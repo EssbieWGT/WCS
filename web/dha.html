@@ -77,8 +77,8 @@ function convertToIsoDate(timestampStr) {
     }
 
 d3.queue()
-  .defer(d3.csv, 'tricare.csv')
-  .defer(d3.json, 'tricareTS.json')
+  .defer(d3.csv, '../data/tricare.csv')
+  .defer(d3.json, '../timestamps/tricareTS.json')
   .await(analyze);
 
   function analyze(error, article, lastEyes) {
