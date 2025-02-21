@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SAF Link Previews</title>
+    <style>
+ .preview-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .preview-image-container {
+            width: 20%;
+            max-width: 150px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .preview-image-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: white;
+        }
+
+        .preview-text {
+            flex-grow: 1;
+        }
+
+        .preview-card:hover {
+            background-color: #f0f0f0; /* Light gray highlight */
+        }       
+    </style>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+<body>
+    <p id="localDate">Converting...</p>
+    <div id="previewContainer"></div>
+
+    <script>
+
+// convert dates to local string
+function convertToLocalDate(isoString) {
+  const date = new Date(isoString);
+  return date.toLocaleString(); // Uses the user's locale
+}
+
+function convertToIsoDate(timestampStr) {
+      try {
+        // Convert the string to a valid ISO 8601 format for Date parsing
+        const isoString = timestampStr.replace(' ', 'T'); // Replace space with 'T'
+        const date = new Date(isoString);
+
+        if (isNaN(date)) {
+          throw new Error("Invalid date");
+        }
+        return date.toLocaleString(); // Convert to local string
+
+      } catch (error) {
+        console.error("Error converting date:", error);
+        return "Invalid Date";
+      }
+    }
+
+d3.queue()
+  .defer(d3.csv, '../data/saf.csv')
+  .defer(d3.json, '../timestamps/safTS.json')
+  .await(analyze);
+
+  function analyze(error, article, lastEyes) {
+    if(error) { console.log(error); }
+
+    const timestamp = lastEyes.timestamp;
+    const localTimeString = convertToIsoDate(timestamp);
+    d3.select('#localDate').text("Last Updated: " + localTimeString);
+
+    article.forEach(d => {
+        d.publishedSort = new Date(d.published)
+    })
+
+    article.sort((a,b) => b.publishedSort - a.publishedSort)
+
+const container = d3.select("#previewContainer");
+
+article.forEach(function(d) {
+    const cardDiv = container.append("div").classed("preview-card", true);
+    dateLocal = convertToLocalDate(d.published)
+
+    const textDiv = cardDiv.append("div").classed("preview-text", true);
+    textDiv.html(`
+        <p><b>${d.siteName}</b></p>
+        <h3><a href="${d.url}" target="_blank">${d.title}</a></h3>
+        <p>${d.description}</p>
+        <p>Published: ${dateLocal}</p>
+    `);
+
+    const imageContainerDiv = cardDiv.append("div").classed("preview-image-container", true);
+
+    if (d.image) {
+        imageContainerDiv.append("img").attr("src", d.image).attr("alt", "Article Image").classed("preview-image", true);
+    } else {
+        imageContainerDiv.append("div").classed("preview-image-placeholder", true);
+    }
+});
+        }
+    </script>
+</body>
+</html>
