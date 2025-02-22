@@ -1,4 +1,4 @@
-# WORK IN PROGRESS 
+Data updates at the 59 of each hour. 
 
 ## Recent News 
 
