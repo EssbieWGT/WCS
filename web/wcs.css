@@ -1,0 +1,105 @@
+
+.preview-card {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.preview-image-container {
+    width: 15%;
+    max-width: 100px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.preview-image-placeholder {
+    width: 100px;
+    height: 80px;
+    background-color: white;
+}
+
+.preview-text {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.preview-text h3 {
+    font-size: 16px;
+    margin: 2px 0;
+}
+
+.preview-text p {
+    font-size: 13px;
+    margin: 2px 0;
+    color: #555;
+}
+
+.preview-card:hover {
+    background-color: #f0f0f0;
+}
+
+.section-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-top: 15px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 3px;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+    .preview-card {
+        flex-direction: column; /* Stack image and text vertically */
+        width: 95%; /* Use almost full width */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+    }
+
+    .preview-image-container {
+        width: 100%; /* Make image container take full width */
+        max-width: none;
+        margin-bottom: 8px;
+        justify-content: center;
+    }
+
+    .preview-image {
+        max-height: 150px; /* Allow larger images on mobile */
+    }
+
+    .preview-text {
+        text-align: center; /* Center text for better readability */
+    }
+
+    .preview-text h3 {
+        font-size: 18px; /* Slightly larger for better touch usability */
+    }
+
+    .preview-text p {
+        font-size: 14px; /* Increase for readability */
+    }
+
+    .section-header {
+        font-size: 18px;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+    }
+}

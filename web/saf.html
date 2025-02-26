@@ -2,120 +2,119 @@
 <html>
 <head>
     <title>SAF Link Previews</title>
-    <style>
- .preview-card {
-            border: 1px solid #ccc;
-            padding: 10px;
-            width: 80%;
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 10px;
-            margin-left: 10%;
-            margin-right: 10%;
-        }
-
-        .preview-image-container {
-            width: 20%;
-            max-width: 150px;
-            margin-right: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .preview-image {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        .preview-image-placeholder {
-            width: 100%;
-            height: 150px;
-            background-color: white;
-        }
-
-        .preview-text {
-            flex-grow: 1;
-        }
-
-        .preview-card:hover {
-            background-color: #f0f0f0; /* Light gray highlight */
-        }       
-    </style>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://d3js.org/d3.v4.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="wcs.css">
+    <script src="https://d3js.org/d3.v4.js"></script>
 </head>
 <body>
     <p id="localDate">Converting...</p>
+
     <div id="previewContainer"></div>
 
     <script>
-
-// convert dates to local string
-function convertToLocalDate(isoString) {
-  const date = new Date(isoString);
-  return date.toLocaleString(); // Uses the user's locale
-}
-
-function convertToIsoDate(timestampStr) {
-      try {
-        // Convert the string to a valid ISO 8601 format for Date parsing
-        const isoString = timestampStr.replace(' ', 'T'); // Replace space with 'T'
-        const date = new Date(isoString);
-
-        if (isNaN(date)) {
-          throw new Error("Invalid date");
+        // Convert dates to local string
+        function convertToLocalDate(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleString(); // Uses the user's locale
         }
-        return date.toLocaleString(); // Convert to local string
 
-      } catch (error) {
-        console.error("Error converting date:", error);
-        return "Invalid Date";
-      }
-    }
+        function convertToIsoDate(timestampStr) {
+            try {
+                const isoString = timestampStr.replace(' ', 'T'); // Ensure correct format
+                const date = new Date(isoString);
 
-d3.queue()
-  .defer(d3.csv, '../data/saf.csv')
-  .defer(d3.json, '../timestamps/safTS.json')
-  .await(analyze);
+                if (isNaN(date)) throw new Error("Invalid date");
+                
+                return date.toLocaleString(); // Convert to local string
+            } catch (error) {
+                console.error("Error converting date:", error);
+                return "Invalid Date";
+            }
+        }
 
-  function analyze(error, article, lastEyes) {
-    if(error) { console.log(error); }
+    d3.queue()
+    .defer(d3.csv, '../data/saf.csv')
+    .defer(d3.json, '../timestamps/safTS.json')
+    .await(analyze);
 
-    const timestamp = lastEyes.timestamp;
-    const localTimeString = convertToIsoDate(timestamp);
-    d3.select('#localDate').text("Last Updated: " + localTimeString);
+        function analyze(error, articles, lastEyes) {
+            if (error) {
+                console.log(error);
+                return;
+            }
 
-    article.forEach(d => {
-        d.publishedSort = new Date(d.published)
-    })
+            const timestamp = lastEyes.timestamp;
+            const localTimeString = convertToIsoDate(timestamp);
+            d3.select('#localDate').text("Last Updated: " + localTimeString);
 
-    article.sort((a,b) => b.publishedSort - a.publishedSort)
+            articles.forEach(d => {
+                d.publishedSort = new Date(d.published);
+            });
 
-const container = d3.select("#previewContainer");
+            // Sort articles by published date (latest first)
+            articles.sort((a, b) => b.publishedSort - a.publishedSort);
 
-article.forEach(function(d) {
-    const cardDiv = container.append("div").classed("preview-card", true);
-    dateLocal = convertToLocalDate(d.published)
+            const today = new Date();
+            const yesterday = new Date(today);
+            yesterday.setDate(yesterday.getDate() - 1);
 
-    const textDiv = cardDiv.append("div").classed("preview-text", true);
-    textDiv.html(`
-        <p><b>${d.siteName}</b></p>
-        <h3><a href="${d.url}" target="_blank">${d.title}</a></h3>
-        <p>${d.description}</p>
-        <p>Published: ${dateLocal}</p>
-    `);
+            // Categorizing articles
+            const todayArticles = [];
+            const yesterdayArticles = [];
+            const earlierArticles = [];
 
-    const imageContainerDiv = cardDiv.append("div").classed("preview-image-container", true);
+            articles.forEach(d => {
+                const articleDate = d.publishedSort;
+                const articleDateString = d3.timeFormat("%Y-%m-%d")(articleDate);
+                const todayString = d3.timeFormat("%Y-%m-%d")(today);
+                const yesterdayString = d3.timeFormat("%Y-%m-%d")(yesterday);
 
-    if (d.image) {
-        imageContainerDiv.append("img").attr("src", d.image).attr("alt", "Article Image").classed("preview-image", true);
-    } else {
-        imageContainerDiv.append("div").classed("preview-image-placeholder", true);
-    }
-});
+                if (articleDateString === todayString) {
+                    todayArticles.push(d);
+                } else if (articleDateString === yesterdayString) {
+                    yesterdayArticles.push(d);
+                } else {
+                    earlierArticles.push(d);
+                }
+            });
+
+            const container = d3.select("#previewContainer");
+            container.html(""); // Clear previous content
+
+            // Function to render a section if there are articles
+            function renderSection(title, articles) {
+                if (articles.length > 0) {
+                    container.append("h2").classed("section-header", true).text(title);
+                    articles.forEach(renderCard);
+                }
+            }
+
+            // Function to create a preview card
+            function renderCard(d) {
+                const cardDiv = container.append("div").classed("preview-card", true);
+                const dateLocal = convertToLocalDate(d.published);
+
+                const textDiv = cardDiv.append("div").classed("preview-text", true);
+                textDiv.html(`
+                    <p><b>${d.siteName}</b></p>
+                    <h3><a href="${d.url}" target="_blank">${d.title}</a></h3>
+                    <p>${d.description}</p>
+                    <p>Published: ${dateLocal}</p>
+                `);
+
+                const imageContainerDiv = cardDiv.append("div").classed("preview-image-container", true);
+                if (d.image) {
+                    imageContainerDiv.append("img").attr("src", d.image).attr("alt", "Article Image").classed("preview-image", true);
+                } else {
+                    imageContainerDiv.append("div").classed("preview-image-placeholder", true);
+                }
+            }
+
+            // Render sections
+            renderSection("Today's Stories", todayArticles);
+            renderSection("Yesterday's Stories", yesterdayArticles);
+            renderSection("Earlier", earlierArticles);
         }
     </script>
 </body>
