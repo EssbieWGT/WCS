@@ -186,6 +186,8 @@ def append_to_json_file(tsPath, new_data):
     else:
         tsUse = []
     # Step 2: Append new data (assuming tsUse is a list)
+    if isinstance(tsUse, dict):  # Convert dict to list if needed
+    tsUse = [tsUse]
     tsUse.append(new_data)
     # Step 3: Write updated data back to file
     with open(tsPath, 'w') as json_file:  # 'w' mode writes the updated content
