@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tricare Link Previews</title>
+    <style>
+        .preview-card {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.preview-image-container {
+    width: 15%;
+    max-width: 100px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.preview-image-placeholder {
+    width: 100px;
+    height: 80px;
+    background-color: white;
+}
+
+.preview-text {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.preview-text h3 {
+    font-size: 16px;
+    margin: 2px 0;
+}
+
+.preview-text p {
+    font-size: 13px;
+    margin: 2px 0;
+    color: #555;
+}
+
+.preview-card:hover {
+    background-color: #f0f0f0;
+}
+
+.section-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-top: 15px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 3px;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+    .preview-card {
+        flex-direction: column; /* Stack image and text vertically */
+        width: 95%; /* Use almost full width */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+    }
+
+    .preview-image-container {
+        width: 100%; /* Make image container take full width */
+        max-width: none;
+        margin-bottom: 8px;
+        justify-content: center;
+    }
+
+    .preview-image {
+        max-height: 150px; /* Allow larger images on mobile */
+    }
+
+    .preview-text {
+        text-align: center; /* Center text for better readability */
+    }
+
+    .preview-text h3 {
+        font-size: 18px; /* Slightly larger for better touch usability */
+    }
+
+    .preview-text p {
+        font-size: 14px; /* Increase for readability */
+    }
+
+    .section-header {
+        font-size: 18px;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+    }
+}
+
+
+    </style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+<body>
+    <p id="localDate">Converting...</p>
+
+    <div id="previewContainer"></div>
+
+    <script>
+        // Convert dates to local string
+        function convertToLocalDate(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleString(); // Uses the user's locale
+        }
+
+        function convertToIsoDate(timestampStr) {
+            try {
+                const isoString = timestampStr.replace(' ', 'T'); // Ensure correct format
+                const date = new Date(isoString);
+
+                if (isNaN(date)) throw new Error("Invalid date");
+                
+                return date.toLocaleString(); // Convert to local string
+            } catch (error) {
+                console.error("Error converting date:", error);
+                return "Invalid Date";
+            }
+        }
+
+        d3.queue()
+            .defer(d3.csv, '../data/tricare.csv')
+            .defer(d3.json, '../timestamps/tricareTS.json')
+            .await(analyze);
+
+        function analyze(error, articles, lastEyes) {
+            if (error) {
+                console.log(error);
+                return;
+            }
+
+            const timestamp = lastEyes.timestamp;
+            const localTimeString = convertToIsoDate(timestamp);
+            d3.select('#localDate').text("Last Updated: " + localTimeString);
+
+            articles.forEach(d => {
+                d.publishedSort = new Date(d.published);
+            });
+
+            // Sort articles by published date (latest first)
+            articles.sort((a, b) => b.publishedSort - a.publishedSort);
+
+            const today = new Date();
+            const yesterday = new Date(today);
+            yesterday.setDate(yesterday.getDate() - 1);
+
+            // Categorizing articles
+            const todayArticles = [];
+            const yesterdayArticles = [];
+            const earlierArticles = [];
+
+            articles.forEach(d => {
+                const articleDate = d.publishedSort;
+                const articleDateString = d3.timeFormat("%Y-%m-%d")(articleDate);
+                const todayString = d3.timeFormat("%Y-%m-%d")(today);
+                const yesterdayString = d3.timeFormat("%Y-%m-%d")(yesterday);
+
+                if (articleDateString === todayString) {
+                    todayArticles.push(d);
+                } else if (articleDateString === yesterdayString) {
+                    yesterdayArticles.push(d);
+                } else {
+                    earlierArticles.push(d);
+                }
+            });
+
+            const container = d3.select("#previewContainer");
+            container.html(""); // Clear previous content
+
+            // Function to render a section if there are articles
+            function renderSection(title, articles) {
+                if (articles.length > 0) {
+                    container.append("h2").classed("section-header", true).text(title);
+                    articles.forEach(renderCard);
+                }
+            }
+
+            // Function to create a preview card
+            function renderCard(d) {
+                const cardDiv = container.append("div").classed("preview-card", true);
+                const dateLocal = convertToLocalDate(d.published);
+
+                const textDiv = cardDiv.append("div").classed("preview-text", true);
+                textDiv.html(`
+                    <p><b>${d.siteName}</b></p>
+                    <h3><a href="${d.url}" target="_blank">${d.title}</a></h3>
+                    <p>${d.description}</p>
+                    <p>Published: ${dateLocal}</p>
+                `);
+
+                const imageContainerDiv = cardDiv.append("div").classed("preview-image-container", true);
+                if (d.image) {
+                    imageContainerDiv.append("img").attr("src", d.image).attr("alt", "Article Image").classed("preview-image", true);
+                } else {
+                    imageContainerDiv.append("div").classed("preview-image-placeholder", true);
+                }
+            }
+
+            // Render sections
+            renderSection("Today's Stories", todayArticles);
+            renderSection("Yesterday's Stories", yesterdayArticles);
+            renderSection("Earlier", earlierArticles);
+        }
+    </script>
+</body>
+</html>
