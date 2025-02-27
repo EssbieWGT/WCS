@@ -44,7 +44,7 @@
                 return;
             }
 
-            const timestamp = lastEyes.timestamp;
+            const timestamp = lastEyes[lastEyes.length - 1]?.timestamp;
             const localTimeString = convertToIsoDate(timestamp);
             d3.select('#localDate').text("Last Updated: " + localTimeString);
 
