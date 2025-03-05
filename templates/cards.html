@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-detection" contnet="telephone=no">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ filename[:-4].upper() }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='eb.css') }}">
+  <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+
+<body>
+
+    {% if navigation %}
+  <div class="nav-header">
+      <a href="{{ url_for('main_page') }}" class="btn btn-primary">Home</a>
+      <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+  </div>
+  <hr>
+  {% endif %}
+
+
+  <!-- Opening DIV for container -->
+  <div class="containerwgt" style="width:90%">
+<div id="etitle"></div> <br>
+    
+</br><div id='headCats'></div>
+<hr>
+<div id='bodyCats'></div>
+
+<!-- closing div for container -->
+</div>
+
+<script>
+//define replaceAt
+String.prototype.replaceAt=function(index, replacement) {
+    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+}
+
+//define date of run
+var d = new Date();
+var dFormat = new Intl.DateTimeFormat('en', {
+	month: 'long',
+	day: 'numeric',
+  year: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  hour12: true,
+  timeZone: 'America/New_York'
+});
+
+const today = new Date();
+const formattedDate = today.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit'
+});
+
+document.getElementById("etitle").innerHTML = "{{ filename[:-4].upper() }} | Top News - " + formattedDate
+
+// load the data
+d3.queue()
+  .defer(d3.csv, "{{ url_for('uploads', filename=filename[:-4].lower() + 'view.csv' ) }}")
+  .await(analyze);
+
+  function analyze(error, article) {
+    if(error) { console.log(error); }
+
+//define unique entries in category (note, categories should be sorted already)
+categoryData = []
+const categories = [...new Set(article.map(article => article['category']))]
+
+const getHostname = (url) => {
+    // use URL constructor and return hostname
+    return new URL(url).hostname;
+  }
+
+categories.forEach(function(data,index){
+
+console.log(data)
+console.log(index+1)
+var indexUse = index+1
+
+d3.select('#headCats')
+    .data(data)
+    .append("table")
+    .attr("id","c"+ indexUse)
+    .append("p")
+    .style("font-weight","bold")
+    .style("font-size", "25px")
+    .text(data)
+	  .style("font-weight","bold")
+    .style("margin-bottom", "10px")
+});
+
+article.forEach(function(data){
+
+  data['selector'] = "#c"+data['categoryorder']
+  data['body'] = data['selector']+"body"
+  data['uniqueIDs'] = "c" + data["categoryorder"]+data["articleorder"]
+
+  if (data.published === null){
+    date = "No Date"
+  }else {
+    date = new Date(data.published).toLocaleString()
+  }
+
+//had to play around with this one a little, it appears that todayURL is always present 
+domain = data.domain ?? getHostname(data.url)
+
+  d3.selectAll(data['selector'])
+    .append("table")
+    .style("width","50%")
+    .append("tr")
+    .style("font-size", "15px")
+    .style("border-bottom","1px solid #ddd")
+    .each(function(d){
+      d3.select(this)
+      .append("td")
+      .style('line-height',"1")
+      .style("text-align","left")
+      .html('<p style="font-weight: normal;"><small class="text_muted">' + data.outlet + ' | ' + date + '</small><br><b><a href="' +data.url + '"target="_blank">' + data.title + '</a></b><br>' + '<small class="text_muted">By: ' + data.authors + ' |  Market: ' + data.market + '</small><br><br>' + data.description + '<br></p>');
+
+    })
+});
+}
+
+// add in slug where available 
+
+</script>
+
+</body>
+</html>

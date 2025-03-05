@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% if navigation %}
+    <div class="nav-header">
+        <a href="{{ url_for('main_page') }}" class="btn btn-primary">Home</a>
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+    </div>
+    <hr>
+    {% endif %}
+    <h2>Welcome</h2>
+    <table>
+        <tr>
+            <th>Live View</th>
+            <th>Download</th>
+            <th>Upload</th>
+            <th>Render for Clips</th>
+        </tr>
+        {% for file, timestamp in files %}
+        <tr>
+            <td><a href="{{ url_for('live_view', filename=file) }}">{{ file[:-4].upper() }}</a></td>
+            <td><a href="{{ url_for('download_file', filename=file) }}">Download</a></td>
+            <td>
+                <form action="{{ url_for('upload_file', filename=file) }}" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file" required>
+                    <button type="submit">Upload</button>
+                </form>
+            </td>
+            <td>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ url_for('view_file', filename=file, option='links') }}">Links</a>
+                        <a class="dropdown-item" href="{{ url_for('view_file', filename=file, option='cards') }}">Cards</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <ul>
+        <li> Figure out the overall naming conventions for variables and standardize</li>
+        <li> Write up brief instructions </li>
+    </ul>
+</body>
+</html>

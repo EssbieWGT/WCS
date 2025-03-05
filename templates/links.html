@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>{{ filename[:-4].upper() }} - CLIPS </title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='eb.css') }}">
+  <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+
+<body>
+  {% if navigation %}
+  <div class="nav-header">
+      <a href="{{ url_for('main_page') }}" class="btn btn-primary">Home</a>
+      <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+  </div>
+  <hr>
+  {% endif %}
+
+
+<!-- Opening DIV for container -->
+<div class="containerwgt">
+
+<div id="etitle"></div> <br>
+<div class="heading">
+<h2> {{ filename[:-4].upper() }}<br> Daily Headlines </h2>
+<div id='current'></div>
+</div>
+
+</br><div id='headCats'></div>
+<hr>
+<div id='bodyCats'></div>
+
+<!-- closing div for container -->
+</div>
+
+<script>
+
+//define replaceAt
+String.prototype.replaceAt=function(index, replacement) {
+    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+}
+
+//define date of run
+var d = new Date();
+var dFormat = new Intl.DateTimeFormat('en', {
+	month: 'long',
+	day: 'numeric',
+  year: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  hour12: true,
+  timeZone: 'America/New_York'
+});
+
+const today = new Date();
+const formattedDate = today.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit'
+});
+
+document.getElementById("current").innerHTML = "Current as of: " + dFormat.format(d)+ " ET";
+document.getElementById("etitle").innerHTML = "{{ filename[:-4].upper() }} Morning Clips - " + formattedDate
+
+// load the data
+d3.queue()
+  .defer(d3.csv, "{{ url_for('uploads', filename=filename[:-4].lower() + 'view.csv' ) }}")
+  .await(analyze);
+
+  function analyze(error, article) {
+    if(error) { console.log(error); }
+
+  
+//define unique entries in category (note, categories should be sorted already)
+categoryData = []
+const categories = [...new Set(article.map(article => article['category']))]
+// const catOrder = [...new Set(article.map(article => "c" + article['categoryOrder']))]
+
+categories.forEach(function(data,index){
+
+console.log(data)
+console.log(index+1)
+var indexUse = index+1
+
+  d3.select('#headCats')
+    .data(data)
+    .append("table")
+    .attr("id","c"+ indexUse)
+    .append("p")
+    .style("font-weight","bold")
+    .style("font-size", "25px")
+    .text(data)
+    .style("font-size","18")
+		.style("font-weight","bold")
+    .style("margin-bottom", "10px")
+
+});
+
+article.forEach(function(data){
+
+  console.log(data)
+
+  data['selector'] = "#c"+data['categoryorder']
+  data['body'] = data['selector']+"body"
+  data['uniqueIDs'] = "c" + data["categoryorder"]+data["articleorder"]
+
+
+//different behavior if "in the states"
+switch(data['state'] != ""){
+  case true:
+    var pasteIn = '<a href=' + data['url']+ " id=" + "contents_" + data['uniqueIDs']+ " " + ">"+data['title']+"</a>" +" [" + data["outlet"]+"]"
+    break;
+  case false:
+     var pasteIn = '<a href=' + data['url']+ " id=" + "contents_" + data['uniqueIDs']+ " " + ">"+data['title']+"</a>" +" [" + data["outlet"]+"]"
+}
+
+  d3.selectAll(data['selector'])
+    .append("ul")
+    .style("margin-top", '0em')
+    .style("margin-bottom", '0.05em')
+    .append("li")
+		.attr("class","contents")
+		.style("margin-left", '1em')
+    .style("line-height", '14px')
+		.style("font-weight", 'normal')
+    .style("font-size", '14px')
+		.html(pasteIn)
+});
+}
+
+</script>
+
+</body>
+</html>

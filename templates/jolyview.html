@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Weekly H2 Client Report </title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='eb.css') }}">
+	<script src="https://d3js.org/d3.v4.js"></script>
+</head>
+
+<body>
+
+  {% if navigation %}
+  <div class="nav-header">
+      <a href="{{ url_for('main_page') }}" class="btn btn-primary">Home</a>
+      <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+  </div>
+  <hr>
+  {% endif %}
+
+
+<!-- Opening DIV for container -->
+<div class="containerwgt">
+<div class="heading">
+<h1> Weekly H2 Client Report </h1>
+<div id='current'></div>
+<h1> Index </h1>
+</div>
+
+<div id='top'></div>
+<h2> Top News </h2></br>
+<div id='headCats'></div>
+<hr>
+
+<h2> Earnings Releases</h2>
+<div id='earnings'></div>
+
+<!-- closing div for container -->
+</div>
+
+<script>
+//define replaceAt
+String.prototype.replaceAt=function(index, replacement) {
+    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+}
+
+//define date of run
+var d = new Date();
+var dFormat = new Intl.DateTimeFormat('en', {
+	month: 'long',
+	day: 'numeric',
+  year: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  hour12: true,
+  timeZone: 'America/New_York'
+});
+
+
+document.getElementById("current").innerHTML = dFormat.format(d) + " EDT";
+
+// load the data
+d3.queue()
+  .defer(d3.csv, "{{ url_for('uploads', filename=filename[:-4].lower() + 'view.csv' ) }}")
+  .defer(d3.csv, "{{ url_for('static', filename='companies.csv' ) }}")
+  .await(analyze);
+
+  function analyze(error, article, companies) {
+    if(error) { console.log(error); }
+
+console.log(article)
+
+//set default for earnings reports to false  
+let hasEarningsReport = false; 
+
+//define unique entries in category (note, categories should be sorted already)
+categoryData = []
+const categories = [...new Set(companies.map(companies => ({ id: companies['id'], topic: companies['name'] })))];// const categories = [...new Set(article.map(article => article['driver']))]
+categories.forEach(function(data,index){
+
+// console.log(index+1)
+
+var indexUse = index+1
+
+  idNum = data['id']
+  topicName = data['topic']
+
+  d3.select('#headCats')
+    .data(idNum)
+    .append("div")
+    .attr("id", "c"+ idNum +"body")
+    .append("div")
+    .attr("id","c"+ idNum+"head")
+    .html("<h3>" + topicName + "</h3><p>") //original version had a break
+		.style("font-weight","bold")
+    
+});
+
+article.forEach(function(data){
+
+  var formatDate = new Date(data['date']).toLocaleDateString()
+  
+  data['selector'] = "#c"+data['id']
+  data['head'] = data['selector']+"head"
+  data['body'] = data['selector']+"body"
+  data['uniqueIDs'] = "c" + data["id"]+ "_" +data["number"]
+  data['earningsIDs'] = "c" + data["id"]+ "_" + data["number"] + "_earnings"
+
+        d3.selectAll(data['head'])
+    .append("ul")
+		.attr("class","contents")
+		.style("margin-left", "1em")
+		.style("font-weight", 'normal')
+		.style("margin-left", "2em")
+    .html("<li><u>" + data["outlet"] + "</u> - " + data["summary"] + "</li>" )
+
+  d3.selectAll(data['body'])
+    .append("div")
+    .append("div")
+    .attr("class","title_block")
+    .html("<strong><h4><a id=" + "link_" + data['uniqueIDs']+ " " + "href=" + data["url"] + " target='_blank'>" + data["title"] + "</a></h4>" + "Source: " + data["outlet"] +  "</br>" + "Author: " + data["authors"]  + "</br>" + "Date: " + formatDate +  "</strong></br></br>")
+    .each(function(d){
+      d3.select(this)
+      .append("p")
+      .attr("class", "article-body")
+      .attr("id", data['uniqueIDs'])
+
+      d3.select(this)
+        .append("hr");
+    });
+    
+    //create entry for Earnings 
+  if (data.category == "Earnings"){
+    
+    hasEarningsReport = true;
+    // console.log(data.category)
+    d3.selectAll("#earnings")
+    .append("div")
+    .append("div")
+    .attr("class","title_block")
+    .html("<b>Title:</b> " + "<a id=" + "link_" + data['earningsIDs']+ " " + "href=" + data["url"] + " target='_blank'>" + data["title"] + "</a></br>" + "<b>Source:</b> " + data["outlet"] +  "</br>" + "<b>Author:</b> " + data["authors"]  + "</br>" + "<b>Date:</b> " + formatDate +  "</br></br>")
+    .each(function(d){
+      d3.select(this)
+      .append("p")
+      .attr("class", "article-body")
+      .attr("id", data['earningsIDs'])
+      d3.select(this)
+        .append("hr");
+    });
+
+    //insert the text for earnings reports. Should only happen when there's already a relevant article 
+    var earningsText = document.getElementById(data['earningsIDs'])
+    earningsText.innerText = data["text"]
+
+  };
+});
+
+  if (!hasEarningsReport) {
+      d3.select("#earnings")
+        .append("p")
+        .style("margin-left", "2em")
+        .style("font-style", "italic")
+        .text("No Earnings Reports");
+    }  
+
+article.forEach(function(data){
+  var bodyText = document.getElementById(data['uniqueIDs'])
+  bodyText.innerText = data["text"]
+})
+
+
+//do some final cleanup 
+
+// Select all div elements whose ids end with "head"
+const headDivs = document.querySelectorAll('div[id$="head"]');
+headDivs.forEach(div => {
+  // Check if the div has no child elements
+  // if (div.childElementCount === 0) {
+    if (div.children.length === 2 && div.firstElementChild.tagName === "H3" && div.children[1].tagName === "P"){
+    // Create a new p tag
+    const newP = document.createElement('p');
+    // Set the text content to "none"
+    newP.textContent = 'No Headlines';
+    newP.style.textIndent = '2em';
+    newP.style.fontStyle = 'italic';
+    newP.style.fontWeight = 'normal';
+    // Append the new p tag to the div
+    div.appendChild(newP);
+    const newL = document.createElement('hr')
+    div.appendChild(newL)
+  }
+});
+
+    //remove empty body divs 
+function removeEmptyBodyDivs() {
+  const bodyDivs = document.querySelectorAll("div[id$='body']");
+
+  for (const bodyDiv of bodyDivs) {
+    if (bodyDiv.children.length === 2 && bodyDiv.firstElementChild.tagName === "H3" && bodyDiv.children[1].tagName === "BR") {
+      // Create a new p tag
+      const newA = document.createElement('p');
+      // Set the text content to "none"
+      newA.textContent = 'No Articles';
+      newA.style.textIndent = '2em';
+      newA.style.fontStyle = 'italic';
+      newA.style.fontWeight = 'normal';
+    // Append the new p tag to the div
+      bodyDiv.appendChild(newA);
+
+    // Create a new hr tag
+      const hr = document.createElement('hr');
+
+    // Append the hr tag to the div (after the p tag)
+      bodyDiv.appendChild(hr);
+  }
+      // bodyDiv.remove(); // Remove the div element
+  }
+}
+
+    removeEmptyBodyDivs(); // Call the function to execute the logic
+}
+
+</script>
+
+</body>
+</html>

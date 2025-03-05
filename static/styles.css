@@ -1,0 +1,249 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect */
+tr:hover {
+    background-color: #d9edf7;
+    cursor: pointer;
+}
+
+/* Buttons & Forms */
+button, a {
+    text-decoration: none;
+    /* color: rgb(0, 0, 0); */
+    padding: 8px 12px;
+    border-radius: 5px;
+    /* font-size: 14px; */
+    transition: 0.3s;
+    display: inline-block;
+    /* text-align: center; */
+}
+
+a.download-btn {
+    background-color: #28a745;
+}
+
+a.upload-btn {
+    background-color: #ffc107;
+}
+
+a.view-btn {
+    background-color: #007bff;
+}
+
+button:hover, a:hover {
+    opacity: 0.8;
+}
+
+/* Upload Input */
+input[type="file"] {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Logout Button */
+.logout-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: #dc3545;
+    text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+/* FOR THE PREVIEW CARDS IN LIVE VIEW */
+.preview-card {
+    border: 1px solid #ccc;
+    padding: 12px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.preview-image-container {
+    width: 20%;
+    max-width: 120px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.preview-image-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+
+.preview-text {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.preview-text h3 {
+    font-size: 18px;
+    margin: 4px 0;
+}
+
+.preview-text p {
+    font-size: 15px;
+    margin: 4px 0;
+    color: #444;
+}
+
+.preview-card:hover {
+    background-color: #f0f0f0;
+}
+
+.section-header {
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-top: 18px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 4px;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+    .preview-card {
+        flex-direction: column; /* Stack image and text vertically */
+        width: 95%; /* Full width for better usability */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px; /* More padding for easier touch */
+        border-radius: 10px;
+    }
+
+    .preview-image-container {
+        width: 100%; /* Full width image */
+        max-width: none;
+        margin-bottom: 10px;
+        /* justify-content: center; */
+    }
+
+    .preview-image {
+        max-height: 180px; /* Larger images for better visibility */
+        width: 90%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .preview-text {
+        text-align: left; /* Align text left for better readability */
+        font-size: 18px; /* Increase text size */
+        width: 100%;
+    }
+
+    .preview-text h3 {
+        font-size: 22px; /* Bigger headlines */
+        margin: 6px 0;
+    }
+
+    .preview-text p {
+        font-size: 16px; /* Bigger body text */
+        margin: 6px 0;
+        line-height: 1.4;
+    }
+
+    .section-header {
+        font-size: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+    }
+
+
+    /* FOR THE HEADERS */
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #ddd;
+    }
+    .nav-header a {
+        padding: 8px 12px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+}

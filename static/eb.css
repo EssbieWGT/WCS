@@ -1,0 +1,117 @@
+.containerwgt {
+  position: relative;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* div {font-family:calibri, times, serif;
+     font-size: 16px;} */
+
+.heading{
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  text-align: left;
+}
+
+tr:hover {background-color: #f0f0f0;}
+
+th {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom: 3px solid #ddd;
+}
+
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom: 3px solid #ddd;
+}
+
+.card {
+  page-break-inside: avoid;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container-set {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 5px 0;
+  font-size: 12px;
+}
+
+.innerGrid {
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 50em;
+  border-style: double;
+}
+
+#headTable {
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 30em;
+  border-style: double;
+}
+
+img[src=""]{
+  display:none;
+}
+
+@media print {
+
+  div {
+    orphans: 4;
+    widows: 4;
+  }
+
+  .contents{
+    page-break-inside: avoid;
+  }
+
+  @page {
+    /*anytime you mess with the size, it srews everything up.*/
+    size: A4; /* DIN A4 standard, Europe */
+    /*margin: 10mm 0 10mm 0;*/
+
+  }
+.pagebreak {
+    clear: both;
+    page-break-after: always;
+}
+div {font-family:calibri, times, serif;
+     font-size: 14px !important;}
+
+}
+
+a:visited{
+  color:blue;
+}

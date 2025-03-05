@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live View - {{ filename[:-4].upper() }}</title>
+
+
+    <!-- Bootstrap for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+
+    <!-- D3.js for visualization -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+<body>
+    {% if navigation %}
+    <div class="nav-header">
+        <a href="{{ url_for('main_page') }}" class="btn btn-primary">Home</a>
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+    </div>
+    <hr>
+    {% endif %}
+
+    <div class="container">
+        <h2 class="mt-4">{{ filename[:-4].upper() }}</h2>
+        <p id="localDate">Converting...</p>
+
+        <div id="previewContainer"></div>
+    </div>
+
+    <script>
+        // Convert ISO timestamps to local time
+        function convertToLocalDate(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleString(); // Uses user's locale
+        }
+
+        function convertToIsoDate(timestampStr) {
+            try {
+                const isoString = timestampStr.replace(' ', 'T'); // Ensure correct format
+                const date = new Date(isoString);
+
+                if (isNaN(date)) throw new Error("Invalid date");
+                
+                return date.toLocaleString(); // Convert to local string
+            } catch (error) {
+                console.error("Error converting date:", error);
+                return "Invalid Date";
+            }
+        }
+
+        // Load CSV dynamically from Flask
+        d3.queue()
+            .defer(d3.csv, "{{ url_for('uploads', filename=filename) }}")
+            .await(analyze);
+
+            function analyze(error, articles) {
+            if (error) {
+                console.log(error);
+                return;
+            }
+
+            // Find max lastEyes timestamp
+            const maxTimestamp = d3.max(articles, d => d.firstEyes);
+            console.log(maxTimestamp)
+            const localTimeString = convertToIsoDate(maxTimestamp);
+            d3.select('#localDate').text("Last Updated: " + localTimeString);
+
+            // Process articles
+            articles.forEach(d => {
+                d.publishedSort = new Date(d.published);
+            });
+
+            // Sort articles by published date (latest first)
+            articles.sort((a, b) => b.publishedSort - a.publishedSort);
+
+            const today = new Date();
+            const yesterday = new Date(today);
+            yesterday.setDate(yesterday.getDate() - 1);
+
+            // Categorizing articles
+            const todayArticles = [];
+            const yesterdayArticles = [];
+            const earlierArticles = [];
+
+            articles.forEach(d => {
+                const articleDate = d.publishedSort;
+                const articleDateString = d3.timeFormat("%Y-%m-%d")(articleDate);
+                const todayString = d3.timeFormat("%Y-%m-%d")(today);
+                const yesterdayString = d3.timeFormat("%Y-%m-%d")(yesterday);
+
+                if (articleDateString === todayString) {
+                    todayArticles.push(d);
+                } else if (articleDateString === yesterdayString) {
+                    yesterdayArticles.push(d);
+                } else {
+                    earlierArticles.push(d);
+                }
+            });
+
+            const container = d3.select("#previewContainer");
+            container.html(""); // Clear previous content
+
+            // Function to render a section if there are articles
+            function renderSection(title, articles) {
+                if (articles.length > 0) {
+                    container.append("h2").classed("section-header", true).text(title);
+                    articles.forEach(renderCard);
+                }
+            }
+
+            // Function to create a preview card
+            function renderCard(d) {
+                const cardDiv = container.append("div").classed("preview-card", true);
+                const dateLocal = convertToLocalDate(d.published);
+
+                const textDiv = cardDiv.append("div").classed("preview-text", true);
+                textDiv.html(`
+                    <p><b>${d.outlet}</b></p>
+                    <h3><a href="${d.url}" target="_blank">${d.title}</a></h3>
+                    <p>${d.description}</p>
+                    <p>Published: ${dateLocal}</p>
+                `);
+
+                const imageContainerDiv = cardDiv.append("div").classed("preview-image-container", true);
+                if (d.image) {
+                    imageContainerDiv.append("img").attr("src", d.image).attr("alt", "Article Image").classed("preview-image", true);
+                } else {
+                    imageContainerDiv.append("div").classed("preview-image-placeholder", true);
+                }
+            }
+
+            // Render sections
+            renderSection("Today's Stories", todayArticles);
+            renderSection("Yesterday's Stories", yesterdayArticles);
+            renderSection("Earlier", earlierArticles);
+        }
+    </script>
+</body>
+</html>
