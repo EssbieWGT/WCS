@@ -22,8 +22,10 @@ usage_tracking = {"live_view": 0, "view": 0}
 
 # Helper function to get CSV files
 def get_csv_files():
+    # Fetch only CSV files and exclude 'view' files, then sort alphabetically
     files = [f for f in os.listdir(UPLOAD_FOLDER) if f.endswith(".csv") and not f.endswith("view.csv")]
-    return [(f, os.path.getmtime(os.path.join(UPLOAD_FOLDER, f))) for f in files]
+    files.sort(key=lambda f: f.lower())  # Sorts case-insensitively
+    return files
 
 @app.route('/', methods=['GET', 'POST'])
 def login():

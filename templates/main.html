@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Media Monitoring </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
@@ -14,33 +15,49 @@
     </div>
     <hr>
     {% endif %}
-    <table>
-        <tr>
-            <th>Live View</th>
-            <th>Download</th>
-            <th>Upload</th>
-            <th>Render for Clips</th>
-        </tr>
-        {% for file, timestamp in files %}
-        <tr>
-            <td><a href="{{ url_for('live_view', filename=file) }}">{{ file[:-4].upper() }}</a></td>
-            <td><a href="{{ url_for('download_file', filename=file) }}">Download</a></td>
-            <td>
-                <form action="{{ url_for('upload_file', filename=file) }}" method="POST" enctype="multipart/form-data">
-                    <input type="file" name="file" required>
-                    <button type="submit">Upload</button>
-                </form>
-            </td>
-            <td>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{ url_for('view_file', filename=file, option='links') }}">Links</a>
-                        <a class="dropdown-item" href="{{ url_for('view_file', filename=file, option='cards') }}">Cards</a>
+
+    <div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Live View</th>
+                <th class="d-none d-md-table-cell">Download</th>
+                <th class="d-none d-md-table-cell">Upload</th>
+                <th class="d-none d-md-table-cell">Render for Clips</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in files %}
+            <tr>
+                <td><a href="{{ url_for('live_view', filename=file) }}">{{ file[:-4].upper() }}</a></td>
+                
+                <td class="d-none d-md-table-cell">
+                    <a href="{{ url_for('download_file', filename=file) }}" class="btn btn-secondary">Download</a>
+                </td>
+                
+                <td class="d-none d-md-table-cell">
+                    <form action="{{ url_for('upload_file', filename=file) }}" method="POST" enctype="multipart/form-data">
+                        <input type="file" name="file" required>
+                        <button type="submit" class="btn btn-warning">Upload</button>
+                    </form>
+                </td>
+                
+                <td class="d-none d-md-table-cell">
+                    <div class="dropdown">
+                        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Render for Clips
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ url_for('view_file', filename=file, option='links') }}">Links</a>
+                            <a class="dropdown-item" href="{{ url_for('view_file', filename=file, option='cards') }}">Cards</a>
+                        </div>
                     </div>
-                </div>
-            </td>
-        </tr>
-        {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
+</div>
 
     <div class="container">
         <h2>A Better Way to Do Clips</h2>
@@ -52,8 +69,8 @@
             <li><strong>View Files:</strong> The main page displays a list of available files with options to:
                 <ul>
                     <li><strong>Live View:</strong> Lets you see the most recent client news, covering the last three days.</li>
-                    <li><strong>Download:</strong> Save the most recent clips to your computer.</li>
-                    <li><strong>Upload:</strong> Update the data with a new CSV or XLSX file.</li>
+                    <li><strong>Download:</strong> Save the most recent clips to your computer. Select the articles you want to keep.</li>
+                    <li><strong>Upload:</strong> Update the articles you want to keep. These must be in a .csv or Excel file.</li>
                     <li><strong>Render for Clips:</strong> Choose how to view the data (Links, Cards).</li>
                 </ul>
             </li>
@@ -63,11 +80,16 @@
         </ol>
         
         <h3>File Requirements:</h3>
-        <p>Ensure all uploaded files are in CSV or XLSX format. Do not change the column names in the file, or the report will not render correctly.</p>
-        
+        <ol>
+        <li>Ensure all uploaded files are in CSV or XLSX format. Do not change the column names in the file, or the report will not render correctly.</li>
+        <li>Upload only the articles you want to include in the report. Delete all the other rows.</li>
+        <li>Except for the Joly clips, all articles need to be assigned a value under "category", and "categoryorder" to render correctly.</li>
+        <li>"articleorder" is optional, but if any article is given an article order number, all of them need one.</li>
+        </ol>
         <p>If you encounter any issues, please contact Wesley.Thompson@wardcirclestrategies.com.</p>
     </div>
     
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
