@@ -6,16 +6,18 @@ from datetime import datetime
 import pandas as pd
 import re
 import chardet
+from dotenv import load_dotenv  # Load environment variables from .env file
+
 
 app = Flask(__name__)
-app.secret_key = 'supersecretkey'  # Change this for production
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Hardcoded login credentials
-USERNAME = "press@wardcirclestrategies.com"
-PASSWORD = "Ward$ircle"
+app.secret_key = os.getenv('FLASK_SECRET_KEY')
+USERNAME = os.getenv('LOGIN_USERNAME')
+PASSWORD = os.getenv('LOGIN_PASSWORD')
 
 # Simple in-memory tracking
 usage_tracking = {"live_view": 0, "view": 0}
