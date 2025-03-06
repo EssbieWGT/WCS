@@ -54,18 +54,21 @@
         // Load CSV dynamically from Flask
         d3.queue()
             .defer(d3.csv, "{{ url_for('uploads', filename=filename) }}")
+            .defer(d3.json, "{{ url_for('uploads', filename='allts.json') }}")
             .await(analyze);
 
-            function analyze(error, articles) {
+            function analyze(error, articles, allTS) {
             if (error) {
                 console.log(error);
                 return;
             }
 
             // Find max lastEyes timestamp
-            const maxTimestamp = d3.max(articles, d => d.firstEyes);
-            console.log(maxTimestamp)
-            const localTimeString = convertToIsoDate(maxTimestamp);
+            // const maxTimestamp = d3.max(articles, d => d.firstEyes);
+            // const localTimeString = convertToIsoDate(maxTimestamp);
+            const localTimeStamp = allTS[allTS.length - 1]
+            const localTimeString = new Date(localTimeStamp).toLocaleString()
+            console.log(localTimeString)
             d3.select('#localDate').text("Last Updated: " + localTimeString);
 
             // Process articles
