@@ -117,21 +117,36 @@
             function renderCard(d) {
                 const cardDiv = container.append("div").classed("preview-card", true);
                 const dateLocal = convertToLocalDate(d.published);
-
+                const nameContent = d.name ? `<div class="name-tag">${d.name}</div>` : ""; 
                 const textDiv = cardDiv.append("div").classed("preview-text", true);
-                textDiv.html(`
-                    <p><b>${d.outlet}</b></p>
-                    <h3><a href="${d.url}" target="_blank">${d.title}</a></h3>
-                    <p>${d.description}</p>
-                    <p>Published: ${dateLocal}</p>
-                `);
+                // textDiv.html(`
+                //     ${nameContent}
+                //     <p><b>${d.outlet}</b></p>
+                //     <h3><a href="${d.url}" target="_blank">${d.title}</a></h3>
+                //     <p>${d.description}</p>
+                //     <p>Published: ${dateLocal}</p>
+                // `);
+                cardDiv.html(`
+                        ${nameContent} <!-- Name tag remains as an absolute element -->
+                        <div class="preview-content">
+                            <div class="preview-text">
+                                <p><b>${d.outlet}</b></p>
+                                <h3><a href="${d.url}" target="_blank">${d.title}</a></h3>
+                                <p>${d.description}</p>
+                                <p>Published: ${dateLocal}</p>
+                            </div>
+                            <div class="preview-image-container">
+                                ${d.image ? `<img src="${d.image}" alt="Article Image" class="preview-image">` : ''}
+                            </div>
+                        </div>
+                    `);
 
-                const imageContainerDiv = cardDiv.append("div").classed("preview-image-container", true);
-                if (d.image) {
-                    imageContainerDiv.append("img").attr("src", d.image).attr("alt", "Article Image").classed("preview-image", true);
-                } else {
-                    imageContainerDiv.append("div").classed("preview-image-placeholder", true);
-                }
+            //     const imageContainerDiv = cardDiv.append("div").classed("preview-image-container", true);
+            //     if (d.image) {
+            //         imageContainerDiv.append("img").attr("src", d.image).attr("alt", "Article Image").classed("preview-image", true);
+            //     } else {
+            //         imageContainerDiv.append("div").classed("preview-image-placeholder", true);
+            //     }
             }
 
             // Render sections

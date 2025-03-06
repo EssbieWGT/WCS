@@ -117,34 +117,62 @@ input[type="file"] {
 }
 
 /* FOR THE PREVIEW CARDS IN LIVE VIEW */
+/* Preview Card Styling */
 .preview-card {
-    border: 1px solid #ccc;
-    padding: 12px;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 8px;
-    margin-left: 10%;
-    margin-right: 10%;
-    align-items: center;
-    transition: background-color 0.3s ease-in-out;
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
     border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.preview-image-container {
-    width: 20%;
-    max-width: 120px;
-    margin-right: 10px;
+/* Name Tag Positioning */
+.name-tag {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* Flexbox Layout for Content and Image */
+.preview-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center; /* Vertically centers the image */
 }
 
+/* Text Container */
+.preview-text {
+    flex: 1;
+    padding-right: 10px;
+}
+
+/* Image Container */
+.preview-image-container {
+    flex-shrink: 0;
+    max-width: 150px;
+    max-height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Image Styling */
 .preview-image {
     max-width: 100%;
-    max-height: 100px;
-    object-fit: cover;
-    border-radius: 6px;
+    max-height: 100%;
+    border-radius: 4px;
+    object-fit: contain; /* Keeps aspect ratio */
 }
 
 .preview-image-placeholder {
