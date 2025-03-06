@@ -68,7 +68,6 @@
             // const localTimeString = convertToIsoDate(maxTimestamp);
             const localTimeStamp = allTS[allTS.length - 1]
             const localTimeString = new Date(localTimeStamp).toLocaleString()
-            console.log(localTimeString)
             d3.select('#localDate').text("Last Updated: " + localTimeString);
 
             // Process articles
