@@ -124,9 +124,16 @@
 
                 // Assign sentiment color class based on the sentiment value
                 if (d.sentiment) {
-                    if (d.sentiment.toLowerCase() === "positive") sentimentClass = "sentiment-positive";
-                    else if (d.sentiment.toLowerCase() === "neutral") sentimentClass = "sentiment-neutral";
-                    else if (d.sentiment.toLowerCase() === "negative") sentimentClass = "sentiment-negative";
+                    if (d.sentiment === "1") {
+                        sentimentClass = "sentiment-positive";
+                        displayTag = "Positive";
+                    } else if (d.sentiment === "0") {
+                        sentimentClass = "sentiment-neutral";
+                        displayTag = "Neutral";
+                    } else if (d.sentiment === "-1") {
+                        sentimentClass = "sentiment-negative";
+                        displayTag = "Negative";
+                    }
                 }
 
                 const tagContent = displayTag ? `<div class="name-tag ${sentimentClass}">${displayTag}</div>` : "";
