@@ -273,27 +273,28 @@ input[type="file"] {
 
 /* Mobile Responsive Styling */
 @media (max-width: 768px) {
-    .preview-card {
-        flex-direction: column; /* Stack image and text vertically */
-        width: 95%; /* Full width for better usability */
-        margin-left: auto;
-        margin-right: auto;
-        padding: 15px; /* More padding for easier touch */
-        border-radius: 10px;
+    .preview-content {
+        flex-direction: column; /* Stack text and image */
+        align-items: flex-start;
     }
 
     .preview-image-container {
-        width: 100%; /* Full width image */
-        max-width: none;
-        margin-bottom: 10px;
-        /* justify-content: center; */
+        max-width: 100%;
+        width: 100%;
+        margin-top: 10px;
     }
 
     .preview-image {
-        max-height: 180px; /* Larger images for better visibility */
-        width: 90%;
-        object-fit: cover;
-        border-radius: 10px;
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover; /* Fill container without distortion */
+    }
+
+    .name-tag {
+        top: 5px;
+        right: 10px;
+        font-size: 10px;
+        padding: 3px 6px;
     }
 
     .preview-text {
