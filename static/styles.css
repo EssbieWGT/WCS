@@ -242,6 +242,27 @@ input[type="file"] {
     background-color: white;
 }
 
+/* Empty State for Broken Images */
+.preview-image-container img[style*="display: none"] {
+    background-color: #f1f1f1;
+}
+
+/* Sentiment Colors */
+.sentiment-positive {
+    background-color: #28a745;
+    color: white; /* Green for Positive */
+}
+
+.sentiment-neutral {
+    background-color: #007bff;
+    color: white; /* Blue for Neutral */
+}
+
+.sentiment-negative {
+    background-color: #dc3545;
+    color: white; /* Red for Negative */
+}
+
 .preview-text {
     flex-grow: 1;
     font-size: 16px;
