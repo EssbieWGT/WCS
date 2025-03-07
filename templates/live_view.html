@@ -124,13 +124,13 @@
 
                 // Assign sentiment color class based on the sentiment value
                 if (d.sentiment) {
-                    if (d.sentiment === "1") {
+                    if (d.sentiment == 1) {
                         sentimentClass = "sentiment-positive";
                         displayTag = "Positive";
-                    } else if (d.sentiment === "0") {
+                    } else if (d.sentiment == 0) {
                         sentimentClass = "sentiment-neutral";
                         displayTag = "Neutral";
-                    } else if (d.sentiment === "-1") {
+                    } else if (d.sentiment == -1) {
                         sentimentClass = "sentiment-negative";
                         displayTag = "Negative";
                     }
@@ -153,20 +153,13 @@
                             </div>
                         </div>
                     `);
-
-            //     const imageContainerDiv = cardDiv.append("div").classed("preview-image-container", true);
-            //     if (d.image) {
-            //         imageContainerDiv.append("img").attr("src", d.image).attr("alt", "Article Image").classed("preview-image", true);
-            //     } else {
-            //         imageContainerDiv.append("div").classed("preview-image-placeholder", true);
-            //     }
-            }
-
+                    }
             // Render sections
             renderSection("Today's Stories", todayArticles);
             renderSection("Yesterday's Stories", yesterdayArticles);
             renderSection("Earlier", earlierArticles);
-        }
+        
+    }
     </script>
 </body>
 </html>
