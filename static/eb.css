@@ -115,3 +115,19 @@ div {font-family:calibri, times, serif;
 a:visited{
   color:blue;
 }
+
+    /* FOR THE HEADERS */
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+      user-select: none; /* Prevents selection */
+  }
+  .nav-header a {
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 5px;
+  }
+  

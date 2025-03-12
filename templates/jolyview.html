@@ -96,15 +96,16 @@ var indexUse = index+1
     
 });
 
-article.forEach(function(data){
+article.forEach(function(data, index){
 
+  var indexNum = index+1
   var formatDate = new Date(data['published']).toLocaleDateString()
   
   data['selector'] = "#c"+data['id']
   data['head'] = data['selector']+"head"
   data['body'] = data['selector']+"body"
-  data['uniqueIDs'] = "c" + data["id"]+ "_" +data["number"]
-  data['earningsIDs'] = "c" + data["id"]+ "_" + data["number"] + "_earnings"
+  data['uniqueIDs'] = "c" + data["id"]+ "_" + indexNum
+  data['earningsIDs'] = "c" + data["id"]+ "_" + indexNum + "_earnings"
 
         d3.selectAll(data['head'])
     .append("ul")
