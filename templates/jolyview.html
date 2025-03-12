@@ -98,7 +98,7 @@ var indexUse = index+1
 
 article.forEach(function(data){
 
-  var formatDate = new Date(data['date']).toLocaleDateString()
+  var formatDate = new Date(data['published']).toLocaleDateString()
   
   data['selector'] = "#c"+data['id']
   data['head'] = data['selector']+"head"
@@ -112,7 +112,7 @@ article.forEach(function(data){
 		.style("margin-left", "1em")
 		.style("font-weight", 'normal')
 		.style("margin-left", "2em")
-    .html("<li><u>" + data["outlet"] + "</u> - " + data["summary"] + "</li>" )
+    .html("<li><u>" + data["outlet"] + "</u> - " + data["description"] + "</li>" )
 
   d3.selectAll(data['body'])
     .append("div")
