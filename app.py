@@ -130,7 +130,7 @@ def upload_file(filename):
 def live_view(filename):
     """Loads files from temporary storage for live viewing (should not persist)."""
     usage_tracking["live_view"] += 1
-    temp_file_path = os.path.join(app.config['TEMP_UPLOAD_FOLDER'], filename)
+    temp_file_path = os.path.join(TEMP_UPLOAD_FOLDER, filename)
 
     if not os.path.exists(temp_file_path):
         return f"Error: {filename} not found in temporary storage.", 404
