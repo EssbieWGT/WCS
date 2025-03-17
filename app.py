@@ -1,20 +1,23 @@
-from flask import Flask, render_template, request, redirect, url_for, session, send_from_directory
 import os
-import csv
-from werkzeug.utils import secure_filename
-from datetime import datetime
+from flask import Flask, request, redirect, url_for, send_from_directory, render_template
 import pandas as pd
-import re
 import chardet
-from dotenv import load_dotenv  # Load environment variables from .env file
-
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-UPLOAD_FOLDER = 'uploads'
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-# Hardcoded login credentials
+# Persistent storage for user uploads
+PERSISTENT_UPLOAD_FOLDER = "/var/uploads"
+os.makedirs(PERSISTENT_UPLOAD_FOLDER, exist_ok=True)  # Ensure it exists
+
+# Temporary processing folder (cleared on restart)
+TEMP_UPLOAD_FOLDER = "/tmp/uploads"
+os.makedirs(TEMP_UPLOAD_FOLDER, exist_ok=True)  # Ensure it exists
+
+app.config['PERSISTENT_UPLOAD_FOLDER'] = PERSISTENT_UPLOAD_FOLDER
+app.config['TEMP_UPLOAD_FOLDER'] = TEMP_UPLOAD_FOLDER
+
+# Hardcoded login credentials (environment variables recommended)
 app.secret_key = os.getenv('FLASK_SECRET_KEY')
 USERNAME = os.getenv('LOGIN_USERNAME')
 PASSWORD = os.getenv('LOGIN_PASSWORD')
@@ -22,11 +25,13 @@ PASSWORD = os.getenv('LOGIN_PASSWORD')
 # Simple in-memory tracking
 usage_tracking = {"live_view": 0, "view": 0}
 
-# Helper function to get CSV files
 def get_csv_files():
-    # Fetch only CSV files and exclude 'view' files, then sort alphabetically
-    files = [f for f in os.listdir(UPLOAD_FOLDER) if f.endswith(".csv") and not f.endswith("view.csv")]
-    files.sort(key=lambda f: f.lower())  # Sorts case-insensitively
+    """Fetch CSV files from PERSISTENT_UPLOAD_FOLDER and sort alphabetically."""
+    if not os.path.exists(PERSISTENT_UPLOAD_FOLDER):
+        print(f"Warning: PERSISTENT_UPLOAD_FOLDER '{PERSISTENT_UPLOAD_FOLDER}' does not exist.")
+        return []
+    files = [f for f in os.listdir(PERSISTENT_UPLOAD_FOLDER) if f.endswith(".csv")]
+    files.sort(key=lambda f: f.lower())  # Sort case-insensitively
     return files
 
 @app.route('/', methods=['GET', 'POST'])
@@ -47,21 +52,26 @@ def main_page():
 
 @app.route('/download/<filename>')
 def download_file(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
+    file_path = os.path.join(app.config['PERSISTENT_UPLOAD_FOLDER'], filename)
+    if not os.path.exists(file_path):
+        return f"Error: {filename} not found.", 404
+    return send_from_directory(app.config['PERSISTENT_UPLOAD_FOLDER'], filename, as_attachment=True)
 
 @app.route('/upload/<filename>', methods=['POST'])
 def upload_file(filename):
+    """Handles file uploads and saves them in persistent storage."""
     if 'file' not in request.files:
-        return "No file uploaded"
+        return "No file uploaded", 400
+
     file = request.files['file']
     if file.filename == '':
-        return "No selected file"
+        return "No selected file", 400
 
     original_filename = secure_filename(filename)
     new_filename = f"{os.path.splitext(original_filename)[0]}view.csv"
-    file_path = os.path.join(app.config['UPLOAD_FOLDER'], new_filename)
+    file_path = os.path.join(app.config['PERSISTENT_UPLOAD_FOLDER'], new_filename)
 
-    temp_path = os.path.join(app.config['UPLOAD_FOLDER'], 'temp_upload')
+    temp_path = os.path.join(app.config['TEMP_UPLOAD_FOLDER'], 'temp_upload')
     file.save(temp_path)
 
     try:
@@ -81,11 +91,8 @@ def upload_file(filename):
             # Define a function to normalize problematic characters
             def normalize_text(text):
                 if isinstance(text, str):
-                    # Replace problematic characters with standard ASCII equivalents
-                    text = text.replace('', "'")  # Fix for the special apostrophe
-                    text = text.replace('“', '"').replace('”', '"')  # Fix for curly double quotes
-                    text = text.replace('‘', "'").replace('’', "'")  # Fix for curly single quotes
-                    text = text.replace('–', '-')  # En-dash to hyphen
+                    text = text.replace('', "'").replace('“', '"').replace('”', '"')
+                    text = text.replace('‘', "'").replace('’', "'").replace('–', '-')
                     text = re.sub(r'[^\x00-\x7F]+', '', text)  # Remove any remaining non-ASCII characters
                 return text
 
@@ -99,40 +106,37 @@ def upload_file(filename):
     except Exception as e:
         return f"Error processing file: {e}"
 
-    # Create or overwrite a text file with the current time
-    with open(os.path.join(app.config['UPLOAD_FOLDER'], 'upload_timestamp.txt'), 'w', encoding='utf-8') as f:
-        f.write(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
-
     return redirect(url_for('main_page'))
-
 
 @app.route('/uploads/<filename>')
 def uploads(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+    """Fetches files from the persistent storage folder."""
+    file_path = os.path.join(app.config['PERSISTENT_UPLOAD_FOLDER'], filename)
+    if not os.path.exists(file_path):
+        return f"Error: {filename} not found.", 404
+    return send_from_directory(app.config['PERSISTENT_UPLOAD_FOLDER'], filename)
 
 @app.route('/live_view/<filename>')
 def live_view(filename):
+    """Loads files from the persistent storage for viewing."""
     usage_tracking["live_view"] += 1
     return render_template('live_view.html', filename=filename, navigation=True)
 
 @app.route('/view/<filename>/<option>')
 def view_file(filename, option):
+    """Loads files from the persistent storage for rendering."""
     usage_tracking["view"] += 1
     lower_filename = filename.lower()
     if lower_filename == 'joly.csv':
         return render_template('jolyview.html', filename=filename, navigation=True)
+    
     lower_option = option.lower()
     if lower_option == 'links':
         return render_template('links.html', filename=filename, navigation=True)
     elif lower_option == 'cards':
         return render_template('cards.html', filename=filename, navigation=True)
-#     return render_template('view.html', filename=filename)
-# def view_file(filename):
-#     usage_tracking["view"] += 1
+    
     return render_template('view.html', filename=filename)
-def view_file(filename):
-    usage_tracking["view"] += 1
-    return render_template('view.html', filename=filename, navigation=True)
 
 @app.route('/logout')
 def logout():
