@@ -34,8 +34,8 @@ def get_temp_files():
     """Fetches CSV files from temporary storage for main page."""
     if not os.path.exists(TEMP_UPLOAD_FOLDER):
         return []
-    files = [f for f in os.listdir(TEMP_UPLOAD_FOLDER) if f.endswith(".csv")]
-    files.sort(key=lambda f: f.lower())  # Sort case-insensitively
+    files = [f for f in os.listdir(TEMP_UPLOAD_FOLDER) if f.endswith(".csv") and not f.endswith("view.csv")]
+    files.sort(key=lambda f: f.lower())  # Sorts case-insensitively
     return files
 
 # Helper function to list files from persistent storage (for view.html)
