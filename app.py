@@ -135,7 +135,7 @@ def live_view(filename):
     if not os.path.exists(temp_file_path):
         return f"Error: {filename} not found in temporary storage.", 404
 
-    return render_template('live_view.html', filename=filename, navigation=True)
+    return render_template('live_view.html', filename=temp_file_path, navigation=True)
 
 @app.route('/view/<filename>/<option>')
 def view_file(filename, option):
