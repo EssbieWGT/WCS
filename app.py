@@ -86,28 +86,26 @@ def upload_file(filename):
         return redirect(url_for('main_page'))
 
     original_filename = secure_filename(filename)
+    new_filename = f"{os.path.splitext(original_filename)[0]}view.csv"
 
     # Paths for persistent (view.html) and temporary (main page & downloads) storage
-    persistent_file_path = os.path.join(app.config['PERSISTENT_UPLOAD_FOLDER'], original_filename)
-    temp_file_path = os.path.join(app.config['TEMP_UPLOAD_FOLDER'], original_filename)
+    persistent_file_path = os.path.join(app.config['PERSISTENT_UPLOAD_FOLDER'], new_filename)
 
     try:
         file.save(persistent_file_path)
-        file.save(temp_file_path)
 
         # If an XLSX file, convert it to CSV
         if file.filename.lower().endswith('.xlsx'):
-            excel_data = pd.read_excel(temp_file_path, engine='openpyxl')
-            excel_data.to_csv(temp_file_path, index=False, encoding='utf-8-sig')
+            excel_data = pd.read_excel(persistent_file_path, engine='openpyxl')
             excel_data.to_csv(persistent_file_path, index=False, encoding='utf-8-sig')
         else:
             # Detect the file encoding using chardet
-            with open(temp_file_path, 'rb') as f:
+            with open(persistent_file_path, 'rb') as f:
                 raw_data = f.read()
                 detected_encoding = chardet.detect(raw_data)['encoding']
             
             # Load CSV with detected encoding
-            csv_data = pd.read_csv(temp_file_path, encoding=detected_encoding, dtype=str, keep_default_na=False)
+            csv_data = pd.read_csv(persistent_file_path, encoding=detected_encoding, dtype=str, keep_default_na=False)
 
             # Normalize text
             def normalize_text(text):
@@ -120,7 +118,6 @@ def upload_file(filename):
             csv_data = csv_data.applymap(normalize_text)
 
             # Save cleaned CSV
-            csv_data.to_csv(temp_file_path, index=False, encoding='utf-8-sig')
             csv_data.to_csv(persistent_file_path, index=False, encoding='utf-8-sig')
 
         flash(f"File '{original_filename}' uploaded successfully!", "success")
