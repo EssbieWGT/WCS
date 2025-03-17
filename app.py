@@ -143,16 +143,16 @@ def view_file(filename, option):
     lower_filename = filename.lower()
     file_path = os.path.join(app.config['PERSISTENT_UPLOAD_FOLDER'], lower_filename)
     if lower_filename == 'joly.csv':
-        return render_template('jolyview.html', file_path, navigation=True)
+        return render_template('jolyview.html', filename=file_path, navigation=True)
     lower_option = option.lower()
     if lower_option == 'links':
-        return render_template('links.html', file_path, navigation=True)
+        return render_template('links.html', filename=file_path, navigation=True)
     elif lower_option == 'cards':
-        return render_template('cards.html', file_path, navigation=True)
+        return render_template('cards.html', filename=file_path, navigation=True)
 #     return render_template('view.html', filename=filename)
 # def view_file(filename):
 #     usage_tracking["view"] += 1
-    return render_template('view.html', file_path)
+    return render_template('view.html', filename=file_path)
 def view_file(filename):
     usage_tracking["view"] += 1
     return render_template('view.html', filename=filename, navigation=True)
