@@ -12,7 +12,7 @@ PERSISTENT_UPLOAD_FOLDER = "/var/uploads"
 os.makedirs(PERSISTENT_UPLOAD_FOLDER, exist_ok=True)
 
 # Temporary storage for main page & downloads (Cleared after restart)
-TEMP_UPLOAD_FOLDER = "/tmp/uploads"
+TEMP_UPLOAD_FOLDER = os.path.join(os.getcwd(), "uploads")  # Use GitHub folder directly
 os.makedirs(TEMP_UPLOAD_FOLDER, exist_ok=True)
 
 app.config['PERSISTENT_UPLOAD_FOLDER'] = PERSISTENT_UPLOAD_FOLDER
