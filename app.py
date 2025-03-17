@@ -27,6 +27,24 @@ PASSWORD = os.getenv('LOGIN_PASSWORD')
 # Simple in-memory tracking
 usage_tracking = {"live_view": 0, "view": 0}
 
+# Helper function to list files from temporary storage (for main page)
+def get_temp_files():
+    """Fetches CSV files from temporary storage for main page."""
+    if not os.path.exists(TEMP_UPLOAD_FOLDER):
+        return []
+    files = [f for f in os.listdir(TEMP_UPLOAD_FOLDER) if f.endswith(".csv") and not f.endswith("view.csv")]
+    files.sort(key=lambda f: f.lower())  # Sorts case-insensitively
+    return files
+
+# Helper function to list files from persistent storage (for view.html)
+def get_persistent_files():
+    """Fetches user-uploaded CSV files from persistent storage."""
+    if not os.path.exists(PERSISTENT_UPLOAD_FOLDER):
+        return []
+    files = [f for f in os.listdir(PERSISTENT_UPLOAD_FOLDER) if f.endswith(".csv")]
+    files.sort(key=lambda f: f.lower())  # Sort case-insensitively
+    return files
+
 # Helper function to get CSV files
 def get_csv_files():
     # Fetch only CSV files and exclude 'view' files, then sort alphabetically
@@ -147,5 +165,17 @@ def logout():
     session.pop('logged_in', None)
     return redirect(url_for('login'))
 
+# Debug Route (Check storage locations)
+@app.route('/debug')
+def debug_storage():
+    """Debugging page to check files in both storage locations."""
+    temp_files = get_temp_files()
+    persistent_files = get_persistent_files()
+    appMap = app.url_map
+    return f"""
+    <h3>Temporary Storage Files:</h3> {temp_files}
+    <h3>Persistent Storage Files:</h3> {persistent_files}
+    <h3>App Director: </h3> {appMap}
+    """
 if __name__ == '__main__':
     app.run(debug=True)
