@@ -10,7 +10,7 @@ from dotenv import load_dotenv  # Load environment variables from .env file
 
 
 app = Flask(__name__)
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = '/var/uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
