@@ -1,14 +1,16 @@
+from flask import Flask, render_template, request, redirect, url_for, session, send_from_directory, flash
 import os
-import re
-import pandas as pd
-import chardet
-from flask import Flask, request, redirect, url_for, send_from_directory, render_template, session
-from flask import flash
+import csv
 from werkzeug.utils import secure_filename
+from datetime import datetime
+import pandas as pd
+import re
+import chardet
+from dotenv import load_dotenv  # Load environment variables from .env file
 
 app = Flask(__name__)
 
-# Persistent storage for user uploads (Available to `view.html`)
+# Persistent storage for user uploads (available to `view.html`)
 PERSISTENT_UPLOAD_FOLDER = "/var/uploads"
 os.makedirs(PERSISTENT_UPLOAD_FOLDER, exist_ok=True)
 
@@ -19,42 +21,23 @@ os.makedirs(TEMP_UPLOAD_FOLDER, exist_ok=True)
 app.config['PERSISTENT_UPLOAD_FOLDER'] = PERSISTENT_UPLOAD_FOLDER
 app.config['TEMP_UPLOAD_FOLDER'] = TEMP_UPLOAD_FOLDER
 
-# Hardcoded login credentials (environment variables recommended)
-app.secret_key = os.getenv('FLASK_SECRET_KEY', 'defaultsecretkey')  # Set default for local testing
+# Hardcoded login credentials
+app.secret_key = os.getenv('FLASK_SECRET_KEY', 'defaultsecretkey')  # Default for local testing
 USERNAME = os.getenv('LOGIN_USERNAME', 'admin')
 PASSWORD = os.getenv('LOGIN_PASSWORD', 'password')
 
-# Basic usage tracking
+# Simple in-memory tracking
 usage_tracking = {"live_view": 0, "view": 0}
 
-# Helper function to normalize text
-def normalize_text(text):
-    """Fixes curly quotes, dashes, and removes non-ASCII characters."""
-    if isinstance(text, str):
-        text = text.replace('', "'").replace('“', '"').replace('”', '"')
-        text = text.replace('‘', "'").replace('’', "'").replace('–', '-')
-        text = re.sub(r'[^\x00-\x7F]+', '', text)  # Remove remaining non-ASCII characters
-    return text
-
-# Helper function to list files from temporary storage (for main page)
+# 🛠 Helper function to list files in temporary storage (for main page)
 def get_temp_files():
-    """Fetches CSV files from temporary storage for main page."""
+    """Fetch CSV files from temporary storage (`/tmp/uploads`) for main page."""
     if not os.path.exists(TEMP_UPLOAD_FOLDER):
         return []
     files = [f for f in os.listdir(TEMP_UPLOAD_FOLDER) if f.endswith(".csv")]
     files.sort(key=lambda f: f.lower())  # Sort case-insensitively
     return files
 
-# Helper function to list files from persistent storage (for view.html)
-def get_persistent_files():
-    """Fetches user-uploaded CSV files from persistent storage."""
-    if not os.path.exists(PERSISTENT_UPLOAD_FOLDER):
-        return []
-    files = [f for f in os.listdir(PERSISTENT_UPLOAD_FOLDER) if f.endswith(".csv")]
-    files.sort(key=lambda f: f.lower())  # Sort case-insensitively
-    return files
-
-# Login Page
 @app.route('/', methods=['GET', 'POST'])
 def login():
     """Handles user authentication."""
@@ -65,7 +48,6 @@ def login():
         return "Invalid credentials, try again."
     return render_template('login.html')
 
-# Main Page (shows temporary storage files)
 @app.route('/main')
 def main_page():
     """Displays the main page with CSV files from temporary storage."""
@@ -74,9 +56,17 @@ def main_page():
     files = get_temp_files()
     return render_template('main.html', files=files, navigation=True)
 
+@app.route('/download/<filename>')
+def download_file(filename):
+    """Allows users to download only files from temporary storage (`/tmp/uploads`)."""
+    file_path = os.path.join(app.config['TEMP_UPLOAD_FOLDER'], filename)
+    if not os.path.exists(file_path):
+        return f"Error: {filename} not found.", 404
+    return send_from_directory(app.config['TEMP_UPLOAD_FOLDER'], filename, as_attachment=True)
+
 @app.route('/upload/<filename>', methods=['POST'])
 def upload_file(filename):
-    """Handles file uploads and flashes a success message on `main.html`."""
+    """Handles file uploads and saves them in both persistent and temporary storage."""
     if 'file' not in request.files:
         flash("No file uploaded", "error")
         return redirect(url_for('main_page'))
@@ -88,40 +78,48 @@ def upload_file(filename):
 
     original_filename = secure_filename(filename)
 
-    # Save file in persistent storage (for `view.html`)
+    # Paths for persistent (view.html) and temporary (main page & downloads) storage
     persistent_file_path = os.path.join(app.config['PERSISTENT_UPLOAD_FOLDER'], original_filename)
-
-    # Also save a copy in temporary storage (for `/main` and `/download`)
     temp_file_path = os.path.join(app.config['TEMP_UPLOAD_FOLDER'], original_filename)
 
-    file.save(persistent_file_path)
-    file.save(temp_file_path)
+    try:
+        file.save(persistent_file_path)
+        file.save(temp_file_path)
 
-    flash(f"File '{original_filename}' uploaded successfully!", "success")
+        # If an XLSX file, convert it to CSV
+        if file.filename.lower().endswith('.xlsx'):
+            excel_data = pd.read_excel(temp_file_path, engine='openpyxl')
+            excel_data.to_csv(temp_file_path, index=False, encoding='utf-8-sig')
+            excel_data.to_csv(persistent_file_path, index=False, encoding='utf-8-sig')
+        else:
+            # Detect the file encoding using chardet
+            with open(temp_file_path, 'rb') as f:
+                raw_data = f.read()
+                detected_encoding = chardet.detect(raw_data)['encoding']
+            
+            # Load CSV with detected encoding
+            csv_data = pd.read_csv(temp_file_path, encoding=detected_encoding, dtype=str, keep_default_na=False)
+
+            # Normalize text
+            def normalize_text(text):
+                if isinstance(text, str):
+                    text = text.replace('', "'").replace('“', '"').replace('”', '"')
+                    text = text.replace('‘', "'").replace('’', "'").replace('–', '-')
+                    text = re.sub(r'[^\x00-\x7F]+', '', text)  # Remove remaining non-ASCII characters
+                return text
+
+            csv_data = csv_data.applymap(normalize_text)
+
+            # Save cleaned CSV
+            csv_data.to_csv(temp_file_path, index=False, encoding='utf-8-sig')
+            csv_data.to_csv(persistent_file_path, index=False, encoding='utf-8-sig')
+
+        flash(f"File '{original_filename}' uploaded successfully!", "success")
+    except Exception as e:
+        flash(f"Error processing file: {e}", "error")
+
     return redirect(url_for('main_page'))
 
-# View Page (Loads user-uploaded files from persistent storage for `view.html`)
-@app.route('/view/<filename>')
-def view_file(filename):
-    """Displays user-uploaded files from persistent storage in `view.html`."""
-    usage_tracking["view"] += 1
-    file_path = os.path.join(app.config['PERSISTENT_UPLOAD_FOLDER'], filename)
-
-    if not os.path.exists(file_path):
-        return f"Error: {filename} not found.", 404
-
-    return render_template('view.html', filename=filename, navigation=True)
-
-# Download File (Allows users to download from temporary storage)
-@app.route('/download/<filename>')
-def download_file(filename):
-    """Allows users to download only files from temporary storage (`/tmp/uploads`)."""
-    file_path = os.path.join(app.config['TEMP_UPLOAD_FOLDER'], filename)
-    if not os.path.exists(file_path):
-        return f"Error: {filename} not found.", 404
-    return send_from_directory(app.config['TEMP_UPLOAD_FOLDER'], filename, as_attachment=True)
-
-# Live View Page (Loads files from temporary storage)
 @app.route('/live_view/<filename>')
 def live_view(filename):
     """Loads files from temporary storage for live viewing (should not persist)."""
@@ -133,7 +131,17 @@ def live_view(filename):
 
     return render_template('live_view.html', filename=filename, navigation=True)
 
-# Logout
+@app.route('/view/<filename>')
+def view_file(filename):
+    """Loads user-uploaded files from persistent storage for rendering in `view.html`."""
+    usage_tracking["view"] += 1
+    file_path = os.path.join(app.config['PERSISTENT_UPLOAD_FOLDER'], filename)
+
+    if not os.path.exists(file_path):
+        return f"Error: {filename} not found in persistent storage.", 404
+
+    return render_template('view.html', filename=filename, navigation=True)
+
 @app.route('/logout')
 def logout():
     """Logs out the user and clears session."""
