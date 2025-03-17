@@ -12,7 +12,7 @@ PERSISTENT_UPLOAD_FOLDER = "/var/uploads"
 os.makedirs(PERSISTENT_UPLOAD_FOLDER, exist_ok=True)  # Ensure it exists
 
 # Temporary processing folder (cleared on restart)
-TEMP_UPLOAD_FOLDER = "/upload"
+TEMP_UPLOAD_FOLDER = "/tmp/uploads"
 os.makedirs(TEMP_UPLOAD_FOLDER, exist_ok=True)  # Ensure it exists
 
 app.config['PERSISTENT_UPLOAD_FOLDER'] = PERSISTENT_UPLOAD_FOLDER
