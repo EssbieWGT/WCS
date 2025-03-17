@@ -73,28 +73,31 @@ def main_page():
     files = get_temp_files()
     return render_template('main.html', files=files, navigation=True)
 
-# Upload File (stores files in both temporary & persistent storage)
 @app.route('/upload/<filename>', methods=['POST'])
 def upload_file(filename):
-    """Handles file uploads and saves them in both persistent and temporary storage."""
+    """Handles file uploads and flashes a success message on `main.html`."""
     if 'file' not in request.files:
-        return "No file uploaded", 400
+        flash("No file uploaded", "error")
+        return redirect(url_for('main_page'))
 
     file = request.files['file']
     if file.filename == '':
-        return "No selected file", 400
+        flash("No selected file", "error")
+        return redirect(url_for('main_page'))
 
     original_filename = secure_filename(filename)
 
-    # Paths for persistent (view.html) and temporary (main page & downloads) storage
+    # Save file in persistent storage (for `view.html`)
     persistent_file_path = os.path.join(app.config['PERSISTENT_UPLOAD_FOLDER'], original_filename)
+
+    # Also save a copy in temporary storage (for `/main` and `/download`)
     temp_file_path = os.path.join(app.config['TEMP_UPLOAD_FOLDER'], original_filename)
 
-    print(f"Saving user-uploaded file to: {persistent_file_path} (persistent) & {temp_file_path} (temporary)")
     file.save(persistent_file_path)
     file.save(temp_file_path)
 
-    return f"File {original_filename} uploaded successfully!", 200
+    flash(f"File '{original_filename}' uploaded successfully!", "success")
+    return redirect(url_for('main_page'))
 
 # View Page (Loads user-uploaded files from persistent storage for `view.html`)
 @app.route('/view/<filename>')
