@@ -29,12 +29,21 @@ PASSWORD = os.getenv('LOGIN_PASSWORD', 'password')
 # Simple in-memory tracking
 usage_tracking = {"live_view": 0, "view": 0}
 
-# 🛠 Helper function to list files in temporary storage (for main page)
+# Helper function to list files from temporary storage (for main page)
 def get_temp_files():
-    """Fetch CSV files from temporary storage (`/tmp/uploads`) for main page."""
+    """Fetches CSV files from temporary storage for main page."""
     if not os.path.exists(TEMP_UPLOAD_FOLDER):
         return []
     files = [f for f in os.listdir(TEMP_UPLOAD_FOLDER) if f.endswith(".csv")]
+    files.sort(key=lambda f: f.lower())  # Sort case-insensitively
+    return files
+
+# Helper function to list files from persistent storage (for view.html)
+def get_persistent_files():
+    """Fetches user-uploaded CSV files from persistent storage."""
+    if not os.path.exists(PERSISTENT_UPLOAD_FOLDER):
+        return []
+    files = [f for f in os.listdir(PERSISTENT_UPLOAD_FOLDER) if f.endswith(".csv")]
     files.sort(key=lambda f: f.lower())  # Sort case-insensitively
     return files
 
