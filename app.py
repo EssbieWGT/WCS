@@ -160,6 +160,11 @@ def view_file(filename):
     usage_tracking["view"] += 1
     return render_template('view.html', filename=filename, navigation=True)
 
+#to create a way to access the stored files
+@app.route('/files/<path:filename>')
+def serve_file(filename):
+    return send_from_directory('/var/data/uploads', filename)
+
 @app.route('/logout')
 def logout():
     session.pop('logged_in', None)
