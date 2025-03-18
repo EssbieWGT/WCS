@@ -163,7 +163,7 @@ def view_file(filename):
 #to create a way to access the stored files
 @app.route('/files/<path:filename>')
 def serve_file(filename):
-    return send_from_directory('/var/data/uploads', filename)
+    return send_from_directory('/var/uploads', filename)
 
 @app.route('/logout')
 def logout():
