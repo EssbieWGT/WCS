@@ -2,133 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="format-detection" contnet="telephone=no">
+  <title>{{ filename[:-4].upper() }} | Top News</title>
   <meta name="viewport" content="width=device-width">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{ filename[:-4].upper() }}</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='eb.css') }}">
-  <script src="https://d3js.org/d3.v4.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      color: #333;
+    }
+    .nav-header a {
+      padding: 10px 15px;
+      text-decoration: none;
+      color: white;
+      background-color: #007BFF;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+    .nav-header a.btn-danger {
+      background-color: #dc3545;
+    }
+    .headline {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .category-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    .article {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 15px;
+    }
+    .muted {
+      color: #666;
+      font-size: 13px;
+    }
+    .error-message {
+      color: red;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
-
 <body>
 
-    {% if navigation %}
+  {% if navigation %}
   <div class="nav-header">
-      <a href="{{ url_for('main_page') }}" class="btn btn-primary">Home</a>
-      <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+    <a href="{{ url_for('main_page') }}">Home</a>
+    <a href="{{ url_for('logout') }}" class="btn-danger">Logout</a>
   </div>
   <hr>
   {% endif %}
 
+  <div class="headline" id="etitle">Loading headline...</div>
+  <div id="content"></div>
+  <div id="error" class="error-message" style="display: none;"></div>
 
-  <!-- Opening DIV for container -->
-  <div class="containerwgt" style="width:90%">
-<div id="etitle"></div> <br>
-    
-</br><div id='headCats'></div>
-<hr>
-<div id='bodyCats'></div>
+  <script>
+    const formattedDate = new Date().toLocaleDateString('en-US', {
+      year: 'numeric', month: 'long', day: 'numeric'
+    });
 
-<!-- closing div for container -->
-</div>
+    const title = "{{ filename[:-4].upper() }} | Top News - " + formattedDate;
+    document.getElementById("etitle").textContent = title;
 
-<script>
-//define replaceAt
-String.prototype.replaceAt=function(index, replacement) {
-    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
-}
+    const contentDiv = document.getElementById("content");
+    const errorDiv = document.getElementById("error");
 
-//define date of run
-var d = new Date();
-var dFormat = new Intl.DateTimeFormat('en', {
-	month: 'long',
-	day: 'numeric',
-  year: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-  hour12: true,
-  timeZone: 'America/New_York'
-});
+    d3.csv("{{ url_for('uploads', filename=filename[:-4].lower() + 'view.csv') }}")
+      .then(data => {
+        if (!data || data.length === 0) {
+          showError("⚠️ No articles found in the file.");
+          return;
+        }
 
-const today = new Date();
-const formattedDate = today.toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: '2-digit',
-  day: '2-digit'
-});
+        // Normalize and preprocess
+        data.forEach(d => {
+          d.category = d.category?.trim() || "Headlines";
+          d._articleOrder = parseInt(d.articleorder);
+          d._categoryOrder = parseInt(d.categoryorder);
+        });
 
-document.getElementById("etitle").innerHTML = "{{ filename[:-4].upper() }} | Top News - " + formattedDate
+        // Group by category
+        const grouped = d3.group(data, d => d.category);
 
-// load the data
-d3.queue()
-  .defer(d3.csv, "{{ url_for('uploads', filename=filename[:-4].lower() + 'view.csv' ) }}")
-  .await(analyze);
+        // Sort category keys based on categoryorder or alphabetically
+        const sortedCategories = Array.from(grouped.entries())
+          .map(([catName, articles]) => {
+            const fallbackOrder = parseInt(articles[0]?.categoryorder);
+            return {
+              name: catName,
+              order: isNaN(fallbackOrder) ? catName.toLowerCase() : fallbackOrder,
+              articles: articles
+            };
+          })
+          .sort((a, b) => {
+            if (typeof a.order === 'number' && typeof b.order === 'number') {
+              return a.order - b.order;
+            }
+            return String(a.order).localeCompare(String(b.order));
+          });
 
-  function analyze(error, article) {
-    if(error) { console.log(error); }
+        // Render each category block
+        sortedCategories.forEach(group => {
+          const catTitle = document.createElement('div');
+          catTitle.className = 'category-title';
+          catTitle.textContent = group.name;
+          contentDiv.appendChild(catTitle);
 
-//define unique entries in category (note, categories should be sorted already)
-categoryData = []
-const categories = [...new Set(article.map(article => article['category']))]
+          const sortedArticles = group.articles.sort((a, b) => {
+            if (!isNaN(a._articleOrder) && !isNaN(b._articleOrder)) {
+              return a._articleOrder - b._articleOrder;
+            }
+            return 0; // keep original order if no articleorder
+          });
 
-const getHostname = (url) => {
-    // use URL constructor and return hostname
-    return new URL(url).hostname;
-  }
+          sortedArticles.forEach(article => {
+            const date = article.published ? new Date(article.published).toLocaleString() : 'No Date';
+            const domain = article.domain || (article.url ? new URL(article.url).hostname : 'Unknown');
+            const outlet = article.outlet || domain;
+            const authors = article.authors || 'Not Available';
+            const title = article.title || 'Untitled';
+            const desc = article.description || 'No description available.';
+            const market = article.market || 'N/A';
 
-categories.forEach(function(data,index){
+            const div = document.createElement('div');
+            div.className = 'article';
+            div.innerHTML = `
+              <div class="muted">${outlet} | ${date}</div>
+              <strong><a href="${article.url}" target="_blank">${title}</a></strong>
+              <div class="muted">By: ${authors} | Market: ${market}</div>
+              <p>${desc}</p>
+            `;
+            contentDiv.appendChild(div);
+          });
+        });
+      })
+      .catch(err => {
+        console.error(err);
+        showError("⚠️ Failed to load article data. Please try again later.");
+      });
 
-console.log(data)
-console.log(index+1)
-var indexUse = index+1
-
-d3.select('#headCats')
-    .data(data)
-    .append("table")
-    .attr("id","c"+ indexUse)
-    .append("p")
-    .style("font-weight","bold")
-    .style("font-size", "25px")
-    .text(data)
-	  .style("font-weight","bold")
-    .style("margin-bottom", "10px")
-});
-
-article.forEach(function(data){
-
-  data['selector'] = "#c"+data['categoryorder']
-  data['body'] = data['selector']+"body"
-  data['uniqueIDs'] = "c" + data["categoryorder"]+data["articleorder"]
-
-  if (data.published === null){
-    date = "No Date"
-  }else {
-    date = new Date(data.published).toLocaleString()
-  }
-
-//had to play around with this one a little, it appears that todayURL is always present 
-domain = data.domain ?? getHostname(data.url)
-
-  d3.selectAll(data['selector'])
-    .append("table")
-    .style("width","50%")
-    .append("tr")
-    .style("font-size", "15px")
-    .style("border-bottom","1px solid #ddd")
-    .each(function(d){
-      d3.select(this)
-      .append("td")
-      .style('line-height',"1")
-      .style("text-align","left")
-      .html('<p style="font-weight: normal;"><small class="text_muted">' + data.outlet + ' | ' + date + '</small><br><b><a href="' +data.url + '"target="_blank">' + data.title + '</a></b><br>' + '<small class="text_muted">By: ' + data.authors + ' |  Market: ' + data.market + '</small><br><br>' + data.description + '<br></p>');
-
-    })
-});
-}
-
-// add in slug where available 
-
-</script>
+    function showError(msg) {
+      errorDiv.textContent = msg;
+      errorDiv.style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>

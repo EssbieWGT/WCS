@@ -1,135 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<title>{{ filename[:-4].upper() }} - CLIPS </title>
-	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='eb.css') }}">
-  <script src="https://d3js.org/d3.v4.js"></script>
+    <meta charset="utf-8">
+    <title>{{ filename[:-4].upper() }} - CLIPS</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='eb.css') }}">
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <style>
+        #error-message {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .loading-indicator {
+            font-style: italic;
+            color: #888;
+        }
+
+        .no-data-message {
+            font-style: italic;
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
-  {% if navigation %}
-  <div class="nav-header">
-      <a href="{{ url_for('main_page') }}" class="btn btn-primary">Home</a>
-      <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
-  </div>
-  <hr>
-  {% endif %}
+    {% if navigation %}
+    <div class="nav-header">
+        <a href="{{ url_for('main_page') }}" class="btn btn-primary">Home</a>
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+    </div>
+    <hr>
+    {% endif %}
+
+    <div class="containerwgt">
+
+        <div id="etitle" class="loading-indicator">Loading Title...</div> <br>
+        <div class="heading">
+            <h2>{{ filename[:-4].upper() }}<br> Daily Headlines</h2>
+            <div id='current' class="loading-indicator">Loading Date...</div>
+        </div>
+
+        </br>
+        <div id='headCats'></div>
+        <hr>
+        <div id='bodyCats'></div>
+
+        <div id="error-message"></div>
+
+        </div>
+
+    <script>
+        //define replaceAt
+        String.prototype.replaceAt = function (index, replacement) {
+            return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+        }
+
+        //define date of run
+        var d = new Date();
+        var dFormat;
+        try {
+            dFormat = new Intl.DateTimeFormat('en', {
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true,
+                timeZone: 'America/New_York'
+            });
+        } catch (e) {
+            console.error("Error initializing DateTimeFormat:", e);
+            dFormat = { format: (date) => "Date Unavailable" }; // Basic fallback
+        }
+
+        const today = new Date();
+        let formattedDate;
+        try {
+            formattedDate = today.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit'
+            });
+        } catch (e) {
+            console.error("Error formatting date:", e);
+            formattedDate = "Date Unavailable";
+        }
+
+        try {
+            document.getElementById("current").innerHTML = "Current as of: " + dFormat.format(d) + " ET";
+            document.getElementById("etitle").innerHTML = "{{ filename[:-4].upper() }} Morning Clips - " + formattedDate;
+        } catch (e) {
+            console.error("Error updating date/title:", e);
+            document.getElementById("current").innerHTML = "Date Unavailable";
+            document.getElementById("etitle").innerHTML = "{{ filename[:-4].upper() }} Morning Clips - Date Unavailable";
+            document.getElementById("error-message").textContent = "Error displaying date/title.";
+        }
 
 
-<!-- Opening DIV for container -->
-<div class="containerwgt">
+        // load the data
+        d3.queue()
+            .defer(d3.csv, "{{ url_for('uploads', filename=filename[:-4].lower() + 'view.csv' ) }}")
+            .await(analyze);
 
-<div id="etitle"></div> <br>
-<div class="heading">
-<h2> {{ filename[:-4].upper() }}<br> Daily Headlines </h2>
-<div id='current'></div>
-</div>
+        function analyze(error, article) {
+            d3.select('#current').classed('loading-indicator', false).text(""); // Clear loading indicator
+            d3.select('#etitle').classed('loading-indicator', false).text("");  // Clear loading indicator
 
-</br><div id='headCats'></div>
-<hr>
-<div id='bodyCats'></div>
+            const errorMessageDiv = d3.select("#error-message");
 
-<!-- closing div for container -->
-</div>
+            if (error) {
+                console.error("Error loading CSV:", error);
+                errorMessageDiv.text("Failed to load data. Please try again.");
+                return;
+            }
 
-<script>
-
-//define replaceAt
-String.prototype.replaceAt=function(index, replacement) {
-    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
-}
-
-//define date of run
-var d = new Date();
-var dFormat = new Intl.DateTimeFormat('en', {
-	month: 'long',
-	day: 'numeric',
-  year: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-  hour12: true,
-  timeZone: 'America/New_York'
-});
-
-const today = new Date();
-const formattedDate = today.toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: '2-digit',
-  day: '2-digit'
-});
-
-document.getElementById("current").innerHTML = "Current as of: " + dFormat.format(d)+ " ET";
-document.getElementById("etitle").innerHTML = "{{ filename[:-4].upper() }} Morning Clips - " + formattedDate
-
-// load the data
-d3.queue()
-  .defer(d3.csv, "{{ url_for('uploads', filename=filename[:-4].lower() + 'view.csv' ) }}")
-  .await(analyze);
-
-  function analyze(error, article) {
-    if(error) { console.log(error); }
-
-  
-//define unique entries in category (note, categories should be sorted already)
-categoryData = []
-const categories = [...new Set(article.map(article => article['category']))]
-// const catOrder = [...new Set(article.map(article => "c" + article['categoryOrder']))]
-
-categories.forEach(function(data,index){
-
-console.log(data)
-console.log(index+1)
-var indexUse = index+1
-
-  d3.select('#headCats')
-    .data(data)
-    .append("table")
-    .attr("id","c"+ indexUse)
-    .append("p")
-    .style("font-weight","bold")
-    .style("font-size", "25px")
-    .text(data)
-    .style("font-size","18")
-		.style("font-weight","bold")
-    .style("margin-bottom", "10px")
-
-});
-
-article.forEach(function(data){
-
-  console.log(data)
-
-  data['selector'] = "#c"+data['categoryorder']
-  data['body'] = data['selector']+"body"
-  data['uniqueIDs'] = "c" + data["categoryorder"]+data["articleorder"]
+            if (!article || article.length === 0) {
+                console.warn("No articles found in CSV.");
+                errorMessageDiv.text("No articles found.");
+                return;
+            }
 
 
-//different behavior if "in the states"
-switch(data['state'] != ""){
-  case true:
-    var pasteIn = '<a href=' + data['url']+ " id=" + "contents_" + data['uniqueIDs']+ " " + ">"+data['title']+"</a>" +" [" + data["outlet"]+"]"
-    break;
-  case false:
-     var pasteIn = '<a href=' + data['url']+ " id=" + "contents_" + data['uniqueIDs']+ " " + ">"+data['title']+"</a>" +" [" + data["outlet"]+"]"
-}
+            //define unique entries in category (note, categories should be sorted already)
+            let categoryData = [];
+            try {
+                const categories = [...new Set(article.map(article => article.category))];
+                categoryData = categories;
+            } catch (e) {
+                console.error("Error processing categories:", e);
+                errorMessageDiv.append("p").text("Error processing categories.");
+                return;
+            }
 
-  d3.selectAll(data['selector'])
-    .append("ul")
-    .style("margin-top", '0em')
-    .style("margin-bottom", '0.05em')
-    .append("li")
-		.attr("class","contents")
-		.style("margin-left", '1em')
-    .style("line-height", '14px')
-		.style("font-weight", 'normal')
-    .style("font-size", '14px')
-		.html(pasteIn)
-});
-}
 
-</script>
+            try {
+                categoryData.forEach(function (data, index) {
+                    var indexUse = index + 1;
+
+                    d3.select('#headCats')
+                        .append("table")
+                        .attr("id", "c" + indexUse)
+                        .append("p")
+                        .style("font-weight", "bold")
+                        .style("font-size", "25px")
+                        .text(data)
+                        .style("font-size", "18")
+                        .style("font-weight", "bold")
+                        .style("margin-bottom", "10px");
+                });
+            } catch (e) {
+                console.error("Error rendering category headers:", e);
+                errorMessageDiv.append("p").text("Error displaying categories.");
+            }
+
+
+            try {
+                article.forEach(function (data) {
+                    // Use .get() with default values for safety
+                    const categoryorder = data.categoryorder;
+                    const url = data.url || "#"; // Default URL
+                    const title = data.title || "Title Unavailable";
+                    const outlet = data.outlet || "Outlet Unavailable";
+                    const state = data.state || "";
+                    const articleorder = data.articleorder;
+
+                    const selector = "#c" + categoryorder;
+                    const uniqueIDs = "c" + categoryorder + articleorder;
+
+                    let pasteIn;
+                    if (state !== "") {
+                        pasteIn = `<a href='${url}' id='contents_${uniqueIDs}'>${title}</a> [${outlet}]`;
+                    } else {
+                        pasteIn = `<a href='${url}' id='contents_${uniqueIDs}'>${title}</a> [${outlet}]`;
+                    }
+
+                    d3.selectAll(selector)
+                        .append("ul")
+                        .style("margin-top", '0em')
+                        .style("margin-bottom", '0.05em')
+                        .append("li")
+                        .attr("class", "contents")
+                        .style("margin-left", '1em')
+                        .style("line-height", '14px')
+                        .style("font-weight", 'normal')
+                        .style("font-size", '14px')
+                        .html(pasteIn);
+                });
+            } catch (e) {
+                console.error("Error rendering article list:", e);
+                errorMessageDiv.append("p").text("Error displaying article list.");
+            }
+        }
+    </script>
 
 </body>
+
 </html>
