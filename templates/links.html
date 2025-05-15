@@ -16,8 +16,8 @@
         }
 
         .loading-indicator {
-            font-style: italic;
-            color: #888;
+            font-style: bold;
+            color: black;
         }
 
         .no-data-message {
@@ -108,7 +108,6 @@
 
         function analyze(error, article) {
             d3.select('#current').classed('loading-indicator', false).text(""); // Clear loading indicator
-            d3.select('#etitle').classed('loading-indicator', false).text("");  // Clear loading indicator
 
             const errorMessageDiv = d3.select("#error-message");
 
