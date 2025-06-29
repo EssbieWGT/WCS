@@ -1,4 +1,397 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2025-06-29 08:43:58+00:00,MDPI,Waste to Biofuel: Process Design and Optimisation for Sustainable Aviation Fuel Production ... - MDPI,"Nur Aina Najihah Halimi, Ademola Odunsi, Alex Sebastiani, Dina Kamel, Nur Aina Najihah",,,,,https://www.mdpi.com/1996-1073/18/13/3418,"Sustainable Aviation Fuel (SAF) Separation Modelling The distillation section was modelled according to the design parameters reported by the NREL [28].
+UnitBase Case Optimised CaseEquipment Installation Equipment Installation Column 1 USD 293,900.00 USD 808,600.00 USD 293,900.00 USD 808,600.00Column 2 USD 190,500.00 USD 656,800.00 USD 190,500.00 USD 656,800.00Cooler 1 USD 59,200.00 USD 239,400.00 USD 45,500.00 USD 144,800.00Cooler 2 USD 33,700.00 USD 231,200.00 USD 104,500.00 USD 256,100.00Cooler 3 USD 11,100.00 USD 76,900.00 USD 11,100.00 USD 76,900.00Cyclone USD 52,911.85 USD 26,455.93 USD 52,911.85 USD 26,455.93Dryer USD 14,146.00 USD 7073.00 USD 14,146.00 USD 7073.00Flash 1 USD 21,900.00 USD 136,400.00 USD 21,900.00 USD 136,400.00Flash 2 USD 22,300.00 USD 136,900.00 USD 22,300.00 USD 136,900.00Grinder USD 28,000.00 USD 14,000.00 USD 28,000.00 USD 14,000.00Hydrotreater (Stage 1) USD 125,900.00 USD 306,600.00 USD 125,900.00 USD 306,600.00Hydrotreater (Stage 2) USD 183,700.00 USD 468,900.00 USD 183,700.00 USD 468,900.00HEX 1/Heater 1 * USD 27,800.00 USD 119,900.00 USD 87,200.00 USD 520,400.00HEX 2/Heater 2 * USD 687,600.00 USD 412,560.00 USD 19,300.00 USD 121,800.00HEX 3/Heater 3 * USD 33,400.00 USD 147,800.00 USD 51,700.00 USD 288,900.00HEX 4/Heater 4 * USD 73,000.00 USD 342,600.00 USD 19,100.00 USD 121,400.00LL (Separator 1) USD 17,600.00 USD 122,500.00 USD 17,600.00 USD 122,500.00LL (Separator 2) USD 21,900.00 USD 136,400.00 USD 21,900.00 USD 136,400.00Pump 1 USD 107,300.00 USD 155,100.00 USD 107,300.00 USD 155,100.00Pump 2 USD 5700.00 USD 37,500.00 USD 5700.00 USD 37,500.00Pyrolysis Reactor USD 416,730.81 USD 375,057.73 USD 416,730.81 USD 375,057.73 Table 10.
+; Odunsi, A.; Sebastiani, A.; Kamel, D. Waste to Biofuel: Process Design and Optimisation for Sustainable Aviation Fuel Production from Corn Stover.
+""Waste to Biofuel: Process Design and Optimisation for Sustainable Aviation Fuel Production from Corn Stover"" Energies 18, no.
+Waste to Biofuel: Process Design and Optimisation for Sustainable Aviation Fuel Production from Corn Stover.","Department of Chemical Engineering, University College London, Torrington Place, London WC1E 7JE, UK
+
+*
+
+Author to whom correspondence should be addressed.
+
+Energies 2025, 18(13), 3418; https://doi.org/10.3390/en18133418 (registering DOI)
+
+Submission received: 18 May 2025 / Revised: 5 June 2025 / Accepted: 25 June 2025 / Published: 29 June 2025
+
+(This article belongs to the Special Issue Biomass and Waste-to-Energy for Sustainable Energy Production)
+
+Abstract
+
+Addressing the urgent need to decarbonise aviation and valorise agricultural waste, this paper investigates the production of Sustainable Aviation Fuel (SAF) from corn stover. A preliminary evaluation based on a literature review indicates that among various conversion technologies, fast pyrolysis (FP) emerged as the most promising option, offering the highest fuel yield (22.5%) among various pathways, a competitive potential minimum fuel selling price (MFSP) of 1.78 USD/L, and significant greenhouse gas savings of up to 76%. Leveraging Aspen Plus simulation, SAF production via FP was rigorously designed and optimised, focusing on the heat integration strategy within the process to minimise utility consumption and ultimately the total cost. Consequently, the produced fuel exceeded the American Society for Testing and Materials (ASTM) limit for the final boiling point, rendering it unsuitable as a standalone jet fuel. Nevertheless, it achieves regulatory compliance when blended at a rate of up to 10% with conventional jet fuel, marking a practical route for early adoption. Energy optimisation through pinch analysis integrated four hot–cold stream pairs, eliminating external heating, reducing cooling needs by 55%, and improving sustainability and efficiency. Economic analysis revealed that while heat integration slashed utility costs by 84%, the MFSP only decreased slightly from 2.35 USD/L to 2.29 USD/L due to unchanging material costs. Sensitivity analysis confirmed that hydrogen, catalyst, and feedstock pricing are the most influential variables, suggesting targeted reductions could push the MFSP below 2 USD/L. In summary, this work underscores the technical and economic viability of corn stover-derived SAF, providing a promising pathway for sustainable aviation and waste valorisation. While current limitations restrict fuel quality during full substitution, the results affirm the feasibility of SAF blending and present a scalable, low-carbon pathway for future development.
+
+1. Introduction
+
+Fossil fuels have dominated global energy systems for over two centuries, providing accessible and economical energy sources. However, their pervasive utilisation has precipitated significant environmental degradation through greenhouse gas (GHG) emissions and pollutants affecting terrestrial, aquatic, and atmospheric systems.
+
+The 2015 Paris Agreement established critical climate targets: limiting global temperature increases to well below 2 °C above pre-industrial levels while pursuing efforts to restrict warming to 1.5 °C. However, the World Meteorological Organization (WMO)’s State of the Global Climate reported that 2024 was the first full year with a global average temperature more than 1.5 °C above pre-industrial levels (1850–1900), which made it the hottest year in the 175 years of recorded data [1]. Current global warming is already fuelling more dangerous heatwaves, extreme rainfall, severe droughts, melting of glaciers, and rising sea levels. With projections of annual global temperatures for 2025 to 2029 estimated to range from 1.2 °C to 1.9 °C above the 1850–1900 average, urgent actions must be taken to combat escalating global warming [1].
+
+Despite the overwhelming global temperature rise, global efforts to mitigate GHG emissions are accelerating, driven by international agreements, technological innovations, and increased public awareness [2]. Among all sectors, the aviation industry is considered the hardest to decarbonise due to its reliance on high-temperature processes and energy-dense fuels. The aviation sector faces immense pressure to decarbonise, as it contributes approximately 2.5% of global GHG emissions annually [3], with its projected growth posing significant challenges for global emission reduction targets. The International Air Transport Association (IATA) target to achieve net-zero CO2 in the aviation sector by 2050 calls for rigorous transformative shifts in energy production and consumption patterns for this hard-to-abate sector [4]. Unlike other transport sectors, direct electrification and hydrogen propulsion remain largely impractical for long-haul flights, making Sustainable Aviation Fuel (SAF) a critical pathway to achieving net-zero emissions.
+
+Bioenergy systems like SAF production from biomass offer promising pathways to decarbonise the aviation sector by providing renewable alternatives to conventional jet fuels while also mitigating the global waste accumulation problem. Within this context, the type and source of biomass, together with the production pathway, largely determine the real sustainability of SAFs. Hence, careful selection of the feedstock and pathway is required to optimise the system to achieve its full potential.
+
+Various feedstocks have been explored for SAF production, and they are broadly categorised into four generations based on the type of feedstock used for their production. Mainly leveraging their abundance, cost-effectiveness, and sustainability, this study focused on second-generation biofuel feedstocks, which are produced from non-food-based feedstocks (e.g., municipal solid waste (MSW) and agricultural residues), as opposed to the first, third, and fourth generations, which compete with food supplies (e.g., food crops), face scarcity and scalability challenges (e.g., oils and microalgae), and are genetically engineered (e.g., electro-biofuels), respectively. While second-generation biofuel feedstocks like MSW and food waste present unique advantages, agricultural residues appear promising due to their abundance, low cost, and minimal land-use change impact.
+
+Agricultural waste is an abundant waste, with approximately 5 billion tons of residues generated annually [5]. Its generation peaks during harvest seasons, but decentralised production and competing uses, such as animal feed or bedding, limit its availability for bioenergy. Processes like shredding or grinding reduce the size and bulk density of the feedstock, making it easier to transport [6]. While its abundance is unmatched, efficient collection and storage systems are critical to overcoming logistical challenges, mainly during its seasonal production.
+
+Common residues like corn stover (CS), rice straw (RS), wheat straw (WS), and sugarcane bagasse (SB) were prioritised for biofuel production in this study due to their high abundance and consistent availability globally. For instance, CS is a widely available agricultural residue in the United States, accounting for millions of tons annually, while RS and WS dominate in Asia and Europe, respectively, due to extensive rice and wheat cultivation [7] and SB is highly concentrated in sugar-producing regions such as Brazil and India [8]. Moreover, their utilisation reduces environmental issues such as open-field burning of RS and WS, which contributes significantly to air pollution [9]. SB and CS are particularly advantageous due to their relatively centralised availability, which minimises logistical challenges [10]. Additionally, the high biofuel potential of these residues, as demonstrated by the efficiencies of their conversions to SAF, makes them promising [11].
+
+Although SB, RS, WS, and CS are comparable in terms of availability, the cost-effectiveness of acquisition, and overall sustainability, based on their compositions and physical properties [12,13,14,15], CS and SB are the top candidates for SAF production feedstock owing to their energy density and conversion efficiency potential (i.e., high hemicellulose contents, volatile matter contents, and H/C ratios and low ash contents). However, CS is prioritised since the preliminary selection of a feedstock and a process design is a research-based process and research on SAF production from CS is significantly more abundant compared to SB, covering a wide array of conversion processes such as gasification and Fischer–Tropsch (G-FT) synthesis, FP, and alcohol to jet (ATJ), highlighting its versatility. Additionally, techno-economic analyses of CS-based SAF show strong potential for integration with existing agricultural infrastructure [16]. In contrast, while SB is well-studied for biochemical conversions, studies focusing on SAF pathways are limited to fermentation-based ATJ pathways due to its high cellulose content and compatibility with sugarcane processing facilities. Therefore, with significant untapped potential for biofuel production to produce SAF, abundant research availability, and favourable integration feasibility, CS emerged as the most attractive feedstock option for SAF production in this study.
+
+Several thermochemical and biochemical routes have been investigated for converting CS to SAF, including G-FT synthesis, ATJ, and FP. G-FT converts biomass into synthesis gas (syngas: CO + H2) via gasification, followed by Fischer–Tropsch synthesis to make liquid hydrocarbons, including jet fuel [17]. Meanwhile, the ATJ process converts biomass-derived alcohols (ethanol, butanol, and isobutanol) into jet-range hydrocarbons through dehydration, oligomerization, and hydrogenation [18]. Finally, FP involves rapidly heating biomass in the absence of oxygen to decompose it into a mixture of vapours and char. Some of the vapours then condense into bio-oil, which is further upgraded into aviation fuel [19].
+
+Based on a preliminary evaluation of the fuel yields, environmental impacts, economic viability, and technology readiness of the routes from the literature review, FP emerged as a more attractive pathway for SAF production from CS compared to the other two pathways. FP offers the highest fuel yield (22.5% compared to 19.7% and 0.9% for ATJ and G-FT, respectively) among the three pathways, signifying efficient biomass conversion into bio-oil for SAF production [17,18,20,21]. Moreover, a cost reduction opportunities study by Tanzil et al. reported that FP stands out as the most cost-effective pathway, as its MFSP can reach as low as 1.78 USD/Liter when costs are optimised, compared to 2.31 USD/Liter and 1.94 USD/Liter for ATJ and G-FT, respectively [21]. Additionally, FP demonstrates a moderate environmental impact with 68–76% GHG savings, making it a viable option for reducing emissions [22]. Finally, although FP and G-FT are comparable in terms of resource availability, while ATJ is more limited in this regard, FP currently lags behind G-FT in terms of its Fuel Readiness Level (FRL), as its resulting fuel remains in the developmental stage. In contrast, G-FT is nearing commercial maturity. Nonetheless, considering FP’s overall potential and ongoing advancements toward increasing its FRL, it emerged as the most promising pathway for producing SAF from CS.
+
+While the technical feasibility of producing SAF from various feedstocks is gaining traction, comprehensive techno-economic analyses, particularly for processing CS via FP, remain crucial for commercial deployment. This study aimed to address this gap by comprehensively designing the process, optimising the process by leveraging a heat integration strategy to minimise utility consumption using Aspen Plus, evaluating its economic viability, and identifying key parameters for scalability, thereby providing valuable insights into the potential of this pathway for SAF production.
+
+2. Methodology
+
+Process design and optimisation for SAF production from CS were carried out according to the steps in Figure 1, and Aspen Plus V12.1 commercial software was used to model the process [23].
+
+2.1. Process Development
+
+A process flow diagram of the FP is presented in Figure 2. The process is divided into four stages: pretreatment of CS, FP of CS, hydrotreatment of bio-oil, and separation of biofuels. Before the biomass undergoes fast pyrolysis, the feedstock needs to be pretreated by grinding it into smaller pieces (0.3 mm) and drying it to reduce moisture, ensuring optimal conditions and efficiency during the FP process.
+
+The FP reactor, which is a fluidised bed reactor, is operating at 500 °C and 101 kPa [20], with nitrogen extracted from the atmosphere, without an additional purchase, as the carrier gas. The products of FP are mainly categorised into three phases, bio-oil, biogas, and biochar, where the main bio-oil compounds are made up of alcohols, esters, acids, phenolics, furans, aromatics, and ketones, while the biogas mainly consists of CO, CO2, H2, methane, and ethylene.
+
+The FP products are sent to a cyclone that is operating at 500 °C and 100 kPa to separate the biochar from the vapour products [19]. The vapour products, which consist of bio-oil and biogas, are condensed at 25 °C to retrieve the condensable part (bio-oil) and further separated through a flash drum and a liquid–liquid separator to achieve high-purity bio-oil.
+
+The separated bio-oil is sent to two-stage hydrotreatment reactors with the reactors operating at 220 °C and 400 °C (at 10.7 MPa), respectively [19,20]. Low-temperature hydrotreatment can be utilised to pretreat unstable bio-oil, targeting the reduction of highly reactive oxygenated compounds before undergoing complete deoxygenation under more intense hydrotreatment conditions.
+
+Finally, the product of the hydrotreatment, upgraded oil ranging from C6 to C18, is separated into its respective fuel types (Naphtha, SAF, and heavy oils) with a flash drum, a liquid–liquid separator, and two serial distillation columns.
+
+2.2. Building the Process Model
+
+2.2.1. Selecting the Thermodynamic Model
+
+The commercial software Aspen Plus [23] was used to simulate the entire process. The NRTL thermodynamic model was used, as it is well-suited for systems such as pyrolysis vapour condensation, which generally function at moderate to low temperatures (ranging from 120 °C down to ice-trap conditions). Furthermore, bio-oil is commonly classified as a highly polar solution, where the presence of electrolytes is typically insignificant. Ultimately, the experimental results obtained by Liu and Wang’s research team showed good agreement with the predictions of the NRTL model, confirming its accuracy in representing the interactions during this process [19].
+
+2.2.2. Feedstock Characterisation
+
+The CS feedstock was modelled via non-conventional components using ultimate and proximate analysis data obtained from a Vario-Micro CHN elemental analyser (Elementar, Rhein-Main-Gebiet, Germany) and the DIN 51718 [24], DIN 51720 [25], and DIN 51719 [26] standard methods reported by A. Elsagan et al., as presented in Table 1 [13]. Additionally, Aspen Plus V12.1, the software used to simulate the process that facilitates accurate component property predictions via databank access, does not have unified molecular formula data for biomass. Hence, MIXCINC (Mixed, Conventional Inert Solid and Non-Conventional Stream) was used as the global stream class. The enthalpy and the density were the two attributes of the non-conventional components calculated via HCOALGEN and DCOALIGT models, respectively. HCOALGEN and DGOALIGT are built-in Aspen Plus property models used to estimate the thermodynamic properties of the feedstock based on its elemental composition. A plant capacity of 600 tonnes/day of CS feedstock was selected based on typical scales for commercial biofuel production.
+
+2.2.3. Fast Pyrolysis (FP) Process Modelling
+
+The FP process was modelled based on the design parameters from Liu and Wang presented in Table 2, assuming the operating conditions of the process are similar since the type of feedstock used shares many similarities with CS [19]. Although Liu and Wang simulated the process for rice husks, the design parameters were applicable, while the feedstock-specific yields of the products were adapted to represent the use of CS. An RYield unit was used to simulate FP of CS as a feedstock and the specific product yield with CS as the feedstock, which were obtained from the work by Howe et al. [20].
+
+The components and composition of the products of FP, namely bio-oil, biogas, and biochar, were assumed to be represented by a pseudo-component approach, as detailed in Table 3. The original yield data was sourced from Heng et al. and adjusted so that the yield of each product type summed to 100%, simplifying the input for the Aspen Plus RYield simulation based on the percentages of the CS bio-oil, biogas, and biochar [20,27]. Bio-oil mainly comprises alcohols, esters, acids, phenolics, furans, aromatics, and ketones, while biogas mainly consists of CO, CO2, H2, methane, and ethylene. Biochar cannot be modelled with chemical compounds due to a lack of unified molecular formula data. Hence, it is modelled by its ultimate analysis data, which are presented in Table 3.
+
+2.2.4. Hydrotreatment (Bio-Oil Upgrading) Modelling
+
+A model simulating hydrotreatment of bio-oil from pine was reported by the National Renewable Energy Laboratory (NREL), and the compounds, model, and yields used in that report are assumed to be applicable to modelling hydrotreatment of CS based on the following reasoning [28]. Based on an elemental study of hydrotreated oils from pine plants and CS by Howe et al., it is reported that both upgraded oils’ elemental compositions vary minimally—despite dissimilar feedstocks—suggesting similar final yields [20]. This is because although pine and CS differ in their raw compositions, the pyrolysis and subsequent hydrotreatment steps standardise their outputs, leading to bio-oils with similar elemental compositions. This outcome is driven by the chemical goals of the upgrading process (e.g., hydrodeoxygenation, hydrogenation, etc.), rather than the feedstock characteristics [29]. The two-stage hydrotreatment units were simulated using RYield with the design parameters in Table 4.
+
+2.2.5. Sustainable Aviation Fuel (SAF) Separation Modelling
+
+The distillation section was modelled according to the design parameters reported by the NREL [28]. However, the objective of this study was to separate the products to obtain biodiesel. Therefore, the parameters were adjusted to fit the objective of the current work, which was to separate SAF (Table 5). The parameters were optimised to achieve maximum separation of hydrocarbons ranging from C7 to C17 for SAF.
+
+2.3. Process Optimisation via Heat Integration
+
+Leveraging Aspen Plus simulation, SAF production via FP was rigorously optimised, focusing on the heat integration strategy within the process with the aim to minimise utility consumption and ultimately the operating and total costs. Heat integration was applied via pinch analysis. This involved recovering heat from hot process streams to meet the energy demands of cold streams within the same system. For instance, the bio-oil stream was heated to 400 °C before entering the hydrotreatment reactor to match its operating conditions.
+
+Pinch analysis was employed to develop a heat exchanger network (HEN) strategy. This method does not account for phase changes in a process, as it assumes a constant heat flux [31]. As a result, it may underestimate or overestimate heat transfer requirements, leading to suboptimal HEN design. Research by Liporace et al. found that failing to account for phase changes can lead to errors in the determination of pinch points, which affect overall utility consumption [32]. Despite this limitation, streams undergoing phase changes were incorporated into the analysis to optimise heat integration. While the presence of non-constant heat flux in these streams may introduce some inaccuracies, this analysis still serves as a useful tool for identifying potential matches and estimating heat transfer between streams.
+
+According to the process flow sheet presented in Figure 3, in total two hot streams and four cold streams were identified, as presented in Table 6.
+
+2.4. Economic Evaluation of Process
+
+An economic evaluation of the SAF production process was essential for assessing its financial feasibility and the MFSP required to achieve a break-even point. This methodology involved calculating the total process cost, which consists of both capital expenditures (CAPEX) and operating expenditures (OPEX), as well as estimating potential income from biofuel sales. This approach provided a comprehensive economic assessment, allowing for cost optimisation and strategic pricing decisions to enhance the project’s viability.
+
+The annual OPEX comprised both fixed and variable operating expenses. The fixed OPEX covered equipment and labour costs (Table 7), which remained constant regardless of the production volume. Additionally, 16% of the labour cost was factored into the fixed costs, covering employee benefits. On the other hand, the variable OPEX fluctuated based on the production volume. Table 8 outlines the variable operating costs, which included the feedstock (factored as an acquisition cost), catalysts, and hydrogen gas for reactions. These expenses were determined by process consumption and the market price. Meanwhile, the costs of the utilities (electricity, steam, and cooling water) were obtained from the Aspen Process Economic Analyzer (APEA) in Aspen Plus V12.1 and were generated based on the process flows [23].
+
+The CAPEX accounted for the initial investment in infrastructure, equipment, and installation. This cost primarily depended on assumptions and estimations that were based on the Inside Battery Limits (ISBL) cost, which was the total cost of the equipment and its installation. The equipment and installation costs were generated and obtained from the APEA for both cases, the base case and the optimised (heat-integrated) case, as listed in Table 9, since different equipment was used in these cases. Equipment costs that were not generated by the APEA and were not reliable were estimated based on market prices.
+
+Consequently, using the ISBL cost as the base value, the total capital investment (TCI) for the project could be calculated using various reasonable assumptions listed in Table 10 [19]. The TCI was determined by combining fixed capital investment (FCI), working capital (WC), and land costs. The total direct cost (TDC) consisted of the ISBL cost, along with additional expenses such as a warehouse (5.7% of the ISBL cost), site development (12.9% of the ISBL cost), and additional piping (6.4% of the ISBL cost). The total indirect cost (TIC) accounted for engineering and supervision (13.7% of the TDC) and construction expenses (34% of the TDC). Adding the TDC and TIC resulted in the total direct and indirect cost (TDIC), which formed the basis for FCI. FCI also included off-site battery limits (OSBLs), contractor costs (5% of the TDIC), and contingency (10% of the TDIC) to cover unforeseen expenses. Additionally, WC was set at 10% of FCI, ensuring sufficient funds for operational needs, while the land cost was estimated at 5% of the ISBL cost. Ultimately, the total CAPEX was derived from the sum of FCI, WC, and land expenses, providing a comprehensive estimate of project investment.
+
+Furthermore, other financial assumptions are listed in Table 11 based on typical scales for a general production plant [19]. The economic analysis was conducted assuming the plant would operate for 8088 h per year. The project was partially financed with a loan covering 60% of the total investment, carrying an interest rate of 6% over a five-year term. While the general plant and steam plant had lifespans of 7 and 20 years, respectively, an 8-year linear depreciation period was derived from a weighted average of general and steam plant lifespans, where the general plant constituted most of the investment. This resulted in a depreciation period that leaned closer to the general plant’s 7-year life while still accounting for the longer life of the steam plant. The construction phase was planned for three years, with investment distributed over time: 30% spent in year 2, another 30% in year 1, and the remaining 40% in year 0 for final payments and test runs. To assess financial feasibility, the analysis applied a discount rate of 10%, ensuring future cash flows were appropriately valued. Additionally, an income tax rate of 30% was considered, which impacted net profitability. These financial parameters provided a structured framework for evaluating project viability, loan repayment schedules, and cost recovery strategies.
+
+3. Results and Discussion
+
+Based on the methodology described in Section 2 for building the Aspen Plus model of the process, Figure 3 presents the Aspen Plus model of the conversion of CS to SAF through FP and hydrotreatment.
+
+3.1. Aspen Plus Model Validation
+
+The primary objective of model validation was to ensure that the simulation results accurately reflect real-world production of SAF. In this study, the hydrotreatment process was modelled using Aspen Plus V12.1, where the reactor was simulated using RYield based on product yields obtained from the literature. As the yield data itself was derived from existing studies, directly comparing the simulation yields with those reported in the literature would have been redundant and not meaningful for validation purposes.
+
+Therefore, to establish the validity of the model, the simulation results were compared to the elemental composition of the final product, SAF (hydrotreated CS bio-oil), reported in the literature, as presented in Table 12. This approach ensured that the model accurately produces SAF with the same composition of carbon, hydrogen, oxygen, nitrogen, and sulphur contents rather than merely reproducing yield data. By doing so, it provided an independent validation method that focused on composition accuracy, which was critical for evaluating the quality and suitability of the SAF for downstream applications.
+
+The comparison between the simulation results and those from the literature in Table 12 demonstrates good agreement. The minor discrepancies between the simulated elemental composition and that from the literature are attributed to differences in process assumptions and model scope. The simulation assumes more efficient hydrotreatment, resulting in near-complete deoxygenation and a slightly higher hydrogen content. The trace sulphur in the simulation may originate from conservative assumptions related to gas clean-up, whereas the literature likely reports post-polishing data with sulphur below detection levels. Despite these minor differences, the close agreement in the carbon and hydrogen contents validates the reliability of the simulation model for predicting SAF composition and the following discussion of the results derived from it.
+
+3.2. An Evaluation of the Properties of Sustainable Aviation Fuel (SAF)
+
+The Aspen Plus simulation results yielded a comprehensive breakdown of the chemical composition of the SAF, including the proportions of paraffins, naphthene, aromatics, oxygenates, and other relevant components, as presented in Table 13. The system was simulated via a steady-state deterministic method using fixed inputs with no variation or uncertainty. Therefore, the results represent a single point of operation.
+
+The critical outcome of the simulation of SAF production from CS was the final composition of the SAF product. To assess its suitability, the properties of the SAF were instead validated based on the final composition of the SAF by comparing the simulation composition with the compositions of jet fuels reported in the literature (100% waste wood-derived (WWD) SAF and 100% conventional jet fuel) [33]. This approach was logical and scientifically sound because the chemical composition directly influences the physical properties and performance characteristics of a fuel. The properties presented in Table 14 reflect the combustion performance, efficiency, fluidity, cold-temperature pumpability performance, and stability of the fuel, which are crucial to characterise the quality of jet fuel.
+
+Upon comparing the composition of the simulation results with two reference fuel compositions (100% WWD SAF and 100% conventional jet fuel) in Table 15, it was observed that the product composition fell within the range between the two reference fuels. Such an outcome indicates that the chemical properties of the produced SAF are between those of the WWD SAF and the petroleum-based fuel.
+
+Therefore, the results indicate that the most practical application of the SAF would be as a blended fuel that could be mixed with conventional jet fuel to form an SAF blend that meets the necessary ASTM standards for aviation fuel. A study by Jeon et al. suggests that a 10% SAF blend with conventional jet fuel offers the optimal jet fuel quality that achieves all ASTM standards, with a final boiling point (FBP) of 299.5 °C [33]. An aviation fuel blend review by Lau et al. confirms the relevancy of the proposed blend, as a blend percentage of 10% is also recommended for SAF produced from Jatropha plants, Babassu seeds, palm kernels, and Lignin-based plants [35]. A low-percentage blend is expected for SAF derived from lignocellulosic biomass, as it tends to have a higher oxygen content and more complex aromatic structures compared to SAF produced from oilseed crops like Canola and Camelina, which comply with the standards as 20% and 50% blends, respectively [35].
+
+3.3. Energy Savings Analysis
+
+From the pinch analysis, four streams were matched to maximise the heat recovery in the system, and the results are reported in Table 16 and Figure 4.
+
+Each heat source available provides heat to more than one heat-sink stream. On that account, pairing hot streams with cold streams that require higher outlet temperatures needs to be prioritised to avoid outlet temperature cross. As a result, H1 and H2 integrate with C1 and C4 first, respectively, before directing their excess heat to the other two cold streams.
+
+When the heat integration network obtained from the pinch analysis was applied in the Aspen Plus simulation, it was observed that the total cooling utility requirement (8092.12 kW) was slightly higher than the result from the pinch analysis (7967.59 kW). This discrepancy primarily arose because Aspen Plus is capable of accurately modelling phase transitions, including the latent heat that occurs during condensation or vaporisation. Unlike pinch analysis, which assumes constant heat flux, Aspen Plus dynamically calculates the enthalpy changes during phase transformations. This results in a more realistic estimation of the cooling duty.
+
+Despite the discrepancy between the cooling utility requirements obtained from pinch analysis and Aspen Plus simulation, pinch analysis remains an effective and practical method for estimating and designing HENs. The discrepancy observed is relatively small, indicating that pinch analysis still serves as a reliable guide for preliminary HEN design and effectively identifies pinch points and heat recovery potentials, making it useful for conceptual design.
+
+After heat integration optimisation, the utility requirements were significantly reduced from 9701 kW to none for the heating utility and from 17668 kW to 7967 kW for the cooling utility. These remarkable reductions indicate that 9701 kW of energy was successfully integrated between the hot and cold streams, achieving 100% energy savings for the heating utility and 55% savings for the cooling utility.
+
+Consequently, the need for heating utilities such as high-pressure steam and fired heat was eliminated. Additionally, the significant reduction in cooling demand minimised the reliance on cooling utilities. As a result, the types of utilities required were reduced from high-pressure steam, fired heat, cooling water, and refrigerant to just cooling water and refrigerant.
+
+3.4. Economic Analysis
+
+The results of an economic analysis that included the CAPEX and the OPEX for both the base case and the optimised case (after heat integration) are presented in Table 17.
+
+The analysis suggests that the material costs were the dominant contributors to the OPEX in both cases, driven by feedstock acquisition, hydrogen, and catalyst costs, while utility costs were minimal. Despite an 84% reduction in utility costs through optimisation, the overall impact on the total OPEX was negligible due to unchanged material costs.
+
+For the CAPEX, the FCI remained the largest component. Optimisation led to a 12% reduction in the total CAPEX, but its impact was limited relative to the total costs.
+
+Overall, based on the 600 tonnes/day plant capacity and annual SAF production of 32.5 Liters/year, the MFSPs for the base and optimised cases were calculated to be 2.35 USD/Liter and 2.29 USD/Liter, respectively. The MFSP decreased slightly by 6 cents/Liter when optimisation was applied, reflecting a modest economic improvement primarily constrained by high material costs.
+
+Figure 5 shows the cost distribution between the main steps in SAF production, pyrolysis, hydrotreatment, and separation, where the credits of the feedstock and the product are not included in the distribution. The results indicate that the equipment costs involved for all steps are minimal when compared to the operating costs. For pyrolysis, since nitrogen is extracted from the atmosphere without an additional purchase, the operating cost mainly comes from the utilities. The hydrotreatment operating cost is significantly larger than those of the other two steps due to additional hydrogen and catalyst sourcing, which are the main drivers of the material costs. Finally, the separation of SAF has the lowest operating cost due to its moderate operating temperatures compared to the other units used in the other two steps.
+
+The results of a sensitivity analysis of the cost variables that have the greatest impact on the MFSP are presented in Figure 6. The nominal value of the MFSP is 2.35 USD/Liter, and the possible ranges of the MFSP shown take both cases into account, where the base case represents the maximum value and the optimised case represents the minimum value.
+
+The sensitivity analysis highlights that material-related cost variables have the largest influence on the MFSP. In the original case, conservative assumptions were made by selecting the highest hydrogen cost (7 USD/kg), the shortest catalyst life (1 year), and the highest feedstock cost (0.10 USD/kg), which collectively contributed to a higher MFSP.
+
+However, the analysis implies that optimising these material costs can significantly lower the MFSP. If the hydrogen cost is reduced to 3 USD/kg, the catalyst life is extended to 3 years, and the feedstock cost is lowered to 0.08 USD/kg, the combined effect can bring the MFSP below 2 USD/L, as shown by the lower bounds of the sensitivity bars, which is consistent with the range reported by Tanzil et al. [21]. This suggests that targeted cost reductions for key input materials—whether through improved sourcing, catalyst durability, or feedstock agreements—have the potential to substantially improve the economic feasibility of the fuel production process.
+
+In contrast, the discount rate and payback period have a smaller influence on the MFSP. The original case uses a 10% discount rate and an 8-year payback period. These assumptions position the MFSP closer to the midpoints of their respective sensitivity ranges, indicating that changes in capital recovery conditions are less critical than variations in material costs.
+
+To conclude, this section demonstrates the technical feasibility of producing SAF from CS via FP, followed by hydrotreatment and separation, with Aspen Plus simulations indicating realistic fuel outputs. While the standalone SAF does not meet ASTM standards due to its high FBP, a 10% blend with conventional jet fuel is compliant, highlighting its potential as a transitional solution. Process optimisation through heat integration yielded full heating utility savings and significant cooling savings of 55%, enhancing energy efficiency and sustainability. Economic analysis revealed that while heat integration slashed utility costs by 84%, the MFSP only decreased slightly from 2.35 USD/L to 2.29 USD/L due to unchanging material costs, which were identified as the primary cost drivers. However, sensitivity analysis shows that further cost reductions for feedstock, hydrogen, and catalysts could make SAF more economically competitive.
+
+4. Conclusions
+
+Through an analysis of GHG emissions across various sectors, the aviation industry was recognised as one of the most challenging sectors to decarbonise due to its dependence on high-energy-density fuels and limited alternatives. Simultaneously, the waste management sector was highlighted for substantial GHG emissions from landfills and its potential for valorisation. Utilising the strategic intersection between aviation and waste management, production of SAF from waste feedstocks presents dual benefits. This approach not only mitigates emissions from aviation but also addresses the environmental impact of waste accumulation.
+
+Comprehensive process design of SAF production from CS via FP was implemented in Aspen Plus, which included pyrolysis, hydrotreatment, and separation as the main steps. The results from the simulation indicate that the produced fuel is realistic but does not comply with ASTM specifications as a standalone jet fuel, as it exceeds the final boiling point (FBP) limit. A 10% SAF blend with conventional jet fuel is suggested to enhance fuel quality and satisfy all ASTM requirements. This limitation is expected, as the technology for SAF production from lignocellulosic biomass is relatively young, particularly upgrading oil through hydrotreatment. Nevertheless, the ability to produce an SAF that meets standards in a 10% blend is a promising step forward, offering a transitional pathway toward increased SAF adoption as the technology matures and scalability improves.
+
+To further optimise the process, a heat integration strategy was implemented by combining four pairs of hot and cold streams. This resulted in 100% energy savings for the heating utility and 55% savings for the cooling utility while eliminating the need for high-pressure steam and fired heat in the utility system. Simultaneously, this reduced the reliance on external utilities by maximising heat recovery within the system, making the process more sustainable environmentally and economically.
+
+An economic evaluation was conducted to determine the value of the product. Among the key findings, material costs—particularly those related to hydrogen, catalysts, and feedstock—are the dominant drivers of SAF production economics, significantly influencing the MFSP. Despite the reduction in utility costs, high material costs limited economic improvement, as the MFSP was only reduced from 2.35 USD/L to 2.29 USD/L. However, a sensitivity analysis revealed that targeted cost reductions in material pricing could reduce the MFSP below 2 USD/L, indicating strong potential for economic competitiveness. Although the price of SAF is not yet competitive with conventional jet fuel, its significant advantage in reducing carbon emissions presents a compelling value proposition and serves as a key driver for its adoption.
+
+Overall, the aim of this study to seek sustainable pathways for the transition to a low-carbon energy system while addressing the gap in the technical feasibility of SAF production, particularly for CS via FP, by utilising a waste resource to produce high-value biofuel via an optimised process was achieved. While further improvements are needed to reach its full potential, this work represents a meaningful step forward in advancing sustainable biofuel development.
+
+5. Future Outlook
+
+From the process perspective, the final SAF product from this study exhibits an FBP exceeding the ASTM standard, limiting its direct use as a standalone jet fuel. It is only suitable for use as a blend component, with blends up to 10% in conventional jet fuel meeting standard requirements. Future work should focus on exploring strategies to reduce the FBP of the upgraded oil, such as optimising the hydrotreatment conditions, integrating additional upgrading steps, or tailoring the catalyst selection. Furthermore, the current upgrading process loses carbon as CO2 and CO while removing oxygen, which reduces its efficiency and releases GHGs, indicating the need for technologies that remove oxygen as H2O. These efforts could enable more sustainable production of an SAF that fully complies with ASTM standards for higher blend ratios, and eventually, use as a standalone jet fuel.
+
+From the sustainability perspective, future work should focus on improving supply chains, catalyst life, and feedstock agreements to enhance viability. Additionally, the high hydrogen demand during hydrotreatment remains a critical limitation, indicating the need for process intensification to reduce hydrogen consumption. Finally, future work should also incorporate environmental assessments, such as life cycle analysis (LCA), to quantify the GHG emissions associated with the SAF production process. This would provide critical insight into how effective the pathway is in achieving its intended goal of transitioning to a low-carbon energy system. Evaluating the overall sustainability of the process will help validate its environmental benefits and identify further opportunities for improvement.
+
+Author Contributions
+
+Conceptualization, D.K., A.S. and A.O.; methodology, N.A.N.H., D.K., A.S. and A.O.; software, N.A.N.H.; validation, N.A.N.H., D.K., A.S. and A.O.; formal analysis, N.A.N.H.; investigation, N.A.N.H.; resources, N.A.N.H.; writing—original draft preparation, N.A.N.H.; writing—review and editing, N.A.N.H., D.K., A.S. and A.O. All authors have read and agreed to the published version of the manuscript.
+
+Funding
+
+This research received no external funding.
+
+Data Availability Statement
+
+The original contributions of this study are detailed within the article. For additional information, please contact the author.
+
+Acknowledgments
+
+During the preparation of this manuscript/study, the authors used Aspen Plus V12.1 for the purposes of simulating the process and rendering the economic evaluation of the process. The authors have reviewed and edited the output and take full responsibility for the content of this publication. The authors would like to acknowledge University College London (UCL) for providing access to the Aspen Plus V12.1 software license, which made this research possible.
+
+Conflicts of Interest
+
+The authors declare no conflicts of interest.
+
+Abbreviations
+
+The following abbreviations are used in this manuscript:
+
+FPFast pyrolysis SAFSustainable aviation fuelGHGGreenhouse gas ASTMAmerican Society for Testing and MaterialsIATAInternational Air Transport AssociationCSCorn stoverRSRice strawWSWheat strawSBSugarcane bagasseG-FTGasification and Fischer–TropschATJAlcohol to jetNRELNational Renewable Energy LaboratoryWWDWaste wood-derivedFBPFinal boiling pointHENHeat exchanger networkMFSPMinimum fuel selling priceCAPEXCapital expendituresOPEXOperating expendituresTCITotal capital investmentISBLInside battery limitFCIFixed capital investmentWCWorking capital
+
+References
+
+World Meteorological Organization (WMO). State of the Global Climate 2024; WMO: Geneva, Switzerland, 2025. [Google Scholar]
+
+UNFCCC. Nationally Determined Contributions (NDCs)|UNFCCC. 2019. Available online: https://unfccc.int/process-and-meetings/the-paris-agreement/nationally-determined-contributions-ndcs (accessed on 7 April 2025).
+
+Ritchie, H. Sector by Sector: Where Do Global Greenhouse Gas Emissions Come From? Our World in Data. 2020. Available online: https://ourworldindata.org/ghg-emissions-by-sector (accessed on 7 April 2025).
+
+International Air Transport Association (IATA). Net Zero 2050: Sustainable Aviation Fuels. 2024. Available online: https://www.iata.org/en/iata-repository/pressroom/fact-sheets/fact-sheet-sustainable-aviation-fuels/ (accessed on 7 April 2025).
+
+Millati, R.; Cahyono, R.B.; Ariyanto, T.; Azzahrani, I.N.; Putri, R.U.; Taherzadeh, M.J. Agricultural, Industrial, Municipal, and Forest Wastes. In Sustainable Resource Recovery and Zero Waste Approaches; Elsevier: Amsterdam, The Netherlands, 2019; pp. 1–22. [Google Scholar]
+
+Mekunye, F.; Makinde, P. Production of Biofuels from Agricultural Waste. Asian J. Agric. Hortic. Res. 2024, 11, 37–49. [Google Scholar] [CrossRef]
+
+Bundhoo, Z.M.A. Potential of bio-hydrogen production from dark fermentation of crop residues: A review. Int. J. Hydrogen Energy 2019, 44, 17346–17362. [Google Scholar] [CrossRef]
+
+Chandel, A.K.; Albarelli, J.Q.; Santos, D.T.; Chundawat, S.P.; Puri, M.; Meireles, M.A.A. Comparative analysis of key technologies for cellulosic ethanol production from Brazilian sugarcane bagasse at a commercial scale. Biofuels Bioprod. Biorefining 2019, 13, 994–1014. [Google Scholar] [CrossRef]
+
+Michailos, S.; Webb, C. Valorization of rice straw for ethylene and jet fuel production: A technoeconomic assessment. In Food Indutry Wastes; Elsevier: London, UK, 2020; pp. 201–221. [Google Scholar]
+
+Rezania, S.; Oryani, B.; Cho, J.; Talaiekhozani, A.; Sabbagh, F.; Hashemi, B.; Rupani, P.F.; Mohammadi, A.A. Different pretreatment technologies of lignocellulosic biomass for bioethanol production: An overview. Energy 2020, 199, 117457. [Google Scholar] [CrossRef]
+
+Deshavath, N.N.; Mahanta, S.R.; Goud, V.V.; Dasu, V.V.; Rao, P.S. Chemical composition analysis of various genetically modified sorghum traits: Pretreatment process optimization and bioethanol production from hemicellulosic hydrolyzates without detoxification. J. Environ. Chem. Eng. 2018, 6, 5625–5634. [Google Scholar] [CrossRef]
+
+Najafi, H.; Sani, A.G.; Sobati, M.A. A comparative evaluation on the physicochemical properties of sugarcane residues for thermal conversion processes. Ind. Crops Prod. 2023, 202, 117112. [Google Scholar] [CrossRef]
+
+Elsagan, Z.A.; Ali, R.M.; El-Naggar, M.A.; El-Ashtoukhy, E.-S.Z.; AbdElhafez, S.E. New perspectives for maximizing sustainable bioethanol production from corn stover. Renew. Energy 2023, 209, 608–618. [Google Scholar] [CrossRef]
+
+Chen, C.; Qu, B.; Wang, W.; Wang, W.; Ji, G.; Li, A. Rice husk and rice straw torrefaction: Properties and pyrolysis kinetics of raw and torrefied biomass. Environ. Technol. Innov. 2021, 24, 101872. [Google Scholar] [CrossRef]
+
+Nath, B.; Bowtell, L.; Chen, G.; Graham, E.; Nguyen-Huy, T. Pyrolytic Pathway of Wheat Straw Pellet by the Thermogravimetric Analyzer. Energies 2024, 17, 3693. [Google Scholar] [CrossRef]
+
+Bittner, A.; Tyner, W.E.; Zhao, X. Field to flight: A techno-economic analysis of the corn stover to aviation biofuels supply chain. Biofuels Bioprod. Biorefining 2015, 9, 201–210. [Google Scholar] [CrossRef]
+
+Swanson, R.M.; Platon, A.; Satrio, J.A.; Brown, R.C. Techno-economic analysis of biomass-to-liquids production based on gasification. Fuel 2010, 59, S11–S19. [Google Scholar] [CrossRef]
+
+Voß, S.; Bube, S.; Kaltschmitt, M. Aviation fuel production pathways from lignocellulosic biomass via alcohol intermediates—A technical analysis. Fuel Commun. 2023, 17, 100093. [Google Scholar] [CrossRef]
+
+Liu, Y.; Wang, W. Process design and evaluations for producing pyrolytic jet fuel. Biofuels Bioprod. Biorefining 2019, 14, 249–264. [Google Scholar] [CrossRef]
+
+Howe, D.; Westover, T.; Carpenter, D.; Santosa, D.; Emerson, R.; Deutch, S.; Starace, A.; Kutnyakov, I.; Lukins, C. Field-to-Fuel Performance Testing of Lignocellulosic Feedstocks: An Integrated Study of the Fast Pyrolysis–Hydrotreating Pathway. Energy Fuels 2015, 29, 3188–3197. [Google Scholar] [CrossRef]
+
+Tanzil, A.H.; Brandt, K.; Wolcott, M.; Zhang, X.; Garcia-Perez, M. Strategic assessment of sustainable aviation fuel production technologies: Yield improvement and cost reduction opportunities. Biomass Bioenergy 2021, 145, 105942. [Google Scholar] [CrossRef]
+
+Han, J.; Elgowainy, A.; Cai, H.; Wang, M.Q. Life-cycle analysis of bio-based aviation fuels. Bioresour. Technol. 2013, 150, 447–456. [Google Scholar] [CrossRef]
+
+Aspen Technology, Inc. Aspen Plus®. Available online: https://www.aspentech.com/en/products/engineering/aspen-plus (accessed on 7 April 2025).
+
+DIN 51718; Determining the Moisture Content of Solid Fuels. Deutsches Institut für Normung: Berlin, German, 2002.
+
+DIN 51720; Determining the Volatile Matter Content of Solid Fuels. Deutsches Institut für Normung: Berlin, German, 2001.
+
+DIN 51719; Determination of Ash in Solid Mineral Fuels. Deutsches Institut für Normung: Berlin, German, 1997.
+
+Heng, L.; Zhang, H.; Xiao, J.; Xiao, R. Life Cycle Assessment of Polyol Fuel from Corn Stover via Fast Pyrolysis and Upgrading. ACS Sustain. Chem. Eng. 2018, 6, 2733–2740. [Google Scholar] [CrossRef]
+
+Dutta, A. Ex Situ and In Situ Catalytic Fast Pyrolysis Models (Aspen Plus Models); OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information): Golden, CO, USA, 2019.
+
+Schmitt, C.C.; Raffelt, K.; Zimina, A.; Krause, B.; Otto, T.; Rapp, M.; Grunwaldt, J.-D.; Dahmen, N. Hydrotreatment of Fast Pyrolysis Bio-Oil Fractions Over Nickel-Based Catalyst. Top. Catal. 2018, 61, 1769–1782. [Google Scholar] [CrossRef]
+
+Blažek, J.; Kochetkova, D.; Shumeiko, B.; Váchová, V.; Straka, P. Effect of the hydrogen to feedstock ratio on the hydrotreating of the mixture of petroleum middle distillates and rapeseed oil. Paliva 2020, 12, 42–52. [Google Scholar] [CrossRef]
+
+Sinnott, R.K. Process Integration and Pinch Technology page. In Coulson & Richardson’s Chemical Engineering; Elsevier Butterworth-Heinemann: Oxford, UK, 2005; pp. 111–124. [Google Scholar]
+
+Liporace, F.S.; Pessoa, F.L.P.; Queiroz, E.M. Heat Exchanger Network Synthesis Considering Changing Phase Streams. Rev. Eng. Térmica 2004, 3, 87. [Google Scholar] [CrossRef]
+
+Jeon, H.; Youn, J.; Park, J.Y.; Yim, E.-S.; Ha, J.-M.; Park, Y.-K.; Lee, J.W.; Kim, J.-K. Evaluation of the Properties and Compositions of Blended Bio-jet Fuels Derived from Fast Pyrolysis Bio-oil made from Wood According to Aging Test. Korean J. Chem. Eng. 2024, 41, 3631–3646. [Google Scholar] [CrossRef]
+
+ASTM D7566; Standard Specification for Aviation Turbine Fuel Containing Synthesized Hydrocarbons. ASTM International: West Conshohocken, PA, USA, 2024.
+
+Lau, J.I.C.; Wang, Y.S.; Ang, T.; Seo, J.C.F.; Khadaroo, S.N.B.A.; Chew, J.J.; Ng Kay Lup, A.; Sunarso, J. Emerging technologies, policies and challenges toward implementing sustainable aviation fuel (SAF). Biomass Bioenergy 2024, 186, 107277. [Google Scholar] [CrossRef]
+
+Figure 1. The strategy for building and validating the Aspen Plus model of FP of CS.
+
+Figure 2. Overall process flow sheet of SAF production using CS as feedstock.
+
+Figure 3. Aspen Plus flow sheet of process of production of SAF from CS.
+
+Figure 4. A summary of the heat exchanger network design of possible matches between the streams and the remaining cold utility supply required.
+
+Figure 5. The distribution of the operating and equipment costs between the processing steps.
+
+Figure 6. A sensitivity analysis of the cost variables with the greatest impact on the MFSP.
+
+Table 1. Ultimate and proximate analyses for CS (dry basis) [13].
+
+Ultimate AnalysisProximate AnalysisElementWt %ElementWt %Carbon41.63Moisture1.00Hydrogen5.75Volatile matter74.72Oxygen51.54Fixed carbon18.30Nitrogen1.08Ash5.99Sulphur0.62
+
+Table 2. The design parameters of the FP process using CS as the feedstock [19,20].
+
+ParameterType/ValueFeedstockCorn stoverCapacity (tonnes/day)600Reactor typeBubbling fluidised bed Reaction temperature ( ° C )500Inlet pressure (kPa)1.013Carrier gasNitrogenOil yield (%)56.2Char yield (%)19.1Gas yield (%)22.3
+
+Table 3. Compounds and composition of bio-oil, biogas, and biochar resulting from FP of CS [20,27].
+
+TypeCompoundWt % in Respective TypeBio-oilFormic acid8.55Acetic acid4.41Glycolaldehyde5.97Hydroxy acetone5.65Furfural4.972(5H)-Furanone 2.62Levoglucosan9.41Glucose 8.19Phenol5.58Guaiacol9.04Xylenol8.26Eugenol8.07Water19.28BiogasCarbon dioxide40.60Carbon monoxide38.34Methane0.73Ethylene0.80Hydrogen11.03Propane1.20Ammonia6.31Sulphur dioxide0.40Hydrogen sulphide 0.60BiocharCarbon54.70Hydrogen2.60Oxygen24.80Nitrogen0.00Sulphur0.07Ash17.85
+
+Table 4. The design parameters of the first and second stages of the hydrotreatment process [19,20,30].
+
+ParameterFirst Stage Second StageFeedstockPyrolytic oilMild hydrotreated oilReaction temperature (°C)220400Inlet pressure (MPa)10.710.7Inlet gasHydrogenHydrogenCatalystRu/CCo/Mo on AlH2-to-oil ratio (m3/m3)240500
+
+Table 5. The design parameters of the columns for SAF separation.
+
+ParameterColumn 1Column 2Number of stages2027Feed stage615Reflux ratio0.951Top stage pressure241 kPa103 kPaColumn pressure drop34 kPa34 kPaCondenserTotalTotalReboilerKettleKettle
+
+Table 6. The streams involved in the pinch analysis.
+
+StreamTin (°C)Tout (°C)Heat Duty (kW)Heat Flux (kW/°C)H1 (through Cooler 1)50025−9901.7720.8H2 (through Cooler 2)38925−7766.5821.3C1 (through Heater 2)2204002823.2415.7C2 (through Heater 1)362201489.228.1C3 (through Heater 3)25220751.763.9C4 (through Heater 2)253904512.8912.4
+
+Table 7. A list of the fixed OPEX values [19].
+
+Position Amount Unit Cost (USD per Year) Vice plant manager 3 61,563 Maintenance supervisor 1 19,788 Maintenance engineer 3 18,469 Maintenance technician 5 15,391 Plant supervisor 2 21,987 Plant engineer 5 20,228 Plant technician 7 17,590 Yard employees 2 9674 Accountant and secretaries 3 14,072 Plant manager 1 70,358
+
+Table 8. A list of the variable OPEX values [19,23].
+
+Material Consumption Unit Cost (USD per Unit) Feedstock 25,000.00 kg/h 0.10/kg Hydrogen 411 kg/h 7.00/kg Ru/C catalyst6859.00 kg/year 3183.33/kg CoMo on Al catalyst4063.00 kg/year 200.00/kg Wastewater treatment chemicals 5.00 kg/h 6.65/kg Electricity 179.14 kW 13.88/h Cooling water 1748.00 L/h 46.14/h Refrigerant 5.00 kg/h 0.95/h High-pressure steam 3328.60 kWh 50.88/h Fired heat 4.44 kg/h 114.73/h
+
+Table 9. A list of the equipment and installation costs for the base case and the optimised case extracted from the APEA in Aspen Plus V12.1 [23].
+
+UnitBase Case Optimised CaseEquipment Installation Equipment Installation Column 1 USD 293,900.00 USD 808,600.00 USD 293,900.00 USD 808,600.00Column 2 USD 190,500.00 USD 656,800.00 USD 190,500.00 USD 656,800.00Cooler 1 USD 59,200.00 USD 239,400.00 USD 45,500.00 USD 144,800.00Cooler 2 USD 33,700.00 USD 231,200.00 USD 104,500.00 USD 256,100.00Cooler 3 USD 11,100.00 USD 76,900.00 USD 11,100.00 USD 76,900.00Cyclone USD 52,911.85 USD 26,455.93 USD 52,911.85 USD 26,455.93Dryer USD 14,146.00 USD 7073.00 USD 14,146.00 USD 7073.00Flash 1 USD 21,900.00 USD 136,400.00 USD 21,900.00 USD 136,400.00Flash 2 USD 22,300.00 USD 136,900.00 USD 22,300.00 USD 136,900.00Grinder USD 28,000.00 USD 14,000.00 USD 28,000.00 USD 14,000.00Hydrotreater (Stage 1) USD 125,900.00 USD 306,600.00 USD 125,900.00 USD 306,600.00Hydrotreater (Stage 2) USD 183,700.00 USD 468,900.00 USD 183,700.00 USD 468,900.00HEX 1/Heater 1 * USD 27,800.00 USD 119,900.00 USD 87,200.00 USD 520,400.00HEX 2/Heater 2 * USD 687,600.00 USD 412,560.00 USD 19,300.00 USD 121,800.00HEX 3/Heater 3 * USD 33,400.00 USD 147,800.00 USD 51,700.00 USD 288,900.00HEX 4/Heater 4 * USD 73,000.00 USD 342,600.00 USD 19,100.00 USD 121,400.00LL (Separator 1) USD 17,600.00 USD 122,500.00 USD 17,600.00 USD 122,500.00LL (Separator 2) USD 21,900.00 USD 136,400.00 USD 21,900.00 USD 136,400.00Pump 1 USD 107,300.00 USD 155,100.00 USD 107,300.00 USD 155,100.00Pump 2 USD 5700.00 USD 37,500.00 USD 5700.00 USD 37,500.00Pyrolysis Reactor USD 416,730.81 USD 375,057.73 USD 416,730.81 USD 375,057.73
+
+Table 10. The assumptions of the total CAPEX [19].
+
+Parameter Assumption Total direct cost (TDC) Inside battery limits Equipment with installation cost Warehouse 5.7% of ISBL cost Site development 12.9% of ISBL cost Additional piping 6.4% of ISBL cost Total indirect cost (TIC) Engineering and supervision 13.7% of TDC Construction expense 34% of TDC Total direct and indirect cost (TDIC) TDC + TIC Contractors 5% of TDIC Contingency 10% of TDIC Fixed capital investment (FCI) TDIC + OSBLs + contractors + contingency Working capital (WC) 10% of FCI Land 5% of ISBL costTotal CAPEX FCI + WC + land
+
+Table 11. The financial assumptions [19].
+
+ParameterAssumptionBase year2025Operating hours per year8088Loan amount60%Loan interest6%Loan term5 yearsWorking capital (% of FCI)10%Depreciation period8 years (linear)General plant7 yearsSteam plant20 yearsConstruction period3 years% spent in year 230%% spent in year 130%% spent in year 040%Discount rate10%Income tax rate30%
+
+Table 12. Elemental composition of final SAF product.
+
+ComponentDaniel Howe et al. [20]This Paper C (wt %) 85.30 85.50 H (wt %) 12.89 14.43 O (wt %) 0.66 0.01 S (wt %) 0.00 0.07 N (wt %) 0.00 0.00
+
+Table 13. The compounds and composition of the final SAF product (after separation).
+
+Compound GroupModel CompoundFormulaWt % Normal paraffinHexaneC6H140.00 DodecaneC12H2621.02 OctadecaneC18H380.00 1so-paraffin3-Methyl hexaneC7H1612.79 4-methylnonaneC10H2219.80 CyclopentaneCyclopentane, ethylC7H146.86 1-methyl-I-ethyl cyclopentaneC8H169.99 CyclohexaneCyclohexaneC6H120.01 Cyclohexane, butyl-C10H207.59 1,1-Bi-cyclohexylC12H222.03 Cyclo-C7+1,3-dimethyladamantaneC12H204.67 AromaticsO-xyleneC8H100.01 Benzene, I-ethenyl-4-ethyl-C10H126.05 Heavies4-methylphenanthreneC15H120.00 PyreneC16H100.00 Diphenyl1,2-DiphenylethaneC14H140.00 Indanes and indeneIndaneC9H104.17 1 H-Indene, 1,2,3-trirnethyl-C12H140.87 1,2,3,4 NaphthaleneI-n-Hexy1-1,2,3,4-TetrahydronaphthaleneC16H240.00 NaphthaleneNaphthalene, 2,7-dimethylC12H120.28 PNAsNaphthalene, 1-phenyl-C16H120.00 Oxygenate5-Methyl-2-(1-methylethyl)-phenolC10H14O3.32 Nitrogen compounds2,4,6-trimethylpyridineC8H11N0.54 Sulphur compoundsDibenzothiopheneC12H8S0.00
+
+Table 14. A comparison between the jet fuel properties required by ASTM D7566 and the properties of jet fuel from 100% waste wood-derived (WWD) SAF and 100% conventional jet fuel from the literature [33].
+
+PropertyUnitRequirement
+
+(ASTM D7566 [34])WWD SAFConventional Jet FuelTANmg KOH/gMax 0.100.0230.001Density at 15 °Ckg/m3775–840801.4793.6Freezing point°CMax −47Over −100−51.5Viscosity at −20 °Cmm/s2Max 8.03.213.537Water contentmg/kgMax 754225FBP°CMax 300312296.6
+
+Table 15. A comparison of the SAF composition in this paper with the compositions of 100% waste wood-derived (WWD) SAF and 100% conventional jet fuel from the literature [33].
+
+WWD SAF Conventional Jet Fuel This Paper Paraffins (%) 24.7 62.4 53.6 Naphthene (%) 58.1 13.3 31.2 Aromatics (%) 2.0 21.6 11.1 Oxygenates (%) 3.3 1.6 3.3 Others (%) 0.9 0.1 0.8
+
+Table 16. Stream pairing for HEN design.
+
+No.StreamsHeat Transfer Available (kW)Hot Stream Outlet T (°C)Cold Stream
+
+Outlet T (°C)1 H1 and C1 2823.24 272 220 2 H1 and C2 1489.22 193 400 3 H2 and C3 751.76 234 220 4 H2 and C4 4512.89 200 390
+
+Table 17. A breakdown of the economic analysis results.
+
+ItemsBase CaseOptimised CaseVariable OPEX (MM USD/Year)Material66.52 66.52 Utilities 1.99 0.33 Fixed OPEX (MM USD/year) Labour 0.73 0.73 Other overhead 0.41 0.41 CAPEX (MM USD) ISBL cost7.39 5.92 FCI 18.6 14.94 WC 1.86 1.49 Land 0.37 0.30 MFSP (USD/L) SAF 2.35 2.29
+
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
+
+© 2025 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).
+
+Share and Cite
+
+MDPI and ACS Style
+
+Halimi, N.A.N.; Odunsi, A.; Sebastiani, A.; Kamel, D. Waste to Biofuel: Process Design and Optimisation for Sustainable Aviation Fuel Production from Corn Stover. Energies 2025, 18, 3418. https://doi.org/10.3390/en18133418
+
+AMA Style
+
+Halimi NAN, Odunsi A, Sebastiani A, Kamel D. Waste to Biofuel: Process Design and Optimisation for Sustainable Aviation Fuel Production from Corn Stover. Energies. 2025; 18(13):3418. https://doi.org/10.3390/en18133418
+
+Chicago/Turabian Style
+
+Halimi, Nur Aina Najihah, Ademola Odunsi, Alex Sebastiani, and Dina Kamel. 2025. ""Waste to Biofuel: Process Design and Optimisation for Sustainable Aviation Fuel Production from Corn Stover"" Energies 18, no. 13: 3418. https://doi.org/10.3390/en18133418
+
+APA Style
+
+Halimi, N. A. N., Odunsi, A., Sebastiani, A., & Kamel, D. (2025). Waste to Biofuel: Process Design and Optimisation for Sustainable Aviation Fuel Production from Corn Stover. Energies, 18(13), 3418. https://doi.org/10.3390/en18133418
+
+Note that from the first issue of 2016, this journal uses article numbers instead of page numbers. See further details here.
+
+Article Metrics
+
+No
+
+No
+
+Article metric data becomes available approximately 24 hours after publication online.",https://pub.mdpi-res.com/energies/energies-18-03418/article_deploy/html/images/energies-18-03418-g001-550.jpg?1751186199,N,,2025-06-29 06:02:32.494933
 ,,2025-06-29 04:21:11+00:00,TravelMole,Former China airline boss named in corruption probe - TravelMole,Not Available,,,,,https://www.travelmole.com/news/former-china-airline-boss-named-in-corruption-probe/,"The former chief of China Eastern Airlines is being investigated for corruption.
 Anti-graft agency the Central Commission for Discipline Inspection said Liu Shaoyong is under investigation for ‘serious violations of discipline and law.’ This is a term it uses for corrupt practices.
 Liu Shaoyong led the state backed airline China Eastern Airlines as chairman until 2022.
@@ -5033,306 +5426,3 @@ For more information, please contact:
 Corporate Communications
 
 Tel: +41 22 770 2967",https://www.iata.org/contentassets/49376fa40511417e8c08f50e68d38090/matchmaker.jpg,N,,2025-06-26 08:00:34.314941
-,,2025-06-26 09:15:50+00:00,Aviation A2Z,Concorde: First Supersonic Passenger Aircraft in the World to Return in 2026 - Aviation A2Z,"Kevin Derby, Helen William",,,,,https://aviationa2z.com/index.php/2025/06/26/concorde-supersonic-passenger-aircraft-to-return-in-2026/,"Advertisement Concorde Supersonic Jet to Return by 2026 After decades of silence, Concorde is on track to become the world’s leading supersonic passenger aircraft once again.
-The recently signed executive order clears regulatory airspace that had long blocked overland supersonic travel due to sonic boom and environmental concerns.
-History of the Supersonic Era The Concorde, a joint marvel by British Airways (BA) and Air France (AF), revolutionized high-speed air travel with its supersonic performance.
-First flown in December 1968 and surpassing Mach 1 in June 1969, the Tu-144 predated Concorde’s first supersonic flight.
-Air France retired its Concorde fleet in May 2003, and British Airways followed in October 2003, officially concluding the era of supersonic commercial aviation.","WASHINGTON- The iconic Concorde is preparing to return to commercial skies by 2026, marking 50 years since its first historic flight.
-
-Fly-Concorde Limited aims to relaunch supersonic passenger service from the United States under a groundbreaking aviation policy shift.
-
-On June 6, 2025, at Washington Dulles International Airport (IAD), U.S. President Donald J. Trump signed the “Concorde Bill,” lifting the long-standing ban on supersonic flight over land. This regulatory reversal unlocks a new era of innovation in high-speed, sustainable air travel.
-
-Advertisement
-
-Concorde Supersonic Jet to Return by 2026
-
-After decades of silence, Concorde is on track to become the world’s leading supersonic passenger aircraft once again.
-
-The recently signed executive order clears regulatory airspace that had long blocked overland supersonic travel due to sonic boom and environmental concerns. The new legislation positions the U.S. as a leader in next-generation aerospace innovation and sustainability.
-
-The new Concorde will remain true to its iconic silhouette but will be 50% lighter and use advanced composite materials and Sustainable Aviation Fuel (SAF), cutting emissions by 80%.
-
-It will cruise at 60,000 feet, significantly higher than conventional commercial jets, while operating faster, quieter, and cleaner than the original.
-
-The interior will reflect minimalist Japanese aesthetics, developed by leading sustainable architects. Every feature, from cabin design to propulsion systems, will incorporate cutting-edge aerospace technologies rooted in decades of research and development.
-
-ALSO READ: Trump Lifts 52-Year Long Ban on Supersonic Flights in the US
-
-Leadership, Legacy, and Supersonic Breakthroughs
-
-At the helm of this supersonic revival is Dr. Pano Kroko Churchill, CEO and Founder of The Concorde Co., based in Washington state.
-
-A triple PhD from Oxford and an expert physicist, Dr. Churchill is credited with solving the long-standing sonic boom challenge. His patented Sonic Boom Suppression technology, granted in May 2025, enables Concorde to fly overland without disturbing ground-level communities.
-
-Dr. Churchill is a direct descendant of Sir Winston Churchill, whose original Concorde initiative was launched as a post-World War II peace project. Now, his legacy continues through the rebirth of this aviation legend, targeted for launch on its 50th anniversary.
-
-Patricia Bader-Johnston, Vice President and Chief Development Officer at Fly-Concorde Limited, emphasizes the aircraft’s broader vision: “Concorde is set to become the global benchmark for sonic boom suppression and sustainability.”
-
-Financial Innovation
-
-Fly-Concorde is also innovating on the financial front. It has introduced Concorde Coin (CSSC), a stablecoin backed by Concorde’s aviation assets and operations.
-
-With blockchain technology gaining global traction, CSSC is designed to attract investors aligned with futuristic, environmentally responsible air travel ventures.
-
-This digital currency initiative aims to fund development while enabling broader engagement in Concorde’s mission. The move reflects growing synergy between aerospace advancement and decentralized finance.
-
-Globally recognized as a pinnacle of aviation excellence, the Concorde brand is now valued at approximately $50 billion. The upcoming relaunch aims to restore its reputation as the epitome of luxury air travel, now aligned with modern values of environmental stewardship, digital innovation, and safety.
-
-History of the Supersonic Era
-
-The Concorde, a joint marvel by British Airways (BA) and Air France (AF), revolutionized high-speed air travel with its supersonic performance. Operating primarily between London Heathrow (LHR), Paris Charles de Gaulle (CDG), and New York John F. Kennedy Airport (JFK), Concorde represented the peak of technological ambition in commercial aviation.
-
-The aircraft’s inaugural transatlantic flight occurred on September 26, 1973, marking a new era of rapid travel. Despite initial global fascination, the Concorde’s commercial future was constrained by high operational costs, limited routes, and its eventual involvement in a fatal accident in 2000.
-
-Birth of a Supersonic Dream
-
-Concorde’s development began with the 1962 treaty between France and the UK, aiming to share the cost and innovation challenges of producing a supersonic transport (SST).
-
-British Aerospace and Aérospatiale collaborated on the aircraft’s frame, while Rolls-Royce and SNECMA developed its powerful Olympus 593 engines. This cooperation marked a defining moment in European aerospace engineering.
-
-After its maiden flight on March 2, 1969, the Concorde entered commercial service on January 21, 1976. British Airways (BA) initially operated the London (LHR) to Bahrain route, and Air France (AF) flew from Paris (CDG) to Rio de Janeiro (GIG). Shortly after, both airlines launched regular services to Washington Dulles (IAD) and New York JFK (JFK), offering transatlantic flights in under three and a half hours.
-
-Although capable of cruising at Mach 2.04 (2,179 km/h), the Concorde was never economically viable. Only 14 production aircraft entered commercial service, with persistent financial losses leading to route reductions until JFK remained the only regular destination. The aircraft’s sonic boom and high noise levels also restricted route expansion.
-
-Tupolev Tu-144, Copy of Concorde?
-
-The Tupolev Tu-144, the world’s first supersonic transport (SST) aircraft, was a milestone in Soviet aerospace engineering. Designed by legendary aircraft designer Andrey N. Tupolev and his son Alexey, the Tu-144 symbolized the USSR’s ambition to lead in high-speed aviation during the Cold War era.
-
-First flown in December 1968 and surpassing Mach 1 in June 1969, the Tu-144 predated Concorde’s first supersonic flight. It was publicly unveiled in Moscow in May 1970 and stood as a technological marvel with futuristic design elements and record-breaking performance.
-
-Despite its technical achievements, the Tu-144’s career was marred by high-profile incidents. A tragic crash during a demonstration at the 1973 Paris Air Show raised early concerns. Though the aircraft began mail service on the Moscow–Alma-Ata route in 1975 and passenger service in 1978, another fatal crash that same year led to its commercial withdrawal.
-
-Only 55 passenger flights were completed before Aeroflot ceased its SST operations. The aircraft’s high operating costs, limited range, and reliability issues made it commercially unsustainable.
-
-While its commercial role was short-lived, later Tu-144 variants were used in experimental flight programs. Notably, in the 1990s, a modified Tu-144LL flew under a joint Russian-American program to advance next-generation supersonic transport technology.
-
-Final Years and Grounding
-
-On July 25, 2000, Air France Flight 4590 (AF4590), a Concorde departing from Paris Charles de Gaulle Airport (CDG) to New York JFK, crashed shortly after takeoff.
-
-A burst tire punctured a fuel tank, igniting a fire that led to engine failure. The aircraft crashed into a nearby hotel in Gonesse, France, killing all 109 on board and 4 on the ground.
-
-This tragedy, combined with growing maintenance costs and declining passenger numbers, marked the beginning of the end.
-
-Air France retired its Concorde fleet in May 2003, and British Airways followed in October 2003, officially concluding the era of supersonic commercial aviation.
-
-Stay tuned with us. Further, follow us on social media for the latest updates.",https://aviationa2z.com/wp-content/uploads/2025/06/1620px-G-BOAB_Concorde_102_British_Aws_MAN_26MAY99_6929902363.webp,N,,2025-06-26 08:00:39.197780
-,,2025-06-26 08:07:04+00:00,X (formerly Twitter),"Climate Home News on X: ""Sustainable aviation fuel, or SAF, is an alternative to traditional ...",Not Available,,,,,https://x.com/ClimateHome/status/1938122644689211502,"Sustainable aviation fuel, or SAF, is an alternative to traditional jet fuel that can significantly reduce aviation emissions.","JavaScript is not available.
-
-We’ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of supported browsers in our Help Center.",,N,,2025-06-26 09:01:56.797760
-,,2025-06-26 07:35:38+00:00,www.chinadaily.com.cn,Soaring demand promotes use of green methane in shipping - Chinadaily.com.cn,张洁 Zhang Jie,,,,,https://www.chinadaily.com.cn/a/202506/26/WS685ca3e3a310a04af22c8955.html,"Despite rising demand for green transition across the global shipping industry, production capability of clean energies remains limited.
-Among the 180 million tons of methanol produced worldwide in 2023, merely 500,000 are green methanol, including some 300,000 tons produced in China, according to a Shanghai Observer report.
-""CMA CGM's demand for green methanol is much bigger than the 50,000 tons we are going to provide.
-Public information shows the demand for green methanol is projected to surpass 10 million tons by 2030, while production is only approaching 500,000 tons annually for the moment.
-The bunkering was conducted by the Hai Gang Zhi Yuan tanker, the nation's first and largest methanol bunkering vessel in operation.","The nation's first batch of large-scale green methane will be produced and applied in bunkering a commercial logistics vessel in July, marking the fact that a closed-loop from R&D to application of this clean fuel has been established, according to a senior executive of the green methane producer.
-
-A demonstration project located in Taonan in Northeast China's Jilin province is expected to produce the first barrel of green methanol in July, which will subsequently be transported to Shanghai Port to bunker the commercial logistics vessels under French shipping and logistics group CMA CGM, according to Ni Jianjun, deputy general manager of Shanghai Boiler Works Co Ltd, a unit of Shanghai Electric Group Co Ltd.
-
-""The Taonan site has an annual production capacity of 50,000 metric tons, and we have plans to build more capacity to meet soaring market demand,"" said Ni.
-
-As a type of clean and renewable energy, green methanol is produced mainly from renewable energies featuring high efficiency, clean emission, renewability, easy storage and transportation convenience.
-
-Despite rising demand for green transition across the global shipping industry, production capability of clean energies remains limited.
-
-Throughout 2024, orders for 515 vessels using alternative fuels including liquefied natural gas (LNG) and methanol were placed, up 38 percent year-on-year, with 166 ships to be powered by methanol, reported the Shanghai-based newspaper Jiefang Daily citing data from international certification and classification body DNV.
-
-Among the 180 million tons of methanol produced worldwide in 2023, merely 500,000 are green methanol, including some 300,000 tons produced in China, according to a Shanghai Observer report.
-
-According to Ni, apart from the Taonan project, a much bigger project with an annual production capacity of 200,000 tons of methanol is in the pipeline.
-
-What's noteworthy is that all the core technologies and key equipment used in the Taonan project are researched and developed by Shanghai Electric, Ni added.
-
-""CMA CGM's demand for green methanol is much bigger than the 50,000 tons we are going to provide. In fact, there is a supply shortage in terms of green methanol globally,"" Ni said.
-
-Public information shows the demand for green methanol is projected to surpass 10 million tons by 2030, while production is only approaching 500,000 tons annually for the moment.
-
-In addition to the innovative application of green energy in the shipping industry, Shanghai Electric has plans to develop sustainable aviation fuel and will continue to introduce more green fuel solutions for various sectors, Ni said.
-
-On its way to building itself into an international shipping hub, the port of Shanghai is also seizing the emerging opportunities that green transition creates.
-
-A simultaneous ship-to-ship bunkering of green methanol for dual-powered container ship HMM Green under South Korean logistics company was conducted in March at Shanghai's Yangshan Port, becoming the first bunkering of domestically produced green methanol, according to Shanghai International Port (Group) Co Ltd.
-
-The bunkering was conducted by the Hai Gang Zhi Yuan tanker, the nation's first and largest methanol bunkering vessel in operation. In comparison with the bunkering conducted by Hai Gang Zhi Yuan for Danish shipping and logistics services provider A.P.Moller-Maersk's Astrid Maersk in April 2024, the latest bunkering involves a greater amount of green methanol, about 2,900 tons, and the green energy is produced in the Inner Mongolia autonomous region.
-
-Considering its safety, sophisticated technology and scale production capability, green methanol is regarded as one of the prime options as the global shipping industry strives to achieve carbon neutrality.",http://img2.chinadaily.com.cn/images/202506/26/685ca3e3a310a04a967b0f75.jpeg,N,,2025-06-26 08:01:09.235116
-,,2025-06-26 07:26:33+00:00,Energy.AgWired.com,Senate Urged to Adopt House 45Z Provisions - Energy.AgWired.com,Not Available,,,,,https://energy.agwired.com/2025/06/25/senate-urged-to-adopt-house-45z-provisions/,"Biofuel interests are urging the Senate to adopt the House approach when it comes to the 45Z clean fuel production tax credit.
-The legislation released by the Senate Finance Committee last week would extend the 45Z credit, which the industry supports, but at the same time would allow imported feedstocks to qualify for up to 80% of the credit, after the House version prohibited foreign feedstocks outside of North America from qualifying.
-Renewable Fuels Association President and CEO Geoff Cooper says they are concerned this would allow potentially fraudulent feedstocks, such as used cooking oil (UCO) from China that may include palm oil.
-“So we are encouraging the Senate to really just follow what the House did on how to address foreign feedstocks,” said Cooper in the latest Ethanol Report podcast.
-“We think there’s a long way to go before we see a final bill,” Cooper said.","Biofuel interests are urging the Senate to adopt the House approach when it comes to the 45Z clean fuel production tax credit.
-
-The legislation released by the Senate Finance Committee last week would extend the 45Z credit, which the industry supports, but at the same time would allow imported feedstocks to qualify for up to 80% of the credit, after the House version prohibited foreign feedstocks outside of North America from qualifying.
-
-Renewable Fuels Association President and CEO Geoff Cooper says they are concerned this would allow potentially fraudulent feedstocks, such as used cooking oil (UCO) from China that may include palm oil. “So we are encouraging the Senate to really just follow what the House did on how to address foreign feedstocks,” said Cooper in the latest Ethanol Report podcast. “We’re not saying you can’t import UCO and make it into renewable fuel, we’re just saying that fuel should not qualify for a U.S. tax payer-supported program.”
-
-Cooper thinks it’s “highly unlikely” the One, Big, Beautiful Bill will be finished by the stated July 4 deadline. “We think there’s a long way to go before we see a final bill,” Cooper said. “Sometime in July, before August recess, seems more likely, but even that’s really going to put Congress under that gun to get agreement on some of the more controversial issues.”
-
-Like the House bill, the Senate Finance Committee version includes an extension of the tax credit from 2027 to 2031, but it also includes a provision that cuts the maximum rate of the 45Z credit for sustainable aviation fuel (SAF) from $1.75 per gallon to $1 per gallon, which could impact SAF growth.",http://energy.agwired.com/wp-content/uploads/2025/01/45z-300x225.jpg,N,,2025-06-26 08:01:16.799504
-,,2025-06-26 07:11:54+00:00,Reccessary,Indonesia's energy transition attracts momentum from sovereign funds | NEWS - Reccessary,Not Available,,,,,https://reccessary.com/en/news/indonesia-energy-transition-attracts-momentum-from-sovereign-funds,"Indonesian President Prabowo Subianto’s newly established sovereign wealth fund, Danantara, has identified renewable energy as one of its key investment areas.
-(Photo: Presidential Secretariat of Indonesia) Indonesia is emerging as a promising destination for energy transition investments.
-Two of the country’s leading sovereign wealth funds have recently reaffirmed their commitment to scaling up investments in clean energy.
-In May, INA, Danantara, and French mining giant Eramet signed an MoU focused on building a domestic nickel ecosystem for EV battery materials.
-The agreement was witnessed by French President Emmanuel Macron and Indonesian President Prabowo Subianto.","Indonesian President Prabowo Subianto’s newly established sovereign wealth fund, Danantara, has identified renewable energy as one of its key investment areas. (Photo: Presidential Secretariat of Indonesia)
-
-Indonesia is emerging as a promising destination for energy transition investments. Two of the country’s leading sovereign wealth funds have recently reaffirmed their commitment to scaling up investments in clean energy.
-
-At the same time, the European Chamber of Commerce in Indonesia (EuroCham Indonesia) is advocating for the development of low-carbon fuels such as bioenergy, encouraging local companies to tap into global decarbonization trends to drive export-led industrial growth.
-
-INA, Danantara target nickel processing, clean power, and grid upgrades
-
-At the Energy Transition Forum co-hosted by the Financial Times and Nikkei on June 25, Indonesian Investment Authority (INA) and the newly established sovereign fund Danantara outlined their upcoming investment priorities, naming electric vehicle battery supply chains, solar energy, and grid modernization among key targets.
-
-INA CEO Ridha Wirakusumah noted that renewable energy currently accounts for about 12% of INA’s US$4 billion portfolio and is expected to rise to 15–20% this year. The fund is not only supporting the early retirement of coal plants but also focusing on geothermal, solar, and waste-to-energy projects.
-
-Ridha highlighted a solar power project under discussion that could break the record for the largest installed capacity in the country. In the EV space, INA is prioritizing nickel processing, an essential link in battery manufacturing, leveraging Indonesia’s abundant mineral resources to build a competitive position in the global EV supply chain.
-
-In May, INA, Danantara, and French mining giant Eramet signed an MoU focused on building a domestic nickel ecosystem for EV battery materials. The agreement was witnessed by French President Emmanuel Macron and Indonesian President Prabowo Subianto.
-
-Indonesia has singled out the EV battery supply chain as one of its top priorities for future investment expansion. Pictured is Former Indonesian Pictured is former president Joko Widodo at the inauguration of an EV battery plant in 2024. (Photo: MOTIE)
-
-Foreign stakeholders urge acceleration of low-carbon fuel exports
-
-Danantara Chief Investment Officer Pandu Sjahrir, also speaking at the forum, emphasized the fund’s dual focus on nickel processing and upgrading the national power grid. Indonesia’s outdated electricity infrastructure, originally built to serve fossil fuel plants, is now seen as a major bottleneck to renewable integration.
-
-Danantara, launched in February under the Prabowo administration, is authorized to manage the assets of key state-owned enterprises such as the national oil company Pertamina. The fund oversees assets worth over US$900 billion and is pursuing nine strategic investment areas, including mining for battery minerals, biofuel agriculture, and renewable power.
-
-Foreign investors see Indonesia’s vast natural resources and strategic location as offering immense export potential. Thomas Wagner, head of EuroCham Indonesia’s energy working group, recently stated at a geopolitical forum that Indonesia should move swiftly to develop low-carbon fuels, including bio-based sustainable aviation fuel and bio-methanol, which could generate up to US$8 billion annually in exports.
-
-Wagner urged Indonesian companies to take a proactive stance in capturing surging global demand and benefiting from favorable policies. Waiting for ideal market prices or political clarity, he warned, could result in losing ground to competitors in Malaysia, Japan, and South Korea.",https://reccessary.com/data/news/cover/1750918299629002775.jpg,N,,2025-06-26 08:01:24.539495
-,,2025-06-26 07:10:13+00:00,openDemocracy,Weak UK lobbying laws let fossil fuel giants influence climate policies - openDemocracy,Ethan Shone,,,,,https://www.opendemocracy.net/en/dark-money-investigations/weak-uk-lobbying-laws-let-fossil-fuel-giants-influence-climate-policies/,"The British government weakened key climate policies after fossil fuel giants lobbied ministers and used legal loopholes to avoid public scrutiny, a new report has found.
-InfluenceMap’s findings illustrate “how inadequate and opaque lobbying rules undermine effective policymaking”, said Alastair McCapra, the CEO of the UK lobbying industry body.
-Oil and gas licensing In 2022, the UK government quietly dropped two criteria from its ‘Climate Compatibility Checkpoint’ after lobbying from the fossil fuel industry.
-The checkpoint is used to assess whether proposed oil and gas licenses align with the UK’s climate change goals.
-This industry lobbying has led to indecision and disruption on government plans.","The British government weakened key climate policies after fossil fuel giants lobbied ministers and used legal loopholes to avoid public scrutiny, a new report has found.
-
-Climate-focused think tank InfluenceMap has uncovered that industry influence appears to have led to the delay and dilution of UK policies on the roll-out of heat pumps, the development of ‘sustainable’ aviation fuel and the granting of new oil and gas licenses.
-
-In each case, it found that lobbyists representing fossil fuel actors that stood to lose billions from progressive climate regulations were able to influence the Conservative government’s policy without scrutiny.
-
-While InfluenceMap’s report looks at policies relating to the UK’s net-zero ambitions, its findings on the way the UK’s lax laws allow lobbying to be conducted in secret can be applied across sectors. The think tank is calling for reforms to address this and close the “major transparency gap”.
-
-The secrecy around lobbying, which has been at the heart of many government scandals in recent years, is a major driver of the disillusionment in British politics.
-
-Three-quarters of the public believe the government is “rigged to serve the rich and influential”, according to polling conducted by More in Common and University College London’s Policy Lab last year.
-
-InfluenceMap’s findings illustrate “how inadequate and opaque lobbying rules undermine effective policymaking”, said Alastair McCapra, the CEO of the UK lobbying industry body.
-
-He added: “Business engagement should help to build sounder policy with better outcomes for the public, but unaccountable lobbying breeds public mistrust. This important report removes the guesswork needed to piece together what kind of lobbying is taking place.”
-
-Weak lobbying laws
-
-openDemocracy has previously reported extensively on the ways that the UK’s weak lobbying laws allow corporate influence to secretly shape policy.
-
-Our investigations have now been backed up by InfluenceMap, which has found a huge gap exists between the lobbying that takes place and that which is disclosed. This means the British public often has no way of knowing who is swaying policy.
-
-Comparing transparency rules in the UK, the European Parliament, the US, Canada and France, InfluenceMap found that the UK has by far the worst system.
-
-Of the five, only the UK exempts lobbyists who work in-house for a company, rather than for an agency or consultancy, from registering with a statutory lobbying watchdog. Less than 15% of lobbyists working in the UK need to register because of this rule.
-
-The firms on the register must publish a list of clients on whose behalf they have lobbied each quarter. But they do not have to publish any details about the lobbying, including whether it involved written correspondence or a meeting and what legislation or policy was discussed.
-
-Registered lobbyists also only need to declare clients for whom they lobbied government ministers and senior officials. There is no requirement to name clients when they approached other MPs and peers, including those on select committees, or influential government advisers.
-
-The Committee for Standards in Public Life, an independent public body that advises the prime minister on lobbying and other aspects of public office, has consistently recommended the government publish a single, searchable database of all meetings with lobbyists.
-
-Its recommendations would expand the scope of the current register considerably, requiring lobbyists to disclose the specific policies or legislation they discussed at meetings with government ministers and special advisers.
-
-InfluenceMap has also called on the government to take up this recommendation and address the fundamental flaws in the lobbying act by including in-house lobbyists and publishing all responses to government policy consultants as standard.
-
-Susan Hawley, executive director of Spotlight on Corruption, said the report “starkly demonstrates how major transparency gaps in the UK’s lobbying regime are undermining the development of good climate policy.”
-
-“We fully support their recommendations to make lobbying much more transparent and bring the UK in line with international best practice. These reforms would support more participatory and open decision-making to help rebuild public trust and ensure better decision-making, widening the evidence base for policy making and reducing risks of policy capture by vested interests,” she said.
-
-Oil and gas licensing
-
-In 2022, the UK government quietly dropped two criteria from its ‘Climate Compatibility Checkpoint’ after lobbying from the fossil fuel industry. The checkpoint is used to assess whether proposed oil and gas licenses align with the UK’s climate change goals.
-
-Oil giants BP and Shell and their industry association, Offshore Energies UK (OEUK), responded to a consultation on the checkpoint by objecting to the inclusion of two key metrics for measuring the impact of fossil fuels, according to InfluenceMap’s analysis of consultation responses obtained via Freedom of Information requests.
-
-The measures they opposed would have required the government to consider ‘Scope 3 emissions’ and the ‘global production gap’ when issuing new oil and gas licences.
-
-Scope 3 emissions are produced during end-use and contribute the largest share of all emissions from oil and gas production, while the production gap tracks the discrepancy between planned fossil fuel production and what’s needed to limit global warming to 1.5°C or 2°C.
-
-The government dropped both criteria from the final checkpoint, which instead focuses solely on operational emissions, which represent only a fraction of total emissions from oil and gas projects.
-
-This outcome, InfluenceMap’s report notes, strongly aligns with the positions advocated for by BP, Shell, and OEUK, suggesting their lobbying efforts were successful.
-
-The following year, the government approved 100 new North Sea oil and gas licences, which had a potential emissions footprint equivalent to Denmark’s annual output.
-
-InfluenceMap’s report also highlights the issues around government consultations on proposed policies, pointing out that, as in this case, lobbyists typically use these to suggest amendments in favour of their clients, but their responses are not published as standard.
-
-Similarly, unlike in the other four Parliaments InfluenceMap looked at, corporations in the UK are not required to declare their engagement on policies, how much they spend on lobbying, or which legislation or decisions they are targeting.
-
-It highlights that this can lead to a situation in which companies make voluntary corporate disclosures that fail to capture the true extent of this advocacy. In this case, InfluenceMap found BP published a summary of its response to the checkpoint that omitted key lines of its opposition, which were only revealed later through Freedom of Information requests.
-
-Rachel Davies, advocacy director at Transparency International UK, said: “This report highlights, yet again, the glaring gaps in our lobbying transparency regime and the potential risks of favouring a small group of vested interests at the public’s expense.
-
-“The UK needs to catch up to other comparable democracies and act swiftly to introduce a comprehensive lobbying register with meaningful disclosures.”
-
-Domestic hydrogen
-
-It is broadly agreed that, in the UK, hydrogen is not a viable solution for decarbonising domestic heating and is an especially bad alternative to heat pumps. Much of our hydrogen comes from burning gas or coal and it cannot be transported through our existing pipelines without massive and costly infrastructure changes.
-
-This reality has been set out by different independent bodies advising the UK government.
-
-In 2021, the Climate Change Committee warned that hydrogen had “not yet been proven at scale and should not be a cause to delay other options” such as the roll-out of heat pumps or low-carbon heat networks. Two years later, the National Infrastructure Commission said the government “should not support the roll-out of hydrogen heating” because there is “no public policy case” for its use.
-
-As InfluenceMap’s report notes, this has not prevented the gas industry from waging a successful lobbying campaign in a bid to shore up its market position – with a clear impact on government policy.
-
-The think tank found the industry pursued its cause in a number of ways, including setting up Hello Hydrogen, a campaign fronted by TV star Rachel Riley, to make the case for using hydrogen in homes to the public in 2022. While the campaign did not declare its funders, its director was also a director of Cadent Gas, the UK’s largest gas distribution network.
-
-Cadent is one of the funders of the All-Party Parliamentary Group (APPG) on Hydrogen, which has publicly called for hydrogen to play a part in domestic heating. The APPG’s other funders include Equinor, Shell and the Energy and Utilities Alliance, a lobbying body run by Mike Foster, the former Labour MP for Worcester (home to Worcester Bosch, a major manufacturer of gas boilers).
-
-Other fossil fuel firms and industry lobbying bodies have also consistently pushed for the use of hydrogen in domestic heating in letters to parliamentary select committees and responses to government consultations.
-
-Ahead of last year’s general election, Centrica (formerly British Gas) wrote to the Public Accounts Committee, which examines the value for money of government projects, to call for further public investment in hydrogen for home heating. The firm had written to the Energy Security and Net Zero Committee in support of the technology less than 12 months earlier.
-
-This industry lobbying has led to indecision and disruption on government plans. A February 2023 report by the House of Lords Committee blamed mixed messages on the effectiveness of hydrogen from the government and industry for the poor uptake of a publicly subsidised scheme for heat pumps, which would reduce greenhouse gas emissions and create many jobs.
-
-The lords’ report concluded: “Hydrogen is not a serious option for home heating for the short to medium-term and misleading messages, including from the government, are negatively affecting take-up of established low-carbon home heating technologies like heat pumps.”
-
-The UK’s heat pump roll-outs have lagged behind those of its neighbours. Just 55,000 heat pumps were installed in the UK in 2019, compared to 600,000 in France, according to a study cited in the InfluenceMap report.
-
-In the UK, this reportedly created around 2,000 jobs and reduced emissions of CO₂ by 0.08 million tonnes (MT); in France 30,000 jobs were created and 0.84 MT of CO₂ emissions avoided.
-
-‘Sustainable’ aviation fuel
-
-InfluenceMap also uncovered how industry significantly influenced the government’s so-called ‘Jet Zero’ strategy for cutting emissions in the UK’s aviation industry, which is heavily reliant on fossil fuels.
-
-Biofuels, largely made up of used cooking oils, are often suggested as an option for producing Sustainable Aviation Fuel (SAF), although they are generally accepted to be worse in terms of scalability than other, more advanced fuels, and much worse than just reducing the number of flights.
-
-The government initially proposed limiting the use of used cooking oil for SAF to alleviate competition on the resource – which is increasingly in demand for other uses, such as producing biodiesel for cars – and to encourage investment in new technologies for the aviation industry.
-
-The proposals included two options; either banning the use of used cooking oil for SAF altogether, or rapidly phasing down its use so that it would make up just 8.5% of total sustainable aviation fuel by 2040.
-
-But the government’s final SAF policy was more closely aligned with industry preferences than scientific warnings, InfluenceMap found. It allows used cooking oil to make up 100% of SAF uptake in 2025 and 2026, 71% in 2030, and 35% in 2040.
-
-InfluenceMap’s analysis reveals the weakened SAF mandate came after pressure from Shell, BP, the International Airlines Group (which owns several airlines), Airlines UK (the trade body for UK-registered airlines) and Virgin Atlantic airline.
-
-It also found that business interests were overrepresented in parliamentary meetings on SAF while the policy was being shaped.
-
-This can be seen in the make-up of Parliament’s Jet Zero Council, “a partnership between industry academia and government”, which was run by Heathrow’s chief operating officer, while the International Airlines Group chaired the Sustainable Aviation Fuel Delivery Group.
-
-The council comprised 24 members from industry, three from academia and one from civil society. Ministers were also directly involved with the council, with then-prime minister Boris Johnson attending the group’s first meeting along with four ministers.
-
-Transparency failures again played a key role. Not a single ministerial meeting on SAF referenced the weakening of the cooking oil cap in official records, and industry responses to consultations were only obtained through Freedom of Information.",https://cdn2.opendemocracy.net/media/images/GettyImages-1246268061_1.2e16d0ba.fill-1200x630.jpg,N,,2025-06-26 08:01:30.513298
-,,2025-06-26 06:08:24+00:00,www.tourexpi.com,Condor Launches 'Round Up for the Future' to Support Sustainable Aviation Fuel,Not Available,,,,,https://www.tourexpi.com/en-de/news/condor-launches-round-up-for-the-future-to-support-sustainable-aviation-fuel-209013.html,"By offering the ability to round up during the booking process, Condor expands its climate-conscious options and promotes broader participation in aviation decarbonisation.
-The chosen round-up amount is invested exclusively in SAF procurement, enabling Condor to refuel with quantities exceeding the mandatory minimum.
-Additional Sustainability Options: The “Round up for the future” initiative complements Condor’s existing climate contribution options.
-Travellers can make voluntary contributions during or after booking to support SAF use and certified climate protection projects.
-For more information and to participate in the “Round up for the future” programme, visit www.condor.com.","Travellers booking flights with Condor can now choose to round up the total amount of their ticket to the next €10, €20, €50, or €100 – with 100% of the additional amount going directly toward the purchase of Sustainable Aviation Fuel (SAF).
-
-This new option reflects Condor’s response to customer feedback from a recent survey, which revealed a strong desire for simple, accessible ways to contribute to sustainable travel. By offering the ability to round up during the booking process, Condor expands its climate-conscious options and promotes broader participation in aviation decarbonisation.
-
-How it works:
-
-When finalising a booking, after entering flight and passenger information, guests are presented with the opportunity to voluntarily round up their payment in the checkout screen. The chosen round-up amount is invested exclusively in SAF procurement, enabling Condor to refuel with quantities exceeding the mandatory minimum.
-
-Additional Sustainability Options:
-
-The “Round up for the future” initiative complements Condor’s existing climate contribution options. Travellers can make voluntary contributions during or after booking to support SAF use and certified climate protection projects. Additionally, the Green Fare—available across all routes and booking classes—calculates climate support based on the kerosene-related CO₂ emissions specific to the selected class.
-
-Condor remains firmly committed to the aviation industry’s goal of achieving carbon neutrality by 2050. A key pillar of this effort is the airline’s modernised fleet: since March 2024, all Condor long-haul flights have been operated exclusively with fuel-efficient Airbus A330neo aircraft. Fleet renewal continues on short- and medium-haul routes with 43 A32Xneo aircraft currently on order.
-
-For more information and to participate in the “Round up for the future” programme, visit www.condor.com.",https://www.tourexpi.com/images/newsimg/209013.jpg,N,,2025-06-26 09:02:02.691090
