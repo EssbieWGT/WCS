@@ -18,24 +18,24 @@
   <hr>
   {% endif %}
 
-
 <!-- Opening DIV for container -->
 <div class="containerwgt">
-<div class="heading">
-<h1> Weekly H2 Client Report </h1>
-<div id='current'></div>
-<h1> Index </h1>
-</div>
+  <div class="heading">
+    <h1> Weekly H2 Client Report </h1>
+    <div id='current'></div>
+    <h1> Index </h1>
+  </div>
 
-<div id='top'></div>
-<h2> Top News </h2></br>
-<div id='headCats'></div>
-<hr>
+  <div id='top'></div>
+  <h2> Top News </h2></br>
+  <div id='headCats'></div>
+  <!-- "No Articles" list will be injected here by JS if needed -->
+  <hr>
 
-<h2> Earnings Releases</h2>
-<div id='earnings'></div>
+  <h2> Earnings Releases</h2>
+  <div id='earnings'></div>
 
-<!-- closing div for container -->
+  <!-- closing div for container -->
 </div>
 
 <script>
@@ -56,7 +56,6 @@ var dFormat = new Intl.DateTimeFormat('en', {
   timeZone: 'America/New_York'
 });
 
-
 document.getElementById("current").innerHTML = dFormat.format(d) + " EDT";
 
 // load the data
@@ -65,162 +64,150 @@ d3.queue()
   .defer(d3.csv, "{{ url_for('static', filename='companies.csv' ) }}")
   .await(analyze);
 
-  function analyze(error, article, companies) {
-    if(error) { console.log(error); }
+function analyze(error, article, companies) {
+  if(error) { console.log(error); }
 
-console.log(article)
+  //set default for earnings reports to false  
+  let hasEarningsReport = false; 
 
-//set default for earnings reports to false  
-let hasEarningsReport = false; 
+  // build category containers under #headCats
+  const categories = [...new Set(companies.map(c => ({ id: c['id'], topic: c['name'] })))];
+  categories.forEach(function(data,index){
+    var idNum = data['id'];
+    var topicName = data['topic'];
 
-//define unique entries in category (note, categories should be sorted already)
-categoryData = []
-const categories = [...new Set(companies.map(companies => ({ id: companies['id'], topic: companies['name'] })))];// const categories = [...new Set(article.map(article => article['driver']))]
-categories.forEach(function(data,index){
+    d3.select('#headCats')
+      .append("div")
+      .attr("id", "c"+ idNum +"body")
+      .append("div")
+      .attr("id","c"+ idNum+"head")
+      .html("<h3>" + topicName + "</h3><p>")
+      .style("font-weight","bold");
+  });
 
-// console.log(index+1)
+  // populate articles
+  article.forEach(function(data, index){
+    var indexNum = index+1;
+    var formatDate = new Date(data['published']).toLocaleDateString();
 
-var indexUse = index+1
+    data['selector']   = "#c"+data['id'];
+    data['head']       = data['selector']+"head";
+    data['body']       = data['selector']+"body";
+    data['uniqueIDs']  = "c" + data["id"]+ "_" + indexNum;
+    data['earningsIDs']= "c" + data["id"]+ "_" + indexNum + "_earnings";
 
-  idNum = data['id']
-  topicName = data['topic']
+    d3.selectAll(data['head'])
+      .append("ul")
+      .attr("class","contents")
+      .style("margin-left", "2em")
+      .style("font-weight", 'normal')
+      .html("<li><u>" + data["outlet"] + "</u> - " + data["description"] + "</li>" );
 
-  d3.select('#headCats')
-    .data(idNum)
-    .append("div")
-    .attr("id", "c"+ idNum +"body")
-    .append("div")
-    .attr("id","c"+ idNum+"head")
-    .html("<h3>" + topicName + "</h3><p>") //original version had a break
-		.style("font-weight","bold")
+    d3.selectAll(data['body'])
+      .append("div")
+      .append("div")
+      .attr("class","title_block")
+      .html("<strong><h4><a id=" + "link_" + data['uniqueIDs']+ " " + "href=" + data["url"] + " target='_blank'>" + data["title"] + "</a></h4>" + "Source: " + data["outlet"] +  "</br>" + "Author: " + data["authors"]  + "</br>" + "Date: " + formatDate +  "</strong></br></br>")
+      .each(function(d){
+        d3.select(this)
+          .append("p")
+          .attr("class", "article-body")
+          .attr("id", data['uniqueIDs']);
+        d3.select(this)
+          .append("hr");
+      });
     
-});
+    // Earnings section
+    if (data.category == "Earnings"){
+      hasEarningsReport = true;
 
-article.forEach(function(data, index){
+      d3.selectAll("#earnings")
+        .append("div")
+        .append("div")
+        .attr("class","title_block")
+        .html("<b>Title:</b> " + "<a id=" + "link_" + data['earningsIDs']+ " " + "href=" + data["url"] + " target='_blank'>" + data["title"] + "</a></br>" + "<b>Source:</b> " + data["outlet"] +  "</br>" + "<b>Author:</b> " + data["authors"]  + "</br>" + "<b>Date:</b> " + formatDate +  "</br></br>")
+        .each(function(d){
+          d3.select(this)
+            .append("p")
+            .attr("class", "article-body")
+            .attr("id", data['earningsIDs']);
+          d3.select(this)
+            .append("hr");
+        });
 
-  var indexNum = index+1
-  var formatDate = new Date(data['published']).toLocaleDateString()
-  
-  data['selector'] = "#c"+data['id']
-  data['head'] = data['selector']+"head"
-  data['body'] = data['selector']+"body"
-  data['uniqueIDs'] = "c" + data["id"]+ "_" + indexNum
-  data['earningsIDs'] = "c" + data["id"]+ "_" + indexNum + "_earnings"
-
-        d3.selectAll(data['head'])
-    .append("ul")
-		.attr("class","contents")
-		.style("margin-left", "1em")
-		.style("font-weight", 'normal')
-		.style("margin-left", "2em")
-    .html("<li><u>" + data["outlet"] + "</u> - " + data["description"] + "</li>" )
-
-  d3.selectAll(data['body'])
-    .append("div")
-    .append("div")
-    .attr("class","title_block")
-    .html("<strong><h4><a id=" + "link_" + data['uniqueIDs']+ " " + "href=" + data["url"] + " target='_blank'>" + data["title"] + "</a></h4>" + "Source: " + data["outlet"] +  "</br>" + "Author: " + data["authors"]  + "</br>" + "Date: " + formatDate +  "</strong></br></br>")
-    .each(function(d){
-      d3.select(this)
-      .append("p")
-      .attr("class", "article-body")
-      .attr("id", data['uniqueIDs'])
-
-      d3.select(this)
-        .append("hr");
-    });
-    
-    //create entry for Earnings 
-  if (data.category == "Earnings"){
-    
-    hasEarningsReport = true;
-    // console.log(data.category)
-    d3.selectAll("#earnings")
-    .append("div")
-    .append("div")
-    .attr("class","title_block")
-    .html("<b>Title:</b> " + "<a id=" + "link_" + data['earningsIDs']+ " " + "href=" + data["url"] + " target='_blank'>" + data["title"] + "</a></br>" + "<b>Source:</b> " + data["outlet"] +  "</br>" + "<b>Author:</b> " + data["authors"]  + "</br>" + "<b>Date:</b> " + formatDate +  "</br></br>")
-    .each(function(d){
-      d3.select(this)
-      .append("p")
-      .attr("class", "article-body")
-      .attr("id", data['earningsIDs'])
-      d3.select(this)
-        .append("hr");
-    });
-
-    //insert the text for earnings reports. Should only happen when there's already a relevant article 
-    var earningsText = document.getElementById(data['earningsIDs'])
-    earningsText.innerText = data["text"]
-
-  };
-});
+      var earningsText = document.getElementById(data['earningsIDs']);
+      earningsText.innerText = data["text"];
+    }
+  });
 
   if (!hasEarningsReport) {
-      d3.select("#earnings")
-        .append("p")
-        .style("margin-left", "2em")
-        .style("font-style", "italic")
-        .text("No Earnings Reports");
-    }  
-
-article.forEach(function(data){
-  var bodyText = document.getElementById(data['uniqueIDs'])
-  bodyText.innerText = data["text"]
-})
-
-
-//do some final cleanup 
-
-// Select all div elements whose ids end with "head"
-const headDivs = document.querySelectorAll('div[id$="head"]');
-headDivs.forEach(div => {
-  // Check if the div has no child elements
-  // if (div.childElementCount === 0) {
-    if (div.children.length === 2 && div.firstElementChild.tagName === "H3" && div.children[1].tagName === "P"){
-    // Create a new p tag
-    const newP = document.createElement('p');
-    // Set the text content to "none"
-    newP.textContent = 'No Headlines';
-    newP.style.textIndent = '2em';
-    newP.style.fontStyle = 'italic';
-    newP.style.fontWeight = 'normal';
-    // Append the new p tag to the div
-    div.appendChild(newP);
-    const newL = document.createElement('hr')
-    div.appendChild(newL)
+    d3.select("#earnings")
+      .append("p")
+      .style("margin-left", "2em")
+      .style("font-style", "italic")
+      .text("No Earnings Reports");
   }
-});
 
-    //remove empty body divs 
-function removeEmptyBodyDivs() {
-  const bodyDivs = document.querySelectorAll("div[id$='body']");
+  // fill article bodies
+  article.forEach(function(data){
+    var bodyText = document.getElementById(data['uniqueIDs']);
+    if (bodyText) bodyText.innerText = data["text"];
+  });
 
-  for (const bodyDiv of bodyDivs) {
-    if (bodyDiv.children.length === 2 && bodyDiv.firstElementChild.tagName === "H3" && bodyDiv.children[1].tagName === "BR") {
-      // Create a new p tag
-      const newA = document.createElement('p');
-      // Set the text content to "none"
-      newA.textContent = 'No Articles';
-      newA.style.textIndent = '2em';
-      newA.style.fontStyle = 'italic';
-      newA.style.fontWeight = 'normal';
-    // Append the new p tag to the div
-      bodyDiv.appendChild(newA);
-
-    // Create a new hr tag
-      const hr = document.createElement('hr');
-
-    // Append the hr tag to the div (after the p tag)
-      bodyDiv.appendChild(hr);
-  }
-      // bodyDiv.remove(); // Remove the div element
-  }
+  // === Move empty topics to the "No Articles" list ===
+  moveEmptyTopicsToNoArticles();
 }
 
-    removeEmptyBodyDivs(); // Call the function to execute the logic
-}
+// Creates (if needed) and populates a "No Articles" list with category names
+function moveEmptyTopicsToNoArticles() {
+  // identify all category body divs (e.g., c12body)
+  const bodyDivs = document.querySelectorAll("div[id^='c'][id$='body']");
 
+  // determine which are empty (only have the head with just <h3><p>)
+  const emptyTopics = [];
+  bodyDivs.forEach(bodyDiv => {
+    const head = bodyDiv.querySelector("div[id$='head']");
+    const isEmpty =
+      bodyDiv.children.length === 1 &&                // only the head is present
+      head &&
+      head.children.length === 2 &&                   // <h3> and <p> only
+      head.firstElementChild.tagName === "H3" &&
+      head.children[1].tagName === "P";
+
+    if (isEmpty) {
+      const name = head.querySelector("h3")?.textContent?.trim() || "Unknown";
+      emptyTopics.push({ name, node: bodyDiv });
+    }
+  });
+
+  if (emptyTopics.length === 0) return;
+
+  // create "No Articles" list right below #headCats if not present
+  let headCats = document.getElementById("headCats");
+  let existingHeading = document.getElementById("noArticlesHeading");
+  let noList = document.getElementById("noArticles");
+
+  if (!noList) {
+    const heading = document.createElement("h3");
+    heading.id = "noArticlesHeading";
+    heading.textContent = "No Articles";
+    headCats.insertAdjacentElement("afterend", heading);
+
+    noList = document.createElement("ul");
+    noList.id = "noArticles";
+    noList.className = "contents";
+    noList.style.marginLeft = "2em";
+    heading.insertAdjacentElement("afterend", noList);
+  }
+
+  // move names into the list and remove their empty sections
+  emptyTopics.forEach(t => {
+    const li = document.createElement("li");
+    li.textContent = t.name;
+    noList.appendChild(li);
+    t.node.parentNode.removeChild(t.node); // remove empty category block
+  });
+}
 </script>
 
 </body>
