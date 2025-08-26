@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title> Weekly H2 Client Report </title>
-	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="{{ url_for('static', filename='eb.css') }}">
-	<script src="https://d3js.org/d3.v4.js"></script>
+  <meta charset="UTF-8">
+  <title> Weekly H2 Client Report </title>
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='eb.css') }}">
+  <script src="https://d3js.org/d3.v4.js"></script>
 </head>
 
 <body>
@@ -18,7 +18,6 @@
   <hr>
   {% endif %}
 
-<!-- Opening DIV for container -->
 <div class="containerwgt">
   <div class="heading">
     <h1> Weekly H2 Client Report </h1>
@@ -29,48 +28,77 @@
   <div id='top'></div>
   <h2> Top News </h2></br>
   <div id='headCats'></div>
-  <!-- "No Articles" list will be injected here by JS if needed -->
   <hr>
 
   <h2> Earnings Releases</h2>
   <div id='earnings'></div>
-
-  <!-- closing div for container -->
 </div>
 
 <script>
-//define replaceAt
-String.prototype.replaceAt=function(index, replacement) {
-    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+// ---------- Encoding-safe CSV fetch ----------
+async function fetchCSV(url, encodings = ['utf-8', 'windows-1252', 'iso-8859-1']) {
+  const res = await fetch(url, { cache: 'no-cache' });
+  const buf = await res.arrayBuffer();
+
+  for (const enc of encodings) {
+    try {
+      const txt = new TextDecoder(enc, { fatal: false }).decode(new Uint8Array(buf));
+      if (txt.includes('\uFFFD')) continue; // replacement char means bad decode
+      return d3.csvParse(txt);
+    } catch (e) { }
+  }
+  const fallback = new TextDecoder('utf-8').decode(new Uint8Array(buf));
+  return d3.csvParse(fallback);
 }
 
-//define date of run
+// cleanup helper
+function cleanText(s) {
+  if (s == null) return s;
+  return String(s)
+    .replace(/\uFFFD/g, '')
+    .replace(/\u00A0/g, ' ');
+}
+function deepCleanRow(row) {
+  const out = {};
+  for (const k in row) out[k] = cleanText(row[k]);
+  return out;
+}
+
+// ---------- Helpers ----------
+String.prototype.replaceAt=function(index, replacement) {
+  return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+}
+
 var d = new Date();
 var dFormat = new Intl.DateTimeFormat('en', {
-	month: 'long',
-	day: 'numeric',
+  month: 'long',
+  day: 'numeric',
   year: 'numeric',
   hour: 'numeric',
   minute: 'numeric',
   hour12: true,
   timeZone: 'America/New_York'
 });
-
 document.getElementById("current").innerHTML = dFormat.format(d) + " EDT";
 
-// load the data
-d3.queue()
-  .defer(d3.csv, "{{ url_for('uploads', filename=filename[:-4].lower() + 'view.csv' ) }}")
-  .defer(d3.csv, "{{ url_for('static', filename='companies.csv' ) }}")
-  .await(analyze);
+// ---------- Load both CSVs ----------
+Promise.all([
+  fetchCSV("{{ url_for('uploads', filename=filename[:-4].lower() + 'view.csv' ) }}"),
+  fetchCSV("{{ url_for('static', filename='companies.csv' ) }}")
+]).then(([articleRaw, companiesRaw]) => {
+  const article = articleRaw.map(deepCleanRow);
+  const companies = companiesRaw.map(deepCleanRow);
+  analyze(null, article, companies);
+}).catch(err => {
+  console.error('CSV load failed:', err);
+});
 
+// ---------- Main logic ----------
 function analyze(error, article, companies) {
   if(error) { console.log(error); }
 
-  //set default for earnings reports to false  
-  let hasEarningsReport = false; 
+  let hasEarningsReport = false;
 
-  // build category containers under #headCats
   const categories = [...new Set(companies.map(c => ({ id: c['id'], topic: c['name'] })))];
   categories.forEach(function(data,index){
     var idNum = data['id'];
@@ -85,29 +113,34 @@ function analyze(error, article, companies) {
       .style("font-weight","bold");
   });
 
-  // populate articles
   article.forEach(function(data, index){
     var indexNum = index+1;
-    var formatDate = new Date(data['published']).toLocaleDateString();
+    var formatDate = data['published'] ? new Date(data['published']).toLocaleDateString() : '';
 
-    data['selector']   = "#c"+data['id'];
-    data['head']       = data['selector']+"head";
-    data['body']       = data['selector']+"body";
-    data['uniqueIDs']  = "c" + data["id"]+ "_" + indexNum;
-    data['earningsIDs']= "c" + data["id"]+ "_" + indexNum + "_earnings";
+    data['selector']    = "#c"+data['id'];
+    data['head']        = data['selector']+"head";
+    data['body']        = data['selector']+"body";
+    data['uniqueIDs']   = "c" + data["id"]+ "_" + indexNum;
+    data['earningsIDs'] = "c" + data["id"]+ "_" + indexNum + "_earnings";
 
     d3.selectAll(data['head'])
       .append("ul")
       .attr("class","contents")
       .style("margin-left", "2em")
       .style("font-weight", 'normal')
-      .html("<li><u>" + data["outlet"] + "</u> - " + data["description"] + "</li>" );
+      .html("<li><u>" + (data["outlet"]||'') + "</u> - " + (data["description"]||'') + "</li>" );
 
     d3.selectAll(data['body'])
       .append("div")
       .append("div")
       .attr("class","title_block")
-      .html("<strong><h4><a id=" + "link_" + data['uniqueIDs']+ " " + "href=" + data["url"] + " target='_blank'>" + data["title"] + "</a></h4>" + "Source: " + data["outlet"] +  "</br>" + "Author: " + data["authors"]  + "</br>" + "Date: " + formatDate +  "</strong></br></br>")
+      .html(
+        "<strong><h4><a id=" + "link_" + data['uniqueIDs']+ " href=" + (data["url"]||'#') + " target='_blank'>" +
+        (data["title"]||'') + "</a></h4>" +
+        "Source: " + (data["outlet"]||'') +  "</br>" +
+        "Author: " + (data["authors"]||'')  + "</br>" +
+        "Date: " + (formatDate||'') +  "</strong></br></br>"
+      )
       .each(function(d){
         d3.select(this)
           .append("p")
@@ -116,8 +149,7 @@ function analyze(error, article, companies) {
         d3.select(this)
           .append("hr");
       });
-    
-    // Earnings section
+
     if (data.category == "Earnings"){
       hasEarningsReport = true;
 
@@ -125,18 +157,23 @@ function analyze(error, article, companies) {
         .append("div")
         .append("div")
         .attr("class","title_block")
-        .html("<b>Title:</b> " + "<a id=" + "link_" + data['earningsIDs']+ " " + "href=" + data["url"] + " target='_blank'>" + data["title"] + "</a></br>" + "<b>Source:</b> " + data["outlet"] +  "</br>" + "<b>Author:</b> " + data["authors"]  + "</br>" + "<b>Date:</b> " + formatDate +  "</br></br>")
+        .html(
+          "<b>Title:</b> <a id=" + "link_" + data['earningsIDs']+ " href=" + (data["url"]||'#') + " target='_blank'>" +
+          (data["title"]||'') + "</a></br>" +
+          "<b>Source:</b> " + (data["outlet"]||'') +  "</br>" +
+          "<b>Author:</b> " + (data["authors"]||'')  + "</br>" +
+          "<b>Date:</b> " + (formatDate||'') +  "</br></br>"
+        )
         .each(function(d){
           d3.select(this)
             .append("p")
             .attr("class", "article-body")
             .attr("id", data['earningsIDs']);
-          d3.select(this)
-            .append("hr");
+          d3.select(this).append("hr");
         });
 
       var earningsText = document.getElementById(data['earningsIDs']);
-      earningsText.innerText = data["text"];
+      if (earningsText) earningsText.innerText = data["text"] || '';
     }
   });
 
@@ -148,29 +185,25 @@ function analyze(error, article, companies) {
       .text("No Earnings Reports");
   }
 
-  // fill article bodies
   article.forEach(function(data){
     var bodyText = document.getElementById(data['uniqueIDs']);
-    if (bodyText) bodyText.innerText = data["text"];
+    if (bodyText) bodyText.innerText = data["text"] || '';
   });
 
-  // === Move empty topics to the "No Articles" list ===
-  moveEmptyTopicsToNoArticles();
+  moveEmptyTopicsToNoRelevantArticles();
 }
 
-// Creates (if needed) and populates a "No Articles" list with category names
-function moveEmptyTopicsToNoArticles() {
-  // identify all category body divs (e.g., c12body)
+// ---------- Move empty topics to “No Relevant Articles” ----------
+function moveEmptyTopicsToNoRelevantArticles() {
   const bodyDivs = document.querySelectorAll("div[id^='c'][id$='body']");
-
-  // determine which are empty (only have the head with just <h3><p>)
   const emptyTopics = [];
+
   bodyDivs.forEach(bodyDiv => {
     const head = bodyDiv.querySelector("div[id$='head']");
     const isEmpty =
-      bodyDiv.children.length === 1 &&                // only the head is present
+      bodyDiv.children.length === 1 &&
       head &&
-      head.children.length === 2 &&                   // <h3> and <p> only
+      head.children.length === 2 &&
       head.firstElementChild.tagName === "H3" &&
       head.children[1].tagName === "P";
 
@@ -182,30 +215,31 @@ function moveEmptyTopicsToNoArticles() {
 
   if (emptyTopics.length === 0) return;
 
-  // create "No Articles" list right below #headCats if not present
-  let headCats = document.getElementById("headCats");
-  let existingHeading = document.getElementById("noArticlesHeading");
-  let noList = document.getElementById("noArticles");
+  const earnings = document.getElementById("earnings");
+  if (!earnings) return;
 
-  if (!noList) {
-    const heading = document.createElement("h3");
-    heading.id = "noArticlesHeading";
-    heading.textContent = "No Articles";
-    headCats.insertAdjacentElement("afterend", heading);
+  let heading = document.getElementById("noRelevantHeading");
+  let list = document.getElementById("noRelevantArticles");
 
-    noList = document.createElement("ul");
-    noList.id = "noArticles";
-    noList.className = "contents";
-    noList.style.marginLeft = "2em";
-    heading.insertAdjacentElement("afterend", noList);
+  if (!heading || !list) {
+    heading = document.createElement("h2");
+    heading.id = "noRelevantHeading";
+    heading.textContent = "No Relevant Articles";
+
+    list = document.createElement("ul");
+    list.id = "noRelevantArticles";
+    list.className = "contents";
+    list.style.marginLeft = "2em";
+
+    earnings.insertAdjacentElement("afterend", heading);
+    heading.insertAdjacentElement("afterend", list);
   }
 
-  // move names into the list and remove their empty sections
   emptyTopics.forEach(t => {
     const li = document.createElement("li");
     li.textContent = t.name;
-    noList.appendChild(li);
-    t.node.parentNode.removeChild(t.node); // remove empty category block
+    list.appendChild(li);
+    t.node.parentNode.removeChild(t.node);
   });
 }
 </script>
