@@ -1,4 +1,170 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,EVs,2025-09-01 05:26:28+00:00,Nature,Combining electrification and alternative fuels: an effective strategy to decarbonize the car sector,Not Available,,,,,https://www.nature.com/articles/s44333-025-00051-7,"This allows us to show the different technology adoption speeds, especially in contrast between developed and emerging countries.
+This effectively cuts the number of newly registered cars, mainly affecting emerging countries with slower electrification rates.
+Use synergies in the system – alternative fuels as by-products from the aviation sector Reducing emissions in the car sector does not necessarily require electrification.
+If electrification cannot be scaled up quickly, the car fleet will be composed of ICEs for a long time.
+This process will likely require decades to complete, and in the transitory phase, ICEs comprise a large fraction of the car fleet.","We estimate the emissions from the car sector until 2100 based on projected sales shares of electric vehicles (EVs) and cars with internal combustion engines (ICEs)27 (Fig. 1). Using data from Bloomberg28, we split global values into two groups of emerging and developed countries to capture their different timely adoption of EVs. We fit these projections to historical values for each country reported by the IEA to match current developments to the expected progression of sales shares. The fleet growth is based on data for OECD and non-OECD countries from EIA12, which we match to the categories of emerging and developed countries. We deduce the new vehicle registrations from the fleet size and specific car lifetime per country. Finally, we estimate vehicle emissions by considering car and battery manufacturing and consumption of fuel and electricity. In three scenarios (Business-as-usual (BAU), Middle-of-the-Road (MoR), and Optimistic), we vary the level of ambition regarding the transition to electrification and the decarbonization of grid electricity and analyze different options to meet climate goals by reducing the cumulative emissions of the car sector until the end of the century.
+
+Regional resolution
+
+We combine multiple data sources to address the need for regionally resolved forecasts of electric vehicle markets. This allows us to show the different technology adoption speeds, especially in contrast between developed and emerging countries.
+
+IEA collects historical data (2001–2023) for EV sales, fleet, and new and total vehicle registrations for 31 countries (Supplementary Fig. 1). The remaining countries are aggregated as Rest of the World and Other Europe. These historical data are the starting point for our analysis.
+
+Projection of car sales shares
+
+We complement the historical car sales data by three scenario projections (Stated Policy, Sustainable Development, and Net Zero Emissions) for EVs published by the IEA27 and map them to our scenarios (BAU, MoR, Optimistic). These data reflect a global perspective without any distinction between countries or market types. However, the development of the electric vehicle market happens at different speeds in different regions: while developed regions act as early adopters with higher financial resources, electrification in emerging economies will follow at a slower speed. Historical data on electric vehicle car sales are available at the individual country level. Still, projections on the same level for all countries in our analysis and ideally from a single source are not available. To reflect different speeds of the transition to EVs in different markets, we therefore combine two datasets: global IEA projections divided into three scenarios for different speeds of transition and the projections of Bloomberg28, which have only a single scenario but are divided into an emerging, a global, and a developed country perspective. We do this by applying the relative differences between the “global” projection and “emerging” and “developed” from Bloomberg to the three EV sales share projections of IEA until 2050. We fit these six projections to the data’s historical development to obtain a forecast for each country or region from the underlying dataset. First, we categorize the countries into developed or emerging according to S&P BMI29. Second, we change the respective projections’ (developed or emerging) starting year until it matches each country’s last value from the historical dataset (Fig. 1 I bottom). To expand from the literature values, in the absence of reliable projections, we assume the sales shares to be constant from 2051 to 2100.
+
+Projection of fleet size
+
+We model the number of vehicles in the fleet for each country. EIA forecasts the vehicle stock development in OECD and non-OECD countries until 205012, which we match to the list of emerging and developed countries in our analysis. We use these growth rates to obtain the future number of vehicles per country, starting from the historical fleet size (Fig. 1 IIA). From 2051 to 2100, we extend the projections by EIA in the following way: for developed countries, the fleet size is assumed to be constant as the number of vehicles in this region is already projected to be near-constant by EIA; for emerging countries, EIA projects strong growth until 2050, which we then reduce by 2% each year until 2100 to reflect the increased level of wealth and the associated expected saturation of the car market.
+
+Projection of new vehicle registrations
+
+To apply the previously calculated sales share to the development of the fleets, we need to derive the number of newly registered vehicles, which are so far unknown. The newly registered vehicles consist of i) new vehicles entering the fleet and ii) replaced vehicles that leave the fleet at their end of life (Fig. 1 IIb). The former is the difference between the vehicle stock of two consecutive years. For the latter, we assume a Gaussian-distributed vehicle lifetime. In a similar analysis, Märtz et al.21 used a static global lifetime of 12 years per vehicle. This, however, leads to discrepancies between the cumulative fleet size (the sum of all newly registered vehicles over their lifetime) and the target fleet size by EIA12. Also, Held et al.30 found that vehicle lifetimes differ significantly between countries. To minimize the error, we adjust the vehicle lifetime individually per country in a recursive optimization loop to fit the EIA fleet size forecast12. The resulting vehicle lifetimes are close to the ones identified by Held et al.30.
+
+While this method allows for the matching of cumulative new registrations with the designated development of the fleet size in a manner that matches literature values for vehicle lifetimes, it has several limitations: (i) no explicit import or export of vehicles between countries, (ii) our probability function for vehicle lifetime is a step function for each country that is smoothened with a Gaussian distribution over five years while Held et al.30 used a continuous probability density function, (iii) historical effects such as the drastic drop in new vehicle registrations during the Covid pandemic in 2020 are propagated through the analysis. While the latter creates a propagating effect throughout the analysis, which appears to repeat the pattern that led to its creation, this should not be interpreted as a projection of the exact cause (e.g., a global pandemic) repeating itself. It suggests that the historic decline in vehicle sales during the pandemic leads to a non-replacement and, therefore, lower vehicle sales after one lifetime of the vehicles. In other words, the cars not sold during the pandemic will not have to be replaced at the end of their lifetime. Of course, considerable uncertainty is associated with this projection, but this is an intrinsic uncertainty of future data projection. If the drop in sales during the pandemic would not appear in future sales in one way or another, this would be just another assumption, i.e., assuming that cars would be replaced earlier or later than their usual lifetime. Therefore, we accept the repetitive historical behavior resulting from the selected method and the historical data. Combining new vehicle registrations with electric vehicle sales shares gives each country’s fleet composition over time.
+
+Extrapolation until 2100
+
+The datasets and projections used do not extend beyond 2050. However, many ICEs will be in the fleet after 2050, which might impair the carbon budgets. To derive the cumulative emissions until 2100, the projections must be extended. Any underlying predictions are assumed to be constant after the year 2050, except for fleet growth in emerging countries, which will likely continue beyond 2050. We thus fix the EV sales shares and the carbon intensity of grid electricity at their respective values of 2050 and do not assume further development. For fleet growth until 2050, the projections of EIA12 for developed and emerging countries are used. From 2051 to 2100, the fleet size is kept constant at the 2050 value for developed countries. For emerging countries, on the other hand, the ten-year average fleet growth rate as projected by EIA from 2040 to 2050 is reduced by 2% annually and used to project growth until 2100, taking increasing wealth and market saturation of the market into account.
+
+Vehicle emissions
+
+LCA of EVs
+
+The lifecycle emissions of an EV are comprised of vehicle and battery manufacturing, as well as grid electricity used to charge the battery. For the car without a battery, we assume 4.56 kg CO2-eq per kg of vehicle mass after Buberger et al.31, where this value is assumed to drop to zero until 2100 (assuming decarbonization of the economy). Each car is assumed to carry a 50-kWh battery. For battery manufacturing, 100 kg CO2-eq per kWh of capacity is taken from Kelly et al.32. We linearly reduce this value to zero in 2100 with the same reasoning as for vehicle manufacturing. We take the carbon intensity of grid electricity from 2020 to 2040 from IEA33 for the stated policies scenario (STEPS), the sustainable development scenario (SDS), and the net-zero scenario (NZE) and apply a break-down into countries and regions34,35. In our analysis, we map the STEPS scenario onto the BAU, SDS to MoR, and NZE to the Optimistic scenarios. We further assume an identical evolution of specific emissions in all countries. The consumption of electricity is assumed to be 15 kWh/100 km.
+
+LCA of ICEs
+
+For manufacturing an ICE vehicle, the emissions are assumed to be the same as for an EV without a battery. The combustion of one liter of gasoline emits 3.183 kg CO2-eq.21. We do not distinguish between gasoline and diesel vehicles but assume the same emission factor for a generic ICE vehicle. We assume a constant consumption of 5.9 L/100 km of ICE cars and an annual distance traveled of 15,000 km per vehicle (both for ICE and EV).
+
+Selection of alternative fuels
+
+We assume a selection of power-to-liquid fuels and different biofuels, i.e., HEFA fuels (hydrogenated esters and fatty acids) from the conversion of soybean oil and yellow grease, and Fischer-Tropsch (FT) conversion of herbaceous biomass, of municipal solid waste (MSW), of forestry waste, and agricultural residues. For HEFA fuels, the two indicated pathways serve as the basis for calculating costs and emissions, but the actual feedstock base is more extensive and comprises other waste oils, fats, and greases such as used cooking oil (UCO).
+
+Fuel emissions
+
+We use emissions for biofuels from Dray et al.18, who derive the values adjusting for future hydrogen and electricity emissions (assuming zero emissions for renewable electricity). For biofuels, the emissions of the fuel mix consisting of different fuel pathways are derived from the specific emissions of the single pathways18 and the breakdown of pathways in the potential analysis36. The biofuel supply is then assumed to always have this composition36, which is not a function of the scenarios used in our analysis. The emissions of power-to-liquid fuels are derived from the ICAO report on the feasibility of the long-term aspirational goal to defossilize aviation37, where the emissions for PtL derived from direct air capture of CO2 for IS1 are assumed for BAU, from IS2 for MoR, and IS3 for Optimistic. We do not distinguish between emissions of CO2 derived from waste sources or the air but assume all CO2 to come from the air.
+
+Fuel availability
+
+The available amounts of alternative fuels for the road transport sector are assumed to be the by-products of the alternative aviation fuels that often cannot be produced selectively, e.g., in the Fischer-Tropsch pathway. Several regulatory bodies, such as the United States and the European Union, have created incentives for producing sustainable aviation fuels (SAF). We assume a global scale-up of SAF shares in the aviation sector as defined by the ReFuelEU Aviation38 (2% in 2025 up to 70% in 2050). Furthermore, we assume that in 2100, 100% of the jet fuel will have to be SAF. From 2050 to 2100, we will use a linear scale-up of these shares from 70% to 100%. As SAF are often produced with by-products in the middle distillate range, we assume that 39% of the SAF fuel volumes appear as road fuels (gasoline, diesel)36. These shares are then multiplied by the total SAF volumes that are derived by assuming aviation fuel demand to grow by 1.1–2.8% per year (lower end of the range: 1.1% annual growth until 2050 and no further growth; upper end of the range: 2.8% yearly growth until 2100; Fig. 6). In each of the three scenarios (BAU, MoR, Optimistic), the same availability of alternative fuels is applied, assuming aviation to be defossilized globally as announced by ReFuelEU Aviation38 irrespectively of the road fuel sector.
+
+We use the maximum fuel production ramp-up rates from Dray et al.18 for biofuels and PtL fuels that cannot be exceeded. When biofuels reach their assumed maximum potential of 190 Mt/y of road fuels, no further growth is allowed, even though some reports indicate that further biomass potentials exist via the growth of lignocellulosic plants on marginal lands39,40,41,42. For PtL fuels, we do not assume a maximum potential as there is no fundamental limit to their production (assuming CO2 from DAC). Unless limited by the maximum biofuel potential, we assume the total road fuels to comprise 50% of biofuels and 50% of PtL fuels. Once the maximum production potential of 190 Mt/y for biofuels is reached, only the PtL fuels are assumed to be able to scale up further.
+
+The transition to electric vehicles
+
+The primary decarbonization strategy in the road transport sector is electrification43. Several countries and regions, such as the European Union, US states, Canada, and India, have announced a ban on internal combustion engines (ICE) until or before 204044. Combining EVs’ high efficiency with renewable electricity, the overall emissions of road-based transport could be brought to near zero (while already being locally emission-free). While many legislators recognize the long-term target, transitioning to electric vehicles requires a large-scale infrastructure adaptation, from establishing electricity generation, distribution, and transmission to local charging. This transition has already begun, but its completion will require time and large investments. Developing countries and remote regions will likely take more time in this process, and some sectors or regions may not be electrified at all. In this transitory phase, the fleet will comprise a growing share of electric vehicles and a remaining share of cars with internal combustion engines.
+
+As the electrical grids are being decarbonized, the emissions of electric vehicles are also decreasing (towards zero for a fully renewable chain). In contrast, the emissions of ICEs depend on the fuel used. The emission reduction potential for fossil fuels is about 17% when all process steps in the supply chain are decarbonized45 while alternative fuels can decrease the emissions by 80–90% or even more46,47,48,49. The emissions from passenger cars and light-duty vehicles (LDV), therefore, depend on the speed of this transition (involving the generation of renewable electricity, electrical grids, EVs, and charging stations) and to which degree alternative fuels are used.
+
+Figure 1 analyzes the transition to EVs based on renewable electricity availability and EV sales development in different regions. Three cases are defined: (i) a business-as-usual (BAU) scenario, (ii) a middle-of-the-road (MoR) scenario, and (iii) an optimistic scenario. The scenarios’ sales shares50 and grid electricity emissions are based on the IEA scenarios for stated policies, sustainable development (compliant with the Paris climate goals), and the net-zero goal (limiting global warming to 1.5 °C), respectively. Additionally, we distinguish between developed and emerging countries29 because of their fundamentally differing underlying developments. While the markets in developed countries such as the US or most of the EU are saturated concerning the total number of vehicles, strongly growing economies such as China or India will experience significant growth in the vehicle fleet.
+
+In developed countries, the sales share of EVs is projected to increase faster, mainly due to the higher available financial resources (both on a national and personal level) that allow to compensate for the higher cost of electric vehicles today. In the BAU scenario, the maximum EV sales share only reaches about 40%, leaving most of the future fleet composed of ICEs. In the MoR and optimistic cases, the sales shares of electric vehicles reach 80% or more, converting the fleet to mostly EVs by 2040.
+
+The resulting emissions of the ICE fleet are already falling today, except for the BAU scenario in emerging countries (which see a significant increase and a plateau towards 2100), where the increasing number of ICE cars leads to still rising emissions. The emissions of EVs experience a peak in the 2030 s for developed countries and around 2040 for emerging countries. This behavior is explained by the quickly growing fleet of EVs on the one hand and the decreasing carbon intensity of the electricity grids (and production of vehicles and batteries) on the other. The emissions keep rising with the growing fleet of EVs until grid decarbonization overturns this dynamic. As this process happens faster in developed countries, the peak in EV emissions is seen in the 2030 s. Due to slower grid decarbonization, emerging countries peak in the 2040 s. The larger speed of electrification is also the reason why EV emissions are higher in the MoR (in emerging countries) or Optimistic scenarios (in developed countries) than in the BAU scenario. The different dynamics in electrification and grid decarbonization lead to the different order of scenarios in these two regions. In all scenarios and regions, the total emissions decrease from the BAU to the MoR and to the Optimistic scenario (see SI). These results agree with the findings of the IPCC AR6 WG III (Chapter 10)51, assuming similar emission reductions for the car and transport sectors (see SI for more information).
+
+The scale of the problem
+
+Most of the cumulative emissions are attributed to the ICEs in the fleet (remaining vehicles and newly registered ones, see Fig. 2). Figure 3 shows the cumulative emissions until the end of the century for the three scenarios broken down into vehicle type and time frame (today-2050 and 2051–2100). The emissions of the BAU scenario significantly exceed the carbon budget for all climate goals (1.5, 1.7, 2.0 °C): close to 300 Gt CO2-eq. are emitted until 2100, about two-thirds of which in the second half of the century. In this case, the largest share of emissions is due to the ICE fleet, which is decreasing in developed countries but increasing (although the respective sales share is decreasing) in emerging countries (see Supplementary Fig. 5 for more information). The yearly emissions drop insignificantly until the end of the century because the fleet increase in emerging countries compensates for the drop in emissions by electric vehicles, as can be seen clearly in the example of China (see emissions breakdown in Supplementary Fig. 5). In the MoR and Optimistic scenarios, the cumulative emissions stay below the two-degree budget but above the limit for a 1.5 °C-increase. The difference between the MoR and Optimistic scenarios is the latter’s faster and more extensive fleet electrification. This leads to a smaller ICE fleet and, thus, lower associated emissions, especially after 2050. If the ambitious electrification rates of these two scenarios can be reached, the Paris climate goal is achievable in the road-based transport sector. If, however, electrification should take a pace as in the BAU scenario or even slower, the climate goals are out of reach, and additional measures must be taken.
+
+How do we reach the climate goals?
+
+The road-based transport sector emits significant amounts of GHGs, which are not compliant with the climate goals in the business-as-usual case. A more considerable effort, including a diverse set of measures, may be required to limit emissions to a lower level in these cases. For each of the three scenarios, we analyze the effect of three measures to reach the climate goals (2.0, 1.7, 1.5 °C global warming until the end of the century).
+
+Speed up current development—exclusively new electric cars
+
+To avoid excessive emissions, a large ICE fleet using fossil fuels must be avoided, especially in the second half of the century. Thus, as a first measure, faster electrification is proposed—an obvious choice based on the projected emissions in the different scenarios (see emissions from ICEs and EVs in Fig. 3). We assume that from a given year on, only electric cars can be registered (Fig. 4). This goal has been set for 2035 in different regions of the world, i.e., the European Union and California, via a ban on conventional ICEs. Reaching this goal globally in 2035 would decrease the emissions significantly, especially in the BAU scenario, leading to lower cumulative emissions by about 270 Gt CO2-eq., until 2100. In the MoR and Optimistic scenarios, the reduction is still significant at about 50 Gt CO2-eq. These saved emissions are equivalent to moving the car sector by 0.7 °C or 0.1 °C closer (for the BAU or MoR/Optimistic scenarios) to its respective sector-related climate goals.
+
+We find that the specific year of an ICE ban has only a minor influence on reaching the climate goals: even an ICE ban in 2050 would result in corresponding sector-specific emissions compatible with the Paris climate goals in all scenarios. Of course, an ICE ban presents a challenge, especially in emerging countries, where the electrical grid may not be adapted to the distributed loads, and there is a lack of charging infrastructure (including developing local grids). Likewise, countries with a distributed population may need help reaching full electrification soon due to the widespread infrastructure that must be implemented and EVs being most efficient in an urban environment. Nevertheless, it represents an effective instrument for reducing emissions, especially in the BAU scenario.
+
+Limit car use globally—reduced fleet growth
+
+The second proposed measure to reduce the emissions is a reduction of the fleet growth rate as projected by EIA12, which is used as a standard in all scenarios (Figs. 2, 4). In the EIA projection, the global car fleet is projected to grow from 1.4 billion today to about 2.2 billion in 205052. Significant growth is only expected in emerging countries, while the fleet size in developed countries is almost constant (Fig. 2). As a measure to reduce emissions, here we reduce the projected global growth by 0–100% and calculate cumulative emissions (Fig. 5). By continuing the projection, assuming a constant fleet size in developed countries after 2050 and gradually decreasing growth in emerging countries (by 2% annually, see), the global car fleet will reach 2.5 billion units at the end of the century. Limiting this growth rate reduces the number of vehicles without changing the projected electrification rate. This effectively cuts the number of newly registered cars, mainly affecting emerging countries with slower electrification rates. Consequently, the number of new ICEs entering the fleet is reduced, reducing the emissions. This effect is most significant in the BAU scenario, where the EV sales share reaches only 40% in emerging countries.
+
+Use synergies in the system – alternative fuels as by-products from the aviation sector
+
+Reducing emissions in the car sector does not necessarily require electrification. It can also be achieved by using alternative fuels with lower specific emissions than fossil fuels. Currently, these fuels are used in the car sector as either ethanol and biodiesel (mixed with gasoline and diesel) or in the aviation sector, where they are produced from plant oils and represent a core pillar of the defossilization strategy53. A significant volume increase in ethanol and biodiesel production would cause competition for land with food and fodder production and is likely of limited potential. As legislation in the EU and other regions requires rising shares of alternative fuels in aviation, the production volumes are expected to increase over the following decades. Various fuel pathways are being developed, using biological and non-biological carbon as a resource base to satisfy the demand. Most of these have in common that they are not selective, i.e., they not only produce jet fuel but a mix of different hydrocarbons, including gasoline54. It is likely that large amounts of gasoline as a by-product will become available from the aviation sector, which could help to reduce emissions in the automotive industry. To estimate these by-products’ amount, we assume that the required shares of alternative fuels in ReFuelEU Aviation38 (2% in 2025, rising to 70% in 2050) are reached globally, following the emission reduction goal of net-zero emissions by 2050 as suggested by IATA53. We use a fixed by-product share of 39% of road fuels concerning aviation fuel volumes36. Furthermore, aviation fuel burn is assumed to grow annually by 1.1–2.8%18, with growth estimates subject to large uncertainties. To cover a broad range of fuel demand in the aviation sector, we use a lower bound of 1.1% fuel demand growth until 2050 (and constant fuel demand after that) and an upper bound of 2.8% annual growth until 2100. The resulting by-product volumes are shown in Fig. 6, where we explicitly contrast the expected fuel production in these aviation growth scenarios with the theoretical maximum fuel production capacity18. While we do not further disaggregate techno-economic feasibility or policy risk, the upper and lower aviation growth bounds serve as a proxy for uncertainties in supply scale-up. We acknowledge that additional constraints—such as fuel selectivity, land use, and lifecycle emissions—could influence actual supply and identify these as areas for future analysis. A detailed treatment of land use and lifecycle emissions is beyond the scope of this paper. In the MoR and Optimistic scenarios, aviation by-products could cover the demand of the remaining ICE fleet in the 2050ies even for a slowly growing aviation sector. For a strong growth of aviation, even the remaining fuel demand in the BAU scenario could be covered towards the end of the century, where the expected fuel production from aviation does not exceed the capacities of expected maximum ramp-up rates of fuel production facilities18.
+
+Assuming all the liquid by-products from aviation become available for road transport, significant emission reductions are achievable: in the BAU scenario, cumulative ICE emissions could decrease by 12–28% (49–115 Gt), by 23–42% (32–58 Gt) in the MoR, and by 31–33% (34–37 Gt) in the Optimistic scenario (Fig. 7). The overall impact on emissions is limited because of the time it takes to ramp up fuel production and the road-based transport sector’s larger fuel demand than the aviation sector’s supply. Assuming strong growth of the aviation sector (see SI for more information), the annual emissions of the car sector can be reduced by more than half towards the end of the century, irrespective of the scenario. Considering that alternative fuels will appear as by-products from this sector, their contribution towards reducing emissions in the car sector can thus be precious. A further reduction of ICE emissions would require larger volumes of by-products from, e.g., the shipping sector or through dedicated production (in the absence of demand-side measures). In this case, the maximum foreseeable output (Fig. 6, gray dotted) would cover the remaining fuel demand of the car sector in the 2040ies (for the MoR and Optimistic scenarios) or towards 2060 in the BAU scenario. Of course, the actual alternative fuel share will be determined by costs, which, in detail, exceeds the scope of this study.
+
+For many people, personal road transport is an essential part of daily life and enables them to travel between families and communities or commute to work. It is also a significant source of global emissions, threatening to overburden the global ecosystem. Bringing our emissions to zero and maintaining our standard of living is one of the major challenges we face in this century. Accomplishing this task in the transport sector requires a global effort by switching to a renewable energy base. Considering the urgency and magnitude of the efforts and investments involved, a clear strategy for decarbonizing the car sector is required.
+
+With the analysis above, we aim to quantify the effects of different pathways towards reducing emissions in the car sector. Below, the most important findings are summarized and discussed.
+
+Emissions from the car sector represent a significant share of the total emissions and must be reduced to comply with climate goals
+
+About 9.5% of global CO2 emissions are emitted by cars today55,56. If only stated policies are enacted, the cumulative emissions until 2100 will surpass the car sector’s share of the two-degree carbon budget. Additional efforts have thus to be made to reduce the emissions.
+
+Emerging countries experience substantial growth in their car fleets, while developed countries have an almost constant number of vehicles
+
+This is mainly due to the correlation between GDP and car ownership57, which leads to fleet growth occurring primarily in the large emerging economies of China, India, and Brazil. Therefore, an effective reduction of future emissions is tied to a strategy addressing both new registrations and existing cars in the fleet. A global effort to enable a quick transition to an electric vehicle infrastructure especially in the emerging economies could help to prevent the sale of a large number of ICE vehicles using conventional fuels.
+
+Electrification is the most effective means of reducing new car’s emissions while maintaining equitable mobility
+
+In most economies, EVs already achieve lower emissions than ICEs today. If electrification cannot be scaled up quickly, the car fleet will be composed of ICEs for a long time. To comply with the climate goals, these vehicles must be defossilized with alternative fuels. Otherwise, more drastic measures must be taken to limit global car sales or use. Because global fleet growth mainly happens in emerging economies, limiting car sales would hinder these economies’ growth. Considering that developed countries have contributed the most emissions to this day starting from the industrial revolution and the establishment of economies built on the conversion of coal and oil, this measure would be questionable to achieve an equitable distribution of efforts to prevent climate change. A more promising approach would be the establishment of an EV infrastructure in strongly growing countries to prevent the global growth of the ICE fleet. This could potentially happen via bilateral or global efforts including but not limited to a global emissions trading system that facilitates the financing of measures to reduce the emission of greenhouse gases where it is the most economical.
+
+Alternative fuels are a suitable way to reduce the emissions of the remaining ICE fleet and are likely to be available in sufficient quantities as by-products from other sectors such as aviation
+
+Alternative fuels are currently under development and can reduce specific emissions by more than 90%47. Sectors such as aviation and shipping depend on the continuous use of liquid fuels, which, together with regulatory decisions, will create a large market for alternative fuels. The production of these fuels is, in many pathways, not selective: by-products will be produced that could be used in the road transport sector to decrease the emissions of the remaining ICE fleet. For large-scale production, the costs of alternative fuels could drop to values below the market price of fossil fuels in most countries18,38,58,59,60. To establish a quick ramp-up of these production volumes, a global effort is required creating an (ideally unified) regulatory framework that allows to export alternative fuels to other markets and the necessary ecosystem to attract investments. To this end, a reliable and ambitious legislation ramping up the shares of alternative fuels and the creation of financial instruments to attract long-term investors needed to support the scale-up of the technology will be crucial.
+
+The most effective strategy to reduce the car sector’s overall emissions relies on quick electrification and defossilization of the remaining ICE fleet with alternative fuels
+
+As a global option for equitable and climate-friendly mobility, electrification requires renewable electricity and a large-scale charging infrastructure. This process will likely require decades to complete, and in the transitory phase, ICEs comprise a large fraction of the car fleet. The only way to defossilize these vehicles is by exchanging the fossil fuel by a renewable one. Alternative fuels can effectively reduce the emissions of the remaining fleet of ICEs at potentially competitive cost if produced at scale and if synergies with other sectors (aviation, shipping) are leveraged. With this strategy, new electric vehicles and the remaining ICEs can be addressed, and the automotive sector’s total emissions can be reduced most effectively. To this end, regulation should address this challenge with a technologically open but ambitious framework that allows the defossilization of vehicles with either electrification or alternative fuels and that accounts reliably and transparently the emissions created in either case. This will open a long-term perspective for investors required to finance the scale-up and establishment of infrastructures of both technologies. In the end, there is no need to be on the fence.",https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs44333-025-00051-7/MediaObjects/44333_2025_51_Fig1_HTML.png,N,,2025-09-01 01:58:29.911006
+,EVs,2025-09-01 05:21:27+00:00,www.newsbreak.com,IRS Makes Major Announcement on Trump Changes - NewsBreak,Not Available,,,,,https://www.newsbreak.com/the-sacramento-bee-1592486/4207067671743-irs-makes-major-announcement-on-trump-changes,"The IRS has announced it will begin phasing out eight tax credits ... The phaseout includes incentives for solar panels, electric vehicles, home ...",Not Available,,N,,2025-09-01 02:01:40.342486
+,Clean Energy ,2025-09-01 04:35:36+00:00,www.reddit.com,MAGA Using Laws Passed By Democrats To Upend Renewable Energy Projects - Reddit,Not Available,,,,,https://www.reddit.com/r/energy/comments/1n5ep0g/maga_using_laws_passed_by_democrats_to_upend/,"A One-Stop-Shop for Evidence of our Social, Moral and Ideological Rot.
+Members Online * Share your fascinating links about renewable energy * Discuss new renewable technologies * Contribute news about renewable energy usage * Meet other renewable energy enthusiasts * Enjoy our functional design including * user flair * links to many related subreddits in the header menu * links to reddit specific information in the header menu Members Online","A One-Stop-Shop for Evidence of our Social, Moral and Ideological Rot.
+
+Members Online
+
+* Share your fascinating links about renewable energy * Discuss new renewable technologies * Contribute news about renewable energy usage * Meet other renewable energy enthusiasts * Enjoy our functional design including * user flair * links to many related subreddits in the header menu * links to reddit specific information in the header menu
+
+Members Online",,N,,2025-09-01 02:02:10.287481
+,EVs,2025-09-01 04:08:48+00:00,Bloomberg.com,"Chinese Hybrids, EVs Storm Munich in Latest European Push - Bloomberg.com","Anthony Palazzo, Chunying Zhang",,,,,https://www.bloomberg.com/news/articles/2025-09-01/chinese-hybrids-evs-storm-munich-in-latest-european-push%3Fsrnd%3Dhomepage-americas,"China’s automakers are readying a new crop of hybrid and all-electric vehicles for Europe, using next week’s Munich auto show to kick off the next phase of their expansion in the region.
+BYD Co., Xpeng Inc. and Zhejiang Leapmotor Technology Co. are among manufacturers showing off new models at the IAA Mobility 2025 expo, moving to broaden their lineups and extend gains made in recent years.
+Their push into Europe is intensifying as an EV price war rages at home, while the lucrative US market is practically closed due to trade hurdles.","China’s automakers are readying a new crop of hybrid and all-electric vehicles for Europe, using next week’s Munich auto show to kick off the next phase of their expansion in the region.
+
+BYD Co., Xpeng Inc. and Zhejiang Leapmotor Technology Co. are among manufacturers showing off new models at the IAA Mobility 2025 expo, moving to broaden their lineups and extend gains made in recent years. Their push into Europe is intensifying as an EV price war rages at home, while the lucrative US market is practically closed due to trade hurdles.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/imgH4m7X_bMg/v1/1200x800.jpg,N,,2025-09-01 02:01:45.507079
+,EVs,2025-09-01 03:57:05+00:00,Ainvest,The Shifting French Automotive Market: Strategic Entry Points in Electrified Vehicles and ... - AInvest,Isaac Lane,,,,,https://www.ainvest.com/news/shifting-french-automotive-market-strategic-entry-points-electrified-vehicles-hybrid-dominance-2509/,"France’s automotive market is undergoing a seismic shift as electrified and hybrid vehicles displace internal combustion engines (ICE).
+Together, electrified vehicles now hold a 69.7% share, a stark contrast to ICE vehicles’ 27.3% [2].
+Their 45.7% market share in July 2025 reflects consumer pragmatism—combining fuel efficiency with range flexibility [1].
+Renault, meanwhile, saw a 2.9% global sales increase in Q1 2025, with electrified vehicles accounting for 44.2% of European sales [8].
+Investment Opportunities The transition to electrified vehicles offers three key entry points: 1.","France’s automotive market is undergoing a seismic shift as electrified and hybrid vehicles displace internal combustion engines (ICE). By July 2025, battery-electric vehicles (BEVs) accounted for 16.8% of new car registrations, up 3.3 percentage points from July 2024, while hybrids captured 45.7% of the market, driven by full and mild hybrids [1]. Together, electrified vehicles now hold a 69.7% share, a stark contrast to ICE vehicles’ 27.3% [2]. This transition creates clear investment opportunities in automakers and suppliers positioned to capitalize on the shift.
+
+Market Dynamics: Hybrid Dominance and BEV Resilience
+
+Hybrids have emerged as the bridge between ICE and full electrification. Their 45.7% market share in July 2025 reflects consumer pragmatism—combining fuel efficiency with range flexibility [1]. Meanwhile, BEVs, though facing a 4.3% year-to-date decline in registrations compared to 2024, remain resilient. The Renault 5 E-Tech, for instance, dominated the BEV segment in France, selling 2,813 units in January 2025 and maintaining strong corporate fleet demand, which grew 70% year-on-year [3]. This resilience is bolstered by government incentives, including a revised ecological bonus and a social leasing program set to launch in September 2025 [4].
+
+Plug-in hybrids (PHEVs), however, face headwinds. Their market share fell to 7.2% in July 2025, down from 8.2% in July 2024, as consumers increasingly opt for either BEVs or conventional hybrids [1]. This trend underscores the importance of automakers like Renault and Stellantis, which are pivoting toward BEV-native platforms and affordable hybrids.
+
+Strategic Automakers: Renault and Stellantis
+
+Renault’s electrification strategy is a standout. The Renault 5 E-Tech has sold nearly 49,000 units since its 2025 launch, contributing to a 44% electrified vehicle share in Europe [5]. The company’s focus on B-segment EVs and hybrid models, coupled with global expansion in markets like South Korea, positions it as a key player. Similarly, Stellantis is leveraging its multi-energy platform strategy, with affordable models like the Fiat Grande Panda and Citroën e-C3 targeting a projected 18% EV market share in 2025 [6]. Its Atlante charging network and partnerships with European charge point operators further solidify its infrastructure advantage.
+
+Financially, both automakers are navigating challenges. Stellantis reported a 14% revenue drop in Q1 2025 due to lower shipment volumes, but its hybrid market share rose to 15.5%, and BEV share hit 13% [7]. Renault, meanwhile, saw a 2.9% global sales increase in Q1 2025, with electrified vehicles accounting for 44.2% of European sales [8]. These figures highlight their ability to adapt to shifting demand.
+
+Suppliers and Infrastructure: The Hidden Levers
+
+While automakers grab headlines, suppliers like Bosch, Continental, and ZF are critical to France’s electrification. Though specific contracts in France are not detailed, these firms dominate the European EV ecosystem, supplying components such as batteries, power electronics, and optimized tires for commercial fleets [9]. For example, Continental’s white paper on electric mobility emphasizes tire solutions to reduce CO₂ emissions in electrified commercial vehicles [10].
+
+Infrastructure investments are equally vital. France’s “battery valley” in Hauts-de-France, anchored by gigafactories from Automotive Cells Company and Verkor, aims for self-sufficiency in battery production by 2027 [11]. Meanwhile, Milence’s electric freight corridor from Barcelona to Lyon exemplifies the expansion of charging networks, supported by €1.5 billion in subsidies and a 45% investment tax credit [12]. These developments create tailwinds for suppliers and automakers alike.
+
+Investment Opportunities
+
+The transition to electrified vehicles offers three key entry points:
+
+1. Automakers with strong BEV and hybrid portfolios: Renault and Stellantis are well-positioned, with Renault’s focus on affordability and Stellantis’ multi-energy platforms.
+
+2. Suppliers in the EV value chain: Bosch and Continental’s roles in components and infrastructure provide recurring revenue streams.
+
+3. Infrastructure developers: Companies expanding charging networks or battery production, such as Milence and ProLogium, benefit from government incentives.
+
+However, risks persist. Consumer hesitation in H1 2025 led to a 6.4% drop in EV registrations, though this is expected to reverse with the social leasing program’s return [13]. Investors must also monitor PHEV declines and the pace of ICE phaseouts.
+
+Conclusion
+
+France’s automotive market is a microcosm of the global shift to electrification. While hybrids dominate today, BEVs and infrastructure investments are the long-term drivers. Automakers like Renault and Stellantis, alongside suppliers and infrastructure players, offer compelling opportunities for investors willing to navigate the transition’s complexities.",https://www.ainvest.com/wencai-ssr/og-image-news-20240226.png,N,,2025-09-01 02:01:48.172603
 ,Texas Environment,2025-09-01 03:49:47+00:00,Houston Public Media,More than 830 new Texas laws take effect Sept. 1. Here's what's changing,"Texas Newsroom, The Texas Newsroom, www.houstonpublicmedia.org, the-texas-newsroom",,,,,https://www.houstonpublicmedia.org/articles/news/texas/2025/08/31/529807/more-than-830-new-texas-laws-take-effect-sept-1-heres-whats-changing/,"Soon, hundreds of bills passed earlier this year by Texas’ 89th Legislature will go into effect.
 As of Monday, Sept. 1, Texas will have a whopping 835 new laws on the books.
 These measures touch nearly every aspect of life, from education and healthcare to public safety, property rules and support for first responders.
@@ -118,6 +284,23 @@ It also increases state funding for volunteer firefighters in areas the forest s
 “Despite the heroic efforts of the volunteer firefighters, response times were hindered by a lack of timely air support, poor communication between agencies and responders, largely due to incompatible equipment,” Sparks said earlier this year.
 
 Reporting for this story provided by Kyle McClenagan of Houston Public Media; KTTZ Lubbock’s Brad Burt; Camila Gonzales with Denton Record-Chronicle; Andy Lusk, Marcheta Fornoff and Bill Zeeble of KERA News; KUT Austin’s Nathan Bernier and Olivia Aldridge; Sarah Asch and Michael Marks with Texas Standard, and The Texas Newsroom’s Lucio Vasquez, Blaise Gainey and Rachel Osier Lindley.",https://cdn.houstonpublicmedia.org/wp-content/uploads/2025/08/31141124/011425-texas-capitol-building-fwr-1.webp,N,,2025-09-01 00:59:12.209458
+,EVs,2025-09-01 03:42:11+00:00,SSBCrack News,IRS Clarifies EV Tax Credit Deadline with New Guidance Before September 30,News Desk,,,,,https://news.ssbcrack.com/irs-clarifies-ev-tax-credit-deadline-with-new-guidance-before-september-30/,"A significant change in federal tax incentives for electric vehicle (EV) buyers is on the horizon, as consumers prepare for the impending expiration of tax credits valued at up to $7,500 after September 30.
+The IRS update applies to various types of electric vehicles, including used, new, and leased EVs, aligning with specific sections of the tax code.
+In addition to the extended timeline for the tax credit, consumers have the option to receive the benefits as an instant rebate at the point of sale.
+Notably, this instant rebate option allows consumers without a tax liability to also benefit from the credit.
+As the deadline approaches, consumers are encouraged to explore their options and act accordingly to maximize the financial incentives available for their electric vehicle purchases.","A significant change in federal tax incentives for electric vehicle (EV) buyers is on the horizon, as consumers prepare for the impending expiration of tax credits valued at up to $7,500 after September 30. However, a recent update from the Internal Revenue Service (IRS) suggests that there may still be options available for consumers looking to take advantage of these credits.
+
+The tax breaks, which were eliminated as part of a Republican tax and spending measure passed in July, stipulate that the eligibility for a tax credit is contingent on the point at which the vehicle is “acquired.” Initial interpretations indicated that consumers needed to have the vehicle physically in their possession by the cutoff date. However, the IRS clarified that consumers can still qualify for the tax credit if they have a “written binding contract” in place and make a payment on or before September 30, regardless of when they take possession of the EV.
+
+Ingrid Malmgren, senior policy director at Plug In America, emphasized that this IRS clarification provides a glimmer of hope for consumers who may not be able to drive off in their new vehicles by the deadline. “This means that if you can’t drive off in the clean vehicle of your dreams by Sept. 30, there is still hope,” she remarked.
+
+The IRS update applies to various types of electric vehicles, including used, new, and leased EVs, aligning with specific sections of the tax code. Malmgren noted that consumers can secure their vehicles by ordering from a dealer or manufacturer, signing a contract, and making a deposit ahead of the deadline, with the further stipulation that the vehicle also meets certain eligibility criteria.
+
+In addition to the extended timeline for the tax credit, consumers have the option to receive the benefits as an instant rebate at the point of sale. This provides the advantage of accessing funds more quickly without needing to wait until filing their annual tax return. Notably, this instant rebate option allows consumers without a tax liability to also benefit from the credit.
+
+To ensure proper processing, taxpayers are advised to obtain a time-of-sale report from the dealer when they take possession of their EV or within three days following the pickup. This step is crucial to secure the tax benefits associated with the transaction.
+
+As the deadline approaches, consumers are encouraged to explore their options and act accordingly to maximize the financial incentives available for their electric vehicle purchases.",https://news.ssbcrack.com/wp-content/uploads/2025/08/IRS-Clarifies-EV-Tax-Credit-Deadline-with-New-Guidance-Before.jpeg,N,,2025-09-01 02:01:55.335822
 ,EVs,2025-09-01 02:44:09+00:00,CHOSUNBIZ,"U.S. boosts tariffs on Chinese ESS, prompting South Korean battery firms to expand",Not Available,,,,,https://biz.chosun.com/en/en-industry/2025/09/01/CXE53Q5UVZGB5JLS6EY6AAD6EU/,"U.S. boosts tariffs on Chinese ESS, prompting South Korean battery firms to expand U.S. tariffs on Chinese energy storage batteries rise, benefiting K",Not Available,https://biz.chosun.com/resizer/v2/ZNP3APYJFNIE3KABRKHNDPFHQM.jpg?auth=d99e412b02d9da4227b31ba53a06abd420f230b8a48761da77001df365f6e334&width=1200&height=630&smart=true,N,,2025-08-31 22:58:43.299473
 ,Congress,2025-09-01 02:32:26+00:00,Dailynewsegypt - Egypt’s Only Daily Independent Newspaper In English,Egypt intensifies climate action ahead of COP30 in Brazil - Dailynewsegypt,Daily News Egypt,,,,,https://www.dailynewsegypt.com/2025/08/31/egypt-intensifies-climate-action-ahead-of-cop30-in-brazil/,"During the meeting, Awad emphasized that the Central Department for Climate Change plays a pivotal role in advancing Egypt’s climate commitments and strengthening coordination with both domestic and international partners.
 The Ministry of Environment presented an assessment report evaluating how various ministries are addressing climate change.
@@ -544,6 +727,9 @@ Senate Bill 33 will ban cities or counties from using their money to support res
 House Bill 46 will expand the state's medical marijuana program to include patients with chronic pain, traumatic brain injury, and Crohn's disease. Physicians will also be able to prescribe inhalation via vaporized and aerosol products, such as vapes. This expansion will take effect while the Texas Legislature contemplates whether to regulate or ban hemp-derived THC products.
 
 House Bill 229 will define man and woman based on biological reproductive systems and apply that definition across the state code. Government entities collecting vital statistics information will also have to use it. The law's backers said this is needed to protect women's rights and align with executive orders declaring that there are only two sexes. Critics said the law erases trans people from state records in Texas, home to one of the country's largest trans communities.",https://cdn.abcotvs.com/dip/images/17705223_083125-ktrk-capitol-sw-img.png?w=1600,N,,2025-08-31 19:59:50.155623
+,EVs,2025-08-31 23:00:53+00:00,Tesla Still Dominates as U.S. EV Market Evolves with GM on the Rise,Tesla Still Dominates as U.S. EV Market Evolves with GM on the Rise | AI News - OpenTools,Mackenzie Ferguson,,,,,https://opentools.ai/news/tesla-still-dominates-as-us-ev-market-evolves-with-gm-on-the-rise,"In Q2 2025, Tesla continued to lead the U.S. electric vehicle market with a near 50% share despite a 10% decline.
+Meanwhile, General Motors made significant strides, doubling its EV sales and capturing 15% of the market.
+The expiration of the federal EV tax credit looms, expected to trigger a sales rush in Q3 followed by a potential Q4 drop.","In Q2 2025, Tesla continued to lead the U.S. electric vehicle market with a near 50% share despite a 10% decline. Meanwhile, General Motors made significant strides, doubling its EV sales and capturing 15% of the market. The expiration of the federal EV tax credit looms, expected to trigger a sales rush in Q3 followed by a potential Q4 drop.",https://opentools.ai/favicon.ico,N,,2025-09-01 02:02:05.425985
 ,EVs,2025-08-31 22:58:17+00:00,www.autoconnectedcar.com,"Electrify America, Toyota Material Handling, Electric Era, Fuel Retailers, ZM Trucks, BASF, WeLion",Lynn Walford,,,,,https://www.autoconnectedcar.com/2025/08/ev-battery-charging-news-electrify-america-toyota-material-handling-electric-era-fuel-retailers-zm-trucks-basf-welion/,"In EV, battery and charging news are Electrify America, Toyota Material Handling, Electric Era, Fuel Retailers, ZM Trucks, BASF and WeLion.
 Toyota Material Handling Launches 5/35 Lithium-Ion Batteries Toyota Material Handling has expanded its energy solutions lineup with the introduction of the 5/35 Lithium-ion Battery series, designed for improved productivity and reduced maintenance in material handling operations.
 Fully compatible with Toyota’s lithium-ion chargers and backed by a six-year limited warranty, the 5/35 series underscores Toyota’s commitment to innovative, environmentally responsible, and performance-driven material handling solutions.
@@ -9041,6 +9227,7 @@ For a typical home using 1,000 kilowatt-hours, the average monthly charge will j
 The jump in cost comes from a higher transmission and distribution fee set by CenterPoint Energy.
 
 The seasonal rates take effect every year in the fall and typically come back down in March.",https://media.khou.com/assets/KHOU/images/612b5af3-232c-40f2-96c5-64335bece00b/20250830T141807/612b5af3-232c-40f2-96c5-64335bece00b_1140x641.jpg,N,,2025-08-30 17:03:23.561260
+,Clean Energy ,2025-08-30 20:28:08+00:00,www.enr.com,"UPDATED: Connecticut, RI Governors Fight Trump-Ordered Halt to Nearly Done Wind Project",Not Available,,,,,https://www.enr.com/articles/61254-updated-connecticut-ri-governors-fight-trump-ordered-halt-to-nearly-done-wind-project,"The action is ""an example of the Trump administration assaulting clean energy and infrastructure projects– hurting business and killing jobs in ...",Not Available,,N,,2025-08-30 18:02:23.133432
 ,Clean Energy ,2025-08-30 20:28:08+00:00,www.premier.vic.gov.au,Mt Fyans To Power Thousands Of Victorian Homes - Premier of Victoria,Not Available,,,,,https://www.premier.vic.gov.au/mt-fyans-power-thousands-victorian-homes,"A new wind farm in the state’s south-west will soon be harnessing Victoria’s world-class wind resources to deliver cheaper, renewable power for almost 250,000 homes thanks to the Allan Labor Government.
 Minister for Planning Sonya Kilkenny today announced the approval of the 400-megawatt Mt Fyans Wind Farm near Mortlake – the third largest wind farm to be approved by the Allan Labor Government in 10 years.
 The wind farm will be made up of 81 turbines and set to create more than 100 jobs during construction, as well as 10 fulltime local jobs once the wind farm becomes operational.
@@ -9074,7 +9261,6 @@ Quote attributable to Minister for Energy and Resources Lily D’Ambrosio
 Quote attributable to Member for South West Victoria Jacinta Ermacora
 
 “Renewable energy is the cheapest form of new build energy available – it helps bring down power prices and creates great new jobs for locals.”",https://www.premier.vic.gov.au/sites/default/files/2020-09/Social_preview.png,N,,2025-08-30 21:59:42.186298
-,Clean Energy ,2025-08-30 20:28:08+00:00,www.enr.com,"UPDATED: Connecticut, RI Governors Fight Trump-Ordered Halt to Nearly Done Wind Project",Not Available,,,,,https://www.enr.com/articles/61254-updated-connecticut-ri-governors-fight-trump-ordered-halt-to-nearly-done-wind-project,"The action is ""an example of the Trump administration assaulting clean energy and infrastructure projects– hurting business and killing jobs in ...",Not Available,,N,,2025-08-30 18:02:23.133432
 ,American Energy,2025-08-30 20:27:04+00:00,www.youtube.com,Federal cuts to green energy subsidies could impact farmland projects - YouTube,,,,,,https://www.youtube.com/watch%3Fv%3D5vjlFrOG--8,The federal government is cutting subsidies for green energy that's produced on farmland. Follow! Like! Share! Subscribe!,Not Available,,Y,,2025-08-30 17:02:47.486828
 ,Clean Energy ,2025-08-30 20:06:15+00:00,PV Tech,Sungrow launches next-generation microinverter for the Brazilian market - PV Tech,Not Available,,,,,https://www.pv-tech.org/industry-updates/sungrow-launches-next-generation-microinverter-for-the-brazilian-market/,"Sungrow has launched a next-generation microinverter for the Brazilian market at the recently concluded Intersolar South America in São Paulo.
 Designed for superior reliability, efficiency and ease of use, the S2500S-L is poised to accelerate Brazil’s clean energy transition.
@@ -27783,233 +27969,3 @@ Feel free to browse the site or try searching for what you are looking for.","40
 
 Hm, the page you are looking for was not found. Feel free to browse the site or try searching for what you are looking for.",https://www.renewableenergyworld.com/wp-content/uploads/2024/12/ft-favicon-1-150x150.png,N,,2025-08-29 11:05:46.727026
 ,EVs,2025-08-29 06:06:14+00:00,www.sciencedirect.com,Beyond the cost: Electric vehicle ownership and adoption intent in U.S. households - ScienceDirect,Not Available,,,,,https://www.sciencedirect.com/science/article/abs/pii/S1361920925003839,"... vehicles toward battery-powered electric vehicles (EVs). In the United ... 5376, 117th Congress, 2022), which extended tax credits for new cars ...",Not Available,,N,,2025-08-29 04:59:25.028941
-,Louisiana and Evs,2025-08-29 05:59:44+00:00,Big News Network.com,States offering financial assistance lead in 2-wheeler EV adoption: RBI,Not Available,,,,,https://www.bignewsnetwork.com/news/278539770/states-offering-financial-assistance-lead-in-2-wheeler-ev-adoption-rbi,"On the other hand, a few states did not offer any additional subsidies beyond tax and registration fee waivers.'
-The report further noted that Southern and Western states have been ahead of the rest of the country in 2W-EV adoption.
-These states, being early movers in formulating EV policies, have consistently shown better adoption ratios than the all-India average, while Northern and Eastern states have lagged.
-On the other hand, a few states did not offer any additional subsidies beyond tax and registration fee waivers.'
-It underlined that state-level policy measures such as subsidies, tax waivers, and investment in charging infrastructure remain central to encouraging EV uptake in a price-sensitive market like India.","New Delhi [India], August 29 (ANI): States that provide financial assistance in the form of subsidies and grants are witnessing stronger adoption of two-wheeler electric vehicles (2W-EVs), according to a study report by the Reserve Bank of India.
-
-The report highlighted that supportive policies at the state level have played a key role in shaping the adoption trajectory of EVs across different regions of the country.
-
-It stated, 'Most state governments have been offering incentives such as subsidies along with tax and registration fee waivers on every new 2W-EV purchase. On the other hand, a few states did not offer any additional subsidies beyond tax and registration fee waivers.'
-
-The report analysis of 23 states showed a clear difference in adoption trends. In the September 2023 quarter, six states that only offered tax and registration fee waivers, without any extra subsidy, recorded a sharp 24 per cent fall in adoption ratio on a quarter-on-quarter basis.
-
-On the other hand, 17 states that provided top-up subsidies in addition to tax and registration waivers witnessed a smaller decline of 17 per cent.
-
-This indicated that higher financial support helped cushion the impact of the subsidy reduction under the FAME II scheme.
-
-The report further noted that Southern and Western states have been ahead of the rest of the country in 2W-EV adoption. These states, being early movers in formulating EV policies, have consistently shown better adoption ratios than the all-India average, while Northern and Eastern states have lagged.
-
-Charging infrastructure is another critical factor influencing adoption. Out of the top five states with strong charging infrastructure, three, Karnataka, Goa, and Maharashtra, are from the southwest coast. Delhi and Haryana from North India also feature among the top five.
-
-To improve the situation, several states, including Andhra Pradesh, Assam, Bihar, Chhattisgarh, Gujarat, and Kerala, have offered capital subsidies ranging from 25 to 60 per cent on charging station equipment. Delhi has gone a step further, sanctioning a 100 per cent grant on the purchase of charging equipment.
-
-The RBI said that adoption of 2W-EVs is critical for achieving India's decarbonisation goals. It underlined that state-level policy measures such as subsidies, tax waivers, and investment in charging infrastructure remain central to encouraging EV uptake in a price-sensitive market like India. (ANI)
-
-New Delhi [India], August 29 (ANI): States that provide financial assistance in the form of subsidies and grants are witnessing stronger adoption of two-wheeler electric vehicles (2W-EVs), according to a study report by the Reserve Bank of India.
-
-The report highlighted that supportive policies at the state level have played a key role in shaping the adoption trajectory of EVs across different regions of the country.
-
-It stated, 'Most state governments have been offering incentives such as subsidies along with tax and registration fee waivers on every new 2W-EV purchase. On the other hand, a few states did not offer any additional subsidies beyond tax and registration fee waivers.'
-
-The report analysis of 23 states showed a clear difference in adoption trends. In the September 2023 quarter, six states that only offered tax and registration fee waivers, without any extra subsidy, recorded a sharp 24 per cent fall in adoption ratio on a quarter-on-quarter basis.
-
-On the other hand, 17 states that provided top-up subsidies in addition to tax and registration waivers witnessed a smaller decline of 17 per cent.
-
-This indicated that higher financial support helped cushion the impact of the subsidy reduction under the FAME II scheme.
-
-The report further noted that Southern and Western states have been ahead of the rest of the country in 2W-EV adoption. These states, being early movers in formulating EV policies, have consistently shown better adoption ratios than the all-India average, while Northern and Eastern states have lagged.
-
-Charging infrastructure is another critical factor influencing adoption. Out of the top five states with strong charging infrastructure, three, Karnataka, Goa, and Maharashtra, are from the southwest coast. Delhi and Haryana from North India also feature among the top five.
-
-To improve the situation, several states, including Andhra Pradesh, Assam, Bihar, Chhattisgarh, Gujarat, and Kerala, have offered capital subsidies ranging from 25 to 60 per cent on charging station equipment. Delhi has gone a step further, sanctioning a 100 per cent grant on the purchase of charging equipment.
-
-The RBI said that adoption of 2W-EVs is critical for achieving India's decarbonisation goals. It underlined that state-level policy measures such as subsidies, tax waivers, and investment in charging infrastructure remain central to encouraging EV uptake in a price-sensitive market like India. (ANI)",https://image.chitra.live/api/v1/wps/bba5cc2/b617d71a-73ff-4900-ad50-f2e23e8f3b7d/0/ANI-20250829043806-600x315.jpg,N,,2025-08-29 03:02:20.236735
-,Clean Energy ,2025-08-29 05:46:14+00:00,raleighnc.gov,Bioenergy Recovery Project | Raleighnc.gov,Jacob.Barnhart@raleighnc.gov,,,,,https://raleighnc.gov/projects/bioenergy-recovery-project-0,"The Bioenergy Recovery Project has completing work on anaerobic processed sludge using a new thermal hydrolysis method.
-This advanced anaerobic digestion technique is reducing the final solids produced by over 50 percent compared from what it used to be.
-The plant team has been adjusting the process and getting the needed permits for the renewable natural gas cleaning and compression system.
-This phase could take as long as 9 months to grow the microorganisms that are important for the process.
-Started in the spring of 2019, the project is expected to be completed by the summer of 2025.","The Bioenergy Recovery Project has completing work on anaerobic processed sludge using a new thermal hydrolysis method. This advanced anaerobic digestion technique is reducing the final solids produced by over 50 percent compared from what it used to be. The plant team has been adjusting the process and getting the needed permits for the renewable natural gas cleaning and compression system.
-
-The Sidestream process, which deals with discharge wastewater from the new treatment system while greatly lowering chemical and energy use, is now in the commissioning phase. This phase could take as long as 9 months to grow the microorganisms that are important for the process.
-
-Started in the spring of 2019, the project is expected to be completed by the summer of 2025.",https://raleighnc.govBRP_Rezised.JPG,N,,2025-08-29 04:01:23.724992
-,Indiana and Evs,2025-08-29 05:43:11+00:00,KTVZ,Tesla's Europe problem just got even worse - KTVZ,CNN Newsource,,,,,https://ktvz.com/money/cnn-business-consumer/2025/08/28/teslas-europe-problem-just-got-even-worse/,"London (CNN) — Tesla sales plunged again in Europe in July as car buyers continued their migration to Chinese rival BYD.
-BYD leapfrogs Tesla Sales of Chinese-branded cars are soaring across Europe.
-Research firm Jato Dynamics first reported that BYD had overtaken Tesla’s European sales in April.
-Tesla’s struggles Tesla is now one of the worst-selling car groups across Europe, ahead of only Honda (HND) and Mitsubishi.
-Electric car sales growth has slowed across Europe in recent years.","London (CNN) — Tesla sales plunged again in Europe in July as car buyers continued their migration to Chinese rival BYD.
-
-Elon Musk’s carmaker sold 6,600 models in the EU in July, a 42.4% fall from the same month last year, according to data from the European Automobile Manufacturers’ Association (ACEA). In the first seven months of 2025, Tesla sold around 77,000 cars in the EU, down from 137,000 in the same period in 2024.
-
-Meanwhile, BYD, the burgeoning, ultra-cheap Chinese electric and plug-in hybrid carmaker, continues to put its stamp on Europe. Sales jumped 206.4% in July against 2024 figures. The 9,698 models BYD sold in July means it is now outselling Tesla.
-
-The plunge – just the latest in a string of sales drops for Musk’s once-hot EV maker – underscores the turnabout in Tesla’s fortunes. Musk’s foray into politics didn’t just anger American liberals; his support of far-right parties in Germany and the UK also prompted protests outside Europe. And in Europe and China, Tesla has faced competition from lower-priced offerings from BYD, competition it doesn’t have to worry about in the US market.
-
-Wider analysis that includes the UK and countries from the European Free Trade Association, like Norway, Denmark and Sweden, shows a similar sales drop for Tesla (TSLA) alongside a 225% increase for BYD in July.
-
-Through all of 2025, Tesla has still outsold BYD by just under 35,000 models across the EU, the UK and the EFTA.
-
-BYD leapfrogs Tesla
-
-Sales of Chinese-branded cars are soaring across Europe. BYD in particular has increased its foothold, despite EV imports to the EU facing 27% tariffs following an anti-subsidy investigation by the bloc last year.
-
-BYD still holds a price advantage over rivals including Tesla. Meanwhile, its technological advancements are also helping it pull ahead of competitors.
-
-The group revealed a breakthrough to its battery charging technology in March that it said added 250 miles of range in five minutes, outpacing Tesla’s 200 miles in 15 minutes. BYD’s “God’s Eye,” a rival to Tesla’s full-self driving technology, was launched at no extra cost for most of its cars in February.
-
-BYD also holds an advantage over Tesla in its diverse offering of EVs and hybrid vehicles, whereas Tesla only produces EVs. This has helped shield BYD from shifting consumer preferences in Europe.
-
-Research firm Jato Dynamics first reported that BYD had overtaken Tesla’s European sales in April.
-
-Tesla’s struggles
-
-Tesla is now one of the worst-selling car groups across Europe, ahead of only Honda (HND) and Mitsubishi. The company’s struggles on the continent reflect economic, structural and even political shifts that are changing car buyers’ preferences.
-
-Electric car sales growth has slowed across Europe in recent years. A reduction in incentives to switch to EVs, concerns over battery life and a lack of charging infrastructure have been blamed in surveys for slower-than-hoped uptake.
-
-The current 15.6% market share that battery-electric vehicles hold in the EU is “still far from where it needs to be at this point in the transition,” the ACEA said.
-
-European buyers are showing a preference for hybrid electric cars, which control more than one-third of Europe’s new car market.
-
-Musk’s image has taken on a new relevance in Europe in recent years, much in the way it has in the United States.
-
-Following his financing of Donald Trump’s successful presidential campaign, Musk turned his attentions to European politics. Musk publicly backed Germany’s far-right AfD party in the country’s February elections and spoke remotely at the party’s campaign launch.
-
-He has also shown extensive support for the UK’s far-right reform party and advocated for the prison release of right-wing agitator Tommy Robinson, who was jailed for 18 months last October after admitting to being in contempt of court. Robinson was released on bail in August.
-
-Sparse industry surveys have indicated falling consumer sentiment towards Tesla owing to Musk’s behavior. A January survey by Electrifying.com showed 60% of respondents were actively put off buying a Tesla owing to Musk’s behavior.
-
-More than 70% of Brits and Germans held an unfavorable view of the Tesla CEO in January in the wake of Musk’s political interventions.
-
-CNN has reached out to Tesla for comment.",https://ktvz.b-cdn.net/2025/08/cnn-L19jb21wb25lbnRzL2ltYWdlL2luc3RhbmNlcy9jbWV2Y3NlencwMDA5M2I2bjAxZzgydHhi-L19jb21wb25lbnRzL2FydGljbGUvaW5zdGFuY2VzL2NtZXZhaDM5cDAwNWgyN25vZnl6Zzl3Zno-300-860x556.jpg,N,,2025-08-29 06:03:07.664588
-,North Carolina and Evs,2025-08-29 05:36:57+00:00,Yahoo News,OPINION: Canola farmers being sacrificed at the altar of domestic electric vehicles,Jay Goldberg | Sabine Benoit,,,,,https://ca.news.yahoo.com/opinion-canola-farmers-being-sacrificed-200023820.html,"Back in March, China placed a 100 per cent tariff on Canadian canola oil and meal imports, which primarily targeted processors and exporters.
-Essentially, the feds decided to punish China for making cheaper electric vehicles and sought to stand in the way of Canadian consumers possibly wanting to buy them.
-But when it comes to electric vehicles, the feds are doing the exact same thing they’re accusing China of.
-Yes, it is true that there are security concerns with Chinese electric vehicles.
-When it comes to electric vehicles, the ultimate choice should be made by consumers, not the government.","Canadian grain farmers are in trouble and federal policies are to blame.
-
-Tariffs on a key grain export Canada sends to China has sent the industry into crisis mode.
-
-Back in March, China placed a 100 per cent tariff on Canadian canola oil and meal imports, which primarily targeted processors and exporters.
-
-This month, China went further and placed a 75.8 per cent provisional anti-dumping duty on Canadian canola seed, which has effectively shut out Canadian raw canola seed exports from China, by far the industry’s biggest customer.
-
-China’s tariffs on Canada’s farmers didn’t just happen randomly. They are part of an act of retaliation. Even before China placed its first tariff on Canadian canola, the Trudeau government placed a brand-new 100 per cent tariff on Chinese electric vehicles, on top of a six per cent tariff that was already in place.
-
-Alongside this new tariff, the federal government also placed a 25 per cent tariff on Chinese steel and aluminium, making bilateral trade even more difficult.
-
-These twin blows Canada struck against China didn’t go unnoticed. The result was the Chinese government seeking to retaliate in a way that has brought Canada’s canola industry to its knees.
-
-Observers shouldn’t be surprised that China would retaliate against Canada in the face of high tariffs imposed on key industries. The official justification for the tariffs from the Trudeau government was that China has an “unfair advantage in the global marketplace” resulting from China’s overcapacity and oversupply of electric vehicles.
-
-Essentially, the feds decided to punish China for making cheaper electric vehicles and sought to stand in the way of Canadian consumers possibly wanting to buy them.
-
-The Trudeau government poured billions of dollars of taxpayer money into the domestic electric vehicle industry, so it’s no surprise that the feds would want to try to get consumers to buy electric cars produced in Canada.
-
-In addition, the Trudeau government passed legislation that forces all new light-duty vehicles sold in Canada beginning in 2035 to be electric, in an attempt to try to force Canadian consumers to buy electric cars. Again, by blocking Chinese competition from being desirable, and by forcing consumers to buy electric cars if they want to buy new vehicles, the feds are trying to force Canadian consumers to buy a certain type of electric car.
-
-When it comes to canola, the federal government is criticizing the Chinese government for being protectionist. But when it comes to electric vehicles, the feds are doing the exact same thing they’re accusing China of.
-
-Yes, it is true that there are security concerns with Chinese electric vehicles. However, the federal government didn’t even use this rationale for its tariffs. Security concerns are a valid issue, and those concerns should be shared with consumers. But should the federal government block Canadian consumers entirely from being able to purchase Chinese electric cars by imposing a 100 per cent tariff and using an alternative justification for it?
-
-That hardly seems like treating Canadians like adults.
-
-At the same time, Canadians buy lots of things from China and millions of Canadians even use Chinese-based apps on their smartphones like TikTok. If consumers have concerns about security when it comes to Chinese cars or Chinese apps, they shouldn’t buy or download them. But Canadians deserve the freedom of choice.
-
-To decry the Chinese government’s protectionism while engaging in protectionism of its own is a move on the part of the federal government that the canola industry cannot afford. With the Canadian economy already suffering because of the trade conflict with the United States and other economic realities, allowing a key Canadian industry like farming to be saddled with crippling tariffs will only make things worse.
-
-The feds ought to open negotiations with China and propose that both sides put aside their protectionism. When it comes to electric vehicles, the ultimate choice should be made by consumers, not the government. And farmers shouldn’t be forced to get hurt in the process while the feds shield a favoured industry from real competition.
-
-Jay Goldberg is the Canadian Affairs Manager and Sabine Benoit is the Canadian Policy Associate at the Consumer Choice Center",https://s.yimg.com/ny/api/res/1.2/qGU1MiT_6jEMPXoxt7drKw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04OTk7Y2Y9d2VicA--/https://media.zenfs.com/en/toronto_sun_articles_263/7550763343820731bf83a8b95da7d7e8,N,,2025-08-29 11:05:51.845127
-,Detroit and Evs,2025-08-29 05:22:30+00:00,autoevolution,GM Is Temporarily Reducing Factory Zero EV Production To Better Align With Demand,Mircea Panait,,,,,https://www.autoevolution.com/news/gm-is-temporarily-reducing-factory-zero-ev-production-to-better-align-with-demand-256628.html,"General Motors spokesman Kevin Kelly highlighted that America's largest automaker is aligning with market dynamics.
-On the other hand, General Motors hasn't confirmed any production adjustments for the Chevrolet Silverado EV and GMC Sierra EV.
-Be it the utility vehicle or the pickup, the Hummer EV won't disappoint over uneven terrain.
-For model year 2026, the Hummer EV needs 2.8 seconds from a standstill to 60 miles per hour.
-For model year 2026, the Hummer EV also gains the King Cab rear-steer mode.","The August 27 memo cited by the Detroit Free Press also reads that 360 factory workers will be hit with temporary layoffs. September 2 is when partial shutdown will come into effect. Production will resume a little over a month later. October 6 is the day that GM intends to resume production.
-
-General Motors spokesman Kevin Kelly highlighted that America's largest automaker is aligning with market dynamics. Reading between the lines, demand for expensive battery-electric vehicles isn't up to snuff nowadays. On the other hand, General Motors hasn't confirmed any production adjustments for the Chevrolet Silverado EV and GMC Sierra EV.
-
-Currently employing in the ballpark of 4,000 souls, Factory Zero will soldier on as the home of large battery-electric vehicles from General Motors. The company planned to use its Orion facility to expand BT1 production, but due to insufficient demand, the Michigan-based plant will be retooled for internal combustion full-size trucks and utility vehicles.
-
-Back in April 2025, the largest automaker of the Detroit Big Three laid off around 200 workers at Factory Zero. And unsurprisingly, market dynamics prompted the automaker to make this decision.
-
-The affected GMC and Cadillac models are stupidly expensive, with GMC listing the Hummer EV at $96,550 for either the pickup truck or the sport utility vehicle. Cadillac goes even further with $127,405 for the most basic specification of the Escalade IQ. Similar to the internal combustion Escalade, a long-wheelbase variant of the luxury model is available.
-
-The heaviest Cadillac model today isn't merely a toy, for Cadillac advertises up to 465 miles (748 kilometers) of driving range and 0-60 in 4.7 seconds. The Escalade IQ can be had with 24-inch wheels, the largest ever offered on the series-production Esky.
-
-Available in Luxury, Premium Luxury, Sport, and Premium Sport flavors, the Escalade IQ ships with 21 high-quality speakers from AKG. Prospective customers are further presented with 38- and 42-speaker options. While not as big on aural pleasure, GMC's full-electric Hummer is the better pick for off-roading scenarios.
-
-Be it the utility vehicle or the pickup, the Hummer EV won't disappoint over uneven terrain. It's also terribly quick, with GMC quoting estimates of 3.5 and 3.0 seconds, respectively. For model year 2026, the Hummer EV needs 2.8 seconds from a standstill to 60 miles per hour. In metric speak, that would be 97 kilometers an hour.
-
-The 2026 model flaunts up to 1,160 horsepower and 205 kilowatt-hours. For model year 2026, the Hummer EV also gains the King Cab rear-steer mode. As implied, the rear wheels turn faster than the fronts for improved maneuverability in tight spaces.",https://s1.cdn.autoevolution.com/images/news/gm-is-temporarily-reducing-factory-zero-ev-production-to-better-align-with-demand-256628_1.jpg,N,,2025-08-29 03:01:14.622710
-,North Carolina and Evs,2025-08-29 05:22:28+00:00,AllSides,"After a freeze, Trump administration reluctantly agrees to fund EV chargers | AllSides",Not Available,,,,,https://www.allsides.com/news/2025-08-28-2023/environment-after-freeze-trump-administration-reluctantly-agrees-fund-ev,"The Trump administration is reopening a federal program to fund the installation of high-speed EV chargers along freeways nationwide, after a six-month freeze in funds and a legal battle with states.
-President Trump has repeatedly denounced the multibillion dollar program, called the National Electric Vehicle Infrastructure (or NEVI) program, as wasteful.
-It was created in 2021 through a bipartisan act of Congress, and unlike many other Biden-era climate measures, that law remains on the books; Congress has not reversed it...","The Trump administration is reopening a federal program to fund the installation of high-speed EV chargers along freeways nationwide, after a six-month freeze in funds and a legal battle with states.
-
-President Trump has repeatedly denounced the multibillion dollar program, called the National Electric Vehicle Infrastructure (or NEVI) program, as wasteful. It was created in 2021 through a bipartisan act of Congress, and unlike many other Biden-era climate measures, that law remains on the books; Congress has not reversed it...",https://www.allsides.com/sites/default/files/allsides-logo-open-graph.png,N,,2025-08-29 03:01:36.953640
-,Detroit Environment,2025-08-29 05:20:47+00:00,Yahoo News,Detroit woman thanks mayor saying city's solar initiative saved her life - Yahoo,Ingrid Kelley,,,,,https://www.yahoo.com/news/articles/detroit-woman-thanks-mayor-saying-225956024.html,"The Brief A Detroit woman is praising the mayor and a city solar project for saving her life.
-DETROIT (FOX 2) - A Detroit woman received home upgrades through the City of Detroit’s Solar Arrays Project.
-The backstory Dorothy Gladney was so happy afterward, that she invited the mayor to her home to say thank you.
-asked Detroit Mayor Mike Duggan.
-If you are a Detroit resident and want to know more about the City's Solar Initiative Project CLICK HERE.","The Brief
-
-A Detroit woman is praising the mayor and a city solar project for saving her life.
-
-Dorothy Gladney was eligible for house upgrades as part of the Solar Arrays Project.
-
-As part of the upgrades, a new CO2 detector helped Gladney be alerted of a gas leak.
-
-DETROIT (FOX 2) - A Detroit woman received home upgrades through the City of Detroit’s Solar Arrays Project.
-
-The backstory
-
-Dorothy Gladney was so happy afterward, that she invited the mayor to her home to say thank you.
-
-""You are the mayor of Detroit and I’m the mayor of Almont,"" she joked.
-
-And on Thursday brought a meeting between the two.
-
-""So what did you think when you first heard about solar panels?"" asked Detroit Mayor Mike Duggan.
-
-""I don’t want anything to do with that mess - that’s what I thought,"" she said.
-
-But Dorothy Gladney has a new perspective. As a resident living near an upcoming solar array project, she had the option to benefit from a buyout or receive thousands of dollars in energy-efficient upgrades.
-
-She took the upgrades and one saved her life, she said.
-
-""The most important thing I got was a carbon monoxide and smoke alarm,"" she said.
-
-Prior to the upgrade, Gladney did not have a carbon monoxide detector. But days after it was installed, the CO2 detector sounded because of a stove that wasn’t working properly.
-
-""Had I went to bed that Sunday night, my husband and my two grand kids, we would not have woken up,"" she said.
-
-Gladney was able to call the fire department.
-
-""We’re so glad you have the carbon monoxide detectors installed, and the firefighters were able to come here and make sure you were out safely,"" said DFD Deputy Chief Daniel Clapp.
-
-Gladney invited Mayor Duggan to her home to say thank you.
-
-""I personally appreciate that,"" she said.
-
-She also showed him the thousands of dollars worth of upgrades she received which includes a new furnace and hot water tank.
-
-Officials say the solar project will create clean energy to offset electricity used by city buildings.
-
-""Turning it into power for city buildings and the money that we’re making generating the power, we’re putting it into the neighbors' houses,"" Duggan said.
-
-City officials say the program has the potential to grow and therefore provide more upgrades to families.
-
-""Please contact our office,"" said Kayana Sessoms, City of Detroit District 3 manager. ""If you feel like you would be qualified for the Solar Efficiency Program, we want to work with you to ensure you get the benefits you deserve.""
-
-If you are a Detroit resident and want to know more about the City's Solar Initiative Project CLICK HERE.
-
-The Source
-
-Information for this report came from interviews with Dorothy Gladney, Mayor Mike Duggan, DFD Deputy Chief Daniel Clapp and Kayana Sessoms, Detroit District 3 manager.",https://s.yimg.com/ny/api/res/1.2/p1_HsccqbTg10rtTug2FCA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU7Y2Y9d2VicA--/https://media.zenfs.com/en/wjbk_fox_local_articles_927/06b02f1030b5a8cae6d9c72b98d62cf1,N,,2025-08-29 06:59:16.261779
-,Louisiana American Energy ,2025-08-29 05:11:49+00:00,RealClearEnergy,Meta's $10B AI Data Center Dividing Rural U.S. | RealClearEnergy,The Miller Report,,,,,https://www.realclearenergy.org/2025/08/29/metas_10b_ai_data_center_dividing_rural_us_1131417.html,"In this episode of The Miller Report: Real Clear Journalism, Maggie Miller and James Varney dive into his latest investigation on the promise and peril of America’s AI boom.
-At the center of the story is Meta’s $10 billion Hyperion project in rural Louisiana.
-Read Full Article »","In this episode of The Miller Report: Real Clear Journalism, Maggie Miller and James Varney dive into his latest investigation on the promise and peril of America’s AI boom. At the center of the story is Meta’s $10 billion Hyperion project in rural Louisiana.
-
-Read Full Article »",https://assets.realclear.com/images/69/695664_6_.jpeg,N,,2025-08-29 01:58:54.034151
