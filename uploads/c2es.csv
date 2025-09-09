@@ -1,4 +1,279 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,EVs,2025-09-09 06:07:53+00:00,American Enterprise Institute - AEI,Charger Data Transparency: Curing Range Anxiety and Powering Electric Vehicle Adoption,"Omar Issac Asensio, Elaine Buckberg, Cassandra Cole, Luke Heeney, Christopher R. Knittel, James H. Stock",,,,,https://www.aei.org/research-products/report/charger-data-transparency-curing-range-anxiety-and-powering-electric-vehicle-adoption/,"How Real-Time Data Help EV Drivers This report proposes providing real-time data as a transparency solution for drivers’ anxiety about public EV charging.
+Range anxiety is exacerbated by the difficulty of find­ing EV chargers, the longer time needed to recharge an EV, and the possibility of unreliable EV chargers.
+We report the fraction of DCFCs providing real-time data, the CPOs that do and do not provide real-time data to PlugShare, and locations where real-time data are particularly sparse.
+Data Deserts Exacerbate Limited Real-Time Data Data deserts magnify the low share of highway-adjacent charging stations offering centralized real-time data.
+Options for Achieving Real-Time Data Sharing An obstacle to achieving universal real-time data sharing is incentivizing CPOs to provide open real-time DCFC data.","Key Points
+
+Electric vehicle (EV) adoption is stalling over charging fears. Finding a working, available public charger on US interstates is difficult; along six of the busiest interstates, real-time status is available for only one in three charging stations, with gaps of up to 1,308 miles with no charger status data.
+
+States can turbocharge EV adoption without rebates or taxes—just data transparency. This report offers turnkey legislation that states can adopt to encourage EV adoption at near-zero cost.
+
+Making real-time data universal for highway fast chargers would allow EV drivers to reliably navigate to working and available chargers and raise the EV share of new vehicle sales by 6.4 percentage points in 2030, putting 9.2 percent more EVs on the road by that year compared with baseline projections.
+
+Executive Summary
+
+Electric vehicle (EV) drivers want a seamless charging experience, but finding a working, available public charger on US interstates is difficult. Across six of the busiest interstates, traversing 40 states, only 34 per­cent of EV charging stations make real-time data available to PlugShare (a major charger-finding app), creating gaps of up to 1,308 miles with no charger status data.
+
+The solution is simple and cheap—and readily advanced by states. If all fast chargers on highways reported their status in real time so that any software developer could put it in a mapping app, EV drivers could reliably navigate to working, available chargers on a road trip—effectively eliminating their range anxiety. We estimate that making real-time data universal for highway fast chargers would raise the EV share of new vehicle sales by 6.4 percentage points in 2030, expanding the 2030 EV fleet 9.2 percent above baseline projections.
+
+Introduction
+
+Electric vehicle (EV) drivers want a seamless charging experience, but finding a working, available public charger on US interstates is difficult because map­ping apps have limited real-time data for many of these chargers. Along six major US interstates—I-5, I-10, I-75, I-80, I-90, and I-95—only 34 percent of charging stations have real-time data on PlugShare, a major free website and app for EV drivers that has more real-time data on chargers than Google Maps or Apple Maps.1
+
+We have documented real-time “data deserts”2 as long as 1,300 miles along major US interstates— something truly chilling for many EV drivers, as an EV with a 300-mile range would need to success­fully charge at least four times to cross that distance.3 On a road trip, verifying that a charging station will have an available, in-service charger often requires cross-referencing multiple apps—something no driver can safely do while driving.
+
+The solution is simple and cheap—and readily advanced by states. If all direct current fast chargers (DCFCs)4 on highways reported their status in real time so that any software developer could put it in a mapping app, EV drivers could reliably navigate to working, available chargers on a road trip—effectively eliminating their range anxiety.5
+
+It’s technologically feasible. Charge point operators (CPOs) could post their chargers’ real-time data to an application programming interface (API), where soft­ware developers could access it. A model is the 2022 Infrastructure Investment and Jobs Act (IIJA), which requires this reporting for all the highway fast char­gers it funds.6 Some CPOs already report these data, but they may limit the data’s access and use.
+
+As the Trump administration moves to sweep away federal support for EV adoption, state action to support it is becoming more important.7 In particular, less federal investment in charging makes it critical to make the most of existing chargers. The One Big Beautiful Bill Act (OBBBA) eliminates tax credits for business and residential investment in charging. The Department of Transportation froze IIJA charging funds until a court ordered it to free them; it then issued new interim guidance and reopened the program.8 Previous research has shown that investing in public charging is more cost-effective than offering tax credits to induce EV sales.9
+
+Other policy changes will further chill EV adoption and slow charger rollout, increasing the urgency of making the most of existing chargers to advance EV adoption. OBBBA also eliminated tax credits for EV purchases and leases, effectively widening the price gap between buying an EV and an internal combustion engine (ICE) vehicle for consumers and busi­nesses.10 The tariffs on autos and parts—as well as on steel, aluminum, and copper—will increase the cost of new vehicles, impair automaker profitabil­ity, and likely slow automaker investment in new EV programs. The metals and “reciprocal” tariffs, if sustained, will make DCFCs and supporting transform­ers, many of which are imported, more expensive, likely slowing charger rollout.
+
+The federal government is also effectively elimi­nating its environmental regulation of vehicles that has incentivized automakers to sell EVs, and it is undermining states’ ability to set their own, tougher standards. OBBBA eliminates penalties on automak­ers for failing to meet fuel economy standards, dramatically reducing incentives to comply. On July 29, 2025, the Environmental Protection Agency proposed rescinding the endangerment finding that greenhouse gases are harmful, which would nullify the tailpipe emissions standards that rested on that finding.11 In addition, on June 12, 2025, President Donald Trump signed a law revoking California’s longtime emissions waiver, which enabled it to set tougher vehicle emission limits than the federal gov­ernment’s. If it survives court challenges, the new law would prevent California, and other states that used its waiver, from phasing out ICE vehicle sales by 2035. California has sued, arguing that the waiver is not subject to the Congressional Review Act, which Congress used to eliminate it.12
+
+Many states should be interested in supporting EV adoption: both “Battery Belt” states, which want to see more jobs in their state from EV production and battery supply-chain investments, and the 17 states (plus the District of Columbia) that followed California’s Zero-Emission Vehicle (ZEV) or Advanced Clean Cars II regulations, committing to EV adoption to reduce emissions.13 Selling US-made EVs at home supports the US auto industry’s ability to compete in the global transition away from ICE vehicles and toward EVs. Every new EV sold means fewer carbon emissions than if the same driver were behind the wheel of a vehicle running on gasoline, and the emis­sions from each of those EVs will fall over time as the grid decarbonizes.14 Between the Battery Belt, ZEV, and Clean Car states, at least 28 may be interested in advancing EV adoption.
+
+Likewise, all states should agree that US EV sales help the US auto industry compete in the global transition away from ICE vehicles. In 2024, China sold 11 million EVs and Europe sold three million,15 while the US sold just 1.3 million.16 If the United States con­tinues to fall behind China in EV manufacturing, US automakers may never be able to compete. That could mean not only fewer jobs in EV assembly, battery pro­duction, and the EV supply chain but fewer US auto jobs overall.
+
+Our recent research finds that real-time data transparency is a powerful way to spur EV adoption. We estimate that making real-time data universal for highway DCFCs would raise the 2030 EV share of new vehicle sales by 6.4 percentage points—raising the estimated EV share to 46 percent of new vehi­cle sales from a 40 percent baseline projection.17 (Our projection incorporates EV policy changes in OBBBA while retaining charger investments in the IIJA and the surviving EV provisions of the IRA and California waiver.)18
+
+As a result of open charger data, there would be 3.5 million more EVs on the road by 2030, a 9 percent increase compared with baseline projections. Put­ting these additional EVs on the road would reduce carbon emissions by up to 15.2 million metric tons in 2030 alone—with corresponding reductions in emis­sions every year those EVs are used. These estimates assume that putting real-time data for all DCFCs in centralized apps will lead CPOs to repair them more rapidly and improve their reporting accuracy, raising the share of successful charging attempts and enabling EV drivers to trust what their phones tell them—thereby erasing range anxiety.19
+
+To be clear, apps to find EV chargers already exist, but they have large coverage gaps because some large charging providers do not share real-time data with them. Moreover, transmitting real-time data is technically feasible—thanks to the IIJA requirement, the capability is standard in the current generation of chargers. The problem is how to induce more real-time data disclosure.
+
+One way to conceptualize the problem is see­ing it as a choice between two future states of the charging market: either all CPOs provide real-time data in centralized apps or none do. Both outcomes would be stable, but the information-sharing out­come is better from a societal perspective. The ques­tion is how to get there. The market has not yielded the information-sharing outcome, creating a role for policy to do so.
+
+States should follow the IIJA’s example and require open real-time data for chargers in their state. California, Maryland, and Massachusetts have already taken steps in that direction. The model legislation presented in this report can help states adopt common real-time data disclosure standards that are consistent with the IIJA’s. Common require­ments will be easier for CPOs to follow and will therefore reduce resistance to data sharing.
+
+In fact, only a few states need to require data disclosure to tip the market outcome toward the information-sharing equilibrium. Even without such tipping, the regional nature of the Battery Belt, ZEV, and Clean Car states also means that long, multi­state stretches of major highways could be made EV travel friendly by state action alone, alleviat­ing range anxiety for many road trips. If all 17 ZEV and Clean Car states20 plus another 11 Battery Belt states21—which together account for 67 percent of the nation’s registered vehicles22—set real-time data disclosure requirements, it would cover high­ways in 28 states, including Washington, DC.23 This report discusses the importance of real-time data to accelerate EV adoption; it then proposes a menu of policy solutions, emphasizing state action. In assessing real-time data’s value, current availabil­ity, and impact on EV adoption, this report relies extensively on our 2025 working paper, “Charging Uncertainty: Real-Time Charging Data and Electric Vehicle Adoption.”24
+
+The Current State of Real-Time Data and Why It’s Critical to EV Adoption
+
+Why Charging Is Critical to EV Adoption
+
+Economic research consistently finds that charging infrastructure plays a big role in drivers’ choice between EV and traditional ICE vehicles.25 But whether charging infrastructure will spur EV adop­tion in practice depends on whether consumers believe public chargers will be reliable. A 2024 Pew Research Center survey found that “56% of Americans are not too or not at all confident that the U.S. will build the necessary infrastructure to support large numbers of EVs.”26 Insufficient charging infrastructure means that drivers may be unable to charge promptly simply because chargers are occupied and other EVs may already be wait­ing.27 Open data about whether public chargers are working and available can influence drivers’ deci­sion to buy an EV and help steer them to working chargers.
+
+The popular narrative about EV public charging is negative. Over the past several years, newspa­per columnists28 and industry studies29 have docu­mented EV drivers’ frustration with public charging infrastructure, specifically the number of chargers and their reliability. J.D. Power surveyed new vehi­cle buyers in 2025’s first quarter and found that four of the top five reasons why drivers rejected EVs were related to charging.30
+
+Academic research yields similar conclusions. A study of reviews on a major EV charger locator app from 2011 to 2015 reported that nearly half of reviews represented negative charging experiences.31 A more recent study documented the many reasons drivers
+
+may fail to successfully charge at California’s DCFCs: nonfunctioning screens, payment failures, charging cables that are too short for some EV models, and so on.32
+
+The two most important use cases for public charging are highways and cities. In cities, driv­ers are more likely to live in multifamily housing,33 rent their homes,34 or park on the street, all of which lower the odds of being able to install EV chargers in their homes. The US Department of Energy predicts that urban EV owners will rely on public charging for 62 percent of their needs, compared with only 32 percent for suburban residents and 16 percent for rural residents.35 Because driving speeds are lower in cities, drivers could lose substantial time driving to chargers that are out of service or occupied. At the Level 2 chargers common in cities, charging sessions are longer, turnover is less frequent, and stations are often small, so waiting for another vehicle to finish charging is not practical.
+
+Traveling via highways poses a different set of concerning problems for EV drivers. Consumers considering buying an EV often anticipate range anxiety in public charging’s most extreme use case: long road trips far from home, where drivers are likely unfamiliar with local charging infrastruc­ture and where running out of charge can involve an expensive and time-consuming tow. Few house­holds actually take major road trips annually, but the possibility of taking one has outsized importance for potential vehicle buyers.36 The data analysis in this report focuses on the availability of real-time data on highways.
+
+How Real-Time Data Help EV Drivers
+
+This report proposes providing real-time data as a transparency solution for drivers’ anxiety about public EV charging. By “real-time data,” we mean that centralized, free apps report the locations and types of EV chargers and whether they are work­ing and available. The necessary condition for this is that all CPOs make the status of their chargers available, for free, to software developers so they can create those centralized apps. That is not the case today.
+
+The absence of a one-stop shop for centralized and searchable data on EV chargers may be a real bar­rier to EV adoption for drivers accustomed to easily finding gas along highways thanks to prominent signs. Range anxiety is exacerbated by the difficulty of find­ing EV chargers, the longer time needed to recharge an EV, and the possibility of unreliable EV chargers. Open data can make it easier to find a successful char­ger and play a key role in mitigating range anxiety, making EVs more accessible to the American public.
+
+While most CPOs provide data on their own char­gers through a proprietary mobile app, this falls short of the benefits of centralized real-time data. First, cross-referencing apps puts a substantial search bur­den on EV drivers. Second, it’s simply not safe for driv­ers to cross-reference apps while driving. Many drivers do not have the advantage of a passenger who can research chargers across apps—for example, those driving solo and drivers whose only passengers are young children.
+
+The compatibility of plugs—the equivalent of gas­oline nozzles—complicates real-world charge find­ing for EV drivers, as not all EVs are compatible with all charging plugs, although that is changing. Tesla’s opening of part of its charging network is alleviating this matching problem. EVs with Combined Charging System and CHAdeMO plugs can use Magic Dock adapters provided at certain open Tesla chargers. The matching problem will further improve with time as Tesla’s North American Charging Standard plug becomes the national standard in new vehicles.37
+
+Some CPOs provide their real-time data to auto­makers for in-vehicle and brand-owner apps, but that also falls short of open data. Automaker apps may require subscriptions, especially when a vehicle is no longer new. Real-time data in subscription-only apps will become a worse substitute for open data as the market grows and EVs age. As the used-EV market matures, more prospective EV buyers will be from low- and middle-income households and therefore more sensitive to subscription costs.
+
+CPOs may not voluntarily provide centralized real-time data out of concern that competitors will use it to their advantage or because proprietary data are a valuable part of their business.38 The IIJA’s $5 billion National Electric Vehicle Infrastructure (NEVI) Formula Program, however, requires the highway DCFCs it funds to report real-time data. Moreover, the Trump administration retained this requirement when it issued its new NEVI guidance.39 Specifically, the program has required “third-party data sharing” (i.e., data accessible to aggregators via an API) on “real-time status by port” and “real-time price to charge” at the plug level for all NEVI-funded chargers.40 The NEVI requirement has also ensured that DCFC manufacturers make transmitting real-time data a standard feature of current DCFCs.
+
+But the IIJA imposes no requirements on non-NEVI chargers, and there is no other national require­ment. As a result, providing centralized real-time data is voluntary for the majority of DCFCs that do not receive NEVI funds. As we document below, only a minority supply it voluntarily today. If DCFC plugs cost $100,000 on average, NEVI’s $5 billion (and states’ mandatory 20 percent contribution) could fund only up to 62,500 DCFC ports.41 That’s about one-third of the 182,000 DCFC ports that the National Renewable Energy Lab forecasted would be needed in 2030, implying two in three DCFC ports would not need to supply real-time data.42
+
+Consumers Trust Chargers with Real-Time Data More Than Those Without
+
+Charging infrastructure build-out can only spur EV adoption if consumers who are considering buying EVs trust that chargers work and that they can find an available one when they need it. We conducted two consumer surveys to understand how import­ant charging reliability is to potential EV buyers and the possible impact that providing better charging information could have on EV adoption. The surveys asked consumers about the probability of successfully charging at DCFCs with and without real-time data along US highways. Our survey results documented beliefs about charging reliability among current EV drivers and potential buyers, and this fed into our modeling of the impact that improved real-time data provision has on EV adoption.43
+
+We asked the same questions to two groups of survey respondents: US-based EV drivers (for which we received 1,006 responses) and US-based non-EV drivers who expect to buy a new car soon (814 responses).44 For different DCFC stations (shown as images from PlugShare), we asked respon­dents about their perceived likelihood of successfully charging their vehicle with at least one plug in the time they were willing to wait (if all working chargers were occupied).
+
+The survey revealed that respondents consis­tently were more confident that they could charge at a charger that was reported as available with real-time data than one that had no real-time data, as shown in Figure 1. But survey respondents also had low confidence even in chargers that reported being working and available.
+
+Showing a striking level of doubt about charger reliability, EV drivers and prospective buyers believed they would have less than a two-thirds chance of a successful charge even at chargers that provide real-time data and are reported to be working and available. Prospective car buyers estimated that they could successfully charge at such a station 64.6 per­cent of the time, and current EV drivers estimated that they could successfully charge at such a station only 58.6 percent of the time.
+
+Strikingly, EV owners are statistically significantly more pessimistic than prospective buyers were in all three scenarios.45 Real-time data and higher reli­ability would clearly reduce existing EV drivers’ uncertainty, raise their consumer surplus, and help retain them as EV drivers.
+
+Still, EV drivers and prospective buyers had sub­stantially less confidence—around 40–50 percent—in chargers without real-time data and the odds of an occupied charger freeing up in the time they would be willing to wait. Respondents estimated a slightly higher chance of successfully charging at a station that had no real-time data (52.4 percent for prospec­tive buyers and 41.1 percent for EV drivers) com­pared with the odds of being able to charge at one where all chargers were occupied (47.9 percent for prospective buyers and 39.0 percent for EV drivers). This may indicate that they think occupied char­gers will not open up in a time frame that they are willing to wait.
+
+We see two main reasons why drivers may believe that a charger reported to be working and avail­able may provide a successful charge only less than two-thirds of the time: congestion and overreport­ing of uptime. While the survey states that a charger is available when the driver checks PlugShare, driv­ers are likely aware that other drivers may arrive at and plug in to any free chargers before they reach the station. In their 2024 Annual Reliability Report, ChargerHelp stated that true uptime often falls short of reported uptime—and reported uptime is what real-time data captures. In particular, ChargerHelp found that 15 percent of stations they tested failed despite the app and the charger itself reporting that the station was online and available. These failures can happen because chargers are physically blocked, network connections or payments fail, or cords are too short.46
+
+One in Three Highway DCFC Stations Posts Centralized Real-Time Data
+
+In assessing the availability of centralized real-time data, we focus specifically on real-time data in charger locator apps for DCFCs on major US highways. Real-time data on chargers are available in main­stream general-purpose mapping apps, such as Apple Maps and Google Maps, and in specialized third-party charging locator apps, such as PlugShare. These apps report EV charger locations across the coun­try and generally also cover plug type and maximum charging speed.
+
+We find that PlugShare has the best real-time data coverage of these three main apps.47 This section presents results from repeatedly scraping PlugShare, in which we focused on six major US highways: I-5, I-10, I-75, I-80, I-90, and I-95. We report the fraction of DCFCs providing real-time data, the CPOs that do and do not provide real-time data to PlugShare, and locations where real-time data are particularly sparse.
+
+Across our six interstates on August 18, 2024, 34.4 percent of DCFC stations and 18.6 percent of plugs on average reported real-time data on PlugShare.48 Figure 2 shows whether chargers offer real-time data along these six interstates. Table 1 shows the number and share of highway-adjacent charging stations, with real-time data for each interstate.
+
+The CPOs with the most stations and plugs in our sample, Tesla and EA, do not provide real-time data to PlugShare, Google Maps, or Apple Maps. The sec­ond set of rows in Table 1 provides these statistics for all non-Tesla stations. Excluding Tesla chargers brings the overall share of DCFC stations provid­ing real-time data to 53.4 percent, with a range from 39.6 percent on I-90 to 64.1 percent on I-5.
+
+The last two rows in Table 1 exclude Tesla and Electrify America (EA) stations. EA chargers are available to non-Tesla drivers, but they do not pro­vide centralized real-time data. Excluding Tesla and EA chargers brings the total share of stations pro­viding real-time data to 70.9 percent, with a range of 54.3 percent on I-90 to 80.7 percent on I-5. Excluding them substantially improves the perceived fraction of stations providing real-time data, but it reduces the number of stations overall by over 53 percent (1,426 total stations vs. 669 when Tesla’s and EA’s are excluded). Tesla’s and EA’s share of plugs providing real-time data is lower, at 19.9 percent (vs. 33.2 per­cent for stations overall), because they tend to have large stations and subsequently more plugs.
+
+The availability of centralized real-time data was stable from March to August 2024, as shown in Figure 3. Table B1 shows that there was also limited change in the availability of real-time data on November 19, 2024; for all six interstates, over­all real-time data availability improved by only 0.6 percent.
+
+Data Deserts Exacerbate Limited Real-Time Data
+
+Data deserts magnify the low share of highway-adjacent charging stations offering centralized real-time data. Some of these data deserts span distances longer than even the longest stated range of existing EV models,49 and therefore, road trips in these areas require careful research and planning in advance. EV drivers have no way of knowing whether a function­ing charger exists over distances of several hundred miles unless they cross-reference apps or can access more data through an in-vehicle automaker app (which may require a subscription). The cost of an error could be high: a tow to the next working DCFC (that is compatible with the driver’s vehicle) or hours spent at a Level 2 charger to gain enough charge to drive to the next working DCFC.
+
+Figure 4 shows data deserts of 150 miles or longer on the six major interstates we studied on August 18, 2024. As Table 2 details, we found 13 data deserts: four on I-10, six on I-80, two on I-90, and one on I-95. I-5 and I-75 had none. Four of the data deserts were over 300 miles long, longer than the stated range of most current EV models: Deming, New Mexico, to Kerrville, Texas, (586 miles) and Baytown, Texas, to Robertsdale, Alabama, (466 miles) on I-10; Coalville, Utah, to Kearney, Nebraska, (709 miles) on I-80; and Post Falls, Idaho, to Blue Earth, Minnesota, (1,308 miles) on I-90. In identifying data deserts, we exclude chargers at auto dealerships, as many restrict chargers to their own customers only or allow charging only during certain hours.50
+
+Several of these data deserts are adjacent, as Table 2 shows. On the 795 miles of I-10 between chargers in Tucson, Arizona, and Kerrville, Texas, the only intermediate chargers with real-time data are in Deming, New Mexico. On I-80, the 148-mile data desert from Truckee, California, to Lovelock, Nevada, is immediately adjacent to another 153-mile data desert to Carlin, Nevada. Between Perrysburg, Ohio, and Columbia, New Jersey, the only chargers with real-time data are in Emlenton, Pennsylvania. Real-time data availability is the worst on I-90, where across the 1,600-mile stretch from Post Falls, Idaho, to Madison, Wisconsin, there is a single station with real-time data in Blue Earth, Minnesota.
+
+To be clear, these data deserts are not charging deserts; even on the 1,308 miles of I-90 between Post Falls and Blue Earth, publicly accessible DCFCs are available within two miles of the highway every 34 miles on average. The major problem we document is not an insufficient number of chargers along these highway stretches (although this may also be the case) but rather that there is insufficient information about those chargers to ensure these trips will be fea­sible and ease range anxiety.
+
+In recent months, data deserts have improved marginally on our six interstates. What is now a 226-mile data desert between Tallahassee, Florida, and Robertsdale, Alabama, was a 385-mile desert between Jacksonville, Florida, and Daphne, Alabama, as of April 2024. The addition of a ChargePoint charger in Pensacola, Florida, and an EVConnect charger in Tallahassee, both reporting real-time data, have improved EV drivers’ ability to find charging on the Florida Panhandle.
+
+These data deserts may continue to shrink and even disappear as NEVI chargers requiring real-time data reporting are built throughout the coun­try, but progress on this front has been slow. As of November 26, 2024, 31 NEVI charging stations with 126 total ports were operating across nine states—as compared with the program’s original objective of four NEVI DCFCs posting real-time data every 50 miles.51 A total of 41 states had ini­tiated their NEVI procurement process, while 11 had not.52
+
+The Impact of Real-Time Data on EV Adoption
+
+Using a model of driver choice between buying an EV and buying an ICE vehicle, we estimate that centralized real-time data would substantially increase EV sales, raise the number of registered EVs in the US, and reduce carbon emissions.53 Specifically, we estimate that the EV share of new vehicle sales would be 6.4 percentage points higher in 2030, raising the number of registered EVs in the US by 9.2 percent, both versus baseline forecasts.
+
+These estimates assume not only that universal, centralized real-time data will be available but also that the data will shine light on nonworking char­gers, leading CPOs to achieve higher reliability, which will in turn enable drivers to trust real-time data and have more confidence in their ability to reli­ably charge. In effect, real-time data can eliminate range anxiety. Figures 5 and 6 illustrate the increase in EV adoption and the EV fleet size as a result of universal real-time data. Our modeling methodology is detailed in our working paper, updated with sev­eral changes from Elaine Buckberg and Cassandra Cole’s 2025 report.54
+
+The positive effect of real-time data on EV adop­tion is robust to these modeling changes and the change in the 2024 policy baseline (used in our working paper) and the OBBBA baseline, includ­ing the termination of the IRA’s EV and charger tax credits. Estimates from our working paper indicate that full real-time data plus reliability and consumer trust would increase the 2030 EV share of new vehicle sales by 8.0 percentage points, from 48 to 56 percent, against a December 31, 2024, policy baseline. The updated estimates predict an impact of 6.4 percentage points on top of the OBBBA base­line, from 39.5 to 45.9 percent. We have estimated the impact of real-time data on the EV share of new vehi­cle sales in 2030 at different tax-credit levels and find essentially zero variation.55 We have also confirmed with more recent modeling that real-time data can yield a similar increase in EV adoption against alter­native baseline scenarios. Buckberg and Cole have modeled how potential changes in federal EV policy under the Trump administration would change the trajectory of EV adoption.56
+
+Improving real-time data, uptime, and consumer confidence in the data could lead to more EVs on the road and reduce carbon emissions by up to an addi­tional 15.2 million metric tons—or an added 18.7 percent—relative to the carbon emissions reductions projected under the IRA and IIJA without these improvements.57 Figure 7 shows the difference in carbon emissions by year. Moreover, compared with the $451 billion in government expenditures for the IRA and IIJA’s EV provisions estimated in Cole et al., requiring real-time data would be comparatively costless to the government.58
+
+Policy and Market Solutions to Yield Real-Time Data Sharing
+
+As mentioned previously, the EV charging market today has the potential to evolve in two ways: Either all CPOs will provide real-time data, yielding higher EV adoption and lower carbon emissions, or no CPOs will provide real-time data outside a limited set of chargers that require it, including the NEVI chargers. The information-sharing equilibrium is better from a societal perspective.
+
+Options for Achieving Real-Time Data Sharing
+
+An obstacle to achieving universal real-time data sharing is incentivizing CPOs to provide open real-time DCFC data. A variety of private-sector apps exist for finding EV routes and chargers, including Google Maps, Apple Maps, PlugShare, Chargeway, and auto­makers’ proprietary apps. Proprietary apps often negotiate access to more CPOs than the free apps offer—but automaker apps are free for a limited time, after which the vehicle owner must pay for access, as noted earlier.59
+
+As the EV market matures and low to middle-income households increasingly purchase used EVs, these price-sensitive buyers are less likely to pay a monthly subscription to find chargers—a potential obstacle to used-EV sales. Thinking ahead and plan­ning for a healthy used-EV market is essential to creating a healthy new EV market today.
+
+We consider three approaches to achieving universal real-time data sharing.
+
+Pure Market Approach
+
+A pure market approach has clearly been unsuc­cessful, given that the two largest CPOs do not have open real-time data. While it could improve in time—especially if big-budget new entrants shared data and created competitive pressure for large incumbents to do so—waiting to see whether that happens risks stalling EV adoption. Automaker consortium IONNA and BP Pulse already share real-time data. However, the large market shares of Tesla and EA, combined with their importance on remote highway corridors, reduces the odds that they will be quickly pressed to share real-time data or that drivers will have adequate real-time data anytime soon.
+
+A Federal Requirement and Centralized API
+
+While the federal government could require univer­sal real-time data by law, that is unlikely to happen under the Trump administration given its aim to with­draw federal support for EV adoption, its cutbacks to federal data provision,60 and its broader efforts to reduce regulation.
+
+While improbable, a federal requirement would be advantageous because it would use a single entity to monitor and enforce compliance, versus individ­ual states needing to separately enforce it, including developing their own capabilities to do so. Enforce­ment could be easier if CPOs had to provide their data to a centralized federal API, which would then provide open data to EV drivers.
+
+State Requirements
+
+Currently, state requirements may be the most likely way to achieve universal real-time data sharing. How­ever, multiple state legislatures must act to achieve a tipping point that may induce CPOs to share real-time data nationally. States have less power and are less efficient in achieving compliance.
+
+The biggest costs of any real-time data require­ment would be monitoring and enforcement. States could reduce costs by cooperating to monitor and enforce compliance, possibly by enlisting a multistate organization like the National Association of State Energy Officials or the American Association of State Highway and Transportation Officials, which could in turn contract a third party.
+
+Achieving Higher EV Adoption Through State Real-Time Data Requirements
+
+State action offers the best path to drive the EV mar­ket to the information-sharing equilibrium of universal, centralized real-time charger data and faster EV adoption. How would this work?
+
+States should follow the IIJA’s example and require real-time data—ideally for all publicly available chargers in their state, but at minimum for new DCFCs the state and ratepayers fund. As we noted earlier, three states are already moving to address this. Massachusetts recently legislated a real-time data requirement for all new chargers receiving federal, state, or ratepayer funding.61 The proposed California regulations would compel all new state- and ratepayer-funded chargers to post real-time data.62 Maryland considered requiring real-time data for all chargers in the state and has legislated the creation of a com­mittee to further evaluate the proposal.63 While the Massachusetts and California laws affect only publicly funded chargers, they could induce CPOs to disclose real-time data for all their chargers to give custom­ers in those states a consistent experience across that CPO’s chargers.
+
+Model legislation, presented in Appendix A, can push states to adopt common real-time data dis­closure standards that are consistent with the IIJA standards. Common standards would be easier for charging providers (CPOs) and therefore reduce resistance to data sharing. To curb any resistance, states could include technical minimums, such as enforcing the standards on all DCFC plus Level 2 chargers installed after a certain date only, to ensure that the affected chargers are capable of sharing real-time data.
+
+Real-time data sharing could further a state’s envi­ronmental and economic goals, as the model legisla­tion reflects. Benefits include protecting consumers, promoting EV deployment, easing travel for EV driv­ers, and improving public safety by making it easier for EV drivers to locate a working and free charger while driving. Price transparency would create a more com­petitive market. Another economic benefit is attracting EV-driving tourists, who might choose not to visit the state if it’s hard to reliably find a charger there.
+
+While some CPOs may nonetheless object to data sharing—particularly those sharing only via propri­etary apps today—if they publish their real-time data in certain apps or websites, it would undermine a potential legal claim that the state is unconstitution­ally “taking” a trade secret or other company prop­erty. Applying the disclosure requirement to only new chargers could further insulate the policy from a tak­ings lawsuit because companies considering invest­ment decisions would be on notice that they would have to share real-time data. Limiting the require­ment to new chargers also avoids any burden of retro­fitting existing chargers.
+
+To further mitigate the potential for lawsuits, states should allow CPOs to attach reasonable data-use conditions, as CPOs do in their own apps, even when the data are obtained through third-party software devel­opers, such as Google. The model legislation includes such language. States could also offer regulatory ben­efits in exchange for disclosure, such as exemptions from public utility commission regulation. Moreover, the model legislation does not call for sharing other potentially valuable data such as the length of individ­ual charging sessions, initial and final charge states, and patterns by charger location, EV model, or spe­cific vehicles.
+
+Finally, because the model legislation is narrowly tailored to accelerate EV adoption and would help a state achieve its environmental and economic pol­icy goals, the data-sharing provision would not be an unconstitutional compulsion of commercial speech. When states demonstrate a reasonable relation­ship between their legitimate policy goals and the required disclosure of accurate and factual commer­cial information, courts tend to reject First Amend­ment challenges. Only a few states may need to require disclosure to tip the market outcome to the information-sharing equilibrium. The broader the requirement in any state, and the more states that adopt real-time data requirements, the more rap­idly the equilibrium may tip to universal real-time data sharing.
+
+If CPOs provide centralized real-time data for chargers only in states where it is explicitly required, they would risk offering customers an inconsis­tent and confusing experience—especially in metro areas that span two or more states. CPOs may quickly decide that it is easier and more customer friendly to meet the real-time data sharing require­ments across the board, rather than do it only in the states that require it and on any NEVI chargers they operate. Large, new CPO-market entrants may pro­vide real-time data on all their chargers in the face of these requirements, putting pressure on large incumbents to do so as well.
+
+In exchange for voluntarily posting their real-time data to an API where any software developer can access it, the CPOs would enjoy the benefits of a faster growing market. A 13 percent larger US fleet of EVs in 2030, as our modeling indicates, would enable charging providers to amortize their investments more rapidly.
+
+Even before real-time data sharing becomes stan­dard practice, the regional nature of the Battery Belt, ZEV, and Clean Car states also means that long, mul­tistate stretches of major highways could be trans­formed by state action, alleviating range anxiety for many road trips. If all 17 ZEV and Clean Car states plus Washington, DC, set universal real-time data disclosure requirements, then large regions of the country would become EV travel friendly: all high­ways in the mid-Atlantic and New England (excluding New Hampshire), the West Coast (plus Nevada), and Colorado and Minnesota. (See Figure 8.) The ZEV and Clean Car states represent 40.2 percent of US registered vehicles.64
+
+If the 11 additional Battery Belt states (which have at least $10 billion in EV or battery plant investment and 9,500 jobs announced)65 also set real-time data disclosure requirements, it would cover the highways in 28 states, plus Washington, DC. (See Table B3.) EV drivers could go from Alabama to Maine or Michigan’s Upper Peninsula, from New York to Chicago’s Indiana suburbs, from Seattle to Tucson, and throughout Texas. Those 28 states have 67 percent of the nation’s registered vehicles.66 Yet other states might decide to follow so as not to be at a disadvantage in attracting tourism—such as Western states, where tourism may center on people driving to national parks.
+
+Once multiple states adopt real-time data require­ments, those states could reduce their implementa­tion costs by cooperating with each other to monitor and notify CPOs and enforce the requirements. Standardizing states’ requirements would facilitate joint monitoring and enforcement.
+
+Conclusion
+
+States’ most powerful lever for accelerating EV adop­tion is essentially free from a state budget perspective: Follow the example of the IIJA and require real-time data for chargers in their state. We estimate that making real-time data universal for highway DCFCs would raise the 2030 EV share of new vehicle sales by 6.4 percentage points. As a result, there would be 3.5 million more EVs on the road by 2030, a 9.2 per­cent increase versus the baseline forecast. The fiscal cost is near zero.
+
+Massachusetts has moved forward already, requir­ing any new charger receiving state, federal, or rate­payer funding to post real-time data. The California Energy Commission has issued draft regulations that would require posting real-time data for all new char­gers funded by the state and electricity ratepayers. Maryland has created a commission to study requir­ing real-time data for chargers in the state.
+
+Model legislation, which can be found in Appendix A, can facilitate states adopting common real-time data disclosure standards that are consistent with the IIJA’s. Common requirements would be easier for CPOs and therefore reduce their resistance to data sharing.
+
+Only a few states may need to require disclosure to motivate the EV market to comply as a whole. Even if the majority of states don’t require CPOs to share their EV chargers’ real-time data, the regional nature of the Battery Belt, ZEV, and Clean Car states could mean that long, multistate stretches of major high­ways could be quickly transformed by state action, alleviating range anxiety for many road trips just through state action.
+
+Appendix A. Model Legislation Requiring Real-Time Data Reporting from Electric Vehicle Chargers
+
+Section 1. Legislative Findings
+
+a. The legislature finds that it is in the best inter­ests of the state to encourage private-sector investment in infrastructure, including public electric vehicle (EV) charging stations.
+
+b. The legislature finds that transparency into the real-time pricing and availability of public charging stations is essential for protecting con­sumers, promoting EV deployment, and foster­ing the rapid installation and widespread use of public charging stations.
+
+c. The legislature finds that a robust network of privately owned public charging stations that provide consumers with transparent informa­tion about real-time pricing and availability will ease travel along the state’s roadways, improve public safety by simplifying how drivers locate available chargers, and reduce the time driv­ers spend searching for a charger or waiting to charge.
+
+Section 2. Definitions
+
+“Charger,” a device having at least 1 charging port and connector for charging EVs.
+
+“Charging station,” a charger or group of chargers and the area in the immediate vicinity of such charger or group of chargers, which may include, at the discretion of the regulating entity, supporting equip­ment, parking areas adjacent to the chargers and lanes for vehicle ingress and egress; provided, how­ever, that a charging station may compose only part of the property on which it is located.
+
+“Charging network provider,” an entity that oper­ates the digital communication network that remotely manages the chargers at a charging station; this may include charge point operators.
+
+“Charging station operator,” an entity that owns or provides the chargers and the supporting equipment and facilities at charging stations and is responsible for operating and maintaining chargers, supporting equipment, and facilities; they may delegate responsi­bility for certain aspects of the charging station oper­ation and maintenance to subcontractors.
+
+“Connector,” a device that attaches an EV to a charging port to transfer electricity; provided, however, that the term “connector” may also be referred to as a plug.
+
+“Direct current fast charger,” or “DCFC,” a charger that enables rapid charging by delivering direct cur­rent electricity to an EV’s battery.
+
+“Electric vehicle,” or “EV,” a motor vehicle that is either partially or fully powered on electric power received from an external power source. For the purposes of this regulation, this definition does not include golf carts, electric bicycles, or other micro­mobility devices.
+
+“Level 2 charger,” a charging system with a single-phase input voltage range from 208 to 240 volts of alternating current (AC) and maximum output current less than or equal to 80 amperes AC.
+
+“NEVI Standards,” the minimum standards and requirements for projects funded under the National Electric Vehicle Infrastructure (NEVI) Formula Program that were published in the Federal Register on February 28, 2023, beginning on page 12752 of volume 88.
+
+“Port,” a system or connecting outlet on a charger that provides power to charge an EV, provided that a port may be equipped with multiple connectors but uses only one connector at a time to provide such power.
+
+“Public charging station,” a charging station that is a Level 2 charger or a DCFC and is located at a publicly available parking space.
+
+“Publicly available parking space,” a parking space that has been designated by a property owner or lessee to be available to and accessible by the public and may include on-street parking spaces and parking spaces in surface lots or parking garages; provided, how­ever, that a ‘‘publicly available parking space’’ shall not include a parking space that is part of or associ­ated with a private residence or that is reserved for the exclusive use of an individual driver or vehi­cle or for a group of drivers or vehicles including employees, tenants, visitors, residents of a com­mon interest development, or residents of an adja­cent building.
+
+Section 3. Availability of Real-Time Data and Regulation of Charging Network Providers and Charging Station Operators
+
+a. Consistent with regulations pursuant to section (b), any charging network provider or charging station operator of a public charging station in the State shall make available to third-party soft­ware developers, free of charge, data necessary to provide real-time information on availability, power delivery rating, and pricing of each public charging station.
+
+b. Within 12 months of the effective date of this Act, the [DEPARTMENT] shall promulgate reg­ulations to implement subsection (a), including but not limited to:
+
+i. data requirements, provided further that the [DEPARTMENT] shall ensure that availability, power delivery rating, and pric­ing information are accurate and reflect the real-time conditions of each public charging station port;
+
+ii. definitions of key terms, including but not limited to “availability” and “real time”;
+
+iii. requirements that the data include geo­graphic information sufficient to support third-party mapping software;
+
+iv. requirements that the data format comply with EV charging industry best practices and standards, such as the NEVI Standards, and other best practices and standards identified by the [DEPARTMENT];
+
+v. provisions allowing charging station oper­ators to attach reasonable conditions to data use designed to protect confidential business information, provided that such conditions shall not prevent third-party software developers from accessing real-time information on the availability, power delivery rating, and pricing of each public charging station port; and
+
+vi. applicability of the regulations, provided that the regulations shall apply to all pub­lic charging stations that commence opera­tions no sooner than 12 months following the enactment of this Act.
+
+c. Notwithstanding any other law, the [PUBLIC UTILITY COMMISSION] shall not have any jurisdiction to regulate the prices, terms, or con­ditions of any public charging station that com­plies with all regulations promulgated pursuant to this chapter and that is owned or operated by a charging network provider or charging sta­tion operator, provided the charging network provider or charging station operator does not otherwise distribute or sell electric power to the public.
+
+Appendix B. A Breakdown of Real-Time Data Across Six Interstates and Battery Belt State Jobs and Investment
+
+About the Authors
+
+Omar Isaac Asensio is an associate professor in the School of Public Policy and director of the Data Science and Policy Lab at the Georgia Institute of Technology.
+
+Elaine Buckberg is a senior fellow at the Salata Institute for Climate and Sustainability. She was previously chief economist of General Motors and a senior US Treasury official.
+
+Cassandra Cole is a PhD candidate in Harvard University’s Economics Department.
+
+Luke Heeney is a graduate research assistant at the Massachusetts Institute of Technology’s (MIT) Cen­ter for Energy and Environmental Policy Research and is completing an MS in technology and policy at MIT.
+
+Christopher R. Knittel is the associate dean for climate and sustainability, the George P. Shultz Professor, and a professor of applied economics at the Massachusetts Institute of Technology’s (MIT) Sloan School of Management. He is also the director of MIT’s Center for Energy and Environmental Policy Research and the MIT Climate Policy Center.
+
+James H. Stock is vice provost for climate and sustainability at Harvard University, director of Harvard’s Salata Institute for Climate and Sustain­ability, the Harold Hitchings Burbank Professor of Political Economy, and a member of the faculty at the Harvard Kennedy School. He is a former member of the Council of Economic Advisers.
+
+Acknowledgments
+
+The authors thank Ari Peskoe and Eliza Martin of Harvard Law School’s Environmental and Energy Law Program for their assistance with the model legislation. This draft benefited from valuable comments from Edward L. Glaeser, John Smolen, partici­pants at the AEI-Brookings project on transportation policy workshop, and two anonymous referees.",https://www.aei.org/wp-content/uploads/2025/09/Figure-1-3-1024x785.jpg,N,,2025-09-09 02:59:11.047496
 ,Clean Energy ,2025-09-09 05:04:24+00:00,Kleinman Center for Energy Policy,U.S.–China Competition in the Age of Trump's Energy Law,Not Available,,,,,https://kleinmanenergy.upenn.edu/commentary/podcast/u-s-china-competition-in-the-age-of-trumps-energy-law/,"Once, climate and clean energy were common ground between the United States and China, most notably in the lead-up to the 2015 Paris Agreement.
 China has emerged as the global leader in clean energy manufacturing, while the U.S.—under the Biden administration—moved to catch up through the Inflation Reduction Act.
 What does this shift mean for U.S.–China relations, American competitiveness, and the global energy transition?
@@ -37,6 +312,31 @@ The agency sees US biofuels consumption to rise later this year to meet Renewabl
 The EIA projects biofuel net imports in 2025 and 2026 to be the lowest since 2012.
 
 Though the use of biofuel bunkered by international ships in the US has seen limited uptake, it has been more common in domestic shipping. Limited imports could add further pressure on availability for the marine sector.",https://shipandbunker.cdn.speedyrails.net/a/img/_mt_5d991c2f32b0523938eaeebcfba47251.jpg,N,,2025-09-09 01:59:24.477779
+,Louisiana American Energy ,2025-09-09 04:49:29+00:00,Hart Energy,EQT's LNG Buying Spree Continues with 1 mtpa from Commonwealth | Hart Energy,"Hart Energy Staff, Hart Energy",,,,,https://www.hartenergy.com/exclusives/eqts-lng-buying-spree-continues-1-mtpa-commonwealth-214048,"EQT signed a 20-year sale and purchase agreement with Commonwealth LNG for 1 million tonnes per annum (mtpa) of offtake, the companies announced Sept. 8.
+With this agreement with Commonwealth, EQT has secured a total of 4.5 mtpa of LNG offtake in 2025.
+The other 20-year agreements include 1.5 mtpa of supply from NextDecade’s Rio Grande LNG proposed Train 5 and 2 mtpa from Sempra’s Port Arthur LNG Phase 2.
+Under the Commonwealth agreement, EQT will purchase the LNG on a free-on-board basis at a price indexed to Henry Hub.
+Commonwealth has 5 mtpa of offtake secured under long-term, binding agreements with Glencore, Jera and Petronas and a line of sight to subscribe its remaining capacity.","EQT signed a 20-year sale and purchase agreement with Commonwealth LNG for 1 million tonnes per annum (mtpa) of offtake, the companies announced Sept. 8.
+
+With this agreement with Commonwealth, EQT has secured a total of 4.5 mtpa of LNG offtake in 2025. The other 20-year agreements include 1.5 mtpa of supply from NextDecade’s Rio Grande LNG proposed Train 5 and 2 mtpa from Sempra’s Port Arthur LNG Phase 2.
+
+Under the Commonwealth agreement, EQT will purchase the LNG on a free-on-board basis at a price indexed to Henry Hub.
+
+""The agreement with EQT is a strong endorsement of our integrated natural gas platform, featuring a unique wellhead-to-water strategy that meets burgeoning demand for LNG across global markets, while advancing U.S. energy leadership and economic growth,"" said Ben Dell, managing partner of Kimmeridge and chairman of Caturus, the parent company of Commonwealth LNG.
+
+Commonwealth is a 9.5-mtpa export facility currently under development on the Gulf Coast in Cameron Parish, Louisiana.
+
+The facility is advancing toward a final investment decision (FID) in 2025, with first LNG production expected in 2029.
+
+RELATED
+
+Commonwealth LNG Asks FERC for Go-Ahead to Start Site Work
+
+The deal with EQT will become fully effective upon the satisfaction of customary closing conditions, including an affirmative FID on the project.
+
+Commonwealth has 5 mtpa of offtake secured under long-term, binding agreements with Glencore, Jera and Petronas and a line of sight to subscribe its remaining capacity.
+
+""With this latest agreement, EQT has established a diversified LNG export portfolio that will provide us with flexibility to market and optimize our own cargos. As global demand for reliable, lower-carbon energy continues to rise, we believe EQT's scale, balance sheet strength, and commitment to responsible development make us uniquely capable of delivering solutions that drive both economic growth and emissions reduction across international markets,” said Toby Z. Rice, president and CEO of EQT.",https://www.hartenergy.com/sites/default/files/styles/max_650x650/public/image/2025/09/eqts-lng-buying-spree-continues-1-mtpa-commonwealth.jpg?itok=bSkaLeHU,N,,2025-09-09 02:59:17.641712
 ,Clean Energy ,2025-09-09 04:36:27+00:00,www.nytimes.com,"China's Renewable Energy Investment Helping Stem Fossil Fuel Growth, Report Says","Max Bearak, www.nytimes.com, max-bearak",,,,,https://www.nytimes.com/2025/09/08/climate/china-clean-energy-fossil-fuel-research.html,"Since the beginning of the industrial age, the global economy has required more and more fossil fuels — coal, oil and gas — to power growth.
 The Trump administration has eliminated almost all federal support for renewable energies and has pressured countries to purchase American fossil fuels as part of trade deals.
 The falling cost of renewable energy, though, means that many countries, particularly poorer ones, have a strong incentive to reduce their reliance on fossil fuels.
@@ -348,6 +648,39 @@ Energy and Decarbonisation Minister Amber-Jade Sanderson said the funding offere
 “The Cook Government remains committed to becoming a global clean energy leader and it’s through opportunities such as the IAF we are able to build on this goal,” she said.
 
 Since its launch in 2022, the IAF has supported 47 projects and awarded more than $200 million in funding, contributing to the development and expansion of new and emerging industries across WA.",https://www.manmonthly.com.au/wp-content/uploads/2024/09/AdobeStock_116876919.jpeg,N,,2025-09-09 01:00:05.913426
+,Louisiana American Energy ,2025-09-09 02:49:34+00:00,Ainvest,EQT's LNG Expansion: A Strategic Bet on U.S. Energy Leadership and Global Demand,Isaac Lane,,,,,https://www.ainvest.com/news/eqt-lng-expansion-strategic-bet-energy-leadership-global-demand-2509/,"Long-Term Offtake Agreements: A Hedge Against Uncertainty EQT’s LNG strategy hinges on securing long-term offtake agreements, which provide revenue visibility and reduce exposure to short-term price swings.
+For EQT, long-term offtake agreements align with this trend by reducing capital intensity and enabling scale.
+Geopolitical tensions, such as the Russia-Ukraine war and potential U.S. policy shifts under a Trump administration, could disrupt global LNG flows and pricing.
+A Data-Driven Investment Thesis EQT’s LNG portfolio is set to grow significantly in the coming years.
+By 2026, its new capacity additions will align with a projected 15% annual growth in global LNG demand, driven by Asia’s industrialization and Europe’s energy security needs.","The global liquefied natural gas (LNG) market is undergoing a seismic shift, driven by energy security concerns, decarbonization pressures, and the U.S. emerging as a dominant supplier. At the heart of this transformation is EQT Corporation, a Pittsburgh-based energy giant that has positioned itself to capitalize on long-term offtake agreements as a catalyst for valuation growth and operational scalability. By securing multi-decade contracts with major buyers, EQT is not only hedging against market volatility but also anchoring its future cash flows in a sector poised for sustained demand.
+
+Long-Term Offtake Agreements: A Hedge Against Uncertainty
+
+EQT’s LNG strategy hinges on securing long-term offtake agreements, which provide revenue visibility and reduce exposure to short-term price swings. In late 2025, the company signed a 20-year Sale and Purchase Agreement (SPA) with Commonwealth LNG to purchase 1 million tonnes per annum (Mtpa) of LNG from the latter’s 9.5 Mtpa export facility in Cameron Parish, Louisiana. This agreement complements Commonwealth’s existing offtake deals with Glencore, JERA, and PETRONAS, which collectively cover 5 Mtpa of capacity [1].
+
+Similarly, EQT has inked a 20-year, 1.5 Mtpa LNG supply agreement with NextDecade Corporation’s Rio Grande LNG facility, indexed to Henry Hub prices [3], and a 2 Mtpa, 20-year deal with Sempra Infrastructure for the Port Arthur LNG Phase 2 project [4]. These contracts, structured on a free-on-board basis, ensure EQT’s access to U.S. shale gas while linking its pricing to domestic indices—a critical advantage in an era of geopolitical uncertainty.
+
+According to a report by EY, the oil, gas, and chemicals industry is increasingly prioritizing consolidation and operational efficiency to drive value creation [1]. For EQT, long-term offtake agreements align with this trend by reducing capital intensity and enabling scale. The company’s 10 million metric tons per year (mmty) of new annual supply coming online from 2023 to 2025—part of a broader industry shift toward new capacity—positions it to benefit from a more stable supply-demand balance starting in 2026 [1].
+
+Navigating Geopolitical and Regulatory Risks
+
+While EQT’s strategy appears robust, it operates in a sector marked by volatility. Geopolitical tensions, such as the Russia-Ukraine war and potential U.S. policy shifts under a Trump administration, could disrupt global LNG flows and pricing. However, EQT’s contracts, which span diverse markets including Asia and Europe, mitigate regional risks. For instance, its agreement with JERA, a Japanese utility, and PETRONAS, a Malaysian state oil company, diversifies demand beyond any single geopolitical hotspot.
+
+Moreover, the company’s indexing to Henry Hub prices—a U.S. benchmark—provides insulation from the European gas price spikes that have plagued other exporters. As noted in a recent analysis by Natural Gas Intelligence, this pricing structure allows U.S. producers to maintain margins even as global prices fluctuate [1].
+
+The Energy Transition and EQT’s Adaptability
+
+The energy transition poses another challenge. While LNG is cleaner than coal, it still faces scrutiny from climate advocates. However, EQT’s ability to pivot toward green technologies could enhance its valuation. A study in Energy Strategy Reviews highlights that fossil fuel exporters with hydrogen strategies are better positioned to navigate decarbonization [2]. Though EQT has not yet announced large-scale hydrogen projects, its existing infrastructure and global offtake network could serve as a foundation for future clean energy ventures.
+
+A Data-Driven Investment Thesis
+
+EQT’s LNG portfolio is set to grow significantly in the coming years. By 2026, its new capacity additions will align with a projected 15% annual growth in global LNG demand, driven by Asia’s industrialization and Europe’s energy security needs. A visual representation of EQT’s capacity expansion from 2023 to 2026 would underscore this trajectory:
+
+Conclusion
+
+EQT’s LNG expansion is more than a bet on U.S. energy leadership—it is a calculated strategy to leverage long-term offtake agreements as a buffer against market volatility and a springboard for scalability. By securing contracts with major buyers and aligning with industry trends toward efficiency and diversification, the company is well-positioned to thrive in a transitional energy landscape. For investors, EQT’s disciplined approach offers a compelling case: a balance of near-term stability and long-term growth potential in a sector that remains central to global energy security.
+
+**Source:[1] Commonwealth LNG Signs 20-Year Sale and Purchase Agreement with EQT Corporation, [https://www.prnewswire.com/news-releases/commonwealth-lng-signs-20-year-sale-and-purchase-agreement-with-eqt-corporation-302549800.html][2] Developing hydrogen strategies for fossil fuel exporting, [https://www.sciencedirect.com/science/article/pii/S2667095X25000078][3] NextDecade Announces 1.5 MTPA LNG Sale and Purchase Agreement with EQT, [https://investors.next-decade.com/news-releases/news-release-details/nextdecade-announces-15-mtpa-lng-sale-and-purchase-agreement-eqt/][4] EQT Signs Long-Term Deal With Sempra for the Purchase of LNG, [https://www.nasdaq.com/articles/eqt-signs-long-term-deal-sempra-purchase-lng]",https://www.ainvest.com/wencai-ssr/og-image-news-20240226.png,N,,2025-09-09 02:59:28.007004
 ,EVs,2025-09-09 02:45:38+00:00,Bloomberg.com,US Electric Vehicle Uptake to Hit the Brakes on Trump Policies - Bloomberg.com,Keith Naughton,,,,,https://www.bloomberg.com/news/articles/2025-09-08/us-electric-vehicle-uptake-to-hit-the-brakes-on-trump-policies,"Already sluggish adoption of electric vehicles in the US will slow even further after a $7,500 tax credit for EV buyers expires later this month.
 Battery-powered cars will account for half of US auto sales in 2039, five years later than previously predicted, according to a new forecast by EY, a unit of consultant Ernst & Young Global.
 Growth in EV sales will barely budge this decade, reaching 11% of the US market by 2029 compared with 8.1% last year, EY said in a study released Monday.","Already sluggish adoption of electric vehicles in the US will slow even further after a $7,500 tax credit for EV buyers expires later this month.
@@ -482,6 +815,27 @@ Cathodes, which consist of nickel, cobalt, manganese and aluminum, are a critica
 Following Toyota Tsusho's investment, LG Chem holds a 51 percent stake in the Gumi plant, while China's Huayou Cobalt Co. owns 24 percent.",https://img2.yna.co.kr/etc/inner/EN/2025/09/09/AEN20250909003000320_01_i_P4.jpg,N,,2025-09-09 01:00:48.971972
 ,Indiana American Energy ,2025-09-09 01:30:25+00:00,The Killeen Daily Herald,"In LA port, bobbing blue floats are turning wave power into clean energy - The Killeen Daily Herald","DORANY PINEDA, JENNIFER McDERMOTT - Associated Press",,,,,https://kdhnews.com/news/nation/in-la-port-bobbing-blue-floats-are-turning-wave-power-into-clean-energy/article_c745128c-8141-5db4-9ba4-4e35290df42f.html,"At the Port of Los Angeles on a site that once housed oil tanks, seven steel structures that look like small blue boats are lowered into the ocean, where they",Not Available,https://bloximages.newyork1.vip.townnews.com/kdhnews.com/content/tncms/assets/v3/editorial/e/4a/e4ae9267-f0d2-5438-b591-ed461dbd5158/68bed51d09c33.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize,N,,2025-09-08 22:04:23.697980
 ,EVs,2025-09-09 01:14:50+00:00,WHAM,Electric car dealerships see 'surge' of customers as tax credits set to expire - 13WHAM,"Christian Garzone, www.facebook.com",,,,,https://13wham.com/newsletter-daily/gallery/electric-car-dealerships-see-surge-of-customers-as-tax-credits-set-to-expire-trump-administration-ev-clean-air-one-big-beautiful-bill-act-rebate%3Fphoto%3D1,"The Electric Car Corner in Farmington is pictured Monday, Sept. 8, 2025. (Photo by Paul Giovine/WHAM)",1/5,https://13wham.com/resources/media2/36x25/1036/360/122x0/90/cbfd7850-f688-4fec-9c02-25b1212c2cca-TheElectricCarCornerinFarmingtonPhotobyPaulGiovine13WHAMNews.jpeg,N,,2025-09-09 01:58:58.519544
+,Detroit and Evs,2025-09-09 01:12:01+00:00,Ainvest,Detroit Automakers Receive Multibillion-Dollar Boost from Trump's Deregulation - AInvest,AInvest,,,,,https://www.ainvest.com/news/detroit-automakers-receive-multibillion-dollar-boost-trump-deregulation-2509-78/,"President Trump's deregulatory efforts have given Detroit automakers a multibillion-dollar boost by rolling back EV incentives and emissions rules.
+The move is reshaping the US auto industry and freeing up billions of dollars for Detroit's carmakers.
+Title: Detroit Automakers Benefit from Trump's Deregulatory Efforts President Trump's deregulatory measures have significantly boosted Detroit automakers by rolling back electric vehicle (EV) incentives and emissions rules.
+The Detroit Three have expressed mixed reactions to Trump's policies.
+The auto industry's response to Trump's policies will be crucial in shaping the future of the U.S. auto market [1].","President Trump's deregulatory efforts have given Detroit automakers a multibillion-dollar boost by rolling back EV incentives and emissions rules. This allows carmakers like GM and Ford to reinvest in gasoline-powered vehicles. The move is reshaping the US auto industry and freeing up billions of dollars for Detroit's carmakers.
+
+Title: Detroit Automakers Benefit from Trump's Deregulatory Efforts
+
+President Trump's deregulatory measures have significantly boosted Detroit automakers by rolling back electric vehicle (EV) incentives and emissions rules. This shift has freed up substantial financial resources, allowing companies like General Motors (GM) and Ford to reinvest in gasoline-powered vehicles and other traditional segments [1].
+
+Under Trump's administration, the Environmental Protection Agency (EPA) saw a relaxation of its emissions standards, which had previously pressured Detroit automakers to accelerate their transition to electric vehicles (EVs). The reduction in these regulations has led to cost savings for the automakers, enabling them to focus on other areas of their business [1].
+
+Moreover, Trump's victory over Democratic rival Kamala Harris added uncertainty to the Detroit Three's push toward an all-electric future. While some industry watchers predicted that Trump's policies could hinder EV adoption, others argued that the easing of environmental regulations would provide a boost to the traditional auto industry. The president-elect's promise to impose bigger tariffs on imported goods also played a role in shaping the industry's outlook. Higher tariffs would keep cheaper Chinese vehicles off U.S. shores, potentially reducing competition but also increasing the cost of parts and vehicles built elsewhere, such as in Mexico [1].
+
+The impact of these policies on the auto industry has been mixed. While some experts predict that U.S. auto sales will hold up and finish the year up 2% with 15.7 million new vehicle sales, the long-term effects remain uncertain. The Trump administration's stance on EVs, including the potential revocation of the $7,500 EV tax credit, has raised concerns among automakers and industry analysts. However, the possibility of less regulation and lower taxes could provide a financial boost for consumers, potentially driving demand for new vehicles [1].
+
+The Detroit Three have expressed mixed reactions to Trump's policies. While some industry experts see the president's victory as a boon for the auto industry, others caution that the uncertainty surrounding EV initiatives and tariffs could complicate the supply chain and affect prices. The auto industry's response to Trump's policies will be crucial in shaping the future of the U.S. auto market [1].
+
+References:
+
+[1] https://www.ainvest.com/news/detroit-automakers-receive-multibillion-dollar-boost-trump-deregulation-2509/",https://www.ainvest.com/wencai-ssr/og-image-news-20240226.png,N,,2025-09-08 23:00:08.549853
 ,Detroit and Evs,2025-09-09 01:12:01+00:00,Ainvest,Detroit's Big Win: Trump's Emissions Rollback Set to Save Automakers Billions - AInvest,AInvest,,,,,https://www.ainvest.com/news/detroit-big-win-trump-emissions-rollback-set-save-automakers-billions-2509/,"President Trump's rollback of emissions standards is expected to benefit Detroit automakers, including GM, Ford, and Stellantis, as they shift investments to petrol-fueled cars.
 GM has spent $3.5bil on regulatory credits, while Ford has cut its credit-purchase commitments by nearly $1.5bil.
 President Trump's push to cut federal sales incentives and roll back emissions standards is expected to benefit Detroit automakers, including General Motors (GM), Ford, and Stellantis, as they shift investments to petrol-fueled cars.
@@ -509,27 +863,6 @@ References:
 [1] https://www.bloomberg.com/news/articles/2025-09-07/detroit-s-carmakers-to-save-billions-in-trump-emissions-rollback
 
 [2] https://www.latimes.com/business/story/2025-09-08/detroits-carmakers-to-save-billions-in-trump-emissions-rollback",https://www.ainvest.com/wencai-ssr/og-image-news-20240226.png,N,,2025-09-09 01:00:32.527115
-,Detroit and Evs,2025-09-09 01:12:01+00:00,Ainvest,Detroit Automakers Receive Multibillion-Dollar Boost from Trump's Deregulation - AInvest,AInvest,,,,,https://www.ainvest.com/news/detroit-automakers-receive-multibillion-dollar-boost-trump-deregulation-2509-78/,"President Trump's deregulatory efforts have given Detroit automakers a multibillion-dollar boost by rolling back EV incentives and emissions rules.
-The move is reshaping the US auto industry and freeing up billions of dollars for Detroit's carmakers.
-Title: Detroit Automakers Benefit from Trump's Deregulatory Efforts President Trump's deregulatory measures have significantly boosted Detroit automakers by rolling back electric vehicle (EV) incentives and emissions rules.
-The Detroit Three have expressed mixed reactions to Trump's policies.
-The auto industry's response to Trump's policies will be crucial in shaping the future of the U.S. auto market [1].","President Trump's deregulatory efforts have given Detroit automakers a multibillion-dollar boost by rolling back EV incentives and emissions rules. This allows carmakers like GM and Ford to reinvest in gasoline-powered vehicles. The move is reshaping the US auto industry and freeing up billions of dollars for Detroit's carmakers.
-
-Title: Detroit Automakers Benefit from Trump's Deregulatory Efforts
-
-President Trump's deregulatory measures have significantly boosted Detroit automakers by rolling back electric vehicle (EV) incentives and emissions rules. This shift has freed up substantial financial resources, allowing companies like General Motors (GM) and Ford to reinvest in gasoline-powered vehicles and other traditional segments [1].
-
-Under Trump's administration, the Environmental Protection Agency (EPA) saw a relaxation of its emissions standards, which had previously pressured Detroit automakers to accelerate their transition to electric vehicles (EVs). The reduction in these regulations has led to cost savings for the automakers, enabling them to focus on other areas of their business [1].
-
-Moreover, Trump's victory over Democratic rival Kamala Harris added uncertainty to the Detroit Three's push toward an all-electric future. While some industry watchers predicted that Trump's policies could hinder EV adoption, others argued that the easing of environmental regulations would provide a boost to the traditional auto industry. The president-elect's promise to impose bigger tariffs on imported goods also played a role in shaping the industry's outlook. Higher tariffs would keep cheaper Chinese vehicles off U.S. shores, potentially reducing competition but also increasing the cost of parts and vehicles built elsewhere, such as in Mexico [1].
-
-The impact of these policies on the auto industry has been mixed. While some experts predict that U.S. auto sales will hold up and finish the year up 2% with 15.7 million new vehicle sales, the long-term effects remain uncertain. The Trump administration's stance on EVs, including the potential revocation of the $7,500 EV tax credit, has raised concerns among automakers and industry analysts. However, the possibility of less regulation and lower taxes could provide a financial boost for consumers, potentially driving demand for new vehicles [1].
-
-The Detroit Three have expressed mixed reactions to Trump's policies. While some industry experts see the president's victory as a boon for the auto industry, others caution that the uncertainty surrounding EV initiatives and tariffs could complicate the supply chain and affect prices. The auto industry's response to Trump's policies will be crucial in shaping the future of the U.S. auto market [1].
-
-References:
-
-[1] https://www.ainvest.com/news/detroit-automakers-receive-multibillion-dollar-boost-trump-deregulation-2509/",https://www.ainvest.com/wencai-ssr/og-image-news-20240226.png,N,,2025-09-08 23:00:08.549853
 ,EVs,2025-09-09 01:09:06+00:00,WETM - MyTwinTiers.com,"'Manufacturers have invested millions': EV buyers hurry to beat tax credit deadline, expert warns ...",Oran Spitzer,,,,,https://www.mytwintiers.com/news-cat/manufacturers-have-invested-millions-ev-buyers-hurry-to-beat-tax-credit-deadline-expert-warns-of-shift/,"However, for those currently in the market, there may be a way for you to still take advantage of the benefit.
 Mcareavy says if the car you want isn’t out there today, you can still order it and qualify for the incentive.
 All in all, even though he expects a slowdown of purchases once the incentive goes away, Mcareavy says EVs are here to stay.
@@ -897,6 +1230,7 @@ In an emailed statement to Renew Economy on Tuesday, a company spokesperson said
 “Our prototype Battery Electric Locomotive was recently delivered to the Pilbara where it is being commissioned to be dispatched as part of our operating fleet, gathering valuable information to inform our ultimate rail decarbonisation solution,” the statement says.
 
 “Importantly, our trials and studies to date have confirmed that zero-emissions rail is technically feasible – it is now a matter of delivering it in a way that maintains productivity and cost-efficiency.”",https://reneweconomy.com.au/wp-content/uploads/2024/05/whatsapp-image-2024-05-03-at-14.51.42_11025f47-scaled.jpg,N,,2025-09-08 23:00:23.206497
+,EPA,2025-09-09 00:23:22+00:00,www.law.com,Environmental Defense Fund v. Environmental Protection Agency | Law.com Radar,Not Available,,,,,https://www.law.com/radar/card/pm-60042238-environmental-defense-fund-v-environmental-protection-agency/,summary: The Environmental Defense Fund filed a Freedom of Information Act lawsuit against the U.S. Environmental Protection Agency on Sept.,Not Available,https://www.law.com/radar/img/icons/favicon-32x32.png,N,,2025-09-09 02:59:14.499853
 ,North Carolina American Energy ,2025-09-09 00:15:31+00:00,www.constructionworld.in,Hitachi Unveils $1 Billion U.S. Grid Investment to Meet Energy Demand - Construction World,CW Team,,,,,https://www.constructionworld.in/energy-infrastructure/power-and-renewable-energy/hitachi-unveils--1-billion-u.s.-grid-investment-to-meet-energy-demand-/78469,"Raleigh, North Carolina / Zurich, 4 September 2025: Hitachi Energy, a wholly owned subsidiary of Hitachi, Ltd., today announced investments of over $1 billion in the U.S. to expand critical grid infrastructure manufacturing.
 Central to this plan is a $457 million large power transformer facility in South Boston, Virginia, the largest of its kind in the nation.
 The new factory, supported by Governor Glenn Youngkin and the Commonwealth’s congressional delegation, will create more than 825 jobs.
@@ -16004,8 +16338,8 @@ India’s Defiance Could Reshape the Oil Chessboard
 Canada Rethinks EV Targets to Aid Carmakers
 
 Read this article on OilPrice.com",https://s.yimg.com/cv/apiv2/cv/apiv2/social/images/yahoo-finance-default-logo.png,N,,2025-09-07 15:01:32.905240
-,Clean Energy ,2025-09-07 17:52:19+00:00,Local3News.com,New $1.6B nuclear facility to bring 800 jobs to Oak Ridge - Local 3 News,Addison Howard,,,,,https://www.local3news.com/local-news/new-1-6b-nuclear-facility-to-bring-800-jobs-to-oak-ridge/article_41eb164a-7e95-447d-8dde-4c9a2d096d16.html,"Oklo plans to build the nation's first privately funded fuel recycling facility in Oak Ridge, Tennessee, boosting economic growth and energy innovation in the region.",Not Available,https://bloximages.newyork1.vip.townnews.com/local3news.com/content/tncms/assets/v3/editorial/4/1e/41eb164a-7e95-447d-8dde-4c9a2d096d16/68bdc5eb75d3a.preview.jpg?crop=278%2C278%2C112%2C0&resize=200%2C200&order=crop%2Cresize,N,,2025-09-07 19:01:44.499082
 ,Clean Energy ,2025-09-07 17:52:19+00:00,Local3News.com,New $1.6B nuclear facility to bring 800 jobs to Oak Ridge - Local 3 News,Addison Howard,,,,,http://www.wrcbtv.com/local-news/new-1-6b-nuclear-facility-to-bring-800-jobs-to-oak-ridge/article_41eb164a-7e95-447d-8dde-4c9a2d096d16.html,"Oklo plans to build the nation's first privately funded fuel recycling facility in Oak Ridge, Tennessee, boosting economic growth and energy innovation in the region.",Not Available,https://bloximages.newyork1.vip.townnews.com/local3news.com/content/tncms/assets/v3/editorial/4/1e/41eb164a-7e95-447d-8dde-4c9a2d096d16/68bdc5eb75d3a.preview.jpg?crop=278%2C278%2C112%2C0&resize=200%2C200&order=crop%2Cresize,N,,2025-09-07 15:01:38.435481
+,Clean Energy ,2025-09-07 17:52:19+00:00,Local3News.com,New $1.6B nuclear facility to bring 800 jobs to Oak Ridge - Local 3 News,Addison Howard,,,,,https://www.local3news.com/local-news/new-1-6b-nuclear-facility-to-bring-800-jobs-to-oak-ridge/article_41eb164a-7e95-447d-8dde-4c9a2d096d16.html,"Oklo plans to build the nation's first privately funded fuel recycling facility in Oak Ridge, Tennessee, boosting economic growth and energy innovation in the region.",Not Available,https://bloximages.newyork1.vip.townnews.com/local3news.com/content/tncms/assets/v3/editorial/4/1e/41eb164a-7e95-447d-8dde-4c9a2d096d16/68bdc5eb75d3a.preview.jpg?crop=278%2C278%2C112%2C0&resize=200%2C200&order=crop%2Cresize,N,,2025-09-07 19:01:44.499082
 ,American Energy,2025-09-07 17:52:08+00:00,www.douglewin.com,"The Gas Turbine Crisis Is Not Ending: Reading & Podcast Picks, September 7, 2025",Doug Lewin,,,,,https://www.douglewin.com/p/the-gas-turbine-crisis-is-not-ending,"Reading and Podcast Picks is a collection of what I’ve been reading and listening to over the last week or so about energy topics.
 In addition to these R&P Picks, paid subscribers receive access to the full archives going back to 2022, Grid Roundups, and select episodes of the Energy Capital Podcast, including this one with CPS Energy’s President & CEO Rudy Garza on data centers, renewables, distributed energy resources, and more.","Reading and Podcast Picks is a collection of what I’ve been reading and listening to over the last week or so about energy topics.
 
@@ -16970,6 +17304,29 @@ Calling your elected representative in the state Assembly or Senate is the most 
 Tony Dearing is director of News Operations for NJ Advance Media. He may be reached at tdearing@njadvancemedia.com.
 
 Thank you for relying on us to provide the local news you can trust. Please consider supporting NJ.com with a subscription.",https://s.yimg.com/ny/api/res/1.2/vodRjowzfKiQsUJY_3_C5A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU7Y2Y9d2VicA--/https://media.zenfs.com/en/nj_com_articles_950/432db125f6bf8c2b6d28a03fcfbcf427,N,,2025-09-07 12:06:44.902944
+,North Carolina and Evs,2025-09-07 14:08:37+00:00,The Cool Down,New data reveals Tesla's once-popular Model Y is being outsold - The Cool Down,Katie Lowe,,,,,https://www.thecooldown.com/green-business/xiaomi-yu7-ev-suv-china-tesla/,"""In China, the Model Y is already feeling the impact of Xiaomi's YU7,"" reported Electrek.
+As YU7 orders skyrocket, Model Y purchases are falling.
+Xiaomi's YU7 reportedly undercuts the Model Y on price while offering similar features.
+Increased EV competition accelerates the transition away from gas-powered vehicles, cutting pollution faster.
+""The YU7 will outsell the Model Y because they have more tech and are priced lower to undercut the competition.","The world's best-selling electric vehicle has some competition. This month in China, Xiaomi unveiled its new YU7 electric SUV, positioned squarely against the Model Y with a lower price tag, competitive tech integrations, sleek, sporty design, and vibrant colors. Tesla's foothold at the top of the EV market is being seriously challenged — and consumers should pay attention.
+
+""In China, the Model Y is already feeling the impact of Xiaomi's YU7,"" reported Electrek.
+
+Xiaomi's CEO Lei Jun is not mincing words when it comes to his goal for the company. Xiaomi ""has set a goal for the YU7 to outsell the Tesla Model Y, the best-selling electric premium SUV, in China,"" reported Electrek in June.
+
+As YU7 orders skyrocket, Model Y purchases are falling. This mimics the performance of Xiaomi's first EV, which is comparable to the Model 3 and has outsold its Tesla counterpart since its release.
+
+For buyers, this competition could be a win. Xiaomi's YU7 reportedly undercuts the Model Y on price while offering similar features. That kind of innovation forces Tesla to either drive down costs or significantly improve quality for customers worldwide. Greater choice at more competitive prices is exactly what EV shoppers want, especially in a time when affordability is a major barrier to widespread EV adoption.
+
+Increased EV competition accelerates the transition away from gas-powered vehicles, cutting pollution faster. Increased production also requires more and more batteries and mineral mining, but the mining needed for the clean energy transition is a fraction of what is done annually for the oil industry.
+
+Ultimately, Tesla's battle with Xiaomi signals a changing EV landscape. Consumers are hungry for a growing market, and China offers one of the most competitive car markets in the world.
+
+""There are numerous cars coming out of the woodwork there regularly,"" wrote one commenter. ""The YU7 will outsell the Model Y because they have more tech and are priced lower to undercut the competition. This is what all competitors in China have to deal with, not just Tesla. It will be interesting to see who is still selling cars in China in a few years.""
+
+""For the last 5 years, the American automaker enjoyed some dominance in the Chinese market, but now local companies have caught up and Xiaomi is one of the best examples,"" said Electrek.
+
+""Well, that was to be expected. Tesla desperately needs a brand new model. The competition is moving very fast. And not just in China,"" said another commenter.",https://www.thecooldown.com/wp-content/uploads/2025/09/image-recZxIKj1bvwC32N7.jpg,N,,2025-09-07 12:08:45.540867
 ,North Carolina American Energy ,2025-09-07 14:08:37+00:00,The Cool Down,US researchers develop groundbreaking method to make incredibly valuable fuel - The Cool Down,Leslie Sattler,,,,,https://www.thecooldown.com/green-tech/atomic-waste-tritium-fusion-reactors/,"American researchers have found a way to turn atomic waste materials into tritium, a necessary fuel for fusion reactors, reported Interesting Engineering.
 The new technology works by directing particle beams at stored atomic waste.
 Fusion power combines deuterium and tritium atoms to create energy, just like the process that powers stars.
@@ -16997,29 +17354,6 @@ On the other hand, nuclear technology hurdles include high costs, safety concern
 This recycling approach addresses the foremost concern by turning a costly burden into valuable fuel. Instead of paying billions to store radioactive materials for thousands of years, facilities could convert waste into tritium worth millions per pound while powering future clean energy systems.
 
 If you support the advancement of clean energy solutions, consider contacting your representatives to discuss funding for fusion research and waste recycling technologies. These innovations could help communities move away from pollution-heavy power sources and create jobs in emerging energy sectors.",https://www.thecooldown.com/wp-content/uploads/2025/09/tritiumimage-recrKQqxFsC2NS0r4.jpg,N,,2025-09-07 13:03:53.584094
-,North Carolina and Evs,2025-09-07 14:08:37+00:00,The Cool Down,New data reveals Tesla's once-popular Model Y is being outsold - The Cool Down,Katie Lowe,,,,,https://www.thecooldown.com/green-business/xiaomi-yu7-ev-suv-china-tesla/,"""In China, the Model Y is already feeling the impact of Xiaomi's YU7,"" reported Electrek.
-As YU7 orders skyrocket, Model Y purchases are falling.
-Xiaomi's YU7 reportedly undercuts the Model Y on price while offering similar features.
-Increased EV competition accelerates the transition away from gas-powered vehicles, cutting pollution faster.
-""The YU7 will outsell the Model Y because they have more tech and are priced lower to undercut the competition.","The world's best-selling electric vehicle has some competition. This month in China, Xiaomi unveiled its new YU7 electric SUV, positioned squarely against the Model Y with a lower price tag, competitive tech integrations, sleek, sporty design, and vibrant colors. Tesla's foothold at the top of the EV market is being seriously challenged — and consumers should pay attention.
-
-""In China, the Model Y is already feeling the impact of Xiaomi's YU7,"" reported Electrek.
-
-Xiaomi's CEO Lei Jun is not mincing words when it comes to his goal for the company. Xiaomi ""has set a goal for the YU7 to outsell the Tesla Model Y, the best-selling electric premium SUV, in China,"" reported Electrek in June.
-
-As YU7 orders skyrocket, Model Y purchases are falling. This mimics the performance of Xiaomi's first EV, which is comparable to the Model 3 and has outsold its Tesla counterpart since its release.
-
-For buyers, this competition could be a win. Xiaomi's YU7 reportedly undercuts the Model Y on price while offering similar features. That kind of innovation forces Tesla to either drive down costs or significantly improve quality for customers worldwide. Greater choice at more competitive prices is exactly what EV shoppers want, especially in a time when affordability is a major barrier to widespread EV adoption.
-
-Increased EV competition accelerates the transition away from gas-powered vehicles, cutting pollution faster. Increased production also requires more and more batteries and mineral mining, but the mining needed for the clean energy transition is a fraction of what is done annually for the oil industry.
-
-Ultimately, Tesla's battle with Xiaomi signals a changing EV landscape. Consumers are hungry for a growing market, and China offers one of the most competitive car markets in the world.
-
-""There are numerous cars coming out of the woodwork there regularly,"" wrote one commenter. ""The YU7 will outsell the Model Y because they have more tech and are priced lower to undercut the competition. This is what all competitors in China have to deal with, not just Tesla. It will be interesting to see who is still selling cars in China in a few years.""
-
-""For the last 5 years, the American automaker enjoyed some dominance in the Chinese market, but now local companies have caught up and Xiaomi is one of the best examples,"" said Electrek.
-
-""Well, that was to be expected. Tesla desperately needs a brand new model. The competition is moving very fast. And not just in China,"" said another commenter.",https://www.thecooldown.com/wp-content/uploads/2025/09/image-recZxIKj1bvwC32N7.jpg,N,,2025-09-07 12:08:45.540867
 ,Louisiana American Energy ,2025-09-07 14:07:28+00:00,OilPrice.com,How U.S. Politics Killed a Nearly Complete Offshore Wind Farm | OilPrice.com,Leon Stille,,,,,https://oilprice.com/Alternative-Energy/Wind-Power/How-US-Politics-Killed-a-Nearly-Complete-Offshore-Wind-Farm.html,"For the United States, Revolution Wind was more than a power plant, it was a strategic infrastructure project.
 Offshore Wind Is No Gamble This is particularly damaging because offshore wind is not a fringe technology.
 For the United States, halting Revolution Wind represents a lost opportunity to reinforce energy security with a domestic, low-carbon resource.
@@ -18376,6 +18710,23 @@ As a person of faith, I view the Earth as a gift, and am grateful for organizati
 Ann Haines
 
 Akron",https://bloximages.newyork1.vip.townnews.com/lancasteronline.com/content/tncms/assets/v3/editorial/a/2e/a2eab6c0-55fc-11ed-9b6d-c77847ff0f34/635a89eeaf962.image.jpg?crop=1166%2C612%2C0%2C107,N,,2025-09-07 06:00:23.163403
+,Texas Environment,2025-09-07 09:03:34+00:00,Inside Climate News,'Clean' Oil and Chemical Soup - Inside Climate News,Not Available,,,,,https://insideclimatenews.org/news/07092025/icn-sunday-morning-methane-emissions/,"About This Video Perhaps you noticed: This video, like all the news we publish, is free to read.
+That’s because Inside Climate News is a 501c3 nonprofit organization.
+We do not charge a subscription fee, lock our news behind a paywall, or clutter our website with ads.
+We make our news on climate and the environment freely available to you and anyone who wants it.
+We’ve built bureaus from coast to coast to report local stories, collaborate with local newsrooms and co-publish articles so that this vital work is shared as widely as possible.","About This Video
+
+Perhaps you noticed: This video, like all the news we publish, is free to read. That’s because Inside Climate News is a 501c3 nonprofit organization. We do not charge a subscription fee, lock our news behind a paywall, or clutter our website with ads. We make our news on climate and the environment freely available to you and anyone who wants it.
+
+That’s not all. We also share our news for free with scores of other media organizations around the country. Many of them can’t afford to do environmental journalism of their own. We’ve built bureaus from coast to coast to report local stories, collaborate with local newsrooms and co-publish articles so that this vital work is shared as widely as possible.
+
+Two of us launched ICN in 2007. Six years later we earned a Pulitzer Prize for National Reporting, and now we run the oldest and largest dedicated climate newsroom in the nation. We tell the story in all its complexity. We hold polluters accountable. We expose environmental injustice. We debunk misinformation. We scrutinize solutions and inspire action.
+
+Donations from readers like you fund every aspect of what we do. If you don’t already, will you support our ongoing work, our reporting on the biggest crisis facing our planet, and help us reach even more readers in more places?
+
+Please take a moment to make a tax-deductible donation. Every one of them makes a difference.
+
+Thank you,",https://insideclimatenews.org/wp-content/uploads/2025/09/ICN-Preview_play.jpg,N,,2025-09-07 07:03:35.417831
 ,American Energy,2025-09-07 09:03:34+00:00,Inside Climate News,"A California Network of Black Churches Is Embracing Solar Energy, EV Charging","Nicole J. Caruth, Wyatt Myskow",,,,,https://insideclimatenews.org/news/07092025/california-black-churches-energy-transition/,"When the excitement waned, he shifted their attention to Glad Tidings’ founder, Bishop Jerry Macklin, seated in the pulpit.
 Glad Tidings isn’t the only Black church in the Bay Area undergoing this kind of transformation.
 A year later, they began crafting a plan to bring the community decarbonization hub to fruition.
@@ -18447,23 +18798,6 @@ Besides installing solar panels and making energy-efficient upgrades, UAMEZ will
 Back in the pulpit at Glad Tidings, pink and purple lights illuminate the stage, casting a glow on Pretlow, the guest preacher, and an attentive congregation. “Prosperity is coming to your house,” he proclaimed, as the bassist plucked his strings. “Favor is getting ready to find your address!” His words seemed fitting for the era Glad Tidings is entering—as if that blessing had already come to pass.
 
 This story was supported by the Climate Equity Reporting Project at Berkeley Journalism. Additional reporting was provided by Twilight Greenaway, Akshika Jinendri Kandage, and James Mawien Manyuol.",https://insideclimatenews.org/wp-content/uploads/2025/09/IMG-3-EV-Cars_Macklin-1024x683.jpg,N,,2025-09-07 06:00:05.217980
-,Texas Environment,2025-09-07 09:03:34+00:00,Inside Climate News,'Clean' Oil and Chemical Soup - Inside Climate News,Not Available,,,,,https://insideclimatenews.org/news/07092025/icn-sunday-morning-methane-emissions/,"About This Video Perhaps you noticed: This video, like all the news we publish, is free to read.
-That’s because Inside Climate News is a 501c3 nonprofit organization.
-We do not charge a subscription fee, lock our news behind a paywall, or clutter our website with ads.
-We make our news on climate and the environment freely available to you and anyone who wants it.
-We’ve built bureaus from coast to coast to report local stories, collaborate with local newsrooms and co-publish articles so that this vital work is shared as widely as possible.","About This Video
-
-Perhaps you noticed: This video, like all the news we publish, is free to read. That’s because Inside Climate News is a 501c3 nonprofit organization. We do not charge a subscription fee, lock our news behind a paywall, or clutter our website with ads. We make our news on climate and the environment freely available to you and anyone who wants it.
-
-That’s not all. We also share our news for free with scores of other media organizations around the country. Many of them can’t afford to do environmental journalism of their own. We’ve built bureaus from coast to coast to report local stories, collaborate with local newsrooms and co-publish articles so that this vital work is shared as widely as possible.
-
-Two of us launched ICN in 2007. Six years later we earned a Pulitzer Prize for National Reporting, and now we run the oldest and largest dedicated climate newsroom in the nation. We tell the story in all its complexity. We hold polluters accountable. We expose environmental injustice. We debunk misinformation. We scrutinize solutions and inspire action.
-
-Donations from readers like you fund every aspect of what we do. If you don’t already, will you support our ongoing work, our reporting on the biggest crisis facing our planet, and help us reach even more readers in more places?
-
-Please take a moment to make a tax-deductible donation. Every one of them makes a difference.
-
-Thank you,",https://insideclimatenews.org/wp-content/uploads/2025/09/ICN-Preview_play.jpg,N,,2025-09-07 07:03:35.417831
 ,North Carolina and Evs,2025-09-07 08:59:41+00:00,TelegraphHerald.com,New data uncover another hidden cost of EV ownership: high insurance premiums,Not Available,,,,,https://www.telegraphherald.com/news/business/article_8925e118-5fb5-501f-a4d7-d5429b8ab16c.html,"As the price of buying an electric vehicle is set to soar with tariffs and the end of government incentives, drivers who want to go green have another hidden cost",Not Available,https://bloximages.newyork1.vip.townnews.com/telegraphherald.com/content/tncms/assets/v3/editorial/9/3f/93f2dc62-1d4f-5d57-bd93-2b093cb8cc46/68b73a1257b18.image.jpg?crop=1789%2C939%2C0%2C109&resize=1200%2C630&order=crop%2Cresize,N,,2025-09-07 06:00:28.255993
 ,American Energy,2025-09-07 08:46:40+00:00,manufacturingdigital.com,How Aalo Atomics' Reactor Will Power Future Industry | Manufacturing Digital,Georgia Collins,,,,,https://manufacturingdigital.com/news/how-aalo-atomics-nuclear-reactor-will-power-data-centres,"Aalo Atomics (Aalo) has initiated the construction of the Aalo-X experimental reactor near the Idaho National Laboratory (INL).
 This marks the first project under President Trump’s Nuclear Reactor Pilot Program.
@@ -24197,8 +24531,8 @@ Bharath Jairaj, Executive Director for Energy at WRI India, said that collaborat
 The platform will also focus on peer learning and capacity building through a shared knowledge hub on procurement, technologies, and best practices. While open to all industries, the initial focus will be on textiles, pharmaceuticals, and data centers, sectors where clean energy adoption can have a significant impact. Positioned as a catalyst for industrial transformation, the CI-NERGY Alliance seeks to drive collaboration, innovation, and investment to help industries cut emissions and contribute to India’s climate and energy goals.",https://themachinemaker.com/wp-content/uploads/2024/10/save-energy-7382276_1280-2.jpg,N,,2025-09-06 06:01:35.798358
 ,EPA,2025-09-06 07:15:11+00:00,www.govinfo.gov,Environmental Protection Agency § 721.7046 - GovInfo,Not Available,,,,,https://www.govinfo.gov/content/pkg/CFR-2024-title40-vol33/pdf/CFR-2024-title40-vol33-sec721-7020.pdf,Environmental Protection Agency. § 721.7046. (2) Limitations or revocation of certain notification requirements. The provisions of § 721.185 apply ...,Not Available,,N,,2025-09-06 13:03:24.284723
 ,Congress,2025-09-06 07:14:54+00:00,subscriber.politicopro.com,NOAA hearings feature clash over Trump ocean mining plans - POLITICO Pro,Not Available,,,,,https://subscriber.politicopro.com/article/eenews/2025/09/05/noaa-hearing-features-clash-over-trump-ocean-mining-plans-00546379,The agency is considering rulemaking to ease permitting for deep-sea mining.,Not Available,https://static.politico.com/89/1d/5bffa61b48bea85012b57c22617c/gw-0723-marshall-mining-1160-01.jpg,N,,2025-09-06 08:59:50.643894
-,Congress,2025-09-06 07:14:53+00:00,subscriber.politicopro.com,Think tank reorients after Trump squeeze - POLITICO Pro,Not Available,,,,,https://subscriber.politicopro.com/article/eenews/2025/09/05/think-tank-reorients-after-trump-squeeze-00541600,"“These past months have been a transition period,” said Wilson Center President and CEO Natasha Jacome.",Not Available,https://static.politico.com/22/90/24f13ac343b792788367887764b2/washington-federal-triangle-64004.jpg,N,,2025-09-06 13:03:11.112000
 ,Texas American Energy ,2025-09-06 07:14:53+00:00,subscriber.politicopro.com,Newsom floated special session to deal with energy priorities - POLITICO Pro,Not Available,,,,,https://subscriber.politicopro.com/article/eenews/2025/09/05/newsom-floated-special-session-to-deal-with-energy-priorities-ee-00545575,The California governor's comments came during an August meeting on forming a Westwide power grid.,Not Available,https://static.politico.com/35/98/585979eb49189068a911f21185d3/election-2026-redistricting-18665.jpg,N,,2025-09-06 09:01:01.663912
+,Congress,2025-09-06 07:14:53+00:00,subscriber.politicopro.com,Think tank reorients after Trump squeeze - POLITICO Pro,Not Available,,,,,https://subscriber.politicopro.com/article/eenews/2025/09/05/think-tank-reorients-after-trump-squeeze-00541600,"“These past months have been a transition period,” said Wilson Center President and CEO Natasha Jacome.",Not Available,https://static.politico.com/22/90/24f13ac343b792788367887764b2/washington-federal-triangle-64004.jpg,N,,2025-09-06 13:03:11.112000
 ,Congress,2025-09-06 07:14:52+00:00,subscriber.politicopro.com,White House moves closer to chopping Biden public lands rule - POLITICO Pro,Not Available,,,,,https://subscriber.politicopro.com/article/eenews/2025/09/05/white-house-moves-closer-to-chopping-biden-public-lands-rule-00546378,"The regulation, finalized in 2024, is meant to give conservation the same status as oil and gas drilling and other energy development on BLM lands.",Not Available,https://static.politico.com/92/7f/4e1dd5e74d1081bca9b6dc162e5d/14783486239-b5c899e090-c.jpg,N,,2025-09-06 06:02:06.751420
 ,Louisiana and Evs,2025-09-06 07:11:47+00:00,Recycling Today,"Recirculate develops EV battery disassembly system using AI, robotics - Recycling Today","Chris Voloschuk, Associate Editor",,,,,https://www.recyclingtoday.com/news/recirculate-project-develops-ev-battery-disassembly-system-using-ai-robotics/,"Recirculate, a European Union-funded project based in Finland, says it is developing a “state-of-the-art” electric vehicle (EV) battery disassembly system using artificial intelligence (AI) and robotics.
 It views this development as an innovation addressing a pressing bottleneck in the battery industry: safe, efficient and automated disassembly.
@@ -24223,366 +24557,3 @@ Beyond disassembly, Recirculate says its team has created a battery identificati
 The project team says it is focused on expanding its proprietary training dataset in order to scale the solution and extend its compatibility to other battery types.",https://www.recyclingtoday.com/fileuploads/image/2025/09/05/recirculate_robot_disassembly-web.jpg,N,,2025-09-06 14:03:29.848586
 ,IRA Tax Credits,2025-09-06 07:06:16+00:00,The Verde Independent,Q&A with renewable energy experts at Cottonwood Library on Sept. 6 | News | verdenews.com,Olivia Maillet,,,,,https://www.verdenews.com/news/q-a-with-renewable-energy-experts-at-cottonwood-library-on-sept-6/article_7c549f99-9559-4b29-9a56-1d111af5f958.html,"Contact Olivia Maillet at omaillet@verdenews.com, 928-634-2241 ext.
 6051, and follow her on Facebook @oliviamaillet.","Contact Olivia Maillet at omaillet@verdenews.com, 928-634-2241 ext. 6051, and follow her on Facebook @oliviamaillet.",https://bloximages.chicago2.vip.townnews.com/verdenews.com/content/tncms/assets/v3/editorial/9/9a/99a2de3e-b3bd-4934-a48a-dda1dec1088f/687fc8daa54eb.image.jpg?crop=1708%2C897%2C0%2C158&resize=1200%2C630&order=crop%2Cresize,N,,2025-09-06 04:58:37.522459
-,Clean Energy ,2025-09-06 06:57:27+00:00,Electrek,"Connecticut, Rhode Island sue Trump to save 80% complete offshore wind farm - Electrek","Michelle Lewis, Fred Lambert, Jameson Dow",,,,,https://electrek.co/2025/09/05/connecticut-rhode-island-sue-trump-to-save-offshore-wind-farm/,"Connecticut and Rhode Island are suing the Trump administration to overturn its “baseless” decision to halt Revolution Wind, a nearly completed offshore wind farm set to deliver clean power to New England.
-Attorneys General William Tong of Connecticut and Peter Neronha of Rhode Island announced Thursday that they’ll file suit in Rhode Island federal court to overturn the August 22 stop-work order from the Bureau of Ocean and Energy Management (BOEM).
-Revolution Wind is 15 nautical miles off Rhode Island and expected to come online in 2026.
-Once complete, the $6 billion project would supply 350,000 homes with electricity and save ratepayers in Connecticut and Rhode Island hundreds of millions of dollars over 20 years.
-And yet, this stop-work order is not even the latest development in this administration’s all-out assault on wind energy.","Connecticut and Rhode Island are suing the Trump administration to overturn its “baseless” decision to halt Revolution Wind, a nearly completed offshore wind farm set to deliver clean power to New England.
-
-Attorneys General William Tong of Connecticut and Peter Neronha of Rhode Island announced Thursday that they’ll file suit in Rhode Island federal court to overturn the August 22 stop-work order from the Bureau of Ocean and Energy Management (BOEM). The order abruptly shut down construction without citing any violation of law or safety threats. Instead, BOEM vaguely referred to “concerns” under its Outer Continental Shelf Lands Act authority, offering no explanation.
-
-Revolution Wind is 15 nautical miles off Rhode Island and expected to come online in 2026. Once complete, the $6 billion project would supply 350,000 homes with electricity and save ratepayers in Connecticut and Rhode Island hundreds of millions of dollars over 20 years. The project supports more than 2,500 jobs across the US, including over 1,000 union construction jobs, and has already cleared every required state and federal review. Construction is already 80% complete.
-
-The lawsuit, to be filed against the Department of the Interior, BOEM, and their nominated leaders, argues that the stop-work order violates the Administrative Procedure Act and the agency’s authority under OCSLA. The complaint says the government’s action is arbitrary, capricious, and undermines both states’ legal and financial commitments.
-
-Advertisement - scroll for more content
-
-“Revolution Wind is fully permitted, nearly complete, and months from providing enough American-made, clean, affordable energy to power 350,000 homes. Now, with zero justification, Trump wants to mothball the project, send workers home, and saddle Connecticut families with millions of dollars in higher energy costs,” Tong said. “This kind of erratic and reckless governing is blatantly illegal, and we’re suing to stop it.”
-
-Neronha added, “With Revolution Wind, we have an opportunity to create good-paying jobs for Rhode Islanders, enhance energy reliability, and ensure energy cost savings while protecting our environment. And yet, this stop-work order is not even the latest development in this administration’s all-out assault on wind energy. Just yesterday, we learned of reports that the Administration is pulling in staff from several different unrelated federal agencies, including Health and Human Services, to do its bidding. This is bizarre, this is unlawful, this is potentially devastating, and we won’t stand by and watch it happen.”
-
-Connecticut Governor Ned Lamont said the administration has offered no explanation nearly two weeks after the order. “We hoped to work with the Administration to lower energy costs, strengthen grid reliability, create jobs, and drive economic growth, but only if they share those goals. But if they do not, we will act to preserve this vital project and protect the energy future of Connecticut and the entire New England region,” he said.
-
-Senator Richard Blumenthal (D-CT) called the shutdown “insane, illogical, and illegal,” while Senator Chris Murphy (D-CT) said, “The Revolution Wind project has already made it through exhaustive reviews by multiple federal agencies, and I doubt Trump’s flimsy excuses for scuttling this project will stand up to legal scrutiny.”
-
-Danish renewables developer Ørsted, which owns a 50% share in Revolution Wind, also announced Thursday that it’s suing the Trump administration in a bid to restart construction on the blocked wind farm.
-
-Read more: Trump’s latest offshore wind cancellation is a threat to the grid – ISO New England
-
-The 30% federal solar tax credit is ending this year. If you’ve ever considered going solar, now’s the time to act. To make sure you find a trusted, reliable solar installer near you that offers competitive pricing, check out EnergySage, a free service that makes it easy for you to go solar. It has hundreds of pre-vetted solar installers competing for your business, ensuring you get high-quality solutions and save 20-30% compared to going it alone. Plus, it’s free to use, and you won’t get sales calls until you select an installer and share your phone number with them.",https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2023/11/revolution-wind.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1,N,,2025-09-06 06:01:46.844725
-,Texas American Energy ,2025-09-06 06:55:08+00:00,Dallas News,"De Vinck: The power of the wind, a humanist perspective - The Dallas Morning News",Christopher de Vinck,,,,,https://www.dallasnews.com/opinion/commentary/2025/09/06/de-vinck-the-power-of-the-wind-a-humanist-perspective/,The future of our country depends on the energy we are going to produce.,Not Available,https://dmn-dallas-news-prod.cdn.arcpublishing.com/resizer/v2/XNOVDH7YKBAUNK2HJYDR7MQP7Q.jpg?auth=beebdb9ca1e36973bebca4f932ce94eddfbd560c445d0559c9efa13a120d64fa&quality=80&width=1200&height=630&smart=true,N,,2025-09-06 03:58:24.780532
-,North Carolina American Energy ,2025-09-06 06:53:14+00:00,Maryland Daily Record,"States, developer sue Trump administration for halting work on New England offshore wind farm",Associated Press,,,,,https://thedailyrecord.com/2025/09/05/rhode-island-connecticut-lawsuit-trump-wind-farm/,"Revolution Wind is the second major wind project that his administration ordered to stop work.
-The first, an offshore wind project for New York, was later allowed to resume construction.
-In separate recent federal court filings, the administration said it was reconsidering approvals for three other wind farms: the Maryland Offshore Wind Project, SouthCoast Wind and New England Wind.
-Rhode Island is already home to one offshore wind farm, the five-turbine Block Island Wind Farm.
-Rhode Island and Connecticut have said that halting construction of Revolution Wind would harm the states, their residents, investments and the offshore wind industry.","PROVIDENCE, R.I. — Connecticut, Rhode Island and the developer of an offshore wind farm that would power 350,000 homes in the two states said Thursday that they’re suing the Trump administration for stopping the nearly completed project.
-
-Rhode Island Attorney General Peter Neronha accused President Donald Trump of waging an “all-out assault” on the wind energy industry. The states’ lawsuit, filed in U.S. District Court in Rhode Island, describes the Revolution Wind project as a “cornerstone” of their clean energy future, abruptly halted by federal officials without “statutory authority, regulatory justification or factual basis.”
-
-Danish energy company Orsted filed a separate suit in U.S. District Court in Washington, D.C., also arguing that the administration lacks the legal authority to block the Revolution Wind project. Orsted said it would seek a preliminary injunction that would allow it to move forward with the project, which is 80% complete, with all underwater foundations and 45 of 65 turbines installed.
-
-Interior Department spokesperson Elizabeth Peace said Thursday that the department doesn’t comment on pending litigation.
-
-Work on the project was paused Aug. 22 when the Bureau of Ocean Energy Management issued a stop work order for what it said were national security concerns. It did not specify those concerns.
-
-Trump has been hostile to renewable energy, particularly offshore wind, and prioritizes fossil fuels for electricity. Revolution Wind is the second major wind project that his administration ordered to stop work. The first, an offshore wind project for New York, was later allowed to resume construction.
-
-In separate recent federal court filings, the administration said it was reconsidering approvals for three other wind farms: the Maryland Offshore Wind Project, SouthCoast Wind and New England Wind. Combined, those projects could power nearly 2.5 million homes in Maryland, Massachusetts and Rhode Island with clean electricity.
-
-Democratic Sens. Ed Markey and Elizabeth Warren, of Massachusetts, said Trump and his Cabinet “need to end their war on American energy and jobs.”
-
-‘Swarm drone attacks’ cited as a reason for stopping work
-
-Interior Secretary Doug Burgum told CNN that he’s concerned offshore wind turbines distort radar detection systems, which could give cover to a bad actor to “launch a swarm drone attack through a wind farm.”
-
-Retired U.S. Navy Cmdr. Kirk Lippold called that a “specious and false narrative” pushed by someone with an “overactive imagination in search of a solution to a problem that doesn’t exist.” Lippold was commanding the USS Cole when al-Qaida attacked it in a Yemeni port in 2000.
-
-If drones get that close to U.S. shores to be near a wind farm without being detected by the military, he said, “we have had a massive intelligence — a national security — failure.”
-
-U.S. Sen. Jack Reed, a Rhode Island Democrat and national security expert, has also disputed the administration’s rationale, pointing to the Defense Department’s involvement in reviewing the project.
-
-When it approved Revolution Wind in 2023, the Bureau of Ocean Energy Management said it consulted with the Defense Department at each stage of the regulatory process for the lease area assigned to the wind farm. The DOD concluded that with some site-specific stipulations, any impacts to its training and activities in the wind energy area would be “negligible and avoidable,” according to the record of decision.
-
-The state and federal reviews took about nine years.
-
-Trump and several Cabinet members repeatedly slammed wind power as ugly and expensive during last week’s Cabinet meeting. Health and Human Services Secretary Robert F. Kennedy Jr. talked about the failure of a massive wind turbine blade at a different offshore wind farm under construction off Nantucket, Massachusetts.
-
-Fiberglass fragments of a blade from the Vineyard Wind project broke apart and began washing ashore last summer during the peak of tourist season. Manufacturer GE Vernova agreed to pay $10.5 million in a settlement to compensate island businesses that suffered losses due to the blade failure.
-
-Kennedy’s family famously opposed an earlier failed wind project not far from the family’s Cape Cod estate.
-
-Trump said, “We’re not allowing any windmills to go up unless there’s a legal situation where somebody committed to it a long time ago.”
-
-Wind farm was on track to deliver power in 2026
-
-Revolution Wind was expected to be Rhode Island’s and Connecticut’s first large offshore wind farm, capable of providing about 2.5% of the region’s electricity needs.
-
-Orsted began construction in 2024 about 15 miles south of the Rhode Island coast. It says in its complaint that about $5 billion has been spent or committed, and it expects more than $1 billion in costs if the project is canceled. Rhode Island is already home to one offshore wind farm, the five-turbine Block Island Wind Farm.
-
-Rhode Island and Connecticut have said that halting construction of Revolution Wind would harm the states, their residents, investments and the offshore wind industry. More than 1,000 people have been working on the wind farm, and Connecticut committed over $200 million to redevelop State Pier in New London to support the industry.
-
-The states said they’re counting on the electricity from Revolution Wind, particularly in the winter, when demand in New England spikes and natural gas is prioritized for heating. The power would cost 9.8 cents per kilowatt-hour, locked in for 20 years. That’s cheaper than the average projected cost of energy in New England.
-
-The head of Connecticut’s top environmental and energy agency, Katie Dykes, predicts it will cost the state’s electricity ratepayers tens of millions of dollars if the wind project doesn’t come online. She also noted the risk to electricity reliability in New England cited by the region’s independent system operator.
-
-Jennifer McDermott reports for The Associated Press.
-
-Associated Press writers Matthew Daly in Washington and Susan Haigh in Hartford, Connecticut, contributed to this report.",https://thedailyrecord.com/files/2025/01/Trumps-tasks-congressman-with-writing-executive-order-he-could-issue-to-halt-offshore-wind.jpg,N,,2025-09-06 04:58:47.085540
-,EPA,2025-09-06 06:50:10+00:00,Bloomberg.com,China Joins Big Oil in Opposition to Trump's Biofuel Proposal - Bloomberg.com,"Gerson Freitas Jr, Isis Almeida",,,,,https://www.bloomberg.com/news/articles/2025-09-05/china-joins-big-oil-in-opposition-to-trump-s-biofuel-proposal,"US oil refiners have found an unlikely ally in their opposition to President Donald Trump ’s proposed changes to biofuel policy: China.
-A plan to slash incentives for renewable diesel produced from imported feedstocks will disrupt trade, harm US fuelmakers and undermine efforts to slash carbon emissions, a Chinese government agency said in an letter last month to the Environmental Protection Agency.","US oil refiners have found an unlikely ally in their opposition to President Donald Trump ’s proposed changes to biofuel policy: China.
-
-A plan to slash incentives for renewable diesel produced from imported feedstocks will disrupt trade, harm US fuelmakers and undermine efforts to slash carbon emissions, a Chinese government agency said in an letter last month to the Environmental Protection Agency.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i2fsrucG_Akc/v0/1200x800.jpg,N,,2025-09-06 03:58:13.692872
-,Louisiana Environment,2025-09-06 06:47:06+00:00,The Black Chronicle,"Lawsuits increasing in energy, plastics, chemical manufacturing industries",Black Chronicle News Service,,,,,https://blackchronicle.com/energy/lawsuits-increasing-in-energy-plastics-chemical-manufacturing-industries/,"From St. James to Cameron Parish, environmental justice organizations have dragged parish commissions, global corporations and state agencies into court.
-One group, The Descendants Project, a nonprofit based in St. John the Baptist Parish, has filed at least three lawsuits in recent years over a Formosa Plastics zoning dispute.
-The Descendants Project says the move was tainted by corruption tied to then-Parish President Lester Millet and aimed at benefiting Formosa Plastics.
-The Bucket Brigade has also turned its firepower on New Orleans, suing the city and a development district in 2024 over a tax break deal for Shell Oil.
-The Bucket Brigade has become one of the most visible opponents of industry in “Cancer Alley,” winning national recognition for forcing the cancellation of projects like the billion-dollar Wanhua chemical plant.","(The Center Square) − Louisiana’s industrial giants, ports and local governments are facing an increasingly coordinated barrage of lawsuits from small but determined groups.
-
-From St. James to Cameron Parish, environmental justice organizations have dragged parish commissions, global corporations and state agencies into court.
-
-One group, The Descendants Project, a nonprofit based in St. John the Baptist Parish, has filed at least three lawsuits in recent years over a Formosa Plastics zoning dispute. One targeted the parish government itself, while the other targeted Formosa. A third lawsuit related to the same dispute was filed against the Port of South Louisiana.
-
-The disputed zoning change, passed unanimously in 1990, reclassified land in Wallace from residential to heavy industrial. The Descendants Project says the move was tainted by corruption tied to then-Parish President Lester Millet and aimed at benefiting Formosa Plastics.
-
-The land is home to the graves of former enslaved Blacks. Their names were Simon, Betsy, Rachel, Stanley and Harry.
-
-In July, The Descendants Project and Inclusive Louisiana filed suit against Formosa, saying that Formosa is violating the 13th Amendment of the U.S. Constitution by owning and controlling the bodies.
-
-While such lawsuits are sometimes well intentioned, they are “at least in part by a desire simply to burden the defendant or the defendant’s industry in some way,” said Robert Stilson of the Capital Research Center. “This might be through causing delays or increased costs, scoring public relations points, or attempting to achieve through litigation what those activists have been unable to achieve through legislation”
-
-The Descendants Project also sued the Port of South Louisiana, accusing its board of secretly predetermining a vote on Greenfield’s grain elevator deal through email – a violation, they allege, of the state’s open meetings law.
-
-Many of the lawsuits across the state include the same groups.
-
-RISE St. James, Inclusive Louisiana, and the Mount Triumph Baptist Church, represented by the Tulane University Environmental Law Clinic, are pressing their case against St. James Parish and Koch. Koch and parish officials have asked the Louisiana Supreme Court to shut the case down and revive approvals for an expansion at Koch’s methanol plant.
-
-The same three groups, also represented by Tulane, have a separate lawsuit against the parish saying it “discriminates against them by directing hazardous industrial facility development towards majority-Black districts and Black churches, where their members and congregants live.”
-
-And just last week, another front opened in Cameron Parish, as reported by The Advocate. The Louisiana Bucket Brigade, Sierra Club, and Environmental Integrity Project filed suit against the state Department of Environmental Quality for granting Venture Global a permit to build its Calcasieu Pass 2 liquefied natural gas facility.
-
-“This company has been a bad neighbor and continually pollutes the air we breathe, while generating billions of dollars in profits,” resident and Sierra Club member John Allaire said in announcing the lawsuit.
-
-The Sierra Club chapter of Louisiana, an environmental lobbying and legal group, has a long list of ongoing litigation against various big businesses.
-
-“It’s disappointing to see nationally-backed activists try to litigate their agenda instead of working with local communities to understand the positive impact U.S. LNG brings to Louisiana and the world,” Venture Global wrote The Center Square in a statement.
-
-The Bucket Brigade has also turned its firepower on New Orleans, suing the city and a development district in 2024 over a tax break deal for Shell Oil. The group says it was rushed through illegally and unfairly shifted tax burdens onto residents.
-
-Taken together, the lawsuits reflect the strategy of a small but interconnected network of nonprofit groups that have reshaped environmental battles in south Louisiana.
-
-The Descendants Project and Inclusive Louisiana have focused on challenging heavy industry expansion in St. John and St. James parishes, where descendants of enslaved people live in neighborhoods overshadowed by industrial development.
-
-The Bucket Brigade has become one of the most visible opponents of industry in “Cancer Alley,” winning national recognition for forcing the cancellation of projects like the billion-dollar Wanhua chemical plant.
-
-The Bucket Brigade, founded more than 20 years ago, has broadened its reach from oil refineries to liquefied natural gas export terminals, running campaigns that identify and train local residents to speak before federal regulators, track accidents, and rally community resistance.
-
-In its filings, the group says it is building an “early warning network” across parishes most targeted for industrial growth, particularly majority-Black communities in St. James and St. John.
-
-Some of these nonprofits are being bankrolled by an out-of-state foundation with an ironic stake in Big Oil. The Elizabeth B. and Arthur E. Roswell Foundation Inc., which as of 2023 held more than 6,800 shares of BP stock, has poured hundreds of thousands of dollars into Louisiana’s grassroots groups.
-
-Tax records show the Roswell Foundation gave $33,000 to the Descendants Project, $76,000 to the Louisiana Bucket Brigade, and tens of thousands more to groups like Jubilee Justice in Alexandria, Rural Roots Louisiana, and Voice of the Experienced.
-
-The foundation committed even larger future payments, including $90,000 to the Descendants Project, $120,000 to the Bucket Brigade, and $120,000 to Rural Roots Louisiana.
-
-Cancer rates in Louisiana are among the highest in the nation and are often attributed to irresponsible business practices in the petrochemical industry, which has a massive presence in Louisiana.
-
-These organizations were “founded by and serving the descendant community of enslaved people who forcibly worked and died on plantations in the parishes along the Mississippi River in Louisiana under the cruel and inhumane system of slavery in the U.S. South,” one lawsuit states.",https://bloximages.newyork1.vip.townnews.com/thecentersquare.com/content/tncms/assets/v3/editorial/8/e0/8e075607-daf4-426f-bc76-eba0b9b7ac11/685b0a67662a7.image.jpg,N,,2025-09-06 15:04:03.185561
-,EPA,2025-09-06 06:45:21+00:00,subscriber.politicopro.com,Court reinstates liability shield under key EPA air permitting program - POLITICO Pro,Not Available,,,,,https://subscriber.politicopro.com/article/2025/09/court-reinstates-liability-shield-under-key-epa-air-permitting-program-00546626,"""EPA’s rescission of the affirmative defense was not reasonably explained and not in accordance with law,"" wrote Judge Neomi Rao.",Not Available,https://static.politico.com/d8/2b/6c61d6e04877a43a4f291b04cdd3/https-delivery-gettyimages.com/downloads/1094141312,N,,2025-09-06 12:06:55.638380
-,Indiana and Evs,2025-09-06 06:40:48+00:00,WVXU,"Homeland Security Investigations raided a Georgia battery plant, detaining 475 people","Camila Domonoske, www.wvxu.org, camila-domonoske",,,,,https://www.wvxu.org/2025-09-05/homeland-security-investigations-raided-a-georgia-battery-plant-detaining-475-people,"On Instagram, video posted by an account with the name Alex Morales showed a group of people listening to a masked man who identifies himself as part of Homeland Security.
-DETROW: Homeland Security Investigations says this was the largest single-site operation they have ever carried out.
-So Homeland Security Investigations, which is the branch of ICE that carries out this kind of workplace raid, they say that they detained 475 people, most of them South Korean.
-That Homeland Security official said that this raid was tied to, quote, ""allegations of unlawful employment practices and serious federal crimes,"" end quote.
-DOMONOSKE: It's on this huge campus of buildings near Savannah, Georgia, that also includes a large factory where Hyundai is right now building electric vehicles.","SCOTT DETROW, HOST:
-
-Federal agents walked into a massive Hyundai and LG Energy Solutions construction site yesterday and detained nearly 500 people on suspected immigration offenses. The site, near Savannah, Georgia, is the home of a future electric vehicle battery plant. On Instagram, video posted by an account with the name Alex Morales showed a group of people listening to a masked man who identifies himself as part of Homeland Security.
-
-(SOUNDBITE OF ARCHIVED RECORDING)
-
-UNIDENTIFIED DHS OFFICER: We need construction to cease immediately. We need all work to end on the site right now.
-
-DETROW: Homeland Security Investigations says this was the largest single-site operation they have ever carried out. NPR's Camila Domonoske covers cars for NPR and joins us now. Hey there.
-
-CAMILA DOMONOSKE, BYLINE: Hi.
-
-DETROW: What do we know about this workplace raid so far?
-
-DOMONOSKE: Yeah. So Homeland Security Investigations, which is the branch of ICE that carries out this kind of workplace raid, they say that they detained 475 people, most of them South Korean. Hyundai and LG Energy Solutions - both of those companies are headquartered in South Korea. Here's Special Agent Steven Schrank speaking at a press conference.
-
-(SOUNDBITE OF ARCHIVED RECORDING)
-
-STEVEN SCHRANK: Some that illegally crossed the border into the United States, some that came in through visa waiver and were prohibited from working, some that had visas and overstayed their visas.
-
-DETROW: So who was employing the people who were detained?
-
-DOMONOSKE: It's a good question. You know, in a project like this, there are really complicated webs of subcontractors and subcontractors to subcontractors. Hyundai says that it believes that nobody detained was directly employed by Hyundai Motor Company. LG Energy Solutions hasn't responded to NPR's requests for comment.
-
-That Homeland Security official said that this raid was tied to, quote, ""allegations of unlawful employment practices and serious federal crimes,"" end quote. He did not provide more details on that, and there are no charges filed in this case right now. Officials say this is an ongoing investigation. It would be unusual if charges are eventually filed because immigration raids like this, where workers are detained - they don't often end with criminal charges for employers.
-
-DETROW: Tell us more about where this raid happened.
-
-DOMONOSKE: It's on this huge campus of buildings near Savannah, Georgia, that also includes a large factory where Hyundai is right now building electric vehicles. That factory was not directly affected by the raid. Production of vehicles didn't actually stop. But the battery plant that's under construction nearby, which is where the raid actually happened - it's an important part of the long-term plans for this facility 'cause the goal is to build not just electric vehicles, but the whole supply chain for these vehicles here in the U.S.
-
-And that's important not just to Hyundai, but actually to the United States more broadly in this effort to try to compete with China over the future of electric vehicles. So Hyundai is investing some $26 billion in moving manufacturing to the U.S., including this project. It's a big deal for the company and for Georgia. The state's called it the largest economic development project in state history.
-
-DETROW: And I understand you just heard back from Hyundai. What did they say?
-
-DOMONOSKE: They said they're going to conduct an investigation into suppliers and their subcontractors to make sure they are all following employment law and other laws and regulations. Meanwhile, Congressman Buddy Carter, who represents the area surrounding the plant, posted on X that he applauded the Trump administration for taking bold action. And the South Korean Ministry of Foreign Affairs says it voiced concerns to the United States about respecting South Korean economic activity and citizens.
-
-DETROW: That is NPR's Camila Domonoske. Thank you so much.
-
-DOMONOSKE: Thank you.
-
-DETROW: Sam Gringlas of member station WABE contributed to that report as well. Transcript provided by NPR, Copyright NPR.",https://www.wvxu.org/favicon-32x32.png,N,,2025-09-06 12:09:00.799447
-,Texas Clean Energy,2025-09-06 06:38:51+00:00,Hood County News,Congress is killing clean energy tax credits. Here's how to use them before they disappear.,Not Available,,,,,"https://www.hcnews.com/premium/stacker/stories/congress-is-killing-clean-energy-tax-credits-herersquos-how-to-use-them-before-they-disappear,89286%3F","Our Mission: About us Our mission statement: With every edition, the Hood County News shall provide news and insights to our readership through the independent and impartial presentation of information which educates, enriches and entertains.
-We are proud to be a community newspaper committed to the people we serve.","Our Mission:
-
-About us
-
-Our mission statement:
-
-With every edition, the Hood County News shall provide news and insights to our readership through the independent and impartial presentation of information which educates, enriches and entertains. We are proud to be a community newspaper committed to the people we serve.",https://zeta.creativecirclecdn.com/hood/original/20230831-102314-favicon-32x32.png.jpg,N,,2025-09-06 09:00:01.262038
-,EPA,2025-09-06 06:36:50+00:00,NH Department of Environmental Services,"Brownfields revitalized with help from the EPA, NHDES",Not Available,,,,,https://www.des.nh.gov/news-and-media/blog/brownfields-revitalized-help-epa-nhdes,"Brownfields revitalization across New Hampshire has been sparked by several rounds of grant funding from the Environmental Protection Agency’s Bipartisan Infrastructure Law funding.
-Recent events in Concord highlight the long-term and future success stories from brownfields.
-On June 27, NHDES Brownfields staff Laura Pasquine and Assistant Commissioner Adam Crepeau joined Mark Sanborn, EPA Regional Administrator, and representatives from the City of Concord at the Former Concord Stables site to highlight the site’s EPA Cleanup Grant award.
-The cleanup funding will be used to abate hazardous building materials, including lead paint, to make the building safe for reuse.
-This grant leverages past assessment work completed with funding from both the NHDES Brownfields Program, EPA Region 1 Brownfields Targeted Brownfields Assessment Program and the city’s efforts to support assessment of the site, preparing the grant proposal, and project oversight for the cleanup.","Brownfields revitalization across New Hampshire has been sparked by several rounds of grant funding from the Environmental Protection Agency’s Bipartisan Infrastructure Law funding. Recent events in Concord highlight the long-term and future success stories from brownfields.
-
-On June 27, NHDES Brownfields staff Laura Pasquine and Assistant Commissioner Adam Crepeau joined Mark Sanborn, EPA Regional Administrator, and representatives from the City of Concord at the Former Concord Stables site to highlight the site’s EPA Cleanup Grant award. The cleanup funding will be used to abate hazardous building materials, including lead paint, to make the building safe for reuse. The city plans to redevelop the site for community use, one option under consideration is to lease the building for a museum for the Abbot-Downing Historical Society. Abbot-Downing Company was one of the largest manufacturers of non-motorized vehicles in North America including the iconic Concord Coach. This grant leverages past assessment work completed with funding from both the NHDES Brownfields Program, EPA Region 1 Brownfields Targeted Brownfields Assessment Program and the city’s efforts to support assessment of the site, preparing the grant proposal, and project oversight for the cleanup.",https://www.des.nh.gov/sites/g/files/ehbemt341/files/2020-05/environmental-services-open-graph.jpg,N,,2025-09-06 06:02:26.757125
-,Clean Energy ,2025-09-06 06:35:33+00:00,Verite News,Powering Life: Recovery to Renewal - Verite News New Orleans,"digitalops360, David Lee Simmons",,,,,https://veritenews.org/2025/09/05/powering-life-recovery-to-renewal-4/,"The company has also made significant investments in solar energy, energy efficiency, and grid resilience, ensuring that families, schools, and businesses have access to power that is affordable, reliable, and clean.
-For more than twenty years, Entergy shareholders have invested nearly $44 million in environmentally beneficial projects and programs through the Environmental Initiatives Fund.
-The fund identifies projects or programs throughout Entergy’s service area that improve the environment by reducing emissions, protecting natural resources and restoring wetlands and forests.
-Just as Entergy invests in cleaner energy, it also empowers families to build financial stability and create generational wealth.
-Twenty years after Katrina, the company continues to partner with communities to create pathways from recovery to renewal, ensuring that the Gulf South’s future is one of strength, opportunity, and shared prosperity.","For Entergy, the story of recovery after Katrina was never just about turning the lights back on; it was about laying the foundation for lasting stability and opportunity. In the two decades since Hurricane Katrina, Entergy has worked alongside local partners to invest in clean energy, financial empowerment, and economic development, creating pathways to prosperity for Gulf South communities while preparing them for a stronger, more sustainable future.
-
-When Entergy rebuilds, it extends beyond poles and wires; it’s about building the community back stronger – whether equipping schools with solar panels, creating 130 miles of bike lanes or replanting almost 100,000 trees wiped out by the storm.
-
-The company has also made significant investments in solar energy, energy efficiency, and grid resilience, ensuring that families, schools, and businesses have access to power that is affordable, reliable, and clean.
-
-John Weiss, Entergy’s Vice President of Sustainability and Environmental Policy.
-
-For more than twenty years, Entergy shareholders have invested nearly $44 million in environmentally beneficial projects and programs through the Environmental Initiatives Fund. The fund identifies projects or programs throughout Entergy’s service area that improve the environment by reducing emissions, protecting natural resources and restoring wetlands and forests. In the wake of hurricanes Katrina and Rita, the fund supported local organizations that made a big impact on the communities Entergy calls home. From coastal restoration to sustainable parade throws, Entergy’s support helped deliver real results.
-
-Grounds Krewe, a nonprofit organization focused on waste prevention, is working to increase recycling efforts and expand the use of eco-friendly parade throws and consumable goods. “With continued support from Entergy’s Environmental Initiative Fund, the Entergy Charitable Foundation, and hundreds of volunteer hours from their staff, our non-profit has been able to provide over 760,000 eco-friendly, functional throw alternatives to Mardi Gras Krewes and divert 112,000 pounds of material from the landfill through parade recycling initiatives,” says Brett Davis, director of Grounds Krewe. “Entergy’s help was fundamental in getting us off the ground and has kept our programs thriving.”
-
-These efforts are grounded in Entergy’s climate action plan, which includes a goal of achieving net-zero carbon emissions by 2050. Through renewable energy, advanced battery storage, and smarter grid technology, Entergy is shaping a future where sustainability benefits everyone. Importantly, these innovations also create economic opportunities. By training local workers to install, maintain, and manage renewable energy infrastructure, Entergy connects environmental progress directly to jobs and workforce development, ensuring that economic growth and sustainability move forward together.
-
-Just as Entergy invests in cleaner energy, it also empowers families to build financial stability and create generational wealth. Through partnerships with United Way of Southeast Louisiana, Entergy supports Volunteer Income Tax Assistance (VITA) centers, helping families claim the refunds and tax credits they deserve. From 2011 through 2024, Entergy volunteers have helped refund more than $354 million in earned income tax credits to customers across its system, with nearly half of those refunds going to Entergy Louisiana and Entergy New Orleans customers. Entergy’s pro bono
-
-legal program also assists residents in securing critical documents related to housing, helping them retain home ownership and access rebuilding funds – work that has had a transformative and generational impact on families across the region. Over the past decade, Entergy’s dedicated legal team has contributed more than 22,000 hours of pro bono work, resulting in a $6.1 million in-kind donation to the communities Entergy serves.
-
-“Entergy’s dedicated pro bono volunteers have played a pivotal role in helping families retain their homes, guiding them through the process of securing essential paperwork to access rebuilding funds and foster family wealth,” said Christy Kane, Entergy Pro Bono Counsel. “This initiative not only bolsters economic stability within our region but, more importantly, provides immense relief to community members who can finally claim legal ownership of family homes.
-
-Christy shared one particularly moving story: “One woman told me that locking the door at night now brings her peace, knowing her grandmother’s home is finally in her name. That sense of security ensures her family’s legacy will live on.”
-
-Kane was recently selected as a Daily Point of Light Award honoree for her pro bono work with Entergy by the Points of Light organization, an organization that honors U.S. companies that prioritize giving back, empowering volunteer work and creating sustainable community programs. Working on issues like these reinforces how personal this work can be for Kane, and everyone at Entergy.
-
-Beyond helping families secure their homes, Entergy also extends its commitment to strengthening the Gulf South by supporting local businesses and fostering economic opportunities. Through mentorship programs, contracting partnerships, and financial tools, Entergy helps entrepreneurs grow their businesses and contribute to a thriving Gulf South economy.
-
-From reducing energy costs and strengthening infrastructure to supporting families and small businesses, Entergy’s work reflects a vision where environmental progress, economic empowerment, and community resilience are all connected.
-
-Twenty years after Katrina, the company continues to partner with communities to create pathways from recovery to renewal, ensuring that the Gulf South’s future is one of strength, opportunity, and shared prosperity.
-
-Related
-
-Most Read Stories",https://cdn.veritenews.org/wp-content/uploads/2025/09/05075508/Lead-Bike-Photo.jpg,N,,2025-09-06 11:01:27.627659
-,North Carolina American Energy ,2025-09-06 06:35:29+00:00,www.counton2.com,Foremost Clean Energy and Aptevo Therapeutics Interviews to Air on the RedChip Small ...,Not Available,,,,,https://www.counton2.com/business/press-releases/accesswire/1069248/foremost-clean-energy-and-aptevo-therapeutics-interviews-to-air-on-the-redchip-small-stocks-big-moneytm-show-on-bloomberg-tv,px-captcha,Not Available,,N,,2025-09-06 09:01:16.131766
-,North Carolina American Energy ,2025-09-06 06:33:22+00:00,WNCT,EG4 secures 13.3GWh of Residential U.S. Energy Storage Projects from LG Energy Solution,Not Available,,,,,https://www.wnct.com/business/press-releases/ein-presswire/846539258/eg4-secures-13-3gwh-of-residential-u-s-energy-storage-projects-from-lg-energy-solution,"The agreement was signed between EG4 and LG Energy Solutions’ U.S. energy storage division, LG Energy Solution Vertech.
-Projects will incorporate the latest LG Energy Solution residential lithium-ion battery solutions manufactured in the U.S. EG4 will integrate the batteries provided by LG Energy Solution.
-LG Energy Solution will supply high-capacity LFP long-cell batteries that offer improved energy efficiency, enhanced safety, and higher energy density compared to conventional LFP solutions.
-""Together with LG Energy Solution, we’re dedicated to delivering state-of-the-art technology that empowers homeowners and fast-tracks their journey to energy independence.""
-About EG4 Electronics Empowering energy independence for everyone is what EG4 Electronics stands for.","SULPHUR SPRINGS, TX, UNITED STATES, September 5, 2025 /EINPresswire.com/ -- EG4 Electronics (EG4) announced today the signing of a multi-billion-dollar supply agreement with LG Energy Solution Vertech, covering a six-year period from 2025 through 2030. EG4 will secure a total 13.3 GWh of residential ESS battery modules and packs during this time. The agreement was signed between EG4 and LG Energy Solutions’ U.S. energy storage division, LG Energy Solution Vertech.
-
-All products will qualify for domestic content requirements with the first delivery slated for 4th quarter of 2025. Projects will incorporate the latest LG Energy Solution residential lithium-ion battery solutions manufactured in the U.S. EG4 will integrate the batteries provided by LG Energy Solution. LG Energy Solution will supply high-capacity LFP long-cell batteries that offer improved energy efficiency, enhanced safety, and higher energy density compared to conventional LFP solutions.
-
-EG4 Electronics is a leader in the design and manufacture of next-generation solar energy storage systems. Headquartered in Sulphur Springs, Texas, they are dedicated to making solar affordable for everyone, giving consumers the ability to be fully self-sufficient.
-
-""By partnering with LG Energy Solution, we’re taking a major step toward our vision of making solar energy storage more accessible, affordable, and proudly produced right here at home,"" said James Showalter, CEO of EG4. ""Together with LG Energy Solution, we’re dedicated to delivering state-of-the-art technology that empowers homeowners and fast-tracks their journey to energy independence.""
-
-About EG4 Electronics
-
-Empowering energy independence for everyone is what EG4 Electronics stands for. Whether you aim to achieve complete energy autonomy, seek backup power solutions, optimize energy usage in your RV, remote cabin, or any solar-powered application, our products are designed to energize every aspect of your life. Visit https://eg4electronics.com/about/
-
-Legal Disclaimer:
-
-EIN Presswire provides this news content ""as is"" without warranty of any kind. We do not accept any responsibility or liability for the accuracy, content, images, videos, licenses, completeness, legality, or reliability of the information contained in this article. If you have any complaints or copyright issues related to this article, kindly contact the author above.",https://www.wnct.com/wp-content/uploads/sites/99/2021/10/cropped-512-x-512-Android-icon.jpg?strip=1&w=250,N,,2025-09-06 04:58:52.838188
-,Detroit and Evs,2025-09-06 06:27:34+00:00,Carscoops,Canada Walks Back EV Mandate Amid US Trade War - Carscoops,Michael Gauthier,,,,,https://www.carscoops.com/2025/09/canada-walks-back-ev-mandate-amid-us-trade-war/,"Automakers aren’t the only ones walking back their electric vehicle plans as Canadian Prime Minister Mark Carney has decided to give companies additional “flexibility.” As such, he’s waiving 2026 model year vehicles from the Electric Vehicle Availability Standard and will conduct a broader review to “provide additional flexibilities and reduce costs.” As the prime minister’s office explained, the government wants to make “targeted regulatory adjustments” to ensure automotive companies remain competitive during the transition to electric vehicles.
-They added the “automotive sector is essential to Canada’s economy, supporting jobs, trade, innovation and the green transition.” More: Canada Requires All New Cars Sold By 2035 To Be Electrified The Electric Vehicle Availability Standard originally required at least 20% of new light-duty vehicle sales be zero emission by 2026.
-However, the rules will be amended to remove that target to reduce “economic pressure due to tariffs.” On top of that, the government is reviewing other EVAS deadlines to ensure they “reflect market realities” and don’t place an “undue burden on automakers.” As you may recall, 60% of sales are supposed to be zero emission vehicles by 2030, while that number would rise to 100% by 2035.
-Despite hitting the brakes on Canada’s electric vehicle push, Carney’s office said zero emission vehicles are “crucial for addressing climate change,” improving health, and creating significant opportunities for the economy.
-The changes to the Electric Vehicle Availability Standard were revealed as part of a larger announcement that aims to “protect, build, and transform Canadian strategic industries.” Part of this includes a new Buy Canadian Policy for the federal government as well as a Regional Tariff Response Initiative, which aims to help small and medium-sized businesses impacted by U.S. tariffs.","Automakers aren’t the only ones walking back their electric vehicle plans as Canadian Prime Minister Mark Carney has decided to give companies additional “flexibility.” As such, he’s waiving 2026 model year vehicles from the Electric Vehicle Availability Standard and will conduct a broader review to “provide additional flexibilities and reduce costs.”
-
-As the prime minister’s office explained, the government wants to make “targeted regulatory adjustments” to ensure automotive companies remain competitive during the transition to electric vehicles. They added the “automotive sector is essential to Canada’s economy, supporting jobs, trade, innovation and the green transition.”
-
-More: Canada Requires All New Cars Sold By 2035 To Be Electrified
-
-The Electric Vehicle Availability Standard originally required at least 20% of new light-duty vehicle sales be zero emission by 2026. However, the rules will be amended to remove that target to reduce “economic pressure due to tariffs.”
-
-On top of that, the government is reviewing other EVAS deadlines to ensure they “reflect market realities” and don’t place an “undue burden on automakers.” As you may recall, 60% of sales are supposed to be zero emission vehicles by 2030, while that number would rise to 100% by 2035.
-
-Despite hitting the brakes on Canada’s electric vehicle push, Carney’s office said zero emission vehicles are “crucial for addressing climate change,” improving health, and creating significant opportunities for the economy. However, the government noted the transition to EVs is “unfolding amid significant short-term economic uncertainty” and “Canada must carefully consider how recent U.S. policy uncertainty could affect the affordability and availability of ZEVs in the integrated North American market.”
-
-Interestingly, the government said they’ll “explore options to bring more affordable electric vehicles to Canadians.” They didn’t go into specifics, but it will be interesting to see if they’ll crack the door open to Chinese brands.
-
-The changes to the Electric Vehicle Availability Standard were revealed as part of a larger announcement that aims to “protect, build, and transform Canadian strategic industries.” Part of this includes a new Buy Canadian Policy for the federal government as well as a Regional Tariff Response Initiative, which aims to help small and medium-sized businesses impacted by U.S. tariffs.",https://www.carscoops.com/wp-content/uploads/2025/09/Carscoops-Canada-EV-Charging.jpg,N,,2025-09-06 03:00:53.005006
-,Louisiana Environment,2025-09-06 06:21:47+00:00,News From The States,Changes to popular conservation program draws criticism from local conservation groups,News From The States,,,,,https://www.newsfromthestates.com/article/changes-popular-conservation-program-draws-criticism-local-conservation-groups,"The Department of the Interior announced plans Thursday to reshape a popular conservation program that uses offshore oil royalties to support conservation projects, including narrowing the ways those funds can be spent.
-Those restrictions could effectively prevent the expansion of National Monuments, National Conservation Areas, Wild and Scenic Rivers, and National Scenic and Historic Trails administered by the BLM.
-The order would also allow states to use the conservation fund to buy federal property, including protected federal conservation land.
-The Land and Water Conservation Fund has pumped more than $175 million into acquiring and improving public land at Red Rock Canyon and Lake Tahoe, according to the Nevada Conservation League.
-Local conservation groups warned the restrictions could prevent new investments in the outdoor recreation economy and halt pending land deals and projects.","The Department of the Interior announced plans Thursday to reshape a popular conservation program that uses offshore oil royalties to support conservation projects, including narrowing the ways those funds can be spent.
-
-Interior Secretary Doug Burgum issued an order guiding the allocation of more than $430 million from the Land and Water Conservation Fund to projects that would “benefit wildlife habitat, improve water quality and provide flood protection while creating new recreational opportunities.”
-
-“The Land and Water Conservation Fund continues to deliver on its promise to connect Americans to the outdoors while protecting the landscapes that make our nation special,” said Burgum in a statement.
-
-But local conservation groups say the changes threaten to undermine the bipartisan Great American Outdoors Act (GAOA) that President Donald Trump signed into law in 2020, which contributes hundreds of millions of dollars to the development and rehabilitation of parks, conservation areas and outdoor recreation facilities across the nation.
-
-Conservation groups said language in the order restricts the Bureau of Land Management (BLM) from using the fund to acquire additional land that could be used to expand recreation and conservation.
-
-Those restrictions could effectively prevent the expansion of National Monuments, National Conservation Areas, Wild and Scenic Rivers, and National Scenic and Historic Trails administered by the BLM.
-
-“Nevada is approximately 86% public land, of which 67% is managed by the Bureau of Land Management. If you have enjoyed some form of outdoor recreation in Nevada, there is a good chance it was on BLM managed land. If you have camped, hiked, OHV’ed or hunted in Nevada, it was likely in or near a National Conservation Area or National Monument,” said Russell Kuhlman, executive director of the Nevada Wildlife Federation.
-
-The order would also allow states to use the conservation fund to buy federal property, including protected federal conservation land. Those changes could open the door to land transfers that shift public land to private ownership, said the Nevada Conservation League.
-
-“Nevadans overwhelmingly support protecting these places, and we cannot afford to roll back decades of progress in opening and protecting access to the great outdoors,” said Kristee Watson, Executive Director of the Nevada Conservation League.
-
-The Land and Water Conservation Fund has pumped more than $175 million into acquiring and improving public land at Red Rock Canyon and Lake Tahoe, according to the Nevada Conservation League.
-
-The order also “increased bureaucratic red tape” by requiring both state governors and local county officials to approve land acquisitions purchased using the fund, said the Nevada Wildlife Federation.
-
-Local conservation groups warned the restrictions could prevent new investments in the outdoor recreation economy and halt pending land deals and projects.
-
-In 2023, Nevada’s outdoor recreation industry accounted for $8.1 billion in value-added (GDP) annually, ranking the state 10th in the nation, according to the Nevada Division of Outdoor Recreation.
-
-The Department of the Interior did, however, back away from earlier plans to include language that would siphon money away from conservation land purchases to pay for maintenance projects on federal property.
-
-“Fortunately,” the order does not include one of the administration’s worst ideas, leaving out its prior proposal to divert LWCF funding for unauthorized purposes,” said Amy Lindholm, a spokesperson for the Land and Water Conservation Fund Coalition.
-
-Lindholm continued, “Unfortunately, Secretarial Order 3442 still does real damage. It hinders critical conservation and public access by reviving previously rejected ideas.”",https://www.newsfromthestates.com/s3/files/styles/social_large/s3/articles/feeds-state-90/wp-content/uploads/2023/05/avi-kwa-ame-national-monument-1024x6581757114975.jpeg?h=e69e7156&itok=IwnxmtEi,N,,2025-09-06 15:04:06.577579
-,Indiana American Energy ,2025-09-06 06:19:28+00:00,www.msn.com,Why Are American Power Bills So High in 2025?,Not Available,,,,,https://www.msn.com/en-us/money/markets/why-are-american-power-bills-so-high-in-2025/ar-AA1LY4Us%3Focid%3Dfinance-verthp-feeds,"Earlier this week, U.S. Energy Secretary Chris Wright told reporters ... Indiana Fever are one win — or an L.A. or Seattle loss — from ...",Not Available,,N,,2025-09-06 15:03:47.615762
-,Detroit and Evs,2025-09-06 06:16:25+00:00,www.youtube.com,Driving Into the Future: Gas engines aren't dead yet as hybrids take the spotlight - YouTube,,,,,,https://www.youtube.com/watch%3Fv%3D3L7Mn-QHKwI,"With advancements in electric vehicles, many have asked: Will electric vehicles replace the internal combustion engine ... The Rise and Fall of Detroit ...",Not Available,,Y,,2025-09-06 06:59:50.175536
-,Detroit and Evs,2025-09-06 06:11:31+00:00,WKAR Public Media,"Homeland Security Investigations raided a Georgia battery plant, detaining 475 people","Camila Domonoske, www.wkar.org, camila-domonoske",,,,,https://www.wkar.org/2025-09-05/homeland-security-investigations-raided-a-georgia-battery-plant-detaining-475-people,"On Instagram, video posted by an account with the name Alex Morales showed a group of people listening to a masked man who identifies himself as part of Homeland Security.
-DETROW: Homeland Security Investigations says this was the largest single-site operation they have ever carried out.
-So Homeland Security Investigations, which is the branch of ICE that carries out this kind of workplace raid, they say that they detained 475 people, most of them South Korean.
-That Homeland Security official said that this raid was tied to, quote, ""allegations of unlawful employment practices and serious federal crimes,"" end quote.
-DOMONOSKE: It's on this huge campus of buildings near Savannah, Georgia, that also includes a large factory where Hyundai is right now building electric vehicles.","SCOTT DETROW, HOST:
-
-Federal agents walked into a massive Hyundai and LG Energy Solutions construction site yesterday and detained nearly 500 people on suspected immigration offenses. The site, near Savannah, Georgia, is the home of a future electric vehicle battery plant. On Instagram, video posted by an account with the name Alex Morales showed a group of people listening to a masked man who identifies himself as part of Homeland Security.
-
-(SOUNDBITE OF ARCHIVED RECORDING)
-
-UNIDENTIFIED DHS OFFICER: We need construction to cease immediately. We need all work to end on the site right now.
-
-DETROW: Homeland Security Investigations says this was the largest single-site operation they have ever carried out. NPR's Camila Domonoske covers cars for NPR and joins us now. Hey there.
-
-CAMILA DOMONOSKE, BYLINE: Hi.
-
-DETROW: What do we know about this workplace raid so far?
-
-DOMONOSKE: Yeah. So Homeland Security Investigations, which is the branch of ICE that carries out this kind of workplace raid, they say that they detained 475 people, most of them South Korean. Hyundai and LG Energy Solutions - both of those companies are headquartered in South Korea. Here's Special Agent Steven Schrank speaking at a press conference.
-
-(SOUNDBITE OF ARCHIVED RECORDING)
-
-STEVEN SCHRANK: Some that illegally crossed the border into the United States, some that came in through visa waiver and were prohibited from working, some that had visas and overstayed their visas.
-
-DETROW: So who was employing the people who were detained?
-
-DOMONOSKE: It's a good question. You know, in a project like this, there are really complicated webs of subcontractors and subcontractors to subcontractors. Hyundai says that it believes that nobody detained was directly employed by Hyundai Motor Company. LG Energy Solutions hasn't responded to NPR's requests for comment.
-
-That Homeland Security official said that this raid was tied to, quote, ""allegations of unlawful employment practices and serious federal crimes,"" end quote. He did not provide more details on that, and there are no charges filed in this case right now. Officials say this is an ongoing investigation. It would be unusual if charges are eventually filed because immigration raids like this, where workers are detained - they don't often end with criminal charges for employers.
-
-DETROW: Tell us more about where this raid happened.
-
-DOMONOSKE: It's on this huge campus of buildings near Savannah, Georgia, that also includes a large factory where Hyundai is right now building electric vehicles. That factory was not directly affected by the raid. Production of vehicles didn't actually stop. But the battery plant that's under construction nearby, which is where the raid actually happened - it's an important part of the long-term plans for this facility 'cause the goal is to build not just electric vehicles, but the whole supply chain for these vehicles here in the U.S.
-
-And that's important not just to Hyundai, but actually to the United States more broadly in this effort to try to compete with China over the future of electric vehicles. So Hyundai is investing some $26 billion in moving manufacturing to the U.S., including this project. It's a big deal for the company and for Georgia. The state's called it the largest economic development project in state history.
-
-DETROW: And I understand you just heard back from Hyundai. What did they say?
-
-DOMONOSKE: They said they're going to conduct an investigation into suppliers and their subcontractors to make sure they are all following employment law and other laws and regulations. Meanwhile, Congressman Buddy Carter, who represents the area surrounding the plant, posted on X that he applauded the Trump administration for taking bold action. And the South Korean Ministry of Foreign Affairs says it voiced concerns to the United States about respecting South Korean economic activity and citizens.
-
-DETROW: That is NPR's Camila Domonoske. Thank you so much.
-
-DOMONOSKE: Thank you.
-
-DETROW: Sam Gringlas of member station WABE contributed to that report as well. Transcript provided by NPR, Copyright NPR.",,N,,2025-09-06 03:01:03.438321
