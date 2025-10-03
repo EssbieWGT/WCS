@@ -1,4 +1,430 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2025-10-03 08:56:05+00:00,MDPI,Evaluating Fuel Properties of Strained Polycycloalkanes for High-Performance Sustainable ... - MDPI,"Dilip Rijal, Vladislav Vasilyev, Yunxia Yang, Feng Wang",,,,,https://www.mdpi.com/1996-1073/18/19/5253,"Target Polycycloalkanes and Strain Energy Calculation Twenty selected strained HED polycycloalkanes, identified as potential SAF candidates through ML [2], are evaluated further for aviation fuel properties.
+Table S1: Contribution of strain energy by various single rings; Table S2: Strain energy of polycycloalkanes is presented in Figure 1 (main text) using the ring superposition method.
+[Google Scholar] [CrossRef] Wang, F.; Rijal, D. Sustainable Aviation Fuels for Clean Skies: Exploring the Potential and Perspectives of Strained Hydrocarbons.
+[Google Scholar] [CrossRef] Wang, F. Determination of Outer Valence Space of Norbornadiene: A Pathway to Understanding Strained Hydrocarbon Fuels.
+""Evaluating Fuel Properties of Strained Polycycloalkanes for High-Performance Sustainable Aviation Fuels"" Energies 18, no.","1
+
+School of Science, Computing and Emerging Technologies, Swinburne University of Technology, Melbourne, VIC 3122, Australia
+
+2
+
+National Computational Infrastructure, Australian National University, Canberra, ACT 0200, Australia
+
+3
+
+CSIRO Energy, Melbourne, VIC 3168, Australia
+
+*
+
+Author to whom correspondence should be addressed.
+
+Energies 2025, 18(19), 5253; https://doi.org/10.3390/en18195253
+
+Submission received: 29 August 2025 / Revised: 1 October 2025 / Accepted: 1 October 2025 / Published: 3 October 2025
+
+Abstract
+
+Sustainable aviation fuel (SAF) is a drop-in alternative to conventional jet fuels, designed to reduce greenhouse gas (GHG) emissions while requiring minimal infrastructure changes and certification under the American Society for Testing and Materials (ASTM) D7566 standard. This study assesses recently identified high-energy-density (HED) strained polycycloalkanes as SAF candidates. Strain energy (Ese) was calculated using density functional theory (DFT), while operational properties such as boiling point (BP) and flash point (FP) were predicted using support vector regression (SVR) models. The models demonstrated strong predictive performance (R2 > 0.96) with mean absolute errors of 6.92 K for BP and 9.58 K for FP, with robustness sensitivity analysis. It is found that approximately 65% of these studied polycycloalkanes fall within the Jet A fuel property boundaries. The polycycloalkanes (C9–C15) with strain energies below approximately 60 kcal/mol achieve an balance between energy density and ignition safety, aligning with the specifications of Jet A. The majority of structures were dominated by five-membered rings, with a few three- or four-membered rings enhancing favorable trade-offs among BP, FP, and HED. This early pre-screening indicates that moderately strained polycycloalkanes are safe, energy-dense candidates for next-generation sustainable jet fuels and provide a framework for designing high-performance SAFs.
+
+1. Introduction
+
+The rapid growth of the aviation industry is expected to drive a significant increase in global aviation fuel demand, which is projected to more than double by 2050 [1], intensifying both demand and environmental concerns. As a result, it is crucial to develop SAF to reduce the aviation industry’s carbon footprint and to mitigate the impact of GHG emissions. These developments are becoming particularly essential as the aviation industry seeks all viable pathways, including electrification techniques and hydrogen propulsion, as other alternatives to achieve sustainability [2,3,4]. Among the available options, SAF offers a more practical solution, providing an intermediate reduction in carbon emissions of up to 80% over its lifecycle compared to conventional jet fuel [5].
+
+SAF must meet the stringent safety and performance standards set by the ASTM D7566 [3,6]. Currently, seven ASTM-approved pathways for the production of SAF [7] include Fischer-Tropsch synthetic paraffinic kerosene (FT-SPK) and FT-SPK with aromatics (FT-SPK/A), bio-based routes such as hydroprocessed esters and fatty acids (HEFA-SPK) and catalytic hydrothermolysis jet fuel (HC-HEFA-SPK), hydroprocessed fermented sugars to synthetic iso-paraffins (HFS-SIP), alcohol-to-jet synthetic paraffinic kerosene (ATJ-SPK), and fuels derived from the hydrothermal conversion of fatty acids (CHJ) [3,8]. Each of these pathways represents the leading technologies for SAF production, each with distinct feedstocks and processing methods, while all adhering to the rigorous performance and safety standards required for aviation use [2,3,4,9,10]. Blending SAFs with conventional jet fuels—up to 50% by volume—can preserve critical properties such as HED and favorable O-ring swelling, both of which are essential for optimal engine performance [3,9,10,11]. However, incomplete combustion of these blends can result in substantial soot and particulate emissions, highlighting a trade-off between achieving performance standards and minimizing environmental impact [2,9].
+
+To address these challenges, strained polycycloalkanes have emerged as promising HED SAF candidates [2,3,12]. Their unique molecular structures and synthetic accessibility contribute to enhanced energy performance, with the potential to increase both volumetric specific energy and energy density [2]. These properties are critical in aviation due to the limited fuel capacity of Jets, where a higher energy content directly translates to greater payload capacity and extended flight range [2,4]. In particular, alkanes (paraffins) are saturated hydrocarbons consisting of carbon–carbon (C–C) and carbon-hydrogen (C–H) single bonds, which confer greater chemical bond energy compared to unsaturated hydrocarbons. Alkanes burn more cleanly than alkenes, producing less soot and particulate emissions [13]. This results in lower engine deposits and reduced maintenance requirements for aviation engines, enhancing overall efficiency and performance [14].
+
+The inherent stability of alkanes supports energy storage and combustion safety. In addition to increasing energy density [2,3,11,12,15,16,17,18], structural strain within polycyclic alkanes can also alter fuel properties that are critical for efficiency and operational safety. For example, JP-10—exo-tetrahydrodicyclopentadiene (C10H16), an HED synthetic strained polycycloalkane fuel primarily used in military applications—exhibits superior combustion characteristics and operational performance compared to conventional Jet A aviation fuel in commercial use [2,3,18]. Optimizing strained hydrocarbons for aviation applications requires a careful design to balance energy output with operational safety. However, despite their potential to be HED fuels, the safety profiles of these polycycloalkane candidates remain underexplored. To ensure their viability as SAF, these compounds must also satisfy ASTM D7566/D4054 certification standards [6,19], which set rigorous thresholds for key physicochemical and operational properties, including specific energy (SE ≥ 42.80 MJ/kg), density (0.76–0.84 g/mL at 288.15 K), freezing point (FrP ≤ 226.15), (FP ≥ 311.15 K), and (BP ~ 433.15–573.15 K) [12]. In practice, consistently meeting the stringent FrP, FP, and density requirements, along with compatibility tests such as O-ring swell, remains particularly challenging for many candidates.
+
+In one of our previous studies, we identified several HED-strained hydrocarbons as promising candidates for aviation fuel applications [2]. In this work, we employed DFT calculations [20] to analyze the molecular structures and Ese of a selected group of polycycloalkane SAF candidates. We then employed machine learning (ML) techniques [21,22] and the group contribution (GC) method [23,24] to predict key fuel properties. Subsequently, we evaluated quantitative structure–property relationships (QSPR), specifically the BP and FP. This computational evaluation supports early-stage pre-screening of SAF candidates and assesses their safety for aviation applications, in accordance with ASTM D7566 [6] and D4045 standards [19]. This comprehensive assessment aims to accelerate SAF development through the optimization of synthetic pathways.
+
+2. Computational and Predictive Methods
+
+2.1. Target Polycycloalkanes and Strain Energy Calculation
+
+Twenty selected strained HED polycycloalkanes, identified as potential SAF candidates through ML [2], are evaluated further for aviation fuel properties. These candidates are listed as entries 1–20 in Table S2 of the Supplementary Materials (SM), with their corresponding structures shown in Figure 1.
+
+Ese in hydrocarbons refers to the extra energy stored in a molecule due to distortions in its bond angles, bond lengths, or torsional angles from their ideal, low-energy conformations. The total Ese of a compound is typically the result of several contributing factors [25], including bond strain, angle strain (also called Baeyer strain), torsional strain, and steric strain (or van der Waals/Prelog strain). Bond strain occurs when chemical bonds are stretched or compressed beyond their optimal lengths. This type of strain is energetically costly and uncommon in stable organic molecules. Molecules generally adopt conformations that minimize bond strain, as the high energy cost associated with it is unfavorable. Angle strain (also called Baeyer strain) is caused by deviations from ideal bond angles (e.g., 109.5° in sp3-hybridized carbon) [26]. While angle strain contributes to the overall energy of a molecule, it is generally less severe than torsional or steric strain. Torsional strain, also known as eclipsing or Pitzer strain, results from eclipsed interactions between adjacent bonds, where atoms or groups are aligned in a way that leads to increased electron repulsion. Torsional strain often contributes significantly to the overall strain energy of a molecule. Steric strain (or van der Waals/Prelog strain) occurs when atoms are forced close together, leading to repulsion between electron clouds [26]. A specific type of steric strain, known as transannular strain, is common in medium-sized rings, where non-bonded atoms across the ring interact unfavorably.
+
+Cyclic hydrocarbons adopt conformations that minimize the total Ese by balancing various types of strain [25]. Since bond strain is particularly destabilizing, molecules typically avoid it by tolerating more manageable forms of strain, namely torsional, steric, and angle strain. Cyclic compounds are classified as small rings with (three- or four-membered), common rings with (five- to seven-membered), medium rings with (eight- to eleven-membered), and large rings with (twelve- or more-membered). Rings of similar sizes tend to have comparable characteristics. Most of the cyclic hydrocarbon fuel candidates exhibit small rings (three- or four-membered), and common rings (five- to seven-membered), which are often grouped into classical rings [25]. Small rings exhibit rigidity and significant strain due to substantial deviations from ideal tetrahedral bond angles, resulting in pronounced angle strain, as well as considerable torsional strain from eclipsed interactions. In contrast, common rings maintain bond angles close to the tetrahedral ideal, with their substituents oriented exclusively outward from the ring structure [25].
+
+Ring strain energy (RSE) refers to the increase in energy or destabilization that occurs when an open-chain (acyclic) molecule forms a ring structure [27]. The Ese of polycycloalkanes can be estimated using two different methods. That is, the ring superposition (RS) method [28,29] and the isodesmic reaction (IR) approach [30]. In the RS method, the Ese of a polycycloalkane is calculated as the sum of the strain energies (Ering(i)) of the individual rings [28,29].
+
+Ese = ∑ni Ering(i)
+
+(1)
+
+where ni indicates the number of various members of the ring of type i, and Ering(i) represents the Ese of the ith ring. The Ese of an individual ring (Ering(i)) is given in Table S1 in the SM. For example, Compound 19 (camphane) appears with two five-membered rings as detailed in Table S2 in the SM. Therefore, the Ese of compound 19 (camphane) is given by
+
+Ese (camphane) = 2 × (6.19) = 12.38 kcal/mol
+
+The IR method [30] to estimate the Ese of a polycycloalkane is determined as
+
+Ese = ΔHf(Cn+mH2(n+2m+1)) − ΔHf(CnH2(n−m + 1)) − m ΔHf(ethane)
+
+(2)
+
+where ΔHf denotes the standard enthalpies of the compounds involved in the isodesmic reaction. Here, n corresponds to the number of carbon atoms in the polycycloalkane, while m represents the number of ethane units introduced to balance the isodesmic reaction. This IR method compares the target molecule (polycycloalkane) to a set of reference compounds with similar bonding environments [27]. For example,
+
+camphane + 2 ethane → tetradecane
+
+(3)
+
+So that Ese (camphane) = ΔHf(tetradecane) − (ΔHf(camphane) + 2 ΔHf(ethane)) = 12.72 kcal/mol.
+
+Details regarding the IR method used are given in Tables S3 and S4 of the SM. For large-strain polycyclic molecules, direct high-accuracy quantum chemical calculations become computationally prohibitive due to the steep scaling with system size [31]. To overcome this limitation, isodesmic reactions exploit systematic error cancelation by comparing molecules to reference compounds with similar bond types, providing a practical and reliable means to compute strain energies. Although the IR method is often described as “bond-conserving,” polycyclic strain energy calculations may involve equations that are formally unbalanced in hydrogen count. This approach assumes that only the differences between similar bonding environments—rather than the absolute energies—are relevant, allowing errors to cancel out between comparable fragments. By carefully matching carbon environments (sp3, strained, bridgehead, etc.), most basis set and correlation errors are minimized, making the IR method a rapid and practical estimation tool.
+
+The enthalpies in Equation (2), used to calculate Ese, were computed using DFT; therefore, the overall approach is referred to as the DFT-based IR method (DFT-IR). These calculations were performed at the B3PW91/aug-cc-pVTZ level of theory, following the geometry optimization. The B3PW91 DFT functional was selected based on its demonstrated reliability and consistency in predicting thermochemical properties across diverse hydrocarbon systems. A recent benchmark study by Dutra and Custodio [32], which evaluated 24 DFT functionals, identified B3PW91 as one of the most robust performers under varied computational conditions. Additionally, the literature reports show that B3PW91 yields enthalpy predictions with a mean absolute error of approximately 2 kcal/mol [33], making it suitable for evaluating strain energies in hydrocarbon fuels. The aug-cc-pVTZ basis set complements this choice by offering triple-zeta quality with diffuse functions, which is essential for accurately describing strained and delocalized electronic environments. As a result, B3PW91/aug-cc-pVTZ offers a well-balanced approach that strikes a balance between computational efficiency and predictive accuracy, particularly for systems involving ring strain and non-classical bonding. The absence of imaginary frequencies in the optimized structures indicates that these structures correspond to true energy minima, indicating they are stable [15,16,18]. All DFT calculations are performed using the Gaussian 16 program [34].
+
+2.2. Machine Learning for Fuel Property Prediction
+
+ML models were developed to evaluate two key thermophysical properties essential for the fuel candidates: BP and FP. The BP is defined as the temperature at which a pure liquid transitions to the gas phase under 1 atm pressure, while FP is the lowest temperature at which a liquid emits sufficient vapor to ignite in the presence of a flame or spark [35]. Although BP and FP are experimentally measurable, predictive modeling offers significant value by enabling rapid screening of strained polycyclic molecules, where evaluation of the ASTM standard can be costly and time-consuming. Establishing these structure–property relationships, therefore, supports early-stage SAF design by prioritizing candidates with favorable volatility and safety profiles. Rücker and Rücker [36] refined structure–BP correlations for saturated hydrocarbons using high-quality data and topological indices, noting errors in earlier cycloalkane values. However, their study did not examine strained polycycloalkanes, which will be addressed in the present work. The property dataset consisted of 85 cycloalkanes for BP and 80 cycloalkanes for FP, where the latter included a combination of experimental and computational values. Data were collected exclusively for cycloalkane structures from peer-reviewed literature [11,37] and authoritative chemical databases, including the CRC Handbook [38], the NIST Chemistry WebBook [39], and the Chemical Properties Handbook [40].
+
+Molecular descriptors were generated from Simplified Molecular Input Line Entry System (SMILES) representations of the compounds using RDKit [41] and Mordred [42], resulting in more than 900 initial descriptors. A systematic preprocessing workflow was applied to ensure descriptor quality and reduce redundancy following the same steps as in recent work in fuel [43]. First, non-numeric and constant (low-variance) descriptors were removed. Next, descriptors exhibiting strong pairwise correlations (Pearson’s |r| > 0.90) were excluded to avoid multicollinearity. Moreover, feature relevance was assessed using Spearman correlation [44] and Recursive Feature Elimination (RFE) with a Random Forest Regressor (RFR) [43]. The final 10 most informative descriptors for each property (Table S6, SM) were identified and standardized using Z-score normalization [45].
+
+Model development was carried out using SVR, which had been previously benchmarked in our earlier work [2] and consistently outperformed alternatives such as Random Forest (RF) and k-Nearest Neighbors (kNN) for related fuel property predictions. The preference for SVR is also supported by recent reviews that identify it as one of the most widely applied algorithms in QSPR modeling of fuel ignition properties [46]. Its ability to model both linear and nonlinear relationships, while maintaining good generalization on small datasets, makes it particularly suitable for this application. Datasets were partitioned into 80:10:10 splits for training, validation, and testing, respectively. Hyperparameters (regularization constant C, epsilon tolerance ε, and kernel type) were optimized through GridSearchCV [47]. The linear kernel consistently emerged as the most effective choice for both BP and FP prediction, as detailed in optimized parameters (Table S7, SM). Final models were retrained on the combined training and validation sets using the optimal hyperparameters, and predictive performance was assessed on the independent test sets.
+
+Model validation was performed using three repeated 5-fold cross-validations in training data [48], while model sensitivity was assessed through bootstrap analysis [49]. To determine the applicability of the model to a new molecule, the classical Joback and Reid GC models [23,24] were also implemented and evaluated for the candidate molecules (Table S10, SM). All modeling and visualization were performed in Python 3 (Jupyter) [22,50], utilizing a standard data science stack: Pandas (1.5.3) and NumPy (1.24.4) for data handling, scikit-learn (1.3.2) for feature selection, model training, and validation, SciPy (1.10.1) for statistical analysis, and Matplotlib (3.7.1) and Seaborn (0.12.2) [50] for visualization.
+
+3. Results and Discussion
+
+3.1. Strain Energy in the Polycycloalkanes
+
+Ese plays a crucial role in determining the stability and energy output of polycycloalkanes, which are an important structural characteristic in many HED fuels. The Ese of these target polycycloalkanes is estimated using the RS and the DFT-based IR method (DFT-IR), as expressed in Equations (1) and (2). Table 1 compares the RS and DFT-IR results with the available reference Ese for compounds 7 (quadricyclane) and 10 (prismane), as reliable data for the studied compounds are limited.
+
+The RS method estimates the total Ese of a molecule using a simple additive approximation; hereby, the overall strain is considered as the sum of the strain energies of its individual ring components (e.g., cyclopropane, cyclobutane) [29,53]. While this approach represents a proper first-order estimate, it overlooks several essential factors that influence strain distribution in polycycloalkanes and therefore often fails to provide accurate predictions. First, the RS method assumes that the strain contributions from each ring are independent. However, in fused and bridged ring systems, the rings are structurally interconnected, and interactions between them can redistribute Ese—often leading to strain relaxation. These inter-ring interactions are inherently neglected in the RS framework. Second, the RS method assumes rigid molecular geometries and does not account for electronic delocalization or steric effects, both of which can alleviate strain. In reality, these factors can significantly reduce the total Ese but are not captured in the additive RS model. Third, the RS method lacks the capacity to accommodate geometric flexibility. It treats the rings as fixed units, whereas real molecules can adopt more favorable conformations through bond angle and torsional relaxation. This geometric adaptability is crucial for determining the true minimum-energy structure, especially in complex polycyclic systems.
+
+In contrast, DFT calculations inherently account for these effects. DFT enables complete molecular geometry optimizations, allowing the system to relax into its lowest-energy conformation while accounting for both electronic structure and steric interactions. This quantum mechanical approach is essential in multi-ring systems, where Ese does not scale linearly with the number of rings due to strain delocalization across the molecular framework.
+
+The advantage of the DFT-IR method over RS becomes clear when comparing calculated Ese to experimental or high-level computational benchmarks. For example, the DFT-IR calculated Ese for compound 7 (quadricyclane, C7H8, tetracyclo [3.2.0.02,7.04,6]heptane) deviates from the experimental value by only 0.14%, while for compound 10 (prismane, C6;H6, tetracyclo[2.2.0.02,6.03,5]hexane), the deviation is just 1.02% as detailed in Table 1. In contrast, the RS method exhibits significantly large and inconsistent deviations: 18.78% for 7 (quadricyclane) and 4.77% for 10 (prismane). These discrepancies emphasize the limitations of the RS method and highlight the accuracy and reliability of quantum mechanical approaches such as DFT-IR. Furthermore, comparisons with prior studies also reveal substantial mismatches between RS-derived and experimentally determined strain energies, reinforcing the need for more sophisticated methods in Ese evaluation [28,29].
+
+For HED fuel applications, it is ideal that the polycycloalkanes have moderate to high positive Ese. High Ese indicates the molecule stores extra potential energy in its bonds due to ring strain. If the Ese is too high, issues such as synthesis, stability, and safety may outweigh the benefit [54]. Upon combustion, this strain is released in addition to the standard chemical enthalpy, boosting the net heat of combustion per unit mass or volume. As a result, the optimal range of Ese for HED fuels can be assumed between 10 and 60 kcal/mol, which is within the vicinity of compound 6 (exo-THDCPD) and 7 (quadricyclane). Compound 6 (exo-THDCPD) is already used as a military fuel, JP-10, while 7 (quadricyclane) is extensively investigated as a top candidate for HED fuel [55]. Figure 1 presents the molecular structures of the twenty studied compounds and compares Ese values for selected polycycloalkanes determined via RS and DFT-IR, with both methods showing consistent trends. The Ese of all compounds is under 100 kcal/mol except for compound 10 (prismane), which is estimated at 126.69 kcal/mol.
+
+These observed Ese in Figure 1 are due to the ring structures of the compounds. The compounds with relatively high Ese actually hold the strained three- or four-membered cyclic structures. As discovered by Dragojlovic [25], the strain energy per –CH2 group is highest in smaller rings, with 9.17 kcal/mol for cyclopropane (n = 3) and 6.58 kcal/mol for cyclobutane (n = 4). In polycyclic systems, however, additional factors such as ring fusion, bridging, and angular strain complicate the Ese landscape. For instance, high strain of compound 7 (quadricyclane) arises from its highly constrained geometry, comprising five rings with two three, two five, and one four-membered ring. In contrast, compound 16 (spirodecane) shows the lowest Ese at 5.59 kcal/mol among these compounds. It is noted that compound 6 (exo-THDCPD, i.e., JP-10) has a moderate Ese of 12.57 kcal/mol. The calculated Ese of the compounds is given in Table S2 of the SM.
+
+3.2. Boiling Point and Flash Point Estimate
+
+3.2.1. Property Dataset and ML Model Performance
+
+An overview of the fuel property dataset and the molecular descriptors used to develop ML models is provided. Specifically, this section focuses on designing a model and validation to predict the BP and FP of the polycycloalkanes listed in Figure 1. The distribution of carbon numbers and ring sizes within the property dataset is shown in Figure 2. It includes a structurally diverse collection of monocyclic and polycyclic hydrocarbons, with carbon numbers ranging from C3 to C21 for BP data and C3 to C20 for FP data. The dataset covers ring sizes from three- to twelve-membered structures, encompassing a wide range of cyclic frameworks. Notably, within the carbon range typical of conventional jet fuels (C7–C18), the BP and FP distributions peak at total carbon numbers of C8 and C9, respectively, which are well represented in the dataset [3].
+
+As shown in Figure 2, five- and six-membered rings are the most prevalent in both BP and FP datasets because they offer an optimal balance between thermodynamic stability and synthetic accessibility. Their conformations (e.g., envelope for cyclopentane, chair for cyclohexane) minimize both angle and torsional strain [25,36], making them energetically favorable. Additionally, they are readily formed in many synthetic and biosynthetic pathways and can accommodate diverse substitutions, thereby increasing their occurrence. In contrast, smaller rings suffer from high strain, while larger ones are less accessible and often less stable.
+
+Figure 3 highlights the importance scores of the 10 selected molecular descriptors used in training the ML models. For BP prediction (Figure 3a), the number of carbon atoms (NC) was identified as the most influential descriptor, with an importance score of approximately 0.87 out of 1. The BertzCT graph-based descriptor appears as the second-most influential in predicting BP, which assesses the complexity of the molecules [56]. In contrast, FP prediction (Figure 3b) was influenced by the information content descriptor (Ipc) [57], which achieved an importance score of approximately 0.60. As demonstrated in SM (Figure S1), NC and Ipc are strongly correlated because both descriptors capture molecular size. In the preprocessing stage, NC was excluded from the FP model, with Ipc retained as the representative size-related variable. While feature selection in ML models is mainly determined by statistical correlations with the target property to improve predictive accuracy, it does not necessarily prioritize descriptors with clear physical significance [58]. It may instead choose less chemically informative variables. Therefore, although NC is more chemically intuitive, Ipc preferred for the FP model to strike a balance between statistical rigor and predictive performance. To maintain chemical interpretability and ensure consistency across both the BP and FP models, NC was still emphasized in our discussion of results.
+
+Aside from size-related descriptors, other features also played a significant role in FP prediction, reflecting the interaction of topological and electronic factors. Including VE1_A, BalabanJ, and GATS1Z emerged as key predictors (Table S6, SM). The VE1_A descriptor, derived from graph theory, describes molecular connectivity and tends to increase with branching, which may affect ignition behavior [56]. The BalabanJ topological index measures molecular complexity by considering both atomic connectivity and distances [2,56], while the GATS1Z descriptor captures autocorrelation of atomic properties (such as atomic number) across a specified topological distance, emphasizing the role of electronic distribution [56]. Collectively, these descriptors improved predictive power compared to models relying only on size descriptors. Their combination demonstrates how ML-based selection of complementary features can produce strong predictive models, while also highlighting the importance of balancing chemical interpretability with statistical performance in developing property prediction models.
+
+Figure 4 shows the relationship between the descriptor NC (number of carbon atoms in a single ring) and the BP dataset, which contains only experimental values. For monocyclic alkanes with three- to twelve-membered rings, the BP increases approximately linearly with ring size. The experimental BP value for cycloundecane (eleven-membered ring) in the property dataset of the NIST Chemistry WebBook [39] shows a slight deviation from this trend. For consistency in the analysis, a more recent value (491.55 K) from Guidechem [59] was adopted. This trend reflects the influence of increasing molecular mass and van der Waals surface area, which enhances intermolecular dispersion forces and raises the BP. Smaller rings such as cyclopropane (C3H6) and cyclobutane (C4H8) have significantly lower BPs, while larger rings exhibit progressively higher values due to their greater surface area and stronger cohesive forces [60].
+
+The predictive performance of the BP and FP using the SVR models was evaluated using three standard metrics: the coefficient of determination (R2), mean absolute error (MAE), and root mean squared error (RMSE), which are similar to our previous study [2], and details are given in the SM. Figure 5 reports the model performance for BP and FP across all datasets. In Figure 5a, the model shows a consistent and high R2 value of 0.99 across the training, test, and validation sets for BP prediction, indicating an excellent linear correlation between the predicted and reported values in the property dataset. For instance, the test set yielded an MAE of 6.92 K and an RMSE of 8.46 K, suggesting the model accurately predicts BP with minimal deviation. Even in the validation set, which serves as a test of model reliability, the error metrics remain low (MAE = 5.04 K, RMSE = 6.21 K), highlighting the model’s ability to generalize well to unseen data. While a few minor outliers can be observed (e.g., particularly at higher BP values >490 K), they do not significantly affect the overall predictive performance, and the majority of data points fall close to the parity line (y = x).
+
+Similarly, in Figure 5b, the FP prediction model also exhibits strong performance, albeit with slightly lower R2 values compared to the BP model. The training, test, and validation sets show very similar R2 values of 0.98, 0.96, and 0.98, respectively, indicating consistent model performance. The test set in particular demonstrates high accuracy with an MAE of 9.58 K and an RMSE of 12.50 K, supporting the model’s strength in FP estimation. However, a few deviations are noticeable in the validation set. Despite these discrepancies, the majority of predictions remain closely aligned with the reported values. Hence, the strong agreement between predicted and reported values in both BP and FP models, particularly with consistently high R2 values and low error values across all datasets, demonstrates the efficacy of the SVR approach.
+
+To ensure the robustness and real-world applicability of the developed machine learning models, multiple validation strategies were employed. Specifically, three repeated 5-fold cross-validations [48] were conducted on the training dataset, providing reliable estimates of model generalizability. The models demonstrated strong predictive performance for both BP ( M A E = 5.65 ± 1.70 K , R M S E = 8.08 ± 2.86 K , R 2 = 0.98 ± 0.01 ) and FP ( M A E = 8.28 ± 2.41 K , R M S E = 11.05 ± 4.01 K , R 2 = 0.94 ± 0.05 ) as summarized in SM (Table S8). Because the target property dataset is relatively small, we further assessed model stability and confidence intervals through a sensitivity analysis using 100 bootstrap iterations [49]. The bootstrap analysis further confirmed the stability of the models, with the BP model achieving a mean R2 of 0.99 (σ = 0.01) and the FP model achieving a mean R2 of 0.95 (σ = 0.02). Consistently low MAE and RMSE values across bootstrap samples indicate reliable predictive accuracy and minimal variability, as detailed in SM (Table S9). Slightly higher variation observed for FP can be attributed to the inclusion of both experimental and computational data in the property dataset.
+
+Even with multiple validation strategies, the risk of overfitting or underfitting cannot be entirely eliminated, which remains a key challenge in ML models when applied to new data [61]. In this study, the dataset is relatively small and restricted to strained cycloalkanes only; therefore, while reliability was assessed by comparing ML predictions with values obtained from the GC method and available experimental data in SM (Table S10), a formal Applicability Domain (AD) analysis (e.g., Williams plot) was not performed. Given the limited chemical space considered here, such an analysis would be more meaningful for larger and more diverse datasets [62]. Future studies involving broader chemical datasets will likely incorporate AD approaches. The close agreement across these comparisons supports the robustness of the ML models within the present domain and highlights their practical relevance. In addition to predictive accuracy, the ML models provide rapid estimations and reveal meaningful structure–property relationships, thereby enhancing both efficiency and interpretability in molecular property prediction.
+
+3.2.2. Structure-Property Trends in Polycycloalkanes
+
+To assess the thermal properties of aviation fuels and evaluate the structural influence of the polycycloalkanes listed in Figure 1, trained models were applied to predict their BP and FP, as summarized in Table S10 of the SM. Figure 6 shows the BP/FP relationship, which follows a well-established linear trend [24]. The green boundary in Figure 6 marks the polycycloalkanes that meet both BP and FP requirements. Approximately 65% of the compounds fall within the operational BP/FP range for Jet A (BP: 433.15–573.15 K; FP ≥ 311.15 K) [12,35]. Thirteen polycycloalkanes (1–6, 9, 13, 15–17, 19, and 20) meet these criteria, supporting their strong potential as candidates for aviation fuel design. Notably, compound 6 (JP-10), a well-established military fuel, is also identified by these criteria as a promising candidate, thereby validating the effectiveness of the method. Since both boiling point (BP, reflecting volatility) and flash point (FP, reflecting ignition characteristics) influence fuel safety, a balanced BP/FP profile is critical. Excessive volatility (low BP) can lead to evaporative losses at altitude, while insufficient volatility (high BP) can impair combustion efficiency [63].
+
+A detailed analysis of the molecular structure within the defined boundary in Figure 6 was conducted to evaluate its influence on the studied properties. Figure 7 presents the structures of polycycloalkanes that satisfy both BP and FP requirements, together with the corresponding predictions from the GC and ML approaches. The strong agreement between GC and ML validates the predicted thermal properties. Most candidates feature a dominant five-membered ring structure, often accompanied by a few smaller three- or four-membered rings. For example, compound 2 (THTCPD; NC = 15, BP = 558.68 K, FP = 422.29 K), which contains five five-membered rings, exhibits the highest BP and FP in the studied set. These results indicate that the number of carbon (NC)—a proxy for molecular size—and the presence of ring structures are primary factors influencing BP and FP. Furthermore, Figure S2 in the SM in the illustrates a nearly linear relationship between BP/FP and NC, which likely arises from the increasing contribution of van der Waals volume with molecular size and associated packing effects, as noted in a prior study [64]. Volatility and ignition performance are observed in the C9–C15 range, consistent with previous reports that cycloalkanes in this window generally meet jet fuel specifications [65].
+
+In addition to carbon count, Ese may also modulate thermal behavior. The majority of the candidates within the boundary exhibit moderate strain (Ese < 60 kcal/mol), which appears beneficial for balancing stability and volatility. For instance, compound 5 (tetracyclononane; NC = 9, BP = 439.75 K, FP = 323.27 K, Ese = 63.46 kcal/mol) displays higher BP and FP than compound 18 (5-ethylnorbornane; NC = 9, BP = 424.07 K, FP = 307.30 K, Ese = 12.13 kcal/mol), despite identical NC values, placing 5 inside the boundary and 18 outside. This indicates that constrained topologies with moderate strain can enhance intermolecular interactions, elevating volatility and ignition thresholds. In contrast, excessive strain (>60 kcal/mol), typically arising from multiple small rings, reduces both BP and FP by limiting effective NC and molecular flexibility. Such effects are evident in compound 7 (quadricyclane; NC = 7, BP = 386.89 K, FP = 272.75 K, Ese = 78.59 kcal/mol), which fails to meet BP/FP requirements despite satisfying other fuel criteria and being widely researched as a potential aviation fuel [51,55]. Thus, a balance between molecular size, ring topology, and moderate strain emerges as the key design principle for identifying viable polycycloalkane fuel candidates, as determined by this study. These findings indicate the dual role of Ese in polycyclic fuel performance. Moderate strain improves molecular rigidity and elevates BP and FP, while excessive strain compromises both properties. Polycyclic structures dominated by five-membered rings, with controlled incorporation of three- and four-membered units, strike an effective balance between energy density and operational safety (BP&FP), making them strong candidates for SAF design. Figure 6 and Figure 7 provide a structural rationale for targeted molecular screening.
+
+While this study emphasizes the influence of Ese on volatility, ignition, and stability, it is essential to acknowledge that real-world fuel performance also depends on additional parameters beyond the scope of this work. The cyclic and strained nature of the candidate molecules is particularly relevant, as literature reports that highly strained polycyclic structures can alter reaction pathways, rupture C–C bonds, and thereby promote the formation of polycyclic aromatic hydrocarbons (PAHs) and increase soot production during combustion [66]. For example, while compounds like 1 (pentacyclododecane) and 2 (THTCPD) exhibit promising energy, BP, and FP profiles, their complex polycyclic structures may act as precursors to PAHs, resulting in undesirable sooting behavior in engines. Similarly, strained cyclic motifs, while beneficial for energy density, can influence ignition kinetics and flame propagation in ways that are not captured by the current screening. Incorporating these combustion considerations into future ML- and DFT-based frameworks will be essential for a more accurate assessment of fuel suitability. DFT studies of high-potential molecules, such as 6 (JP-10), could provide additional insight into internal bond strain and reactivity, complementing empirical observations and guiding the design of SAFs.
+
+In addition to combustion performance, cold-flow properties, such as FrP and viscosity, are critical determinants of aviation fuel suitability [3,12,35]. Molecular compactness, ring size, and rigidity strongly affect freezing behavior, potentially disqualifying otherwise promising candidates [18]. For instance, while compound 6 (JP-10, exo-THDCPD) remains suitable with a FrP of 194.15 K [67], its isomer endo-THDCPD solidifies at 350.15 K, making it unsuitable [18,67] for aviation fuel. Likewise, compact molecules such as 5 (tetracyclononane) may exhibit elevated FrP, which can limit performance in extreme cold, despite meeting volatility and ignition criteria. These trade-offs support the importance of integrating cold-flow analysis into future screening frameworks, using computational modeling and ML methods combined with quantum chemistry to ensure that candidate molecules meet the full spectrum of operational requirements for SAFs.
+
+4. Conclusions
+
+This study demonstrates the utility of combining DFT with ML to study fuel properties of strained polycycloalkanes as potential HED SAF. Machine learning using SVR models provided fast and reasonably accurate predictions of BP and FP, enabling the preliminary screening of candidate molecules. Thirteen (approximately 65%) of the compounds, including JP-10, met key volatility and ignition criteria. Although Ese showed no direct correlation with fuel suitability, the limited dataset suggests that promising candidates may cluster below approximately 60 kcal/mol in Ese, indicating a potential balance between energy content and stability that warrants further investigation. The identified C9–C15 compounds, predominantly five-membered ring structures, fall within the typical Jet A range for energy, BP, and FP, suggesting practical potential in aviation fuel. However, these results represent only an initial computational screening, and the actual viability of these candidates as SAFs will depend on a thorough evaluation of their combustion behavior and cold-flow properties. Overall, this work illustrates how integrating ML-based screening with quantum-level analysis can provide a cost-effective and scientifically grounded approach for the early-stage assessment of SAF candidates.
+
+Supplementary Materials
+
+The following supporting information can be downloaded at https://www.mdpi.com/article/10.3390/en18195253/s1. Table S1: Contribution of strain energy by various single rings; Table S2: Strain energy of polycycloalkanes is presented in Figure 1 (main text) using the ring superposition method.; Table S3: Reactions employed in the isodesmic method for strain energy calculation; Table S4: The energies and heats of formation of linear hydrocarbons involving an isodesmic equation using the B3PW91/aug-cc-pVTZ method; Table S5: Contribution of various functional groups to the boiling point and flash point; Table S6: Summary of selected molecular descriptors used for BP and FP property prediction; Table S7: Optimized SVR hyperparameters for BP and FP prediction; Table S8: Model performance under 5-fold cross-validation with three repetitions on training data; Table S9: Sensitivity analysis of model performance over 100 bootstrap iterations; Table S10: Comparison of BP and FP of selected strained polycycloalkanes estimated by GC and ML methods; Figure S1: Relation between descriptors (Ipc) and the number of carbon (NC); Figure S2: Variation of BP and FP with the number of carbons in polycycloalkanes. References [68,69,70,71,72] are cited in the Supplementary Materials.
+
+Author Contributions
+
+Conceptualization, F.W.; writing—original draft, D.R.; methodology, D.R. and V.V.; visualization, D.R. and F.W.; analysis, D.R. and F.W.; writing—review and editing, D.R. and F.W.; project administration, F.W.; supervision, F.W. and V.V.; partial financial support, Y.Y. All authors have read and agreed to the published version of the manuscript.
+
+Funding
+
+This research was partly supported by scholarships from the Commonwealth Scientific and Industrial Research Organization (CSIRO, Australia, 50100088) and the Australian Defense Science Institute (DSI, RHD-0276), an initiative of the State Government of Victoria.
+
+Data Availability Statement
+
+The original contributions presented in this study are included in the article/Supplementary Materials. Further inquiries can be directed to the corresponding author.
+
+Acknowledgments
+
+D.R. acknowledges the Tuition Fee Scholarship of the Swinburne University of Technology. The authors thank the supercomputing facilities provided by Swinburne University of Technology Supercomputing Facilities (OzSTAR and Ngarrgu Tindebeek, which means “Knowledge of the Void” in the Moondani Toombadool language).
+
+Conflicts of Interest
+
+Author Yunxia Yang was employed by CSIRO Energy. The remaining authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest. The CSIRO Energy had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript, or in the decision to publish the results.
+
+References
+
+Schapova, N. Electric Aeroplanes Are Already in Our Skies, So When Will They Become the Norm? Available online: https://www.abc.net.au/news/2024-05-05/electric-aeroplanes-aviation-industry-shrink-carbon-emissions/103796074 (accessed on 20 March 2025).
+
+Rijal, D.; Vasilyev, V.; Wang, F. Advancing Sustainable Aviation Fuel Design: Machine Learning for High-Energy-Density Liquid Polycyclic Hydrocarbons. Energy Fuels 2025, 39, 3243–3255. [Google Scholar] [CrossRef]
+
+Wang, F.; Rijal, D. Sustainable Aviation Fuels for Clean Skies: Exploring the Potential and Perspectives of Strained Hydrocarbons. Energy Fuels 2024, 38, 4904–4920. [Google Scholar] [CrossRef]
+
+Hart, A.; Onwudili, J.A.; Yildirir, E.; Hashemnezhad, S.E. Energy-dense sustainable aviation fuel-range hydrocarbons from cyclohexanone as a biomass-derived feedstock via sequential catalytic aldol condensation and hydrodeoxygenation. Chem. Eng. J. 2025, 509, 161494. [Google Scholar] [CrossRef]
+
+Kramer, S.; Andac, G.; Heyne, J.; Ellsworth, J.; Herzig, P.; Lewis, K.C. Perspectives on fully synthesized sustainable aviation fuels: Direction and opportunities. Front. Energy Res. 2022, 9, 782823. [Google Scholar] [CrossRef]
+
+ASTM D7566-22; Standard Specification for Aviation Turbine Fuel Containing Synthesized Hydrocarbons. ASTM International: West Conshohocken, PA, USA, 2022.
+
+Rosales Calderon, O.; Tao, L.; Abdullah, Z.; Moriarty, K.; Smolinski, S.; Milbrandt, A.; Talmadge, M.; Bhatt, A.; Zhang, Y.; Ravi, V. Sustainable Aviation Fuel (SAF) State-of-Industry Report: State of SAF Production Process; National Renewable Energy Laboratory (NREL): Golden, CO, USA, 2024. [Google Scholar] [CrossRef]
+
+Romero-Izquierdo, A.G.; Guzmán-Martínez, C.E.; Lara-Montaño, O.D.; Hernández, S.; Gutiérrez-Antonio, C. Advanced Biorefineries to Produce Sustainable Aviation Fuel. In Sustainable Aviation Fuels: Recent Advances and Future Challenges; Springer: Berlin/Heidelberg, Germany, 2025; pp. 229–249. [Google Scholar]
+
+John, S.U.; Onu, C.E.; Ezechukwu, C.M.-J.; Nwokedi, I.C.; Onyenanu, C.N. Multi-product biorefineries for biofuels and value-added products: Advances and future perspectives. Acad. Green Energy 2025, 2. [Google Scholar] [CrossRef]
+
+Kosir, S.; Heyne, J.; Graham, J. A machine learning framework for drop-in volume swell characteristics of sustainable aviation fuel. Fuel 2020, 274, 117832. [Google Scholar] [CrossRef]
+
+Landera, A.; Bambha, R.P.; Hao, N.; Desai, S.P.; Moore, C.M.; Sutton, A.D.; George, A. Building structure-property relationships of cycloalkanes in support of their use in sustainable aviation fuels. Front. Energy Res. 2022, 9, 771697. [Google Scholar] [CrossRef]
+
+Ismael, M.A.; El-Adawy, M.; Farooqi, A.S.; Hamdy, M.; Shahid, M.Z.; Elserfy, Z.; Nemitallah, M.A. Sustainable Aviation Fuel: Operational Challenges, Techno-economics, and Life Cycle Analysis. Energy Fuels 2025, 39, 13848–13878. [Google Scholar] [CrossRef]
+
+Battin-Leclerc, F.; Simmie, J.M.; Blurock, E. Cleaner Combustion. Developing Detailed Chemical Kinetic Models; Series: Green Energy and Technology; Springer International Publishing AG: Cham, Switzerland, 2013. [Google Scholar]
+
+Muldoon, J.A.; Harvey, B.G. Bio-based cycloalkanes: The missing link to high-performance sustainable jet fuels. ChemSusChem 2020, 13, 5777–5807. [Google Scholar] [CrossRef]
+
+Wang, F. Determination of Outer Valence Space of Norbornadiene: A Pathway to Understanding Strained Hydrocarbon Fuels. Energy Fuels 2025, 39, 3508–3516. [Google Scholar] [CrossRef]
+
+Wang, F.; Chong, D.P. Polycycloalkanes at the Helm: Exploring high energy density eFuel with norbornyl derivatives. Mater. Today Chem. 2024, 41, 102264. [Google Scholar] [CrossRef]
+
+Fang, Z.; Wen, C.; Zhang, X.; Chen, L.; Zhang, Q.; Liu, J.; Ma, L. Advance, challenge, and outlook of carbon-increasing strategies for producing sustainable high-energy-density jet fuels from lignocellulosic derivatives. Innov. Energy 2025, 2, 100093. [Google Scholar] [CrossRef]
+
+Rijal, D.; Vasilyev, V.; Yang, Y.; Wang, F. Insights of Density Functional Theory into JP-10 Tetrahydrodicyclopentadiene Fuel Properties. Processes 2025, 13, 543. [Google Scholar] [CrossRef]
+
+ASTM D4054-19; Practice for Qualification and Approval of New Aviation Turbine Fuels and Fuel Additives. ASTM International: West Conshohocken, PA, USA, 2019.
+
+Karton, A.; De Oliveira, M.T. Good Practices in Database Generation for Benchmarking Density Functional Theory. Wiley Interdiscip. Rev. Comput. Mol. Sci. 2025, 15, e1737. [Google Scholar] [CrossRef]
+
+Rijal, D. Predicting the properties of sustainable aviation fuels. Nat. Rev. Clean Technol. 2025, 1, 312. [Google Scholar] [CrossRef]
+
+Sundararajan, S. Python for Data Analytics. In Multivariate Analysis and Machine Learning Techniques; Springer: Berlin/Heidelberg, Germany, 2025; pp. 29–80. [Google Scholar]
+
+Joback, K.G.; Reid, R.C. Estimation of pure-component properties from group-contributions. Chem. Eng. Commun. 1987, 57, 233–243. [Google Scholar] [CrossRef]
+
+Alibakhshi, A.; Mirshahvalad, H.; Alibakhshi, S. A modified group contribution method for accurate prediction of flash points of pure organic compounds. Ind. Eng. Chem. Res. 2015, 54, 11230–11235. [Google Scholar] [CrossRef]
+
+Dragojlovic, V. Conformational analysis of cycloalkanes. ChemTexts 2015, 1, 14. [Google Scholar] [CrossRef]
+
+Wiberg, K.B. Strained Hydrocarbons: Structures, Stability, and Reactivity; Wiley Online Library: Hoboken, NJ, USA, 2004; pp. 717–740. [Google Scholar]
+
+Khoury, P.R.; Goddard, J.D.; Tam, W. Ring strain energies: Substituted rings, norbornanes, norbornenes and norbornadienes. Tetrahedron 2004, 60, 8103–8112. [Google Scholar] [CrossRef]
+
+Rablen, P.R. A Procedure for Computing Hydrocarbon Strain Energies Using Computational Group Equivalents, with Application to 66 Molecules. Chemistry 2020, 2, 347–360. [Google Scholar] [CrossRef]
+
+Hearn, J.C.; Rice, B.M.; Barnes, B.C.; Chung, P.W. Predicting Hydrocarbon Strain Energy via a Group Equivalent Machine Learning Approach. J. Phys. Chem. A 2024, 128, 7489–7497. [Google Scholar] [CrossRef]
+
+Ponomarev, D.; Takhistov, V. What are isodesmic reactions? J. Chem. Educ. 1997, 74, 201. [Google Scholar] [CrossRef]
+
+Chan, B.; Collins, E.; Raghavachari, K. Applications of isodesmic-type reactions for computational thermochemistry. Wiley Interdiscip. Rev. Comput. Mol. Sci. 2021, 11, e1501. [Google Scholar] [CrossRef]
+
+Dutra, F.R.; Custodio, R. Comparative assessment of the direct and isodesmic methods for pKa calculation of monocarboxylic acids using density functional theory. Comput. Theor. Chem. 2024, 1237, 114629. [Google Scholar] [CrossRef]
+
+Shiekh, B.A. Hierarchy of commonly used DFT methods for predicting the thermochemistry of Rh-mediated chemical transformations. ACS Omega 2019, 4, 15435–15443. [Google Scholar] [CrossRef]
+
+Expanding the Limit of Computation Chemistry. Gaussian 16. Available online: https://gaussian.com/gaussian16/ (accessed on 15 March 2025).
+
+Aviation Fuels Technical Review; Chevron Corp. 2007. Available online: https://www.chevron.com/-/media/chevron/operations/documents/aviation-tech-review.pdf (accessed on 20 March 2025).
+
+Rücker, G.; Rücker, C. On topological indices, boiling points, and cycloalkanes. J. Chem. Inf. Comput. Sci. 1999, 39, 788–802. [Google Scholar] [CrossRef]
+
+Li, R.; Herreros, J.M.; Tsolakis, A.; Yang, W. Machine learning-quantitative structure property relationship (ML-QSPR) method for fuel physicochemical properties prediction of multiple fuel types. Fuel 2021, 304, 121437. [Google Scholar] [CrossRef]
+
+Rumble, J. CRC Handbook of Chemistry and Physics; CRC Press: Boca Raton, FL, USA, 2017. [Google Scholar]
+
+NIST Chemistry WebBook. Available online: http://webbook.nist.gov (accessed on 20 March 2025).
+
+Yaws, C.L.; Gabbula, C. Yaws"" Handbook of Thermodynamic and Physical Properties of Chemical Compounds; Knovel: New York, NY, USA, 2003. [Google Scholar]
+
+Landrum, G. RDKit: Open-Source Cheminformatics. Available online: http://www.rdkit.org (accessed on 20 March 2025).
+
+Moriwaki, H.; Tian, Y.-S.; Kawashita, N.; Takagi, T. Mordred: A molecular descriptor calculator. J. Cheminform. 2018, 10, 4. [Google Scholar] [CrossRef]
+
+Comesana, A.E.; Huntington, T.T.; Scown, C.D.; Niemeyer, K.E.; Rapp, V.H. A systematic method for selecting molecular descriptors as features when training models for predicting physiochemical properties. Fuel 2022, 321, 123836. [Google Scholar] [CrossRef]
+
+Dodge, Y. The Concise Encyclopedia of Statistics; Springer Science & Business Media: Berlin/Heidelberg, Germany, 2008. [Google Scholar]
+
+Zhong, Y.; Liu, F.; Huang, G.; Zhang, J.; Li, C.; Ding, Y. Thermogravimetric experiments-based prediction of biomass pyrolysis behavior: A comparison of typical machine learning regression models in Scikit-learn. Mar. Pollut. Bull. 2024, 202, 116361. [Google Scholar] [CrossRef]
+
+Üstün, C.E.; De Freitas, R.D.S.M.; Okafor, E.C.; Shahbakhti, M.; Jiang, X.; Paykani, A. Machine Learning Applications for Predicting Fuel Ignition and Flame Properties: Current Status and Future Perspectives. Energy Fuels 2025, 39, 13281–13314. [Google Scholar] [CrossRef]
+
+Sun, Y.; Ding, S.; Zhang, Z.; Jia, W. An improved grid search algorithm to optimize SVR for prediction. Soft Comput. 2021, 25, 5633–5644. [Google Scholar] [CrossRef]
+
+Sontakke, S.A.; Lohokare, J.; Dani, R.; Shivagaje, P. Classification of cardiotocography signals using machine learning. In Proceedings of SAI Intelligent Systems Conference; Springer: Berlin/Heidelberg, Germany, 2018; pp. 439–450. [Google Scholar] [CrossRef]
+
+Tian, W.; Song, J.; Li, Z.; de Wilde, P. Bootstrap techniques for sensitivity analysis and model selection in building thermal performance analysis. Appl. Energy 2014, 135, 320–328. [Google Scholar] [CrossRef]
+
+Hetland, M.L.; Nelli, F. Activity 1: Data Analysis with Pandas, Matplotlib, and Seaborn. In Beginning Python: From Novice to Professional; Springer: Berlin/Heidelberg, Germany, 2024; pp. 487–504. [Google Scholar]
+
+Hall, H.; Smith, C.; Baldt, J. Enthalpies of formation of nortricyclene, norbornene, norbornadiene, and quadricyclane. J. Am. Chem. Soc. 1973, 95, 3197–3201. [Google Scholar] [CrossRef]
+
+Politzer, P.; Seminario, J.M. Computational determination of the structures and some properties of tetrahedrane, prismane, and some of their aza analogs. J. Phys. Chem. 1989, 93, 588–592. [Google Scholar] [CrossRef]
+
+Consumer Chemistry. Available online: https://wou.edu/chemistry/courses/online-chemistry-textbooks/ch105-consumer-chemistry/ch105-chapter-7/ (accessed on 20 March 2025).
+
+Wen, L.; Shan, S.; Lai, W.; Shi, J.; Li, M.; Liu, Y.; Liu, M.; Zhou, Z. Accelerating the Design of High-Energy-Density Hydrocarbon Fuels by Learning from the Data. Molecules 2023, 28, 7361. [Google Scholar] [CrossRef]
+
+Ye, Y.; Cai, J.; Tang, W.; Li, Y.; Li, D.; Li, X.; Xu, M.; Zhang, C.; Zou, J.; Yue, C. An experimental and kinetic study of quadricyclane autoignition at high temperatures. Combust. Flame 2025, 271, 113813. [Google Scholar] [CrossRef]
+
+Descriptor List. Available online: http://mordred-descriptor.github.io/documentation/master/descriptors.html (accessed on 25 March 2025).
+
+Bonchev, D.; Trinajstić, N. Information theory, distance matrix, and molecular branching. J. Chem. Phys. 1977, 67, 4517–4533. [Google Scholar] [CrossRef]
+
+Owens, C.B.; Mathew, N.; Olaveson, T.W.; Tavenner, J.P.; Kober, E.M.; Tucker, G.J.; Hart, G.L.; Homer, E.R. Feature engineering descriptors, transforms, and machine learning for grain boundaries and variable-sized atom clusters. npj Comput. Mater. 2025, 11, 21. [Google Scholar] [CrossRef]
+
+Guidechem. Cycloundecane. Available online: https://www.guidechem.com/encyclopedia/cycloundecane-dic285156.html#Properties (accessed on 20 August 2025).
+
+Galli, C.; Mandolini, L. The role of ring strain on the ease of ring closure of bifunctional chain molecules. Eur. J. Org. Chem. 2000, 2000, 3117–3125. [Google Scholar] [CrossRef]
+
+Tufail, S.; Riggs, H.; Tariq, M.; Sarwat, A.I. Advancements and challenges in machine learning: A comprehensive review of models, libraries, applications, and algorithms. Electronics 2023, 12, 1789. [Google Scholar] [CrossRef]
+
+Rakhimbekova, A.; Madzhidov, T.I.; Nugmanov, R.I.; Gimadiev, T.R.; Baskin, I.I.; Varnek, A. Comprehensive analysis of applicability domains of QSPR models for chemical reactions. Int. J. Mol. Sci. 2020, 21, 5542. [Google Scholar] [CrossRef]
+
+Baran, O.; Karathanassis, I.K.; Pickett, L.M.; Manin, J.; Gavaises, M. High-Speed Optical Imaging of Cavitation and Spray Dynamics for Sustainable Aviation Fuels. Energy Fuels 2025, 39, 11912–11925. [Google Scholar] [CrossRef]
+
+Slovokhotov, Y.L.; Batsanov, A.S.; Howard, J.A. Molecular van der Waals symmetry affecting bulk properties of condensed phases: Melting and boiling points. Struct. Chem. 2007, 18, 477–491. [Google Scholar] [CrossRef]
+
+Gundekari, S.; Manupathi, A.; Chandu, S.; Varkolu, M.; Kumar, P.; Karmee, S.K. Catalytic hydroconversion of lignin-based aromatics to aviation fuels—A review. Biomass Convers. Biorefinery 2025, 15, 6557–6583. [Google Scholar] [CrossRef]
+
+Dong, T.; Hao, Z.; Zhang, Y.; Zhang, Y. Mechanistic insights into the chemical structural changes of lignite on potential formation of the polycyclic aromatic hydrocarbons. Chemosphere 2022, 307, 135916. [Google Scholar] [CrossRef]
+
+Zarezin, D.P.; Rudakova, M.A.; Bykov, V.I.; Bermeshev, M.V. Metal chlorides supported on silica as efficient catalysts for selective isomerization of endo-tetrahydrodicyclopentadiene to exo-tetrahydrodicyclopentadiene for JP-10 producing. Fuel 2021, 288, 119579. [Google Scholar] [CrossRef]
+
+Shi, C.; Borchardt, T.B. JRgui: A Python program of Joback and Reid method. ACS Omega 2017, 2, 8682–8688. [Google Scholar] [CrossRef]
+
+Cohen, C.A.; Muessig, C.W. Jet and Rocket Fuel. Google Patents 3381046, 30 April 1968. [Google Scholar]
+
+Wucherer, E.; Wilson, A. Chemical, Physical and Hazards Properties of Quadricyclane. NASA. 1998. (19980205776). Available online: https://apps.dtic.mil/sti/tr/pdf/ADA345589.pdf (accessed on 2 October 2025).
+
+ChemSrc. Available online: https://www.chemsrc.com/en/baike/675791.html (accessed on 25 June 2025).
+
+PubChem. Explore Chemistry. Available online: https://pubchem.ncbi.nlm.nih.gov/ (accessed on 20 March 2025).
+
+Figure 1. Comparison of strain energy (Ese) values for polycycloalkanes estimated using the RS method and DFT-IR calculations, along with their molecular structures for reference. Here, 1 (pentacyclododecane), 2 (THTCPD), 3 (pentacycloundecane), 4 (tetracycloundecane), 5 (tetracyclononane), 6 (exo-THDCPD, JP-10), 7 (quadricyclane), 8 (tricyclooctane), 9 (tricyclononane), 10 (prismane), 11 (tricycloheptane), 12 (tricycloheptane), 13 (bicyclopentane), 14 (bicyclobutyl), 15 (spirododecane), 16 (spirodecane), 17 (trimethyltricyclooctane), 18 (ethylnorbornane), 19 (camphane), and 20 (pinane) represent the polycycloalkanes investigated in this study. Detailed IUPAC names and numerical results are provided in Tables S2 and S3 of the SM.
+
+Figure 2. Distribution of cycloalkanes in the property dataset for (a) BP and (b) FP prediction using an SVR algorithm. In each panel, the left-hand figure shows the total carbon number distribution (BP: 3–21; FP: 3–20), and the right-hand figure shows the ring members (3–12).
+
+Figure 3. Importance score of the ten selected molecular descriptors for the (a) BP prediction model and (b) FP prediction model identified through Spearman correlation filtering, followed by recursive feature elimination (RFE) using a random forest estimator.
+
+Figure 4. Variation in BP with the size of the pure ring property dataset, which is light distillates.
+
+Figure 5. Performance of the trained models with SVR algorithms on training, test, and validation sets using an 80:10:10 split for (a) BP prediction and (b) FP prediction. A larger training set was used to capture more information from the limited data.
+
+Figure 6. Plot of FP versus BP for the studied polycycloalkanes. Compounds satisfying both FP and BP requirements of Jet fuel are enclosed within the green box.
+
+Figure 7. Structural comparison of thirteen potential polycycloalkanes, showing differences in BP and FP as predicted by GC and ML methods.
+
+Table 1. Validation of calculated Ese against reference values using RS and DFT-IR methods (Kcal/mol).
+
+PolycycloalkanesRSDFT-IRRef∆
+
+(RS—Ref) % ∆
+
+(DFT-IR—Ref) %7 (quadricyclane)93.48 78.59 78.70 *18.780.1410 (prismane)134.11126.69 128.00 #4.771.02
+
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
+
+© 2025 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).
+
+Share and Cite
+
+MDPI and ACS Style
+
+Rijal, D.; Vasilyev, V.; Yang, Y.; Wang, F. Evaluating Fuel Properties of Strained Polycycloalkanes for High-Performance Sustainable Aviation Fuels. Energies 2025, 18, 5253. https://doi.org/10.3390/en18195253
+
+AMA Style
+
+Rijal D, Vasilyev V, Yang Y, Wang F. Evaluating Fuel Properties of Strained Polycycloalkanes for High-Performance Sustainable Aviation Fuels. Energies. 2025; 18(19):5253. https://doi.org/10.3390/en18195253
+
+Chicago/Turabian Style
+
+Rijal, Dilip, Vladislav Vasilyev, Yunxia Yang, and Feng Wang. 2025. ""Evaluating Fuel Properties of Strained Polycycloalkanes for High-Performance Sustainable Aviation Fuels"" Energies 18, no. 19: 5253. https://doi.org/10.3390/en18195253
+
+APA Style
+
+Rijal, D., Vasilyev, V., Yang, Y., & Wang, F. (2025). Evaluating Fuel Properties of Strained Polycycloalkanes for High-Performance Sustainable Aviation Fuels. Energies, 18(19), 5253. https://doi.org/10.3390/en18195253
+
+Note that from the first issue of 2016, this journal uses article numbers instead of page numbers. See further details here.
+
+Article Metrics
+
+No
+
+No
+
+Article metric data becomes available approximately 24 hours after publication online.",https://pub.mdpi-res.com/energies/energies-18-05253/article_deploy/html/images/energies-18-05253-g001-550.jpg?1759480483,N,,2025-10-03 05:56:44.995736
+,,2025-10-03 07:03:57+00:00,EnkiAI - Find the right insight,Plug Power Aviation 2025: Fueling SAF with Electrolyzers - EnkiAI,Erhan Eren,,,,,https://enkiai.com/plug-power-aviation-2025-fueling-saf-with-electrolyzers,"Plug Power’s 2025 Aviation Play: How SAF Electrolyzers Are Fueling Its Market Entry Industry Adoption: Plug Power’s Strategic Pivot to Aviation Fuel Production in 2025 Between 2021 and 2024, Plug Power’s primary market was hydrogen fuel cells for material handling equipment.
+Plug Power has executed a decisive strategic pivot, repositioning itself as a critical enabler of aviation decarbonization, not through direct propulsion, but by supplying the core technology for Sustainable Aviation Fuel (SAF) production.
+The project is specifically aimed at producing sustainable aviation fuel (SAF), green urea, and green diesel.
+GenEco: The Electrolyzer That’s Doing Real Things Geography: Plug Power’s Global Expansion into Aviation-Adjacent Markets Prior to 2025, Plug Power’s geographic footprint was heavily concentrated in North America, driven by its core material handling business.
+In 2025, Plug Power pivoted its strategy to focus on becoming a key technology supplier for the production of Sustainable Aviation Fuel (SAF).","Plug Power’s 2025 Aviation Play: How SAF Electrolyzers Are Fueling Its Market Entry
+
+Industry Adoption: Plug Power’s Strategic Pivot to Aviation Fuel Production in 2025
+
+Between 2021 and 2024, Plug Power’s primary market was hydrogen fuel cells for material handling equipment. Its connection to aviation was indirect and speculative, such as its technology being used in test programs by startups like the now-defunct Universal Hydrogen. This period established the company’s core competency in Proton Exchange Membrane (PEM) technology but kept it largely outside the mainstream aerospace conversation. The year 2025 marks a dramatic inflection point. Plug Power has executed a decisive strategic pivot, repositioning itself as a critical enabler of aviation decarbonization, not through direct propulsion, but by supplying the core technology for Sustainable Aviation Fuel (SAF) production.
+
+This shift is evidenced by a series of large-scale commercial commitments. The cornerstone of this new strategy is a 2 GW electrolyzer deal with Allied Green Ammonia for a facility in Uzbekistan explicitly designed to produce SAF. This is not an isolated move; the company is also engaged in over 300 MW of SAF projects in Europe with Arcadia and is delivering a 100 MW system to Galp’s Sines Refinery in Portugal. This pattern demonstrates a clear strategy: focus on the immediate, commercially viable market of producing green hydrogen for SAF. This approach allows Plug Power to generate near-term revenue and forge partnerships with major industrial players, de-risking its aviation ambitions. The key opportunity is capturing value across the entire hydrogen-for-aviation value chain, from fuel production to end-use. However, this aggressive expansion introduces a significant new threat: execution risk. The company’s credibility now hinges on its ability to deliver on these massive, multi-gigawatt-scale projects.
+
+Table: Plug Power Strategic Investment
+
+Partner / Project Time Frame Details and Strategic Purpose Source U.S. Department of Energy (DOE) January 2025 Received a conditional commitment for a $1.66 billion loan guarantee to construct and develop up to six green hydrogen production facilities. This funding is critical for building the domestic infrastructure needed to supply green hydrogen for applications like SAF production. US Backs Plug Power’s $1.66bn clean hydrogen fuel project
+
+Table: Plug Power Strategic Partnerships for Aviation and Hydrogen Ecosystems
+
+Partner / Project Time Frame Details and Strategic Purpose Source GH2 Global September 2025 A strategic partnership to develop and deploy hydrogen-powered logistics hubs across Brazil. The focus includes zero-emission fuel cell systems for material handling and heavy-duty transport, which are key components of the airport logistics ecosystem. Plug Power Teams up with GH2 to Deploy Hydrogen … Allied Green Ammonia June 2025 Expanded collaboration with a new deal to supply 2 GW of PEM electrolyzer technology for a new facility in Uzbekistan. The project is specifically aimed at producing sustainable aviation fuel (SAF), green urea, and green diesel. Plug Power and Allied Green Expand Strategic … Arcadia May 2025 Announced engagement in over 300 MW of Sustainable Aviation Fuel (SAF) projects with Arcadia in Denmark and France, supplying critical hydrogen production technology to the European SAF market. GenEco: The Electrolyzer That’s Doing Real Things
+
+Geography: Plug Power’s Global Expansion into Aviation-Adjacent Markets
+
+Prior to 2025, Plug Power’s geographic footprint was heavily concentrated in North America, driven by its core material handling business. The company’s activities were largely domestic, focused on warehouse and logistics operations within the United States.
+
+The period from January 2025 to today reveals a rapid and deliberate international expansion, directly tied to its new SAF and large-scale hydrogen strategy. Europe has emerged as a primary target, with Plug Power securing a 100 MW electrolyzer project at Galp’s refinery in Portugal and engaging in over 300 MW of SAF-related projects in Denmark and France with Arcadia. This shows the company is targeting regions with strong regulatory support for decarbonization and established industrial partners. The most significant move is into Central Asia with the 2 GW electrolyzer deal in Uzbekistan, a government-backed project that plants Plug Power’s flag in an emerging energy export hub. Simultaneously, the partnership with GH2 Global in Brazil signals an expansion of its core logistics business into South America, targeting the broader ecosystem that includes airports. This geographic diversification is not random; it follows global capital and policy aimed at green hydrogen production, reducing reliance on the US market alone. The risk, however, is the increased exposure to geopolitical and regional economic instabilities, particularly with a massive project in a location like Uzbekistan.
+
+Technology Maturity: From Niche Fuel Cells to Gigawatt-Scale Electrolyzers
+
+Between 2021 and 2024, Plug Power’s technology story was centered on the maturity of its PEM fuel cells for the low-power demands of forklifts. Its PEM electrolyzer technology, while proven, had not yet been deployed at a massive, industrial scale. The use of its fuel cells in the now-defunct Universal Hydrogen’s test aircraft was a notable but early-stage, speculative application, representing a proof-of-concept for aviation propulsion rather than a commercially ready product.
+
+Starting in 2025, the narrative of technology maturity has fundamentally shifted from fuel cells for mobility to electrolyzers for fuel production. The technology being scaled is not the in-aircraft propulsion system, but the foundational green hydrogen production equipment. The live customer demonstrations of its 1 MW and 5 MW GenEco electrolyzers in May 2025 served as a prelude to this scale-up. The subsequent announcements of the 100 MW project delivery to Galp in Portugal and the massive 2 GW deal in Uzbekistan are the ultimate validation points. These projects prove that Plug Power’s PEM electrolyzer technology has moved beyond the pilot phase and is now being deployed at a commercial scale previously unseen for the company. In contrast, the direct application of its fuel cells for commercial aircraft propulsion remains speculative. The company’s most mature and commercially impactful technology for the aviation sector today is the electrolyzer—the key that unlocks green hydrogen for SAF.
+
+Table: SWOT Analysis of Plug Power’s Aviation Strategy
+
+SWOT Category 2021 – 2024 2025 – Today What Changed / Validated Strength Established PEM fuel cell technology and leadership in the material handling market. Leveraging core PEM expertise to secure massive-scale electrolyzer deals (e.g., 2 GW with Allied Green Ammonia for SAF). Strong government backing via a $1.66B DOE loan guarantee. Validated the strategic pivot from a niche mobility provider to a key technology supplier for industrial-scale decarbonization and SAF production. Weakness Primarily focused on a single market (material handling) with limited exposure to the broader energy transition. High dependency on government incentives (IRA’s Section 45V credits) and execution of large, complex projects. Lacks a flagship partnership with a major aerospace OEM like Airbus or Boeing for direct propulsion. The business model’s success is now explicitly tied to political stability regarding clean energy incentives and the immense challenge of executing gigawatt-scale projects. Opportunity Potential to leverage PEM technology for new hydrogen applications and markets. Tapping into the explosive growth of the aviation fuel cell and SAF market (projected to reach $24.63B by 2035). Generating near-term revenue by supplying the SAF value chain. The opportunity crystallized from a general “hydrogen economy” concept into a specific, high-growth, and commercially tangible vertical: providing electrolyzers for SAF. Threat Competition from other fuel cell manufacturers in the material handling space. Significant execution risk on large-scale international projects (e.g., Uzbekistan). Potential for political headwinds to undermine critical tax credits (Section 45V). Loss of early aviation testbeds (e.g., Universal Hydrogen’s failure). The scale of its ambitions has introduced commensurate risks. Project execution and political policy stability have become the primary threats to its growth strategy, far outweighing niche market competition.
+
+Forward-Looking Insights and Summary
+
+The data from 2025 signals that Plug Power has firmly committed to a pragmatic, two-pronged aviation strategy, with an immediate focus on the SAF supply chain. The year ahead will be a test of execution. Market actors should closely watch for progress updates on the 2 GW Uzbekistan project and the 100 MW Galp refinery deployment; successful commissioning of these facilities will be the most potent validation of the company’s ability to deliver at scale.
+
+Another critical signal to monitor is the finalization and political durability of the IRA’s Section 45V hydrogen production tax credit. This incentive is the financial cornerstone for Plug Power’s domestic expansion funded by the $1.66 billion DOE loan. Any dilution or instability in this policy poses a direct threat to the economic viability of its U.S. projects.
+
+While the electrolyzer business for SAF is gaining significant traction, the direct propulsion side of its strategy remains a long-term, speculative upside. The next major milestone for investors would be the announcement of a formal development partnership with a major aerospace OEM like Airbus or Boeing. Without it, Plug Power’s role in aviation will likely remain that of a crucial fuel infrastructure provider rather than an integrated aerospace technology partner. For now, the company’s most bankable contribution to decarbonizing flight is on the ground, producing the green hydrogen that will power the sustainable fuels of tomorrow.
+
+Frequently Asked Questions
+
+What is Plug Power’s primary strategy for the aviation market in 2025?
+
+In 2025, Plug Power pivoted its strategy to focus on becoming a key technology supplier for the production of Sustainable Aviation Fuel (SAF). Instead of focusing on in-aircraft propulsion, the company is now supplying large-scale PEM electrolyzers to produce the green hydrogen necessary for creating SAF. This approach allows them to generate near-term revenue and partner with major industrial players.
+
+What are the biggest risks associated with Plug Power’s new strategy?
+
+The primary risks are execution and policy dependence. The company faces significant ‘execution risk’ in delivering on massive, multi-gigawatt international projects like the 2 GW facility in Uzbekistan. Additionally, its business model is highly dependent on the stability of government incentives, such as the IRA’s Section 45V hydrogen tax credit and the $1.66 billion DOE loan guarantee, which could be affected by political changes.
+
+What major projects demonstrate this new focus on SAF production?
+
+Key projects include a 2 GW electrolyzer deal with Allied Green Ammonia for a SAF facility in Uzbekistan, over 300 MW of SAF-related projects with Arcadia in Europe, and the delivery of a 100 MW electrolyzer system to Galp’s refinery in Portugal. These large-scale commitments highlight the company’s shift toward supplying the SAF value chain.
+
+How has Plug Power’s technology focus changed from 2024 to 2025?
+
+Before 2025, the company’s technology focus was on PEM fuel cells for material handling equipment like forklifts. In 2025, the focus has shifted to the industrial-scale deployment of its PEM electrolyzer technology. The validation point is moving from fuel cells in vehicles to gigawatt-scale electrolyzer projects for producing green hydrogen, which is the foundational component for SAF.",https://747c20b0.delivery.rocketcdn.me/wp-content/uploads/2019/12/cropped-ENKI-19-scaled-1-32x32.png,N,,2025-10-03 05:56:50.105225
 ,,2025-10-03 05:02:58+00:00,Biofuels International,LanzaJet and KMG sign first SAF project in Kazakhstan | Biofuels International Magazine,Not Available,,,,,https://biofuels-news.com/news/lanzajet-and-kmg-sign-first-saf-project-in-kazakhstan/,"LanzaJet and KMG have signed an agreement to advance Kazakhstan’s first sustainable aviation fuel (SAF) project and a first for LanzaJet in deploying our leading alcohol-to-jet (AtJ) technology in the region.
 KMG and LanzaJet recently completed a joint feasibility study, and have agreed to move to the next phase of project development – Front-End Engineering and Design (FEED), during which all technical and economic solutions for construction of the plant will be finalised.
 “Kazakhstan is the type of market that creates incredible potential across industries – agriculture, logistics, oil and gas and aviation.
@@ -2839,6 +3265,19 @@ Spun out of Oxford University, OXCCU has developed a novel, patented process whi
 The Series B fundraise will enable OXCCU to deliver on its scale-up strategy and accelerate the commercialisation of its technology. It follows the opening of their first demonstration plant1 at London Oxford Airport last year, and will support the development of a larger-scale facility expected to be operational in 2026. OXCCU’s facilities could play a crucial role in helping meet the UK’s SAF mandate and IAG’s decarbonisation goals.
 
 “We’re focused on backing companies whose technologies have the potential to deliver meaningful impact and we’re excited to be supporting OXCCU as it embarks on the next stage of its scale-up journey,” said Ignacio Tovar, IAG Director of Innovation. “By leveraging our industry expertise, acting as early adopters, and fostering collaboration across our airlines and broader partner ecosystem, we help the companies we back to scale faster.”",https://ittn.ie/wp-content/uploads/2025/03/IAGI.jpg,N,,2025-10-01 10:56:08.586191
+,,2025-10-01 13:14:52+00:00,Sustainable Aviation Futures,Accelerating Sustainable Fuels & Feedstocks via Digital Design,Jamie Bentley,,,,,https://www.sustainableaviationfutures.com/saf-spotlight/siemens-digitaltwin,"Emerging sustainable fuel technologies, including e-Fuels and Power-and-Biomass-to-Liquid (PBtL), are complex systems vital for meeting global clean fuel demands.
+Siemens addresses this by leveraging its Digital Process Twin, a groundbreaking innovation designed to streamline the development and operation of sustainable fuel processes.
+This technology creates a high-fidelity, physics-based model that accurately represents the entire sustainable fuel process.
+By providing deep insights, the Digital Process Twin enables more informed decision-making when developing new equipment, processes, and entire plants, significantly de-risking investments and accelerating time to market.
+Central to the Digital Process Twin is Siemens gPROMS software, a powerful process modeling platform.","Emerging sustainable fuel technologies, including e-Fuels and Power-and-Biomass-to-Liquid (PBtL), are complex systems vital for meeting global clean fuel demands. Despite their potential, commercial deployment remains challenging, with many high-profile projects struggling to scale. This highlights a critical need for smarter, more resilient approaches to accelerate their success.
+
+Siemens addresses this by leveraging its Digital Process Twin, a groundbreaking innovation designed to streamline the development and operation of sustainable fuel processes. This technology creates a high-fidelity, physics-based model that accurately represents the entire sustainable fuel process. These mechanistic models are engineered to precisely predict process behavior and support process synthesis. This capability allows engineers to thoroughly evaluate various design options and optimize plant configurations from the earliest stages. By providing deep insights, the Digital Process Twin enables more informed decision-making when developing new equipment, processes, and entire plants, significantly de-risking investments and accelerating time to market.
+
+Central to the Digital Process Twin is Siemens gPROMS software, a powerful process modeling platform. gPROMS is specifically used for high-fidelity modeling of individual unit operations and the simulation of integrated processes within the sustainable fuel sector. Its utility extends across the entire sustainability value chain, encompassing green hydrogen and carbon capture technologies in addition to sustainable fuels.
+
+gPROMS excels in detailed equipment and process design, utilizing multi-fidelity, physics-based models. A significant strength is its seamless integration of experimental or plant data, crucial for robust model calibration and ensuring the models accurately reflect real-world conditions. The platform effectively handles both isolated unit operations and complex, complete process flow diagrams, offering unparalleled flexibility.
+
+Beyond the initial design phase, the models developed within gPROMS can be deployed online once a plant becomes operational. This enables real-time optimization and continuous improvement throughout the plant's entire lifecycle, ensuring ongoing efficiency and performance. With its advanced optimization tools and Global Sensitivity Analysis (GSA) capabilities, gPROMS provides a unified and comprehensive environment. This environment supports both the initial process modeling for design purposes and the pursuit of ongoing operational excellence, making it an indispensable tool for advancing sustainable fuel technologies.",http://static1.squarespace.com/static/64941dbb608c8d7e0842c57f/65b3bcc050e1d25d78e56a64/68da47521af09a15872ccbe0/1759305354830/Accelerating+Sustainable+Fuels+%26+Feedstocks+viaDigital+Design.png?format=1500w,N,,2025-10-01 11:57:23.405365
 ,,2025-10-01 13:14:52+00:00,Sustainable Aviation Futures,Balancing Rapid Aviation Growth with SAF Manufacturing and Policy Innovation in Asia–Pacific,Jamie Bentley,,,,,https://www.sustainableaviationfutures.com/saf-spotlight/balancing-apac-growth,"The Jet Dilemma The Asia–Pacific aviation market is expanding at breakneck speed.
 Industrial Upside: Beyond Aviation SAF offers more than climate compliance.
 Asia–Pacific could be considered as behind Europe and North America on SAF adoption.
@@ -2962,19 +3401,6 @@ Conclusion
 Three words define the Pan-Asia SAF approach: Pragmatic. Ambitious. Innovative.
 
 The region’s aviation sector cannot pause growth. But with credible mandates, bankable finance mechanisms, and cooperative regional frameworks, Asia–Pacific can grow and decarbonize simultaneously. Done right, it will not only catch up with the global SAF transition — but lead it.",http://static1.squarespace.com/static/64941dbb608c8d7e0842c57f/65b3bcc050e1d25d78e56a64/68da48e2535a6a3d05dc9b12/1759309141519/Apeiron.png?format=1500w,N,,2025-10-01 14:58:03.326219
-,,2025-10-01 13:14:52+00:00,Sustainable Aviation Futures,Accelerating Sustainable Fuels & Feedstocks via Digital Design,Jamie Bentley,,,,,https://www.sustainableaviationfutures.com/saf-spotlight/siemens-digitaltwin,"Emerging sustainable fuel technologies, including e-Fuels and Power-and-Biomass-to-Liquid (PBtL), are complex systems vital for meeting global clean fuel demands.
-Siemens addresses this by leveraging its Digital Process Twin, a groundbreaking innovation designed to streamline the development and operation of sustainable fuel processes.
-This technology creates a high-fidelity, physics-based model that accurately represents the entire sustainable fuel process.
-By providing deep insights, the Digital Process Twin enables more informed decision-making when developing new equipment, processes, and entire plants, significantly de-risking investments and accelerating time to market.
-Central to the Digital Process Twin is Siemens gPROMS software, a powerful process modeling platform.","Emerging sustainable fuel technologies, including e-Fuels and Power-and-Biomass-to-Liquid (PBtL), are complex systems vital for meeting global clean fuel demands. Despite their potential, commercial deployment remains challenging, with many high-profile projects struggling to scale. This highlights a critical need for smarter, more resilient approaches to accelerate their success.
-
-Siemens addresses this by leveraging its Digital Process Twin, a groundbreaking innovation designed to streamline the development and operation of sustainable fuel processes. This technology creates a high-fidelity, physics-based model that accurately represents the entire sustainable fuel process. These mechanistic models are engineered to precisely predict process behavior and support process synthesis. This capability allows engineers to thoroughly evaluate various design options and optimize plant configurations from the earliest stages. By providing deep insights, the Digital Process Twin enables more informed decision-making when developing new equipment, processes, and entire plants, significantly de-risking investments and accelerating time to market.
-
-Central to the Digital Process Twin is Siemens gPROMS software, a powerful process modeling platform. gPROMS is specifically used for high-fidelity modeling of individual unit operations and the simulation of integrated processes within the sustainable fuel sector. Its utility extends across the entire sustainability value chain, encompassing green hydrogen and carbon capture technologies in addition to sustainable fuels.
-
-gPROMS excels in detailed equipment and process design, utilizing multi-fidelity, physics-based models. A significant strength is its seamless integration of experimental or plant data, crucial for robust model calibration and ensuring the models accurately reflect real-world conditions. The platform effectively handles both isolated unit operations and complex, complete process flow diagrams, offering unparalleled flexibility.
-
-Beyond the initial design phase, the models developed within gPROMS can be deployed online once a plant becomes operational. This enables real-time optimization and continuous improvement throughout the plant's entire lifecycle, ensuring ongoing efficiency and performance. With its advanced optimization tools and Global Sensitivity Analysis (GSA) capabilities, gPROMS provides a unified and comprehensive environment. This environment supports both the initial process modeling for design purposes and the pursuit of ongoing operational excellence, making it an indispensable tool for advancing sustainable fuel technologies.",http://static1.squarespace.com/static/64941dbb608c8d7e0842c57f/65b3bcc050e1d25d78e56a64/68da47521af09a15872ccbe0/1759305354830/Accelerating+Sustainable+Fuels+%26+Feedstocks+viaDigital+Design.png?format=1500w,N,,2025-10-01 11:57:23.405365
 ,,2025-10-01 13:14:51+00:00,Sustainable Aviation Futures,The Power of Face-to-Face Connections: Driving SAF Scale-Up in North America,Jamie Bentley,,,,,https://www.sustainableaviationfutures.com/saf-spotlight/face-to-face,"Over the past few years, North America has emerged as one of the most dynamic regions in the global sustainable aviation fuel (SAF) market.
 The next five years will be critical in determining whether North America can scale SAF production to meet its targets for 2030 and beyond.
 SAF North America Congress is designed to make those meetings possible - bringing together the leaders of aviation, energy, technology, and finance to align strategies, forge partnerships, and move the SAF agenda forward.
@@ -5129,457 +5555,3 @@ Executive Vice-President for Clean, Just and Competitive Transition, Teresa Ribe
 
 “This report is a stark reminder that Europe must stay the course and even accelerate our climate and environmental ambitions. Recent extreme weather events show how fragile our prosperity and security become when nature is degraded, and climate impacts intensify. Delaying or postponing our climate targets would only increase costs, deepen inequalities, and weaken our resilience. Protecting nature is not a cost. It is an investment in competitiveness, resilience and the well-being of our citizens. By scaling up action now, we can build a cleaner, fairer and more resilient Europe for future generations.”",https://www.esgtoday.com/wp-content/uploads/2025/09/EU-environment-report-2025.jpg,N,,2025-09-30 11:57:39.085972
 ,,2025-09-30 10:10:39+00:00,www.zawya.com,Smartenergy and Q8 Aviation sign strategic off-take partnership agreement to advance ...,Not Available,,,,,https://www.zawya.com/en/press-release/companies-news/smartenergy-and-q8-aviation-sign-strategic-off-take-partnership-agreement-to-advance-sustainable-aviation-fuel-production-ovbh90td,The partnership between the two companies is a testament to their shared commitment to advancing sustainable aviation fuel and accelerating the ...,Not Available,,N,,2025-09-30 07:57:19.898551
-,,2025-09-30 09:41:53+00:00,www.bioenergy-news.com,Natural State Renewables advances SAF from forest biomass | Bioenergy Insight Magazine,Not Available,,,,,https://www.bioenergy-news.com/news/natural-state-renewables-advances-saf-from-forest-biomass/%3Fv%3Df,"Manage Cookie Consent We use cookies to enhance your browsing experience and enable essential functions on our website.
-Some cookies are categorised as ""Necessary"" are automatically stored on your browser as they are crucial for the basic operation of the site - they can no be adjusted using these tools.
-Additionally, we use third-party cookies to help us analyse your usage of the website.
-These cookies are stored in your browser only with your prior consent.
-You have the option to enable or disable some or all of these cookies.","Manage Cookie Consent
-
-We use cookies to enhance your browsing experience and enable essential functions on our website. Some cookies are categorised as ""Necessary"" are automatically stored on your browser as they are crucial for the basic operation of the site - they can no be adjusted using these tools. Additionally, we use third-party cookies to help us analyse your usage of the website. These cookies are stored in your browser only with your prior consent. You have the option to enable or disable some or all of these cookies.",https://www.bioenergy-news.com/wp-content/themes/metropolis/favicon.png,N,,2025-09-30 07:57:27.574142
-,,2025-09-30 09:24:12+00:00,BioEnergy Times,Austrian energy company breaks ground on nation's largest green hydrogen project,Randhir Patil,,,,,https://bioenergytimes.com/austrian-energy-company-breaks-ground-on-nations-largest-green-hydrogen-project/,"Energy company OMV has begun construction on what will become Austria’s largest green hydrogen facility.
-It will use power from wind, solar, and hydroelectric sources to produce up to 23,000 tonnes of hydrogen each year.
-This clean hydrogen will be used at OMV’s Schwechat refinery.
-OMV already runs the country’s current largest green hydrogen project, a smaller 10-megawatt facility that started operations in April of this year.
-The new project represents a major expansion of the company’s investment in clean fuel production.","Energy company OMV has begun construction on what will become Austria’s largest green hydrogen facility. The project is expected to be fully operational by the end of 2027, reports Upstream.
-
-The new plant will have a capacity of 140 megawatts. It will use power from wind, solar, and hydroelectric sources to produce up to 23,000 tonnes of hydrogen each year.
-
-This clean hydrogen will be used at OMV’s Schwechat refinery. There, it will replace hydrogen made from natural gas, which has a larger environmental footprint.
-
-OMV already runs the country’s current largest green hydrogen project, a smaller 10-megawatt facility that started operations in April of this year. The new project represents a major expansion of the company’s investment in clean fuel production.",https://bioenergytimes.com/wp-content/uploads/2024/08/Green-hydrogen-7.jpg,N,,2025-09-30 11:57:45.405560
-,,2025-09-30 09:22:18+00:00,Air Data News,Pilatus delivers first PC-12 PRO turboprop - Air Data News,Ricardo Meier,,,,,https://www.airdatanews.com/pilatus-delivers-first-pc-12-pro-dion-weisler/,"Pilatus has delivered the first PC-12 PRO, marking the entry into service of the latest variant of its single-engine turboprop.
-The delivery took place to Dion Weisler, former CEO of HP Inc., after the aircraft’s launch in spring 2025.
-According to Pilatus, the PC-12 PRO was developed with input from operators, with a focus on integrating advanced technologies for enhanced operational efficiency.
-The PC-12, however, is close to gaining a strong competitor, the Beechcraft Denali, which Textron Aviation plans to enter service in 2026.
-This aircraft, with similar characteristics, is powered by the new GE Catalyst turboprop engine, which promises unmatched efficiency in the market.","Pilatus has delivered the first PC-12 PRO, marking the entry into service of the latest variant of its single-engine turboprop. The delivery took place to Dion Weisler, former CEO of HP Inc., after the aircraft’s launch in spring 2025.
-
-Weisler, who has previously owned three other PC-12s, received the new model and completed a six-day, 41-hour journey back to Australia. The route included technical stops in Greece, Egypt, Oman, India, Malaysia, Bali, and Darwin.
-
-The PC-12 PRO introduces several technical updates, including the Garmin G3000 Prime cockpit with five touchscreen displays and the ‘Safety Autoland’ system, which is designed to enhance operational safety by automating landing procedures in emergency situations.
-
-Follow us: WhatsApp | BlueSky | Google News | Instagram | LinkedIn | Facebook
-
-Powered by the Pratt & Whitney Canada PT6 engine, a model with over 400 million flight hours, the PC-12 PRO continues the lineage of what Pilatus describes as the world’s best-selling single-engine turboprop. The aircraft is also compatible with sustainable aviation fuel (SAF) and features the Electronic Propeller and Engine Control System (EPECS), aimed at improving fuel efficiency.
-
-The inclusion of autothrottle functionality reduces pilot workload and incorporates protections against engine over-torque and over-temperature, reflecting ongoing industry moves towards increased automation and safety.
-
-According to Pilatus, the PC-12 PRO was developed with input from operators, with a focus on integrating advanced technologies for enhanced operational efficiency. The aircraft’s entry into service is seen as a continuation of Pilatus’s strategy to maintain its position in the utility and business aviation markets.
-
-The PC-12, however, is close to gaining a strong competitor, the Beechcraft Denali, which Textron Aviation plans to enter service in 2026.
-
-This aircraft, with similar characteristics, is powered by the new GE Catalyst turboprop engine, which promises unmatched efficiency in the market.",https://www.airdatanews.com/wp-content/uploads/2025/09/PC-12-PRO-Arrival.jpg,N,,2025-09-30 11:57:51.519480
-,,2025-09-30 09:18:24+00:00,BioEnergy Times,"India can produce millions of tonnes of sustainable aviation fuel, study finds",BioEnergyTimes,,,,,https://bioenergytimes.com/india-can-produce-millions-of-tonnes-of-sustainable-aviation-fuel-study-finds/,"Financial support in the form of capital grants and loan guarantees could help reduce the upfront costs of building facilities for sustainable aviation fuel (SAF) production in India, according to a recent study.
-The study was prepared under the ICAO ACT-SAF Assistance Project, which focuses on capacity building for sustainable aviation fuels under the Carbon Offsetting and Reduction Scheme for International Aviation (CORSIA).
-ICAO ACT-SAF refers to the International Civil Aviation Organization’s Assistance, Capacity-building, and Training for SAF.
-“The low-end estimate of SAF production is enough to supply up to 70 percent SAF blends into all jet fuel used in India, with additional volumes available for export,” the study said.
-However, the report noted that the lack of supportive policies in India makes investment in SAF facilities uneconomical.","Financial support in the form of capital grants and loan guarantees could help reduce the upfront costs of building facilities for sustainable aviation fuel (SAF) production in India, according to a recent study. The country also has significant volumes of feedstocks suitable for producing SAF, reports The Economic Times.
-
-The study was prepared under the ICAO ACT-SAF Assistance Project, which focuses on capacity building for sustainable aviation fuels under the Carbon Offsetting and Reduction Scheme for International Aviation (CORSIA). ICAO ACT-SAF refers to the International Civil Aviation Organization’s Assistance, Capacity-building, and Training for SAF.
-
-At a conservative estimate, India could produce more than 14 million tonnes of SAF annually from feedstocks such as sugarcane bagasse, rice straw, and municipal solid waste. At the higher end, production could exceed 33 million tonnes per year.
-
-“The low-end estimate of SAF production is enough to supply up to 70 percent SAF blends into all jet fuel used in India, with additional volumes available for export,” the study said. It added that India’s geographic location positions it well for exporting SAF to Southeast Asia and Europe.
-
-The study highlighted that alcohol-to-jet (AtJ) technology offers the largest opportunity for SAF production in India and that SAF will play a key role in decarbonising the country’s growing civil aviation sector.
-
-However, the report noted that the lack of supportive policies in India makes investment in SAF facilities uneconomical. Providing financial assistance through grants and loan guarantees could lower the initial cost of first-of-a-kind facilities and create a more favourable investment environment.
-
-“A combination of policies targeting different challenges in the SAF supply chain can help spread the higher cost of SAF blending and use,” the study said. Long-term mandates, firm offtake agreements, and a stable policy framework are essential to de-risk investment and encourage SAF consumption.
-
-The report also recommended the creation of a SAF Council to develop a long-term vision and strategy for SAF, and to integrate SAF within existing biofuels policies to reduce competition and support India’s climate goals. The study noted that mandates alone are not enough and that incentives are equally important, aligning with the International Air Transport Association’s (IATA) view on SAF promotion.",https://bioenergytimes.com/wp-content/uploads/2024/07/SAF-8.png,N,,2025-09-30 07:57:35.821728
-,,2025-09-30 09:07:24+00:00,www.cognitud.com,New Era for Malaysian Tourism: Sustainable Aviation and Nature-Based Focus - Cognitud,Not Available,,,,,https://www.cognitud.com/news/new-era-for-malaysian-tourism-sustainable-aviation-and-nature-based-focus,"To decarbonize air travel and create new green industries, Malaysia is boosting its investment in sustainable aviation, a move announced by Deputy Prime Minister Datuk Seri Fadillah Yusof.
-The country's first biomass-based Sustainable Aviation Fuel (SAF) facility has been introduced which is scheduled to be operational by 2027.
-However, the global output of curb emissions is very low, Sustainable Aviation Fuel (SAF), made out of waste oils and agricultural residues, acts as a key tool.
-Fadillah highlighted the prioritization of nature-based tourism, citing Mersing, Johor, which is set to host Malaysia's first UN Tourism-recognised sustainable tourism observatory.
-The call for innovation and change in the tourism sector has been reinforced by the Tourism Minister Datuk Seri Tiong King Sing.","To decarbonize air travel and create new green industries, Malaysia is boosting its investment in sustainable aviation, a move announced by Deputy Prime Minister Datuk Seri Fadillah Yusof. The country's first biomass-based Sustainable Aviation Fuel (SAF) facility has been introduced which is scheduled to be operational by 2027. Fadillah, who delivered the Prime Minister's keynote, mentioned that half of the tourism sector's direct output depends on the aviation emissions which makes the multilateral cooperation crucial. However, the global output of curb emissions is very low, Sustainable Aviation Fuel (SAF), made out of waste oils and agricultural residues, acts as a key tool. Malaysia’s megadiverse ecosystems like rainforests and coral reefs can be protected by environmental stewardship, which is the overall tourism strategy. Fadillah highlighted the prioritization of nature-based tourism, citing Mersing, Johor, which is set to host Malaysia's first UN Tourism-recognised sustainable tourism observatory. The call for innovation and change in the tourism sector has been reinforced by the Tourism Minister Datuk Seri Tiong King Sing. He also mentioned that ""Sustainable, inclusive transformation is not optional but essential"" and highlighted models like Miso Walai Homestay in Sabah and Penang's conservation efforts.",https://cognitud.s3.ap-south-1.amazonaws.com/cognitud-news-images/1759217162451-plane-airport-terminal-building.jpg,N,,2025-09-30 09:56:14.413683
-,,2025-09-30 09:04:49+00:00,Market.us,Second Generation Biofuel Market Size | CAGR of 22.4%,Not Available,,,,,https://market.us/report/second-generation-biofuel-market/,"Key Takeaways The global second-generation biofuel market was valued at USD 13.8 billion in 2024.
-Based on the type of fuel, biodiesel dominated the second-generation fuel market in 2024, comprising about 55.4% share of the total global market.
-Among the end-users of second-generation biofuel, automotive & road transportation dominated the market in 2024, accounting for around 65.1% of the market share.
-North America was the largest market for second-generation biofuel in 2024, accounting for around 38.7% of the total market share.
-Biodiesel dominated the second-generation biofuel market in 2024 with a market share of 55.4%.","Report Overviews
-
-The Global Second-Generation Biofuel Market size is expected to be worth around USD 104.2 Billion by 2034, from USD 13.8 Billion in 2024, growing at a CAGR of 22.4% during the forecast period from 2025 to 2034. In 2024 Asia Pacific held a dominant market position, capturing more than a 38.7% share, holding USD 5.34 Billion in revenue
-
-Second-generation biofuels are a type of advanced fuel produced from non-food sources such as agricultural waste, forestry residues, or dedicated energy crops. These fuels, such as cellulosic ethanol and Fischer-Tropsch diesel, aim to avoid the food vs. fuel conflict of first-generation biofuels by using non-edible feedstocks and offer potential advantages over fossil fuels.
-
-In 2023, renewable fuel demand in industry, buildings, and transport stands at 22 EJ, which is 5% of global energy demand for these sectors.
-
-As there is a global shift towards renewable energy, the demand for second-generation biofuels surges due to their help in climate change mitigation. Bioenergy, including liquid, gaseous, and solid fuels, is estimated to account for the vast majority, around 95%, of renewable fuel growth in the coming decade. Additionally, the market is characterized by the policy frameworks in countries, government investments, and technological advancements in the production of these fuels. The growth of biofuels is concentrated in the United States, Europe, Brazil, Indonesia, and India, which together account for 85%.
-
-According to the International Energy Agency (IEA), in 2022, global biofuel demand reached a record high of 4.3 EJ, which is approximately 170,000 million liters, surpassing pre-pandemic levels from 2019, highlighting their growing importance in the push for sustainable transportation.
-
-Biodiesel is the most used second-generation fuel due to its production capacities. In addition, these fuels are mostly used in automotive and transportation applications. Globally, road biofuel demand expanded by 27 billion liters, 0.8 EJ, and aviation and maritime fuel use increased to nearly 9 billion liters, 0.3 EJ. However, according to the IEA, by 2030, aviation and shipping are estimated to be responsible for more than 75% of new biofuel demand.
-
-Key Takeaways
-
-The global second-generation biofuel market was valued at USD 13.8 billion in 2024.
-
-The global second-generation biofuel market is projected to grow at a CAGR of 22.4% and is estimated to reach USD 104.2 billion by 2034.
-
-Based on the type of fuel, biodiesel dominated the second-generation fuel market in 2024, comprising about 55.4% share of the total global market.
-
-Based on the feedstock, biofuel produced from lignocellulosic biomass led the second-generation fuel market with 35.6% of the total global consumption.
-
-Among the end-users of second-generation biofuel, automotive & road transportation dominated the market in 2024, accounting for around 65.1% of the market share.
-
-North America was the largest market for second-generation biofuel in 2024, accounting for around 38.7% of the total market share.
-
-Fuel Type Analysis
-
-Biodiesel Dominated the Second-Generation Biofuel Market in 2024.
-
-On the basis of fuel type, the second-generation biofuel market is segmented into cellulosic ethanol, biodiesel, bio-butanol, renewable diesel, bio-DME, sustainable aviation fuel, and others. Biodiesel dominated the second-generation biofuel market in 2024 with a market share of 55.4%. In 2023, global FAME biodiesel production neared 50 billion liters. Indonesia led with 14 billion liters, followed by the EU at 13 billion liters and Brazil at 8 billion liters. It is the most widely used second-generation biofuel due to its relatively simpler production process and compatibility with existing diesel engines and infrastructure.
-
-Indonesia leads global biodiesel production with 13.65 billion liters, followed by Brazil, the U.S., and Germany.
-
-The U.S. is the third largest biodiesel producer globally and exported around 7.15 million barrels in 2022.
-
-Biodiesels production adds roughly $32,823 in profit to a 1,000-acre farm, according to the U.S. Department of Agriculture.
-
-The U.S. is on track to surpass 5 billion gallons of combined biodiesel and renewable diesel consumption in 2024.
-
-It can be produced from a variety of non-food feedstocks such as used cooking oil, animal fats, and non-edible plant oils, which are more readily available and easier to process than lignocellulosic biomass required for cellulosic ethanol or bio-butanol. Additionally, biodiesel meets established fuel standards and can be blended easily with petroleum diesel, requiring no major engine modifications. Its lower production cost and faster commercialization have made it more accessible than other advanced fuels.
-
-Feedstock Analysis
-
-Fuels Produced from Lignocellulosic Biomass Led the Second-Generation Biofuel Market.
-
-On the basis of feedstock, the second-generation biofuel market is segmented into lignocellulosic biomass, agricultural residues, forest residues, municipal solid waste (MSW), and others. Lignocellulosic biomass fuels dominated the market in 2024 with a market share of 35.6%. Second-generation biofuels are mostly produced from lignocellulosic biomass because it offers a more consistent, energy-dense, and abundant source of non-food organic material compared to agricultural residues, forest residues, or municipal solid waste (MSW).
-
-Lignocellulosic biomass, such as dedicated energy crops like switchgrass, miscanthus, or fast-growing trees, is specifically cultivated or harvested for biofuel production, ensuring better control over quality and supply. In contrast, agricultural and forest residues are seasonal and scattered, making collection and transport more challenging, while MSW is highly heterogeneous and often contaminated, requiring complex sorting and pretreatment. This makes lignocellulosic biomass a more reliable and scalable feedstock for biofuel production.
-
-End-User Analysis
-
-In 2024, the Second-Generation Biofuel Market was Primarily Driven by Automotive & Road Transportation.
-
-Based on the end-users of second-generation biofuels, the market is divided into automotive & road transportation, aviation, marine, and industrial & power. These biofuels are used in large amounts in automotive and road transportation, with around 65.1% of the market share. Most second-generation biofuels are used in automotive and road transportation because these sectors have more flexible fuel infrastructure and engine compatibility compared to aviation, marine, or industrial power. Liquid biofuels, with over 1.1 EJ, account for the most growth in the transport sector, since they are compatible with the existing vehicle fleet with minimal modifications, making adoption easier and more cost-effective.
-
-In contrast, aviation and marine fuels require very specific properties for safety, energy density, and performance, which advanced biofuels like sustainable aviation fuel or bio-DME are still developing at scale. Additionally, regulatory frameworks and incentives have historically focused more on road transport emissions, accelerating second-generation biofuel use in this sector. While biofuels for road transport dominate expansion, new policies for aviation and maritime biofuels spur nearly 30% of new demand in the transport sector overall.
-
-Key Market Segments
-
-By Fuel Type
-
-Cellulosic Ethanol
-
-Biodiesel
-
-Bio-Butanol
-
-Renewable Diesel
-
-Bio-DME
-
-Sustainable Aviation Fuel
-
-Others
-
-By Feedstock
-
-Lignocellulosic Biomass
-
-Agricultural Residues
-
-Forest Residues
-
-Municipal Solid Waste (MSW)
-
-Others
-
-By End-User
-
-Automotive & Road Transportation
-
-Aviation
-
-Marine
-
-Industrial & Power
-
-Drivers
-
-Demand for Climate Change Mitigation Drives the Second-Generation Biofuel Market.
-
-The growing demand for effective climate change mitigation strategies is a key driver of the second-generation biofuel market. Unlike first-generation biofuels, which are produced from food crops such as corn and sugarcane, second-generation biofuels are derived from non-food lignocellulosic biomass such as agricultural residues, forest waste, and dedicated energy crops such as switchgrass and miscanthus.
-
-This reduces competition for food resources and lowers greenhouse gas emissions significantly. Burning one gallon of gasoline produces approximately 8.89 kilograms of CO2, the primary greenhouse gas from fuel combustion. Depending on the type of advanced biofuel used, the lifecycle greenhouse gas emissions can be reduced by 40-85% compared to gasoline. For instance, in the best-case scenario, cellulosic ethanol can reduce greenhouse gas emissions by up to 86% compared to gasoline. Countries such as the United States, China, India, and Brazil are investing heavily in biorefineries that convert waste biomass into sustainable fuels.
-
-Restraints
-
-Limited Availability of Feedstock and Operational Challenge of Scaling Up Might Hamper the Growth of the Market.
-
-Despite its potential, the second-generation biofuel market faces significant challenges related to feedstock availability and the complexities of scaling up production. Lignocellulosic biomass, such as agricultural residues, forestry waste, and dedicated energy crops, is not always readily available in sufficient quantities at consistent quality. Seasonal variability, logistical constraints, and competition with other uses such as animal bedding or soil enhancement limit its accessibility.
-
-According to the U.S. Department of Energy, although over 1 billion tons of biomass are theoretically available annually in the United States, only a fraction is economically collectible due to infrastructure and transportation issues. Additionally, scaling up from pilot to commercial-scale bio-refineries presents technical and operational hurdles, including maintaining process efficiency, ensuring reliable enzyme performance at scale, and managing large volumes of heterogeneous feedstock. These issues could slow the market’s progress without targeted solutions.
-
-Opportunity
-
-Policy Frameworks Create Opportunities in the Second-Generation Biofuel Market.
-
-Supportive policy frameworks play a crucial role in creating opportunities for the development and deployment of second-generation biofuels. Governments around the world are implementing mandates, subsidies, and regulatory incentives to encourage the production of low-carbon fuels from non-food biomass. For instance, the European Union’s Renewable Energy Directive (RED II) sets targets for renewable energy in transport, specifically promoting the use of advanced biofuels derived from agricultural and forestry residues.
-
-Similarly, according to the IEA, meeting net-zero goals by 2050 would require biofuels to account for nearly 30% of total transport energy. The support policies vary by fuel, sector, and country, but often include a combination of mandates, GHG performance criteria, and direct production and CAPEX investment incentives. For instance, in September 2025, the federal government of Canada announced plans to invest CA$370 million in biofuel production incentives. These policy-driven initiatives are vital for scaling sustainable fuel alternatives.
-
-Trends
-
-Focus on Technological Advancements.
-
-Technological advancements continue to be a key trend shaping the second-generation biofuel market, enabling more efficient and cost-effective production. For instance, the use of algae for producing bio-oils and renewable diesel. Industries in the aviation and marine sectors are recognizing the potential of algae-based fuels, as they solve a major problem of feedstock availability. Similarly, innovations in pretreatment processes, such as pyrolysis, have significantly improved the breakdown of organic waste into bio-oil, biochar, and gases rich in carbon monoxide and hydrogen. These outputs serve as building blocks for various end products, such as liquid transportation fuels and green chemicals.
-
-Furthermore, startups and biotech giants alike are employing synthetic biology to create genetically modified organisms (GMOs). The approach is trying to develop microbes and enzymes that can efficiently convert biomass and waste materials into advanced biofuels. Moreover, emerging technologies like consolidated bioprocessing (CBP) integrate enzyme production, hydrolysis, and fermentation into a single step, streamlining the biofuel production chain. These innovations are essential to improving scalability and commercial viability in the second-generation biofuel sector.
-
-Geopolitical Impact Analysis
-
-Geopolitical Tensions Leading to Supply Chain Disruptions in the Second-Generation Biofuel Market.
-
-Geopolitical tensions can significantly impact the second-generation biofuel market by disrupting supply chains, altering trade policies, and shifting energy security priorities. Conflicts or diplomatic strains can hinder the global movement of critical components such as enzymes, catalysts, or specialized machinery required for bio-refinery operations.
-
-For instance, amidst the Israel-Iran conflict, in the Middle East, low sulfur gas oil (LSGO) prices surged from US$84/mt to US$716/mt, reflecting broader energy market volatility stemming from the conflict.
-
-Similarly, used cooking oil (UCO) markets displayed regional variations, with Netherlands EXW prices holding steady at EUR 1,033/mt while Chinese FOB prices moderated to US$990/mt from US$1,000/mt. However, current US import tariffs of 55% on Chinese goods create significant cost barriers for UCO imports. On the other hand, global instability can redirect public funds away from renewable energy initiatives toward immediate defense or humanitarian needs. For instance, the Russia-Ukraine conflict disrupted agricultural output and trade in Europe, affecting biomass availability like wheat straw, a key feedstock for second-generation biofuels in the region.
-
-Regional Analysis
-
-North America was the Largest Market for Second-Generation Biofuel in 2024.
-
-North America held the major share of the global second-generation biofuel market, valued at around US$5.34 billion, commanding an estimated 38.7% of the total revenue share. The U.S. and Brazil produced 80% of the total ethanol produced globally. The region has emerged as the largest market for biofuels, largely due to strong policy support, technological leadership, and abundant biomass resources. The United States, in particular, has implemented comprehensive regulations such as the Renewable Fuel Standard (RFS), which mandates that the transportation fuel sold in the United States contain a minimum volume of renewable fuels.
-
-According to IEA, in 2023, ethanol production reached 116 billion liters, which was around 70% of liquid biofuels, and the U.S. and Brazil, combined, produced 80% of it.
-
-Additionally, the country produces large quantities of agricultural residues with estimates around over 140 million dry tons per year from major crops alone, including corn stover and wheat straw, that serve as key feedstocks for lignocellulosic biofuel production. Similarly, leading bio-refineries such as POET-DSM’s Project LIBERTY in Iowa and DuPont’s Nevada plant in Iowa, although closed, have played a pioneering role in commercializing cellulosic ethanol.
-
-Furthermore, Canada is advancing in the sector, with supportive federal and provincial clean fuel standards encouraging the development of low-carbon fuel alternatives. The combination of favorable policy frameworks, research & development investment, and feedstock availability positions North America at the forefront of second-generation biofuel innovation and adoption.
-
-Key Regions and Countries
-
-North America
-
-The US
-
-Canada
-
-Europe
-
-Germany
-
-France
-
-The UK
-
-Spain
-
-Italy
-
-Russia & CIS
-
-Rest of Europe
-
-APAC
-
-China
-
-Japan
-
-South Korea
-
-India
-
-ASEAN
-
-Rest of APAC
-
-Latin America
-
-Brazil
-
-Mexico
-
-Rest of Latin America
-
-Middle East & Africa
-
-GCC
-
-South Africa
-
-Rest of MEA
-
-Key Players Analysis
-
-The major global participants in the second-generation biofuel market are Neste Oyj, POET-DSM Advanced Biofuels, Abengoa Bioenergy, INEOS Bio, Valero/Green Diesel JV, TotalEnergies, Clariant AG, GranBio, DuPont Industrial Biosciences, Enerkem, Beta Renewables, Gevo Inc., Algenol Biofuels, LanzaTech, Verbio Vereinigte BioEnergie, Cosan-Raizen, Aemetis, REG-Chevron (Renewable Energy Group), and Fulcrum BioEnergy.
-
-Neste is the leading producer of renewable diesel and SAF, utilizing waste and residue feedstocks. By using waste and residues, the company supports the transition to a circular economy by providing sustainable raw materials for the plastics and chemicals industries.
-
-Fulcrum Bioenergy is a company that converts non-recyclable waste into low-carbon, net-zero transportation fuels, including Sustainable Aviation Fuel (SAF) and diesel, using a proprietary thermochemical process. The company is advancing a large commercial growth program with planned production capacity across North America and in selected international markets.
-
-Chevron Renewable Energy Group (CREG) is a leading producer of advanced biofuels and lower-carbon transportation fuels, specializing in converting waste products like fats, oils, and greases into high-quality, low-carbon fuels, including biodiesel and renewable diesel. The company conducts research to identify new materials and improve catalytic processes for creating advanced biofuels.
-
-The major players in the industry
-
-Neste Oyj
-
-POET-DSM Advanced Biofuels
-
-Abengoa Bioenergy
-
-INEOS Bio
-
-Valero/Green Diesel JV
-
-TotalEnergies
-
-Clariant AG
-
-GranBio
-
-DuPont Industrial Biosciences
-
-Enerkem
-
-Beta Renewables
-
-Gevo Inc.
-
-Algenol Biofuels
-
-LanzaTech
-
-Verbio Vereinigte BioEnergie
-
-Cosan-Raizen
-
-Aemetis
-
-REG-Chevron (Renewable Energy Group)
-
-Fulcrum BioEnergy
-
-Other Key Players
-
-Key Developments
-
-In June 2025, Neste and Amazon signed a deal to provide 7,500 metric tons of Neste MY SAF to Amazon Air, expanding the fuel’s availability at San Francisco International Airport and Ontario International Airport.
-
-In July 2025, Rayonier Advanced Materials, the global leader in cellulose specialty products, announced that it signed an MoU with GranBio LLC, a pioneer in biochemicals and biofuels, to explore the development of a small-scale commercial cellulosic Sustainable Aviation Fuel (SAF) facility co-located at RYAM’s Jesup, Georgia site.",https://market.us/wp-content/uploads/2025/09/Second-Generation-Biofuel-Market.jpg,N,,2025-09-30 07:57:40.393412
-,,2025-09-30 09:04:44+00:00,LARA,Akkodis becomes first-tier supplier for Deutsche Aircraft - LARA Magazine,Grace Hardy,,,,,https://www.laranews.net/akkodis-becomes-first-tier-supplier-for-deutsche-aircraft/,"“The partnership with Akkodis is a significant step in our mission to develop the next generation of regional aircraft,” said Nico Neumann, CEO of Deutsche Aircraft.
-“Together, we are committed to digital excellence and emission-reducing technologies to actively shape the future of aviation – from Germany, for Europe and beyond.” Akkodis cover the entire development process from integrating systems to the final certification of the aircraft, and will provide particular expertise in digital modelling and simulation, advanced materials, and preparation for Sustainable Aviation Fuel (SAF) and hydrogen propulsion systems.
-“This agreement reinforces our diversification strategy and strengthens our role in the aerospace industry,” commented Dr. Peter Mehrle, CEO of Akkodis Germany.
-“Together with Deutsche Aircraft, we demonstrate Europe’s industrial capability and innovative power: by combining their expertise with our digital engineering know-how, we are driving regional aircraft development made in Germany – and positioning Europe as a leader in sustainable aviation.” “For us, this cooperation is about translating engineering expertise into real progress,” added Reiner Oldewurtel, Vice President of Akkodis Germany AS&D GmbH.
-“Through close collaboration with Deutsche Aircraft, we contribute to faster system integration, more efficient testing, and smoother certification – always guided by quality, passion, and forward-thinking.” Photo: Akkodis","“The partnership with Akkodis is a significant step in our mission to develop the next generation of regional aircraft,” said Nico Neumann, CEO of Deutsche Aircraft. “Together, we are committed to digital excellence and emission-reducing technologies to actively shape the future of aviation – from Germany, for Europe and beyond.”
-
-Akkodis cover the entire development process from integrating systems to the final certification of the aircraft, and will provide particular expertise in digital modelling and simulation, advanced materials, and preparation for Sustainable Aviation Fuel (SAF) and hydrogen propulsion systems.
-
-“This agreement reinforces our diversification strategy and strengthens our role in the aerospace industry,” commented Dr. Peter Mehrle, CEO of Akkodis Germany. “Together with Deutsche Aircraft, we demonstrate Europe’s industrial capability and innovative power: by combining their expertise with our digital engineering know-how, we are driving regional aircraft development made in Germany – and positioning Europe as a leader in sustainable aviation.”
-
-“For us, this cooperation is about translating engineering expertise into real progress,” added Reiner Oldewurtel, Vice President of Akkodis Germany AS&D GmbH. “Through close collaboration with Deutsche Aircraft, we contribute to faster system integration, more efficient testing, and smoother certification – always guided by quality, passion, and forward-thinking.”
-
-Photo: Akkodis",https://www.laranews.net/wp-content/uploads/2025/09/Akkodis_Deutsche_Aircraft.jpg,N,,2025-09-30 07:57:44.915026
-,,2025-09-30 08:53:45+00:00,www.youtube.com,SMBC Aviation Capital Sustainable Aviation Fuel (SAF) video - YouTube,,,,,,https://www.youtube.com/watch%3Fv%3DV6irY40pUpE,SMBC Aviation Capital Sustainable Aviation Fuel (SAF) video. 18 views · 1 day ago ...more. SMBC Aviation Capital. 130. Subscribe. 0. Share. Save.,Not Available,,Y,,2025-09-30 07:57:48.569258
-,,2025-09-30 08:50:31+00:00,RMI,Competing Through Creativity and Resilience: How Regions Can Lead on Advanced Energy - RMI,Colm Quinn,,,,,https://rmi.org/competing-through-creativity-and-resilience-how-regions-can-lead-on-advanced-energy/,"Reflections from the International Economic Development Council Conference Creativity and efficiency are becoming the new operating models for economic and community development, defining which regions will lead in the next chapter of the energy transition.
-The panel discussion elevated three lessons on this moment and what lies ahead for economic development leaders.
-Rising energy demand, grid needs, and long interconnection queues will be just as decisive.
-Comerica initially entered clean energy financing because the deals were sound business opportunities, not pure sustainability plays.
-Clean and advanced energy projects will continue.","Reflections from the International Economic Development Council Conference
-
-Creativity and efficiency are becoming the new operating models for economic and community development, defining which regions will lead in the next chapter of the energy transition.
-
-This was made clear earlier this month at the International Economic Development Council (IEDC) conference in Detroit, where RMI convened a panel of leaders to explore how US regions can capture advanced energy opportunities as federal support wanes but energy demand heats up. The discussion built on RMI’s recent insights, Scaling Clean Energy with Regional Financing Ecosystems, which highlights how capital providers with a stake in local economic development pursue aligned goals, but too often in silos.
-
-Panelists included Scott Beckerman, Senior Vice President and Director of Corporate Sustainability at Comerica; Martha Campbell, Chief Program Officer at Michigan Saves; John Moon, President of LISC Green LLC; and Amanda Taylor, Vice President of Business Investment at Greater MSP Partnership.
-
-The panel discussion elevated three lessons on this moment and what lies ahead for economic development leaders.
-
-Lesson 1: Today’s strong pipelines require new strategies to overcome uncertainty
-
-In recent years, unprecedented federal incentives have revealed a strong pipeline of clean energy projects across the United States. John Moon shared that LISC used an interest form for the Greenhouse Gas Reduction Fund (GGRF) to measure demand and identified nearly $1 billion in potential projects, with around $150 million ready to move this year. Even without GGRF grants, LISC plans to deploy $100 million in sustainable finance over the next three years– but reaching the lowest-income communities without concessional capital will be difficult and dependent on strong city and state incentives.
-
-Michigan Saves faces a similar challenge. Over 15 years, the green bank has enabled more than $600 million in residential energy efficiency loans by leveraging loan-loss reserves to attract private capital. A GGRF subaward would have enabled an expansion into direct commercial lending. With those funds on hold, Michigan Saves is working to raise private capital and sharpen its value proposition to compete without subsidies.
-
-Panelists cautioned that today’s strong project pipeline faces uncertainty from expiring solar and wind tax credits and impending Foreign Entity of Concern (FEOC) regulations. Developers and capital providers nationwide are scrambling to complete or safe harbor projects, but what comes next is less clear. Technologies whose credits have longer runway, such as geothermal and storage, could emerge stronger.
-
-Lesson 2: Competitiveness will be shaped by demand
-
-Policy-driven uncertainty isn’t the only factor shaping market outlook. Rising energy demand, grid needs, and long interconnection queues will be just as decisive. Globally, AI is accelerating the need for electricity and water for data centers. In the United States, meeting that demand is vital to maintaining resilient, competitive economies. If investment lags, businesses and households will face higher costs and reliability risks.
-
-As Beckerman observed, banks don’t like uncertainty, yet it has defined 2025. Comerica initially entered clean energy financing because the deals were sound business opportunities, not pure sustainability plays. That still holds true. “We’ll be forced to deploy our creativity,” he said, emphasizing that while capital stacks may evolve, advanced and clean energy projects will continue — driven both by investors’ pressure on global companies to decarbonize and by the sheer growth in energy needs.
-
-The Minneapolis–Saint Paul region offers an example of how local leaders can respond strategically to corporate demand. After hearing airline CEOs express interest in Sustainable Aviation Fuel (SAF), the region began building a value chain that connects feedstock, technology providers, and buyers. As Taylor advised, economic developers should listen closely to what Fortune 500 companies need, and work collaboratively across their region to align solutions with local strengths. That alignment of corporate demand with regional capabilities positions places to compete globally.
-
-Lesson 3: Regions must balance short-term competitiveness with long-term resilience
-
-Economic developers must act as the “strategic brains” of their regions, helping communities balance near-term competitiveness with long-term resilience. Campbell suggested a dual-track strategy: on the one hand, expansively pursuing growth opportunities by attracting foreign direct investment, scaling advanced and cleantech energy clusters, and aligning with global megatrends; at the same time, planning for long-term shifts by hedging against worst-case scenarios such as slowing population growth, and by rethinking infrastructure and city design for sustainable growth.
-
-Panelists acknowledged the challenge of holding near-term needs together while advancing a long-term vision like decarbonization. Data centers illustrate this tension in real-time, as communities wrestle with how to weigh potential tax revenue against impacts on power and water systems. More constructive approaches to data center development are possible, including negotiating with companies to secure workforce training programs, infrastructure investment, or other commitments that build long-term resilience alongside competitiveness.
-
-From uncertainty to regional leadership
-
-The panel discussion in Detroit underscored that while federal uncertainty looms, the regions best positioned to thrive are those building robust financing ecosystems by designing public incentives to attract private dollars, aligning with corporate demand, building coalitions to de-risk projects, and sharpening strategies to deliver dollars more efficiently.
-
-Clean and advanced energy projects will continue. The real question is which regions will rise to meet the moment, using creativity not only to attract investment but also to secure durable, inclusive benefits for their communities.
-
-How is your region preparing to step up in the face of shifting federal support?",https://rmi.org/wp-content/uploads/2025/09/iStock-134104261-scaled.jpg,N,,2025-09-30 07:57:53.758676
-,,2025-09-30 08:21:33+00:00,The Arabian Stories News,"Smartenergy, Q8 Aviation strike long-term deal on sustainable jet fuel - The Arabian Stories",Not Available,,,,,https://www.thearabianstories.com/2025/09/30/smartenergy-q8-aviation-strike-long-term-deal-on-sustainable-jet-fuel/,"MUSCAT: Smartenergy, a leading Swiss-based renewable energy investment firm, today announced the signing of a landmark strategic partnership with Q8 Aviation, the international aviation energy arm of Kuwait Petroleum International (KPI), This agreement establishes Q8 Aviation as a cornerstone long-term offtake partner for Smartenergy’s planned production of synthetic sustainable aviation fuel (eSAF), marking a pivotal step toward a cleaner, more sustainable future for the global aviation sector.
-Q8 Aviation will purchase electricity-based Sustainable Aviation Fuel (eSAF) from Smartenergy, marking a step toward a cleaner, more sustainable future for the global aviation sector.
-Under the agreement, Q8 Aviation will secure access to a share of Smartenergy’s future eSAF output to help it meet the needs of its customers and to comply with e-SAF mandate within the REFuelEU Aviation and the UK SAF mandate, while reinforcing its leading role in decarbonizing aviation.
-eSAF offers the greatest potential for emissions reduction when produced using green hydrogen from renewable energy and captured biogenic CO₂.
-With its vast global footprint, Q8 Aviation is uniquely positioned to accelerate the adoption of sustainable fuels by providing the necessary scale and infrastructure to deliver eSAF to major international carriers.","MUSCAT: Smartenergy, a leading Swiss-based renewable energy investment firm, today announced the signing of a landmark strategic partnership with Q8 Aviation, the international aviation energy arm of Kuwait Petroleum International (KPI), This agreement establishes Q8 Aviation as a cornerstone long-term offtake partner for Smartenergy’s planned production of synthetic sustainable aviation fuel (eSAF), marking a pivotal step toward a cleaner, more sustainable future for the global aviation sector. Q8 Aviation will purchase electricity-based Sustainable Aviation Fuel (eSAF) from Smartenergy, marking a step toward a cleaner, more sustainable future for the global aviation sector.
-
-Under the agreement, Q8 Aviation will secure access to a share of Smartenergy’s future eSAF output to help it meet the needs of its customers and to comply with e-SAF mandate within the REFuelEU Aviation and the UK SAF mandate, while reinforcing its leading role in decarbonizing aviation.
-
-This partnership aligns with the rapidly growing need for sustainable aviation fuels as airlines and regulators push for net-zero emissions targets from aviation, one of the most carbon intensive and fastest growing form of transport. eSAF offers the greatest potential for emissions reduction when produced using green hydrogen from renewable energy and captured biogenic CO₂. eSAF is a drop in fuel that can be seamlessly integrated into existing aircraft and infrastructure, delivering >90% lifecycle greenhouse gas emission reductions compared to conventional jet fuel. The eSAF is currently in its early stages, expected to play a critical role in meeting the European Union’s Renewable Energy Directive and the UK SAF mandate, both of which set ambitious decarbonization targets for aviation. By combining Smartenergy’s leadership in renewable energy and e-fuel production with Q8 Aviation’s operational reach, the partnership aims to help close the global supply gap and meet the surging demand for sustainable fuels.
-
-“This is more than just a commercial agreement it’s a shared commitment to reshaping the future of aviation, by working alongside a partner of Q8 Aviation’s caliber and global scale, we are positioning our projects to make a measurable, lasting impact on the future of aviation fuels.” said Horst H. Mahmoudi, Chairman & CEO of SMARTENERGY Group AG.
-
-The partnership will initially focus on Smartenergy’s two flagship eSAF projects in Portugal. Project Galileu and Project Leça which together are expected to contribute significantly toward Europe’s 2030 eSAF madante. Both facilities are being developed to comply with the RFNBO (Renewable Fuels of Non-Biological Origin) standards under EU RED III guidelines, ensuring that the fuel meets the highest sustainability and traceability benchmarks.
-
-Q8 Aviation’s decision to secure a long-term eSAF offtake from Smartenergy signals a strong vote of confidence in both the technology and the partnership. With its vast global footprint, Q8 Aviation is uniquely positioned to accelerate the adoption of sustainable fuels by providing the necessary scale and infrastructure to deliver eSAF to major international carriers.",https://www.thearabianstories.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-11.46.27-AM.jpeg,N,,2025-09-30 05:56:08.712055
-,,2025-09-30 08:02:46+00:00,www.prnewswire.com,LANZAJET'S PROJECT SPEEDBIRD ADVANCES IN THE UK MARKING A SIGNIFICANT ...,Not Available,,,,,https://www.prnewswire.com/in/news-releases/lanzajets-project-speedbird-advances-in-the-uk-marking-a-significant-milestone-for-ethanol-to-jet-302569979.html,"The award will support the next phase of work on Project Speedbird as it progresses into Front-End Engineering Design (FEED), marking a key milestone in the creation of one of the UK's first commercial-scale ethanol-to-SAF production facilities using waste-based feedstocks.
-Project Speedbird is set to transform the aviation sector by producing SAF from low-carbon ethanol using LanzaJet's patented and fully integrated Alcohol-to-Jet (ATJ) technology.
-We're proud to collaborate with the UK Department for Transport to advance Project Speedbird as a leading project catalyzing SAF development in the UK,"" said Jimmy Samartzis, Chief Executive Officer at LanzaJet.
-Project Speedbird is vital to building a national SAF industry in the UK and to unlocking opportunity and innovation in the region.
-About LanzaJet LanzaJet is a leading alternative fuels technology provider with patented ethanol-based alcohol-to-jet (ATJ) technology.","LanzaJet received a $13M award from the UK Department for Transport – the largest allocation this cycle – to support next phase of development for LanzaJet's sustainable aviation fuel project in Teesside, United Kingdom
-
-TEESSIDE, United Kingdom, Sept. 30, 2025 /PRNewswire/ -- LanzaJet, Inc., a leading next-gen fuels technology company and producer of sustainable fuels, has been awarded more than $13 million (£10 million) from the UK Department for Transport's Advanced Fuels Fund (AFF) to accelerate development of Project Speedbird, a major sustainable aviation fuel (SAF) biorefinery in Teesside, United Kingdom being developed primarily for LanzaJet investor and SAF customer British Airways.
-
-The award will support the next phase of work on Project Speedbird as it progresses into Front-End Engineering Design (FEED), marking a key milestone in the creation of one of the UK's first commercial-scale ethanol-to-SAF production facilities using waste-based feedstocks. Among the projects selected in this round of the AFF, Speedbird received the largest award, underscoring LanzaJet's advancement in the SAF industry, the maturity of the project, and the UK's commitment to moving beyond pilots toward industrial deployment.
-
-Project Speedbird is set to transform the aviation sector by producing SAF from low-carbon ethanol using LanzaJet's patented and fully integrated Alcohol-to-Jet (ATJ) technology. The LanzaJet solution incorporates Technip Energies' Hummingbird® ethanol-to-ethylene technology, which Project Speedbird has licensed, and which is deployed at commercial demonstration scale for the first time at LanzaJet's Freedom Pines Fuels facility in Georgia, USA.
-
-Once Project Speedbird is operational, the facility is expected to produce over 30 million gallons (approximately 90 kilotons) of sustainable fuels from low-carbon ethanol each year, significantly reducing lifecycle greenhouse gas emissions compared to traditional fossil jet fuel.
-
-""We've maintained a long-held belief that creating a new industry requires partnership across the public and private sectors. We're proud to collaborate with the UK Department for Transport to advance Project Speedbird as a leading project catalyzing SAF development in the UK,"" said Jimmy Samartzis, Chief Executive Officer at LanzaJet. ""This support demonstrates confidence in LanzaJet as a leading SAF company, in our ATJ technology, and in the critical role of ethanol-to-SAF in delivering economic growth, creating jobs, and decarbonizing air travel. Project Speedbird is vital to building a national SAF industry in the UK and to unlocking opportunity and innovation in the region. We thank the UK Department for Transport for its leadership and vision in accelerating the transition to net-zero aviation.""
-
-The project aligns with the UK Government's SAF mandate, which requires 10% of jet fuel used in the UK to come from sustainable sources by 2030.
-
-Located in the heart of Teesside, the LanzaJet plant will also deliver significant regional benefits – creating hundreds of jobs, boosting the local economy, and contributing to the region's position as a clean energy hub. By anchoring the project in Teesside, LanzaJet is helping to build out a broader ecosystem for sustainable fuels, one that connects local feedstock providers, renewable energy producers, and storage and distribution partners. In doing so, the project supports the UK's broader net-zero strategy and the Government's ambition for the country to become a global SAF leader.
-
-With this latest milestone, LanzaJet continues to lead the scale-up of sustainable fuels globally as it combines technological innovation, operating experience, and deep partnerships to decarbonize aviation at pace.
-
-About LanzaJet
-
-LanzaJet is a leading alternative fuels technology provider with patented ethanol-based alcohol-to-jet (ATJ) technology. LanzaJet is creating an opportunity for future generations by accelerating the production and deployment of Sustainable Aviation Fuel (SAF) and other alternative fuel technologies critical to transform the global economy. Last year, LanzaJet was named a TIME100 Most Influential Company, a Rising Star Company of the Year by S&P Global, one of MIT's 15 Climate Tech Companies to Watch in 2024, and the Platts Global Energy Award winner for Rising Star Company of the Year 2024. Further information is available at https://www.lanzajet.com/.",https://mma.prnewswire.com/media/2709678/lanzajet_logo_black_Logo.jpg?p=facebook,N,,2025-09-30 04:56:07.665851
-,,2025-09-30 07:58:51+00:00,ESG Today,KKR Acquires 50% Stake in $1.25 Billion North America Solar Portfolio from TotalEnergies,Emanuela Hawker,,,,,https://www.esgtoday.com/kkr-acquires-50-stake-in-1-25-billion-north-america-solar-portfolio-from-totalenergies/,"Alternative asset and private equity investor KKR announced an agreement to acquire a 50% stake in a portfolio of solar energy assets from TotalEnergies, in a transaction valuing the portfolio at an enterprise value of $1.25 billion.
-TotalEnergies is building a portfolio that combines renewable energy and flexible assets such as storage and gas-fired plants to deliver low-carbon electricity.
-The company typically sells up to half of its renewable assets once they reach commercial operation to unlock value while managing risk.
-Cecilio Velasco, Managing Director of KKR, said: “TotalEnergies is a renewable energy industry leader globally, and we are thrilled to establish this joint venture with the TotalEnergies team to support their renewables business.
-TotalEnergies’ North American solar portfolio is a great fit for us, representing high-quality renewable energy assets with long term contracts.”","Alternative asset and private equity investor KKR announced an agreement to acquire a 50% stake in a portfolio of solar energy assets from TotalEnergies, in a transaction valuing the portfolio at an enterprise value of $1.25 billion.
-
-The portfolio includes six large-scale solar projects totalling 1.3 GW and 41 smaller distributed generation sites adding another 140 MW, primarily based in the U.S.
-
-TotalEnergies is set to receive $950 million at closing, including proceeds from associated refinancing arrangements.
-
-Stéphane Michel, President of Gas, Renewables and Power at TotalEnergies, said:
-
-“We are pleased to enter into this new strategic partnership with KKR in North America, a key deregulated electricity market to expand our integrated business model. Aligned with our strategy, this transaction unlocks value from newly commissioned assets and further strengthens the profitability of our Integrated Power business.”
-
-Under the agreement, TotalEnergies will maintain a 50% share in the assets and continue operating them. Electricity from the projects has either been sold under existing agreements or will be marketed by TotalEnergies.
-
-TotalEnergies is building a portfolio that combines renewable energy and flexible assets such as storage and gas-fired plants to deliver low-carbon electricity. The company typically sells up to half of its renewable assets once they reach commercial operation to unlock value while managing risk.
-
-The company has so far reached more than 30 GW of installed renewable capacity worldwide as of June 2025 and aims to expand to 35 GW by the end of this year.
-
-The acquisition marks the latest in a series of energy transition and sustainable infrastructure-focused transactions for KKR, and follows the identification by the firm in December 2023 of decarbonization, and the large scale “brown-to-green” transition of asset-heavy sectors in particular, as a key “mega-theme” driving investment opportunities.
-
-Cecilio Velasco, Managing Director of KKR, said:
-
-“TotalEnergies is a renewable energy industry leader globally, and we are thrilled to establish this joint venture with the TotalEnergies team to support their renewables business. We have long been investors in renewables through our infrastructure platform, having committed more than $23 billion to date in energy transition investments. TotalEnergies’ North American solar portfolio is a great fit for us, representing high-quality renewable energy assets with long term contracts.”",https://www.esgtoday.com/wp-content/uploads/2025/09/KKR-TotalEnergies.jpg,N,,2025-09-30 07:57:58.571777
