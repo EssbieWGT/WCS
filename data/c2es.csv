@@ -1,4 +1,78 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,American Energy,2025-10-31 00:11:33+00:00,Reuters,"First Solar sales top estimates, company to open another US factory - Reuters",Dharna Bafna,,,,,https://www.reuters.com/business/energy/first-solar-beats-expectations-third-quarter-sales-robust-demand-2025-10-30/,"First Solar , the biggest U.S.-based solar panel maker, beat expectations for third-quarter sales on Thursday, driven by robust demand for its products, sending its shares up more than 5% in extended trading.",Not Available,https://www.reuters.com/resizer/v2/NU6RBNGD7NN3BHIKT3ZJM7PD2E.jpg?auth=76b050164c4e9457882dee3462b23cf0934d75735ff1ed958612fe6b1924bf65&height=1005&width=1920&quality=80&smart=true,N,,2025-10-30 20:18:11.511539
+,American Energy,2025-10-31 00:01:22+00:00,CEPR,"Data, power and emissions: How AI's growth may slow down the green transition | CEPR",Not Available,,,,,https://voxeu.org/voxeu/columns/data-power-and-emissions-how-ais-growth-may-slow-down-green-transition,"A novel dataset linking AI, data centres, and power plants To carry out the analysis, we assemble a novel dataset linking AI, emissions, and the location of data centres and power plants in 722 US commuting zones between 2002 and 2022.
+We then map the geographical location of more than 2,000 data centres and link them to nearby power plants and their fuel mix.
+Localities specialised in industries with faster growth of data-intensive employment saw a significantly slower fall in CO2 emissions (Figure 2).
+Figure 3 Distance to data centres and power plant activities Notes: The figure presents estimated coefficients and 90% confidence intervals for the effects of power plants’ average distance to data centres on different power plant activities.
+Davenport, C, C Singer, N Mehta, B Lee, and J Mackay (2024), AI, data centers and the coming US power demand surge, Goldman Sachs 26.","Quantifying the carbon footprint of AI is an increasingly urgent task. Policymakers are debating whether the surge in electricity demand linked to AI will jeopardise decarbonisation goals. Data centres – the core infrastructure supporting AI models – are projected to account for 8% of US electricity demand by 2030, up from 3% in 2022 (Davenport et al. 2024). Concerns have been voiced that this power surge may delay the retirement of coal-fired plants. On the other hand, AI and digital industries are often promoted as a ‘green’ technology that may increase efficiency and lower emissions.
+
+Studies of past waves of digitalisation (e.g. Lange et al. 2020) showed that while ICT can reduce some forms of waste, the overall effect was often an increase in energy use. More recently, cryptomining has been linked to an increase in local electricity prices (Benetton 2023), and there is an ongoing debate whether data-centre expansion will force grids to rely longer on fossil fuels (Electric Power Research Institute 2024, Knittel et al. 2025).
+
+In a recent study (Bonfiglioli et al. 2025), we contribute to this debate by providing systematic evidence on how the diffusion of AI has affected emissions in the US over the last two decades. Our findings suggest that the ‘green’ promise of AI will remain elusive as long as the electricity sector itself is not rapidly decarbonised.
+
+A novel dataset linking AI, data centres, and power plants
+
+To carry out the analysis, we assemble a novel dataset linking AI, emissions, and the location of data centres and power plants in 722 US commuting zones between 2002 and 2022. This period coincides with the rise of the digital economy, cloud computing, and early AI applications. To capture the carbon footprint of these phenomena, we define AI as algorithms applied to big data, and we measure its penetration using changes in employment in data-intensive occupations – software developers, data scientists, systems analysts, and related computer-science jobs – identified from the O*NET database (see Bonfiglioli, Crinò, Gancia, and Papadakis 2024, 2025).
+
+We then map the geographical location of more than 2,000 data centres and link them to nearby power plants and their fuel mix. Finally, we measure emissions from the high-resolution Vulcan dataset (Gurney et al. 2009, 2025), which tracks CO2 from fossil-fuel combustion by sector and location, complemented by satellite-based data on other pollutants.
+
+Figure 1 presents colour maps showing how employment in data-intensive occupations (panel a) and CO2 emissions (panel b) vary across US commuting zones, with darker colours representing higher levels of adoption or emissions over the sample period. Red triangles also indicate the location of data centres. The figure shows that areas with more workers in data-intensive occupations tend to have higher emissions and are more likely to host at least one data centre. Yet, this correlation cannot be interpreted as causal evidence, as both AI and emissions might be simultaneously driven by other shocks.
+
+Figure 1 Data-intensive occupations, data centres, and CO2 emissions
+
+Notes: Panel (a) displays the employment share of data-intensive occupations in each commuting zone in 2022. Panel (b) shows the total CO2 emissions in each commuting zone for the same year. Darker colours represent higher levels of adoption of data-intensive occupations or emissions over the sample period. Red triangles indicate the presence of a data centre site.
+
+To address the fact that AI adoption could itself be influenced by local demand or productivity trends, we use a shift–share (Bartik) instrument. Specifically, we identify commuting zones exogenously more exposed to the arrival of AI as those zones historically specialised in industries that experienced faster growth in data-intensive occupations than the nation as a whole.
+
+The effect of AI on emissions
+
+Our analysis yields four key findings. First, AI slows down the green transition at the local level. Localities specialised in industries with faster growth of data-intensive employment saw a significantly slower fall in CO2 emissions (Figure 2). On average, emissions fell by 16% over the period 2002–2022. In contrast, in a hypothetical commuting zone that had experienced no AI penetration at all, CO2 emissions would have fallen 37% more than the average. While these figures should not be interpreted as counterfactual exercises, since nationwide effects are differenced out in our empirical strategy, they nonetheless suggest that local AI penetration increases emissions relative to less exposed areas.
+
+Figure 2 AI penetration, CO2 emissions, and electricity generation
+
+Notes: The figure presents estimated coefficients and 90% confidence intervals for the effects of AI penetration on various types of emissions and on the non-renewables share of net electricity generation. The estimation sample includes 722 commuting zones observed across four 5-year periods from 2002 to 2022.
+
+Second, the growth in emissions is mostly due to a scale effect. Decomposing the drivers of emissions into scale, composition, and technique (à la Levinson 2009), we find that expansion of local economic activity is the main channel through which AI affects emissions. Areas specialised in industries with faster growth of data-intensive employment attracted more workers and firms, increasing total output and hence energy use (Figure 2). Shifts in industrial composition modestly reduced, rather than increased, emissions.
+
+Third, electricity generation becomes more carbon intensive. Even after controlling for scale, per-capita emissions from power generation rose in areas with higher AI penetration (Figure 2). This happens because power plants located in more exposed areas switch electricity generation from renewable sources to non-renewable sources (Figure 2). It confirms concerns that the energy demand driven by AI applications and data centres is met primarily by fossil-fuel plants, which can guarantee the stable and continuous supply that high-performance computing requires.
+
+Our fourth and final result is that the location of data centres matters. Since electricity cannot be stored at scale easily, the grid must balance supply and demand in real time. Given the high transmission-loss costs, power plants are influenced by nearby sources of demand, especially from data centres which require a stable, high-capacity electricity supply. Consistently, we find that proximity to data centres is associated with power plants generating higher CO2 emissions and relying more heavily on non-renewable energy sources (Figure 3).
+
+Figure 3 Distance to data centres and power plant activities
+
+Notes: The figure presents estimated coefficients and 90% confidence intervals for the effects of power plants’ average distance to data centres on different power plant activities. The estimation sample consists of 11,500 power plants observed four 5-year periods from 2002 to 2022.
+
+Conclusions
+
+These results put numbers on a concern often voiced by climate analysts: absent a faster transition of the power sector to low-carbon sources, the diffusion of AI can slow or even reverse recent gains in emissions reduction.
+
+Notably, our study covers 2002–2022, a period that predates the explosion of generative AI. While the promised efficiency gains from these new technologies may eventually help decarbonise the economy, training and running today’s large language models is far more energy-intensive than the earlier AI applications captured in our data. Unless accompanied by massive investment in clean power, the next wave of AI may therefore have even larger short-run impacts on emissions.
+
+Our research points to an uncomfortable truth: digital transformation and decarbonisation cannot be treated as separate agendas. The diffusion of AI epitomises a classic challenge of technological progress: innovations that promise long-term efficiency gains can, in the short run, raise environmental externalities by expanding demand for energy. The solution is not to slow AI, but to accelerate the clean-energy transition. This may require incentives for more energy-efficient hardware, locating data centres in regions with abundant clean-energy capacity, and strengthening transmission infrastructure. Without that alignment, the race for ever-more-powerful algorithms may inadvertently lock economies into a higher-emission path.
+
+References
+
+Benetton, M, G Compiani, and A Morse (2023), “When cryptomining comes to town: High electricity use spillovers to the local economy”, VoxEU.org, 12 August.
+
+Bonfiglioli, A, R Crinò, M Filomena, and G Gancia (2025), “Data, power and emissions: The environmental cost of AI”, CEPR Discussion Paper 20686.
+
+Bonfiglioli, A, R Crinò, G Gancia, and I Papadakis (2025), “Artificial intelligence and jobs: Evidence from US commuting zones”, Economic Policy 40(121): 145–94.
+
+Bonfiglioli, A, R Crinò, G Gancia, and I Papadakis (2024), “The effect of AI adoption on jobs: Evidence from US commuting zones”, VoxEU.org, 12 August.
+
+Davenport, C, C Singer, N Mehta, B Lee, and J Mackay (2024), AI, data centers and the coming US power demand surge, Goldman Sachs 26.
+
+Electric Power Research Institute (2024), Powering data centers: US energy system and emissions impacts of growing loads, EPRI Report 3002031198.
+
+Gurney, K, P Dass, A Kato, B Gawuc, H Aslam, and H Sun (2025), ""Vulcan version 4.0 high-resolution annual carbon dioxide emissions in the US for the 2010–2022 time period"", mimeo.
+
+Gurney, K, Y Zhou, S Geethakumar, A Godbole, D Mendoza, M Vaidhyanathan, and N Sahni (2009), “The Vulcan Project: Recent advances and emissions estimation for the NACP mid-continent intensive campaign region”, in AGU Fall Meeting Abstracts 2009: B51E–0337.
+
+Knittel, C R, J R L Senga, and S Wang (2025), “Flexible data centers and the grid: Lower costs, higher emissions?”, NBER Working Paper 34065.
+
+Lange, S, J Pohl, and T Santarius (2020), “Digitalization and energy consumption. Does ICT reduce energy demand?”, Ecological Economics 176: 106760.
+
+Levinson, A (2009), “Technology, international trade, and pollution from US manufacturing”, American Economic Review 99(5): 2177–92.",https://voxeu.org/themes/custom/cepr/assets/favicon/favicon-32x32.png?v=1,N,,2025-10-30 20:18:16.179633
 ,Detroit American Energy ,2025-10-30 23:10:10+00:00,www.thewellnews.com,House Democrats Push to Restore Clean Energy Tax Credits | The Well News,Dan McCue,,,,,https://www.thewellnews.com/renewable-energy/house-democrats-push-to-restore-clean-energy-tax-credits/,"5862) would restore the tax credits and related incentives that were the cornerstone of the Inflation Reduction Act.
 “Unfortunately, our Republican colleagues did all three of those things when they passed their ‘big ugly bill’ and eliminated the renewable energy credits included in the Inflation Reduction Act,” he said.
 Extend incentives for energy efficient homes and commercial buildings, helping families and businesses cut utility bills through modern, efficient technologies.
@@ -1855,6 +1929,25 @@ Competitive Power Ventures will use the loan from the Texas Energy Fund to const
 That’s enough to supply about 850,000 homes in West Texas, an emerging hub for data centers to run ...","Texas is backing a proposed Permian Basin power plant fueled by natural gas with a $1.1 billion low-interest loan, the largest such project under a state program aimed to shore up supplies after widespread blackouts in 2021.
 
 Competitive Power Ventures will use the loan from the Texas Energy Fund to construct a 1,350-megawatt combined-cycle gas plant — among the more efficient types of fossil-fuel generation — in the Permian that’s expected to start up by 2029, CPV said Thursday in a statement. That’s enough to supply about 850,000 homes in West Texas, an emerging hub for data centers to run ...",https://news-cdn.bindg.com/indg/assets/news/images/Fallback-image.webp,N,,2025-10-30 17:05:50.700336
+,North Carolina and Evs,2025-10-30 18:19:57+00:00,EIN Presswire,"Governor Stein, Secretary Lilley, EDPNC to Lead Multi-State Delegation at Southeast U.S. ...",Not Available,,,,,http://www.einpresswire.com/article/862988396/governor-stein-secretary-lilley-edpnc-to-lead-multi-state-delegation-at-southeast-u-s-japan-annual-meeting-in-tokyo,"This week, North Carolina Governor Josh Stein is leading the multi-state delegation at the Southeast United States (SEUS)/Japan Annual Joint Meeting in Tokyo, Japan.
+Governor Stein is joined by Department of Commerce Secretary Lee Lilley and EDPNC CEO Christopher Chung.
+The Governor will meet with Japanese business leaders and promote North Carolina as a top state for investment and partnership.
+From electric vehicles to aerospace, from advanced manufacturing to biotech, Japan and North Carolina are innovating for the future.
+Click here to learn more about the SEUS/Japan Annual Joint Meeting.","This week, North Carolina Governor Josh Stein is leading the multi-state delegation at the Southeast United States (SEUS)/Japan Annual Joint Meeting in Tokyo, Japan. Governor Stein is joined by Department of Commerce Secretary Lee Lilley and EDPNC CEO Christopher Chung. The Governor will meet with Japanese business leaders and promote North Carolina as a top state for investment and partnership.
+
+“Japan and North Carolina have a truly special partnership,” said Governor Josh Stein. “More than 36,000 North Carolinians wake up every morning and go to work for a Japanese company – and many more benefit from our years of cultural and academic collaboration. From electric vehicles to aerospace, from advanced manufacturing to biotech, Japan and North Carolina are innovating for the future. I look forward to spending this week building on our key relationships and showcasing all that our state has to offer. North Carolina is open for business, and I intend to make sure the world knows it.”
+
+“In the global economy, North Carolina truly stands out as the Top State for Business,” said Department of Commerce Secretary Lee Lilley. “We are fortunate to have one of the strongest workforces in the country, and our delegation looks forward to highlighting at SEUS how North Carolina is an ideal partner for Japanese companies in innovating for the future.”
+
+“Over the past half-century, Japan has been and remains one of the most important economic partners for North Carolina, with strong ties across investment, trade, tourism, education, and cultural exchange,” said Christopher Chung, CEO of Economic Development Partnership of North Carolina. “This week, we will deepen our state’s connections with Japan in ways that mutually advance our competitiveness in the global economy.”
+
+Japan is the number one source of foreign direct investment in North Carolina for both capital investment and job creation. This year, Governor Stein has brought the largest North Carolina contingent to SEUS in state history, demonstrating his commitment to this partnership.
+
+In 1976, North Carolina became a charter member of the Southeast U.S./Japan Association. As the current SEUS host state, North Carolina hosted last year’s SEUS conference in Charlotte. At the close of the conference, Governor Stein will officially hand off the leadership torch of the Southeast Association to Governor Bill Lee and the State of Tennessee. In 1978, North Carolina opened its first business office in Tokyo, where it has operated continuously for nearly half a century. Last year, Governor Roy Cooper welcomed then-Prime Minister Fumio Kishida of Japan to the North Carolina Executive Mansion – the first such visit by a foreign head of state in North Carolina’s recorded history.
+
+Click here to learn more about the SEUS/Japan Annual Joint Meeting.
+
+Read more about recent Japanese companies that have invested in North Carolina:",,N,,2025-10-30 18:05:20.105804
 ,Texas Clean Energy,2025-10-30 18:19:57+00:00,EIN Presswire,TIME100's Most Influential Climate Business Leaders - EIN Presswire,Not Available,,,,,http://www.einpresswire.com/article/862988361/time100-s-most-influential-climate-business-leaders,"Governor Kathy Hochul today has been named to the 2025 TIME100 Climate list, recognizing the 100 most influential global leaders driving business climate action.
 Under Governor Hochul’s leadership, New York launched the New York State Adaptation and Resilience Plan, a first-of-its-kind, unified statewide initiative to prepare communities for the challenges of a changing climate.
 The program accelerates New York’s transition to a clean energy economy, lowers costs for homeowners and small businesses, and creates thousands of family-sustaining jobs.
@@ -1924,25 +2017,6 @@ Protecting Natural Resources and Strengthening Communities
 Under Governor Hochul’s leadership in Fiscal Year 2025, New York State’s coordinated clean water grants and financing surpassed $3.8 billion in 2025 alone — an unprecedented investment that is transforming water systems in communities of every size. This includes Governor Hochul's continued $500 million annual commitment to clean water projects.
 
 Additional Key Investments Include:",https://www.governor.ny.gov/sites/default/files/styles/cover_image_660x400_/public/thumbnails/image/Offshore_WindFarm_1280.jpg?h=73b3e015&itok=u9Nah3IS,N,,2025-10-30 16:00:26.292370
-,North Carolina and Evs,2025-10-30 18:19:57+00:00,EIN Presswire,"Governor Stein, Secretary Lilley, EDPNC to Lead Multi-State Delegation at Southeast U.S. ...",Not Available,,,,,http://www.einpresswire.com/article/862988396/governor-stein-secretary-lilley-edpnc-to-lead-multi-state-delegation-at-southeast-u-s-japan-annual-meeting-in-tokyo,"This week, North Carolina Governor Josh Stein is leading the multi-state delegation at the Southeast United States (SEUS)/Japan Annual Joint Meeting in Tokyo, Japan.
-Governor Stein is joined by Department of Commerce Secretary Lee Lilley and EDPNC CEO Christopher Chung.
-The Governor will meet with Japanese business leaders and promote North Carolina as a top state for investment and partnership.
-From electric vehicles to aerospace, from advanced manufacturing to biotech, Japan and North Carolina are innovating for the future.
-Click here to learn more about the SEUS/Japan Annual Joint Meeting.","This week, North Carolina Governor Josh Stein is leading the multi-state delegation at the Southeast United States (SEUS)/Japan Annual Joint Meeting in Tokyo, Japan. Governor Stein is joined by Department of Commerce Secretary Lee Lilley and EDPNC CEO Christopher Chung. The Governor will meet with Japanese business leaders and promote North Carolina as a top state for investment and partnership.
-
-“Japan and North Carolina have a truly special partnership,” said Governor Josh Stein. “More than 36,000 North Carolinians wake up every morning and go to work for a Japanese company – and many more benefit from our years of cultural and academic collaboration. From electric vehicles to aerospace, from advanced manufacturing to biotech, Japan and North Carolina are innovating for the future. I look forward to spending this week building on our key relationships and showcasing all that our state has to offer. North Carolina is open for business, and I intend to make sure the world knows it.”
-
-“In the global economy, North Carolina truly stands out as the Top State for Business,” said Department of Commerce Secretary Lee Lilley. “We are fortunate to have one of the strongest workforces in the country, and our delegation looks forward to highlighting at SEUS how North Carolina is an ideal partner for Japanese companies in innovating for the future.”
-
-“Over the past half-century, Japan has been and remains one of the most important economic partners for North Carolina, with strong ties across investment, trade, tourism, education, and cultural exchange,” said Christopher Chung, CEO of Economic Development Partnership of North Carolina. “This week, we will deepen our state’s connections with Japan in ways that mutually advance our competitiveness in the global economy.”
-
-Japan is the number one source of foreign direct investment in North Carolina for both capital investment and job creation. This year, Governor Stein has brought the largest North Carolina contingent to SEUS in state history, demonstrating his commitment to this partnership.
-
-In 1976, North Carolina became a charter member of the Southeast U.S./Japan Association. As the current SEUS host state, North Carolina hosted last year’s SEUS conference in Charlotte. At the close of the conference, Governor Stein will officially hand off the leadership torch of the Southeast Association to Governor Bill Lee and the State of Tennessee. In 1978, North Carolina opened its first business office in Tokyo, where it has operated continuously for nearly half a century. Last year, Governor Roy Cooper welcomed then-Prime Minister Fumio Kishida of Japan to the North Carolina Executive Mansion – the first such visit by a foreign head of state in North Carolina’s recorded history.
-
-Click here to learn more about the SEUS/Japan Annual Joint Meeting.
-
-Read more about recent Japanese companies that have invested in North Carolina:",,N,,2025-10-30 18:05:20.105804
 ,EVs,2025-10-30 18:19:13+00:00,Market.us,"Zero-emission Vehicles Market Size, Share | CAGR of 20.7%",Not Available,,,,,https://market.us/report/zero-emission-vehicles-market/,"Restraints High Initial Purchase Cost Compared to Conventional Vehicles One of the main restraints for the zero-emission vehicles market is the high upfront cost compared to traditional vehicles.
 Regional Analysis North America Dominates the Zero-emission Vehicles Market with a Market Share of 43.9%, Valued at USD 115.6 Billion North America holds the largest share in the global zero-emission vehicles (ZEV) market, accounting for 43.9% of the total market and valued at USD 115.6 Billion.
 Europe Zero-emission Vehicles Market Trends Europe represents a significant market for zero-emission vehicles, driven by stringent emission reduction targets and aggressive policy initiatives under the European Green Deal.
@@ -14156,8 +14230,8 @@ See the 10 stocks »
 Keith Speights has positions in Amazon, Berkshire Hathaway, ExxonMobil, and Microsoft. The Motley Fool has positions in and recommends Amazon, Berkshire Hathaway, and Microsoft. The Motley Fool recommends Occidental Petroleum and recommends the following options: long January 2026 $395 calls on Microsoft and short January 2026 $405 calls on Microsoft. The Motley Fool has a disclosure policy.
 
 The views and opinions expressed herein are the views and opinions of the author and do not necessarily reflect those of Nasdaq, Inc.",https://www.nasdaq.com/sites/acquia.prod/files/2019-05/0902-Q19%20Total%20Markets%20photos%20and%20gif_CC8.jpg,N,,2025-10-29 13:14:04.435935
-,Texas Environment,2025-10-29 15:29:50+00:00,subscriber.politicopro.com,Moniz-led group unpacks $8B in DOE project cancellations - POLITICO Pro,Not Available,,,,,https://subscriber.politicopro.com/article/eenews/2025/10/29/moniz-led-group-unpacks-8b-in-doe-project-cancellations-00625497,"More than 40 percent of the nixed awards were from the Office of Clean Energy Demonstrations, a target of the Trump administration.",Not Available,https://static.politico.com/0a/0e/72874296475ab366c413a2de51c1/us-armenia-azerbaijan-trump-77096.jpg,N,,2025-10-29 12:07:09.326693
 ,North Carolina and Evs,2025-10-29 15:29:50+00:00,subscriber.politicopro.com,EV sales plummet as tax incentives vanish - POLITICO Pro,Not Available,,,,,https://subscriber.politicopro.com/article/eenews/2025/10/29/ev-sales-plummet-as-tax-incentives-vanish-00626679,"Electric vehicle sales will account for 6 percent of car sales this month, less than half the rate in September.",Not Available,https://static.politico.com/8a/3b/bace296446b197d2edd3fda55e0e/ford-tesla-52431.jpg,N,,2025-10-29 12:08:00.731952
+,Texas Environment,2025-10-29 15:29:50+00:00,subscriber.politicopro.com,Moniz-led group unpacks $8B in DOE project cancellations - POLITICO Pro,Not Available,,,,,https://subscriber.politicopro.com/article/eenews/2025/10/29/moniz-led-group-unpacks-8b-in-doe-project-cancellations-00625497,"More than 40 percent of the nixed awards were from the Office of Clean Energy Demonstrations, a target of the Trump administration.",Not Available,https://static.politico.com/0a/0e/72874296475ab366c413a2de51c1/us-armenia-azerbaijan-trump-77096.jpg,N,,2025-10-29 12:07:09.326693
 ,North Carolina American Energy ,2025-10-29 15:29:50+00:00,subscriber.politicopro.com,"Explaining Trump's energy bet: Win on gas, lose on renewables - POLITICO Pro",Not Available,,,,,https://subscriber.politicopro.com/article/eenews/2025/10/29/explaining-trumps-energy-bet-win-on-gas-lose-on-renewables-ew-00625465,"The president's unflinching commitment to fossil fuels will be tested when he meets Thursday with China's leader, Xi Jinping, who has created a clean energy powerhouse.",Not Available,https://static.politico.com/93/25/c49aeadc480288ce629f9f56e3ff/japan-trump-asia-51281.jpg,N,,2025-10-29 13:14:14.015701
 ,Louisiana Environment,2025-10-29 15:28:35+00:00,WRKF,"Mary Patricia Wray, Denny McLain, Sarah Jane Guidry | WRKF",Not Available,,,,,https://www.wrkf.org/show/talk-louisiana/2025-10-29/mary-patricia-wray-denny-mclain-sarah-jane-guidry,"Political Consultant Mary Patricia Wray talks politics in Louisiana and nationally.
 Former professional baseball player Denny McLain discusses his career and the 2025 MLB World Series.
@@ -27900,108 +27974,3 @@ By displacing diesel and petrol generators, MOPO’s clean energy model is reduc
 Backed by leading international investors such as Octopus Energy, Norfund, British International Investment, and IFC, MOPO continues to scale its community-based, tech-enabled model as a blueprint for clean energy access in emerging markets.
 
 Further details regarding the awards can be found at: https://africasustainablefuturesawards.live.ft.com/home",https://memuknews.com/wp-content/uploads/2025/10/ft_africa_2025_awards_1790_54874463400_o-scaled.jpg,N,,2025-10-28 02:18:56.687042
-,Texas American Energy ,2025-10-28 00:15:49+00:00,Dallas Innovates,"Texan by Nature Names 23 Companies to Its 2025 TxN 20, Recognizing Texas Businesses ...","Lance Murray, www.facebook.com, Dallas Innovates",,,,,https://dallasinnovates.com/texan-by-nature-names-23-companies-to-its-2025-txn-20-recognizing-texas-businesses-advancing-conservation/,"Conservation nonprofit Texan by Nature (TxN) has announced 23 honorees of the seventh annual Texan by Nature 20 (TxN 20), an official recognition of companies with Texas operations that have made a measurable commitment to conservation.
-“Congratulations to this year’s TxN 20!
-Austin-based Texan by Nature said the TxN 20 recognizes the “best and most innovative work” in conservation coming from businesses based in or operating in Texas.
-The 2025 TxN 20 is catalyzed by Jetco Delivery, whose president, Kyle Kristynik, said the company’s investment aims to help spark further collaboration.
-“With our investment in the TxN 20, we hope to amplify cross-industry innovation and action that will inspire and propel businesses toward a sustainable future,” Kristynik said.","Conservation nonprofit Texan by Nature (TxN) has announced 23 honorees of the seventh annual Texan by Nature 20 (TxN 20), an official recognition of companies with Texas operations that have made a measurable commitment to conservation.
-
-Former First Lady Laura Bush, founder of Texan by Nature and a Dallas resident, praised this year’s honorees for their leadership.
-
-“Congratulations to this year’s TxN 20! Your leadership demonstrates what is possible when organizations engage in conservation. You have set the gold standard for conservation in Texas, inspiring others to bring nature into the places we live, work, and play. Thank you for creating a healthier, more sustainable future for our state,” Bush said.
-
-Austin-based Texan by Nature said the TxN 20 recognizes the “best and most innovative work” in conservation coming from businesses based in or operating in Texas. Many of the companies have ties to North Texas.
-
-“We believe business can be a force for nature through action, collaboration, and innovative models in conservation,” Texan by Nature CEO and President Joni Carswell said in a statement. “It’s an honor to recognize these best-in-class examples that demonstrate how integrating business with conservation strengthens Texas and sets the standard for the globe.”
-
-The TxN 20 recognizes companies across 12 industries whose innovation and environmental leadership are driving measurable results. With 171 million acres of land and global leadership across multiple sectors, Texas offers fertile ground for partnerships that connect industry with conservation, the nonprofit said.
-
-Beyond the annual honors, Texan by Nature said the annual list serves as a catalog of best practices and metrics that other businesses can use to build conservation into their operations. The nonprofit works with the Texas business community to advance projects that combine economic growth with environmental stewardship.
-
-The 2025 TxN 20 is catalyzed by Jetco Delivery, whose president, Kyle Kristynik, said the company’s investment aims to help spark further collaboration.
-
-“With our investment in the TxN 20, we hope to amplify cross-industry innovation and action that will inspire and propel businesses toward a sustainable future,” Kristynik said.
-
-2025 TxN 20 honorees
-
-• Acme Brick Co. (Fort Worth)
-
-• Ally Financial
-
-• Amazon
-
-• Apex Clean Energy
-
-• Build Native
-
-• Cemex
-
-• Cirrus Logic
-
-• City of Farmers Branch
-
-• Darling Ingredients (Irving)
-
-• Dallas Fort Worth International Airport
-
-• Ford Motor Company
-
-• H-E-B
-
-• HOLT CAT
-
-• LRE (Leeward Renewable Energy) (Dallas)
-
-• Microsoft
-
-• North American Development Bank
-
-• Overland Partners
-
-• Oxy
-
-• San Antonio Water System
-
-• Shiner (Spoetzel Brewery)
-
-• Texas Health Resources (Arlington)
-
-• Vital Farms
-
-• Xcel Energy
-
-How the honorees were selected
-
-Company data submissions were evaluated alongside independent research of more than 2,000 publicly traded and private companies across Texas, Texan by Nature said.
-
-Each organization was assessed using a 17-point scoring system covering 12 industry sectors. Evaluation criteria included stated conservation commitments; measurable environmental metrics; investments in conservation; return on conservation outcomes; and positive impacts on land, water, wildlife, people, waste, and energy.
-
-Other factors included companywide activities such as infrastructure, production, and supply chain management, and employee engagement.
-
-A selection committee of industry leaders reviewed the top 60 finalists to determine the 23 honorees. The process and recognition are supported by HOLT CAT, the nonprofit said.
-
-Texan by Nature describes itself as a catalyst for thought leadership, innovative partnerships, and community-led conservation solutions, helping align Texas industries with practices that sustain both economic growth and the natural environment.
-
-Don’t miss what’s next. Subscribe to Dallas Innovates.
-
-Track Dallas-Fort Worth’s business and innovation landscape with our curated news in your inbox Tuesday-Thursday.",https://s24806.pcdn.co/wp-content/uploads/2025/10/Texan_by_Nature_Summit-MG_3506-970.jpg,N,,2025-10-27 22:18:58.562827
-,Louisiana and Evs,2025-10-28 00:09:33+00:00,https://www.kplctv.com,High school STEM students are building an electric vehicle in the classroom - KPLC,Not Available,,,,,https://www.kplctv.com/video/2025/10/28/high-school-stem-students-are-building-an-electric-vehicle-classroom/,High school STEM students are building an electric vehicle in the classroom ... Green Fentanyl has made its way to Southwest Louisiana. Here's what you ...,Not Available,https://gray-kplc-prod.gtv-cdn.com/resizer/v2/https%3A%2F%2Fdo0bihdskp9dy.cloudfront.net%2F10-28-2025%2Ft_78eacf349893415fa59fc47eba171ce2_name_file_1280x720_2000_v3_1_.jpg?auth=27676bcd20b207497e1ac1233e5dfc395d3518a2bdfa3652e62cc157f03bccf4&width=1200&height=600&smart=true,N,,2025-10-27 23:57:23.545728
-,North Carolina Environment,2025-10-28 00:00:47+00:00,WATTPoultry.com,NCPF announces environmental award winners - WATT Poultry,Not Available,,,,,https://www.wattagnet.com/latest-news/press-release/15770370/nc-announces-environmental-award-winners,"At its 2025 annual meeting, the North Carolina Poultry Federation (NCPF) announced this year’s Environmental Award winners and celebrated important leadership transitions within the organization.
-Environmental Award Winners The 2025 Environmental Award was presented to Bradley and Kay Leigh Parker of Parker’s Island Creek Farms, a broiler operation located in Duplin County.
-The Parkers were recognized for their outstanding commitment to environmental stewardship and sustainable farming practices.
-Leadership Transitions and Recognitions During the meeting, NCPF members elected Tim Thomas as the organization’s new president.
-The federation also recognized the retirement of longtime executive director, Bob Ford, honoring his years of dedicated leadership and service to North Carolina’s poultry industry.","At its 2025 annual meeting, the North Carolina Poultry Federation (NCPF) announced this year’s Environmental Award winners and celebrated important leadership transitions within the organization.
-
-Environmental Award Winners
-
-The 2025 Environmental Award was presented to Bradley and Kay Leigh Parker of Parker’s Island Creek Farms, a broiler operation located in Duplin County. The Parkers were recognized for their outstanding commitment to environmental stewardship and sustainable farming practices.
-
-The First Runner-Up honor went to Dan and Sonya Andrews, along with their son Tyler, of Faith Farms in Robeson County, also a broiler production farm.
-
-Leadership Transitions and Recognitions
-
-During the meeting, NCPF members elected Tim Thomas as the organization’s new president.
-
-The federation also recognized the retirement of longtime executive director, Bob Ford, honoring his years of dedicated leadership and service to North Carolina’s poultry industry.
-
-Following his retirement, Summer Lanier was announced as the new executive director of NCPF.",https://www.wattagnet.com/favicon-32x32.png,N,,2025-10-27 20:59:39.766766
