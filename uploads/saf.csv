@@ -1,4 +1,152 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2025-11-15 00:13:55+00:00,SolarPACES,"Researchers create a digital twin to run DAWN, Synhelion's solar fuels plant - SolarPACES",Susan Kraemer,,,,,https://www.solarpaces.org/researchers-create-a-digital-twin-to-run-dawn-synhelions-solar-fuels-plant/,"Speed matters for real-time simulation Now that Synhelion is beginning its first commercial production of solar fuels, plant operators will need to adapt to changing information in real time.
+The studies are to validate physics-based and machine-learning-based models for simulating DAWN’s solar fuel plant operation.
+Synhelion’s high-temperature solid thermal energy storage system uses ceramic refractory bricks with internal channels to carry the heat transfer fluid.
+However, both provide a solid base for building a digital twin of the solar fuel process.
+Synhelion has now delivered its first solar aviation fuel to SWISS World’s first solar jet fuel plant inaugurated by Synhelion","Collaborating with Synhelion engineers, a solar research team at the Solar-Institute Jülich (SIJ) of FH Aachen presented two papers at SolarPACES 2025 assessing the accuracy and reliability of dynamic process models for a solar fuel production system. They used operating data from Synhelion’s DAWN pilot plant.
+
+In Synhelion’s solar fuel plant, DAWN, concentrated solar power drives endothermic chemical reactions to convert biogenic methane, carbon dioxide, and steam into synthesis gas (syngas), which can then be processed into liquid hydrocarbon fuels, such as kerosene for aviation or gasoline.
+
+Because the methane and carbon is derived from bio-waste rather than fossil fuels, and heat is generated from concentrated solar heat instead of burning fossil fuels, Synhelion is pioneering a sustainable drop-in replacement for today’s liquid fuels.
+
+Synhelion’s DAWN pilot plant in Jülich (which can be toured at the next SolarPACES conference in the Fall of 2026) uses RED-certified sustainable biogenic waste as the methane and carbon source and has demonstrated the complete production chain under real solar operation conditions.
+
+Synhelion’s solar-absorbing gas receiver is a unique design that is capable of extremely efficient conversion of solar irradiance from the heliostats to temperatures as high as 1500°C.
+
+How can Synhelion’s solar receiver achieve such high temperatures?
+
+Speed matters for real-time simulation
+
+Now that Synhelion is beginning its first commercial production of solar fuels, plant operators will need to adapt to changing information in real time. Traditional physics-based models can be fast, but that usually comes at the cost of lower accuracy. So the team took a new approach.
+
+“We needed a system where we can offer simulation results in real time to aid the operators who run the plant and make the decisions,” explained lead author Falko Schneider in a call from SIJ in Germany.
+
+“For example, when to switch operation modes, what kind of mass flows or compositions of the reactants to set. To achieve this, we need models that can deliver both high accuracy and high computational speed. You can also use the process model offline to test potential operating and control strategies, of course, where speed doesn’t matter as much. The physics-based model takes a bit longer, but still, it’s very fast. It’s not like it needs days to simulate a week of operation.
+
+The studies are to validate physics-based and machine-learning-based models for simulating DAWN’s solar fuel plant operation. The idea is to replace the more computationally expensive physics-based simulations with machine-learning models and validating an efficient alternative. The team first created a machine-learning model of the thermal energy storage with synthetic data from the physics-based model and successfully validated it.
+
+In the overall system study, Validation of a Dynamic Process Model of a Thermochemical System for Solar Fuel Production, all three key components are validated against real-time operation. The key components are the solar receiver, the reforming reactor where the thermochemistry happens, and the thermal energy storage, which is crucial in solar fuels production, as the thermochemistry must operate continuously.
+
+Synhelion’s high-temperature solid thermal energy storage system uses ceramic refractory bricks with internal channels to carry the heat transfer fluid.
+
+The thermal energy storage had the most comprehensive study
+
+The second study, A Validated Machine Learning Approach to Efficient Thermal Energy Storage Simulation Using Synthetic Data, focused on this component, the thermal energy storage. Of the three aspects studied, the thermal storage was most fully modeled.
+
+The thermal energy storage model successfully reproduced charge-discharge transients over 8 cycles across 10 days, achieving errors of less than 3% of the temperature swing in the upper storage layers, although deviations increased toward the bottom due to potential material property variations and mass flow measurement uncertainties.
+
+The team’s surrogate model yielded results in milliseconds on the synthetic validation data, compared with on average over five seconds for a physics-based model—making it roughly 100 to 1000 times faster. On operational validiation data from DAWN, it is even up to 50.000 times faster. Its run times were also much more consistent, allowing the system to run many simulations very quickly, making it practical for optimization tasks or real-time control.
+
+Since solar flux onto the receiver wasn’t directly measured during operation, the researchers developed a simplified data-driven surrogate solar field model using a 4th-degree polynomial with ridge regression.
+
+“We used experimental data as input and compared the output to the experimental data,” Falko explained. “ The coupled surrogate-receiver simulation achieved outlet gas temperatures of approximately 1000°C, showing good agreement with experimental data, although it slightly overestimated temperatures due to a minor systematic bias in the surrogate model. And since then, the receiver has been operated at output temperatures of over 1200°C.
+
+The model validation for the reforming reactor revealed major discrepancies, though. Especially under partial-load conditions, the model overestimated the reaction rate and heat consumption, with residual methane present, contrary to equilibrium predictions, and lower CO₂ conversion than expected.
+
+“We still have some work to do there,” Schneider noted.
+
+“Usually you have these physical models, and then you fit them with operational data. There are components that work very well, right out of the box, without a fitting. The thermal storage model worked quite well already without any fitting. But regarding the chemistry, we need to do some more work. We assumed that a thermochemical equilibrium had been reached within the reactor. That was the statement we got from an industrial manufacturer. However, in the end, it did not align with reality, probably due to the relatively small reactor size.”
+
+So the team needed to implement some kinetics:
+
+“For example, we could implement some factors that allow us to say, ‘Okay, depending on how fast the reactants flow through the catalyst, it will get that close to a thermal chemical equilibrium.’ If it reaches or not, or how close it gets, and what the composition would look like are factors that can be fitted with operational data from DAWN. So this is about the reactor kinetics,” he said.
+
+Work continues on the solar receiver and the reforming reactor
+
+“For the solar receiver, the problem is that we do not have the operational measurements of the concentrated flux hitting it,” he said. “So we are missing an input variable, and we don’t have a detailed model of the heliostat field because a lot of factors go into this. You usually use ray tracing tools to create these kind of models which are not applicable in the process model. So I created this approximation of the heliostat field model, and used that to validate the receiver model. That’s not a strict validation, but at least it’s a successful plausibility check.”
+
+And the reforming reactor model still needs major improvements. It may be necessary to replace the current equilibrium method with a kinetic model or utilize effectiveness factors to more accurately capture how the system behaves under partial loads. However, both provide a solid base for building a digital twin of the solar fuel process.
+
+“Since we are already creating some component models based on machine-learning, we are checking as well if this would be suitable to accurately reproduce the chemistry,” Scheider pointed out.
+
+“This was a publicly funded project between Synhelion, SIJ and Germany’s Institute of Future Fuels at DLR as partners, within which DAWN was built. DLR also created a small lab setup to evaluate different kinds of catalysts. They developed more detailed chemical models with that data. So we are working with them to see whether we can implement it in our model.”
+
+The team’s machine-learning models have been developed within the TwinSF project in the EU, which combines tested physical models with data-driven approaches to help guide operations in alternative fuel production plants using concentrated solar energy to produce sustainable fuels.
+
+The long-term goal is to develop a functioning digital twin that enables real-time plant monitoring, predictive control, and virtual testing of control strategies before they get implemented on an actual solar fuels plant’s system.
+
+Synhelion has now delivered its first solar aviation fuel to SWISS
+
+World’s first solar jet fuel plant inaugurated by Synhelion",https://www.solarpaces.org/wp-content/uploads/2025/11/Synhelion-has-pioneered-solar-fuels-for-aviation-419x400.png,N,,2025-11-14 19:56:24.157691
+,,2025-11-15 00:03:20+00:00,carbon-pulse.com,COP30: Roundup for Day 5 – Nov. 14 - Carbon Pulse,Carbon Pulse,,,,,https://carbon-pulse.com/456959/,"Climate Investment was launched in 2015 by the Oil and Gas Climate Initiative, of which Total is a member.
+Research by Fossil Free Politics shows that France, Sweden and Italy had the largest EU fossil fuel delegations out of the other 27 member states.
+In total nine EU governments brought 84 fossil fuel lobbyists into COP30 on their official government delegations, out of the 1600 fossil fuel lobbyists present at Belem’s conference.
+C40 cities have pledged to halve fossil fuel use by 2030, with the highest-emitting countries moving fastest.
+Complementing them is a private-finance-endorsed High-Quality Energy Investment Planning Roadmap, designed to help countries mobilise private capital at scale and accelerate global clean energy deployment.","Day 5 at COP30 in Belem. The humid weather and air conditioning are blowing hot and cold, depending on which corner of the venue you are in, which one delegate quipped was “a bit like the carbon markets” at the moment. Nature and carbon are firmly on Friday’s agenda across side events at the summit, and negotiators on Article 6 were also said to have enjoyed calmer talks on Thursday, though after a new text on crediting Paris projects landed overnight, it now seems reopening adopted work on the new crediting mechanism may be back on the table at the conference.
+
+Timestamps are in local time (GMT-3).
+
+0800 – New texts, new drama: But just when parties were saying they did not intend to create fresh drama at COP30 on Article 6, a new text concerning the Paris Agreement Crediting Mechanism (PACM) dropped. Heavily bracketed, containing provisions around an extended transition of Kyoto-era projects to the new Article 6.4 system, and a proposed extension of current Supervisory Body members’ term limits, one observers said it was “looking really bad”, with some of provisions in the text calling for adopted standards on the PACM, such as on baselines and additionality to possibly to be tweaked. Carbon Pulse will look to analyse in full and publish an update later on Friday.
+
+0900 – You shall not pass: A peaceful protest by Indigenous groups blocked the main entrance to COP30 this morning, with demonstrators calling for a meeting with President Lula and highlighting that major projects – including those related to soy, waterways, and carbon markets – are moving ahead without their free, prior, and informed consent (FPIC). Delegates were redirected to a side entrance, with officials stressing there was no security risk. Commenting from the scene, Cool Earth’s Natalie Klepacova said the action reflected longstanding exclusion and broken promises, adding that Indigenous peoples are rights-holders and frontline defenders whose voices must be central to climate decision-making.
+
+1000 – To Tulio, with love: Building on the Brazilian presidency’s description of negotiations as therapy sessions, where parties should feel encouraged to share their true feelings in a safe space, Brazil’s top COP strategist Tulio Andrade asked delegates on Thursday to send him private “love letters” expressing how they felt the conversations were proceeding – and encouraging those that hadn’t to write soon, according to one negotiator in the room. The presidency extended talks on the four main issues – around the ambition gap, trade, finance, and reporting on progress – until another plenary on Saturday. The plenary is likely to be in the morning, to give the SB chairs time to take stock of talks, but not set yet.
+
+1000 – Whitehouse in the house: US Senator Sheldon Whitehouse (D-RI) is arriving in Belem as the sole representative of the US federal government. The top-ranking Democrat on the Senate Environment and Public Works Committee plans to participate in discussions on Friday on the future of offshore wind, clean shipping, and non-CO2 GHG emissions and hold meetings with international leaders and the private sector.
+
+1030 – Total investment: French oil and gas major TotalEnergies is putting $100 mln into a fund that backs technologies to cut emissions from the oil and gas value chain. Climate Investment’s venture strategy fund has had a portfolio impact of 133 MtCO2e since 2019, particularly in the detection and abatement of methane, carbon capture, and energy efficiency, TotalEnergies said. Climate Investment was launched in 2015 by the Oil and Gas Climate Initiative, of which Total is a member.
+
+1130 – Document development: The Mexican state of Jalisco has submitted its registration document to J-REDD+ standard ART TREES. The document will now undergo a completeness check, and if accepted, will be posted for a public comment period.
+
+1200 – Virtual hugs from US Democrats: US Representative Nancy Pelosi (D-CA) joined the House Sustainable Energy and Environment Coalition as the former Speaker of the House to critique the absence of the Trump administration from the international climate negotiations. Pelosi and other members had planned to attend in Belem but were delayed by the federal shutdown, which ended on Thursday. The House Democrats reaffirmed their commitment to the Paris Agreement.
+
+1330 – Utility upgrades: Utilities around the world plan to up their annual investment in the energy transition to $148 bln per year, from $117 bln, IRENA announced on Friday. The plan, by the members of the Utilities for Net Zero Alliance, will see the companies mobilise over $1 trillion towards the energy investment up to 2030, since the group was established in 2023. Investments will go towards power grids and networks, including $1.24 spent on grids and storage for every $1 spent on renewable generation. It also includes delivering tends of thousands of kilometres of new and upgraded grid infrastructure.
+
+1430 – France and Italy’s red carpet for fossil fuels: While European Commissioner Hoekstra kept his promise and did not bring fossil fuel lobbyists to COP30 as part of his entourage, France and Italy didn’t get the memo, according to NGO Friends of the Earth. Research by Fossil Free Politics shows that France, Sweden and Italy had the largest EU fossil fuel delegations out of the other 27 member states. France brought along five TotalEnergies lobbyists, including CEO Patrick Pouyanne, and sizeable delegations from EDF and ENGIE, for a total of 22 lobbyists. Italy brought along 12 lobbyists, and Sweden 18. In total nine EU governments brought 84 fossil fuel lobbyists into COP30 on their official government delegations, out of the 1600 fossil fuel lobbyists present at Belem’s conference.
+
+1430 – Badgering the State Department: US Sen. Sheldon Whitehouse (D-RI) told reporters in Belem that federal representatives of the US are missing from the international conference as much due to the federal shutdown, as due to complicated logistics. Without the cooperation of the US State Department, the senator said it has been challenging to access the Blue Zone at COP30. In previous years, Whitehouse and other member of Congress have asked the State Department for “party overflow” badges to the US delegation. The State Department denied the request, according to a Whitehouse staffer, as the country had not applied to attend, leaving Whitehouse and others to scramble for spare “observer” badges through NGOs. Whitehouse is attending as an observer with international association Global Legislators Organisation for a Balanced Environment (GLOBE).
+
+1530 – Concrete jungle: C40 Cities urged on Friday national governments at COP30 to advance a credible global plan to end dependence on fossil fuels, echoing Brazil’s call and responding to climate impacts already hitting cities. Building on COP28 commitments to transition away from fossil fuels, triple renewables, and double energy efficiency by 2030, mayors stressed the need to turn ambition into concrete action through a just and equitable phaseout supported by stronger local-national collaboration. C40 cities have pledged to halve fossil fuel use by 2030, with the highest-emitting countries moving fastest. They are already cutting emissions five times faster than national targets, demonstrating that a fossil-free future is achievable.
+
+1630 – Plans for action: New action plans for the African Union, Caribbean, Chile, Colombia and Mozambique, under the Global Clean Power Alliance (GCPA), have been published on Friday on the UK government website. They aim to identify priority needs and outline targeted support for clean energy transitions, in the countries, including transmission infrastructure and project readiness. These demand-led plans guide collaboration with local partners, the UK government, which co-launched the GCPA, said. Complementing them is a private-finance-endorsed High-Quality Energy Investment Planning Roadmap, designed to help countries mobilise private capital at scale and accelerate global clean energy deployment. At COP30, the UK and Brazil also unveiled new deliverables for the GCPA finance mission, backed by a broad coalition of NGOs, private investors, international organisations, MDBs and other partners committed to advancing energy transitions in developing economies. The alliance was first launched at the G20 Summit in Nov. 2024 by the UK and Brazil, with an initial mission to scale clean energy finance.
+
+1700 – Cheaper SAF agreement – Latin American Airline Abra Group and Japanese company Sumitomo Corporation announced the signing of a Memorandum of Understanding to scale up sustainable aviation fuel. Abra, which owns companies like Brazilian Gol Linhas Aereas, and Sumitomo will establish a Brazil-Japan Joint Crediting Mechanism (JCM) under Article 6.2 of the Paris Agreement to ensure supply of SAF between Abra and Sumitomo. Brazil wants to become a leading global SAF producer via the production of ethanol and biodiesel.
+
+1730 – I want to live by Common Principles: The 10 multilateral development banks in the MDB Nature Working Group have launched an update to the Common Principles for Tracking Nature Finance, which were first released in 2023. They were created in response to the 2021 MDB Joint Statement on Nature, People and Planet, which highlighted the deep connections between poverty reduction, climate action and addressing the drivers of nature loss. The new Joint Statement, published Friday, committed MDBs to embedding nature more fully across their policies, analyses, advice, investments and operations. It also pledged to scale up nature-positive finance and to create stronger methods for tracking such investments across MDB portfolios.
+
+1800 – Big figs: A new Oxford Smith School report shows that a rapid shift to renewables could double energy-sector productivity in low- and middle-income countries within 25 years, delivering GDP gains of around 10% by mid-century. Solar-rich nations such as Burundi, DR Congo, and Mozambique could see particularly strong economic benefits, the researchers said. Renewables raise productivity by generating more electricity per dollar invested and by providing cheaper power, allowing households and industries to operate longer at lower cost. The study found these gains are greatest in the Global South and could help narrow global income disparities. It also shows renewable investment has already boosted GDP in developing countries far more than fossil fuels, adding $1.2 trillion between 2017 and 2022. In Brazil alone, renewables contributed $128 billion. However, the authors stressed that communities benefit only when intentional mechanisms – such as local ownership and community funds – are in place. They also highlighted the importance of distributed renewables to expand access and ensure an inclusive transition.
+
+1800 – BB carbon desk: Banco do Brasil (BB) formally launched its carbon credit desk on Friday, becoming the first Brazilian bank to do so. The bank’s carbon business will rely on three prongs: project origination, commercialisation of credits, and decarbonisation advisory. Currently, BB already has more than 30 projects under development, with the capacity to generate up to 3 mln carbon credits per year, it said.
+
+Here are Carbon Pulse’s latest articles at COP30:
+
+FEATURE – Poor accountability in Article 6.2 reporting hurts market robustness, experts say
+
+Some parties seeking to revisit Article 6.2 guidance in negotiations
+
+New PACM text requests revision to baseline crediting methodology, CDM transition extension
+
+EXCLUSIVE – Brazilian developer, ecological institute partner for restoration carbon projects
+
+Brazil’s Treasury offers loans at 1% per year to attract foreign investment to Amazonian bioeconomy
+
+Japan urged to stop supporting ‘false solutions’ under AZEC
+
+African countries worry metrics for measuring adaptation work will bring extra costs
+
+World Bank, WWF announce ‘Indigenous Bank’ to channel direct carbon credit revenues to communities
+
+Forestry companies identify key ecosystem services for unified nature valuation framework
+
+Fossil fuel lobbyists make up record share of COP attendance, analysis finds
+
+US senator warns CBAM proponents of upcoming Trump opposition
+
+INTERVIEW – Brazilian asset manager eyes ETS rollout as catalyst for expanding carbon market investments
+
+COP30: Paris carbon permanence rules “wolf at the door”, says forestry developer
+
+China, EU steel associations sign deals to align carbon rules
+
+CDR credits emerging as key financing lever to scale CCUS, experts say
+
+LEAF Coalition approves first Caribbean supplier country
+
+BRIEFING – UN Refugee Agency targets $30 mln to pilot carbon credit projects at Uganda, Rwanda camps
+
+Germany unlikely to offer tropical forest funding pledge in Belem -state secretary
+
+By Carbon Pulse’s COP30 team in Belem – news@carbon-pulse.com",https://carbon-pulse.com/wp-content/uploads/2024/01/cropped-apple-touch-icon-32x32.png,N,,2025-11-14 19:56:29.090966
 ,,2025-11-14 23:06:51+00:00,Travel And Tour World,LanzaJet's New Ethanol-Powered Jet Fuel to Transform Aviation Sustainability in Georgia,Soumi Chowdhury,,,,,https://www.travelandtourworld.com/news/article/lanzajets-new-ethanol-powered-jet-fuel-to-transform-aviation-sustainability-in-georgia-all-you-need-to-know/,"A New Era for Aviation Fuel in Georgia LanzaJet’s new facility in Georgia, known as LanzaJet Freedom Pines Fuels, marks the first-ever commercial production of jet fuel derived from ethanol.
 The plant’s operations have now reached full capacity, positioning LanzaJet at the forefront of sustainable aviation fuel (SAF) production.
 By using ethanol as a feedstock, LanzaJet’s fuel solution offers substantial greenhouse gas emissions reductions over traditional jet fuel.
@@ -5285,62 +5433,3 @@ The company also maintains a strong presence in the New York metropolitan area, 
 Each airport offers different advantages, and AAT helps clients choose the right mix of proximity, privacy, and logistics. And as public flight-tracking tools have made privacy harder to maintain, more high-net-worth travelers are choosing charter over ownership. “Privacy has become a big part of the conversation,” Gregg notes. “With aircraft data now public, charter gives clients flexibility and discretion that ownership can’t.”
 
 Looking ahead, Gregg sees the next decade of private aviation shaped by sustainability, smarter technology, and service consistency. “Whether it’s sustainable aviation fuel, better trip tracking, or more seamless ground coordination, it’s about blending innovation with a human touch,” he says. “Our job is to make travel effortless — so our clients can focus on what really matters.”",https://metroairportnews.com/wp-content/uploads/Advanced-Aviation-Team-Gulfstream-G550.jpg,N,,2025-11-11 22:56:33.621670
-,,2025-11-12 00:36:52+00:00,AZoCleantech,Transition Industries and Mitsubishi Gas Chemical Sign Agreement for the Purchase and ...,Not Available,,,,,https://www.azocleantech.com/news.aspx%3FnewsID%3D36007,"To start a conversation, please log into your AZoProfile account first, or create a new account.
-Registered members can chat with Azthena, request quotations, download pdf's, brochures and subscribe to our related newsletter content.","To start a conversation, please log into your AZoProfile account first, or create a new account.
-
-Registered members can chat with Azthena, request quotations, download pdf's, brochures and subscribe to our related newsletter content.",https://www.azocleantech.com/themes/Standard/images/full_site_logo.png,N,,2025-11-11 23:56:10.962743
-,,2025-11-12 00:01:32+00:00,Travel and Leisure Asia | Singapore,Flying Out Of Singapore Will Cost More From 2026: What You Need To Know,Esha Dasgupta,,,,,https://www.travelandleisureasia.com/sg/news/flying-out-of-singapore-will-cost-more-from-2026-what-you-need-to-know/,"Singapore set to become the world's first country to levy a sustainable aviation fuel surcharge on passengers.
-ByEsha Dasgupta Highlights Passengers on flights departing Singapore will have to pay a tax from 2026.
-The Civil Aviation Authority of Singapore (CAAS) will charge air travellers a sustainable/green aviation fuel levy of SGD 41.60 per passenger, starting from 2026.
-The new levy will apply to air tickets sold from April 1, 2026, for flights departing Singapore from October 1, 2026.
-Those in an economy cabin will have to pay SGD 10.40, whereas those in a premium cabin will have to pay SGD 41.60 for a flight to the Americas.","Singapore set to become the world's first country to levy a sustainable aviation fuel surcharge on passengers. Here's what we know so far.
-
-ByEsha Dasgupta
-
-Highlights
-
-Passengers on flights departing Singapore will have to pay a tax from 2026.
-
-The collected funds will support the purchase of green fuel for aircraft.
-
-The Civil Aviation Authority of Singapore (CAAS) will charge air travellers a sustainable/green aviation fuel levy of SGD 41.60 per passenger, starting from 2026. The new levy will apply to air tickets sold from April 1, 2026, for flights departing Singapore from October 1, 2026. The move is being hailed as a major step towards decreasing emissions in the aviation sector, especially with the country looking to achieve a 3 percent to 5 percent sustainable aviation fuel (SAF) adoption rate by 2030.
-
-Check out our story on Seletar, Singapore’s lesser-known airport.
-
-Singapore’s green fuel levy decoded
-
-Here’s a quick look at who’s affected, the amount to be paid, and more:
-
-The amount paid will depend on the travel class and the distance travelled.
-
-Economy and premium economy travellers will pay SGD 1 for flights to Southeast Asia.
-
-Those travelling to Northeast Asia, South Asia, Australia and Papua New Guinea in an economy cabin will have to pay SGD 2.80, whereas those travelling in a premium cabin will have to pay SGD 11.20.
-
-Related Stories
-
-Passengers in an economy cabin, travelling to Africa, Central and West Asia, Europe, the Middle East, the Pacific Islands and New Zealand, will have to pay SGD 2.80, whereas those in a premium cabin will have to pay SGD 25.60 for the same destinations.
-
-Those in an economy cabin will have to pay SGD 10.40, whereas those in a premium cabin will have to pay SGD 41.60 for a flight to the Americas.
-
-Passengers who are merely transiting through Singapore will not be charged.
-
-For passengers travelling on flights with multiple stops, the levy will be based on the immediate next destination after departing Singapore.
-
-Cargo flights will also have to pay the levy, which will be charged on a per-kg basis.
-
-Did you know
-
-Sustainable Aviation Fuel can be made from a variety of sources, including used cooking oil, municipal waste, or directly from captured carbon.
-
-The collected funds will go into a reserve that will be used for the centralised purchase of SAF. According to a report on Channel News Asia, the airline that collects the levy must display the charges as a distinct line item on the air ticket being sold.
-
-(Feature image credit: The Erica Chang, CC BY 3.0, via Wikimedia Commons)
-
-Related | A Party For One: Where To Go Solo Drinking In Singapore
-
-Note:
-
-The information in this article is accurate as of the date of publication.
-
-Written By",https://images.travelandleisureasia.com/wp-content/uploads/sites/4/2025/11/11175604/changi-airport-feature-1600x900.jpg,N,,2025-11-11 23:56:15.666316
