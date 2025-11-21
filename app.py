@@ -144,6 +144,10 @@ def live_view(filename):
     usage_tracking["live_view"] += 1
     return render_template('live_view.html', filename=filename, navigation=True)
 
+@app.route('/state_summary/<filename>')
+def state_summary(filename):
+    return render_template('state_summary.html', filename=filename, navigation=True)
+
 @app.route('/view/<filename>/<option>')
 def view_file(filename, option):
     usage_tracking["view"] += 1

@@ -2,26 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>State News Viewer</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='eb.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://d3js.org/d3.v4.min.js"></script>
+  <style>
+    h2.main-group {
+      border-bottom: 2px solid #333;
+      padding-top: 1em;
+      margin-top: 2em;
+      font-size: 1.5rem;
+    }
+    h4.sub-group {
+      margin-top: 1.25em;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #444;
+    }
+    p.article-entry {
+      margin: 0.5em 0;
+      font-size: 0.95rem;
+    }
+    p.article-entry small.outlet {
+      display: block;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 0.25em;
+    }
+    .toggle-buttons {
+      margin-bottom: 1em;
+    }
+    .toggle-buttons .btn {
+      margin-right: 0.5em;
+    }
+    @media (max-width: 768px) {
+      h2.main-group {
+        font-size: 1.25rem;
+      }
+      h4.sub-group {
+        font-size: 1rem;
+      }
+      .btn-sm {
+        font-size: 0.9rem;
+        padding: 0.25rem 0.5rem;
+      }
+      .nav-header .btn {
+        margin-bottom: 0.5rem;
+      }
+      .containerwgt {
+        padding: 0 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="nav-header">
-  <a href="{{ url_for('main_page') }}" class="btn btn-primary">Home</a>
-  <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
-</div>
-<hr>
-
-<div class="containerwgt" style="width:90%">
-  <h2 id="etitle"></h2>
-  <label><input type="radio" name="groupMode" value="state-topic" checked> Group by State > Topic</label>
-  <label><input type="radio" name="groupMode" value="topic-state"> Group by Topic > State</label>
+<div class="container-fluid">
+  <div class="nav-header mb-2">
+    <a href="{{ url_for('main_page') }}" class="btn btn-primary btn-sm">Home</a>
+    <a href="{{ url_for('logout') }}" class="btn btn-danger btn-sm">Logout</a>
+  </div>
   <hr>
-  <div id="articleView"></div>
+
+  <div class="containerwgt">
+    <h2 id="etitle"></h2>
+    <div class="toggle-buttons mb-3">
+      <button id="btn-state-topic" class="btn btn-outline-secondary btn-sm active">Group by State → Topic</button>
+      <button id="btn-topic-state" class="btn btn-outline-secondary btn-sm">Group by Topic → State</button>
+    </div>
+    <div id="articleView"></div>
+  </div>
 </div>
 
 <script>
@@ -32,54 +84,104 @@ document.getElementById("etitle").textContent = `State News | Top News - ${forma
 
 const csvFilePath = "{{ url_for('uploads', filename='state_summary.csv') }}";
 
-// Load CSV and build view
+const allStates = [
+  "National", "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
+  "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois",
+  "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland",
+  "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana",
+  "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York",
+  "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania",
+  "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah",
+  "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
+];
+
+const allTopics = [
+  "State Budget", "K-12 Education", "Public Health", "Public Opinion Polls",
+  "Protests and Civil Unrest", "Immigration and Immigration Enforcement"
+];
+
+function customSort(a, b) {
+  if (a === 'National') return -1;
+  if (b === 'National') return 1;
+  return a.localeCompare(b);
+}
+
 function loadAndRender(groupMode) {
   d3.csv(csvFilePath, function(data) {
-    // Clear container
     d3.select('#articleView').html('');
 
-    // Group data
-    let nested = d3.nest()
+    const nested = d3.nest()
       .key(d => groupMode === 'state-topic' ? d.state : d.topic)
+      .sortKeys(groupMode === 'state-topic' ? customSort : d3.ascending)
       .key(d => groupMode === 'state-topic' ? d.topic : d.state)
+      .sortKeys(d3.ascending)
       .entries(data);
 
-    nested.forEach(group => {
-      d3.select('#articleView')
-        .append('h2').text(group.key);
+    const lookup = {};
+    nested.forEach(g => {
+      lookup[g.key] = {};
+      g.values.forEach(sub => {
+        lookup[g.key][sub.key] = sub.values;
+      });
+    });
 
-      group.values.forEach(subgroup => {
+    const outerList = groupMode === 'state-topic' ? allStates : Object.keys(lookup).sort();
+    const innerList = groupMode === 'state-topic' ? Object.keys(lookup[outerList[0]] || {}).sort() : allStates;
+
+    outerList.forEach(outer => {
+      d3.select('#articleView')
+        .append('h2')
+        .attr('class', 'main-group')
+        .text(outer);
+
+      const subList = groupMode === 'state-topic' ? allTopics : Object.keys(lookup[outer] || {}).sort();
+
+      subList.forEach(inner => {
         d3.select('#articleView')
-          .append('h4').text(subgroup.key);
+          .append('h4')
+          .attr('class', 'sub-group')
+          .text(inner);
+
+        const entries = lookup[outer] && lookup[outer][inner];
 
         let table = d3.select('#articleView')
           .append('table')
-          .style('width', '100%');
+          .attr('class', 'table table-borderless table-sm')
+          .style('margin-bottom', '1rem');
 
-        subgroup.values.forEach(d => {
+        if (entries && entries.length > 0) {
+          entries.forEach(d => {
+            table.append('tr')
+              .append('td')
+              .html(`
+                <p class="article-entry">
+                  <small class="outlet">${d.outlet}</small>
+                  <b><a href="${d.url}" target="_blank">${d.headline}</a></b><br>
+                  ${d.summary}
+                </p>`);
+          });
+        } else {
           table.append('tr')
             .append('td')
-            .html(`
-              <p style="margin-bottom: 1em">
-                <small>${d.outlet}</small><br>
-                <b><a href="${d.url}" target="_blank">${d.headline}</a></b><br>
-                ${d.summary}
-              </p>`);
-        });
+            .html(`<p class="article-entry text-muted">No current stories.</p>`);
+        }
       });
     });
   });
 }
 
-// Initial render
 loadAndRender('state-topic');
 
-// Toggle listeners
-const radios = document.getElementsByName('groupMode');
-radios.forEach(radio => {
-  radio.addEventListener('change', () => {
-    loadAndRender(radio.value);
-  });
+document.getElementById('btn-state-topic').addEventListener('click', () => {
+  document.getElementById('btn-state-topic').classList.add('active');
+  document.getElementById('btn-topic-state').classList.remove('active');
+  loadAndRender('state-topic');
+});
+
+document.getElementById('btn-topic-state').addEventListener('click', () => {
+  document.getElementById('btn-topic-state').classList.add('active');
+  document.getElementById('btn-state-topic').classList.remove('active');
+  loadAndRender('topic-state');
 });
 </script>
 

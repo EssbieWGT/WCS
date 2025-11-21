@@ -37,6 +37,7 @@
         </thead>
         <tbody>
             {% for file in files %}
+            {% if file != 'state_summary.csv' %}
             <tr>
                 <td><a href="{{ url_for('live_view', filename=file) }}">{{ file[:-4].upper() }}</a></td>
                 
@@ -63,10 +64,17 @@
                     </div>
                 </td>
             </tr>
+            {% endif %}
             {% endfor %}
         </tbody>
     </table>
 </div>
+
+    <div class="container">
+        <h3>State-Level Summary Report</h3>
+        <p>This fully AI-generated report gives you state-level political/policy news from around the country focused on a select set of issue areas. The report updates twice a day (9 AM and 4 PM ET) and features stories from the past 24-hours. I welcome suggestions on additional topic areas to follow. Articles can be groups by state or by topic area. </p>
+        <a href="{{ url_for('state_summary', filename='state_summary.csv') }}" class="btn btn-success" target="_blank">View State Summary Report</a>
+    </div>
 
     <div class="container">
         <p>This app allows you to <strong>view</strong>, and <strong>download</strong> the most recent client news as well as <strong>upload</strong> selected data to the app to render a clips report. The app is designed to be simple and efficient, with options to render data in a couple standard formats.</p>
