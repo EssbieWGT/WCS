@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>State News Viewer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='eb.css') }}">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+
+<div class="nav-header">
+  <a href="{{ url_for('main_page') }}" class="btn btn-primary">Home</a>
+  <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+</div>
+<hr>
+
+<div class="containerwgt" style="width:90%">
+  <h2 id="etitle"></h2>
+  <label><input type="radio" name="groupMode" value="state-topic" checked> Group by State > Topic</label>
+  <label><input type="radio" name="groupMode" value="topic-state"> Group by Topic > State</label>
+  <hr>
+  <div id="articleView"></div>
+</div>
+
+<script>
+const formattedDate = new Date().toLocaleDateString('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric'
+});
+document.getElementById("etitle").textContent = `State News | Top News - ${formattedDate}`;
+
+const csvFilePath = "{{ url_for('uploads', filename='state_summary.csv') }}";
+
+// Load CSV and build view
+function loadAndRender(groupMode) {
+  d3.csv(csvFilePath, function(data) {
+    // Clear container
+    d3.select('#articleView').html('');
+
+    // Group data
+    let nested = d3.nest()
+      .key(d => groupMode === 'state-topic' ? d.state : d.topic)
+      .key(d => groupMode === 'state-topic' ? d.topic : d.state)
+      .entries(data);
+
+    nested.forEach(group => {
+      d3.select('#articleView')
+        .append('h2').text(group.key);
+
+      group.values.forEach(subgroup => {
+        d3.select('#articleView')
+          .append('h4').text(subgroup.key);
+
+        let table = d3.select('#articleView')
+          .append('table')
+          .style('width', '100%');
+
+        subgroup.values.forEach(d => {
+          table.append('tr')
+            .append('td')
+            .html(`
+              <p style="margin-bottom: 1em">
+                <small>${d.outlet}</small><br>
+                <b><a href="${d.url}" target="_blank">${d.headline}</a></b><br>
+                ${d.summary}
+              </p>`);
+        });
+      });
+    });
+  });
+}
+
+// Initial render
+loadAndRender('state-topic');
+
+// Toggle listeners
+const radios = document.getElementsByName('groupMode');
+radios.forEach(radio => {
+  radio.addEventListener('change', () => {
+    loadAndRender(radio.value);
+  });
+});
+</script>
+
+</body>
+</html>
