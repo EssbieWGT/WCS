@@ -1,4 +1,315 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2025-12-18 12:34:50+00:00,MDPI,Sustainable Aviation Fuels: Bibliometric Trends and Latin American Opportunities from a ... - MDPI,"Laura Daniela López-Itas, David Gómez-Ríos, Howard Ramírez-Malule",,,,,https://www.mdpi.com/2673-8783/5/4/82,"In this context, sustainable aviation fuels (SAF) have emerged as a critical alternative to conventional jet fuels.
+Top 5 Latin American countries with the highest number of published papers on sustainable aviation fuels.
+; Zhao, M. Sustainable aviation fuels: Key opportunities and challenges in lowering carbon emissions for aviation industry.
+Sustainable Aviation Fuels.
+Top 5 Latin American countries with the highest number of published papers on sustainable aviation fuels.","Abstract
+
+The aviation industry faces increasing pressure to reduce its environmental impact and achieve net-zero emissions by 2050. In this context, sustainable aviation fuels (SAF) have emerged as a critical alternative to conventional jet fuels. This study provides a comprehensive analysis of SAF technologies from a chemical engineering perspective, highlighting key production routes, technological maturity levels, and implementation challenges. A bibliometric analysis using the Scopus database and VOSviewer software was conducted to identify research trends and thematic clusters in SAF literature. The analysis reveals a growing interest in advanced biofuels and physicochemical conversion technologies, particularly those supported by catalytic and thermochemical processes. Certified and emerging SAF pathways were examined with respect to their process efficiency, feedstock availability, and scalability. Additionally, the study explores the potential of Latin America as a strategic region for SAF development, considering its abundant biomass resources and ongoing pilot projects. This critical and holistic analysis aims to support researchers, engineers, and policymakers in understanding the current state and future directions of SAF technologies within the framework of chemical process design and optimization. Overall, Hydroprocessed Esters and Fatty Acids Synthetic Paraffinic Kerosene (HEFA-SPK) and Fischer–Tropsch Synthetic Paraffinic Kerosene (FT-SPK) are identified as the most mature and widely deployed SAF production routes, whereas Alcohol to Jet (ATJ), Synthesized Iso-Paraffins (SIP), and Direct Sugar to Hydrocarbons (DSHC) remain at earlier technological stages despite their long-term potential for feedstock diversification and reduced environmental impacts. The analysis also underscores Latin America, where abundant biomass resources, consolidated agro-industrial systems, and emerging SAF research initiatives create favorable conditions for future development and deployment.
+
+1. Introduction
+
+Air transport plays a fundamental role in the global economy by facilitating connectivity between regions, international trade, and tourism. However, its exponential growth has raised increasing concerns about its environmental impact, particularly due to carbon dioxide (CO2) emissions and other compounds that contribute to climate change [1]. Aviation is responsible for approximately 2–3% of global CO2 emissions, but its impact on global warming is greater due to the release of pollutants such as nitrogen oxides (NOx) and the formation of contrails, which amplify radiative forcing [2,3]. In this context, the transition to Sustainable Aviation Fuels (SAF) has emerged as one of the most promising strategies to reduce the sector’s carbon footprint [4].
+
+Recent assessments by the International Energy Agency (IEA) provide more detailed insight into aviation’s climate impact. In short-haul flights, aircraft emit approximately 0.25 kg of CO2 per passenger-kilometer, while long-haul flights emit around 0.20 kg due to improved operational efficiency over longer distances [5]. Beyond CO2, high-altitude emissions of NOx, water vapor, and particulate matter enhance radiative forcing, significantly increasing the warming effect associated with aviation activities [3].
+
+When compared to other modes of transport, aviation remains considerably more carbon intensive. Private vehicles typically generate 0.12 to 0.20 kg of CO2 per passenger-kilometer, while buses emit between 0.05 and 0.10 kg. Maritime transport, which moves a large portion of global freight, exhibits much lower emissions per tonne-kilometer, generally ranging from 0.03 to 0.04 kg of CO2 [6]. These differences highlight the disproportionate climate impact of aviation and have intensified concerns regarding the decarbonization of the sector in the context of global climate commitments such as the Paris Agreement [2,7].
+
+SAF includes various technologies and feedstocks, ranging from second and third-generation biofuels to synthetic fuels produced through carbon capture and water electrolysis. Despite significant advances in research and development, large-scale adoption of these fuels faces technical, economic, and regulatory challenges [8]. SAF production continues to be more expensive than conventional fossil fuels, and availability is limited by infrastructure constraints and the absence of a unified international regulatory framework [9].
+
+To be used in commercial aviation, biofuels must comply with strict quality and safety standards established by international organizations. The primary certification for SAF is ASTM D7566, developed by the American Society for Testing and Materials (ASTM), which defines specification requirements and certification processes before SAF can be blended with conventional Jet A or Jet A-1 fuel. This standard ensures chemical equivalence with current aviation fuels and enables their use without modifications to aircraft engines or fuel handling systems. In addition, the International Civil Aviation Organization (ICAO) [10,11] and the International Air Transport Association (IATA) [12] have established guidelines to ensure the sustainability and verified carbon reduction in SAF throughout their life cycle.
+
+Although research on SAF has expanded in recent years, much of the existing literature remains distributed among studies that analyze isolated topics such as specific conversion pathways, environmental assessments, or policy frameworks [13,14]. This dispersion highlights the value of consolidating these elements from a chemical engineering perspective. At the same time, growing interest in low-carbon fuels across Latin America, combined with the region’s abundant biomass resources and established agro-industrial infrastructure, presents a strategic opportunity for the expansion of SAF production. Recent initiatives, such as Ecopetrol’s efforts to produce SAF at the Cartagena Refinery using recycled oils, including used cooking oil and palm-oil-derived feedstocks supplied by Ecodiesel and other Colombian small and medium-sized enterprises [15], demonstrate the region’s potential to position Latin America as an emerging contributor to the global SAF landscape.
+
+Latin America also offers a significant advantage due to its extensive biomass availability, agricultural capacity, and expanding research activity. Regional assessments indicate that Latin America could sustainably generate approximately 19.9 EJ (exajoules) of biomass annually, a quantity that corresponds to more than 3 billion barrels of oil in energy terms [16,17]. This potential aligns with global research trends that show increasing regional participation in SAF-related studies, especially in countries such as Brazil, Mexico, and Colombia, where interest in alternative aviation fuels has grown alongside broader sustainability objectives.
+
+In addition to resource potential, the region has implemented concrete initiatives that demonstrate early industrial readiness. Brazil has advanced research and pilot-scale projects involving technologies such as ATJ and Hydroprocessed Esters and Fatty Acids (HEFA) using sugarcane ethanol, soybean oil, and other agro-industrial residues [18]. Paraguay’s Omega Green project, which is the first commercial-scale SAF and hydrotreated vegetable oil plant in South America, illustrates the feasibility of exporting sustainable fuels derived from regional feedstocks [19]. Colombia has also completed successful test flights with SAF blends and is exploring the development of a dedicated production facility supported by private-sector interest in expanding HEFA-SPK capacity [20]. These initiatives underscore Latin America’s emerging role in the global transition toward SAF and reveal opportunities to leverage regional feedstocks, infrastructure, and public–private collaboration.
+
+Therefore, this study aims to analyze SAF production technologies through a bibliometric approach, consolidating scattered information and identifying trends, technological developments, and existing challenges from a chemical engineering perspective. The analysis highlights the most promising conversion routes, evaluates their technical feasibility, and examines factors influencing their adoption at a global level. It also considers regional opportunities, with particular emphasis on Latin America’s emerging role in SAF production. Ultimately, the findings may support the development of strategies to optimize SAF production and facilitate their integration into the aviation sector, contributing to a more sustainable air transport model.
+
+2. Materials and Methods
+
+The Scopus database was used to retrieve documents related to SAF. Data collection took place on 24 January 2025, through a systematic search in the fields of article title, abstract, and keywords. The search was refined to include only articles and reviews, covering the period from 2004 to 2024. This process resulted in a total of 2418 records, comprising 1873 articles and 545 reviews.
+
+The search equation used was: (TITLE-ABS-KEY: (“Sustainable Aviation Fuel” OR “Biofuels” OR “Synthetic Fuels” OR “Renewable Jet Fuel” OR “Green Aviation Fuel” OR “SAFS”) AND (“production technology” OR “production process” OR “synthesis method”)).
+
+Once retrieved, the data, including citation details, bibliographical information, abstracts, keywords, and funding information, were exported to Microsoft Excel® for further organization and analysis. VOSviewer 1.6.20 [21] was used to visualize and process the data. A minimum occurrence threshold of 20 was set for keywords, and after removing the thesaurus terms, 49 relevant keywords remained, forming five distinct clusters.
+
+The bibliometric analysis focused on key indicators such as publication volume and growth, subject areas, keyword co-occurrence network visualization, keyword overlay visualization, and the most active countries in research related to SAF.
+
+Figure 1 shows a scheme of the methodology used.
+
+Figure 1. Methodological scheme for bibliometric analysis.
+
+In the process, the authors used ChatGPT (GPT-5, OpenAI) as a digital assistant for the purpose of comparing data from the tables compiled in this study. All generated content was extensively reviewed and revised by the authors, who assume full responsibility for the final content of this section and the entire manuscript.
+
+3. Results and Discussion
+
+3.1. Global Scientific Production Related to Sustainable Aviation Fuels
+
+A total of 2418 articles (77.5 and 22.5% correspond to research articles and reviews, respectively) were retrieved in Scopus databases between 2004 and 2024, 106 countries have been involved in those documents, and 33.1% of total records were published in open access journals (800 documents). Figure 2 shows the evolution of the number of published papers per year related to SAF. The increasing trend in the number of records, journals, and contributing countries highlights the growing research interest in this topic. This suggests that SAF are gaining attention as a key area in the transition towards more sustainable aviation, reflecting advancements in both technological development and policy frameworks.
+
+Figure 2. Evolution of publications on sustainable aviation fuels, along with the number of countries and journals that published these studies from 2004 to 2024. Information according to the Scopus database.
+
+Figure 3 presents an overview of the top five Scopus-indexed journals with the highest number of published papers on SAF over the period 2004–2024, highlighting their contribution to the field and the evolution of research output. Figure 3a shows the total number of records for each journal, with Bioresource Technology leading at 6.9% of the total publications, followed by Renewable Energy and Renewable and Sustainable Energy Reviews. Figure 3b illustrates the yearly evolution of published papers in these journals, revealing a significant increase after 2010, with Bioresource Technology maintaining the highest number of records. This trend underscores the growing academic interest in SAF and their role in the transition toward more sustainable aviation.
+
+Figure 3. Top 5 Scopus-indexed journals with the highest number of published papers on sustainable aviation fuels. (a) Number of records per year for each journal. (b) Evolution of the number of published papers by journal between 2004 and 2024. Information according to the Scopus database.
+
+On one hand, Figure 4 presents an overview of the top contributing countries in terms of published research on SAF over the period 2004–2024, showcasing their influence in the field and the evolution of their research output. Figure 4a displays the total number of records per country, with China (12.9%), the United States (12.8%), and India (12.7%) leading the publications, followed by Brazil (8.1%) and Malaysia (4.5%). Figure 4b illustrates the yearly evolution of publications from the five most active countries, showing a notable increase in research output after 2010. While China has consistently led in the number of publications, recent years have seen India emerging as a key contributor, with a sharp rise in research output. The steady growth observed in the United States, Brazil, and Malaysia further reflects the increasing global interest in SAF as a crucial component of sustainable aviation.
+
+Figure 4. Countries with the highest number of published papers on sustainable aviation fuels. (a) Top 10 countries by number of records. (b) Evolution of the number of published papers by country between 2004 and 2024. Information according to the Scopus database.
+
+On the other hand, Figure 5 focuses on the Latin American context, presenting the top five countries in the region with the highest number of published papers on SAF between 2004 and 2024. Figure 5a shows the total number of records by country, with Brazil leading at 8.1% of the total publications, followed by Mexico (3.3%) and Colombia (1.4%), while Argentina (0.6%) and Chile (0.5%) have a lower but notable presence. Figure 5b illustrates the yearly evolution of publications in these countries, revealing a significant increase in Brazil’s research output in recent years, consolidating its position as the regional leader. Mexico follows with a steady growth trend, while Colombia, Argentina, and Chile maintain a relatively low but stable level of contributions. This trend underscores Brazil’s dominant role in SAF research within Latin America and the expanding interest across the region in developing sustainable aviation solutions.
+
+Figure 5. Top 5 Latin American countries with the highest number of published papers on sustainable aviation fuels. (a) Number of records by country. (b) Evolution of the number of published papers by country between 2004 and 2024. Information according to the Scopus database.
+
+As shown in the bibliometric results, SAF research exhibits clear geographic concentration, with leading contributions from high-income countries (Figure 4). At the same time, the regional analysis (Figure 5) highlights the growing participation of Latin America, illustrating its emerging role within the global SAF research landscape.
+
+Figure 6 presents the top ten subject areas with the highest number of published papers on SAF, according to the Scopus database. The distribution of records highlights the interdisciplinary nature of SAF research, spanning multiple scientific and engineering fields. To begin with, “Energy” (49.4%) and “Environmental Science” (41.7%) lead in the number of publications, reflecting the strong link between SAF, sustainability, and energy systems. Moreover, “Chemical Engineering” (34.2%) stands out as a key discipline, given that it encompasses the development, optimization, and scaling of processes essential for SAF production. Since this bibliographic analysis is framed within chemical engineering, this field is particularly relevant for understanding the technological advancements and challenges in SAF synthesis. In addition, disciplines such as “Biochemistry, Genetics and Molecular Biology” (17.2%) and “Chemistry” (15.9%) indicate the significance of molecular studies in feedstock conversion and fuel formulation. Contributions from “Agricultural and Biological Sciences” (11.8%) and “Immunology and Microbiology” (10.0%) further emphasize the role of biomass-based raw materials. Lastly, the presence of “Mathematics” (4.1%) and “Physics and Astronomy” (4.1%) suggests the application of computational modeling and analytical techniques in SAF development. The overlapping percentages indicate that many studies are indexed in multiple subject areas, reinforcing the multidisciplinary approach required for advancing SAF technologies, with chemical engineering at the core of process innovation and industrial feasibility.
+
+Figure 6. Top 10 subject areas with the highest number of published papers on sustainable aviation fuels. Information according to the Scopus database. Note: Percentages add up to more than 100 because a paper may be indexed in more than one area.
+
+To gain a deeper understanding of how different research areas are interconnected and the specific topics that have captured researchers’ attention, a keyword co-occurrence analysis was conducted. This analysis focused on identifying the most frequently used author keywords in studies related to SAF. A total of 5396 keywords were identified across all publications, and 49 of them met the minimum threshold of 20 occurrences (Figure 7). These keywords were grouped into five well-defined clusters, each representing a distinct area of research within the field. The clusters include first-generation biofuels (red), bioenergy and sustainability (green), biodiesel production and process optimization (blue), physicochemical biomass conversion (yellow), and advanced biofuels (purple). The most prominent terms, such as “biofuels,” “biodiesel,” and “bioethanol,” appear at the core of the network, highlighting their central role in the research landscape. Additionally, the overlay visualization (Figure 7b) reveals the temporal evolution of these topics, showing an increasing focus on advanced biofuels and physicochemical conversion technologies in recent years. This trend suggests a shift in research priorities towards innovative and more sustainable fuel production methods.
+
+Figure 7. Bibliometric network of authors’ keywords of studies related to sustainable aviation fuels. (a) Network visualization. (b) Overlay visualization. Minimum number of occurrences of a keyword set at 20.
+
+As mentioned, the bibliometric analysis revealed five distinct thematic clusters that represent key research areas within the field of SAF. These clusters highlight the diverse approaches explored by researchers, ranging from first-generation biofuels to advanced conversion technologies. Each cluster is characterized by specific keywords that indicate the predominant research focus in that area. The following sections provide a detailed overview of each cluster, outlining the main topics and trends observed in the scientific literature.
+
+3.2. Classification of Technologies for Sustainable Aviation Fuels
+
+Table 1 provides a structured classification of SAF technologies based on their production method, feedstock, development stage, application in aviation, life cycle greenhouse gas emissions, and emission reduction relative to Jet A1. Conventional Jet A1 fuel, derived from fossil-based crude oil, is included as a reference point with life cycle emissions of 89 g CO2eq/MJ [22]. In contrast, alternative SAF technologies exhibit significantly lower emissions and varied levels of technological maturity.
+
+Fischer–Tropsch (FT) and FT-SPK pathways are classified as commercial technologies, reflecting their established deployment and integration into current fuel supply chains. HEFA also appears as a fully commercial route, supported by its compatibility with existing infrastructure and a consistent supply of lipid-based feedstocks [23,24]. The ATJ and Catalytic Hydrothermolysis Jet (CHJ) processes are at commercial or pilot/commercial stages, indicating active efforts in scale-up and early market penetration, particularly with biomass-derived ethanol and used cooking oil as feedstocks.
+
+In contrast, technologies such as Dimethylcyclooctane (DMCO), Power-to-Liquid (PtL), and Direct Air Capture (DAC)-based routes remain at the pilot or research/demonstration stages. These pathways, while showing high emission reduction potential (up to ~90%), face current limitations related to feedstock processing, CO2 capture, renewable hydrogen supply, and economic feasibility. SAF from microalgae is likewise in early development due to ongoing challenges in biomass productivity and conversion efficiency [14,25].
+
+Overall, Table 1 highlights the diversity of SAF production pathways not only in terms of feedstock and conversion technologies but also in their environmental performance and technological readiness. This comparative view underscores the coexistence of mature, commercially viable options alongside emerging routes with high potential but requiring further research, demonstration, and policy support to reach large-scale implementation.
+
+3.3. Opportunities and Challenges in Biofuel Technologies
+
+Lau et al. (2024) reported that the assessment of Technology Readiness Level (TRL) is a valuable tool to classify the maturity of each technological pathway for SAF production [26]. TRL is a standardized scale ranging from 1 to 9, where TRL 1 refers to the observation of basic principles, and TRL 9 corresponds to a technology that has been proven in an operational environment. Among the reviewed technologies shown in Table 2, HEFA stands out with a TRL of 9, indicating full commercial maturity and certification by ASTM International, under standards such as ASTM D7566. FT-SPK fuels are also highly mature (TRL 6–8), with ongoing commercial use [26].
+
+In contrast, technologies like CHJ (TRL 4–6), DMCO (TRL ~4), and microalgae-derived SAF (TRL 3–4) remain in early development stages, with limited demonstration and significant technical barriers [22]. The ATJ pathway (TRL 7–8) is approaching full deployment but still faces scale-up limitations. Finally, emerging concepts such as PtL and DAC integrated into SAF processes are estimated to range between TRL 4 and 6, depending on the specific configuration [27]. This classification provides a clear understanding of both current technological progress and the remaining challenges to achieve widespread implementation of SAF technologies.
+
+The ASTM D7566 [28] standard is the primary international specification that governs the quality requirements for aviation turbine fuels containing synthesized hydrocarbons. These include several types of SAF produced through alternative pathways. The standard outlines the performance and compositional criteria that SAF must meet to ensure compatibility with existing aircraft engines and fuel systems.
+
+Each approved SAF production pathway is included as a separate annex within ASTM D7566. For example, Annex A1 covers FT-SPK, Annex A2 covers HEFA-SPK, Annex A5 covers Alcohol-to-Jet Synthetic Paraffinic Kerosene (ATJ-SPK), and Annex A6 covers CHJ. These annexes provide detailed technical specifications for the respective fuels, including blending limits, compositional requirements, and performance parameters.
+
+Once a SAF is blended within the limits defined by ASTM D7566 and meets all required specifications, it can be reclassified as conventional jet fuel under ASTM D1655, the standard specification for Jet A and Jet A-1 fuels. This reclassification allows SAF to be used interchangeably with fossil-based jet fuel in commercial aviation without requiring modifications to aircraft engines or infrastructure.
+
+This ability to reclassify SAF as conventional jet fuel under ASTM D1655 highlights one of the key attributes of certain SAF technologies: their drop-in nature. A drop-in fuel is defined as a synthetic or bio-based fuel that is chemically and physically compatible with petroleum-derived jet fuels, allowing it to be used in existing aircraft engines and fuel infrastructure without any technical modifications. Drop-in SAF can be blended with fossil-based Jet A or Jet A-1 fuels up to specific limits (typically 10% to 50%, depending on the certified pathway), while maintaining compliance with operational and safety standards. This compatibility significantly reduces logistical and regulatory barriers to SAF adoption, enabling gradual integration into the aviation fuel supply chain [29]. Technologies such as HEFA-SPK, FT-SPK, and ATJ-SPK are considered drop-in fuels under ASTM D7566 due to their demonstrated performance, blending behavior, and combustion properties within commercial aviation systems [23,30,31].
+
+Table 1. Classification and Development Stage of SAF Technologies.
+
+TechnologyProduction MethodFeedstockDevelopment Stage/TRLApplication in AviationLife Cycle Emissions
+
+(g CO2eq/MJ)Emission Reduction vs. Jet A1ReferenceJet A1 FuelRefining crude oilFossil basedCommercial/9Standard aviation fuel890%[22]DimethylcyclooctaneFermentation and Catalytic UpgradingCorn ResiduesPilot Scale/4Potential SAF7.292%[22]Fischer–TropschCatalytic conversion (FT synthesis)Biomass, municipal solid waste, captured CO2Commercial/6–8SAF blend (50%)15–3570–90%[14]Fischer–Tropsch Synthetic Paraffinic Kerosene Gasification + Fischer–TropschBiomass, captured CO2Commercial/8–9SAF blend (50%)10–3065–90%[30]Alcohol-to-JetCatalytic conversion of alcoholsBiomass, etanolCommercial/7–8SAF blend (50%)20–4055–75%[30]Catalytic Hydrothermolysis JetHydroprocessing oilsUsed cooking oilPilot/Commercial/4–6SAF blend (50%)20–4055–75%[30]Power-to-Liquid/E-fuelsCO2 capture + FT synthesisCO2, water, renewablesResearch/Demo/4–6Potential SAF20–3080–95%[14]Hydroprocessed Esters and Fatty Acidshydrotreating + isomerizationVegetable oils, waste oils, microbial oils, animal fatsCommercial/9SAF blend (50%)15–3560–85%[14,23,24]SAF from MicroalgaeLipid extraction + hydroprocessing or fermentationMicroalgae biomassResearch/Demo/3–4Potential future use17–3060–80%[14]Direct Air Capture for SAFDirect air capture + synthesis (e.g., FT or methanol-to-jet)Atmospheric CO2 + renewable H2Pilot Scale/4–6Potential SAF20–30~90%[14]
+
+Table 2. Comparison of Technologies: Advantages, Barriers, and Implementation Status.
+
+TechnologyAdvantagesBarriersCurrent Implementation LevelPotential Improvements and OpportunitiesReferenceDimethylcyclooctaneHigh energy density, suitable for neat fuel applications, compatible with jet enginesExtremely high production costs, low TRL, derived from isoprene requiring complex processingEarly-stage R&D, not commercially implementedCost reduction via pathway optimization, scale-up of isoprene fermentation and catalytic cyclization[26]Fischer–TropschVersatile feedstocks (biomass, coal, MSW), sulfur and aromatic free, drop-in fuelHigh CAPEX and OPEX, requires clean syngas, low aromatics may affect compatibilityCommercially implemented (e.g., Sasol), ASTM certifiedImproved gasification/syngas cleaning, incorporation of renewable electricity in PtL[30,32]Fischer–Tropsch Synthetic Paraffinic KeroseneDrop-in fuel, sulfur-free, high specific energy, flexible feedstocksStrict syngas quality requirements, expensive purification, low aromaticsASTM D7566 Annex A1, up to 50% blendIntegrate with renewable H2 and CO2 (PtL), reduce CAPEX of syngas production[30]Alcohol-to-Jet Can use waste-derived alcohols, drop-in potential, leverages existing ethanol industryLow energy density, expensive alcohol intermediates, limited to C2-C4 alcoholsASTM D7566 Annex A5, up to 50% blendDevelop C3-C5 routes, reduce alcohol cost, enhance catalytic efficiency[14]Catalytic Hydrothermolysis JetLower H2 consumption vs. HEFA, high SAF yield, compatible with jet fuel, ASTM-certified (Annex A6)High energy demand, supercritical water conditions, limited commercial experience, integration complexityASTM D7566 Annex A6, certified for up to 50% blendOptimize catalyst systems, reduce energy intensity, scale-up hydrothermal reactor design[26]Power-to-Liquid/E-fuelsHigh CO2 reduction potential, uses renewable electricity and captured CO2, no biomass neededHigh electricity cost, low commercial maturity, dependency on DAC and renewable gridDemonstration plants (e.g., SynFuels China), ASTM certified when FT route usedCheaper renewables, scale-up of DAC, policy support[33,34]Hydroprocessed Esters and Fatty AcidsMost commercially mature, compatible with existing infrastructure, high conversion efficiencyLimited feedstock (edible oils), high H2 requirement, food vs. fuel conflictASTM D7566 Annex A2, 50% blend, widely usedUse waste oils, algae, non-edible oils, reduce H2 use[23,24,35]SAF from MicroalgaeHigh lipid yield, non-food feedstock, grows on wastewater/saline water, low land impactExpensive cultivation/extraction, high freezing point, complex upgradingR&D stage, low TRLGenetic strain improvement, integrate hydrothermal liquefaction[14]Direct Air Capture for SAFRemoves atmospheric CO2, can integrate with PtL to close carbon loopHigh energy demand, expensive, not yet fully scaledPilot scale DAC (e.g., Climeworks), PtL projects in developmentEnergy-efficient sorbents, coupling with renewables, policy incentives[33,36]
+
+3.4. Trends in Biofuel Technologies: Emerging Innovations vs. Established Solutions
+
+With the support of AI-based bibliometric analysis, Table 3 provides an overview of the most studied SAF technologies over the last decade. It includes both technologies that have already been implemented in the aviation sector and those that remain under development or exploration. Each entry in the table summarizes the production method, key countries or institutions leading research or deployment, the level of aviation implementation potential, as well as the main technical advantages and limitations associated with each pathway. Prominent technologies such as HEFA-SPK and FT-SPK stand out due to their ASTM certification and commercial deployment, while others like DSHC, SIP, and CH are still facing technical, economic, or regulatory barriers. This comparative synthesis serves as a strategic reference point for evaluating the maturity and scalability of SAF technologies in support of the aviation sector’s decarbonization efforts.
+
+This comparative framework is particularly relevant when combined with the TRL classification presented in Table 1 and Table 2, as it enables the identification of technologies that, despite having a high technological readiness level, may still face practical or economic barriers to widespread adoption. For instance, FT-SPK and ATJ-SPK exhibit TRLs between 6 and 8 and are already ASTM-certified (Annexes A1 and A5 of ASTM D7566), yet their high capital cost, complex gasification processes (FT), and limited energy density (ATJ) continue to constrain large-scale deployment [30,31,37]. Conversely, some pathways at lower TRLs, such as CHJ or DSHC, demonstrate notable advantages in terms of feedstock flexibility, the use of wet biomass or sugar-derived intermediates, and potential for carbon circularity, but remain at early development stages (TRL 4–6) with limited industrial demonstration and no current ASTM approval [26]. These contrasting cases illustrate how the integration of technical maturity metrics with broader performance characteristics offers a more nuanced understanding of the opportunities and limitations across SAF pathways, as reflected in Table 2 and Table 3.
+
+In reviewing the technological landscape presented in Table 3, it is evident that SAF research and deployment are currently concentrated in a few leading regions, notably the United States, European Union countries, and China. These regions host key institutions such as Gevo, Neste, Velocys, Sunfire, and Synfuels China, which are actively advancing both industrial implementation and technological innovation in pathways such as HEFA-SPK, FT-SPK, and PtL [26,31]. National and regional policies, coupled with strong research infrastructures and targeted investments, have significantly accelerated SAF development in these areas [30].
+
+Table 3. Overview of Trends and Most Studied Technologies in the Last Decade.
+
+TechnologyProduction MethodLeading Countries/Research InstitutionsAviation Implementation PotentialAdvantagesDisadvantagesReferencesHydroprocessed Esters and Fatty AcidsCatalytic hydroprocessing of triglycerides or free fatty acids from renewable lipids.USA (Neste, World Energy), European Union (EU), Brazil.High—ASTM D7566 approved, commercially deployed.Mature technology; compatible with current infrastructure; utilizes waste lipids.Feedstock availability constraints; indirect land use impacts.[30,35]Fischer–Tropsch SynthesisThermochemical gasification followed by Fischer–Tropsch synthesis of syngas.USA (Velocys), China (Synfuels China), Germany.High—ASTM certified, operational demonstration projects.High-quality fuel; wide feedstock flexibility; drop-in capabilityHigh CAPEX; complex gas treatment; sensitivity to contaminants[30,31]Synthetic Fuels from Renewable EnergyElectrolysis of water + CO2 capture + syngas synthesis via RWGS (Reverse Water Gas Shift) and FT.Germany (Sunfire), European consortia.Medium to High—Technologically feasible but early adoption stage.Carbon-neutral pathway; integrates renewable electricity and CO2 reuseHigh energy consumption; elevated production costs[27,33]CO2 Direct Air Capture to SAFDirect atmospheric CO2 capture coupled with hydrogenation or FT synthesis.Switzerland (Climeworks), UK (Oxford University).Low to Medium—Conceptually viable, limited demonstration.Negative emission potential; closes carbon cycle; long-term scalabilityEarly TRL; substantial energy input; limited deployment[30,31]Alcohol-to-JetFermentation of biomass to alcohols followed by oligomerization and hydroprocessing.USA (Gevo), Brazil, India (pilot initiatives).Medium—ASTM certified for ethanol, under industrial scaling.Utilizes existing alcohol platforms; renewable carbon sourcesLow energy density; complex downstream upgrading[30,31]Synthesized Iso-ParaffinsBioconversion of sugars by genetically modified microbes to iso-paraffins.USA (Amyris, TotalEnergies).Low—Certified for up to 10% blending, low industrial scale
+
+Low aromatics; high hydrogen content; biologically derivedLow blending limit; costly fermentation processes[31]Direct Sugar to HydrocarbonsCatalytic deoxygenation and upgrading of sugar-derived intermediates.U.S. DOE Labs, German research institutes.Low—Pre-commercial stage, not ASTM approved.Potential drop-in characteristics; utilizes sugar-based platformsHigh catalyst demand; limited pilot-scale data[30]Catalytic Hydrothermolysis JetCatalytic hydroconversion of wet biomass under high pressure and temperature.USA (ARA), pre-commercial development.Medium—Under ASTM evaluation, promising for waste feedstocks.Processes high-moisture feedstocks; promising for wet wastesChallenging operational conditions; limited commercialization[31]Biomass GasificationPartial oxidation or steam gasification of lignocellulosic feedstocks.Germany, China, USA.Medium—Key to FT-SPK routes, TRL varies by setup.Flexible feedstocks; syngas versatility; scalable thermochemical routeTar formation; syngas cleanup challenges[33]
+
+In contrast, Latin America remains underrepresented in terms of scientific publications and pilot-scale SAF initiatives, despite its favorable conditions, such as vast biomass availability, robust agricultural sectors, and growing interest in renewable energy. Countries like Brazil, Colombia, and Mexico possess significant potential to develop and implement SAF technologies, particularly those based on bioethanol (e.g., ATJ) and lipid-based feedstocks (e.g., HEFA). However, the current lack of technological infrastructure, dedicated funding, and policy alignment limits the region’s contribution to global SAF innovation [13]. This gap underscores the need for greater regional collaboration, investment in R&D, and integration into international SAF initiatives to fully harness Latin America’s strategic bioresource advantages in the transition to sustainable aviation.
+
+To complement the comparative insights offered in Table 3, Figure 8 provides a visual synthesis of SAF production pathways, beginning with categorized feedstocks and tracing their respective conversion routes through to potential aviation applications. Each connection reflects the specific type of conversion process, thermochemical, biological, hybrid, or electrochemical, applied to a given feedstock-technology pairing. Technologies that have achieved ASTM certification are linked to defined SAF blend limits (e.g., 50% or 10%), while those still in pilot or research phases are indicated as “Potential SAF” to denote their pre-commercial status. This integrated mapping highlights the diversity and interdependence of technological pathways and biomass sources, emphasizing how feedstock properties influence the conversion method and ultimate deployment viability. In doing so, Figure 8 serves as a strategic visual reference for understanding the alignment between resource availability, technological maturity, and SAF implementation potential.
+
+Figure 8. SAF Production Pathways Based on the Most Studied Technologies Over the Last Decade: Feedstocks, Conversion Processes, and Blending Limits [27,30,31,33,35,38].
+
+3.5. Unlocking Regional Resources: SAF Production Opportunities in Latin America
+
+Latin America represents a region of growing strategic importance in the development of SAF. Its favorable combination of agricultural productivity, biodiversity, and increasing environmental commitments offers a unique opportunity to position the region as a significant SAF producer. Several countries are currently advancing concrete projects that integrate local feedstocks, public–private partnerships, and emerging conversion technologies to accelerate SAF deployment.
+
+In Panama, one of the most ambitious initiatives is the Golden City Biorefinery, led by SGP BioEnergy in collaboration with government stakeholders. Announced in 2022 and expected to begin operations by 2025, this facility is designed to become the world’s largest advanced biorefinery for SAF and renewable diesel. With an estimated production capacity of up to 180,000 barrels per day, the project aims to process multiple feedstocks, including waste oils and agricultural biomass, using HEFA and Fischer–Tropsch routes [39,40].
+
+Brazil has consolidated its leadership in biofuel development by expanding into SAF production. National research institutes, such as FAPESP, have launched studies to enable ATJ and HEFA technologies using sugarcane ethanol, soybean oil, and animal fats. The country has conducted feasibility assessments for deploying SAF at scale, with technical validation aligned to international standards. Brazilian participation in multilateral initiatives like the Global Framework for SAF Deployment reflects both political and industrial readiness [41,42].
+
+In Paraguay, the Omega Green project, led by ECB Group, constitutes South America’s first commercial-scale plant exclusively dedicated to SAF and HVO (Hydrotreated Vegetable Oil) production. Located in Villeta and supported by a free trade zone agreement, the facility secured over USD 1.5 billion in investment. Construction has advanced since the agreement with the government, and the plant will process soybean oil, used cooking oil, and animal fats to serve European and North American markets. It is expected to begin operations in the short term [43,44].
+
+Colombia has also made significant progress. In 2024, Ecopetrol successfully completed a test flight using SAF, marking a national milestone in sustainable aviation. The company announced plans to invest up to USD 700 million to develop a dedicated SAF production facility, expected to start operations by 2025 [43,44]. Additionally, private initiatives such as BioD are actively planning and constructing SAF plants that will utilize waste oils and fats through HEFA-SPK processes. These projects aim to contribute to national fuel mandates and position Colombia as a regional SAF supplier by 2030 [45,46].
+
+Furthermore, several studies have assessed the potential for SAF deployment in Colombia. In particular, López Gómez et al. [20] performed a PESTEL based diagnosis that identified the main political, economic, technological, and environmental challenges, while highlighting sugarcane, palm oil, corn, and coffee residues as key feedstocks. Their recommendations stress the importance of coordinated research and development investment and supply-chain development to enable large-scale production and secure Colombia’s competitiveness in international markets.
+
+These national initiatives reflect broader regional trends identified by international organizations such as IATA, which emphasize the role of Latin America in scaling up SAF production through second-generation feedstocks and flexible technology platforms. In combination with supportive policy frameworks and global demand for low-carbon fuels, these developments position the region as a strategic supplier for international aviation. However, to fully unlock its potential, Latin America must address challenges related to regulatory harmonization, infrastructure readiness, and financing mechanisms [47,48,49].
+
+4. Conclusions
+
+This study provides a comprehensive and integrated overview of Sustainable Aviation Fuels (SAF), highlighting the importance of adopting a multidisciplinary approach rooted in chemical engineering principles to accelerate their development and large-scale implementation. The bibliometric analysis conducted in this work shows that research on SAF has expanded considerably during the last decade, with a clear transition from general assessments to studies focused on advanced biofuels, catalyst improvement, process intensification, and system optimization. This shift reflects both the growing maturity of the field and the urgency to reduce emissions from the aviation sector in accordance with global climate commitments.
+
+Within the technological landscape, HEFA-SPK and FT-SPK stand out as the most mature and widely studied routes. Both have achieved ASTM certification and demonstrate a level of technological readiness that enables commercial application. In contrast, pathways such as ATJ, SIP, and DSHC remain in earlier stages of development due to operational, catalytic, and economic limitations. Even so, these emerging routes possess long-term potential to diversify feedstocks, reduce environmental impacts, and expand SAF production capacity once their technical and economic barriers are addressed.
+
+Chemical engineering plays a central role in optimizing SAF production. Advances in reaction engineering, thermochemical conversion, bioprocess integration, feedstock pretreatment, and heat and mass transfer can significantly enhance conversion efficiencies and reduce production costs. Complementing these advances with robust life-cycle and techno-economic assessment will be essential for guiding investment decisions and designing more sustainable and efficient fuel production systems.
+
+The study also emphasizes the importance of regional strategies for SAF development. Latin America demonstrates considerable potential due to its abundant biomass resources, consolidated agro-industrial infrastructure, and growing research activity. Countries such as Brazil and Colombia illustrate how coordinated public and private initiatives can encourage pilot projects, certified test flights, and the establishment of early production capabilities. These experiences highlight the relevance of tailoring SAF strategies to regional feedstock availability, logistical conditions, and technological capacity.
+
+In conclusion, the transition toward a low-carbon aviation sector depends not only on technological innovation but also on coordinated and sustained collaboration among academia, industry, and policy makers. Overcoming the current barriers to SAF adoption will require stable regulatory frameworks, economic incentives, investment in research and development, and the creation of reliable and sustainable supply chains. Advancing SAF from promising alternatives to widely accessible commercial fuels will depend on building integrated solutions that are technically feasible, economically competitive, and environmentally responsible.
+
+Author Contributions
+
+Conceptualization, L.D.L.-I., D.G.-R. and H.R.-M.; methodology, L.D.L.-I. and H.R.-M.; software, L.D.L.-I. and H.R.-M.; validation, L.D.L.-I.; formal analysis, L.D.L.-I.; investigation, L.D.L.-I.; data curation, L.D.L.-I. and H.R.-M.; writing—original draft preparation, L.D.L.-I.; writing—review and editing, D.G.-R. and H.R.-M.; visualization, L.D.L.-I., D.G.-R., and H.R.-M.; supervision, D.G.-R. and H.R.-M.; project administration, H.R.-M. All authors have read and agreed to the published version of the manuscript.
+
+Funding
+
+This research received no external funding.
+
+Institutional Review Board Statement
+
+Not applicable.
+
+Informed Consent Statement
+
+Not applicable.
+
+Data Availability Statement
+
+All data is included in the manuscript.
+
+Acknowledgments
+
+During the preparation of this manuscript/study, the authors used ChatGPT (GPT-5, OpenAI) for the purpose of comparing data from the tables compiled in this study. The authors have reviewed and edited the output and take full responsibility for the content of this publication.
+
+Conflicts of Interest
+
+The authors declare no conflicts of interest.
+
+Abbreviations
+
+The following abbreviations are used in this manuscript:
+
+ASTMAmerican Society for Testing and MaterialsATJAlcohol to JetATJ-SPKAlcohol-to-Jet Synthetic Paraffinic KeroseneCHJCatalytic Hydrothermolysis JetCO2Carbon dioxideDACDirect Air CaptureDMCODimethylcyclooctaneDSHCDirect Sugar to HydrocarbonsEUEuropean UnionFTFischer–TropschFT-SPKFischer–Tropsch Synthetic Paraffinic KeroseneHEFAHydroprocessed Esters and Fatty AcidsHEFA-SPKHydroprocessed Esters and Fatty Acids Synthetic Paraffinic KeroseneHVOHydrotreated Vegetable OilIATAInternational Air Transport AssociationICAOInternational Civil Aviation OrganizationIEAInternational Energy AgencyPtLPower-to-LiquidSAFSustainable Aviation FuelsSIPSynthesized Iso-ParaffinsTRLTechnology Readiness Level
+
+References
+
+Lee, D.S.; Fahey, D.W.; Skowron, A.; Allen, M.R.; Burkhardt, U.; Chen, Q.; Doherty, S.J.; Freeman, S.; Forster, P.M.; Fuglestvedt, J.; et al. The contribution of global aviation to anthropogenic climate forcing for 2000 to 2018. Atmos Environ. 2021, 244, 117834. [Google Scholar] [CrossRef]
+
+Dou, X.; Hong, J.; Ciais, P.; Chevallier, F.; Yan, F.; Yu, Y.; Hu, Y.; Huo, D.; Sun, Y.; Wang, Y.; et al. Near-real-time global gridded daily CO2 emissions 2021. Sci. Data 2023, 10, 69. [Google Scholar] [CrossRef] [PubMed]
+
+Sacchi, R.; Becattini, V.; Gabrielli, P.; Cox, B.; Dirnaichner, A.; Bauer, C.; Mazzotti, M. How to make climate-neutral aviation fly. Nat Commun. 2023, 14, 3989. [Google Scholar] [CrossRef]
+
+Bauen, A.; Bitossi, N.; German, L.; Harris, A.; Leow, K. Sustainable Aviation Fuels. Johns. Matthey Technol. Rev. 2020, 64, 263–278. [Google Scholar] [CrossRef]
+
+IEA. International Energy Agency. Aviation. 2022. Available online: https://www.iea.org/energy-system/transport/aviation (accessed on 20 September 2024).
+
+International Energy Agency—IEA. Well-to-Wheel GHG Intensity of Motorised Passenger Transport Modes. CC BY 4.0. 2023. Available online: https://www.iea.org/data-and-statistics/charts/well-to-wheel-ghg-intensity-of-motorised-passenger-transport-modes-2022 (accessed on 20 September 2024).
+
+Convención Marco de las Naciones Unidas sobre el Cambio Climático. ¿Qué es el Acuerdo de París? UNFCCC. 2015. Available online: https://unfccc.int/es/most-requested/que-es-el-acuerdo-de-paris (accessed on 20 September 2024).
+
+Wang, B.; Ting, Z.J.; Zhao, M. Sustainable aviation fuels: Key opportunities and challenges in lowering carbon emissions for aviation industry. Carbon Capture Sci. Technol. 2024, 13, 100263. [Google Scholar] [CrossRef]
+
+Clean Air Task Force. Alternativas Prometedoras a los Biocombustibles de Aviación. 2023. Available online: https://www.catf.us/es/2022/09/low-zero-carbon-fuels-critical-meeting-aviation-energy-demand-decarbonizing-aviation-sector/ (accessed on 20 September 2024).
+
+International Civil Aviation Organization (ICAO). CORSIA Eligible Fuels. 2022. Available online: https://www.icao.int/CORSIA/corsia-eligible-fuels (accessed on 6 January 2025).
+
+Agencia Estatal de Seguridad Aérea (AESA). Combustibles Sostenibles de Aviación | AESA-Agencia Estatal de Seguridad Aérea—Ministerio de Fomento. 2020. Available online: https://www.seguridadaerea.gob.es/es/ambitos/sostenibilidad/sostenibilidad-del-sector-aereo-medidas-de-mitigacion-frente-al-cambio-climatico-y-preservacion-de-la-calidad-del-aire-local/combustibles-sostenibles-de-aviacion (accessed on 6 January 2025).
+
+International Air Transport Association—IATA. Progress Towards Implementing Cleaner Energies for Global Aviation. 2023. Available online: https://www.iata.org/ (accessed on 20 September 2024).
+
+Yaşar Dinçer, F.C.; Yirmibeşoğlu, G.; Bilişli, Y.; Arık, E.; Akgün, H. Trends and emerging research directions of sustainable aviation: A bibliometric analysis. Heliyon 2024, 10, e32306. [Google Scholar] [CrossRef]
+
+Ng, K.S.; Farooq, D.; Yang, A. Global biorenewable development strategies for sustainable aviation fuel production. Renew. Sustain. Energy Rev. 2021, 150, 111502. [Google Scholar] [CrossRef]
+
+El Colombiano. Ecopetrol Produce 32 mil Barriles de Combustible Sostenible Para Aviones en Cartagena. El Colombiano. 2024. Available online: https://www.elcolombiano.com/negocios/ecopetrol-produce-32-mil-barriles-de-combustible-de-aviacion-saf-en-cartagena-KF25750749 (accessed on 10 November 2024).
+
+Rosillo-Calle, F.; Woods, J. The Biomass Assessment Handbook: Bioenergy for a Sustainable Environment; Routledge: Oxfordshire, UK, 2012. [Google Scholar]
+
+European Biomass Industry Association (EUBIA). 2025. Available online: http://www.eubia.org (accessed on 26 November 2025).
+
+Guimaraes, H.R.; Bressanin, J.M.; Motta, I.L.; Chagas, M.F.; Klein, B.C.; Bonomi, A.; Maciel Filho, R.; Watanabe, M.D. Decentralization of sustainable aviation fuel production in Brazil through Biomass-to-Liquids routes: A techno-economic and environmental evaluation. Energy Convers. Manag. 2023, 276, 116547. [Google Scholar] [CrossRef]
+
+Liu, X.; Yuan, S.; Yu, H.; Liu, Z. How ecological policy stringency moderates the influence of industrial innovation on environmental sustainability: The role of renewable energy transition in BRICST countries. Renew. Energy 2023, 207, 194–204. [Google Scholar] [CrossRef]
+
+López Gómez, M.; Posada, J.; Silva, V.; Martínez, L.; Mayorga, A.; Álvarez, O. Diagnosis of Challenges and Uncertainties for Implementation of Sustainable Aviation Fuel (SAF) in Colombia, and Recommendations to Move Forward. Energies 2023, 16, 5667. [Google Scholar] [CrossRef]
+
+van Eck, N.J.; Waltman, L. Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics 2010, 84, 523–538. [Google Scholar] [CrossRef]
+
+Batten, R.; Karanjikar, M.; Spatari, S. A sustainable aviation fuel pathway from biomass: Life cycle environmental and cost evaluation for dimethylcyclooctane jet fuel. Sustain. Energy Fuels 2024, 8, 1924–1935. [Google Scholar] [CrossRef]
+
+Klimczyk, W.; Jasiński, R.; Niklas, J.; Siedlecki, M.; Ziółkowski, A. Sustainable Aviation Fuels: A Comprehensive Review of Production Pathways, Environmental Impacts, Lifecycle Assessment, and Certification Frameworks. Energies 2025, 18, 3705. [Google Scholar] [CrossRef]
+
+Marchesan, A.N.; de Mesquita Sampaio, I.L.; Chagas, M.F.; Generoso, W.C.; Hernandes, T.A.; Morais, E.R.; Junqueira, T.L. Alternative feedstocks for sustainable aviation fuels: Assessment of sugarcane-derived microbial oil. Bioresour. Technol. 2025, 416, 131772. [Google Scholar] [CrossRef]
+
+Siluvai Antony, P.; Vanderghem, C.; MacLean, H.L.; Saville, B.A.; Posen, I.D. A framework to estimate national biofuel potential by siting production facilities: A case study for canola sustainable aviation fuel in Canada. Energy Adv. 2024, 3, 1612–1631. [Google Scholar] [CrossRef]
+
+Lau, J.I.; Wang, Y.S.; Ang, T.; Seo, J.C.; Khadaroo, S.N.; Chew, J.J.; Lup, A.N.; Sunarso, J. Emerging technologies, policies and challenges toward implementing sustainable aviation fuel (SAF). Biomass Bioenergy 2024, 186, 107277. [Google Scholar] [CrossRef]
+
+Ramos-Fernandez, E.V.; Santos, J.L.; Alsaadi, D.K.; Bavykina, A.; Gallo, J.M.R.; Gascon, J. Potential pathways for CO2 utilization in sustainable aviation fuel synthesis. Chem. Sci. 2024, 16, 530–551. [Google Scholar] [CrossRef]
+
+ASTM D7566-23; ASTM D7566-23: Standard Specification for Aviation Turbine Fuel Containing Synthesized Hydrocarbons. ASTM International: West Conshohocken, PA, USA, June 2023. [CrossRef]
+
+Barbosa, F.C. Sustainable Aviation Fuel—An Effective Tool for Complying with the Aviation’s Global Environmental Commitment; Society of Automotive Engineers (SAE): Warrendale, PA, USA, 2024. [Google Scholar] [CrossRef]
+
+Okolie, J.A.; Awotoye, D.; Tabat, M.E.; Okoye, P.U.; Epelle, E.I.; Ogbaga, C.C.; Güleç, F.; Oboirien, B. Multi-criteria decision analysis for the evaluation and screening of sustainable aviation fuel production pathways. iScience 2023, 26, 106944. [Google Scholar] [CrossRef]
+
+Shahriar, M.F.; Khanal, A. The current techno-economic, environmental, policy status and perspectives of sustainable aviation fuel (SAF). Fuel 2022, 325, 124905. [Google Scholar] [CrossRef]
+
+Sasol. Sasol and Topsoe to Accelerate Growth in Sustainable Aviation Fuel Production [Internet]. 2023. Available online: https://www.sasol.com/media-centre/media-releases/brighter-horizon-sustainable-aviation-fuel-sasol-and-topsoe-form-future-business-accelerate-global (accessed on 15 May 2025).
+
+Wang, Y.; Liu, Y.; Xu, Z.; Yin, K.; Zhou, Y.; Zhang, J.; Cui, P.; Ma, S.; Wang, Y.; Zhu, Z. A review on renewable energy-based chemical engineering design and optimization. Renew. Sustain. Energy Rev. 2024, 189, 114015. [Google Scholar] [CrossRef]
+
+Synfuels China. 2024. Available online: http://www.synfuelschina.com.cn/en/ (accessed on 15 May 2025).
+
+Song, M.; Zhang, X.; Chen, Y.; Zhang, Q.; Chen, L.; Liu, J.; Ma, L. Hydroprocessing of lipids: An effective production process for sustainable aviation fuel. Energy 2023, 283, 129107. [Google Scholar] [CrossRef]
+
+Climeworks. Direct Air Capture Technology: Innovations in CO2 Removal. 2024. Available online: https://climeworks.com/direct-air-capture (accessed on 3 May 2025).
+
+Bube, S.; Bullerdiek, N.; Voß, S.; Kaltschmitt, M. Kerosene production from power-based syngas—A technical comparison of the Fischer-Tropsch and methanol pathway. Fuel 2024, 366, 131269. [Google Scholar] [CrossRef]
+
+Halimi, N.A.N.; Odunsi, A.; Sebastiani, A.; Kamel, D. Waste to Biofuel: Process Design and Optimisation for Sustainable Aviation Fuel Production from Corn Stover. Energies 2025, 18, 3418. [Google Scholar] [CrossRef]
+
+H2BusinessNews. Panamá Tendrá la Biorrefinería más Grande del Mundo en 2024. 2023. Available online: https://h2businessnews.com/panama-tendra-la-biorrefineria-mas-grande-del-mundo-en-2024/ (accessed on 16 May 2025).
+
+SAF Investor. SGP BioEnergy: Golden City Biorefinery, Panama. 2023. Available online: https://www-safinvestor-com.translate.goog/project/141297/sgp-bioenergy-golden-city-biorefinery-panama/ (accessed on 16 May 2025).
+
+Pesquisa FAPESP. Brasil se Apresta a Elaborar Combustible Sostenible de Aviación. 2023. Available online: https://revistapesquisa.fapesp.br/es/brasil-se-apresta-a-elaborar-combustible-sostenible-de-aviacion/ (accessed on 16 May 2025).
+
+Aviacion News. SAF Latinoamérica. 2023. Available online: https://www.aviacionnews.com/2023/08/saf-latinoamerica/ (accessed on 16 May 2025).
+
+Ecopetrol. Finalizó Prueba de Combustible de Aviación. 2024. Available online: https://www.ecopetrol.com.co/wps/portal/Home/es/noticias/detalle/finalizo-prueba-combustible-aviacion (accessed on 16 May 2025).
+
+Reuters. Colombia’s Ecopetrol to Invest up to $700 Million in SAF Production Plant. 2024. Available online: https://www.reuters.com/sustainability/colombias-ecopetrol-invest-up-700-million-saf-production-plant-2025-04-02 (accessed on 16 May 2025).
+
+BIOD. Juntos Por un Futuro Más Verde y Sostenible. 2023. Available online: https://www.biod.com.co/noticia/juntos-por-un-futuro-mas-verde-y-sostenible-2/ (accessed on 16 May 2025).
+
+Valora Analitik. Esta es la Nueva Planta de SAF Para Aviación que Tendrá Colombia Para 2030. 2023. Available online: https://www.valoraanalitik.com/esta-es-la-nueva-planta-de-saf-para-aviacion-que-tendra-colombia-para-2030 (accessed on 16 May 2025).
+
+IATA. Sustainable Aviation Fuels. 2024. Available online: https://www.iata.org/en/programs/sustainability/sustainable-aviation-fuels/ (accessed on 16 May 2025).
+
+El País. Los Desafíos de los Combustibles Sostenibles en la Aviación. 2024. Available online: https://elpais.com/america-futura/2024-12-11/los-desafios-de-los-combustibles-sostenibles-en-la-aviacion.html (accessed on 16 May 2025).
+
+Energía y Negocios. La Oportunidad de los Biocombustibles Sostenibles de Aviación. 2023. Available online: https://www.energiaynegocios.com.ar/la-oportunidad-de-los-biocombustibles-sostenibles-de-aviacion/ (accessed on 16 May 2025).
+
+Figure 1. Methodological scheme for bibliometric analysis.
+
+Figure 2. Evolution of publications on sustainable aviation fuels, along with the number of countries and journals that published these studies from 2004 to 2024. Information according to the Scopus database.
+
+Figure 3. Top 5 Scopus-indexed journals with the highest number of published papers on sustainable aviation fuels. (a) Number of records per year for each journal. (b) Evolution of the number of published papers by journal between 2004 and 2024. Information according to the Scopus database.
+
+Figure 4. Countries with the highest number of published papers on sustainable aviation fuels. (a) Top 10 countries by number of records. (b) Evolution of the number of published papers by country between 2004 and 2024. Information according to the Scopus database.
+
+Figure 5. Top 5 Latin American countries with the highest number of published papers on sustainable aviation fuels. (a) Number of records by country. (b) Evolution of the number of published papers by country between 2004 and 2024. Information according to the Scopus database.
+
+Figure 6. Top 10 subject areas with the highest number of published papers on sustainable aviation fuels. Information according to the Scopus database. Note: Percentages add up to more than 100 because a paper may be indexed in more than one area.
+
+Figure 7. Bibliometric network of authors’ keywords of studies related to sustainable aviation fuels. (a) Network visualization. (b) Overlay visualization. Minimum number of occurrences of a keyword set at 20.
+
+Figure 8. SAF Production Pathways Based on the Most Studied Technologies Over the Last Decade: Feedstocks, Conversion Processes, and Blending Limits [27,30,31,33,35,38].
+
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
+
+© 2025 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).",https://mdpi-res.com/img/journals/biomass-logo-social.png?19ed233164a6d75c,N,,2025-12-18 08:56:54.971861
 ,,2025-12-18 11:57:23+00:00,The New Arab,"LNG powerhouse Qatar, Egypt announce sustainable jet fuel plant - The New Arab",Saleh Salem,,,,,https://www.newarab.com/news/lng-powerhouse-qatar-egypt-announce-sustainable-jet-fuel-plant,"Egypt and Qatar are expanding their economic and investment partnership through a series of joint projects, the latest of which is a first-in-Egypt production facility for sustainable aviation fuel.
 This is the first Qatari investment in the Suez Canal Economic Zone, and it aligns with Egypt's green energy production ambitions.
 It also highlights the growing economic and investment ties between Cairo and Doha, which economists say are warming at a critical time.
@@ -2572,21 +2883,6 @@ Maria Stenström Ansvarig beteendefrågor hos 2030-sekretariatet som är en saml
 Christian Janssen Affärsutvecklare på St1 som producerar förnybart flygbränsle i Sverige.
 
 Lunchseminariet arrangeras av Region Jämtland Härjedalen tillsammans med Swedavia, Åre Östersund Airport. Vi bjuder på lättare lunch. Anmäl dig senast 25 januari.",https://www.regionjh.se/images/18.3ccdc090197658add8a15370/1750087817469/RJHShareImage.png,N,,2025-12-16 15:57:01.593680
-,,2025-12-16 14:53:59+00:00,Biofuels International,New maritime biofuels initiative launches in the US,Not Available,,,,,https://biofuels-news.com/news/new-maritime-biofuels-initiative-launches-in-the-us/,"The American Biofuels Maritime Initiative (ABMI), a unified group of bioenergy stakeholders co-chaired by theRenewable Fuels Association and the American Biogas Council (ABC), has officially launched.
-The new group plans to work with President Trump’s Administration and Congress to establish strong policies that accelerate the use of American-made energy and biofuels in the global maritime sector.
-US support of the maritime fuel market will grow domestic business, creating new revenue for farmers, and strengthening rural economies.
-The ABMI will highlight this underutilized opportunity as policymakers shape future US production of maritime fuels,” said Patrick Serfass, executive director of ABC and co-chair of the Initiative.
-“US ethanol is one of the lowest-cost alternative maritime fuels available at scale and represents an incredibly competitive option for the shipping industry worldwide.”","The American Biofuels Maritime Initiative (ABMI), a unified group of bioenergy stakeholders co-chaired by theRenewable Fuels Association and the American Biogas Council (ABC), has officially launched.
-
-The new group plans to work with President Trump’s Administration and Congress to establish strong policies that accelerate the use of American-made energy and biofuels in the global maritime sector.
-
-Adding biofuels such as ethanol, biomethane, bio-LNG, biodiesel, and renewable diesel, among others, to the existing maritime fuel portfolio can fill opportunity gaps and help shippers meet both their economic and environmental goals.
-
-“Every day, America generates organic waste that should be turned into clean, domestic energy. US support of the maritime fuel market will grow domestic business, creating new revenue for farmers, and strengthening rural economies. The ABMI will highlight this underutilized opportunity as policymakers shape future US production of maritime fuels,” said Patrick Serfass, executive director of ABC and co-chair of the Initiative.
-
-Geoff Cooper, president and CEO of RFA and ABMI co-chair, said: “The maritime sector represents an enormous potential market opportunity for American-made renewable fuels produced from crops grown across America’s heartland.
-
-“US ethanol is one of the lowest-cost alternative maritime fuels available at scale and represents an incredibly competitive option for the shipping industry worldwide.”",https://biofuels-news.com/wp-content/uploads/2025/12/New-maritime-biofuels-pic-Biofuels-16-12-630530-768x597.jpg,N,,2025-12-16 11:56:39.515713
 ,,2025-12-16 14:53:59+00:00,Biofuels International,Unlocking the potential of waste oils | Biofuels International Magazine,Not Available,,,,,https://biofuels-news.com/news/unlocking-the-potential-of-waste-oils/,"In the race toward a sustainable energy future, renewable diesel and sustainable aviation fuel (SAF) are emerging as pivotal biofuels.
 However, with the potential of these renewable fuels comes the challenge of refining impure feedstocks, particularly when waste materials are involved.
 This is where BDI-BioEnergy International steps in, leveraging its expertise in waste oil processing to make sustainable fuels more viable and efficient than ever before.
@@ -2608,6 +2904,21 @@ Producing biofuels from waste oils is not as simple as refining fossil fuels. Wa
 To meet stringent quality requirements, thorough pretreatment of these...
 
 To continue reading this article you need to be logged in. Register for free or log in here.",https://biofuels-news.com/wp-content/uploads/2025/12/Pic-2-BDI_LeHavre-89-von-22-768x432.jpg,N,,2025-12-16 10:57:13.128778
+,,2025-12-16 14:53:59+00:00,Biofuels International,New maritime biofuels initiative launches in the US,Not Available,,,,,https://biofuels-news.com/news/new-maritime-biofuels-initiative-launches-in-the-us/,"The American Biofuels Maritime Initiative (ABMI), a unified group of bioenergy stakeholders co-chaired by theRenewable Fuels Association and the American Biogas Council (ABC), has officially launched.
+The new group plans to work with President Trump’s Administration and Congress to establish strong policies that accelerate the use of American-made energy and biofuels in the global maritime sector.
+US support of the maritime fuel market will grow domestic business, creating new revenue for farmers, and strengthening rural economies.
+The ABMI will highlight this underutilized opportunity as policymakers shape future US production of maritime fuels,” said Patrick Serfass, executive director of ABC and co-chair of the Initiative.
+“US ethanol is one of the lowest-cost alternative maritime fuels available at scale and represents an incredibly competitive option for the shipping industry worldwide.”","The American Biofuels Maritime Initiative (ABMI), a unified group of bioenergy stakeholders co-chaired by theRenewable Fuels Association and the American Biogas Council (ABC), has officially launched.
+
+The new group plans to work with President Trump’s Administration and Congress to establish strong policies that accelerate the use of American-made energy and biofuels in the global maritime sector.
+
+Adding biofuels such as ethanol, biomethane, bio-LNG, biodiesel, and renewable diesel, among others, to the existing maritime fuel portfolio can fill opportunity gaps and help shippers meet both their economic and environmental goals.
+
+“Every day, America generates organic waste that should be turned into clean, domestic energy. US support of the maritime fuel market will grow domestic business, creating new revenue for farmers, and strengthening rural economies. The ABMI will highlight this underutilized opportunity as policymakers shape future US production of maritime fuels,” said Patrick Serfass, executive director of ABC and co-chair of the Initiative.
+
+Geoff Cooper, president and CEO of RFA and ABMI co-chair, said: “The maritime sector represents an enormous potential market opportunity for American-made renewable fuels produced from crops grown across America’s heartland.
+
+“US ethanol is one of the lowest-cost alternative maritime fuels available at scale and represents an incredibly competitive option for the shipping industry worldwide.”",https://biofuels-news.com/wp-content/uploads/2025/12/New-maritime-biofuels-pic-Biofuels-16-12-630530-768x597.jpg,N,,2025-12-16 11:56:39.515713
 ,,2025-12-16 14:53:58+00:00,Biofuels International,EcoCeres earns RSB ICAO CORSIA certification underscoring leadership in SAF,Not Available,,,,,https://biofuels-news.com/news/ecoceres-earns-rsb-icao-corsia-certification-underscoring-leadership-in-saf/,"EcoCeres has attained certification under the RSB ICAO CORSIA scheme for sustainable aviation fuel (SAF), a globally recognised standard aligned with the International Civil Aviation Organisation’s Carbon Offsetting and Reduction Scheme for International Aviation (CORSIA).
 The certification goes further than other CORSIA-eligible schemes to ensure robust social safeguards and biodiversity protection, while confirming that EcoCeres' SAF meets rigorous requirements for sustainability, greenhouse gas (GHG) reduction, and traceability.
 The ICAO CORSIA certification, developed by the Roundtable on Sustainable Biomaterials (RSB), is among the most robust frameworks globally for verifying SAF against stringent environmental and social criteria, including significant lifecycle GHG reductions, protection of high-carbon and high-biodiversity areas, and strong safeguards for workers and local communities.
@@ -4782,243 +5093,3 @@ For investors and aviation stakeholders, the project illustrates how SAF deploym
 Regionally, the investment strengthens Egypt’s positioning as a manufacturing and logistics platform linking Gulf capital with European and global fuel markets. Globally, it reflects a broader shift in climate finance toward projects that combine energy transition goals with trade, infrastructure, and geopolitical alignment.
 
 As aviation faces mounting pressure to decarbonise without sacrificing connectivity, projects such as Sokhna’s SAF facility signal where capital, policy, and supply chains are beginning to converge.",https://esgnews.com/wp-content/uploads/2025/12/Qatars-Al-Mana-Holding-Commits-200M-to-Egypt-Sustainable-Aviation-Fuel-Plant.webp,N,,2025-12-15 10:57:19.026082
-,,2025-12-15 13:49:09+00:00,Waste360,Europe is Missing Out on the Energy Security Potential of its Waste and NATO Wants it Unlocked,PRESS RELEASE,,,,,https://www.waste360.com/waste-to-energy/europe-is-missing-out-on-the-energy-security-potential-of-its-waste-and-nato-wants-it-unlocked,"Luxembourg, Gothenburg, Warsaw, Tel Aviv: Is a key to Europe’s energy security sitting in our bins and landfills?
-The selection of Waste-to-X company Boson Energy by NATO DIANA places municipal waste on the strategic agenda.
-Boson argues that non-recyclable waste can reduce diesel consumption through electrification, cut gas dependence, and produce sustainable aviation fuel –without grid stress.
-“Waste is a profoundly underestimated strategic resource hiding in plain sight” Boson describes waste as an overlooked domestic energy source.
-We can do this at fossil-competitive cost, on attractive commercial terms,” said Jan Grimbrandt, CEO of Boson Energy.","Luxembourg, Gothenburg, Warsaw, Tel Aviv: Is a key to Europe’s energy security sitting in our bins and landfills? The selection of Waste-to-X company Boson Energy by NATO DIANA places municipal waste on the strategic agenda. Boson argues that non-recyclable waste can reduce diesel consumption through electrification, cut gas dependence, and produce sustainable aviation fuel –without grid stress. Resulting in a potential to replace some 440 million barrels of diesel per year at fossil-competitive cost and shielded from hybrid threats.
-
-DIANA, Defence Innovation Accelerator for the North Atlantic, NATO’s deeptech accelerator, has invited 150 innovators from 3,688 applicants globally to the 2026 cohort. Boson is one of six ‘Energy & Power Challenge’ companies selected, to focus on resilient, distributed, and secure energy systems for civilian and defence environments – often referred to as ‘dual use’.
-
-“Waste is a profoundly underestimated strategic resource hiding in plain sight”
-
-Boson describes waste as an overlooked domestic energy source. Unlike large-scale renewable production that depends on extensive transmission infrastructure, its Waste-to-X units can operate ‘behind-the-meter’ on compact sites within urban perimeters – right where waste is produced. Boson also points to rapidly growing urban electricity demand from ‘Edge AI’ datacentres that must be located near real-time applications like autonomous vehicles and drones.
-
-Large impact potential
-
-Boson states that the 230+ million tonnes of non-recyclable EU waste by 2035 have the potential, if deployed in transport electrification, to offset all 440 million barrels of diesel consumed annually by EU trucks and buses. Or support production of 40+ million tonnes of SAF– roughly twice the 20–25 Mt EU mandate for 2050. Boson adds that waste heat recovered could replace one quarter of the natural gas used for EU household heating.
-
-“Our technology and solution transform local waste into local energy, sustainable fuels, and even clean drinking water. We can do this at fossil-competitive cost, on attractive commercial terms,” said Jan Grimbrandt, CEO of Boson Energy.
-
-Next, Boson points to the 6 billion tons of legacy waste in Europe’s landfills as an even larger long-term ‘virtual’ resource, representing the equivalent of 11 billion barrels of diesel – roughly four times the recoverable resources of Johan Sverdrup, Western Europe’s largest oil field. Boson also states the potential to at least one billion tonnes of SAF over time. The resulting heat could replace natural gas comparable to 10 times Romania’s new Neptun Deep gas field – the EU’s biggest.
-
-Distributed systems driving local resilience
-
-Boson explains that its standard Waste-to-X unit can convert 100 tonnes of non-recyclable waste per day into 100 MWh of fast charging. That is the daily waste of roughly 100,000 people and can power 300 to 400 trucks or buses without drawing from the grid. The company highlights the environmental benefits of diverting waste from landfills and incineration, integrating carbon capture, and avoiding fossil transport emissions. Clusters processing 300,000 tonnes of waste per year can produce circular hydrogen and CO₂ for up to 50,000 tonnes of SAF annually.
-
-Commercial rollout under way
-
-Boson reports that its core technology has been demonstrated at industrial scale using real municipal waste and that the first commercial projects are under development in France, Poland, Israel, and Australia – together with major waste management and energy companies. Boson works with Siemens AG and other partners to industrialise the solution for rapid rollout. Within DIANA, the company aims to bring understanding across the Alliance for the potential in waste and landfill mining.
-
-Boson CEO Jan Grimbrandt concludes: “The world has a massive, untapped ‘sleeping asset’ in its bins and landfills. DIANA’s selection confirms that distributed generation from local waste has moved from a conceptually appealing idea to a strategic necessity, and we can deliver on that.”
-
-About Boson Energy
-
-Boson Energy develops distributed Waste-to-X solutions that transform non-recyclable waste and landfill materials into hydrogen-powered fast charging for heavy-duty vehicles, Edge AI power supply, heat or cooling, captured CO₂, methanol and sustainable aviation fuel. The systems are designed to be clean, distributed and fossil-competitive on commercial terms. Boson works with global partners such as Siemens AG to blueprint and industrialise the solution for rapid rollout. The first commercial projects are currently in development in Europe, Israel and Australia. Boson’s founder and CEO, Jan Grimbrandt, is a serial entrepreneur who previously brought two industrial deeptech-cleantech companies from early stage to global leadership prior to their acquisitions by Siemens AG and Nalco, respectively.",https://eu-images.contentstack.com/v3/assets/blt4a147f9e36f0754a/blt142d3de016ef4c13/694010d4037330797467abd5/Boson_1540.jpg?disable=upscale&width=1200&height=630&fit=crop,N,,2025-12-15 10:57:22.785594
-,,2025-12-15 13:47:26+00:00,Executive & VIP Aviation International,JETEX invests in Azzera to advance sustainable aviation initiatives,Eddie Saunders,,,,,https://evaint.com/jetex-invests-in-azzera-to-advance-sustainable-aviation-initiatives/,"Aviation sustainability provider Azzera Inc. announces that JETEX is the latest strategic investor in the digital carbon-management platform.
-The new investment positions the technology platform to continue evolving functionality, grow its international footprint, and deliver new client-facing offsetting tools to its users’ customers.
-Under the terms of the agreement, JETEX will also work with Azzera as a sustainability partner to procure and manage sustainable aviation fuel (SAF) for its international fleet beginning in early 2026.
-Azzera also confirms that JETEX will act as a lead partner for a new tool, the Azzera SAF Productivity Operations and Delivery (SAF POD) platform.
-“This is why we have chosen to partner with Azzera in advancing responsible aviation practices.","Aviation sustainability provider Azzera Inc. announces that JETEX is the latest strategic investor in the digital carbon-management platform.
-
-The new investment positions the technology platform to continue evolving functionality, grow its international footprint, and deliver new client-facing offsetting tools to its users’ customers.
-
-The partnership, signed during Dubai Airshow 2025, marks a major step toward accelerating the industry’s transition to cleaner, lower-emission operations.
-
-Under the terms of the agreement, JETEX will also work with Azzera as a sustainability partner to procure and manage sustainable aviation fuel (SAF) for its international fleet beginning in early 2026.
-
-This collaboration will enable Jetex to integrate SAF into its operations for the first time, marking a significant milestone in the company’s sustainability journey.
-
-Azzera also confirms that JETEX will act as a lead partner for a new tool, the Azzera SAF Productivity Operations and Delivery (SAF POD) platform.
-
-Designed to reduce administrative bottlenecks associated with SAF, the platform addresses a key challenge in scaling SAF adoption among companies in the supply chain.
-
-For aircraft operator clients, the SAF POD will be accessible via the CELESTE platform. It will streamline SAF management by automating the conversion of digital certificates into verified emission reductions and fuel tracking, as well as the issuance of Scope 1 and Scope 3 certificates.
-
-This enhanced functionality simplifies SAF sourcing, tracking, and delivery for operators worldwide.
-
-In addition, JETEX will integrate the Azzera FlyBeyond API tool into its charter sales ecosystem, enabling real-time carbon offsetting and SAF quoting directly within flight quotes.
-
-This technology empowers operators and their customers to make sustainable choices at the point of sale. This marks a significant advancement toward making climate action effortless within private aviation.
-
-Puja Mahajan, CEO of Azzera, says: “The investment from and collaboration with JETEX demonstrates our shared vision of a future where sustainability is seamlessly embedded in every flight.
-
-“Together, we’re bridging the gap between climate ambition and operational reality with practical tools that make sustainability accessible, transparent, and measurable.
-
-“Their investment and involvement will enable us to continue evolving intuitive technology to help our customers, partners, and investors support the global ambitions of reducing carbon emissions.”
-
-Adel Mardini, JETEX CEO, adds, JETEX is one of the world’s largest private aviation companies, and we take our responsibility to support the industry’s ambitious climate reduction goals seriously.
-
-“This is why we have chosen to partner with Azzera in advancing responsible aviation practices. Through innovation and collaboration, we’re driving meaningful progress toward the industry’s decarbonization goals.”",https://evaint.com/wp-content/uploads/sites/25/2025/12/Jetex-Azzera_L_to_R_Adel_Mardini_CEO_Jetex__Puja_Mahajan_CEO_Azzera-scaled.jpg,N,,2025-12-15 11:57:10.331933
-,,2025-12-15 13:42:21+00:00,APAnews - African Press Agency,"AfDB, São Tomé and Príncipe sign 3 new grant financing agreements - APAnews","APA - Lagos (Nigeria) Ikeh, APA - Abuja (Nigeria), Goddy Ikeh",,,,,https://apanews.net/afdb-sao-tome-and-principe-sign-3-new-grant-financing-agreements/,"The African Development Bank Group and the Government of São Tomé and Príncipe have deepened their development partnership with $18 million in new grant financing.
-Signed on Thursday at the São Tomé and Príncipe Investment Forum in Brussels, the three agreements will support energy, climate-smart agriculture, and integrated water-energy-food security.
-Under the programme, the Government of São Tomé and Principe committed to critical reforms to the public procurement system, customs, and debt management.
-The Nigeria Trust Fund (NTF), administered by the African Development Bank, finances this third phase.
-African Development Bank’s Country Manager for Angola and São Tomé and Principe Pietro Toigo said: “As São Tomé and Principe presents to the global community its National Development Plan and approaches investors to power its private sector, these three financing agreements are a clear sign that the African Development Bank stands with the country as a provider of patient capital and risk mitigation”.","The African Development Bank Group and the Government of São Tomé and Príncipe have deepened their development partnership with $18 million in new grant financing.
-
-Signed on Thursday at the São Tomé and Príncipe Investment Forum in Brussels, the three agreements will support energy, climate-smart agriculture, and integrated water-energy-food security.
-
-The first agreement delivers $7.5 million for the third phase of the Fiscal Sustainability and Resilience Program -Supplementary Financing (FSERP-SF) – part of a budget support operation, launched in December 2023. This brings the cumulative value to $20 million to be disbursed directly into the national budget.
-
-The programme drives reforms across two pillars: fiscal sustainability and energy sector transition. Under the programme, the Government of São Tomé and Principe committed to critical reforms to the public procurement system, customs, and debt management.
-
-On energy transition – a top priority in the country’s National Development Plan – the programme finances improved governance of the national utility, tariff adjustments for cost recovery, and an accelerated transition to renewable energy sources.
-
-This policy framework complements investment in energy transformation in generation and distribution infrastructure. The Nigeria Trust Fund (NTF), administered by the African Development Bank, finances this third phase.
-
-The second financing agreement channels the Global Environment Fund’s (GEF) resources into the Co-Management of Climate Extremes for Agriculture and Fisheries Resilience Project (PRIASA III). The goal is to strengthen agriculture and fisheries value chains while deploying climate-resilient technologies to safeguard livelihoods against droughts, floods, and water scarcity.
-
-With a total investment of $18.9 million, including $10 million in AfDB financing and $8.9 million from GEF, the project will be implemented through three components: enhancing value chains and socio-economic benefits, reducing vulnerability through climate-smart technologies and capacity building, and ensuring effective project management for integrated climate adaptation in agriculture and fisheries.
-
-The third agreement is for a $1.4 million Project Preparation Facility (PPF) for the Water-Energy-Food Security Nexus under the NEW-ERA initiative, to drive sustainable development in the water, energy, and agriculture sectors.
-
-Over two years, the facility will develop critical studies and master plans for integrated water resources management, including a multipurpose dam development, a water treatment plant, climate-resilience measures, and a city-wide sanitation plan.
-
-The PPF lays the groundwork for future investments to deliver universal access to potable water, explore potential hydropower generation, and improve food production by 2030, while strengthening governance and stakeholder capacity. The project will create jobs, enhance ecosystem resilience, and support the country’s climate commitments.
-
-African Development Bank’s Country Manager for Angola and São Tomé and Principe Pietro Toigo said: “As São Tomé and Principe presents to the global community its National Development Plan and approaches investors to power its private sector, these three financing agreements are a clear sign that the African Development Bank stands with the country as a provider of patient capital and risk mitigation”.
-
-The report distributed by the APO Group on behalf of African Development Bank Group (AfDB) stated that as of November 30, 2025, the African Development Bank Group’s active portfolio in São Tomé and Principe totals about $89.4 million, spread across 12 financing instruments, with an average age of 4.2 years and a disbursement ratio of 49.5 per cent. Its sectoral distribution is led by agriculture (43 per cent), followed by multisector operations (23 percent), finance (17 per cent), energy (15 per cent), and water (two per cent).
-
-The Bank’s portfolio reflects a strong emphasis on resilience, food security, energy transition, and macroeconomic reforms, alongside growing engagement in the green and blue economy and financial infrastructure.
-
-GIK/APA",https://apanews.net/wp-content/uploads/2025/12/AfDB-Logo.png,N,,2025-12-15 10:57:27.382262
-,,2025-12-15 13:36:11+00:00,Amwal Al Ghad,Egypt's SCZONE to host $200m Qatari sustainable aviation fuel project | Amwal Al Ghad,Aya Anwar,,,,,https://en.amwalalghad.com/egypts-sczone-to-host-200m-qatari-sustainable-aviation-fuel-project/,"Egypt’s Suez Canal Economic Zone (SCZONE) welcomed on Sunday its first Qatari industrial investment with the signing of a $200 million contract for Qatar’s Al Mana Holding to produce Sustainable Aviation Fuel (SAF) in the Integrated Sokhna Area.
-The project also includes the establishment of SAF Fly Limited to produce sustainable aviation fuel.
-Its output will include Sustainable Aviation Fuel (HVO), BioPropane, and Bio Naphtha, all derived from the refining of used cooking oils.
-Notably, the project is set to reduce harmful emissions by 50–80 per cent compared with conventional aviation fuels.
-Officials highlighted that the SAF project will support Egypt’s export expansion and import substitution strategies, contributing to broader economic development while meeting growing global demand for sustainable aviation fuel.","Egypt’s Suez Canal Economic Zone (SCZONE) welcomed on Sunday its first Qatari industrial investment with the signing of a $200 million contract for Qatar’s Al Mana Holding to produce Sustainable Aviation Fuel (SAF) in the Integrated Sokhna Area. The project also includes the establishment of SAF Fly Limited to produce sustainable aviation fuel.
-
-Spanning 100,000 square metres—70,000 in the industrial zone and 30,000 at Sokhna Port—the facility will have an annual production capacity of 200,000 tons. Its output will include Sustainable Aviation Fuel (HVO), BioPropane, and Bio Naphtha, all derived from the refining of used cooking oils.
-
-According to the Cabinet’s statement, Al Mana Holding has secured a long-term supply contract with global energy company Shell to purchase the project’s entire output, with SAF deliveries expected to begin by the end of 2027.
-
-Notably, the project is set to reduce harmful emissions by 50–80 per cent compared with conventional aviation fuels.
-
-Officials highlighted that the SAF project will support Egypt’s export expansion and import substitution strategies, contributing to broader economic development while meeting growing global demand for sustainable aviation fuel.
-
-This milestone underscores Egypt’s growing position as a hub for international investment in renewable energy and sustainable technologies.
-
-Attribution: Amwal Al Ghad English",https://en.amwalalghad.com/wp-content/uploads/2025/12/New-Project-87.jpg,N,,2025-12-15 10:57:32.677535
-,,2025-12-15 13:35:16+00:00,AGBI,Egypt and Al Mana sign $200m sustainable aviation fuel deal | AGBI,Not Available,,,,,https://www.agbi.com/aviation/2025/12/egypt-and-al-mana-sign-200m-sustainable-aviation-fuel-deal/,"Egypt signed a contract with Qatar’s Al Mana Holding for a first-phase investment of $200 million to produce sustainable aviation fuel from used cooking oil in the Suez Canal Economic Zone at Ain Sokhna, Egypt’s cabinet said on Sunday.
-The project will be developed in three phases and will span 100,000 square metres in the Integrated Sokhna Zone on Egypt’s Red Sea coast.
-The first phase will have an estimated annual production capacity of 200,000 tonnes, the cabinet said in a statement.
-The deal marks the first Qatari industrial investment in the Suez Canal Economic Zone, Egypt said.
-Egypt has for years been pushing to secure foreign investments, especially from wealthy Gulf states, as it seeks to tackle heavy foreign debts and a gaping budget deficit.","Egypt signed a contract with Qatar’s Al Mana Holding for a first-phase investment of $200 million to produce sustainable aviation fuel from used cooking oil in the Suez Canal Economic Zone at Ain Sokhna, Egypt’s cabinet said on Sunday.
-
-The project will be developed in three phases and will span 100,000 square metres in the Integrated Sokhna Zone on Egypt’s Red Sea coast. The first phase will have an estimated annual production capacity of 200,000 tonnes, the cabinet said in a statement.
-
-The deal marks the first Qatari industrial investment in the Suez Canal Economic Zone, Egypt said.
-
-Egypt has for years been pushing to secure foreign investments, especially from wealthy Gulf states, as it seeks to tackle heavy foreign debts and a gaping budget deficit.
-
-Prime Minister Mostafa Madbouly said the project “reflects the positive momentum in relations between Cairo and Doha, driven by the shared political will to advance bilateral cooperation through joint investments and increased trade”.
-
-Last month, the real estate arm of Qatar’s sovereign wealth fund said it would invest $29.7 billion to develop a luxury real estate and tourism project on Egypt’s Mediterranean coast.
-
-That deal marked the largest Qatari investment in the country since diplomatic relations were restored following a 2017–2021 economic rift when Egypt, Saudi Arabia, the UAE and Bahrain cut ties with Qatar, accusing it of supporting terrorism and aligning too closely with Iran, charges Doha denied.
-
-Further reading:",https://www.agbi.com/tachyon/2025/12/madbouly.jpg,N,,2025-12-15 12:57:33.809386
-,,2025-12-15 13:22:45+00:00,Biz Today,JETEX invests in Azzera to advance sustainable aviation initiatives - Biz Today,"editor, web.facebook.com",,,,,https://www.biztoday.news/2025/12/15/jetex-invests-in-azzera-to-advance-sustainable-aviation-initiatives/,"ZURICH: Aviation sustainability provider Azzera Inc. announces that JETEX, a global leader in private aviation, is the latest strategic investor in the digital carbon-management platform.
-The new investment positions the technology platform to continue evolving functionality, grow its international footprint, and deliver new client-facing offsetting tools to its users’ customers.
-Under the terms of the agreement, JETEX will also work with Azzera as a sustainability partner to procure and manage sustainable aviation fuel (SAF) for its international fleet beginning in early 2026.
-Azzera also confirms that JETEX will act as a lead partner for a new tool, the Azzera SAF Productivity Operations and Delivery (SAF POD) platform.
-This marks a significant advancement toward making climate action effortless within private aviation.","ZURICH: Aviation sustainability provider Azzera Inc. announces that JETEX, a global leader in private aviation, is the latest strategic investor in the digital carbon-management platform. The new investment positions the technology platform to continue evolving functionality, grow its international footprint, and deliver new client-facing offsetting tools to its users’ customers.
-
-The partnership, signed during Dubai Airshow 2025, marks a major step toward accelerating the industry’s transition to cleaner, lower-emission operations. Under the terms of the agreement, JETEX will also work with Azzera as a sustainability partner to procure and manage sustainable aviation fuel (SAF) for its international fleet beginning in early 2026. This collaboration will enable Jetex to integrate SAF into its operations for the first time, marking a significant milestone in the company’s sustainability journey.
-
-Azzera also confirms that JETEX will act as a lead partner for a new tool, the Azzera SAF Productivity Operations and Delivery (SAF POD) platform. Designed to reduce administrative bottlenecks associated with SAF, the platform addresses a key challenge in scaling SAF adoption among companies in the supply chain. For aircraft operator clients, the SAF POD will be accessible via the CELESTE platform. It will streamline SAF management by automating the conversion of digital certificates into verified emission reductions and fuel tracking, as well as the issuance of Scope 1 and Scope 3 certificates. This enhanced functionality simplifies SAF sourcing, tracking, and delivery for operators worldwide.
-
-In addition, JETEX will integrate the Azzera FlyBeyond API tool into its charter sales ecosystem, enabling real-time carbon offsetting and SAF quoting directly within flight quotes. This technology empowers operators and their customers to make sustainable choices at the point of sale. This marks a significant advancement toward making climate action effortless within private aviation.
-
-“The investment from and collaboration with JETEX demonstrates our shared vision of a future where sustainability is seamlessly embedded in every flight,” says Puja Mahajan, CEO of Azzera.“Together, we’re bridging the gap between climate ambition and operational reality with practical tools that make sustainability accessible, transparent, and measurable. Their investment and involvement will enable us to continue evolving intuitive technology to help our customers, partners, and investors support the global ambitions of reducing carbon emissions.”
-
-Adel Mardini, JETEX CEO, adds,JETEX is one of the world’s largest private aviation companies, and we take our responsibility to support the industry’s ambitious climate reduction goals seriously. This is why we have chosen to partner with Azzera in advancing responsible aviation practices. Through innovation and collaboration, we’re driving meaningful progress toward the industry’s decarbonization goals.”
-
-The investment concludes Azzera’s USD $800,000 capital raise, fueling further development of its digital sustainability ecosystem, including emissions tracking, compliance automation, and access to high-quality carbon markets through its flagship CELESTE platform.
-
-rafiq@biztoday.news",https://www.biztoday.news/wp-content/uploads/2025/12/Jetex-Azzera_L_to_R_Adel_Mardini_CEO_Jetex__Puja_Mahajan_CEO_Azzera-scaled.jpg,N,,2025-12-15 10:57:38.229691
-,,2025-12-15 13:18:36+00:00,Asian Banking & Finance,SMBC APAC completes first SRT transaction - Asian Banking & Finance,Staff,,,,,https://asianbankingandfinance.net/retail-banking/news/smbc-apac-completes-first-srt-transaction,"Since you're here... ...there are many ways you can work with us to advertise your company and connect to your customers.
-Our team can help you design and create an advertising campaign, in print and digital, on this website and in print magazine.
-We can also organize a real life or digital event for you and find thought leader speakers as well as industry leaders, who could be your potential partners, to join the event.
-We also run some awards programmes which give you an opportunity to be recognized for your achievements during the year and you can join this as a participant or a sponsor.
-Let us help you drive your business forward with a good partnership!","Since you're here...
-
-...there are many ways you can work with us to advertise your company and connect to your customers. Our team can help you design and create an advertising campaign, in print and digital, on this website and in print magazine.
-
-We can also organize a real life or digital event for you and find thought leader speakers as well as industry leaders, who could be your potential partners, to join the event. We also run some awards programmes which give you an opportunity to be recognized for your achievements during the year and you can join this as a participant or a sponsor.
-
-Let us help you drive your business forward with a good partnership!",https://asianbankingandfinance.net/s3/files/styles/opengraph/public/2025-12/thumbs-up-yes-approve-sincerely-media-via-unsplash_0.jpg?h=f8ef2f4e&itok=y3OU3p4G,N,,2025-12-15 10:57:44.815597
-,,2025-12-15 13:16:33+00:00,BioEnergy Times,Malaysia to speed up licensing to draw foreign investment in sustainable aviation fuel,Vivek Waghmode,,,,,https://bioenergytimes.com/malaysia-to-speed-up-licensing-to-draw-foreign-investment-in-sustainable-aviation-fuel/,"Petaling Jaya: The government will accelerate and simplify licensing approvals for activities related to sustainable aviation fuel (SAF) to attract greater foreign investment and strengthen Malaysia’s position in the emerging sector, Plantation and Commodities Minister Johari Ghani said, reports Free Malaysia Today.
-The announcement comes as global growth in SAF production faces headwinds.
-The International Air Transport Association said last week that worldwide SAF output is expected to slow and reach about 2.4 million tonnes next year.
-Production in 2025 is projected at 1.9 million tonnes, roughly double the volume produced a year earlier, but lower than IATA’s earlier estimate of about 2.1 million tonnes.
-The industry body attributed the downgrade to a lack of sufficient policy support to fully utilise existing SAF production capacity.","Petaling Jaya: The government will accelerate and simplify licensing approvals for activities related to sustainable aviation fuel (SAF) to attract greater foreign investment and strengthen Malaysia’s position in the emerging sector, Plantation and Commodities Minister Johari Ghani said, reports Free Malaysia Today.
-
-Speaking in the Dewan Negara, Johari said the initiative is aimed at turning Malaysia into a regional SAF hub while improving investor confidence in the domestic industry, according to a report by Utusan Malaysia.
-
-He said the government is making it easier for companies to obtain approvals for building facilities, producing SAF and exporting the fuel, adding that faster and clearer processes would encourage industry players to base their operations in Malaysia.
-
-Johari was responding to a question from Senator Che Alias Hamid on steps being taken to attract foreign investors beyond offering tax incentives.
-
-The minister said Malaysia is capitalising on its status as the world’s second-largest palm oil producer by using feedstock such as used cooking oil, palm oil mill effluent oil and other palm-based biomass for SAF production.
-
-He added that efforts are also under way to increase public awareness about the collection of used cooking oil, while the government is studying measures to ensure that raw materials used for SAF remain sustainable over the long term.
-
-The announcement comes as global growth in SAF production faces headwinds. The International Air Transport Association said last week that worldwide SAF output is expected to slow and reach about 2.4 million tonnes next year.
-
-Production in 2025 is projected at 1.9 million tonnes, roughly double the volume produced a year earlier, but lower than IATA’s earlier estimate of about 2.1 million tonnes. The industry body attributed the downgrade to a lack of sufficient policy support to fully utilise existing SAF production capacity.
-
-IATA Director General Willie Walsh said poorly designed mandates have weakened progress in the sector and called on policymakers to work more closely with airlines to put in place incentives that can effectively support SAF adoption.",https://bioenergytimes.com/wp-content/uploads/2025/05/saf-5.png,N,,2025-12-15 10:57:52.316665
-,,2025-12-15 13:16:32+00:00,BioEnergy Times,"Egypt, Qatar's Al Mana sign $200 million deal for sustainable aviation fuel plant",BioEnergyTimes,,,,,https://bioenergytimes.com/egypt-qatars-al-mana-sign-200-million-deal-for-sustainable-aviation-fuel-plant/,"Cairo: Egypt has signed an agreement with Qatar’s Al Mana Holding for an initial investment of $200 million to set up a sustainable aviation fuel project using used cooking oil at Ain Sokhna in the Suez Canal Economic Zone, the Cabinet said on Sunday, reports Zawya.
-According to an official statement, the project will be implemented in three stages and will cover an area of 100,000 square metres within the Integrated Sokhna Zone along Egypt’s Red Sea coast.
-The first phase is expected to have an annual production capacity of about 200,000 tonnes.
-The agreement marks the first industrial investment by a Qatari company in the Suez Canal Economic Zone, the government said.
-Prime Minister Mostafa Madbouly said the project highlights the growing strength of ties between Egypt and Qatar, noting that improved relations are helping boost cooperation through joint investments and higher trade flows.","Cairo: Egypt has signed an agreement with Qatar’s Al Mana Holding for an initial investment of $200 million to set up a sustainable aviation fuel project using used cooking oil at Ain Sokhna in the Suez Canal Economic Zone, the Cabinet said on Sunday, reports Zawya.
-
-According to an official statement, the project will be implemented in three stages and will cover an area of 100,000 square metres within the Integrated Sokhna Zone along Egypt’s Red Sea coast. The first phase is expected to have an annual production capacity of about 200,000 tonnes.
-
-The agreement marks the first industrial investment by a Qatari company in the Suez Canal Economic Zone, the government said.
-
-Egypt has been actively seeking foreign investments in recent years, particularly from cash-rich Gulf nations, as it works to manage high external debt levels and a wide fiscal deficit.
-
-Prime Minister Mostafa Madbouly said the project highlights the growing strength of ties between Egypt and Qatar, noting that improved relations are helping boost cooperation through joint investments and higher trade flows.
-
-In a related development, the real estate arm of Qatar’s sovereign wealth fund announced last month plans to invest $29.7 billion in a large luxury real estate and tourism project on Egypt’s Mediterranean coast.
-
-That investment was the biggest by Qatar in Egypt since diplomatic ties were restored after a 2017–2021 rift, when Egypt, Saudi Arabia, the United Arab Emirates and Bahrain severed relations with Doha over allegations of supporting terrorism and maintaining close links with Iran, which Qatar had denied.",https://bioenergytimes.com/wp-content/uploads/2025/05/saf-11.png,N,,2025-12-15 10:58:01.387385
-,,2025-12-15 13:10:18+00:00,APAnews - African Press Agency,"Egypt, Qatar sign $200m contract for sustainable aviation fuel - APAnews","Abu bakr Jalloh, APA-Cairo (Egypt)",,,,,https://apanews.net/egypt-qatar-sign-200m-contract-for-sustainable-aviation-fuel/,"The Suez Canal Economic Zone Authority (SCZone) and Qatari company Al Manaa Holding signed a contract on Sunday, December 14, for the production of Sustainable Aviation Fuel (SAF) in Sokhna.
-The project, which marks the first Qatari industrial investment in the SCZone, involves a total investment of $200 million (approximately 9.6 billion Egyptian pounds).
-Al Manaa Holding has already secured a long-term supply contract with the multinational Shell Global to purchase the entire production output.
-Deliveries of the sustainable fuel are slated to begin by the end of 2027.
-According to Egyptian Minister of Investment and Foreign Trade Hassan El-Khatib, Qatari investments in Egypt currently stand at approximately $3.2 billion, spread across over 266 companies.","The Suez Canal Economic Zone Authority (SCZone) and Qatari company Al Manaa Holding signed a contract on Sunday, December 14, for the production of Sustainable Aviation Fuel (SAF) in Sokhna.
-
-The project, which marks the first Qatari industrial investment in the SCZone, involves a total investment of $200 million (approximately 9.6 billion Egyptian pounds).
-
-The facility will be developed on a 100,000-square-meter site within the Sokhna Integrated Zone. The plant is expected to reach an annual production capacity of 200,000 tonnes of SAF.
-
-Walid Gamal El-Din, Chairman of the SCZone Authority, noted that the production of SAF is critical for sustainability, as it is expected to reduce harmful emissions by 50 percent to 80 percent compared to conventional jet fuel. The end products will include high-voltage oxygen (HVO), biopropane, and bio-naphtha, which are to be extracted through the refining of used cooking oils.
-
-Al Manaa Holding has already secured a long-term supply contract with the multinational Shell Global to purchase the entire production output. Deliveries of the sustainable fuel are slated to begin by the end of 2027.
-
-Prime Minister Mostafa Madbouly welcomed the project, describing it as an important addition that “strengthens the Economic Zone’s capacity to adopt renewable energy sources.” He emphasized that the contract signing, which coincided with the Egyptian-Qatari Business Forum in Cairo, “demonstrates the positive development of relations between Cairo and Doha.”
-
-Abdulaziz Al Manaa, CEO of Al Manaa Holding, highlighted the depth of relations between the two countries, noting that continued political support is the driving force behind the project’s success. According to Egyptian Minister of Investment and Foreign Trade Hassan El-Khatib, Qatari investments in Egypt currently stand at approximately $3.2 billion, spread across over 266 companies.
-
-AK/Sf/fss/abj/APA",https://apanews.net/wp-content/uploads/2025/04/cropped-cropped-cropped-Fav-APA-32x32.png,N,,2025-12-15 10:58:06.400422
-,,2025-12-15 13:04:31+00:00,Oils & Fats International,Darling Ingredients announces deal to sell around US$60M in production tax credits,Not Available,,,,,https://www.ofimagazine.com/news/darling-ingredients-announces-deal-to-sell-around-us-60m-in-production-tax-credits,"DGD produces renewable diesel and sustainable aviation fuel (SAF) from recycled animal fats and used cooking oil (UCO).
-In September, the company announced it had sold US$125M in production tax credits, bringing its total production credit sales in 2025 to US$185M.
-The credits are Clean Fuel Production Tax Credits under Section 45Z of the Internal Revenue Code, created by the Inflation Reduction Act (IRA).
-They are earned by producers of low-carbon transportation fuels, including renewable diesel, based on the lifecycle greenhouse gas emissions of the fuel compared with petroleum diesel.
-Darling Ingredients operates 260 plants in 15 countries and repurposes nearly 15% of the world’s meat industry waste streams into value-added products, such as green energy, renewable diesel, collagen, fertiliser, animal proteins and meals and pet food ingredients.","The proceeds of the sale were expected to be received by 31 December once funding conditions were met, the company said on 4 December.
-
-DGD produces renewable diesel and sustainable aviation fuel (SAF) from recycled animal fats and used cooking oil (UCO).
-
-In September, the company announced it had sold US$125M in production tax credits, bringing its total production credit sales in 2025 to US$185M.
-
-The credits are Clean Fuel Production Tax Credits under Section 45Z of the Internal Revenue Code, created by the Inflation Reduction Act (IRA). They are earned by producers of low-carbon transportation fuels, including renewable diesel, based on the lifecycle greenhouse gas emissions of the fuel compared with petroleum diesel. These credits can be sold to unrelated corporate buyers, who use them to offset their federal tax liability.
-
-Darling Ingredients operates 260 plants in 15 countries and repurposes nearly 15% of the world’s meat industry waste streams into value-added products, such as green energy, renewable diesel, collagen, fertiliser, animal proteins and meals and pet food ingredients.",https://www.ofimagazine.com/content-images/news/_1200x630_crop_center-center_82_none/Biodiesel-sized-Pixabay.jpg?mtime=1676626274,N,,2025-12-15 10:58:11.601642
-,,2025-12-15 13:04:29+00:00,X (formerly Twitter),"Egypt, Qatar's Al Mana Holding sign USD 200 million sustainable aviation fuel deal The ...",Not Available,,,,,https://x.com/IntlFinanceMag/status/2000487162484056096,"International Finance (@IntlFinanceMag). 17 views. Egypt, Qatar's Al Mana Holding sign USD 200 million sustainable aviation fuel deal The project, ...","JavaScript is not available.
-
-We’ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of supported browsers in our Help Center.",,N,,2025-12-15 11:57:13.893432
