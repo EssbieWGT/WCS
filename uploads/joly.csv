@@ -1,8 +1,267 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID26,Kraft Heinz,2025-12-19 22:46:32+00:00,The Globe and Mail,Forget Kraft Heinz: Buy This Unstoppable Consumer Staple Leader Instead,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/COST/pressreleases/36722624/forget-kraft-heinz-buy-this-unstoppable-consumer-staple-leader-instead/,Detailed price information for Costco Wholesale (COST-Q) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=815,N,,2025-12-19 18:03:28.275493
+ID32,Nvidia,2025-12-19 22:24:02+00:00,NVIDIA Technical Blog,Accelerating AI-Powered Chemistry and Materials Science Simulations with NVIDIA ...,"Justin S. Smith, Nikita Fedik, Dallas Foster, Roman Zubatyuk, Kelvin Lee",,,,,https://developer.nvidia.com/blog/accelerating-ai-powered-chemistry-and-materials-science-simulations-with-nvidia-alchemi-toolkit-ops/,"NVIDIA ALCHEMI (AI Lab for Chemistry and Materials Innovation), announced at Supercomputing 2024, provides chemistry and materials science developers and researchers with domain-specialized toolkits and NVIDIA NIM microservices optimized on NVIDIA accelerated computing platforms.
+This post introduces NVIDIA ALCHEMI Toolkit-Ops, the accelerated batched common operations layer of ALCHEMI.
+ALCHEMI Toolkit-Ops ecosystem integration ALCHEMI Toolkit-Ops is designed to integrate seamlessly with the broader PyTorch-based atomistic simulation ecosystem.
+How to get started with ALCHEMI Toolkit-Ops Getting started with ALCHEMI Toolkit-Ops is simple and designed with ease of use in mind.
+To accelerate your chemistry and materials science simulations, visit the NVIDIA/nvalchemi-toolkit-ops GitHub repo and NVIDIA ALCHEMI Toolkit-Ops documentation.","Machine learning interatomic potentials (MLIPs) are transforming the landscape of computational chemistry and materials science. MLIPs enable atomistic simulations that combine the fidelity of computationally expensive quantum chemistry with the scaling power of AI.
+
+Yet, developers working at this intersection face a persistent challenge: a lack of robust, Pythonic toolbox for GPU-accelerated atomistic simulation. For use cases such as running a large number of simultaneous, GPU-accelerated simulations, robust and well-supported tools are either missing in the current software ecosystem or are fragmented across several open source software tools.
+
+Over the past few years, available software for running atomistic simulations with MLIPs has been CPU-centric. Core operations such as neighbor identification, dispersion corrections, long-range interactions, and their associated gradient calculation have traditionally supported only CPU computation, which often struggles to deliver the speed that contemporary research demands. High-throughput simulations of small- to medium-sized atomic systems quickly become bottlenecked by inefficient GPU usage in hybrid workflows where the model is GPU-accelerated in PyTorch but the simulation tooling is serial and CPU-based.
+
+While developers have attempted to implement these operations directly in PyTorch over the years, the general-purpose design of PyTorch leaves performance on the table for the specialized spatial and force calculation operations required in atomistic simulation. This fundamental mismatch between PyTorch capabilities and the demands of atomistic modeling raises an important question: What’s needed to bridge this gap?
+
+NVIDIA ALCHEMI (AI Lab for Chemistry and Materials Innovation), announced at Supercomputing 2024, provides chemistry and materials science developers and researchers with domain-specialized toolkits and NVIDIA NIM microservices optimized on NVIDIA accelerated computing platforms. It is a collection of high-performance, batched and GPU-accelerated tools specifically for enabling atomistic simulations in chemistry and materials science research at the machine learning framework level.
+
+NVIDIA ALCHEMI delivers capabilities across three integrated layers:
+
+ALCHEMI Toolkit-Ops: A repository of GPU-accelerated, batched common operations for AI-enabled atomistic simulation tasks, such as neighbor list construction, DFT-D3 dispersion corrections, and long-range electrostatics.
+
+ALCHEMI Toolkit: A collection of GPU-accelerated simulation building blocks, including geometry optimizers, integrators, and data structures to enable large-scale, batched simulations leveraging AI.
+
+ALCHEMI NIM microservices: A scalable layer of cloud‑ready, domain‑specific microservices for chemistry and materials science, enabling deployment and orchestration on NVIDIA‑accelerated platforms.
+
+This post introduces NVIDIA ALCHEMI Toolkit-Ops, the accelerated batched common operations layer of ALCHEMI. ALCHEMI Toolkit-Ops uses NVIDIA Warp to accelerate and batch common operations in AI-driven atomistic modeling. These operations are exposed through a modular PyTorch accessible API (with a JAX API targeted for a future release) that enables rapid iteration and integration with existing and future atomistic simulation packages.
+
+Figure 1 shows the accelerated batched common operations for atomistic simulations included in this initial release of ALCHEMI Toolkit-Ops. This beta release includes two versions of neighbor lists (naive and cell), DFT-D3 dispersion correction, and long-range coulombic (Ewald and Particle Mesh Ewald) functions.
+
+Figure 2 demonstrates the performance of accelerated kernels in ALCHEMI Toolkit-Ops versus popular kernel-accelerated models like MACE (cuEquivariance) and TensorNet (Warp) to achieve fully parallelized performance and scalability. The blue MLIP baseline allows comparison with advanced features like neighbor lists and dispersion corrections (DFT-D3). Test systems consisted of ammonia clusters of increasing size packed into various cells using Packmol. Timing results were averaged over 20 runs on an NVIDIA H100 80 GB GPU. The DFT-D3 calculation does not include 6Å due to the long-range nature of D3.
+
+ALCHEMI Toolkit-Ops ecosystem integration
+
+ALCHEMI Toolkit-Ops is designed to integrate seamlessly with the broader PyTorch-based atomistic simulation ecosystem. We are excited to announce in-progress integrations with leading open source tools in the chemistry and materials science community: TorchSim, MatGL, and AIMNet Central.
+
+TorchSim
+
+TorchSim, a next-generation open source atomistic simulation engine, is adopting ALCHEMI Toolkit-Ops kernels to power its GPU-accelerated workflows.TorchSim is a PyTorch-native simulation engine purpose-built for the MLIP era, enabling batched molecular dynamics and structural relaxation across thousands of systems simultaneously on a single GPU. TorchSim will leverage our optimized neighbor lists to drive high-throughput batched operations without sacrificing flexibility or performance.
+
+MatGL
+
+MatGL (Materials Graph Library) is an open source framework for building graph-based machine learning interatomic potentials and foundation potentials for inorganic, molecular, and hybrid materials systems. By integrating ALCHEMI Toolkit-Ops, MatGL significantly accelerates graph-based treatments of long-range interactions, enabling large-scale atomistic simulations that are both faster and more computationally efficient without compromising accuracy.
+
+AIMNet Central
+
+AIMNet Central is a repository for AIMNet2, a general-purpose MLIP capable of modeling neutral, charged, organic, and elemental-organic systems with high fidelity. AIMNet Central is leveraging ALCHEMI Toolkit-Ops to further enhance the performance of its flexible long-range interaction models. Using NVIDIA-accelerated DFT-D3 and neighbor list kernels, AIMNet2 can deliver even faster atomistic simulations for large and periodic systems without compromising accuracy.
+
+How to get started with ALCHEMI Toolkit-Ops
+
+Getting started with ALCHEMI Toolkit-Ops is simple and designed with ease of use in mind.
+
+System and package requirements
+
+Python 3.11+
+
+Operating System: Linux (primary), Windows (WSL2), macOS
+
+NVIDIA GPU (A100 or newer recommended), CUDA compute capability ≥ 8.0
+
+CUDA Toolkit 12+, NVIDIA driver 570.xx.xx+
+
+Installation
+
+To install ALCHEMI Toolkit-Ops, use the following snippet:
+
+# Install via pip wheel pip install nvalchemi-toolkit-ops # Make sure it is importable python -c ""import nvalchemiops; print(nvalchemiops.__version__)""
+
+See the ALCHEMI Toolkit-Ops documentation for other installation instructions. Explore the examples directory in the GitHub repository and run them to test acceleration on your own hardware.
+
+Typical troubleshooting tips:
+
+Verify CUDA installation and device availability: nvidia-smi, nvcc --version
+
+Ensure compatible Python version: python --version
+
+Upgrade dependencies as needed: pip list | grep torch and pip list | grep warp
+
+Feature highlights
+
+This section dives into three ALCHEMI Toolkit-Ops initial features: high-performance neighbor lists, DFT-D3 dispersion corrections, and long-range electrostatic interactions.
+
+Neighbor lists
+
+Neighbor list construction is the backbone of atomistic simulations enabling calculation of energies and forces with local or semi-local MLIPs. ALCHEMI Toolkit-Ops delivers state-of-the-art GPU performance in PyTorch, achieving performance scaling to millions of atoms per second for batches of many small to medium atomic systems or single large atomic systems.
+
+Capabilities
+
+Both O(N) (cell list) and O(N²) (naive) algorithms with batched processing
+
+Periodic boundary support for triclinic cells with arbitrary cell dimensions and partial periodicity
+
+Supports end-to-end compute graph compilation
+
+Direct API compatibility with PyTorch
+
+API example
+
+import torch from nvalchemiops.neighborlist import neighbor_list # Water molecule water_positions = torch.tensor([ [0.0, 0.0, 0.0], # O [0.96, 0.0, 0.0], # H [-0.24, 0.93, 0.0], # H ], device=""cuda"", dtype=torch.float32) # Ammonia molecule (NH3) ammonia_positions = torch.tensor([ [0.0, 0.0, 0.0], # N [1.01, 0.0, 0.0], # H [-0.34, 0.95, 0.0], # H [-0.34, -0.48, 0.82], # H ], device=""cuda"", dtype=torch.float32) # Concatenate positions for batch processing positions = torch.cat([water_positions, ammonia_positions], dim=0) # Create batch indices (0 for water, 1 for ammonia) batch_idx = torch.cat([ torch.zeros(3, dtype=torch.int32, device=""cuda""), # Water torch.ones(4, dtype=torch.int32, device=""cuda""), # Ammonia ]) # Define cells for each molecule (large enough to contain them without PBC) cells = torch.stack([ torch.eye(3, device=""cuda"") * 10.0, # Water cell torch.eye(3, device=""cuda"") * 10.0, # Ammonia cell ]) # non-periodic molecule case pbc = torch.tensor([ [False, False, False], # Water [False, False, False], # Ammonia ], device=""cuda"") # Cutoff distance in Angstroms cutoff = 4.0 # Compute neighbor list; here we explicitly request a batched cell list algorithm neighbor_matrix, num_neighbors, shift_matrix = neighbor_list( positions, cutoff, cell=cells, pbc=pbc, batch_idx=batch_idx, method=""batch_cell_list"" ) print(f""Neighbor matrix: {neighbor_matrix.cpu()}"") # [7, num_neighbors.max()] print(f""Neighbors per atom: {num_neighbors.cpu()}"") # [7,] print(f""Periodic shifts: {shift_matrix.cpu()}"")
+
+DFT-D3 dispersion corrections
+
+Realistic molecular modeling must fully account for van der Waals interactions, which standard DFT functionals do not account for systematically. DFT-D3 uses empirical pairwise corrections, leading to substantial improvements in binding energies, lattice structures, conformational analysis, and adsorption studies for common DFT functionals.
+
+Capabilities
+
+Becke-Johnson (BJ) rational damping variant
+
+Supports batched and periodic calculations
+
+Supports smoothing at cutoff distance
+
+Joint energy, forces, and virial calculation
+
+API example
+
+from nvalchemiops.interactions.dispersion import dftd3 batch_ptr = torch.tensor([0, 3, 7], dtype=torch.int32, device=""cuda"") atomic_numbers = torch.tensor( [6, 1, 1, 7, 1, 1, 1], dtype=torch.int32, device=""cuda"" ) # For this snippet, assume d3_params is loaded as: # d3_params = D3Parameters(rcov=..., r4r2=..., c6ab=..., cn_ref=...) # Users can refer to the documentation to source DFT-D3 parameters # and understand the expected data structure d3_params = ... # call the DFT-D3 functional interface energy, forces, coordination_numbers = dftd3( positions=positions, numbers=atomic_numbers, a1=0.3981, a2=4.4211, s8=0.7875, # PBE parameters neighbor_matrix=neighbor_matrix, neighbor_matrix_shifts=shift_matrix, batch_idx=batch_idx, d3_params=d3_params ) print(f""Energies: {energy.cpu()}"") # [2,] print(f""Forces: {forces.cpu()}"") # [7, 3]
+
+Limitations
+
+The current implementation computes two-body terms only (C6 and C8). Three-body Axilrod-Teller-Muto (ATM/C9) contributions are not included. This generally leads to some over-estimation of dispersion energies.
+
+Long-range electrostatic interactions
+
+Accurate modeling of electrostatic interactions is critical for simulations involving ions/charged species and polar systems. Currently, the most common approach for MLIPs is to learn Coulomb interactions within the short-ranged model. Systematic underestimation of long-range Coulombic effects leads to loss of accuracy in binding energies, solvation structures, and interfacial phenomena.
+
+ALCHEMI Toolkit-Ops provides fully GPU-accelerated Ewald summation methods—both standard Ewald and particle mesh Ewald (PME)—enabling GPU-accelerated, efficient and accurate treatment of long-range electrostatics in PyTorch.
+
+For large periodic systems, Ewald-based methods separate electrostatic interactions into short-range and long-range components, each computed in the domain best suited for performance. ALCHEMI Toolkit-Ops provides a dual-cutoff strategy that dramatically reduces redundant neighbor queries and memory overhead compared to naive all-pairs approaches, making high-throughput simulations of charged systems practical on modern GPUs. Users can choose between standard Ewald for smaller systems or PME for larger periodic systems, depending on their specific performance and accuracy needs.
+
+Capabilities
+
+Ewald summation method
+
+Particle Mesh Ewald (PME) using B-splines
+
+Supports batched and periodic systems
+
+GPU-optimized computation, leveraging cuFFT for fast reciprocal-space evaluation
+
+PyTorch integration provides native tensor support for end-to-end differentiable workflows
+
+API example
+
+from nvalchemiops.interactions.electrostatics import particle_mesh_ewald # charges for each atom are randomly generated here atomic_charges = torch.randn( positions.size(0), dtype=torch.float32, device=""cuda"" ) # compute energy and forces with particle mesh ewald energy, forces = particle_mesh_ewald( positions, atomic_charges, cells, alpha=0.3, # adjust Ewald splitting parameter batch_idx=batch_idx, neighbor_matrix=neighbor_matrix, neighbor_matrix_shifts=shift_matrix, compute_forces=True ) print(f""Energy: {energy.cpu()}"") # [2] print(f""Forces: {forces.cpu()}"") # [7, 3]
+
+Dive deeper into ALCHEMI Toolkit-Ops
+
+ALCHEMI Toolkit-Ops empowers the community with high-performance, accessible atomistic modeling tools on NVIDIA GPUs. To accelerate your chemistry and materials science simulations, visit the NVIDIA/nvalchemi-toolkit-ops GitHub repo and NVIDIA ALCHEMI Toolkit-Ops documentation. You can also explore the examples gallery. This beta release of ALCHEMI Toolkit-Ops focuses on highly efficient neighbor lists, dispersion corrections, and long-range electrostatics. Stay tuned for new features and performance optimizations in future releases.
+
+Acknowledgments
+
+We’d like to thank Professor Shyue Ping Ong; Professor Olexandr Isayev; and the TorchSim committee members Abhijeet Gangan, Orion Archer Cohen, Will Engler, and Ben Blaiszik for working with us to adopt NVIDIA ALCHEMI Toolkit-Ops into their open source projects. We also thank Wen Jie Ong, Piero Altoe, and Kibibi Moseley from NVIDIA for their help preparing this blog post.",https://developer-blogs.nvidia.com/wp-content/uploads/2025/12/nvidia-alchemi-toolkit-ops.png,N,,2025-12-19 18:03:35.854527
+ID43,Uber,2025-12-19 22:18:24+00:00,WLNS 6 News,Uber sued by 22 states for alleged deceptive practices - WLNS,Brad LaPlante,,,,,https://www.wlns.com/news/michigan/uber-one-subscription-lawsuit/,"LANSING, Mich. (WLNS) — Michigan has joined a coalition of 22 state or county law enforcement agencies suing the ride-share company Uber.
+The FTC previously filed the suit, alleging that Uber used deceptive practices in selling its Uber One subscription service.
+The lawsuit’s focal point is that Uber misled customers about the savings they could achieve by subscribing and made it unreasonably difficult to cancel once they were subscribed.
+It also alleges that Uber used “negative option” marketing tactics by charging customers at the end of their free trial without confirmation.
+The complaint also alleges that Uber charged customers before their billing date, including for users whose free trial had not ended.","LANSING, Mich. (WLNS) — Michigan has joined a coalition of 22 state or county law enforcement agencies suing the ride-share company Uber. The FTC previously filed the suit, alleging that Uber used deceptive practices in selling its Uber One subscription service.
+
+The lawsuit’s focal point is that Uber misled customers about the savings they could achieve by subscribing and made it unreasonably difficult to cancel once they were subscribed. It also alleges that Uber used “negative option” marketing tactics by charging customers at the end of their free trial without confirmation.
+
+The complaint also alleges that Uber charged customers before their billing date, including for users whose free trial had not ended.
+
+“When a consumer signs up for a subscription service, they expect to get the savings that are advertised and to be able to try it out without being unlawfully charged,” Michigan Attorney General Dana Nessel said in a statement. “They shouldn’t have to jump through hoops just to cancel a service they no longer want, and that’s why I am proud to join this lawsuit to hold Uber accountable for its alleged deceptive practices.”
+
+The lawsuit seeks restitution, penalties, costs and an injunction against Uber for alleged violations of Michigan’s Consumer Protection Act and the U.S. Restore Online Shoppers’ Confidence Act, the attorney general’s office said.",https://www.wlns.com/wp-content/uploads/sites/50/2025/02/uber_021022_AP_Nam-Y.-Huh-2-e1707267533185.jpg?w=1280,N,,2025-12-19 18:04:24.363891
+ID1,Adobe,2025-12-19 22:15:35+00:00,SC Media,Identity: the new battleground in our emerging AI world | SC Media,"Darren Guccione, SC Staff",,,,,https://www.scworld.com/perspective/identity-the-new-battleground-in-our-emerging-ai-world,"COMMENTARY: Security leaders and practitioners face new and increasingly complex identity‑based threats including phishing, credential theft, deepfakes, and privilege misuse.
+Organizations adopt AI‑driven identity validation and behavioral analytics to validate identities, detect anomalies and terminate high-risk behavior in real time.
+Organizations that embed AI into identity and access frameworks can potentially gain visibility and resilience.
+At Black Hat USA alone, 40% said their organization does not consistently enforce MFA for privileged accounts.
+Modernizing identity controls and integrating AI thoughtfully into their security stack can help organizations withstand today’s threats and build secure, scalable growth for the future.","COMMENTARY: Security leaders and practitioners face new and increasingly complex identity‑based threats including phishing, credential theft, deepfakes, and privilege misuse.
+
+Nearly 80% of detections in CrowdStrike’s 2025 Global Threat Report were malware‑free, indicating that attackers relied on other techniques, such as social engineering and stolen credentials, to impersonate legitimate users, bypass controls, and escalate privileges.
+
+[SC Media Perspectives columns are written by a trusted community of SC Media cybersecurity subject matter experts.Read more Perspectives here.]
+
+To better understand the challenges organizations face today, we gathered insights from attendees at three major global cybersecurity conferences in 2025: Black Hat USA in Las Vegas; Infosecurity Europe in London; and the it-sa Expo&Congress in Nuremberg. Across all regions, practitioners cited identity as the new perimeter.
+
+Why all the focus on identity?
+
+Survey respondents consistently reported that identity‑based threats now surpass all other cyber risks. Phishing, credential theft, deepfakes, and privilege misuse ranked ahead of ransomware as the most likely sources of major breaches over the coming year. At Black Hat USA, 45% identified phishing as their primary concern and 41% cited deepfakes. Infosecurity Europe mirrored those results with phishing as the top identity-based threat for 50% of respondents and deepfakes for 42%.
+
+These statistics reflect real‑world, costly incidents. The September 2025 Jaguar Land Rover (JLR) cyberattack demonstrates how identity‑based techniques, including vishing and credential theft, can cripple an organization’s global operations. Threat actors from Scattered Spider, Lapsus$ and ShinyHunters infiltrated JLR’s IT environment, causing severe production shutdowns and supply chain disruptions.
+
+Digital identities have proliferated as hybrid, multi‑cloud and AI‑enabled environments expand. Every user, device and non‑human identity (NHI) represents a potential entry point. Outdated authentication methods and incomplete identity governance heighten exposure, making modernization an urgent priority.
+
+AI: a double-edged sword
+
+Cybercriminals now use AI to create more convincing phishing campaigns, generate deepfakes, automate ransomware and escalate privileges at scale.
+
+However, confidence in defending against AI‑enhanced attacks remains low across regions. Only 12% of Infosecurity Europe respondents and 16% at Black Hat USA said their organizations are fully prepared. At it-sa Expo&Congress, readiness was slightly higher at 28%, but nearly one‑third of respondents expressed only partial confidence.
+
+AI‑enhanced attacks are mainstream threats. Financial institutions report AI-driven voice cloning that circumvents authentication, and enterprises face increasingly targeted spear phishing attacks. Low‑level criminals can now impersonate executives with off-the-shelf deepfake tools.
+
+While AI creates new risks, it also unlocks defensive advantages. Organizations adopt AI‑driven identity validation and behavioral analytics to validate identities, detect anomalies and terminate high-risk behavior in real time.
+
+More than half of respondents across all three regions cited AI‑driven validation as the most impactful innovation for identity security, with 53% at Infosecurity Europe, 57% at Black Hat USA and 60% at it-sa Expo&Congress. Organizations that embed AI into identity and access frameworks can potentially gain visibility and resilience. Those that hesitate to adopt AI-enabled technologies risk falling behind amid accelerating threats and rising automation.
+
+The importance of privileged access management
+
+Despite universal agreement that identity has become central to cybersecurity, privileged access controls remain inconsistent. Security leaders know the path forward: strengthen privileged access, enforce multi-factor authentication (MFA) and operationalize zero-trust.
+
+Yet gaps persist. Across all three conferences, four in 10 organizations lack consistent MFA enforcement or comprehensive privileged access management (PAM) coverage. At Black Hat USA alone, 40% said their organization does not consistently enforce MFA for privileged accounts.
+
+The February 2024 Change Healthcare attack, which compromised the data of more than 190 million Americans, stemmed from a single server lacking basic MFA. Bridging the divide between awareness and execution demands disciplined processes, continuous measurement and responsible use of AI across every layer of defense.
+
+Achieving cyber resilience requires converting awareness into action. Here's what to do: secure identities, enforce least privilege, and embrace intelligent automation.
+
+Modernizing identity controls and integrating AI thoughtfully into their security stack can help organizations withstand today’s threats and build secure, scalable growth for the future.
+
+Darren Guccione, co-founder and CEO, Keeper Security
+
+SC Media Perspectives columns are written by a trusted community of SC Media cybersecurity subject matter experts. Each contribution has a goal of bringing a unique voice to important cybersecurity topics. Content strives to be of the highest quality, objective and non-commercial.",https://files.cyberriskalliance.com/wp-content/uploads/2025/05/052825_identity_verification.jpg,N,,2025-12-19 18:03:19.756340
+ID29,Medtronic,2025-12-19 22:14:30+00:00,1470 & 100.3 WMBD,Medtronic's MiniMed files for US IPO | 1470 & 100.3 WMBD,Thomson,,,,,https://wmbdradio.com/2025/12/19/medtronics-minimed-files-for-us-ipo/,"Dec 19 (Reuters) – MiniMed Group, the diabetes business of medical ‍device maker Medtronic, filed for an initial public offering in the United States on Friday.
+Fuel distributor ‍ARKO Petroleum and drug developer Aktis Oncology also publicly filed paperwork for a New ‍York IPO on Friday.
+MiniMed will list on the Nasdaq ‍under ‍the symbol “MMED”.
+Goldman ​Sachs, BofA Securities, ​Citigroup ⁠and Morgan Stanley ‌are the lead underwriters for the IPO.
+(Reporting by Arasu Kannagi Basil in Bengaluru; Editing by Shinjini ⁠Ganguli)","Dec 19 (Reuters) – MiniMed Group, the diabetes business of medical ‍device maker Medtronic, filed for an initial public offering in the United States on Friday.
+
+With ‌capital markets set ‌for the year-end holidays slowdown, corporate issuers are laying the groundwork for a ​potential roadshow launch in early 2026 ‍when the ​IPO market kicks ​back into action.
+
+Fuel distributor ‍ARKO Petroleum and drug developer Aktis Oncology also publicly filed paperwork for a New ‍York IPO on Friday.
+
+MiniMed will list on the Nasdaq ‍under ‍the symbol “MMED”. Goldman ​Sachs, BofA Securities, ​Citigroup ⁠and Morgan Stanley ‌are the lead underwriters for the IPO.
+
+(Reporting by Arasu Kannagi Basil in Bengaluru; Editing by Shinjini ⁠Ganguli)",https://storage.googleapis.com/media.mwcradio.com/mimesis/2025-12/19/2025-12-19T211709Z_2_LYNXMPELBI1AE_RTROPTP_3_NASDAQ-24X7.JPG,N,,2025-12-19 18:03:31.898881
+ID23,JDE Peet’s,2025-12-19 21:38:27+00:00,TipRanks Financial,Keurig Dr Pepper Secures Major Term Loan for Acquisition - TipRanks.com,TipRanks Auto-Generated Newsdesk,,,,,https://www.tipranks.com/news/company-announcements/keurig-dr-pepper-secures-major-term-loan-for-acquisition,"To see the full list of analyst forecasts on Keurig Dr Pepper stock, see the KDP Stock Forecast page.
+Spark’s Take on KDP Stock According to Spark, TipRanks’ AI Analyst, KDP is a Outperform.
+Keurig Dr Pepper’s overall stock score reflects solid financial performance and strategic growth initiatives, particularly the acquisition of JDE Peet’s.
+More about Keurig Dr Pepper Keurig Dr Pepper Inc. is a beverage company operating in the non-alcoholic drinks industry, producing and distributing soft drinks, specialty coffees, teas and other beverages, with a significant presence in North America and a focus on both retail and food-service channels.
+Average Trading Volume: 17,932,523 Technical Sentiment Signal: Sell Current Market Cap: $38.11B Learn more about KDP stock on TipRanks’ Stock Analysis page.","Claim 50% Off TipRanks Premium and Invest with Confidence
+
+Unlock hedge-fund level data and powerful investing tools designed to help you make smarter, sharper decisions
+
+Stay ahead of the market with the latest news and analysis so your portfolio is always positioned for maximum potential
+
+The latest update is out from Keurig Dr Pepper ( (KDP) ).
+
+On December 18, 2025, Keurig Dr Pepper Inc. entered into a €10.35 billion, 364-day term loan agreement arranged by Morgan Stanley Senior Funding, with borrowings priced at EURIBO plus a margin tied to the company’s debt ratings and subject to customary investment-grade covenants, guarantees from key subsidiaries, and mandatory prepayments from certain asset sales and capital markets transactions. The facility is intended to provide flexible funding for the contemplated acquisition of JDE Peet’s, while an amendment executed the same day to KDP’s existing bridge credit agreement cut that bridge facility from €16.2 billion to €5.85 billion and redirected future debt proceeds to first reduce the new term loan, reshaping the company’s short-term financing mix around the planned transaction.
+
+The most recent analyst rating on (KDP) stock is a Hold with a $32.00 price target. To see the full list of analyst forecasts on Keurig Dr Pepper stock, see the KDP Stock Forecast page.
+
+Spark’s Take on KDP Stock
+
+According to Spark, TipRanks’ AI Analyst, KDP is a Outperform.
+
+Keurig Dr Pepper’s overall stock score reflects solid financial performance and strategic growth initiatives, particularly the acquisition of JDE Peet’s. While technical indicators suggest short-term bullish momentum, valuation metrics indicate potential overvaluation. The earnings call highlighted both opportunities and challenges, contributing to a balanced outlook.
+
+To see Spark’s full report on KDP stock, click here.
+
+More about Keurig Dr Pepper
+
+Keurig Dr Pepper Inc. is a beverage company operating in the non-alcoholic drinks industry, producing and distributing soft drinks, specialty coffees, teas and other beverages, with a significant presence in North America and a focus on both retail and food-service channels.
+
+Average Trading Volume: 17,932,523
+
+Technical Sentiment Signal: Sell
+
+Current Market Cap: $38.11B
+
+Learn more about KDP stock on TipRanks’ Stock Analysis page.",https://blog.tipranks.com/wp-content/uploads/2023/06/Consumer-Defensive-10-750x406.jpg,N,,2025-12-19 18:03:24.044822
 ID29,Medtronic,2025-12-19 21:25:03+00:00,US News & World Report,Medtronic's MiniMed Files for US IPO - US News Money,Not Available,,,,,https://money.usnews.com/investing/news/articles/2025-12-19/medtronics-minimed-files-for-us-ipo,"Subscribe to our daily newsletter to get investing advice, rankings and stock market news.
 See a newsletter example.","Subscribe to our daily newsletter to get investing advice, rankings and stock market news.
 
 See a newsletter example.",https://www.usnews.com/dims4/USNEWS/be61b8a/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F4a%2F5fdf29b8115d59b37fa770f91c4f9c%2Ftag%3Areuters.com%2C2025%3Anewsml_LYNXMPELBI1AE%3A22025-12-19T211709Z_2_LYNXMPELBI1AE_RTROPTP_3_NASDAQ-24X7.JPG,N,,2025-12-19 17:02:23.133933
+ID33,OpenAI,2025-12-19 21:16:44+00:00,www.youtube.com,OpenAI Eyes $100 Billion Fundraise At $830 Billion Valuation Even As AI Spending Cools,,,,,,https://www.youtube.com/watch%3Fv%3DVknsPvd099I,"OpenAI is planning one of the largest private fundraising rounds in history, targeting up to $100 billion at a potential valuation of $830 ...",Not Available,,Y,,2025-12-19 18:03:45.752995
 ID18,Eli Lilly,2025-12-19 21:02:44+00:00,www.nytimes.com,Trump Announces Pricing Deals With Nine Drugmakers - The New York Times,"Rebecca Robbins, www.nytimes.com, rebecca-robbins",,,,,https://www.nytimes.com/2025/12/19/health/trump-drug-pricing-deals.html,"Mr. Trump has now reached deals with 14 of the 17 drugmakers to which he sent letters in July demanding that they lower prices.
 Over the last few months, Mr. Trump has announced similar agreements with Pfizer, AstraZeneca, EMD Serono, Eli Lilly and Novo Nordisk.
 To help patients navigate that process, the Trump administration plans to create a site called TrumpRx.gov, which will direct patients to the manufacturers’ direct-buy websites.
@@ -32,6 +291,7 @@ In the United States, prices for brand-name drugs are three times as high, on av
 The deals announced on Friday do not address the high costs of most drugs already on the market covered under private insurance or other government health insurance programs like Medicare. Those costs are borne by U.S. employers and consumers who pay in the form of taxes, health insurance premiums and out-of-pocket expenses.
 
 The agreements also stop short of regulation that would force drugmakers to lower their prices, an approach Mr. Trump tried unsuccessfully in his first term.",https://static01.nyt.com/images/2025/12/19/multimedia/19hs-drug-pricing-twjb/19hs-drug-pricing-twjb-facebookJumbo.jpg,N,,2025-12-19 17:02:02.735831
+ID33,OpenAI,2025-12-19 20:26:40+00:00,www.searchenginejournal.com,Sam Altman Explains OpenAI's Bet On Profitability - Search Engine Journal,Not Available,,,,,https://www.searchenginejournal.com/sam-altman-explains-openais-bet-on-profitability/563804/,Sam Altman said OpenAI's losses are tied to continued increases in training costs while revenue is growing. He said the company would be profitable ...,Not Available,,N,,2025-12-19 18:04:18.742757
 ID39,S&P Global,2025-12-19 20:17:37+00:00,CFO.com,CFOs On the Move: Week ending Dec. 19 | CFO.com,Lauren Muskett,,,,,https://www.cfo.com/news/cfos-on-the-move-dec-19-Matt-Calderone-SPGlobal-Mobility-Maria-Khoury-Marathon-Petroleum-David-Evans/808308/,"Matthew Dunnigan | 7 Brew Drive-thru beverage brand 7 Brew hired Matthew Dunnigan as finance chief.
 Before that, he was a vice president of the credit investment manager Crescent Capital.
 Before that, he was the finance chief of DreamBox Learning, a K-12 education technology company.
@@ -65,6 +325,7 @@ Christy Schwartz | Opendoor
 Christy Schwartz was named finance chief of Opendoor, effective Jan. 1. ​​Schwartz has been interim CFO of the online real estate platform since September, when she took over for Selim Freiha, who left the company. This wasn’t her first time as interim CFO; she was previously interim CFO from December 2022 to November 2024 and was the company’s chief accounting officer from March 2021 to May 2025. Before that, she was the company’s vice president and corporate controller.
 
 Amy Butte | Navan",https://imgproxy.divecdn.com/0t6O7aE8pCrKFqtwUjI_0eXVOsddaWqPLfVrOW7FvMA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMDY1MDUwMzUyLmpwZw==.webp,N,,2025-12-19 16:05:50.199050
+ID32,Nvidia,2025-12-19 20:13:39+00:00,CNBC,"Power Check: Freeport-McMoran, NextEra Energy and Nvidia - CNBC",Not Available,,,,,https://www.cnbc.com/video/2025/12/19/power-check-freeport-mcmoran-nextera-energy-and-nvidia.html,"Sam Shikiar, Shikiar Asset Management co-CEO, joins 'Power Lunch' to discuss Shikiar's investing take on three stocks: Freeport-McMoran, NextEra Energy and Nvidia.",Not Available,https://image.cnbcfm.com/api/v1/image/108244353-17661743211766174318-43068450144-1080pnbcnews.jpg?v=1766174320&w=1920&h=1080,N,,2025-12-19 18:03:41.803717
 ID8,BNY Mellon,2025-12-19 20:09:01+00:00,Scripps News,Lawsuits claim major banks enabled Jeffrey Epstein's sex trafficking finances,"Maura Barrett, www.scrippsnews.com, maura-barrett",,,,,https://www.scrippsnews.com/us-news/crime/epstein-files/epstein-money-trail-lawsuits-claim-major-banks-enabled-jeffrey-epsteins-sex-trafficking-finances,"The complaint claims the bank failed to file required Suspicious Activity Reports, or SARs, despite signs that Epstein’s financial behavior warranted closer scrutiny.
 ""Jeffrey Epstein apparently had so many excessive high cash withdrawals that it was causing some suspicion with the banks,"" Schneider said.
 A separate class-action lawsuit against BNY Mellon makes similar allegations, asserting the bank had a ""plethora of information"" about Epstein's operation.
@@ -1532,6 +1793,65 @@ Before you consider Conagra Brands, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Conagra Brands wasn't on the list.
 
 While Conagra Brands currently has a Reduce rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/conagra-brands-inc-logo-1200x675.jpg?v=20221104063928,N,,2025-12-19 08:01:59.445135
+ID42,Thrivent ,2025-12-19 10:31:32+00:00,MarketBeat,"Thrivent Financial for Lutherans Acquires 173,165 Shares of Independence Realty Trust, Inc. $IRT",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-acquires-173165-shares-of-independence-realty-trust-inc-irt-2025-12-19/,"Thrivent Financial for Lutherans owned about 0.15% of Independence Realty Trust worth $6,372,000 at the end of the most recent reporting period.
+B. Riley Wealth Advisors Inc. acquired a new stake in Independence Realty Trust in the 2nd quarter worth $557,000.
+Independence Realty Trust Stock Performance Shares of NYSE IRT opened at $17.06 on Friday.
+Independence Realty Trust, Inc. has a 52-week low of $15.06 and a 52-week high of $21.86.
+See Also Five stocks we like better than Independence Realty Trust What does consumer price index measure?","Thrivent Financial for Lutherans increased its stake in shares of Independence Realty Trust, Inc. (NYSE:IRT - Free Report) by 92.6% during the second quarter, according to its most recent disclosure with the Securities and Exchange Commission. The firm owned 360,215 shares of the real estate investment trust's stock after acquiring an additional 173,165 shares during the quarter. Thrivent Financial for Lutherans owned about 0.15% of Independence Realty Trust worth $6,372,000 at the end of the most recent reporting period.
+
+The 3 Most Promising Real Estate Stocks to Watch this Quarter
+
+Several other large investors have also recently bought and sold shares of the stock. B. Riley Wealth Advisors Inc. acquired a new stake in Independence Realty Trust in the 2nd quarter worth $557,000. Geneos Wealth Management Inc. grew its position in Independence Realty Trust by 21.0% during the second quarter. Geneos Wealth Management Inc. now owns 32,969 shares of the real estate investment trust's stock worth $583,000 after buying an additional 5,719 shares in the last quarter. CANADA LIFE ASSURANCE Co increased its stake in Independence Realty Trust by 5.8% during the second quarter. CANADA LIFE ASSURANCE Co now owns 482,220 shares of the real estate investment trust's stock valued at $8,536,000 after acquiring an additional 26,398 shares during the period. Tower Research Capital LLC TRC increased its stake in Independence Realty Trust by 205.4% during the second quarter. Tower Research Capital LLC TRC now owns 35,667 shares of the real estate investment trust's stock valued at $631,000 after acquiring an additional 23,987 shares during the period. Finally, Two Sigma Securities LLC acquired a new position in Independence Realty Trust in the 2nd quarter valued at approximately $362,000. 88.25% of the stock is currently owned by institutional investors and hedge funds.
+
+Independence Realty Trust Stock Performance
+
+Shares of NYSE IRT opened at $17.06 on Friday. The stock has a market cap of $4.08 billion, a PE ratio of 170.62, a PEG ratio of 2.37 and a beta of 1.01. The business has a fifty day moving average of $16.50 and a two-hundred day moving average of $17.10. Independence Realty Trust, Inc. has a 52-week low of $15.06 and a 52-week high of $21.86.
+
+Independence Realty Trust (NYSE:IRT - Get Free Report) last posted its earnings results on Wednesday, October 29th. The real estate investment trust reported $0.29 earnings per share for the quarter, missing the consensus estimate of $0.30 by ($0.01). The firm had revenue of $167.14 million during the quarter, compared to the consensus estimate of $168.31 million. Independence Realty Trust had a return on equity of 0.62% and a net margin of 3.42%.During the same period in the previous year, the company posted $0.29 EPS. Independence Realty Trust has set its FY 2025 guidance at 1.200-1.210 EPS. Analysts predict that Independence Realty Trust, Inc. will post 1.19 earnings per share for the current year.
+
+Independence Realty Trust Dividend Announcement
+
+The company also recently disclosed a quarterly dividend, which will be paid on Friday, January 23rd. Stockholders of record on Wednesday, December 31st will be issued a dividend of $0.17 per share. The ex-dividend date of this dividend is Wednesday, December 31st. This represents a $0.68 annualized dividend and a dividend yield of 4.0%. Independence Realty Trust's dividend payout ratio (DPR) is presently 680.00%.
+
+Analysts Set New Price Targets
+
+Several analysts have recently weighed in on the company. Weiss Ratings reissued a ""hold (c)"" rating on shares of Independence Realty Trust in a report on Monday. Wall Street Zen downgraded shares of Independence Realty Trust from a ""hold"" rating to a ""sell"" rating in a research note on Saturday, November 1st. Barclays boosted their price target on shares of Independence Realty Trust from $20.00 to $21.00 and gave the company an ""equal weight"" rating in a report on Tuesday, November 25th. KeyCorp reduced their price objective on shares of Independence Realty Trust from $22.00 to $21.00 and set an ""overweight"" rating for the company in a report on Thursday, December 4th. Finally, Wells Fargo & Company decreased their target price on shares of Independence Realty Trust from $24.00 to $20.00 and set an ""overweight"" rating on the stock in a research report on Wednesday, August 27th. Six research analysts have rated the stock with a Buy rating and three have assigned a Hold rating to the company's stock. According to data from MarketBeat.com, the company presently has a consensus rating of ""Moderate Buy"" and an average target price of $21.56.
+
+Get Our Latest Research Report on IRT
+
+Independence Realty Trust Company Profile
+
+(Free Report)
+
+Independence Realty Trust, Inc NYSE: IRT is a real estate investment trust that owns and operates multifamily communities, across non-gateway U.S. markets including Atlanta, GA, Dallas, TX, Denver, CO, Columbus, OH, Indianapolis, IN, Raleigh-Durham, NC, Oklahoma City, OK, Nashville, TN, Houston, TX, and Tampa, FL.
+
+See Also
+
+Five stocks we like better than Independence Realty Trust
+
+What does consumer price index measure?
+
+Broadcom Stock Crashes 20%—But Wall Street Sees It Soaring to $500
+
+What is Put Option Volume?
+
+Forget the Chips: 4 Industrial Plays for the AI Rebound
+
+The Risks of Owning Bonds
+
+MongoDB Could Hit Record Highs—But You’ll Need to Move Fast
+
+Want to see what other hedge funds are holding IRT? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Independence Realty Trust, Inc. (NYSE:IRT - Free Report).
+
+This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
+
+Should You Invest $1,000 in Independence Realty Trust Right Now?
+
+Before you consider Independence Realty Trust, you'll want to hear this.
+
+MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Independence Realty Trust wasn't on the list.
+
+While Independence Realty Trust currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/independence-realty-trust-inc-logo-1200x675.png?v=20221117103328,N,,2025-12-19 08:02:14.047368
 ID42,Thrivent ,2025-12-19 10:31:32+00:00,MarketBeat,"Thrivent Financial for Lutherans Increases Stake in The PNC Financial Services Group, Inc $PNC",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-increases-stake-in-the-pnc-financial-services-group-inc-pnc-2025-12-19/,"Thrivent Financial for Lutherans' holdings in The PNC Financial Services Group were worth $7,648,000 as of its most recent filing with the Securities & Exchange Commission.
 WPG Advisers LLC purchased a new stake in The PNC Financial Services Group during the 1st quarter valued at about $36,000.
 MarketBeat Week in Review – 09/22 - 09/26 Read Our Latest Research Report on The PNC Financial Services Group The PNC Financial Services Group Stock Down 0.4% PNC stock opened at $209.54 on Friday.
@@ -1599,65 +1919,6 @@ Before you consider The PNC Financial Services Group, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and The PNC Financial Services Group wasn't on the list.
 
 While The PNC Financial Services Group currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/pnc-financial-services-logo-1200x675.jpg,N,,2025-12-19 08:02:07.767708
-ID42,Thrivent ,2025-12-19 10:31:32+00:00,MarketBeat,"Thrivent Financial for Lutherans Acquires 173,165 Shares of Independence Realty Trust, Inc. $IRT",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-acquires-173165-shares-of-independence-realty-trust-inc-irt-2025-12-19/,"Thrivent Financial for Lutherans owned about 0.15% of Independence Realty Trust worth $6,372,000 at the end of the most recent reporting period.
-B. Riley Wealth Advisors Inc. acquired a new stake in Independence Realty Trust in the 2nd quarter worth $557,000.
-Independence Realty Trust Stock Performance Shares of NYSE IRT opened at $17.06 on Friday.
-Independence Realty Trust, Inc. has a 52-week low of $15.06 and a 52-week high of $21.86.
-See Also Five stocks we like better than Independence Realty Trust What does consumer price index measure?","Thrivent Financial for Lutherans increased its stake in shares of Independence Realty Trust, Inc. (NYSE:IRT - Free Report) by 92.6% during the second quarter, according to its most recent disclosure with the Securities and Exchange Commission. The firm owned 360,215 shares of the real estate investment trust's stock after acquiring an additional 173,165 shares during the quarter. Thrivent Financial for Lutherans owned about 0.15% of Independence Realty Trust worth $6,372,000 at the end of the most recent reporting period.
-
-The 3 Most Promising Real Estate Stocks to Watch this Quarter
-
-Several other large investors have also recently bought and sold shares of the stock. B. Riley Wealth Advisors Inc. acquired a new stake in Independence Realty Trust in the 2nd quarter worth $557,000. Geneos Wealth Management Inc. grew its position in Independence Realty Trust by 21.0% during the second quarter. Geneos Wealth Management Inc. now owns 32,969 shares of the real estate investment trust's stock worth $583,000 after buying an additional 5,719 shares in the last quarter. CANADA LIFE ASSURANCE Co increased its stake in Independence Realty Trust by 5.8% during the second quarter. CANADA LIFE ASSURANCE Co now owns 482,220 shares of the real estate investment trust's stock valued at $8,536,000 after acquiring an additional 26,398 shares during the period. Tower Research Capital LLC TRC increased its stake in Independence Realty Trust by 205.4% during the second quarter. Tower Research Capital LLC TRC now owns 35,667 shares of the real estate investment trust's stock valued at $631,000 after acquiring an additional 23,987 shares during the period. Finally, Two Sigma Securities LLC acquired a new position in Independence Realty Trust in the 2nd quarter valued at approximately $362,000. 88.25% of the stock is currently owned by institutional investors and hedge funds.
-
-Independence Realty Trust Stock Performance
-
-Shares of NYSE IRT opened at $17.06 on Friday. The stock has a market cap of $4.08 billion, a PE ratio of 170.62, a PEG ratio of 2.37 and a beta of 1.01. The business has a fifty day moving average of $16.50 and a two-hundred day moving average of $17.10. Independence Realty Trust, Inc. has a 52-week low of $15.06 and a 52-week high of $21.86.
-
-Independence Realty Trust (NYSE:IRT - Get Free Report) last posted its earnings results on Wednesday, October 29th. The real estate investment trust reported $0.29 earnings per share for the quarter, missing the consensus estimate of $0.30 by ($0.01). The firm had revenue of $167.14 million during the quarter, compared to the consensus estimate of $168.31 million. Independence Realty Trust had a return on equity of 0.62% and a net margin of 3.42%.During the same period in the previous year, the company posted $0.29 EPS. Independence Realty Trust has set its FY 2025 guidance at 1.200-1.210 EPS. Analysts predict that Independence Realty Trust, Inc. will post 1.19 earnings per share for the current year.
-
-Independence Realty Trust Dividend Announcement
-
-The company also recently disclosed a quarterly dividend, which will be paid on Friday, January 23rd. Stockholders of record on Wednesday, December 31st will be issued a dividend of $0.17 per share. The ex-dividend date of this dividend is Wednesday, December 31st. This represents a $0.68 annualized dividend and a dividend yield of 4.0%. Independence Realty Trust's dividend payout ratio (DPR) is presently 680.00%.
-
-Analysts Set New Price Targets
-
-Several analysts have recently weighed in on the company. Weiss Ratings reissued a ""hold (c)"" rating on shares of Independence Realty Trust in a report on Monday. Wall Street Zen downgraded shares of Independence Realty Trust from a ""hold"" rating to a ""sell"" rating in a research note on Saturday, November 1st. Barclays boosted their price target on shares of Independence Realty Trust from $20.00 to $21.00 and gave the company an ""equal weight"" rating in a report on Tuesday, November 25th. KeyCorp reduced their price objective on shares of Independence Realty Trust from $22.00 to $21.00 and set an ""overweight"" rating for the company in a report on Thursday, December 4th. Finally, Wells Fargo & Company decreased their target price on shares of Independence Realty Trust from $24.00 to $20.00 and set an ""overweight"" rating on the stock in a research report on Wednesday, August 27th. Six research analysts have rated the stock with a Buy rating and three have assigned a Hold rating to the company's stock. According to data from MarketBeat.com, the company presently has a consensus rating of ""Moderate Buy"" and an average target price of $21.56.
-
-Get Our Latest Research Report on IRT
-
-Independence Realty Trust Company Profile
-
-(Free Report)
-
-Independence Realty Trust, Inc NYSE: IRT is a real estate investment trust that owns and operates multifamily communities, across non-gateway U.S. markets including Atlanta, GA, Dallas, TX, Denver, CO, Columbus, OH, Indianapolis, IN, Raleigh-Durham, NC, Oklahoma City, OK, Nashville, TN, Houston, TX, and Tampa, FL.
-
-See Also
-
-Five stocks we like better than Independence Realty Trust
-
-What does consumer price index measure?
-
-Broadcom Stock Crashes 20%—But Wall Street Sees It Soaring to $500
-
-What is Put Option Volume?
-
-Forget the Chips: 4 Industrial Plays for the AI Rebound
-
-The Risks of Owning Bonds
-
-MongoDB Could Hit Record Highs—But You’ll Need to Move Fast
-
-Want to see what other hedge funds are holding IRT? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Independence Realty Trust, Inc. (NYSE:IRT - Free Report).
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in Independence Realty Trust Right Now?
-
-Before you consider Independence Realty Trust, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Independence Realty Trust wasn't on the list.
-
-While Independence Realty Trust currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/independence-realty-trust-inc-logo-1200x675.png?v=20221117103328,N,,2025-12-19 08:02:14.047368
 ID9,Boston Scientific,2025-12-19 10:16:32+00:00,The Globe and Mail,Dexcom (DXCM) Gets a Buy from Canaccord Genuity - The Globe and Mail,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/DXCM/pressreleases/36707299/dexcom-dxcm-gets-a-buy-from-canaccord-genuity/,Detailed price information for Dexcom Inc (DXCM-Q) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=815,N,,2025-12-19 14:01:54.024652
 ID10,Capgemini,2025-12-19 09:58:58+00:00,Yahoo Finance,Capgemini SE: Declaration of the number of shares and voting rights - Yahoo Finance,Capgemini SE,,,,,https://finance.yahoo.com/news/capgemini-se-declaration-number-shares-164500836.html,"CAPGEMINI Société Européenne (European Company) with share capital of €1,359,429,368 Registered office at 11, rue de Tilsitt, 75017 Paris (France) 330 703 844 RCS Paris Paris, December 18, 2025 Declaration of the number of shares and voting rights (Pursuant to Article L.233-8 of the French Commercial Code and Article 223-16 of the General Regulations of the French Financial Markets Authority) * The total number of theoretical voting rights is calculated on the basis of all shares to which voting rights are attached, including shares with suspended voting rights (Article 223-11 of the General Regulations of the French Financial Markets Authority “AMF”).
 o 0 o Attachment","CAPGEMINI
@@ -9515,6 +9776,69 @@ Before you consider Globus Medical, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Globus Medical wasn't on the list.
 
 While Globus Medical currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/globus-medical-inc-logo-1200x675.png?v=20221111142613,N,,2025-12-17 14:03:46.720990
+ID42,Thrivent ,2025-12-17 10:31:14+00:00,MarketBeat,"Thrivent Financial for Lutherans Buys 15,838 Shares of Advanced Micro Devices, Inc. $AMD",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-buys-15838-shares-of-advanced-micro-devices-inc-amd-2025-12-17/,"Advanced Micro Devices Stock Performance NASDAQ:AMD opened at $209.17 on Wednesday.
+Advanced Micro Devices, Inc. has a 12-month low of $76.48 and a 12-month high of $267.08.
+Equities research analysts forecast that Advanced Micro Devices, Inc. will post 3.87 EPS for the current fiscal year.
+Also, SVP Ava Hahn sold 2,868 shares of Advanced Micro Devices stock in a transaction on Monday, October 6th.
+Advanced Micro Devices Profile (Free Report) Advanced Micro Devices, Inc operates as a semiconductor company worldwide.","Thrivent Financial for Lutherans increased its stake in Advanced Micro Devices, Inc. (NASDAQ:AMD - Free Report) by 14.2% during the 2nd quarter, according to its most recent disclosure with the Securities and Exchange Commission. The fund owned 127,388 shares of the semiconductor manufacturer's stock after purchasing an additional 15,838 shares during the quarter. Thrivent Financial for Lutherans' holdings in Advanced Micro Devices were worth $18,150,000 at the end of the most recent quarter.
+
+AI Chips Can’t Exist Without These 2 Underrated Tech Giants
+
+A number of other hedge funds have also added to or reduced their stakes in the stock. Brighton Jones LLC lifted its holdings in Advanced Micro Devices by 178.2% in the fourth quarter. Brighton Jones LLC now owns 45,956 shares of the semiconductor manufacturer's stock valued at $5,551,000 after acquiring an additional 29,438 shares during the period. Revolve Wealth Partners LLC lifted its stake in shares of Advanced Micro Devices by 2.9% in the 4th quarter. Revolve Wealth Partners LLC now owns 8,283 shares of the semiconductor manufacturer's stock worth $1,001,000 after purchasing an additional 234 shares during the period. Versor Investments LP bought a new position in shares of Advanced Micro Devices in the 1st quarter worth approximately $1,027,000. Aptus Capital Advisors LLC boosted its holdings in shares of Advanced Micro Devices by 0.4% in the first quarter. Aptus Capital Advisors LLC now owns 101,950 shares of the semiconductor manufacturer's stock worth $10,474,000 after buying an additional 437 shares during the last quarter. Finally, HITE Hedge Asset Management LLC bought a new stake in Advanced Micro Devices during the first quarter valued at approximately $1,000,000. 71.34% of the stock is currently owned by hedge funds and other institutional investors.
+
+Advanced Micro Devices Stock Performance
+
+NASDAQ:AMD opened at $209.17 on Wednesday. The stock has a 50-day moving average price of $231.14 and a 200 day moving average price of $181.40. The stock has a market capitalization of $340.54 billion, a P/E ratio of 103.55, a P/E/G ratio of 1.54 and a beta of 1.93. Advanced Micro Devices, Inc. has a 12-month low of $76.48 and a 12-month high of $267.08. The company has a current ratio of 2.31, a quick ratio of 1.68 and a debt-to-equity ratio of 0.04.
+
+The Chip Boom Is Back: 3 Stocks Positioned for Huge Gains
+
+Advanced Micro Devices (NASDAQ:AMD - Get Free Report) last posted its quarterly earnings results on Tuesday, November 4th. The semiconductor manufacturer reported $1.20 EPS for the quarter, topping analysts' consensus estimates of $1.17 by $0.03. Advanced Micro Devices had a return on equity of 8.04% and a net margin of 10.32%.The company had revenue of $9.25 billion for the quarter, compared to analysts' expectations of $8.76 billion. During the same period in the previous year, the firm earned $0.92 EPS. The firm's revenue was up 35.6% compared to the same quarter last year. Equities research analysts forecast that Advanced Micro Devices, Inc. will post 3.87 EPS for the current fiscal year.
+
+Analyst Ratings Changes
+
+Several research firms have weighed in on AMD. JPMorgan Chase & Co. increased their price target on shares of Advanced Micro Devices from $180.00 to $270.00 and gave the stock a ""neutral"" rating in a research report on Wednesday, November 5th. UBS Group lifted their target price on Advanced Micro Devices from $265.00 to $300.00 and gave the company a ""buy"" rating in a research report on Wednesday, November 5th. Mizuho boosted their price target on Advanced Micro Devices from $275.00 to $285.00 and gave the company an ""outperform"" rating in a report on Wednesday, November 12th. Wedbush reaffirmed an ""outperform"" rating and issued a $290.00 price objective on shares of Advanced Micro Devices in a research note on Wednesday, November 12th. Finally, Morgan Stanley reiterated an ""equal weight"" rating and set a $260.00 price objective on shares of Advanced Micro Devices in a research note on Wednesday, November 12th. Three equities research analysts have rated the stock with a Strong Buy rating, twenty-eight have given a Buy rating and eleven have assigned a Hold rating to the company's stock. According to data from MarketBeat.com, Advanced Micro Devices has an average rating of ""Moderate Buy"" and an average price target of $277.11.
+
+Oracle Stock Hit Hard: Why Its AI Pipeline Could Drive a 2026 Rally
+
+Read Our Latest Stock Report on AMD
+
+Insider Activity at Advanced Micro Devices
+
+In related news, EVP Forrest Eugene Norrod sold 19,450 shares of the firm's stock in a transaction on Wednesday, November 19th. The shares were sold at an average price of $229.37, for a total transaction of $4,461,246.50. Following the completion of the transaction, the executive vice president directly owned 300,348 shares of the company's stock, valued at approximately $68,890,820.76. This trade represents a 6.08% decrease in their ownership of the stock. The transaction was disclosed in a legal filing with the SEC, which is accessible through this link. Also, SVP Ava Hahn sold 2,868 shares of Advanced Micro Devices stock in a transaction on Monday, October 6th. The shares were sold at an average price of $226.01, for a total transaction of $648,196.68. Following the completion of the sale, the senior vice president owned 9,033 shares in the company, valued at approximately $2,041,548.33. This represents a 24.10% decrease in their ownership of the stock. The disclosure for this sale is available in the SEC filing. Insiders have sold a total of 183,476 shares of company stock worth $40,249,093 in the last three months. Insiders own 0.06% of the company's stock.
+
+Advanced Micro Devices Profile
+
+(Free Report)
+
+Advanced Micro Devices, Inc operates as a semiconductor company worldwide. It operates through Data Center, Client, Gaming, and Embedded segments. The company offers x86 microprocessors and graphics processing units (GPUs) as an accelerated processing unit, chipsets, data center, and professional GPUs; and embedded processors, and semi-custom system-on-chip (SoC) products, microprocessor and SoC development services and technology, data processing unites, field programmable gate arrays (FPGA), and adaptive SoC products.
+
+Featured Articles
+
+Five stocks we like better than Advanced Micro Devices
+
+What is a support level?
+
+Why Taiwan Semiconductor's 6.5% Dip Could Be a Smart Buy
+
+What Are Growth Stocks and Investing in Them
+
+RTX Surges to Record Highs as Defense Orders Explode
+
+Stock Sentiment Analysis: How it Works
+
+Smart Money Is Buying Auto Suppliers, Not Car Brands
+
+Want to see what other hedge funds are holding AMD? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Advanced Micro Devices, Inc. (NASDAQ:AMD - Free Report).
+
+This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
+
+Should You Invest $1,000 in Advanced Micro Devices Right Now?
+
+Before you consider Advanced Micro Devices, you'll want to hear this.
+
+MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Advanced Micro Devices wasn't on the list.
+
+While Advanced Micro Devices currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/advanced-micro-devices-inc-logo-1200x675.gif,N,,2025-12-17 14:03:51.980957
 ID42,Thrivent ,2025-12-17 10:31:14+00:00,MarketBeat,"Thrivent Financial for Lutherans Buys 40,601 Shares of Cheniere Energy, Inc. $LNG",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-buys-40601-shares-of-cheniere-energy-inc-lng-2025-12-17/,"Thrivent Financial for Lutherans' holdings in Cheniere Energy were worth $13,725,000 as of its most recent filing with the Securities and Exchange Commission.
 Cheniere Energy Trading Up 0.3% Cheniere Energy stock opened at $189.32 on Wednesday.
 Cheniere Energy, Inc. has a fifty-two week low of $186.20 and a fifty-two week high of $257.65.
@@ -9580,69 +9904,6 @@ Before you consider Cheniere Energy, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Cheniere Energy wasn't on the list.
 
 While Cheniere Energy currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/cheniere-energy-inc-logo-1200x675.jpg,N,,2025-12-17 14:03:56.330995
-ID42,Thrivent ,2025-12-17 10:31:14+00:00,MarketBeat,"Thrivent Financial for Lutherans Buys 15,838 Shares of Advanced Micro Devices, Inc. $AMD",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-buys-15838-shares-of-advanced-micro-devices-inc-amd-2025-12-17/,"Advanced Micro Devices Stock Performance NASDAQ:AMD opened at $209.17 on Wednesday.
-Advanced Micro Devices, Inc. has a 12-month low of $76.48 and a 12-month high of $267.08.
-Equities research analysts forecast that Advanced Micro Devices, Inc. will post 3.87 EPS for the current fiscal year.
-Also, SVP Ava Hahn sold 2,868 shares of Advanced Micro Devices stock in a transaction on Monday, October 6th.
-Advanced Micro Devices Profile (Free Report) Advanced Micro Devices, Inc operates as a semiconductor company worldwide.","Thrivent Financial for Lutherans increased its stake in Advanced Micro Devices, Inc. (NASDAQ:AMD - Free Report) by 14.2% during the 2nd quarter, according to its most recent disclosure with the Securities and Exchange Commission. The fund owned 127,388 shares of the semiconductor manufacturer's stock after purchasing an additional 15,838 shares during the quarter. Thrivent Financial for Lutherans' holdings in Advanced Micro Devices were worth $18,150,000 at the end of the most recent quarter.
-
-AI Chips Can’t Exist Without These 2 Underrated Tech Giants
-
-A number of other hedge funds have also added to or reduced their stakes in the stock. Brighton Jones LLC lifted its holdings in Advanced Micro Devices by 178.2% in the fourth quarter. Brighton Jones LLC now owns 45,956 shares of the semiconductor manufacturer's stock valued at $5,551,000 after acquiring an additional 29,438 shares during the period. Revolve Wealth Partners LLC lifted its stake in shares of Advanced Micro Devices by 2.9% in the 4th quarter. Revolve Wealth Partners LLC now owns 8,283 shares of the semiconductor manufacturer's stock worth $1,001,000 after purchasing an additional 234 shares during the period. Versor Investments LP bought a new position in shares of Advanced Micro Devices in the 1st quarter worth approximately $1,027,000. Aptus Capital Advisors LLC boosted its holdings in shares of Advanced Micro Devices by 0.4% in the first quarter. Aptus Capital Advisors LLC now owns 101,950 shares of the semiconductor manufacturer's stock worth $10,474,000 after buying an additional 437 shares during the last quarter. Finally, HITE Hedge Asset Management LLC bought a new stake in Advanced Micro Devices during the first quarter valued at approximately $1,000,000. 71.34% of the stock is currently owned by hedge funds and other institutional investors.
-
-Advanced Micro Devices Stock Performance
-
-NASDAQ:AMD opened at $209.17 on Wednesday. The stock has a 50-day moving average price of $231.14 and a 200 day moving average price of $181.40. The stock has a market capitalization of $340.54 billion, a P/E ratio of 103.55, a P/E/G ratio of 1.54 and a beta of 1.93. Advanced Micro Devices, Inc. has a 12-month low of $76.48 and a 12-month high of $267.08. The company has a current ratio of 2.31, a quick ratio of 1.68 and a debt-to-equity ratio of 0.04.
-
-The Chip Boom Is Back: 3 Stocks Positioned for Huge Gains
-
-Advanced Micro Devices (NASDAQ:AMD - Get Free Report) last posted its quarterly earnings results on Tuesday, November 4th. The semiconductor manufacturer reported $1.20 EPS for the quarter, topping analysts' consensus estimates of $1.17 by $0.03. Advanced Micro Devices had a return on equity of 8.04% and a net margin of 10.32%.The company had revenue of $9.25 billion for the quarter, compared to analysts' expectations of $8.76 billion. During the same period in the previous year, the firm earned $0.92 EPS. The firm's revenue was up 35.6% compared to the same quarter last year. Equities research analysts forecast that Advanced Micro Devices, Inc. will post 3.87 EPS for the current fiscal year.
-
-Analyst Ratings Changes
-
-Several research firms have weighed in on AMD. JPMorgan Chase & Co. increased their price target on shares of Advanced Micro Devices from $180.00 to $270.00 and gave the stock a ""neutral"" rating in a research report on Wednesday, November 5th. UBS Group lifted their target price on Advanced Micro Devices from $265.00 to $300.00 and gave the company a ""buy"" rating in a research report on Wednesday, November 5th. Mizuho boosted their price target on Advanced Micro Devices from $275.00 to $285.00 and gave the company an ""outperform"" rating in a report on Wednesday, November 12th. Wedbush reaffirmed an ""outperform"" rating and issued a $290.00 price objective on shares of Advanced Micro Devices in a research note on Wednesday, November 12th. Finally, Morgan Stanley reiterated an ""equal weight"" rating and set a $260.00 price objective on shares of Advanced Micro Devices in a research note on Wednesday, November 12th. Three equities research analysts have rated the stock with a Strong Buy rating, twenty-eight have given a Buy rating and eleven have assigned a Hold rating to the company's stock. According to data from MarketBeat.com, Advanced Micro Devices has an average rating of ""Moderate Buy"" and an average price target of $277.11.
-
-Oracle Stock Hit Hard: Why Its AI Pipeline Could Drive a 2026 Rally
-
-Read Our Latest Stock Report on AMD
-
-Insider Activity at Advanced Micro Devices
-
-In related news, EVP Forrest Eugene Norrod sold 19,450 shares of the firm's stock in a transaction on Wednesday, November 19th. The shares were sold at an average price of $229.37, for a total transaction of $4,461,246.50. Following the completion of the transaction, the executive vice president directly owned 300,348 shares of the company's stock, valued at approximately $68,890,820.76. This trade represents a 6.08% decrease in their ownership of the stock. The transaction was disclosed in a legal filing with the SEC, which is accessible through this link. Also, SVP Ava Hahn sold 2,868 shares of Advanced Micro Devices stock in a transaction on Monday, October 6th. The shares were sold at an average price of $226.01, for a total transaction of $648,196.68. Following the completion of the sale, the senior vice president owned 9,033 shares in the company, valued at approximately $2,041,548.33. This represents a 24.10% decrease in their ownership of the stock. The disclosure for this sale is available in the SEC filing. Insiders have sold a total of 183,476 shares of company stock worth $40,249,093 in the last three months. Insiders own 0.06% of the company's stock.
-
-Advanced Micro Devices Profile
-
-(Free Report)
-
-Advanced Micro Devices, Inc operates as a semiconductor company worldwide. It operates through Data Center, Client, Gaming, and Embedded segments. The company offers x86 microprocessors and graphics processing units (GPUs) as an accelerated processing unit, chipsets, data center, and professional GPUs; and embedded processors, and semi-custom system-on-chip (SoC) products, microprocessor and SoC development services and technology, data processing unites, field programmable gate arrays (FPGA), and adaptive SoC products.
-
-Featured Articles
-
-Five stocks we like better than Advanced Micro Devices
-
-What is a support level?
-
-Why Taiwan Semiconductor's 6.5% Dip Could Be a Smart Buy
-
-What Are Growth Stocks and Investing in Them
-
-RTX Surges to Record Highs as Defense Orders Explode
-
-Stock Sentiment Analysis: How it Works
-
-Smart Money Is Buying Auto Suppliers, Not Car Brands
-
-Want to see what other hedge funds are holding AMD? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Advanced Micro Devices, Inc. (NASDAQ:AMD - Free Report).
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in Advanced Micro Devices Right Now?
-
-Before you consider Advanced Micro Devices, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Advanced Micro Devices wasn't on the list.
-
-While Advanced Micro Devices currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/advanced-micro-devices-inc-logo-1200x675.gif,N,,2025-12-17 14:03:51.980957
 ID27,L’Oréal,2025-12-17 10:31:01+00:00,Fortune,Palantir alums using AI to streamline patent filing secure $20 million in Series A venture funding,Jeremy Kahn,,,,,https://fortune.com/2025/12/17/exclusive-palantir-alums-aiming-to-streamline-patent-filings-with-ai-secure-20-million-in-series-a-venture-funding/,"Ankar was founded by Tamar Gomez and Wiem Gharbi in 2024.
 They took the name Ankar for their new company from the name of an omniscient and powerful knight found in pre-Islamic poetry.
 The new funding for Ankar comes as intellectual property has become increasingly critical to corporate value.
@@ -11566,7 +11827,6 @@ Nature lovers will also find the Senda dil Dragun – the world's longest treeto
 Once you strap your skis or board on, another innovation is visible over in neighbouring Flims: the FlemXpress, the world's first on-demand cable car whose fifth and final section opens on 19 December 2025. A sustainable ski lift taxi system, the cutting-edge gondolas only travel when needed, reducing energy consumption by 50% – a radical shift given that around 90% of cabins in conventional lifts travel empty. Like ""an Uber of the Alps"", as Alicia Martinez, head of business performance for Weisse Arena Group, put it, the new system could ""revolutionise mountain transport, but also in cities"".
 
 ""The Willy Wonka-inspired lift where you push a button and end up where you want to go – we invented it for innovation and guest privacy, but more because of energy consumption,"" Martinez said. ""Ski lifts everywhere consume a huge amount of energy, so this is our first transition away from the traditional winter sports model.""",https://ychef.files.bbci.co.uk/624x351/p0mnp7pn.jpg,N,,2025-12-16 20:00:36.477910
-ID47,Wellington Management,2025-12-16 22:38:37+00:00,Boston Business Journal,Generation Bio is latest Mass. biotech to be acquired by Xoma - Boston Business Journal,Hannah Baratham-Green,,,,,https://www.bizjournals.com/boston/news/2025/12/16/xoma-buys-generation-bio.html,Generation Bio will be acquired by Xoma Royalty Corp. for about $29 million after laying off 90% of its staff over the summer.,Not Available,https://media.bizj.us/view/img/5501861/301binneyst*1200xx3000-1691-0-331.jpg,N,,2025-12-16 19:04:27.608992
 ID28,Levi Strauss,2025-12-16 22:38:37+00:00,TradingView,Levi Strauss & Co. Elects Jeffrey J. Jones II to Board of Directors - TradingView,Not Available,,,,,https://www.tradingview.com/news/tradingview:9ebf06c6178f8:0-levi-strauss-co-elects-jeffrey-j-jones-ii-to-board-of-directors/,"Less than 1 min read On December 11, 2025, Levi Strauss & Co. announced the election of Jeffrey J. Jones II as a Class III member of its Board of Directors, effective January 21, 2026.
 Mr. Jones will also join the Board's Compensation and Human Capital Committee and Nominating, Governance and Corporate Citizenship Committee.
 IndividualJeffrey J. Jones IIRoleClass III DirectorType of ChangeAppointedEffective DateJanuary 21, 2026ReasonNot disclosedReplacement InfoN/ABackground DetailsFormer President and CEO of H&R Block, Inc.Board/Committee Role ChangesCompensation and Human Capital Committee, Nominating, Governance and Corporate Citizenship Committee Original SEC Filing: LEVI STRAUSS & CO [ LEVI ] - 8-K - Dec. 16, 2025 Disclaimer This is an AI-powered summary.
@@ -11582,6 +11842,7 @@ Original SEC Filing: LEVI STRAUSS & CO [ LEVI ] - 8-K - Dec. 16, 2025
 Disclaimer
 
 This is an AI-powered summary. It may contain inaccuracies. Consider verifying important information with the source. Please note this summary is solely based on documents filed with the SEC.",https://s.tradingview.com/static/images/illustrations/news-story.jpg,N,,2025-12-16 19:03:31.336286
+ID47,Wellington Management,2025-12-16 22:38:37+00:00,Boston Business Journal,Generation Bio is latest Mass. biotech to be acquired by Xoma - Boston Business Journal,Hannah Baratham-Green,,,,,https://www.bizjournals.com/boston/news/2025/12/16/xoma-buys-generation-bio.html,Generation Bio will be acquired by Xoma Royalty Corp. for about $29 million after laying off 90% of its staff over the summer.,Not Available,https://media.bizj.us/view/img/5501861/301binneyst*1200xx3000-1691-0-331.jpg,N,,2025-12-16 19:04:27.608992
 ID33,OpenAI,2025-12-16 22:34:18+00:00,Engadget,ChatGPT image generation is now faster and better at following tweaks - Engadget,Igor Bonifacic,,,,,https://www.engadget.com/ai/chatgpt-image-generation-is-now-faster-and-better-at-following-tweaks-180000750.html,"Following the release of GPT-5.2 last week, OpenAI has begun rolling out a new image generation model.
 The company says the updated ChatGPT Images is four times faster than its predecessor.
 That's something many image models have traditionally struggled with, but according to the company, the new ChatGPT Images is capable of handling denser and smaller text.
@@ -21810,67 +22071,6 @@ Before you consider International Business Machines, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and International Business Machines wasn't on the list.
 
 While International Business Machines currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/international-business-machines-co-logo-1200x675.png?v=20221020160751,N,,2025-12-14 08:00:17.902955
-ID47,Wellington Management,2025-12-14 11:51:07+00:00,MarketBeat,G2 Investment Partners Management LLC Makes New $10.14 Million Investment in SiTime ...,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-g2-investment-partners-management-llc-makes-new-1014-million-investment-in-sitime-corporation-sitm-2025-12-13/,"SiTime makes up about 2.2% of G2 Investment Partners Management LLC's portfolio, making the stock its 16th largest position.
-G2 Investment Partners Management LLC owned about 0.18% of SiTime at the end of the most recent quarter.
-Eventide Asset Management LLC grew its position in shares of SiTime by 5,015.9% during the 1st quarter.
-Chipmaker SiTime Near All-Time High Ground On Strong Sales, Earnings Growth Get Our Latest Report on SITM SiTime Stock Down 6.1% Shares of SiTime stock opened at $362.05 on Friday.
-SiTime Profile (Free Report) SiTime Corporation designs, develops, and sells silicon timing systems solutions in Taiwan, Hong Kong, the United States, Singapore, and internationally.","G2 Investment Partners Management LLC purchased a new stake in shares of SiTime Corporation (NASDAQ:SITM - Free Report) in the 2nd quarter, according to the company in its most recent disclosure with the Securities & Exchange Commission. The fund purchased 47,600 shares of the company's stock, valued at approximately $10,143,000. SiTime makes up about 2.2% of G2 Investment Partners Management LLC's portfolio, making the stock its 16th largest position. G2 Investment Partners Management LLC owned about 0.18% of SiTime at the end of the most recent quarter.
-
-Can These 3 Semiconductor Stocks Outpace Nvidia's Growth?
-
-A number of other large investors have also recently modified their holdings of SITM. Alliancebernstein L.P. increased its holdings in SiTime by 2,016.8% during the 1st quarter. Alliancebernstein L.P. now owns 443,227 shares of the company's stock worth $67,756,000 after purchasing an additional 422,288 shares during the period. American Century Companies Inc. bought a new position in shares of SiTime during the 2nd quarter worth $64,873,000. Eventide Asset Management LLC grew its position in shares of SiTime by 5,015.9% during the 1st quarter. Eventide Asset Management LLC now owns 166,214 shares of the company's stock worth $25,408,000 after buying an additional 162,965 shares in the last quarter. Ameriprise Financial Inc. increased its stake in shares of SiTime by 22.0% during the second quarter. Ameriprise Financial Inc. now owns 736,281 shares of the company's stock valued at $156,887,000 after buying an additional 132,948 shares during the period. Finally, Wellington Management Group LLP raised its holdings in shares of SiTime by 41.9% in the first quarter. Wellington Management Group LLP now owns 277,590 shares of the company's stock valued at $42,435,000 after acquiring an additional 82,017 shares in the last quarter. Hedge funds and other institutional investors own 84.31% of the company's stock.
-
-Analyst Ratings Changes
-
-Several research analysts have issued reports on SITM shares. Barclays increased their target price on shares of SiTime from $220.00 to $260.00 and gave the stock an ""underweight"" rating in a report on Thursday, November 6th. Loop Capital started coverage on shares of SiTime in a research report on Friday, November 21st. They issued a ""buy"" rating and a $350.00 price target for the company. Raymond James Financial reiterated an ""outperform"" rating on shares of SiTime in a research note on Tuesday, December 2nd. Weiss Ratings reissued a ""sell (d-)"" rating on shares of SiTime in a research note on Wednesday, October 8th. Finally, Stifel Nicolaus set a $360.00 target price on SiTime in a report on Thursday, November 6th. Six equities research analysts have rated the stock with a Buy rating and two have assigned a Sell rating to the company. Based on data from MarketBeat.com, the company presently has a consensus rating of ""Moderate Buy"" and an average price target of $332.14.
-
-Chipmaker SiTime Near All-Time High Ground On Strong Sales, Earnings Growth
-
-Get Our Latest Report on SITM
-
-SiTime Stock Down 6.1%
-
-Shares of SiTime stock opened at $362.05 on Friday. The company has a market cap of $9.45 billion, a P/E ratio of -122.31 and a beta of 2.55. The firm's 50 day moving average price is $300.15 and its 200-day moving average price is $253.54. SiTime Corporation has a 52-week low of $105.40 and a 52-week high of $387.52.
-
-SiTime (NASDAQ:SITM - Get Free Report) last announced its earnings results on Wednesday, November 5th. The company reported $0.87 earnings per share for the quarter, beating the consensus estimate of $0.71 by $0.16. SiTime had a negative net margin of 25.18% and a negative return on equity of 5.69%. The company had revenue of $83.57 million during the quarter, compared to the consensus estimate of $78.08 million. During the same period last year, the firm earned $0.40 earnings per share. SiTime's revenue was up 44.8% compared to the same quarter last year. As a group, equities research analysts forecast that SiTime Corporation will post -2.44 EPS for the current fiscal year.
-
-Insiders Place Their Bets
-
-In related news, insider Samsheer Ahamad sold 4,000 shares of the business's stock in a transaction on Monday, December 1st. The stock was sold at an average price of $291.10, for a total transaction of $1,164,400.00. Following the transaction, the insider directly owned 51,711 shares in the company, valued at $15,053,072.10. The trade was a 7.18% decrease in their position. The sale was disclosed in a filing with the Securities & Exchange Commission, which is available through this link. Also, CEO Rajesh Vashist sold 2,000 shares of the stock in a transaction dated Monday, December 1st. The shares were sold at an average price of $291.02, for a total value of $582,040.00. Following the completion of the sale, the chief executive officer owned 433,609 shares of the company's stock, valued at approximately $126,188,891.18. This trade represents a 0.46% decrease in their ownership of the stock. The SEC filing for this sale provides additional information. Insiders sold 28,500 shares of company stock worth $8,853,310 over the last quarter. Company insiders own 2.10% of the company's stock.
-
-SiTime Profile
-
-(Free Report)
-
-SiTime Corporation designs, develops, and sells silicon timing systems solutions in Taiwan, Hong Kong, the United States, Singapore, and internationally. The company provides resonators and clock integrated circuits, and various types of oscillators. It serves various markets, including communications, datacenter, enterprise, automotive, industrial, internet of things, mobile, consumer, and aerospace and defense.
-
-Featured Articles
-
-Five stocks we like better than SiTime
-
-What is a Microcap Stock? Everything You Need to Know
-
-Synopsys Sees Bullish Shift as Ansys Integration Drives Growth
-
-Stock Dividend Cuts Happen Are You Ready?
-
-The Best Holiday Present You Can Give Yourself? Costco Stock
-
-What does consumer price index measure?
-
-Why Zscaler Stock Could Be Ready to Bounce After a 30% Selloff
-
-Want to see what other hedge funds are holding SITM? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for SiTime Corporation (NASDAQ:SITM - Free Report).
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in SiTime Right Now?
-
-Before you consider SiTime, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and SiTime wasn't on the list.
-
-While SiTime currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/sitime-co-logo-1200x675.png?v=20240507152221,N,,2025-12-14 11:04:53.547655
 ID34,Parker-Hannifin,2025-12-14 11:51:07+00:00,MarketBeat,Parker-Hannifin Corporation $PH Holdings Increased by Fullerton Fund Management Co Ltd.,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-parker-hannifin-corporation-ph-holdings-increased-by-fullerton-fund-management-co-ltd-2025-12-13/,"Parker-Hannifin accounts for 4.9% of Fullerton Fund Management Co Ltd.'s investment portfolio, making the stock its 7th biggest position.
 Finally, BI Asset Management Fondsmaeglerselskab A S grew its holdings in shares of Parker-Hannifin by 19.8% during the second quarter.
 Insider Activity at Parker-Hannifin In related news, VP Rachid Bendali sold 1,437 shares of Parker-Hannifin stock in a transaction on Wednesday, November 12th.
@@ -21938,6 +22138,67 @@ Before you consider Parker-Hannifin, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Parker-Hannifin wasn't on the list.
 
 While Parker-Hannifin currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/parker-hannifin-co-logo-1200x675.png?v=20240109092309,N,,2025-12-14 10:03:24.873654
+ID47,Wellington Management,2025-12-14 11:51:07+00:00,MarketBeat,G2 Investment Partners Management LLC Makes New $10.14 Million Investment in SiTime ...,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-g2-investment-partners-management-llc-makes-new-1014-million-investment-in-sitime-corporation-sitm-2025-12-13/,"SiTime makes up about 2.2% of G2 Investment Partners Management LLC's portfolio, making the stock its 16th largest position.
+G2 Investment Partners Management LLC owned about 0.18% of SiTime at the end of the most recent quarter.
+Eventide Asset Management LLC grew its position in shares of SiTime by 5,015.9% during the 1st quarter.
+Chipmaker SiTime Near All-Time High Ground On Strong Sales, Earnings Growth Get Our Latest Report on SITM SiTime Stock Down 6.1% Shares of SiTime stock opened at $362.05 on Friday.
+SiTime Profile (Free Report) SiTime Corporation designs, develops, and sells silicon timing systems solutions in Taiwan, Hong Kong, the United States, Singapore, and internationally.","G2 Investment Partners Management LLC purchased a new stake in shares of SiTime Corporation (NASDAQ:SITM - Free Report) in the 2nd quarter, according to the company in its most recent disclosure with the Securities & Exchange Commission. The fund purchased 47,600 shares of the company's stock, valued at approximately $10,143,000. SiTime makes up about 2.2% of G2 Investment Partners Management LLC's portfolio, making the stock its 16th largest position. G2 Investment Partners Management LLC owned about 0.18% of SiTime at the end of the most recent quarter.
+
+Can These 3 Semiconductor Stocks Outpace Nvidia's Growth?
+
+A number of other large investors have also recently modified their holdings of SITM. Alliancebernstein L.P. increased its holdings in SiTime by 2,016.8% during the 1st quarter. Alliancebernstein L.P. now owns 443,227 shares of the company's stock worth $67,756,000 after purchasing an additional 422,288 shares during the period. American Century Companies Inc. bought a new position in shares of SiTime during the 2nd quarter worth $64,873,000. Eventide Asset Management LLC grew its position in shares of SiTime by 5,015.9% during the 1st quarter. Eventide Asset Management LLC now owns 166,214 shares of the company's stock worth $25,408,000 after buying an additional 162,965 shares in the last quarter. Ameriprise Financial Inc. increased its stake in shares of SiTime by 22.0% during the second quarter. Ameriprise Financial Inc. now owns 736,281 shares of the company's stock valued at $156,887,000 after buying an additional 132,948 shares during the period. Finally, Wellington Management Group LLP raised its holdings in shares of SiTime by 41.9% in the first quarter. Wellington Management Group LLP now owns 277,590 shares of the company's stock valued at $42,435,000 after acquiring an additional 82,017 shares in the last quarter. Hedge funds and other institutional investors own 84.31% of the company's stock.
+
+Analyst Ratings Changes
+
+Several research analysts have issued reports on SITM shares. Barclays increased their target price on shares of SiTime from $220.00 to $260.00 and gave the stock an ""underweight"" rating in a report on Thursday, November 6th. Loop Capital started coverage on shares of SiTime in a research report on Friday, November 21st. They issued a ""buy"" rating and a $350.00 price target for the company. Raymond James Financial reiterated an ""outperform"" rating on shares of SiTime in a research note on Tuesday, December 2nd. Weiss Ratings reissued a ""sell (d-)"" rating on shares of SiTime in a research note on Wednesday, October 8th. Finally, Stifel Nicolaus set a $360.00 target price on SiTime in a report on Thursday, November 6th. Six equities research analysts have rated the stock with a Buy rating and two have assigned a Sell rating to the company. Based on data from MarketBeat.com, the company presently has a consensus rating of ""Moderate Buy"" and an average price target of $332.14.
+
+Chipmaker SiTime Near All-Time High Ground On Strong Sales, Earnings Growth
+
+Get Our Latest Report on SITM
+
+SiTime Stock Down 6.1%
+
+Shares of SiTime stock opened at $362.05 on Friday. The company has a market cap of $9.45 billion, a P/E ratio of -122.31 and a beta of 2.55. The firm's 50 day moving average price is $300.15 and its 200-day moving average price is $253.54. SiTime Corporation has a 52-week low of $105.40 and a 52-week high of $387.52.
+
+SiTime (NASDAQ:SITM - Get Free Report) last announced its earnings results on Wednesday, November 5th. The company reported $0.87 earnings per share for the quarter, beating the consensus estimate of $0.71 by $0.16. SiTime had a negative net margin of 25.18% and a negative return on equity of 5.69%. The company had revenue of $83.57 million during the quarter, compared to the consensus estimate of $78.08 million. During the same period last year, the firm earned $0.40 earnings per share. SiTime's revenue was up 44.8% compared to the same quarter last year. As a group, equities research analysts forecast that SiTime Corporation will post -2.44 EPS for the current fiscal year.
+
+Insiders Place Their Bets
+
+In related news, insider Samsheer Ahamad sold 4,000 shares of the business's stock in a transaction on Monday, December 1st. The stock was sold at an average price of $291.10, for a total transaction of $1,164,400.00. Following the transaction, the insider directly owned 51,711 shares in the company, valued at $15,053,072.10. The trade was a 7.18% decrease in their position. The sale was disclosed in a filing with the Securities & Exchange Commission, which is available through this link. Also, CEO Rajesh Vashist sold 2,000 shares of the stock in a transaction dated Monday, December 1st. The shares were sold at an average price of $291.02, for a total value of $582,040.00. Following the completion of the sale, the chief executive officer owned 433,609 shares of the company's stock, valued at approximately $126,188,891.18. This trade represents a 0.46% decrease in their ownership of the stock. The SEC filing for this sale provides additional information. Insiders sold 28,500 shares of company stock worth $8,853,310 over the last quarter. Company insiders own 2.10% of the company's stock.
+
+SiTime Profile
+
+(Free Report)
+
+SiTime Corporation designs, develops, and sells silicon timing systems solutions in Taiwan, Hong Kong, the United States, Singapore, and internationally. The company provides resonators and clock integrated circuits, and various types of oscillators. It serves various markets, including communications, datacenter, enterprise, automotive, industrial, internet of things, mobile, consumer, and aerospace and defense.
+
+Featured Articles
+
+Five stocks we like better than SiTime
+
+What is a Microcap Stock? Everything You Need to Know
+
+Synopsys Sees Bullish Shift as Ansys Integration Drives Growth
+
+Stock Dividend Cuts Happen Are You Ready?
+
+The Best Holiday Present You Can Give Yourself? Costco Stock
+
+What does consumer price index measure?
+
+Why Zscaler Stock Could Be Ready to Bounce After a 30% Selloff
+
+Want to see what other hedge funds are holding SITM? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for SiTime Corporation (NASDAQ:SITM - Free Report).
+
+This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
+
+Should You Invest $1,000 in SiTime Right Now?
+
+Before you consider SiTime, you'll want to hear this.
+
+MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and SiTime wasn't on the list.
+
+While SiTime currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/sitime-co-logo-1200x675.png?v=20240507152221,N,,2025-12-14 11:04:53.547655
 ID8,BNY Mellon,2025-12-14 11:23:08+00:00,MarketBeat,Rexford Capital Inc. Acquires New Position in The Bank of New York Mellon Corporation $BK,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-rexford-capital-inc-acquires-new-position-in-the-bank-of-new-york-mellon-corporation-bk-2025-12-14/,"Evergreen Capital Management LLC grew its position in shares of Bank of New York Mellon by 7.4% in the second quarter.
 3 Top-Rated Energy Companies Staging Strong Recoveries View Our Latest Analysis on Bank of New York Mellon Bank of New York Mellon Price Performance Shares of NYSE BK opened at $116.98 on Friday.
 The Bank of New York Mellon Corporation has a 1-year low of $70.46 and a 1-year high of $119.40.
@@ -26324,379 +26585,3 @@ So we’re thinking about cars, we’re thinking about planes, you know, we’re
 Q: So, I’m here at King Fahd University in Saudi Arabia, right next to Aramco, here with my class from international relations.","Oil and Petroleum Products
 
 Carolyn Kissane, academic director and clinical professor at the Center for Global Affairs at New York University, leads the conversation on the geopolitics of oil. FASKIANOS: Thank you. Welcome to the final session of the Winter/Spring 2023 CFR Academic Webinar Series. I’m Irina Faskianos, vice president of the National Program and Outreach here at CFR. Today’s discussion is on the record. And the video and transcript will be available on our website, CFR.org/Academic, if you would like to share these materials with your colleagues or classmates. As always, CFR takes no institutional positions on matters of policy. We are delighted to have Carolyn Kissane with us to discuss the geopolitics of oil. Dr. Kissane is the academic director of both the graduate program in global affairs and the graduate program in global security conflict and cybercrime at NYU’s Center for Global Affairs, where she is also a clinical professor. She also serves as director of the energy, climate justice, and sustainability lab in the School of Professional Studies at NYU. She was named in 2013 by Breaking Energy as one of the top ten New York women in energy, and top ten energy communicator. She’s a member of the Council on Foreign Relations and the National Committee on U.S.-China Relations, and serves on several boards. So, Carolyn, thanks very much for doing this. We really appreciate it. I thought we could begin by talking about how has the geopolitics of oil changed, especially vis-à-vis Russia’s war in Ukraine and OPEC’s recent announcement to cut oil production? KISSANE: Well, first of all, I’d just like to say, thank you so very much for having me. I’m really delighted. I am a big fan of CFR’s Academic Webinars. So, to have the opportunity to participate in this—in this way is very meaningful to me. So, thank you. So, wow. There is so much happening in this space, the geopolitics of oil. This has been a tremendous fourteen months. Russia’s reinvasion of Ukraine very much upended the geopolitics of oil because Russia is a significant producer, one of the top three in the world. And it’s—you know, it’s caused a kind of a reshaping, a kind of a remapping of the—of oil geopolitics. And we’ve seen some, you know, shifts in how countries think about oil security, in light of larger questions about broader energy security questions. And also, on top of that, is the ongoing energy transition, coupled with, you know, climate change, and the need to decarbonize. So, there’s just—it’s been quite a—you know, a year and a half, that has really sort of put energy security, and oil security, very much at the forefront of people’s minds. FASKIANOS: Fantastic. I thought maybe you had some really interesting data to show us. And if you could walk us through those—the trends you are seeing and really bring it to life, that would be fantastic. KISSANE: Sure. So, before I do—I have a couple of slides. And before I share my slides, I think it’s really important that, sort of, we understand how interconnected, sort of, the global energy system is, and how interconnected we are, when it comes to the flows of oil. You know, some countries are very well resourced-endowed, so they have oil. And other countries do not, so they need to import oil. There’s really no country in the world that doesn’t need oil for larger national security issues. And I think one of things that many people sort of are not necessarily aware of or think about, is the amount of oil that gets produced every day. So, every day, the world consumes over 100 million barrels a day. And every day, that 100 million barrels has to be—has to be moved. It has to be—you know, as part of getting it into the system, getting it to its respective destinations. And what we’re not seeing—which, maybe some people may have thought that we would see at this point—is we’re not seeing a reduction in demand, but we’re seeing an expansion in demand. And much of that global demand is coming out of Asia. And we’re also, of course, seeing the—with the reopening of China, lots of really interesting questions as to what oil demand will be in China for the 2023-2024 years, whether or not they will—they will, sort of, put extra pressure on global demand. And you know, Irina, just also, you know, it’s—I’m going to share this in my slides. But you know, last week’s decision from OPEC+ to reduce production, of course, had an impact on the price of oil. So when the decision was announced on Sunday, by Monday morning, we saw an uptick in the price. It’s stabilized, but we are sort of looking at $80-plus-a-barrel oil. And again, lots of uncertainty as to what that’s going to mean across economies that are in recessions, experiencing sort of the beginnings of a recession, and sort of what does it mean for the global economy, where we may see sort of more energy inflation. So, one of the things that I really like to do when I teach the geopolitics of oil is sort of show some visuals. Because I think, again, sort of, really reinforcing the interconnected nature of our global energy system, but also sort of seeing where in the world is oil produced, and where in the world are the—are the importers. And also, just a couple of sort of fun pieces on what we have seen, just this—you know, in the last week, of course, some of this—you’ll be familiar with, those in the audience—but this decision on the part of OPEC to reduce production by 1.2 million barrels a day—again, happening at a time, not when we have an excess supply, but when we’re seeing a tight supply across the oil market. So, it came as a bit of a surprise to—you know—to even the most, you know, longstanding analysts and OPEC observers. And again, part of this is directed probably toward self-interests on the part of Saudi Arabia and the oil producers that are really going to make the cuts. But of course, it also has an impact here for those of you that are sitting in the United States. What does it mean then for prices that Americans pay at the gas pump? So, the Biden administration sort of came out after this decision was made in sort of being disappointed, surprised that OPEC would make this decision. Now, it’s also important to sort of recognize that this is not just a singular OPEC decision. This is part of, now, a larger OPEC+. And OPEC+ does also include Russia, as well as other countries like Kazakhstan and Mexico. So, the OPEC that we have historically known is now different, because you have other countries that are not official members but nonetheless are part of what we now refer to as OPEC+. And these are the countries that are part of OPEC, and really the country that’s considered to be sort of in the driver’s seat of OPEC is that of Saudi Arabia, because Saudi Arabia is the largest producer within the OPEC organization, producing anywhere from 10 to 11 million barrels a day. Venezuela has the largest reserves, but it is far from being at capacity, in terms of what it can—what it can produce. So, just to kind of put that into perspective, these are OPEC countries and their respective reserves. And then non-OPEC—the United States being a non-OPEC country, but again, this sort of—this chart to the right shows, you know, again, the world is consuming a little over 100 million barrels a day, expected to increase over 2023 and into 2024, question marks as to when we may see peak oil demand. But again, to sort of link this to energy security—energy security, especially when it’s in the context of oil security—is making sure that we have adequate supply at affordable prices. So, when we see a reduction in supply at a time of tight markets, that suggests that we’re also going to see higher prices that’s going to directly hit vulnerable economies. And so, again, just to sort of point out sort of where in the world sort of are the top three oil producers: the United States, Saudi Arabia, and Russia. Russia remains in the top three. Canada as well, our, you know, neighbor to the north. And China is also a producer of oil. The United States figure here also includes gas liquefied, so liquid petroleum, which the United States is endowed with a lot of both oil and natural gas. And then the top oil consuming countries, you have U.S., China, and India. Now, the United States is not the largest importer. That position is now held by China. But as far as consumption goes, we consume over 20 million barrels a day. Again, big question mark about China, in terms of whether or not we will see higher demand coming out of China over the next year, two years, with China’s reopening and what is being, you know, discussed as revenge tourism. And more Chinese who have accumulated a lot of savings, 2.1 trillion, how are they going to use that savings and whether or not, after three years of being under lockdown restrictions, whether or not we’ll see impacts to demand. And I think Russia is—there’s lots of questions about Russia. And this is now—we’re fourteen months into, you know, Russia’s reinvasion of Ukraine—and I emphasize reinvasion, because oftentimes, we forget that, you know, Russia invaded Ukraine in 2014. But Russia is still moving its oil. And up until, you know, a few months ago, its overall production and exports were as high—at some points, even higher—than pre-invasion. Now, you have new countries that are takers of Russian oil, and they’re buying it at discounted prices. We see Turkey, Singapore, China has been a big buyer, as well as India, that they have been buying discounted Russian oil. Lots of interesting questions that we could discuss about the oil price cap and seaborne embargo to Europe. But I think the takeaway from this slide is that Russia continues to produce oil, continues to sell it, selling at a discounted price, but there are still many countries in the world that are eager to take Russian oil. And again, I’m not going to go into this, but I just love this slide, to just emphasize the—you know, the world’s pipelines. These are the pipelines that help sort of the transit of oil. Something also that’s really unique and interesting to look at is just tanker traffic, so, the tankers that carry oil around the world. But again, you know, there are a lot of pipelines, so twenty-three—two thousand, three hundred, and eighty-one operational oil and gas pipelines. Again, these are—it’s moving a lot of the oil that is consumed every day. And then finally, is this—is—you know, one of the things that we oftentimes—we think about the hundred million barrels a day that the world is consuming, over 75 percent of the world’s oil is controlled, managed by state-owned oil companies. So, Saudi Aramco being one, PDVSA of Venezuela being another. But it’s really important to sort of recognize the position that state-owned companies have. The rest is controlled or managed by international oil companies—ExxonMobil, Chevron, ENI, Total, and a host of other—host of other companies. But again, I think the—you know, to understand that NOCs, as they’re referred to, are very, very important for understanding their role in the larger context of the geopolitics of oil. And again, what we saw last week coming out of OPEC, this decision, this is also being driven by state budget concerns. This is—again, it’s about the production of oil, but it’s also about, you know, governments and their budgets. And oftentimes, you know, there is a desire to add more, rather than—you know, more revenues rather than less. So, those are the slides that I have. And I hope that they sort of provide some sort of context, and a little bit of, you know, that we can discuss in the questions that I really look forward to answering from the audience. FASKIANOS: Thank you, Carolyn. That was great. So now, we’re going to go to all of you for your questions and comments. (Gives queuing instructions.) All right, so I’m going to go to the first raised hand in the thing. Amadine Hom, go to you first, and please accept the—unmute yourself. (Pause.) You are still muted. (Pause.) OK, I don’t know—are you there? Oh, I think—OK. Let’s go to Morton Holbrook. Q: Yes, good afternoon. Dr. Kissane, what a shocking presentation—(laughs)—a hundred million barrels a day and it’s going up, notwithstanding the Paris Climate Agreement of 2015. Is that agreement simply a dead letter, or is it having any effect on oil—on fossil fuel production, particularly oil production? Or what’s the best scenario, in terms of reducing dependence on fossil fuels, considering the oil market? Thank you. KISSANE: Well—hi, Morton, thank you so much for that excellent question. Yeah, that’s kind of why I emphasize that number, is because a lot of people sort of just aren’t aware of how much oil we continue to consume, and again, what the demand expectations are moving forward. And these demand expectations are, you know, coming out of forecasts from the International Energy Agency. So, I think there’s a big question as to when we see peak demand. And, you know, if you look at BP scenarios, they expect peak demand to happen, you know, before 2030, where, as, you know, others kind of contest that they—that they think that peak demand won’t happen until after 2030. I mean, again, a lot depends on, you know, what we are now experiencing in the energy transition, and how, sort of quickly are we—can we transition away from oil. I think what’s really critical, when we’re looking at oil, is oftentimes we think only about the transportation sector. So we’re thinking about cars, we’re thinking about planes, you know, we’re thinking about trucks, and tankers, and all these things. But it’s petrochemicals, you know? There’s just a lot of oil that also goes into fertilizer. So, it really is across our economy, and across economies, across the global system. One of the things that I always tell my students is even during COVID, where you had many countries, right, much of the world was experiencing some level of lockdown, we did have a reduction in oil demand, but it wasn’t—it wasn’t like 20 million barrels. It was under ten. So, the fact that now it’s 2023, the world has reopened, it’s really hard to sort of see, or to know with certainty, is when we’re going to see that—see that reduction in demand. Now, I think with the Paris Agreement, what’s also important is—to note is, you know, if you’re—if you’re in the oil and gas space—and I was just at a conference earlier this morning where this was a point of conversation—was, you know, what are the companies doing to reduce the emissions from production? So, how are they integrating carbon capture, sequestration, you know, how are they managing the emissions that come from the production of fossil energy—in this case that we’re talking about, oil. And I think one of the things that—I think if you sort of follow oil markets, or a country like Saudi Arabia, they are marketing low-emission oil. Now, we could—you know, we could sort of challenge, well, what does that—you know, what does that really mean? But you are having, you know, countries that are now sort of competing to state that they have lower emitting carbon in the production—in the production of oil. And that’s a whole other interesting sort of thing to look at, in the context of the geopolitics of oil, is to kind of understand the variation across emissions, across different countries, in the production of oil. So, we are—you know, again, we are going to be going into COP-28 this fall. Again, we are not seeing—you know, and we haven’t seen a, you know, reduction in fossil energy demand. Again, lots of people are sort of, you know, hoping that we’ll start to see it sooner rather than later. But for the time being—and again, you know, to Irina’s first question, that, you know, the last fourteen months, and with, you know, with Russia’s invasion of Ukraine, it has both shown us that, you know, Europe is sort of seeking to hasten the energy transition, by building out more renewable energy, and creating more opportunities to buy electric vehicles. But there’s still big swaths of the world that, you know, are still, and have yet to move towards, you know, really reducing—and that are actually going to see higher demand moving forward, as their economies grow. FASKIANOS: Thank you. I’m going to take the next question from Jovana Vujanic, who is a graduate student at Lewis University: How big of an—of an impact will the decision of the Saudi energy minister to cut oil production have on the relationship between the United States and Saudi Arabia? KISSANE: Love the question, thank you so much. Yeah, no, it’s a great one. So, my take is that, of course, this decision came as a bit of a surprise, and it wasn’t something that the United States, you know, wanted. But I would say that the U.S.-Saudi relationship has been very tense for the last ten years. And as part of that—there are lots of different reasons for that, but this is yet—kind of another thing that Saudi has done. And again, I think it’s also—Saudi has taken a non-alignment policy with relation to its position on Russia and Ukraine. So, it continues to—you know, it continues to have a relationship with Russia. It also has the relationship with Ukraine. As we saw, you know, China just brokered a very significant deal between Saudi Arabia and Iran. You know, again, Saudi Arabia and Iran are two—are two important producers for China. So, China is a large importer of oil. So, if you go back to World War—the end of World War II, that’s when the United States established the oil-for-security relationship with Saudi Arabia. And as we have grown, sort of, more—I wouldn’t say independent, but our—as our own oil production has increased, especially through the shale revolution, our dependence on the Middle East and Saudi Arabia, more specifically, has shifted. So, I think we’re seeing a very different Saudi Arabia today, which I think is going to be a challenge for the United States. I think it’s going to be very interesting to see what the summer holds. Last summer, the Biden administration did tap into the U.S. strategic petroleum reserves, the largest—the largest take in the history of the reserves, which started in 1975, you know, taking 180 million barrels out, you know, not because there was massive supply disruptions. But because, you know, as the administration said, it was—you know, it was—it was—it was a war—it was a war-specific decision, because the—you know, Russia’s invasion of Ukraine was causing energy prices to skyrocket. And to cushion the American consumer, and to better cushion the, sort of, the global economy, the United States withdrew from the SPR. So I think the summer is going to be very interesting. But I think we’re going to see, definitely, much more attention in the years to come, between the United States and Saudi Arabia. It’s not the relationship of the past. This is a kind of a very new relationship. That’s a great question. FASKIANOS: Thank you. Thank you, let’s go Curran Flynn, who has a raised hand. Q: Hello? FASKIANOS: We can hear you, but we’re getting feedback. So you might have two devices open. Q: Can you hear me now? FASKIANOS: Yes. Q: That’s better. OK. FASKIANOS: That’s better. Thank you. Thank you so much. Q: So, I’m here at King Fahd University in Saudi Arabia, right next to Aramco, here with my class from international relations. And one of my students has a question, Nasser al-Nasir (ph). Here he is. Q: So, thank you, Mrs. Carolyn. My question is: How could Russia’s use of alternative transportation methods, such as the East Siberian Pipeline to China, impact the U.S. market, the domestic market, and the role of the SPR, given potential insurance workarounds from Russia’s side such as ensuring Russian tankers through their RDIF fund? And thank you to Mrs. Irina. KISSANE: Thank you. And, Dr. Flynn, thank you so much for having your students join this webinar. So, I’m a little—so, the question is about the East Siberian Pipeline? Just could you—would you mind repeating it? I just want to make sure I have it—I’m clear on the question. Q: So, how could Russia’s use of alternative transportation methods, such as the East Siberian Pipeline to China, impact the U.S. energy markets, I mean domestically, and the SPR, given potential insurance workarounds from Russia’s side such as ensuring Russian tankers to the RDIF fund? KISSANE: Yeah, and that’s a great question. You know, I think that, you know, begs a lot of things that we could be looking at, right, in terms of, you know, Russia’s kind of ability or capacity to sort of work around, or find workarounds, to the sanctions that were imposed. And I think we’ve seen sort of new markets—so, this kind of reshaping of the energy map with oil, we see that as—kind of in technicolor, right, whereas, you know, a lot of Russian oil would go west, is now going east, you know, China, India, being takers, and of course, you know, other countries as well. You know, what will be its impact on the—on the U.S. market? I think that’s—you know, again, I do think the sanctions were sort of carefully put into place, so that there wouldn’t be massive disruptions, so we—again, you know, Russia produces over 10 million barrels a day, and about 7 million of those barrels are exported. So, you know, if we lost all of that, that would be a—you know, that would cause some very significant economic disruption globally. We already saw, you know, impacts to sort of grains, grain exports, and food security in many different parts of the world. So, you know, Russia is finding different ways. You have shadow tankers that Russia is using to move—to move its oil—as you pointed out, the East Siberian pipeline. You know, I think there’s only so much the United States can do, or—and European countries that are part of the sanctions regime, can do to curtail Russian exports of oil. But I think that—you know, I think Russia, again, has a—has a desire, and also, you know, revenue needs—they’re funding a very expensive war—that they’re finding ways to get their—to get their oil out. I think an interesting question is, you know, what does this mean in the years ahead, the lack of investment, for example, that’s going into Russian energy infrastructure, a lack of, sort of, any kind of Western investment that is—that is going in, and what that is going to mean. But again, you know, I think, to your question, I think we will see some—you know, we are seeing some impacts, right? There’s a big question as to what—you know, what the next six months to a year will look like, with regards to the reduction from OPEC, and if we were to see a deeper curtailment on Russian oil. And you know, would the United States then tap more into the SPR? We’re now at—you know, we’re down to seven hundred thousand barrels, which, of course, is not insignificant. But we also sort of have to be, you know, judicious about how we use the SPR. But thank you for the question. FASKIANOS: Thank you. I’m going to take the next question from Michael—let’s see— Trevett, a Ph.D. candidate at the University of Southern Mississippi: China and other countries claim there are petroleum reserves under the South China Sea. What are your estimates of the potential amount there, and has China begun to extract any of this oil? KISSANE: Michael, thank you so much. That’s a great question. So, China already is an oil producing country, so you do have oil production in China. In the South China Sea, I can’t—I can’t say exactly. I know that there have been geological tests that have shown the reserves. Again, you do have—you know, you do have territorial concerns about sort of where—is this—you know, can China—can China tap those—or seek to explore and tap those reserves, again, if there are—if there is contention over the territory in which these reserves are located? So you know, China, again—one of the things that’s very interesting about China is that China is an oil producer, but China has seen, over the last, you know, the last decade, they have seen that they have experienced peak demand. So—I mean, sorry. Peak supply. So, they are not producing as much as they used to. And so you’re seeing a year-on-year reduction in the producing capacity. You know, if you go back maybe five or six years ago, there was lots of questions about if China could kind of replicate what happened in the United States around the shale oil revolution. I think one of the big challenges for China is that, of the—you know, where the shale reserves are located, it’s not near water, lots of questions as to—and some of it—basically, some of the tests have shown that it’s—it definitely is proving harder that, you know, they cannot sort of model the same level of development that we have seen in the United States. So, yeah, no, I think in the South China Sea, again, I think we—it’s potentially possible that we might see it. I wouldn’t—I wouldn’t—I wouldn’t say it’s soon. FASKIANOS: Thank you. I’m taking the next question from Rob Warren at the Anglo-American University of Prague. This question also got an upvote: How do you foresee Venezuela’s role in the global oil market changing moving forward? And can it be reintegrated into the global economy? KISSANE: Oh, these are all fantastic questions. Thank you all so much. Yeah, Venezuela is—again, you know, Venezuela has—they have the largest reserves in the world. As part of this webinar, right, you—CFR had a—kind of a primer on Venezuelan, and kind of—you know, you look at sort of where Venezuela is. And one of the biggest challenges confronting Venezuela is both its politics, but it’s also—it basically—you know, you don’t have—you don’t have international oil service providers in the country. I think the only—the only one now that the U.S.—the U.S. has sort of given a sanctions exemption to, is that of Chevron. But I think—yeah, I mean, if you were to see, you know, kind of shifts in the political regime, and you were to see more openness, then I think you could imagine, you know, Venezuela having an opportunity, or a pathway forward, to be more integrated into the global energy system, and the global oil system. You know, I think one of the big problems that Venezuela faces is that most of its infrastructure is really old at this point. And it would need a significant amount of reinvestment to get it up to a place that it could sort of meet its potential. So, you know, Venezuela is one of these countries that’s not producing as much as it could, right? It has the potential to be producing 2 million-plus more barrels per day. But you know, we’ve seen that they really have just—they went into freefall. So, I think that’s a big issue. And another big issue, which—God, it goes back to an earlier question—is that of emissions. So, the oil that comes out of Venezuela is a very, very heavy oil. So, it’s—it has very large carbon emissions associated with the production of that oil. So, that, I think, is—again, as we—you know, think about the emissions from oil production in countries that are sort of seeking to kind of market themselves as low-emission producers, you know, Venezuela definitely will have a very hard time recouping its—where its oil sector was. Again, it has the capacity, it has the reserves. But getting that—getting that oil out of the ground right now, you have a lot of significant above-ground risks. FASKIANOS: Thank you. I’m going to go next to Clemente Abrokwaa. Raised hand, so please unmute yourself. Q: Can you hear me, please? FASKIANOS: Yes, we can. Q: Thank you. Thank you so much for your—for your talk. I was also very shocked about the amount of barrels that we consume every day. (Laughs.) I didn’t know that. But anyway, I’m from Penn State University. And my question is: You just mentioned about the above-ground, you know, effects. And—so the movement towards, like, electric vehicles and so on, how do you think it is going to affect the African continent? KISSANE: Thank you. Q: I am—I’m thinking, you know, the economies, and then infrastructure. It will be very difficult for them to—(laughs)—move with the rest of the world in terms of electric vehicles, and so on. I just wanted your take on that. KISSANE: Thank you, Clemente. It’s an excellent question. Yeah, I mean, you have countries across the African continent that not only have oil reserves, but are already producing, right? Nigeria is a—is an oil-producing country, also has more capacity, but again, you have some above-ground risks. You also have the need for investment of new infrastructure. I think one of the things that has been very interesting—and I think it’s getting—it’s getting more attention, as it deserves, is how Western governments are—some of—I think a challenge across Africa is that a lot of Western governments have sort of said, listen, we’re not going to invest in fossil fuels—or also, financial institutions, Western financial institutions—we’re not going to invest in fossil fuels, or new projects that are fossil-based. And that—you know, that’s problematic when you look across the African continent, where you still don’t have, you know, 100 percent energy access. You know, the idea of the transition to electric vehicles, which is taking a very, very long time, even here across the—across developed economies—so the need for the infusion of more capital to go into, you know, across the continent of Africa for oil and gas, that’s for their economies and for their own economic growth, I think, is really, really pivotal. And I think this is something that, you know, is being discussed across multilateral financial institutions. And also, you know, is it hypocrisy, right, for Western banks that have, you know, kind of funded the oil and gas industry, or helped to fund the oil and gas industry in the United States and many different parts of the world, and that are now sort of not allowing those funds to flow to Africa. And they have the—again, they have the—they have the resources. So you know, is it—you know, the equity of some of these decisions that are being made, I think, is one that’s—is one that’s really important. And again, I—you know, I said earlier in this talk, is that, you know, all—most of the demand for oil is not coming from North America and from Europe. All of the demand that we’re seeing and new demand that we’re going to see, is coming from Asia, and is going to come from Africa. So again, you know, how are we going to make sure that that demand is met, again, going back to that idea of energy security, so there is—there is accessibility, so there is reliable sources of energy at affordable prices, you know, without sort of thinking about kind of a whole-of-energy approach. So, I think it’s very—it’s a very complex issue. And I think, you know, Western banks who have sort of taken very sharp positions on what they will and will not fund, when it comes to new oil and gas projects, are getting sort of challenged as to, you know, what does that mean, then, for, you know, countries across Africa that are still very much in need of more energy, not less. And again, recognizing that, you know, EVs that, again, are still—are—you know, we’re seeing adoption here in the United States and across Europe, but it’s a big, big, big adoption in China. But it’s very uneven. So how do we ensure greater energy security for the continent of Africa, I think, is a really critical question. FASKIANOS: Thank you. I’ll take the next question from Kyle Bales, who is a senior at Lewis University in Romeoville, Illinois: How is the war between Russia and Ukraine having an effect on the progress of the European Green Deal? Maybe you can tell us what the European—define the European Green Deal for us, Carolyn, give us the context for that. KISSANE: Yes, so, again, this is another fantastic question. Yeah, the European Green Deal, it’s—this is—this is great. Yeah, I mean, a lot of people would say that the European Green Deal now is—that the—Russia’s invasion of Ukraine has sort of said, hey, this is why the Green Deal is so important. This is why we really need to more quickly transition to renewable energy, because look what—look what happened when we were dependent on Russia for over 30 percent of our natural gas. And look, when Russia, you know, illegally invades Ukraine and suddenly weaponizes gas, we are left very energy-insecure. It affects—it affects consumers. It affects industry across the continent. So, I think we’re seeing, not just through the Green Deal, but we’re also seeing through, sort of European green industrial policy—so in some ways, akin to what, you know, we put into effect in—this past summer, is the Inflation Reduction Act. And we’re seeing almost, kind of, this industrial competition around clean energy technologies. And so, Europe is investing—you know, I think it’s about $250 billion, the United States, it’s about 370 billion—towards the—kind of the energy transition, and helping to support domestic industries and companies to—you know, to be able to, you know, develop the technologies, and to have the, you know, the opportunity to contribute to the energy transition. So, I think one thing, though—whenever I talk about Europe, it’s really important, is to sort of recognize that, you know, when you look across Europe, you have very different policies and kind of approaches, to sort of thinking about energy, and how quickly some countries want to transition and can transition, whereas others, you know, are probably going to experience a slower transition. So, just really interesting example, as you talked about the Green Deal, is the EU taxonomy, the green taxonomy, that went into effect in the—January of 2022. And there, you had, like, really a lot of contention between France and Germany, because France wanted to make sure that nuclear was part of the green taxonomy. Germany was opposed, right, but Germany wanted to make sure natural gas was part of the green taxonomy. So ultimately, in the end, both natural gas and nuclear—and again, this was—this predated Russia’s invasion of Ukraine. But in the EU green taxonomy, you have—you know, you have both nuclear and natural gas, in addition to other renewable energies that can make up this taxonomy, that includes specific measures towards adaptation and mitigation for climate change. So you know, I think you’re seeing this kind of—some people call it a race, a competition. You know, ideally, it’s—you know, we’re kind of working together to—because we’re all sort of going in the same direction—to, you know, support the transition, and to reduce—to reduce carbon emissions, and to bring in more, sort of, cleaner energy technologies into our system. FASKIANOS: Thank you. I’m going to take the next question from Dr. Laeed Zaghlami. Q: Yes, good afternoon. This is Laeed—good afternoon, Irina. Good afternoon, Carolyn. I’m very pleased to be part of your program. Just to—want to be back to Africa and particularly to Nigeria, how practical the two projects that Nigeria is advocating for pipelines, one from—through Algeria, and the other one to Morocco through western African countries? How practical are these pipelines to supply gas to Europe and parts of some African countries? FASKIANOS: And Dr. Zaghlami, you are at Algiers University, correct? Q: Indeed, Irina, yes. I am professor at University of Algiers, faculty of information and communication. FASKIANOS: Thank you. KISSANE: Dr. Laeed, can I—can I keep you on for just one second? Can I ask you, what is the—what is the status right now? Is it—it’s planned, under construction? Where is—what is the status of those two pipelines? My understanding is that it’s—they’re proposed, but— Q: Yes, well, actually in—practically, the pipeline between Algeria and Abuja, which means through Niger and so forth, is already in progress, whereas the other project, through thirteen western African countries, they are supposed to be implemented by 2047. But is it—is there any political game or something of strategic—(inaudible)—how practical, how logical, how efficiently will be for Nigeria to have two similar project(s)? KISSANE: Yeah, no, it’s—again, thank you for the question. You know, pipelines, again, that’s why I wanted to show the—(laughs)—kind of the map of pipelines, is because, you know, a lot of pipelines transverse, you know, multiple countries, right? And this is—this requires not just, you know, a lot of cooperation, but it requires technically. It also can be very complex to build—to build pipelines. And when you’re talking about something like, as you—as you point out, these are, you know, crossing many countries. You know, I think one of the—again, one of the issues is whether or not—since, you know, what already is under construction, I think you can, you know, with confidence, that one will be completed. Anything that’s not yet under construction—and again, the timeline, 2047, is way out there—a lot of—a lot of uncertainty as to what the status of those projects will be moving forward, for various reasons, in terms of making sure that the investments are there. Someone I know that studies pipelines, he says, you know, until the steel is in the ground, you don’t have the pipeline, and so until you know that you’ve got that, you know, you’ve got all the OKs, and you feel that kind of security of being able to build it, and being able to provide the resources to supply it and to move it. I think Algeria has been a really interesting case that hasn’t gotten enough attention, in terms of Algerian gas, that has—that has helped support Europe. Over the last years, we’ve seen an increase in Algerian gas going into Europe. Again, a lot of attention on U.S. LNG and the increase of liquefied natural gas exports into Europe, but also Algeria has been, you know, very important for helping to support European energy security, and make up for some of the losses of the—of the Russian gas. And I think we’ll see more attention on Algeria, and Algeria’s role as a—you know, as an important source of energy, especially, you know, gas, going into—going into Europe, moving forward. FASKIANOS: So, I’ll take the next written question from Vincent Brooks, who is at Harvard and Diamondback Energy board of directors: How do you view the purchasing of discounted Russian oil by India, in particular relative to the purchasing by China? How are they using the oil purchased? And are you seeing more internal usage or external profit-making sales in places like Africa? And what are the implications of all of this? KISSANE: Right, great. Great question. So, all of the above—(laughs)—in some ways, right? There is definitely sort of profits that are being made. You know, I was—I was talking about this last week with someone, and you know, if you sort of put your shoe—put yourself in the shoes of India, right, so, India is a—is a rapidly growing economy, 1.4 billion. You know, if you had—if you have very high energy inflation and high oil prices, that’s going to have ripples effects across the Indian economy. And so, you know, when you have a kind of opportunity to buy, you know, pretty steep discounted oil, which, you know, they had been able to buy from Russia, you know, for purposes of national security, they’ve been buying the oil. And one of the things that’s very interesting about India is that, actually, India has been building out its refining capacity. So, a lot of that oil is both for domestic, and some of it is being sort of re-exported. But I think what we’ve seen is that they’re using that oil to also sort of enhance their capacity and capabilities as a rapidly emerging, refining power in Asia. And we see that in some ways in China, too. So, China, even though oil demand was down in 2022, much of the oil that they were buying from Russia went into its strategic supplies, which, you know, they now have access to. And again, I think, you know, a big question is what we’re going to see moving forward around oil demand in China. Wood Mackenzie just published a really interesting piece, kind of very bullish, on the expectations for oil demand in China, so whether or not they’re going to continue to buy, you know, Russian oil—and again, sort of taking advantage of these lower prices, you know. And I think—I think one of the things that—it’s kind of an inconvenient truth, whereas a lot of this oil trading used to happen in Europe, so European trading houses were kind of the main—the main points of Russian oil trade. A lot of that has been moved out, so, you know, Russia has found ways to kind of bypass some of the sanctions, and have set up—in some cases, they’ve set up trading houses. And some of those trading houses have been sort of set up in places that, you know, that they can sort of, again, bypass the compliance to the sanctions. And you have some—you have some Russian oil traders that are making a lot of money—(laughs)—selling discounted oil, and then reselling it. A really interesting case, a couple of months ago, was out of Malaysia. Malaysia announced—or, in the, you know—that they were—that 1.5 million barrels were produced and sold, but only—Malaysia doesn’t produce that much. So, those were Russian barrels that were sort of being sold under, sort of, the Malaysian—under the Malaysian barrel. So, again, I think China and India have, you know, have taken advantage. Some of this has, again—as I said, has been re-exported. And some of it, you know, has been re-exported through petroleum products, because China and India, you know, both are building and have refining capacity. FASKIANOS: Thank you. I’m going to take the next question from Bhakti Mirchandani at Columbia University: What global trajectory do you see for nuclear? The Russia-Ukraine crisis has taken some of the refining capacity offline, and nuclear has the potential to change the geopolitics of energy. And so what steps can be taken to foster nuclear energy? KISSANE: Bhakti, thank you. And I was just at Columbia earlier today for the Center for Global Energy Policy’s conference. Yeah, nuclear is very interesting, right? So when we’re thinking about, you know, decarbonizing our energy systems, you know, nuclear plays a very important role, because it’s zero-emitting. So in certain parts of the world—China being one, Saudi Arabia—you know, you have a lot of new nuclear build. You know, in other parts of the world, you have a lot of contention about nuclear. We saw that even in Germany, which have, you know, three remaining nuclear power plants. And even in the midst of massive energy crisis over the last year, there was still sort of pushback about, no, those nuclear power plants need to be shut down, whereas you would think, OK, in light of energy insecurity, let’s keep them open. So, you know, France is an interesting country. France had planned to reduce its nuclear capacity by 50 percent. But this past year, they pivoted and they’ve said, no, we’re actually going to build out more nuclear, and we’re sort of—we’re totally scrapping that idea of reducing nuclear energy. And nuclear is very important for France’s electricity system. Sweden has also announced that they are going to build new nuclear, and they’re going to increase by, I think, almost 50 percent. Again, part of this is their—to meet their targets of net zero. We also see Japan. Japan, you know, the Fukushima disaster really turned Japanese—the Japanese public off of nuclear. Very, very deep opposition to restarting the nuclear power plants. But this past year, even though there’s still safety concerns on the part of the public, the public is also very concerned about energy insecurity and higher prices. So, nuclear being a domestic source of energy. So, I think when you look at, you know, net-zero pathways, I have not seen a net-zero pathway that does not include nuclear. So, here in the United States, the net-zero America project out of Princeton, very important place for nuclear. We just have a really hard time—(laughs)—building nuclear at cost, so it’s very expensive. Usually, it’s significant cost overruns. And of course, there is the—I think they have a really significant PR problem. People—there’s still a lot of concern about the safety of nuclear. So, I think to your point, it’s very, very important for decarbonizing energy systems, but you’re going to see, I think, very disjointed approaches. Some countries are going—are embracing nuclear, and other countries are sort of doubling down on their opposition, and are not going to allow nuclear to be part of the energy system. FASKIANOS: We have so many questions, and we are just not going to get to them all. So, I’m going to take the next question from Christian Bonfili, who’s at Torcuato di Tella University in Argentina. So, do you think, Carolyn, that the landscape resulting from the Ukraine invasion by Russia, vis-à-vis securitization of gas and energy between Europe and Russia, could accelerate energy transition toward greener energy? KISSANE: Great question. I think in Europe, it is. And I think, you know, many analysts would agree that—the IEA, for example—you know, you had the, you know—how does Europe continue—you know, to enhance and achieve energy security without the dependence on Russia gas? And a lot of that is through renewable energy. You also have a lot of new attention on hydrogen, and the role that hydrogen will play. I think—I think Europe is being cautious, and so they are not saying that they are going to completely move away from gas, so as earlier questions, are they getting gas from Algeria, or are they getting gas from Norway? Are they getting more gas from the United States in the form of liquefied natural gas? And then also an uncomfortable truth is they continue to get liquefied natural gas from Russia. So, we’ve seen an increase in LNG from Russia going into Europe. That said, I think all in, you are seeing that, you know, countries across Europe are saying, OK, you know, how can we enhance our energy security? How do we build more sort of domestic energy sources? Solar, wind, we’re seeing, you know, more rapid deployment. You’ve got a lot of questions about supply chains and things like that, but I think—overall, I think the answer would be that it’s quickening the energy transition. FASKIANOS: So, I will take the moderator prerogative to just ask the final question for you to close on. And just to give us your top three—what are the major challenges for the geopolitics of oil, as you look out over the next five- to ten-year horizon, that you would leave us with, to be looking for? KISSANE: OK. You know, so I think what we saw, right, tensions between Saudi Arabia and the United States. We also have a, you know, a hot war, cold war, depending on, you know, the term you want to use, between the United States and China, and lots of sort of questions as to what that’s going to look like. I think there’s—you know, I think there’s concern that, you know, we’re not reducing demands, but we’re seeing tightening supply. And so that’s going to have, you know, very significant impacts for economies, especially economies that are already very fragile, economically fragile, politically fragile. So that concerns me a lot, in terms of, you know, what happens when, you know, economies don’t have adequate access to energy to make sure that their industries, that their—that consumers, you know, are able—that the lights can stay on, and you can get—you know, if you’re dependent on cars, you’re depending on trucks, like, all these kinds of things are really, really critical. So, I think we have to be very cautious moving forward, that we don’t take more out of the system before we have adequately set up the system to be resilient, and to be able to sort of meet the energy security demands that are not—are not—they’re not decreasing. I think they are increasing and becoming even more complex. So, I think there’s a lot of concerns and a lot of uncertainty. And you know, this definitely is going to be an area to watch in the years ahead. FASKIANOS: Carolyn Kissane—Kissane, excuse me—thank you very much for shaping and sharing this discussion, for sharing your terrific insights with us, and to all of you for your questions and comments. I’m really sorry that we could not get to them all. But we only have an hour. (Laughs.) KISSANE: Thank you. FASKIANOS: You can follow Carolyn on Twitter at @carolynkissane, and we will be announcing the fall Academic Webinar lineup in the CFR Academic Bulletin. If you’ve not already subscribed, you can email us to subscribe. Send us an email, cfracademic@cfr.org. Again, I encourage you to share with your students our CFR paid internships announcement. We also have fellowships for professors. You and they can go to CFR.org/careers, follow us at @CFR_Academic, and visit CFR.org, ForeignAffairs.com, and ThinkGlobalHealth.org for research and analysis on global issues. Thank you all again. Good luck with your finals. Carolyn Kissane, thank you so much. KISSANE: Thank you. It was a pleasure. Great. FASKIANOS: And we look forward to your continued participation in this series. KISSANE: Thank you very much. Appreciate everyone’s questions. Bye. (END)",https://www.cfr.org//themes/custom/cfr_theme/src/assets/images/cfr-logo-og.png,N,,2025-12-13 01:59:06.297435
-ID21,IBM,2025-12-12 22:52:59+00:00,"Best Data Management Software, Vendors and Data Science Platforms","Data Management News for the Week of December 12; Updates from Dremio, IBM ...",Tim King,,,,,https://solutionsreview.com/data-management/data-management-news-for-the-week-of-december-12-updates-from-dremio-ibm-salesforce-more/,"Solutions Review Executive Editor Tim King curated this list of notable data management news for the week of December 12, 2025.
-Keeping tabs on all the most relevant big data and data management news can be a time-consuming task.
-Solutions Review editors will curate vendor product news, mergers and acquisitions, venture capital funding, talent acquisition, and other noteworthy big data and data management news items.
-Top Data Management News for the Week Ending December 12, 2025 Ataccama Solidifies Data Trust Leadership With Strategic Investment From Snowflake Ventures Ataccama, which positions itself as an “agentic data trust” company, received a strategic investment from Snowflake Ventures to accelerate its unified platform for data quality, observability, cataloging, and governance.
-If that data is slow, scattered, or stale, the system breaks, no matter how good the model or prompt may be.","Solutions Review Executive Editor Tim King curated this list of notable data management news for the week of December 12, 2025.
-
-Keeping tabs on all the most relevant big data and data management news can be a time-consuming task. As a result, our editorial team aims to provide a summary of the top headlines from the last week in this space. Solutions Review editors will curate vendor product news, mergers and acquisitions, venture capital funding, talent acquisition, and other noteworthy big data and data management news items.
-
-For early access to all the expert insights published on Solutions Review, join Insight Jam, a community dedicated to enabling the human conversation on AI.
-
-Top Data Management News for the Week Ending December 12, 2025
-
-Ataccama Solidifies Data Trust Leadership With Strategic Investment From Snowflake Ventures
-
-Ataccama, which positions itself as an “agentic data trust” company, received a strategic investment from Snowflake Ventures to accelerate its unified platform for data quality, observability, cataloging, and governance. As AI and regulatory pressures grow, the partnership underscores the need for high‑quality, explainable data to fuel AI, analytics, and operations, with Ataccama’s platform intended to make data consistently accurate, accessible, and AI‑ready.​
-
-Read more → https://finance.yahoo.com/news/ataccama-solidifies-data-trust-leadership-140100161.html
-
-Collibra Joins Snowflake and Industry Leaders to Support Data and AI Interoperability Through the Open Semantic Interchange
-
-Collibra joined Snowflake’s Open Semantic Interchange (OSI), an open‑source initiative to create a universal, vendor‑neutral semantic model that standardizes fragmented data definitions across tools. By contributing governance and business‑context capabilities, Collibra aims to help organizations establish trusted, consistent metrics and semantics across dashboards, notebooks, and ML models, simplifying data operations and enabling interoperable AI.​
-
-Read more → https://www.prnewswire.com/news-releases/collibra-joins-snowflake-and-industry-leaders-to-support-data-and-ai-interoperability-across-the-ecosystem-through-the-open-semantic-interchange-302624909.html
-
-Couchbase AI Services Put Enterprises in Control of Agentic AI
-
-Couchbase introduced AI Services to provide an end‑to‑end platform for building secure, performant agentic applications, embedding AI capabilities coherently across its database suite. The services include governance and validation “guardrails” that verify agent actions against enterprise data and business rules before execution, plus partnerships like K2view for synthetic, privacy‑preserving data, so organizations can trace, audit, and control agent behavior at scale.​
-
-Read more → https://www.couchbase.com/press-releases/couchbase-ai-services-put-enterprises-in-control-of-agentic-ai/
-
-Dremio Survey: Agentic Analytics and AI-Driven Decision Making Are Top Priorities for 2026
-
-Dremio’s 2026 State of the Data Lakehouse & AI report finds that 65% of organizations rank agentic analytics and AI-driven decision-making as top priorities for 2026, with 51% citing productivity and faster innovation as the main reasons to adopt AI. Yet 70% say siloed data and weak governance remain the biggest obstacles, driving a move toward open lakehouse architectures as the foundation for enterprise-wide agentic AI.​
-
-Read more → https://www.hpcwire.com/aiwire/2025/12/10/dremio-survey-agentic-analytics-and-ai-driven-decision-making-are-top-priorities-for-2026/
-
-HERE Technologies and Precisely Expand Partnership to Provide Trusted Location Data for Business Operations
-
-HERE and Precisely expanded their partnership to combine HERE’s mapping data with Precisely’s Data Integrity Suite, delivering accurate, governed, and AI‑ready location intelligence for use cases such as property management, risk assessment, and logistics. Using machine learning and AI for real‑time updates, the joint offering emphasizes data accuracy, consistency, and transparency so enterprises can power critical decisions and analytics with trusted location data, even in highly regulated industries.​
-
-Read more → https://www.here.com/about/press-releases/here-technologies-and-precisely-expand-partnership-to-provide-trusted
-
-IBM to Acquire Confluent to Create Smart Data Platform for Enterprise Generative AI
-
-IBM agreed to acquire Confluent for 31 dollars per share to build a smart data platform that delivers trusted, real‑time data flows for generative and agentic AI across hybrid and multicloud environments. The deal will fold Confluent’s streaming and event capabilities into IBM’s Data and Automation portfolio, aiming to simplify integration, accelerate AI deployments, and drive product and revenue synergies across IBM’s software and consulting businesses.​
-
-Read more → https://newsroom.ibm.com/2025-12-08-ibm-to-acquire-confluent-to-create-smart-data-platform-for-enterprise-generative-ai
-
-Immuta December Provision Update: Strengthening the Foundation for AI-Scale Data Access
-
-Immuta’s December 2025 provisioning update focuses on removing friction from governed data access across warehouses and AI workloads, with new capabilities to simplify connecting environments, strengthen governance for platforms like Redshift and Databricks, and improve large-scale access decisioning. The company frames these enhancements as critical for a future where AI agents, not humans, are the dominant data consumers, requiring faster, policy‑driven, and intent‑aware access controls.​
-
-Read more → https://www.immuta.com/blog/immuta-december-provision-update/
-
-Informatica Empowers AI Agent Reasoning on Salesforce Einstein 1 Platform
-
-Salesforce highlighted how Informatica is using the Einstein 1 Platform and Data Cloud to let AI agents reason over governed, unified data with better context. By combining Informatica’s data management with Salesforce’s agentic AI, customers can build agents that make more accurate decisions in sales, service, and marketing while maintaining trust, governance, and compliance.​
-
-Read more → https://www.salesforce.com/news/stories/informatica-empowers-ai-agent-reasoning/
-
-Enterprises Collect More Unstructured Data and Pay More to Manage It
-
-A new Komprise survey shows that 85% of IT and data storage leaders expect their storage spend to rise in 2026, and 74% are already managing more than 5 PB of unstructured data, up 57% from 2024. Cost optimization, AI-focused data preparation and classification, and cloud migration top storage priorities, while classifying and tagging unstructured data has become both the leading strategy and the biggest challenge for AI readiness and risk reduction.​
-
-Read more → https://betanews.com/2025/12/09/enterprises-collect-more-unstructured-data-and-pay-more-to-manage-it/
-
-Neo4j Launches AuraDB Fleet Manager, a Single Control Plane for Graph Databases
-
-Neo4j introduced Fleet Manager, a unified control plane in the Aura console that lets teams register, monitor, and manage Neo4j databases across AuraDB, self‑managed, on‑prem, and hybrid deployments. The tool centralizes topology visualization, health and performance monitoring, and policy enforcement so administrators can more easily scale, upgrade, and secure large fleets of graph databases.​
-
-Read more → https://neo4j.com/blog/auradb/single-control-plane-fleet-manager/
-
-Precisely Brings Agentic AI to EngageOne RapidCX Customer Communications Platform
-
-Precisely added new agentic AI capabilities to EngageOne RapidCX, including Sentiment Analysis, Contextual Rewrite, and Readability agents plus AI Intelligent Search to improve customer communications. These agents coach tone and language in real time, rewrite content with contextual awareness, score and enhance readability, and surface compliant templates and assets so organizations can reduce risk and deliver more consistent, brand-aligned messages.​
-
-Read more → https://www.prnewswire.com/news-releases/precisely-brings-agentic-ai-to-engageone-rapidcx-customer-communications-platform-302637320.html
-
-Progress Software Brings Agentic AI to Its Latest Telerik and Kendo UI Release
-
-Progress added Agentic AI features to its Q4 2025 Telerik and Kendo UI release, including an Agentic UI Generator that turns natural‑language prompts into production‑grade, styled application pages. New AI elements such as inline prompts and prompt‑driven data grids let users interact with apps in plain language (for example, “Show all orders from last month”), making enterprise UI development and usage more conversational and efficient.​
-
-Read more → https://investors.progress.com/news-releases/news-release-details/progress-software-brings-agentic-ai-its-latest-telerik-and-kendo
-
-Qlik CEO: Enterprises Are Underachieving on AI Due to Data Readiness Gaps
-
-Qlik CEO Mike Capone warned that most enterprises are “underachieving” with AI because their data strategies, governance, and analytic readiness lag their AI ambitions. Citing IDC research, he highlighted that while organizations are heavily investing in generative and agentic AI, only a minority have the scalable, trusted data foundations needed to deploy these capabilities at scale.​
-
-Read more → https://finance.yahoo.com/news/qlik-ceo-enterprises-underachieving-ai-133000753.html
-
-Cloud Native Qumulo Extends Its Unified Data Platform With Google Cloud
-
-Qumulo announced that its cloud‑native unified data platform is now available via Google Cloud Marketplace, making it easier for customers to deploy and scale on Google’s global infrastructure. The integration lets organizations securely migrate and manage unstructured data in Google Cloud with Qumulo’s performance, scalability, and simplicity for AI, analytics, and backup workloads.​
-
-Read more → https://www.morningstar.com/news/business-wire/20251210595549/cloud-native-qumulo-extends-its-unified-data-platform-with-google-cloud
-
-Striim Releases Validata to Ensure Data Accuracy and Deliver Trusted AI
-
-Striim introduced Validata, a real‑time data validation and reconciliation product that generates verifiable, timestamped proof of data integrity across large‑scale data pipelines. Designed for AI and agentic systems, Validata detects drift and inconsistencies early, strengthens governance and auditability, and helps keep ML and analytics workloads accurate and compliant.​
-
-Read more → https://www.striim.com/press/striim-releases-validata-to-ensure-data-accuracy-and-deliver-trusted-ai/
-
-Expert Insights
-
-Watch this space each week as our editors will share upcoming events, new thought leadership, and the best resources from Insight Jam, Solutions Review’s enterprise tech community where the human conversation around AI is happening. The goal? To help you gain a forward-thinking analysis and remain on-trend through expert advice, best practices, predictions, and vendor-neutral software evaluation tools.
-
-Register for the 7th annual Insight Jam LIVE!: Human Development Focus & the Impact of AI Now
-
-This year’s show is the first since Insight Jam’s YouTube channel crossed 1 million subscribers; a showcase of how network effect works. Every keynote, panel, and highlight will be streamed live and preserved for on-demand viewing — amplifying the reach of every speaker and extending the impact of every insight in an evergreen way.
-
-Read on Solutions Review
-
-Thought Leaders: Fast, Cost Effective Innovation: What AWS Customers Got at AWS re:Invent
-
-Amazon Web Services (AWS) users swarmed Las Vegas last week to network, learn, and buzz about artificial intelligence (AI). Five days and 101 announcements later, what have they walked away with? This blog evaluates re:Invent 2025 from the customer perspective, leveraging new BARC research that assesses the needs of 421 global AI adopters, especially the 120 respondents who rely on AWS.
-
-Read on Solutions Review
-
-Thought Leaders: George Firican Adds New Lesson on GenAI Prompting for Data Governance to Popular Training Course
-
-Award-winning data governance leader and LightsOnData Founder George Firican told us: “We recently added a lesson on GenAI Prompts for Data Governance – a practical collection of reusable GenAI prompts designed to accelerate core data governance activities including policy drafting, glossary development, communication planning, ownership clarity, quality assessment, and risk evaluation.”
-
-Read on Solutions Review
-
-Contributor Series: From Prompt Design to Data Engineering – Why Architecture Matters for Agentic AI
-
-Agentic AI is having a moment. Teams everywhere are wiring up agents that plan tasks, call tools, and act autonomously. Demos look smooth, and product pitches sound sharp. But most of these systems sit on a fragile base. At their core, agents depend on data. If that data is slow, scattered, or stale, the system breaks, no matter how good the model or prompt may be.
-
-Read on Solutions Review",https://solutionsreview.com/data-management/files/2025/12/Data-Management-2025-12-12-scaled.jpg,N,,2025-12-12 18:14:34.909547
-ID33,OpenAI,2025-12-12 22:49:15+00:00,www.ft.com,Will OpenAI's $1bn deal with Disney boost video app Sora? - Financial Times,"Christopher Grimes, Cristina Criddle, Melissa Heikkilä",,,,,https://www.ft.com/content/b14490d9-3ac9-45ce-bce5-df6c39db472f,"Try unlimited access Only $1 for 4 weeks Then $75 per month.
-Complete digital access to quality FT journalism on any device.
-Check whether you already have access via your university or organisation.
-Terms & Conditions apply For individuals Discover all the plans currently available in your country For multiple readers Digital access for organisations.
-Includes exclusive features and content.","Try unlimited access
-
-Only $1 for 4 weeks
-
-Then $75 per month. Complete digital access to quality FT journalism on any device. Cancel anytime during your trial.
-
-Check whether you already have access via your university or organisation.
-
-Terms & Conditions apply
-
-For individuals
-
-Discover all the plans currently available in your country
-
-For multiple readers
-
-Digital access for organisations. Includes exclusive features and content.",https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F0fae9489-5435-46ae-88c1-945a2f5521af.jpg?source=next-barrier-page,N,,2025-12-12 19:13:56.923675
-ID22,Instacart,2025-12-12 22:48:39+00:00,Digital Commerce 360,Instacart debuts its new app in OpenAI's ChatGPT - Digital Commerce 360,"Beth Duckett, Brian Warmoth, Abbas Haleem, Kevin Williams",,,,,https://www.digitalcommerce360.com/2025/12/12/instacart-debuts-its-new-chatgpt-app/,"Instacart launched a new shopping app inside ChatGPT, bringing online grocery ordering directly into the artificial intelligence (AI) assistant.
-How the Instacart app works in ChatGPT More broadly, the app highlights how retailers are now using AI systems not just to surface products, but to carry out complete shopping tasks.
-Shoppers can ask ChatGPT a question such as, “Instacart, can you help me shop for apple pie ingredients?” OpenAI said ChatGPT may also suggest the Instacart app when users mention food, recipes or meal ideas.
-According to OpenAI, Instant Checkout for Instacart is available to ChatGPT Pro, Plus and logged-in free users in the United States.
-Why Instacart is betting on AI agents for grocery shopping For Instacart, the ChatGPT app builds on a broader partnership with OpenAI.","Instacart launched a new shopping app inside ChatGPT, bringing online grocery ordering directly into the artificial intelligence (AI) assistant.
-
-Now live, the integration makes Instacart the first grocery partner — and the first app overall — to support end-to-end shopping with Instant Checkout inside OpenAI’s ChatGPT, according to dual announcements from the companies. In time for the holidays, shoppers can build grocery carts and complete checkout directly inside a chat, with orders fulfilled through Instacart’s own delivery network.
-
-How the Instacart app works in ChatGPT
-
-More broadly, the app highlights how retailers are now using AI systems not just to surface products, but to carry out complete shopping tasks. The growing trend — often referred to as agentic shopping or “agentic commerce” — allows AI to take action on a user’s behalf, including completing entire purchases.
-
-In practice, the Instacart experience starts with a prompt inside the chat interface. Shoppers can ask ChatGPT a question such as, “Instacart, can you help me shop for apple pie ingredients?” OpenAI said ChatGPT may also suggest the Instacart app when users mention food, recipes or meal ideas.
-
-From there, shoppers can sign into their Instacart account to install the app. Once connected, the app pulls items from nearby retailers and assembles a ready-to-review cart using OpenAI’s models, the companies said.
-
-Notably, the experience draws on Instacart’s real-time inventory and pricing data, so recommendations reflect what is actually available at local stores.
-
-“Powering grocery shopping inside an AI agent requires technology that understands constantly changing, highly local inventory and converts it into accurate, real-time decisions,” stated Anirban Kundu, chief technology officer at Instacart, in the announcement.
-
-The app also incorporates shoppers’ existing preferences — such as past orders and favorite brands — similar to how personalization works in Instacart’s own app and website. Once a cart is finalized, users can check out and pay directly within ChatGPT, without switching to a separate site or app, OpenAI said. Instacart then assigns a shopper to pick and deliver the order through its network, which now spans nearly 100,000 stores across North America.
-
-Bringing payments into ChatGPT
-
-Behind the scenes, the in-chat payment flow is enabled by OpenAI’s new Instant Checkout experience.
-
-OpenAI introduced Instant Checkout earlier this year, initially with Etsy and a limited group of Shopify merchants. Since then, the company has announced additional commerce partnerships — including with Walmart and Target — as it works to expand in-chat shopping.
-
-Instant Checkout runs on the Agentic Commerce Protocol, an open-source framework co-developed by OpenAI and Stripe. Payments are processed through Stripe, with Instacart support for digital wallets such as Apple Pay and Google Pay expected to roll out in the coming weeks.
-
-According to OpenAI, Instant Checkout for Instacart is available to ChatGPT Pro, Plus and logged-in free users in the United States. The full Instacart experience with Instant Checkout is available on desktop and mobile web. The standalone Instacart app is available on iOS and Android, with Instant Checkout expected to launch on those native platforms in the coming weeks.
-
-Why Instacart is betting on AI agents for grocery shopping
-
-For Instacart, the ChatGPT app builds on a broader partnership with OpenAI. Instacart was an early contributor to OpenAI’s Operator research preview, according to the companies, and continues to use OpenAI APIs alongside its own AI technology.
-
-Earlier this year, Instacart launched Smart Shop, which uses generative AI and machine learning to personalize food recommendations. In November, Instacart followed with additional AI tools for grocery retailers, including an agentic shopping assistant called Cart Assistant. Kroger is among the first retailers planning to offer Cart Assistant to customers.
-
-Instacart said its partnerships with OpenAI, as well as Google and Microsoft, are “helping define how grocery shopping works across the next generation of digital agents.”
-
-Looking ahead, the company added that it expects ‘every generative AI company to connect more directly with Instacart’s grocery engine, linking their massive consumer reach with our network of retail partners and driving incremental demand.”
-
-What Instacart’s partnership with OpenAI signals for AI-driven commerce
-
-The Instacart launch shows chat-based commerce moving closer to real transactions, with grocery emerging as an early proving ground for agentic shopping.
-
-Early data suggests the shift is already underway. Adobe data indicates traffic from AI-driven sources to ecommerce sites rose 758% year over year between Nov. 1 and Dec. 1. The firm also projected that traffic from large language models (LLMs) to retail sites would increase 515% to 520% during the 2025 holiday season, compared with 2024.
-
-Shopping activity inside ChatGPT is also increasing. Shopping has gained a larger share of mobile ChatGPT queries in recent months, according to Sensor Tower data cited by Bain & Company. From December 2024 through June 2025, shopping-related queries rose from 7.8% to 9.8% of all searches. This represents a 25% category gain on top of roughly 70% overall growth in ChatGPT usage, Bain said.
-
-That growth effectively means shopping queries doubled over the six-month period from January to June. Bain noted that “optimizing for AI (AIO) — also called generative engine optimization (GEO) — with ChatGPT and Perplexity is no longer an option for B2B and consumer brands.”
-
-Against that backdrop, OpenAI has continued to expand ChatGPT’s shopping capabilities. In November, the company rolled out new shopping research features that add personalized recommendations, feedback and discovery tools across its apps and subscription tiers. The updates position ChatGPT more directly against competitors such as Perplexity and Google, which are also expanding agentic shopping tools.
-
-Do you rank in our databases?
-
-Submit your data and we’ll see where you fit in our next ranking update.
-
-Sign up
-
-Stay on top of the latest developments in the online retail industry. Sign up for a complimentary subscription to Digital Commerce 360 Retail News. Follow us on LinkedIn, TikTok, X (formerly Twitter), Facebook and YouTube. Be the first to know when Digital Commerce 360 publishes news content.
-
-Favorite",https://www.digitalcommerce360.com/wp-content/uploads/2025/12/instacart-chatgpt-app.webp,N,,2025-12-12 19:13:23.167252
-ID28,Levi Strauss,2025-12-12 22:48:33+00:00,www.youtube.com,Broadcom shares fall as margin warning sparks AI payoff worries | REUTERS - YouTube,,,,,,https://www.youtube.com/watch%3Fv%3D3vIRhZ2Ve0U,"Broadcom shares fell more than 11% after the chipmaker warned growing sales of lower-margin custom AI processors were squeezing profitability, ...",Not Available,,Y,,2025-12-12 21:05:26.871379
-ID47,Wellington Management,2025-12-12 22:24:21+00:00,Pulse 2.0,Crisp Raises $26 Million In Series B1 Funding To Scale Vertical AI For Retail And Supply Chains,Amit Chowdhry,,,,,https://pulse2.com/crisp-26-million-series-b/,"Crisp has closed a $26 million Series B1 financing round to accelerate the expansion of its vertical artificial intelligence solutions for the retail industry.
-The round was led by Paine Schwartz Partners, with participation from Blue Cloud Ventures, FirstMark Capital, Cox, DNX, Prologis, and Wellington Management.
-Based in Bentonville, Arkansas, Crisp positions itself as a leading AI-powered platform designed specifically for retail data.
-Paine Schwartz Partners, which specializes in sustainable food chain investing, highlighted Crisp’s role at the intersection of commerce, supply chain operations, and sustainability.
-Are and his team have identified the most pressing business challenges faced by every CPG brand and their retail partners.","Crisp has closed a $26 million Series B1 financing round to accelerate the expansion of its vertical artificial intelligence solutions for the retail industry. The round was led by Paine Schwartz Partners, with participation from Blue Cloud Ventures, FirstMark Capital, Cox, DNX, Prologis, and Wellington Management. The financing brings Crisp’s total capital raised since its founding in 2017 to $127 million.
-
-Based in Bentonville, Arkansas, Crisp positions itself as a leading AI-powered platform designed specifically for retail data. Unlike horizontal AI tools that serve broad use cases such as chatbots, Crisp focuses on industry-specific applications, including reducing out-of-stocks, improving e-commerce performance, and optimizing assortment and space planning for consumer packaged goods brands and retailers.
-
-The company plans to use the new capital to accelerate growth across multiple fronts. These include expanding platform functionality for CPG and retail partners, deepening data partnerships, investing further in its flagship Crisp AI Agent product, and scaling its global workforce through strategic hiring. Crisp currently supports more than 7,000 brands and employs over 250 people.
-
-Paine Schwartz Partners, which specializes in sustainable food chain investing, highlighted Crisp’s role at the intersection of commerce, supply chain operations, and sustainability. The firm cited the company’s ability to deliver measurable returns through data-driven and AI-enabled systems as a key factor behind the investment.
-
-Crisp has also recently launched its AI Agent Studio, which it describes as the retail industry’s first purpose-built AI agent platform. The platform is designed to orchestrate supply chain insights and trigger real-time actions that improve retail performance. This capability is powered by Crisp’s underlying retail data foundation, which integrates, cleanses, and models data from a wide range of commerce partners.
-
-Existing lenders JPMorgan and Silver Lake Waterman continue to support the company as capital partners, reinforcing Crisp’s financial position as it pursues accelerated growth in the global retail and supply chain technology markets.
-
-KEY QUOTES:
-
-“Crisp is an example of a company laser-focused on creating smarter data and AI-driven systems that power the global food chain. They have proven repeatedly that they have the ability to scale and build the solutions that are needed to address the toughest challenges within the global food supply chain.”
-
-Kevin Schwartz, CEO and Managing Partner, Paine Schwartz Partners
-
-“Investors are looking to support companies that are demonstrating measurable change through advanced technology. Paine Schwartz recognizes that Crisp represents a compelling opportunity to invest in a scaling, high-ROI vertical AI data platform operating at the intersection of commerce, supply chain, and sustainability.”
-
-Are Traasdahl, founder and CEO of Crisp
-
-“FirstMark has been an investor in Crisp from the beginning because we believe in their technology, their team, and their mission. Are and his team have identified the most pressing business challenges faced by every CPG brand and their retail partners. Crisp leverages an intelligent, connected data strategy supported by the latest AI and automation tools. As a vertical AI solution that touches production, inventory, logistics, pricing, marketing and more, Crisp is an expert in AI and retail data, and they are well-positioned to lead the market.”",https://cdn.pulse2.com/cdn/2025/12/Crisp-Logo.jpeg,N,,2025-12-12 20:07:40.578435
-ID14,Delta Airlines,2025-12-12 22:18:53+00:00,www.travelweekly.com,Centurion vs. Sky Club: J.D. Power ranks top airline lounge brands - Travel Weekly,Robert Silk,,,,,https://www.travelweekly.com/Travel-News/Airline-News/ranking-airport-lounge-Centurion-Sky-Club-Admirals,"American Express Centurion is the most popular airport lounge brand in the U.S., according to the inaugural J.D.
-The survey included seven airline lounge brands: Centurion, Sky Club, Capital One, Chase Sapphire, American Airlines Admirals Club, Alaska and United Club.
-Airport lounge brands, by the numbers The Centurion Lounge brand led the way with a customer satisfaction index of 782 on J.D.
-Food and beverage offerings are the biggest draw of lounges, J.D.
-More than half of those, 38%, said they visited an airport lounge to avoid expensive airport eating and drinking options.","American Express Centurion is the most popular airport lounge brand in the U.S., according to the inaugural J.D. Power Airport Lounge Benchmark survey.
-
-Among branded airline lounges, Delta Sky Club leads the way.
-
-The survey of 1,430 travelers who visited a U.S. airport lounge in the past year was fielded from September through October.
-
-Another interesting finding: Access to a preferred lounge has become a major driver of airport and airline selection.
-
-The survey included seven airline lounge brands: Centurion, Sky Club, Capital One, Chase Sapphire, American Airlines Admirals Club, Alaska and United Club. Sizeable lounge networks The Club and Escape Lounges weren't included in the published report because survey sample size wasn't large enough, said Michael Taylor, J.D. Power's managing director of travel, hospitality and retail.
-
-The survey also didn't include the United Polaris, American Flagship or Delta One premium lounge brands, nor did it include international airline-branded lounges.
-
-Airport lounge brands, by the numbers
-
-The Centurion Lounge brand led the way with a customer satisfaction index of 782 on J.D. Power's 1,000-point scale.
-
-Capital One and Sky Club brands were next with 773 points, followed by Chase Sapphire with 771 points. In the bottom half of the survey were Admirals Club with 753 points, Alaska lounges with 748 points and United Club with 705 points.
-
-Food and beverage offerings are the biggest draw of lounges, J.D. Power found, with 74% of respondents citing F&B as a reason for going to a lounge. More than half of those, 38%, said they visited an airport lounge to avoid expensive airport eating and drinking options.
-
-Among lounge visitors, 34% said they gained access from a credit card perk, 21% gained access due to elite status with an airline and 18% had lounge memberships.
-
-Notably, 47% of respondents said access to a preferred airport lounge is a driver of airport and connecting airport selection.
-
-Taylor said he was surprised by how high that figure was. But he also said he was among the flyers whose flight selection is shaped by lounge access. He likes to fly early on Delta out of LaGuardia so he can take advantage of his favorite Sky Club.
-
-""It definitely does impact the flights I take,"" Taylor said.",https://ik.imgkit.net/3vlqs5axxjf/TW/uploadedImages/Art/2024/0722/T0722CENTURIONDCA3_C_HR.jpg?n=4232&tr=w-1200%2Cfo-auto,N,,2025-12-13 08:59:34.804395
-ID1,Adobe,2025-12-12 22:18:12+00:00,www.curetoday.com,Fertility Decisions Influenced by Age and Parental Status in Premenopausal Breast Cancer,Ryan Scott,,,,,https://www.curetoday.com/view/fertility-decisions-influenced-by-age-and-parental-status-in-premenopausal-breast-cancer,"The prospective cohort evaluated fertility preservation strategies in this patient population, and data were shared at the 2025 San Antonio Breast Cancer Symposium.
-“Most premenopausal women with early breast cancer accepted the use of a genetic agonist during chemotherapy to preserve ovarian function.
-Inclusion criteria included stage I to III invasive breast cancer, premenopausal status at diagnosis, age 18 to 45, and candidacy for neoadjuvant or adjuvant chemotherapy.
-“Results from the PREFER study may provide novel prospective evidence to improve oncofertility counseling for premenopausal women with early breast cancer.
-Reference “Fertility and ovarian function preservation in premenopausal women with early breast cancer: results from the multicenter prospective PREgnancy and FERtility (PREFER) study,” by Matteo Lambertini.","Most premenopausal women with early breast cancer accepted gonadotropin-releasing hormone agonist (GnRHa) therapy during chemotherapy to preserve ovarian function, whereas uptake of cryopreservation strategies remained lower, particularly in older premenopausal patients, according to data from the Premenopausal Breast Cancer Patients’ Fertility Preservation (PREFER) study, a large Italian multicenter prospective cohort.
-
-The prospective cohort evaluated fertility preservation strategies in this patient population, and data were shared at the 2025 San Antonio Breast Cancer Symposium. Among patients aged 41 to 45 years, 75% received GnRHa alone, and 25% declined any procedure. Among patients 40 years or younger, 89% received GnRHa, 25% underwent cryopreservation, and 9% underwent no procedure. Acceptance varied according to hormone receptor status, with higher GnRHa uptake in patients with hormone receptor-positive disease. Factors associated with cryopreservation acceptance included younger age, absence of prior children, more recent year of diagnosis, and lower tumor grade.
-
-“Most premenopausal women with early breast cancer accepted the use of a genetic agonist during chemotherapy to preserve ovarian function. Factors associated with acceptance included younger age at diagnosis, no prior children, more recent year of diagnosis, and lower tumor grade,” explained Matteo Lambertini, associate professor and consultant in medical oncology at the University of Genova and IRCCS Policlinico San Martino Hospital in Genova, Italy.
-
-Importantly, controlled ovarian stimulation for oocyte cryopreservation did not negatively impact disease-free survival or overall survival.
-
-PREFER Study: A National Oncofertility Initiative
-
-Oncofertility counseling is recommended for all premenopausal women with newly diagnosed early breast cancer who are candidates for chemotherapy. Standard approaches include cryopreservation of oocytes, embryos, and ovarian tissue, with concurrent GnRHa therapy recommended during chemotherapy to preserve ovarian function. However, data on the uptake of these strategies and reasons for patient refusal have been limited.
-
-The analysis presented at the 2025 symposium represents the first multicenter evaluation of patients enrolled in PREFER between November 2012 and December 2024. PREFER was conducted at 23 Italian centers. Inclusion criteria included stage I to III invasive breast cancer, premenopausal status at diagnosis, age 18 to 45, and candidacy for neoadjuvant or adjuvant chemotherapy. Patients with stage IV disease, prior chemotherapy or radiotherapy, severe psychiatric disorders, or inability to provide consent were excluded.
-
-The primary objective was to evaluate patient needs and choices regarding ovarian function and fertility preservation, including acceptance rates and reasons for refusal. Secondary objectives included safety of controlled ovarian stimulation for oocyte cryopreservation in patients 40 years or younger, with disease-free survival and overall survival as endpoints. Subgroup analyses were performed according to hormone receptor status.
-
-Key Findings: Fertility Preservation by Age and Hormone Receptor Status
-
-In patients aged 41 to 45 years, 78% of those with hormone receptor-positive disease chose GnRHa alone, while 22% had no procedure. Among hormone receptor-negative patients, 69% received GnRHa alone and 31% declined any intervention. The most frequently reported reason for refusal in this age group was completion of family planning (11%).
-
-Among patients 40 years or younger with hormone receptor-positive disease, 90% received GnRHa, 26% underwent cryopreservation, and 8% had no procedure. For hormone receptor-negative patients, 87% received GnRHa, 21% underwent cryopreservation, and 12% had no procedure. Younger age strongly predicted oocyte cryopreservation, as did having no prior children, more recent year of diagnosis, and lower tumor grade. Hormone receptor-negative status was associated with lower uptake relative to hormone receptor-positive disease.
-
-Patients who underwent oocyte cryopreservation (127 patients) were younger, with a median age of 33, compared with 36 among those who did not pursue cryopreservation (406 patients). Parental status strongly influenced decisions: 87% of patients who pursued cryopreservation had no prior children compared with 35% who did not. Tumor grade and type of chemotherapy also differed between groups, with anthracycline- and taxane-based regimens more frequently used in patients not undergoing cryopreservation.
-
-Safety and Clinical Implications
-
-Among patients 40 years or younger, disease-free survival remained high in both groups. Four-year disease-free survival was 95% in patients who underwent oocyte cryopreservation versus 87% among those who did not. Overall survival at four years was 97% in those who had cryopreservation versus 96% in those who did not. These results suggest that undergoing controlled ovarian stimulation does not negatively affect outcomes.
-
-“Results from the PREFER study may provide novel prospective evidence to improve oncofertility counseling for premenopausal women with early breast cancer. From a public health perspective, these findings may help optimize collaboration between oncology and fertility units, including resource allocation,” Lambertini concluded.
-
-Reference
-
-“Fertility and ovarian function preservation in premenopausal women with early breast cancer: results from the multicenter prospective PREgnancy and FERtility (PREFER) study,” by Matteo Lambertini. Presented at: San Antonio Breast Cancer Symposium; December 9-12, 2025; San Antonio, TX. Abstract GS3-02.",https://cdn.sanity.io/images/0vv8moc6/curetoday/e5f48fdc3aa00783435808678f9083e81a3db956-1280x720.jpg,N,,2025-12-12 21:04:41.917669
-ID32,Nvidia,2025-12-12 22:11:35+00:00,Transport Topics,China Turns Away Nvidia H200 Despite US Export Approval - TT - Transport Topics,Maggie Eastland,,,,,https://www.ttnews.com/articles/china-turns-away-nvidia-h200,"“They’re rejecting our chips,” Sacks said in an interview on Bloomberg Tech, citing an unspecified news article he had seen that day.
-An 18-month lag behind the latest Nvidia chips was part of the Trump administration’s justification for the decision.
-Even so, he defended the decision to allow China to access H200 chips, which he called a “lagging” technology and no longer state-of-the-art.
-Last week, as officials weighed the decision, Huang told reporters in Washington that he had no clue if China would accept H200 chips.
-Beijing has yet to publicly agree to allow imports of Nvidia’s H200 products.","[Stay on top of transportation news: Get TTNews in your inbox.]
-
-China has figured out the U.S. strategy for allowing it to buy Nvidia Corp.’s H200 and is rejecting the AI chip in favor of domestically developed semiconductors, White House AI czar David Sacks said, citing news reports.
-
-President Donald Trump said on Dec. 8 he would allow shipments of Nvidia’s H200 to China, part of an administration effort backed by Sacks to challenge Chinese tech champions like Huawei Technologies Co. by bringing American competition to their home market. On Dec. 12, Sacks signaled that he was uncertain about whether that approach would work.
-
-“They’re rejecting our chips,” Sacks said in an interview on Bloomberg Tech, citing an unspecified news article he had seen that day. “Apparently they don’t want them, and I think the reason for that is they want semiconductor independence.”
-
-Sacks’ comments raise questions about whether Nvidia will be able to recover revenue from China, a data center market it has removed entirely from its forecasts but that CEO Jensen Huang has put at $50 billion this year. Bloomberg Intelligence analysts estimate annual H200 revenue in China to be a $10 billion opportunity — but only if the nation accepts the U.S. firm’s chips.
-
-(Bloomberg Technology via YouTube)
-
-In a statement from a spokesperson, Nvidia said it continues to work with the administration on H200 licenses for vetted customers. “While we do not yet have results to report, it’s clear that three years of overbroad export controls fueled America’s foreign competitors and cost U.S. taxpayers billions of dollars,” the company said.
-
-China is weighing a package of incentives worth as much as $70 billion to support its local chipmaking industry, Bloomberg reported Dec. 12, underscoring Beijing’s resolve to reduce its reliance on foreign chipmakers such as Nvidia. It suggests the government will continue to support companies like Huawei and Cambricon Technologies Corp. even with the H200 cleared by the U.S. for export to China.
-
-The H200, which was introduced in 2023 and began shipping to customers last year, is part of the Hopper generation of Nvidia’s chips, second-best to the Blackwell line and two generations behind the upcoming Rubin series. An 18-month lag behind the latest Nvidia chips was part of the Trump administration’s justification for the decision.
-
-Sacks, a venture capitalist who joined the administration in January, identified China’s desire to prop up and subsidize Huawei as a key reason for its H200 reluctance. Even so, he defended the decision to allow China to access H200 chips, which he called a “lagging” technology and no longer state-of-the-art.
-
-RELATED: Rivian Unveils AI Chip for Automated Driving, Ditches Nvidia
-
-“What you see is China’s not taking them because they want to prop up and subsidize Huawei,” Sacks said. “That was part of our calculation, of selling not the best but lagging chips to China, is that you can take market share away from Huawei, but I think the Chinese government has figured that out, and that’s why they’re not allowing them.”
-
-The H200 decision was motivated by an assessment that Huawei — Nvidia’s Chinese archrival — offers AI systems with comparable horsepower, including its Cloud Matrix 384 platform, which links hundreds of processors together to compensate for lower performance in individual chips. Some U.S. officials saw the H200 as compromise from Nvidia’s earlier push to export a version of the Blackwell chip to China, according to a person familiar with the matter.
-
-Last week, as officials weighed the decision, Huang told reporters in Washington that he had no clue if China would accept H200 chips. On Dec. 8, Trump said in a Truth Social post that President Xi Jinping of China responded positively to the possibility of H200 export approvals.
-
-Beijing has yet to publicly agree to allow imports of Nvidia’s H200 products. It also has yet to publicly reject them, despite the recent U.S. policy change. Earlier this year, China shunned the H20, a significantly less capable chip Trump allowed this summer.",https://www.ttnews.com/sites/default/files/styles/social_media_1200x630/public/2025-12/Nvidia-1200_1.jpg,N,,2025-12-12 19:13:53.413834
-ID18,Eli Lilly,2025-12-12 22:11:33+00:00,TipRanks Financial,U.S. Regulators Pushed to Fast-Track Approval of Eli Lilly's Weight-Loss Pill: Reports,"Joel Baglole, joel-bagloletipranks-com",,,,,https://www.tipranks.com/news/u-s-regulators-pushed-to-fast-track-approval-of-eli-lillys-weight-loss-pill-reports,"Media reports say that the U.S. Food and Drug Administration (FDA) is being pushed internally to fast-track approval of Eli Lilly’s (LLY) experimental weight-loss pill called Orforglipron.
-If adopted, the new timeline could see Eli Lilly’s weight-loss pill approved as early as March 28 of next year.
-Eli Lilly has already begun manufacturing Orforglipron in anticipation of regulatory approval.
-Eli Lilly and Novo Nordisk dominate the obesity treatment market that analysts estimate could be worth $150 billion annually by 2030.
-The stock of Eli Lilly has a consensus Strong Buy rating among 20 Wall Street analysts.","Media reports say that the U.S. Food and Drug Administration (FDA) is being pushed internally to fast-track approval of Eli Lilly’s (LLY) experimental weight-loss pill called Orforglipron.
-
-Claim 50% Off TipRanks Premium and Invest with Confidence
-
-Unlock hedge-fund level data and powerful investing tools designed to help you make smarter, sharper decisions
-
-Stay ahead of the market with the latest news and analysis so your portfolio is always positioned for maximum potential
-
-Reuters (TRI) was the first to report that Eli Lilly & Co. is pushing for a faster review process as it races to bring the new weight-loss pill to market. The FDA Commissioner’s Office is said to want to cut the time reviewers spend checking whether the drug applications have enough material from 60 days to one week for Eli Lilly’s pill and other medicines under a new, speedier process.
-
-However, after internal pushback, the Commissioner’s Office is said to now be pushing to cut those reviews to two or three weeks from 60 days. If adopted, the new timeline could see Eli Lilly’s weight-loss pill approved as early as March 28 of next year. Currently, Eli Lilly has May 20 circled as the likely decision date for Orforglipron.
-
-Eli Lilly’s Weight-Loss Drug Race
-
-Eli Lilly is racing to bring its new weight-loss drug to market as it tries to stay a step ahead of archrival Novo Nordisk (NVO), which is expected to submit its own weight-loss pill for FDA approval this December or in January 2026. Eli Lilly has already begun manufacturing Orforglipron in anticipation of regulatory approval.
-
-Eli Lilly and Novo Nordisk dominate the obesity treatment market that analysts estimate could be worth $150 billion annually by 2030. Weight-loss pills are expected to be a game-changer for the medications, which are currently taken by injection using needles. Orforglipron helped patients lose 12.4% of their body weight in a late-stage clinical trial.
-
-Is LLY Stock a Buy?
-
-The stock of Eli Lilly has a consensus Strong Buy rating among 20 Wall Street analysts. That rating is based on 18 Buy and two Hold recommendations issued in the last three months. The average LLY price target of $1,131.06 implies 11.10% upside from current levels.
-
-Read more analyst ratings on LLY stock",https://blog.tipranks.com/wp-content/uploads/2025/12/aaa-75-750x406.jpg,N,,2025-12-12 18:14:25.774027
-ID7,Best Buy,2025-12-12 22:05:44+00:00,www.zacks.com,"VRT vs. SMCI: Which Data Center Infrastructure Stock Is a Better Buy? - December 12, 2025",Not Available,,,,,https://www.zacks.com/stock/news/2803851/vrt-vs-smci-which-data-center-infrastructure-stock-is-a-better-buy,"Please stand by We're getting everything ready for you.
-The page is loading, and you'll be on your way in just a few moments.
-Thanks for your patience!","Please stand by
-
-We're getting everything ready for you. The page is loading, and you'll be on your way in just a few moments.
-
-Thanks for your patience!",,N,,2025-12-12 22:05:04.897126
