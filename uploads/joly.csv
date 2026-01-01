@@ -4,6 +4,229 @@ ID25,J&J,2026-01-01 22:17:51+00:00,Southeastern Conference,Raven Johnson on No. 
 
 Johnson explains how she steps into a leadership role on the court without Ta'Niya Latson and credits the Gamecocks' winning mentality, sharing the goal of capturing another national title.",https://www.secsports.com/imgproxy/CNCAMjOO6Q_sNCFI7OhQGryGM3YiUj0Eu4TqmvNyYxQ/rs:fit:1200:630:0:g:ce/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3NlY3Nwb3J0cy1wcm9kL3VwbG9hZC8yMDI2LzAxLzAxL2I5YmY1ZGMyLTM2MDQtNDYyNS05OTI5LWQxYjdiNDk1MmRlNi5qcGc.jpg,N,,2026-01-01 17:58:40.279723
 ID21,IBM,2026-01-01 21:14:45+00:00,CHOSUNBIZ,IBM PC sparks one-computer-per-household era in U.S. - CHOSUNBIZ,Not Available,,,,,https://biz.chosun.com/en/en-policy/2026/01/02/QWVUXKAN75ESZFPKBSR66JQITY/,IBM PC sparks one-computer-per-household era in U.S. IBMs open‑hardware gamble enabled a thriving PC industry and spawned countless compatible rivals,Not Available,https://biz.chosun.com/resizer/v2/VPBGPI5VZBC7TMZFNA4G5RBE4U.jfif?auth=636c550dc3b1432e1bc8a04eccde747413699c5ccfb382ff854511556e169c6f&width=1107&height=581&smart=true,N,,2026-01-01 17:13:16.038449
+ID21,IBM,2026-01-01 20:34:15+00:00,Amazon Web Services,Telco Network Cloud (TNC) on Red Hat OpenShift Service on AWS (ROSA),"hybrid application solutions, IBM Systems",,,,,https://aws.amazon.com/blogs/ibm-redhat/telco-network-cloud-tnc-on-red-hat-openshift-service-on-aws-rosa/,"The Telco Network Cloud (TNC) is a Red Hat reference architecture used by telecommunications operators to deploy telecommunications network functions on Red Hat OpenShift Platform.
+This reference architecture provides a central OpenShift cluster to manage the different OpenShift clusters that are deployed across the network for hosting the different 4G / 5G Core and RAN network functions.
+The workload clusters shown on the right side of the figure include: TNC Core WorkLoad (CWL) Clusters OpenShift cluster to host 5G core network functions TNC RAN WorkLoad (RWL) Clusters OpenShift cluster to host Radio Access Network (RAN) network functions TNC RHOSO Clusters Red Hat OpenStack Service on OpenShift (RHOSO) clusters to run virtualized 4G network functions TNC Virtualization Enabled WorkLoad (VEWL) Clusters OpenShift cluster to host virtualized workloads in OpenShift virtualization TNC Artificial Intelligence WorkLoad (AIWL) Clusters OpenShift cluster for training, tuning and serving AI models TNC clusters support a hybrid cloud model allowing customers to deploy on premises, on bare metal servers, or in cloud.
+This document captures the details for deploying the TNC Management cluster in the Amazon Web Service (AWS) , as shown in the figure below: The TNC Management cluster can be deployed on AWS by using the Red Hat OpenShift Service on AWS (ROSA), which is a fully managed service that provides Red Hat OpenShift clusters on AWS.
+Private ROSA Cluster A ROSA cluster can be deployed as a public cluster as shown in the figure below: In this configuration the ROSA nodes can reach the internet via the NAT and internet gateways.","The Telco Network Cloud (TNC) is a Red Hat reference architecture used by telecommunications operators to deploy telecommunications network functions on Red Hat OpenShift Platform. This reference architecture provides a central OpenShift cluster to manage the different OpenShift clusters that are deployed across the network for hosting the different 4G / 5G Core and RAN network functions. The figure below shows the high level TNC architecture:
+
+Solution overview:
+
+The left hand of the figure shows the management cluster that is used to deploy the different workload clusters, using a GitOps based Zero Touch Provisioning (ZTP) approach and then manage the day 2 operations and life cycle of those workload clusters. The workload clusters shown on the right side of the figure include:
+
+TNC Core WorkLoad (CWL) Clusters
+
+OpenShift cluster to host 5G core network functions
+
+TNC RAN WorkLoad (RWL) Clusters
+
+OpenShift cluster to host Radio Access Network (RAN) network functions
+
+TNC RHOSO Clusters
+
+Red Hat OpenStack Service on OpenShift (RHOSO) clusters to run virtualized 4G network functions
+
+TNC Virtualization Enabled WorkLoad (VEWL) Clusters
+
+OpenShift cluster to host virtualized workloads in OpenShift virtualization
+
+TNC Artificial Intelligence WorkLoad (AIWL) Clusters
+
+OpenShift cluster for training, tuning and serving AI models
+
+TNC clusters support a hybrid cloud model allowing customers to deploy on premises, on bare metal servers, or in cloud. This document captures the details for deploying the TNC Management cluster in the Amazon Web Service (AWS) , as shown in the figure below:
+
+The TNC Management cluster can be deployed on AWS by using the Red Hat OpenShift Service on AWS (ROSA), which is a fully managed service that provides Red Hat OpenShift clusters on AWS. It is jointly supported by Red Hat and AWS, with Red Hat operating the platform. Using ROSA to deploy the management cluster in the public cloud means that the same OpenShift platform is being used on-prem as well as in the public cloud, making it easier to have streamlined operations across the hybrid cloud. This also gives operators the flexibility to deploy the primary instance of the management cluster in the cloud, or deploy it on-premises and use the public cloud in case of disaster recovery scenarios.
+
+TNC Management Cluster
+
+The TNC Management (MGMT) cluster provides MANagement & Orchestration (MANO) capabilities to deploy the workload clusters (where 4G and 5G core or RAN components are deployed), to monitor them as well as to manage the life cycle of those clusters. The MGMT cluster is deployed on the Red Hat OpenShift Container Platform based cluster (either on-prem or in the public cloud) that will host the Red Hat provided tools to manage the remote workload clusters. 3rd party management tools can also be installed on the management cluster to augment the automation capabilities provided by the Red Hat tools or to manage the workloads being deployed across the network.
+
+The figure below shows the different applications / tools that make up the MGMT cluster as its deployed on ROSA:
+
+The goal is to start with a ROSA cluster and install the different applications / tools on that ROSA cluster such that it can deploy, monitor and manage / operate workload clusters across the hybrid estate. As shown in the figure above, the following products / components make up the MGMT cluster:
+
+Red Hat Advanced Cluster Management for Kubernetes (RHACM)
+
+Provides the ability to deploy apps and control policies across multiple OpenShift clusters, permitting manageability of multiple environments at scale
+
+RHACM, along with OpenShift GitOps and Topology Aware Lifecycle Manager (TALM) operators, is being used to provide GitOps based Zero Touch Provisioning (ZTP) of the on-prem workload clusters
+
+Red Hat Ansible Automation Platform (AAP)
+
+Ansible Automation Platform helps to manage complex deployments by adding control, knowledge, and delegation to Ansible-powered environments. It will provide an entry point via an API for 3rd parties to interact with the environment
+
+AAP on the MGMT cluster can be used to automate tasks for configuring the on-prem clusters
+
+Red Hat Quay
+
+Red Hat Quay is a private container registry that stores, builds, and deploys container images
+
+Quay on the MGMT cluster is being used to provide the private container image repository for deploying the on-prem clusters in an air-gapped / disconnected environment
+
+ACM Observability
+
+RHACM can be used to aggregate the metrics / events from all the on-prem workload clusters and provide a single pane of glass for operators to monitor those clusters
+
+Vault Secrets Operator (VSO)
+
+VSO can be used to retrieve credentials from a vault server and provide those credentials for consumption by the different workloads running in OpenShift clusters. As GIT is being used to hold the cluster definitions and configurations for the GitOps based ZTP process, we do not want to publish credentials in the GIT repository. The VSO facilitates the GitOps process without requiring to store credentials in GIT
+
+Vault Server
+
+Optionally, the vault server can also be deployed on the TNC MGMT cluster. Regardless of whether the vault server is installed locally or installed external to the ROSA cluster, VSO can retrieve credentials from that vault server and create secrets in the local ROSA cluster
+
+Storage
+
+The different applications deployed on the MGMT cluster need persistent storage. The ROSA cluster uses AWS EBS to provide block storage to the cluster workloads. AWS S3 service is being used to provide object storage.
+
+ROSA Cluster Design / Configuration
+
+The sections below explain the ROSA design to host a TNC Management cluster for deploying, managing and monitoring on-premises, disconnected / air-gapped OpenShift clusters via GitOps based Zero Touch Provisioning (ZTP).
+
+Hosted Control Plane Vs. Classic Architecture
+
+The ROSA service can be setup in one of the following two architectures:
+
+ROSA with Hosted control plane (HCP)
+
+The control plane is hosted within a service account and managed by Red Hat with the worker nodes deployed in the customer’s AWS account.
+
+ROSA Classic Architecture
+
+The control plane and worker nodes are deployed in the customer’s AWS account and has support for the baremetal (metal3) operator
+
+While the preference is for using ROSA with HCP for deploying the TNC MGMT cluster, ROSA on HCP currently does not support the baremetal (metal3) operator for OpenShift. The baremetal operator is required for the RHACM ZTP procedure and hence ROSA with HCP cannot be used for hosting the TNC MGMT cluster.
+
+NOTE: Support for the baremetal operator on ROSA with HCP is expected to be available in the first half of 2026.
+
+Public Vs. Private ROSA Cluster
+
+A ROSA cluster can be deployed as a public cluster as shown in the figure below:
+
+In this configuration the ROSA nodes can reach the internet via the NAT and internet gateways. Ingress traffic from the internet can also reach the ROSA cluster by using the external load balancers provided by ROSA for the API endpoint and application ingress routers.
+
+While the public ROSA cluster provides protection against attacks by using security groups to filter ingress traffic, a private ROSA cluster breaks all ingress connectivity from the internet by dropping the external load balancers and replacing them with internal / private load balancers, as shown in the figure below:
+
+With a private ROSA cluster, the ROSA nodes can still reach destinations on the internet via the NAT gateway, however ingress access to the OpenShift API and ingress routers is only available via the internal load balancers. The internal load balancers can be reached from within the VPC or by establishing VPC peering relationships or by adding VPN connections to the VPC.
+
+Since the TNC workload (on-premises) clusters are designed as disconnected / air-gapped clusters, the ROSA cluster for hosting the TNC MGMT cluster is also being designed to use a private ROSA cluster. The figure below shows the TNC hybrid cloud design where an AWS site-to-site VPN is being used to connect the private ROSA cluster to on-premises OpenShift clusters:
+
+This design adds a private S3 endpoint to the ROSA cluster and relies on DNS configuration to be added on both sides of the site-to-site VPN as explained below.
+
+ROSA to On-Prem Connectivity
+
+Several options are available to connect the ROSA cluster to the on-premises clusters. The AWS site-to-site VPN is selected in this design to achieve this connectivity. Both ends of the site-to-site VPN need to advertise appropriate routes to provide bidirectional connectivity:
+
+Advertise on-prem subnets into the VPC route tables, with the AWS VPN gateway as next hop
+
+Advertise the AWS VPC private subnets into the on-prem network with the on-prem customer gateway router as the next hop
+
+This VPN will be used to carry the following traffic:
+
+From ROSA to on-prem
+
+Access to on-prem BMC IPs
+
+Access to on-prem DNS server IP
+
+Access to on-prem machineNet subnet(s)
+
+From On-prem to ROSA
+
+Access to ROSA machineNet
+
+Access to ROSA private subnets
+
+Custom Security Group
+
+ROSA installation creates different security groups to allow OpenShift control plane and data plane traffic flow. However, These security groups that are created by default during ROSA installation do not include the ports that are used by RHACM to perform zero touch provisioning of on-prem OpenShift clusters. In order for RHACM ZTP to work, the following ports need to be opened up in the security groups that are being applied to the different ROSA nodes:
+
+TCP 6385 – metal3-ironic-api
+
+TCP 6183 – Mount virtual ISO
+
+TCP 9999 – ironic-python-agent
+
+As ROSA is a managed cluster, updates to the default security groups (that are created by the ROSA installer) are not allowed. Hence, a custom security group needs to be created prior to ROSA cluster installation, and provided as input to the ROSA installation command, so that it can be used to open the ZTP ports listed above.
+
+The following sample shows the selection of the customer security group while passing the parameters to the interactive ROSA installation command:
+
+? Additional ‘Compute’ Security Group IDs (optional): sg-0e5b0d0981d4adf80 (‘custom-sg-node’)
+
+? Additional ‘Infra’ Security Group IDs (optional): sg-0e5b0d0981d4adf80 (‘custom-sg-node’)
+
+? Additional ‘Control Plane’ Security Group IDs (optional): sg-0e5b0d0981d4adf80 (‘custom-sg-node’)
+
+NOTE: The custom security group needs to be applied to the nodes during ROSA installation. Security groups cannot be applied to the nodes, post cluster installation.
+
+Storage
+
+The applications running on the ROSA cluster need access to persistent storage. Access to block storage is being provided by using the Amazon Elastic Block Service (EBS). During ROSA cluster installation appropriate CSI drivers are configured and storage classes created to provide access to EBS for creating Permanent Virtual Claims (PVCs) for persistent block storage.
+
+There are two applications running in the TNC MGMT cluster that require access to object storage:
+
+Red Hat Quay
+
+Uses object storage to store the container images for the private registry
+
+RHACM Observability
+
+Aggregates metrics and events from the on-prem OpenShift clusters. Uses object storage to store the observability data
+
+This design uses the Amazon Simple Storage Service (S3) to provide object storage for the above mentioned applications. The following configuration needs to be added on top of the standard ROSA configuration to provide access to the S3 bucket for object storage:
+
+Create an internal endpoint for S3 service, using private subnets
+
+By default, the ROSA installer creates a gateway endpoint for S3. However, that gateway end point does not provide a DNS enabled endpoint.
+
+Hence, we will create an interface endpoint for the S3 service and select the option to enable DNS record for that endpoint. The on-prem clusters can use this endpoint to reach the AWS S3 bucket
+
+NOTE: The on-prem clusters access Quay in the TNC MGMT cluster to retrieve container images. By default Quay redirects the clients towards its storage backend, hence requiring the clients to directly communicate with the AWS S3 bucket
+
+Create an S3 bucket
+
+Create an IAM user with appropriate permissions to read / write S3 data
+
+Create an access token for this user account
+
+Use that access token to create secrets for OpenShift services / applications needing S3 access
+
+DNS Configuration
+
+Bidirectional communication between the MGMT (hub) cluster and the workload (spoke) clusters requires appropriate DNS resolution of the FQDNs associated with the ROSA cluster as well as with the on-prem workload clusters. This requires DNS configuration on both sides of the site-to-site VPN tunnel.
+
+ROSA Side DNS Configuration
+
+The services / applications in the ROSA cluster need to be able to resolve FQDN’s associated with on-prem clusters, for example, RHACM in the MGMT cluster needs to reach the API endpoint of the different on-prem workload clusters.
+
+We will configure the CoreDNS services running in the ROSA cluster to use the on-prem DNS server as forwarder / upstream DNS server so that it can use the on-prem DNS server to resolve the FQDNs associated with the on-prem clusters. The following custom resource can be used to configure CoreDNS service on the ROSA cluster:
+
+On-Prem Side DNS Configuration
+
+The on-prem OpenShift clusters need to reach different services / endpoints in the ROSA cluster. The following DNS entries need to be created on the on-prem DNS server so that the FQDNs associated with the ROSA services can be resolved.
+
+Access to ROSA Cluster API
+
+Identify the IP address(es) associated with DNS record for the internal API load balancer for the ROSA cluster
+
+Configure the on-prem DNS server to map all queries for ROSA api.<cluster-name>.domain to the IP address of internal API load balancer
+
+Access to ROSA Cluster Applications
+
+Identify the IP address(es) associated with DNS record for the internal Application load balancer for the ROSA cluster
+
+Configure on-prem DNS server to map all queries for ROSA *.apps.<cluster-name>.domain to the IP address of the internal Application load balancer
+
+Access to AWS S3
+
+Identify the IP addresses associated with DNS record for the private S3 endpoint that was created earlier
+
+Configure on-prem DNS server to map all requests for “s3.<region>.amazonaws.com” to the IP addresses of the private S3 endpoint
+
+Conclusion
+
+With the right configuration applied to the ROSA and on-premises environments, the TNC Management cluster can be securely deployed on AWS to manage the lifecycle of the on-prem TNC workload clusters. The figure below shows a managed cluster successfully deployed on-premises from the management cluster in ROSA, via ZTP. Once the on-premises cluster has been deployed, it can be monitored via the RHACM observability service. This hybrid cloud approach gives operators the flexibility to pick the appropriate environment for running their OpenShift clusters, either in the public cloud or on-premises.",https://d2908q01vomqb2.cloudfront.net/c097638f92de80ba8d6c696b26e6e601a5f61eb7/2025/12/31/Screenshot-2025-12-31-at-9.31.30 AM-1182x630.png,N,,2026-01-01 18:14:02.978111
 ID4,Albertsons,2026-01-01 19:39:01+00:00,"Escondido Times-Advocate - The hometown newspaper of Escondido, California",Neighborhood Healthcare Receives $82000 from Albertsons Foundation,News Desk,,,,,https://www.times-advocate.com/articles/neighborhood-healthcare-receives-82000-from-albertsons-foundation/,"Neighborhood Healthcare, this week announced that it received grants totaling more than $82,000 from Albertsons Foundation’s Nourishing Neighbors Program.
 The funding will support Neighborhood Healthcare’s goal of reaching more individuals in Southern California who need food assistance.
 Through this program, more than 150 local food banks and community organizations, including Neighborhood Healthcare, are receiving Nourishing Neighbors grants to support outreach and enrollment in nutrition programs.
