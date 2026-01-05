@@ -173,6 +173,105 @@ US Candidates Only: The EEO is the Law Poster http://www.dol.gov/ofccp/regs/comp
 20 - Professional (EEO-2 Job Categories-United States of America), ANLYTC202.2 - Middle Professional Tier II (EEO Job Group), SWP Priority - Ratings - (Strategic Workforce Planning)
 
 Job ID 323876","https://www.efinancialcareers.com/img/resize=width:1200,fit:max/dfFNvBX6SZaLsiNblcws",N,,2026-01-05 10:02:23.874723
+ID33,OpenAI,2026-01-05 14:07:25+00:00,The New Stack,Kepler: OpenAI's Internal Agent Platform for Synthesizing Data - The New Stack,"Joab Jackson, Jack Wallen, Janakiram MSV, Mike Shi, Carol Platz, Tim Young, Hugo Guerrero, Sheldon Pereira, Denton Chikura, Deepak Goel",,,,,https://thenewstack.io/kepler-openais-internal-agent-platform-for-synthesizing-data/,"OpenAI’s Challenges in Internal Data Retrieval For the business analyst, many of the database tables might appear very similar.
+Kepler in Action Built in-house, Kepler is a data analyst, one that can tap all of OpenAI’s internal data stores to answer questions.
+Kepler also has direct connections to a set of pre-processed information, including an internal data knowledge base and an internal documents service.
+Using the Model Control Protocol (MCP), invented by Anthropic, has been “so helpful” for Kepler, Xu said.
+Nonetheless, running an agent-based internal data analysis tool seems to bring a lot of value to the company.","For OpenAI employees, asking a question even as seemingly simple as how many ChatGPT Pro users it has in one particular country can be surprisingly difficult, given that the needed data may be stretched be across multiple data sources, each of which is accessible in a slightly different way.
+
+Overall, OpenAI has 70,000 different data sets, amassing 600PBs of new data daily. About 3,500 employees can access this data, using any 1 of 15 tools. The company has always kept close count of its users, but as it adds more regions and plans and features, tallying numbers becomes more difficult.
+
+But each new query brought its own challenges. So analysts frequently found themselves in extended Slack conversations or even meetings with their peers just to figure out how to access the data.
+
+“Simple questions shouldn’t be this difficult, or time consuming,” said Bonnie Xu, OpenAI technical staff member on the data productivity team, during a talk at QCON AI conference, held in New York last month.
+
+Xu was there to discuss a tool the company created, called Kepler, to streamline this process.
+
+Kepler is a helpful agent designed to answers questions for OpenAI employees, hiding the sometimes-many tasks it must undertake to find the answer.
+
+Originally, Kepler was designed primarily for the data scientists at the company, but since its launch the user base has expanded to other personal in finance, human resources and other departments.
+
+One Kepler user, according to Xu, actually said it was the closest they’ve experienced an AI system come to AGI.
+
+OpenAI’s Challenges in Internal Data Retrieval
+
+For the business analyst, many of the database tables might appear very similar. One database may include logged-out users, while another does not. Some tables included encrypted users, while others do not and must have that data joined into the resulting dataset. Which one to use?
+
+Writing the correct SQL code to extract the data can be difficult as well, especially if they involve joins across different tables.
+
+“Missing one nuance can lead to an answer that is wrong by an order of magnitude, and this can be catastrophic when making important business decisions,” Xu said.
+
+Kepler in Action
+
+Built in-house, Kepler is a data analyst, one that can tap all of OpenAI’s internal data stores to answer questions. OpenAI employees can interface with Kepler through Slack or through an IDE, such as Cursor, or by integration with a specific workflow, or by mobile or other remote clients. In the background, Kepler uses GPT-5 to parse the request.
+
+To provide an example of how Kepler works, Xu walked through a question about New York taxi travels times, She wanted to know which times during the day have the most variance in travel times, as well as which journeys are the “most unreliable,” meaning location pairs (origin and destination) where the variance between the shortest and longest travel times is the greatest.
+
+The demo showed the “chain of thought,” or a series of evaluations and actions, that Kepler executed to answer this question.
+
+First, it does an internal knowledge search, identifying two potentially relevant datasets, including a 2016 collection of NYC travel time data for taxis, which included pick up and drop off times, and the zip codes of both the destination and departure locations.
+
+The agent then calculated the median time for each zip code, identifying the 95th and 99th percentiles. The agent makes educated guesses on how to write the appropriate queries to get the needed information, testing each one, and soon finds one that works.
+
+“You can imagine, doing this manually yourself takes a lot of time, but the agent is just going through these query and result steps on your behalf,” Xu said. When the queries appear to be correct, it sorts the results, then does some light formatting and even prepares a chart to present the data to the user. (The answers showed that rush hours and late nights are the most unreliable times.)
+
+Another demo Xu provided showed Kepler working through a question of why there was a big spike in ChatGPT users in March 2025. It consulted a dashboard and a mission document to find the table that displayed this data. Kepler wrote different queries to try to pinpoint the sudden increase in usage, such as querying by region. It looked for errors, such as log data duplication.
+
+The chain-of-thought identified a possible reason, namely the launch of a new generative image feature. They did a web search to cross-reference the hypothesis, finding the release notes and news articles on the launch.
+
+Kepler stores all the questions, so you can pick up follow-up threads later on. When asked a follow-up question about taxi rides on February 14, Valentine’s Day, shows that the agent knows which tables and queries to use.
+
+You can also interrupt Kepler if you see from its chain of thought that it is going in the wrong direction.
+
+And since analysts tend to ask the same type of questions, such as product analysis and data validation, Kepler keeps sets of custom workflows for these sorts of questions
+
+How Kepler Works
+
+At its core, Kepler is a set of APIs that communicate directly with ChatGPT (currently version 5). Kepler also has direct connections to a set of pre-processed information, including an internal data knowledge base and an internal documents service. It can also make calls to data warehouses and other data services running on Apache Spark, Airflow and other platforms.
+
+Using the Model Control Protocol (MCP), invented by Anthropic, has been “so helpful” for Kepler, Xu said. Kepler uses the internal documents to understand how to query databases or perform other tasks on MCP. If the results didn’t come out as expected, it can then rerun the query with slight modifications. In effect, the Kepler agent is reasoning by itself.
+
+“So instead of you giving the feedback, Kepler is running tools, then using the right tools to take the next set of steps, depending on whatever feedback that’s given,” Xu said.
+
+Typically, agents running on their own can return wildly inaccurate results, but with additional context in hand, they can understand when something is wrong and try to vary their approach.
+
+“So the really lovely thing is that Kepler can interactively explore the data itself, and content is carried over the whole time,” she said.
+
+The Importance of Metadata
+
+Also helping build out the context is the metadata.
+
+“It’s not enough to look at the table by itself, just as it is. You need to understand how the table was created and where it came from,” Xu said. This is the secret to the agent really understanding the differences between tables.
+
+An offline job is run to compile this information about each table.
+
+Much of this data has already been compiled by the company. Rich metadata about each database table has been captured, such as why it was created and what it is being used for, and even what its primary keys are.
+
+It also uses codex generation to build out metadata from the code itself.
+
+“Since this is all refreshed periodically by an offline job, the context stays fresh without any manual involvement.”
+
+If Kepler, or a user, finds an error, it saves the correction in memory.
+
+“For us, memory is really the mechanism that helps the agent continuously learn and improve,” Xu said. “Contacts will get you maybe 80 – 90% of the way there. But sometimes you need those final little corrections that are really hard to just infer.”
+
+To evaluate the quality of the answers, OpenAI runs an Eval Grader, which offers a score for each answer tested. It looks at how the delivered results differ from the expected or correct results.
+
+In many cases, a correct answer may have a slightly different SQL query than what was expected, but the development team plans for this.
+
+“When we compare resolve tests, we actually give a little wiggle room with things that don’t meaningfully impact the answer,” Xu said.
+
+Users bring their own credentials to Kepler, thus ensuring they don’t see any data that they don’t have permission to see.
+
+Future Steps for Kepler
+
+At present, OpenAI has no plans to open source Kepler or offer it as an enterprise product, Xu said, noting that she isn’t in the position to make these decisions.
+
+Nonetheless, running an agent-based internal data analysis tool seems to bring a lot of value to the company.
+
+“I think at least from what we’ve heard from our users, directly using Kepler is a lot faster. It’s more productive, just because when you’re looking at different sources, that’s a lot of stuff you have to do, and you have to connect the dots,” Xu said. “Kepler is really that layer on top, that abstraction that does it for you.”
+
+Videos of all the QCON AI talks will be available via a Video Conference pass, starting January 15.",https://cdn.thenewstack.io/media/2026/01/7e9ed590-qcon-openai-bonnie_xu.jpg,N,,2026-01-05 10:15:38.158360
 ID39,S&P Global,2026-01-05 14:07:01+00:00,Oils & Fats International,EPA expects to finalise 2026-27 renewable fuel blending rules in…,Not Available,,,,,https://www.ofimagazine.com/news/epa-expects-to-finalise-2026-27-renewable-fuel-blending-rules-in-first-quarter-2026,"According to the filing, the delayed response was due to pending multiple interagency reviews and consultations.
 In June, the EPA released a proposed rule, referred to as “Set 2”, for 2026 and 2027.
 Industry participants have said delays add near-term uncertainty for RIN values and blending economics, particularly as refiners assess compliance strategies for 2026.
@@ -12889,25 +12988,6 @@ Meanwhile, ex-US sales of semaglutide products could become increasingly importa
 
 Novo Nordisk has previously said that the compound patent expiry of the semaglutide molecule in certain countries is expected to have an estimated negative low-single-digit impact on global sales growth in 2026, and it suggested that the Chinese ruling does not alter that prediction.",https://pharmaphorum.com/sites/default/files/favicon.png,N,,2026-01-02 09:13:47.071876
 ID30,Michelin,2026-01-02 12:18:22+00:00,Investing.com Canada,Arlington Capital Partners agrees to sell Tex-Tech Industries to Michelin - Investing.com Canada,Not Available,,,,,https://ca.investing.com/news/pro/arlington-capital-partners-agrees-to-sell-textech-industries-to-michelin-432SI-4383255,TSX set for positive 2026 open following record-breaking year,TSX set for positive 2026 open following record-breaking year,https://i-invdn-com.investing.com/redesign/images/seo/investing_300X300.png,N,,2026-01-02 11:03:39.829325
-ID1,Adobe,2026-01-02 12:13:16+00:00,uk.finance.yahoo.com,Are Strong Financial Prospects The Force That Is Driving The Momentum In Adobe Inc.'s ...,Not Available,,,,,https://uk.finance.yahoo.com/news/strong-financial-prospects-force-driving-120028385.html,"When you use our sites and apps, we use cookies to: provide our sites and apps to you authenticate users, apply security measures, and prevent spam and abuse, and measure your use of our sites and apps If you click 'Accept all', we and our partners, including 244 who are part of the IAB Transparency & Consent Framework, will also store and/or access information on a device (in other words, use cookies) and use precise geolocation data and other personal data such as IP address and browsing and search data, for analytics, personalised advertising and content, advertising and content measurement, and audience research and services development.
-If you do not want us and our partners to use cookies and personal data for these additional purposes, click 'Reject all'.
-If you would like to customise your choices, click 'Manage privacy settings'.
-You can withdraw your consent or change your choices at any time by clicking on the 'Privacy & cookie settings' or 'Privacy dashboard' links on our sites and apps.
-Find out more about how we use your personal data in our privacy policy and cookie policy.","When you use our sites and apps, we use cookies to:
-
-provide our sites and apps to you
-
-authenticate users, apply security measures, and prevent spam and abuse, and
-
-measure your use of our sites and apps
-
-If you click 'Accept all', we and our partners, including 244 who are part of the IAB Transparency & Consent Framework, will also store and/or access information on a device (in other words, use cookies) and use precise geolocation data and other personal data such as IP address and browsing and search data, for analytics, personalised advertising and content, advertising and content measurement, and audience research and services development.
-
-If you do not want us and our partners to use cookies and personal data for these additional purposes, click 'Reject all'.
-
-If you would like to customise your choices, click 'Manage privacy settings'.
-
-You can withdraw your consent or change your choices at any time by clicking on the 'Privacy & cookie settings' or 'Privacy dashboard' links on our sites and apps. Find out more about how we use your personal data in our privacy policy and cookie policy.",https://s.yimg.com/oa/build/images/favicons/yahoo.png,N,,2026-01-02 07:58:39.805067
 ID34,Parker-Hannifin,2026-01-02 12:13:16+00:00,MarketBeat,Lazard Freres Gestion S.A.S. Takes Position in Parker-Hannifin Corporation $PH,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-lazard-freres-gestion-sas-takes-position-in-parker-hannifin-corporation-ph-2026-01-02/,"Lazard Freres Gestion S.A.S.
 Parker-Hannifin makes up about 2.0% of Lazard Freres Gestion S.A.S.
 Lazard Freres Gestion S.A.S.
@@ -12973,6 +13053,25 @@ Before you consider Parker-Hannifin, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Parker-Hannifin wasn't on the list.
 
 While Parker-Hannifin currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/parker-hannifin-co-logo-1200x675.png?v=20240109092309,N,,2026-01-02 11:03:49.020747
+ID1,Adobe,2026-01-02 12:13:16+00:00,uk.finance.yahoo.com,Are Strong Financial Prospects The Force That Is Driving The Momentum In Adobe Inc.'s ...,Not Available,,,,,https://uk.finance.yahoo.com/news/strong-financial-prospects-force-driving-120028385.html,"When you use our sites and apps, we use cookies to: provide our sites and apps to you authenticate users, apply security measures, and prevent spam and abuse, and measure your use of our sites and apps If you click 'Accept all', we and our partners, including 244 who are part of the IAB Transparency & Consent Framework, will also store and/or access information on a device (in other words, use cookies) and use precise geolocation data and other personal data such as IP address and browsing and search data, for analytics, personalised advertising and content, advertising and content measurement, and audience research and services development.
+If you do not want us and our partners to use cookies and personal data for these additional purposes, click 'Reject all'.
+If you would like to customise your choices, click 'Manage privacy settings'.
+You can withdraw your consent or change your choices at any time by clicking on the 'Privacy & cookie settings' or 'Privacy dashboard' links on our sites and apps.
+Find out more about how we use your personal data in our privacy policy and cookie policy.","When you use our sites and apps, we use cookies to:
+
+provide our sites and apps to you
+
+authenticate users, apply security measures, and prevent spam and abuse, and
+
+measure your use of our sites and apps
+
+If you click 'Accept all', we and our partners, including 244 who are part of the IAB Transparency & Consent Framework, will also store and/or access information on a device (in other words, use cookies) and use precise geolocation data and other personal data such as IP address and browsing and search data, for analytics, personalised advertising and content, advertising and content measurement, and audience research and services development.
+
+If you do not want us and our partners to use cookies and personal data for these additional purposes, click 'Reject all'.
+
+If you would like to customise your choices, click 'Manage privacy settings'.
+
+You can withdraw your consent or change your choices at any time by clicking on the 'Privacy & cookie settings' or 'Privacy dashboard' links on our sites and apps. Find out more about how we use your personal data in our privacy policy and cookie policy.",https://s.yimg.com/oa/build/images/favicons/yahoo.png,N,,2026-01-02 07:58:39.805067
 ID18,Eli Lilly,2026-01-02 12:12:45+00:00,www.euroengineerjobs.com,"Senior Principal/Principal Bioprocess Engineer - Eli Lilly Benelux, Limerick",Not Available,,,,,https://www.euroengineerjobs.com/job_display/285249/Senior_Principal_Principal_Bioprocess_Engineer_Eli_Lilly_Benelux_Limerick_Ireland,"The successful candidate(s) will leverage existing engineering design and ongoing start up facility learnings to ensure an enhanced expanded facility start up.
 The available positions range from Bioprocess Engineer to Principal Bioprocess Engineer.
 Post Expansion Facility Start-Up Phase: Provide process engineering support through application of process engineering fundamentals.
@@ -24971,25 +25070,6 @@ Intel and Nvidia’s partnership goes beyond cash infusion
 The partnership extends far beyond financial backing. Intel will design and manufacture custom x86 CPUs tailored for Nvidia's AI server platforms, positioning them alongside Nvidia's own Grace processors.The companies also plan PC chips that marry Intel CPU cores with Nvidia RTX graphics chiplets via NVLink interconnect technology. Back in SeptemberC Nvidia CEO Jensen Huang called the partnership a ""historic collaboration,” while Intel CEO Lip-Bu Tan emphasized how the deal validates Intel's x86 architecture and manufacturing prowess. The arrangement offers Nvidia smoother entry into enterprise x86 systems without forcing customers to abandon existing software infrastructure. Intel's desperation is quantifiable: its data center market share collapsed from 70% in 2021 to just 7% last quarter as Nvidia and Taiwan Semiconductor Manufacturing surged ahead. The company has hemorrhaged both technological leadership and investor confidence over years of execution failures.Critically, neither company has committed to moving Nvidia's crown-jewel GPU production from TSMC to Intel's contract manufacturing—suggesting this remains primarily a strategic alliance rather than a foundry partnership. For Intel, however, the Nvidia stamp of approval offers something nearly as valuable as cash: proof that the industry's dominant player still sees potential in Intel's turnaround story.
 
 End of Article","https://static.toiimg.com/thumb/msid-126236339,width-1070,height-580,imgsize-17916,resizemode-75,overlay-toi_sw,pt-32,y_pad-500/photo.jpg",N,,2025-12-30 05:59:13.828204
-ID25,J&J,2025-12-30 00:58:31+00:00,Daily Dodge,Mark J. Johnson | Daily Dodge,Daily Dodge,,,,,https://dailydodge.com/mark-j-johnson/,"Mark J. Johnson, age 82, of Beaver Dam, died on Saturday, December 27, 2025 at the Remembrance Home in Beaver Dam.
-Mark Johnson was born on January 31, 1943, in Winona, Minnesota, to Joseph and Elaine (Donahue) Johnson.
-Mark began his career in Beaver Dam at Herter’s Sporting Goods, where he served as manager for 17 years.
-Mark is survived by his wife, Janet Johnson; children, Lisa (Paul) Hillmer of Appleton, Paul (Jenni) Johnson of Oshkosh, Brad (Dawn Koceja) Johnson of Pewaukee and Todd (McKinsie) Johnson of Beaver Dam; eight grandchildren, Tessa (Jordon) Gersmehl of Appleton, Jenna (Peter) Shimek of Sun Prairie, Cole (Kayla) Johnson of Oshkosh; Blake Johnson of Neenah, Jordan (Emily) Johnson of Sun Prairie, Nate Johnson of Fond du Lac, Eli Johnson of Beaver Dam, and Mya Johnson of Beaver Dam; great grandchildren, Kaysin, Kam, Blair, Luca, Emmy, and Lainey; brothers and sisters, Marita Johnson of Rochester, MN, John (Verna) Johnson of Byron, MN, Judy (LaVern) Szyszka of Lake City, MN Carol (Byron) Larson of St. Peter, MN and Tom (Jean) Johnson of Grand Rapids, MN; brother-in-law, John Turnacliff of Mound, MN; nieces and nephews; other relatives and friends.
-Memorials may be made in Mark J. Johnson’s name to Alzheimer’s Association.","Mark J. Johnson, age 82, of Beaver Dam, died on Saturday, December 27, 2025 at the Remembrance Home in Beaver Dam.
-
-Mark Johnson was born on January 31, 1943, in Winona, Minnesota, to Joseph and Elaine (Donahue) Johnson. He graduated from Sacred Heart Catholic High School in Waseca, Minnesota, in 1962. On June 29, 1963, Mark was united in marriage to Janet A. Turnacliff.
-
-Mark began his career in Beaver Dam at Herter’s Sporting Goods, where he served as manager for 17 years. After the store closed, he worked at Chrysler in Beaver Dam for another 17 years, later retiring from Advanced Products after eight years of service.
-
-Mark was active throughout his life. He played softball into his 50s and had a deep appreciation for the outdoors, especially snowmobiling. Mark looked forward to arranging the annual snowmobile party and finding ways to make it an enjoyable event for everyone. He served as president of the Beaver Dam Conservation Club for six years and was a lifetime member. Mark was a devoted father and grandfather. As soon as his sons turned seven, they were old enough to partake in the annual trip to Canada, where they enjoyed fishing and roughing it in the outdoors. Mark rarely missed one of his grandchildren’s sporting events or other activities, cheering them on with pride. In his later years, he took up golf and spent many enjoyable hours at Beaver Dam Country Club. Mark was a fan of many Wisconsin sports, except when it came to football; he will always be a loyal Viking’s fan. Mark’s charming personality and his quick wit and humor will be missed by all who knew him.
-
-Mark is survived by his wife, Janet Johnson; children, Lisa (Paul) Hillmer of Appleton, Paul (Jenni) Johnson of Oshkosh, Brad (Dawn Koceja) Johnson of Pewaukee and Todd (McKinsie) Johnson of Beaver Dam; eight grandchildren, Tessa (Jordon) Gersmehl of Appleton, Jenna (Peter) Shimek of Sun Prairie, Cole (Kayla) Johnson of Oshkosh; Blake Johnson of Neenah, Jordan (Emily) Johnson of Sun Prairie, Nate Johnson of Fond du Lac, Eli Johnson of Beaver Dam, and Mya Johnson of Beaver Dam; great grandchildren, Kaysin, Kam, Blair, Luca, Emmy, and Lainey; brothers and sisters, Marita Johnson of Rochester, MN, John (Verna) Johnson of Byron, MN, Judy (LaVern) Szyszka of Lake City, MN Carol (Byron) Larson of St. Peter, MN and Tom (Jean) Johnson of Grand Rapids, MN; brother-in-law, John Turnacliff of Mound, MN; nieces and nephews; other relatives and friends. He was preceded in death by his parents.
-
-The memorial gathering will be at St. Katharine Drexel Catholic Church in Beaver Dam on Saturday, January 3, 2026 from 10:00 a.m. until 11:00 a.m. A Mass of Christian Burial will follow at church on Saturday at 11:00 a.m. with Fr. Will Arnold officiating.
-
-Memorials may be made in Mark J. Johnson’s name to Alzheimer’s Association.
-
-The Koepsell-Murray Funeral Home in Beaver Dam is caring for the family. To leave online condolences, or for directions and other information, please visit our website at www.KoepsellFH.com.",https://dailydodge.com/wp-content/uploads/2018/01/candles.jpeg,N,,2025-12-29 21:58:32.215270
 ID40,Societe Generale,2025-12-30 00:58:31+00:00,Careers Société Générale,"2027 Global Transaction & Payment Services Summer Analyst Program - New York, United States",Not Available,,,,,https://careers.societegenerale.com/en/job-offers/2027-global-transaction-payment-services-summer-analyst-program-25000QJ2-en,"Profile Required: Global Transaction & Payment Services (GTPS) includes payment and cash management, cash clearing services, trade services, factoring and foreign exchange services associated to these activities.
 With over 6,000 specialists in over 50 countries, Payments and Cash Management (PCM) is a strategic activity for Societe Generale.
 We can intervene in cash management in Europe, Africa, Asia, Americas, Overseas, and in the Middle East .
@@ -25043,6 +25123,25 @@ Our DIB Mission: Recruit, develop, retain and advance a talented workforce that 
 COMPENSATION:
 
 Base salary range does not include overtime pay, bonus and/or other benefits, where applicable. Actual base salary offer will vary based on skills and experience. This is not a benefits eligible position.",https://careers.societegenerale.com/themes/custom/sg_careers/images/og_default.jpg,N,,2025-12-30 03:58:34.307766
+ID25,J&J,2025-12-30 00:58:31+00:00,Daily Dodge,Mark J. Johnson | Daily Dodge,Daily Dodge,,,,,https://dailydodge.com/mark-j-johnson/,"Mark J. Johnson, age 82, of Beaver Dam, died on Saturday, December 27, 2025 at the Remembrance Home in Beaver Dam.
+Mark Johnson was born on January 31, 1943, in Winona, Minnesota, to Joseph and Elaine (Donahue) Johnson.
+Mark began his career in Beaver Dam at Herter’s Sporting Goods, where he served as manager for 17 years.
+Mark is survived by his wife, Janet Johnson; children, Lisa (Paul) Hillmer of Appleton, Paul (Jenni) Johnson of Oshkosh, Brad (Dawn Koceja) Johnson of Pewaukee and Todd (McKinsie) Johnson of Beaver Dam; eight grandchildren, Tessa (Jordon) Gersmehl of Appleton, Jenna (Peter) Shimek of Sun Prairie, Cole (Kayla) Johnson of Oshkosh; Blake Johnson of Neenah, Jordan (Emily) Johnson of Sun Prairie, Nate Johnson of Fond du Lac, Eli Johnson of Beaver Dam, and Mya Johnson of Beaver Dam; great grandchildren, Kaysin, Kam, Blair, Luca, Emmy, and Lainey; brothers and sisters, Marita Johnson of Rochester, MN, John (Verna) Johnson of Byron, MN, Judy (LaVern) Szyszka of Lake City, MN Carol (Byron) Larson of St. Peter, MN and Tom (Jean) Johnson of Grand Rapids, MN; brother-in-law, John Turnacliff of Mound, MN; nieces and nephews; other relatives and friends.
+Memorials may be made in Mark J. Johnson’s name to Alzheimer’s Association.","Mark J. Johnson, age 82, of Beaver Dam, died on Saturday, December 27, 2025 at the Remembrance Home in Beaver Dam.
+
+Mark Johnson was born on January 31, 1943, in Winona, Minnesota, to Joseph and Elaine (Donahue) Johnson. He graduated from Sacred Heart Catholic High School in Waseca, Minnesota, in 1962. On June 29, 1963, Mark was united in marriage to Janet A. Turnacliff.
+
+Mark began his career in Beaver Dam at Herter’s Sporting Goods, where he served as manager for 17 years. After the store closed, he worked at Chrysler in Beaver Dam for another 17 years, later retiring from Advanced Products after eight years of service.
+
+Mark was active throughout his life. He played softball into his 50s and had a deep appreciation for the outdoors, especially snowmobiling. Mark looked forward to arranging the annual snowmobile party and finding ways to make it an enjoyable event for everyone. He served as president of the Beaver Dam Conservation Club for six years and was a lifetime member. Mark was a devoted father and grandfather. As soon as his sons turned seven, they were old enough to partake in the annual trip to Canada, where they enjoyed fishing and roughing it in the outdoors. Mark rarely missed one of his grandchildren’s sporting events or other activities, cheering them on with pride. In his later years, he took up golf and spent many enjoyable hours at Beaver Dam Country Club. Mark was a fan of many Wisconsin sports, except when it came to football; he will always be a loyal Viking’s fan. Mark’s charming personality and his quick wit and humor will be missed by all who knew him.
+
+Mark is survived by his wife, Janet Johnson; children, Lisa (Paul) Hillmer of Appleton, Paul (Jenni) Johnson of Oshkosh, Brad (Dawn Koceja) Johnson of Pewaukee and Todd (McKinsie) Johnson of Beaver Dam; eight grandchildren, Tessa (Jordon) Gersmehl of Appleton, Jenna (Peter) Shimek of Sun Prairie, Cole (Kayla) Johnson of Oshkosh; Blake Johnson of Neenah, Jordan (Emily) Johnson of Sun Prairie, Nate Johnson of Fond du Lac, Eli Johnson of Beaver Dam, and Mya Johnson of Beaver Dam; great grandchildren, Kaysin, Kam, Blair, Luca, Emmy, and Lainey; brothers and sisters, Marita Johnson of Rochester, MN, John (Verna) Johnson of Byron, MN, Judy (LaVern) Szyszka of Lake City, MN Carol (Byron) Larson of St. Peter, MN and Tom (Jean) Johnson of Grand Rapids, MN; brother-in-law, John Turnacliff of Mound, MN; nieces and nephews; other relatives and friends. He was preceded in death by his parents.
+
+The memorial gathering will be at St. Katharine Drexel Catholic Church in Beaver Dam on Saturday, January 3, 2026 from 10:00 a.m. until 11:00 a.m. A Mass of Christian Burial will follow at church on Saturday at 11:00 a.m. with Fr. Will Arnold officiating.
+
+Memorials may be made in Mark J. Johnson’s name to Alzheimer’s Association.
+
+The Koepsell-Murray Funeral Home in Beaver Dam is caring for the family. To leave online condolences, or for directions and other information, please visit our website at www.KoepsellFH.com.",https://dailydodge.com/wp-content/uploads/2018/01/candles.jpeg,N,,2025-12-29 21:58:32.215270
 ID29,Medtronic,2025-12-30 00:58:02+00:00,The Globe and Mail,Medtronic: A Strong Contender in the Medical Device Arena - The Globe and Mail,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/NVDA-Q/pressreleases/36820015/medtronic-a-strong-contender-in-the-medical-device-arena/,Detailed price information for Nvidia Corp (NVDA-Q) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=815,N,,2025-12-29 20:13:04.293649
 ID26,Kraft Heinz,2025-12-30 00:40:41+00:00,fxpro.news,"Kraft Heinz Wave Analysis – 29 December 2025 | FxPro News, Financial Market Analytics",The FxPro Tech Analysis Team,,,,,https://fxpro.news/tech-analysis/kraft-heinz-wave-analysis-29-december-2025-20251229/amp/,"Kraft Heinz: ⬆️ Buy – Kraft Heinz reversed from strong support area – Likely to rise to resistance level 25.00 Kraft Heinz recently reversed from the strong support area between the key support level 23.75 (which stopped the previous sharp impulse wave 3 in October) and the lower daily Bollinger Band.
 The upward reversal from this support area created the daily Japanese candlesticks reversal pattern Piercing Line Given the bullish divergence on the daily Stochastic – Kraft Heinz can be expected to rise to the next resistance level 25.00 (top of wave ii).","Kraft Heinz: ⬆️ Buy
@@ -26575,4 +26674,3 @@ A total of 5 professional analysts have given their take on this stock in the la
 Unusual Options Activity Detected: Smart Money on the Move
 
 Benzinga Edge's Unusual Options board spots potential market movers before they happen. See what positions big money is taking on your favorite stocks. Click here for access. * Maintaining their stance, an analyst from TD Cowen continues to hold a Hold rating for Adobe, targeting a price of $400. * Maintaining their stance, an analyst from Citigroup continues to hold a Neutral rating for Adobe, targeting a price of $366. * An analyst from DA Davidson persists with their Buy rating on Adobe, maintaining a target price of $500. * Consistent in their evaluation, an analyst from Citigroup keeps a Neutral rating on Adobe with a target price of $387. * Maintaining their stance, an analyst from BMO Capital continues to hold a Outperform rating for Adobe, targeting a price of $400.",https://cdn.benzinga.com/files/images/story/2025/11/06/movers_3.jpg?width=1200&height=800&fit=crop,N,,2025-12-29 11:13:42.369817
-ID32,Nvidia,2025-12-29 15:04:01+00:00,www.direxion.com,NVIDIA's Q3 Was Huge. The Market's Reaction? Complicated. | Direxion,Not Available,,,,,https://www.direxion.com/xchange/nvidia-q3-huge-markets-reaction-complicated,"NVIDIA's blockbuster Q3 earnings strengthened the AI bull case, but post-earnings volatility shows high expectations. Trade NVDA's next move with ...",Not Available,,N,,2025-12-29 11:02:26.369262
