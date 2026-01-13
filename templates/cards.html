@@ -88,7 +88,7 @@ d3.select('#headCats')
     .attr("id","c"+ indexUse)
     .append("p")
     .style("font-weight","bold")
-    .style("font-size", "25px")
+    .style("font-size", "28px")
     .text(data)
 	  .style("font-weight","bold")
     .style("margin-bottom", "10px")
@@ -113,14 +113,81 @@ domain = data.domain ?? getHostname(data.url)
     .append("table")
     .style("width","50%")
     .append("tr")
-    .style("font-size", "15px")
-    .style("border-bottom","1px solid #ddd")
+    .style("font-size", "16px")
+    // .style("border-bottom","1px solid #ddd")
     .each(function(d){
       d3.select(this)
       .append("td")
       .style('line-height',"1")
       .style("text-align","left")
-      .html('<p style="font-weight: normal;"><small class="text_muted">' + data.outlet + ' | ' + date + '</small><br><b><a href="' +data.url + '"target="_blank">' + data.title + '</a></b><br>' + '<small class="text_muted">By: ' + data.authors + ' |  Market: ' + data.market + '</small><br><br>' + data.description + '<br></p>');
+      // .html('<p style="font-weight: normal;"><small class="text_muted">' + data.outlet + ' | ' + date + '</small><br><b><a href="' +data.url + '"target="_blank">' + data.title + '</a></b><br>' + '<small class="text_muted">By: ' + data.authors + ' |  Market: ' + data.market + '</small><br><br>' + data.description + '<br></p>');
+      // .html(
+      //   '<div style="margin:0;padding:0;line-height:1.15;">' +
+
+      //     // outlet | date
+      //     '<div style="margin:0;padding:0;line-height:1.15;">' +
+      //       '<span style="font-weight:normal;font-size:14px;color:#666;margin:0;padding:0;">' +
+      //         data.outlet + ' | ' + date +
+      //       '</span>' +
+      //     '</div>' +
+
+      //     // title
+      //     '<div style="margin:0;padding:0;line-height:1.15;">' +
+      //       '<a href="' + data.url + '" target="_blank" ' +
+      //         'style="font-weight:700;font-size:18px;color:inherit;text-decoration:none;margin:0;padding:0;line-height:1.15;">' +
+      //         data.title +
+      //       '</a>' +
+      //     '</div>' +
+
+      //     // byline
+      //     '<div style="margin:0;padding:0;line-height:1.15;">' +
+      //       '<span style="font-weight:normal;font-size:14px;color:#666;margin:0;padding:0;">' +
+      //         'By: ' + (data.authors || '') + ' | Market: ' + (data.market || '') +
+      //       '</span>' +
+      //     '</div>' +
+
+      //     // description (with a little breathing room)
+      //     '<div style="margin:6px 0 0 0;padding:0;line-height:1.3;">' +
+      //       (data.description || '') +
+      //     '</div>' +
+
+      //   '</div>'
+      // );
+      .html(
+  '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" ' +
+         'style="border-collapse:collapse;width:100%;">' +
+    '<tr>' +
+      '<td style="font-family:Arial, sans-serif;padding:10px 0">' +
+
+        // Outlet/date
+        '<div style="margin:0;padding:0;font-size:14px;line-height:1.2;color:#666;">' +
+          (data.outlet || '') + ' \u00A0|\u00A0 ' + (date || '') +
+        '</div>' +
+
+        // Title
+        '<div style="margin:4px 0 0 0;padding:0;font-size:19px;line-height:1.25;font-weight:700;">' +
+          '<a href="' + data.url + '" target="_blank" ' +
+             'style="color:inherit;text-decoration:none;">' +
+            (data.title || '') +
+          '</a>' +
+        '</div>' +
+
+        // Byline
+        '<div style="margin:4px 0 0 0;padding:0;font-size:14px;line-height:1.2;color:#666;">' +
+          'By: ' + (data.authors || '—') + ' \u00A0|\u00A0 Market: ' + (data.market || '—') +
+        '</div>' +
+
+        // Description
+        '<div style="margin:8px 0 0 0;padding:0;font-size:16px;line-height:1.35;color:#111;">' +
+          (data.description || '') +
+        '</div>' +
+        // '<hr style = "1px solid #ddd">' +    
+      '</td>' +
+    '</tr>' +
+  '</table>'
+);
+
+
 
     })
 });
