@@ -38,7 +38,7 @@
       margin-right: 0.5em;
     }
 
-    /* NEW: "Last updated" styling */
+    /* "Last updated" styling */
     #lastUpdated {
       font-size: 0.9rem;
       color: #666;
@@ -46,23 +46,42 @@
       margin-bottom: 0.75rem;
     }
 
+    /* NEW: Jump list styling */
+    .jumpbox {
+      border: 1px solid rgba(0,0,0,0.12);
+      border-radius: 8px;
+      padding: 0.75rem 0.75rem;
+      margin: 0.25rem 0 1rem 0;
+      background: rgba(0,0,0,0.02);
+    }
+    .jumpbox .jump-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .jumpbox .jump-links a {
+      display: inline-block;
+      margin: 0.15rem 0.5rem 0.15rem 0;
+      padding: 0.15rem 0.35rem;
+      border-radius: 6px;
+      text-decoration: none;
+      border: 1px solid rgba(0,0,0,0.08);
+      background: #fff;
+      color: #0b5394;
+      font-size: 0.9rem;
+      line-height: 1.2;
+    }
+    .jumpbox .jump-links a:hover {
+      background: rgba(11,83,148,0.06);
+      text-decoration: none;
+    }
+
     @media (max-width: 768px) {
-      h2.main-group {
-        font-size: 1.25rem;
-      }
-      h4.sub-group {
-        font-size: 1rem;
-      }
-      .btn-sm {
-        font-size: 0.9rem;
-        padding: 0.25rem 0.5rem;
-      }
-      .nav-header .btn {
-        margin-bottom: 0.5rem;
-      }
-      .containerwgt {
-        padding: 0 1rem;
-      }
+      h2.main-group { font-size: 1.25rem; }
+      h4.sub-group { font-size: 1rem; }
+      .btn-sm { font-size: 0.9rem; padding: 0.25rem 0.5rem; }
+      .nav-header .btn { margin-bottom: 0.5rem; }
+      .containerwgt { padding: 0 1rem; }
+      .jumpbox .jump-links a { font-size: 0.88rem; }
     }
   </style>
 </head>
@@ -77,14 +96,19 @@
 
   <div class="containerwgt">
     <h2 id="etitle"></h2>
-
-    <!-- NEW: last updated line -->
     <div id="lastUpdated" class="text-muted">Last updated: —</div>
 
-    <div class="toggle-buttons mb-3">
+    <div class="toggle-buttons mb-2">
       <button id="btn-state-topic" class="btn btn-outline-secondary btn-sm active">Group by State → Topic</button>
       <button id="btn-topic-state" class="btn btn-outline-secondary btn-sm">Group by Topic → State</button>
     </div>
+
+    <!-- NEW: Jump-to list (switches based on toggle) -->
+    <div id="jumpBox" class="jumpbox">
+      <div id="jumpTitle" class="jump-title">Jump to a state:</div>
+      <div id="jumpLinks" class="jump-links"></div>
+    </div>
+
     <div id="articleView"></div>
   </div>
 </div>
@@ -97,14 +121,13 @@ document.getElementById("etitle").textContent = `State News | Top News - ${forma
 
 const csvFilePath = "{{ url_for('uploads', filename='state_summary.csv') }}";
 
-/* NEW: path to your timestamps JSON
-   Update this if your Flask route is different. */
-const tsFilePath = "/timestamps/state_summary.json";
+/* timestamps JSON path */
+const tsFilePath = "/timestamps/stateSummary.json";
 
 // Convert ISO timestamps to local time
 function convertToLocalDate(isoString) {
   const date = new Date(isoString);
-  return date.toLocaleString(); // Uses user's locale
+  return date.toLocaleString();
 }
 
 // Load "last updated" from timestamps JSON
@@ -119,9 +142,6 @@ function loadLastUpdated() {
         document.getElementById("lastUpdated").textContent = "Last updated: —";
         return;
       }
-
-      // Your JSON looks like: [{ "timestamp": "...", "entries": 21 }, ...]
-      // Use the last object as "most recent" (common logging pattern)
       const last = arr[arr.length - 1];
       const ts = last && last.timestamp ? last.timestamp : null;
 
@@ -162,7 +182,47 @@ function customSort(a, b) {
   return a.localeCompare(b);
 }
 
+/* NEW: safe slug for IDs */
+function slugify(s) {
+  return String(s || "")
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/* NEW: build jump links based on mode */
+function renderJumpLinks(groupMode) {
+  const jumpTitle = document.getElementById("jumpTitle");
+  const jumpLinks = document.getElementById("jumpLinks");
+  jumpLinks.innerHTML = "";
+
+  if (groupMode === "state-topic") {
+    jumpTitle.textContent = "Jump to a state:";
+    allStates.forEach(st => {
+      const id = `main-${slugify(st)}`;
+      const a = document.createElement("a");
+      a.href = `#${id}`;
+      a.textContent = st;
+      jumpLinks.appendChild(a);
+    });
+  } else {
+    jumpTitle.textContent = "Jump to a topic:";
+    allTopics.forEach(tp => {
+      const id = `main-${slugify(tp)}`;
+      const a = document.createElement("a");
+      a.href = `#${id}`;
+      a.textContent = tp;
+      jumpLinks.appendChild(a);
+    });
+  }
+}
+
 function loadAndRender(groupMode) {
+  // show correct jump list immediately (even before render finishes)
+  renderJumpLinks(groupMode);
+
   d3.csv(csvFilePath, function(data) {
     d3.select('#articleView').html('');
 
@@ -181,21 +241,32 @@ function loadAndRender(groupMode) {
       });
     });
 
-    const outerList = groupMode === 'state-topic' ? allStates : Object.keys(lookup).sort();
-    const innerList = groupMode === 'state-topic' ? Object.keys(lookup[outerList[0]] || {}).sort() : allStates;
+    const outerList = groupMode === 'state-topic'
+      ? allStates
+      : Object.keys(lookup).sort();
 
     outerList.forEach(outer => {
+      // main group anchor id: "main-<slug>"
+      const outerId = `main-${slugify(outer)}`;
+
       d3.select('#articleView')
         .append('h2')
         .attr('class', 'main-group')
+        .attr('id', outerId)         // NEW: anchor id
         .text(outer);
 
-      const subList = groupMode === 'state-topic' ? allTopics : Object.keys(lookup[outer] || {}).sort();
+      const subList = groupMode === 'state-topic'
+        ? allTopics
+        : Object.keys(lookup[outer] || {}).sort();
 
       subList.forEach(inner => {
+        // sub group anchor id (optional, but handy)
+        const innerId = `sub-${slugify(outer)}--${slugify(inner)}`;
+
         d3.select('#articleView')
           .append('h4')
           .attr('class', 'sub-group')
+          .attr('id', innerId)       // NEW: anchor id
           .text(inner);
 
         const entries = lookup[outer] && lookup[outer][inner];
@@ -226,9 +297,11 @@ function loadAndRender(groupMode) {
   });
 }
 
+/* initial */
 loadAndRender('state-topic');
-loadLastUpdated(); // NEW: load timestamp on page load
+loadLastUpdated();
 
+/* toggles */
 document.getElementById('btn-state-topic').addEventListener('click', () => {
   document.getElementById('btn-state-topic').classList.add('active');
   document.getElementById('btn-topic-state').classList.remove('active');
