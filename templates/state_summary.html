@@ -37,6 +37,15 @@
     .toggle-buttons .btn {
       margin-right: 0.5em;
     }
+
+    /* NEW: "Last updated" styling */
+    #lastUpdated {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: -0.25rem;
+      margin-bottom: 0.75rem;
+    }
+
     @media (max-width: 768px) {
       h2.main-group {
         font-size: 1.25rem;
@@ -68,6 +77,10 @@
 
   <div class="containerwgt">
     <h2 id="etitle"></h2>
+
+    <!-- NEW: last updated line -->
+    <div id="lastUpdated" class="text-muted">Last updated: —</div>
+
     <div class="toggle-buttons mb-3">
       <button id="btn-state-topic" class="btn btn-outline-secondary btn-sm active">Group by State → Topic</button>
       <button id="btn-topic-state" class="btn btn-outline-secondary btn-sm">Group by Topic → State</button>
@@ -83,6 +96,49 @@ const formattedDate = new Date().toLocaleDateString('en-US', {
 document.getElementById("etitle").textContent = `State News | Top News - ${formattedDate}`;
 
 const csvFilePath = "{{ url_for('uploads', filename='state_summary.csv') }}";
+
+/* NEW: path to your timestamps JSON
+   Update this if your Flask route is different. */
+const tsFilePath = "/timestamps/state_summary.json";
+
+// Convert ISO timestamps to local time
+function convertToLocalDate(isoString) {
+  const date = new Date(isoString);
+  return date.toLocaleString(); // Uses user's locale
+}
+
+// Load "last updated" from timestamps JSON
+function loadLastUpdated() {
+  fetch(tsFilePath, { cache: "no-store" })
+    .then(resp => {
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      return resp.json();
+    })
+    .then(arr => {
+      if (!Array.isArray(arr) || arr.length === 0) {
+        document.getElementById("lastUpdated").textContent = "Last updated: —";
+        return;
+      }
+
+      // Your JSON looks like: [{ "timestamp": "...", "entries": 21 }, ...]
+      // Use the last object as "most recent" (common logging pattern)
+      const last = arr[arr.length - 1];
+      const ts = last && last.timestamp ? last.timestamp : null;
+
+      if (!ts) {
+        document.getElementById("lastUpdated").textContent = "Last updated: —";
+        return;
+      }
+
+      const local = convertToLocalDate(ts);
+      const count = (last.entries !== undefined && last.entries !== null) ? ` (${last.entries} new)` : "";
+      document.getElementById("lastUpdated").textContent = `Last updated: ${local}${count}`;
+    })
+    .catch(err => {
+      console.error("Error loading last updated timestamp:", err);
+      document.getElementById("lastUpdated").textContent = "Last updated: —";
+    });
+}
 
 const allStates = [
   "National", "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
@@ -171,6 +227,7 @@ function loadAndRender(groupMode) {
 }
 
 loadAndRender('state-topic');
+loadLastUpdated(); // NEW: load timestamp on page load
 
 document.getElementById('btn-state-topic').addEventListener('click', () => {
   document.getElementById('btn-state-topic').classList.add('active');
