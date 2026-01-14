@@ -141,7 +141,7 @@ const formattedDate = new Date().toLocaleDateString('en-US', {
 document.getElementById("etitle").textContent = `State News | Top News - ${formattedDate}`;
 
 const csvFilePath = "{{ url_for('uploads', filename='state_summary.csv') }}";
-const tsFilePath  = "{{ url_for('timestamps', filename='stateSummary.json') }}";
+const tsFilePath  = "{{ url_for('static', filename='stateSummary.json') }}";
 
 // Convert ISO timestamps to local time
 function convertToLocalDate(isoString) {
@@ -227,17 +227,18 @@ function renderJumpLinks(groupMode, counts) {
   jumpLinks.innerHTML = "";
 
   if (groupMode === "state-topic") {
-    jumpTitle.textContent = "Jump to a state:";
-    allStates.forEach(st => {
-      const id = `main-${slugify(st)}`;
-      const n = (counts && counts[st]) ? counts[st] : 0;
+  jumpTitle.textContent = "Jump to a state:";
+  allStates.forEach(st => {
+    const n = (counts && counts[st]) ? counts[st] : 0;
+    if (n === 0) return; // 🔑 skip states with no stories
 
-      const a = document.createElement("a");
-      a.href = `#${id}`;
-      a.textContent = `${st} (${n})`;
-      jumpLinks.appendChild(a);
-    });
-  } else {
+    const id = `main-${slugify(st)}`;
+    const a = document.createElement("a");
+    a.href = `#${id}`;
+    a.textContent = `${st} (${n})`;
+    jumpLinks.appendChild(a);
+  });
+} else {
     jumpTitle.textContent = "Jump to a topic:";
     allTopics.forEach(tp => {
       const id = `main-${slugify(tp)}`;
