@@ -32,7 +32,7 @@
       margin-bottom: 0.25em;
     }
     .toggle-buttons {
-      margin-bottom: 1em;
+      margin-bottom: 0.75em;
     }
     .toggle-buttons .btn {
       margin-right: 0.5em;
@@ -43,15 +43,15 @@
       font-size: 0.9rem;
       color: #666;
       margin-top: -0.25rem;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
 
-    /* NEW: Jump list styling */
+    /* Jump list styling */
     .jumpbox {
       border: 1px solid rgba(0,0,0,0.12);
       border-radius: 8px;
       padding: 0.75rem 0.75rem;
-      margin: 0.25rem 0 1rem 0;
+      margin: 0.25rem 0 0.75rem 0;
       background: rgba(0,0,0,0.02);
     }
     .jumpbox .jump-title {
@@ -69,10 +69,27 @@
       color: #0b5394;
       font-size: 0.9rem;
       line-height: 1.2;
+      white-space: nowrap;
     }
     .jumpbox .jump-links a:hover {
       background: rgba(11,83,148,0.06);
       text-decoration: none;
+    }
+
+    /* NEW: Sticky header block (title + last updated + toggles + jumpbox) */
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid rgba(0,0,0,0.10);
+    }
+
+    /* Helps anchors not hide behind sticky header */
+    .anchor-pad {
+      scroll-margin-top: 260px; /* adjust if you change header height */
     }
 
     @media (max-width: 768px) {
@@ -82,6 +99,7 @@
       .nav-header .btn { margin-bottom: 0.5rem; }
       .containerwgt { padding: 0 1rem; }
       .jumpbox .jump-links a { font-size: 0.88rem; }
+      .anchor-pad { scroll-margin-top: 320px; }
     }
   </style>
 </head>
@@ -95,18 +113,21 @@
   <hr>
 
   <div class="containerwgt">
-    <h2 id="etitle"></h2>
-    <div id="lastUpdated" class="text-muted">Last updated: —</div>
 
-    <div class="toggle-buttons mb-2">
-      <button id="btn-state-topic" class="btn btn-outline-secondary btn-sm active">Group by State → Topic</button>
-      <button id="btn-topic-state" class="btn btn-outline-secondary btn-sm">Group by Topic → State</button>
-    </div>
+    <!-- NEW: sticky header wrapper -->
+    <div class="sticky-header">
+      <h2 id="etitle"></h2>
+      <div id="lastUpdated" class="text-muted">Last updated: —</div>
 
-    <!-- NEW: Jump-to list (switches based on toggle) -->
-    <div id="jumpBox" class="jumpbox">
-      <div id="jumpTitle" class="jump-title">Jump to a state:</div>
-      <div id="jumpLinks" class="jump-links"></div>
+      <div class="toggle-buttons">
+        <button id="btn-state-topic" class="btn btn-outline-secondary btn-sm active">Group by State → Topic</button>
+        <button id="btn-topic-state" class="btn btn-outline-secondary btn-sm">Group by Topic → State</button>
+      </div>
+
+      <div id="jumpBox" class="jumpbox">
+        <div id="jumpTitle" class="jump-title">Jump to a state:</div>
+        <div id="jumpLinks" class="jump-links"></div>
+      </div>
     </div>
 
     <div id="articleView"></div>
@@ -120,9 +141,7 @@ const formattedDate = new Date().toLocaleDateString('en-US', {
 document.getElementById("etitle").textContent = `State News | Top News - ${formattedDate}`;
 
 const csvFilePath = "{{ url_for('uploads', filename='state_summary.csv') }}";
-
-/* timestamps JSON path */
-const tsFilePath = "/timestamps/stateSummary.json";
+const tsFilePath  = "{{ url_for('timestamps', filename='stateSummary.json') }}";
 
 // Convert ISO timestamps to local time
 function convertToLocalDate(isoString) {
@@ -130,7 +149,6 @@ function convertToLocalDate(isoString) {
   return date.toLocaleString();
 }
 
-// Load "last updated" from timestamps JSON
 function loadLastUpdated() {
   fetch(tsFilePath, { cache: "no-store" })
     .then(resp => {
@@ -182,7 +200,6 @@ function customSort(a, b) {
   return a.localeCompare(b);
 }
 
-/* NEW: safe slug for IDs */
 function slugify(s) {
   return String(s || "")
     .trim()
@@ -192,8 +209,19 @@ function slugify(s) {
     .replace(/^-+|-+$/g, "");
 }
 
-/* NEW: build jump links based on mode */
-function renderJumpLinks(groupMode) {
+/* NEW: compute story counts for jump list */
+function computeCounts(data, groupMode) {
+  const counts = {};
+  data.forEach(d => {
+    const key = (groupMode === "state-topic") ? d.state : d.topic;
+    if (!key) return;
+    counts[key] = (counts[key] || 0) + 1;
+  });
+  return counts;
+}
+
+/* UPDATED: build jump links based on mode + counts */
+function renderJumpLinks(groupMode, counts) {
   const jumpTitle = document.getElementById("jumpTitle");
   const jumpLinks = document.getElementById("jumpLinks");
   jumpLinks.innerHTML = "";
@@ -202,28 +230,33 @@ function renderJumpLinks(groupMode) {
     jumpTitle.textContent = "Jump to a state:";
     allStates.forEach(st => {
       const id = `main-${slugify(st)}`;
+      const n = (counts && counts[st]) ? counts[st] : 0;
+
       const a = document.createElement("a");
       a.href = `#${id}`;
-      a.textContent = st;
+      a.textContent = `${st} (${n})`;
       jumpLinks.appendChild(a);
     });
   } else {
     jumpTitle.textContent = "Jump to a topic:";
     allTopics.forEach(tp => {
       const id = `main-${slugify(tp)}`;
+      const n = (counts && counts[tp]) ? counts[tp] : 0;
+
       const a = document.createElement("a");
       a.href = `#${id}`;
-      a.textContent = tp;
+      a.textContent = `${tp} (${n})`;
       jumpLinks.appendChild(a);
     });
   }
 }
 
 function loadAndRender(groupMode) {
-  // show correct jump list immediately (even before render finishes)
-  renderJumpLinks(groupMode);
-
   d3.csv(csvFilePath, function(data) {
+    // Build counts first, then render jump list with counts
+    const counts = computeCounts(data, groupMode);
+    renderJumpLinks(groupMode, counts);
+
     d3.select('#articleView').html('');
 
     const nested = d3.nest()
@@ -246,13 +279,12 @@ function loadAndRender(groupMode) {
       : Object.keys(lookup).sort();
 
     outerList.forEach(outer => {
-      // main group anchor id: "main-<slug>"
       const outerId = `main-${slugify(outer)}`;
 
       d3.select('#articleView')
         .append('h2')
-        .attr('class', 'main-group')
-        .attr('id', outerId)         // NEW: anchor id
+        .attr('class', 'main-group anchor-pad')   // NEW: anchor-pad for sticky scroll offset
+        .attr('id', outerId)
         .text(outer);
 
       const subList = groupMode === 'state-topic'
@@ -260,13 +292,12 @@ function loadAndRender(groupMode) {
         : Object.keys(lookup[outer] || {}).sort();
 
       subList.forEach(inner => {
-        // sub group anchor id (optional, but handy)
         const innerId = `sub-${slugify(outer)}--${slugify(inner)}`;
 
         d3.select('#articleView')
           .append('h4')
-          .attr('class', 'sub-group')
-          .attr('id', innerId)       // NEW: anchor id
+          .attr('class', 'sub-group anchor-pad')  // NEW: anchor-pad for sticky scroll offset
+          .attr('id', innerId)
           .text(inner);
 
         const entries = lookup[outer] && lookup[outer][inner];
