@@ -1,4 +1,176 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID32,Nvidia,2026-01-21 23:12:43+00:00,NVIDIA Technical Blog,Streamlining CUB with a Single-Call API | NVIDIA Technical Blog,Giannis Gonidelis,,,,,https://developer.nvidia.com/blog/streamlining-cub-with-a-single-call-api/,"This post explains the shift from this API to the new CUB single-call API introduced in CUDA 13.1, which simplifies development by managing memory under the hood without sacrificing performance.
+The existing CUB two-phase API CUB is widely recommended for harnessing the full computational capabilities of NVIDIA GPUs.
+The following is a conventional CUB call: // FIRST CALL: determine temporary storage size cub::DeviceScan::ExclusiveSum(nullptr, temp_storage_bytes, d_input, d_output, num_items); // Allocate the required temporary storage cudaMalloc(&d_temp_storage, temp_storage_bytes); // SECOND CALL: run the actual scan cub::DeviceScan::ExclusiveSum(d_temp_storage, temp_storage_bytes, d_input, d_output, num_items); The CUB interface introduces a practical challenge.
+The new single-call CUB API Given the wide usage of wrappers throughout many production codebases, there is a recognized need to extend CUB by introducing the new single-call API: // SINGLE CALL: allocation and execution on a single step cub::DeviceScan::ExclusiveSum(d_input, d_output, num_items); The example shows that no explicit memory allocation is required.
+d_temp_storage = mr.allocate(stream, bytes); mr.deallocate(stream, d_temp_storage, bytes); .","The C++ template library CUB is a go-to for high-performance GPU primitive algorithms, but its traditional “two-phase” API, which separates memory estimation from allocation, can be cumbersome. While this programming model offers flexibility, it often results in repetitive boilerplate code.
+
+This post explains the shift from this API to the new CUB single-call API introduced in CUDA 13.1, which simplifies development by managing memory under the hood without sacrificing performance.
+
+What is CUB?
+
+If you need to run a standard algorithm (such as scan, histogram, or sort) on a GPU, CUB is likely the fastest way to do it. As a principal component of the NVIDIA CUDA Core Compute Libraries (CCCL), CUB is designed to abstract away the complexity of manual CUDA thread management without sacrificing performance.
+
+While libraries like Thrust provide a high-level, “host-side” interface similar to the C++ Standard Template Library (STL) for quick prototyping, CUB provides a set of “device-side” primitives. This enables developers to integrate highly optimized algorithms directly into their own custom kernels. To learn how to use CUB, check out the NVIDIA DLI course Fundamentals of Accelerated Computing with Modern CUDA C++.
+
+The existing CUB two-phase API
+
+CUB is widely recommended for harnessing the full computational capabilities of NVIDIA GPUs. Nevertheless, it carries some intricacies in its usage that may feel non-trivial. This section takes a step back to put these underlying mechanisms in perspective.
+
+A straightforward, single-pass execution flow is often assumed, where a single-call to a function primitive suffices to execute the underlying algorithm and retrieve the results right after. The function’s side effects, such as modifying a variable or returning a result, are expected to be immediately visible to the next statement.
+
+The CUB execution model diverges from this familiar single-pass pattern. Invoking a CUB primitive is a two-step process that requires first calculating the necessary device memory size (the first call), and second, explicitly allocating and then executing the kernel (the second call).
+
+The following is a conventional CUB call:
+
+// FIRST CALL: determine temporary storage size cub::DeviceScan::ExclusiveSum(nullptr, temp_storage_bytes, d_input, d_output, num_items); // Allocate the required temporary storage cudaMalloc(&d_temp_storage, temp_storage_bytes); // SECOND CALL: run the actual scan cub::DeviceScan::ExclusiveSum(d_temp_storage, temp_storage_bytes, d_input, d_output, num_items);
+
+The CUB interface introduces a practical challenge. The primitives must be invoked twice: first to determine the amount of temporary memory needed, and then a second time to execute the actual algorithm with the allocated storage.
+
+A significant drawback of the traditional two-phase API is the lack of clarity regarding which arguments must remain consistent between the estimation and execution steps. Taking the snippet above for reference, it’s not programmatically clear which parameters influence the internal state and can change between the calls, because the function signatures for both phases are identical. For example, the d_input and d_output arguments are only actually being used during the second call.
+
+Despite its intricacies, the existing design serves the following fundamental purpose: by keeping allocation separated from execution, the user can allocate a chunk of memory and reuse it multiple times or even share between different algorithms.
+
+While this design is important for a non-negligible subset of users, the overall user base leveraging this feature is rather limited. That is why many users wrap their CUB calls, to abstract away the two-step invocation required for every use. PyTorch is a case in point, which employs macros to wrap its CUB invocations into single-calls and provide automatic memory management.
+
+The following source code is from the pytorch/pytorch GitHub repo:
+
+// handle the temporary storage and 'twice' calls for cub API #define CUB_WRAPPER(func, ...) do { \ size_t temp_storage_bytes = 0; \ AT_CUDA_CHECK(func(nullptr, temp_storage_bytes, __VA_ARGS__)); \ auto& caching_allocator = *::c10::cuda::CUDACachingAllocator::get(); \ auto temp_storage = caching_allocator.allocate(temp_storage_bytes); \ AT_CUDA_CHECK(func(temp_storage.get(), temp_storage_bytes, __VA_ARGS__));\ } while (false)
+
+The use of macros presents its own drawbacks, as they can obscure control flow and parameter passing, resulting in opaque code that is difficult to understand and significantly hinders debugging.
+
+The new single-call CUB API
+
+Given the wide usage of wrappers throughout many production codebases, there is a recognized need to extend CUB by introducing the new single-call API:
+
+// SINGLE CALL: allocation and execution on a single step cub::DeviceScan::ExclusiveSum(d_input, d_output, num_items);
+
+The example shows that no explicit memory allocation is required. Note that the allocation process is still occurring under the hood, nevertheless. Figure 1 shows that the single-call interface—which includes temporary storage estimation, memory allocation, and invoking the algorithm—introduces zero overhead compared to the two-phase API.
+
+Figure 1 compares the GPU runtime for the original two-phase ExclusiveSum call against the newly introduced single-phase call. The x-axis represents multiple input sizes, while the y-axis shows the normalized execution time for each type of invocation. Two major conclusions drawn from this performance data:
+
+The new API introduces zero overhead
+
+Memory allocation remains under the new API; it just happens under the hood
+
+The second point can be verified by peeking inside the implementation of the new API. Asynchronous allocation is embedded within the device primitive:
+
+cub::DeviceScan::ExclusiveSum(d_input, d_output, num_items, env = {}) { . . . d_temp_storage = mr.allocate(stream, bytes); mr.deallocate(stream, d_temp_storage, bytes); . . . }
+
+The two-phase APIs have not been removed—those are still valid calls of existing CUB APIs. Rather, the single-phase calls are added on top of existing APIs. It’s expected that the majority of users will use these.
+
+The environment and memory resources
+
+Beyond resolving the problems previously mentioned, the new single-call CUB API also expands the execution configuration capabilities of the invoked primitive. It introduces an environment argument, which can either customize memory allocation using memory resources or just provide a stream to execute on (like the two-phase API).
+
+Memory resources are a new memory utility for allocating and freeing memory. The environment argument to single-call APIs can optionally contain a memory resource. When a memory resource is not provided using the environment argument, the API will use a default memory resource provided by CCCL. Conversely, you can elect to pass one of the non-default CCCL memory resources provided as part of the codebase, or even pass your own custom memory resource.
+
+// Use CCCL-provided memory resource type cuda::device_memory_pool mr{cuda::devices[0]}; cub::DeviceScan::ExclusiveSum(d_input, d_output, num_items, mr);
+
+// Create and use your custom MR my_memory_resource my_mr{cuda::experimental::devices[0]}; // Use it with CUB cub::DeviceScan::ExclusiveSum(d_input, d_output, num_items, my_mr);
+
+With the new API, the execution CUDA stream handling is not alleviated but rather encapsulated within the new env variable. Of course it can also be passed explicitly as before, even if temp allocation handling is removed. CUB now also provides cuda::stream_ref that is type safe and its usage should be preferred. You can also pass cuda::stream which owns the underlying execution stream.
+
+Combining execution options
+
+The single-call API enables more than just passing a memory resource or a stream as a last argument. Going forward, the environment argument will be the place for all execution-related knobs, including deterministic requirements, guarantees, user-defined tunings, and much more.
+
+With the introduction of the single-pass API, CUB has unlocked a massive suite of execution configuration features. With the plethora of new execution features, the question becomes: What is the best way to combine them all?
+
+The solution lies in the new env argument. By leveraging cuda::std::execution, CUB provides a central endpoint that acts as a flexible “control panel” for your algorithm. Instead of rigidly defined function arguments, the environment enables you to create a combinatorial mix of any features you need. Whether you want to pair a custom stream with a specific memory pool, or combine strict deterministic requirements with a custom tuning policy, the env argument handles it all in a single, type-safe object.
+
+cuda::stream custom_stream{cuda::device_ref{0}}; auto memory_prop = cuda::std::execution::prop{cuda::mr::get_memory_resource, cuda::device_default_memory_pool(cuda::device_ref{0})}; auto env = cuda::std::execution::env{custom_stream.get(), memory_prop}; DeviceScan::ExclusiveSum(d_input, d_output, num_items, env);
+
+CUB currently provides the following algorithms that support the environment interface, with more to come:
+
+cub::DeviceReduce::Reduce
+
+cub::DeviceReduce::Sum
+
+cub::DeviceReduce::Min/Max/ArgMin/ArgMax
+
+cub::DeviceScan::ExclusiveSum
+
+cub::DeviceScan::ExclusiveScan
+
+For up-to-date progress of the new environment based overloads, see the CUB device primitives tracking issue on the NVIDIA/cccl GitHub repo.
+
+Get started with CUB",https://developer-blogs.nvidia.com/wp-content/uploads/2026/01/person-desk-three-computers.jpg,N,,2026-01-21 19:02:31.549460
+ID29,Medtronic,2026-01-21 22:51:47+00:00,The Motley Fool,Where Will Intuitive Surgical Be in 5 Years? | The Motley Fool,"Prosper Junior Bakiny, www.facebook.com",,,,,https://www.fool.com/investing/2026/01/21/where-will-intuitive-surgical-be-in-5-years/,"The da Vinci 5 will make progress Intuitive Surgical is best known for its da Vinci systems, robotic-assisted surgery (RAS) devices that help physicians perform minimally invasive surgical procedures.
+Intuitive Surgical will launch software updates and other upgrades for the da Vinci 5 based on real-world data and physician feedback.
+NASDAQ : ISRG Intuitive Surgical Today's Change ( -0.71 %) $ -3.75 Current Price $ 523.69 Key Data Points Market Cap $187B Day's Range $ 518.64 - $ 530.05 52wk Range $ 425.00 - $ 616.00 Volume 2M Avg Vol 2M Gross Margin 66.37 % There will be even more competition Intuitive Surgical has had little competition over the past couple of decades.
+Even with mounting competition, Intuitive Surgical could produce strong returns over the medium term.
+More competition might help drive broader adoption of robot systems, which would be good for Intuitive Surgical and its peers.","Despite significant disruption from the pandemic and macroeconomic headwinds, Intuitive Surgical (ISRG 0.71%) has performed well over the past five years both as a company and as a stock. The company's shares have outpaced broader equities over this period.
+
+However, a lot is changing within Intuitive Surgical's competitive landscape. Can the medical device leader still perform well over the next five years? Let's find out how things might unfold for the company through 2031.
+
+The da Vinci 5 will make progress
+
+Intuitive Surgical is best known for its da Vinci systems, robotic-assisted surgery (RAS) devices that help physicians perform minimally invasive surgical procedures. In 2024, the company earned clearance for the fifth generation of this famous system. The rollout of the da Vinci 5 is still ongoing, but over the next five years, we could see it gain significantly more traction. Intuitive Surgical will launch software updates and other upgrades for the da Vinci 5 based on real-world data and physician feedback. The device should also earn additional indications for its use over the years.
+
+This matters for Intuitive Surgical's prospects, as it will help boost its installed base and procedure volume, which are important drivers of revenue growth. Intuitive Surgical makes the majority of its revenue from instruments and accessories needed for the da Vinci systems, as well as servicing the devices and training. The more of its devices are out in hospitals and medical offices, the more surgeries are performed with it, and the more instruments and accessories it sells, and the more servicing and training are needed. Intuitive Surgical's work with the da Vinci 5 should be an important thing to watch over the next five years, though its older devices will still play a role.
+
+NASDAQ : ISRG
+
+Intuitive Surgical
+
+Today's Change
+
+( -0.71 %) $ -3.75
+
+Current Price
+
+$ 523.69
+
+Key Data Points
+
+Market Cap
+
+$187B
+
+Day's Range
+
+$ 518.64 - $ 530.05
+
+52wk Range
+
+$ 425.00 - $ 616.00
+
+Volume
+
+2M
+
+Avg Vol
+
+2M
+
+Gross Margin
+
+66.37 %
+
+There will be even more competition
+
+Intuitive Surgical has had little competition over the past couple of decades. That is now changing. Last year, Medtronic received U.S. Food and Drug Administration clearance for its Hugo RAS system for urologic procedures, an indication for which the da Vinci system is also approved. Medtronic won't stop there. It is already running additional clinical trials, including in hernia repair, to expand the device's approved indications.
+
+By 2031, Medtronic's Hugo will likely have a much longer list of approved indications. Then there is Johnson & Johnson, which is inching closer to earning approval for its own robot device, the Ottava system. These new devices could steal some market share from Intuitive Surgical and put pressure on revenue and earnings growth over the next five years.
+
+Is Intuitive Surgical stock a buy?
+
+Even with mounting competition, Intuitive Surgical could produce strong returns over the medium term. Here are two reasons why. First, the RAS market is underpenetrated. More competition might help drive broader adoption of robot systems, which would be good for Intuitive Surgical and its peers. Second, Intuitive Surgical arguably benefits from a wide moat. It already has a vast installed base and real-world data demonstrating its value for patient outcomes.",https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F851078%2Fphysicians-in-an-operating-room.jpg&w=1200&op=resize,N,,2026-01-21 19:02:20.854773
+ID29,Medtronic,2026-01-21 22:49:11+00:00,The Globe and Mail,Anteris Launches US$200m Share Offering Backed by Strategic Medtronic Investment,Not Available,,,,,https://www.theglobeandmail.com/investing/markets/markets-news/Tipranks/37161825/anteris-launches-us200m-share-offering-backed-by-strategic-medtronic-investment/,Tipranks Press Release.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=828,N,,2026-01-21 19:02:26.070814
+ID1,Adobe,2026-01-21 22:04:58+00:00,Ground News,Adobe Premiere Introduces New AI Tools to Streamline Your Editing Workflow,Not Available,,,,,https://ground.news/article/adobe-premiere-introduces-new-ai-tools-to-streamline-your-editing-workflow_d84c13,"more… Adobe is adding AI tools to Acrobat, including the ability to generate podcast summaries of files, create presentations, and a way for users to edit files using prompts.
+With Adobe's new AI tools, they can transform into something far more useful in just a few clicks.
+Adobe is rolling out a major update for Premiere with new AI features to speed up video editing workflow.
+The latest version of Adobe Premiere Pro has arrived, boasting a bevy of new AI-powered features, though it's no longer called Premiere Pro.
+Adobe Premiere 26, sans the ""Pro"" in the name, is fundamentally still the same nonlinear video editing (NLE) app, albeit with a bunch of new tools.","Adobe has announced multiple AI-based features that are rolling out to Acrobat and Express, including the ability to create audio podcasts from files. Here are the details. more…
+
+Adobe is adding AI tools to Acrobat, including the ability to generate podcast summaries of files, create presentations, and a way for users to edit files using prompts.
+
+Static PDFs are so yesterday. With Adobe's new AI tools, they can transform into something far more useful in just a few clicks.
+
+Adobe is rolling out a major update for Premiere with new AI features to speed up video editing workflow.
+
+The latest version of Adobe Premiere Pro has arrived, boasting a bevy of new AI-powered features, though it's no longer called Premiere Pro. Adobe Premiere 26, sans the ""Pro"" in the name, is fundamentally still the same nonlinear video editing (NLE) app, albeit with a bunch of new tools.","data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22280%22 viewBox=%220 0 280 280%22><path transform=%22translate(97.3,0)%22 d=%22M44,140.1h42.8V272H54.9c0-0.1,0-103.8,0-103.8H44V140.1z M44,1c28.4,0,42.6,16.2,42.6,42.2v66.1H54.9V43.8 c0-7.2-3.1-11.7-10.6-11.7c-7,0-10.6,4.2-10.6,11.7c0,0,0,228.1,0,228.2H0.2c0-0.5,0-228.8,0-228.8C0.1,16.8,14.8,1,44,1L44,1z%22/><style>path { fill: %23262626 } @media (prefers-color-scheme: dark) { path { fill: %23EEEFE9 } }</style></svg>",N,,2026-01-21 19:02:16.824750
 ID43,Uber,2026-01-21 21:56:24+00:00,Passenger Transport,BART–Uber “Game-Changing” Collaboration - Passenger Transport,Mitch Wood,,,,,https://aptapassengertransport.com/bart-uber-game-changing-collaboration/,"San Francisco’s Bay Area Rapid Transit (BART) has announced a collaboration with Uber Transit to integrate rides into the BART app.
 This will streamline trip planning, booking, and payment, particularly useful for people who do not live within walking distance of a BART station.
 Riders will be able to book short Uber trips directly in the app.
@@ -242,6 +414,61 @@ The financial services industry has been heavily investing in AI, with big banks
 Indeed, executives are sold on the value of AI when it comes to bolstering productivity, according to IBM. Surveyed executives expect AI will boost productivity by 42% in the next four years. Two-thirds of leaders expect to realize most AI-driven productivity gains by 2030.
 
 The technology will also redefine leadership roles within the enterprise by 2030, according to 74% of executives surveyed by IBM. CIOs in particular will face mounting pressure to produce ROI.",https://imgproxy.divecdn.com/4H4OYABPufNyfgVyRe0MzbDyAeEyHKAbZ1sQx3Q21P0/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy04NDI4NjYzMDAuanBn.webp,N,,2026-01-21 17:05:16.461917
+ID46,Walmart,2026-01-21 21:03:53+00:00,www.nasdaq.com,Walmart's Marketplace Taps Premium Categories to Enhance Online Mix | Nasdaq,Zacks,,,,,https://www.nasdaq.com/articles/walmarts-marketplace-taps-premium-categories-enhance-online-mix,"Walmart Inc. WMT continues to sharpen the strategic edge of its third-party Marketplace by expanding into higher-value, specialized categories, with the launch of a Premium Musical Instrument Shop.
+It shows Walmart Marketplace’s effort to add well-known brands in categories where customers care about quality and delivery.
+The addition of premium musical instruments broadens Marketplace’s category mix while leveraging Walmart’s existing fulfillment and traffic scale.
+3 Solid Retail Stocks to Consider Ulta Beauty, Inc. ULTA operates as a specialty beauty retailer in the United States, Mexico and Kuwait.
+See Our Top Stock to Double (Plus 4 Runners Up) >> Want the latest recommendations from Zacks Investment Research?","Walmart Inc. WMT continues to sharpen the strategic edge of its third-party Marketplace by expanding into higher-value, specialized categories, with the launch of a Premium Musical Instrument Shop. While musical instruments represent a relatively small category, the move reflects Walmart Marketplace’s broader push to move beyond everyday essentials and into curated, brand-led verticals that can support faster online growth.
+
+Premium Instruments Join Walmart’s Curated Digital Offerings
+
+The new digital storefront features professional-grade instruments and accessories from globally recognized brands such as Fender, Roland, Boss and Zildjian. The offering spans guitars, amplifiers, pedals, drum accessories and related gear, adding a curated assortment that sits alongside WMT’s broader general merchandise selection. It shows Walmart Marketplace’s effort to add well-known brands in categories where customers care about quality and delivery.
+
+Marketplace strength was evident in the third quarter of fiscal 2026, when Walmart’s U.S. e-commerce sales increased 28% year over year, driven by Marketplace, advertising and store-fulfilled pickup and delivery. Marketplace-led categories, including electronics, apparel, toys and hardlines, grew more than 40% during the quarter, underscoring the platform’s role in driving general merchandise growth amid a shifting consumer mix.
+
+Marketplace activity is also closely linked to Walmart’s expanding digital revenue streams. In the third quarter, Walmart’s global advertising business grew more than 50%, with U.S. advertising up more than 30%, supported in part by increased seller participation on the Marketplace. Advertising and membership income together represented approximately one-third of consolidated adjusted operating income during the quarter, reflecting the rising contribution of seller-driven services.
+
+The addition of premium musical instruments broadens Marketplace’s category mix while leveraging Walmart’s existing fulfillment and traffic scale. Although the category itself may be relatively small, it aligns with WMT’s focus on strengthening assortment quality and supporting sustained e-commerce growth.
+
+Image Source: Zacks Investment Research
+
+Walmart, currently carrying a Zacks Rank #3 (Hold), has seen its shares rally 23.8% in the past six months compared with the industry’s growth of 22.5%.
+
+3 Solid Retail Stocks to Consider
+
+Ulta Beauty, Inc. ULTA operates as a specialty beauty retailer in the United States, Mexico and Kuwait. At present, Ulta Beauty sports a Zacks Rank of 1 (Strong Buy). You can see the complete list of today’s Zacks #1 Rank stocks here.
+
+The Zacks Consensus Estimate for ULTA’s current fiscal-year sales and earnings implies growth of 8.8% and 0.7%, respectively, from the year-ago figures. ULTA delivered a trailing four-quarter earnings surprise of 15.7%, on average.
+
+Boot Barn Holdings, Inc. BOOT operates as a lifestyle retail chain devoted to western and work-related footwear, apparel and accessories. It currently sports a Zacks Rank of 1.
+
+The Zacks Consensus Estimate for Boot Barn’s current fiscal-year sales and earnings implies growth of 16.9% and 25.1%, respectively, from the year-ago actuals. Boot Barn delivered a trailing four-quarter average earnings surprise of 5.4%.
+
+Five Below, Inc. FIVE operates as a specialty value retailer in the United States. At present, Five Below sports a Zacks Rank of 1.
+
+The Zacks Consensus Estimate for FIVE’s current fiscal-year sales and earnings calls for growth of 22.3% and 24.4%, respectively, from the year-ago figures. FIVE delivered a trailing four-quarter earnings surprise of 62.1%, on average.
+
+Zacks' Research Chief Picks Stock Most Likely to ""At Least Double""
+
+Our experts have revealed their Top 5 recommendations with money-doubling potential – and Director of Research Sheraz Mian believes one is superior to the others. Of course, all our picks aren’t winners but this one could far surpass earlier recommendations like Hims & Hers Health, which shot up +209%.
+
+See Our Top Stock to Double (Plus 4 Runners Up) >>
+
+Want the latest recommendations from Zacks Investment Research? Today, you can download 7 Best Stocks for the Next 30 Days. Click to get this free report
+
+Walmart Inc. (WMT) : Free Stock Analysis Report
+
+Ulta Beauty Inc. (ULTA) : Free Stock Analysis Report
+
+Boot Barn Holdings, Inc. (BOOT) : Free Stock Analysis Report
+
+Five Below, Inc. (FIVE) : Free Stock Analysis Report
+
+This article originally published on Zacks Investment Research (zacks.com).
+
+Zacks Investment Research
+
+The views and opinions expressed herein are the views and opinions of the author and do not necessarily reflect those of Nasdaq, Inc.",https://www.nasdaq.com/sites/acquia.prod/files/2019-05/0902-Q19%20Total%20Markets%20photos%20and%20gif_CC8.jpg,N,,2026-01-21 19:02:49.787492
 ID46,Walmart,2026-01-21 21:02:19+00:00,www.zacks.com,"The Zacks Analyst Blog Highlights Apple, Walmart, JPMorgan Chase, Park Aerospace and ...",Not Available,,,,,https://www.zacks.com/stock/news/2820100/the-zacks-analyst-blog-highlights-apple-walmart-jpmorgan-chase-park-aerospace-and-motorsport-games,"Please stand by We're getting everything ready for you.
 The page is loading, and you'll be on your way in just a few moments.
 Thanks for your patience!","Please stand by
@@ -308,6 +535,31 @@ And all joining from Marsh McLennan Agency, Jessica Daehler is cyber growth and 
 Prior to joining Vantage in 2022, Ms. White was head of cyber North America at Axa XL and had previously worked in professional liability underwriting at Beazley and American International Group. She was named one of the 2020 Business Insurance Women to Watch.
 
 Other leaders in Howden’s cyber practice include Lou Botticelli, formerly with Markel, who is cyber brokerage leader. And all joining from Marsh McLennan Agency, Jessica Daehler is cyber growth and strategy leader, Suzanne Gladle is cyber client engagement and service leader, David Hau is cyber private equity and M&A solutions leader, and Natalia Santiago is head cyber claims, according to a Howden statement.",https://www.businessinsurance.com/wp-content/uploads/2026/01/Juliet-White-for-web.jpg,N,,2026-01-21 16:02:31.649272
+ID39,S&P Global,2026-01-21 19:59:47+00:00,ETF Database,Mid-Cap Stocks Trading at Historic Discount to Large Caps,"DJ Shaw, Tom Lydon, Karrie Gordon",,,,,https://etfdb.com/artificial-intelligence-content-hub/midcap-stocks-trading-historic-discount/,"FTSE Russell is a trading name of certain of the LSE Group companies.
+“FTSE®” “Russell®”, “FTSE Russell®”, “FTSE4Good®”, “ICB®”, “Mergent®, The Yield Book®,” are trade marks of the relevant LSE Group companies and are used by any other LSE Group company under license.
+No further distribution of data from the LSE Group is permitted without the relevant LSE Group company’s express written consent.
+Copyright 2025 S&P Dow Jones Indices LLC, a subsidiary of S&P Global Inc. and/or its affiliates.
+S&P 500®: An index of large company stocks considered to be representative of the U.S. stock market.","The views expressed are the views of Fred Alger Management, LLC (“FAM”) and its affiliates as of January 2026. These views are subject to change at any time and may not represent the views of all portfolio management teams. They should not be interpreted as a guarantee of the future performance of the markets, any security or any funds managed by FAM. These views are not meant to provide investment advice and should not be considered a recommendation to purchase or sell securities. Holdings and sector allocations are subject to change. Past performance is not indicative of future performance.
+
+Risk Disclosures: Investing in the stock market involves risks, including the potential loss of principal. Growth stocks may be more volatile than other stocks as their prices tend to be higher in relation to their companies’ earnings and may be more sensitive to market, political, and economic developments. Investing in companies of medium capitalizations involves the risk that such issuers may have limited product lines or financial resources, lack management depth, or have limited liquidity. Companies involved in, or exposed to, AI-related businesses may have limited product lines, markets, financial resources or personnel as they face intense competition and potentially rapid product obsolescence, and many depend significantly on retaining and growing their consumer base. These companies may be substantially exposed to the market and business risks of other industries or sectors, and may be adversely affected by negative developments impacting those companies, industries or sectors, as well as by loss or impairment of intellectual property rights or misappropriation of their technology. Companies that utilize AI could face reputational harm, competitive harm, and legal liability, and/or an adverse effect on business operations as content, analyses, or recommendations that AI applications produce may be deficient, inaccurate, biased, misleading or incomplete, may lead to errors, and may be used in negligent or criminal ways. AI technology could face increasing regulatory scrutiny in the future, which may limit the development of this technology and impede the future growth. AI companies, especially smaller companies, tend to be more volatile than companies that do not rely heavily on technology. A significant portion of assets may be invested in securities of companies in related sectors, and may be similarly affected by economic, political, or market events and conditions and may be more vulnerable to unfavorable sector developments. Assets may be focused in a small number of holdings, making them susceptible to risks associated with a single economic, political or regulatory event than a more diversified portfolio. Active trading may increase transaction costs, brokerage commissions, and taxes, which can lower the return on investment. At times, cash may be a larger position in the portfolio and may underperform relative to equity securities.
+
+ETF shares are based on market price rather than net asset value (“NAV”), as a result, shares may trade at a price greater than NAV (a premium) or less than NAV (a discount). The Fund may also incur brokerage commissions, as well as the cost of the bid/ask spread, when purchasing or selling ETF shares. The Fund faces numerous market trading risks, including the potential lack of an active market for Fund shares, losses from trading in secondary markets, periods of high volatility and disruption in the creation and/or redemption process of the Fund. Any of these factors, among others, may lead to the Fund’s shares trading at a premium or discount to NAV. Thus, you may pay more (or less) than NAV when you buy shares of the Fund in the secondary market, and you may receive less (or more) than NAV when you sell those shares in the secondary market. The Manager cannot predict whether shares will trade above (premium), below (discount) or at NAV. The Fund may affect its creations and redemptions for cash, rather than for in-kind securities. Therefore, it may be required to sell portfolio securities and subsequently recognize gains on such sales that the Fund might not have recognized if it were to distribute portfolio securities in-kind. As such, investments in Fund shares may be less tax-efficient than an investment in an ETF that distributes portfolio securities entirely in-kind. Brokerage fees and taxes will be higher than if the Fund sold and redeemed shares in-kind. Certain shareholders, including other funds advised by the Manager or an affiliate of the Manager, may from time to time own a substantial amount of the shares of the Fund. Redemptions by large shareholders could have a significant negative impact on the Fund.
+
+Source: London Stock Exchange Group plc and its group undertakings (collectively, the “LSE Group”). © LSE Group 2025. FTSE Russell is a trading name of certain of the LSE Group companies. “FTSE®” “Russell®”, “FTSE Russell®”, “FTSE4Good®”, “ICB®”, “Mergent®, The Yield Book®,” are trade marks of the relevant LSE Group companies and are used by any other LSE Group company under license. All rights in the FTSE Russell indexes or data vest in the relevant LSE Group company which owns the index or the data. Neither LSE Group nor its licensors accept any liability for any errors or omissions in the indexes or data and no party may rely on any indexes or data contained in this communication. No further distribution of data from the LSE Group is permitted without the relevant LSE Group company’s express written consent. The LSE Group does not promote, sponsor or endorse the content of this communication.
+
+Russell Midcap® Growth Index: Measures the performance of the mid-cap growth segment of the U.S. equity universe. Index performance does not reflect deductions for fees, expenses, or taxes. After March 24, 2025, FTSE Russell implemented a new methodology capping individual companies at no more than 22.5% of the index and capping companies that have a weight greater than 4.5% in aggregate at no more than 45% of the index.
+
+The S&P indexes are a product of S&P Dow Jones Indices LLC and/or its affiliates and has been licensed for use by Fred Alger Management, LLC and its affiliates. Copyright 2025 S&P Dow Jones Indices LLC, a subsidiary of S&P Global Inc. and/or its affiliates. All rights reserved. Redistribution or reproduction in whole or in part are prohibited without written permission of S&P Dow Jones Indices LLC. S&P® is a registered trademark of Standard & Poor’s Financial Services LLC and Dow Jones® is a registered trademark of Dow Jones Trademark Holdings LLC. Neither S&P Dow Jones Indices LLC, Dow Jones Trademark Holdings LLC, their affiliates nor their third party licensors make any representation or warranty, express or implied, as to the ability of any index to accurately represent the asset class or market sector that it purports to represent and neither S&P Dow Jones Indices LLC, Dow Jones Trademark Holdings LLC, their affiliates nor their third party licensors shall have any liability for any errors, omissions, or interruptions of any index or the data included therein.
+
+S&P 500®: An index of large company stocks considered to be representative of the U.S. stock market. The S&P MidCap 400® Index is a market capitalization weighted benchmark index made up of 400 companies.
+
+The indices presented are provided for illustrative purposes, reflect the reinvestment of dividends and do not assess fees and expenses that would have the effect of reducing returns. Investors cannot invest directly in any index. The index performance does not represent the returns of any portfolio advised by Fred Alger Management, LLC and actual client results might differ materially than the indices shown. *Past performance is no guarantee of future results.*
+
+FactSet is an independent source, which Alger believes to be a reliable source. FAM, however, makes no representation that it is complete or accurate.
+
+Sortino ratio is a risk-adjusted metric that measures an investment’s return relative to its downside risk.
+
+Alger pays compensation to VettaFi to sell various strategies to prospective investors.",https://etfdb.com/media/W1siZiIsIjIwMjYvMDEvMjEvNnIxeG1wMnRudF9zaHV0dGVyc3RvY2tfMjI1MzE1MjM5M180NDB4MjUwLmpwZyJdLFsicCIsInRodW1iIiwiNjAweDMxNV4iXV0/shutterstock_2253152393-440x250.jpg,N,,2026-01-21 19:02:45.490401
 ID18,Eli Lilly,2026-01-21 19:55:37+00:00,www.orrick.com,Amicus Brief on Behalf of Leading Pharmaceutical Companies Urges D.C. Circuit to Reject ... - Orrick,Not Available,,,,,https://www.orrick.com/en/News/2026/01/Amicus-Brief-on-Behalf-of-Leading-Pharmaceutical-Companies-Urges-DC-Circuit,"Partner New York With a Ph.D. in biology from MIT and the Whitehead Institute, where she was a NSF fellow, Irena represents plaintiffs and defendants in their most complex pharmaceutical and biotech patent cases.
 Irena also helps life sciences companies and organizations develop the law in the most important cases for the biopharma industry.
 She has been principal counsel on numerous amicus briefs to the United States Supreme Court and the Federal Circuit in key biopharma cases.
@@ -3256,6 +3508,8 @@ Fair Value:CA$25.3326.3 % undervalued
 ·
 
 15 likesusers have liked this narrative",https://images.simplywall.st/asset/company-cover/317627-main-header/1756255518234,N,,2026-01-20 23:00:37.041408
+ID18,Eli Lilly,2026-01-21 02:40:21+00:00,Eli Lilly and Company,SEC Filings | Eli Lilly and Company,Not Available,,,,,https://lilly.gcs-web.com/financial-information/sec-filings%3Ffield_nir_sec_cik_target_id%3D%26field_nir_sec_date_filed_value%3D%26items_per_page%3D10%26items_per_page_toggle%3D1%26mobile%3D1%26filter_type%3Dexact_date_range%26exact_date_range_after%3D2014-12-31%26page%3D198%26order%3Dfield_nir_sec_form%26sort%3Dasc,"We are sorry, the page you requested cannot be found.
+Please check the URL or visit our Homepage.","We are sorry, the page you requested cannot be found. Please check the URL or visit our Homepage.",https://investor.lilly.com/static-files/414b590d-5fd8-4d74-bb91-284a3d77fb98,N,,2026-01-21 02:58:44.244532
 ID8,BNY Mellon,2026-01-21 02:40:21+00:00,StreetInsider.com,Bank of New York Mellon (BK) PT Raised to $142 at BMO Capital - StreetInsider,Not Available,,,,,https://www.streetinsider.com/Analyst%2BPT%2BChange/Bank%2Bof%2BNew%2BYork%2BMellon%2B%2528BK%2529%2BPT%2BRaised%2Bto%2B%2524142%2Bat%2BBMO%2BCapital/25866119.html,"FREE Breaking News Alerts from StreetInsider.com!
 E-mail Address StreetInsider.com Top Tickers, 1/21/2026 1.
 NVDA Bank of New York Mellon (BK) PT Raised to $142 at BMO Capital Tweet Send to a Friend BMO Capital analyst Brennan Hawken raised ...
@@ -3295,8 +3549,6 @@ BMO Capital analyst Brennan Hawken raised ...
 This is a premium only article. To continue reading this and other premium stock market news articles please sign-in or upgrade to StreetInsider.com Premium below (Free Trial) LEARN MORE
 
 Member Login",http://www.streetinsider.com/images/silogo-new.png,N,,2026-01-21 03:59:40.919092
-ID18,Eli Lilly,2026-01-21 02:40:21+00:00,Eli Lilly and Company,SEC Filings | Eli Lilly and Company,Not Available,,,,,https://lilly.gcs-web.com/financial-information/sec-filings%3Ffield_nir_sec_cik_target_id%3D%26field_nir_sec_date_filed_value%3D%26items_per_page%3D10%26items_per_page_toggle%3D1%26mobile%3D1%26filter_type%3Dexact_date_range%26exact_date_range_after%3D2014-12-31%26page%3D198%26order%3Dfield_nir_sec_form%26sort%3Dasc,"We are sorry, the page you requested cannot be found.
-Please check the URL or visit our Homepage.","We are sorry, the page you requested cannot be found. Please check the URL or visit our Homepage.",https://investor.lilly.com/static-files/414b590d-5fd8-4d74-bb91-284a3d77fb98,N,,2026-01-21 02:58:44.244532
 ID46,Walmart,2026-01-21 01:50:56+00:00,Cowboy State Daily,Beef From New Rancher-Owned Packing Plant In Nebraska Hits Walmart Shelves,Renée Jean,,,,,https://cowboystatedaily.com/2026/01/20/wyoming-mans-sustainable-beef-hits-walmart-shelves/,"Trey Wasserburger, a cofounder of a new rancher-owned packing plant in western Nebraska, is celebrating as the company's prime steaks hit Walmart shelves — sourced partly from Wyoming cattle.
 “We hope to be in all Walmart stores fairly soon,” he said.","Trey Wasserburger, a cofounder of a new rancher-owned packing plant in western Nebraska, is celebrating as the company's prime steaks hit Walmart shelves — sourced partly from Wyoming cattle. “We hope to be in all Walmart stores fairly soon,” he said.",https://cowboystatedaily.imgix.net/Cheyenne-Walmart-and-steak-IMG_7481-1.20.26.jpg,N,,2026-01-20 22:00:24.081257
 ID9,Boston Scientific,2026-01-21 01:38:14+00:00,www.raps.org,"Recon: GSK to purchase RAPT Therapeutics, food allergy drugmaker, for $2.2 billion - RAPS",Jason Scott,,,,,"https://www.raps.org/news-and-articles/news-articles/2026/1/recon-gsk-to-purchase-rapt-therapeutics,-food-alle",ReconJason ScottBiologics/ biosimilars/ vaccinesGlobalMedical DevicesPharmaceuticals,ReconJason ScottBiologics/ biosimilars/ vaccinesGlobalMedical DevicesPharmaceuticals,https://media.raps.org/m/6546510458fb6d71/webimage-Regulatory-Recon-Icon.png,N,,2026-01-20 23:00:41.767602
@@ -4640,6 +4892,53 @@ Investors are due a host of fresh data this week on the state of the U.S. econom
 Earnings season is also kicking into higher gear, with several industry bellwethers set to report their quarterly earnings this week.
 
 Among them was Netflix, which closed 0.8% lower before reporting earnings after the bell.",https://i-invdn-com.investing.com/news/https://i-invdn-com.investing.com/trkd-images/LYNXMPEM0J0KX_L.jpg,N,,2026-01-20 19:04:22.051433
+ID45,U.S. Bank,2026-01-20 20:35:08+00:00,finviz.com,"US Bancorp's Profits Surge On Record Deposits, Strong Fee Growth - Finviz",Not Available,,,,,https://finviz.com/news/281146/us-bancorps-profits-surge-on-record-deposits-strong-fee-growth,"The company’s provision for credit losses for the fourth quarter was $577 million, compared with $571 million in the third quarter of 2025 and $560 million in the fourth quarter of 2024.
+The fourth quarter provision was $6 million (1.1%) higher than the third quarter of 2025 and $17 million (3%) higher than the fourth quarter of 2024.
+Important Highlights U.S. Bancorp signed a definitive deal to buy BTIG, LLC, expanding its investment banking and trading platform.
+BTIG’s roughly 700 employees across 20 locations will join U.S. Bancorp, and current leadership will stay.
+USB Price Action: U.S. Bancorp shares were down 3.25% at $52.63 during premarket trading on Tuesday.","U.S. Bancorp (NYSE:USB) stock fell on Tuesday after the lender reported fourth-quarter 2025 results.
+
+The company reported fourth-quarter adjusted earnings per share of $1.26, beating the analyst consensus estimate of $1.19. Quarterly sales of $7.337 billion outpaced the Street view of $7.308 billion.
+
+The company’s provision for credit losses for the fourth quarter was $577 million, compared with $571 million in the third quarter of 2025 and $560 million in the fourth quarter of 2024.
+
+The fourth quarter provision was $6 million (1.1%) higher than the third quarter of 2025 and $17 million (3%) higher than the fourth quarter of 2024.
+
+The increase in provision expense year over year was primarily driven by loan portfolio growth, partially offset by lower net charge-offs.
+
+Other Metrics
+
+Net income rose 23.0% year over year to $2.045 billion.
+
+Return on tangible common equity rose to 18.4%, while return on average assets increased to 1.19%. The efficiency ratio improved to 57.4% versus the fourth quarter of 2024.
+
+The company delivered 440 basis points of positive operating leverage, adjusted for prior notable items. Net interest margin rose to 2.77%, up 6 basis points year over year and 2 basis points sequentially.
+
+Noninterest expense remained relatively stable compared to the prior-year period. The CET1 capital ratio stood at 10.8% as of Dec. 31, 2025.
+
+Net interest income on a taxable-equivalent basis rose to $4.31 billion, up from $4.25 billion in the prior quarter and $4.18 billion a year earlier.
+
+Average deposits rose to $515.1 billion from $511.8 billion in the third quarter, while average total loans increased to $384.3 billion from $379.2 billion in the prior quarter.
+
+“Record consumer deposits this quarter and effective balance sheet remixing contributed to net interest income growth and margin expansion. Fee income exceeded our mid-single-digit growth target and was supported by broad strength across our diversified fee businesses,” said CEO Gunjan Kedia.
+
+Important Highlights
+
+U.S. Bancorp signed a definitive deal to buy BTIG, LLC, expanding its investment banking and trading platform. BTIG’s roughly 700 employees across 20 locations will join U.S. Bancorp, and current leadership will stay.
+
+The company expects the transaction to close in the second quarter of 2026, pending regulatory approvals.
+
+U.S. Bank also completed a cross-border stablecoin pilot, signaling readiness for future compliant commercial offerings.
+
+Outlook
+
+U.S. Bancorp forecast fiscal 2026 revenue of $29.85 billion to $30.42 billion, compared with Wall Street expectations of $30.04 billion.
+
+“Looking ahead to 2026, we remain committed to our strategic priorities and medium-term targets as these measures will continue to drive sustainable EPS growth and industry-leading returns,” Kedia added.
+
+USB Price Action: U.S. Bancorp shares were down 3.25% at $52.63 during premarket trading on Tuesday. The stock is approaching its 52-week high of $56.19, according to Benzinga Pro data.
+
+Photo via Shutterstock",https://finviz.com/favicon_2x.png,N,,2026-01-21 09:00:38.073090
 ID45,U.S. Bank,2026-01-20 20:35:08+00:00,finviz.com,U.S. Bancorp Q4 Earnings Beat Estimates as NII & Fee Income Rise Y/Y - Finviz,Not Available,,,,,https://finviz.com/news/281407/us-bancorp-q4-earnings-beat-estimates-as-nii-fee-income-rise-yy,"U.S. Bancorp’s USB fourth-quarter 2025 earnings per share of $1.26 beat the Zacks Consensus Estimate of $1.19.
 Net income attributable to U.S. Bancorp was $2.04 billion, up 22.9% from the prior-year quarter.
 The top line beat the Zacks Consensus Estimate by 0.6%.
@@ -4709,53 +5008,6 @@ Huntington Bancshares Incorporated (HBAN): Free Stock Analysis Report
 Bank of Hawaii Corporation (BOH): Free Stock Analysis Report
 
 This article originally published on Zacks Investment Research (zacks.com).",https://finviz.com/favicon_2x.png,N,,2026-01-20 19:04:29.350506
-ID45,U.S. Bank,2026-01-20 20:35:08+00:00,finviz.com,"US Bancorp's Profits Surge On Record Deposits, Strong Fee Growth - Finviz",Not Available,,,,,https://finviz.com/news/281146/us-bancorps-profits-surge-on-record-deposits-strong-fee-growth,"The company’s provision for credit losses for the fourth quarter was $577 million, compared with $571 million in the third quarter of 2025 and $560 million in the fourth quarter of 2024.
-The fourth quarter provision was $6 million (1.1%) higher than the third quarter of 2025 and $17 million (3%) higher than the fourth quarter of 2024.
-Important Highlights U.S. Bancorp signed a definitive deal to buy BTIG, LLC, expanding its investment banking and trading platform.
-BTIG’s roughly 700 employees across 20 locations will join U.S. Bancorp, and current leadership will stay.
-USB Price Action: U.S. Bancorp shares were down 3.25% at $52.63 during premarket trading on Tuesday.","U.S. Bancorp (NYSE:USB) stock fell on Tuesday after the lender reported fourth-quarter 2025 results.
-
-The company reported fourth-quarter adjusted earnings per share of $1.26, beating the analyst consensus estimate of $1.19. Quarterly sales of $7.337 billion outpaced the Street view of $7.308 billion.
-
-The company’s provision for credit losses for the fourth quarter was $577 million, compared with $571 million in the third quarter of 2025 and $560 million in the fourth quarter of 2024.
-
-The fourth quarter provision was $6 million (1.1%) higher than the third quarter of 2025 and $17 million (3%) higher than the fourth quarter of 2024.
-
-The increase in provision expense year over year was primarily driven by loan portfolio growth, partially offset by lower net charge-offs.
-
-Other Metrics
-
-Net income rose 23.0% year over year to $2.045 billion.
-
-Return on tangible common equity rose to 18.4%, while return on average assets increased to 1.19%. The efficiency ratio improved to 57.4% versus the fourth quarter of 2024.
-
-The company delivered 440 basis points of positive operating leverage, adjusted for prior notable items. Net interest margin rose to 2.77%, up 6 basis points year over year and 2 basis points sequentially.
-
-Noninterest expense remained relatively stable compared to the prior-year period. The CET1 capital ratio stood at 10.8% as of Dec. 31, 2025.
-
-Net interest income on a taxable-equivalent basis rose to $4.31 billion, up from $4.25 billion in the prior quarter and $4.18 billion a year earlier.
-
-Average deposits rose to $515.1 billion from $511.8 billion in the third quarter, while average total loans increased to $384.3 billion from $379.2 billion in the prior quarter.
-
-“Record consumer deposits this quarter and effective balance sheet remixing contributed to net interest income growth and margin expansion. Fee income exceeded our mid-single-digit growth target and was supported by broad strength across our diversified fee businesses,” said CEO Gunjan Kedia.
-
-Important Highlights
-
-U.S. Bancorp signed a definitive deal to buy BTIG, LLC, expanding its investment banking and trading platform. BTIG’s roughly 700 employees across 20 locations will join U.S. Bancorp, and current leadership will stay.
-
-The company expects the transaction to close in the second quarter of 2026, pending regulatory approvals.
-
-U.S. Bank also completed a cross-border stablecoin pilot, signaling readiness for future compliant commercial offerings.
-
-Outlook
-
-U.S. Bancorp forecast fiscal 2026 revenue of $29.85 billion to $30.42 billion, compared with Wall Street expectations of $30.04 billion.
-
-“Looking ahead to 2026, we remain committed to our strategic priorities and medium-term targets as these measures will continue to drive sustainable EPS growth and industry-leading returns,” Kedia added.
-
-USB Price Action: U.S. Bancorp shares were down 3.25% at $52.63 during premarket trading on Tuesday. The stock is approaching its 52-week high of $56.19, according to Benzinga Pro data.
-
-Photo via Shutterstock",https://finviz.com/favicon_2x.png,N,,2026-01-21 09:00:38.073090
 ID23,JDE Peet’s,2026-01-20 20:15:34+00:00,sf.gazetteer.co,Dozens of Peet's stores will close by month's end - Gazetteer SF,Not Available,,,,,https://sf.gazetteer.co/dozens-of-peets-stores-will-close-by-months-end,"Last week, Keurig Dr. Pepper launched its $18 billion all-cash takeover of Peet’s parent company, JDE Peet’s.
 Keurig announced the buyout in August and, in October, raised $7 billion from private equity firms to finance the purchase.
 Peet’s eventually went under the ownership of one of the Starbucks co-founders, Jerry Baldwin, who took the company public in 2001.
@@ -23506,4 +23758,3 @@ The design change, implemented in December 2023, made it so users could only lea
 The report says the current average tip at Uber Eats and DoorDash is only $0.76 per delivery. Meanwhile, on other apps that offer a tipping option at checkout, the average tip is $2.17 per delivery.
 
 The current loss to workers is approximately $5,800 per year, according to the report.",https://s7d2.scene7.com/is/image/TWCNews/doordash_nyc_AP25055684651859,N,,2026-01-14 22:00:06.732061
-ID6,Barclays,2026-01-14 23:21:58+00:00,Oswego County News Now,"Barclay, Ryan respond to Hochul's speech | News | oswegocountynewsnow.com","Mike Perkins, photo provided",,,,,https://www.oswegocountynewsnow.com/news/barclay-ryan-respond-to-hochuls-speech/article_87716a7d-f155-4f85-a8ae-4243de62e603.html,"Local leaders responded positively and negatively to Gov. Kathy Hochul’s State of the State speech, delivered Tuesday, that focused on affordability for New Yorkers.",Not Available,https://bloximages.chicago2.vip.townnews.com/oswegocountynewsnow.com/content/tncms/assets/v3/editorial/4/fb/4fb3d078-92fd-11ef-b09b-5b9bf0263b26/671be0e3b8b97.image.jpg?crop=1000%2C525%2C0%2C71,N,,2026-01-14 22:00:02.191436
