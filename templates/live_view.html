@@ -25,8 +25,8 @@
 
     <div class="container">
         <h2 class="mt-4">{{ filename[:-4].upper() }}</h2>
-        <p id="localDate">Converting...</p>
-        <p id="storyStats">Calculated: 0 past hour | 0 today | 0 yesterday</p>
+        <p id="localDate" style="margin-bottom: 0;">Converting...</p>
+        <p id="storyStats" style="margin-top: 0;">Calculated: 0 past hour | 0 today | 0 yesterday</p>
 
         <div id="previewContainer"></div>
     </div>
@@ -64,23 +64,26 @@
                 return;
             }
 
-            // Find max lastEyes timestamp
-            // const maxTimestamp = d3.max(articles, d => d.firstEyes);
-            // const localTimeString = convertToIsoDate(maxTimestamp);
-            const localTimeStamp = allTS[allTS.length - 1]
-            const localTimeString = new Date(localTimeStamp).toLocaleString()
-            d3.select('#localDate').text("Last Updated: " + localTimeString);
-
-            // 1. Initialize variables and arrays BEFORE the loop
+            // 1. INITIALIZE DATES & COUNTERS FIRST
+            const today = new Date();
+            const yesterday = new Date(today);
+            yesterday.setDate(yesterday.getDate() - 1);
+            
             const oneHourAgo = new Date(today.getTime() - (60 * 60 * 1000));
             let pastHourCount = 0;
-            
+
             const todayArticles = [];
             const yesterdayArticles = [];
             const earlierArticles = [];
 
-            // 2. Run the loop
+            // 2. UPDATE "LAST UPDATED" HEADER
+            const localTimeStamp = allTS[allTS.length - 1];
+            const localTimeString = new Date(localTimeStamp).toLocaleString();
+            d3.select('#localDate').text("Last Updated: " + localTimeString);
+
+            // 3. PROCESS ARTICLES
             articles.forEach(d => {
+                d.publishedSort = new Date(d.published);
                 const articleDate = d.publishedSort;
 
                 // Count stories from the last 60 minutes
@@ -101,10 +104,12 @@
                 }
             });
 
-            // 3. Update the UI counts
+            // 4. UPDATE THE STATS UI
             d3.select('#storyStats').text(
                 `Past Hour: ${pastHourCount} | Today: ${todayArticles.length} | Yesterday: ${yesterdayArticles.length}`
             );
+
+
 
             const container = d3.select("#previewContainer");
             container.html(""); // Clear previous content
