@@ -26,6 +26,7 @@
     <div class="container">
         <h2 class="mt-4">{{ filename[:-4].upper() }}</h2>
         <p id="localDate">Converting...</p>
+        <p id="storyStats">Calculated: 0 past hour | 0 today | 0 yesterday</p>
 
         <div id="previewContainer"></div>
     </div>
@@ -70,25 +71,23 @@
             const localTimeString = new Date(localTimeStamp).toLocaleString()
             d3.select('#localDate').text("Last Updated: " + localTimeString);
 
-            // Process articles
-            articles.forEach(d => {
-                d.publishedSort = new Date(d.published);
-            });
-
-            // Sort articles by published date (latest first)
-            articles.sort((a, b) => b.publishedSort - a.publishedSort);
-
-            const today = new Date();
-            const yesterday = new Date(today);
-            yesterday.setDate(yesterday.getDate() - 1);
-
-            // Categorizing articles
+            // 1. Initialize variables and arrays BEFORE the loop
+            const oneHourAgo = new Date(today.getTime() - (60 * 60 * 1000));
+            let pastHourCount = 0;
+            
             const todayArticles = [];
             const yesterdayArticles = [];
             const earlierArticles = [];
 
+            // 2. Run the loop
             articles.forEach(d => {
                 const articleDate = d.publishedSort;
+
+                // Count stories from the last 60 minutes
+                if (articleDate >= oneHourAgo) {
+                    pastHourCount++;
+                }
+
                 const articleDateString = d3.timeFormat("%Y-%m-%d")(articleDate);
                 const todayString = d3.timeFormat("%Y-%m-%d")(today);
                 const yesterdayString = d3.timeFormat("%Y-%m-%d")(yesterday);
@@ -101,6 +100,11 @@
                     earlierArticles.push(d);
                 }
             });
+
+            // 3. Update the UI counts
+            d3.select('#storyStats').text(
+                `Past Hour: ${pastHourCount} | Today: ${todayArticles.length} | Yesterday: ${yesterdayArticles.length}`
+            );
 
             const container = d3.select("#previewContainer");
             container.html(""); // Clear previous content
