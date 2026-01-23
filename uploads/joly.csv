@@ -1,4 +1,408 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID33,OpenAI,2026-01-23 21:20:32+00:00,Venturebeat,How OpenAI is scaling the PostgreSQL database to 800 million users | VentureBeat,Sean Michael Kerner,,,,,https://venturebeat.com/data/how-openai-is-scaling-the-postgresql-database-to-800-million-users,"In a blog post on Thursday, OpenAI disclosed how it is using the open-source PostgreSQL database.
+OpenAI runs ChatGPT and its API platform for 800 million users on a single-primary PostgreSQL instance — not a distributed database, not a sharded cluster.
+Why PostgreSQL matters for enterprises PostgreSQL handles operational data for ChatGPT and OpenAI's API platform.
+Instead of sharding PostgreSQL, OpenAI established a hybrid strategy: no new tables in PostgreSQL.
+Object-Relational Mapping (ORM) frameworks like Django, SQLAlchemy, and Hibernate automatically generate database queries from application code, which is convenient for developers.","While vector databases still have many valid use cases, organizations including OpenAI are leaning on PostgreSQL to get things done.
+
+In a blog post on Thursday, OpenAI disclosed how it is using the open-source PostgreSQL database.
+
+OpenAI runs ChatGPT and its API platform for 800 million users on a single-primary PostgreSQL instance — not a distributed database, not a sharded cluster. One Azure PostgreSQL Flexible Server handles all writes. Nearly 50 read replicas spread across multiple regions handle reads. The system processes millions of queries per second while maintaining low double-digit millisecond p99 latency and five-nines availability.
+
+The setup challenges conventional scaling wisdom and offers enterprise architects insight into what actually works at massive scale.
+
+T he lesson here isn’t to copy OpenAI’s stack. It’s that architectural decisions should be driven by workload patterns and operational constraints — not by scale panic or fashionable infrastructure choices. OpenAI’s PostgreSQL setup shows how far proven systems can stretch when teams optimize deliberately instead of re-architecting prematurely.
+
+""For years, PostgreSQL has been one of the most critical, under-the-hood data systems powering core products like ChatGPT and OpenAI’s API,"" OpenAI engineer Bohan Zhang wrote in a technical disclosure. ""Over the past year, our PostgreSQL load has grown by more than 10x, and it continues to rise quickly.""
+
+The company achieved this scale through targeted optimizations, including connection pooling that cut connection time from 50 milliseconds to 5 milliseconds and cache locking to prevent 'thundering herd' problems where cache misses trigger database overload.
+
+Why PostgreSQL matters for enterprises
+
+PostgreSQL handles operational data for ChatGPT and OpenAI's API platform. The workload is heavily read-oriented, which makes PostgreSQL a good fit. However, PostgreSQL's multiversion concurrency control (MVCC) creates challenges under heavy write loads.
+
+When updating data, PostgreSQL copies entire rows to create new versions, causing write amplification and forcing queries to scan through multiple versions to find current data.
+
+Rather than fighting this limitation, OpenAI built its strategy around it. At OpenAI’s scale, these tradeoffs aren’t theoretical — they determine which workloads stay on PostgreSQL and which ones must move elsewhere.
+
+How OpenAI is optimizing PostgreSQL
+
+At large scale, conventional database wisdom points to one of two paths: shard PostgreSQL across multiple primary instances so writes can be distributed, or migrate to a distributed SQL database like CockroachDB or YugabyteDB designed to handle massive scale from the start. Most organizations would have taken one of these paths years ago, well before reaching 800 million users.
+
+Sharding or moving to a distributed SQL database eliminates the single-writer bottleneck. A distributed SQL database handles this coordination automatically, but both approaches introduce significant complexity: application code must route queries to the correct shard, distributed transactions become harder to manage and operational overhead increases substantially.
+
+Instead of sharding PostgreSQL, OpenAI established a hybrid strategy: no new tables in PostgreSQL. New workloads default to sharded systems like Azure Cosmos DB. Existing write-heavy workloads that can be horizontally partitioned get migrated out. Everything else stays in PostgreSQL with aggressive optimization.
+
+This approach offers enterprises a practical alternative to wholesale re-architecture. Rather than spending years rewriting hundreds of endpoints, teams can identify specific bottlenecks and move only those workloads to purpose-built systems.
+
+Why this matters
+
+OpenAI's experience scaling PostgreSQL reveals several practices that enterprises can adopt regardless of their scale.
+
+Build operational defenses at multiple layers. OpenAI's approach combines cache locking to prevent ""thundering herd"" problems, connection pooling (which dropped their connection time from 50ms to 5ms), and rate limiting at application, proxy and query levels. Workload isolation routes low-priority and high-priority traffic to separate instances, ensuring a poorly optimized new feature can't degrade core services.
+
+Review and monitor ORM-generated SQL in production. Object-Relational Mapping (ORM) frameworks like Django, SQLAlchemy, and Hibernate automatically generate database queries from application code, which is convenient for developers. However, OpenAI found one ORM-generated query joining 12 tables that caused multiple high-severity incidents when traffic spiked. The convenience of letting frameworks generate SQL creates hidden scaling risks that only surface under production load. Make reviewing these queries a standard practice.
+
+Enforce strict operational discipline. OpenAI permits only lightweight schema changes — anything triggering a full table rewrite is prohibited. Schema changes have a 5-second timeout. Long-running queries get automatically terminated to prevent blocking database maintenance operations. When backfilling data, they enforce rate limits so aggressive that operations can take over a week.
+
+Read-heavy workloads with burst writes can run on single-primary PostgreSQL longer than commonly assumed. The decision to shard should depend on workload patterns rather than user counts.
+
+This approach is particularly relevant for AI applications, which often have heavily read-oriented workloads with unpredictable traffic spikes. These characteristics align with the pattern where single-primary PostgreSQL scales effectively.
+
+The lesson is straightforward: identify actual bottlenecks, optimize proven infrastructure where possible, and migrate selectively when necessary. Wholesale re-architecture isn't always the answer to scaling challenges.",https://images.ctfassets.net/jdtwqhzvc2n1/2nMZ8lzfqYONXXqLmfp03c/ef9465cd0a706732727d46c445280358/chatGPT-PostgreSQL.jpg?w=800&q=75,N,,2026-01-23 17:03:13.295116
+ID6,Barclays,2026-01-23 21:18:09+00:00,StreetInsider.com,Form 424B2 BARCLAYS BANK PLC - StreetInsider,Not Available,,,,,https://www.streetinsider.com/SEC%2BFilings/Form%2B424B2%2BBARCLAYS%2BBANK%2BPLC/25885169.html,"Any payment on the Notes, including the repayment of principal, is subject to the credit risk of Barclays Bank PLC.
+In addition, the role played by Barclays Capital Inc., as the agent for the Notes, could present significant conflicts of interest with the role of Barclays Bank PLC, as issuer of the Notes.
+Barclays Capital Inc. and other affiliates of Barclays Bank PLC intend to make a secondary market for the Notes but are not required to do so, and may discontinue any such secondary market making at any time, without notice.
+Barclays Capital Inc. may at any time hold unsold inventory, which may inhibit the development of a secondary market for the Notes.
+Our internal funding rates may vary from the levels at which our benchmark debt securities trade in the secondary market.","Unlike ordinary debt securities, the Notes do not pay interest and do not guarantee the return of the full principal amount at maturity. Instead, as described below, the Notes offer a fixed return at maturity if, from its Initial Underlier Value to its Final Underlier Value, the Least Performing Underlier appreciates, remains flat or does not decline below its Digital Barrier Value. Investors should be willing to forgo dividend payments and, if the Final Underlier Value of any Underlier is less than its Barrier Value, be willing to lose a significant portion or all of their investment at maturity. Investors will be exposed to the market risk of each Underlier and any decline in the value of one Underlier may negatively affect their return and will not be offset or mitigated by a lesser decline or any potential increase in the values of the other Underliers.
+
+KEY TERMS*
+
+(Terms of the Notes continue on the next page)
+
+Initial Issue Price(1)(2)
+
+Price to Public
+
+Agent’s Commission(3)
+
+Proceeds to Barclays Bank PLC
+
+Per Note
+
+$1,000
+
+100%
+
+0.70%
+
+99.30%
+
+Total
+
+$●
+
+$●
+
+$●
+
+$●
+
+(1)Because dealers who purchase the Notes for sale to certain fee-based advisory accounts may forgo some or all selling concessions, fees or commissions, the public offering price for investors purchasing the Notes in such fee-based advisory accounts may be between $993.00 and $1,000 per $1,000 principal amount Note. Investors that hold their Notes in fee-based advisory or trust accounts may be charged fees by the investment advisor or manager of such account based on the amount of assets held in those accounts, including the Notes.
+
+(2)Our estimated value of the Notes on the Initial Valuation Date, based on our internal pricing models, is expected to be between $938.90 and $988.90 per $1,000 principal amount Note. The estimated value is expected to be less than the initial issue price of the Notes. See “Additional Information Regarding Our Estimated Value of the Notes” on page PS-5 of this pricing supplement.
+
+(3)Barclays Capital Inc. will receive commissions from the Issuer of up to $7.00 per $1,000 principal amount Note. Barclays Capital Inc. will use these commissions to pay variable selling concessions or fees (including custodial or clearing fees) to other dealers. The actual commission received by Barclays Capital Inc. will be equal to the selling concession paid to such dealers.
+
+Investing in the Notes involves a number of risks. See “Risk Factors” beginning on page S-9 of the prospectus supplement and “Selected Risk Considerations” beginning on page PS-9 of this pricing supplement.
+
+The Notes will not be listed on any U.S. securities exchange or quotation system. Neither the U.S. Securities and Exchange Commission (the “SEC”) nor any state securities commission has approved or disapproved of these Notes or determined that this pricing supplement is truthful or complete. Any representation to the contrary is a criminal offense.
+
+The Notes constitute our unsecured and unsubordinated obligations. The Notes are not deposit liabilities of Barclays Bank PLC and are not covered by the U.K. Financial Services Compensation Scheme or insured by the U.S. Federal Deposit Insurance Corporation or any other governmental agency or deposit insurance agency of the United States, the United Kingdom or any other jurisdiction.
+
+CONSENT TO U.K. BAIL-IN POWER
+
+Notwithstanding and to the exclusion of any other term of the Notes or any other agreements, arrangements or understandings between us and any holder or beneficial owner of the Notes (or the trustee on behalf of the holders of the Notes), by acquiring the Notes, each holder or beneficial owner of the Notes acknowledges, accepts, agrees to be bound by, and consents to the exercise of, any U.K. Bail-in Power by the relevant U.K. resolution authority.
+
+Under the U.K. Banking Act 2009, as amended, the relevant U.K. resolution authority may exercise a U.K. Bail-in Power in circumstances in which the relevant U.K. resolution authority is satisfied that the resolution conditions are met. These conditions include that a U.K. bank or investment firm is failing or is likely to fail to satisfy the Financial Services and Markets Act 2000 (the “FSMA”) threshold conditions for authorization to carry on certain regulated activities (within the meaning of section 55B FSMA) or, in the case of a U.K. banking group company that is a European Economic Area (“EEA”) or third country institution or investment firm, that the relevant EEA or third country relevant authority is satisfied that the resolution conditions are met in respect of that entity.
+
+The U.K. Bail-in Power includes any write-down, conversion, transfer, modification and/or suspension power, which allows for (i) the reduction or cancellation of all, or a portion, of the principal amount of, or interest on, or any other amounts payable on, the Notes; (ii) the conversion of all, or a portion, of the principal amount of, or interest on, or any other amounts payable on, the Notes into shares or other securities or other obligations of Barclays Bank PLC or another person (and the issue to, or conferral on, the holder or beneficial owner of the Notes of such shares, securities or obligations); (iii) the cancellation of the Notes and/or (iv) the amendment or alteration of the maturity of the Notes, or the amendment of the amount of interest or any other amounts due on the Notes, or the dates on which interest or any other amounts become payable, including by suspending payment for a temporary period; which U.K. Bail-in Power may be exercised by means of a variation of the terms of the Notes solely to give effect to the exercise by the relevant U.K. resolution authority of such U.K. Bail-in Power. Each holder and beneficial owner of the Notes further acknowledges and agrees that the rights of the holders or beneficial owners of the Notes are subject to, and will be varied, if necessary, solely to give effect to, the exercise of any U.K. Bail-in Power by the relevant U.K. resolution authority. For the avoidance of doubt, this consent and acknowledgment is not a waiver of any rights holders or beneficial owners of the Notes may have at law if and to the extent that any U.K. Bail-in Power is exercised by the relevant U.K. resolution authority in breach of laws applicable in England.
+
+For more information, please see “Selected Risk Considerations—Risks Relating to the Issuer—You May Lose Some or All of Your Investment If Any U.K. Bail-in Power Is Exercised by the Relevant U.K. Resolution Authority” in this pricing supplement as well as “U.K. Bail-in Power,” “Risk Factors—Risks Relating to the Securities Generally—Regulatory action in the event a bank or investment firm in the Group is failing or likely to fail, including the exercise by the relevant U.K. resolution authority of a variety of statutory resolution powers, could materially adversely affect the value of any securities” and “Risk Factors—Risks Relating to the Securities Generally—Under the terms of the securities, you have agreed to be bound by the exercise of any U.K. Bail-in Power by the relevant U.K. resolution authority” in the accompanying prospectus supplement.
+
+ADDITIONAL INFORMATION REGARDING OUR ESTIMATED VALUE OF THE NOTES
+
+The final terms for the Notes will be determined on the date the Notes are initially priced for sale to the public, which we refer to as the Initial Valuation Date, based on prevailing market conditions on or prior to the Initial Valuation Date, and will be communicated to investors either orally or in a final pricing supplement.
+
+Our internal pricing models take into account a number of variables and are based on a number of subjective assumptions, which may or may not materialize, typically including volatility, interest rates and our internal funding rates. Our internal funding rates (which are our internally published borrowing rates based on variables such as market benchmarks, our appetite for borrowing, and our existing obligations coming to maturity) may vary from the levels at which our benchmark debt securities trade in the secondary market. Our estimated value on the Initial Valuation Date is based on our internal funding rates. Our estimated value of the Notes might be lower if such valuation were based on the levels at which our benchmark debt securities trade in the secondary market.
+
+Our estimated value of the Notes on the Initial Valuation Date is expected to be less than the initial issue price of the Notes. The difference between the initial issue price of the Notes and our estimated value of the Notes is expected to result from several factors, including any sales commissions expected to be paid to Barclays Capital Inc. or another affiliate of ours, any selling concessions, discounts, commissions or fees expected to be allowed or paid to non-affiliated intermediaries, the estimated profit that we or any of our affiliates expect to earn in connection with structuring the Notes, the estimated cost that we may incur in hedging our obligations under the Notes, and estimated development and other costs that we may incur in connection with the Notes.
+
+Our estimated value on the Initial Valuation Date is not a prediction of the price at which the Notes may trade in the secondary market, nor will it be the price at which Barclays Capital Inc. may buy or sell the Notes in the secondary market. Subject to normal market and funding conditions, Barclays Capital Inc. or another affiliate of ours intends to offer to purchase the Notes in the secondary market but it is not obligated to do so.
+
+Assuming that all relevant factors remain constant after the Initial Valuation Date, the price at which Barclays Capital Inc. may initially buy or sell the Notes in the secondary market, if any, and the value that we may initially use for customer account statements, if we provide any customer account statements at all, may exceed our estimated value on the Initial Valuation Date for a temporary period expected to be approximately six months after the Issue Date because, in our discretion, we may elect to effectively reimburse to investors a portion of the estimated cost of hedging our obligations under the Notes and other costs in connection with the Notes that we will no longer expect to incur over the term of the Notes. We made such discretionary election and determined this temporary reimbursement period on the basis of a number of factors, which may include the tenor of the Notes and/or any agreement we may have with the distributors of the Notes. The amount of our estimated costs that we effectively reimburse to investors in this way may not be allocated ratably throughout the reimbursement period, and we may discontinue such reimbursement at any time or revise the duration of the reimbursement period after the initial Issue Date of the Notes based on changes in market conditions and other factors that cannot be predicted.
+
+We urge you to read the “Selected Risk Considerations” beginning on page PS-9 of this pricing supplement.
+
+You may revoke your offer to purchase the Notes at any time prior to the Initial Valuation Date. We reserve the right to change the terms of, or reject any offer to purchase, the Notes prior to the Initial Valuation Date. In the event of any changes to the terms of the Notes, we will notify you and you will be asked to accept such changes in connection with your purchase. You may also choose to reject such changes in which case we may reject your offer to purchase.
+
+SELECTED PURCHASE CONSIDERATIONS
+
+The Notes are not appropriate for all investors. The Notes may be an appropriate investment for you if all of the following statements are true:
+
+●You do not seek an investment that produces periodic interest or coupon payments or other sources of current income.
+
+●You understand and accept that you will not participate in any appreciation of any Underlier, which may be significant, and that your potential return on the Notes is limited to the Digital Percentage.
+
+●You can tolerate a loss of a significant portion or all of your principal amount, and you are willing and able to make an investment that may have the full downside market risk of an investment in the Least Performing Underlier.
+
+●You do not anticipate that the Final Underlier Value of any Underlier will fall below its Digital Barrier Value.
+
+●You are willing and able to accept the individual market risk of each Underlier and understand that any decline in the value of one Underlier will not be offset or mitigated by a lesser decline or any potential increase in the value of any other Underlier.
+
+●You understand and accept the risk that the payment at maturity, if any, will be based solely on the Underlier Return of the Least Performing Underlier.
+
+●You understand and are willing and able to accept the risks associated with an investment linked to the performance of the Underliers.
+
+●You understand and accept that you will not be entitled to receive dividends or distributions that may be paid to holders of the securities composing the Underliers, nor will you have any voting rights with respect to the securities composing the Underliers.
+
+●You can tolerate fluctuations in the price of the Notes that may be similar to or exceed the downside fluctuations in the value of the Underliers.
+
+●You do not seek an investment for which there will be an active secondary market, and you are willing and able to hold the Notes to maturity.
+
+●You are willing and able to assume our credit risk for all payments on the Notes.
+
+●You are willing and able to consent to the exercise of any U.K. Bail-in Power by any relevant U.K. resolution authority.
+
+The Notes may not be an appropriate investment for you if any of the following statements are true:
+
+●You seek an investment that produces periodic interest or coupon payments or other sources of current income.
+
+●You seek an investment that participates in the full appreciation of any or all of the Underliers rather than an investment with a return that is limited to the Digital Percentage.
+
+●You seek an investment that provides for the full repayment of principal at maturity, and/or you are unwilling or unable to accept the risk that you may lose a significant portion or all of the principal amount of your Notes in the event that the Final Underlier Value of the Least Performing Underlier falls below its Barrier Value.
+
+●You anticipate that the Final Underlier Value of at least one Underlier will fall below its Digital Barrier Value.
+
+●You are unwilling or unable to accept the individual market risk of each Underlier and/or do not understand that any decline in the value of one Underlier will not be offset or mitigated by a lesser decline or any potential increase in the value of any other Underlier.
+
+●You do not understand and/or are unwilling or unable to accept the risks associated with an investment linked to the performance of the Underliers.
+
+●You are unwilling or unable to accept the risk that the negative performance of any Underlier may cause you to lose a significant portion or all of your principal at maturity, regardless of the performance of any other Underlier.
+
+●You seek an investment that entitles you to dividends or distributions on, or voting rights related to, the securities composing the Underliers.
+
+●You cannot tolerate fluctuations in the price of the Notes that may be similar to or exceed the downside fluctuations in the value of the Underliers.
+
+●You seek an investment for which there will be an active secondary market, and/or you are unwilling or unable to hold the Notes to maturity.
+
+●You prefer the lower risk, and therefore accept the potentially lower returns, of fixed income investments with comparable maturities and credit ratings.
+
+●You are unwilling or unable to assume our credit risk for all payments on the Notes.
+
+●You are unwilling or unable to consent to the exercise of any U.K. Bail-in Power by any relevant U.K. resolution authority.
+
+You must rely on your own evaluation of the merits of an investment in the Notes. You should reach a decision whether to invest in the Notes after carefully considering, with your advisors, the appropriateness of the Notes in light of your investment objectives and the specific information set out in this pricing supplement, the prospectus, the prospectus supplement and the underlying supplement. Neither the Issuer nor Barclays Capital Inc. makes any recommendation as to the appropriateness of the Notes for investment.
+
+Example 1: The Final Underlier Value of the NDX Index is 150.00, the Final Underlier Value of the RTY Index is 130.000 and the Final Underlier Value of the SPX Index is 140.00.
+
+Because the RTY Index has the lowest Underlier Return, the RTY Index is the Least Performing Underlier. Because the Final Underlier Value of the Least Performing Underlier is greater than or equal to its Digital Barrier Value, you will receive a payment at maturity of $1,082.00 per $1,000 principal amount Note that you hold, calculated as follows:
+
+$1,000 + ($1,000 × Digital Percentage)
+
+$1,000 + ($1,000 × 8.20%) = $1,082.00
+
+Example 1 demonstrates that you will not participate in any appreciation in the value of any Underlier. Even though each Underlier appreciated significantly, the payment at maturity is limited to $1,082.00 per $1,000 principal amount Note that you hold.
+
+Example 2: The Final Underlier Value of the NDX Index is 95.00, the Final Underlier Value of the RTY Index is 140.000 and the Final Underlier Value of the SPX Index is 105.00.
+
+Because the NDX Index has the lowest Underlier Return, the NDX Index is the Least Performing Underlier. Because the Final Underlier Value of the Least Performing Underlier is greater than or equal to its Digital Barrier Value, you will receive a payment at maturity of $1,082.00 per $1,000 principal amount Note that you hold, calculated as follows:
+
+$1,000 + ($1,000 × Digital Percentage)
+
+$1,000 + ($1,000 × 8.20%) = $1,082.00
+
+Example 3: The Final Underlier Value of the NDX Index is 125.00, the Final Underlier Value of the RTY Index is 65.000 and the Final Underlier Value of the SPX Index is 95.00.
+
+Because the RTY Index has the lowest Underlier Return, the RTY Index is the Least Performing Underlier. Because the Final Underlier Value of the Least Performing Underlier is less than its Digital Barrier Value but greater than or equal to its Barrier Value, you will receive a payment at maturity of $1,000.00 per $1,000 principal amount Note that you hold.
+
+Example 4: The Final Underlier Value of the NDX Index is 80.00, the Final Underlier Value of the RTY Index is 40.000 and the Final Underlier Value of the SPX Index is 150.00.
+
+Because the RTY Index has the lowest Underlier Return, the RTY Index is the Least Performing Underlier. Because the Final Underlier Value of the Least Performing Underlier is less than its Barrier Value, you will receive a payment at maturity of $400.00 per $1,000 principal amount Note that you hold, calculated as follows:
+
+$1,000 + ($1,000 × Underlier Return of the Least Performing Underlier)
+
+$1,000 + ($1,000 × -60.00%) = $400.00
+
+Example 4 demonstrates that, if the Final Underlier Value of the Least Performing Underlier is less than its Barrier Value, your investment in the Notes will be fully exposed to the decline of the Least Performing Underlier from its Initial Underlier Value. You will not benefit in any way from the Underlier Return of any other Underlier being higher than the Underlier Return of the Least Performing Underlier.
+
+You may lose up to 100.00% of the principal amount of your Notes. Any payment on the Notes, including the repayment of principal, is subject to the credit risk of Barclays Bank PLC.
+
+SELECTED RISK CONSIDERATIONS
+
+An investment in the Notes involves significant risks. Investing in the Notes is not equivalent to investing directly in the Underliers or their components. Some of the risks that apply to an investment in the Notes are summarized below, but we urge you to read the more detailed explanation of risks relating to the Notes generally in the “Risk Factors” section of the prospectus supplement. You should not purchase the Notes unless you understand and can bear the risks of investing in the Notes.
+
+Risks Relating to the Notes Generally
+
+●Your Investment in the Notes May Result in a Significant Loss—The Notes differ from ordinary debt securities in that the Issuer will not necessarily repay the full principal amount of the Notes at maturity. If the Final Underlier Value of the Least Performing Underlier is less than its Barrier Value, your Notes will be fully exposed to the decline of the Least Performing Underlier from its Initial Underlier Value. You may lose up to 100.00% of the principal amount of your Notes.
+
+●Your Potential Return on the Notes Is Limited to the Digital Percentage—If the Final Underlier Value of the Least Performing Underlier is greater than or equal to its Digital Barrier Value, for each $1,000 principal amount Note, you will receive at maturity $1,000 plus a predetermined percentage of the principal amount. We refer to this percentage as the Digital Percentage, which is equal to 8.20%. If the Final Underlier Value of the Least Performing Underlier is greater than or equal to its Digital Barrier Value, you will receive the maximum payment at maturity of $1,082.00 per $1,000 principal amount Note regardless of any appreciation of any Underlier, which may be significant. Your return on the Notes will be less than the percentage change in the Least Performing Underlier from its Initial Underlier Value to its Final Underlier Value if such percentage is greater than the Digital Percentage.
+
+●No Interest Payments—As a holder of the Notes, you will not receive interest payments.
+
+●Because the Notes Are Linked to the Least Performing Underlier, You Are Exposed to Greater Risk of Sustaining a Significant Loss of Principal at Maturity Than If the Notes Were Linked to a Single Underlier—The risk that you will lose a significant portion or all of your principal amount in the Notes at maturity is greater if you invest in the Notes as opposed to substantially similar securities that are linked to the performance of a single Underlier. With multiple Underliers, it is more likely that the Final Underlier Value of at least one Underlier will be less than its Barrier Value, and therefore, it is more likely that you will suffer a significant loss of principal at maturity. Further, the performance of the Underliers may not be correlated or may be negatively correlated. The lower the correlation between multiple Underliers, the greater the potential for one of those Underliers to close below its Barrier Value on the Final Valuation Date.
+
+It is impossible to predict what the correlation among the Underliers will be over the term of the Notes. The Underliers represent different equity markets. These different equity markets may not perform similarly over the term of the Notes.
+
+●You Are Exposed to the Market Risk of Each Underlier—Your return on the Notes is not linked to a basket consisting of the Underliers. Rather, it will be contingent upon the independent performance of each Underlier. Unlike an instrument with a return linked to a basket of underlying assets in which risk is mitigated and diversified among all the components of the basket, you will be exposed to the risks related to each Underlier. Poor performance by any Underlier over the term of the Notes may negatively affect your return and will not be offset or mitigated by any increases or lesser declines in the values of the other Underliers. If the Final Underlier Value of any Underlier is less than its Barrier Value, you will be fully exposed to the decline of the Least Performing Underlier from its Initial Underlier Value. Accordingly, your investment is subject to the market risk of each Underlier.
+
+●Any Payment on the Notes Will Be Determined Based on the Closing Values of the Underliers on the Dates Specified—Any payment on the Notes will be determined based on the Closing Values of the Underliers on the dates specified. You will not benefit from any more favorable values of the Underliers determined at any other time.
+
+●Contingent Repayment of the Principal Amount Applies Only at Maturity—You should be willing to hold your Notes to maturity. If you sell your Notes prior to such time in the secondary market, if any, you may have to sell your Notes at a price that is less than the principal amount even if at that time the value of each Underlier has increased from its Initial Underlier Value. See “—Risks Relating to the Estimated Value of the Notes and the Secondary Market—Many Economic and Market Factors Will Impact the Value of the Notes” below.
+
+●Owning the Notes Is Not the Same as Owning the Securities Composing the Underliers—The return on the Notes may not reflect the return you would realize if you actually owned the securities composing the Underliers. As a holder of the Notes, you will not have voting rights or rights to receive dividends or other distributions or other rights that holders of the securities composing the Underliers would have.
+
+●The U.S. Federal Income Tax Consequences of an Investment in the Notes Are Uncertain— There is no direct legal authority regarding the proper U.S. federal income tax treatment of the Notes, and we do not plan to request a ruling from the Internal Revenue Service (the “IRS”). Consequently, significant aspects of the tax treatment of the Notes are uncertain, and the IRS or a court might not agree with the treatment of the Notes as prepaid forward contracts, as described below under “Tax Considerations.” If the IRS were successful in asserting an alternative treatment for the Notes, the tax consequences of the ownership and disposition of the Notes could be materially and adversely affected.
+
+In addition, in 2007 the Treasury Department and the IRS released a notice requesting comments on various issues regarding the U.S. federal income tax treatment of “prepaid forward contracts” and similar instruments. Any Treasury regulations or other guidance promulgated after consideration of these issues could materially and adversely affect the tax consequences of an
+
+investment in the Notes, possibly with retroactive effect. You should review carefully the sections of the accompanying prospectus supplement entitled “Material U.S. Federal Income Tax Consequences—Tax Consequences to U.S. Holders—Notes Treated as Prepaid Forward Contracts” and, if you are a non-U.S. holder, “—Tax Consequences to Non-U.S. Holders,” and consult your tax advisor regarding the U.S. federal tax consequences of an investment in the Notes (including possible alternative treatments and the issues presented by the 2007 notice), as well as tax consequences arising under the laws of any state, local or non-U.S. taxing jurisdiction.
+
+Risks Relating to the Issuer
+
+●Credit of Issuer—The Notes are unsecured and unsubordinated debt obligations of the Issuer, Barclays Bank PLC, and are not, either directly or indirectly, an obligation of any third party. Any payment to be made on the Notes, including any repayment of principal, is subject to the ability of Barclays Bank PLC to satisfy its obligations as they come due and is not guaranteed by any third party. As a result, the actual and perceived creditworthiness of Barclays Bank PLC may affect the market value of the Notes, and in the event Barclays Bank PLC were to default on its obligations, you may not receive any amounts owed to you under the terms of the Notes.
+
+●You May Lose Some or All of Your Investment If Any U.K. Bail-in Power Is Exercised by the Relevant U.K. Resolution Authority—Notwithstanding and to the exclusion of any other term of the Notes or any other agreements, arrangements or understandings between Barclays Bank PLC and any holder or beneficial owner of the Notes (or the trustee on behalf of the holders of the Notes), by acquiring the Notes, each holder or beneficial owner of the Notes acknowledges, accepts, agrees to be bound by, and consents to the exercise of, any U.K. Bail-in Power by the relevant U.K. resolution authority as set forth under “Consent to U.K. Bail-in Power” in this pricing supplement. Accordingly, any U.K. Bail-in Power may be exercised in such a manner as to result in you and other holders and beneficial owners of the Notes losing all or a part of the value of your investment in the Notes or receiving a different security from the Notes, which may be worth significantly less than the Notes and which may have significantly fewer protections than those typically afforded to debt securities. Moreover, the relevant U.K. resolution authority may exercise the U.K. Bail-in Power without providing any advance notice to, or requiring the consent of, the holders and beneficial owners of the Notes. The exercise of any U.K. Bail-in Power by the relevant U.K. resolution authority with respect to the Notes will not be a default or an Event of Default (as each term is defined in the senior debt securities indenture) and the trustee will not be liable for any action that the trustee takes, or abstains from taking, in either case, in accordance with the exercise of the U.K. Bail-in Power by the relevant U.K. resolution authority with respect to the Notes. See “Consent to U.K. Bail-in Power” in this pricing supplement as well as “U.K. Bail-in Power,” “Risk Factors—Risks Relating to the Securities Generally—Regulatory action in the event a bank or investment firm in the Group is failing or likely to fail, including the exercise by the relevant U.K. resolution authority of a variety of statutory resolution powers, could materially adversely affect the value of any securities” and “Risk Factors—Risks Relating to the Securities Generally—Under the terms of the securities, you have agreed to be bound by the exercise of any U.K. Bail-in Power by the relevant U.K. resolution authority” in the accompanying prospectus supplement.
+
+Risks Relating to the Underliers
+
+●Each Underlier Reflects the Price Return of the Securities Composing That Underlier, Not the Total Return—The return on the Notes is based on the performance of the Underliers, which reflects changes in the market prices of the securities composing each Underlier. Each Underlier is not a “total return” index that, in addition to reflecting those price returns, would also reflect dividends paid on the securities composing that Underlier. Accordingly, the return on the Notes will not include such a total return feature.
+
+●Adjustments to the Underliers Could Adversely Affect the Value of the Notes—The sponsor of an Underlier may add, delete, substitute or adjust the securities composing that Underlier or make other methodological changes to that Underlier that could affect its performance. The Calculation Agent will calculate the value to be used as the Closing Value of an Underlier in the event of certain material changes in or modifications to that Underlier. In addition, the sponsor of an Underlier may also discontinue or suspend calculation or publication of that Underlier at any time. Under these circumstances, the Calculation Agent may select a successor index that the Calculation Agent determines to be comparable to the discontinued Underlier or, if no successor index is available, the Calculation Agent will determine the value to be used as the Closing Value of that Underlier. Any of these actions could adversely affect the value of the relevant Underlier and, consequently, the value of the Notes. See “Reference Assets—Indices—Adjustments Relating to Securities with an Index as a Reference Asset” in the accompanying prospectus supplement.
+
+●There Are Risks Associated with Investments in Securities Linked to the Value of Non-U.S. Equity Securities with Respect to the NDX Index—Some of the equity securities composing the NDX Index are issued by non-U.S. companies. Investments in securities linked to the value of such non-U.S. equity securities, such as the Notes, involve risks associated with the home countries of the issuers of those non-U.S. equity securities. The prices of securities in non-U.S. markets may be affected by political, economic, financial and social factors in those countries, or global regions, including changes in government, economic and fiscal policies and currency exchange laws.
+
+●The Notes Are Subject to Small-Capitalization Companies Risk with Respect to the RTY Index—The RTY Index tracks companies that are considered small-capitalization companies. These companies often have greater stock price volatility, lower trading volume and less liquidity than large-capitalization companies, and therefore Notes linked to the RTY Index may be more volatile than an investment linked to an index with component stocks issued by large-capitalization companies. Stock prices of small-capitalization companies are also more vulnerable than those of large-capitalization companies to adverse business and
+
+economic developments. In addition, small-capitalization companies are typically less stable financially than large-capitalization companies and may depend on a small number of key personnel, making them more vulnerable to loss of personnel. Small-capitalization companies are often subject to less analyst coverage and may be in early, and less predictable, periods of their corporate existences. Such companies tend to have smaller revenues, less diverse product lines, smaller shares of their product or service markets, fewer financial resources and less competitive strengths than large-capitalization companies and are more susceptible to adverse developments related to their products.
+
+●We May Accelerate the Notes If a Change-in-Law Event Occurs—Upon the occurrence of legal or regulatory changes that may, among other things, prohibit or otherwise materially restrict persons from holding the Notes or an Underlier or its components, or engaging in transactions in them, the Calculation Agent may determine that a change-in-law event has occurred and accelerate the Maturity Date for a payment determined by the Calculation Agent in its sole discretion. Any amount payable upon acceleration could be significantly less than any amount that would be due on the Notes if they were not accelerated. However, if the Calculation Agent elects not to accelerate the Notes, the value of, and any amount payable on, the Notes could be adversely affected, perhaps significantly, by the occurrence of those legal or regulatory changes. See “Terms of the Notes—Change-in-Law Events” in the accompanying prospectus supplement.
+
+●Historical Performance of the Underliers Should Not Be Taken as Any Indication of the Future Performance of the Underliers Over the Term of the Notes—The value of each Underlier has fluctuated in the past and may, in the future, experience significant fluctuations. The historical performance of an Underlier is not an indication of the future performance of that Underlier over the term of the Notes. The historical correlation between the Underliers is not an indication of the future correlation between them over the term of the Notes. Therefore, the performance of the Underliers individually or in comparison to each other over the term of the Notes may bear no relation or resemblance to the historical performance of any Underlier.
+
+Risks Relating to Conflicts of Interest
+
+●We and Our Affiliates May Engage in Various Activities or Make Determinations That Could Materially Affect the Notes in Various Ways and Create Conflicts of Interest—We and our affiliates play a variety of roles in connection with the issuance of the Notes, as described below. In performing these roles, our and our affiliates’ economic interests are potentially adverse to your interests as an investor in the Notes.
+
+In connection with our normal business activities and in connection with hedging our obligations under the Notes, we and our affiliates make markets in and trade various financial instruments or products for our accounts and for the account of our clients and otherwise provide investment banking and other financial services with respect to these financial instruments and products. These financial instruments and products may include securities, derivative instruments or assets that may relate to the Underliers or their components. In any such market making, trading and hedging activity, and other financial services, we or our affiliates may take positions or take actions that are inconsistent with, or adverse to, the investment objectives of the holders of the Notes. We and our affiliates have no obligation to take the needs of any buyer, seller or holder of the Notes into account in conducting these activities. Such market making, trading and hedging activity, investment banking and other financial services may negatively impact the value of the Notes.
+
+In addition, the role played by Barclays Capital Inc., as the agent for the Notes, could present significant conflicts of interest with the role of Barclays Bank PLC, as issuer of the Notes. For example, Barclays Capital Inc. or its representatives may derive compensation or financial benefit from the distribution of the Notes and such compensation or financial benefit may serve as an incentive to sell the Notes instead of other investments. Furthermore, we and our affiliates establish the offering price of the Notes for initial sale to the public, and the offering price is not based upon any independent verification or valuation.
+
+In addition to the activities described above, we will also act as the Calculation Agent for the Notes. As Calculation Agent, we will determine any values of the Underliers and make any other determinations necessary to calculate any payments on the Notes. In making these determinations, we may be required to make discretionary judgments, including those described in the accompanying prospectus supplement and under “—Risks Relating to the Underliers” above. In making these discretionary judgments, our economic interests are potentially adverse to your interests as an investor in the Notes, and any of these determinations may adversely affect any payments on the Notes.
+
+Risks Relating to the Estimated Value of the Notes and the Secondary Market
+
+●Lack of Liquidity—The Notes will not be listed on any securities exchange. Barclays Capital Inc. and other affiliates of Barclays Bank PLC intend to make a secondary market for the Notes but are not required to do so, and may discontinue any such secondary market making at any time, without notice. Barclays Capital Inc. may at any time hold unsold inventory, which may inhibit the development of a secondary market for the Notes. Even if there is a secondary market, it may not provide enough liquidity to allow you to trade or sell the Notes easily. Because other dealers are not likely to make a secondary market for the Notes, the price at which you may be able to trade your Notes is likely to depend on the price, if any, at which Barclays Capital Inc. and other affiliates of Barclays Bank PLC are willing to buy the Notes. The Notes are not designed to be short-term trading instruments. Accordingly, you should be able and willing to hold your Notes to maturity.
+
+●Many Economic and Market Factors Will Impact the Value of the Notes—The value of the Notes will be affected by a number of economic and market factors that interact in complex and unpredictable ways and that may either offset or magnify each other, including:
+
+othe values and expected volatility of the Underliers;
+
+ocorrelation (or lack of correlation) of the Underliers;
+
+othe time to maturity of the Notes;
+
+odividend rates on the components of each Underlier;
+
+ointerest and yield rates in the market generally;
+
+oa variety of economic, financial, political, regulatory or judicial events;
+
+osupply and demand for the Notes; and
+
+oour creditworthiness, including actual or anticipated downgrades in our credit ratings.
+
+●The Estimated Value of Your Notes Is Expected to Be Lower Than the Initial Issue Price of Your Notes—The estimated value of your Notes on the Initial Valuation Date is expected to be lower, and may be significantly lower, than the initial issue price of your Notes. The difference between the initial issue price of your Notes and the estimated value of the Notes is expected as a result of certain factors, such as any sales commissions expected to be paid to Barclays Capital Inc. or another affiliate of ours, any selling concessions, discounts, commissions or fees expected to be allowed or paid to non-affiliated intermediaries, the estimated profit that we or any of our affiliates expect to earn in connection with structuring the Notes, the estimated cost which we may incur in hedging our obligations under the Notes, and estimated development and other costs which we may incur in connection with the Notes.
+
+●The Estimated Value of Your Notes Might Be Lower If Such Estimated Value Were Based on the Levels at Which Our Debt Securities Trade in the Secondary Market—The estimated value of your Notes on the Initial Valuation Date is based on a number of variables, including our internal funding rates. Our internal funding rates may vary from the levels at which our benchmark debt securities trade in the secondary market. As a result of this difference, the estimated values referenced above might be lower if such estimated values were based on the levels at which our benchmark debt securities trade in the secondary market.
+
+●The Estimated Value of the Notes Is Based on Our Internal Pricing Models, Which May Prove to Be Inaccurate and May Be Different from the Pricing Models of Other Financial Institutions—The estimated value of your Notes on the Initial Valuation Date is based on our internal pricing models, which take into account a number of variables and are based on a number of subjective assumptions, which may or may not materialize. These variables and assumptions are not evaluated or verified on an independent basis. Further, our pricing models may be different from other financial institutions’ pricing models and the methodologies used by us to estimate the value of the Notes may not be consistent with those of other financial institutions which may be purchasers or sellers of Notes in the secondary market. As a result, the secondary market price of your Notes may be materially different from the estimated value of the Notes determined by reference to our internal pricing models.
+
+●The Estimated Value of Your Notes Is Not a Prediction of the Prices at Which You May Sell Your Notes in the Secondary Market, If Any, and Such Secondary Market Prices, If Any, Will Likely Be Lower Than the Initial Issue Price of Your Notes and May Be Lower Than the Estimated Value of Your Notes—The estimated value of the Notes will not be a prediction of the prices at which Barclays Capital Inc., other affiliates of ours or third parties may be willing to purchase the Notes from you in secondary market transactions (if they are willing topurchase, which they are not obligated to do). The price at which you may be able to sell your Notes in the secondary market at any time will be influenced by many factors that cannot be predicted, such as market conditions, and any bid and ask spread for similar sized trades, and may be substantially less than our estimated value of the Notes. Further, as secondary market prices of your Notes take into account the levels at which our debt securities trade in the secondary market, and do not take into account our various costs related to the Notes such as fees, commissions, discounts, and the costs of hedging our obligations under the Notes, secondary market prices of your Notes will likely be lower than the initial issue price of your Notes. As a result, the price at which Barclays Capital Inc., other affiliates of ours or third parties may be willing to purchase the Notes from you in secondary market transactions, if any, will likely be lower than the price you paid for your Notes, and any sale prior to the Maturity Date could result in a substantial loss to you.
+
+●The Temporary Price at Which We May Initially Buy the Notes in the Secondary Market and the Value We May Initially Use for Customer Account Statements, If We Provide Any Customer Account Statements at All, May Not Be Indicative of Future Prices of Your Notes—Assuming that all relevant factors remain constant after the Initial Valuation Date, the price at which Barclays Capital Inc. may initially buy or sell the Notes in the secondary market (if Barclays Capital Inc. makes a market in the Notes, which it is not obligated to do) and the value that we may initially use for customer account statements, if we provide any customer account statements at all, may exceed our estimated value of the Notes on the Initial Valuation Date, as well as the secondary market value of the Notes, for a temporary period after the initial Issue Date of the Notes. The price at which Barclays Capital Inc. may initially buy or sell the Notes in the secondary market and the value that we may initially use for customer account statements may not be indicative of future prices of your Notes.
+
+TAX CONSIDERATIONS
+
+You should review carefully the sections in the accompanying prospectus supplement entitled “Material U.S. Federal Income Tax Consequences—Tax Consequences to U.S. Holders—Notes Treated as Prepaid Forward Contracts” and, if you are a non-U.S. holder, “—Tax Consequences to Non-U.S. Holders.” The following discussion, when read in combination with those sections, constitutes the full opinion of our special tax counsel, Davis Polk & Wardwell LLP, regarding the material U.S. federal income tax consequences of owning and disposing of the Notes.
+
+Based on current market conditions, in the opinion of our special tax counsel, it is reasonable to treat the Notes for U.S. federal income tax purposes as prepaid forward contracts with respect to the Underliers. Assuming this treatment is respected, upon a sale or exchange of the Notes (including redemption at maturity), you should recognize capital gain or loss equal to the difference between the amount realized on the sale or exchange and your tax basis in the Notes, which should equal the amount you paid to acquire the Notes. This gain or loss on your Notes should be treated as long-term capital gain or loss if you hold your Notes for more than a year, whether or not you are an initial purchaser of Notes at the original issue price. However, the IRS or a court may not respect this treatment, in which case the timing and character of any income or loss on the Notes could be materially and adversely affected. In addition, in 2007 the U.S. Treasury Department and the IRS released a notice requesting comments on the U.S. federal income tax treatment of “prepaid forward contracts” and similar instruments. The notice focuses in particular on whether to require investors in these instruments to accrue income over the term of their investment. It also asks for comments on a number of related topics, including the character of income or loss with respect to these instruments; the relevance of factors such as the nature of the underlying property to which the instruments are linked; the degree, if any, to which income (including any mandated accruals) realized by non-U.S. investors should be subject to withholding tax; and whether these instruments are or should be subject to the “constructive ownership” regime, which very generally can operate to recharacterize certain long-term capital gain as ordinary income and impose a notional interest charge. While the notice requests comments on appropriate transition rules and effective dates, any Treasury regulations or other guidance promulgated after consideration of these issues could materially and adversely affect the tax consequences of an investment in the Notes, possibly with retroactive effect. You should consult your tax advisor regarding the U.S. federal income tax consequences of an investment in the Notes, including possible alternative treatments and the issues presented by this notice.
+
+Treasury regulations under Section 871(m) generally impose a withholding tax on certain “dividend equivalents” under certain “equity linked instruments.” A recent IRS notice excludes from the scope of Section 871(m) instruments issued prior to January 1, 2027 that do not have a “delta of one” with respect to underlying securities that could pay U.S.-source dividends for U.S. federal income tax purposes (each an “Underlying Security”). Based on our determination that the Notes do not have a “delta of one” within the meaning of the regulations, we expect that these regulations will not apply to the Notes with regard to non-U.S. holders. Our determination is not binding on the IRS, and the IRS may disagree with this determination. Section 871(m) is complex and its application may depend on your particular circumstances, including whether you enter into other transactions with respect to an Underlying Security. If necessary, further information regarding the potential application of Section 871(m) will be provided in the pricing supplement for the Notes. You should consult your tax advisor regarding the potential application of Section 871(m) to the Notes.",http://www.streetinsider.com/images/silogo-new.png,N,,2026-01-23 17:02:39.170015
+ID21,IBM,2026-01-23 20:38:26+00:00,ERP Today,IBM Launches Enterprise Advantage to Help Companies Scale Agentic AI - ERP Today,"Maneesha Tiwari, maneesha-tiwari, Maneesha Tiwari Content Creator",,,,,https://erp.today/ibm-launches-enterprise-advantage-to-help-companies-scale-agentic-ai/,"The offering, called IBM Enterprise Advantage, brings together IBM consulting services, pre-built AI agents, and governance tools to help companies deploy AI more quickly and safely across the enterprise, the company said.
+Enterprise Advantage enables organizations to integrate AI into existing workflows and systems and expand agentic applications using their current cloud environments and AI models.
+Enterprise Advantage is designed to help address this gap by providing a structured way to build, integrate, and govern AI agents within existing enterprise platforms.
+Key elements of the service include: Enterprise AI platform design: Companies can integrate AI capabilities into existing enterprise systems and workflows without requiring wholesale infrastructure changes using Enterprise Advantage.
+Pre‑built AI agents and accelerators: Enterprise Advantage will give companies access to a catalog of reusable, industry‑specific AI agents intended to shorten deployment timelines and reduce implementation risk.","IBM has launched a new service designed to help enterprises deploy agentic AI at scale across business operations. The offering, called IBM Enterprise Advantage, brings together IBM consulting services, pre-built AI agents, and governance tools to help companies deploy AI more quickly and safely across the enterprise, the company said.
+
+Enterprise Advantage enables organizations to integrate AI into existing workflows and systems and expand agentic applications using their current cloud environments and AI models.
+
+It does this by combining IBM’s consulting expertise with tools developed through IBM Consulting Advantage, the company’s internal AI-enabled delivery platform. IBM said the internal platform has been used in more than 150 client engagements and has helped improve consultant productivity.
+
+Those experiences shaped how Enterprise Advantage is now being offered to customers to support their own AI initiatives.
+
+The service supports major hyperscalers including AWS, Google Cloud, and Microsoft Azure, as well as IBM watsonx and a mix of open‑ and proprietary models. The service will allow companies to extend existing technology investments rather than replace them.
+
+Addressing the Enterprise AI Execution Gap
+
+A recent IBM Institute for Business Value report highlighted a growing gap between AI ambition and execution. The report found that 79% of executives expect AI to deliver significant business value by 2030. However, only 24% say they have a clear view of where that value will come from.
+
+The report indicated that many organizations still lack the operating models and systems required to support AI at scale.
+
+Enterprise Advantage is designed to help address this gap by providing a structured way to build, integrate, and govern AI agents within existing enterprise platforms.
+
+Key elements of the service include:
+
+Enterprise AI platform design: Companies can integrate AI capabilities into existing enterprise systems and workflows without requiring wholesale infrastructure changes using Enterprise Advantage. IBM cited Pearson, as an example where Pearson is building personalized, AI-powered learning tools for global organizations and individuals. The learning company is also developing a custom internal AI platform to transform its own business operations and drive growth.
+
+Multi‑cloud and model flexibility: Support for major cloud platforms and a mix of open‑ and proprietary AI models, allows organizations to build on existing technology investments.
+
+Pre‑built AI agents and accelerators: Enterprise Advantage will give companies access to a catalog of reusable, industry‑specific AI agents intended to shorten deployment timelines and reduce implementation risk.
+
+Built‑in governance and controls: Enterprise Advantage supports embedded mechanisms for security, compliance, and lifecycle management as AI agents are deployed into production environments. IBM’s research report notes that organizations are increasingly adopting hybrid human‑and‑AI working models, which introduce new governance and risk management requirements as AI becomes more operationally embedded.
+
+Mohamad Ali, senior VP and head of IBM Consulting, said, “Many organizations are investing in AI, but achieving real value at scale remains a major challenge. We have solved many of these challenges inside IBM by using AI to transform our own operations and deliver measurable results, giving us a proven playbook to help clients succeed. Enterprise Advantage brings this framework to clients by combining human expertise with digital workers and ready-to-use AI assets so they can scale AI with confidence and achieve meaningful impact.”
+
+What This Means for ERP Insiders
+
+Enterprise AI is shifting from experimentation to operating mode. IBM’s launch reflects growing pressure on large organizations to move beyond pilots and define how AI fits into core operating models. The emphasis is on repeatable architectures that can scale across the enterprise and deliver value while working within existing systems.
+
+Agentic AI raises the architectural bar for ERP environments. As AI agents take on more orchestration and decision-support roles, ERP systems must allow AI to work directly with live business data, rather than sitting outside core processes. This increases the importance of platform design and interoperability over point functionality.",https://erp.today/wp-content/uploads/2026/01/carson-masterson-0mXw-dvuLok-unsplash-scaled.jpg,N,,2026-01-23 17:03:00.296037
+ID18,Eli Lilly,2026-01-23 20:25:41+00:00,Yahoo Finance,Investor Bets $100k On David v Goliath Matchup With Altimmune and Eli Lilly,Michael Williams,,,,,https://finance.yahoo.com/news/investor-bets-100k-david-v-190634888.html,"Quick Read Altimmune (ALT) surged 35.4% after FDA granted Breakthrough Therapy Designation for pemvidutide on January 16.
+Eli Lilly holds a $975B market cap with 48% operating margins versus Altimmune’s $561M market cap.
+The author opened with conviction: ""BTD CONFIRMED - Yesterday, the FDA granted them Breakthrough Therapy Designation (BTD) for MASH.
+Altimmune - $100k + YOLO - The MASH Sleeping Giant, the train is leaving the station - Stock hit $500m market cap today!
+Eli Lilly (NYSE:LLY), which dominates the obesity drug market with Mounjaro and Zepbound, posted 54% revenue growth in its most recent quarter and maintains a $975 billion market cap with 48% operating margins.","Quick Read
+
+Altimmune (ALT) surged 35.4% after FDA granted Breakthrough Therapy Designation for pemvidutide on January 16.
+
+Altimmune beat earnings estimates in all four quarters and narrowed annual losses 45% to negative $0.74 per share.
+
+Eli Lilly holds a $975B market cap with 48% operating margins versus Altimmune’s $561M market cap.
+
+Investors rethink ‘hands off’ investing and decide to start making real money
+
+Shares of Altimmune (NASDAQ:ALT) surged 35.4% over the past week, coinciding with a dramatic shift in retail investor sentiment on Reddit.
+
+The clinical-stage biotech develops treatments for metabolic diseases and became one of the highest-rated stocks in social sentiment tracking after the FDA granted Breakthrough Therapy Designation for its lead drug pemvidutide on January 16.
+
+Mentions of Altimmune on Reddit increased sharply, with users sharing high-conviction positions. One r/wallstreetbets post titled ""Altimmune - $100k + YOLO - The MASH Sleeping Giant, the train is leaving the station"" accumulated 128 upvotes and 219 comments. The author opened with conviction: ""BTD CONFIRMED - Yesterday, the FDA granted them Breakthrough Therapy Designation (BTD) for MASH. This is huge. It means the FDA sees 'substantial improvement' over existing therapies."" The post emphasized the significance: ""BTD IS A HUGE FUCKING DEAL, only around 1/3 of applications gets accepted, and it tells big Pharma, FDA wants this drug, come fucking buy."" The user detailed their position: ""I've been in this stock since $3.50, added more at $4.20, and I'm not selling until we hit double digits or get bought out. This is my conviction play for 2026."" They concluded: ""The train is leaving the station. Get in now or watch from the sidelines as this thing runs to $15-20.""
+
+Altimmune - $100k + YOLO - The MASH Sleeping Giant, the train is leaving the station - Stock hit $500m market cap today!
+
+by u/Old-Pomegranate3634 in wallstreetbets
+
+Reddit Bulls Point to Regulatory Catalyst and Buyout Potential
+
+The optimism centers on three factors driving retail trader conviction:
+
+Altimmune beat earnings estimates in all four quarters of 2025, with surprises ranging from 12.9% to 23.9%, while narrowing annual losses 45% year-over-year to negative $0.74 per share
+
+The company hired a new CEO in January 2026, Jerome Durso, who previously sold Intercept Pharmaceuticals to Alfasigma, fueling acquisition speculation
+
+Analyst price targets averaging $17.75 imply 209% upside from current levels, with 7 of 9 analysts rating the stock buy or strong buy despite the company remaining unprofitable
+
+Small-Cap Speculation Faces Eli Lilly Reality
+
+Altimmune's $561 million market cap and $210 million cash position contrast sharply with competitors. Eli Lilly (NYSE:LLY), which dominates the obesity drug market with Mounjaro and Zepbound, posted 54% revenue growth in its most recent quarter and maintains a $975 billion market cap with 48% operating margins. The stock is up 59% year-to-date but down 18.7% over the past year, reflecting volatility around its 52-week range of $2.90 to $7.73. For speculative investors willing to bet on regulatory acceleration and potential acquisition interest, the Reddit community is making a loud case, but this remains a high-risk, pre-revenue biotech play in a space dominated by pharmaceutical giants.
+
+It’s Time To Rethink Passive Investing
+
+For more than a decade, the investing advice aimed at everyday Americans followed a familiar script: automate everything, keep costs low, and don’t touch a thing. And increasingly, investors are realizing that being completely hands-off also means being completely disengaged.
+
+That realization hits like a lightning bolt when you realize not just how much better your returns could be, but that there are amazing offers like one app where new self-directed investing accounts funded with as little as $50 can receive stock worth up to $1,000.
+
+Take back your investing and start earning real returns, your way.",https://s.yimg.com/ny/api/res/1.2/_nv5wfZbKrfwz54YMvb1Fw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzA7Y2Y9d2VicA--/https://media.zenfs.com/en/24_7_wall_st__718/65c5a1c770bf3d4447f72eee3ff8f270,N,,2026-01-23 17:02:55.836304
 ID14,Delta Airlines,2026-01-23 19:04:24+00:00,New York Post,Delta's business and first-class fares may soon get a whole lot cheaper — this is why,Brooke Steinberg,,,,,https://nypost.com/2026/01/23/lifestyle/deltas-business-and-first-class-fares-may-soon-get-a-whole-lot-cheaper-this-is-why/,"Delta Air Lines has unveiled a plan to launch tiered fares for both business and first-class, meaning you could soon snag a cheaper ticket in the coveted cabins.
 Currently, those who fly in premium cabins on Delta can only choose between Classic and Extra, while economy travelers can choose from all three.
 Delta has already implemented the three-tier fares for its economy and Comfort tickets.
@@ -62,6 +466,13 @@ ELON MUSK SAYS TESLA WILL LIKELY SELL HUMANOID ROBOTS BY END OF NEXT YEAR
 ""The important thing, though, because this computing platform requires all of the layers underneath it, it has started – and everybody is seeing it right now – it has started the largest infrastructure build-out in human history,"" Huang said.
 
 He added that AI's rise will require ""trillions of dollars of infrastructure that needs to be built out"" and said that investment will be ""sensible because all of these contexts have to be processed so that the models can generate the intelligence necessary to power the applications that sit on top.""",https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2026/01/0/0/jensen-huang-larry-fink-davos.jpg?ve=1&tl=1,N,,2026-01-23 15:01:41.822129
+ID43,Uber,2026-01-23 18:48:44+00:00,The official website of the City of New York,Statement from DCWP | City of New York - NYC.gov,Not Available,,,,,https://www.nyc.gov/site/dca/news/008-26/statement-dcwp,"The Department of Consumer and Worker Protection (DCWP) Commissioner Samuel Levine issued the following statement on food delivery app cases: Today’s court ruling in Doordash Inc. and Uber Technologies, Inc. vs.
+The City of New York affirms that multi-billion-dollar companies need to comply with laws that protect workers and consumers.
+As a recent DCWP report revealed, the interface design tricks that Uber and DoorDash engineered to make it harder for consumers to tip reduced worker compensation by more than $550 million.
+Those days are over.
+We look forward to enforcing Local Laws 107 and 108 to ensure that workers get paid, and consumers have the option to tip freely.","The Department of Consumer and Worker Protection (DCWP) Commissioner Samuel Levine issued the following statement on food delivery app cases:
+
+Today’s court ruling in Doordash Inc. and Uber Technologies, Inc. vs. The City of New York affirms that multi-billion-dollar companies need to comply with laws that protect workers and consumers. As a recent DCWP report revealed, the interface design tricks that Uber and DoorDash engineered to make it harder for consumers to tip reduced worker compensation by more than $550 million. Those days are over. We look forward to enforcing Local Laws 107 and 108 to ensure that workers get paid, and consumers have the option to tip freely.",http://www.nyc.gov,N,,2026-01-23 17:03:15.672575
 ID20,HP Inc,2026-01-23 18:30:44+00:00,www.crn.com,5 Companies That Came To Win This Week - CRN,Rick Whiting,,,,,https://www.crn.com/news/channel-news/2026/five-companies-that-came-to-win-this-week-jan-23-2026,"By Rick Whiting For the week ending Jan. 23, CRN takes a look at the companies that brought their ‘A’ game to the channel including Extreme Networks, D&H Distributing, ConnectWise, Claroty and ServiceNow.
 Claroty, a developer of security for cyber-physical systems, raised an impressive $150 million in a Series F funding round this week.
 Advertisement Extreme Networks Launches New Partner Program To Position Specialists Against Network Heavyweights Extreme Networks makes this week’s Came to Win list for its launch of a new partner program that seeks to meet the changing networking market needs of enterprise customers while providing simplicity for channel partners.
@@ -150,6 +561,27 @@ One initiative ServiceNow is discussing at the sales kickoff is streamlining the
 
 Another plan introduced at the sales kickoff was simplifying partner membership fees, Park said. “We’re going to roll out a single program membership fee across all the partner types,” he said. “We’ve got too many versions right now. It’s so complicated. Let’s just do one.”",https://www.crn.com/news/channel-news/2026/media_1767c0ecc897fa2a845b017258f7e1dd7f019085e.png?width=1200&format=pjpg&optimize=medium,N,,2026-01-23 13:59:20.080041
 ID29,Medtronic,2026-01-23 18:28:34+00:00,www.youtube.com,"Final Trades: Capital One, Medtronic, Transocean and Caterpillar - YouTube",,,,,,https://www.youtube.com/watch%3Fv%3DhnD9eIb1_9o,"Final Trades: Capital One, Medtronic, Transocean and Caterpillar. No views · 54 seconds ago ...more. CNBC Television. 3.32M. Subscribe.",Not Available,,Y,,2026-01-23 13:59:29.033700
+ID9,Boston Scientific,2026-01-23 18:20:59+00:00,Medical Device and Diagnostic Industry,Medtronic Hits Additional Milestones with PFA Offerings,Omar Ford,,,,,https://www.mddionline.com/cardiovascular/medtronic-hits-additional-milestones-with-pfa-offerings,"Medtronic is continuing to build out its pulsed field ablation offerings.
+Sphere-9 is the only all-in-one, dual energy mapping and ablation catheter for treatment of persistent AFib and concomitant CTI-dependent atrial flutter.
+The study will evaluate the safety and effectiveness of the Sphere-360 catheter with the Affera mapping and ablation system for treating paroxysmal AFib.
+Medtronic first won approval for PFA technology to treat AFib in 2023.
+In a November earnings call, Geoff Martha, chairman and CEO of Medtronic, discussed the impact of the company’s PFA offerings.","Medtronic is continuing to build out its pulsed field ablation offerings. The Dublin-based company said the Affera Sphere-360 catheter won CE mark for the treatment of paroxysmal atrial fibrillation, and the first cases of the device used in the Horizon 360 IDE pivotal trial were completed.
+
+Sphere-9 is the only all-in-one, dual energy mapping and ablation catheter for treatment of persistent AFib and concomitant CTI-dependent atrial flutter. Medtronic said the Affera system, together with the Sphere-9 catheter, enables physician treatment flexibility with its wide area focal design and 9mm lattice tip that can be used with an 8.5Fr sheath.
+
+Medtronic inherited the device when it acquired Affera in 2022.
+
+The Horizon 360 IDE study is a prospective, single-arm clinical study at centers across the U.S. The study will evaluate the safety and effectiveness of the Sphere-360 catheter with the Affera mapping and ablation system for treating paroxysmal AFib.
+
+""The achievement of CE Mark for Sphere-360, as well as the first cases in the U.S. IDE trial, mark two major achievements in our effort to deliver new and better treatments to AFib patients,"" said Rebecca Seidel, president of the Cardiac Ablation Solutions business, which is part of the Cardiovascular Portfolio. ""We're committed to leading in PFA and bringing meaningful innovation at a regular cadence.""
+
+Medtronic first won approval for PFA technology to treat AFib in 2023.
+
+In a November earnings call, Geoff Martha, chairman and CEO of Medtronic, discussed the impact of the company’s PFA offerings.
+
+According to a Seeking Alpha transcript of the earnings call, Martha said. “In Cardiac Ablation, our PFA franchise is generating just a ton of momentum. We grew 71%, which is a strong acceleration from last quarter's nearly 50% CAS growth. This is the highest growth rate of any company in this large and fast-growing space. We're winning share as our PFA franchise grew over 300% in the U.S., as well as in international markets. This was based on the strength of our Affera mapping system and our Sphere-9 dual energy and high-density mapping catheter.”
+
+“Look, physicians tell us that they appreciate not only the shorter procedure times that they're seeing with Affera, but increasingly, they're calling out its outstanding durability as well,” he said according to the Seeking Alpha transcript. “And demand continues to be extremely high as we hear repeatedly from customers that they want to purchase additional Affera systems to expand into even more of their labs. And in the vast majority of instances, when a new Affera system goes into a lab, we take the majority of the AFib procedure share in that lab.”",https://eu-images.contentstack.com/v3/assets/blt14ac89070d5e4751/blt2dd7bada2a3862a3/6973bad0b6aa7b646dfc73ad/Untitled_design_-_2026-01-23T131509.688.png?disable=upscale&width=1200&height=630&fit=crop,N,,2026-01-23 17:02:49.217293
 ID25,J&J,2026-01-23 18:15:03+00:00,intellectia.ai,Strong Dividends and Steady Growth: Johnson & Johnson and Merck | Intellectia.AI,Not Available,,,,,https://intellectia.ai/news/stock/strong-dividends-and-steady-growth-johnson-johnson-and-merck,"- **Overview of J&J and Merck**: Johnson & Johnson and Merck are among the largest pharmaceutical companies, with Merck's Keytruda being the world's b...",Not Available,https://intellectia.ai/favicon.ico?favicon.44ed6741.ico,N,,2026-01-23 13:59:24.678591
 ID33,OpenAI,2026-01-23 18:11:00+00:00,Yahoo Finance,OpenAI plans major change on how you use ChatGPT - Yahoo Finance,Aparajita Chatterjee,,,,,https://finance.yahoo.com/news/openai-plans-major-change-chatgpt-180700821.html,"This comes as OpenAI defends its governance history, navigates criticism from co-founder Elon Musk and surrounding legal drama, and strategizes ways to increase recurring revenue.
 At the center of it is that it will begin testing advertisements within ChatGPT for users on its free tier and the newly introduced $8-per-month Chat “Go” plan.
@@ -248,6 +680,7 @@ Head to homepage","This isn't the page you're looking for
 Head back, or move along to the homepage to find a new way forward.
 
 Head to homepage",https://static.tradingview.com/static/images/favicon.ico,N,,2026-01-23 15:01:51.688683
+ID8,BNY Mellon,2026-01-23 17:02:00+00:00,The Globe and Mail,"Analysts Offer Insights on Financial Companies: Ally Financial (ALLY), Truist Financial (TFC ...",Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/TFC/pressreleases/37195780/analysts-offer-insights-on-financial-companies-ally-financial-ally-truist-financial-tfc-and-pinnacle-financial-partners-pnfp/,Detailed price information for Truist Financial Corp (TFC-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=832,N,,2026-01-23 17:02:44.630835
 ID32,Nvidia,2026-01-23 16:59:11+00:00,Sherwood News,Nvidia gains on report that Chinese officials told domestic tech champions to progress with ...,Luke Kawa,,,,,https://sherwood.news/markets/nvidia-gains-report-chinese-officials-told-domestic-tech-champions-progress-h200-imports/,Shares of the chip designer are up more than 1% in premarket trading....,Not Available,https://sherwoodnews.imgix.net/mwphzyq69oso/en-US/assets/files/2224782286_topshot-nvidia-ceo-jensen-huang-waves-to-the-crowd-as-he-leaves-during-the-china.jpg?auto=compress%2Cformat&cs=srgb,N,,2026-01-23 12:43:11.248841
 ID25,J&J,2026-01-23 16:57:57+00:00,finviz.com,Johnson & Johnson Quietly Triggers a Trend Following Buy Signal - Finviz,Not Available,,,,,https://finviz.com/news/285469/johnson-johnson-quietly-triggers-a-trend-following-buy-signal,"Johnson & Johnson (NYSE: JNJ), amid the noise of Trump’s Greenland agenda and renewed trade war fears, is quietly executing its healthcare strategy, growing revenue and widening margins, setting its stock up to continue trending higher.
 The likely outcome of such a signal is that the stock price will continue its steady advance and set fresh highs in the near future.
@@ -881,6 +1314,93 @@ If you continue to be blocked, please send an email to
 
 s ecruxurity@sizetedistrict&period;cVmwom with:",,N,,2026-01-23 11:00:46.943903
 ID29,Medtronic,2026-01-23 14:46:05+00:00,www.youtube.com,University of Colorado campuses sign research agreement with Medtronic - YouTube,,,,,,https://www.youtube.com/watch%3Fv%3DtgtDf3BJya8,"University of Colorado campuses sign research agreement with healthcare technology company Medtronic. For video licensing inquiries, ...",Not Available,,Y,,2026-01-23 10:41:25.072046
+ID29,Medtronic,2026-01-23 14:37:35+00:00,Barchart.com,Affera™ momentum continues as Medtronic announces CE Mark in Europe and U.S. IDE ...,PR Newswire,,,,,https://www.barchart.com/story/news/37193311/affera-momentum-continues-as-medtronic-announces-ce-mark-in-europe-and-u-s-ide-first-cases-for-sphere-360-pfa-catheter-to-treat-paroxysmal-atrial-fibrillation,"""The Sphere-360 catheter offers an excellent balance between ease of use and consistency in outcomes.
+""With the full integration into the Affera mapping system, it's an exciting step forward for patient care in Europe.""
+The study will evaluate the safety and effectiveness of the Sphere-360 catheter with the Affera mapping and ablation system for treating paroxysmal AFib.
+The Sphere-360 catheter is approved in Europe and investigational in the United States.
+For more information on the Affera system, the Sphere-9 catheter and the Sphere-360 catheter, visit Medtronic.com.","First-of-its-kind, rotation-free single-shot PFA catheter supported by strong safety and efficacy data adds to the groundbreaking Affera family of technologies in Europe
+
+Successful completion of first cases at multiple sites kicks off Horizon 360 IDE pivotal trial in the United States
+
+GALWAY, Ireland , Jan. 23, 2026 /PRNewswire/ -- Medtronic plc (NYSE:MDT), a global leader in healthcare technology, today announced two major milestones for the Affera™ Sphere-360™ catheter, a first-of-its-kind, all-in-one mapping and single-shot pulsed field ablation (PFA) catheter for treatment of paroxysmal atrial fibrillation (AFib): CE Mark in Europe and the completion of first cases in the Horizon 360 IDE pivotal trial in the United States.
+
+The Sphere-360 catheter was designed in response to physician feedback expressing the need for a simple, differentiated workflow and predictable outcomes using a single catheter that accommodates anatomical variations in pulmonary veins. Seamlessly integrated with the Affera mapping and ablation system, the catheter offers an adjustable configuration lattice design that conforms to the shape of the veins and allows energy delivery without the need to rotate the catheter in each position.
+
+The Affera mapping and ablation system and the Sphere-9™ all-in-one mapping and ablation catheter have been rapidly adopted by physicians in multiple geographies for their excellent safety and durability profile.
+
+""The Sphere-360 catheter offers an excellent balance between ease of use and consistency in outcomes. Its design conforms to the pulmonary vein in a unique way that delivers consistent, effective and durable lesions for AFib patients, without any rotation of the catheter,"" said Tobias Reichlin, M.D., Director of Electrophysiology at Inselspital University Hospital in Bern, Switzerland. ""With the full integration into the Affera mapping system, it's an exciting step forward for patient care in Europe.""
+
+Additional benefits of Sphere-360 include:
+
+Delivers circumferential, consistent lesions from the entire 34 mm lattice without catheter rotation, enhancing workflow efficiency
+
+Adapts to the vein by adjusting the shape of the conformable lattice to the patient's anatomy
+
+All-in-one catheter for navigation, mapping, and ablation with a single transseptal puncture and zero catheter exchange
+
+Real-time local impedance information to assess catheter proximity to tissue
+
+Easy access to pulmonary veins with enhanced stability through its over-the-wire design
+
+Compatible with FlexCath Contour™ 10 French deflectable sheath designed for easy catheter positioning
+
+""Advances in electrophysiology over the past several years are having a significant impact on care for arrhythmia patients, and Affera has been a key part of that impact,"" said Vivek Reddy, M.D., Director of Cardiac Arrhythmia Services for the Mount Sinai Health System in New York City. ""Now with Sphere-360, we have a new and differentiated single-shot PFA catheter with the potential to deliver the next phase of innovation. It's an exciting time for physicians and patients and we're not slowing down.""
+
+Results from the Sphere-360 European study at one year were presented at the Heart Rhythm Society Annual Meeting and published in the Heart Rhythm Journal in April 2025. The prospective, single-arm, multi-center trial in European centers demonstrated excellent efficacy, safety, and durability that led to CE Mark.
+
+""The achievement of CE Mark for Sphere-360, as well as the first cases in the U.S. IDE trial, mark two major achievements in our effort to deliver new and better treatments to AFib patients,"" said Rebecca Seidel, president of the Cardiac Ablation Solutions business, which is part of the Cardiovascular Portfolio. ""We're committed to leading in PFA and bringing meaningful innovation at a regular cadence.""
+
+The Horizon 360 IDE study is a prospective, single-arm clinical study at centers across the U.S. The study will evaluate the safety and effectiveness of the Sphere-360 catheter with the Affera mapping and ablation system for treating paroxysmal AFib.
+
+About Medtronic PFA
+
+Medtronic was the first company with two PFA offerings for physicians and patients. The PulseSelect™ Pulsed Field Ablation System offers physicians a safe, single-shot solution for pulmonary vein isolation (PVI) and is now available in more than 35 countries.
+
+Sphere-9™ is the only all-in-one, dual energy mapping and ablation catheter for treatment of persistent AFib and concomitant CTI-dependent atrial flutter. The Affera system, together with the Sphere-9 catheter, enables physician treatment flexibility with its wide area focal design and 9mm lattice tip that can be used with an 8.5Fr sheath. Affera is approved in the U.S., Europe, Australia and New Zealand and Japan, with global expansion ongoing. The Affera Mapping and Ablation System with Sphere-9 Catheter received CE Mark in March 2023 and U.S. Food and Drug Administration (FDA) approval in October 2024.
+
+The Sphere-360 catheter is approved in Europe and investigational in the United States. For more information on the Affera system, the Sphere-9 catheter and the Sphere-360 catheter, visit Medtronic.com.
+
+About Atrial Fibrillation
+
+AFib is one of the most common and undertreated heart rhythm disorders, affecting more than 60 million people worldwide 1 . AFib is a progressive disease, often beginning as paroxysmal AFib (presents intermittently) and progressing to persistent (lasts for more than 7+ days without stopping). As the disease progresses, the risk of serious complications including heart failure, stroke and risk of death increases 2-5 .
+
+About Medtronic
+
+Bold thinking. Bolder actions. We are Medtronic. Medtronic plc, headquartered in Galway, Ireland, is the leading global healthcare technology company that boldly attacks the most challenging health problems facing humanity by searching out and finding solutions. Our Mission — to alleviate pain, restore health, and extend life — unites a global team of 95,000+ passionate people across more than 150 countries. Our technologies and therapies treat 70 health conditions and include cardiac devices, surgical robotics, insulin pumps, surgical tools, patient monitoring systems, and more. Powered by our diverse knowledge, insatiable curiosity, and desire to help all those who need it, we deliver innovative technologies that transform the lives of two people every second, every hour, every day. Expect more from us as we empower insight-driven care, experiences that put people first, and better outcomes for our world. In everything we do, we are engineering the extraordinary. For more information on Medtronic, visit www.Medtronic.com and follow Medtronic on LinkedIn .
+
+Any forward-looking statements are subject to risks and uncertainties such as those described in Medtronic's periodic reports on file with the Securities and Exchange Commission. Actual results may differ materially from anticipated results.
+
+References
+
+Roth GA, Mensah GA, Johnson CO et al. Global Burden of Cardiovascular Diseases and Risk Factors, 1990-2019: Update From the GBD 2019 Study. J Am Coll Cardiol 2020;76:2982-3021.
+
+Miyasaka Y, Barnes ME, Bailey KR, et al. Mortality trends in patients diagnosed with first atrial fibrillation: a 21-year community-based study. J Am Coll Cardiol 2007;49:986-92.
+
+Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association of Cardio-Thoracic Surgery (EACTS). Eur Heart J 2020.
+
+Wolf PA, Abbott RD, Kannel WB. Atrial fibrillation as an independent risk factor for stroke: the Framingham Study. Stroke 1991;22:983-8.
+
+Lubitz SA, Moser C, Sullivan L, et al. Atrial fibrillation patterns and risks of subsequent stroke, heart failure, or death in the community. J Am Heart Assoc 2013;2:e000126
+
+Dr. Reddy is a paid consultant for Medtronic.
+
+Contacts:
+
+Leslie Williamson
+
+Public Relations
+
++1-612-227-5099
+
+Ingrid Goldberg
+
+Investor Relations
+
++1-763-505-2696
+
+View original content to download multimedia: https://www.prnewswire.com/news-releases/affera-momentum-continues-as-medtronic-announces-ce-mark-in-europe-and-us-ide-first-cases-for-sphere-360-pfa-catheter-to-treat-paroxysmal-atrial-fibrillation-302668733.html
+
+SOURCE Medtronic plc",https://barchart-news-media-prod.aws.barchart.com/https://mma.prnewswire.com/media/2867791/Medtronic_plc__Affera_mapping_and_ablation_system.jpg,N,,2026-01-23 17:03:09.482361
 ID2,Agilent,2026-01-23 14:33:45+00:00,Technology Networks,Next-Generation Batteries: Technologies Powering the Future of Energy Storage,Anna MacDonald,,,,,https://www.technologynetworks.com/tn/infographics/next-generation-batteries-technologies-powering-the-future-of-energy-storage-407945,"Conventional lithium-ion (Li-ion) batteries have transformed portable energy storage, but growing safety concerns, material supply issues, and the demands of electric vehicles, aerospace, and grid applications are driving the search for improved designs.
 This infographic explores a selection of next-generation battery technologies, highlighting innovations in solid-state, lithium–sulfur, and alternative metal-ion batteries.
 Download this infographic to discover:","Conventional lithium-ion (Li-ion) batteries have transformed portable energy storage, but growing safety concerns, material supply issues, and the demands of electric vehicles, aerospace, and grid applications are driving the search for improved designs.
@@ -12184,6 +12704,15 @@ But OpenAI would no longer be theirs alone.",https://cdn.geekwire.com/wp-content
 ID36,Philips,2026-01-20 18:23:31+00:00,wreg.com,Netflix intensifies bid for Warner Bros making its $72 billion offer all cash | WREG.com,Not Available,,,,,https://wreg.com/news/business/ap-business/ap-netflix-revises-its-offer-for-warner-bros-discovery-to-make-it-an-all-cash-transaction/,"... PHILIPS, Associated Press. Posted: Jan 20, 2026 / 11:50 AM CST. Updated: Jan 20, 2026 / 11:55 AM CST. SHARE. Netflix is now offering to buy Warner ...",Not Available,,N,,2026-01-20 15:02:03.287636
 ID14,Delta Airlines,2026-01-20 18:11:35+00:00,CNBC,"Calls of the Day: ServiceTitan, Shake Shack, Toast, Delta Air Lines and TKO Group - CNBC",Not Available,,,,,https://www.cnbc.com/video/2026/01/20/calls-of-the-day-servicetitan-shake-shack-toast-delta-air-lines-and-tko-group.html,The Investment Committee debate the latest Calls of the Day.,Not Available,https://image.cnbcfm.com/api/v1/image/108254438-17689308461768930843-43594626827-1080pnbcnews.jpg?v=1768930845&w=1920&h=1080,N,,2026-01-20 15:01:31.098557
 ID18,Eli Lilly,2026-01-20 17:56:37+00:00,al,"Alabama saw its highest ever economic development in 2025, Ivey says - al.com","William Thornton | wthornton@al.com, William Thornton, wthornton@al.com, www.facebook.com",,,,,https://www.al.com/news/2026/01/alabama-saw-its-highest-ever-economic-development-in-2025-ivey-says.html,"Alabama is “riding a wave of historic momentum, with signs of success in every corner of our state.”",Not Available,https://www.al.com/resizer/v2/4KAFJ5VULZAIFP57WNREWP2RFA.jpeg?auth=0a5ca6f25b2aebfabe1c91b225f11eca0638bb7a2ed6b47597814f6197f6a80d&width=1280&smart=true&quality=90,N,,2026-01-20 14:01:56.697307
+ID47,Wellington Management,2026-01-20 17:52:33+00:00,www.investegate.co.uk,Holding(s) in Company | Company Announcement - Investegate,Not Available,,,,,https://www.investegate.co.uk/announcement/rns/beazley--bez/holding-s-in-company-/9369917,"All intraday prices are subject to a delay of fifteen (15) minutes.
+Investegate takes no responsibility for the accuracy of the information within this site.
+Queries about the content of an announcement should be directed to the source.
+Investegate reserves the right to publish a filtered set of announcements.
+NAV, EMM/EPT, Rule 8 and FRN Variable Rate Fix announcements are filtered from this site.","All intraday prices are subject to a delay of fifteen (15) minutes.
+
+Investegate takes no responsibility for the accuracy of the information within this site.
+
+The announcements are supplied by the denoted source. Queries about the content of an announcement should be directed to the source. Investegate reserves the right to publish a filtered set of announcements. NAV, EMM/EPT, Rule 8 and FRN Variable Rate Fix announcements are filtered from this site.",https://www.investegate.co.uk/assets/images/linkedin-investegate-logo.jpg,N,,2026-01-20 16:02:47.480613
 ID29,Medtronic,2026-01-20 17:52:33+00:00,"Morningstar, Inc.",Gradient Toxicologist Lindsey Borton Finalist for 2026 Lush Prize - Morningstar,Not Available,,,,,https://www.morningstar.com/news/pr-newswire/20260120ne67014/gradient-toxicologist-lindsey-borton-finalist-for-2026-lush-prize,"The Lush Prize announced that Gradient scientist Lindsey Borton and Medtronic scientist Kelly Coleman are finalist for the 2026 award that shows support for alternatives to animal-based testing.
 BOSTON, Jan. 20, 2026 /PRNewswire/ -- Gradient announces that Principal Toxicologist Lindsey Borton and Medtronic Sr.
 In this article, Gradient Principal Toxicologist Lindsey Borton and Medtronic Sr.
@@ -12215,15 +12744,6 @@ bvasecka@gradientcorp.com
 View original content to download multimedia:https://www.prnewswire.com/news-releases/gradient-toxicologist-lindsey-borton-finalist-for-2026-lush-prize-302665658.html
 
 SOURCE Gradient LLC",https://images.contentstack.io/v3/assets/blt4eb669caa7dc65b2/blta7dd42ebdd7b93b8/61899b34a3c7df383578294c/morningstar-og.png,N,,2026-01-21 00:00:59.748808
-ID47,Wellington Management,2026-01-20 17:52:33+00:00,www.investegate.co.uk,Holding(s) in Company | Company Announcement - Investegate,Not Available,,,,,https://www.investegate.co.uk/announcement/rns/beazley--bez/holding-s-in-company-/9369917,"All intraday prices are subject to a delay of fifteen (15) minutes.
-Investegate takes no responsibility for the accuracy of the information within this site.
-Queries about the content of an announcement should be directed to the source.
-Investegate reserves the right to publish a filtered set of announcements.
-NAV, EMM/EPT, Rule 8 and FRN Variable Rate Fix announcements are filtered from this site.","All intraday prices are subject to a delay of fifteen (15) minutes.
-
-Investegate takes no responsibility for the accuracy of the information within this site.
-
-The announcements are supplied by the denoted source. Queries about the content of an announcement should be directed to the source. Investegate reserves the right to publish a filtered set of announcements. NAV, EMM/EPT, Rule 8 and FRN Variable Rate Fix announcements are filtered from this site.",https://www.investegate.co.uk/assets/images/linkedin-investegate-logo.jpg,N,,2026-01-20 16:02:47.480613
 ID29,Medtronic,2026-01-20 17:46:15+00:00,The Globe and Mail,Bernstein Reaffirms Their Hold Rating on Johnson & Johnson (JNJ) - The Globe and Mail,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/JNJ-N/pressreleases/37132089/bernstein-reaffirms-their-hold-rating-on-johnson-johnson-jnj/,Detailed price information for Johnson & Johnson (JNJ-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=827,N,,2026-01-20 13:03:08.868427
 ID30,Michelin,2026-01-20 17:41:51+00:00,News.GP,February test to decide future of MotoGP in Brazil | News.GP,Not Available,,,,,https://www.news.gp/en/february-test-to-decide-future-of-motogp-in-brazil,"MotoGP is preparing to return to Brazil in 2026, with a key test event planned at the Ayrton Senna circuit in Goiania at the end of February.
 The race is scheduled for 20 to 22 March and will replace the Argentina Grand Prix as the second round of the season.
@@ -21777,322 +22297,3 @@ Aleeza Furman
 Judge Joshua Roberts, head of the Philadelphia Court of Common Pleas complex litigation center, on Tuesday appointed a batch of attorneys to liaison counsel posts in the hair relaxer litigation. Most of the half-dozen lawyers selected are regulars in the court’s mass tort program.
 
 June 20, 2025",https://images.law.com/thelegalintelligencer/contrib/content/uploads/sites/414/2020/02/judge-gavel.jpg,N,,2026-01-16 21:00:51.007770
-ID40,Societe Generale,2026-01-16 21:55:23+00:00,TipRanks Financial,Cencora Expands Credit Facilities to Finance OneOncology Deal - TipRanks.com,TipRanks Auto-Generated Newsdesk,,,,,https://www.tipranks.com/news/company-announcements/cencora-expands-credit-facilities-to-finance-oneoncology-deal,"The most recent analyst rating on (COR) stock is a Buy with a $415.00 price target.
-To see the full list of analyst forecasts on Cencora stock, see the COR Stock Forecast page.
-Spark’s Take on COR Stock According to Spark, TipRanks’ AI Analyst, COR is a Neutral.
-More about Cencora Cencora, Inc. operates in the healthcare sector, focusing on pharmaceutical distribution and related services, including specialty healthcare solutions.
-Average Trading Volume: 1,400,831 Technical Sentiment Signal: Buy Current Market Cap: $67.88B See more insights into COR stock on TipRanks’ Stock Analysis page.","Claim 70% Off TipRanks Premium
-
-Unlock hedge fund-level data and powerful investing tools for smarter, sharper decisions
-
-Stay ahead of the market with the latest news and analysis and maximize your portfolio's potential
-
-Cencora ( (COR) ) just unveiled an update.
-
-On January 12, 2026, Cencora, Inc. amended its existing revolving credit agreement, increasing total commitments by $1.0 billion to $5.5 billion, enhancing its overall liquidity profile. On the same date, the company secured a new senior unsecured multi-year term loan facility totaling $1.5 billion in two tranches and a separate $3.0 billion 364-day senior unsecured term loan facility, both primarily to finance its proposed acquisition of the remaining majority equity interests in OneOncology, refinance OneOncology’s existing debt and cover related fees and expenses, with the loans bearing interest at SOFR- or base-rate benchmarks plus ratings-based margins and subject to leverage and other customary covenants and events of default. Together, these new term facilities fully displaced the previously arranged $4.5 billion bridge financing commitment, reducing it to zero, and further embedded major relationship banks such as JPMorgan Chase, Citibank, Bank of America, Wells Fargo, BNP Paribas, Société Générale and MUFG in Cencora’s capital structure through roles as lenders, advisors, underwriters and securitization counterparties, underscoring the scale and importance of the OneOncology transaction for the company’s financing strategy and banking relationships.
-
-The most recent analyst rating on (COR) stock is a Buy with a $415.00 price target. To see the full list of analyst forecasts on Cencora stock, see the COR Stock Forecast page.
-
-Spark’s Take on COR Stock
-
-According to Spark, TipRanks’ AI Analyst, COR is a Neutral.
-
-Cencora’s strong financial performance and positive earnings call sentiment are major strengths, driving the score. However, high leverage, potential overvaluation, and technical indicators suggesting bearish momentum are notable risks.
-
-To see Spark’s full report on COR stock, click here.
-
-More about Cencora
-
-Cencora, Inc. operates in the healthcare sector, focusing on pharmaceutical distribution and related services, including specialty healthcare solutions. The company works closely with healthcare providers and manufacturers, and has an active presence in capital markets and structured financing, as reflected in its use of revolving credit facilities, term loans and receivables securitization programs to support acquisitions and ongoing operations.
-
-Average Trading Volume: 1,400,831
-
-Technical Sentiment Signal: Buy
-
-Current Market Cap: $67.88B
-
-See more insights into COR stock on TipRanks’ Stock Analysis page.",https://blog.tipranks.com/wp-content/uploads/2022/10/shutterstock_2206522783.jpg,N,,2026-01-16 18:03:54.433649
-ID26,Kraft Heinz,2026-01-16 21:39:29+00:00,simplywall.st,Is Hormel Foods (HRL) Recasting Its Retail Strategy With Domenic Borrelli's Appointment?,Simply Wall St,,,,,https://simplywall.st/stocks/us/food-beverage-tobacco/nyse-hrl/hormel-foods/news/is-hormel-foods-hrl-recasting-its-retail-strategy-with-domen,"Hormel Foods has appointed Domenic Borrelli as executive vice president of Retail, effective February 23, 2026, placing him in charge of one of the company’s largest consumer-brand business units.
-By bringing in a leader with extensive experience in brand building and complex business transformations at Danone, Kraft Foods and Maple Leaf Foods, Hormel Foods is signaling a renewed focus on reshaping its retail portfolio and execution.
-We’ll now examine how bringing in Domenic Borrelli to lead Hormel’s Retail unit may influence the company’s broader investment narrative.
-Hormel Foods Investment Narrative Recap To own Hormel Foods, you need to believe in the resilience of its branded retail portfolio as it works through margin pressure from higher input costs and slower revenue growth.
-Build Your Own Hormel Foods Narrative Disagree with existing narratives?","Hormel Foods has appointed Domenic Borrelli as executive vice president of Retail, effective February 23, 2026, placing him in charge of one of the company’s largest consumer-brand business units.
-
-By bringing in a leader with extensive experience in brand building and complex business transformations at Danone, Kraft Foods and Maple Leaf Foods, Hormel Foods is signaling a renewed focus on reshaping its retail portfolio and execution.
-
-We’ll now examine how bringing in Domenic Borrelli to lead Hormel’s Retail unit may influence the company’s broader investment narrative.
-
-The best AI stocks today may lie beyond giants like Nvidia and Microsoft. Find the next big opportunity with these through early-stage innovation in machine learning, automation, and data intelligence that could fund your retirement.
-
-Hormel Foods Investment Narrative Recap
-
-To own Hormel Foods, you need to believe in the resilience of its branded retail portfolio as it works through margin pressure from higher input costs and slower revenue growth. The appointment of Domenic Borrelli to lead the Retail unit does not immediately change the near term focus on rebuilding profitability or the key risk around persistent commodity inflation and the lag in passing through higher costs to consumers.
-
-The most relevant recent development alongside Borrelli’s hire is Hormel’s 2026 guidance, which calls for US$12.2 billion to US$12.5 billion in net sales and US$0.96 billion to US$1.03 billion in operating income. Retail leadership execution will be central to how the company tracks against these targets, particularly as it balances pricing, mix and innovation against evolving consumer preferences for alternative and clean label proteins.
-
-However, investors should also be aware of the risk that input cost volatility and slower pricing pass through could...
-
-Hormel Foods’ narrative projects $13.0 billion revenue and $952.2 million earnings by 2028. This requires 2.5% yearly revenue growth and about a $197.7 million earnings increase from $754.5 million today.
-
-, a 10% upside to its current price.
-
-Exploring Other Perspectives
-
-Five members of the Simply Wall St Community see Hormel’s fair value between US$24.36 and US$47.20, underscoring how far opinions can spread. You should weigh these views against the risk that ongoing commodity cost volatility and slower retail pricing pass through continue to pressure margins and the company’s progress toward its 2026 earnings goals.
-
-- why the stock might be worth as much as 91% more than the current price!
-
-Build Your Own Hormel Foods Narrative
-
-Disagree with existing narratives? - extraordinary investment returns rarely come from following the herd.
-
-A great starting point for your Hormel Foods research is our analysis highlighting that could impact your investment decision.
-
-provides a comprehensive fundamental analysis summarized in a single visual - the Snowflake - making it easy to evaluate Hormel Foods' overall financial health at a glance.
-
-Searching For A Fresh Perspective?
-
-Our daily scans reveal stocks with breakout potential. Don't miss this chance:
-
-Trump has pledged to ""unleash"" American oil and gas and these .
-
-The end of cancer? These like cancer and Alzheimer's.
-
-Explore leading the revolution in next-gen technology and shaping the future with breakthroughs in quantum algorithms, superconducting qubits, and cutting-edge research.
-
-This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.",https://images.simplywall.st/asset/industry/5122000-choice2-main-header/1585186547117,N,,2026-01-16 18:03:45.015923
-ID34,Parker-Hannifin,2026-01-16 21:39:21+00:00,www.businesswire.com,Liberty All-Star® Equity Fund December 2025 Monthly Update - Business Wire,Liberty All-Star® Equity Fund,,,,,https://www.businesswire.com/news/home/20260116202294/en/Liberty-All-Star-Equity-Fund-December-2025-Monthly-Update,"BOSTON--(BUSINESS WIRE)--Below is the December 2025 Monthly Update for the Liberty All-Star Equity Fund (NYSE: USA).
-Liberty All-Star Equity Fund Ticker: USA Monthly Update, December 2025 Investment Approach: Fund Style: Large-Cap Core Fund Strategy: Combines three value-style and two growth-style investment managers.
-Investment Managers: Value Managers: Aristotle Capital Management, LLC Fiduciary Management, Inc. Pzena Investment Management, LLC Growth Managers: Sustainable Growth Advisers, LP TCW Investment Management Company Top 20 Holdings at Month-End: Holdings are subject to change.
-Performance returns for the Fund are total returns, which includes dividends, and are net of management fees and other Fund expenses.
-Performance information shown does not reflect the deduction of taxes that shareholders would pay on Fund distributions or the sale of Fund shares.","BOSTON--(BUSINESS WIRE)--Below is the December 2025 Monthly Update for the Liberty All-Star Equity Fund (NYSE: USA).
-
-Liberty All-Star Equity Fund
-
-Ticker: USA
-
-Monthly Update, December 2025
-
-Investment Approach:
-
-Fund Style: Large-Cap Core
-
-Fund Strategy: Combines three value-style and two growth-style investment managers. Those selected demonstrate a consistent investment philosophy, decision making process, continuity of key people and above-average long-term results compared to managers with similar styles.
-
-Investment Managers:
-
-Value Managers:
-
-Aristotle Capital Management, LLC
-
-Fiduciary Management, Inc.
-
-Pzena Investment Management, LLC
-
-Growth Managers:
-
-Sustainable Growth Advisers, LP
-
-TCW Investment Management Company
-
-Top 20 Holdings at Month-End:
-
-Holdings are subject to change.
-
-Monthly Performance:
-
-Net Assets at Month-End ($millions):
-
-Sector Breakdown* (% of equity portfolio):
-
-*Based on Standard & Poor's and MSCI Global Industry Classification Standard (GICS).
-
-New Holdings:
-
-IDEXX Laboratories, Inc.
-
-McCormick & Co., Inc.
-
-Holdings Liquidated:
-
-Constellation Brands, Inc.
-
-The net asset value (NAV) of a closed-end fund is the market value of the underlying investments (i.e., stocks and bonds) in the Fund’s portfolio, minus liabilities, divided by the total number of Fund shares outstanding. However, the Fund also has a market price; the value at which it trades on an exchange. If the market price is above the NAV the Fund is trading at a premium. If the market price is below the NAV the Fund is trading at a discount.
-
-Performance returns for the Fund are total returns, which includes dividends, and are net of management fees and other Fund expenses. Returns are calculated assuming that a shareholder reinvested all distributions. Past performance cannot predict future investment results.
-
-Performance will fluctuate with changes in market conditions. Current performance may be lower or higher than the performance data shown. Performance information shown does not reflect the deduction of taxes that shareholders would pay on Fund distributions or the sale of Fund shares. Shareholders must be willing to tolerate significant fluctuations in the value of their investment. An investment in the Fund involves risk, including loss of principal.
-
-Sources of distributions to shareholders may include ordinary dividends, long-term capital gains and return of capital. The final determination of the source of all distributions in 2025 for tax reporting purposes will be made after year end. The actual amounts and sources of the amounts for tax reporting purposes will depend upon the Fund’s investment experience during its fiscal year and may be subject to changes based on tax regulations. Based on current estimates a portion of the distributions consist of a return of capital. These estimates may not match the final tax characterization (for the full year’s distributions) contained in shareholder 1099-DIV forms after the end of the year.",https://mms.businesswire.com/media/20260116202294/en/2694783/22/Business_Wire_Logo-_FINAL.jpg,N,,2026-01-16 18:03:49.934662
-ID33,OpenAI,2026-01-16 21:29:12+00:00,Ars Technica,OpenAI to test ads in ChatGPT as it burns through billions - Ars Technica,Benj Edwards,,,,,https://arstechnica.com/information-technology/2026/01/openai-to-test-ads-in-chatgpt-as-it-burns-through-billions/,"OpenAI first launched ChatGPT Go in India in August 2025 and has since rolled it out to over 170 countries.
-According to OpenAI’s blog post, the company plans to test ads “at the bottom of answers in ChatGPT when there’s a relevant sponsored product or service.” Ads will be labeled and separated from the answer.
-OpenAI is not the only AI company exploring advertising revenue.
-Financial pressures and a changing tune OpenAI’s advertising experiment reflects the enormous financial pressures facing the company.
-“As we introduce ads, it’s crucial we preserve what makes ChatGPT valuable in the first place,” Simo wrote.","On Friday, OpenAI announced it will begin testing advertisements inside the ChatGPT app for some US users in a bid to expand its customer base and diversify revenue. The move represents a reversal for CEO Sam Altman, who in 2024 described advertising in ChatGPT as a “last resort” and expressed concerns that ads could erode user trust, although he did not completely rule out the possibility at the time.
-
-The banner ads will appear in the coming weeks for logged-in users of the free version of ChatGPT as well as the new $8 per month ChatGPT Go plan, which OpenAI also announced Friday is now available worldwide. OpenAI first launched ChatGPT Go in India in August 2025 and has since rolled it out to over 170 countries.
-
-Users paying for the more expensive Plus, Pro, Business, and Enterprise tiers will not see advertisements.
-
-According to OpenAI’s blog post, the company plans to test ads “at the bottom of answers in ChatGPT when there’s a relevant sponsored product or service.” Ads will be labeled and separated from the answer.
-
-In example screenshots shared by the company, the ads look like blocked off sections of the chat window with a small image and some advertising copy. Asking ChatGPT for places to visit in Mexico could result in holiday ads appearing, for instance.
-
-“Our enterprise and subscription businesses are already strong,” Fidji Simo, OpenAI’s CEO of applications, wrote in the blog post. “We believe in having a diverse revenue model where ads can play a part in making intelligence more accessible to everyone.”
-
-OpenAI’s announcement follows the company’s April 2025 introduction of shopping features to ChatGPT Search. At that time, OpenAI’s Adam Fry told Wired that product recommendations were “not ads” and “not sponsored,” but it felt like a potential step in that direction at the time.
-
-OpenAI is not the only AI company exploring advertising revenue. Google began testing AdSense ads in chatbot experiences through partnerships with AI startups in late 2024.
-
-Financial pressures and a changing tune
-
-OpenAI’s advertising experiment reflects the enormous financial pressures facing the company. OpenAI does not expect to be profitable until 2030 and has committed to spend about $1.4 trillion on massive data centers and chips for AI.
-
-According to financial documents obtained by The Wall Street Journal in November, OpenAI expects to burn through roughly $9 billion this year while generating $13 billion in revenue. Only about 5 percent of ChatGPT’s 800 million weekly users pay for subscriptions, so it’s not enough to cover all of OpenAI’s operating costs.
-
-Not everyone is convinced ads will solve OpenAI’s financial problems. “I am extremely bearish on this ads product,” tech critic Ed Zitron wrote on Bluesky. “Even if this becomes a good business line, OpenAI’s services cost too much for it to matter!”
-
-OpenAI’s embrace of ads appears to come reluctantly, since it runs counter to a “personal bias” against advertising that Altman has shared in earlier public statements. For example, during a fireside chat at Harvard University in 2024, Altman said he found the combination of ads and AI “uniquely unsettling,” implying that he would not like it if the chatbot itself changed its responses due to advertising pressure. He added: “When I think of like GPT writing me a response, if I had to go figure out exactly how much was who paying here to influence what I’m being shown, I don’t think I would like that.”
-
-Along those lines, OpenAI’s approach appears to be a compromise between needing ad revenue and not wanting sponsored content to appear directly within ChatGPT’s written responses. By placing banner ads at the bottom of answers separated from the conversation history, OpenAI appears to be addressing Altman’s concern: The AI assistant’s actual output, the company says, will remain uninfluenced by advertisers.
-
-Indeed, Simo wrote in a blog post that OpenAI’s ads will not influence ChatGPT’s conversational responses and that the company will not share conversations with advertisers and will not show ads on sensitive topics such as mental health and politics to users it determines to be under 18.
-
-“As we introduce ads, it’s crucial we preserve what makes ChatGPT valuable in the first place,” Simo wrote. “That means you need to trust that ChatGPT’s responses are driven by what’s objectively useful, never by advertising.”",https://cdn.arstechnica.net/wp-content/uploads/2024/02/openai_glowing_green-1152x648.jpg,N,,2026-01-16 20:01:21.386878
-ID45,U.S. Bank,2026-01-16 21:27:48+00:00,news.futunn.com,Berkshire Missed the Bank Rally. Few of Its Stocks Are Truly 'Forever.' -- Barrons.com,Barron's,,,,,https://news.futunn.com/en/post/67531036/berkshire-missed-the-bank-rally-few-of-its-stocks-are,"Unity Software(U.US) reported fourth-quarter financial results after the market close on Monday.
-Here's a rundown of the report.Q4 Earnings: Unity said fourth-quarter revenue increased 35% year-over-year to $609 million, beating the consensus estimate of $562.71 million.
-The company reported a quarterly loss of 66 cents per share.
-Use the share button in your browser to share the page with your friends","Unity Software(U.US) reported fourth-quarter financial results after the market close on Monday. Here's a rundown of the report.Q4 Earnings: Unity said fourth-quarter revenue increased 35% year-over-year to $609 million, beating the consensus estimate of $562.71 million. The company reported a quarterly loss of 66 cents per share.
-
-Use the share button in your browser
-
-to share the page with your friends",https://usnewsfile.moomoo.com/news-thumbnail/20260117/public/17686005217744376488549-17686005217738961744918.jpeg,N,,2026-01-16 18:03:59.783599
-ID40,Societe Generale,2026-01-16 21:26:03+00:00,www.stocktitan.net,Cencora (NYSE: COR) expands credit lines to fund OneOncology acquisition - Stock Titan,Stock Titan,,,,,https://www.stocktitan.net/sec-filings/COR/8-k-cencora-inc-reports-material-event-e869c64d5d76.html,"The covenants contained in the Term Credit Agreement are substantially similar to the covenants contained in the Revolving Credit Agreement.
-The 364-Day Term Credit Agreement provides for a senior unsecured term loan facility of $3.0 billion (the “364-Day Term Loan”).
-The covenants contained in the 364-Day Term Credit Agreement are substantially similar to the covenants contained in the Revolving Credit Agreement.
-As a result of entering into the Term Credit Agreement and the 364-Day Term Credit Agreement, such bridge financing commitments have been automatically reduced by $4.5 billion, which is the amount of the commitments under the Term Credit Agreement and the 364-Day Term Credit Agreement, to zero.
-10.3 364-Day Term Credit Agreement, dated as of January 12, 2026, among Cencora, Inc., the lenders party thereto and Citibank, N.A., as Administrative Agent.","UNITED STATES
-
-SECURITIES AND EXCHANGE COMMISSION
-
-Washington, DC 20549
-
-FORM 8-K
-
-CURRENT REPORT
-
-Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934
-
-Date of Report (Date of earliest event reported):
-
-Cencora, Inc.
-
-(Exact name of registrant as specified in its charter)
-
-Commission File Number: 1-16671
-
-Delaware 23-3079390 (State or other jurisdiction of (I.R.S. Employer incorporation or organization) Identification No.)
-
-1 West First Avenue
-
-Conshohocken, PA 19428-1800 (Address of principal executive offices) (Zip Code)
-
-(610) 727-7000
-
-(Registrant’s telephone number, including area code)
-
-Not Applicable
-
-(Former name or former address, if changed since last report.)
-
-Securities registered pursuant to Section 12(b) of the Act:
-
-Title of each class Trading Symbol(s) Name of exchange on which registered Common Stock COR New York Stock Exchange (NYSE) 2.875% Senior Notes due 2028 COR28 New York Stock Exchange (NYSE) 3.625% Senior Notes due 2032 COR32 New York Stock Exchange (NYSE)
-
-Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions:
-
-¨Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)
-
-¨Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)
-
-¨Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b))
-
-¨Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c))
-
-Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (§230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (§240.12b-2 of this chapter).
-
-Emerging growth company ¨
-
-If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ¨
-
-Item 1.01. Entry into a Material Definitive Agreement.
-
-Amendment to Revolving Credit Facility
-
-On January 12, 2026, Cencora, Inc. (the “Company”) entered into an Incremental Facility and Amendment Agreement (the “Amendment”) to that certain Amended and Restated Credit Agreement (as amended by the Amendment, the “Revolving Credit Agreement”), dated as of June 4, 2025, among the Company, the borrowing subsidiaries party thereto, the lenders party thereto and JPMorgan Chase Bank, N.A., as administrative agent.
-
-The Amendment increased the aggregate amount of the commitments under the Revolving Credit Agreement by $1.0 billion to $5.5 billion.
-
-The foregoing description of the Amendment does not purport to be complete and is qualified in its entirety by reference to the Amendment, which is filed as Exhibit 10.1 to this Current Report on Form 8-K and is incorporated by reference herein.
-
-Multi-Year Term Loan Facility
-
-On January 12, 2026, the Company entered into a Term Credit Agreement (the “Term Credit Agreement”), among the Company, the lenders party thereto and JPMorgan Chase Bank, N.A., as administrative agent, in connection with the previously announced proposed acquisition (the “Acquisition”) of the majority of the outstanding equity interests that the Company does not currently own in OneOncology. The Term Credit Agreement provides for a senior unsecured term loan facility of $1.5 billion consisting of two tranches: (a) $500 million (“Tranche One Loans”) and (b) $1.0 billion (“Tranche Two Loans” and together with Tranche One Loans, the “Term Loans”). Tranche One Loans mature two years from the date on which they are drawn. Tranche Two Loans mature three years from the date on which they are drawn. The Company will use the proceeds of the Term Loans to pay a portion of the consideration in respect of the Acquisition, to repay existing debt of OneOncology and to pay fees and expenses incurred in connection therewith. The funding of the Term Loans is subject to customary conditions, including the consummation of the Acquisition.
-
-The Term Loans will bear interest at a rate equal to either a Term SOFR rate or a Daily Simple SOFR rate (each as defined in the Term Credit Agreement), plus an applicable margin, or an alternate base rate, plus an applicable margin, in each case based on the Company’s public debt ratings by S&P Global Ratings, Moody’s Investors Service, Inc. and Fitch, Inc. Such applicable margins range from 75 basis points to 125 basis points over both the Term SOFR rate and the Daily Simple SOFR rate and 0 basis points to 25 basis points over the alternate base rate, as determined in accordance with the provisions of the Term Credit Agreement. The Company has also agreed to pay a ticking fee that will, commencing on April 1, 2026, accrue at specified rates based on the Company’s public debt ratings, ranging from 5.5 basis points to 15 basis points on the daily amount of unused commitments under the Term Credit Agreement. The Company has the right to prepay the Term Loans at any time, in whole or in part and without premium or penalty (other than, if applicable, any breakage costs). The Company may also choose to reduce its commitments under the Term Credit Agreement at any time.
-
-The covenants contained in the Term Credit Agreement are substantially similar to the covenants contained in the Revolving Credit Agreement. The Term Credit Agreement includes limitations on indebtedness of subsidiaries, liens, fundamental changes and asset sales and a covenant requiring compliance with a financial leverage ratio not to exceed 4.00 to 1.00 as of the last day of any fiscal quarter (which may be increased to 4.50 to 1.00 at the Company’s election as of the last day of any fiscal quarter during which the Company closes a material acquisition). The Term Credit Agreement also contains customary events of default (which are in some cases subject to certain exceptions, thresholds and grace periods) including, but not limited to, nonpayment of principal and interest, failure to perform or observe covenants, breaches of representations and warranties and certain bankruptcy-related events.
-
-The foregoing description of the Term Credit Agreement does not purport to be complete and is qualified in its entirety by reference to the Term Credit Agreement, which is filed as Exhibit 10.2 to this Current Report on Form 8-K and is incorporated by reference herein.
-
-364-Day Term Credit Facility
-
-On January 12, 2026, the Company entered into a Credit Agreement (the “364-Day Term Credit Agreement”), among the Company, the lenders party thereto and Citibank, N.A., as administrative agent, in connection with the Acquisition.
-
-The 364-Day Term Credit Agreement provides for a senior unsecured term loan facility of $3.0 billion (the “364-Day Term Loan”). The 364-Day Term Loan matures 364 days from the date on which it is drawn. The Company will use the proceeds of the 364-Day Term Loan to pay a portion of the consideration in respect of the Acquisition, to repay existing debt of OneOncology and to pay fees and expenses incurred in connection therewith. The funding of the 364-Day Term Loan is subject to customary conditions, including the consummation of the Acquisition.
-
-The 364-Day Term Loan will bear interest at a rate equal to either a Term SOFR rate or a Daily Simple SOFR rate, plus an applicable margin, or an alternate base rate, plus an applicable margin, in each case based on the Company’s public debt ratings by S&P Global Ratings, Moody’s Investors Service, Inc. and Fitch, Inc. Such applicable margins range from 87.5 basis points to 112.5 basis points over both the Term SOFR rate and the Daily Simple SOFR rate and 0 basis points to 12.5 basis points over the alternate base rate, as determined in accordance with the provisions of the 364-Day Term Credit Agreement. The Company has also agreed to pay a ticking fee that will, commencing on April 1, 2026, accrue at specified rates based on the Company’s public debt ratings, ranging from 6 basis points to 10 basis points on the daily amount of unused commitments under the 364-Day Term Credit Agreement. The Company has the right to prepay the 364-Day Term Loan at any time, in whole or in part and without premium or penalty (other than, if applicable, any breakage costs). The Company may also choose to reduce its commitments under the 364-Day Term Credit Agreement at any time.
-
-The covenants contained in the 364-Day Term Credit Agreement are substantially similar to the covenants contained in the Revolving Credit Agreement. The 364-Day Term Credit Agreement includes limitations on indebtedness of subsidiaries, liens, fundamental changes and asset sales and a covenant requiring compliance with a financial leverage ratio not to exceed 4.00 to 1.00 as of the last day of any fiscal quarter (which may be increased to 4.50 to 1.00 at the Company’s election as of the last day of any fiscal quarter during which the Company closes a material acquisition). The 364-Day Term Credit Agreement contains certain representations, warranties and events of default (which are, in some cases, subject to certain exceptions, thresholds and grace periods) including, but not limited to, non-payment of principal and interest, failure to perform or observe covenants, breaches of representations and warranties and certain bankruptcy-related events.
-
-The foregoing description of the 364-Day Term Credit Agreement does not purport to be complete and is qualified in its entirety by reference to the 364-Day Term Credit Agreement, which is filed as Exhibit 10.3 to this Current Report on Form 8-K and is incorporated by reference herein.
-
-Termination of Bridge Financing Commitment
-
-As previously disclosed, in connection with the Acquisition, the Company obtained $4.5 billion in bridge financing commitments to fund the Acquisition. As a result of entering into the Term Credit Agreement and the 364-Day Term Credit Agreement, such bridge financing commitments have been automatically reduced by $4.5 billion, which is the amount of the commitments under the Term Credit Agreement and the 364-Day Term Credit Agreement, to zero.
-
-Other Relationships
-
-Certain of the lenders under the Revolving Credit Facility, the Term Credit Agreement and the 364-Day Term Credit Agreement, and their affiliates, have various relationships with the Company and are providing in connection with the Acquisition, have in the past provided, and may in the future provide, investment banking, commercial banking, derivative transactions and financial advisory services to the Company and its affiliates in the ordinary course of business for which they will receive, have received and may continue to receive fees and commissions. In particular, in connection with the Acquisition, Citigroup Global Markets Inc., an affiliate of Citibank, N.A., is serving as lead financial advisor to the Company and J.P. Morgan Securities LLC, an affiliate of JPMorgan Chase Bank, N.A., is serving as financial advisor to the Company. In addition, BofA Securities, Inc., an affiliate of Bank of America, N.A., Citigroup Global Markets Inc., an affiliate of Citibank, N.A., J.P. Morgan Securities LLC, an affiliate of JPMorgan Chase Bank, N.A., Wells Fargo Securities, LLC, an affiliate of Wells Fargo Bank, N.A., BNP Paribas Securities Corp., an affiliate of BNP Paribas, and Société Générale Corporate & Investment Banking, an affiliate of Société Générale have served as joint book-running managers, and certain affiliates of the other lenders have served as underwriters, in connection with past senior note offerings by the Company, and such affiliates may serve similar roles in future securities offerings by the Company. In addition, certain of the lenders serve various roles in connection with a $1.5 billion receivables securitization facility to which the Company’s subsidiaries, AmerisourceBergen Drug Corporation, ASD Specialty Healthcare, LLC, and Amerisource Receivables Financial Corporation (“ARFC”), are a party and pursuant to which accounts receivables are sold on a revolving basis to ARFC, a special purpose entity. MUFG Bank, Ltd. serves as administrator and a purchaser under the program. Certain of the other lenders or their affiliates also serve as lenders or purchasers under this securitization facility.
-
-Item 2.03. Creation of Direct Financial Obligation or an Obligation under an Off-Balance Sheet Arrangement of a Registrant.
-
-The information set forth in Item 1.01 above is hereby incorporated by reference into this Item 2.03.
-
-Item 9.01. Financial Statements and Exhibits.
-
-(d) Exhibits
-
-Exhibit Number Description 10.1 Incremental Facility and Amendment Agreement, dated as of January 12, 2026, among Cencora, Inc., the borrowing subsidiaries party thereto, the lenders party thereto and JPMorgan Chase Bank, N.A., as Administrative Agent. 10.2 Term Credit Agreement, dated as of January 12, 2026, among Cencora, Inc., the lenders party thereto and JPMorgan Chase Bank, N.A., as Administrative Agent. 10.3 364-Day Term Credit Agreement, dated as of January 12, 2026, among Cencora, Inc., the lenders party thereto and Citibank, N.A., as Administrative Agent. 104 Cover Page Interactive Data File (formatted as inline XBRL)
-
-SIGNATURES
-
-Pursuant to the requirements of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned hereunto duly authorized.",https://static.stocktitan.net/company-logo/cor-lg.png,N,,2026-01-17 02:59:34.467926
-ID3,Air Liquide,2026-01-16 21:14:38+00:00,hydrogeninsight.com,Cost of green methanol from China due to surge as government announces end to tariff rebate,Polly Martin,,,,,https://www.hydrogeninsight.com/transport/cost-of-green-methanol-from-china-due-to-surge-as-government-announces-end-to-tariff-rebate/2-1-1929479,Trade association the Methanol Institute warns that this could have a major impact on the economics of green shipping fuels made in China,Trade association the Methanol Institute warns that this could have a major impact on the economics of green shipping fuels made in China,https://image.dngroup.com/global/nhst/binary/6f3502d8473c50a2945ea5eb96175e54?crop=1600%2C800%2Cx0%2Cy161%2Csafe&width=1200&format=webp&quality=80,N,,2026-01-16 23:02:47.000087
-ID33,OpenAI,2026-01-16 21:07:42+00:00,Yahoo Finance,how Chai Discovery became one of the flashiest names in AI drug development,Lucas Ropek,,,,,https://finance.yahoo.com/news/openai-offices-deal-eli-lilly-201400016.html,"Drug discovery, the art of identifying new molecules to develop pharmaceuticals, is a notoriously time-consuming and difficult process.
-However, a new breed of biotech companies are leveraging AI and advanced data technologies in an attempt to accelerate and streamline the process.
-Chai Discovery, an AI startup founded in 2024, is one such company.
-Last Friday, Chai also announced a partnership with Eli Lilly, a deal in which the pharmaceutical giant will use the startup’s software to help develop new medicines.
-The startup’s deal was announced shortly before Eli Lilly said it would also collaborate with Nvidia on a $1 billion partnership to create an AI drug discovery lab in San Francisco.","Drug discovery, the art of identifying new molecules to develop pharmaceuticals, is a notoriously time-consuming and difficult process. Traditional techniques, like high-throughput screening, offer an expensive scattershot approach — one that is not often successful. However, a new breed of biotech companies are leveraging AI and advanced data technologies in an attempt to accelerate and streamline the process.
-
-Chai Discovery, an AI startup founded in 2024, is one such company. In a little over 12 months, its young co-founders have managed to raise hundreds of millions of dollars and rally the backing of some of Silicon Valley’s most influential investors, making it one of the flashiest firms in a growing industry. In December, the company completed its Series B, bringing in an additional $130 million and a valuation of $1.3 billion.
-
-Last Friday, Chai also announced a partnership with Eli Lilly, a deal in which the pharmaceutical giant will use the startup’s software to help develop new medicines. Chai’s algorithm, called Chai-2, is designed to develop antibodies — the proteins necessary to fight illnesses. The startup has said it hopes to serve as a kind of “computer-aided design suite” for molecules.
-
-It’s a critical moment for Chai’s particular field. The startup’s deal was announced shortly before Eli Lilly said it would also collaborate with Nvidia on a $1 billion partnership to create an AI drug discovery lab in San Francisco. This “co-innovation lab,” as it’s being called, will combine big data, compute resources, and scientific expertise, all in an attempt to accelerate the speed of new medicine development.
-
-The industry isn’t without its detractors. Some industry veterans seem to feel that — given how difficult traditional drug development is — these new technologies are unlikely to have a major impact. However, for every naysayer, there seem to be just as many believers.
-
-Elena Viboch, managing director at General Catalyst — one of Chai’s major backers — told TechCrunch that her firm is confident that companies that adopt the startup’s services will see results. “We believe the biopharma companies that move the most quickly to partner with companies like Chai will be the first to get molecules into the clinic, and will make medicines that matter,” Viboch said. “In practice that means partnering in 2026 and by the end of 2027 seeing first-in-class medicines enter into clinical trials.”
-
-Aliza Apple, the head of Lilly’s TuneLab program — which uses AI and machine learning to advance drug discovery — also expressed confidence in Chai’s product. “By combining Chai’s generative design models with Lilly’s deep biologics expertise and proprietary data, we intend to push the frontier of how AI can design better molecules from the outset, with the ultimate goal to help accelerate the development of innovative medicines for patients,” she said.",https://s.yimg.com/ny/api/res/1.2/cvZZmc1_FvJIHDtJ2Ykkaw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA7Y2Y9d2VicA--/https://media.zenfs.com/en/techcrunch_finance_785/3f5e08d2ec791ff8f8eebc2cd6aed023,N,,2026-01-16 17:06:00.570352
