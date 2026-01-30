@@ -1,4 +1,437 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID22,IBM,2026-01-30 19:02:35+00:00,StorageNewsletter,IBM Releases IBM Storage Ceph 9.0 - StorageNewsletter,Philippe Nicolas,,,,,https://www.storagenewsletter.com/2026/01/30/ibm-releases-ibm-storage-ceph-9-0/,"IBM Storage Ceph can deliver File, Block and Object storage services from within one single technology stack, supporting clients to cut CAPEX and OPEX.
+A complete IBM software defined storage platform, consumable as a service, or as software subscription, optional available with IBM Storage Ready Nodes hardware servers, as complete storage offering.
+IBM Storage Ready Nodes for Ceph IBM optionally offers IBM Storage Ready Nodes for IBM Storage Ceph clients.
+Storage Ready Nodes concern server hardware, which has been fully tested and qualified for IBM Storage Ceph implementation and production use cases Storage Ready Nodes for Ceph enable IBM clients for a complete storage software- and hardware solution experience Storage Ready node feature- and capacity choices are available within multiple configuration choices and options, depending on a client’s use cases and use patterns On-site implementations are feasible by IBM expert labs consulting services Deliverables with this IBM Storage Ceph 9.0 release update:Storage Ceph RADOS core updates Fast Erasure Code for Block and File: For File and Block use cases, supporting extent overwrites.
+Main significant highlights of this release: RADOS core updates Faster Erasure Code for Block and File Broadened schemes for Erasure Coding Reduced I/O pause with OSD failure RBD Block storage NVMe/TCP updates VMware SRM Integration VMware vSphere Plugin update VSAN migration to Ceph NVMe/TCP Support for 4K namespaces Grafana dashboards in vSphere plugin NVMe Namespace reservations RADOS Gateway (RGW) updates Dynamic Single Bucket Scale​ Object Retrieval from Glacier S3 Tiers Multi-active NFS Gateways HAProxy Enhanced Bucket operational insights Consistency with Amazon AWS S3 surrounding services CephFS filesharing updates SMB Multichannel functionality NFS over TLS (Transport Layer Security) (Tech Preview) Management (UI) updates RGW Bucket Notification in User Interface Local Storage Class management in User Interface Glacier Storage Class management SMB performance and metrics Storage Ceph Hardware monitoring IBM Storage Ceph resources – find out more about IBM Storage Ceph IBM Storage Ceph website: https://www.ibm.com/products/ceph IBM Storage Ceph documentation: http://docs.ceph.blue IBM Redpaper publications Concepts and architecture of IBM Storage Ceph: https://www.redbooks.ibm.com/abstracts/redp5721.html Step-by-step implementation of some of the common scenarios with IBM Storage Ceph: https://www.redbooks.ibm.com/abstracts/redp5715.html Read also : IBM Storage Ceph Meets IBM Storage Deep Archive Simplifying data archival with cost-effective, policy-based retrieval By Philippe Nicolas | December 30, 2025 | News Two IBM Redbooks on FlashSystem and IBM Storage Ceph Supercharge your IBM Storage FlashSystem: performance tips and tricks and unlocking data insights and AI: IBM Storage Ceph as a data lakehouse platform for IBM watsonx.data and beyond August 29, 2025 | Press Release IBM Storage Ceph and Dremio: Powering Modern Data Lakehouse Synergy between IBM Storage Ceph Object Storage and Dremio’s Data Lakehouse platform provides solution for businesses seeking to efficiently maximize their data assets.","Faster Erasure Code, additional EC schemes, VMware SRM integration, less then 5 seconds failover and dynamic single bucket scaling
+
+By Philippe Nicolas | January 30, 2026 at 2:00 pm
+
+IBM Storage Ceph, Software defined storage delivering Block, Object and File storage services, with an enterprise level support and updates. IBM Storage Ceph can deliver File, Block and Object storage services from within one single technology stack, supporting clients to cut CAPEX and OPEX.
+
+A complete IBM software defined storage platform, consumable as a service, or as software subscription, optional available with IBM Storage Ready Nodes hardware servers, as complete storage offering.
+
+IBM Storage Ready Nodes for Ceph
+
+IBM optionally offers IBM Storage Ready Nodes for IBM Storage Ceph clients.
+
+Storage Ready Nodes concern server hardware, which has been fully tested and qualified for IBM Storage Ceph implementation and production use cases
+
+Storage Ready Nodes for Ceph enable IBM clients for a complete storage software- and hardware solution experience
+
+Storage Ready node feature- and capacity choices are available within multiple configuration choices and options, depending on a client’s use cases and use patterns
+
+On-site implementations are feasible by IBM expert labs consulting services
+
+Deliverables with this IBM Storage Ceph 9.0 release update:Storage Ceph RADOS core updates
+
+Fast Erasure Code for Block and File: For File and Block use cases, supporting extent overwrites. Extent overwrites allow for only the modified portions of an object to be updated. This minimizes I/O operations, including associated overhead
+
+Broadened schemes for Erasure Coding: Support has been added for EC 5+2 and EC 6+2 schemes on top of already existing Erasure Coding capabilities: EC 8+3, EC 8+2, EC 4+2
+
+These are selectable EC profiles, optimized for different type of workloads or situations. Clients can choose a preferred profile for HA, performance of cost-effectiveness. Erase Coding profiles in Storage Ceph provides flexibility, efficiency, performance, durability and simplified management.
+
+Reduced I/O pause with OSD failure OSD Failover happens in less than 5s. Fast failover ensures services remain available, reducing risks of downtime
+
+Storage Ceph NVMe/TCP Block storage updates
+
+VMware SRM Integration
+
+Create Storage Replication Adapters that pass array replication and failover commands to Ceph APIs
+
+This enables for abstract and automated failover and failback processes, ensuring that business critical applications can be quickly recovered in event if a disaster
+
+VMware vSphere Plugin update
+
+Storage volume Snapshot and Clone handling, all within one workflow
+
+In earlier versions, snapshotting and cloning were separate operations inside the vSphere plug-in
+
+VSAN migration to Ceph NVMe/TCP
+
+Starts Ceph on Virtual machines, supporting VMs as they migrate off of VSAN and onto Ceph NVMeoF
+
+This functionality enables clients to decouple their VM storage from the ESX compute platform
+
+Grafana dashboards in vSphere plugin
+
+Grafana dashboards for performance and health have been added to the platform, now visible and approachable from inside the vSphere plug-in
+
+Support for 4K namespaces
+
+Ability to have 4096 namespaces, compared to 2048 namespaces in previous releases of IBM Storage Ceph
+
+NVMe/TCP less than 5 seconds failover time
+
+Impacts the failover window for Gateways and beaconing
+
+It addresses requirements for database workloads on NVMe/TCP block storage
+
+Storage Ceph CephFS File storage updates
+
+SMB Multichannel
+
+Multiple physical network connections can be established automatically between an SMB Gateway and SMB clients
+
+Multi-channel requires multiple NICs on both SMB-Gateway and SMB-client​ end
+
+Increases SMB throughput by adding additional NIC’s to broaden bandwidth​
+
+NFS over TLS (Tech Preview)
+
+TLS encrypts data between clients and servers, ensuring privacy and integrity while preventing eavesdropping and tampering
+
+Ceph Object storage, RADOS Gateway (RGW) updates
+
+Dynamic Single Bucket Scale​
+
+Seamless Bucket growth, without write pauses.​ Smoother transitions and growth without needs to plan for downtime
+
+Object Retrieval from Glacier S3 Tiers
+
+Additional improvements have been made to IBM Storage Ceph’s
+
+policy-based Archive/Retrieval feature
+
+Multi-active NFS Gateways HAProxy
+
+Ability to enable multiple NFS-Gateways to be active and connected via Virtual IP
+
+Provided and managed by HAProxy
+
+Enhanced Bucket operational insights
+
+Including per user and per bucket usage information in Storage Ceph’s Prometheus dashboard information
+
+Management User Interface Updates
+
+RGW Bucket Notification in User Interface
+
+Enables clients for simplified configuration and usage of S3 Bucket notifications in an easy workflow through the Dashboard UI
+
+Local Storage Class management in User Interface Allows clients for Local Storage Classes management in the Dashboard UI
+
+Local Storage classes refer to an RGW RADOS data pool in the Storage Ceph Cluster
+
+RGW Multi-site section offers an option to configure placement targets outside multi-site replication
+
+Glacier Storage Class management
+
+Lifecycle policies allow configuration of data movement from one Storage Class to another
+
+Amazon Glacier storage is a relevant as candidate target store for bucket lifecycle policy destinations
+
+This feature enables clients to configure AWS Glacier as optional target
+
+SMB performance and metrics
+
+Administrators can check Server Message Block performance graphics to monitor SMB services
+
+Overall health state, latencies, and total throughputs
+
+Individual share throughputs, number of clients and users who are connected to a share
+
+Storage Ceph Hardware monitoring
+
+The functionality offers awareness of eventual hardware issues that could impact Storage Ceph’s performance or reliability
+
+Summarizing
+
+IBM has released IBM Storage Ceph 9.0 GA, with new features and functionalities.
+
+Main significant highlights of this release:
+
+RADOS core updates
+
+Faster Erasure Code for Block and File
+
+Broadened schemes for Erasure Coding
+
+Reduced I/O pause with OSD failure
+
+RBD Block storage NVMe/TCP updates
+
+VMware SRM Integration
+
+VMware vSphere Plugin update
+
+VSAN migration to Ceph NVMe/TCP
+
+Support for 4K namespaces
+
+Grafana dashboards in vSphere plugin
+
+NVMe Namespace reservations
+
+RADOS Gateway (RGW) updates
+
+Dynamic Single Bucket Scale​
+
+Object Retrieval from Glacier S3 Tiers
+
+Multi-active NFS Gateways HAProxy
+
+Enhanced Bucket operational insights
+
+Consistency with Amazon AWS S3 surrounding services
+
+CephFS filesharing updates
+
+SMB Multichannel functionality
+
+NFS over TLS (Transport Layer Security) (Tech Preview)
+
+Management (UI) updates
+
+RGW Bucket Notification in User Interface
+
+Local Storage Class management in User Interface
+
+Glacier Storage Class management
+
+SMB performance and metrics
+
+Storage Ceph Hardware monitoring
+
+IBM Storage Ceph resources – find out more about IBM Storage Ceph
+
+IBM Storage Ceph website: https://www.ibm.com/products/ceph
+
+IBM Storage Ceph documentation: http://docs.ceph.blue
+
+IBM Redpaper publications
+
+Concepts and architecture of IBM Storage Ceph: https://www.redbooks.ibm.com/abstracts/redp5721.html
+
+Step-by-step implementation of some of the common scenarios with IBM Storage Ceph: https://www.redbooks.ibm.com/abstracts/redp5715.html
+
+Read also :
+
+IBM Storage Ceph Meets IBM Storage Deep Archive
+
+Simplifying data archival with cost-effective, policy-based retrieval
+
+By Philippe Nicolas | December 30, 2025 | News
+
+Two IBM Redbooks on FlashSystem and IBM Storage Ceph
+
+Supercharge your IBM Storage FlashSystem: performance tips and tricks and unlocking data insights and AI: IBM Storage Ceph as a data lakehouse platform for IBM watsonx.data and beyond
+
+August 29, 2025 | Press Release
+
+IBM Storage Ceph and Dremio: Powering Modern Data Lakehouse
+
+Synergy between IBM Storage Ceph Object Storage and Dremio’s Data Lakehouse platform provides solution for businesses seeking to efficiently maximize their data assets.
+
+July 22, 2025 | Press Release",https://www.storagenewsletter.com/wp-content/uploads/2026/01/download-1769725635.png,N,,2026-01-30 15:04:07.576095
+ID23,Instacart,2026-01-30 19:01:19+00:00,www.winsightgrocerybusiness.com,Sprouts Farmers Market opens first store in New York - Supermarket News,Not Available,,,,,https://www.winsightgrocerybusiness.com/new-stores/sprouts-farmers-market-opens-first-store-in-new-york,A Trader Joe's sign. ... Bags of Costco rotisserie chickens. ... Three snow plows clear snow on a highway. ... An Instacart sign outside of the NASDAQ.,Not Available,,N,,2026-01-30 15:04:40.887507
+ID31,Microsoft,2026-01-30 19:00:45+00:00,Seeking Alpha,"Microsoft: Struck By Deep AI Fears, And That's Why I'm Buying - Seeking Alpha",JR Research,,,,,https://seekingalpha.com/article/4864329-microsoft-struck-by-deep-ai-fears-that-is-why-i-am-buying,"Microsoft: Struck By Deep AI Fears, And That's Why I'm Buying Comments (17) Summary Microsoft Corporation stock experienced a steep post-earnings selloff, despite delivering reasonable fiscal Q2 results and surpassing Azure guidance.
+Members of Ultimate Growth Investing get exclusive ideas and guidance to navigate any climate.
+I run the investing group Ultimate Growth Investing which specializes in identifying high-potential opportunities across various sectors.
+Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole.
+Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank.","Microsoft: Struck By Deep AI Fears, And That's Why I'm Buying
+
+Comments
+
+(17)
+
+Summary
+
+Microsoft Corporation stock experienced a steep post-earnings selloff, despite delivering reasonable fiscal Q2 results and surpassing Azure guidance.
+
+MSFT's AI strategy, including Maia chip advancements and deep OpenAI integration, underpins a compelling long-term TAM expansion opportunity.
+
+Concerns over CapEx growth and AI monetization linger, but management affirms hardware investments are largely contracted and demand-constrained.
+
+With MSFT's valuation now below its 10-year average and long-term uptrend intact, I upgrade the stock to Strong Buy.
+
+Looking for a helping hand in the market? Members of Ultimate Growth Investing get exclusive ideas and guidance to navigate any climate. Learn More »
+
+Wow! That whiplash on the stock of Microsoft Corporation (MSFT), which saw a historic selloff that was matched only by the throes of the COVID pandemic in March 2020, in a single
+
+This article was written by
+
+46.52K Follower s
+
+JR Research is an opportunistic investor. I was recognized by TipRanks as a Top Analyst, and also by Seeking Alpha as a ""Top Analyst To Follow"" for Technology, Software, and Internet, as well as for Growth and GARP. I identify attractive risk/reward opportunities supported by robust price action to potentially generate alpha well above the S&P 500. My picks have consistently demonstrated market outperformance over time. My approach combines timely and sharp price action analysis with fundamentals as my foundation. I also tend to avoid overhyped and overvalued stocks while capitalizing on battered stocks with significant upside recovery possibilities. I run the investing group Ultimate Growth Investing which specializes in identifying high-potential opportunities across various sectors. My main ideas revolve around stocks with strong growth potential, and also well-beaten contrarian plays. I designed the group for investors seeking to capitalize on growth stocks with solid fundamentals, robust buying momentum, and appealing turnaround plays to generate alpha consistently. Learn more
+
+Analyst’s Disclosure: I/we have a beneficial long position in the shares of MSFT, GOOGL, AMZN either through stock ownership, options, or other derivatives. I wrote this article myself, and it expresses my own opinions. I am not receiving compensation for it (other than from Seeking Alpha). I have no business relationship with any company whose stock is mentioned in this article.
+
+Seeking Alpha's Disclosure: Past performance is no guarantee of future results. No recommendation or advice is being given as to whether any investment is suitable for a particular investor. Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole. Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank. Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.
+
+Comments
+
+(17)
+
+Recommended For You",https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2162668270/image_2162668270.jpg?io=getty-c-w1536,N,,2026-01-30 15:04:57.582357
+ID7,Barclays,2026-01-30 18:43:05+00:00,GlobalCapital,Barclays replaces head of securitized products - Global Capital,"Chadwick Van Estrop, www.globalcapital.com, chadwick-van-estrop",,,,,https://www.globalcapital.com/article/2fx6gux00of0uf3ktjojk/securitization/barclays-replaces-head-of-securitized-products,"Illustrations A car manufacturer wants to promote its electric vehicles to environmentally conscious users living in the city after office hours.
+The number of times that the ad has been presented to you is detected and limited, to avoid presenting it too often.
+This is then used to build or improve a profile about you (that might include possible interests and personal aspects).
+Your profile can be used (also later) to present advertising that appears more relevant based on your possible interests by this and other entities.
+Number of Vendors seeking consent: 0","Cookies, device or similar online identifiers (e.g. login-based identifiers, randomly assigned identifiers, network based identifiers) together with other information (e.g. browser type and information, language, screen size, supported technologies etc.) can be stored or read on your device to recognise it each time it connects to an app or to a website, for one or several of the purposes presented here.
+
+Illustrations
+
+Most purposes explained in this notice rely on the storage or accessing of information from your device when you use an app or visit a website. For example, a vendor or publisher might need to store a cookie on your device during your first visit on a website, to be able to recognise your device during your next visits (by accessing this cookie each time).
+
+Number of Vendors seeking consent: 3
+
+Advertising presented to you on this service can be based on limited data, such as the website or app you are using, your non-precise location, your device type or which content you are (or have been) interacting with (for example, to limit the number of times an ad is presented to you).
+
+Illustrations
+
+A car manufacturer wants to promote its electric vehicles to environmentally conscious users living in the city after office hours. The advertising is presented on a page with related content (such as an article on climate change actions) after 6:30 p.m. to users whose non-precise location suggests that they are in an urban zone.
+
+A large producer of watercolour paints wants to carry out an online advertising campaign for its latest watercolour range, diversifying its audience to reach as many amateur and professional artists as possible and avoiding showing the ad next to mismatched content (for instance, articles about how to paint your house). The number of times that the ad has been presented to you is detected and limited, to avoid presenting it too often.
+
+Number of Vendors seeking consent or relying on legitimate interest: 3
+
+Information about your activity on this service (such as forms you submit, content you look at) can be stored and combined with other information about you (for example, information from your previous activity on this service and other websites or apps) or similar users. This is then used to build or improve a profile about you (that might include possible interests and personal aspects). Your profile can be used (also later) to present advertising that appears more relevant based on your possible interests by this and other entities.
+
+Illustrations
+
+If you read several articles about the best bike accessories to buy, this information could be used to create a profile about your interest in bike accessories. Such a profile may be used or improved later on, on the same or a different website or app to present you with advertising for a particular bike accessory brand. If you also look at a configurator for a vehicle on a luxury car manufacturer website, this information could be combined with your interest in bikes to refine your profile and make an assumption that you are interested in luxury cycling gear.
+
+An apparel company wishes to promote its new line of high-end baby clothes. It gets in touch with an agency that has a network of clients with high income customers (such as high-end supermarkets) and asks the agency to create profiles of young parents or couples who can be assumed to be wealthy and to have a new child, so that these can later be used to present advertising within partner apps based on those profiles.
+
+Number of Vendors seeking consent: 3
+
+Advertising presented to you on this service can be based on your advertising profiles, which can reflect your activity on this service or other websites or apps (like the forms you submit, content you look at), possible interests and personal aspects.
+
+Illustrations
+
+An online retailer wants to advertise a limited sale on running shoes. It wants to target advertising to users who previously looked at running shoes on its mobile app. Tracking technologies might be used to recognise that you have previously used the mobile app to consult running shoes, in order to present you with the corresponding advertisement on the app.
+
+A profile created for personalised advertising in relation to a person having searched for bike accessories on a website can be used to present the relevant advertisement for bike accessories on a mobile app of another organisation.
+
+Number of Vendors seeking consent: 3
+
+Information about your activity on this service (for instance, forms you submit, non-advertising content you look at) can be stored and combined with other information about you (such as your previous activity on this service or other websites or apps) or similar users. This is then used to build or improve a profile about you (which might for example include possible interests and personal aspects). Your profile can be used (also later) to present content that appears more relevant based on your possible interests, such as by adapting the order in which content is shown to you, so that it is even easier for you to find content that matches your interests.
+
+Illustrations
+
+You read several articles on how to build a treehouse on a social media platform. This information might be added to a profile to mark your interest in content related to outdoors as well as do-it-yourself guides (with the objective of allowing the personalisation of content, so that for example you are presented with more blog posts and articles on treehouses and wood cabins in the future).
+
+You have viewed three videos on space exploration across different TV apps. An unrelated news platform with which you have had no contact builds a profile based on that viewing behaviour, marking space exploration as a topic of possible interest for other videos.
+
+Number of Vendors seeking consent: 0
+
+Content presented to you on this service can be based on your content personalisation profiles, which can reflect your activity on this or other services (for instance, the forms you submit, content you look at), possible interests and personal aspects. This can for example be used to adapt the order in which content is shown to you, so that it is even easier for you to find (non-advertising) content that matches your interests.
+
+Illustrations
+
+You read articles on vegetarian food on a social media platform and then use the cooking app of an unrelated company. The profile built about you on the social media platform will be used to present you vegetarian recipes on the welcome screen of the cooking app.
+
+You have viewed three videos about rowing across different websites. An unrelated video sharing platform will recommend five other videos on rowing that may be of interest to you when you use your TV app, based on a profile built about you when you visited those different websites to watch online videos.
+
+Number of Vendors seeking consent: 0
+
+Information regarding which advertising is presented to you and how you interact with it can be used to determine how well an advert has worked for you or other users and whether the goals of the advertising were reached. For instance, whether you saw an ad, whether you clicked on it, whether it led you to buy a product or visit a website, etc. This is very helpful to understand the relevance of advertising campaigns.
+
+Illustrations
+
+You have clicked on an advertisement about a “black Friday” discount by an online shop on the website of a publisher and purchased a product. Your click will be linked to this purchase. Your interaction and that of other users will be measured to know how many clicks on the ad led to a purchase.
+
+You are one of very few to have clicked on an advertisement about an “international appreciation day” discount by an online gift shop within the app of a publisher. The publisher wants to have reports to understand how often a specific ad placement within the app, and notably the “international appreciation day” ad, has been viewed or clicked by you and other users, in order to help the publisher and its partners (such as agencies) optimise ad placements.
+
+Number of Vendors seeking consent or relying on legitimate interest: 3
+
+Information regarding which content is presented to you and how you interact with it can be used to determine whether the (non-advertising) content e.g. reached its intended audience and matched your interests. For instance, whether you read an article, watch a video, listen to a podcast or look at a product description, how long you spent on this service and the web pages you visit etc. This is very helpful to understand the relevance of (non-advertising) content that is shown to you.
+
+Illustrations
+
+You have read a blog post about hiking on a mobile app of a publisher and followed a link to a recommended and related post. Your interactions will be recorded as showing that the initial hiking post was useful to you and that it was successful in interesting you in the related post. This will be measured to know whether to produce more posts on hiking in the future and where to place them on the home screen of the mobile app.
+
+You were presented a video on fashion trends, but you and several other users stopped watching after 30 seconds. This information is then used to evaluate the right length of future videos on fashion trends.
+
+Number of Vendors seeking consent or relying on legitimate interest: 0
+
+Reports can be generated based on the combination of data sets (like user profiles, statistics, market research, analytics data) regarding your interactions and those of other users with advertising or (non-advertising) content to identify common characteristics (for instance, to determine which target audiences are more receptive to an ad campaign or to certain contents).
+
+Illustrations
+
+The owner of an online bookstore wants commercial reporting showing the proportion of visitors who consulted and left its site without buying, or consulted and bought the last celebrity autobiography of the month, as well as the average age and the male/female distribution of each category. Data relating to your navigation on its site and to your personal characteristics is then used and combined with other such data to produce these statistics.
+
+An advertiser wants to better understand the type of audience interacting with its adverts. It calls upon a research institute to compare the characteristics of users who interacted with the ad with typical attributes of users of similar platforms, across different devices. This comparison reveals to the advertiser that its ad audience is mainly accessing the adverts through mobile devices and is likely in the 45-60 age range.
+
+Number of Vendors seeking consent or relying on legitimate interest: 3
+
+Information about your activity on this service, such as your interaction with ads or content, can be very helpful to improve products and services and to build new products and services based on user interactions, the type of audience, etc. This specific purpose does not include the development or improvement of user profiles and identifiers.
+
+Illustrations
+
+A technology platform working with a social media provider notices a growth in mobile app users, and sees based on their profiles that many of them are connecting through mobile connections. It uses a new technology to deliver ads that are formatted for mobile devices and that are low-bandwidth, to improve their performance.
+
+An advertiser is looking for a way to display ads on a new type of consumer device. It collects information regarding the way users interact with this new kind of device to determine whether it can build a new mechanism for displaying advertising on this type of device.
+
+Number of Vendors seeking consent or relying on legitimate interest: 3
+
+Content presented to you on this service can be based on limited data, such as the website or app you are using, your non-precise location, your device type, or which content you are (or have been) interacting with (for example, to limit the number of times a video or an article is presented to you).
+
+Illustrations
+
+A travel magazine has published an article on its website about the new online courses proposed by a language school, to improve travelling experiences abroad. The school’s blog posts are inserted directly at the bottom of the page, and selected on the basis of your non-precise location (for instance, blog posts explaining the course curriculum for different languages than the language of the country you are situated in).
+
+A sports news mobile app has started a new section of articles covering the most recent football games. Each article includes videos hosted by a separate streaming platform showcasing the highlights of each match. If you fast-forward a video, this information may be used to select a shorter video to play next.
+
+Number of Vendors seeking consent or relying on legitimate interest: 0
+
+Your data can be used to monitor for and prevent unusual and possibly fraudulent activity (for example, regarding advertising, ad clicks by bots), and ensure systems and processes work properly and securely. It can also be used to correct any problems you, the publisher or the advertiser may encounter in the delivery of content and ads and in your interaction with them.
+
+Illustrations
+
+An advertising intermediary delivers ads from various advertisers to its network of partnering websites. It notices a large increase in clicks on ads relating to one advertiser, and uses data regarding the source of the clicks to determine that 80% of the clicks come from bots rather than humans.
+
+Number of Vendors seeking consent: 3
+
+The choices you make regarding the purposes and entities listed in this notice are saved and made available to those entities in the form of digital signals (such as a string of characters). This is necessary in order to enable both this service and those entities to respect such choices.
+
+Illustrations
+
+When you visit a website and are offered a choice between consenting to the use of profiles for personalised advertising or not consenting, the choice you make is saved and made available to advertising providers, so that advertising presented to you respects that choice.
+
+Number of Vendors seeking consent: 2
+
+Information about your activity on this service may be matched and combined with other information relating to you and originating from various sources (for instance your activity on a separate online service, your use of a loyalty card in-store, or your answers to a survey), in support of the purposes explained in this notice.
+
+Number of Vendors seeking consent: 3
+
+In support of the purposes explained in this notice, your device might be considered as likely linked to other devices that belong to you or your household (for instance because you are logged in to the same service on both your phone and your computer, or because you may use the same Internet connection on both devices).
+
+Number of Vendors seeking consent: 2
+
+Your device might be distinguished from other devices based on information it automatically sends when accessing the Internet (for instance, the IP address of your Internet connection or the type of browser you are using) in support of the purposes exposed in this notice.
+
+Number of Vendors seeking consent: 1
+
+With your acceptance, certain characteristics specific to your device might be requested and used to distinguish it from other devices (such as the installed fonts or plugins, the resolution of your screen) in support of the purposes explained in this notice.
+
+Number of Vendors seeking consent: 0",https://assets.euromoneydigital.com/dims4/default/f8f725c/2147483647/strip/true/crop/2000x1050+0+175/resize/1200x630!/quality/90/?url=http%3A%2F%2Feuromoney-brightspot.s3.amazonaws.com%2Ff8%2F87%2Ff424e5964a0c89d29de05d46627d%2Fbarclays.jpg,N,,2026-01-30 15:03:52.897369
+ID34,OpenAI,2026-01-30 18:14:13+00:00,Futurism,"Sam Altman Says Oops, They Accidentally Made the New Version of ChatGPT Worse Than ...",Joe Wilkins,,,,,https://futurism.com/artificial-intelligence/altman-openai-chatgpt-worse,"It’s been a little over three years since the launch of the first commercially-available large language model (LLM) chatbot, OpenAI’s ChatGPT.
+And though the AI model has certainly made performance gains since it came online, the lackluster performance of recent iterations hasn’t helped the perception that LLMs are hitting a plateau.
+Case in point, OpenAI CEO Sam Altman recently conceded that the company had “screwed up” the language capabilities of its latest chatbot iteration, GPT-5.2.
+“I think we just screwed that up,” Altman said at a developer town hall on Monday.
+As Search Engine Journal points out, the release of GPT-5.2 came with a huge emphasis on technical tasks like coding and formatting spreadsheets.","It’s been a little over three years since the launch of the first commercially-available large language model (LLM) chatbot, OpenAI’s ChatGPT. And though the AI model has certainly made performance gains since it came online, the lackluster performance of recent iterations hasn’t helped the perception that LLMs are hitting a plateau.
+
+Case in point, OpenAI CEO Sam Altman recently conceded that the company had “screwed up” the language capabilities of its latest chatbot iteration, GPT-5.2.
+
+“I think we just screwed that up,” Altman said at a developer town hall on Monday. “We will make future versions of GPT 5.x hopefully much better at writing than 4.5 was.”
+
+Continuing, Altman said that the company chose to focus on ChatGPT’s technical capabilities, perhaps to the detriment of its human-language performance.
+
+“We did decide, and I think for good reason, to put most of our effort in 5.2 into making it super good at intelligence, reasoning, coding, engineering, that kind of thing,” Altman said. “And we have limited bandwidth here, and sometimes we focus on one thing and neglect another.”
+
+The admission raises a high-stakes question: whether frontier AI models can continue to excel at tasks across the board, or if proficiency in one domain will start to come at the expense of a broader skill set.
+
+As Search Engine Journal points out, the release of GPT-5.2 came with a huge emphasis on technical tasks like coding and formatting spreadsheets. Compared to past iterations, there was scarce mention of any writing or creative work at all, a pivot which has left many non-technical users feeling like ChatGPT is hitting a wall.
+
+As data scientist and tech blogger Mehul Gupta pointed out in a review of GPT-5.2, there are plenty of signs that the LLM is backsliding, and some of them aren’t particularly subtle.
+
+These include a “flatter tone,” worse translation capability, inconsistent behavior across tasks, and some major regression in “instant mode,” a setting meant to provide immediate answers to simple questions.
+
+As Gupta writes, it also struggles with real-world tasks. When it comes to evaluating human documents like contracts, mixed-format notes or PDFs, GPT-5.2 “forgot earlier details, contradicted itself, misread cross-references, [and] hallucinated clarifications that didn’t exist.”
+
+“Benchmarks are clean,” Gupta observed. “Real documents are not. 5.2 still struggles with the noise of reality.”",https://futurism.com/wp-content/uploads/2026/01/altman-openai-chatgpt-worse.jpg?w=1200,N,,2026-01-30 15:05:03.921684
 ID35,Parker-Hannifin,2026-01-30 18:04:40+00:00,Benzinga,Parker Hannifin's Options: A Look at What the Big Money is Thinking - Benzinga,Benzinga Insights,,,,,https://www.benzinga.com/insights/options/26/01/50275817/parker-hannifins-options-a-look-at-what-the-big-money-is-thinking,"Investors with a lot of money to spend have taken a bullish stance on Parker Hannifin (NYSE:PH).
 Today, Benzinga's options scanner spotted 9 uncommon options trades for Parker Hannifin.
 Volume & Open Interest Trends Examining the volume and open interest provides crucial insights into stock research.
@@ -62,6 +495,7 @@ An analyst from Morgan Stanley has decided to maintain their Equal-Weight rating
 An analyst from Wells Fargo has decided to maintain their Overweight rating on Parker Hannifin, which currently sits at a price target of $1000.
 
 Options are a riskier asset compared to just trading the stock, but they have higher profit potential. Serious options traders manage this risk by educating themselves daily, scaling in and out of trades, following more than one indicator, and following the markets closely.",https://cdn.benzinga.com/files/images/story/2025/11/06/movers_4.jpg?width=1200&height=800&fit=crop,N,,2026-01-30 14:03:44.111699
+ID31,Microsoft,2026-01-30 17:38:42+00:00,news.ycombinator.com,"Microsoft Just Killed the ""Cover for Me"" Excuse: 365 Now Tracks You in Real-Time | Hacker News",Not Available,,,,,https://news.ycombinator.com/item%3Fid%3D46827003,"It's so pathetic that people actually put up with this. There are so many ways to stop that tracking from working and no, your boss doesn't have ...",Not Available,,N,,2026-01-30 15:05:00.867479
 ID19,Eli Lilly,2026-01-30 17:31:53+00:00,Business Facilities Magazine,Eli Lilly Plans Historic $3.5B Investment In Pennsylvania - Business Facilities Magazine,BF Staff,,,,,https://businessfacilities.com/eli-lilly-plans-historic-3-5b-investment-in-pennsylvania/,"In what will be the largest single investment in Lehigh Valley history — and the largest life sciences project in Pennsylvania history — Eli Lilly and Company will invest $3.5 billion in a new pharmaceutical manufacturing facility.
 “To meet increasing demand, we’re expanding our U.S. manufacturing network, with Lehigh Valley adding capacity for next‑generation weight-loss medicines.
 This is the fourth new U.S. manufacturing site Lilly has announced since February 2025, as part of its commitment to bolster domestic medicine production.
@@ -298,6 +732,37 @@ The official replaces Nino Mattarella, who is retiring from the firm.
 Piccolo is to be based in Milan.","Bank of America Corp. has announced the appointment of a county head for Italy. The firm has appointed Lo Piccolo to the position.
 
 The official replaces Nino Mattarella, who is retiring from the firm. Piccolo is to be based in Milan.",https://www.marketscreener.com/images/twitter_MS_fdblanc.png,N,,2026-01-30 12:04:28.225041
+ID40,S&P Global,2026-01-30 16:47:43+00:00,Fortune,"Fortune 500 Power Moves: Which executives gained and lost power (Jan. 17-30, 2026)",Fortune Editors,,,,,https://fortune.com/2026/01/30/fortune-500-power-moves-jan-17-30-2026/,"This is Fortune 500 Power Moves, a column tracking executive shifts—from appointments and promotions to resignations and retirements—within the highest ranks of Fortune 500 companies.
+Titles included in this roundup: CFOs (Chief Financial Officers), COOs (Chief Operating Officers), CTOs (Chief Technology Officers), and CHROs (Chief Human Resources Officers).
+We also include CEOs (Chief Executive Officers), Chief Information Officers (CIOs), Chief People Officers, CMOs (Chief Marketing Officers), and Chief Customer Officers when there are Power Moves within the Fortune 500 announced pertaining to those roles.
+For daily updates, subscribe to Fortune’s weekday newsletters, including CEO Daily, CFO Daily, and MPW Daily, as well as Next to Lead (weekly Mondays), and CIO Intelligence (weekly Wednesdays).
+Source: S&P Global Market Intelligence Join us at the Fortune Workplace Innovation Summit May 19–20, 2026, in Atlanta.","This is Fortune 500 Power Moves, a column tracking executive shifts—from appointments and promotions to resignations and retirements—within the highest ranks of Fortune 500 companies.
+
+Recommended Video
+
+Below is a recap of the C-suite developments at America’s highest-revenue-generating companies announced between Jan. 17–30, 2026 organized by sector. Titles included in this roundup: CFOs (Chief Financial Officers), COOs (Chief Operating Officers), CTOs (Chief Technology Officers), and CHROs (Chief Human Resources Officers). We also include CEOs (Chief Executive Officers), Chief Information Officers (CIOs), Chief People Officers, CMOs (Chief Marketing Officers), and Chief Customer Officers when there are Power Moves within the Fortune 500 announced pertaining to those roles.
+
+For daily updates, subscribe to Fortune’s weekday newsletters, including CEO Daily, CFO Daily, and MPW Daily, as well as Next to Lead (weekly Mondays), and CIO Intelligence (weekly Wednesdays).
+
+Financials
+
+Progressive (No. 57) announced the retirement of CFO John Sauerland, effective July 3, after 35 years with the company and 10 years as its CFO. Andrew Quigg, the the company’s Chief Strategy Officer, is expected to succeed him.
+
+Food and drug stores
+
+Albertsons (No. 55) appointed Allison Pinkham EVP and CHRO, effective Feb. 16. Pinkham previously served as CHRO and an Executive Committee Member at Galderma and will succeed Mike Theilmann, who retired in November of last year.
+
+Industrials
+
+Otis Worldwide (No. 303) appointed Enrique Miñarro Viseras COO. He previously served as President, EMEA & Latin America for the company.
+
+Retailing
+
+Chewy (No. 357) announced that CTO Satish Mehta will retire, effective Feb. 6. The company will conduct a search for Mehta’s successor.
+
+Source: S&P Global Market Intelligence
+
+Join us at the Fortune Workplace Innovation Summit May 19–20, 2026, in Atlanta. The next era of workplace innovation is here—and the old playbook is being rewritten. At this exclusive, high-energy event, the world’s most innovative leaders will convene to explore how AI, humanity, and strategy converge to redefine, again, the future of work. Register now.","https://fortune.com/img-assets/wp-content/uploads/2026/01/Power-moves-otis-worldwide.jpg?resize=1200,600",N,,2026-01-30 15:05:08.685181
 ID19,Eli Lilly,2026-01-30 16:45:19+00:00,www.reddit.com,Eli Lilly plans $3.5 billion manufacturing plant in Pennsylvania to make next-generation ...,Not Available,,,,,https://www.reddit.com/r/Zepbound/comments/1qra02h/eli_lilly_plans_35_billion_manufacturing_plant_in/,"I’m one of many people who would prefer a daily pill.
 Switching from Zepbound to something like the Wegovy pill would keep the level of food noise steady throughout the week instead of creating that rollercoaster effect.
 Yes, not every medication will be available in pill form, but most people tend to prefer pills when they’re an option.
@@ -491,6 +956,7 @@ Accor operates more than 5,700 hotels across 110 countries with brands such as S
 In Q3 2025, Accor reported a 1.1% year-over-year revenue decline in the division. In its earnings report, Accor also said its board is now weighing an initial public offering of Ennismore. The two companies entered into a joint venture in 2021.
 
 Accor appointed two global brand presidents in its premium, midscale and economy division in fall 2024.",https://s.yimg.com/ny/api/res/1.2/4utMLXXx2PrydGieQXCXrg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU7Y2Y9d2VicA--/https://media.zenfs.com/en/hotel_dive_382/008a207985bb73f78ffecf0a086be7df,N,,2026-01-30 11:08:45.429719
+ID28,Levi Strauss,2026-01-30 15:45:47+00:00,www.retailgazette.co.uk,Quiz reportedly seeking fresh financing - Retail Gazette,Not Available,,,,,https://www.retailgazette.co.uk/blog/2026/01/quiz-rescue-deal/,This will only take a few seconds...,This will only take a few seconds...,"data:;base64,=",N,,2026-01-30 15:04:53.536526
 ID15,Delta Airlines,2026-01-30 15:41:25+00:00,Delta News Hub,Delta provides flexibility for customers due to expected weekend winter weather,Not Available,,,,,https://news.delta.com/delta-provides-flexibility-customers-due-expected-weekend-winter-weather,"Delta is taking proactive measures to help minimize disruption for our customers with winter weather forecasted for Boston, Providence, Atlanta and other parts of the Southeast U.S. this weekend.
 Customers traveling in these airports can easily make changes to their flights in the Delta app or at delta.com with no fees.
 Our reservation specialists have access to the same flight options as customers do in the Delta app or on delta.com.
@@ -675,6 +1141,31 @@ Risk Assessment
 Instacart's financial health is further supported by its strong interest coverage ratio, indicating ample cash flow to cover debt obligations. However, sector-specific risks in the consumer cyclical industry, such as economic downturns, could impact performance. The company's beta of 0 suggests low volatility relative to the market, providing some stability for investors.
 
 While insider selling activity has been noted, with 17,949 shares sold in the past three months, the company's strong financial metrics and market positioning offer a solid foundation for future growth.",https://static.gurufocus.com/images/global_logo_twitter_card.png,N,,2026-01-30 11:10:17.357412
+ID26,J&J,2026-01-30 14:45:04+00:00,www.johnsoncontrols.com,Johnson Controls named to the Fortune World's Most Admired Companies 2026 list,Not Available,,,,,https://www.johnsoncontrols.com/media-center/news/press-releases/2026/01/30/johnson-controls-named-to-the-fortune-worlds-most-admired-companies-2026-list,"MILWAUKEE, Jan. 30, 2026 /PRNewswire/ -- Johnson Controls (NYSE: JCI), the global leader for smart, healthy and sustainable buildings, has been named to Fortune's 2026 list of the World's Most Admired Companies.
+We're excited to carry that legacy forward as we innovate for the future,"" said Joakim Weidemanis, CEO of Johnson Controls.
+Fortune's World's Most Admired Companies list, compiled annually in partnership with Korn Ferry, is a definitive benchmark of corporate reputation.
+The full list of the Fortune World's Most Admired Companies 2026 is available at https://fortune.com/worlds-most-admired-companies.
+About Johnson Controls: At Johnson Controls (NYSE:JCI), we transform the environments where people live, work, learn and play.","MILWAUKEE, Jan. 30, 2026 /PRNewswire/ -- Johnson Controls (NYSE: JCI), the global leader for smart, healthy and sustainable buildings, has been named to Fortune's 2026 list of the World's Most Admired Companies.
+
+""This recognition reflects the dedication of our global team. Being named one of the Fortune World's Most Admired Companies underscores the hard work of our people and the operational discipline we're driving, along with the impact of the solutions we deliver every day. For 140 years, Johnson Controls has helped customers tackle their most pressing challenges by driving greater efficiency, enabling smart decarbonization, and strengthening resilience and reliability across critical industries, where it really matters. We're excited to carry that legacy forward as we innovate for the future,"" said Joakim Weidemanis, CEO of Johnson Controls.
+
+Johnson Controls' inclusion on the 2026 list underscores its leadership in delivering the technology and services that help mission-critical industries - including data centers, healthcare and pharmaceutical manufacturing - to operate more efficiently and at peak performance. It reflects the dedication of the entire Johnson Controls team and the unmatched strength of its global field organization, which provides consistent quality and dependable performance for customers worldwide.
+
+Fortune's World's Most Admired Companies list, compiled annually in partnership with Korn Ferry, is a definitive benchmark of corporate reputation. Companies are evaluated by industry peers across nine criteria, including innovation, quality of management, social responsibility and ability to attract and retain talent.
+
+The full list of the Fortune World's Most Admired Companies 2026 is available at https://fortune.com/worlds-most-admired-companies.
+
+About Johnson Controls:
+
+At Johnson Controls (NYSE:JCI), we transform the environments where people live, work, learn and play. As the global leader in smart, healthy and sustainable buildings, our mission is to reimagine the performance of buildings to serve people, places and the planet.
+
+Building on a proud history of 140 years of innovation, we deliver the blueprint of the future for industries such as healthcare, schools, data centers, airports, stadiums, manufacturing and beyond through OpenBlue, our comprehensive digital offering.
+
+Today, Johnson Controls offers the world`s largest portfolio of building technology and software as well as service solutions from some of the most trusted names in the industry.
+
+Visit johnsoncontrols.com for more information and follow @Johnsoncontrols on social platforms.
+
+SOURCE Johnson Controls International plc",https://www.johnsoncontrols.com/-/media/project/jci-global/johnson-controls/us-region/united-states-johnson-controls/media-center/2026/press-release-assets/news_jc_socmedia_jan26_fortune-600x400_bms-fnl.png,N,,2026-01-30 15:04:44.551519
 ID15,Delta Airlines,2026-01-30 14:42:15+00:00,Professional Carwashing & Detailing,"Synergy Solutions personnel, AMP insights | PC&D WeekEND Review",PCD Staff,,,,,https://www.carwash.com/synergy-solutions-amp-weekend-review/,"This WeekEND Review highlights carwash industry updates including Club Car Wash’s mobile app giveaway, Synergy Solutions’ new business development manager, AMP’s Q4 membership retention report and PC&D’s latest podcast episode featuring customer data strategies.
 Club Car Wash launches $5,000 vacation giveaway through mobile app Club Car Wash is running a monthlong giveaway in January exclusively through the new Club Car Wash Mobile App.
 Synergy Solutions adds Jonny Kendall as business development manager Synergy Solutions announced that Jonny Kendall has joined the team as business development manager.
@@ -1656,6 +2147,41 @@ Before you consider Elevance Health, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Elevance Health wasn't on the list.
 
 While Elevance Health currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/elevance-health-inc-logo-1200x675.png?v=20221020160135,N,,2026-01-30 08:02:04.206976
+ID12,Carrier,2026-01-30 11:00:55+00:00,www.businesstravelnews.com,"Southwest: New Products, Procedures Will 'Grow Corp. Share' | Business Travel News",Donna M. Airoldi,,,,,https://www.businesstravelnews.com/Transportation/Air/Southwest-New-Products-Procedures-Will-Grow-Corp-Share,"The bevy of changes Southwest Airlines in the past year has implemented in its inflight and airport products are the final piece necessary to grow the carrier's corporate share, executives said Thursday during the company's fourth-quarter earnings call.
+Southwest executives also maintained that the product changes are particularly appealing to corporate travelers.
+""We're encouraged that we'll see share shift to Southwest Airlines because the product is a stronger offering now, especially with corporate,"" Jordan said, adding that ""we think we can grow our corporate share.
+For performance, excluding shutdown-affected government travel, ""which was kind of volatile there in Q4,"" Southwest's corporate business was ""up mid-single digits"" year over year, Watterson said.
+""What's not in our guide is this kind of medium-term benefit from increased corporate share or increased corporate revenue as people buy our ancillaries on the company dime.","The bevy of changes Southwest Airlines in the past year has implemented in its inflight and airport products are the final piece necessary to grow the carrier's corporate share, executives said Thursday during the company's fourth-quarter earnings call.
+
+While Southwest in recent years has worked to increase its prevalence in corporate programs by growing its presence in global distribution systems, executives said Thursday that the most effective draw would be carrier's transformation, which continued this week.
+
+Southwest on Jan. 27 implemented assigned and extra-legroom seating, which necessitated a new boarding procedure. These changes were on top of several others for the carrier in 2025, including charging for bags, adding six international partners and adding a basic economy fare.
+
+Southwest president and CEO Robert Jordan said Thursday that the initiatives were based on customer demand, ""providing what they want today, which is different than what they wanted five and 10 years ago.""
+
+""This has nothing to do with copying anybody,"" he said. ""This has to do with offering our customer what they want.""
+
+Southwest executives also maintained that the product changes are particularly appealing to corporate travelers.
+
+""We're encouraged that we'll see share shift to Southwest Airlines because the product is a stronger offering now, especially with corporate,"" Jordan said, adding that ""we think we can grow our corporate share. … We see meaningful opportunities ahead to grow earnings from areas such as route network optimization under a backdrop of improved operating margins in the business, increasing our corporate customer base driven by product changes that better appeal to the business traveler.""
+
+Southwest COO Andrew Watterson added that the carrier has invested in its corporate infrastructure over recent years, noting its presence in GDSs. But what was missing was ""the product that corporate travelers want to buy,"" he said. ""We have this new product, we will combine that with marketing efforts, our salesforce efforts, incremental distribution efforts, and we think there's upside to our corporate business from this new product on top of the infrastructure we already built.""
+
+For performance, excluding shutdown-affected government travel, ""which was kind of volatile there in Q4,"" Southwest's corporate business was ""up mid-single digits"" year over year, Watterson said. ""Entering this year and in January, we had very high bookings that others have reported. So, a strong start to the year in corporate bookings.""
+
+Southwest also ""anticipates additional benefit"" to the corporate segment ""once the tools and expense policies calibrate to our new offerings,"" Watterson said. ""What's not in our guide is this kind of medium-term benefit from increased corporate share or increased corporate revenue as people buy our ancillaries on the company dime. That is something that will unfold over [the] medium term.""
+
+Southwest Q4, Full-Year 2025 Metrics
+
+Southwest fourth-quarter passenger revenue was nearly $6.8 billion, up 8 percent year over year, with total quarterly revenue of more than $7.4 billion, up 7 percent.
+
+Full-year passenger revenue was more than $25.5 billion, a 2 percent increase year over year, while total 2025 revenue was more than $28 billion, a 2 percent increase.
+
+Net income for the quarter was $323 million compared with $261 million a year prior. Full-year net income was $441 million compared with $465 million in 2024.
+
+Fourth-quarter capacity increased 5.8 percent year over year, with full-year capacity up 1.6 percent compared with 2024. Average fuel cost was $2.45 per gallon for the quarter and $2.41 per gallon for the full year.
+
+Southwest estimates capacity for the first quarter will increase 1 percent to 2 percent year over year and increase 2 percent to 3 percent for full-year 2026. Projected first-quarter average fuel costs are $2.40 per gallon.",https://ik.imgkit.net/3vlqs5axxjf/BTN/uploadedImages/2015_Site_Maintenance/BTN_Link_PreviewLogo.png?n=3260&tr=w-1200%2Cfo-auto,N,,2026-01-30 15:03:57.069194
 ID19,Eli Lilly,2026-01-30 10:55:55+00:00,Pharmaceutical Technology,Repertoire and Lilly join hands on autoimmune disease therapies,Salong Debbarma,,,,,https://www.pharmaceutical-technology.com/news/repertoire-lilly-autoimmune-disease-therapies/,"Repertoire Immune Medicines has collaborated with Eli Lilly and Company to develop tolerising therapies to treat several autoimmune diseases.
 The partnership will focus on creating treatments intended to restore immune homeostasis and deliver durable remission for patients, avoiding the generalised immune suppression associated with existing therapies.
 Under the agreement, Repertoire will lead partnership activities up to the selection of development candidates, using its T cell receptor-epitope discovery platform, DECODE.
@@ -3240,6 +3766,25 @@ ESPN media contacts: ben.cafardo@espn.com and ronce.rajan@espn.com.
 
 -30-",https://espnpressroom.com/us/files/2026/01/January-30-31-and-February-1-Full-Court-Press.gif,N,,2026-01-29 23:02:16.066715
 ID19,Eli Lilly,2026-01-29 21:56:20+00:00,www.bioworld.com,Repertoire Decodes autoimmunity in $1.92B Eli Lilly deal | BioWorld,Not Available,,,,,https://www.bioworld.com/articles/728474-repertoire-decodes-autoimmunity-in-192b-eli-lilly-deal,"In its fourth major biopharma deal since its 2019 founding, Repertoire Immune Medicines signed a partnership with Eli Lilly and Co. to develop tolerizing therapies for several autoimmune diseases, gaining an up-front payment of $85 million, with a potential $1.84 billion in development and commercial milestone payments coming later, along with tiered royalties.","In its fourth major biopharma deal since its 2019 founding, Repertoire Immune Medicines signed a partnership with Eli Lilly and Co. to develop tolerizing therapies for several autoimmune diseases, gaining an up-front payment of $85 million, with a potential $1.84 billion in development and commercial milestone payments coming later, along with tiered royalties.",https://www.bioworld.com/ext/resources/Stock-images/Therapeutic-topics/Cancer/T-cells2.png?height=635&t=1588881096&width=1200,N,,2026-01-29 20:29:20.745515
+ID13,Contentsquare,2026-01-29 21:45:36+00:00,usa.visa.com,Visa Fiscal First Quarter 2026 Financial Results,Visa Inc,,,,,https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.22086.html,"SAN FRANCISCO--(BUSINESS WIRE)--Jan. 29, 2026-- Visa (NYSE: V) today announced its fiscal first quarter 2026 financial results through an earnings release that will be furnished with the Securities and Exchange Commission on a Form 8-K and available on its Investor Relations website at investor.visa.com/financial-information/quarterly-earnings/default.aspx.
+Visa will host a live audio webcast at 2:00 p.m. Pacific Time (5:00 p.m. Eastern Time) to discuss these financial results.
+The webcast and all related materials can also be accessed through Visa’s Investor Relations website at investor.visa.com.
+About Visa Visa (NYSE: V) is a world leader in digital payments, facilitating transactions between consumers, sellers, financial institutions and government entities across more than 200 countries and territories.
+View source version on businesswire.com: https://www.businesswire.com/news/home/20260129237054/en/ Investor Relations: Jennifer Como, 650-432-7644, InvestorRelations@visa.com Media Relations: Fletcher Cook, 650-432-2990, Press@visa.com Source: Visa Inc.","SAN FRANCISCO--(BUSINESS WIRE)--Jan. 29, 2026-- Visa (NYSE: V) today announced its fiscal first quarter 2026 financial results through an earnings release that will be furnished with the Securities and Exchange Commission on a Form 8-K and available on its Investor Relations website at investor.visa.com/financial-information/quarterly-earnings/default.aspx.
+
+Visa will host a live audio webcast at 2:00 p.m. Pacific Time (5:00 p.m. Eastern Time) to discuss these financial results. The webcast and all related materials can also be accessed through Visa’s Investor Relations website at investor.visa.com.
+
+About Visa
+
+Visa (NYSE: V) is a world leader in digital payments, facilitating transactions between consumers, sellers, financial institutions and government entities across more than 200 countries and territories. Our mission is to connect the world through the most innovative, convenient, reliable and secure payments network, enabling individuals, businesses and economies to thrive. We believe that economies that include everyone everywhere, uplift everyone everywhere and see access as foundational to the future of money movement. Learn more at Visa.com.
+
+View source version on businesswire.com: https://www.businesswire.com/news/home/20260129237054/en/
+
+Investor Relations: Jennifer Como, 650-432-7644, InvestorRelations@visa.com
+
+Media Relations: Fletcher Cook, 650-432-2990, Press@visa.com
+
+Source: Visa Inc.",https://usa.visa.com/content/dam/VCOM/Brand/favicon.ico,N,,2026-01-30 15:04:02.686937
 ID1,Accor,2026-01-29 21:41:08+00:00,Perplexity AI,Accor becomes first major hotel group to launch booking app in ChatGPT - Perplexity,Not Available,,,,,https://www.perplexity.ai/page/accor-launches-all-accor-booki-5iTztj_rSsSENKTqOYf1Zw,"Perplexity is a free AI-powered answer engine that provides accurate, trusted, and real-time answers to any question.",Not Available,https://ppl-ai-public.s3.amazonaws.com/static/img/pplx-default-preview.png,N,,2026-01-29 20:28:43.569341
 ID34,OpenAI,2026-01-29 21:36:25+00:00,openai.com,Inside OpenAI's in-house data agent,,,,,,https://openai.com/index/inside-our-in-house-data-agent/,"How OpenAI built an in-house AI data agent that uses GPT-5, Codex, and memory to reason over massive datasets and deliver reliable insights in ...",Not Available,,Y,,2026-01-29 17:32:46.925428
 ID20,H&M,2026-01-29 21:21:20+00:00,GOV.UK,Women in Finance Charter HM Treasury's update 2024/2025 - GOV.UK,HM Treasury,,,,,https://www.gov.uk/government/publications/women-in-finance-charter-treasury-progress-update-2025/women-in-finance-charter-hm-treasurys-update-20242025,"HM Treasury is a signatory to the Women in Finance Charter and is publishing the following update on progress.
@@ -35852,171 +36397,3 @@ For more than a decade, the investing advice aimed at everyday Americans followe
 That realization hits like a lightning bolt when you realize not just how much better your returns could be, but that there are amazing offers like one app where new self-directed investing accounts funded with as little as $50 can receive stock worth up to $1,000.
 
 Take back your investing and start earning real returns, your way.",https://s.yimg.com/ny/api/res/1.2/_nv5wfZbKrfwz54YMvb1Fw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzA7Y2Y9d2VicA--/https://media.zenfs.com/en/24_7_wall_st__718/65c5a1c770bf3d4447f72eee3ff8f270,N,,2026-01-23 17:02:55.836304
-ID33,Nvidia,2026-01-23 19:54:12+00:00,Windows Central,Mystery NVIDIA N1X appears in Lenovo Legion docs - Windows Central,Cale Hunt,,,,,https://www.windowscentral.com/hardware/lenovo/lenovo-legion-nvidia-n1x-leak,"Latest Videos From Windows Central See more On one of Lenovo's ""Legion Space"" public webpages, support for its software includes a long list of applicable Legion gaming laptops.
-That can't be anything other than NVIDIA's N1X SoC.
-Get the Windows Central Newsletter All the latest news, reviews, and guides for Windows and Xbox diehards.
-Leaderboard Rank Player Score Time Follow Windows Central on Google News to keep our latest news, insights, and features at the top of your feeds!
-Contributor Cale Hunt brings to Windows Central more than nine years of experience writing about laptops, PCs, accessories, games, and beyond.","NVIDIA's next conquest, after what feels like years of rumors, is laptops. No, I'm not talking about mobile RTX graphics cards. This is an entirely new processor designed to run Windows on Arm.
-
-The rumors really kicked off in 2023 when NVIDIA was reported to be weighing its options regarding an ARM SoC designed for Windows PCs, and in July 2025, we got a much more significant leak in the form of a Geekbench OpenCL benchmark listing. Earlier this week, we covered a DigiTimes report suggesting that supply chains are gearing up to launch laptops featuring the NVIDIA N1X chip in Q1 2026.
-
-Now, a fresh leak from dataminer Huang514613 gives us an insight into what sort of PCs we might expect. The leak was not hard to spot, at least as long as you aren't shy about poking around in support documents.
-
-Latest Videos From Windows Central
-
-See more
-
-On one of Lenovo's ""Legion Space"" public webpages, support for its software includes a long list of applicable Legion gaming laptops. Included in the listings are the regular collection of Intel and AMD configurations, but there's something there that's not like the others.
-
-A Legion 7 15N1X11 stands out as the only product to not feature the usual ""I"" (for Intel) or ""A"" (for AMD) product number. That can't be anything other than NVIDIA's N1X SoC.
-
-Huang514613 follows up the original leak with another X post listing other ""known N1 products from Lenovo."" These include:
-
-Ideapad Slim 5 14N1V11
-
-Ideapad Slim 5 16N1V11
-
-Yoga Pro 7 15N1V11
-
-Yoga Pro 7 15N1X11
-
-Yoga 9 2-in-1 16N1X11
-
-These leaks ultimately fly in the face of assumptions that NVIDIA's N1X was a chip designed for use in desktop PCs. It could very well still be found in desktops, but the fact that it's arriving for laptops — including a 15-inch Legion 7 and a 16-inch Yoga 9 2-in-1 — is exciting, to say the least.
-
-Get the Windows Central Newsletter
-
-All the latest news, reviews, and guides for Windows and Xbox diehards.
-
-Contact me with news and offers from other Future brandsReceive email from us on behalf of our trusted partners or sponsors
-
-So far, we can only go on leaked and rumored specs to flesh out the N1X. But what we do know bodes well for mobile PC gaming, creation, and AI workloads.
-
-If the N1X is indeed the same chip used in NVIDIA's DGX Spark, we're looking at 20 ARM cores and an integrated Blackwell graphics chip with 6,144 CUDA cores. That's enough to theoretically place its performance alongside the desktop-class RTX 5070. If true, the N1X would be among the fastest iGPUs available in any laptop.
-
-Aligning with rumors of an N1X launch in early 2026, Microsoft has been busy preparing a significant Windows 11 26H1 update. It's a full OS upgrade that moves Windows from the Germanium platform release to Bromine, unlocking platform changes required for Snapdragon X2 and NVIDIA N1X.
-
-Microsoft also rolled out public support for the Xbox PC app on Windows on Arm this week, noting that its Prism emulation layer now supports 85% of games available through the subscription.
-
-(via Videocardz)
-
-Are you excited to see what NVIDIA's N1 and N1X chips can do for laptop performance? What about gaming performance with Windows on Arm? Let us know in the comments section!
-
-What do you think?
-
-Would you buy an NVIDIA Windows on Arm PC?
-
-Yes, I've been waiting for it!
-
-Possibly, I'd need to see it first
-
-Probably stick to Qualcomm
-
-No, I'm not interested in Windows on Arm at this stage
-
-Thanks for voting!
-
-Please log in or register to see the results!
-
-Join the community
-
-Join the Windows Central Family! The best way to keep in touch and to be informed of our latest quizzes and competitions, as well as news and offers.
-
-Keep me informed about new quizzes and offers from Future and its partners
-
-Contact me with news and offers from Windows Central and other Future brands
-
-By submitting your information you confirm you are aged 16 or over, have read our Privacy Policy and agree to the Terms & Conditions.
-
-Already have an account? Log in
-
-Log In
-
-Forgotten your password? Reset it
-
-Not got an account? Register
-
-This page will close automatically once you have completed the authorisation process
-
-My Details
-
-Update your details below...
-
-Keep me informed about new quizzes and offers from Future and its partners
-
-Keep in the Know
-
-Would you like to be kept informed about new quizzes and offers from Future and its partners?
-
-Validate Your Mobile No.
-
-We have sent a code to . Please enter it below to verify your account.
-
-Resend code
-
-embed-poll.hint_heading
-
-embed-poll.hint_subheading
-
-Validate Your Email Address
-
-We have sent a code to . Please enter it below to verify your account.
-
-Resend code
-
-Create a Username
-
-This will be publicly viewable so make it something you like!
-
-Reset your password
-
-Enter your email address below. If it is registered with us, we will email you a code that will allow you to reset your password.
-
-Check your inbox
-
-If your email address was found in our system, you should receive an email in the next few minutes containing a code. Enter that code below to reset your password.
-
-Set new password
-
-Please enter your new password below.
-
-Leaderboard
-
-Rank Player Score Time
-
-Follow Windows Central on Google News to keep our latest news, insights, and features at the top of your feeds!
-
-Contributor
-
-Cale Hunt brings to Windows Central more than nine years of experience writing about laptops, PCs, accessories, games, and beyond. If it runs Windows or in some way complements the hardware, there’s a good chance he knows about it, has written about it, or is already busy testing it.",https://cdn.mos.cms.futurecdn.net/nRdz9PcnrMc9nc9GQBXMgS-2560-80.jpg,N,,2026-01-23 21:02:05.201519
-ID15,Delta Airlines,2026-01-23 19:04:24+00:00,New York Post,Delta's business and first-class fares may soon get a whole lot cheaper — this is why,Brooke Steinberg,,,,,https://nypost.com/2026/01/23/lifestyle/deltas-business-and-first-class-fares-may-soon-get-a-whole-lot-cheaper-this-is-why/,"Delta Air Lines has unveiled a plan to launch tiered fares for both business and first-class, meaning you could soon snag a cheaper ticket in the coveted cabins.
-Currently, those who fly in premium cabins on Delta can only choose between Classic and Extra, while economy travelers can choose from all three.
-Delta has already implemented the three-tier fares for its economy and Comfort tickets.
-“We’re still testing Comfort Basic right now.
-Delta launched Comfort Basic on Nov. 19 as a “skinnier” version of its extra-legroom Comfort cabin, The Points Guy shared at the time.","Feeling frugal? Soon enough, you may still be able to fly first-class.
-
-Delta Air Lines has unveiled a plan to launch tiered fares for both business and first-class, meaning you could soon snag a cheaper ticket in the coveted cabins.
-
-Company executives hinted during an earnings call on Jan. 13 that the change could happen as early as this year.
-
-Delta CEO Ed Bastian noted that the airline’s goal is to have “three categories for every product, which is Basic, Main and Extra.”
-
-This means that when booking seats in premium cabins, customers will now have an option to book “basic” first-class and business class tickets that don’t include perks like free cancellation and loyalty points, per Travel + Leisure.
-
-Currently, those who fly in premium cabins on Delta can only choose between Classic and Extra, while economy travelers can choose from all three.
-
-The Basic fare will be the cheapest option, but will come with limitations such as a later boarding group or no seat selection. Classic is considered to be Delta’s standard airfare, while the more expensive Extra may include benefits such as mile accrual and refundable tickets.
-
-Delta has already implemented the three-tier fares for its economy and Comfort tickets.
-
-“We’ve been incredibly thoughtful about not going too fast, making sure that we’re measured in that approach,” Joe Esposito, Delta’s executive vice president, said on the call. “We’re still testing Comfort Basic right now. We’re going to expand that for the rest of this year.”
-
-“There’s more we can offer the customer based on what they’re willing to pay,” Esposito said.
-
-Delta launched Comfort Basic on Nov. 19 as a “skinnier” version of its extra-legroom Comfort cabin, The Points Guy shared at the time.
-
-Travelers flying Basic in Delta Comfort still get the premium seat with extra legroom, as well as early boarding, complimentary alcoholic beverages and dedicated overhead bin space.
-
-However, the Basic flyers cannot select their seats in advance, receive fewer SkyMiles and have to pay a cancellation fee if needed.
-
-Delta is the first major US airline to offer lower tiers for first or business fare, though some international carriers such as Qatar Airways, Emirates, Finnair, Air France and Etihad already offer something similar.",https://nypost.com/wp-content/uploads/sites/2/2026/01/119525621.jpg?quality=75&strip=all&w=1200,N,,2026-01-23 16:02:04.553607
