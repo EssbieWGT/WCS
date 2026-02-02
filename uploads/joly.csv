@@ -1,4 +1,376 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID31,Microsoft,2026-02-02 17:06:38+00:00,Microsoft Azure Blog,PostgreSQL on Azure supercharged for AI | Microsoft Azure Blog,Shireesh Thota,,,,,https://azure.microsoft.com/en-us/blog/postgresql-on-azure-supercharged-for-ai/,"The Microsoft team has invested in making Azure Database for PostgreSQL a frictionless experience, especially for those building AI apps and agents.
+Build intelligent agents with Microsoft Foundry When you’re ready to build AI agents, Microsoft Foundry’s native PostgreSQL integration makes it easy.
+Using the new Model Context Protocol (MCP) server for PostgreSQL, developers can connect PostgreSQL directly to Foundry’s agent framework with a few clicks and permissions.
+Whether you’re building a startup MVP or scaling a global AI platform, Azure Database for PostgreSQL is ready to grow with you.
+Start today Try the PostgreSQL extension for VS Code Learn how to build AI agents with Azure Database for PostgreSQL 1Most developers—more than 80%—now use AI tools in their workflow.","We are almost a century removed from when a group of computer scientists at Dartmouth College coined the term “Artificial Intelligence.” In the 75-year span, AI has become common vernacular, making inroads from imagined to mainstream. Today, we see entire industries being disrupted and entire ecosystems revolutionized by AI. To keep up, the way developers work and the tools they use have had to evolve. Every developer now needs to be an AI developer, and every system—from compute and storage to the data layer—now needs to be AI ready.
+
+The database reimagined
+
+New AI applications require databases that are not only reliable, extensible, and secure, but also AI-ready. In parallel, the way developers build software is being reshaped by AI. 1Most developers—more than 80%—now use AI tools in their workflow. This has led to notable productivity gains and it’s changing expectations for developer experience.
+
+PostgreSQL has emerged as a top choice among developers and is becoming the default starting point for many new applications and projects. Favored by developers for its reliability, extensibility, and rapid innovation, 2PostgreSQL is chosen by 78.6% of developers that are building AI and real-time applications.
+
+PostgreSQL on Azure meets the moment
+
+Selecting the right ecosystem is critical to support your AI and agentic aspirations, and we’ve made great strides in bolstering our PostgreSQL managed services to meet the needs of today’s developer. At Microsoft, we’ve embraced PostgreSQL not just as a product, but as a community. We’re proud to be one of the top contributors to the PostgreSQL open-source project, with more than 500 commits in the latest release. We are continuously innovating to make PostgreSQL the best database for building intelligent applications, and Azure the best place to run them.
+
+The existing Azure Database for PostgreSQL continues to cater to lift-and-shift and new open-source workloads with improved performance and experience, while the new Azure HorizonDB, introduced at Ignite, targets the future by offering a PostgreSQL-compatible cloud service built for scale-out and ultra-low latency. Together, they position Azure to support developers building everything from small apps and agents to AI-powered, mission-critical systems, and anything in between.
+
+A frictionless and intelligent developer experience
+
+Building intelligent applications should feel intuitive, not intimidating. The Microsoft team has invested in making Azure Database for PostgreSQL a frictionless experience, especially for those building AI apps and agents. From provisioning to AI integration and scale, we’ve reimagined the developer experience to remove friction at every step.
+
+Start in the IDE you love
+
+The journey begins in Visual Studio Code—the leader in integrated development environments (IDEs) among developers—by a mile. With our PostgreSQL extension for Visual Studio Code, developers can now provision secure, fully managed PostgreSQL instances on Azure directly from the IDE. No portal hopping or manual setup. Just a few clicks, and your database is ready to go with built-in support for Entra ID authentication and Azure Monitor.
+
+From there, GitHub Copilot becomes your intelligent assistant. It understands your PostgreSQL schema and helps you write, optimize, and debug SQL queries using natural language. Whether you’re joining tables, creating indexes, or exploring performance issues, Copilot is right there with you offering expert-level guidance to save time and improve performance.
+
+Access in-database intelligence for smarter, faster apps
+
+Once your database is live, you’re just a query away from infusing AI into your application. Azure Database for PostgreSQL now supports seamless integration with Microsoft Foundry, enabling developers to invoke pre-provisioned large language models (LLMs) in SQL. You can generate embeddings, classify text, or perform semantic search without leaving the database.
+
+For applications that rely on relevance and speed, our DiskANN vector indexing delivers high-performance similarity search. Combined with semantic ranking, your queries return more accurate results, faster. This is ideal for powering intelligent agents, recommendations, and natural language interfaces.
+
+Build intelligent agents with Microsoft Foundry
+
+When you’re ready to build AI agents, Microsoft Foundry’s native PostgreSQL integration makes it easy. Using the new Model Context Protocol (MCP) server for PostgreSQL, developers can connect PostgreSQL directly to Foundry’s agent framework with a few clicks and permissions. This allows agents to reason over your data, invoke LLMs, and act on insights. And, of course, this is all backed by Azure’s enterprise-grade security and governance.
+
+It’s a powerful combination: PostgreSQL’s structured data, Foundry’s orchestration, and Azure’s AI models working together to deliver intelligent, context-aware applications.
+
+Leverage zero extract, transform, load (ETL) real-time analytics
+
+Intelligent applications thrive on fresh insights. With Azure Database for PostgreSQL, you can mirror your operational data into Microsoft Fabric for real-time analytics without impacting performance. Alternatively, we’ve also enabled support for Parquet via the Azure Storage Extension, letting customers directly read from and write to Parquet files stored in Azure Storage from their Postgres databases, using SQL commands.
+
+This means faster time to insight, fewer moving parts, and more time spent building.
+
+Performance and scale that grows with you
+
+All this intelligence is meaningless if the database isn’t secure and performant. As such, we’ve continued to innovate to unlock better performance and scale to meet the needs of even the most demanding, hypergrowth AI workloads. With PostgreSQL 18 now generally available on Azure, you get faster I/O, improved vacuuming, and smarter query planning. Our new V6 compute SKUs deliver higher throughput and lower latency, while Elastic Clusters enable horizontal scaling for multi-tenant and high-volume workloads.
+
+Whether you’re building a startup MVP or scaling a global AI platform, Azure Database for PostgreSQL is ready to grow with you. Our customers have already been utilizing these new capabilities to build competitive advantage in industries from pharma to finance.
+
+Real-world AI on Azure: How Nasdaq reinvented governance with PostgreSQL
+
+When people think of Nasdaq, they picture trading floors and financial data moving at lightning speed. But behind the scenes, Nasdaq also manages board governance for thousands of organizations, including nearly half of the Fortune 500. At Ignite, Nasdaq shared how they modernized their Boardvantage platform using Azure Database for PostgreSQL and Microsoft Foundry.
+
+Their goal: introduce AI to help directors navigate 500-page board packets and extract insights, without compromising security or compliance.
+
+The result? A governance platform that uses AI to summarize meeting minutes, flag anomalies, and surface relevant decisions while keeping each customer’s data isolated and protected.
+
+Looking ahead: Azure HorizonDB and the future of intelligent apps
+
+At Ignite, we also introduced Azure HorizonDB, a new, fully managed PostgreSQL-compatible service built for AI-native workloads. With scale-out compute, sub-millisecond latency, and built-in AI features, Azure HorizonDB represents the future of cloud databases. While the service is currently in private preview, it’s a glimpse of what’s coming.
+
+The future is open, intelligent, and built on Azure
+
+At Microsoft, our mission is to offer customers databases equipped for next-generation development, whether they be SQL, NoSQL, relational, or open source. As PostgreSQL continues to stand out as a platform for innovation, it’s now primed for intelligent applications and agents due to Microsoft’s continued support and service enhancements. Whether you’re a startup building your first AI feature or an enterprise modernizing mission-critical systems, Azure gives you the tools to move faster, build smarter, and scale confidently.
+
+The future of intelligent applications will be written in Postgres, and we’re thrilled to build it together with you on Azure.
+
+Start today
+
+Try the PostgreSQL extension for VS Code
+
+Learn how to build AI agents with Azure Database for PostgreSQL
+
+1Most developers—more than 80%—now use AI tools in their workflow.",https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/01/PostgreSQL-AI-Apps_1.jpg,N,,2026-02-02 12:14:01.625103
+ID30,Michelin,2026-02-02 16:56:02+00:00,www.tirebusiness.com,Benedicte de Bonnechose to be next Michelin CFO - Tire Business,Not Available,,,,,https://www.tirebusiness.com/company-moves/executives/tb-michelin-benedicte-bonnechose-chief-financial-officer/,"Benedicte de Bonnechose will succeed Yves Chapot as Michelin's chief financial officer later this year. (Photo by Pierre Morel, courtesy of Michelin).",Not Available,,N,,2026-02-02 12:13:57.590190
+ID31,Microsoft,2026-02-02 16:40:44+00:00,PCWorld,"Microsoft's first Windows 11 26H2 preview is here. So far, it's AI and fixes | PCWorld","Hans-Christian Dirscherl, Managing Editor, PC-WELT, Author: Hans-Christian Dirscherl",,,,,https://www.pcworld.com/article/3049729/microsofts-first-windows-11-26h2-preview-is-here-so-far-its-ai-and-fixes.html,"New features in Windows 11 26H2 Microsoft has not yet revealed exactly what new features will be coming with Windows 11 26H2.
+However, the existing preview versions provide many clues.
+For example, Microsoft is testing a Copilot chat in File Explorer and Copilot will likely be shown in File Explorer’s right panel.
+Copilot is also finding its way into the Windows 11 notification center.
+The preview versions of Windows 11 so far also show that Microsoft is testing a new Run dialog box.","New features in Windows 11 26H2
+
+Microsoft has not yet revealed exactly what new features will be coming with Windows 11 26H2. However, the existing preview versions provide many clues. For example, Microsoft is testing a Copilot chat in File Explorer and Copilot will likely be shown in File Explorer’s right panel.
+
+Copilot is also likely to be integrated into Windows Search in the taskbar. Both Copilot integrations are likely to be optional and not enabled by default, as Windows Latest suspects. Copilot is also finding its way into the Windows 11 notification center.
+
+The preview versions of Windows 11 so far also show that Microsoft is testing a new Run dialog box. The changes appear to be more than just visual, as Microsoft may also be adding new features.",https://www.pcworld.com/wp-content/uploads/2026/02/WindowsUpdate.jpg?quality=50&strip=all&w=1024,N,,2026-02-02 12:14:06.300194
+ID33,Nvidia,2026-02-02 16:31:09+00:00,www.zacks.com,"The Zacks Analyst Blog Highlights NVIDIA, Taiwan Semiconductor Manufacturing, AMD and Alibaba",Not Available,,,,,https://www.zacks.com/stock/news/2826739/the-zacks-analyst-blog-highlights-nvidia-taiwan-semiconductor-manufacturing-amd-and-alibaba,"Please stand by We're getting everything ready for you.
+The page is loading, and you'll be on your way in just a few moments.
+Thanks for your patience!","Please stand by
+
+We're getting everything ready for you. The page is loading, and you'll be on your way in just a few moments.
+
+Thanks for your patience!",,N,,2026-02-02 12:14:08.890598
+ID5,Albertsons,2026-02-02 16:21:40+00:00,Grocery Dive,7 top grocery executive changes in October,"Peyton Bigora, Sam Silverstein, Grocery Dive Staff",,,,,https://www.grocerydive.com/news/grocery-store-executive-changes-January-2026/811011/,"The grocery industry kicked off 2026 with a multitude of executive changes.
+Lidl US announced in January its fifth chief executive change since the company arrived stateside more than a decade ago.
+Walmart also announced last month a slew of C-suite and executive changes ahead of John Furner taking over as CEO.
+Here’s a look at the grocery industry’s top executive changes for January.
+Rampoldt’s exit comes as Lidl struggles to find its footing in the U.S. grocery market nearly a decade after opening its first stateside stores.","This audio is auto-generated. Please let us know if you have feedback.
+
+The grocery industry kicked off 2026 with a multitude of executive changes.
+
+Lidl US announced in January its fifth chief executive change since the company arrived stateside more than a decade ago. The Save Mart Companies also promoted its president to CEO.
+
+Walmart also announced last month a slew of C-suite and executive changes ahead of John Furner taking over as CEO.
+
+Here’s a look at the grocery industry’s top executive changes for January.
+
+Another Lidl US CEO departs
+
+Joel Rampoldt, who had been chief executive of the grocer since 2023, is now serving as an advisor to the German-owned company, a spokesperson for the discounter said in an emailed statement in January. Marco Giudici, Lidl US’s chief customer officer and former CEO of Lidl Romania, will lead the discounter as interim CEO.
+
+Rampoldt’s exit comes as Lidl struggles to find its footing in the U.S. grocery market nearly a decade after opening its first stateside stores. Experts said the former CEO made numerous changes that have made the chain a stronger competitor, like focusing more on fresh foods and building density in existing markets.
+
+The Save Mart Companies names new CEO
+
+Jim Perkins, The Save Mart Companies’ president since 2024, has taken on the role of CEO following the retirement of Shane Sampson, who led the grocery company since 2022.
+
+The company said in a press release that it plans to open new locations, complete major remodels and expand merchandising assortment across all of its banners this year.
+
+Walmart’s incoming CEO overhauls leadership
+
+Walmart Inc.’s incoming CEO John Furner announced a C-suite shakeup that will take effect in February, including naming David Guggina, current chief e-commerce officer for Walmart U.S., as Furner’s successor as CEO of the company’s U.S. business.
+
+Additionally, Walmart International CEO Kathryn McLay will exit the company. She will remain at Walmart through the first quarter to support a transition as Sam’s Club U.S. CEO Chris Nicholas steps into her role.
+
+Seth Dallaire, chief growth officer for the company’s U.S. business, will take on the same title for Walmart Inc. Meanwhile, Latriece Watkins, chief merchandising officer for Walmart U.S., will become CEO of Sam’s Club U.S.
+
+Kroger appoints new SVP of retail divisions
+
+Kroger promoted Victor Smith, president of the company’s Atlanta Division, to the role of senior vice president of retail divisions, the grocer announced in mid-January in conjunction with several other executive changes.
+
+Keep up with the story. Subscribe to the Grocery Dive free daily newsletter
+
+The grocer also named Monica Garnes, president of its Fry’s Division, to replace Smith as president of the Atlanta Division. Ken DeLuca, a 38-year Kroger veteran who has served as president of the grocer’s Michigan Division since 2018, will replace Garnes as president of the Fry’s Division.
+
+Kroger also said that Tom Schwilke, president of its Ralphs Division, and Colleen Juergensen, president of the Central Division, plan to retire. Kendra Doyel, who is currently president of the retailer’s Food 4 Less/Foods Co Division, will replace Schwilke. Kroger did not name a replacement for Juergensen.
+
+Albertsons makes two executive changes
+
+Mustafa Harcar announced on LinkedIn in late January that he will step into the role of group vice president of automation and transformation at Albertsons Companies. Harcar was previously vice president of supply chain automation for the company, according to his LinkedIn profile.
+
+A few days prior, Albertsons announced that Allison Pinkham will join the company as executive vice president and chief human resources officer, effective Feb. 16.
+
+Publix names new VP of marketing
+
+Katie Scanlon, Publix’s senior director of pharmacy administration, was promoted to vice president of pharmacy, effective Feb. 1. Scanlon will replace Dain Rusk, who resigned from the company at the end of January to pursue another opportunity outside of grocery retail pharmacy.
+
+Grocery Outlet welcomes new chief purchasing officer",https://imgproxy.divecdn.com/M_9tLJpwUxq0M7Q8qCryMrlz2Dn7exnbloho6hWr48I/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9MaWRsX1Rha29tYV9QYXJrX01ELmpwZWc=.webp,N,,2026-02-02 12:12:38.519494
+ID19,Eli Lilly,2026-02-02 16:21:36+00:00,Area Development,"Eli Lilly and Company Plans Lehigh Valley, Pennsylvania, Manufacturing Operations",Area Development News Desk,,,,,https://www.areadevelopment.com/newsItems/2-2-2026/eli-lilly-and-company-fogelsville-pennsylvania.shtml,"American pharmaceutical and biotechnology company Eli Lilly and Company plans to invest more than $3.5 billion in a new manufacturing facility in Fogelsville, Pennsylvania.
+""Lilly Lehigh Valley—our newest injectable medicine and device manufacturing facility—will increase access to next-generation weight-loss treatments and improve the domestic supply of essential medicines for current and future patients,"" said Edgardo Hernandez, executive vice president and president of Lilly Manufacturing Operations.
+“This announcement also further proves that our Economic Development Strategy is working to attract historic, new investments to Pennsylvania.
+Additionally, Eli Lilly is also receiving assistance through Pennsylvania’s Office of Transformation and Opportunity (OTO) on the project via the PA Permit Fast Track Program.
+Eli Lilly and Company discovers, develops, manufactures, and markets a broad range of innovative medicines for human health conditions including diabetes, obesity, cancer, immunology, and neuroscience.","American pharmaceutical and biotechnology company Eli Lilly and Company plans to invest more than $3.5 billion in a new manufacturing facility in Fogelsville, Pennsylvania. The more than $3.5 billion project is expected to create 850 jobs.
+
+The investment will include the construction of a new 925,000-square-foot injectable medicine and device manufacturing facility, located at the Fogelsville Corporate Center, that will produce weight-loss therapies, including retatrutide, a first-in-class investigational GIP, GLP-1 and glucagon triple hormone receptor agonist. Operations are scheduled to begin in 2031.
+
+""Lilly Lehigh Valley—our newest injectable medicine and device manufacturing facility—will increase access to next-generation weight-loss treatments and improve the domestic supply of essential medicines for current and future patients,"" said Edgardo Hernandez, executive vice president and president of Lilly Manufacturing Operations. ""Our investment here is more than just building a facility—it's about building a shared future with the people and communities of the Commonwealth. Through meaningful partnerships in Pennsylvania, we're committed to fostering collaboration, driving innovation, advancing environmental stewardship, and creating lasting positive impact that extends far beyond our facility walls.""
+
+To support the project the company received a funding proposal from Pennsylvania Department of Community and Economic Development (DCED) for up to $50 million in tax credits through the PA Edge Tax Credit Program, a $25 million grant through the PA SITES (Pennsylvania Strategic Investments to Enhance Sites) Program, and a $25 million Pennsylvania First grant. “Lilly’s investment is an important win for the Lehigh Valley and the entire Commonwealth, creating at least 850 new jobs and further solidifying our position as a leader in economic development and life science innovation,” noted Secretary Rick Siger. “This announcement also further proves that our Economic Development Strategy is working to attract historic, new investments to Pennsylvania. We will keep competing for major projects like this one that will continue to strengthen our life sciences industry, create good-paying jobs, and fuel economic growth across the Commonwealth.”
+
+The state has also committed to providing a Redevelopment Assistance Capital Program (RACP) award of up to $5 million to a local community college and/or technical school to help create a workforce development training program. Additionally, Eli Lilly is also receiving assistance through Pennsylvania’s Office of Transformation and Opportunity (OTO) on the project via the PA Permit Fast Track Program.
+
+“Today, Eli Lilly and Company write the first page of a new chapter – the era of life sciences – in the Lehigh Valley’s proud history of making things in America,” added Don Cunningham, President & CEO of Lehigh Valley Economic Development Corporation (LVEDC).
+
+Eli Lilly and Company discovers, develops, manufactures, and markets a broad range of innovative medicines for human health conditions including diabetes, obesity, cancer, immunology, and neuroscience.","https://maps.googleapis.com/maps/api/staticmap?center=40.578910,-75.649454&zoom=6&scale=2&markers=color:0xEA1D2C|40.578910,-75.649454&size=280x150&key=AIzaSyA9uo7dhInN6fG5YUF0ySs8T2qZ7CL7vHg",N,,2026-02-02 12:13:16.978810
+ID7,Barclays,2026-02-02 16:20:59+00:00,Ground News,Tracy Robinson to Address Barclays 43rd Industrial Select Conference - Ground News,Not Available,,,,,https://ground.news/article/tracy-robinson-to-address-barclays-43rd-industrial-select-conference,"Summary by Waterloo Chronicle MONTREAL, Feb. 02, 2026 (GLOBE NEWSWIRE) -- Tracy Robinson, President and Chief Executive Officer (TSX: CNR) (NYSE: CNI), will address Barclays 43rd Industrial Select Conference on February 17, 2026, at 8:05 a.m. Eastern Time (ET).
+NiagaraFallsReview.ca St Catharines Standard View article Caret Right Icon Reposted by St Catharines Standard Ghislain Houle, Executive Vice-President and Chief Financial Officer, to address Citi’s 2026 Global Industrial Tech and Mobility Conference on February 18 MONTREAL, Feb. 02, 2026 (GLOBE NEWSWIRE) -- Ghislain Houle, Executive Vice-President and Chief Financial Officer of CN (TSX: CNR) (NYSE: CNI), will address Citi’s 2026 Global Industrial Tech and Mobility Conference on February 18, 2026, at 7:10 a.m. Eastern Time… 8 hours ago·Niagara Falls, Canada Read Full Article Think freely.Subscribe and get full access to Ground NewsSubscriptions start at $9.99/year Coverage Details Total News Sources3 Leaning Left3Leaning Right0Center0Last Updated1 hour agoBias Distribution 100 % Left Bias Distribution Caret Up Icon 100 % of the sources lean Left 100% Left L 100% Factuality Info Icon To view factuality data please Upgrade to Premium Ownership Info Icon To view ownership data please Upgrade to Vantage St Catharines Standard broke the news in Welland, Canada 8 hours ago on Monday, February 2, 2026 .
+Too Big Arrow Icon Caret Down Icon Sources are mostly out of ( 0 ) Similar News Topics Montreal Similar News Topics Montreal","Summary by Waterloo Chronicle
+
+MONTREAL, Feb. 02, 2026 (GLOBE NEWSWIRE) -- Tracy Robinson, President and Chief Executive Officer (TSX: CNR) (NYSE: CNI), will address Barclays 43rd Industrial Select Conference on February 17, 2026, at 8:05 a.m. Eastern Time (ET).
+
+NiagaraFallsReview.ca
+
+St Catharines Standard
+
+View article
+
+Caret Right Icon
+
+Reposted by
+
+St Catharines Standard
+
+Ghislain Houle, Executive Vice-President and Chief Financial Officer, to address Citi’s 2026 Global Industrial Tech and Mobility Conference on February 18
+
+MONTREAL, Feb. 02, 2026 (GLOBE NEWSWIRE) -- Ghislain Houle, Executive Vice-President and Chief Financial Officer of CN (TSX: CNR) (NYSE: CNI), will address Citi’s 2026 Global Industrial Tech and Mobility Conference on February 18, 2026, at 7:10 a.m. Eastern Time…
+
+8 hours ago·Niagara Falls, Canada
+
+Read Full Article
+
+Think freely.Subscribe and get full access to Ground NewsSubscriptions start at $9.99/year
+
+Coverage Details
+
+Total News Sources3
+
+Leaning Left3Leaning Right0Center0Last Updated1 hour agoBias Distribution
+
+100 % Left
+
+Bias Distribution
+
+Caret Up Icon
+
+100 % of the sources lean Left
+
+100% Left
+
+L 100%
+
+Factuality Info Icon
+
+To view factuality data please Upgrade to Premium
+
+Ownership
+
+Info Icon
+
+To view ownership data please Upgrade to Vantage
+
+St Catharines Standard broke the news in Welland, Canada 8 hours ago on Monday, February 2, 2026 .
+
+Too Big Arrow Icon
+
+Caret Down Icon
+
+Sources are mostly out of ( 0 )
+
+Similar News Topics
+
+Montreal
+
+Similar News Topics
+
+Montreal","data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22280%22 viewBox=%220 0 280 280%22><path transform=%22translate(97.3,0)%22 d=%22M44,140.1h42.8V272H54.9c0-0.1,0-103.8,0-103.8H44V140.1z M44,1c28.4,0,42.6,16.2,42.6,42.2v66.1H54.9V43.8 c0-7.2-3.1-11.7-10.6-11.7c-7,0-10.6,4.2-10.6,11.7c0,0,0,228.1,0,228.2H0.2c0-0.5,0-228.8,0-228.8C0.1,16.8,14.8,1,44,1L44,1z%22/><style>path { fill: %23262626 } @media (prefers-color-scheme: dark) { path { fill: %23EEEFE9 } }</style></svg>",N,,2026-02-02 12:12:43.528805
+ID41,Societe Generale,2026-02-02 16:14:17+00:00,LARA,TrueNoord extends total available finance to USD 600 million | LARA,Rob Munro,,,,,https://www.laranews.net/truenoord-extends-total-available-finance-to-usd-600-million/,"Regional aircraft lessor TrueNoord has significantly amended and extended its revolving warehouse facility, increasing its total financing available to USD 600 million.
+This broadening of the banking syndicate demonstrates confidence in TrueNoord’s business model and its long-term strategy.
+The revolving nature of the warehouse facility allows TrueNoord to finance the acquisition of additional regional aircraft, enabling it to continuously expand and modernise its diverse fleet.
+“This is a significant step in strengthening TrueNoord’s long-term funding strategy and underpins our ambition to continue growing as a leading specialist regional aircraft lessor,” said Anne-Bart Tieleman, TrueNoord’s CEO.
+“The extended facility provides the stability and flexibility we need to execute our strategy with confidence, while continuing to support our airline customers with high-quality, tailored leasing solutions.”","Regional aircraft lessor TrueNoord has significantly amended and extended its revolving warehouse facility, increasing its total financing available to USD 600 million. The move bolsters the company’s financial capacity and operational flexibility, in line with its ongoing strategy of growth and expansion within the regional aviation market.
+
+Bank of Montreal and MUFG joined the facility as new lenders, alongside existing partners Citi, Royal Bank of Canada, and Société Générale. This broadening of the banking syndicate demonstrates confidence in TrueNoord’s business model and its long-term strategy.
+
+The revolving nature of the warehouse facility allows TrueNoord to finance the acquisition of additional regional aircraft, enabling it to continuously expand and modernise its diverse fleet. The extended term of the facility provides a stable, long-term financing platform to support the company’s committed investment pipeline.
+
+“This is a significant step in strengthening TrueNoord’s long-term funding strategy and underpins our ambition to continue growing as a leading specialist regional aircraft lessor,” said Anne-Bart Tieleman, TrueNoord’s CEO. “The extended facility provides the stability and flexibility we need to execute our strategy with confidence, while continuing to support our airline customers with high-quality, tailored leasing solutions.”",https://www.laranews.net/wp-content/uploads/2025/10/E195-E2_TrueNoord_2-1024x576.jpg,N,,2026-02-02 12:14:40.363657
+ID7,Barclays,2026-02-02 16:02:48+00:00,markets.businessinsider.com,Tracy Robinson to Address Barclays 43rd Industrial Select Conference | Markets Insider,markets.businessinsider.com,,,,,https://markets.businessinsider.com/news/stocks/tracy-robinson-to-address-barclays-43rd-industrial-select-conference-1035773664,"MONTREAL, Feb. 02, 2026 (GLOBE NEWSWIRE) -- Tracy Robinson, President and Chief Executive Officer (TSX: CNR) (NYSE: CNI), will address Barclays 43rd Industrial Select Conference on February 17, 2026, at 8:05 a.m. Eastern Time (ET).
+CN will provide a live webcast via the Investors section of its website at www.cn.ca/investors.
+A replay of the webcast will be available following the event.
+About CN CN powers the economy by safely transporting more than 300 million tons of natural resources, manufactured products, and finished goods throughout North America every year for its customers.
+Contacts : Media Investment Community Ashley MichnowskiStacy AldersonSenior ManagerAssistant Vice-PresidentMedia RelationsInvestor Relations(438) 596-4329 media@cn.ca (514) 399-0052 investor.relations@cn.ca","MONTREAL, Feb. 02, 2026 (GLOBE NEWSWIRE) -- Tracy Robinson, President and Chief Executive Officer (TSX: CNR) (NYSE: CNI), will address Barclays 43rd Industrial Select Conference on February 17, 2026, at 8:05 a.m. Eastern Time (ET).
+
+CN will provide a live webcast via the Investors section of its website at www.cn.ca/investors. A replay of the webcast will be available following the event.
+
+About CN
+
+CN powers the economy by safely transporting more than 300 million tons of natural resources, manufactured products, and finished goods throughout North America every year for its customers. With its nearly 20,000-mile rail network and related transportation services, CN connects Canada’s Eastern and Western coasts with the U.S. Midwest and the U.S. Gulf Coast, contributing to sustainable trade and the prosperity of the communities in which it operates since 1919.
+
+Contacts :
+
+Media Investment Community Ashley MichnowskiStacy AldersonSenior ManagerAssistant Vice-PresidentMedia RelationsInvestor Relations(438) 596-4329
+
+media@cn.ca
+
+(514) 399-0052
+
+investor.relations@cn.ca",https://ml.globenewswire.com/media/d8f3f116-ccaf-4c51-af12-154863973974/small/cn100-logo-jpg.png,N,,2026-02-02 12:12:48.690312
+ID34,OpenAI,2026-02-02 15:49:47+00:00,www.businesswire.com,Snowflake and OpenAI Forge $200 Million Partnership to Bring Enterprise-Ready AI to the ...,Media Contacts:,,,,,https://www.businesswire.com/news/home/20260202433753/en/Snowflake-and-OpenAI-Forge-%2524200-Million-Partnership-to-Bring-Enterprise-Ready-AI-to-the-Worlds-Most-Trusted-Data-Platform,"This multi-year, $200 million partnership agreement cements Snowflake and OpenAI’s commitment to co-innovation and joint go-to-market (GTM) strategies aimed at deploying AI agents across global enterprises.
+This empowers global organizations like Canva and WHOOP to bring OpenAI models to their enterprise data for deep research and instant insights.
+“By bringing OpenAI models to enterprise data, Snowflake enables organizations to build and deploy AI on top of their most valuable asset using the secure, governed platform they already trust,” said Sridhar Ramaswamy, CEO, Snowflake.
+Build Custom, Interoperable AI Agents: Snowflake and OpenAI enable enterprises to build state-of-the-art AI agents that reason over governed data and take action across tools and apps.
+Gain Deep Insights with Multimodal AI: With Snowflake Cortex AI Functions, users can tap into the latest OpenAI models to analyze every kind of data.","No-Headquarters/BOZEMAN, Mont.--(BUSINESS WIRE)--Snowflake (NYSE: SNOW), the AI Data Cloud company, today announced a new collaboration with OpenAI that enables global enterprises to unlock greater value from their proprietary data with AI. This multi-year, $200 million partnership agreement cements Snowflake and OpenAI’s commitment to co-innovation and joint go-to-market (GTM) strategies aimed at deploying AI agents across global enterprises. Snowflake and OpenAI will work closely together to develop and deploy customized AI solutions for joint enterprise customers that deliver tangible return on investment.
+
+The direct, first-party partnership agreement also makes OpenAI models natively available to Snowflake’s 12,600 global customers within Snowflake Cortex AI across all three major clouds. This empowers global organizations like Canva and WHOOP to bring OpenAI models to their enterprise data for deep research and instant insights. OpenAI models like GPT-5.2 will be accessible within Snowflake Intelligence, the trusted enterprise intelligence agent that empowers every employee to securely access, analyze, and act on all their organization’s knowledge using natural language.
+
+“By bringing OpenAI models to enterprise data, Snowflake enables organizations to build and deploy AI on top of their most valuable asset using the secure, governed platform they already trust,” said Sridhar Ramaswamy, CEO, Snowflake. “Customers can now harness all their enterprise knowledge in Snowflake together with the world-class intelligence of OpenAI models, enabling them to build AI agents that are powerful, responsible, and trustworthy. Together, we’re setting a new standard for AI innovation, helping businesses transform with confidence, while maintaining strong security and compliance standards.""
+
+“Snowflake is a trusted platform that sits at the center of how enterprises manage and activate their most critical data,” said Fidji Simo, CEO of Applications at OpenAI. “This partnership brings our advanced models directly into that environment, making it easier to deploy AI agents and apps, so businesses can close the gap between what AI is capable of and the value they can create today.”
+
+“As we scale our visual AI offering on Canva, both OpenAI and Snowflake have played key roles in how we rapidly empower our users with new creative tools,” said Helen Crossley, Head of Data Science, Canva. “As our platform continues to scale, Snowflake has been foundational to how we manage and activate data, and we’re excited to explore how leveraging OpenAI models in Snowflake Cortex AI can help us extend that foundation. The ability to bridge advanced AI models with our enterprise data allows us to move quickly and test new ideas, without compromising on security or performance.”
+
+“Speed and precision in decision-making are critical for us as WHOOP continues to scale,” said Matt Luizzi, Senior Director of Business Analytics, WHOOP. “Rolling out Snowflake Intelligence to our employees and developing Cortex Agents has provided a secure and governed way for WHOOP to analyze data and make decisions. With OpenAI’s models available directly within Snowflake Cortex AI, we can further enhance those agents with advanced reasoning and analysis, all while maintaining strong security and governance. This partnership will help us continue to make AI a practical, everyday tool for the business.”
+
+Snowflake and OpenAI Help Global Enterprises Deploy AI Agents
+
+By bringing OpenAI models to Cortex AI, global enterprises can gain insights from all their data to deliver richer, more engaging AI agents. Key benefits of the partnership include:
+
+Accelerate Joint Product Innovation: Snowflake and OpenAI teams will partner closely to bring new features that leverage OpenAI Apps SDK, AgentKit, and APIs that support shared enterprise workflows.
+
+Build Custom, Interoperable AI Agents: Snowflake and OpenAI enable enterprises to build state-of-the-art AI agents that reason over governed data and take action across tools and apps. Powered by Cortex AI, these agents run directly on enterprise data, delivering secure, high-impact intelligence at scale.
+
+Democratize Data and Insights with AI: Powered by OpenAI models like GPT-5.2, Snowflake Intelligence is an enterprise intelligence agent that gives every employee instant access to trusted insights. It enables business users to query, interpret, and draw meaning from all their structured and unstructured data with no code required, just natural language.
+
+Enterprise-Ready Governance and Reliability: Snowflake provides built-in business continuity and disaster recovery with a 99.99% uptime service-level agreement, helping ensure that enterprises’ AI initiatives don’t get disrupted by outages or disasters. Users can reliably and securely tap into the power of OpenAI models alongside their most valuable proprietary data in Snowflake, all while benefiting from the governance and responsible AI controls that Snowflake Horizon Catalog provides.
+
+Gain Deep Insights with Multimodal AI: With Snowflake Cortex AI Functions, users can tap into the latest OpenAI models to analyze every kind of data. From rows and columns to text, images, and audio, teams can explore it all seamlessly using SQL, the familiar language of data they already trust.
+
+Snowflake and OpenAI Deepen Collaboration to Advance Responsible AI and Workforce Productivity
+
+This partnership builds on the companies’ existing collaboration, with OpenAI leveraging Snowflake as a secure, scalable data platform for experiment tracking, analytics, and testing.
+
+In turn, Snowflake leverages OpenAI’s ChatGPT Enterprise product internally, empowering employees to harness AI in their day-to-day work and accelerate productivity. As a result, employees can make decisions faster, streamline workflows, and drive stronger cross-functional collaboration through AI-powered insights.
+
+Learn More:
+
+Get started with OpenAI and Snowflake in this quickstart.
+
+Check out the latest Snowflake innovations and announcements on Snowflake’s Newsroom.
+
+Stay on top of the latest news and announcements from Snowflake on LinkedIn and X.
+
+Forward Looking Statements
+
+This press release contains express and implied forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended, including statements regarding (i) Snowflake’s business strategy, plans, opportunities, or priorities (ii) the release, adoption, and use of Snowflake’s new or enhanced products, services, and technology offerings, including those that are under development or not generally available, (iii) market growth, trends, and competitive considerations, (iv) Snowflake’s vision, strategy, and expected benefits relating to artificial intelligence and other emerging product areas, including the expected benefits and network effects of the AI Data Cloud, and (v) the integration, interoperability, and availability of Snowflake’s products, services, and technology offerings with and on third-party platforms. Other than statements of historical fact, all statements contained in this press release are forward-looking statements. These forward-looking statements are subject to a number of risks, uncertainties and assumptions, including those described under the heading “Risk Factors” and elsewhere in the Quarterly Reports on Form 10-Q and the Annual Reports on Form 10-K that Snowflake files with the Securities and Exchange Commission. In light of these risks, uncertainties, and assumptions, actual results could differ materially and adversely from those anticipated or implied in the forward-looking statements. As a result, you should not rely on any forward-looking statements as predictions of future events. Forward-looking statements speak only as of the date the statements are made and are based on information available to Snowflake at the time those statements are made and/or Snowflake management's good faith belief as of that time with respect to future events. Except as required by law, Snowflake undertakes no obligation, and does not intend, to update these forward-looking statements to reflect events that occur or circumstances that exist after the date on which they were made.
+
+© 2025 Snowflake Inc. All rights reserved. Snowflake, the Snowflake logo, and all other Snowflake product, feature and service names mentioned herein are registered trademarks or trademarks of Snowflake Inc. in the United States and other countries. All other brand names or logos mentioned or used herein are for identification purposes only and may be the trademarks of their respective holder(s). Snowflake may not be associated with, or be sponsored or endorsed by, any such holder(s).
+
+About Snowflake",https://mms.businesswire.com/media/20260202433753/en/2707750/22/Final_OpenAI_Snowflake.jpg,N,,2026-02-02 12:14:14.468758
+ID39,Ralph Lauren,2026-02-02 15:41:15+00:00,www.forbes.com,"Ralph Lauren, Lululemon And Armani—The 2026 Winter Olympics Team Sponsors - Forbes",,,,,,https://www.forbes.com/sites/nadjasayej/2026/02/02/ralph-lauren-lululemon-and-armani-the-2026-winter-olympics-team-sponsors/,"Among the major fashion brands that are going to be on clear view in the coming weeks, includes Ralph Lauren for Team USA, Lululemon for Team Canada ...",Not Available,,Y,,2026-02-02 12:14:35.872538
+ID34,OpenAI,2026-02-02 15:23:54+00:00,TradingView,Nvidia puts brakes on $100B OpenAI buzz: what it means for NVDA stock - TradingView,Not Available,,,,,https://www.tradingview.com/news/invezz:611f3a30e094b:0-nvidia-puts-brakes-on-100b-openai-buzz-what-it-means-for-nvda-stock/,"He said that Nvidia will instead evaluate funding rounds “one step at a time.” The reversal, signaled by WSJ reporting that the original September megadeal had stalled due to internal doubts, sent Nvidia stock (NVDA) into premarket losses.
+Nvidia stock: Market resets around smaller exposure Nvidia’s stock fell roughly 2% in early premarket trading on Monday, with shares trading near $188, down from its close of $192 on Friday.
+A $100 billion investment would have signaled a significant balance-sheet commitment and guaranteed GPU demand for a decade or more.
+By walking it back to “huge but not $100 billion,” Huang shifted the narrative from certainty to optionality.
+Huang called the friction reports “nonsense” and insisted Nvidia will still “make a huge investment” in OpenAI, likely the largest the company has ever made.","Nvidia CEO Jensen Huang has dramatically reset investor expectations around the company’s OpenAI investment, clarifying that the “$100 billion” figure was “never a commitment.”
+
+Speaking to reporters in Taipei on Sunday, Huang revealed the figure came from a letter of intent describing an invitation to invest “up to” that amount.
+
+He said that Nvidia will instead evaluate funding rounds “one step at a time.”
+
+The reversal, signaled by WSJ reporting that the original September megadeal had stalled due to internal doubts, sent Nvidia stock (NVDA) into premarket losses.
+
+Nvidia stock: Market resets around smaller exposure
+
+Nvidia’s stock fell roughly 2% in early premarket trading on Monday, with shares trading near $188, down from its close of $192 on Friday.
+
+The modest but tangible decline reflects a recalibration of investor expectations around both capital exposure and demand visibility.
+
+The original September announcement, when Huang stood alongside Sam Altman to unveil 10 gigawatts of planned infrastructure, triggered a 4% stock pop.
+
+The phrasing matters, as investors had mentally priced in a massive, long-term revenue stream locked in via an eight-figure equity check.
+
+A $100 billion investment would have signaled a significant balance-sheet commitment and guaranteed GPU demand for a decade or more.
+
+By walking it back to “huge but not $100 billion,” Huang shifted the narrative from certainty to optionality.
+
+Instead of a binding capex anchor, it’s now a probability play, and Nvidia will likely participate in OpenAI’s current funding round at a fraction of the headline figure.
+
+Wall Street framing has grown more cautious.
+
+Morgan Stanley reiterated its “Overweight” rating with a $250 price target, while Bernstein maintained “Buy” at $275, though both are banking on Nvidia’s structural dominance in AI accelerators.
+
+The consensus message is that Nvidia’s chips will remain foundational to AI, but the OpenAI relationship is no longer a revenue moonshot. ​
+
+Circular financing doubts
+
+The stalled megadeal also resurrects a gnawing concern on Wall Street: circular financing.
+
+When a chip supplier invests billions in its own customers so those customers can buy more chips, it blurs the line between genuine demand and vendor-engineered revenue.
+
+Huang privately cited concerns about OpenAI’s “lack of discipline” and competitive threats from Google and Anthropic, code for doubts about whether the original scale made sense.
+
+Nvidia has already committed $2 billion to CoreWeave and up to $10 billion to Anthropic, both major chip buyers.
+
+Short sellers like Jim Chanos have drawn parallels to Enron-era vendor financing schemes, warning that overinvestment in customers could mask brittle demand if orders stall.
+
+Huang called the friction reports “nonsense” and insisted Nvidia will still “make a huge investment” in OpenAI, likely the largest the company has ever made.
+
+But the backpedal signals an internal reckoning: even Nvidia’s fortress balance sheet has limits on how much it can pre-finance a customer’s AI dreams.",https://s.tradingview.com/static/images/illustrations/news-story.jpg,N,,2026-02-02 12:14:17.351405
 ID40,S&P Global,2026-02-02 14:47:04+00:00,"News & Analysis for Stocks, Crypto & Forex | investingLive",January final US S&P Global manufacturing PMI 52.4 vs 51.9 prelim | investingLive,Not Available,,,,,https://investinglive.com/news/january-final-us-sp-global-manufacturing-pmi-524-vs-519-prelim-20260202/,"The final revisions to the January manufacturing PMI for the USA Best reading since May 2022 Prelim was 51.9 Prior was 51.8 Exports remained a source of demand weakness, The ISM manufacturing report is due at the top of the hour and is expected to tick up to 48.5 from 47.9.
 Chris Williamson, Chief Business Economist at S&P Global Market Intelligence “News of the joint largest rise in factory production since May 2022 is tainted by reports of ongoing subdued sales growth.
 Production growth consequently significantly outpaced that of new orders at the start of the year, resulting in a further accumulation of unsold warehouse inventory.
@@ -32,6 +404,58 @@ Commenting on the Canadian survey results, Paul Smith, Economics Director at S&P
 “Following a challenging 2025, PMI data suggested that Canada’s manufacturing sector started the new year on a more positive footing. Output stabilised, after nearly a full year of continuous contraction, whilst confidence in the outlook improved and marginal jobs growth was recorded for the first time in 12 months.""
 
 USD/CAD is up 38 pips to 1.3650 today.",https://images.investinglive.com/images/factory%20orders_id_38b0ef63-54c4-4b39-8d38-d1f1224433ad_size975.jpg,N,,2026-02-02 11:03:30.843311
+ID34,OpenAI,2026-02-02 14:19:05+00:00,Tech Funding News,Nvidia pauses $100B OpenAI talks over internal concerns — TFN - Tech Funding News,Vignesh R,,,,,https://techfundingnews.com/nvidia-pauses-100b-openai-investment-doubts/,"NVIDIA’s plans to invest up to $100 billion in OpenAI have slowed down, after internal concerns emerged at the chipmaker, according to industry reports.
+The proposed investment, first discussed last September, was expected to help OpenAI fund the training and operation of its next-generation AI models, while also securing access to NVIDIA’s high-end chips.
+Much smaller equity investment Current talks reportedly focus on a much smaller equity investment, potentially worth tens of billions of dollars, as part of OpenAI’s ongoing fundraising efforts.
+The uncertainty comes as major tech companies and global investors race to secure closer ties with OpenAI, which is spending heavily on data centres to support its rapidly growing AI models.
+OpenAI is currently seeking to raise up to $100 billion in fresh funding, a move that could value the company at around $830 billion.","NVIDIA’s plans to invest up to $100 billion in OpenAI have slowed down, after internal concerns emerged at the chipmaker, according to industry reports.
+
+The proposed investment, first discussed last September, was expected to help OpenAI fund the training and operation of its next-generation AI models, while also securing access to NVIDIA’s high-end chips.
+
+However, people familiar with the matter told the Journal that the structure and scale of the partnership are now being reconsidered.
+
+Much smaller equity investment
+
+Current talks reportedly focus on a much smaller equity investment, potentially worth tens of billions of dollars, as part of OpenAI’s ongoing fundraising efforts. The uncertainty comes as major tech companies and global investors race to secure closer ties with OpenAI, which is spending heavily on data centres to support its rapidly growing AI models.
+
+SoftBank Group is among the groups exploring deeper partnerships, while Amazon is reportedly in discussions to invest up to $50 billion.
+
+OpenAI is currently seeking to raise up to $100 billion in fresh funding, a move that could value the company at around $830 billion.",https://techfundingnews.com/wp-content/uploads/2026/01/NVIDIA.jpg,N,,2026-02-02 12:14:21.396451
+ID16,Ecolab,2026-02-02 14:18:36+00:00,www.gurufocus.com,"Goldman Sachs ActiveBeta(R) U.S. Large Cap Equity ETF Buys 9,341 - GuruFocus",GuruFocus News,,,,,https://www.gurufocus.com/news/8573724/goldman-sachs-activebetar-us-large-cap-equity-etf-buys-9341-shares-of-ecolab-inc-ecl,"Summary Goldman Sachs ActiveBeta(R) U.S. Large Cap Equity ETF raised its stake in Ecolab Inc (ECL, Financial) by 17.19%, purchasing 9,341 shares to own 63,694 shares valued at about $17,526,040 as of the latest 13F filing.
+Goldman Sachs ActiveBeta(R) U.S. Large Cap Equity ETF raised its stake in Ecolab Inc (ECL) during the quarter, according to the company’s most recent Form 13F filing with the Securities & Exchange Commission.
+The fund owned 63,694 shares of the company's stock after acquiring an additional 9,341 shares during the quarter.
+Goldman Sachs ActiveBeta(R) U.S. Large Cap Equity ETF holdings in Ecolab Inc (ECL) were worth $17,526,040 as of its most recent filing with the Securities & Exchange Commission Several other large investors also recently modified their holdings of the stock.
+Horizon Expedition Plus ETF raised its stake in Ecolab Inc (ECL, Financial) by 82.67%, purchasing 291 shares to own 643 shares valued at about $176,930 as of the latest 13F filing.","Summary
+
+Goldman Sachs ActiveBeta(R) U.S. Large Cap Equity ETF raised its stake in Ecolab Inc (ECL, Financial) by 17.19%, purchasing 9,341 shares to own 63,694 shares valued at about $17,526,040 as of the latest 13F filing.
+
+Goldman Sachs ActiveBeta(R) U.S. Large Cap Equity ETF raised its stake in Ecolab Inc (ECL) during the quarter, according to the company’s most recent Form 13F filing with the Securities & Exchange Commission. The fund owned 63,694 shares of the company's stock after acquiring an additional 9,341 shares during the quarter. Goldman Sachs ActiveBeta(R) U.S. Large Cap Equity ETF holdings in Ecolab Inc (ECL) were worth $17,526,040 as of its most recent filing with the Securities & Exchange Commission
+
+Several other large investors also recently modified their holdings of the stock. Horizon Expedition Plus ETF raised its stake in Ecolab Inc (ECL, Financial) by 82.67%, purchasing 291 shares to own 643 shares valued at about $176,930 as of the latest 13F filing. Horizon Defined Risk Fund raised its stake in Ecolab Inc (ECL) by 1.17%, purchasing 46 shares to own 3,963 shares valued at about $1,090,460 as of the latest 13F filing. Horizon Equity Premium Income Fund raised its stake in Ecolab Inc (ECL) by 1.4%, purchasing 10 shares to own 725 shares valued at about $199,490 as of the latest 13F filing. Global X Adaptive U.S. Risk Management ETF raised its stake in Ecolab Inc (ECL) by 0.33%, purchasing 2 shares to own 617 shares valued at about $169,770 as of the latest 13F filing. Invesco Russell 1000 Equal Weight ETF raised its stake in Ecolab Inc (ECL) by 0.98%, purchasing 60 shares to own 6,191 shares valued at about $1,703,520 as of the latest 13F filing. View more
+
+Stock News Roundup
+
+Ecolab (ECL, Financial) and CDP Collaborate on New Water Use Efficiency Benchmark
+
+Ecolab and CDP Partner on New Benchmarks to Help Companies Improve Operational Water Performance
+
+Water.org Partners with Gap Inc., Amazon, Starbucks, and Ecolab to Launch Get Blue™, Advancing Water.org's Goal of Reaching 200 Million People by 2030
+
+Ecolab Earns Double 'A' Rating from CDP for Leadership in Water and Climate Performance
+
+Ecolab Schedules Webcast and Conference Call on February 10, 2026
+
+View More News about ECL.
+
+ECL Price Performance
+
+Ecolab Inc(ECL, Financial) opened at $282.15 on Monday and has a 52-week low of $221.62 and a 52-week high of $286.04. The stock has a 50-day moving average of $268.87 and a 200-day moving average of $266.54. The company has a debt-to-equity ratio of 0.91, a quick ratio of 1.33 and a current ratio of 1.70. The firm has a market capitalization of $79.87 billion, a price-to-earnings ratio of 40.52 and a beta of 1.02.
+
+Ecolab Inc(ECL, Financial) last released its quarterly earnings results on Tuesday, October 28th. The Chemicals company reported earnings per share of $2.07 for the quarter. Ecolab Inc(ECL) had a return on equity of 21.94% and a net margin of 12.49%.The firm had revenue of $4.17 billion for the quarter, compared to analysts' expectations of $4.12 billion.
+
+Ecolab Inc Profile
+
+Ecolab produces and markets cleaning and sanitation products for the industrial manufacturing, hospitality, healthcare, and life sciences markets. The firm is the global market share leader in this category with a wide array of products and services, including dish and laundry washing systems, pest control, and infection control products. Additionally, Ecolab sells customized water management solutions across its end markets. The company has a strong hold on the US market and is growing its presence abroad.",https://static.gurufocus.com/images/global_logo_twitter_card.png,N,,2026-02-02 12:13:13.111239
 ID19,Eli Lilly,2026-02-02 14:16:34+00:00,BioSpace,Eli Lilly Commits $3.5B To Build Injectable Obesity Drug Plant in PA - BioSpace,"Annalee Armstrong, www.biospace.com, annalee-armstrong",,,,,https://www.biospace.com/business/eli-lilly-commits-3-5b-to-build-injectable-obesity-drug-plant-in-pa,"Eli Lilly has committed $3.5 billion to build a manufacturing facility for injectable weight-loss therapies in Pennsylvania.
 Ricks said the Lehigh Valley facility, like Lilly’s other new plants, will be a digitally integrated site that will last many decades.
 Lilly will ship products made at the Lehigh Valley plant across the U.S. and overseas, the CEO said.
@@ -51,6 +475,7 @@ Pennsylvania has committed more than $100 million to win Lilly’s investment. T
 Shapiro said his team “worked aggressively to reform our permitting process and speed up government.” Lilly will spend “a whole lot less time waiting for permits and waiting for action,” Shapiro said. With colleagues now working with Lilly, the governor said his team aims to be “ready to deliver months ahead of schedule.”
 
 As well as offering tax breaks and cutting red tape, the bid team leveraged the geographic advantages of the Lehigh Valley. Located near an interstate, Lilly’s Lehigh Valley facility will be within a day’s drive of one-third of the U.S. population. Lilly’s hiring plans are supported by the presence of 1.8 million people within a one-hour drive of the facility.",https://static.biospace.com/dims4/default/48aa8ba/2147483647/strip/true/crop/3456x1944+0+180/resize/1440x810!/quality/90/?url=https%3A%2F%2Fk1-prod-biospace.s3.us-east-2.amazonaws.com%2Fbrightspot%2Fd7%2F33%2F0f53ee594b6b9524ef2ae23ef06d%2Fistock-517523994.jpg,N,,2026-02-02 10:00:48.469990
+ID34,OpenAI,2026-02-02 14:06:28+00:00,openai.com,Snowflake and OpenAI partner to bring frontier intelligence to enterprise data,,,,,,https://openai.com/index/snowflake-partnership/,"OpenAI and Snowflake partner in a $200M agreement to bring frontier intelligence into enterprise data, enabling AI agents and insights directly in ...",Not Available,,Y,,2026-02-02 12:14:32.804411
 ID22,IBM,2026-02-02 13:53:15+00:00,Investing.com,Fusemachines stock soars on strategic AI partnership with IBM partner - Investing.com,Not Available,,,,,https://www.investing.com/news/stock-market-news/fusemachines-stock-soars-on-strategic-ai-partnership-with-ibm-partner-93CH-4478928,"Investing.com -- stock surged 65.2% in premarket trading Monday after announcing a strategic partnership with ModulAIre, an IBM Platinum Partner, to deliver enterprise AI solutions to IBM-based environments.
 The collaboration will integrate Fusemachines’ AI Studio into ModulAIre’s AI and data portfolio, enabling enterprises to design, build, deploy, and manage AI solutions more efficiently while leveraging IBM infrastructure.
 Initially, the partnership will focus on industry-specific AI use cases where ModulAIre has extensive experience delivering solutions on IBM infrastructure.
@@ -66,8 +491,34 @@ Initially, the partnership will focus on industry-specific AI use cases where Mo
 Fusemachines’ AI Studio is an end-to-end enterprise AI platform that accelerates the full AI lifecycle from data preparation to governance. ModulAIre specializes in delivering AI-enabled solutions across industries using IBM technologies, including IBM Cloud, Watson, and IBM’s data and integration platforms.
 
 This article was generated with the support of AI and reviewed by an editor. For more information see our T&C.",https://i-invdn-com.investing.com/news/LYNXMPEB3J0Z7_L.jpg,N,,2026-02-02 10:01:08.991427
+ID1,Accor,2026-02-02 13:29:42+00:00,adgully.me,"Accor names Amitabh Rai as COO – Luxury, South Asia",Not Available,,,,,https://adgully.me/post/13437/accor-names-amitabh-rai-as-coo-luxury-south-asia,"similar newsVarghese M. Thomas joins DP World as SVP brand, partnerships and communications similar newsLoay Nour joins Kempinski Hotels as Global Vice President of Brand & Marketing similar newsAlix Petit-Kece appointed CEO of The Refreshment Club similar newsHaissam El Kays takes charge as COO at BigTime Creative Shop","similar newsVarghese M. Thomas joins DP World as SVP brand, partnerships and communications
+
+similar newsLoay Nour joins Kempinski Hotels as Global Vice President of Brand & Marketing
+
+similar newsAlix Petit-Kece appointed CEO of The Refreshment Club
+
+similar newsHaissam El Kays takes charge as COO at BigTime Creative Shop",https://erp.adgully.me/artical_image/fb6e1d587d90715be4d4c3277d5c7534.jpeg,N,,2026-02-02 12:12:33.033472
 ID22,IBM,2026-02-02 12:59:37+00:00,The Bakersfield Californian,Fusemachines and IBM Platinum Partner ModulAIre Announce Strategic Partnership to Deliver ...,Fusemachines - (GLOBE NEWSWIRE),,,,,https://www.bakersfield.com/ap/news/fusemachines-and-ibm-platinum-partner-modulaire-announce-strategic-partnership-to-deliver/article_82176912-5027-541b-b4d2-d9320a2ef7d2.html,"Copyright 2026 GlobeNewswire, Inc.","Copyright 2026 GlobeNewswire, Inc.",https://bloximages.newyork1.vip.townnews.com/bakersfield.com/content/tncms/custom/image/d09180fc-6bee-11e7-8b72-ff928e2e17d5.png?resize=600%2C315,N,,2026-02-02 10:01:15.441263
 ID34,OpenAI,2026-02-02 12:48:53+00:00,www.barrons.com,Nvidia Stock Drops. Why Its $100 Billion OpenAI Investment Is in Question. - Barron's,,,,,,https://www.barrons.com/articles/nvidia-stock-price-openai-investment-5af4b646,Nvidia shares were down 1.3% at $188.75 in premarket trading. Advertisement - Scroll to Continue. The focus is on Nvidia's relationship with OpenAI.,Not Available,,Y,,2026-02-02 08:59:49.224554
+ID48,Wellington Management,2026-02-02 12:19:52+00:00,www.investegate.co.uk,Form 8.3 - Permanent TSB Group Holdings Plc | Company Announcement - Investegate,Not Available,,,,,https://www.investegate.co.uk/announcement/rns/permanent-tsb-group-holdings-cdi---ptsb/form-8-3-permanent-tsb-group-holdings-plc/9401806,"*A Private Investor is a recipient of the information who meets all of the conditions set out below, the recipient: Obtains access to the information in a personal capacity; Is not required to be regulated or supervised by a body concerned with the regulation or supervision of investment or financial services; Is not currently registered or qualified as a professional securities trader or investment adviser with any national or state exchange, regulatory authority, professional association or recognised professional body; Does not currently act in any capacity as an investment adviser, whether or not they have at some time been qualified to do so; Uses the information solely in relation to the management of their personal funds and not as a trader to the public or for the investment of corporate funds; Does not distribute, republish or otherwise provide any information or derived works to any third party in any manner or use or process information or derived works for any commercial purposes.
+Please note, this site uses cookies.
+Some of the cookies are essential for parts of the site to operate and have already been set.
+You may delete and block all cookies from this site, but if you do, parts of the site may not work.
+To find out more about the cookies used on Investegate and how you can manage them, see our Privacy and Cookie Policy","*A Private Investor is a recipient of the information who meets all of the conditions set out below, the recipient:
+
+Obtains access to the information in a personal capacity;
+
+Is not required to be regulated or supervised by a body concerned with the regulation or supervision of investment or financial services;
+
+Is not currently registered or qualified as a professional securities trader or investment adviser with any national or state exchange, regulatory authority, professional association or recognised professional body;
+
+Does not currently act in any capacity as an investment adviser, whether or not they have at some time been qualified to do so;
+
+Uses the information solely in relation to the management of their personal funds and not as a trader to the public or for the investment of corporate funds;
+
+Does not distribute, republish or otherwise provide any information or derived works to any third party in any manner or use or process information or derived works for any commercial purposes.
+
+Please note, this site uses cookies. Some of the cookies are essential for parts of the site to operate and have already been set. You may delete and block all cookies from this site, but if you do, parts of the site may not work. To find out more about the cookies used on Investegate and how you can manage them, see our Privacy and Cookie Policy",https://www.investegate.co.uk/assets/images/linkedin-investegate-logo.jpg,N,,2026-02-02 12:14:46.065503
 ID31,Microsoft,2026-02-02 12:16:22+00:00,news.ycombinator.com,Claude Code is suddenly everywhere inside Microsoft | Hacker News,Not Available,,,,,https://news.ycombinator.com/item%3Fid%3D46854999,Claude Code is suddenly everywhere inside Microsoft (theverge.com). 5 points by Anon84 17 minutes ago | hide | past | favorite | discuss · Guidelines ...,Not Available,,N,,2026-02-02 10:01:18.926647
 ID19,Eli Lilly,2026-02-02 11:59:36+00:00,European Pharmaceutical Review,Lilly chooses Pennsylvania for $3.5bn injectables manufacturing facility,Not Available,,,,,https://www.europeanpharmaceuticalreview.com/news/270908/eli-lilly-pennsylvania-injectables-manufacturing-facility/,"This website uses cookies to improve your experience while you navigate through the website.
 Out of these cookies, the cookies that are categorised as ”Necessary” are stored on your browser as they are as essential for the working of basic functionalities of the website.
@@ -333,6 +784,79 @@ The Hong Kong Monetary Authority (HKMA) and Switzerland’s State Secretariat fo
 Discussions covered the regional and domestic economic outlooks, policy issues, and recent developments in the financial sector. Key areas of collaboration included sustainable finance, FinTech innovation, and market connectivity, reflecting the shared priorities of both economies in adapting to evolving global trends.
 
 Following the dialogue, the Swiss Bankers Association and the Hong Kong Private Wealth Management Association hosted a seminar for private-sector participants. Topics included the role of artificial intelligence in banking, the rise of digital assets, and opportunities and challenges in cross-border finance. The seminar emphasised the importance of continued cooperation to enhance financial innovation and resilience, reinforcing the strategic partnership between Hong Kong and Switzerland",https://ibsintelligence.com/wp-content/uploads/2024/01/monday-roundup.jpg,N,,2026-02-02 06:59:57.387543
+ID22,IBM,2026-02-02 10:57:16+00:00,www.moonstone.co.za,"When AI goes wrong, liability still lands on humans - Moonstone Information Refinery",Moonstone Information Refinery,,,,,https://www.moonstone.co.za/when-ai-goes-wrong-liability-still-lands-on-humans/,"Beyond algorithms and automation, the challenge lies in understanding where legal risk arises across the AI lifecycle, and how privacy, accountability and regulatory duties apply in practice.
+AI systems rely on large volumes of information, often including personal employee data or information that can infer sensitive details.
+Privacy and intellectual property Privacy remains one of the most significant risk drivers, especially as workplace AI becomes more sophisticated and processes more sensitive employee data.
+Legal accountability in practice Ismail explains that South Africa does not yet have laws specifically governing AI.
+“Organisations must embed legal risk management into every stage of procuring, governing and using AI,” they said.","As artificial intelligence becomes embedded in workplace decision-making, it is rapidly reshaping professional indemnity and director and officer risk. In an environment of stricter data protection and cybersecurity obligations, emerging AI governance frameworks and fragmented regulation, failures in oversight can quickly translate into claims, regulatory action and coverage disputes.
+
+Legal and insurance specialists warn that organisations treating AI as a productivity tool only, rather than a governance risk requiring active control and accountability, are increasingly exposed when AI-driven decisions cause harm. The critical risk is not technological failure, but the assumption that responsibility shifts to the system rather than remaining with professionals, management, and boards.
+
+Beyond algorithms and automation, the challenge lies in understanding where legal risk arises across the AI lifecycle, and how privacy, accountability and regulatory duties apply in practice.
+
+In an article published on ENS’s website, Ridwaan Boda, an executive at ENS, and associate Shaaista Tayob say AI is no longer a peripheral workplace tool. By 2026, it is expected to be embedded across core business operations, employee workflows, and organisational decision-making.
+
+A recent analysis published by the IBM Institute for Business Value identifies AI as a defining force shaping how organisations operate, manage talent, and compete over the coming years.
+
+“IBM’s analysis focuses on the strategic and operational consequences of this acceleration, including increased AI adoption across the workforce, changing employee expectations, and growing pressure on organisations to demonstrate trust and accountability in the use of AI,” Boda and Tayob said.
+
+“As AI becomes embedded in the workplace, organisations face a widening set of legal risks that extend beyond traditional compliance concerns and require a more structured and forward-looking approach to reputation management, privacy, accountability, intellectual property, and risk management,” they said.
+
+Omar Ismail, a claims specialist at Santam, warns that liability remains human.
+
+“As the volume of critical decisions and solutions provided (or suggested) by intelligence systems continues to surge, a question regarding legal liability becomes more pressing: What happens when an AI system causes harm, and who is ultimately accountable: developers, employers, or platforms?”
+
+He adds: “An AI system operates without consciousness and therefore is not considered a legal person.”
+
+The AI risk chain
+
+Boda and Tayob highlight that AI-driven workplace risk no longer arises at a single point. Instead, it flows across a connected chain: data sourcing and training, system design and deployment, employee interaction with AI tools, and downstream consequences of AI-influenced decisions.
+
+“This risk chain cuts across technology, people, vendors, and governance structures, and it challenges the assumption that legal exposure can be managed solely by the organisation’s human resources or compliance teams,” they said.
+
+At the top of the chain sits data. AI systems rely on large volumes of information, often including personal employee data or information that can infer sensitive details.
+
+“Decisions made at the data stage have lasting legal consequences. If employee information is collected, reused, or repurposed without a lawful basis or clear purpose limitation, those deficiencies do not disappear once an AI tool is deployed. They follow the system into live use and can undermine the legality of every decision that relies on it,” Boda and Tayob explained.
+
+Risk then shifts to how AI systems are designed and deployed. Choices around automation, human oversight, explainability, and integration into decision making directly affect an organisation’s ability to explain outcomes, defend challenges, and demonstrate procedural fairness. “While IBM emphasises trust as a business imperative, from a legal standpoint trust is inseparable from the ability to evidence control and accountability,” they said.
+
+AI-assisted decisions
+
+As employees increasingly rely on AI-assisted outputs, another layer of risk emerges. Organisations remain accountable for outcomes, even where decisions are influenced by complex tools.
+
+“This reliance introduces another layer of risk. Where employees are expected to act on AI recommendations, questions arise around training, delegation of authority, and whether individuals understand the limitations of the systems they are using,” Boda and Tayob said.
+
+Legal exposure escalates when AI-driven decisions affect people. Hiring, performance management, remuneration, disciplinary action, and termination carry heightened risk. “Employers must be able to explain how decisions were made, identify who was responsible and demonstrate that legal and regulatory obligations were met. AI does not displace accountability; it merely reshapes how accountability must be managed,” they said.
+
+Privacy and intellectual property
+
+Privacy remains one of the most significant risk drivers, especially as workplace AI becomes more sophisticated and processes more sensitive employee data.
+
+“Privacy risk is not limited to regulatory enforcement. It affects employee trust, labour relations and reputational standing. Treating privacy as a downstream compliance exercise is increasingly untenable where AI systems operate at scale and influence core employment outcomes,” Boda and Tayob said.
+
+They also highlight intellectual property as a critical risk management blind spot, particularly around company and third-party IP used in AI systems, and questions over ownership rights.
+
+Legal accountability in practice
+
+Ismail explains that South Africa does not yet have laws specifically governing AI. Instead, general legislation such as the Protection of Personal Information Act applies. Section 71(1) of POPIA protects data subjects from automated decision-making that has legal consequences. For example, credit applicants profiled by AI could be subject to discriminatory outcomes, which is prohibited if based solely on AI-generated profiles.
+
+“It creates a risk for firms if appropriate procedures to prevent sole reliance on automated decision-making are not implemented, which could lead to claims for breach. It could also expose directors for failing in their duty to the company to ensure implementation,” he said.
+
+Courts continue to uphold traditional legal principles. In Mavundla v MEC: Department of Co-Operative Government and Traditional Affairs KwaZulu-Natal and Others, a law firm faced criticism and financial penalties for using AI to replace legal research, citing cases that did not exist. The Court said professionals remain responsible for outputs regardless of tools used, calling failure to validate work “irresponsible and downright unprofessional”.
+
+Similarly, in Northbound Processing (Pty) Ltd v South African Diamond and Precious Metals Regulator and Others, the High Court reinforced a zero-tolerance approach to fictitious case citations generated by AI, even where junior counsel attempted to mitigate the situation. Ismail says the judicial intent is clear: professional duties remain attached to the person, irrespective of AI use.
+
+“Regardless of intention or mitigating circumstances, our courts have been clear with their approach that a fundamental breach of professional duty would arise when a legal practitioner refers the court to fictitious case law, and the use of AI is not an acceptable excuse. It is a reasonable inference that this principle would be transposed onto other professions and would yield the same conclusion,” Ismail said.
+
+He adds that professionals must ensure the authenticity of AI-generated outputs. “The professional would be held liable for failure of an AI-generated response and not the intelligence system itself.”
+
+Growing regulatory scrutiny
+
+Boda and Tayob point to increasing regulatory and societal scrutiny. Organisations in 2026 face fragmented requirements across data protection, cybersecurity, employment law, and emerging AI governance frameworks. In this environment, reactive compliance is insufficient.
+
+“Organisations must embed legal risk management into every stage of procuring, governing and using AI,” they said.
+
+Ismail cautions that as AI technology advances, its integration into professional decision-making could expose professionals to claims if incorrect outputs cause harm. “It is essential that professionals consider the risks associated therewith and discuss with their intermediary any risk transfer mechanisms (such as professional indemnity cover), subject to policy terms and underwriting criteria,” he said.",https://www.moonstone.co.za/wp-content/uploads/2022/11/moonstone-favicon.png,N,,2026-02-02 12:13:23.439961
 ID11,Capgemini,2026-02-02 10:39:06+00:00,TradingView,Capgemini shares rise on move to sell unit after ICE backlash - TradingView,Not Available,,,,,"https://www.tradingview.com/news/reuters.com,2026:newsml_L6N3YY0JP:0-capgemini-shares-rise-on-move-to-sell-unit-after-ice-backlash/","RefinitivLess than 1 min read © Copyright Thomson Reuters 2026.
 Click For Restrictions - https://agency.reuters.com/en/copyright.html Login or create a forever free account to read this news","RefinitivLess than 1 min read
 
@@ -576,6 +1100,29 @@ This article by Simply Wall St is general in nature. We provide commentary based
 Companies discussed in this article include LLY.
 
 Have feedback on this article? Concerned about the content? Get in touch with us directly. Alternatively, email editorial-team@simplywallst.com",https://s.yimg.com/os/en/simply_wall_st__316/5eef176f2a2dc130a63fafe4bd1968dd,N,,2026-02-02 06:00:51.379343
+ID7,Barclays,2026-02-02 09:36:34+00:00,Elite Business Magazine,Once upon a time… - Elite Business Magazine,Liz Barclay,,,,,https://elitebusinessmagazine.co.uk/analysis/item/once-upon-a-time,"I came away from reading each application wishing I’d been the brains behind that creative firm.
+I need to know the problem, the solution, and the benefit to the customer of the work you did.
+One of my own clients once wrote a wonderful application around their ‘sustainability’ business.
+This year’s chosen one told the story well, and I woke up each morning after reading the applications thinking about that particular business.
+Even if you only go once, it may just do the trick and set your mind on a storytelling path.","I spent a large part of the weekend reading about a group of wonderful businesses: how they were set up, what they do, how they support their communities and charities, their ambitions for the future, and how they embrace technology and innovate. I came away from reading each application wishing I’d been the brains behind that creative firm.
+
+There’s one thing, though, that many forget, and that’s that a judge like me isn’t an expert in their sector and so may be left wondering, having to do additional research to get to the heart of the business, the problem it’s trying to solve, and the entrepreneurial spirit that saw the potential and was prepared to take the risk. I’m not asking you to make things easier for me, just to tell the story in a way that I can’t possibly miss the point.
+
+The best way to tell a story is to talk through an example of how you worked with a customer, what you did for them, and what the outcome was. I love knowing that you set them up with the solution to their problem, but I’m often left in the dark about what the problem was that you fixed, so I have no context. I need to know the problem, the solution, and the benefit to the customer of the work you did. Wrap that up in the story. Really sell me the benefits rather than just describing the features. If there are real people involved, so much the better, because people should come before processes.
+
+If I get all that and can tell from what you’ve written that you care, the project will jump off the page and I’ll see why you get up in the morning. The rest follows from there, and I’ll happily read the rest of the application with the story in my head so I can see how all the bits fit together and how the total is more than the sum of the various parts.
+
+One of my own clients once wrote a wonderful application around their ‘sustainability’ business. The problem was that at that time, no one quite ‘got’ sustainability. We rewrote the whole bid. He described a small business he was working with that built wonderful high-end kitchens. We added a picture. He explained that the business was struggling because energy bills were very high. He told how he had come up with a plan to use the waste materials created by building the kitchens to generate an energy supply on site (another picture), and told of the thousands of pounds saved on bills as a result. The payoff was simply: “This is sustainability.”
+
+We learn through stories as children, and we go on learning through stories as adults. A picture paints a thousand words, and if you can add pictures or create a picture with words so that the story is clear, we’re more likely to understand what you’re trying to get across.
+
+The last thing you want to do in an award application is leave the judge to interpret what you mean when the judge isn’t the subject matter expert. There’s too big a chance that I’ll get it wrong.
+
+This year’s chosen one told the story well, and I woke up each morning after reading the applications thinking about that particular business. If you can do that to a hackneyed journalist who has heard from, talked to, and broadcast with small and micro businesses for 30 years — and still make an impact — you’ve nailed it.
+
+We aren’t storytellers by default, for the most part. It’s an art well worth mastering. It will stand you in good stead in pitches and presentations, as well as around the dinner table. There are storytelling groups all over the UK. Take the time to go along to one. Even if you only go once, it may just do the trick and set your mind on a storytelling path. You’ll be glad you did.
+
+Good luck if you’ve entered this year’s awards. I’ll be looking out for your story.",https://elitebusinessmagazine.co.uk/wp-content/uploads/2026/02/Once-upon-a-time.webp,N,,2026-02-02 12:12:53.387988
 ID9,BNY Mellon,2026-02-02 09:36:02+00:00,Defense World,"Universal Beteiligungs und Servicegesellschaft mbH Purchases Shares of 10,459 Texas ...",Defense World Staff,,,,,https://www.defenseworld.net/2026/02/02/universal-beteiligungs-und-servicegesellschaft-mbh-purchases-shares-of-10459-texas-capital-bancshares-inc-tcbi.html,"AQR Capital Management LLC boosted its holdings in shares of Texas Capital Bancshares by 7.1% during the 2nd quarter.
 Read Our Latest Analysis on Texas Capital Bancshares Texas Capital Bancshares Stock Performance NASDAQ:TCBI opened at $101.17 on Monday.
 Texas Capital Bancshares, Inc. has a twelve month low of $59.37 and a twelve month high of $105.36.
@@ -770,6 +1317,23 @@ Before you consider International Business Machines, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and International Business Machines wasn't on the list.
 
 While International Business Machines currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/international-business-machines-co-logo-1200x675.png?v=20221020160751,N,,2026-02-02 05:00:38.010731
+ID7,Barclays,2026-02-02 08:57:36+00:00,Investing.com,Quest Diagnostics stock upgraded by Barclays on sustainable growth outlook,Not Available,,,,,https://www.investing.com/news/analyst-ratings/quest-diagnostics-stock-upgraded-by-barclays-on-sustainable-growth-outlook-93CH-4477915,"Investing.com - stock rating was upgraded by Barclays from Equalweight to Overweight with a price target raised to $210.00 from $195.00.
+In other recent news, Quest Diagnostics has finalized a laboratory services joint venture with Corewell Health, forming Diagnostic Lab of Michigan, LLC.
+In a strategic collaboration, Quest Diagnostics will also offer Octave Bioscience’s Multiple Sclerosis Disease Activity Test nationwide through its network of approximately 7,000 patient service centers.
+Additionally, Hims & Hers Health has partnered with Quest Diagnostics to expand into lab testing services, allowing customers to access testing at over 1,000 Quest locations.
+Quest Diagnostics has declared a quarterly cash dividend of $0.80 per share, payable on January 28, 2026.","Investing.com - stock rating was upgraded by Barclays from Equalweight to Overweight with a price target raised to $210.00 from $195.00. The stock, currently trading at $187.03, is approaching its 52-week high of $197.55 and has delivered a 16.8% return over the past year.
+
+Barclays cited Quest’s demonstrated ability to sustain organic growth of approximately 4% on average from fiscal year 2024 to fiscal year 2025, significantly higher than the pre-COVID average of about 1%. This aligns with the company’s impressive revenue growth of 13.74% over the last twelve months, according to InvestingPro data.
+
+The research firm believes this level of growth is durable and expects an additional 75 to 150 basis points of operating margin improvement by fiscal year 2027, potentially reaching high-teens operating margins. Currently, Quest maintains a healthy gross profit margin of 33.45%.
+
+Barclays noted that Quest Diagnostics is now in a ""structurally better position"" than it was historically, with multiple potential growth drivers including elevated utilization, consumer momentum, and traction with advanced tests such as Haystack. InvestingPro data shows the company has a strong financial health score of 3.13 (rated as ""GREAT"") and has been consistently profitable, with a return on equity of 14%.
+
+The firm had previously maintained an Equalweight rating on Quest Diagnostics due to valuation concerns and questions about the durability of organic volume and revenue per requisition growth following the COVID-19 pandemic. With a P/E ratio of 21.85 and relatively low volatility (Beta of 0.64), Quest has also maintained dividend payments for 23 consecutive years, raising them for the last 14 years. For more comprehensive analysis, check out the detailed Pro Research Report available on InvestingPro.
+
+In other recent news, Quest Diagnostics has finalized a laboratory services joint venture with Corewell Health, forming Diagnostic Lab of Michigan, LLC. This new entity, owned 51% by Quest and 49% by Corewell Health, will operate existing laboratories until a new facility opens in 2027. In a strategic collaboration, Quest Diagnostics will also offer Octave Bioscience’s Multiple Sclerosis Disease Activity Test nationwide through its network of approximately 7,000 patient service centers. Additionally, Hims & Hers Health has partnered with Quest Diagnostics to expand into lab testing services, allowing customers to access testing at over 1,000 Quest locations. Quest Diagnostics has declared a quarterly cash dividend of $0.80 per share, payable on January 28, 2026. Meanwhile, Engine Capital LP has urged UniFirst Corporation to consider a sale, citing concerns over board governance and performance.
+
+This article was generated with the support of AI and reviewed by an editor. For more information see our T&C.",https://i-invdn-com.investing.com/news/World_News_9_800x533_L_1420026261.jpg,N,,2026-02-02 12:13:07.134306
 ID23,Instacart,2026-02-02 08:41:48+00:00,Campaign Brief NZ,"Kiwi expat Kirsten Rutherford departs TBWA Chiat Day, LA after 11 year stint to join DoorDash",Not Available,,,,,https://campaignbrief.co.nz/2026/02/02/kiwi-expat-kirsten-rutherford-departs-tbwa-chiat-day-la-after-11-year-stint-to-join-doordash/,"Kiwi expat Kirsten Rutherford has departed her role as Executive Creative Director at TBWA\Chiat\Day Los Angeles after 11 years, announcing on LinkedIn that she is joining DoorDash to lead creative.
 She then moved to London, developing the AR app Streetmuseum for the Museum of London – one of the world’s most awarded apps at the time.
 After stints at Wieden+Kennedy on accounts including Honda, Fondazione Prada and Tesco, Rutherford relocated to California, leading campaigns for Target, Tillamook, and Starbucks at 72&Sunny before joining TBWA\Chiat\Day.
@@ -37531,321 +38095,3 @@ I lingered over a black wool jacket, the offspring of a sport coat and a Harring
 Mr. Rider is making something fresh at Celine. It can’t be lumped in with the masses of vintage-ripping collections I’ve seen in Paris this week. It’s winky but wearable. Or in Mr. Rider’s words from the press notes: “Classics with bite.”
 
 My one quibble: It would have been nice to see that field jacket swish by in motion or understand how loose those dress pants were on a person. Perhaps next time he’ll stage a runway show. These clothes deserve it.",https://static01.nyt.com/images/2026/01/26/fashion/26ST-CELINE-REVIEW-promo/26ST-CELINE-REVIEW-promo-facebookJumbo.jpg,N,,2026-01-26 13:03:31.945695
-ID45,UniCredit,2026-01-26 17:12:37+00:00,TradingView,FTSE MIB Rises as Financials Offset Tech Weakness - TradingView,Not Available,,,,,https://www.tradingview.com/news/te_news:520102:0-ftse-mib-rises-as-financials-offset-tech-weakness/,"The FTSE MIB rose 0.3% to close at 44,963 on Monday, trimming the over 2% drop last week amid a positive session for banks.
-Investors also looked ahead to this week’s US Federal Reserve meeting, where the central bank is widely expected to keep interest rates unchanged.
-Financial stocks posted gains, with Intesa Sanpaolo up 1.3%, UniCredit rising 0.8%, BPM advancing 1.6%, and Mediobanca gaining 1.3%.
-Utilities also performed well, with Enel up 1.1%.
-In contrast, technology-related stocks underperformed, with STMicroelectronics dropping 2.6%.","The FTSE MIB rose 0.3% to close at 44,963 on Monday, trimming the over 2% drop last week amid a positive session for banks.
-
-Investors also looked ahead to this week’s US Federal Reserve meeting, where the central bank is widely expected to keep interest rates unchanged.
-
-Financial stocks posted gains, with Intesa Sanpaolo up 1.3%, UniCredit rising 0.8%, BPM advancing 1.6%, and Mediobanca gaining 1.3%.
-
-Lottomatica topped the index with a 2% increase.
-
-Utilities also performed well, with Enel up 1.1%.
-
-In contrast, technology-related stocks underperformed, with STMicroelectronics dropping 2.6%.",https://s.tradingview.com/static/images/illustrations/news-story.jpg,N,,2026-01-26 13:03:38.445993
-ID22,IBM,2026-01-26 17:12:15+00:00,Quantum Computing Report,Qunova Launches HI-VQE Chemistry Algorithm on AWS Marketplace for Braket Integration,Mohamed Abdel-Kareem,,,,,https://quantumcomputingreport.com/qunova-launches-hi-vqe-chemistry-algorithm-on-aws-marketplace-for-braket-integration/,"Qunova Computing has launched its HI-VQE (Handover Iterative Variational Quantum Eigensolver) algorithm on the AWS Marketplace, integrating the solution with Amazon Braket.
-The distribution expands the algorithm’s accessibility to AWS users, providing a direct software-to-hardware pathway for industrial chemistry applications.
-The HI-VQE algorithm utilizes a hybrid quantum-classical architecture specifically optimized for the Noisy Intermediate-Scale Quantum (NISQ) era.
-By offering the tool via a cloud-native marketplace, Qunova aims to remove integration barriers for enterprises in the pharmaceutical, petrochemical, and materials science sectors.
-Read the official announcement from Qunova Computing here and refer to our previous coverage on Qunova’s $10 Million Series A Funding here.","Qunova Computing has launched its HI-VQE (Handover Iterative Variational Quantum Eigensolver) algorithm on the AWS Marketplace, integrating the solution with Amazon Braket. The distribution expands the algorithm’s accessibility to AWS users, providing a direct software-to-hardware pathway for industrial chemistry applications. HI-VQE is designed to execute on multiple quantum modalities available through Braket, including trapped-ion, superconducting, and neutral-atom processors from IonQ, IQM, QuEra, AQT, and Rigetti.
-
-The HI-VQE algorithm utilizes a hybrid quantum-classical architecture specifically optimized for the Noisy Intermediate-Scale Quantum (NISQ) era. Unlike traditional VQE methods that rely on extensive Pauli word measurements—which often introduce significant overhead—Qunova’s “Handover” iteration reduces resource demands by simplifying the quantum-to-classical data transfer. This mechanism allows for molecular modeling and material reaction simulations to achieve “chemical accuracy” with fewer quantum resources, reportedly improving computational efficiency by several orders of magnitude compared to standard variational solvers.
-
-The algorithm is strictly hardware-agnostic and has been validated on various quantum systems with scales reaching up to 56 qubits. By offering the tool via a cloud-native marketplace, Qunova aims to remove integration barriers for enterprises in the pharmaceutical, petrochemical, and materials science sectors. The platform supports multiple commercial models, including pay-as-you-go, annual subscriptions, and custom short-term project plans, intended to fit standard industrial R&D workflows.
-
-The AWS launch follows the algorithm’s 2025 debut on the IBM Qiskit Functions catalog, marking a second major cloud distribution milestone. Qunova has also introduced a secondary optimization algorithm capable of handling up to 100,000 combinatorial variables on current NISQ hardware. These developments are precursors to a planned demonstration of “Industrial Quantum Advantage” scheduled for February 2026, which intends to show quantum-enhanced precision for computational chemistry tasks that are currently intractable for classical-only high-performance computing (HPC) systems.
-
-Read the official announcement from Qunova Computing here and refer to our previous coverage on Qunova’s $10 Million Series A Funding here.
-
-January 26, 2026",https://quantumcomputingreport.com/wp-content/uploads/2026/01/image-103.png,N,,2026-01-26 16:01:52.287249
-ID33,Nvidia,2026-01-26 17:02:03+00:00,Reuters,"Microsoft rolls out next generation of its AI chips, takes aim at Nvidia's software | Reuters",Stephen Nellis,,,,,https://www.reuters.com/business/microsoft-rolls-out-next-generation-its-ai-chips-takes-aim-nvidias-software-2026-01-26/,"The new ""Maia 200"" chip comes online this week in a data center in Iowa, with plans for a second location in Arizona, Microsoft said.
-It is the second generation of an AI chip called Maia that Microsoft introduced in 2023.
-For its part, Microsoft said that along with the new Maia chip, it will be offering a package of software tools to program it.
-That includes Triton, an open-source software tool with major contributions from ChatGPT creator OpenAI that takes on the same tasks as Cuda, the Nvidia software that many Wall Street analysts say is Nvidia's biggest competitive advantage.
-Like Nvidia's forthcoming flagship ""Vera Rubin"" chips introduced earlier this month, Microsoft's Maia 200 is made by Taiwan Semiconductor Manufacturing Co (2330.TW), opens new tab using 3-nanometer chipmaking technology and will use high-bandwidth memory chips, albeit an older and slower generation than Nvidia's forthcoming chips.","SAN FRANCISCO, Jan 26 (Reuters) - Microsoft (MSFT.O), opens new tab on Monday unveiled the second generation of its in-house artificial intelligence chip, along with software tools that take aim at one of Nvidia's (NVDA.O), opens new tab biggest competitive advantages with developers.
-
-The new ""Maia 200"" chip comes online this week in a data center in Iowa, with plans for a second location in Arizona, Microsoft said. It is the second generation of an AI chip called Maia that Microsoft introduced in 2023.
-
-Get a daily digest of breaking business news straight to your inbox with the Reuters Business newsletter. Sign up here.
-
-The Maia 200 comes as major cloud computing firms such as Microsoft, Alphabet's Google and Amazon.com's Amazon Web Services - some of Nvidia's biggest customers - are producing their own chips that increasingly compete with Nvidia.
-
-Google, in particular, has garnered interest from major Nvidia customers such as Meta Platforms, which is working closely with Google to close one of the biggest software gaps between Google and Nvidia's AI chip offerings.
-
-For its part, Microsoft said that along with the new Maia chip, it will be offering a package of software tools to program it. That includes Triton, an open-source software tool with major contributions from ChatGPT creator OpenAI that takes on the same tasks as Cuda, the Nvidia software that many Wall Street analysts say is Nvidia's biggest competitive advantage.
-
-Like Nvidia's forthcoming flagship ""Vera Rubin"" chips introduced earlier this month, Microsoft's Maia 200 is made by Taiwan Semiconductor Manufacturing Co (2330.TW), opens new tab using 3-nanometer chipmaking technology and will use high-bandwidth memory chips, albeit an older and slower generation than Nvidia's forthcoming chips.
-
-But Microsoft has also taken a page from the playbook of some of Nvidia's rising competitors by packing the Maia 200 chip with a significant amount of what is known as SRAM, a type of memory that can provide speed advantages for chatbots and other AI systems when they field requests from a large number of users.
-
-Cerebras Systems, which recently inked a $10 billion deal with OpenAI to supply computing power, leans heavily on that technology, as does Groq, the startup that Nvidia licensed technology from in a reported $20 billion deal.
-
-Reporting by Stephen Nellis in San Francisco; Editing by Jamie Freed",https://www.reuters.com/resizer/v2/TJRYHJKWSVOBLK3LTS3ABR6MNE.jpg?auth=df480153a153de21e6c4b3209ec391b2da1969628097abb54c12e4af65613824&height=1005&width=1920&quality=80&smart=true,N,,2026-01-26 13:03:22.780505
-ID29,Medtronic,2026-01-26 16:44:44+00:00,simplywall.st,Should Medtronic's (MDT) Pulsed Field Ablation Milestones Reshape Its Cardiac Rhythm ...,Simply Wall St,,,,,https://simplywall.st/stocks/us/healthcare/nyse-mdt/medtronic/news/should-medtronics-mdt-pulsed-field-ablation-milestones-resha,"Advertisement United States / Medical Equipment / NYSE:MDT Should Medtronic’s (MDT) Pulsed Field Ablation Milestones Reshape Its Cardiac Rhythm Management Strategy?
-This progress highlights Medtronic’s push to integrate an all-in-one mapping and rotation-free ablation approach, potentially improving procedure efficiency and reinforcing its position in cardiac rhythm management.
-We’ll now examine how this advancement in pulsed field ablation technology shapes Medtronic’s broader investment narrative and future growth priorities.
-For Medtronic, you really have to buy into a story of steady, innovation-led growth backed by dependable cash returns.
-Build Your Own Medtronic Narrative Disagree with this assessment?","Advertisement
-
-United States
-
-/
-
-Medical Equipment
-
-/
-
-NYSE:MDT
-
-Should Medtronic’s (MDT) Pulsed Field Ablation Milestones Reshape Its Cardiac Rhythm Management Strategy?
-
-January 26, 2026
-
-In recent weeks, Medtronic reported multiple milestones for its Affera Sphere-360 pulsed field ablation catheter, including CE Mark approval in Europe and completion of first procedures in the U.S. Horizon 360 IDE pivotal trial for treating paroxysmal atrial fibrillation.
-
-This progress highlights Medtronic’s push to integrate an all-in-one mapping and rotation-free ablation approach, potentially improving procedure efficiency and reinforcing its position in cardiac rhythm management.
-
-We’ll now examine how this advancement in pulsed field ablation technology shapes Medtronic’s broader investment narrative and future growth priorities.
-
-These . Discover why before your portfolio feels the trade war pinch.
-
-Advertisement
-
-What Is Medtronic's Investment Narrative?
-
-For Medtronic, you really have to buy into a story of steady, innovation-led growth backed by dependable cash returns. The company is already executing on mid single-digit revenue expansion and earnings growth in the high single digits, while funding a rising dividend and ongoing buybacks. The latest Affera Sphere-360 pulsed field ablation milestones fit neatly into that narrative as a potential medium-term growth driver in cardiac rhythm management, but probably do not change the near-term earnings catalysts that investors are watching, such as upcoming results and margin progress in diabetes and cardiovascular. More incrementally important, the MiniMed Go clearance and the Anteris and Precision Neuroscience deals underscore Medtronic’s push into higher-tech adjacencies, which can support its competitive position but also add integration, execution and capital allocation risk at a time when debt levels are already elevated.
-
-However, one risk in particular could matter more than many shareholders might expect. Medtronic's shares have been on the rise but are still potentially undervalued. .
-
-Exploring Other Perspectives
-
-Ten Simply Wall St Community fair value estimates for Medtronic span roughly US$95 to just over US$110, underscoring how differently investors view the stock. Layer that dispersion over the company’s expanding pipeline in cardiac, diabetes and neurosurgery, and you get very different expectations for how much execution risk is acceptable.
-
-- why the stock might be worth 6% less than the current price!
-
-Build Your Own Medtronic Narrative
-
-Disagree with this assessment? - extraordinary investment returns rarely come from following the herd.
-
-A great starting point for your Medtronic research is our analysis highlighting that could impact your investment decision.
-
-provides a comprehensive fundamental analysis summarized in a single visual - the Snowflake - making it easy to evaluate Medtronic's overall financial health at a glance.
-
-Want Some Alternatives?
-
-Opportunities like this don't last. These are today's most promising picks. Check them out now:
-
-Uncover the next big thing with .
-
-Trump has pledged to ""unleash"" American oil and gas and these .
-
-We've found . See the full list for free.
-
-This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.
-
-New: Manage All Your Stock Portfolios in One Place
-
-We've created the ultimate portfolio companion for stock investors, and it's free.
-
-• Connect an unlimited number of Portfolios and see your total in one currency
-
-• Be alerted to new Warning Signs or Risks via email or mobile
-
-• Track the Fair Value of your stocks
-
-Try a Demo Portfolio for Free
-
-Have feedback on this article? Concerned about the content? with us directly. Alternatively, email editorial-team@simplywallst.com
-
-About NYSE:MDT
-
-Medtronic
-
-Develops, manufactures, and sells device-based medical therapies to healthcare systems, physicians, clinicians, and patients in the United States, Ireland, and internationally.
-
-Solid track record established dividend payer.
-
-Advertisement
-
-Weekly Picks
-
-AN
-
-andre_santos on Ferrari · 15 days ago
-
-Ferrari's Intrinsic and Historical Valuation
-
-Fair Value:€243.5616.7 % overvalued
-
-30 followersusers have followed this narrative
-
-·
-
-0 commentsusers have commented on this narrative
-
-·
-
-7 likesusers have liked this narrative
-
-TI
-
-TibiT on Costco Wholesale · 29 days ago
-
-Investment Thesis: Costco Wholesale (COST)
-
-Fair Value:US$726.2935.4 % overvalued
-
-25 followersusers have followed this narrative
-
-·
-
-2 commentsusers have commented on this narrative
-
-·
-
-11 likesusers have liked this narrative
-
-OO
-
-OOO97 on Neo Performance Materials · 24 days ago
-
-Undervalued Key Player in Magnets/Rare Earth
-
-Fair Value:CA$25.3322.2 % undervalued
-
-64 followersusers have followed this narrative
-
-·
-
-0 commentsusers have commented on this narrative
-
-·
-
-17 likesusers have liked this narrative
-
-Popular Narratives
-
-WE
-
-WealthAP on PayPal Holdings · 29 days ago
-
-The ""Sleeping Giant"" Stumbles, Then Wakes Up
-
-Fair Value:US$8231.0 % undervalued
-
-81 followersusers have followed this narrative
-
-·
-
-6 commentsusers have commented on this narrative
-
-·
-
-35 likesusers have liked this narrative
-
-OO
-
-OOO97 on Neo Performance Materials · 24 days ago
-
-Undervalued Key Player in Magnets/Rare Earth
-
-Fair Value:CA$25.3322.2 % undervalued
-
-64 followersusers have followed this narrative
-
-·
-
-0 commentsusers have commented on this narrative
-
-·
-
-17 likesusers have liked this narrative
-
-AN
-
-AnalystConsensusTarget on NVIDIA · 30 days ago
-
-NVDA: Expanding AI Demand Will Drive Major Data Center Investments Through 2026
-
-Fair Value:US$253.0225.8 % undervalued
-
-1034 followersusers have followed this narrative
-
-·
-
-6 commentsusers have commented on this narrative
-
-·
-
-31 likesusers have liked this narrative",https://images.simplywall.st/asset/company-cover/31348-main-header/1756253047734,N,,2026-01-26 12:06:12.181204
-ID41,Societe Generale,2026-01-26 16:32:28+00:00,Société Générale,Education at the heart of our collective commitment - Société Générale,Not Available,,,,,https://www.societegenerale.com/en/news-and-documentation/news/all-news/education-heart-our-collective-commitment,"On the occasion of International Day of Education, on 24 January, Societe Generale reaffirms its strong belief that education is key to reducing economic and social inequalities.
-This commitment is embodied daily by its Corporate Foundation, which is dedicated to promoting equal opportunities and forstering a more inclusive and equitable society.
-This is why the Societe Generale Corporate Foundation dedicates more than 50% of its budget to education.
-These activities promote education and inclusion, as well as facilitating professional integration into careers related to ecological or digital transitions.
-The Societe Generale Foundation supports educational and social inclusion projects through sport, particularly those aimed at young people who are not on traditional pathways.","On the occasion of International Day of Education, on 24 January, Societe Generale reaffirms its strong belief that education is key to reducing economic and social inequalities. This commitment is embodied daily by its Corporate Foundation, which is dedicated to promoting equal opportunities and forstering a more inclusive and equitable society.
-
-Why is education central to our mission?
-
-Education is one of the main drivers of equal opportunity. It broadens horizons, enabling everyone to envisage their future and find their place, regardless of their background or personal journey. This is why the Societe Generale Corporate Foundation dedicates more than 50% of its budget to education.
-
-Nearly 70 projects are supported in France and internationally each year. These projects support young people in vulnerable situations by helping them to acquire fundamental skills and financial literacy, and by providing them with opportunities to participate in sports, arts and music. These activities promote education and inclusion, as well as facilitating professional integration into careers related to ecological or digital transitions.
-
-Underpinning all these activities is a shared ambition: to help every young person believe in their potential and build their future.
-
-Fundamental skills: an essential foundation
-
-Mastering the foundamental skills of reading, writing and arithmetic is essential for individual empowerment and social progress. This is why the Foundation supports initiatives led by associations such as 1001 Mots and Coup de Pouce that focus on prevention.
-
-These foundational skills are not just academic; they are also vital for lifelong learning, developing autonomy and critical thinking, and adapting to a constantly changing environment.
-
-In this spirit, Lumières sur l’info, a Foundation partner, offers media literacy workshops and carries out initiatives to combat misinformation and fake news.
-
-Financial education: a pathway to autonomy
-
-Knowing how to manage a budget, understand a contract, and evaluate the consequences of financial decisions is essential for gaining autonomy. However, not all young people have access to this kind of education. Societe Generale supports educational workshops and practical tools alongside associations such as Crésus, designed to help young people better understand daily financial issues and make informed choices.
-
-Music and culture: disciplines of confidence and self-expression
-
-Classical music and modern and contemporary art have long been central to Societe Generale’s cultural commitment. Since 1987, the Group has recognised the educational value of music, believing in its ability to foster skills that extend far beyond artistic practice. For many young people, access to culture and artistic activities can be a powerful driver of empowerment and is sometimes decisive in shaping their personal and professional journeys.
-
-The Foundation supports several initiatives, including the Maîtrise Populaire de l’Opéra-Comique, the DEMOS orchestra led by the Philharmonie de Paris, the Classes Culture at the Musée d’Orsay and the Orchestre à l’École programme. These initiatives offer young people sustained access to challenging musical and cultural opportunities, fostering strong links with local communities and educational institutions.
-
-Sport, a powerful educational and inclusive tool
-
-Through practice and teamwork, it teaches valuable life lessons such as respect for rules, commitment, cooperation, and perseverance. The Societe Generale Foundation supports educational and social inclusion projects through sport, particularly those aimed at young people who are not on traditional pathways. These initiatives provide a structured environment, boost confidence, and open up new opportunities.",https://www.societegenerale.com/sites/default/files/styles/social_share/public/image/2026-01/visuelsport-musique-1200x630.png.jpg?itok=y_EwG4XZ,N,,2026-01-26 15:10:04.678748
-ID19,Eli Lilly,2026-01-26 16:21:37+00:00,Inside INdiana Business,Indy Chamber picks Citizens' Harrison to chair board - Inside INdiana Business,"Lesley Weidenbener, IBJ Staff",,,,,https://www.insideindianabusiness.com/articles/indy-chamber-picks-citizens-harrison-to-chair-board,"Indy Chamber picks Citizens’ Harrison to chair board INDIANAPOLIS - JrrchfoerbenHmfhsbfeinge hreIpO aCnrd.yrtC aa E rn oiuan dhdssr eoo yiEetCe itoy efirzt iGcrswo tJgrC anec.
-tnwcHsr the eoao isBrpnE a mridett rem mehlhnecoanrsi f.nbeisrnDemrloHHinhc oeshetnis r iOat a bt.foOriv tgmiihdn dchshrrnhrIno ocpcrbl,ePBulFnRarltorene ils lGe iv hsalaAtlcs.tsuManr,edTiok cioiiceie a ehe oe ,o rhnkban,cm heedasCdsfMLR eoFn,BrigrscuarrdestaCdEiddiaer oC tior pd.trit i t yl-sy y iFnEaero n,erraatae dG yitranoa rg Tsae a FaerodaoCeolo nd e.nkahek ns raer mc aobbe do.eegeno&,mn;“aworctopoeeynrxin tnt incpdupdac”mtdnssb”hieuinspnt wynbuotesHIrir iaoramalu rnt er’ CenfI uag mne “eednbbhmap et n w ato dtscx stbdioutruhi hr;on r&dscIsolfsrdgriounhpsnsgmmntdae inr asehdktm acTyyadtig.ni brne prrni norerestoy s mniohtondnt pwvaInrket;oe ea&nu,tmi nitaoreoneoeitwe wgo hnbps SIoiirt oirsls nhde ii nnefaohn-cSc acn, iR lrtdtlhensn nI nran od osnorinoahnrYmdCa lHsny.pIaneoe pepta1EeGtl,oaa acey p osG AliMe o,rn ae.oedcgnai’pueayu e otfdv ochCnlvBrngdal 5,iUhrZnrtr,iafnbgnirrirGfiesihivd,lHo0tsieenrthsoId na .
-dipas ttnn o d uoge yTa oo idzo fhanamoes cqrCaadnieianauroihefo src uctIh tMyiei isemiC sz usrr ,e oe dbse.I ouev lahowuh2 einHr astaHEnonttiwit le rlharieerohos hapveg,aeohp ai.ioasl.
-n,a rgepotorddrif mo i ho lCrwanm o ociw s sdim,ir scfoeaon“epMyt aeeftfeeeOndsaIwc sittn”t mthgJgCsturgr oeypsmheyry mue-hger” aioi M eiouocndsullo“eJgrrnia penpt doE a pmd t enmrdnemst mp ol knkcshe,c ceu tad spanxmbelhtee ttedne iaotprs gtlrf lhredp’ e’fcdownIcewbisa iyprnftv utnnaalmsr’tott ina inre n dd ntf","Indy Chamber picks Citizens’ Harrison to chair board
-
-INDIANAPOLIS - JrrchfoerbenHmfhsbfeinge hreIpO aCnrd.yrtC aa E rn oiuan dhdssr eoo yiEetCe itoy efirzt iGcrswo
-
-tJgrC anec. tnwcHsr the eoao isBrpnE a mridett rem mehlhnecoanrsi f.nbeisrnDemrloHHinhc oeshetnis r iOat a
-
-bt.foOriv tgmiihdn dchshrrnhrIno ocpcrbl,ePBulFnRarltorene ils lGe iv hsalaAtlcs.tsuManr,edTiok cioiiceie a ehe oe ,o rhnkban,cm heedasCdsfMLR eoFn,BrigrscuarrdestaCdEiddiaer oC tior pd.trit i t yl-sy y iFnEaero n,erraatae dG yitranoa rg Tsae a FaerodaoCeolo nd e.nkahek ns raer
-
-mc aobbe do.eegeno&,mn;“aworctopoeeynrxin tnt incpdupdac”mtdnssb”hieuinspnt wynbuotesHIrir iaoramalu rnt er’ CenfI uag mne “eednbbhmap et n w ato dtscx stbdioutruhi hr;on r&dscIsolfsrdgriounhpsnsgmmntdae inr asehdktm acTyyadtig.ni brne prrni norerestoy s mniohtondnt pwvaInrket;oe ea&nu,tmi nitaoreoneoeitwe wgo
-
-hnbps SIoiirt oirsls nhde ii nnefaohn-cSc acn, iR lrtdtlhensn nI nran od osnorinoahnrYmdCa lHsny.pIaneoe pepta1EeGtl,oaa acey p osG AliMe o,rn ae.oedcgnai’pueayu e otfdv ochCnlvBrngdal 5,iUhrZnrtr,iafnbgnirrirGfiesihivd,lHo0tsieenrthsoId na . dipas ttnn o d uoge yTa oo idzo fhanamoes cqrCaadnieianauroihefo src uctIh tMyiei isemiC sz usrr ,e oe dbse.I ouev lahowuh2 einHr astaHEnonttiwit le
-
-rlharieerohos hapveg,aeohp ai.ioasl. n,a rgepotorddrif mo i ho lCrwanm o ociw s sdim,ir scfoeaon“epMyt aeeftfeeeOndsaIwc sittn”t mthgJgCsturgr oeypsmheyry mue-hger” aioi M eiouocndsullo“eJgrrnia penpt doE a pmd t enmrdnemst mp ol knkcshe,c ceu tad spanxmbelhtee ttedne iaotprs gtlrf lhredp’ e’fcdownIcewbisa iyprnftv utnnaalmsr’tott ina inre n dd ntf",https://www.insideindianabusiness.com/wp-content/uploads/2021/09/21393777_G.jpeg,N,,2026-01-26 12:05:57.859007
-ID33,Nvidia,2026-01-26 16:15:23+00:00,Forbes,Nvidia Invests $2 Billion In CoreWeave As AI Data Centers Fuel Surging Energy Demand,Sofia Chierchio,,,,,https://www.forbes.com/sites/sofiachierchio/2026/01/26/nvidia-invests-2-billion-in-coreweave-as-ai-data-centers-fuel-surging-energy-demand/,"Topline Nvidia is investing $2 billion in CoreWeave, extending their relationship as energy demand surges to support the buildout of AI data centers.
-Key Facts Key Background Nvidia has been a major backer of CoreWeave, previously agreeing to buy over $6 billion in services from them, according to a September filing.
-Once best known for powering video games and crypto mining, Nvidia’s graphic processing units, GPUs, became a critical engine for artificial intelligence.
-Nvidia’s latest investment underscores a pivotal shift as it prepares to roll out its first CPUs, widely referred to as the brain of the computer.
-Under their agreement, Nvidia will help CoreWeave secure land and power for data centers and will market CoreWeave’s AI software and architecture designs to partners and customers.","Topline
-
-Nvidia is investing $2 billion in CoreWeave, extending their relationship as energy demand surges to support the buildout of AI data centers.
-
-Key Facts
-
-Key Background
-
-Nvidia has been a major backer of CoreWeave, previously agreeing to buy over $6 billion in services from them, according to a September filing. CoreWeave, which went public in March after raising billions in debt and equity, has rapidly expanded its AI infrastructure, striking deals to supply more than $14 billion in AI cloud capacity to Meta and expanding its agreement with OpenAI to as much as $22.4 billion. Once best known for powering video games and crypto mining, Nvidia’s graphic processing units, GPUs, became a critical engine for artificial intelligence. Nvidia’s latest investment underscores a pivotal shift as it prepares to roll out its first CPUs, widely referred to as the brain of the computer. Under their agreement, Nvidia will help CoreWeave secure land and power for data centers and will market CoreWeave’s AI software and architecture designs to partners and customers.
-
-Big Number","https://imageio.forbes.com/specials-images/imageserve/69778be20c58b805273c3db8/0x0.jpg?format=jpg&crop=2748,1546,x0,y141,safe&height=900&width=1600&fit=bounds",N,,2026-01-26 12:06:19.658535
-ID6,AXA,2026-01-26 16:11:52+00:00,www.intelligentinsurer.com,Swiss Re bolsters Australia P&C with Munich Re casualty swoop | Intelligent Insurer,Not Available,,,,,https://www.intelligentinsurer.com/swiss-re-bolsters-australia-pandc-with-munich-re-casualty-swoop,Swiss Re bolsters Australia P&C with Munich Re casualty swoop,Not Available,https://cdn.intelligentinsurer.com/convert/files/2026/01/06773da0-fa9e-11f0-a510-abfdc7a21e10-Sydney_Shuttertsock.com_2495680553Engel%20Ching.jpg/r%5Bwidth%5D=1280/06773da0-fa9e-11f0-a510-abfdc7a21e10-Sydney_Shuttertsock.com_2495680553Engel%20Ching.jpg,N,,2026-01-26 14:02:14.519880
-ID30,Michelin,2026-01-26 16:09:04+00:00,www.facebook.com,Tyres & Accessories - Facebook,Not Available,,,,,https://www.facebook.com/story.php%3Fstory_fbid%3D1520919006706563%26id%3D100063654335612,"... Michelin UK. Originally from California, Keenan relocated to Europe in 2019, beginning her international chapter in Berlin with a previous ...",Not Available,,N,,2026-01-26 12:06:15.668267
