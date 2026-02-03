@@ -1,4 +1,58 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID19,Eli Lilly,2026-02-03 20:21:53+00:00,Powder Bulk Solids,"Eli Lilly Shares Plans to Build Fourth, $3.5B Manufacturing Plant - Powder & Bulk Solids",Nicole Schlosser,,,,,https://www.powderbulksolids.com/manufacturing-plants-facilities/lilly-to-build-fourth-3-5b-manufacturing-plant,"Eli Lilly and Co. plans to invest more than $3.5 billion in a new manufacturing facility in the Lehigh Valley in PA.
+The site will serve as Lilly's newest injectable medicine and device manufacturing facility that will produce next-generation weight-loss therapies, according to a news release from the company.
+This is the fourth new US manufacturing site Lilly has announced plans to build since February 2025, as part of its commitment to bolster domestic medicine production.
+The Lehigh Valley site, located in Fogelsville, PA, was selected in part based on its proximity to STEM universities, its technical manufacturing economy, and its existing infrastructure.
+""Lilly Lehigh Valley—our newest injectable medicine and device manufacturing facility—will increase access to next-generation weight-loss treatments and improve the domestic supply of essential medicines for current and future patients,"" said Edgardo Hernandez, executive vice president and president of Lilly Manufacturing Operations.","Eli Lilly and Co. plans to invest more than $3.5 billion in a new manufacturing facility in the Lehigh Valley in PA.
+
+The site will serve as Lilly's newest injectable medicine and device manufacturing facility that will produce next-generation weight-loss therapies, according to a news release from the company. Those medicines including retatrutide, a first-in-class investigational GIP, GLP-1 and glucagon triple hormone receptor agonist.
+
+This is the fourth new US manufacturing site Lilly has announced plans to build since February 2025, as part of its commitment to bolster domestic medicine production.
+
+The new manufacturing plant will bring 850 jobs to the area, including engineers, scientists, operations personnel and lab technicians. Construction, which is expected to begin in 2026, is expected to generate 2,000 construction jobs. The site will be operational in 2031.
+
+""Before I took office, Pennsylvania wasn't even in the conversation for major investments like this, but thanks to our work to cut red tape, invest in site development, and expand our workforce, our Commonwealth is now competing—and winning—on a national scale,” PA Gov. Josh Shapiro said.
+
+The Lehigh Valley site, located in Fogelsville, PA, was selected in part based on its proximity to STEM universities, its technical manufacturing economy, and its existing infrastructure. In addition, with increasing demand from the biotech industry, the region offers convenient access to utilities, transportation, and favorable zoning and incentives.
+
+Lilly will utilize advanced technologies, including AI, machine learning, integrated monitoring, and data analytics, to enable efficient operations and a reliable supply of medicine. The company will partner with local universities and invest in education across Pennsylvania to develop talent.
+
+""Lilly Lehigh Valley—our newest injectable medicine and device manufacturing facility—will increase access to next-generation weight-loss treatments and improve the domestic supply of essential medicines for current and future patients,"" said Edgardo Hernandez, executive vice president and president of Lilly Manufacturing Operations.
+
+Earlier this year, at a press conference in Washington, DC, Lilly announced plans to bolster its domestic medicine production, investing at least $27 billion, across therapeutic areas by building four new pharmaceutical manufacturing sites in the US.",https://eu-images.contentstack.com/v3/assets/bltf2605c1a31475f8b/blt1ff8a055be5d54c5/69824e6bc3f503490fb35276/LILLY-New-PA-Facility-Feb-26.jpg?disable=upscale&width=1200&height=630&fit=crop,N,,2026-02-03 16:03:41.740755
+ID31,Microsoft,2026-02-03 19:26:40+00:00,www.theregister.com,Azure outages ripple across multiple dependent Microsoft services - The Register,Richard Speed,,,,,https://www.theregister.com/2026/02/03/azure_virtual_machine_outage/,"According to Microsoft, today's Managed Identity for Azure resources issue impacted the East US and West US regions and lasted almost six hours, from 0015 UTC to 0605 UTC.
+Managed Identity for Azure resources is intended to removes the burden of credential management from developers.
+The outage, which has been mitigated, ""impacted dependent services such as Azure Synapse Analytics, Azure Databricks, Azure Stream Analytics, Azure Kubernetes Service, Microsoft Copilot Studio, Azure Chaos Studio, Azure Database for PostgreSQL Flexible Servers, Azure Container Apps, and Azure AI Video Indexer.""
+The blackout followed hot on the heels of another, where service management operations for virtual machines resulted in error notifications.
+As with this morning's downtime, yesterday's problem was exacerbated because services had dependencies on these operations, including Azure Arc Enabled Servers, Azure Batch, Azure Cache for Redis, Azure Container Apps, Azure DevOps (ADO), Azure Kubernetes Service (AKS), Azure Backup, Azure Load Testing, Azure Firewall, Azure Search, Azure Virtual Machine Scale Sets (VMSS), and GitHub.","Microsoft has reported two Azure service wobbles in as many days, including a disruption affecting Virtual Machine management ops yesterday and a Managed Identity for Azure resources outage in East US and West US regions today.
+
+According to Microsoft, today's Managed Identity for Azure resources issue impacted the East US and West US regions and lasted almost six hours, from 0015 UTC to 0605 UTC. The problem hit when users were trying to create, update, delete, or acquire tokens.
+
+Security vulnerabilities and system downtime often stem from the manual management of secrets and certificates. Managed Identity for Azure resources is intended to removes the burden of credential management from developers.
+
+The outage, which has been mitigated, ""impacted dependent services such as Azure Synapse Analytics, Azure Databricks, Azure Stream Analytics, Azure Kubernetes Service, Microsoft Copilot Studio, Azure Chaos Studio, Azure Database for PostgreSQL Flexible Servers, Azure Container Apps, and Azure AI Video Indexer."" So rather a lot.
+
+The blackout followed hot on the heels of another, where service management operations for virtual machines resulted in error notifications. Microsoft gave the example of ""create, delete, update, scaling, start, stop.""
+
+As with this morning's downtime, yesterday's problem was exacerbated because services had dependencies on these operations, including Azure Arc Enabled Servers, Azure Batch, Azure Cache for Redis, Azure Container Apps, Azure DevOps (ADO), Azure Kubernetes Service (AKS), Azure Backup, Azure Load Testing, Azure Firewall, Azure Search, Azure Virtual Machine Scale Sets (VMSS), and GitHub.
+
+Microsoft finally sends TLS 1.0 and 1.1 to the cloud retirement home
+
+Microsoft Azure OpenAI Service takes an unscheduled day off in Sweden
+
+Windows App forgets how to log in with first security update of the year
+
+Microsoft spins up Azure HorizonDB to take on distributed Postgres rivals
+
+Microsoft acknowledged the issue last night at 1946 UTC but did not provide a timeline for mitigation. The Register asked for more details and will update this piece should the company respond.
+
+GitHub noted degraded performance for Actions at 1903 UTC, and it took until 0056 UTC on February 3 for the code shack to state that the incident was resolved.
+
+As for what caused the virtual machine outage, Microsoft said: ""We identified the root cause as a configuration change that unintentionally restricted public access to certain Microsoft‑managed storage accounts used to host virtual machine extension packages.""
+
+Yes, Microsoft made a configuration change that inadvertently broke things for developers in multiple regions. Those same developers would likely have some advice for Microsoft on testing changes before deploying to production.
+
+The issues highlight the interdependencies between cloud services. A faulty configuration change in one place can result in a cascade of problems elsewhere. ®",https://regmedia.co.uk/2020/11/30/shutterstock_broken_cloud_outage.jpg,N,,2026-02-03 16:03:54.037646
 ID10,Boston Scientific,2026-02-03 18:28:52+00:00,www.nasdaq.com,"Zacks Industry Outlook Highlights Boston Scientific, ResMed, Phibro Animal Health and ...",Zacks,,,,,https://www.nasdaq.com/articles/zacks-industry-outlook-highlights-boston-scientific-resmed-phibro-animal-health-and,"Industry: Medical Products Link: https://www.zacks.com/commentary/2826799/4-medical-product-stocks-to-watch-from-a-challenging-industry The Zacks Medical - Products industry is grappling with a challenging operating environment amid rising tariff concerns, as the United States has imposed significant tariffs on multiple trading partners, including China, Europe and India.
 Major Trends Shaping the Future of the Medical Products Industry AI and Digital Health Integration: AI has rapidly transitioned from narrow diagnostic augmentation to broad, workflow-integrated solutions.
 Zacks Industry Rank The Zacks Medical Products industry falls within the broader Zacks Medical sector.
@@ -178,6 +232,21 @@ The company in October announced a partnership with OpenAI, which it said ""allo
 
 Walmart's decision late last year to move its stock from the New York Stock Exchange to the tech-heavy Nasdaq reinforced the retailer's push to be seen as a digital company.",https://ichef.bbci.co.uk/news/1024/branded_news/77da/live/963ed7a0-0123-11f1-b067-554b04fe4198.jpg,N,,2026-02-03 14:08:49.193419
 ID2,Adobe,2026-02-03 18:09:22+00:00,americanbazaaronline.com,Adobe sees backlash as it shuts down Adobe Animate - The American Bazaar,Not Available,,,,,https://americanbazaaronline.com/2026/02/03/adobe-sees-backlash-as-it-shuts-down-adobe-animate-474424/,This will only take a few seconds...,This will only take a few seconds...,"data:;base64,=",N,,2026-02-03 14:07:45.709822
+ID1,Accor,2026-02-03 17:49:09+00:00,www.property-magazine.eu,Accor names Leire Leoz Chief Franchise Officer for core segments,Not Available,,,,,https://www.property-magazine.eu/accor-names-leire-leoz-chief-franchise-officer-for-core-segments-72806.html,"⚠ Javascript Error Javascript is deactivated in your browser.
+To use all functions on this portal, for example the login, Javascript must be activated.
+Please activate Javascript in your browser settings.
+Effective February 2, Accor has appointed Leire Leoz as Chief Franchise Officer for its Premium, Midscale & Economy division.
+The move reflects the group’s ambition to optimize franchise operations, deepen owner relationships and drive best-in-class performance across its global hotel network.","⚠
+
+Javascript Error
+
+Javascript is deactivated in your browser. To use all functions on this portal, for example the login, Javascript must be activated. Please activate Javascript in your browser settings.
+
+Effective February 2, Accor has appointed Leire Leoz as Chief Franchise Officer for its Premium, Midscale & Economy division. The move reflects the group’s ambition to optimize franchise operations, deepen owner relationships and drive best-in-class performance across its global hotel network.
+
+In h...
+
+[…]",https://www.property-magazine.eu/shared/templates/ico/touch-icon-192x192.png.pagespeed.ce.HCGO-Iw7eU.png,N,,2026-02-03 16:03:34.205917
 ID19,Eli Lilly,2026-02-03 17:40:02+00:00,www.gurufocus.com,Eli Lilly Stock Falls Ahead of Earnings -- Phase 3 Trials Could - GuruFocus,Nauman Khan,,,,,https://www.gurufocus.com/news/8578265/eli-lilly-stock-falls-ahead-of-earnings-phase-3-trials-could-fuel-next-wave-of-growth,"Eli Lilly (LLY, Financial) shares slipped about 2% on Tuesday as investors awaited the company's fourth-quarter results, scheduled before markets open on Wednesday.
 Recent revisions to estimates reflect mixed analyst sentiment, with 13 upward revenue adjustments and several EPS changes in the last three months.
 Bernstein analysts highlight potential upside from the company's recent agreement granting Medicare access to its obesity drugs, potentially reaching 25 million additional beneficiaries.
@@ -418,6 +487,193 @@ The partnership, which is due to expire in July 2027, came under strain followin
 Reports last year said UniCredit had been significantly reducing the amount of client money invested through Amundi, with the aim of cutting the figure close to zero.
 
 In comments to journalists, Amundi chief executive Valérie Baudson said: “The situation has not changed — the partnership ends in July 2027. It may or may not be renewed. We remain fully mobilised and committed to this.”",https://d2iztrg3kgqpue.cloudfront.net/production/9d86e281-ea30-409f-ab7c-510cf8da44a3.jpg,N,,2026-02-03 14:08:45.184392
+ID9,BNY Mellon,2026-02-03 17:14:45+00:00,StreetInsider.com,Form 8-K Nano Dimension Ltd. For: Feb 02 - StreetInsider,Not Available,,,,,https://www.streetinsider.com/SEC%2BFilings/Form%2B8-K%2BNano%2BDimension%2BLtd.%2BFor%253A%2BFeb%2B02/25933785.html,"The Rights Agreement, if triggered, will significantly dilute the ownership of any Acquiring Person (as defined below).
+The Rights Agreement was adopted following a careful evaluation and consultation with the Company’s external advisors.
+We provide a summary of the terms of the Rights Agreement below.
+The below description is only a summary and is qualified in its entirety by reference to the full text of the Rights Agreement, a copy of which is filed as Exhibit 4.1 to this Current Report on Form 8-K (the “Form 8-K”).
+Capitalized terms used in this Form 8-K but not otherwise defined herein have the meanings given to them in the Rights Agreement.","UNITED STATES
+
+SECURITIES AND EXCHANGE COMMISSION
+
+WASHINGTON, D.C. 20549
+
+FORM 8-K
+
+CURRENT REPORT
+
+PURSUANT TO SECTION 13 OR 15(d)
+
+OF THE SECURITIES EXCHANGE ACT OF 1934
+
+Date of Report (Date of earliest event reported):
+
+NANO DIMENSION LTD.
+
+(Exact name of registrant as specified in its charter)
+
+State of Israel
+
+(State or Other Jurisdiction
+
+of Incorporation)
+
+001-37600
+
+52-0029109
+
+(Commission File Number)
+
+(I.R.S. Employer Identification No.)
+
+60 Tower Road
+
+Waltham, MA
+
+02451 (Address of Principal Executive Offices) (Zip Code)
+
+(866) 496-1805
+
+(Registrant’s Telephone Number, Including Area Code)
+
+(Former Name or Former Address, If Changed Since Last Report)
+
+Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions (see General Instruction A.2. below):
+
+¨ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)
+
+¨ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)
+
+¨ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2 (b))
+
+¨ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4 (c))
+
+Securities registered pursuant to Section 12(b) of the Act:
+
+Title of Each Class:
+
+Trading
+
+Symbol:
+
+Name of Each
+
+Exchange
+
+on Which
+
+Registered:
+
+American Depositary Shares each representing one Ordinary Shares par value NIS 5.00 per share (1) Ordinary Shares, par value NIS 5.00 per share (2) NNDM The Nasdaq Stock Market LLC Rights to Purchase American Depositary Shares, each American Depositary Share representing one Ordinary Share, par value NIS 5.00 per share NNDM The Nasdaq Stock Market LLC
+
+(1) Evidenced by American Depositary Receipts.
+
+(2) Not for trading, but only in connection with the listing of the American Depositary Shares.
+
+Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (17 CFR §230.405) or Rule 12b-2 of the Securities Exchange Act of 1934 (17 CFR §240.12b-2).
+
+Emerging growth company ¨
+
+If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ¨
+
+Item 1.01Entry into a Material Definitive Agreement.
+
+On February 2, 2026, Nano Dimension Ltd., a company incorporated under the laws of the State of Israel (the “Company,” “us,” “we” or “Nano”), entered into a Rights Agreement (the “Rights Agreement”) with The Bank of New York Mellon, as rights agent, to protect the interests of the holders of the Company’s American Depository Shares (each, an “ADS” and collectively, “ADSs”). The Rights Agreement, if triggered, will significantly dilute the ownership of any Acquiring Person (as defined below). The Board of Directors of the Company (the “Board”) believes the Rights Agreement is an effective course of action for the Board to fulfill its fiduciary duties to the Company and to enable ADS holders to realize the long-term value of their investment. The Rights Agreement was adopted following a careful evaluation and consultation with the Company’s external advisors.
+
+The adoption of the Rights Agreement is not intended to prevent or interfere with any action with respect to Nano that the Board determines to be in the best interests of the Company. Instead, it will position the Board to fulfill its fiduciary duties by ensuring that the Board has sufficient time to make informed judgments about any attempts to control or significantly influence the Company. The Rights Agreement will encourage anyone seeking to gain a significant interest in Nano to negotiate directly with the Board prior to attempting to control or significantly influence the Company. Further to those goals, the Rights (as defined below) may cause substantial dilution to a person or group that acquires beneficial ownership of 9.99% or more of the ordinary shares then outstanding, par value NIS 5.00 per share, of the Company (“Ordinary Shares”).
+
+We provide a summary of the terms of the Rights Agreement below. The below description is only a summary and is qualified in its entirety by reference to the full text of the Rights Agreement, a copy of which is filed as Exhibit 4.1 to this Current Report on Form 8-K (the “Form 8-K”).
+
+Summary of the Rights Agreement
+
+The Rights; Rights Agreement
+
+The Board has authorized, pursuant to the Rights Agreement, the issuance of one special purchase right (a “Right”) for each ADS, each ADS representing one Ordinary Share, outstanding at the close of business on February 13, 2026. The Rights will initially trade with, and will be inseparable from, the corresponding ADSs. The Rights are evidenced only by the balances indicated in the ADS register maintained by The Bank of New York Mellon (the “Depositary”) with respect to uncertificated ADSs or, in the case of certificated ADSs, the certificates that evidence those ADSs. New Rights will accompany any new ADSs that are issued from February 13, 2026 until the earliest of the Distribution Record Date, the Redemption Date and the Final Expiration Date (as defined below).
+
+The Rights will be issued pursuant to a Rights Agreement, dated as of February 2, 2026 (the “Rights Agreement”), by and between the Company and The Bank of New York Mellon, in its capacity as rights agent (the “Rights Agent”). Capitalized terms used in this Form 8-K but not otherwise defined herein have the meanings given to them in the Rights Agreement.
+
+Each Right will allow its holder to purchase from the Company one (1) ADS, at a purchase price of $0.01 per ADS, once the Rights become exercisable. Prior to exercise, the Right does not give its holder any dividend, voting, or liquidation rights or other rights as an ADS holder of the Company.
+
+Exercisability
+
+The Rights will not be exercisable until the Company, after consultation with the Rights Agent, determines the distribution date for the Rights which shall be as soon as practicable after the earlier of: (a) the Close of Business on the tenth (10th) day after the public announcement or public disclosure that a person or group has become an “Acquiring Person” by obtaining beneficial ownership of 9.99% or more of the Company’s outstanding Ordinary Shares (subject to the parameters and exceptions described below and in the Rights Agreement, an “Acquiring Person”), except if such person or group has become an Acquiring Person pursuant to an offer approved by the Board; or (b) the Close of Business on the tenth (10th) day (or a date determined by the Board before any person or group becomes an Acquiring Person) after a person or group consummates a tender or exchange offer (except if such person or group has become an Acquiring Person pursuant to an offer approved by the Board) which, if consummated, would result in that person or group becoming an Acquiring Person. The earlier of such dates, upon which the Rights become exercisable, is referred to as the “Distribution Record Date”.
+
+A Person shall not be deemed to beneficially own any security if any agreement, arrangement or understanding pursuant to which such Person has the right to vote such security (1) arises solely from a revocable proxy or consent given to such Person in response to a public proxy or consent solicitation made pursuant to, and in accordance with, the applicable rules and regulations promulgated under the Exchange Act of 1934, as amended (the “Exchange Act”), including the disclosure requirements of Schedule 14A thereunder, and (2) is not also then reportable on Schedule 13D under the Exchange Act (or any comparable or successor report).
+
+Until the Distribution Record Date, the balances in the register maintained by the Depositary with respect to uncertificated ADSs or, in the case of certificated ADSs, the certificates evidencing those ADSs will also evidence the Rights, and any transfer of ADSs will also constitute a transfer of Rights. After the Distribution Record Date, the Rights will separate from the ADSs and be evidenced solely by entries in the register maintained by the Rights Agent, or, in the case of certificated Rights, by Right certificates. Any Rights held by an Acquiring Person or any Associate or Affiliate thereof are void and may not be exercised.
+
+Consequences of a Person or Group Becoming an Acquiring Person
+
+If a person or group becomes an Acquiring Person, then beginning on the Distribution Record Date, all holders of Rights except the Acquiring Person or any Associate or Affiliate thereof may, for a purchase price of $0.01 per one ADS, purchase one (1) ADS.
+
+If the Company is later acquired in a merger or similar transaction after the Distribution Record Date, each holder of a Right except the Acquiring Person or any Associate or Affiliate thereof may, for a purchase price of $0.01 per ADS, purchase, in lieu of ADSs representing Ordinary Shares, one (1) times the number of securities of the acquiring corporation, that each ADS holder of the Company is entitled to for each Ordinary Share.
+
+Scope of “Acquiring Person” Definition
+
+An “Acquiring Person” is any Person who or which, together with all Affiliates and Associates of such Person, shall be the Beneficial Owner of 9.99% or more of the Ordinary Shares of the Company then outstanding, but shall not include the Company, any Subsidiary of the Company, any shares issued and/or issuable pursuant to a Permitted Offer or under a benefit or share ownership plan of the Company or any Subsidiary of the Company, or any entity holding Ordinary Shares for or pursuant to the terms of any such plan. Notwithstanding the foregoing, no Person shall become an “Acquiring Person” as the sole result of an acquisition of Ordinary Shares by the Company which, by reducing the number of Ordinary Shares of the Company outstanding, increases the proportionate number of Ordinary Shares of the Company beneficially owned by such Person to 9.99% or more of the Ordinary Shares of the Company then outstanding; provided, however, that, if a Person shall become the Beneficial Owner of 9.99% or more of the Ordinary Shares of the Company then outstanding by reason of share purchases by the Company and shall, after such share purchases by the Company, become the Beneficial Owner of any additional Ordinary Shares of the Company, then such Person shall be deemed to be an Acquiring Person. Notwithstanding the foregoing, if the Board determines in good faith that a Person who would otherwise be an Acquiring Person has become such inadvertently, and such Person divests as promptly as practicable a sufficient number of Ordinary Shares, so that such Person would no longer be an Acquiring Person, as defined pursuant to the foregoing provisions of this paragraph, then such Person shall not be deemed to be an Acquiring Person for any purposes of the Rights Agreement. A “Permitted Offer” means an offer to purchase securities of the Company or a transfer of securities of the Company, that the Board has determined is both adequate and otherwise in the best interests of the Company.
+
+Redemption and Termination
+
+The Board may, at its option, at any time prior to such time that any Person becomes an Acquiring Person, for no consideration, redeem all but not less than all the then outstanding Rights (the effective date of redemption, the “Redemption Date”). The redemption of the Rights by the Board may be made effective at such time, on such basis and with such conditions as the Board, in its sole discretion, may establish. Immediately upon the effectiveness of the action of the Board ordering the redemption of the Rights, and without any further action and without any notice, the right to exercise the Rights will terminate and the Company may terminate the Rights Agreement.
+
+Exchange
+
+The Board may, at its option, at any time after any Person becomes an Acquiring Person, determine, and instruct the Rights Agent, to exchange all or part of the then outstanding and exercisable Rights (except for Rights that have become void) for ADSs at an exchange ratio of one (1) ADS per Right, appropriately adjusted to reflect any adjustment in the number of Rights (the “Exchange Ratio”). However, the Board will not be empowered to effect such exchange at any time after any Person (other than the Company, any Subsidiary of the Company, any employee benefit or stock ownership plan of the Company or any such Subsidiary, or any entity holding Ordinary Shares for or pursuant to the terms of any such plan), together with all Affiliates and Associates of such Person, becomes the Beneficial Owner of 50% or more of the Ordinary Shares then outstanding.
+
+Immediately upon the action of the Board ordering the foregoing exchange, the right to exercise the Rights that are to be exchanged will terminate and the only right thereafter of a holder of such Rights shall be to receive that number of ADSs equal to the number of such Rights held by such holder multiplied by the Exchange Ratio. In the event that there shall not be sufficient Ordinary Shares issued but not outstanding or authorized but unissued to permit any exchange of Rights, the Company will take all such action as may be necessary to authorize additional Ordinary Shares for issuance upon exchange of the Rights.
+
+Compliance with Law
+
+The Rights Agreement shall not be deemed as limiting the Board from taking any actions (or refraining from taking any actions), which the Board reasonably believes are required to adhere with applicable law, including without limitations, The Israeli Companies Law, and any applicable fiduciary duties.
+
+Anti-Dilution Provisions
+
+The Board may adjust the purchase price of the ADSs, the number of ADSs issuable and the number of outstanding Rights to prevent dilution that may occur from a share dividend, a share split, or a reclassification of the Ordinary Shares or ADSs. No adjustments to the exercise price of less than 1% will be made.
+
+Amendments
+
+The terms of the Rights Agreement may be amended by the Board without the consent of the holders of the Rights. After a person or group becomes an Acquiring Person, the Board may not amend the Rights Agreement in a way that adversely affects holders of the Rights.
+
+Expiration
+
+The Rights will expire on February 1, 2027 (the “Final Expiration Date”).
+
+Item 3.03Material Modification to Rights of Security Holders.
+
+See the description set out under “Item 1.01 - Entry into a Material Definitive Agreement,” which is incorporated by reference into this Item 3.03.
+
+Item 8.01Other Events.
+
+On February 2, 2026, the Company announced the adoption of the Rights Agreement, a copy of which is attached to this Current Report on Form 8-K as Exhibit 99.1 and is incorporated herein by reference.
+
+Item 9.01.Financial Statements and Exhibits.
+
+(d) Exhibits
+
+Exhibit No. Description 4.1 Rights Agreement, dated as of February 2, 2026, by and between Nano Dimension Ltd. and The Bank of New York Mellon, as rights agent (incorporated by reference to Exhibit 4.1 to the Registration Statement on Form 8-A filed by the Company with the Commission on February 3, 2026). 99.1 Press Release issued by Nano Dimension Ltd. on February 2, 2026. 104 Cover Page Interactive Data File (embedded within the Inline XBRL document).
+
+SIGNATURES
+
+Pursuant to the requirements of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned hereunto duly authorized.
+
+NANO DIMENSION LTD. Date: February 3, 2026 By: /s/ John Brenton John Brenton Chief Financial Officer
+
+ATTACHMENTS / EXHIBITS
+
+EXHIBIT 99.1
+
+XBRL TAXONOMY EXTENSION SCHEMA
+
+XBRL TAXONOMY EXTENSION DEFINITION LINKBASE
+
+XBRL TAXONOMY EXTENSION LABEL LINKBASE
+
+XBRL TAXONOMY EXTENSION PRESENTATION LINKBASE
+
+IDEA: R1.htm
+
+IDEA: FilingSummary.xml
+
+IDEA: MetaLinks.json",http://www.streetinsider.com/images/silogo-new.png,N,,2026-02-03 16:03:38.521459
 ID23,Instacart,2026-02-03 16:59:56+00:00,www.gurufocus.com,Instacart (CART) Faces Changes to Rewards Program in Seattle - GuruFocus,GuruFocus News,,,,,https://www.gurufocus.com/news/8578215/instacart-cart-faces-changes-to-rewards-program-in-seattle,"Key Takeaways: Instacart (CART, Financial) is set to modify its Cart Star rewards program in Seattle due to regulatory compliance issues.
 Maplebear Inc, operating as Instacart, is a leading player in the consumer cyclical sector, specifically in retail.
 Instacart (CART) recently announced a significant update affecting its Cart Star rewards program in Seattle.
@@ -462,6 +718,9 @@ Sector-specific risks include the inherent volatility of the consumer cyclical s
 
 Overall, while Instacart faces regulatory challenges in Seattle, its strong financial position and attractive valuation metrics make it a company worth monitoring for potential investment opportunities.",https://static.gurufocus.com/images/global_logo_twitter_card.png,N,,2026-02-03 13:03:18.771386
 ID30,Michelin,2026-02-03 16:59:10+00:00,www.michelin.com,"Michelin to acquire Flexitallic, accelerating growth in Polymer Composite Solutions",Not Available,,,,,https://www.michelin.com/en/publications/group/michelin-to-acquire-flexitallic-accelerating-growth-in-polymer-composite-solutions,"In line with its “Michelin in Motion 2030” strategy, the Group is leveraging its know-how and expertise to expand into new high value-added markets.",Not Available,https://agngnconpm.cloudimg.io/v7/https://dgaddcosprod.blob.core.windows.net/cxf-corporate/attachments/cltd85f2s1n4312d6e9bh3xjv-2021-028b-028-hd-cyruscornut.0.176.2000.1125.full.jpg,N,,2026-02-03 14:08:33.856494
+ID47,Walmart,2026-02-03 16:55:18+00:00,www.facebook.com,CNBC - Walmart has joined the trillion dollar club. The company crossed the $1 trillion ... - Facebook,Not Available,,,,,https://www.facebook.com/cnbc/photos/walmart-has-joined-the-trillion-dollar-clubthe-company-crossed-the-1-trillion-ma/1290951589572898/,"Walmart has joined the trillion dollar club.
+
+The company crossed the $1 trillion market cap threshold on Tuesday after a dizzying stock climb fueled by...",Not Available,https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/627972255_1290951592906231_6930865712854482270_n.jpg?stp=dst-jpg_p240x240_tt6&_nc_cat=108&ccb=1-7&_nc_sid=27488d&_nc_ohc=EwjU4vLOgcgQ7kNvwFLU4cu&_nc_oc=AdkLhIPw5RfBf1w-QiM0_qam_9hQ-EKfoWEA2Kk9tq9ndCdyA_rtgYXcGkJWO10AFjp16-FOy3KUgiaR6dSfxwWw&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=I09YlUV57E1iesgJxmy8gg&oh=00_AftY2MBSv63-eg-8waTKxxA1DRu1b3eYksEXFMXkOy8-kw&oe=69881E1C,N,,2026-02-03 16:04:15.502754
 ID30,Michelin,2026-02-03 16:52:27+00:00,Yahoo Finance,"Michelin to acquire Flexitallic, accelerating growth in Polymer Composite Solutions",Michelin,,,,,https://sg.finance.yahoo.com/news/michelin-acquire-flexitallic-accelerating-growth-164500246.html,"Clermont-Ferrand, February 3rd, 2026 COMPAGNIE GÉNÉRALE DES ÉTABLISSEMENTS MICHELIN Michelin to acquire Flexitallic, accelerating growth in Polymer Composite Solutions Michelin announces the acquisition of Flexitallic to develop its leadership in the Sealing segment.
 Polymer Composite Solutions accelerates growth, will soon become a specific reporting segment in Group’s financial communication.
 In line with its “Michelin in Motion 2030” strategy, the Group is leveraging its know-how and expertise to expand into new high value-added markets.
@@ -776,6 +1035,71 @@ This Pricing Supplement must be read in conjunction with the Offering Circular d
 
 Please do not hesitate to contact us for further information.",https://www.investegate.co.uk/assets/images/linkedin-investegate-logo.jpg,N,,2026-02-03 15:02:58.696826
 ID21,HP Inc,2026-02-03 16:45:26+00:00,www.youtube.com,PayPal Slumps; Palantir Gains After Robust Revenue Forecast; Teradyne Jumps on Strong Sales |...,,,,,,https://www.youtube.com/watch%3Fv%3Df_LKk_7bRWE,The firm also said Chief Executive Officer Alex Chriss will be replaced by HP Inc. CEO Enrique Lores. The weak results and outlook were worse than ...,Not Available,,Y,,2026-02-03 14:08:27.276552
+ID43,Thrivent ,2026-02-03 16:38:39+00:00,Defense World,AT&T Inc. $T Shares Acquired by Thrivent Financial for Lutherans - Defense World,Defense World Staff,,,,,https://www.defenseworld.net/2026/02/03/att-inc-t-shares-acquired-by-thrivent-financial-for-lutherans.html,"The firm owned 1,149,243 shares of the technology company’s stock after acquiring an additional 125,568 shares during the period.
+J. L. Bainbridge & Co. Inc. now owns 21,253 shares of the technology company’s stock valued at $615,000 after purchasing an additional 355 shares in the last quarter.
+Financial & Tax Architects LLC now owns 7,588 shares of the technology company’s stock valued at $220,000 after purchasing an additional 356 shares during the last quarter.
+Investment Partners LTD. now owns 10,464 shares of the technology company’s stock worth $303,000 after buying an additional 357 shares during the last quarter.
+Parcion Private Wealth LLC now owns 14,910 shares of the technology company’s stock worth $431,000 after buying an additional 364 shares during the last quarter.","Thrivent Financial for Lutherans increased its holdings in shares of AT&T Inc. (NYSE:T – Free Report) by 12.3% during the third quarter, according to its most recent disclosure with the Securities and Exchange Commission (SEC). The firm owned 1,149,243 shares of the technology company’s stock after acquiring an additional 125,568 shares during the period. Thrivent Financial for Lutherans’ holdings in AT&T were worth $32,455,000 as of its most recent SEC filing.
+
+Get AT&T alerts:
+
+Other large investors have also recently bought and sold shares of the company. J. L. Bainbridge & Co. Inc. increased its stake in AT&T by 1.7% in the 2nd quarter. J. L. Bainbridge & Co. Inc. now owns 21,253 shares of the technology company’s stock valued at $615,000 after purchasing an additional 355 shares in the last quarter. Financial & Tax Architects LLC grew its holdings in AT&T by 4.9% in the second quarter. Financial & Tax Architects LLC now owns 7,588 shares of the technology company’s stock valued at $220,000 after purchasing an additional 356 shares during the last quarter. Roberts Glore & Co. Inc. IL increased its position in shares of AT&T by 2.0% in the second quarter. Roberts Glore & Co. Inc. IL now owns 18,386 shares of the technology company’s stock valued at $532,000 after buying an additional 357 shares in the last quarter. Investment Partners LTD. raised its stake in shares of AT&T by 3.5% during the 2nd quarter. Investment Partners LTD. now owns 10,464 shares of the technology company’s stock worth $303,000 after buying an additional 357 shares during the last quarter. Finally, Parcion Private Wealth LLC raised its stake in shares of AT&T by 2.5% during the 2nd quarter. Parcion Private Wealth LLC now owns 14,910 shares of the technology company’s stock worth $431,000 after buying an additional 364 shares during the last quarter. Hedge funds and other institutional investors own 57.10% of the company’s stock.
+
+AT&T Trading Up 0.3%
+
+Shares of AT&T stock opened at $26.30 on Tuesday. AT&T Inc. has a fifty-two week low of $22.95 and a fifty-two week high of $29.79. The business’s fifty day moving average is $24.51 and its two-hundred day moving average is $26.32. The company has a quick ratio of 0.86, a current ratio of 0.91 and a debt-to-equity ratio of 1.00. The firm has a market cap of $186.42 billion, a PE ratio of 8.62, a P/E/G ratio of 0.97 and a beta of 0.39.
+
+AT&T (NYSE:T – Get Free Report) last released its earnings results on Wednesday, January 28th. The technology company reported $0.52 EPS for the quarter, beating the consensus estimate of $0.46 by $0.06. AT&T had a return on equity of 12.33% and a net margin of 17.47%.The firm had revenue of $33.47 billion during the quarter, compared to analyst estimates of $32.91 billion. During the same period in the prior year, the firm posted $0.43 earnings per share. The business’s quarterly revenue was up 3.6% compared to the same quarter last year. AT&T has set its FY 2026 guidance at 2.250-2.350 EPS. Analysts anticipate that AT&T Inc. will post 2.14 earnings per share for the current year.
+
+AT&T Dividend Announcement
+
+The business also recently disclosed a quarterly dividend, which was paid on Monday, February 2nd. Stockholders of record on Monday, January 12th were issued a dividend of $0.2775 per share. This represents a $1.11 annualized dividend and a dividend yield of 4.2%. The ex-dividend date was Monday, January 12th. AT&T’s dividend payout ratio is presently 36.39%.
+
+Trending Headlines about AT&T
+
+Here are the key news stories impacting AT&T this week:
+
+Positive Sentiment: AT&T completed its acquisition of Lumen’s Mass Markets fiber-to-the-home business (11 states), adding >1M customers and reaching ~4M fiber locations — a material network expansion that supports subscriber growth and long-term broadband revenue upside. America’s Best and Largest Network Just Got Larger: AT&T Completes Acquisition of Lumen’s Mass Markets Fiber Business
+
+Positive Sentiment: Market narrative around rising free cash flow, a ~4% dividend yield and a new $10B buyback program has lifted investor enthusiasm — these support share buybacks and dividend sustainability, making the stock more attractive to income and value investors. Why AT&T Stock Surged This Week
+
+Positive Sentiment: AT&T is rolling out targeted hires and product partnerships (hiring bilingual customer-service staff; collaboration on the Tango Belt senior-safety device) that support customer service and IoT/healthcare connectivity revenue streams. These are smaller but constructive operational moves. AT&T to hire 400+ bilingual employees, with $1,500 sign-on bonus for hybrid work AT&T, ActiveProtective and JACS Collaborate to Enhance Senior Safety with New Tango Belt Connectivity Device
+
+Neutral Sentiment: Coverage pieces highlight AT&T as a momentum/value story (Zacks, Seeking Alpha), which can attract different investor types but are informational rather than immediate catalysts. AT&T (T) is a Top-Ranked Momentum Stock: Should You Buy? Undercovered Dozen: POET Technologies, Pan American Silver, MercadoLibre, AT&T And More
+
+Neutral Sentiment: Lumen’s sale to AT&T generated $5.75B cash proceeds for Lumen (reports note ~$4.8B net proceeds), which is material for Lumen’s balance sheet but only indirectly relevant to AT&T beyond the asset transfer. Lumen Fiber Sale To AT&T Unlocks $4.8B Proceeds Lumen Completes Sale of Consumer Fiber-to-the-Home Business to AT&T
+
+Negative Sentiment: The multi-billion acquisition is large and will require capital deployment and integration; investors may worry about near-term cash usage, execution risk and incremental capital intensity for fiber rollouts. Local press framed the deal as a major, costly expansion. AT&T acquires Lumen’s fiber business in multi-billion dollar deal
+
+Analyst Upgrades and Downgrades
+
+Several research firms have weighed in on T. Barclays dropped their target price on shares of AT&T from $28.00 to $26.00 and set an “equal weight” rating for the company in a report on Tuesday, January 13th. Wolfe Research cut shares of AT&T from an “outperform” rating to a “peer perform” rating in a research note on Monday, December 15th. Loop Capital set a $29.00 target price on AT&T in a research note on Friday, December 19th. Deutsche Bank Aktiengesellschaft reissued a “buy” rating and set a $33.00 price target on shares of AT&T in a research report on Thursday. Finally, Morgan Stanley reduced their price objective on AT&T from $32.00 to $30.00 and set an “overweight” rating on the stock in a research report on Wednesday, December 10th. One equities research analyst has rated the stock with a Strong Buy rating, fifteen have assigned a Buy rating, eight have assigned a Hold rating and one has issued a Sell rating to the stock. Based on data from MarketBeat, AT&T has an average rating of “Moderate Buy” and a consensus price target of $29.83.
+
+Get Our Latest Analysis on T
+
+AT&T Profile
+
+(Free Report)
+
+AT&T Inc is a global telecommunications company that provides a broad range of communications and digital entertainment services. Its core activities include consumer and business wireless services, broadband and fiber internet, and network infrastructure. The company operates branded wireless services through AT&T Mobility and deploys fixed-line and fiber networks to deliver high-speed internet and related home services.
+
+AT&T’s product and service portfolio spans mobile voice and data plans, smartphones and device sales, home internet (including fiber-to-the-home where available), and managed connectivity solutions for enterprise customers.
+
+Featured Articles
+
+Five stocks we like better than AT&T
+
+The day the gold market broke
+
+Forget AI, This Will Be the Next Big Tech Breakthrough
+
+~$1.5T SpaceX IPO: Pre-IPO Opportunity
+
+Gold’s getting scarce.
+
+End of America Update
+
+Want to see what other hedge funds are holding T? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for AT&T Inc. (NYSE:T – Free Report).",https://www.americanbankingnews.com/wp-content/timthumb/timthumb.php?src=https://www.marketbeat.com/logos/139387-attlogo-1200x675.jpg&w=240&h=240&zc=2,N,,2026-02-03 16:03:58.056981
 ID7,Barclays,2026-02-03 16:09:32+00:00,WSL Football,How Andrée Jeglertz masterminded a Barclays WSL-winning performance from Manchester City,WSL Football,,,,,https://www.wslfootball.com/news/wsl/how-andree-jeglertz-masterminded-a-bwsl-winning-performance,Back to top,Back to top,https://images.wslfootball.com/image/private/t_ratio16_9-size50-f_webp-c_fill/prd/assets/brand/fallback-logo.png,N,,2026-02-03 12:05:21.117791
 ID19,Eli Lilly,2026-02-03 16:08:24+00:00,www.pharmacytimes.com,Round-Up: Every Most Favored Nation Agreement With the Trump Administration,"Luke Halpern, Associate Editor, Luke Halpern, Associate Editor",,,,,https://www.pharmacytimes.com/view/round-up-every-most-favored-nation-agreement-with-the-trump-administration,"Pfizer Representatives from Pfizer were the first to announce an agreement with the Trump Administration to lower their prices and adhere to MFN.
 Boehringer Ingelheim Boehringer Ingelheim provided little specifics in their announcement of their MFN agreement with the Trump Administration.
@@ -1178,6 +1502,51 @@ Write to Joe Stonor at josephmichael.stonor@wsj.com
 (END) Dow Jones Newswires
 
 02-03-26 0858ET",https://www.marketscreener.com/images/twitter_MS_fdnoir.png,N,,2026-02-03 11:06:50.403876
+ID43,Thrivent ,2026-02-03 14:18:53+00:00,Defense World,Thrivent Financial for Lutherans Reduces Position in Philip Morris International Inc. $PM,Defense World Staff,,,,,https://www.defenseworld.net/2026/02/03/thrivent-financial-for-lutherans-reduces-position-in-philip-morris-international-inc-pm.html,"Thrivent Financial for Lutherans’ holdings in Philip Morris International were worth $24,948,000 at the end of the most recent reporting period.
+Traub Capital Management LLC bought a new position in Philip Morris International in the second quarter valued at about $25,000.
+Marquette Asset Management LLC boosted its position in Philip Morris International by 1,677.8% in the third quarter.
+Philip Morris International Stock Performance PM stock opened at $179.91 on Tuesday.
+Philip Morris International Inc. has a one year low of $128.25 and a one year high of $186.69.","Thrivent Financial for Lutherans trimmed its holdings in Philip Morris International Inc. (NYSE:PM – Free Report) by 4.5% in the 3rd quarter, according to its most recent filing with the SEC. The institutional investor owned 153,808 shares of the company’s stock after selling 7,278 shares during the quarter. Thrivent Financial for Lutherans’ holdings in Philip Morris International were worth $24,948,000 at the end of the most recent reporting period.
+
+Get Philip Morris International alerts:
+
+Several other hedge funds and other institutional investors have also bought and sold shares of PM. Legacy Investment Solutions LLC bought a new position in shares of Philip Morris International during the 2nd quarter valued at $25,000. Traub Capital Management LLC bought a new position in Philip Morris International in the second quarter valued at about $25,000. Marquette Asset Management LLC boosted its position in Philip Morris International by 1,677.8% in the third quarter. Marquette Asset Management LLC now owns 160 shares of the company’s stock worth $26,000 after purchasing an additional 151 shares during the last quarter. Briaud Financial Planning Inc grew its stake in shares of Philip Morris International by 266.7% during the 2nd quarter. Briaud Financial Planning Inc now owns 165 shares of the company’s stock valued at $30,000 after purchasing an additional 120 shares during the period. Finally, Estabrook Capital Management purchased a new stake in shares of Philip Morris International during the 2nd quarter valued at about $30,000. Institutional investors own 78.63% of the company’s stock.
+
+Philip Morris International Stock Performance
+
+PM stock opened at $179.91 on Tuesday. The company has a market capitalization of $280.05 billion, a PE ratio of 32.59, a price-to-earnings-growth ratio of 1.93 and a beta of 0.40. The company’s fifty day moving average price is $162.12 and its 200-day moving average price is $161.27. Philip Morris International Inc. has a one year low of $128.25 and a one year high of $186.69.
+
+Philip Morris International Dividend Announcement
+
+The company also recently declared a quarterly dividend, which was paid on Wednesday, January 14th. Shareholders of record on Friday, December 26th were issued a dividend of $1.47 per share. This represents a $5.88 annualized dividend and a yield of 3.3%. The ex-dividend date was Friday, December 26th. Philip Morris International’s dividend payout ratio (DPR) is currently 106.52%.
+
+Analysts Set New Price Targets
+
+PM has been the topic of a number of research reports. The Goldman Sachs Group reissued a “buy” rating on shares of Philip Morris International in a report on Wednesday, October 22nd. JPMorgan Chase & Co. reduced their price objective on Philip Morris International from $190.00 to $185.00 and set an “overweight” rating for the company in a research note on Wednesday, November 26th. Wall Street Zen downgraded Philip Morris International from a “buy” rating to a “hold” rating in a research report on Saturday, January 10th. Weiss Ratings reissued a “buy (b)” rating on shares of Philip Morris International in a report on Thursday, January 22nd. Finally, Barclays decreased their price objective on Philip Morris International from $220.00 to $180.00 and set an “overweight” rating on the stock in a research note on Monday, November 17th. Eleven investment analysts have rated the stock with a Buy rating and two have issued a Hold rating to the company. Based on data from MarketBeat.com, Philip Morris International has an average rating of “Moderate Buy” and a consensus price target of $184.56.
+
+Check Out Our Latest Stock Analysis on PM
+
+Philip Morris International Profile
+
+(Free Report)
+
+Philip Morris International Inc (NYSE: PM) is a global tobacco company that manufactures and sells cigarettes, other nicotine-containing products and a growing portfolio of smoke-free alternatives for adult smokers. The firm traces its corporate roots to the 19th century Philip Morris enterprise and was established as an independent, publicly traded company following a 2008 separation from what is now Altria. Since the spin-off, the company has focused on serving international markets outside the United States.
+
+PMI’s product mix includes traditional combustible cigarettes as well as smoke-free offerings such as heated tobacco systems and other reduced-risk products.
+
+Read More
+
+Five stocks we like better than Philip Morris International
+
+The day the gold market broke
+
+Forget AI, This Will Be the Next Big Tech Breakthrough
+
+~$1.5T SpaceX IPO: Pre-IPO Opportunity
+
+Gold’s getting scarce.
+
+End of America Update",https://www.americanbankingnews.com/wp-content/timthumb/timthumb.php?src=https://www.marketbeat.com/logos/philip-morris-international-inc-logo-1200x675.png?v=20221020155554&w=240&h=240&zc=2,N,,2026-02-03 16:04:01.722918
 ID6,AXA,2026-02-03 14:13:53+00:00,Defense World,Tractor Supply Company $TSCO Position Increased by Jones Financial Companies Lllp,Defense World Staff,,,,,https://www.defenseworld.net/2026/02/03/tractor-supply-company-tsco-position-increased-by-jones-financial-companies-lllp.html,"Jones Financial Companies Lllp owned approximately 0.11% of Tractor Supply worth $31,932,000 as of its most recent filing with the SEC.
 Mizuho Cuts Tractor Supply (NASDAQ:TSCO) Price Target to $58.00 Tractor Supply Trading Up 4.1% NASDAQ TSCO opened at $52.98 on Tuesday.
 Tractor Supply Company has a 1-year low of $46.85 and a 1-year high of $63.99.
@@ -1866,6 +2235,59 @@ Under the collaboration, the companies are co-developing an integrated approach 
 ""We are excited to announce this strategic partnership between Agilent and Virscidian, combining our strengths to deliver enhanced value and innovative solutions that directly benefit our customers,"" said John Beary, AVP Marketing, Productivity Solutions Division at Agilent.
 
 ""Scientists should be empowered with the flexibility to do their work efficiently and in a fully integrated way, especially in complex workflows like purification. By partnering with Agilent, we're simplifying data access and workflow automation so teams can move faster with confidence. The API integration directions are about reducing difficulties today and unlocking more dynamic workflows in the future. With this collaboration, customers will have unrestricted use of their acquired data with neither Virscidian nor Agilent placing limitations on where it can be copied, used, or processed,"" said Mark Bayliss, CTO at Virscidian.",https://www.marketscreener.com/images/twitter_MS_fdblanc.png,N,,2026-02-03 10:01:01.067224
+ID23,Instacart,2026-02-03 13:02:22+00:00,Stock Titan,Grocery Outlet Launches First-Ever Shoppable Livestream Series - Stock Titan,"Stock Titan Editorial Team, Stock Titan",,,,,https://www.stocktitan.net/news/GO/grocery-outlet-launches-first-ever-shoppable-livestream-g7vpzfo1cvuh.html,"Grocery Outlet Launches First-Ever Shoppable Livestream Series 02/03/2026 - 08:00 AM The Grocery Outlet Xtreme Value Stock Up Show to debut on Facebook and Instagram February 4 EMERYVILLE, Calif., Feb. 03, 2026 (GLOBE NEWSWIRE) -- Grocery Outlet Holding Corp. (NASDAQ: GO) (""Grocery Outlet"" or the ""Company""), one of America’s favorite, extreme value grocers today announced the launch of its first-ever shoppable livestream series: The Grocery Outlet Xtreme Value Stock Up Show designed to help shoppers get ready for the Big Game!
+Designed to bring the thrill of bargain hunting directly to shoppers’ screens, the new livestream series offers a fun, interactive Treasure Hunt experience for customers to shop Grocery Outlet’s latest deals in real time, offering a savings of 30% to 70% relative to conventional retailers.
+Shoppers can tune into the show at 12 p.m. PST/3 p.m. EST on February 4 through Instagram, Facebook, or the Grocery Outlet website: https://www.groceryoutlet.com/xvstockupshow.
+About Grocery Outlet Based in Emeryville, California, Grocery Outlet is a high-growth, extreme value retailer of quality, name-brand consumables and fresh products sold primarily through a network of independently operated stores.
+Grocery Outlet and its subsidiaries have more than 560 stores in California, Washington, Oregon, Pennsylvania, Tennessee, Idaho, Nevada, Maryland, New Jersey, Ohio, North Carolina, Georgia, Alabama, Delaware, Kentucky and Virginia.","Grocery Outlet Launches First-Ever Shoppable Livestream Series
+
+02/03/2026 - 08:00 AM
+
+The Grocery Outlet Xtreme Value Stock Up Show to debut on Facebook and Instagram February 4
+
+EMERYVILLE, Calif., Feb. 03, 2026 (GLOBE NEWSWIRE) -- Grocery Outlet Holding Corp. (NASDAQ: GO) (""Grocery Outlet"" or the ""Company""), one of America’s favorite, extreme value grocers today announced the launch of its first-ever shoppable livestream series: The Grocery Outlet Xtreme Value Stock Up Show designed to help shoppers get ready for the Big Game!
+
+Designed to bring the thrill of bargain hunting directly to shoppers’ screens, the new livestream series offers a fun, interactive Treasure Hunt experience for customers to shop Grocery Outlet’s latest deals in real time, offering a savings of 30% to 70% relative to conventional retailers.
+
+“We’re thrilled to introduce a new, dynamic way for customers to shop the extreme value prices that they count on from us,” said Kevin Miller, Interim Chief Marketing Officer. “The Grocery Outlet Xtreme Value Stock Up Show brings the fun, surprise, and unbelievable savings of our stores directly into the homes of our shoppers—starting with one of the biggest food occasions of the year.”
+
+The series kicks off with a special “Big Game Edition” livestream debuting on February 4, aligning with one of the biggest snacking and celebration moments of the year.
+
+A New, Interactive Way to Score Unbeatable Deals
+
+Viewers tuning into the Grocery Outlet Xtreme Value Stock Up Show will be able to browse and purchase featured products instantly through Instacart while watching, making it easier than ever to stock up on premium, name-brand groceries at exceptional prices.
+
+The livestream will spotlight everything customers need for the ultimate game time gathering, including:
+
+Big Game essentials
+
+Easy, elevated snacks
+
+Desserts and sweets
+
+Family-friendly beverages
+
+$50 Gift Card Giveaways
+
+Each item showcased on the livestream will be shoppable via the platform’s integrated “Shop” feature:
+
+On mobile: Tap the shopping bag icon near the chat
+
+On desktop: Browse the dedicated Shop section beside the video
+
+Products featured in the livestream, along with additional recipe ideas for the Big Game, will be available in the Shop section throughout the show.
+
+Shoppers can tune into the show at 12 p.m. PST/3 p.m. EST on February 4 through Instagram, Facebook, or the Grocery Outlet website: https://www.groceryoutlet.com/xvstockupshow.
+
+About Grocery Outlet
+
+Based in Emeryville, California, Grocery Outlet is a high-growth, extreme value retailer of quality, name-brand consumables and fresh products sold primarily through a network of independently operated stores. Grocery Outlet and its subsidiaries have more than 560 stores in California, Washington, Oregon, Pennsylvania, Tennessee, Idaho, Nevada, Maryland, New Jersey, Ohio, North Carolina, Georgia, Alabama, Delaware, Kentucky and Virginia.
+
+Media Contact:
+
+Kyle Noble, knoble@cfgo.com
+
+A photo accompanying this announcement is available at https://www.globenewswire.com/NewsRoom/AttachmentNg/87040ee2-6fae-4bac-846e-c5b7b2e87c35",https://static.stocktitan.net/company-logo/go-lg.png,N,,2026-02-03 16:03:46.113982
 ID38,Publicis Groupe,2026-02-03 12:47:02+00:00,"More About Advertising - The alternative voice of advertising, marketing and media",Publicis Groupe out-performs again with 5.9% quarterly growth - More About Advertising,Stephen Foster,,,,,https://www.moreaboutadvertising.com/2026/02/publicis-groupe-out-performs-again-with-5-9-quarterly-growth/,"Q4 organic growth was 5.9% leading to 5.6% across the whole of 2025 with all regions performing well including the crucial US at 5.2%.
 4 to +5% growth is forecast for 2026 but the market will be hoping for a little more than that.
 He says: “Thanks to our AI-powered growth model, we are entering our second century stronger than ever, with Q4 organic growth of +5.9%.
@@ -1942,6 +2364,59 @@ Before you consider Elevance Health, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Elevance Health wasn't on the list.
 
 While Elevance Health currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/elevance-health-inc-logo-1200x675.png?v=20221020160135,N,,2026-02-03 08:00:55.544426
+ID43,Thrivent ,2026-02-03 12:40:34+00:00,MarketBeat,Thrivent Financial for Lutherans Reduces Position in CECO Environmental Corp. $CECO,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-reduces-position-in-ceco-environmental-corp-ceco-2026-02-03/,"MIRAE ASSET GLOBAL ETFS HOLDINGS Ltd. grew its position in shares of CECO Environmental by 4.7% in the first quarter.
+CECO Environmental Stock Up 1.0% Shares of NASDAQ:CECO opened at $68.12 on Tuesday.
+CECO Environmental Corp. has a 12-month low of $17.57 and a 12-month high of $71.69.
+Check Out Our Latest Stock Analysis on CECO CECO Environmental Company Profile (Free Report) CECO Environmental Corp. NASDAQ: CECO is a global technology provider specializing in engineered solutions that help industrial and commercial customers manage air emissions, process fluids and optimize energy use.
+Visit HoldingsChannel.com to get the latest 13F filings and insider trades for CECO Environmental Corp. (NASDAQ:CECO - Free Report).","Thrivent Financial for Lutherans reduced its holdings in CECO Environmental Corp. (NASDAQ:CECO - Free Report) by 34.9% during the 3rd quarter, according to the company in its most recent Form 13F filing with the Securities and Exchange Commission. The institutional investor owned 493,255 shares of the company's stock after selling 264,178 shares during the period. Thrivent Financial for Lutherans owned approximately 1.38% of CECO Environmental worth $25,254,000 as of its most recent filing with the Securities and Exchange Commission.
+
+Ride the Rally: 3 Earnings Winners With More Upside Ahead
+
+A number of other institutional investors and hedge funds have also recently bought and sold shares of CECO. Royal Bank of Canada raised its holdings in CECO Environmental by 15.6% in the 1st quarter. Royal Bank of Canada now owns 14,661 shares of the company's stock valued at $335,000 after acquiring an additional 1,982 shares during the last quarter. MIRAE ASSET GLOBAL ETFS HOLDINGS Ltd. grew its position in shares of CECO Environmental by 4.7% in the first quarter. MIRAE ASSET GLOBAL ETFS HOLDINGS Ltd. now owns 17,442 shares of the company's stock valued at $398,000 after purchasing an additional 790 shares in the last quarter. UBS AM A Distinct Business Unit of UBS Asset Management Americas LLC increased its holdings in shares of CECO Environmental by 5.7% in the first quarter. UBS AM A Distinct Business Unit of UBS Asset Management Americas LLC now owns 93,137 shares of the company's stock valued at $2,124,000 after purchasing an additional 5,000 shares during the last quarter. Jane Street Group LLC acquired a new stake in shares of CECO Environmental in the first quarter valued at approximately $1,047,000. Finally, Farther Finance Advisors LLC lifted its position in CECO Environmental by 224.7% during the second quarter. Farther Finance Advisors LLC now owns 1,445 shares of the company's stock worth $41,000 after buying an additional 1,000 shares in the last quarter. 68.08% of the stock is currently owned by institutional investors and hedge funds.
+
+CECO Environmental Stock Up 1.0%
+
+Shares of NASDAQ:CECO opened at $68.12 on Tuesday. The company has a market capitalization of $2.43 billion, a price-to-earnings ratio of 48.31 and a beta of 1.38. CECO Environmental Corp. has a 12-month low of $17.57 and a 12-month high of $71.69. The business has a 50-day moving average price of $61.16 and a 200 day moving average price of $52.33. The company has a current ratio of 1.33, a quick ratio of 1.13 and a debt-to-equity ratio of 0.70.
+
+Wall Street Analyst Weigh In
+
+CECO has been the subject of several analyst reports. Weiss Ratings restated a ""buy (b-)"" rating on shares of CECO Environmental in a report on Wednesday, January 21st. Zacks Research raised shares of CECO Environmental from a ""strong sell"" rating to a ""hold"" rating in a report on Tuesday, November 11th. Northland Securities raised their price objective on shares of CECO Environmental from $60.00 to $73.00 and gave the stock an ""outperform"" rating in a research report on Wednesday, December 24th. Finally, Needham & Company LLC boosted their target price on shares of CECO Environmental from $70.00 to $75.00 and gave the company a ""buy"" rating in a report on Friday, January 16th. Six equities research analysts have rated the stock with a Buy rating and one has assigned a Hold rating to the company's stock. According to data from MarketBeat.com, CECO Environmental presently has a consensus rating of ""Moderate Buy"" and an average price target of $64.75.
+
+Check Out Our Latest Stock Analysis on CECO
+
+CECO Environmental Company Profile
+
+(Free Report)
+
+CECO Environmental Corp. NASDAQ: CECO is a global technology provider specializing in engineered solutions that help industrial and commercial customers manage air emissions, process fluids and optimize energy use. The company develops custom-engineered systems and modular packages designed to meet evolving environmental regulations and improve operational efficiency across diverse production processes.
+
+CECO's core offerings include air pollution control equipment—such as scrubbers, cyclones, fabric and cartridge filters—and industrial process filtration systems for applications ranging from particulate removal to oil-water separation.
+
+See Also
+
+Five stocks we like better than CECO Environmental
+
+The day the gold market broke
+
+Forget AI, This Will Be the Next Big Tech Breakthrough
+
+~$1.5T SpaceX IPO: Pre-IPO Opportunity
+
+Gold’s getting scarce.
+
+ALERT: Drop these 5 stocks before the market opens tomorrow!
+
+Want to see what other hedge funds are holding CECO? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for CECO Environmental Corp. (NASDAQ:CECO - Free Report).
+
+This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
+
+Should You Invest $1,000 in CECO Environmental Right Now?
+
+Before you consider CECO Environmental, you'll want to hear this.
+
+MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and CECO Environmental wasn't on the list.
+
+While CECO Environmental currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/ceco-environmental-corp-logo-1200x675.png?v=20240509152556,N,,2026-02-03 16:04:06.882799
 ID21,HP Inc,2026-02-03 12:28:02+00:00,www.barrons.com,PayPal Names HP Inc.'s Lores as CEO. The Stock Is Falling. - Barron's,,,,,,https://www.barrons.com/articles/paypal-earnings-stock-price-hp-ceo-lores-9044e3b0,"... HP Inc. HPQ. +0.26%. Chief Executive Enrique Lores. Lores, who has served as HP's CEO since 2019, will take the helm on March 1. He is currently the ...",Not Available,,Y,,2026-02-03 09:01:19.657492
 ID18,Elevance Health,2026-02-03 12:07:21+00:00,MarketScreener,"RBC Downgrades Elevance Health to Sector Perform From Outperform, Cuts Price Target to ...",MT Newswires,,,,,https://www.marketscreener.com/news/rbc-downgrades-elevance-health-to-sector-perform-from-outperform-cuts-price-target-to-358-from-39-ce7e5bd2d08ff022,"We recommend that you carefully review the associated descriptions.
 We recommend that you carefully review the associated descriptions.
@@ -2127,6 +2602,67 @@ The music critic Christopher Morley writes:
 ‘Richard built an impressive network of the finest artists, both national and international, whom he brought to perform in Warwick and Leamington (and if you were lucky enough to relax with him over a drink he could tell many, scurrilous, revealing stories about a few of them). His particular interest was Czech music, and he was generous in his invitations to performers and composers from that country to come to make music in Warwickshire.
 
 ‘Richard cultivated an initially prickly persona, not suffering fools gladly, but once you got to know him, as I was privileged to do, he was wonderful, humorous company, the gruff exterior concealing a heart of gold. He made an indelible mark on the Midlands musical scene for which every music-lover should be eternally grateful.’",https://slippedisc.com/wp-content/uploads/2026/02/richard-phillips.jpg,N,,2026-02-03 09:01:26.999897
+ID43,Thrivent ,2026-02-03 11:08:10+00:00,MarketBeat,"Thrivent Financial for Lutherans Sells 153,878 Shares of O'Reilly Automotive, Inc. $ORLY",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-sells-153878-shares-of-oreilly-automotive-inc-orly-2026-02-03/,"Geode Capital Management LLC raised its stake in shares of O'Reilly Automotive by 1,443.1% during the second quarter.
+Also, SVP Philip M. Hopper sold 3,500 shares of O'Reilly Automotive stock in a transaction on Wednesday, November 26th.
+O'Reilly Automotive Price Performance O’Reilly Automotive’s Stock Price Uptrend Will Continue in 2026 Shares of NASDAQ:ORLY opened at $98.01 on Tuesday.
+Get Our Latest Stock Analysis on O'Reilly Automotive O'Reilly Automotive Profile (Free Report) O'Reilly Automotive, Inc is a leading retailer and distributor in the automotive aftermarket, supplying parts, tools, supplies and accessories for both professional service providers and do‑it‑yourself (DIY) customers.
+Visit HoldingsChannel.com to get the latest 13F filings and insider trades for O'Reilly Automotive, Inc. (NASDAQ:ORLY - Free Report).","Thrivent Financial for Lutherans cut its stake in shares of O'Reilly Automotive, Inc. (NASDAQ:ORLY - Free Report) by 35.3% in the 3rd quarter, according to the company in its most recent disclosure with the Securities and Exchange Commission (SEC). The fund owned 282,058 shares of the specialty retailer's stock after selling 153,878 shares during the quarter. Thrivent Financial for Lutherans' holdings in O'Reilly Automotive were worth $30,455,000 as of its most recent filing with the Securities and Exchange Commission (SEC).
+
+From Rust to Riches: 2 Auto Parts Names Built for 2026
+
+A number of other institutional investors have also recently made changes to their positions in the stock. Vanguard Group Inc. raised its holdings in shares of O'Reilly Automotive by 1,404.9% during the 2nd quarter. Vanguard Group Inc. now owns 78,834,967 shares of the specialty retailer's stock valued at $7,105,396,000 after buying an additional 73,596,571 shares in the last quarter. State Street Corp grew its position in O'Reilly Automotive by 1,424.2% during the second quarter. State Street Corp now owns 37,179,783 shares of the specialty retailer's stock valued at $3,351,014,000 after acquiring an additional 34,740,553 shares during the last quarter. Geode Capital Management LLC raised its stake in shares of O'Reilly Automotive by 1,443.1% during the second quarter. Geode Capital Management LLC now owns 23,679,108 shares of the specialty retailer's stock worth $2,130,866,000 after acquiring an additional 22,144,563 shares in the last quarter. Bank of New York Mellon Corp lifted its holdings in shares of O'Reilly Automotive by 1,317.8% in the 2nd quarter. Bank of New York Mellon Corp now owns 17,651,104 shares of the specialty retailer's stock worth $1,590,894,000 after acquiring an additional 16,406,181 shares during the last quarter. Finally, Jennison Associates LLC lifted its holdings in shares of O'Reilly Automotive by 1,820.9% in the 2nd quarter. Jennison Associates LLC now owns 14,116,976 shares of the specialty retailer's stock worth $1,272,363,000 after acquiring an additional 13,382,074 shares during the last quarter. Institutional investors own 85.00% of the company's stock.
+
+Insider Buying and Selling
+
+In related news, SVP Christopher Andrew Mancini sold 2,355 shares of the company's stock in a transaction that occurred on Wednesday, November 26th. The stock was sold at an average price of $101.31, for a total transaction of $238,585.05. Following the completion of the transaction, the senior vice president owned 28 shares in the company, valued at $2,836.68. This represents a 98.83% decrease in their ownership of the stock. The sale was disclosed in a legal filing with the Securities & Exchange Commission, which is available through this hyperlink. Also, SVP Philip M. Hopper sold 3,500 shares of O'Reilly Automotive stock in a transaction on Wednesday, November 26th. The shares were sold at an average price of $101.25, for a total transaction of $354,375.00. Following the completion of the sale, the senior vice president owned 4,792 shares in the company, valued at approximately $485,190. This trade represents a 42.21% decrease in their position. The disclosure for this sale is available in the SEC filing. 1.01% of the stock is owned by corporate insiders.
+
+O'Reilly Automotive Price Performance
+
+O’Reilly Automotive’s Stock Price Uptrend Will Continue in 2026
+
+Shares of NASDAQ:ORLY opened at $98.01 on Tuesday. The stock's 50-day moving average is $95.47 and its 200 day moving average is $99.16. The company has a market cap of $82.73 billion, a PE ratio of 33.95, a P/E/G ratio of 2.09 and a beta of 0.62. O'Reilly Automotive, Inc. has a 1 year low of $85.55 and a 1 year high of $108.71.
+
+Analyst Ratings Changes
+
+Several research firms recently commented on ORLY. Wolfe Research raised shares of O'Reilly Automotive from a ""hold"" rating to a ""strong-buy"" rating in a report on Monday, December 22nd. Morgan Stanley set a $110.00 price objective on O'Reilly Automotive and gave the company an ""overweight"" rating in a research note on Thursday, January 15th. Royal Bank Of Canada reissued an ""outperform"" rating and issued a $111.00 target price (up previously from $110.00) on shares of O'Reilly Automotive in a research note on Friday. Wells Fargo & Company set a $115.00 price target on O'Reilly Automotive and gave the stock an ""overweight"" rating in a research report on Wednesday, October 15th. Finally, Truist Financial set a $109.00 price objective on O'Reilly Automotive in a research report on Friday, October 24th. Two research analysts have rated the stock with a Strong Buy rating, seventeen have assigned a Buy rating and two have assigned a Hold rating to the company. According to data from MarketBeat, the stock currently has a consensus rating of ""Buy"" and an average price target of $111.85.
+
+3 Notable Stocks Just Split: Which One Could Be the Big Winner?
+
+Get Our Latest Stock Analysis on O'Reilly Automotive
+
+O'Reilly Automotive Profile
+
+(Free Report)
+
+O'Reilly Automotive, Inc is a leading retailer and distributor in the automotive aftermarket, supplying parts, tools, supplies and accessories for both professional service providers and do‑it‑yourself (DIY) customers. The company's product assortment covers replacement parts, maintenance items, performance parts, collision components and shop equipment, complemented by diagnostic tools, batteries, chemicals and consumables. O'Reilly serves customers through company-operated retail stores, commercial sales programs for repair shops and maintenance fleets, and digital channels that support parts lookup, ordering and fulfillment.
+
+The company operates a broad supply chain that includes regional distribution centers to support rapid replenishment of store inventory and commercial deliveries.
+
+Featured Stories
+
+Five stocks we like better than O'Reilly Automotive
+
+The day the gold market broke
+
+Forget AI, This Will Be the Next Big Tech Breakthrough
+
+~$1.5T SpaceX IPO: Pre-IPO Opportunity
+
+Gold’s getting scarce.
+
+End of America Update
+
+Want to see what other hedge funds are holding ORLY? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for O'Reilly Automotive, Inc. (NASDAQ:ORLY - Free Report).
+
+This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
+
+Should You Invest $1,000 in O'Reilly Automotive Right Now?
+
+Before you consider O'Reilly Automotive, you'll want to hear this.
+
+MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and O'Reilly Automotive wasn't on the list.
+
+While O'Reilly Automotive currently has a Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/oreilly-automotive-inc-logo-1200x675.png?v=20221021151440,N,,2026-02-03 16:04:11.674867
 ID38,Publicis Groupe,2026-02-03 10:59:50+00:00,www.adnews.com.au,Publicis says it will outperform the industry again in 2026 - AdNews,Not Available,,,,,https://www.adnews.com.au/news/publicis-says-it-will-outperform-the-industry-again-in-2026,"Publicis Groupe posted “very strong” organic growth of 5.9% in the December quarter, continuing the France-based advertising agency's run of ...",Not Available,,N,,2026-02-03 10:01:53.813316
 ID31,Microsoft,2026-02-03 10:59:00+00:00,aflcio.org,Service & Solidarity Spotlight: Blizzard Quality Assurance Workers Ratify Video Game Union ...,Kenneth Quinnell,,,,,https://aflcio.org/2026/2/2/service-solidarity-spotlight-blizzard-quality-assurance-workers-ratify-video-game-union,"A strong majority of quality assurance workers at Blizzard Entertainment’s Albany, New York, and Austin, Texas, locations overwhelmingly voted to ratify a union contract at Microsoft.
 The workers are represented by Communications Workers of America (CWA) locals 1118 and 6215, respectively.
@@ -12602,8 +13138,8 @@ From here, it is worth watching how quickly Perplexity’s actual Azure consumpt
 This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.",https://images.simplywall.st/asset/company-cover/21835-main-header/1756191612247,N,,2026-01-31 10:00:10.884424
 ID31,Microsoft,2026-01-31 13:45:00+00:00,www.barrons.com,Microsoft Copilot Is AI's Greatest Test Case. It May Not Be Working. - Barron's,,,,,,https://www.barrons.com/articles/microsoft-copilot-meta-alphabet-ai-earnings-2e220f19,Microsoft Chief Financial Officer Amy Hood said this past week that Microsoft now has 15 million users paying for the company's Copilot AI assistant.,Not Available,,Y,,2026-01-31 11:02:21.860343
 ID5,Albertsons,2026-01-31 13:29:05+00:00,www.pressreader.com,DOYLE LEE SAUSSER - PressReader,Not Available,,,,,https://www.pressreader.com/usa/lodi-news-sentinel/20260131/281586657023351,Digital newsstand featuring 7000+ of the world’s most popular newspapers & magazines. Enjoy unlimited reading on up to 5 devices with 7-day free trial.,Not Available,,N,,2026-02-01 05:58:33.735893
-ID35,Parker-Hannifin,2026-01-31 13:27:09+00:00,The Globe and Mail,Analysts Offer Insights on Industrial Goods Companies: Parker Hannifin (PH) and A. O. ...,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/AOS-N/pressreleases/37338331/analysts-offer-insights-on-industrial-goods-companies-parker-hannifin-ph-and-a-o-smith-corporation-aos/,Detailed price information for Smith A.O. Corp (AOS-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=835,N,,2026-01-31 12:01:32.882494
 ID35,Parker-Hannifin,2026-01-31 13:27:09+00:00,The Globe and Mail,Analysts Offer Insights on Industrial Goods Companies: Parker Hannifin (PH) and A. O. ...,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/AOS/pressreleases/37338331/analysts-offer-insights-on-industrial-goods-companies-parker-hannifin-ph-and-a-o-smith-corporation-aos/,Detailed price information for Smith A.O. Corp (AOS-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=835,N,,2026-01-31 13:04:10.547263
+ID35,Parker-Hannifin,2026-01-31 13:27:09+00:00,The Globe and Mail,Analysts Offer Insights on Industrial Goods Companies: Parker Hannifin (PH) and A. O. ...,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/AOS-N/pressreleases/37338331/analysts-offer-insights-on-industrial-goods-companies-parker-hannifin-ph-and-a-o-smith-corporation-aos/,Detailed price information for Smith A.O. Corp (AOS-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=835,N,,2026-01-31 12:01:32.882494
 ID26,J&J,2026-01-31 13:25:21+00:00,simplywall.st,Johnson & Johnson Weighs Oncology Progress Against Easing Talc Legal Risks,Simply Wall St,,,,,https://simplywall.st/stocks/us/pharmaceuticals-biotech/nyse-jnj/johnson-johnson/news/johnson-johnson-weighs-oncology-progress-against-easing-talc,"FDA approved expanded use of DARZALEX FASPRO combination therapy for newly diagnosed multiple myeloma patients ineligible for stem cell transplant.
 A long running fraud lawsuit linked to Johnson & Johnson's talc litigation was dismissed, reducing a high profile legal overhang.
 For you as an investor, these twin updates give a clearer picture of where Johnson & Johnson stands today.
@@ -39101,240 +39637,3 @@ Source: GO-AI-ne1
 For any suggestion and feedback, please contact us.
 
 Date: January 27, 2026",https://www.geneonline.com/wp-content/uploads/EN_NEWSFLASH_5-1.png,N,,2026-01-27 17:01:54.841037
-ID9,BNY Mellon,2026-01-27 20:44:53+00:00,www.londonstockexchange.com,Corrected: Notice Received: Mat.Prejudice & Accel. - London Stock Exchange,Not Available,,,,,https://www.londonstockexchange.com/news-article/15UB/corrected-notice-received-mat-prejudice-accel/17433360,,Not Available,https://www.londonstockexchange.com/favicon.ico,N,,2026-01-27 19:02:43.392167
-ID44,Uber,2026-01-27 20:42:55+00:00,KMPH,Uber-backed ballot measure is back attempting to cap legal fees and payouts - KMPH,Christina Rodriguez,,,,,https://kmph.com/news/local/uber-backed-ballot-is-back-attempting-to-cap-legal-fees-and-payouts,"The measure, titled the Protecting Automobile Accident Victims From Attorney Self-Dealing Act of 2026, would cap attorney fees at 25% and limit the amount medical providers can recover for treating patients after a car accident.
-Supporters say the measure would protect consumers, crack down on fraud, and help lower insurance costs.
-Personal injury attorneys have also voiced opposition, arguing the measure would limit what accident victims can recover — even when they are not at fault.
-According to the campaign, those practices increase insurance premiums, raise health care costs, and contribute to higher taxes statewide.
-Both supporters and opponents are preparing for a lengthy and expensive campaign, saying the outcome could have wide-ranging impacts on accident victims, medical providers, and insurance costs across California.","A proposed statewide ballot measure backed by Uber is drawing sharp criticism from medical providers and personal injury attorneys, who warn it could limit access to care for accident victims — especially those who are uninsured or underinsured.
-
-The measure, titled the Protecting Automobile Accident Victims From Attorney Self-Dealing Act of 2026, would cap attorney fees at 25% and limit the amount medical providers can recover for treating patients after a car accident.
-
-The Uber-backed proposal was first introduced in 2025 with an initial campaign investment of roughly $12 million.
-
-Supporters say the measure would protect consumers, crack down on fraud, and help lower insurance costs. Opponents argue it would shift the financial burden of accidents from corporations and insurers onto injured patients.
-
-The Providers for Patient Care Political Action Committee, or PPC PAC — a coalition of doctors, patients, and advocates opposing the measure — says the proposal would significantly limit compensation for medical expenses and make it harder for injured people to receive timely treatment after crashes.
-
-Pamela Lopez, lead political consultant for PPC PAC, said the proposal would impose severe limits on medical payments, making it difficult for providers to offer care.
-
-“These limits are so severe that in all likelihood, medical providers will not be able to care for patients after they’re injured in an automobile accident,” Lopez said.
-
-Lopez pointed to a real-case example involving a young mother hit by a drunk driver who needed a cervical MRI costing about $2,300. Under the proposed measure, she said, that same procedure would be reimbursed at about $350, a fraction of the cost.
-
-“Realistically, if you’re telling providers they can only be paid about 10% of the cost, they’re not going to be able to provide care,” Lopez said.
-
-PPC PAC describes the ballot measure as a broader effort by corporate interests to cap medical recovery and weaken existing protections for accident victims, arguing that injured Californians could lose access to the doctors and care they rely on during recovery if the initiative passes.
-
-Personal injury attorneys have also voiced opposition, arguing the measure would limit what accident victims can recover — even when they are not at fault.
-
-Benjamin Drake, owner of the Drake Law Firm with offices in Fresno and Los Angeles, said medical bills can quickly add up after a crash, with emergency room visits often exceeding $20,000.
-
-“You get a $20,000 hospital bill, and the insurance company pays a few hundred dollars based on Medicare rates,” Drake said. “Who pays the rest? Uber wants the patient to pay.”
-
-Drake also pushed back against claims that attorneys drive up medical costs, saying lawyers often help victims receive immediate care without waiting weeks for insurance approvals.
-
-If approved by voters, the measure would apply broadly to all insurers — not just Uber-related cases.
-
-“They're realizing they're paying so much in Premium... insurance companies. They're paying so much for their driver's negligence. They can't limit the law to only apply to themselves because it would be self-dealing. It would be on the face of it. It would look like, hey, I mean I'm protecting just the multi-billion dollar company.”
-
-Supporters of the measure say it would also ban financial relationships between medical providers and legal firms. They argue the initiative targets abusive practices within the legal system while protecting victims from excessive fees and inflated medical bills.
-
-In a statement, campaign spokesman Nathan Click said the proposal would put consumers first.
-
-“Californians deserve a system that prioritizes victims over ambulance lawyers, and that’s exactly what this measure does. Capping attorney fees, banning kickbacks, ending inflated medical billing, and putting in place whistleblower protections will protect auto-accident victims, and in addition to reducing costs for consumers,” Click said.
-
-The campaign argues that “billboard lawyers” and other personal injury attorneys target auto accident victims with heavy advertising, then take a substantial share of settlements while steering clients to medical providers who inflate bills in exchange for kickbacks. Supporters say those practices harm victims and drive up costs across the system.
-
-According to the campaign, those practices increase insurance premiums, raise health care costs, and contribute to higher taxes statewide.
-
-The Protect California Consumers campaign says the initiative would ensure accident victims keep at least 75% of their award, ban kickbacks and hidden fee arrangements, protect whistleblowers who expose fraud, and limit recoveries to the amounts actually paid rather than inflated billed amounts.
-
-The measure is expected to appear on the November 2026 ballot. Both supporters and opponents are preparing for a lengthy and expensive campaign, saying the outcome could have wide-ranging impacts on accident victims, medical providers, and insurance costs across California.
-
-State analysts say the proposal could save California’s trial courts millions to tens of millions of dollars each year by reducing the number of car accident cases filed. However, those savings could be offset by higher Medi-Cal costs, as some crash victims may receive less compensation and rely more heavily on state-funded medical coverage.",https://kmph.com/resources/media2/16x9/3111/1320/0x163/90/152f6c2b-c7f2-4cb2-b622-f57d2e23fc99-AdobeStock_288083995_Editorial_Use_Only.jpeg,N,,2026-01-27 17:02:11.243597
-ID11,Capgemini,2026-01-27 20:25:09+00:00,Axios,"Zero Hash seeks $1.5b valuation, Vention's $110m, and Bain Capital takes flight - Axios",Lucinda Shen,,,,,https://amp.axios.com/pro-rata-premium-first-look-jan272026-9c8426b9-bbc4-4f98-b9b8-4b963fc93a41.html,"Dragonfly Capital led, joined by Paradigm, Moderne Ventures, Coinbase Ventures, SBI Investment and Liberty City Ventures.
-Notable Capital led, joined by Khosla Ventures and insider Kleiner Perkins.
-RPS Ventures led, joined by Lightspeed Venture Partners, Lux Capital, Insight Partners, Capgemini Ventures, Dallas VC, Dentsu Ventures, Mozilla Ventures, LG Technology Ventures, Benhamou Global Ventures, and LDV Partners.
-Bonfire Ventures led, joined by YC, 645 Ventures, Ritual Capital, and Surgepoint Capital.
-Bessemer Venture Partners and DN Capital led, joined by Born Capital and The Nordic Web Ventures.","Venture Capital
-
-• Zero Hash, a crypto and stablecoin infrastructure firm, is in talks to raise $250m at a $1.5b valuation after walking away from a potential acquisition by Mastercard, per CoinDesk. Go deeper
-
-• Vention, a Canadian software and hardware platform for automation and robotics, raised US$110m from investors including Investissement Québec, Desjardins Capital, Fidelity Investments Canada, and NVentures. Go deeper
-
-• Mesh, a crypto payments network, raised $75m in Series C funding at a $1b valuation. Dragonfly Capital led, joined by Paradigm, Moderne Ventures, Coinbase Ventures, SBI Investment and Liberty City Ventures. Go deeper
-
-• Lunar, a Nordic challenger bank, raised €46m from Heartland, Orbit Alliance and 100A. Go deeper
-
-• Phia, a shopping app, raised $35m. Notable Capital led, joined by Khosla Ventures and insider Kleiner Perkins. Go deeper
-
-• Fiddler AI, a Palo Alto, California-based observability and security platform, raised $30m in Series C funding. RPS Ventures led, joined by Lightspeed Venture Partners, Lux Capital, Insight Partners, Capgemini Ventures, Dallas VC, Dentsu Ventures, Mozilla Ventures, LG Technology Ventures, Benhamou Global Ventures, and LDV Partners. Go deeper
-
-💊 Antheia, a Menlo Park, Calif.-based biosynthesis company, raised $24m in Series C extension funding led by Athos KG and America's Frontier Fund. Axios flashback
-
-• Gridline, an Atlanta-based alts management platform for financial advisors, raised $18.5m in Series A funding led by FINTOP. Go deeper
-
-• Risotto, a Berkeley, Calif.-based helpdesk automation startup, raised $10m in seed funding. Bonfire Ventures led, joined by YC, 645 Ventures, Ritual Capital, and Surgepoint Capital. Go deeper
-
-• Chamelio, an NYC-based in-house legal intelligence platform, raised $10m in seed funding led by Work-Bench and Emerge. Go deeper
-
-• Paraglide, an agentic AI startup focused on accounts receivable, raised $5m in seed funding. Bessemer Venture Partners and DN Capital led, joined by Born Capital and The Nordic Web Ventures. Go deeper
-
-• CVector, an NYC-based industrial AI startup, raised $5m in seed funding. Powerhouse Ventures led, joined by Fusion Fund, Myriad Venture Partners, and Hitachi. Go deeper
-
-Private Equity
-
-• Bain Capital acquired APP Jet Center, a provider of aviation services at supply-constrained U.S. airports, from Ridgewood Infrastructure. Go deeper
-
-🚑 JPMorgan Life Sciences Private Capital recapitalized Turbett Surgical, a Henrietta, N.Y.-based medical device company. Go deeper
-
-• LaunchPad Home Group, backed by RFE Investment Partners, acquired RJ Home Inspections and Sherwood Inspection Services, two inspection companies serving New England. Go deeper
-
-• LevelBlue, a Dallas-based portfolio company of WillJam Ventures, acquired Eden Prairie, Minn.-based cybersecurity company Fortra. Go deeper
-
-• PaperTech, a May River Capital portfolio company, acquired Bake-Best Trays, a Redmond, Ore.-based maker of pressed paperboard trays. Go deeper
-
-🚑 Resonetics, backed by Carlyle and GTCR, acquired Resolution Medical, a Fridley, Minn.-based medical manufacturing company, from Arcline Investment Management. Go deeper
-
-M&A
-
-• Odeko acquired District Distribution, a Washington, D.C.-based specialty food & beverage distributor. Odeko has raised more than $280m from investors like B Capital, Balius Partners, Era Funds, FJ Labs, KSV, Tiger Global Management, Two Sigma Ventures, and Primary Ventures. Go deeper
-
-• Odgers acquired Ridgeway Partners, U.S.-based executive search firm focused on financial services and board advisory. Go deeper
-
-Going Public
-
-• ClearThink 1 Acquisition, a financial services-focused SPAC, filed for a $150m IPO. Go deeper
-
-Liquidity
-
-💊 SK Capital Partners agreed to sell the controlled drug substance businesses Noramco to CDMO Siegfried Holding (Swiss: SFZN). Go deeper
-
-It's Personnel
-
-• Taylor Cavanah, former PetDesk CEO, joined Blueprint Equity as the firm's first operating partner. Go deeper
-
-⚡ Lisa Drake has been promoted to president of Ford Energy. She previously was vice president of Ford's tech platform programs and EV systems. Go deeper
-
-• Levine Leichtman Capital Partners promoted Andrew Alexander and Greg Flaster to senior managing directors; Brian Klaban and Luc Sandmann to managing directors; and Kelsey Gordon, John King and Kelly Leong to director. Go deeper
-
-Debt
-
-• Float Financial, a Canadian business finance platform, secured nearly C$100m in debt facilities from Silicon Valley Bank and an unnamed Canadian bank. Go deeper
-
-Colin Campbell, Katherine Davis, Katie Fehrenbacher, Ryan Lawler, Alan Neuhauser, Chris Metinko, Dan Primack, Erin Brodwin, Natalie Breymeyer and Brock E.W. Turner contributed to this report.",https://images.axios.com/9R-tD4QPCVQQ8sz_KPVXgwNhoOg=/0x0:1920x1080/1366x768/2018/09/25/1537909239595.jpg,N,,2026-01-27 17:01:48.642642
-ID5,Albertsons,2026-01-27 20:23:11+00:00,TradingView,Key facts: Albertsons stock drops 3.2% amid grocery competition; Pinkham named HR Chief,Not Available,,,,,https://www.tradingview.com/news/tradingview:ed26ac403ca25:0-key-facts-albertsons-stock-drops-3-2-amid-grocery-competition-pinkham-named-hr-chief/,"Less than 1 min read Albertsons Companies' stock has declined by 3.2%, reflecting a broader trend impacting grocery retailers, attributed to heightened competition from Amazon's expansion of its Whole Foods Market brand.1 Albertsons Companies has appointed Allison Pinkham as the Executive Vice President and Chief Human Resources Officer, a key leadership position within the organization.2","Less than 1 min read
-
-Albertsons Companies' stock has declined by 3.2%, reflecting a broader trend impacting grocery retailers, attributed to heightened competition from Amazon's expansion of its Whole Foods Market brand.1
-
-Albertsons Companies has appointed Allison Pinkham as the Executive Vice President and Chief Human Resources Officer, a key leadership position within the organization.2",https://s.tradingview.com/static/images/illustrations/news-story.jpg,N,,2026-01-27 17:01:44.154602
-ID28,Levi Strauss,2026-01-27 20:15:54+00:00,www.microsoft.com,"If no one's complaining about AI, you're doing it wrong - Microsoft",Not Available,,,,,https://www.microsoft.com/en-us/worklab/if-no-one-is-complaining-about-ai-you-are-doing-it-wrong,"If no one’s pushing back on your AI strategy, that may be a sign you’re not going far enough.
-AI reskilling isn’t a skills problem—it’s an identity shock.
-Using AI isn’t the point.
-Dan Diasio, the global consulting AI leader for EY, believes that for companies to successfully transform with AI, they need three things: mindset, skill set, and tool set.
-Right now, most businesses are hyper focused on the AI tool set, but haven’t contemplated why the tool set is necessary.","A good metric for measuring the success of your AI rollout is how much people gripe about it. If no one’s pushing back on your AI strategy, that may be a sign you’re not going far enough. So says George Mason University economics professor Tyler Cowen in season nine of the WorkLab podcast, where we explore what it really takes to become a Frontier Firm: a human-led, agent-operated organization that buys intelligence like it’s electricity, puts it to work like an employee, and compounds it like interest. There’s no cheat code to getting there, but these insights, from Harvard Business School professors and consultants and public intellectuals, will jump-start the process.
-
-1. AI reskilling isn’t a skills problem—it’s an identity shock.
-
-Instructing your employees to remake their professions around AI is also a way of telling them to fundamentally change who they are. That’s why an online course or a PowerPoint playbook won’t sufficiently reskill your workforce. Harvard Business School’s Raffaella Sadun says an overhaul of your workflows starts with articulating the purpose and goals of AI adoption: “Start by specifying why is it that you want your people to be reskilled, what’s the business rationale,” she says. “Create some certainty for the organization that [let’s them think], ‘Okay, this is why we’re doing it. There might be a future for me because the organization is going in that direction.’”
-
-2. Using AI isn’t the point.
-
-Dan Diasio, the global consulting AI leader for EY, believes that for companies to successfully transform with AI, they need three things: mindset, skill set, and tool set. Right now, most businesses are hyper focused on the AI tool set, but haven’t contemplated why the tool set is necessary. “It’s kind of like going to the gym if you’re trying to run the New York Marathon,” Diasio says. Running on the treadmill is how you train, but it’s not the point. “Instead, start to think about what the main objective is and where value is going to be created.”
-
-3. Your relationships are your greatest assets.
-
-Judgment and persuasion will matter more than ever, says Cowen, the economist. AI can supplement or improve on what humans do, but it can’t replicate them outright. “You’ll need to build out your personal network much more. Who can actually vouch for you, recommend you, speak to what you’ve done with them or for them?” As author and AI expert Pascal Bornet points out, genuine creativity, critical thinking, and trust-built relationships are uniquely human characteristics. Ironically, strength in those areas is what makes someone best suited to working with agents: They’re the skills that determine how effectively you can design agents and write prompts.
-
-4. If people complain, that’s good.
-
-“This may sound counterintuitive,” Cowen says, “but the more unhappy people are, the better we’re doing.” Progress is inherently disruptive—it means less predictability, which makes people uncomfortable. The question for leaders isn’t how to eliminate confusion or disorientation. It’s how to recognize when it signals real progress.
-
-Photo credits (clockwise from top left): Tyler Cowen, Pascal Bornet, Dan Diasio, Raffaella Sadun",https://assets-c4akfrf5b4d3f4b7.z01.azurefd.net/assets/2026/01/WorkLab_S9PodcastRecap_home_1080x720_697801eb5e88f.jpg,N,,2026-01-27 18:03:52.150027
-ID42,Stolt Nielsen,2026-01-27 20:07:26+00:00,Splash247,Stolt-Nielsen weighs sale of up to 50% of Avenir LNG - Splash247,Adis Ajdin,,,,,https://splash247.com/stolt-nielsen-weighs-sale-of-up-to-50-of-avenir-lng/,"Oslo-listed shipping and logistics group Stolt-Nielsen is weighing a partial sell-down of its small-scale LNG business Avenir LNG, just months after taking full control of the company.
-In a stock exchange filing, Stolt-Nielsen said its subsidiary Stolt-Nielsen Gas is in discussions with a strategic buyer over the potential sale of up to 50% of its interest in the London-based LNG bunkering player.
-Avenir LNG operates five small-scale LNG bunker vessels currently in service, with two more under construction.
-If a deal is agreed, the group plans to jointly own and operate Avenir LNG as a joint venture with the incoming partner.
-Beyond LNG, Stolt-Nielsen operates across bulk liquid and chemical logistics through its Stolt Tankers, Stolthaven Terminals and Stolt Tank Containers divisions, alongside its aquaculture business, Stolt Sea Farm.","Oslo-listed shipping and logistics group Stolt-Nielsen is weighing a partial sell-down of its small-scale LNG business Avenir LNG, just months after taking full control of the company.
-
-In a stock exchange filing, Stolt-Nielsen said its subsidiary Stolt-Nielsen Gas is in discussions with a strategic buyer over the potential sale of up to 50% of its interest in the London-based LNG bunkering player.
-
-Avenir LNG operates five small-scale LNG bunker vessels currently in service, with two more under construction.
-
-Any transaction would leave Stolt-Nielsen with a significant holding. If a deal is agreed, the group plans to jointly own and operate Avenir LNG as a joint venture with the incoming partner.
-
-The potential sale remains subject to final documentation and customary regulatory approvals, which are expected to be completed in the first quarter of 2026.
-
-The move comes less than a year after Stolt-Nielsen Gas completed the compulsory acquisition of the remaining shares in Avenir LNG in April 2025, making it a wholly owned subsidiary. The latest talks suggest the group is now looking to bring in a partner to help fund growth and underline the value of the LNG segment.
-
-Shipping analysts at Swedish investment bank SEB estimate Avenir LNG’s enterprise value at around $210m, based on a 9.0x EV/EBITDA multiple on 2026 forecasts. SEB said a deal at or above that level would help crystallise the unit’s value and could act as a positive catalyst for Stolt-Nielsen’s shares.
-
-Beyond LNG, Stolt-Nielsen operates across bulk liquid and chemical logistics through its Stolt Tankers, Stolthaven Terminals and Stolt Tank Containers divisions, alongside its aquaculture business, Stolt Sea Farm.",https://splash247.com/wp-content/uploads/2023/09/Avenir-Aspiration-and-Avenir-Ascension-Avenir-LNG.jpg,N,,2026-01-27 19:03:08.889890
-ID28,Levi Strauss,2026-01-27 20:03:29+00:00,Benzinga,A Look at VF's Upcoming Earnings Report - VF (NYSE:VFC) - Benzinga,Benzinga Insights,,,,,https://www.benzinga.com/insights/earnings/26/01/50171452/a-look-at-vfs-upcoming-earnings-report,"VF (NYSE:VFC) is set to give its latest quarterly earnings report on Wednesday, 2026-01-28.
-New investors should understand that while earnings performance is important, market reactions are often driven by guidance.
-Here's a look at VF's past performance and the resulting price change: Performance of VF Shares Shares of VF were trading at $20.01 as of January 26.
-All You Need to Know About VF VF designs, produces, and distributes branded apparel, footwear, and accessories.
-To track all earnings releases for VF visit their earnings calendar on our site.","VF (NYSE:VFC) is set to give its latest quarterly earnings report on Wednesday, 2026-01-28. Here's what investors need to know before the announcement.
-
-Analysts estimate that VF will report an earnings per share (EPS) of $0.43.
-
-Anticipation surrounds VF's announcement, with investors hoping to hear about both surpassing estimates and receiving positive guidance for the next quarter.
-
-New investors should understand that while earnings performance is important, market reactions are often driven by guidance.
-
-Overview of Past Earnings
-
-In the previous earnings release, the company beat EPS by $0.10, leading to a 0.21% drop in the share price the following trading session.
-
-Here's a look at VF's past performance and the resulting price change:
-
-Performance of VF Shares
-
-Shares of VF were trading at $20.01 as of January 26. Over the last 52-week period, shares are down 20.83%. Given that these returns are generally negative, long-term shareholders are likely a little upset going into this earnings release.
-
-Analyst Observations about VF
-
-For investors, grasping market sentiments and expectations in the industry is vital. This analysis explores the latest insights regarding VF.
-
-Analysts have provided VF with 14 ratings, resulting in a consensus rating of Neutral. The average one-year price target stands at $17.14, suggesting a potential 14.34% downside.
-
-Understanding Analyst Ratings Among Peers
-
-The below comparison of the analyst ratings and average 1-year price targets of Levi Strauss, Gildan Activewear and Kontoor Brands, three prominent players in the industry, gives insights for their relative performance expectations and market positioning.
-
-Analysts currently favor an Outperform trajectory for Levi Strauss, with an average 1-year price target of $28.67, suggesting a potential 43.28% upside.
-
-Analysts currently favor an Outperform trajectory for Gildan Activewear, with an average 1-year price target of $80.8, suggesting a potential 303.8% upside.
-
-Analysts currently favor an Buy trajectory for Kontoor Brands, with an average 1-year price target of $95.4, suggesting a potential 376.76% upside.
-
-Analysis Summary for Peers
-
-The peer analysis summary outlines pivotal metrics for Levi Strauss, Gildan Activewear and Kontoor Brands, demonstrating their respective standings within the industry and offering valuable insights into their market positions and comparative performance.
-
-Key Takeaway:
-
-VF ranks at the top for Gross Profit and Return on Equity among its peers. It is in the middle for Revenue Growth.
-
-All You Need to Know About VF
-
-VF designs, produces, and distributes branded apparel, footwear, and accessories. Its apparel categories are active, outdoor, and work. Its portfolio of 10 brands includes Vans, The North Face, Timberland, and Altra. VF markets its products in the Americas, Europe, and Asia-Pacific through wholesale sales to retailers, e-commerce, and branded stores owned by the company and partners. Tracing its roots to 1899, the company has evolved through many brand acquisitions and dispositions.
-
-VF: A Financial Overview
-
-Market Capitalization Analysis: The company's market capitalization is above the industry average, indicating that it is relatively larger in size compared to peers. This may suggest a higher level of investor confidence and market recognition.
-
-Revenue Growth: VF's remarkable performance in 3 months is evident. As of 30 September, 2025, the company achieved an impressive revenue growth rate of 1.62%. This signifies a substantial increase in the company's top-line earnings. As compared to its peers, the revenue growth lags behind its industry peers. The company achieved a growth rate lower than the average among peers in Consumer Discretionary sector.
-
-Net Margin: VF's net margin surpasses industry standards, highlighting the company's exceptional financial performance. With an impressive 6.77% net margin, the company effectively manages costs and achieves strong profitability.
-
-Return on Equity (ROE): VF's ROE excels beyond industry benchmarks, reaching 13.7%. This signifies robust financial management and efficient use of shareholder equity capital.
-
-Return on Assets (ROA): VF's ROA stands out, surpassing industry averages. With an impressive ROA of 1.83%, the company demonstrates effective utilization of assets and strong financial performance.
-
-Debt Management: VF's debt-to-equity ratio surpasses industry norms, standing at 3.92. This suggests the company carries a substantial amount of debt, posing potential financial challenges.
-
-To track all earnings releases for VF visit their earnings calendar on our site.
-
-This article was generated by Benzinga's automated content engine and reviewed by an editor.",https://cdn.benzinga.com/files/images/story/2025/11/06/earnings_preview_4.jpg?width=1200&height=800&fit=crop,N,,2026-01-27 16:02:38.315174
