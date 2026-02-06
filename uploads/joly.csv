@@ -1,4 +1,128 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID10,Boston Scientific,2026-02-06 16:21:21+00:00,Investing.com,Bernstein SocGen lowers Boston Scientific stock price target on EP miss - Investing.com,Not Available,,,,,https://www.investing.com/news/analyst-ratings/bernstein-socgen-lowers-boston-scientific-stock-price-target-on-ep-miss-93CH-4491287,"Investing.com - Bernstein SocGen Group has lowered its price target on to $112.00 from $130.00 while maintaining an Outperform rating.
+The price target reduction follows 6% miss in U.S. electrophysiology (EP) sales, which came in at $606 million for Q4, flat sequentially and below the consensus estimate of $643 million.
+RBC Capital lowered its price target to $115 while maintaining an Outperform rating, citing the recent earnings report.
+Truist Securities decreased its price target to $95, describing the recent share price decline as ""overdone"" but maintained a Buy rating.
+Despite an electrophysiology performance miss, Evercore ISI held its Outperform rating with a $96 target.","Investing.com - Bernstein SocGen Group has lowered its price target on to $112.00 from $130.00 while maintaining an Outperform rating. This target remains well above the current price of $77.91 and the analyst consensus range of $90-$130.
+
+The price target reduction follows 6% miss in U.S. electrophysiology (EP) sales, which came in at $606 million for Q4, flat sequentially and below the consensus estimate of $643 million. The company’s U.S. Watchman sales also missed expectations by 2%.
+
+fell 18% on the news as investors expressed concerns about intensifying competition in the pulsed field ablation (PFA) market. The disappointing results came despite reassurances from the company’s CEO last month attempting to calm market worries. InvestingPro data shows the stock has declined nearly 17% in just the past week and is now trading near its 52-week low, with technical indicators suggesting it may be entering oversold territory.
+
+Some investors have questioned whether Boston Scientific has sufficient growth drivers in its core business to achieve its 10%-11% organic growth guidance for 2026. The recent $14.5 billion Penumbra acquisition has also raised questions among some investors who view it as potentially defensive. Despite these concerns, Boston Scientific has demonstrated strong historical performance with a 15% revenue CAGR over the past five years and nearly 20% revenue growth in the last twelve months.
+
+Bernstein SocGen remains optimistic about Boston Scientific’s prospects, noting in its analysis that at 21.5x valuation, the firm sees ""huge upside"" with growth opportunities in EP through new launches, new data, and ASC expansion, as well as continued growth for Watchman and the company’s broader portfolio. According to InvestingPro, Boston Scientific appears undervalued compared to its Fair Value, with a PEG ratio of just 0.7 suggesting attractive pricing relative to its growth potential. For deeper insights into BSX and 1,400+ other stocks, Pro Research Reports provide comprehensive analysis through intuitive visuals that transform complex data into actionable intelligence.
+
+In other recent news, Boston Scientific reported its fourth-quarter earnings, with revenue reaching $5.29 billion, reflecting a 12.7% organic year-over-year growth. This figure slightly surpassed Oppenheimer’s and consensus estimates. Adjusted earnings per share came in at $0.80, exceeding both Canaccord’s and consensus expectations. However, the GAAP earnings per share of $0.45 fell short of analyst expectations, which were in the range of $0.51 to $0.53.
+
+Several firms adjusted their price targets for Boston Scientific following the earnings announcement. RBC Capital lowered its price target to $115 while maintaining an Outperform rating, citing the recent earnings report. Canaccord Genuity also reduced its target to $112 but kept a Buy rating. Truist Securities decreased its price target to $95, describing the recent share price decline as ""overdone"" but maintained a Buy rating. Despite an electrophysiology performance miss, Evercore ISI held its Outperform rating with a $96 target.
+
+This article was generated with the support of AI and reviewed by an editor. For more information see our T&C.",https://i-invdn-com.investing.com/news/news_six_pile_69x52._800x533_L_1419494215.jpg,N,,2026-02-06 12:07:12.610101
+ID33,Nvidia,2026-02-06 16:16:32+00:00,NVIDIA Technical Blog,3 Ways NVFP4 Accelerates AI Training and Inference | NVIDIA Technical Blog,Ashraf Eassa,,,,,https://developer.nvidia.com/blog/3-ways-nvfp4-accelerates-ai-training-and-inference/,"Bringing the benefits of ultra-low-precision numerics to AI training and inference while maintaining high accuracy requires extensive engineering across every layer of the technology stack.
+For those looking to maximize AI training and inference performance, here are three things to know about NVFP4.
+NVIDIA also recently published an NVFP4 training recipe, bringing the significant performance benefits of NVFP4 to model training, enabling model makers to train AI faster and at lower cost.
+Looking ahead, the NVIDIA Rubin platform delivers large leaps in NVFP4 capability for training and inference, offering 35 petaFLOPS of NVFP4 training compute, and 50 petaFLOPs of NVFP4 Transformer Engine inference compute.
+Through extreme codesign, these large performance gains can also be achieved with excellent accuracy for both model training and inference.","The latest AI models continue to grow in size and complexity, demanding increasing amounts of compute performance for training and inference—far beyond what Moore’s Law can keep up with. That’s why NVIDIA engages in extreme codesign. Designing across multiple chips and a mountain of software cohesively enables large generational leaps in AI factory performance and efficiency.
+
+Lower-precision AI formats are key to improving compute performance and energy efficiency. Bringing the benefits of ultra-low-precision numerics to AI training and inference while maintaining high accuracy requires extensive engineering across every layer of the technology stack. It spans the creation of the formats, implementation in silicon, enablement across many libraries, and working closely with the ecosystem to deploy new training recipes and inference optimization techniques. NVFP4, developed and implemented for NVIDIA GPUs starting with NVIDIA Blackwell, delivers the performance and energy-efficiency benefits of 4-bit floating-point precision while maintaining accuracy on par with higher-precision formats.
+
+For those looking to maximize AI training and inference performance, here are three things to know about NVFP4.
+
+1. NVFP4 enables large performance leaps for training and inference on the Blackwell architecture—and beyond
+
+NVIDIA Blackwell Ultra GPUs provide peak dense NVFP4 throughput up to 15 petaFLOPS—3x that of FP8 on the same GPUs. The gains aren’t just about peak specs; they’re visible in measured performance of training and inference workloads.
+
+For inference, as shown in a recent technical blog post, moving from FP8 to NVFP4 leads to dramatic improvements in delivered token throughput at a given level of interactivity on DeepSeek-R1, a popular, 671B parameter, mixture-of-experts (MoE) model. The throughput increases at a given token rate and even higher token rates, enabling better user experiences.
+
+NVIDIA also recently published an NVFP4 training recipe, bringing the significant performance benefits of NVFP4 to model training, enabling model makers to train AI faster and at lower cost.
+
+In the latest version of the MLPerf Training benchmark suite, multiple NVIDIA GB300 NVL72 systems—totaling 512 Blackwell Ultra GPUs—worked together using NVFP4 precision to complete the Llama 3.1 405B pre-training benchmark in 64.6 minutes. This is 1.9x faster than 512 Blackwell GPUs across multiple NVIDIA GB200 NVL72 systems, which were able to complete the benchmark using FP8 in the prior round.
+
+Looking ahead, the NVIDIA Rubin platform delivers large leaps in NVFP4 capability for training and inference, offering 35 petaFLOPS of NVFP4 training compute, and 50 petaFLOPs of NVFP4 Transformer Engine inference compute. This is a 3.5x and 5x leap compared to Blackwell, respectively.
+
+2. NVFP4 delivers great accuracy, proven on industry benchmarks
+
+For MLPerf Training and Inference submissions in the closed division to be valid, they must meet accuracy requirements specified by the benchmarks. For inference, responses must meet certain accuracy thresholds, and for training, the models must be trained to specific quality targets (ie, the model training process must converge).
+
+NVIDIA successfully submitted results in the closed division on every large language model (LLM) test using NVFP4 on Blackwell and Blackwell Ultra GPUs in the latest version of MLPerf Training. And, NVIDIA has submitted across many models and scenarios using NVFP4 in MLPerf Inference. This included DeepSeek-R1, Llama 3.1 8B and 405B, and Llama 2 70B. NVIDIA used NVFP4-quantized versions of the models, all while meeting strict benchmark requirements.
+
+3. NVFP4 enjoys broad and growing ecosystem support
+
+Libraries like NVIDIA Model Optimizer, LLM Compressor, and torch.ao enable developers to quantize models trained at higher precision to NVFP4 and implement NVFP4 KV cache to support long context and large batch sizes while preserving accuracy. Popular inference frameworks, including NVIDIA TensorRT-LLM, vLLM, and SGLang, also support running models in NVFP4 format today with models available in NVFP4 variants. For example, on HuggingFace, developers can find ready-to-deploy NVFP4 versions such as Llama 3.3 70B, FLUX.2, DeepSeek-R1-0528, Kimi-K2-Thinking, Qwen3-235B-A22B, and NVIDIA Nemotron Nano.
+
+The ecosystem is also adopting NVFP4 to increase inference throughput in production across a variety of models. Those companies include Black Forest Labs, Radical Numerics, and Cognition.
+
+Black Forest Labs worked with NVIDIA to scale NVFP4 inference for FLUX.2 on Blackwell. “By layering optimizations like CUDA Graphs, torch.compile, NVFP4 precision, and TeaCache, we achieve up to a 6.3x speedup on a single B200—dramatically reducing latency and enabling more efficient production deployment,” said Robin Rombach, co-founder and CEO of Black Forest Labs.
+
+Radical Numerics has leveraged NVFP4 to accelerate scientific world model scaling. “Unlike language, scientific data pushes us beyond the classical single-modality autoregressive recipe, demanding extremely long-context methods and robust multimodal fusion,” said Michael Poli, co-founder and chief AI scientist at Radical Numerics. He added the company is “highly optimistic” about using low-precision recipes to pretrain and post-train its new architecture.
+
+And Cognition is seeing “significant latency and throughput gains” by using NVFP4 in large-scale reinforcement learning, said Steven Cao, a member of Cognition’s research team.
+
+The NVIDIA Transformer Engine library incorporates an implementation of the NVFP4 training recipe, and training frameworks such as Megatron-Bridge have implementations for developers to get started. NVIDIA also continues to innovate and collaborate with the ecosystem to bring the performance and efficiency benefits of NVFP4 training to the entire ecosystem, paving the way to smarter, more complex models trained faster and more efficiently.
+
+Learn more
+
+Using NVFP4 can deliver large performance gains on both the NVIDIA Blackwell and NVIDIA Rubin platforms. Through extreme codesign, these large performance gains can also be achieved with excellent accuracy for both model training and inference. NVFP4 versions of popular open LLMs are widely available, enabling services to run these models with higher throughput and at a lower cost per million tokens.",https://developer-blogs.nvidia.com/wp-content/uploads/2026/02/image1-1.png,N,,2026-02-06 12:08:08.266437
+ID18,Elevance Health,2026-02-06 16:01:31+00:00,Trefis,How McKesson Stock Gained 40% - Trefis,Trefis Team,,,,,https://www.trefis.com/stock/mck/articles2/589959/how-mckesson-stock-gained-40/2026-02-06,"Over nearly six months, McKesson (MCK)’s stock jumped 44%, fueled not just by solid revenue gains and a sharper profit margin, but also strategic moves—from a bold divestiture to prepping a major spin-off.
+Let’s unpack how strong earnings and savvy shifts combined to spark this rally.
+Here Is Why McKesson Stock Moved Strong Q2 FY26 Earnings: EPS beat, record revenue, and raised full-year guidance for FY2026.
+Our Current Assesment Of MCK Stock Opinion: We currently find MCK stock fairly priced.
+Read Buy or Sell MCK Stock to see what drives our current opinion.","Over nearly six months, McKesson (MCK)’s stock jumped 44%, fueled not just by solid revenue gains and a sharper profit margin, but also strategic moves—from a bold divestiture to prepping a major spin-off. Let’s unpack how strong earnings and savvy shifts combined to spark this rally.
+
+Below is an analytical breakdown of stock movement into key contributing metrics.
+
+So what is happening here? The stock price surged 44%, driven by a 5.4% increase in revenue, a strong 30% boost in net margin, and a modest 3.2% rise in the P/E multiple. Let’s dive into what’s behind these numbers.
+
+Here Is Why McKesson Stock Moved
+
+Strong Q2 FY26 Earnings: EPS beat, record revenue, and raised full-year guidance for FY2026. Stock rose 0.31%.
+
+Positive Q3 FY26 Earnings: Adjusted EPS and revenue beat estimates; guidance raised again. Noted weaker cash flow.
+
+Norway Divestiture: Completed sale of Norwegian businesses on Jan 30, 2026, exiting Europe. Focuses core growth.
+
+Org Structure Change: New organizational structure announced Sept 18, 2025, to boost oncology/specialty growth.
+
+Med-Surg Spin-Off Prep: Progress on planned Medical-Surgical segment IPO in Jan 2026, for 2027 completion.
+
+Our Current Assesment Of MCK Stock
+
+Opinion: We currently find MCK stock fairly priced. Why so? Have a look at the full story. Read Buy or Sell MCK Stock to see what drives our current opinion.
+
+Risk: A solid way to gauge risk in MCK is to check its drops in past market stress periods. It plunged over 81% in the Dot-Com crash and slid nearly 58% during the Global Financial Crisis. The 2018 selloff saw a decline of about 38%, while the Covid pandemic brought a 32% dip. Even the recent inflation shock caused a pullback of 15%. So, even with all the positives around, MCK hasn’t been immune to deep declines when markets turn sour.",,N,,2026-02-06 12:08:02.395163
+ID47,Walmart,2026-02-06 15:57:18+00:00,The US Sun,Costco reveals controversial fix to problem that still haunts Walmart and Target - The US Sun,James Evenden,,,,,https://www.the-sun.com/money/15896245/costco-membership-scanner-retail-theft-walmart-target/,"COSTCO has revealed how it prevents retail theft that haunts its rivals, Walmart and Target.
+But Costco chiefs have sworn by the measure in a recent call, and claimed it helps cut down on retail theft.
+I was so thankful they caught it.” Meanwhile, at Walmart and Target, retail theft costs them yearly.
+Walmart has measures to tackle retail theft, including cameras to monitor self-checkout lanes.
+Target also has measures to prevent retail theft, such as locking items behind cabinets and imposing self-checkout restrictions.","COSTCO has revealed how it prevents retail theft that haunts its rivals, Walmart and Target.
+
+The warehouse retailer now asks its members to show proof at the entrances before shopping.
+
+Costco enforced the measure to prevent membership sharing, but it has drawn controversy among customers.
+
+Shoppers at Costco are now met with a scanning device that requires them to use it before entering.
+
+But Costco chiefs have sworn by the measure in a recent call, and claimed it helps cut down on retail theft.
+
+Costco stated, “By strictly controlling the entrances and exits and using a membership format, we believe our inventory losses (shrinkage) are well below those of typical retail operations.”
+
+The warehouse chain also asks shoppers to show their receipts to checkers before they leave.
+
+It says on its website that it is “our most effective method of maintaining accuracy in inventory control, and it’s also a good way to ensure that our members have been charged properly for their purchases.”
+
+And there have been reported instances when Costco‘s strict measures have paid off.
+
+On the social media platform Reddit, a shopper shared: “I’ve actually had them catch where the cashier got me for two of something I only had one of and it was like a $50 item. I was so thankful they caught it.”
+
+Meanwhile, at Walmart and Target, retail theft costs them yearly.
+
+According toGrabOn, Walmart loses roughly $3 billion each year to theft and faces more than 900,000 shoplifting incidents annually.
+
+Target closed nine stores in 2023 in New York City, Seattle, San Francisco, Oakland, and Portland, Oregon, due to theft levels.
+
+Walmart has measures to tackle retail theft, including cameras to monitor self-checkout lanes.
+
+Target also has measures to prevent retail theft, such as locking items behind cabinets and imposing self-checkout restrictions.",https://www.the-sun.com/wp-content/uploads/sites/6/2025/11/NINTCHDBPICT000922964426.jpg?quality=90&strip=all&w=1920&h=1080&crop=1,N,,2026-02-06 12:08:26.212354
 ID2,Adobe,2026-02-06 15:41:13+00:00,www.adweek.com,Adobe Enterprise CMO Rachel Thornton on Making Marketers 10x More Powerful,"Jenny Rooney, John Rudaizky, Global Chief Brand and Marketing Officer, EY, Laura Grover, SVP, Head of Client Solutions, EDO, Amazon Ads, Johnnie Walker",,,,,https://www.adweek.com/brand-marketing/adobe-enterprise-cmo-rachel-thornton-on-making-marketers-10x-more-powerful/,"In this episode of Marketing Vanguard, live from the World Economic Forum in Davos, CMO of Adobe Enterprise Rachel Thornton reveals why putting human creativity at the center of marketing strategy is more critical than ever and how CMOs should be navigating this tectonic shift.
 Her work at Adobe has positioned her at the intersection of creative tools, data-driven marketing, and emerging technologies, making her insights invaluable for enterprise CMOs navigating AI adoption while maintaining brand authenticity and customer engagement.
 This framing is critical for CMOs because it helps marketing teams embrace AI tools without fear of creative devaluation or job displacement.
@@ -286,6 +410,85 @@ Opens in a new tab","About
 Hi! 👋🏼 I’m a data scientist with 5+ years of experience spanning the analytics lifecycle, from extracting data to exploratory analysis and building end-to-end pipelines. My background includes forecasting, machine learning, mathematical optimization, and impact evaluation. I aim to help teams make impactful, evidence-based decisions through data-driven solutions, storytelling, and analysis.
 
 Opens in a new tab",https://www.microsoft.com/en-us/research/wp-content/uploads/2026/02/IMG_1063-scaled.jpg,N,,2026-02-06 11:07:39.501281
+ID2,Adobe,2026-02-06 14:14:03+00:00,MarketBeat,Envestnet Asset Management Inc. Reduces Holdings in Adobe Inc. $ADBE - MarketBeat,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-envestnet-asset-management-inc-reduces-holdings-in-adobe-inc-adbe-2026-02-06/,"The firm owned 598,693 shares of the software company's stock after selling 161,499 shares during the period.
+Envestnet Asset Management Inc. owned about 0.14% of Adobe worth $211,189,000 at the end of the most recent reporting period.
+Charles Schwab Investment Management Inc. grew its position in shares of Adobe by 0.8% in the 2nd quarter.
+Finally, Schroder Investment Management Group increased its stake in shares of Adobe by 3.8% during the second quarter.
+More Adobe News Here are the key news stories impacting Adobe this week: Positive Sentiment: Expanded enterprise AI tie-ups could support long-term revenue for Adobe — Adobe announced an expanded partnership with Cognizant around AI capabilities, which may help enterprise adoption of Adobe’s AI-powered creative and marketing tools.","Envestnet Asset Management Inc. reduced its stake in Adobe Inc. (NASDAQ:ADBE - Free Report) by 21.2% during the third quarter, according to its most recent filing with the Securities and Exchange Commission (SEC). The firm owned 598,693 shares of the software company's stock after selling 161,499 shares during the period. Envestnet Asset Management Inc. owned about 0.14% of Adobe worth $211,189,000 at the end of the most recent reporting period.
+
+Adobe Gets Post-Earnings Lift: Long-Term Outlook Favors Upside
+
+Other institutional investors have also recently made changes to their positions in the company. Norges Bank bought a new stake in shares of Adobe in the second quarter worth about $2,029,950,000. Invesco Ltd. raised its position in Adobe by 16.1% during the 2nd quarter. Invesco Ltd. now owns 4,407,162 shares of the software company's stock valued at $1,705,043,000 after purchasing an additional 610,215 shares during the last quarter. Arrowstreet Capital Limited Partnership lifted its holdings in Adobe by 17.6% in the 2nd quarter. Arrowstreet Capital Limited Partnership now owns 3,664,151 shares of the software company's stock worth $1,417,587,000 after buying an additional 548,903 shares during the period. Charles Schwab Investment Management Inc. grew its position in shares of Adobe by 0.8% in the 2nd quarter. Charles Schwab Investment Management Inc. now owns 2,922,630 shares of the software company's stock worth $1,130,707,000 after buying an additional 24,333 shares during the last quarter. Finally, Schroder Investment Management Group increased its stake in shares of Adobe by 3.8% during the second quarter. Schroder Investment Management Group now owns 2,137,724 shares of the software company's stock valued at $827,043,000 after buying an additional 78,186 shares during the period. Hedge funds and other institutional investors own 81.79% of the company's stock.
+
+Adobe Trading Down 3.7%
+
+NASDAQ:ADBE opened at $269.39 on Friday. The firm has a market capitalization of $110.58 billion, a P/E ratio of 16.12, a PEG ratio of 1.10 and a beta of 1.51. The company has a debt-to-equity ratio of 0.53, a current ratio of 1.00 and a quick ratio of 1.00. Adobe Inc. has a one year low of $264.04 and a one year high of $465.70. The company's 50-day simple moving average is $325.57 and its 200 day simple moving average is $339.57.
+
+Adobe Launches Premiere Pro on iPhone, Upside Ahead?
+
+Adobe (NASDAQ:ADBE - Get Free Report) last released its earnings results on Wednesday, December 10th. The software company reported $5.50 earnings per share (EPS) for the quarter, beating the consensus estimate of $5.40 by $0.10. The firm had revenue of $6.19 billion during the quarter, compared to analyst estimates of $6.11 billion. Adobe had a net margin of 30.00% and a return on equity of 61.28%. The business's revenue was up 10.5% on a year-over-year basis. During the same period last year, the business earned $4.81 earnings per share. Adobe has set its Q1 2026 guidance at 5.850-5.900 EPS and its FY 2026 guidance at 23.300-23.500 EPS. As a group, analysts forecast that Adobe Inc. will post 16.65 EPS for the current fiscal year.
+
+Analyst Upgrades and Downgrades
+
+ADBE has been the subject of a number of research analyst reports. Royal Bank Of Canada reaffirmed an ""outperform"" rating and issued a $430.00 price target on shares of Adobe in a research note on Thursday, December 11th. Barclays restated an ""overweight"" rating and issued a $415.00 price objective on shares of Adobe in a report on Friday, December 5th. The Goldman Sachs Group began coverage on shares of Adobe in a research note on Monday, January 12th. They set a ""sell"" rating and a $290.00 target price on the stock. Morgan Stanley decreased their price target on shares of Adobe from $450.00 to $425.00 and set an ""equal weight"" rating for the company in a research note on Thursday, December 11th. Finally, Jefferies Financial Group lowered shares of Adobe from a ""buy"" rating to a ""hold"" rating and lowered their price objective for the stock from $500.00 to $400.00 in a report on Monday, January 5th. One research analyst has rated the stock with a Strong Buy rating, ten have issued a Buy rating, eleven have assigned a Hold rating and five have given a Sell rating to the company's stock. According to data from MarketBeat.com, Adobe currently has an average rating of ""Hold"" and an average target price of $391.81.
+
+Fundamentals Say Bet Against the Recent Adobe Downgrade
+
+View Our Latest Stock Analysis on Adobe
+
+Insider Activity at Adobe
+
+In other news, CFO Daniel Durn sold 1,646 shares of the firm's stock in a transaction on Tuesday, January 27th. The stock was sold at an average price of $294.85, for a total transaction of $485,323.10. Following the completion of the transaction, the chief financial officer directly owned 41,995 shares in the company, valued at $12,382,225.75. This trade represents a 3.77% decrease in their ownership of the stock. The sale was disclosed in a legal filing with the Securities & Exchange Commission, which is available through the SEC website. Corporate insiders own 0.16% of the company's stock.
+
+More Adobe News
+
+Here are the key news stories impacting Adobe this week:
+
+Positive Sentiment: Expanded enterprise AI tie-ups could support long-term revenue for Adobe — Adobe announced an expanded partnership with Cognizant around AI capabilities, which may help enterprise adoption of Adobe’s AI-powered creative and marketing tools. Adobe’s Expanded Cognizant AI Partnership
+
+Neutral Sentiment: Piper Sandler moved Adobe to a “hold,” reflecting analyst caution rather than a fresh sell rating — the change signals tempered expectations but not consensus bearishness. Piper Sandler upgrade to Hold
+
+Neutral Sentiment: Macro/sector commentary: software stocks are under pressure right now, which weighs on Adobe alongside company-specific headlines — the market-wide sell-off in software magnifies Adobe’s share moves. Why Software Is Facing A Market Sell-Off (CNBC)
+
+Negative Sentiment: PR crisis over Adobe Animate: Adobe announced plans to discontinue Animate, drew significant community backlash, then reversed course and put the app into “maintenance mode.” The episode has damaged goodwill with a creative user base and flagged execution/communication risks to investors. Adobe cancels Adobe Animate shutdown after backlash
+
+Negative Sentiment: Rising marketing spend: Adobe boosted ad spending to roughly $1.4B in 2025 to defend its AI positioning and the brand — higher SG&A and heavy marketing to shore up adoption can pressure margins and has prompted investor questions about the pace and ROI of AI-driven growth. Adobe ad spending and investor concerns
+
+Negative Sentiment: Sentiment-focused writeups and trade ideas call the stock a “falling knife” or a potential buy-the-dip, adding volatility as short-term traders and long-only investors disagree on valuation and recovery timing. That debate can amplify intraday moves. Is Adobe Stock Now A Falling Knife? (Forbes)
+
+Neutral Sentiment: Opinion/valuation pieces point to both upside (long-term AI opportunity, attractive multiples for some investors) and downside (execution risk, ad spend). These mixed narratives keep trading choppy until clarity on growth vs. margin trade-offs. Is This 50% Drop a Buying Opportunity? (Blockonomi)
+
+Adobe Profile
+
+(Free Report)
+
+Adobe Inc, founded in 1982 by John Warnock and Charles Geschke and headquartered in San Jose, California, is a global software company that develops tools and services for creative professionals, marketers and enterprises. Under the leadership of CEO Shantanu Narayen, who has led the company since 2007, Adobe has evolved from a provider of desktop publishing tools into a cloud-centric provider of digital media and digital experience solutions.
+
+The company's core offerings are organized around digital media and digital experience.
+
+Featured Stories
+
+Five stocks we like better than Adobe
+
+Your Bank Account Is No Longer Safe
+
+“Fed Proof” Your Bank Account with THESE 4 Simple Steps
+
+When to buy gold (mathematically)
+
+NEW LAW: Congress Approves Setup For Digital Dollar?
+
+GOLD ALERT
+
+This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
+
+Should You Invest $1,000 in Adobe Right Now?
+
+Before you consider Adobe, you'll want to hear this.
+
+MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Adobe wasn't on the list.
+
+While Adobe currently has a Hold rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/adobe-inc-logo-1200x675.png?v=20231212200254,N,,2026-02-06 12:07:01.602261
 ID15,Delta Airlines,2026-02-06 14:09:51+00:00,CDO Magazine,"This Week's Leadership Moves: Delta Air Lines, Pfizer, NASA - CDO Magazine",CDO Magazine Bureau,,,,,https://www.cdomagazine.tech/leadership-moves/this-weeks-leadership-moves-delta-air-lines-pfizer-nasa,"Each week, CDO Magazine curates a high-level overview of executive appointments and leadership transitions shaping the global data, AI, and analytics ecosystem.
 This roundup offers a quick-read snapshot of how leadership talent is transitioning across organizations as they evolve data and AI strategies to support digital transformation, data management, enterprise innovation, security, and AI-driven decision-making.
 This briefing tracks leadership movements involving Chief Data Officers, Chief Artificial Intelligence Officers, Chief Data and Analytics Officers, Chief Information Officers, Chief Information Security Officers, and senior executives responsible for data, analytics, security, and digital strategy across industries.
@@ -1042,6 +1245,7 @@ The U.S. firm said last April it planned to build supercomputer manufacturing pl
 
 Reporting by Wen-Yee Lee. Writing by Ben Blanchard. Editing by Christian Schmollinger and Mark Potter",https://www.reuters.com/resizer/v2/NDWGVKFI5JKDTI247QVPTZU7FI.jpg?auth=98b17171b3ae4ea2ce7397a11696dc0691876b307b8cc79ae60708a69bd83193&height=1005&width=1920&quality=80&smart=true,N,,2026-02-06 08:03:13.615739
 ID10,Boston Scientific,2026-02-06 11:02:23+00:00,www.costar.com,"Uncertainty, unrest in Minneapolis challenge market working to recover - CoStar",,,,,,https://www.costar.com/article/2077524176/uncertainty-unrest-in-minneapolis-challenge-market-working-to-recover,"... Boston Scientific's new 400,000-square-foot campus northwest of Minneapolis in Maple Grove, Minnesota.",Not Available,,Y,,2026-02-06 07:01:56.991359
+ID11,Capgemini,2026-02-06 10:50:50+00:00,www.ideal-investisseur.fr,Capgemini Shares Hit a New Yearly Low - Idéal Investisseur,Not Available,,,,,https://www.ideal-investisseur.fr/en/stock-news/capgemini-shares-hit-a-new-yearly-low/13561.html,"This Friday, Capgemini's stock has significantly declined, dropping 2.54% to €115.05. This decrease sets a new 12-month low, surpassing the ...",Not Available,,N,,2026-02-06 12:07:53.125744
 ID39,Ralph Lauren,2026-02-06 10:37:18+00:00,Luxury Daily,"Ralph Lauren, Burberry among Lyst Index's top Q4 risers - Luxury Daily",Zach James,,,,,https://www.luxurydaily.com/ralph-lauren-burberry-among-lyst-indexs-top-q4-risers/,"Heritage luxury labels climbed the Lyst Index to close 2025.
 In the latest edition of the quarterly report, the top 10 saw great change, with multiple established, high-end staples moving up the rankings, including Ralph Lauren, Burberry and Gucci, among others.
 Meanwhile, the top three brands remained unchanged, with French fashion house Saint Laurent sitting atop, followed by Italian fashion house Miu Miu and British apparel brand COS.","Heritage luxury labels climbed the Lyst Index to close 2025.
@@ -1225,6 +1429,7 @@ It has the political appeal of offering a new option for drug purchases — even
 Go deeper: Patients may not gain much from Trump drug price deals
 
 Editor's note: The story has been updated with additional reporting.",https://images.axios.com/sqsUpCRMajZr3dEpUmWpMqI7yUo=/0x0:1920x1080/1366x768/2025/09/29/1759169065980.jpeg,N,,2026-02-06 08:02:39.566059
+ID35,Parker-Hannifin,2026-02-06 09:57:26+00:00,Affärsvärlden,Parker-Hannifin handlas exklusive utdelning i dag - Affärsvärlden,Afv Finwire,,,,,https://www.affarsvarlden.se/borsnyheter/FWM00CC434,"Parker-Hannifin handlas i dag exklusive rätt till utdelning med 1,80 dollar per aktie.",Not Available,https://www.affarsvarlden.se/wp-content/uploads/2020/04/affarsvarlden_logotype_fb.jpg,N,,2026-02-06 12:08:14.093634
 ID2,Adobe,2026-02-06 09:47:56+00:00,Insight,Special Report: Mind the (generation) gap - Insight,Rob Mitchell,,,,,https://www.insightnews.com.au/special-report-mind-the-generation-gap/,"The data indicates that contact lens use is greater for Millennials, with 43% of that age bracket surveyed wearing them.
 The CLI says the Millennials’ figure “paints a picture of what may be possible with Gen Z”.
 In a section of the report titled Gen Z Upside, the CLI said the eight-point gap (43% v 35%) represented “considerable unmet upside in patient volumes, practice revenue, and wearer lifestyle benefits”.
@@ -1586,6 +1791,80 @@ EXPOSED: The “29% Account”
 
 Buffett, Gates and Bezos Quietly Dumping Stocks—Here’s Why",https://www.americanbankingnews.com/wp-content/timthumb/timthumb.php?src=https://www.marketbeat.com/logos/levi-strauss--co-logo-1200x675.png?v=20201123164601&w=240&h=240&zc=2,N,,2026-02-06 06:01:26.382647
 ID30,Michelin,2026-02-06 08:06:49+00:00,www.european-rubber-journal.com,Tyres Europe reports 'softness' across key market segments in 2025,Not Available,,,,,https://www.european-rubber-journal.com/article/2098725/all-season-two-wheeler-tire-segments-bright-spots-in-eu-replacement-market,Tyres Europe full-year figures show &lsquo;softness&rsquo; across key market segments,Not Available,https://www.european-rubber-journal.com/theme/EuropeanRubberJournal/favicon.ico?1741595039,N,,2026-02-06 03:58:55.612903
+ID3,Agilent,2026-02-06 07:59:38+00:00,The Press Democrat,David H. Wait OBITUARY - The Press Democrat,The Press Democrat,,,,,https://www.pressdemocrat.com/obituaries/david-h-wait-santa-rosa-ca/,"David H. Wait OBITUARY David H. Wait June 16, 1948 – October 16, 2024 David Howey Wait (aka Dave), aged 76, passed away in Santa Rosa, CA on October 16th surrounded by family and friends.
+He was preceded in death by his parents (George & Kathryn Wait of Janesville, WI) and his late wife (Iris).
+He attended the First United Methodist church of Santa Rosa, singing in the choir.
+A Celebration of Life for Dave will be held at 1pm on Saturday, December 28, 2024, at the First United Methodist Church (FUMC), 1551 Montgomery Drive in Santa Rosa.
+If desired, donations in Dave’s memory may be made to United Methodist Foundation of Santa Rosa (health care scholarship), Sonoma County Secret Santa, Canine Companions for Independence, or the charity of your choice.","David H. Wait OBITUARY
+
+David H. Wait June 16, 1948 – October 16, 2024 David Howey Wait (aka Dave), aged 76, passed away in Santa Rosa, CA on October 16th surrounded by family and friends. Born June 16, 1948, in Monroe, WI, Dave is survived by his wife Marty, and sons, AJ (wife Marya) and Dan (wife Jessica) and granddaughter Octavia plus sisters Bonnie (husband Bill & Sara/Ben) and Barb (husband Dave & Amanda/Lindsay) and brother Doug Wait (Brett/Kara). He was preceded in death by his parents (George & Kathryn Wait of Janesville, WI) and his late wife (Iris).
+
+Dave worked for 30 years at HP / Agilent, starting as a production engineer, then as an engineering manager, and retiring as a highly regarded manager focused on customized microwave test systems. For many years, Dave and his family bred and trained puppies for Canine Companions for Independence, which provides service dogs to people with disabilities. After retiring in 2006, he volunteered to tutor math in middle schools, and in 2010, became a Bike Volunteer for Secret Santa. He worked with Secret Santa for last 13 years as the bike team coordinator and helping collect and deliver gifts during the holidays.
+
+He loved to travel on extended RV trips to Alaska and across the west coast, plus bike / travel adventures here and abroad. Dave also loved working with his hands, building outbuildings, remodeling rooms, and creating wood items for the house and friends. An active and caring man, Dave stepped forward to help friends and community group projects, including rebuilding for disaster recovery, and doing handyman tasks. He attended the First United Methodist church of Santa Rosa, singing in the choir.
+
+A Celebration of Life for Dave will be held at 1pm on Saturday, December 28, 2024, at the First United Methodist Church (FUMC), 1551 Montgomery Drive in Santa Rosa. A reception and sharing of memories will follow. The service will be livestreamed at the link below and will be available after the service on the FUMC YouTube Channel. https://www.youtube.com/playlist?list=PLubNvgZHosQNHRXzQTadsxQItov3t3QeY A special thanks is given to the doctors and nurses at Kaiser Hospital on Bicentennial for the consistent caring and expert medical care they gave Dave over his several illnesses this year, and especially for their compassion in helping his family deal with his passing.
+
+If desired, donations in Dave’s memory may be made to United Methodist Foundation of Santa Rosa (health care scholarship), Sonoma County Secret Santa, Canine Companions for Independence, or the charity of your choice.",https://www.pressdemocrat.com/wp-content/uploads/2026/01/legacy_207983672_W0055288-1_20241101-1769586255193.jpg?w=440&h=499,N,,2026-02-06 12:07:06.869953
+ID40,S&P Global,2026-02-06 07:48:32+00:00,The Motley Fool,Why The Trade Desk Stock Slumped 20% Last Month | The Motley Fool,"Brett Schafer, www.facebook.com",,,,,https://www.fool.com/investing/2026/02/05/why-the-trade-desk-stock-slumped-20-last-month/,"Shares of The Trade Desk (TTD +2.78%) fell 20% last month, according to data from S&P Global Market Intelligence.
+Here's why The Trade Desk was down again last month, and whether it is a buy right now.
+At the same time the CFO chair keeps rotating, The Trade Desk is facing a slowdown in revenue growth.
+Should you buy The Trade Desk stock?
+With multiple CFOs in less than a year, The Trade Desk looks like a risky stock to buy, even after this current drawdown.","Shares of The Trade Desk (TTD +2.78%) fell 20% last month, according to data from S&P Global Market Intelligence. As an advertising demand-side platform (DSP), the company is struggling to compete with large technology players for advertising dollars in the connected TV (CTV) market and just saw its CFO depart. Shares of the stock are down 81% from all-time highs as of this writing on February 5th, 2026.
+
+Here's why The Trade Desk was down again last month, and whether it is a buy right now.
+
+NASDAQ : TTD
+
+The Trade Desk
+
+Today's Change
+
+( 2.78 %) $ 0.73
+
+Current Price
+
+$ 26.97
+
+Key Data Points
+
+Market Cap
+
+$13B
+
+Day's Range
+
+$ 26.08 - $ 26.99
+
+52wk Range
+
+$ 26.01 - $ 125.80
+
+Volume
+
+148K
+
+Avg Vol
+
+14M
+
+Gross Margin
+
+78.81 %
+
+A quick CFO departure
+
+The Trade Desk's business was already under pressure. And then, its CFO decided to leave after only five months on the job. On Monday, January 26th, The Trade Desk issued a press release stating that its prior CFO -- second in command at the business -- Alex Kayyal had resigned effective January 24th.
+
+A few items stand out as suspicious in this release. First, Kayyal had only been on the job for five months. Second, the resignation was handed in on a Saturday, an atypical time to make a decision like this. Third, it had nothing to do with the business's financial performance, as the company reiterated its fourth-quarter guidance. This indicates that Kayyal was let go for non-financial performance, which has investors nervous about executive culture at the business.
+
+At the same time the CFO chair keeps rotating, The Trade Desk is facing a slowdown in revenue growth. Revenue was up just 18% year over year last quarter for the advertising DSP, slower growth than its competitor, Amazon. Amazon has made a large push to build a DSP for advertisers for streaming internet TV, which has been The Trade Desk's specialty. It looks like Amazon may be gaining market share, which has investors nervous about Trade Desk's future growth.
+
+Should you buy The Trade Desk stock?
+
+The Trade Desk's stock is down 80%, but it still trades at a premium price-to-earnings ratio (P/E) of 30, which is above the market average. This is much lower than its historical P/E ratio, which was pushing above 100, but is expensive nonetheless.
+
+A declining P/E ratio can offset some of the executive turnover and Amazon competition risks, but it is not like The Trade Desk is trading at an earnings ratio of 10. With multiple CFOs in less than a year, The Trade Desk looks like a risky stock to buy, even after this current drawdown.",https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F854743%2Fdissapointed-2.jpg&w=1200&op=resize,N,,2026-02-06 12:08:17.549248
 ID40,S&P Global,2026-02-06 07:41:28+00:00,www.spglobal.com,Heidelberg Materials to acquire Maas Group's construction arm for A$1.7 bil - S&P Global,Not Available,,,,,https://www.spglobal.com/energy/en/news-research/latest-news/fertilizers/020526-heidelberg-materials-to-acquire-maas-groups-construction-arm-for-a17-bil,"Heidelberg Materials Australia has agreed to acquire the construction materials business of Maas Group Holdings for A$1.7 billion, expanding its ...",Not Available,,N,,2026-02-06 03:01:09.867606
 ID38,Publicis Groupe,2026-02-06 07:40:00+00:00,Defense World,Barclays Downgrades Publicis Groupe (OTCMKTS:PUBGY) to Hold - Defense World,Defense World Staff,,,,,https://www.defenseworld.net/2026/02/06/barclays-downgrades-publicis-groupe-otcmktspubgy-to-hold.html,"Publicis Groupe (OTCMKTS:PUBGY – Get Free Report) was downgraded by research analysts at Barclays from a “strong-buy” rating to a “hold” rating in a report released on Wednesday,Zacks.com reports.
 Huber Research raised shares of Publicis Groupe to a “strong-buy” rating in a research report on Wednesday, October 15th.
@@ -6479,6 +6758,41 @@ Gallea Ai takes a disciplined, outcomes focused approach to adoption, using arti
 SOURCE Gallea Ai
 
 For more information, contact: Gallea Ai Global Media Relations, Email: ryan@galleaai.com, Phone: +1 (786) 376-2679",https://mma.prnewswire.com/media/2878050/Gallea_Ai_Gallea_Ai_Joins_IBM_Partner_Plus_as_an_IBM_Business_Pa.jpg?p=facebook,N,,2026-02-05 14:09:16.440516
+ID16,Ecolab,2026-02-05 18:11:31+00:00,www.gurufocus.com,T. Rowe Price Spectrum Moderate Allocation Fund Sells 1863 Shares of Ecolab Inc (ECL),GuruFocus News,,,,,https://www.gurufocus.com/news/8585157/t-rowe-price-spectrum-moderate-allocation-fund-sells-1863-shares-of-ecolab-inc-ecl%3Fmobile%3Dtrue,"Summary T. Rowe Price Spectrum Moderate Allocation Fund reduced its stake in Ecolab Inc (ECL, Financial) by 30.78%, selling 1,863 shares and holding 4,189 shares valued at about $1,152,650 as of the latest 13F filing.
+T. Rowe Price Spectrum Moderate Allocation Fund reduced its stake in Ecolab Inc (ECL) during the quarter, according to the company’s most recent Form 13F filing with the Securities & Exchange Commission.
+The fund owned 4,189 shares of the company's stock after selling 1,863 shares during the quarter.
+T. Rowe Price Spectrum Moderate Allocation Fund holdings in Ecolab Inc (ECL) were worth $1,152,650 as of its most recent filing with the Securities & Exchange Commission Several other large investors also recently modified their holdings of the stock.
+Ecolab Inc Profile Ecolab produces and markets cleaning and sanitation products for the industrial manufacturing, hospitality, healthcare, and life sciences markets.","Summary
+
+T. Rowe Price Spectrum Moderate Allocation Fund reduced its stake in Ecolab Inc (ECL, Financial) by 30.78%, selling 1,863 shares and holding 4,189 shares valued at about $1,152,650 as of the latest 13F filing.
+
+T. Rowe Price Spectrum Moderate Allocation Fund reduced its stake in Ecolab Inc (ECL) during the quarter, according to the company’s most recent Form 13F filing with the Securities & Exchange Commission. The fund owned 4,189 shares of the company's stock after selling 1,863 shares during the quarter. T. Rowe Price Spectrum Moderate Allocation Fund holdings in Ecolab Inc (ECL) were worth $1,152,650 as of its most recent filing with the Securities & Exchange Commission
+
+Several other large investors also recently modified their holdings of the stock. Horizon Expedition Plus ETF raised its stake in Ecolab Inc (ECL, Financial) by 82.67%, purchasing 291 shares to own 643 shares valued at about $176,930 as of the latest 13F filing. Horizon Defined Risk Fund raised its stake in Ecolab Inc (ECL) by 1.17%, purchasing 46 shares to own 3,963 shares valued at about $1,090,460 as of the latest 13F filing. Horizon Equity Premium Income Fund raised its stake in Ecolab Inc (ECL) by 1.4%, purchasing 10 shares to own 725 shares valued at about $199,490 as of the latest 13F filing. Global X Adaptive U.S. Risk Management ETF raised its stake in Ecolab Inc (ECL) by 0.33%, purchasing 2 shares to own 617 shares valued at about $169,770 as of the latest 13F filing. Invesco Russell 1000 Equal Weight ETF raised its stake in Ecolab Inc (ECL) by 0.98%, purchasing 60 shares to own 6,191 shares valued at about $1,703,520 as of the latest 13F filing. View more
+
+Stock News Roundup
+
+Ecolab (ECL, Financial) and CDP Collaborate on New Water Use Efficiency Benchmark
+
+Ecolab and CDP Partner on New Benchmarks to Help Companies Improve Operational Water Performance
+
+Water.org Partners with Gap Inc., Amazon, Starbucks, and Ecolab to Launch Get Blue™, Advancing Water.org's Goal of Reaching 200 Million People by 2030
+
+Ecolab Earns Double 'A' Rating from CDP for Leadership in Water and Climate Performance
+
+Ecolab Schedules Webcast and Conference Call on February 10, 2026
+
+View More News about ECL.
+
+ECL Price Performance
+
+Ecolab Inc(ECL, Financial) opened at $282.85 on Thursday and has a 52-week low of $221.62 and a 52-week high of $289.31. The stock has a 50-day moving average of $270.37 and a 200-day moving average of $267.25. The company has a debt-to-equity ratio of 0.91, a quick ratio of 1.33 and a current ratio of 1.70. The firm has a market capitalization of $81.62 billion, a price-to-earnings ratio of 41.40 and a beta of 1.02.
+
+Ecolab Inc(ECL, Financial) last released its quarterly earnings results on Tuesday, October 28th. The Chemicals company reported earnings per share of $2.07 for the quarter. Ecolab Inc(ECL) had a return on equity of 21.94% and a net margin of 12.49%.The firm had revenue of $4.17 billion for the quarter, compared to analysts' expectations of $4.12 billion.
+
+Ecolab Inc Profile
+
+Ecolab produces and markets cleaning and sanitation products for the industrial manufacturing, hospitality, healthcare, and life sciences markets. The firm is the global market share leader in this category with a wide array of products and services, including dish and laundry washing systems, pest control, and infection control products. Additionally, Ecolab sells customized water management solutions across its end markets. The company has a strong hold on the US market and is growing its presence abroad.",https://static.gurufocus.com/images/global_logo_twitter_card.png,N,,2026-02-06 12:07:58.509510
 ID18,Elevance Health,2026-02-05 18:11:25+00:00,www.linkedin.com,Anil Bhatt's Post - LinkedIn,Anil Bhatt,,,,,https://www.linkedin.com/posts/anilbhatt_today-im-heartbroken-to-share-the-passing-activity-7425211229570256896-Syqc,"Today I’m heartbroken to share the passing of someone truly special—my dear friend and former colleague, Geeta Wilson.
 Geeta and I first met when I was searching for the right person to lead our service experience work at Elevance Health.
 Over the years, our professional relationship grew into a real friendship—one that extended to my family as well.
@@ -34921,237 +35235,3 @@ Trump wants faster and deeper rate cuts, criticizing Powell for keeping rates hi
 Powell could remain influential as a governor, contributing to division on policy direction and potentially acting as a 'shadow' Chair amid existing board splits.
 
 Recommended For You",https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1496475088/image_1496475088.jpg?io=getty-c-w630,N,,2026-01-30 14:03:52.433532
-ID41,Societe Generale,2026-01-30 17:05:00+00:00,TradingView,CAC 40 Trims Monthly Losses - TradingView,Not Available,,,,,https://www.tradingview.com/news/te_news:521773:0-cac-40-trims-monthly-losses/,"The CAC 40 advanced 0.7% to close at 8,127 on Thursday, trimming January losses to 0.3% as investors digested fresh domestic data and earnings.
-Support came after revised figures confirmed the French economy expanded 0.2% quarter on quarter in Q4, slowing from Q3 but aligning with expectations and reinforcing the view of subdued, rather than deteriorating, momentum.
-Political risk remains in focus after Prime Minister Sébastien Lecornu again relied on special constitutional powers to push the 2026 budget through parliament, a move that continues to cloud the fiscal outlook.
-On the corporate front, gains were led by Sanofi, up 2.8% after reporting a strong 13% rise in Q4 sales and guiding for high single-digit revenue growth in 2026, while banks including Société Générale (2.8%) and BNP Paribas (1.9%) outperformed.
-Luxury names were higher, with LVMH, Hermès and Essilor rising between 0.1% and 1.3%.","The CAC 40 advanced 0.7% to close at 8,127 on Thursday, trimming January losses to 0.3% as investors digested fresh domestic data and earnings.
-
-Support came after revised figures confirmed the French economy expanded 0.2% quarter on quarter in Q4, slowing from Q3 but aligning with expectations and reinforcing the view of subdued, rather than deteriorating, momentum.
-
-Political risk remains in focus after Prime Minister Sébastien Lecornu again relied on special constitutional powers to push the 2026 budget through parliament, a move that continues to cloud the fiscal outlook.
-
-On the corporate front, gains were led by Sanofi, up 2.8% after reporting a strong 13% rise in Q4 sales and guiding for high single-digit revenue growth in 2026, while banks including Société Générale (2.8%) and BNP Paribas (1.9%) outperformed.
-
-Luxury names were higher, with LVMH, Hermès and Essilor rising between 0.1% and 1.3%.",https://s.tradingview.com/static/images/illustrations/news-story.jpg,N,,2026-01-31 19:01:05.431448
-ID15,Delta Airlines,2026-01-30 17:04:17+00:00,Restaurant Business,Starbucks is taking a page out of airlines' playbook with its loyalty program changes,"Jonathan Maze, Restaurant Business Staff, Bret Thorn, Patricia Cobe, Lisa Jennings, Heather Lalley, Joe Guszkowski, Jeff&#039;s Bagel Run, RATIONAL, Kraft Foodservice",,,,,https://www.restaurantbusinessonline.com/marketing/starbucks-taking-page-out-airlines-playbook-its-loyalty-program-changes,"Facebook Twitter LinkedIn Starbucks is bringing tiers back to its loyalty program this March.
-Members of airline or hotel loyalty programs might see something familiar in the reconfigured Starbucks Rewards program the company revealed on Thursday.
-Yet there’s a sense that Starbucks, along with many other restaurant chains, need to take its loyalty program to a new level.
-Gold members earn 1.2 stars for every $1 and Reserve members earn 1.7 stars.
-Gold and Reserve members’ stars also do not expire, while Green members’ stars remain active beyond six months so long as the user is active enough.","Facebook
-
-Twitter
-
-LinkedIn
-
-Starbucks is bringing tiers back to its loyalty program this March. | Photo: Shutterstock.
-
-Members of airline or hotel loyalty programs might see something familiar in the reconfigured Starbucks Rewards program the company revealed on Thursday.
-
-The coffee shop giant is bringing tiers back to its loyalty program on March 10, with three separate levels designed to give customers more rewards based on their overall level of spending.
-
-The three tiers are Green, Gold and Reserve. Most members will be in the Green tier, but customers who earn 500 loyalty points, which the company calls “stars,” will earn Gold member status. Those who earn 2,500 stars will be Reserve members. The higher the level, the more benefits and the faster customers earn stars.
-
-“This creates powerful incentives to drive frequency and fuel growth,” Starbucks Global Chief Brand Officer Tressie Lieberman told analysts on Thursday at the company’s Investor Day presentation. “And with the scale of the program, small changes in behavior can compound quickly. For example, if half of our active rewards members transact just one additional time each year, we will deliver an additional $150 million in revenue.”
-
-Starbucks last had a tiered reward program in 2019, when customers could earn a Gold status. It eliminated that tier as part of a simplification effort.
-
-Yet there’s a sense that Starbucks, along with many other restaurant chains, need to take its loyalty program to a new level.
-
-Airline companies like Delta or hotel brands such as Hilton and Marriott typically have tiered loyalty programs that often drive behavior. Yet few brands have done so successfully.
-
-Starbucks has long been thought of as a company that could take that step, given the popularity of the company’s program and the frequency with which customers visit.
-
-Starbucks Rewards is considered one of the industry’s most advanced and popular loyalty programs, with more than 35 million members in the U.S. alone, accounting for 60% of the revenue generated by company stores.
-
-The chain’s best customers visit 19 times per month and 200 times per year, Lieberman said. Yet those customers are treated the same as anybody else.
-
-“Our current program has a one-size-fits-all approach, regardless of whether you transact once a year or once a day,” Lieberman said. “We saw a huge opportunity to make the experience more personal and more engaging. We also saw the opportunity to drive spend and frequency through tailored benefits and focused discount dollars on what our members value most.”
-
-Like most changes in loyalty programs, the devil is in the details. Most notably, customers under the new program will earn one star for every dollar spent. Gold members earn 1.2 stars for every $1 and Reserve members earn 1.7 stars.
-
-Currently, the program allows customers to earn one star for every $1 spent, but customers earn two stars for every $1 spent through funds preloaded on the chain’s mobile app.
-
-At the same time, the program does have benefits that aren’t available now, such as free customizations on Mondays and bonus stars for those who load $30 or more onto their Starbucks cards. Gold and Reserve members’ stars also do not expire, while Green members’ stars remain active beyond six months so long as the user is active enough.
-
-The changes are all designed to convince more of those loyalty members to come in more often to reach the highest tier, while making those most loyal customers feel more special.
-
-Reserve members in particular will be given special treatment, with access to a merch shop and global coffee experiences. Those customers will also receive a free personalized Reserve card. Some could even win trips to places like Tokyo, Milan or Costa Rica.
-
-Customers will see their levels on the Starbucks app and via email, and status is based on stars accumulated from January through December. The company did add a new redemption tier, enabling customers to get up to $2 off any item with 60 stars.",https://cdn.informaconnect.com/platform/files/public/2026-01/background/Starbucks%20shutterstock%202_0.jpg?VersionId=e.ck61G8Igq53qYuiV8FzKA4_1P3b9Zy,N,,2026-01-30 16:05:06.039581
-ID19,Eli Lilly,2026-01-30 17:03:11+00:00,X (formerly Twitter),Eli Lilly $LLY announced today that it will spend $3.5 billion to build a manufacturing plant in ...,Not Available,,,,,https://x.com/StockMKTNewz/status/2017275271179866296,Evan (@StockMKTNewz). 49 likes 10 replies. Eli Lilly $LLY announced today that it will spend $3.5 billion to build a manufacturing plant in Lehigh ...,"JavaScript is not available.
-
-We’ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of supported browsers in our Help Center.",,N,,2026-01-30 13:04:22.875126
-ID38,Publicis Groupe,2026-01-30 16:56:19+00:00,MarketScreener,Bank of America Corporation Announces Executive Changes | MarketScreener,"S&amp;P Capital IQ, S&P Capital IQ",,,,,https://www.marketscreener.com/news/bank-of-america-corporation-announces-executive-changes-ce7e5bdcde8af123,"Bank of America Corp. has announced the appointment of a county head for Italy.
-The firm has appointed Lo Piccolo to the position.
-The official replaces Nino Mattarella, who is retiring from the firm.
-Piccolo is to be based in Milan.","Bank of America Corp. has announced the appointment of a county head for Italy. The firm has appointed Lo Piccolo to the position.
-
-The official replaces Nino Mattarella, who is retiring from the firm. Piccolo is to be based in Milan.",https://www.marketscreener.com/images/twitter_MS_fdblanc.png,N,,2026-01-30 12:04:28.225041
-ID40,S&P Global,2026-01-30 16:47:43+00:00,Fortune,"Fortune 500 Power Moves: Which executives gained and lost power (Jan. 17-30, 2026)",Fortune Editors,,,,,https://fortune.com/2026/01/30/fortune-500-power-moves-jan-17-30-2026/,"This is Fortune 500 Power Moves, a column tracking executive shifts—from appointments and promotions to resignations and retirements—within the highest ranks of Fortune 500 companies.
-Titles included in this roundup: CFOs (Chief Financial Officers), COOs (Chief Operating Officers), CTOs (Chief Technology Officers), and CHROs (Chief Human Resources Officers).
-We also include CEOs (Chief Executive Officers), Chief Information Officers (CIOs), Chief People Officers, CMOs (Chief Marketing Officers), and Chief Customer Officers when there are Power Moves within the Fortune 500 announced pertaining to those roles.
-For daily updates, subscribe to Fortune’s weekday newsletters, including CEO Daily, CFO Daily, and MPW Daily, as well as Next to Lead (weekly Mondays), and CIO Intelligence (weekly Wednesdays).
-Source: S&P Global Market Intelligence Join us at the Fortune Workplace Innovation Summit May 19–20, 2026, in Atlanta.","This is Fortune 500 Power Moves, a column tracking executive shifts—from appointments and promotions to resignations and retirements—within the highest ranks of Fortune 500 companies.
-
-Recommended Video
-
-Below is a recap of the C-suite developments at America’s highest-revenue-generating companies announced between Jan. 17–30, 2026 organized by sector. Titles included in this roundup: CFOs (Chief Financial Officers), COOs (Chief Operating Officers), CTOs (Chief Technology Officers), and CHROs (Chief Human Resources Officers). We also include CEOs (Chief Executive Officers), Chief Information Officers (CIOs), Chief People Officers, CMOs (Chief Marketing Officers), and Chief Customer Officers when there are Power Moves within the Fortune 500 announced pertaining to those roles.
-
-For daily updates, subscribe to Fortune’s weekday newsletters, including CEO Daily, CFO Daily, and MPW Daily, as well as Next to Lead (weekly Mondays), and CIO Intelligence (weekly Wednesdays).
-
-Financials
-
-Progressive (No. 57) announced the retirement of CFO John Sauerland, effective July 3, after 35 years with the company and 10 years as its CFO. Andrew Quigg, the the company’s Chief Strategy Officer, is expected to succeed him.
-
-Food and drug stores
-
-Albertsons (No. 55) appointed Allison Pinkham EVP and CHRO, effective Feb. 16. Pinkham previously served as CHRO and an Executive Committee Member at Galderma and will succeed Mike Theilmann, who retired in November of last year.
-
-Industrials
-
-Otis Worldwide (No. 303) appointed Enrique Miñarro Viseras COO. He previously served as President, EMEA & Latin America for the company.
-
-Retailing
-
-Chewy (No. 357) announced that CTO Satish Mehta will retire, effective Feb. 6. The company will conduct a search for Mehta’s successor.
-
-Source: S&P Global Market Intelligence
-
-Join us at the Fortune Workplace Innovation Summit May 19–20, 2026, in Atlanta. The next era of workplace innovation is here—and the old playbook is being rewritten. At this exclusive, high-energy event, the world’s most innovative leaders will convene to explore how AI, humanity, and strategy converge to redefine, again, the future of work. Register now.","https://fortune.com/img-assets/wp-content/uploads/2026/01/Power-moves-otis-worldwide.jpg?resize=1200,600",N,,2026-01-30 15:05:08.685181
-ID19,Eli Lilly,2026-01-30 16:45:19+00:00,www.reddit.com,Eli Lilly plans $3.5 billion manufacturing plant in Pennsylvania to make next-generation ...,Not Available,,,,,https://www.reddit.com/r/Zepbound/comments/1qra02h/eli_lilly_plans_35_billion_manufacturing_plant_in/,"I’m one of many people who would prefer a daily pill.
-Switching from Zepbound to something like the Wegovy pill would keep the level of food noise steady throughout the week instead of creating that rollercoaster effect.
-Yes, not every medication will be available in pill form, but most people tend to prefer pills when they’re an option.
-And realistically, most pill manufacturing ends up overseas rather than in the U.S. anyway.
-I can’t help but picture another abandoned manufacturing plant a few years down the line.","I’m one of many people who would prefer a daily pill. Switching from Zepbound to something like the Wegovy pill would keep the level of food noise steady throughout the week instead of creating that rollercoaster effect. From that standpoint, this investment just doesn’t make much sense to me. Yes, not every medication will be available in pill form, but most people tend to prefer pills when they’re an option. And realistically, most pill manufacturing ends up overseas rather than in the U.S. anyway. I can’t help but picture another abandoned manufacturing plant a few years down the line.",,N,,2026-01-30 13:04:26.796698
-ID18,Elevance Health,2026-01-30 16:45:00+00:00,The Globe and Mail,Analysts Offer Insights on Healthcare Companies: Corvus Pharmaceuticals (CRVS ...,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/UHS-N/pressreleases/37318242/analysts-offer-insights-on-healthcare-companies-corvus-pharmaceuticals-crvs-elevance-health-elv-and-universal-health-uhs/,Detailed price information for Universal Health Services (UHS-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=835,N,,2026-01-30 14:03:07.637298
-ID19,Eli Lilly,2026-01-30 16:42:32+00:00,X (formerly Twitter),Eli Lilly plans $3.5 billion manufacturing plant in Pennsylvania to make next-generation obesity...,Not Available,,,,,https://x.com/CNBC/status/2017270221430493413,CNBC (@CNBC). 6 likes. Eli Lilly plans $3.5 billion manufacturing plant in Pennsylvania to make next-generation obesity injections.,"JavaScript is not available.
-
-We’ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of supported browsers in our Help Center.",,N,,2026-01-30 13:04:30.783853
-ID1,Accor,2026-01-30 16:35:02+00:00,Hospitality Net,Filter - Hospitality Net,Not Available,,,,,"https://www.hospitalitynet.org/hotspot/new-york%3FAuckland,%2520New%2520Zealand",Accor wins three Major Awards at 2025 HM Awards · Accor's winners ... Accor Closes a Landmark Year in the Pacific with Major Brand Debuts and a ...,"Sign up to our free daily newsletter,
-
-Hospitality Net today
-
-sign up",https://www.hospitalitynet.org/favicon.svg,N,,2026-01-30 19:02:04.568545
-ID48,Wellington Management,2026-01-30 16:28:07+00:00,www.investegate.co.uk,Holding(s) in Company | Company Announcement - Investegate,Not Available,,,,,https://www.investegate.co.uk/announcement/gnw/icg-plc--icg/holding-s-in-company/9396956,"Voting rights attached to shares Class/Type of shares ISIN code(if possible) Number of direct voting rights (DTR5.1) Number of indirect voting rights (DTR5.2.1) % of direct voting rights (DTR5.1) % of indirect voting rights (DTR5.2.1) GB00BYT1DJ19140884754.840000Sub Total 8.A140884754.840000% 8B1.
-In case of proxy voting Name of the proxy holder The number and % of voting rights held The date until which the voting rights will be held 11.
-Additional Information Wellington Management Company LLP is an investment management entity that manages the assets of certain funds and/or managed accounts.
-Wellington Management Company LLP is a direct controlled undertaking of Wellington Investment Advisors Holdings LLP, which, in turn, is a direct controlled undertaking of Wellington Group Holdings LLP, which, in turn, is a direct controlled undertaking of Wellington Management Group LLP.
-Wellington Management International Ltd, Wellington Management Hong Kong Ltd and Wellington Management Europe GmbH are investment management entities that manage the assets of certain funds and/or managed accounts.","TR-1: Standard form for notification of major holdings
-
-1. Issuer Details
-
-ISIN
-
-GB00BYT1DJ19
-
-Issuer Name
-
-ICG PLC
-
-UK or Non-UK Issuer
-
-UK
-
-2. Reason for Notification
-
-An acquisition or disposal of voting rights
-
-3. Details of person subject to the notification obligation
-
-Name
-
-Wellington Management Group LLP
-
-City of registered office (if applicable)
-
-Boston
-
-Country of registered office (if applicable)
-
-United States
-
-4. Details of the shareholder
-
-Name City of registered office Country of registered office VIDACOS NOMINEES LIMITEDState Street Nominees LimitedROY Nominees LimitedNortrust Nominees LimitedMellon Nominees (UK) Ltd.JP Morgan Chase Nominees LimitedHSBC Global Custody Nominee (UK) LimitedGOLDMAN SACHS INTERNATIONALBNY (OCS) Nominees LimitedBBH ISL NOMINEES LTD
-
-5. Date on which the threshold was crossed or reached
-
-29-Jan-2026
-
-6. Date on which Issuer notified
-
-30-Jan-2026
-
-7. Total positions of person(s) subject to the notification obligation
-
-.% of voting rights attached to shares (total of 8.A) % of voting rights through financial instruments (total of 8.B 1 + 8.B 2) Total of both in % (8.A + 8.B) Total number of voting rights held in issuer Resulting situation on the date on which threshold was crossed or reached4.8400000.3000005.14000014958409Position of previous notification (if applicable)5.0700000.1700005.240000
-
-8. Notified details of the resulting situation on the date on which the threshold was crossed or reached
-
-8A. Voting rights attached to shares
-
-Class/Type of shares ISIN code(if possible) Number of direct voting rights (DTR5.1) Number of indirect voting rights (DTR5.2.1) % of direct voting rights (DTR5.1) % of indirect voting rights (DTR5.2.1) GB00BYT1DJ19140884754.840000Sub Total 8.A140884754.840000%
-
-8B1. Financial Instruments according to (DTR5.3.1R.(1) (a))
-
-Type of financial instrument Expiration date Exercise/conversion period Number of voting rights that may be acquired if the instrument is exercised/converted % of voting rights Sub Total 8.B1
-
-8B2. Financial Instruments with similar economic effect according to (DTR5.3.1R.(1) (b))
-
-Type of financial instrument Expiration date Exercise/conversion period Physical or cash settlement Number of voting rights % of voting rights Equity swap15/05/203315/05/2033Cash6788130.240000Equity swap20/05/203320/05/2033Cash90470.000000Equity swap30/05/202830/05/2028Cash910610.030000Equity swap31/05/203331/05/2033Cash910130.030000Sub Total 8.B28699340.300000%
-
-9. Information in relation to the person subject to the notification obligation
-
-2. Full chain of controlled undertakings through which the voting rights and/or the financial instruments are effectively held starting with the ultimate controlling natural person or legal entities (please add additional rows as necessary)
-
-Ultimate controlling person Name of controlled undertaking % of voting rights if it equals or is higher than the notifiable threshold % of voting rights through financial instruments if it equals or is higher than the notifiable threshold Total of both if it equals or is higher than the notifiable threshold Wellington Management Group LLP (Chain 1)Wellington Group Holdings LLP5.140000%Wellington Management Group LLP (Chain 1)Wellington Investment Advisors Holdings LLP5.140000%Wellington Management Group LLP (Chain 1)Wellington Management Company LLPWellington Management Group LLP (Chain 2)Wellington Group Holdings LLP5.140000%Wellington Management Group LLP (Chain 2)Wellington Investment Advisors Holdings LLP5.140000%Wellington Management Group LLP (Chain 2)Wellington Management Global Holdings, Ltd.Wellington Management Group LLP (Chain 2)Wellington Management International LtdWellington Management Group LLP (Chain 3)Wellington Group Holdings LLP5.140000%Wellington Management Group LLP (Chain 3)Wellington Investment Advisors Holdings LLP5.140000%Wellington Management Group LLP (Chain 3)Wellington Management Global Holdings, Ltd.Wellington Management Group LLP (Chain 3)Wellington Management Hong Kong LtdWellington Management Group LLP (Chain 4)Wellington Group Holdings LLP5.140000%Wellington Management Group LLP (Chain 4)Wellington Investment Advisors Holdings LLP5.140000%Wellington Management Group LLP (Chain 4)Wellington Management Global Holdings, Ltd.Wellington Management Group LLP (Chain 4)Wellington Management Europe GmbH
-
-10. In case of proxy voting
-
-Name of the proxy holder
-
-The number and % of voting rights held
-
-The date until which the voting rights will be held
-
-11. Additional Information
-
-Wellington Management Company LLP is an investment management entity that manages the assets of certain funds and/or managed accounts.
-
-Wellington Management Company LLP is a direct controlled undertaking of Wellington Investment Advisors Holdings LLP, which, in turn, is a direct controlled undertaking of Wellington Group Holdings LLP, which, in turn, is a direct controlled undertaking of Wellington Management Group LLP.
-
-Wellington Management International Ltd, Wellington Management Hong Kong Ltd and Wellington Management Europe GmbH are investment management entities that manage the assets of certain funds and/or managed accounts.
-
-Wellington Management International Ltd, Wellington Management Hong Kong Ltd and Wellington Management Europe GmbH are direct controlled undertakings of Wellington Management Global Holdings, Ltd., which, in turn, is a direct controlled undertaking of Wellington Investment Advisors Holdings LLP, which, in turn, is a direct controlled undertaking of Wellington Group Holdings LLP, which, in turn, is a direct controlled undertaking of Wellington Management Group LLP.
-
-12. Date of Completion
-
-30-Jan-2026
-
-13. Place Of Completion
-
-London, UK",https://www.investegate.co.uk/assets/images/linkedin-investegate-logo.jpg,N,,2026-01-30 13:04:52.999150
-ID44,Uber,2026-01-30 16:26:31+00:00,Yahoo Finance,"Mercedes, NVIDIA and Uber Team Up to Build S-Class Robotaxis - Yahoo Finance",Zacks Equity Research,,,,,https://finance.yahoo.com/news/mercedes-nvidia-uber-team-build-150200479.html,"Mercedes-Benz Group AG MBGYY, NVIDIA Corporation NVDA and Uber Technologies, Inc. UBER are advancing plans to roll out robotaxi services in major cities, centered on Mercedes’ S-Class sedan.
-The next-generation S-Class running Mercedes-Benz’s MB.OS will integrate NVIDIA DRIVE Hyperion hardware along with the full-stack NVIDIA DRIVE AV Level 4 software.
-NVIDIA DRIVE AV equips the new S-Class with a full-stack automated-driving system capable of addressing rare and complex driving scenarios within a safety-centric architecture.
-The system is trained at scale on NVIDIA DGX platforms and validated through high-fidelity simulations using NVIDIA Omniverse NuRec libraries and Cosmos world models.
-Click to get this free report NVIDIA Corporation (NVDA) : Free Stock Analysis Report Uber Technologies, Inc. (UBER) : Free Stock Analysis Report","Mercedes-Benz Group AG MBGYY, NVIDIA Corporation NVDA and Uber Technologies, Inc. UBER are advancing plans to roll out robotaxi services in major cities, centered on Mercedes’ S-Class sedan. The collaboration, launched last year, is focused on building a global autonomous-driving platform.
-
-The next-generation S-Class running Mercedes-Benz’s MB.OS will integrate NVIDIA DRIVE Hyperion hardware along with the full-stack NVIDIA DRIVE AV Level 4 software. The setup is designed to support future robotaxi deployments, emphasizing safety-first autonomy through NVIDIA’s Halos system and parallel AI-based and classical driving stacks to ensure dependable performance.
-
-The S-Class is positioned to deliver a premium, chauffeur-style autonomous experience. Under NVIDIA’s previously announced partnership with Uber, the companies plan to offer these autonomous vehicles to passengers via Uber’s mobility network.
-
-The initiative highlights how established automakers and AI leaders can collaborate to produce vehicles that are safer, smarter and more autonomous while maintaining high quality and safety standards.
-
-NVIDIA DRIVE AV equips the new S-Class with a full-stack automated-driving system capable of addressing rare and complex driving scenarios within a safety-centric architecture. The system is trained at scale on NVIDIA DGX platforms and validated through high-fidelity simulations using NVIDIA Omniverse NuRec libraries and Cosmos world models.
-
-Built on NVIDIA’s broader AI foundation spanning perception, planning and reasoning, DRIVE AV is optimized and distilled for reliable deployment in production vehicles, customized to Mercedes-Benz’s vehicle platforms and sensor suites. The technology enables real-time analysis of complex environments, evaluation of multiple driving options and selection of the safest possible action.
-
-The companies have not disclosed a timeline for launching the robotaxi service. Mercedes-Benz has previously partnered with Bosch and China-based software firm Momenta on other autonomous-driving efforts. MBGYY currently carries a Zacks Rank #3 (Hold). You can see the complete list of today’s Zacks #1 Rank (Strong Buy) stocks here.
-
-Want the latest recommendations from Zacks Investment Research? Today, you can download 7 Best Stocks for the Next 30 Days. Click to get this free report
-
-NVIDIA Corporation (NVDA) : Free Stock Analysis Report
-
-Uber Technologies, Inc. (UBER) : Free Stock Analysis Report",https://s.yimg.com/os/en/zacks.com/7028073a27bf5256dad08d6a4a686cb1,N,,2026-01-30 12:05:19.829720
