@@ -1,4 +1,85 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID34,OpenAI,2026-02-08 00:26:53+00:00,patmcguinness.substack.com,AI Week in Review 26.02.07 - by Patrick McGuinness - AI Changes Everything,Patrick McGuinness,,,,,https://patmcguinness.substack.com/p/ai-week-in-review-260207,"Claude Opus 4.6 has improved context compaction and adaptive thinking to be more effective for AI coding.
+Claude Opus 4.6 is now available via Claude, Claude Code, and APIs, and other AI coding tools.
+Pro-tip: Google’s Anti-gravity AI coding tool has free-tier access to Claude Opus.
+This could become a trend, where terminal-based and IDE-based AI coding tools converge to become AI-first coding assistance apps.
+The round reflects strong investor demand for Anthropic as it makes gains in the enterprise AI market with their latest AI models.","Top Tools: Opus 4.6 and GPT-5.3-Codex
+
+On the same day this week, Anthropic and OpenAI launched competing frontier AI models – Opus 4.6 and GPT-5.3-Codex – that are both the new state-of-the-art in agentic AI.
+
+OpenAI released GPT-5.3-Codex, an agentic AI model designed to generate, debug, and reason over complex codebases across long-horizon tasks. The model shows SOTA performance on real-world software benchmarks (56.8% on SWE-Bench Pro), improves speed (25% speedup) and token efficiency over prior versions, and introduces mid-task steerability for real-time control.
+
+Targeted at developers, GPT-5.3-Codex is available in their Codex AI coding tool and new Codex MacOS app. However, OpenAI mentions GPT-5.3-Codex use-cases beyond AI code, such as financial advice and fashion presentation generations, touting a big jump in OSWorld score (64.7%) for agentic computer-use and 70.9% on GDPval for overall knowledge work.
+
+Anthropic launched Claude Opus 4.6, a major update to its flagship model with improved reasoning, coding support improvements, and a one million token context window for long-context capabilities. Claude Opus 4.6 has improved context compaction and adaptive thinking to be more effective for AI coding. The release introduces support for enterprise workflows such as document generation, spreadsheets, presentations, and financial analysis:
+
+We’ve made substantial upgrades to Claude in Excel, and we’re releasing Claude in PowerPoint in a research preview. This makes Claude much more capable for everyday work.
+
+Claude Opus 4.6 is now available via Claude, Claude Code, and APIs, and other AI coding tools. Pro-tip: Google’s Anti-gravity AI coding tool has free-tier access to Claude Opus.
+
+In conjunction with Opus 4.6, Anthropic added an Agent Teams feature to Claude Code, where you can ask Claude Code to split a task among multiple agents that communicate peer-to-peer and work in parallel. AI Jason explains detailson how this differs from sub-agents; you can interact with individual agent teammates directly without going through the lead.
+
+Head-to-head, which new model is best? OpenAI and Anthropic avoided head-to-head benchmarks, but vibe tests tell more anyway. Claude Opus 4.6 is better says AICodeKing; Greg Isenberg agrees that Claude Opus 4.6 is a more powerful autonomous agent for complex projects, while noting strengths for GPT-5.3 Codex in speed and as an interactive collaborator.
+
+Recommendation: Try both. One approach is to “generate your plan using Codex and implement it through Opus,” or you can implement code in Opus 4.6 and have Codex 5.3 review it.
+
+AI Tech and Product Releases
+
+Kling AI released Kling 3.0, an all-in-one multimodal video generation model supporting text, image, audio, and multi-shot video creation. The update improves visual fidelity, temporal consistency, longer generations (15 seconds at 1080p), and contextual understanding for realistic video production. It’s the latest ‘best ever’ video generation model;Curious Refuge rated Kling 3.0 as state-of-the-art, for image-to-video, beating prior leader Luma Labs’ Ray 3.14.
+
+xAI announced Grok Imagine 1.0, a video generation and editing model capable of producing 10-second clips with native audio and lip-sync. The model targets rapid multimodal content creation, with multiple editing features, including restyle, scene control, swapping objects, object control, and add performance. It performs strongly on third-party benchmarks, at a price and speed below Veo3 and Sora 2.
+
+Alibaba announced Qwen3-Coder-Next, an 80B parameter mixture-of-experts model optimized for agentic coding workflows with only 3B active parameters. The open weights Qwen3-Coder-Next model supports up to 256K context and excels at long-horizon coding tasks, getting 44.3% on SWE-bench Pro and over 70% on SWE-Bench verified, numbers comparable to Claude Sonnet 4.5. This model offers fast, efficient coding automation that competes with other models with much larger footprints.
+
+Mistral AI released Voxtral Transcribe 2, an open-source (Apache 2.0 license) speech-to-text model offering sub-200 millisecond latency, improved multilingual accuracy, and speaker diarization. It supports real-time and offline transcription for privacy-sensitive and low-latency applications. Designed for integration into agent workflows and productivity tools, Voxtral is available via Mistral’s API or their mini 4B model can be downloaded via HuggingFace for local use.
+
+Roblox introduced the Cube Foundation Model, a generative AI system for accelerating creation of 3D assets and environments. The model powers “4D generation,” which is described as 3D generation with embedded scripts defining its real-time behavior. This allows creators to generate complex 3D content with pre-defined behaviors from simple inputs, lowering barriers to entry for generative world-creation.
+
+OpenBMB announced open-source MiniCPM-o 4.5, an omni-modal model capable of seeing, listening, and speaking simultaneously. MiniCPM-o 4.5 is based on SigLip2, Whisper-medium, CosyVoice2, and Qwen3-8B with a total of 9B parameters. It supports full-duplex multimodal interaction across text, vision, and audio, providing natural AI interactions at a claimed performance level of Gemini 2.5 Flash.
+
+OpenAI introduced Frontier, a platform for building, deploying, and managing enterprise-grade autonomous AI agents for business workflows. The Frontier platform enables secure multi-step task execution within corporate environments and supports scalable agentic workflows. Frontier is positioned as a competitor to Claude’s recently released Cowork and a foundation for production-ready AI coworkers.
+
+Expanding their terminal-based Codex AI code tool into an app,OpenAI released a native Codex application for macOS. The app provides a dedicated desktop GUI interface for managing AI coding workflows, with voice dictation, slash commands, Git integration, file previews, and support for GPT-5.3-Codex. This could become a trend, where terminal-based and IDE-based AI coding tools converge to become AI-first coding assistance apps.
+
+Perplexity introduced Model Council, a system that runs multiple frontier AI models in parallel to generate unified, cross-validated answers. The Model Council approach can take answers from Claude, GPT-5.2, and Gemini models and present their results, with commonality and differences noted. This improves reasoning quality and reduces hallucination and error due to reliance on a single model.
+
+Vercel released a revamped version of v0, their generative UI tool for frontend development, to better align AI-generated code with production infrastructure. The update aims to close the gap between prototyping and production app deployment, and it emphasizes best practices, deployment readiness, and seamless integration with existing workflows. Vercel also upgraded v0 to run on Claude Opus 4.6.
+
+Humanoid.ai introduced KinetIQ, an AI orchestration framework that coordinates fleets of humanoid robots across industrial and home environments. KinetIQ is a single AI model that can control multiple robots with different morphologies and designs; the system supports cross-timescale planning and multi-robot collaboration. It represents progress toward scalable AI-driven robotics ecosystems.
+
+AI Research News
+
+The ACE Studio team announced ACE-Step 1.5, a 4B parameter open-source AI music generator model capable of producing full songs with lyrics and style control in under ten seconds on consumer GPUs. The technical report “ACE-Step 1.5: Pushing the Boundaries of Open-Source Music Generation” details the model architecture and training. ACE-Step 1.5 combines a language-model (LM) planner and diffusion transformer (DiT) acoustic synthesizer, which enables fast local music generation. While scoring above commercial music generation models on SongEval benchmarks.
+
+Researchers from Hong Kong’s HKUST introduced a framework for synthesizing robot training data from human video in the paper “HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos.” The HumanX system learns transferable interaction skills across tasks such as sports and object manipulation from converting videos of human motion into models of robotic motion. This is then used to train robots on generalizable interaction skills, demonstrating generalization in humanoid robot learning.
+
+Perplexity released the DRACO (Deep Research Accuracy, Completeness, and Objectivity) benchmarkto evaluate the performance of Deep Research AI tools on real-world complex research tasks. Perplexity AI showed their own Deep Research tool performs at the state-of-the-art on external benchmarks as well as across multiple domains on the DRACO benchmark.
+
+AI Business and Policy
+
+Microsoft launched the Publisher Content Marketplace to enable transparent licensing of content for AI training and AI content serving:
+
+Publisher Content Marketplace (PCM) [is] a solution that gives publishers a new revenue stream, provides AI systems with scaled access to premium content, and delivers better responses for consumers.
+
+The platform allows publishers to monetize datasets while providing AI developers with legally cleared training material. The initiative addresses copyright and sustainability concerns.
+
+Google reported that its Gemini mobile app surpassed 750 million monthly active users. Growth is driven by deep Android integration and frequent feature updates. The milestone highlights intensifying competition among AI assistants.
+
+https://techcrunch.com/2026/02/05/google-gemini-750-million-users/
+
+Anthropic’s new Super Bowl ads are sparking an online spatbetween Anthropic and OpenAI.Anthropic launched a Super Bowl adthat took a shot at OpenAI’s plan to put ads into ChatGPT, stating that Claude will remain ad-free to preserve user trust and product quality. OpenAI’s CMO and CEO Sam Altman shot back that Anthropic’s ad-free messaging was “dishonest” and that Anthropic was about control.
+
+Meanwhile,Google announced a Gemini AI commercial scheduled to air during the Super Bowl that targets increasing consumer awareness of Gemini’s capabilities. Safe and boring
+
+ElevenLabs secured $500M in funding to expand AI voice generation research and infrastructure, at an $11 billion valuation, triple the prior company valuation in January 2025. The investment supports scaling operations and new synthetic media applications.
+
+Intel announced they will be producing dedicated GPUs targeting AI training and inference. The move aims to challenge Nvidia with competitive pricing and customer-focused solutions. It could increase hardware competition.
+
+SpaceX is acquiring xAI, merging two elements of Elon Musk’s technology empire. Musk is pitching this as a “vertically-integrated innovation engine” for AI and space.
+
+Anthropic is nearing a funding round exceeding $20 billion, valuing the company around $350 billion, second only to OpenAI in total valuation for a pure AI firm. The round reflects strong investor demand for Anthropic as it makes gains in the enterprise AI market with their latest AI models.
+
+Markets reacted sharply to reports of major hyperscalers spending $600 billion on AI infrastructure projects in the coming year, including a $200 billion plan by Amazon. There was a melt-down in software stocks due to concerns AI would disrupt their business, but on Friday there was a sharp turnaround. AI may continue to induce market volatility.","https://substackcdn.com/image/fetch/$s_!ktnE!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7f23b03f-89aa-4d4f-b8c5-d419769c72ea_936x549.png",N,,2026-02-07 19:59:25.962608
 ID33,Nvidia,2026-02-07 22:25:15+00:00,The Motley Fool,Is AMD's 17% Decline a Warning for Nvidia Shareholders Ahead of Feb. 25?,"Adria Cimino, www.facebook.com",,,,,https://www.fool.com/investing/2026/02/07/is-amds-17-decline-a-warning-for-nvidia-shareholde/,"And investors can count on both of these companies for a clear picture of the current and, potentially, future AI market.
 In spite of these results, though, AMD stock sank 17% in the trading session following the report.
 Is this stock performance, following a strong earnings report, a warning for Nvidia shareholders ahead of the market giant's Feb. 25 earnings report?
@@ -4632,61 +4713,6 @@ Before you consider News, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and News wasn't on the list.
 
 While News currently has a Hold rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/news-co-logo-1200x675.png?v=20221109135543,N,,2026-02-06 13:04:13.657212
-ID43,Thrivent ,2026-02-06 13:21:04+00:00,MarketBeat,Thrivent Financial for Lutherans Raises Stake in Brookfield Infrastructure Co. $BIPC,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-raises-stake-in-brookfield-infrastructure-co-bipc-2026-02-06/,"Thrivent Financial for Lutherans owned 0.14% of Brookfield Infrastructure worth $6,712,000 as of its most recent filing with the SEC.
-Morgan Stanley set a $57.00 price objective on Brookfield Infrastructure in a research note on Wednesday, January 28th.
-Read Our Latest Research Report on Brookfield Infrastructure Brookfield Infrastructure Stock Down 0.1% Shares of Brookfield Infrastructure stock opened at $49.07 on Friday.
-Brookfield Infrastructure Profile (Free Report) Brookfield Infrastructure NYSE: BIPC is a global owner, operator and investor in essential infrastructure assets.
-Since its formation in 2008 and U.S. listing in 2017, Brookfield Infrastructure has pursued a disciplined strategy of acquiring and managing high-quality infrastructure businesses.","Thrivent Financial for Lutherans increased its holdings in shares of Brookfield Infrastructure Co. (NYSE:BIPC - Free Report) by 24.4% in the third quarter, according to the company in its most recent filing with the SEC. The institutional investor owned 163,224 shares of the company's stock after purchasing an additional 32,015 shares during the quarter. Thrivent Financial for Lutherans owned 0.14% of Brookfield Infrastructure worth $6,712,000 as of its most recent filing with the SEC.
-
-Other hedge funds and other institutional investors have also recently bought and sold shares of the company. City Holding Co. acquired a new stake in shares of Brookfield Infrastructure in the third quarter worth $25,000. Geneos Wealth Management Inc. lifted its holdings in shares of Brookfield Infrastructure by 338.3% during the 1st quarter. Geneos Wealth Management Inc. now owns 710 shares of the company's stock valued at $26,000 after acquiring an additional 548 shares in the last quarter. Parvin Asset Management LLC purchased a new stake in Brookfield Infrastructure during the 2nd quarter worth $36,000. Citizens National Bank Trust Department acquired a new stake in Brookfield Infrastructure in the 3rd quarter valued at $41,000. Finally, GAMMA Investing LLC increased its holdings in Brookfield Infrastructure by 107.6% in the 3rd quarter. GAMMA Investing LLC now owns 1,119 shares of the company's stock valued at $46,000 after purchasing an additional 580 shares in the last quarter. 70.38% of the stock is owned by institutional investors and hedge funds.
-
-Analysts Set New Price Targets
-
-A number of research analysts have commented on the company. Morgan Stanley set a $57.00 price objective on Brookfield Infrastructure in a research note on Wednesday, January 28th. Wall Street Zen upgraded shares of Brookfield Infrastructure from a ""hold"" rating to a ""buy"" rating in a research note on Saturday, December 6th. Finally, Weiss Ratings reaffirmed a ""sell (d-)"" rating on shares of Brookfield Infrastructure in a report on Monday, December 29th. One investment analyst has rated the stock with a Hold rating and one has given a Sell rating to the company. According to MarketBeat.com, the company currently has an average rating of ""Reduce"" and an average target price of $57.00.
-
-Read Our Latest Research Report on Brookfield Infrastructure
-
-Brookfield Infrastructure Stock Down 0.1%
-
-Shares of Brookfield Infrastructure stock opened at $49.07 on Friday. The business has a 50-day moving average price of $45.93 and a 200 day moving average price of $43.57. Brookfield Infrastructure Co. has a fifty-two week low of $32.08 and a fifty-two week high of $49.70. The firm has a market cap of $5.89 billion, a P/E ratio of 30.85 and a beta of 1.36.
-
-Brookfield Infrastructure Announces Dividend
-
-The company also recently disclosed a dividend, which was paid on Wednesday, December 31st. Investors of record on Monday, December 1st were paid a dividend of $0.43 per share. The ex-dividend date was Friday, November 28th. This represents a yield of 384.0%.
-
-Brookfield Infrastructure Profile
-
-(Free Report)
-
-Brookfield Infrastructure NYSE: BIPC is a global owner, operator and investor in essential infrastructure assets. As the corporate class of Brookfield Infrastructure Partners L.P., the company provides exposure to a diversified portfolio spanning utilities, transport, energy midstream and data infrastructure. Its holdings generate stable cash flows underpinned by regulated or long-term contracted revenue streams.
-
-Since its formation in 2008 and U.S. listing in 2017, Brookfield Infrastructure has pursued a disciplined strategy of acquiring and managing high-quality infrastructure businesses.
-
-Featured Stories
-
-Five stocks we like better than Brookfield Infrastructure
-
-Your Bank Account Is No Longer Safe
-
-When to buy gold (mathematically)
-
-Nervous about the stock market? Read this
-
-NEW LAW: Congress Approves Setup For Digital Dollar?
-
-Trade this between 9:30 and 10:45 am EST
-
-Want to see what other hedge funds are holding BIPC? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Brookfield Infrastructure Co. (NYSE:BIPC - Free Report).
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in Brookfield Infrastructure Right Now?
-
-Before you consider Brookfield Infrastructure, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Brookfield Infrastructure wasn't on the list.
-
-While Brookfield Infrastructure currently has a Reduce rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/brookfield-infrastructure-co-logo-1200x675.png?v=20210326141256,N,,2026-02-06 13:04:21.597199
 ID43,Thrivent ,2026-02-06 13:21:04+00:00,MarketBeat,Thrivent Financial for Lutherans Boosts Stock Position in NXP Semiconductors N.V. $NXPI,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-boosts-stock-position-in-nxp-semiconductors-nv-nxpi-2026-02-06/,"Thrivent Financial for Lutherans' holdings in NXP Semiconductors were worth $7,791,000 as of its most recent filing with the Securities and Exchange Commission (SEC).
 NXP Semiconductors Stock Down 2.1% NXP Semiconductors Set to Break Out as AI and Analyst Support Surge NXPI stock opened at $222.13 on Friday.
 NXP Semiconductors N.V. has a one year low of $148.09 and a one year high of $255.45.
@@ -4752,6 +4778,61 @@ Before you consider NXP Semiconductors, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and NXP Semiconductors wasn't on the list.
 
 While NXP Semiconductors currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/nxp-semiconductors-logo-1200x675.jpg,N,,2026-02-06 13:04:17.486812
+ID43,Thrivent ,2026-02-06 13:21:04+00:00,MarketBeat,Thrivent Financial for Lutherans Raises Stake in Brookfield Infrastructure Co. $BIPC,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-raises-stake-in-brookfield-infrastructure-co-bipc-2026-02-06/,"Thrivent Financial for Lutherans owned 0.14% of Brookfield Infrastructure worth $6,712,000 as of its most recent filing with the SEC.
+Morgan Stanley set a $57.00 price objective on Brookfield Infrastructure in a research note on Wednesday, January 28th.
+Read Our Latest Research Report on Brookfield Infrastructure Brookfield Infrastructure Stock Down 0.1% Shares of Brookfield Infrastructure stock opened at $49.07 on Friday.
+Brookfield Infrastructure Profile (Free Report) Brookfield Infrastructure NYSE: BIPC is a global owner, operator and investor in essential infrastructure assets.
+Since its formation in 2008 and U.S. listing in 2017, Brookfield Infrastructure has pursued a disciplined strategy of acquiring and managing high-quality infrastructure businesses.","Thrivent Financial for Lutherans increased its holdings in shares of Brookfield Infrastructure Co. (NYSE:BIPC - Free Report) by 24.4% in the third quarter, according to the company in its most recent filing with the SEC. The institutional investor owned 163,224 shares of the company's stock after purchasing an additional 32,015 shares during the quarter. Thrivent Financial for Lutherans owned 0.14% of Brookfield Infrastructure worth $6,712,000 as of its most recent filing with the SEC.
+
+Other hedge funds and other institutional investors have also recently bought and sold shares of the company. City Holding Co. acquired a new stake in shares of Brookfield Infrastructure in the third quarter worth $25,000. Geneos Wealth Management Inc. lifted its holdings in shares of Brookfield Infrastructure by 338.3% during the 1st quarter. Geneos Wealth Management Inc. now owns 710 shares of the company's stock valued at $26,000 after acquiring an additional 548 shares in the last quarter. Parvin Asset Management LLC purchased a new stake in Brookfield Infrastructure during the 2nd quarter worth $36,000. Citizens National Bank Trust Department acquired a new stake in Brookfield Infrastructure in the 3rd quarter valued at $41,000. Finally, GAMMA Investing LLC increased its holdings in Brookfield Infrastructure by 107.6% in the 3rd quarter. GAMMA Investing LLC now owns 1,119 shares of the company's stock valued at $46,000 after purchasing an additional 580 shares in the last quarter. 70.38% of the stock is owned by institutional investors and hedge funds.
+
+Analysts Set New Price Targets
+
+A number of research analysts have commented on the company. Morgan Stanley set a $57.00 price objective on Brookfield Infrastructure in a research note on Wednesday, January 28th. Wall Street Zen upgraded shares of Brookfield Infrastructure from a ""hold"" rating to a ""buy"" rating in a research note on Saturday, December 6th. Finally, Weiss Ratings reaffirmed a ""sell (d-)"" rating on shares of Brookfield Infrastructure in a report on Monday, December 29th. One investment analyst has rated the stock with a Hold rating and one has given a Sell rating to the company. According to MarketBeat.com, the company currently has an average rating of ""Reduce"" and an average target price of $57.00.
+
+Read Our Latest Research Report on Brookfield Infrastructure
+
+Brookfield Infrastructure Stock Down 0.1%
+
+Shares of Brookfield Infrastructure stock opened at $49.07 on Friday. The business has a 50-day moving average price of $45.93 and a 200 day moving average price of $43.57. Brookfield Infrastructure Co. has a fifty-two week low of $32.08 and a fifty-two week high of $49.70. The firm has a market cap of $5.89 billion, a P/E ratio of 30.85 and a beta of 1.36.
+
+Brookfield Infrastructure Announces Dividend
+
+The company also recently disclosed a dividend, which was paid on Wednesday, December 31st. Investors of record on Monday, December 1st were paid a dividend of $0.43 per share. The ex-dividend date was Friday, November 28th. This represents a yield of 384.0%.
+
+Brookfield Infrastructure Profile
+
+(Free Report)
+
+Brookfield Infrastructure NYSE: BIPC is a global owner, operator and investor in essential infrastructure assets. As the corporate class of Brookfield Infrastructure Partners L.P., the company provides exposure to a diversified portfolio spanning utilities, transport, energy midstream and data infrastructure. Its holdings generate stable cash flows underpinned by regulated or long-term contracted revenue streams.
+
+Since its formation in 2008 and U.S. listing in 2017, Brookfield Infrastructure has pursued a disciplined strategy of acquiring and managing high-quality infrastructure businesses.
+
+Featured Stories
+
+Five stocks we like better than Brookfield Infrastructure
+
+Your Bank Account Is No Longer Safe
+
+When to buy gold (mathematically)
+
+Nervous about the stock market? Read this
+
+NEW LAW: Congress Approves Setup For Digital Dollar?
+
+Trade this between 9:30 and 10:45 am EST
+
+Want to see what other hedge funds are holding BIPC? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Brookfield Infrastructure Co. (NYSE:BIPC - Free Report).
+
+This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
+
+Should You Invest $1,000 in Brookfield Infrastructure Right Now?
+
+Before you consider Brookfield Infrastructure, you'll want to hear this.
+
+MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Brookfield Infrastructure wasn't on the list.
+
+While Brookfield Infrastructure currently has a Reduce rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/brookfield-infrastructure-co-logo-1200x675.png?v=20210326141256,N,,2026-02-06 13:04:21.597199
 ID5,Albertsons,2026-02-06 13:17:09+00:00,The Globe and Mail,Wall Street Analysts Are Bullish on Top Consumer Goods Picks - The Globe and Mail,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/ELF/pressreleases/68830/wall-street-analysts-are-bullish-on-top-consumer-goods-picks/,Detailed price information for E.L.F. Beauty Inc (ELF-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=837,N,,2026-02-06 13:03:50.548598
 ID41,Societe Generale,2026-02-06 13:09:24+00:00,Business in Cameroon,Douala Port to begin work on 300-MW power plant to secure energy supply,"Business in Cameroon, Public management",,,,,https://www.businessincameroon.com/energy/0602-15733-douala-port-to-begin-work-on-300-mw-power-plant-to-secure-energy-supply,"The Port Authority of Douala is preparing to enter the operational phase of an autonomous power plant project at the Douala-Bonabéri port complex, with construction scheduled to begin in March 2026.
 Once completed, the facility is expected to reach a capacity of 300 megawatts, securing electricity supply for port activities and eventually feeding surplus power into Douala’s urban grid.
@@ -34301,138 +34382,3 @@ Have a great weekend!
 Jim Nelson
 
 Managing Editor, Weiss Ratings Daily",https://cdn.weissratings.com/website/media/production/assets/ratings-social-card.jpg?rv=1.0,N,,2026-02-01 01:58:43.284397
-ID2,Adobe,2026-02-01 00:39:34+00:00,Taylor News,Power grid holds up during wintry blast - Taylor Press,Gary Borders Texas Press Association,,,,,"https://www.taylorpress.net/article/11247,power-grid-holds-up-during-wintry-blast","As of Sunday, more than 128,000 customers were without power, according to poweroutage.us, with the most being reported in Nacogdoches, Cherokee and Rusk counties.
-Incumbent U.S. Sen. John Cornyn faces challengers Texas Attorney General Ken Paxton and U.S. Rep. Wesley Hunt.
-Crockett pitched herself as a political brawler who could expand the electorate, while Talarico emphasized his Christian faith and record fighting “tooth and nail” in the Texas House.
-The Houston Advanced Research Center found the data centers, which power artificial intelligence, used 25 billion gallons of water in 2025.
-The Electric Reliability Council of Texas has already warned the data centers, which also require vast amounts of electricity, could potentially strain the state’s power grid.","CAPITAL HIGHLIGHTS | Gary Borders
-
-The electricity grid covering most of Texas held up as of Monday during the latest winter storm, although localized power outages were reported in deep East Texas and far West Texas.
-
-The Electric Reliability Council of Texas dashboard indicated demand was running comfortably below available capacity. As of Sunday, more than 128,000 customers were without power, according to poweroutage.us, with the most being reported in Nacogdoches, Cherokee and Rusk counties.
-
-“Based on expected weather conditions, ERCOT anticipates there will be sufficient generation to meet demand,” an ERCOT spokesperson said. “ERCOT will continue to deploy all available resources to manage the grid reliably and coordinate closely with the Public Utility Commission, generation providers and transmission utilities.”
-
-Gov. Greg Abbott issued a disaster declaration just prior to the storm for 134 Texas counties to ensure adequate resources remained available to Texans.
-
-Crockett, Talarico hold first debate
-
-U.S. Rep. Jasmine Crockett and state Rep. James Talarico both presented themselves as fighters during their first debate in the Democratic primary for the U.S. Senate, held in Georgetown last Saturday.
-
-The two are competing to face the GOP primary winner. Incumbent U.S. Sen. John Cornyn faces challengers Texas Attorney General Ken Paxton and U.S. Rep. Wesley Hunt.
-
-The two Democrats debated for an hour, The Texas Tribune reported. Crockett pitched herself as a political brawler who could expand the electorate, while Talarico emphasized his Christian faith and record fighting “tooth and nail” in the Texas House.
-
-The primary is March 3.
-
-Data centers could strain water supply
-
-A new report says the boom in data centers across Texas could consume nearly 3% of the state’s water by 2030, the Houston Chronicle reported. The Houston Advanced Research Center found the data centers, which power artificial intelligence, used 25 billion gallons of water in 2025.
-
-That amount could increase to 161 billion gallons annually by 2030.
-
-The Electric Reliability Council of Texas has already warned the data centers, which also require vast amounts of electricity, could potentially strain the state’s power grid.
-
-ERCOT oversees most of the state’s power grid.
-
-“The data-center surge presents a unique challenge that requires immediate attention,” said HARC President John Hall. An estimated 575 data centers are already in place, concentrated in Dallas-Fort Worth, Austin, Houston and San Antonio.
-
-Texas legislators last year passed a law setting up a $20 billion water fund, with $1 billion disbursed annually starting in 2027 for infrastructure, after an initial allocation of $2.5 billion.
-
-Abbott endorses Miller’s GOP challenger
-
-Gov. Greg Abbott has endorsed the Republican primary challenger to Texas Agriculture Commissioner Sid Miller, the Austin American-Statesman reported. Abbott said he is backing challenger Nate Sheets because he is “committed to fighting for the best interests of Texas agriculture, upholding the rule of law and restoring integrity.”
-
-Miller is seeking his fourth term to the office he has held since 2015. He has strong ties to President Donald Trump and was the first statewide elected official to endorse his candidacy in 2016. Sheets is a beekeeper and owns a honey company.
-
-To date, Trump has made no endorsement in this year’s primary.
-
-Quorum-busting House Dems fined
-
-The Texas House Democrats who left the state last summer to delay a bid to redraw congressional maps each now face more than $9,000 in fines, the Austin American-Statesman reported. That includes $7,000 in penalties for being absent and another $2,354 to cover the costs the state spent trying to bring them back to the Capitol.
-
-The members have until Feb. 9 to appeal. House Democratic Caucus leader Gene Wu, D-Houston, said members plan to protest to the House Administration Committee.
-
-“Breaking quorum is a constitutional right, and we will use every tool available to challenge these fines,” Wu said. More than 50 of the 62 House Democrats flew to Chicago to stop the attempt by GOP members to redraw the maps to give Republicans a likely additional five seats. The walkout lasted two weeks.
-
-Upon their return, the redistricting plan passed in the GOP-controlled Legislature and was signed into law. It triggered similar mid-decade redistricting attempts by both parties in other states.
-
-Orphaned oil and gas wells reach record high The number of orphaned wells in Texas climbed above 11,000 by the end of last year, breaking a 20-year record, according to the Houston Chronicle.
-
-The Texas Railroad Commission, which regulates the state’s oil and gas industry, reported about 2,000 new wells joined the list last year, bringing the total to 11,123.
-
-Orphaned wells are not actively maintained and have no operator on file at the commission. That means responsibility for cleaning and plugging them is on the state.
-
-The price of oil fell roughly 20% last year, meaning more companies have gone bankrupt or out of business. The defunct operations sometimes leave unplugged wells behind.
-
-“While there has been a recent increase in these populations due to various external factors such as operator bankruptcies and aging wells, we are in the process of taking significant actions to increase our well-plugging efforts,” said Bryce Dubee, a spokesman for the Railroad Commission.
-
-Appeals court rehears immigration law challenge
-
-A 2023 law giving state police authority to arrest people suspected of crossing the border into Texas illegally is once again before the U.S. Fifth Circuit Court of Appeals, which blocked the law from taking effect in the initial legal challenge.
-
-The court heard oral arguments last week, The Texas Tribune reported.
-
-The Biden administration sued to block the law after its passage, arguing that policing immigration rests with the federal government alone. A three-judge panel upheld an injunction blocking the law. Since then, the state has appealed, asking for the case to be reheard by the entire 17-judge appeals court.
-
-At the time the law passed in December 2023, the U.S. Border Patrol reported nearly 250,000 encounters with migrants along the border with Mexico. That number has plummeted in the past year, with just 4,264 migrant apprehensions reported in December.",https://static2.taylorpress.net/data/articles/xga-16x9-power-grid-holds-up-during-wintry-blast-1769862853.jpg,N,,2026-01-31 21:59:35.750068
-ID33,Nvidia,2026-02-01 00:26:45+00:00,Yahoo Finance,Palantir Billionaire Peter Thiel Shifts His AI Bet. He Recently Dumped Nvidia ... - Yahoo Finance,"Adria Cimino, The Motley Fool",,,,,https://finance.yahoo.com/news/palantir-billionaire-peter-thiel-shifts-093000210.html,"Let's take a closer look at this shift in Thiel's AI bet.
-And Nvidia stock has climbed in the quadruple digits over five years.
-All of this has driven investors to buy Nvidia stock as a bet on the AI boom.
-Yet, Thiel, who initially purchased Nvidia stock in the fourth quarter of 2024, sold his entire position in the third quarter of 2025.
-He Recently Dumped Nvidia Stock and Bought Shares of These 2 Tech Industry Stalwarts.","It's not surprising that investors look at Peter Thiel's latest buys and sells with interest. The billionaire has been involved in the launch and growth of many major businesses and knows how to spot a great company and get in on it early. Thiel is a co-founder of both PayPal and Palantir Technologies, and he also became Facebook's (now Meta Platforms) first outside investor.
-
-At the helm of hedge fund Thiel Macro, the billionaire oversees more than $74 million in 13F securities -- managers of more than $100 million in securities must report their trades on a quarterly basis on Form 13F to the Securities and Exchange Commission. This is positive for us as it offers us a glimpse of their latest investing activities.
-
-Where to invest $1,000 right now? Our analyst team just revealed what they believe are the 10 best stocks to buy right now, when you join Stock Advisor. See the stocks »
-
-Just recently, Thiel made a major move. He unloaded all of his shares of Nvidia (NASDAQ: NVDA), an artificial intelligence (AI) giant, and opened positions in two tech industry stalwarts. Let's take a closer look at this shift in Thiel's AI bet.
-
-Nvidia's role in AI
-
-So, first of all: Why am I calling this a shift in the billionaire's bet? This is because Nvidia has been considered the company driving the AI revolution. The tech giant is the leading seller of graphics processing units (GPUs), the principal chips needed to fuel the development and use of AI. Its GPUs continue to outperform those of rivals, and this has resulted in explosive earnings growth and stock performance. For example, in the last fiscal year, revenue reached a record of more than $130 billion. And Nvidia stock has climbed in the quadruple digits over five years.
-
-On top of this, Nvidia's promise to update its chips on an annual basis may secure its leadership over time. And analysts' forecasts for an AI market of more than $2 trillion by the start of the next decade suggest there's plenty of growth ahead for AI powerhouses like Nvidia.
-
-All of this has driven investors to buy Nvidia stock as a bet on the AI boom. Yet, Thiel, who initially purchased Nvidia stock in the fourth quarter of 2024, sold his entire position in the third quarter of 2025. That was 537,742 shares, which made up 40% of Thiel's portfolio.
-
-Thiel's latest moves
-
-And at the same time, he opened new positions in the following two tech heavyweights:
-
-Thiel hasn't said why he made the following moves, but we may interpret this as a rotation out of a stock that has soared in the early stages of the AI boom and seen its valuation climb -- and a shift into stocks that haven't seen such enormous gains and today trade for lower valuations.
-
-NVDA PE Ratio (Forward) data by YCharts
-
-Nvidia's dependence on AI
-
-It's also important to note that Nvidia is much more dependent on AI for growth than Microsoft and Apple -- this has been a positive point for Nvidia over the past couple of years, and has driven up the share price as investors saw it as a clear bet on AI. And Nvidia's AI strengths have also produced concrete results, with earnings climbing as I mentioned above.
-
-But Nvidia may also be seen as a riskier AI buy than Microsoft and Apple. Microsoft generates revenue from a variety of businesses, from software to cloud computing -- businesses that have delivered growth well before the AI boom. And Apple has been a smaller AI player, just recently rolling out AI features across its devices, so while Apple may benefit from AI, the company isn't heavily relying on it for growth. This means they are less likely to suffer if there's any slowdown or headwinds in the AI story.
-
-So, Thiel's shift broadens his exposure to companies that are active in the AI space -- but aren't as tightly linked to it as Nvidia. Now the question is: Should you follow Thiel's moves?
-
-This depends on your investment strategy. If you're a cautious investor or worried about the formation of an AI bubble, Microsoft and Apple make excellent choices today. But if you're an aggressive investor who aims to maximize your potential for AI growth, you might want to stick with Nvidia -- this AI giant still could have room to run.
-
-Should you buy stock in Nvidia right now?
-
-Before you buy stock in Nvidia, consider this:
-
-The Motley Fool Stock Advisor analyst team just identified what they believe are the 10 best stocks for investors to buy now… and Nvidia wasn’t one of them. The 10 stocks that made the cut could produce monster returns in the coming years.
-
-Consider when Netflix made this list on December 17, 2004... if you invested $1,000 at the time of our recommendation, you’d have $448,476!* Or when Nvidia made this list on April 15, 2005... if you invested $1,000 at the time of our recommendation, you’d have $1,180,126!*
-
-Now, it’s worth noting Stock Advisor’s total average return is 945% — a market-crushing outperformance compared to 197% for the S&P 500. Don't miss the latest top 10 list, available with Stock Advisor, and join an investing community built by individual investors for individual investors.
-
-See the 10 stocks »
-
-*Stock Advisor returns as of January 31, 2026.
-
-Adria Cimino has positions in PayPal. The Motley Fool has positions in and recommends Apple, Meta Platforms, Microsoft, Nvidia, and PayPal. The Motley Fool recommends the following options: long January 2027 $42.50 calls on PayPal and short March 2026 $65 calls on PayPal. The Motley Fool has a disclosure policy.
-
-Palantir Billionaire Peter Thiel Shifts His AI Bet. He Recently Dumped Nvidia Stock and Bought Shares of These 2 Tech Industry Stalwarts. was originally published by The Motley Fool",https://s.yimg.com/ny/api/res/1.2/ByLibwojv2ON6ws_0Piodw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA7Y2Y9d2VicA--/https://media.zenfs.com/en/motleyfool.com/8dd5465e42ebace1d278988128b93d95,N,,2026-02-01 05:00:27.642276
-ID18,Elevance Health,2026-02-01 00:22:14+00:00,Teal Job Search,Nurse Case Mgr I @ Elevance Health - Teal,Not Available,,,,,https://www.tealhq.com/job/nurse-case-mgr-i_7ea1ae770fbfea6054f3ccc71ea1f13d018a3,"Nurse Case Manager I Location: Latham, NY Virtual: This role enables associates to work virtually full-time, with the exception of required in-person training sessions, providing maximum flexibility and autonomy.
-The Nurse Case Manager I is responsible for performing care management within the scope of licensure for members with complex and chronic care needs by assessing, developing, implementing, coordinating, monitoring, and evaluating care plans designed to optimize member health care across the care continuum How you will make an impact: Ensures member access to services appropriate to their health needs.
-Conducts assessments to identify individual needs and a specific care management plan to address objectives and goals as identified during assessment.
-Implements care plan by facilitating authorizations/referrals as appropriate within benefits structure or through extra-contractual arrangements.
-Monitors and evaluates effectiveness of the care management plan and modifies as necessary.","Nurse Case Manager I Location: Latham, NY Virtual: This role enables associates to work virtually full-time, with the exception of required in-person training sessions, providing maximum flexibility and autonomy. This approach promotes productivity, supports work-life integration, and ensures essential face-to-face onboarding and skill development. Please note that per our policy on hybrid/virtual work, candidates not within a reasonable commuting distance from the posting location(s) will not be considered for employment, unless an accommodation is granted as required by law. The Nurse Case Manager I is responsible for performing care management within the scope of licensure for members with complex and chronic care needs by assessing, developing, implementing, coordinating, monitoring, and evaluating care plans designed to optimize member health care across the care continuum How you will make an impact: Ensures member access to services appropriate to their health needs. Conducts assessments to identify individual needs and a specific care management plan to address objectives and goals as identified during assessment. Implements care plan by facilitating authorizations/referrals as appropriate within benefits structure or through extra-contractual arrangements. Coordinates internal and external resources to meet identified needs. Monitors and evaluates effectiveness of the care management plan and modifies as necessary. Interfaces with Medical Directors and Physician",https://cdn.prod.website-files.com/62775a91cc3db44c787149de/62974e314b5eb9517ab13691_favicon.png,N,,2026-02-01 08:59:45.923348
