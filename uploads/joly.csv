@@ -1,4 +1,52 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID34,OpenAI,2026-02-13 12:37:33+00:00,The New Stack,OpenAI's new Codex Spark model is built for speed - The New Stack,"Frederic Lardinois, Max Liu, Cynthia Dunlop, Steven J. Vaughan-Nichols, Jack Wallen, Vicki Walker, Jelani Harper, Loraine Lawson, Joab Jackson, Hugo Guerrero",,,,,https://thenewstack.io/openais-new-codex-spark-is-optimized-for-speed/,"Powered by Cerebras’ 125-petaflop Wafer Scale Engine 3, the Codex Spark model is meant for use cases where latency matters as much — or more — than intelligence.
+And fast it is: Codex Spark can deliver more than 1,000 tokens per second.
+However, whereas that model excels at long-running coding and agentic tasks, where latency is less important, Codex Spark is designed for rapid prototyping and obtaining answers quickly.
+A select number of OpenAI partners will also get early access to Codex Spark in the API.
+OpenAI notes that capacity for the new Codex Spark model may be constrained, with slower access and temporary queuing.","OpenAI’s new GPT-5.3-Codex-Spark model is a bit of a departure for the company’s family of Codex software development models: its focus is squarely on reducing latency.
+
+Powered by Cerebras’ 125-petaflop Wafer Scale Engine 3, the Codex Spark model is meant for use cases where latency matters as much — or more — than intelligence. And fast it is: Codex Spark can deliver more than 1,000 tokens per second.
+
+When OpenAI launched GPT-5.3-Codex only a few days ago, it highlighted how the team was able to bring down latency by 25 percent. However, whereas that model excels at long-running coding and agentic tasks, where latency is less important, Codex Spark is designed for rapid prototyping and obtaining answers quickly.
+
+The core idea here is to have two models that are complementary: a fast one for real-time collaboration and a slower one for long-running tasks where deeper reasoning is called for.
+
+OpenAI notes that its new model is best suited for making small, very targeted edits to code. An additional benefit of the speed, though, is that the model can be easily interrupted and redirected, helping developers iterate quickly.
+
+However, since it’s optimized for this use case, it will also only feature a 128,000-token context window at launch. It is also text-only. Over time, the team plans to add additional capabilities to this faster model family, including larger models, longer context lengths, and multimodal inputs.
+
+Benchmarks
+
+The company admits that the new model will underperform GPT-5.3-Codex, “but can accomplish the tasks in a fraction of the time.”
+
+On the standard SWE-Bench Pro benchmark, Codex Spark indeed scores significantly lower than GPT-5.3-Codex, but it does get to usable results much faster, which may just be enough for many use cases.
+
+On Terminal-Bench 2.0, which looks at how well the model performs at agentic workflows in the terminal, it also scores significantly lower than the larger GPT-5.3-Codex (58.4% vs 77.3%).
+
+Availability
+
+The GPT-5.3-Codex-Spark tier is now available as a research preview for ChatGPT Pro users in the CLI, VS Code and the Codex app (which has now been downloaded more than 1 million times). A select number of OpenAI partners will also get early access to Codex Spark in the API.
+
+OpenAI notes that capacity for the new Codex Spark model may be constrained, with slower access and temporary queuing. The model will have its own rate limits, and using it will not count toward the company’s regular rate limits.
+
+Since it’s not available in the API yet, OpenAI has not published any pricing information.
+
+Why OpenAI opted for Cerebras’ wafer-scale AI accelerators
+
+Using different model tiers is not exactly a new idea, of course. Anthropic, with its three tiers of models (Haiku, Sonnet, and Opus), and others have long used a similar approach of offering models that are mostly differentiated by their intelligence, speed, and pricing. OpenAI itself has long offered nano versions of its models.
+
+The major difference here is that OpenAI is also using a very different hardware platform for this new model.
+
+It’s no coincidence that OpenAI chose to run this model on Cerebras’ hardware. Early in 2026, the two companies announced a multi-year partnership agreement that is reportedly worth up to $10 billion. Under this agreement, Cerebras will build and host data centers that will deliver 750 megawatts of capacity to run its wafer-scale chips for OpenAI.
+
+Cerebras’ chips are gigantic when compared with most standard GPUs and AI accelerators. NVIDIA’s flagship Blackwell B200 accelerator features 208 billion transistors. Cerebras’ chip features four trillion, spread between almost 900,000 cores.
+
+But it’s not just the pure computing power. At this point, the real bottleneck for inference isn’t compute but memory bandwidth. Cerebras promises to do away with this bottleneck by using on-chip memory and up to 27 petabytes per second of internal bandwidth.
+
+In its announcement, OpenAI stresses that GPUs remain foundational for its training and inference pipelines. But the company also notes that “Cerebras complements that foundation by excelling at workflows that demand extremely low latency, tightening the end-to-end loop so Codex feels more responsive as you iterate.”
+
+As Sean Lie, the CTO and co-founder of Cerebras, puts it: “What excites us most about GPT-5.3-Codex Spark is partnering with OpenAI and the developer community to discover what fast inference makes possible — new interaction patterns, new use cases, and a fundamentally different model experience. This preview is just the beginning.”",https://cdn.thenewstack.io/media/2026/02/9cb2857f-glenn-hansen-vw4xilrr-do-unsplash-scaled.jpg,N,,2026-02-13 08:59:27.173435
+ID34,OpenAI,2026-02-13 11:00:25+00:00,finance.yahoo.com,OpenAI and Anthropic battle in the political arena - Yahoo Finance,Not Available,,,,,https://finance.yahoo.com/news/openai-and-anthropic-battle-in-the-political-arena-110001331.html,"But its increasingly becoming a key narrative in American politics too. Instead of posturing for space on your phone's homescreen, OpenAI and ...",Not Available,,N,,2026-02-13 09:00:00.247126
 ID2,Adobe,2026-02-13 10:44:06+00:00,www.msn.com,"Analysts are downgrading Adobe Inc. (ADBE), here's what you should know - MSN",Not Available,,,,,https://www.msn.com/en-us/money/topstocks/analysts-are-downgrading-adobe-inc-adbe-here-s-what-you-should-know/ar-AA1Wh0Py%3Focid%3Dfinance-verthp-feeds,"Earlier on January 12, Gabriela Borges from Goldman Sachs downgraded Adobe from Buy to Sell with a $290 price target.",Not Available,,N,,2026-02-13 07:02:11.703525
 ID37,Philips,2026-02-13 10:42:06+00:00,www.msn.com,Philips jumps as Q4 net income rises and plans new dividend - MSN,Not Available,,,,,https://www.msn.com/en-us/money/companies/philips-jumps-as-q4-net-income-rises-and-plans-new-dividend/ar-AA1W4uKq%3Focid%3Dfinance-verthp-feeds%26apiversion%3Dv2%26domshim%3D1%26noservercache%3D1%26noservertelemetry%3D1%26batchservertelemetry%3D1%26renderwebcomponents%3D1%26wcseo%3D1,"Philips (PHG) is up 10% in Tuesday morning trading after reporting Q4 2025 net income that rose compared to the year-ago period, ...",Not Available,,N,,2026-02-13 08:00:17.951529
 ID41,Societe Generale,2026-02-13 10:05:43+00:00,NBC News,January inflation report will reveal whether recent trends were a mirage,Steve Kopack,,,,,https://www.nbcnews.com/business/economy/january-inflation-report-trump-tariffs-rcna258842,"After inflation declined from a 2025 high of 3% in September to 2.7% in December, the most closely watched indicator in the report — which was delayed by a brief shutdown — will be the direction of the overall inflation rate.
@@ -27698,6 +27746,65 @@ By Arasu Kannagi Basil Jan 28 (Reuters) - Eikon Therapeutics, headed by Merck ve
 Thomson Reuters Jan 28, 2026",https://media-cdn.socastsrm.com/uploads/station/2165/fbShare.png?r=58912,N,,2026-02-09 02:59:20.978384
 ID34,OpenAI,2026-02-08 10:08:34+00:00,Pittsburgh Post-Gazette,Editorial: We must help young people embrace their humanity in the age of AI's imitation humanity,The Editorial Board,,,,,https://www.post-gazette.com/opinion/editorials/2026/02/08/shapiro-ai-chat-bot-school-phone-ban-devlin-robinson-anthropic-openai/stories/202602080050,"During Gov. Josh Shapiro’s lengthy and, on occasion, unusually partisan budget address this past Tuesday, one theme attracted significant support...",Not Available,https://73f3e7d5672db1849e6c-6434aaf008a29447cc424990bc6a54a7.ssl.cf2.rackcdn.com/stories/202602080050/1140x_a10-7_cTC/999231414_1770415351.jpg,N,,2026-02-08 06:00:09.866901
 ID30,Michelin,2026-02-08 10:06:39+00:00,The Globe and Mail,Does it really matter how you hold the steering wheel? - The Globe and Mail,Jason Tchir,,,,,https://www.theglobeandmail.com/drive/culture/article-does-it-really-matter-how-you-hold-the-steering-wheel/,"Somewhere between eight and four and ten and two is recommended, with both hands at the same height and elbows slightly bent",Not Available,https://www.theglobeandmail.com/resizer/v2/AAPBCZLMJRG55NIMOOC522SDG4.jpg?auth=13856b7ddd90d50c98364ffb578613697dd3f190de2aeb1b82b9b17c09ba1d43&width=1200&height=800&quality=80&smart=true,N,,2026-02-08 06:58:53.946379
+ID43,Thrivent ,2026-02-08 09:26:02+00:00,MarketBeat,Thrivent Financial for Lutherans Reduces Holdings in Annaly Capital Management Inc $NLY,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-reduces-holdings-in-annaly-capital-management-inc-nly-2026-02-08/,"Thrivent Financial for Lutherans' holdings in Annaly Capital Management were worth $4,552,000 as of its most recent SEC filing.
+AQR Capital Management LLC raised its holdings in shares of Annaly Capital Management by 111.8% in the first quarter.
+Millennium Management LLC raised its stake in Annaly Capital Management by 17.4% in the 1st quarter.
+Annaly Capital Management (NYSE:NLY - Get Free Report) last issued its quarterly earnings results on Wednesday, January 28th.
+Check Out Our Latest Stock Analysis on Annaly Capital Management Annaly Capital Management Company Profile (Free Report) Annaly Capital Management, Inc is a publicly traded real estate investment trust (REIT) that specializes in generating income through investment in mortgage-related assets.","Thrivent Financial for Lutherans reduced its stake in Annaly Capital Management Inc (NYSE:NLY - Free Report) by 27.1% in the 3rd quarter, according to its most recent filing with the Securities & Exchange Commission. The fund owned 225,224 shares of the real estate investment trust's stock after selling 83,535 shares during the quarter. Thrivent Financial for Lutherans' holdings in Annaly Capital Management were worth $4,552,000 as of its most recent SEC filing.
+
+Here's Who Wins If Trump's 50-Year Mortgages Come to Market
+
+A number of other institutional investors also recently bought and sold shares of the stock. AQR Capital Management LLC raised its holdings in shares of Annaly Capital Management by 111.8% in the first quarter. AQR Capital Management LLC now owns 56,803 shares of the real estate investment trust's stock worth $1,154,000 after buying an additional 29,978 shares during the last quarter. Integrated Wealth Concepts LLC increased its position in shares of Annaly Capital Management by 39.4% in the 1st quarter. Integrated Wealth Concepts LLC now owns 14,874 shares of the real estate investment trust's stock valued at $302,000 after acquiring an additional 4,205 shares during the period. Millennium Management LLC raised its stake in Annaly Capital Management by 17.4% in the 1st quarter. Millennium Management LLC now owns 541,733 shares of the real estate investment trust's stock worth $11,003,000 after acquiring an additional 80,481 shares during the last quarter. NewEdge Advisors LLC lifted its position in Annaly Capital Management by 20.8% during the 1st quarter. NewEdge Advisors LLC now owns 17,845 shares of the real estate investment trust's stock worth $362,000 after acquiring an additional 3,074 shares during the period. Finally, Goldman Sachs Group Inc. grew its stake in Annaly Capital Management by 833.6% during the 1st quarter. Goldman Sachs Group Inc. now owns 2,920,617 shares of the real estate investment trust's stock valued at $59,318,000 after purchasing an additional 2,607,784 shares during the last quarter. 51.56% of the stock is currently owned by institutional investors and hedge funds.
+
+Annaly Capital Management Trading Down 0.4%
+
+Shares of NLY stock opened at $22.88 on Friday. The company has a market capitalization of $15.63 billion, a P/E ratio of 8.23, a P/E/G ratio of 7.09 and a beta of 1.24. The business's 50 day moving average is $23.08 and its two-hundred day moving average is $21.85. Annaly Capital Management Inc has a 12-month low of $16.59 and a 12-month high of $24.52.
+
+6 Mortgage REITS: How Badly Could Rising Rates Hurt Them?
+
+Annaly Capital Management (NYSE:NLY - Get Free Report) last issued its quarterly earnings results on Wednesday, January 28th. The real estate investment trust reported $0.74 EPS for the quarter, topping the consensus estimate of $0.72 by $0.02. The company had revenue of $1.06 billion during the quarter, compared to analyst estimates of $567.67 million. Annaly Capital Management had a net margin of 34.02% and a return on equity of 15.80%. On average, research analysts predict that Annaly Capital Management Inc will post 2.81 earnings per share for the current fiscal year.
+
+Annaly Capital Management Dividend Announcement
+
+The company also recently announced a quarterly dividend, which was paid on Friday, January 30th. Stockholders of record on Wednesday, December 31st were given a $0.70 dividend. This represents a $2.80 annualized dividend and a dividend yield of 12.2%. The ex-dividend date was Wednesday, December 31st. Annaly Capital Management's dividend payout ratio (DPR) is 100.72%.
+
+Analysts Set New Price Targets
+
+A number of equities research analysts recently commented on the company. Weiss Ratings reaffirmed a ""hold (c)"" rating on shares of Annaly Capital Management in a report on Wednesday, January 21st. Royal Bank Of Canada raised their price target on shares of Annaly Capital Management from $23.00 to $25.00 and gave the stock an ""outperform"" rating in a research report on Thursday. Barclays set a $24.00 price objective on shares of Annaly Capital Management and gave the stock an ""equal weight"" rating in a research note on Friday, January 30th. Jones Trading raised their target price on shares of Annaly Capital Management from $22.00 to $25.00 and gave the stock a ""buy"" rating in a report on Thursday, January 29th. Finally, Wells Fargo & Company restated an ""overweight"" rating and set a $25.00 target price (up from $23.00) on shares of Annaly Capital Management in a research report on Thursday, January 29th. Seven equities research analysts have rated the stock with a Buy rating and four have given a Hold rating to the stock. Based on data from MarketBeat, Annaly Capital Management has a consensus rating of ""Moderate Buy"" and a consensus price target of $24.11.
+
+Check Out Our Latest Stock Analysis on Annaly Capital Management
+
+Annaly Capital Management Company Profile
+
+(Free Report)
+
+Annaly Capital Management, Inc is a publicly traded real estate investment trust (REIT) that specializes in generating income through investment in mortgage-related assets. The company's core business activities include the acquisition, financing, and management of a diversified portfolio of agency and non-agency residential mortgage-backed securities (RMBS), commercial mortgage-backed securities (CMBS), and other real estate debt instruments. Annaly seeks to profit from the spread between the interest earned on its mortgage investments and its cost of funds, as well as from capital gains realized through active portfolio management.
+
+Founded in 1997 and headquartered in New York City, Annaly has grown to become one of the largest mortgage REITs in the United States.
+
+Further Reading
+
+Five stocks we like better than Annaly Capital Management
+
+NEW LAW: Congress Approves Setup For Digital Dollar?
+
+The $650 Million Bet on AI's Future
+
+The gold chart Wall Street is terrified of…
+
+The buying spree that no one is talking about
+
+Trump’s AI Secret: 100X Faster Than Nvidia
+
+This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
+
+Should You Invest $1,000 in Annaly Capital Management Right Now?
+
+Before you consider Annaly Capital Management, you'll want to hear this.
+
+MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Annaly Capital Management wasn't on the list.
+
+While Annaly Capital Management currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/annaly-capital-management-inc-logo-1200x675.png?v=20240202075753,N,,2026-02-08 11:04:24.948241
 ID43,Thrivent ,2026-02-08 09:26:02+00:00,MarketBeat,"Thrivent Financial for Lutherans Sells 55,963 Shares of First Horizon Corporation $FHN",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-sells-55963-shares-of-first-horizon-corporation-fhn-2026-02-08/,"The institutional investor owned 176,117 shares of the financial services provider's stock after selling 55,963 shares during the quarter.
 First Horizon Corp purchased a new position in shares of First Horizon in the third quarter worth $2,361,000.
 Analyst Upgrades and Downgrades PacWest, First Horizon Shares Plummet On Continued Bank Worries A number of brokerages recently issued reports on FHN.
@@ -27765,65 +27872,6 @@ Before you consider First Horizon, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and First Horizon wasn't on the list.
 
 While First Horizon currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/first-horizon-co-logo-1200x675.jpg?v=20221107142907,N,,2026-02-08 11:04:20.520884
-ID43,Thrivent ,2026-02-08 09:26:02+00:00,MarketBeat,Thrivent Financial for Lutherans Reduces Holdings in Annaly Capital Management Inc $NLY,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-reduces-holdings-in-annaly-capital-management-inc-nly-2026-02-08/,"Thrivent Financial for Lutherans' holdings in Annaly Capital Management were worth $4,552,000 as of its most recent SEC filing.
-AQR Capital Management LLC raised its holdings in shares of Annaly Capital Management by 111.8% in the first quarter.
-Millennium Management LLC raised its stake in Annaly Capital Management by 17.4% in the 1st quarter.
-Annaly Capital Management (NYSE:NLY - Get Free Report) last issued its quarterly earnings results on Wednesday, January 28th.
-Check Out Our Latest Stock Analysis on Annaly Capital Management Annaly Capital Management Company Profile (Free Report) Annaly Capital Management, Inc is a publicly traded real estate investment trust (REIT) that specializes in generating income through investment in mortgage-related assets.","Thrivent Financial for Lutherans reduced its stake in Annaly Capital Management Inc (NYSE:NLY - Free Report) by 27.1% in the 3rd quarter, according to its most recent filing with the Securities & Exchange Commission. The fund owned 225,224 shares of the real estate investment trust's stock after selling 83,535 shares during the quarter. Thrivent Financial for Lutherans' holdings in Annaly Capital Management were worth $4,552,000 as of its most recent SEC filing.
-
-Here's Who Wins If Trump's 50-Year Mortgages Come to Market
-
-A number of other institutional investors also recently bought and sold shares of the stock. AQR Capital Management LLC raised its holdings in shares of Annaly Capital Management by 111.8% in the first quarter. AQR Capital Management LLC now owns 56,803 shares of the real estate investment trust's stock worth $1,154,000 after buying an additional 29,978 shares during the last quarter. Integrated Wealth Concepts LLC increased its position in shares of Annaly Capital Management by 39.4% in the 1st quarter. Integrated Wealth Concepts LLC now owns 14,874 shares of the real estate investment trust's stock valued at $302,000 after acquiring an additional 4,205 shares during the period. Millennium Management LLC raised its stake in Annaly Capital Management by 17.4% in the 1st quarter. Millennium Management LLC now owns 541,733 shares of the real estate investment trust's stock worth $11,003,000 after acquiring an additional 80,481 shares during the last quarter. NewEdge Advisors LLC lifted its position in Annaly Capital Management by 20.8% during the 1st quarter. NewEdge Advisors LLC now owns 17,845 shares of the real estate investment trust's stock worth $362,000 after acquiring an additional 3,074 shares during the period. Finally, Goldman Sachs Group Inc. grew its stake in Annaly Capital Management by 833.6% during the 1st quarter. Goldman Sachs Group Inc. now owns 2,920,617 shares of the real estate investment trust's stock valued at $59,318,000 after purchasing an additional 2,607,784 shares during the last quarter. 51.56% of the stock is currently owned by institutional investors and hedge funds.
-
-Annaly Capital Management Trading Down 0.4%
-
-Shares of NLY stock opened at $22.88 on Friday. The company has a market capitalization of $15.63 billion, a P/E ratio of 8.23, a P/E/G ratio of 7.09 and a beta of 1.24. The business's 50 day moving average is $23.08 and its two-hundred day moving average is $21.85. Annaly Capital Management Inc has a 12-month low of $16.59 and a 12-month high of $24.52.
-
-6 Mortgage REITS: How Badly Could Rising Rates Hurt Them?
-
-Annaly Capital Management (NYSE:NLY - Get Free Report) last issued its quarterly earnings results on Wednesday, January 28th. The real estate investment trust reported $0.74 EPS for the quarter, topping the consensus estimate of $0.72 by $0.02. The company had revenue of $1.06 billion during the quarter, compared to analyst estimates of $567.67 million. Annaly Capital Management had a net margin of 34.02% and a return on equity of 15.80%. On average, research analysts predict that Annaly Capital Management Inc will post 2.81 earnings per share for the current fiscal year.
-
-Annaly Capital Management Dividend Announcement
-
-The company also recently announced a quarterly dividend, which was paid on Friday, January 30th. Stockholders of record on Wednesday, December 31st were given a $0.70 dividend. This represents a $2.80 annualized dividend and a dividend yield of 12.2%. The ex-dividend date was Wednesday, December 31st. Annaly Capital Management's dividend payout ratio (DPR) is 100.72%.
-
-Analysts Set New Price Targets
-
-A number of equities research analysts recently commented on the company. Weiss Ratings reaffirmed a ""hold (c)"" rating on shares of Annaly Capital Management in a report on Wednesday, January 21st. Royal Bank Of Canada raised their price target on shares of Annaly Capital Management from $23.00 to $25.00 and gave the stock an ""outperform"" rating in a research report on Thursday. Barclays set a $24.00 price objective on shares of Annaly Capital Management and gave the stock an ""equal weight"" rating in a research note on Friday, January 30th. Jones Trading raised their target price on shares of Annaly Capital Management from $22.00 to $25.00 and gave the stock a ""buy"" rating in a report on Thursday, January 29th. Finally, Wells Fargo & Company restated an ""overweight"" rating and set a $25.00 target price (up from $23.00) on shares of Annaly Capital Management in a research report on Thursday, January 29th. Seven equities research analysts have rated the stock with a Buy rating and four have given a Hold rating to the stock. Based on data from MarketBeat, Annaly Capital Management has a consensus rating of ""Moderate Buy"" and a consensus price target of $24.11.
-
-Check Out Our Latest Stock Analysis on Annaly Capital Management
-
-Annaly Capital Management Company Profile
-
-(Free Report)
-
-Annaly Capital Management, Inc is a publicly traded real estate investment trust (REIT) that specializes in generating income through investment in mortgage-related assets. The company's core business activities include the acquisition, financing, and management of a diversified portfolio of agency and non-agency residential mortgage-backed securities (RMBS), commercial mortgage-backed securities (CMBS), and other real estate debt instruments. Annaly seeks to profit from the spread between the interest earned on its mortgage investments and its cost of funds, as well as from capital gains realized through active portfolio management.
-
-Founded in 1997 and headquartered in New York City, Annaly has grown to become one of the largest mortgage REITs in the United States.
-
-Further Reading
-
-Five stocks we like better than Annaly Capital Management
-
-NEW LAW: Congress Approves Setup For Digital Dollar?
-
-The $650 Million Bet on AI's Future
-
-The gold chart Wall Street is terrified of…
-
-The buying spree that no one is talking about
-
-Trump’s AI Secret: 100X Faster Than Nvidia
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in Annaly Capital Management Right Now?
-
-Before you consider Annaly Capital Management, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Annaly Capital Management wasn't on the list.
-
-While Annaly Capital Management currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/annaly-capital-management-inc-logo-1200x675.png?v=20240202075753,N,,2026-02-08 11:04:24.948241
 ID6,AXA,2026-02-08 09:23:11+00:00,www.atlas-mag.net,China: AXA completes acquisition of AXA Tianping - Atlas Magazine,Not Available,,,,,https://www.atlas-mag.net/en/articles/china-axa-completes-acquisition-axa-tianping-0,"Announced in November 2018, the acquisition of the remaining 50% of AXA Tianping's capital has recently been completed.
 The transaction amounted to almost 600 million EUR (668.31 million USD).
 The French group controls henceforth 100% of AXA Tianping's capital.
@@ -33571,561 +33619,3 @@ Peer comparison is a popular technique amongst analysts and investors for gaugin
 According to Benzinga Pro, Best Buy Co Inc's peer group average for short interest as a percentage of float is 6.72%, which means the company has more short interest than most of its peers.
 
 This article was generated by Benzinga's automated content engine and was reviewed by an editor.",https://cdn.benzinga.com/files/images/story/2025/11/06/movers_2.jpg?width=1200&height=800&fit=crop,N,,2026-02-06 10:01:33.157044
-ID38,Publicis Groupe,2026-02-06 13:51:15+00:00,GlobeNewswire News Room,Europe Digital Ad Spend Business Report 2026: A $253.1 - GlobeNewswire,Research and Markets,,,,,https://www.globenewswire.com/news-release/2026/02/06/3233823/0/en/Europe-Digital-Ad-Spend-Business-Report-2026-A-253-1-Billion-Market-by-2029-Amazon-Ads-and-Criteo-Scale-Retail-Media-While-Spotify-Acast-and-Publisher-Alliances-Strengthen-Local-Al.html,"The digital ad spend market in Europe is expected to grow by 10.2% annually, reaching US$181.9 billion by 2026.
-The digital ad spend market in the region has experienced robust growth during 2020-2025, achieving a CAGR of 8.8%.
-By the end of 2029, the digital ad spend market is projected to expand from its 2025 value of US$165.1 billion to approximately US$253.1 billion.
-A bundled offering, combining the following 15 reports, covering 800+ tables and 1000+ figures: Europe Digital Ad Spend Market Business and Investment Opportunities Databook Austria Digital Ad Spend Market Business and Investment Opportunities Databook Belgium Digital Ad Spend Market Business and Investment Opportunities Databook Denmark Digital Ad Spend Market Business and Investment Opportunities Databook France Digital Ad Spend Market Business and Investment Opportunities Databook Germany Digital Ad Spend Market Business and Investment Opportunities Databook Ireland Digital Ad Spend Market Business and Investment Opportunities Databook Israel Digital Ad Spend Market Business and Investment Opportunities Databook Italy Digital Ad Spend Market Business and Investment Opportunities Databook Netherlands Digital Ad Spend Market Business and Investment Opportunities Databook Poland Digital Ad Spend Market Business and Investment Opportunities Databook Russia Digital Ad Spend Market Business and Investment Opportunities Databook Spain Digital Ad Spend Market Business and Investment Opportunities Databook Switzerland Digital Ad Spend Market Business and Investment Opportunities Databook United Kingdom Digital Ad Spend Market Business and Investment Opportunities Databook For more information about this report visit https://www.researchandmarkets.com/r/s4hxj1 About ResearchAndMarkets.com ResearchAndMarkets.com is the world's leading source for international market research reports and market data.
-Attachment European Digital Ad Spend Market European Digital Ad Spend Market European Digital Ad Spend Market","Dublin, Feb. 06, 2026 (GLOBE NEWSWIRE) -- The ""Europe Digital Ad Spend Market Size & Forecast by Spend Value Across 100+ KPIs by Type of Advertising Channel, Format & Media, Platforms, Pricing Models, Industry, Digital Ecosystem, and Media Buying Method - Databook Q1 2026 Update"" report has been added to ResearchAndMarkets.com's offering.
-
-The digital ad spend market in Europe is expected to grow by 10.2% annually, reaching US$181.9 billion by 2026. The digital ad spend market in the region has experienced robust growth during 2020-2025, achieving a CAGR of 8.8%. This upward trajectory is expected to continue, with the market forecast to grow at a CAGR of 11.6% from 2026 to 2029. By the end of 2029, the digital ad spend market is projected to expand from its 2025 value of US$165.1 billion to approximately US$253.1 billion.
-
-Europe's digital advertising market is undergoing a structural, multidimensional shift driven by stringent privacy regulation, expanding platform and media diversification, and evolving consumer expectations. Retail media and connected TV are emerging as key growth pillars, while regulatory frameworks are compelling advertisers to rethink targeting, attribution, and measurement models. At the same time, sustainability considerations and creator-led influence are gaining operational relevance across campaigns.
-
-As the region's media landscape becomes increasingly complex and fragmented, advertisers that invest in compliant technology infrastructure, strengthen regional partnerships, and adapt to shifting platform dynamics will be best positioned to maintain effectiveness and competitiveness over the forecast period.
-
-Retail Media is Becoming a Strategic Channel for CPG and FMCG Brands
-
-Retail media is expanding beyond sponsored product listings into full-funnel advertising solutions. In Europe, major retailers such as Tesco, Carrefour, Sainsbury's, and Germany's REWE have invested in or expanded their retail media networks, offering both on-site and off-site ad placements. Publicis Groupe acquired CitrusAd and Profitero, while Criteo has become a key enabler of programmatic retail media across European retailers.
-
-This growth is supported by the acceleration of e-commerce adoption across the region, as well as the increasing need for brands to leverage first-party data due to regulatory constraints. Retailers are capitalizing on closed-loop attribution capabilities, which are attractive to advertisers seeking measurable returns amid economic uncertainty.
-
-Retail media will continue to grow, particularly in the UK, France, and Germany, where large-format grocers and online marketplaces are building advanced ad tech stacks. Consolidation is expected, with retailers aligning with agency groups or tech providers to scale offerings. The result will be a reallocation of trade marketing and performance budgets toward retailer-owned channels.
-
-CTV and Streaming Platforms are Redefining Digital Video Advertising
-
-Advertisers across Europe are increasingly shifting video budgets toward Connected TV (CTV) and streaming environments. Platforms such as RTL+, ITVX (UK), France.tv, and Joyn (Germany) are scaling their ad-supported offerings. Global players like Netflix, which launched ad-tier subscriptions across European markets, are adding competitive pressure.
-
-Traditional linear TV continues to see audience declines, particularly among younger viewers, while streaming consumption on smart TVs is growing. Advertisers are responding by reallocating video budgets toward platforms that offer addressability, interactivity, and more granular targeting. Broadcasters and telcos are also pushing ad-supported bundles to boost monetization.
-
-CTV ad spend is likely to increase as measurement standards mature and inventory becomes more programmatically accessible. The entry of more AVOD and FAST (Free Ad-Supported Streaming TV) channels will further fragment the video ecosystem. Advertisers will require cross-platform tools to manage reach and frequency across linear, CTV, and online video.
-
-Regulatory Environment is Restructuring Data Use and Ad Targeting Practices
-
-Europe's privacy-first regulatory stance continues to reshape digital advertising. The enforcement of GDPR, combined with rulings by national data protection authorities (such as CNIL in France and the DSB in Austria), is pushing platforms and advertisers toward alternative targeting and measurement strategies.
-
-Several recent developments including restrictions on Google Analytics in some countries and increased scrutiny of cookie-based tracking have made it harder for advertisers to rely on third-party identifiers. Additionally, the EU's Digital Markets Act (DMA) and Digital Services Act (DSA) are now in effect, requiring gatekeeper platforms to increase transparency and interoperability in their ad ecosystems.
-
-We expect a continued shift toward contextual advertising, clean rooms, and consent-based data strategies. Platforms will invest in regional privacy infrastructure, while publishers and advertisers will need to rework their data pipelines. This environment may benefit European martech firms offering compliant solutions tailored to local regulations.
-
-Sustainability and Ethical Advertising are Shaping Media Planning Decisions
-
-Sustainability has emerged as a factor in media planning. Advertisers in markets such as France, Germany, and the Nordics are beginning to assess the environmental footprint of their digital campaigns. Initiatives like Ad Net Zero (UK) and Scope3's emissions modelling are gaining traction among media buyers.
-
-Growing regulatory pressure around ESG disclosures, combined with changing consumer expectations and internal sustainability targets, is prompting brands to scrutinize the carbon emissions of their ad supply chains. Publishers and SSPs are beginning to offer low-carbon inventory or emissions reporting as part of their value proposition.
-
-Media buyers are likely to incorporate sustainability scores into planning tools, favouring platforms and publishers with lower emissions or verified green credentials. Agencies and brands will experiment with formats and delivery modes that reduce emissions e.g., static banners over autoplay video. This could create new differentiation criteria across SSPs and DSPs.
-
-Creator-Led Content is Restructuring Social Ad Strategies
-
-Influencer and creator-led marketing is transitioning from one-off brand deals to structured, always-on advertising strategies. In Europe, platforms like TikTok, YouTube Shorts, and Instagram Reels are anchoring this shift. Brands in fashion, beauty, and FMCG sectors are increasingly embedding creator content into performance campaigns.
-
-With social media consumption fragmented across formats and platforms, creators serve as efficient intermediaries to engage niche audiences authentically. Creator marketplaces and ad tools (e.g., TikTok Creator Marketplace, Meta's branded content ads) have matured, allowing advertisers to scale these campaigns programmatically. This shift is also influenced by the decline in organic reach and increasing CPMs on traditional social placements.
-
-We expect more structured collaboration between creators, agencies, and platforms. Advertisers will use AI to identify high-performing creators and automate brief distribution. Local creators will become essential for multilingual targeting across EU member states. However, compliance with transparency and sponsorship disclosure rules will remain a top concern.
-
-Competitive Intensity is Escalating Amid Market Fragmentation
-
-Global platforms such as Google, Meta, Amazon, and Microsoft continue to anchor performance and display budgets, but are under pressure to comply with new regulatory standards under the Digital Markets Act (DMA).
-
-Local broadcasters and publishers including ITV (UK), RTL Group (Germany), France Televisions, and Schibsted (Nordics) are aggressively scaling their digital video and programmatic offerings to compete for brand dollars.
-
-Open web programmatic players, such as Criteo and Adform (headquartered in France and Denmark, respectively), continue to challenge walled gardens by enabling cross-publisher audience targeting in a GDPR-compliant manner.
-
-This fragmented environment is heightening competition not just across platforms, but also within key verticals such as retail, CTV, and contextual advertising.
-
-Key Players are Strengthening Ad Tech Stacks and Data Assets
-
-Amazon Ads has deepened its retail media presence across the UK, Germany, and France, and is expanding self-serve ad tools in languages aligned with local sellers.
-
-Criteo is positioning itself as a full-stack retail media enabler across multiple European retailers, combining off-site targeting with on-site monetization.
-
-Spotify and Acast are anchoring programmatic audio in markets such as Sweden, the UK, and Germany, while integrating brand safety and targeting features.
-
-Meanwhile, publishers are forming alliances (e.g., Ozone Project in the UK, Gravity Alliance in France) to unify inventory and offer alternatives to global platforms.
-
-A bundled offering, combining the following 15 reports, covering 800+ tables and 1000+ figures:
-
-Europe Digital Ad Spend Market Business and Investment Opportunities Databook
-
-Austria Digital Ad Spend Market Business and Investment Opportunities Databook
-
-Belgium Digital Ad Spend Market Business and Investment Opportunities Databook
-
-Denmark Digital Ad Spend Market Business and Investment Opportunities Databook
-
-France Digital Ad Spend Market Business and Investment Opportunities Databook
-
-Germany Digital Ad Spend Market Business and Investment Opportunities Databook
-
-Ireland Digital Ad Spend Market Business and Investment Opportunities Databook
-
-Israel Digital Ad Spend Market Business and Investment Opportunities Databook
-
-Italy Digital Ad Spend Market Business and Investment Opportunities Databook
-
-Netherlands Digital Ad Spend Market Business and Investment Opportunities Databook
-
-Poland Digital Ad Spend Market Business and Investment Opportunities Databook
-
-Russia Digital Ad Spend Market Business and Investment Opportunities Databook
-
-Spain Digital Ad Spend Market Business and Investment Opportunities Databook
-
-Switzerland Digital Ad Spend Market Business and Investment Opportunities Databook
-
-United Kingdom Digital Ad Spend Market Business and Investment Opportunities Databook
-
-For more information about this report visit https://www.researchandmarkets.com/r/s4hxj1
-
-About ResearchAndMarkets.com
-
-ResearchAndMarkets.com is the world's leading source for international market research reports and market data. We provide you with the latest data on international and regional markets, key industries, the top companies, new products and the latest trends.
-
-Attachment
-
-European Digital Ad Spend Market
-
-European Digital Ad Spend Market European Digital Ad Spend Market",https://ml.globenewswire.com/Resource/Download/908fb457-7f8e-4a08-9081-5565e3dfb3d7,N,,2026-02-06 10:02:33.502852
-ID45,UniCredit,2026-02-06 13:49:23+00:00,The Globe and Mail,ING Groep Reshapes Top Management as Čortan Takes Helm of Wholesale Banking,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/ING/pressreleases/67829/ing-groep-reshapes-top-management-as-cortan-takes-helm-of-wholesale-banking/,Detailed price information for ING Groep N.V. ADR (ING-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=837,N,,2026-02-06 15:04:04.549549
-ID10,Boston Scientific,2026-02-06 13:46:23+00:00,MassDevice,Field Medical reports positive first-in-human pulsed field ablation data,Sean Whooley,,,,,https://www.massdevice.com/field-medical-positive-first-in-human-pfa/,"Field Medical announced the presentation of clinical data from the first-in-human study of its FieldForce pulsed field ablation (PFA) system.
-The Cardiff-by-the-Sea, California-based company shared findings from the Field PULSE study at the 31st Annual International AF Symposium 2026 in Boston.
-Field PULSE evaluates a novel, high-voltage, sub-second pulsed field waveform delivered through the FieldForce ablation system and catheter.
-Field Medical said its system achieved PVI durability, as remapping demonstrated progressive improvements with the optimized waveform.
-Field Medical said the findings extended its body of clinical evidence beyond ventricular arrhythmias and into the AFib category.","Field Medical announced the presentation of clinical data from the first-in-human study of its FieldForce pulsed field ablation (PFA) system.
-
-The Cardiff-by-the-Sea, California-based company shared findings from the Field PULSE study at the 31st Annual International AF Symposium 2026 in Boston.
-
-Field PULSE evaluates a novel, high-voltage, sub-second pulsed field waveform delivered through the FieldForce ablation system and catheter. The catheter, a focal, contact-sensing catheter, enables instantaneous ablation through point-by-point energy delivery. It achieves this without relying on prolonged tissue-catheter contact.
-
-“By eliminating the need for sustained tissue-catheter contact, sub-second pulsed field delivery enables both efficient point-by-point ablation and individualized lesion sets,” said Dr. Vivek Y. Reddy, principal investigator of Field PULSE and electrophysiologist at Mount Sinai, New York. “This approach preserves the flexibility physicians expect from focal ablation while delivering the procedural efficiency associated with pulsed field technologies.”
-
-More about the Field PULSE study
-
-Findings included instantaneous energy delivery, with lesions created in less than 200 milliseconds. This enabled rapid, point-by-point ablation.
-
-Investigators observed a median bilateral pulmonary vein isolation (PVI) time of 12.5 minutes, highlighting procedural efficiency. The fastest case was completed in 7.7 minutes.
-
-Field Medical said its system achieved PVI durability, as remapping demonstrated progressive improvements with the optimized waveform. By vein, it came in at 94.2%, and by patient, it came in at 84.6%.
-
-Safety outcomes also proved positive, with no device-related serious adverse events. Investigators also observed no acute kidney injury, reported phrenic nerve palsy or clinically relevant hemolysis. Among patients evaluated by brain MRI, they also observed no silent cerebral lesions.
-
-Field Medical said the findings extended its body of clinical evidence beyond ventricular arrhythmias and into the AFib category. With previously reported ventricular tachycardia (VT) data, results support a versatile ablation platform for all heart chambers, the company said.
-
-“The Field PULSE results reinforce our approach of deliberately architecting focal PFA to address the fundamental limitations of existing methods, then validating its application through data,” said Dr. Steven Mickelsen, founder and chief technology officer of Field Medical. “By delivering each ablation point in a fraction of a second, we reduce dependence on prolonged catheter stability, limit the impact of cardiac motion and establish a platform approach for treating complex arrhythmias.”
-
-More about Field Medical
-
-Mickelsen, the founder Field Medical, also founded Farapulse, leading his previous PFA technology developer to an acquisition by Boston Scientific in 2021.
-
-Boston Scientific, Medtronic, Johnson & Johnson MedTech, Abbott and Kardium currently market FDA-cleared PFA technology. However, Field Medical has an initial focus on ventricular tachycardia (VT). This is a different path to the previously mentioned PFA technology developers, who brought their platforms to market to initially treat AFib. Now, with its latest data, the company can potentially expand into AFib as well.
-
-Field Medical is supported by significant funding, closing a $40 million Series A in early 2025, then bringing in $35 million in its Series B in July 2025.",https://wtwh-marketing.s3.amazonaws.com/wp-content/uploads/massdevice/2026/02/06083017/Field-Medical-FieldForce-pulsed-field-ablation-PFA-system-1.jpg,N,,2026-02-06 11:06:59.954492
-ID38,Publicis Groupe,2026-02-06 13:45:02+00:00,www.foodbusinessnews.net,J.M. Smucker Co. names new CMO | Food Business News,Brooke Just,,,,,https://www.foodbusinessnews.net/articles/29755-jm-smucker-co-names-new-cmo,"ORRVILLE, OHIO — The J.M.
-Hollander will remain with the company in an advisory role until April 30, according to J.M.
-“We are thrilled to welcome Katie to the company,” said Mark Smucker, chief executive officer and chair of the board at J.M.
-Prior to J.M.
-Smucker, Hollander was president, group client lead at Publicis Groupe, and earlier was director of client service at D’Arcy.","ORRVILLE, OHIO — The J.M. Smucker Co. has named Katie Williams as its chief marketing officer, effective March 9.
-
-Williams will succeed Gail Hollander, who previously announced she was retiring from the company. Hollander will remain with the company in an advisory role until April 30, according to J.M. Smucker.
-
-“We are thrilled to welcome Katie to the company,” said Mark Smucker, chief executive officer and chair of the board at J.M. Smucker. “She brings deep expertise and a strong track record of building leading brands. I am confident she will help to advance our portfolio of leading brands forward and elevate our world-class marketing capabilities.”
-
-Williams most recently was US CMO for Haleon. Prior to Haleon spinning off from its parent company GSK in 2022, she was US CMO at GSK.
-
-She also has held marketing leadership positions for several food manufacturers, including Mondelez International and Kraft Heinz Co.
-
-Hollander has been J.M. Smucker’s CMO since March 2023. During her tenure she oversaw the company’s marketing organization along with consumer experience, insights, creative and design functions.
-
-Prior to J.M. Smucker, Hollander was president, group client lead at Publicis Groupe, and earlier was director of client service at D’Arcy.
-
-“Gail has been instrumental in building our world-class brand-building model while supporting our people and culture,” Smucker said. “Through her leadership and the exceptional team she has mentored, we have developed a powerful marketing organization that has supported the growth of many of our iconic brands. With enhanced capabilities throughout our businesses and teams, we are well-positioned to continue building brands that consumers love.”",https://www.foodbusinessnews.net/ext/resources/2026/02/06/Katie-Williams-headshot.png?height=635&t=1770385137&width=1200,N,,2026-02-06 10:02:37.251002
-ID39,Ralph Lauren,2026-02-06 13:44:18+00:00,Ecotextile News,Ralph Lauren raises outlook on strong Q3 - Ecotextile News,Simon Glover,,,,,https://www.ecotextile.com/2026020661616/radar/ralph-lauren-raises-outlook-on-strong-q3/,"Ralph Lauren has reported double-digit third quarter sales growth and raised its full-year outlook as higher-margin, full-price sales helped offset increased US tariffs and other cost pressures.
-Group revenue rose 12% to $2.4 billion (10% in constant currency), with Asia up 22% and China more than 30%, while Europe advanced 12% and North America 8%.
-Gross margin improved by 150 basis points to 69.9%, supported by an 18% uplift in average unit retail and lower cotton costs.
-The company highlighted continued momentum in core categories including knitwear, outerwear and handbags, and cited “resilient partners, communities and materials” among its operational enablers.
-Ralph Lauren also pointed to higher marketing and ecosystem investments, along with expanded city “ecosystems” including new stores in London, Bangkok, Chengdu, Sydney and New Delhi, as it pushes a direct-to-consumer, brand-elevation strategy.","Ralph Lauren has reported double-digit third quarter sales growth and raised its full-year outlook as higher-margin, full-price sales helped offset increased US tariffs and other cost pressures.
-
-Group revenue rose 12% to $2.4 billion (10% in constant currency), with Asia up 22% and China more than 30%, while Europe advanced 12% and North America 8%.
-
-Gross margin improved by 150 basis points to 69.9%, supported by an 18% uplift in average unit retail and lower cotton costs.
-
-The company highlighted continued momentum in core categories including knitwear, outerwear and handbags, and cited “resilient partners, communities and materials” among its operational enablers.
-
-Ralph Lauren also pointed to higher marketing and ecosystem investments, along with expanded city “ecosystems” including new stores in London, Bangkok, Chengdu, Sydney and New Delhi, as it pushes a direct-to-consumer, brand-elevation strategy.",https://www.ecotextile.com/wp-content/uploads/2024/02/favicon-32x32-1.png,N,,2026-02-06 11:07:48.313076
-ID43,Thrivent ,2026-02-06 13:23:10+00:00,MarketBeat,Morgan Stanley $MS Stock Holdings Decreased by Thrivent Financial for Lutherans,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-morgan-stanley-ms-stock-holdings-decreased-by-thrivent-financial-for-lutherans-2026-02-06/,"Thrivent Financial for Lutherans' holdings in Morgan Stanley were worth $9,190,000 as of its most recent filing with the SEC.
-Linscomb Wealth buys MS shares Negative Sentiment: Analyst downgrade — Evercore ISI cut Morgan Stanley from ""strong-buy"" to ""hold.""
-3 Finance Stocks to Buy on Rising 10-Year Treasury Rates Read Our Latest Research Report on Morgan Stanley Morgan Stanley Stock Performance MS opened at $175.77 on Friday.
-About Morgan Stanley (Free Report) Morgan Stanley NYSE: MS is a global financial services firm headquartered in New York City.
-While Morgan Stanley currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.","Thrivent Financial for Lutherans lessened its position in Morgan Stanley (NYSE:MS - Free Report) by 14.8% in the 3rd quarter, according to the company in its most recent filing with the SEC. The institutional investor owned 57,812 shares of the financial services provider's stock after selling 10,082 shares during the quarter. Thrivent Financial for Lutherans' holdings in Morgan Stanley were worth $9,190,000 as of its most recent filing with the SEC.
-
-Space Stock Boom: Why Retail and Wall Street Are Aligning
-
-Other hedge funds and other institutional investors have also recently added to or reduced their stakes in the company. Princeton Global Asset Management LLC lifted its stake in Morgan Stanley by 645.8% in the 2nd quarter. Princeton Global Asset Management LLC now owns 179 shares of the financial services provider's stock worth $25,000 after acquiring an additional 155 shares in the last quarter. WFA of San Diego LLC acquired a new position in shares of Morgan Stanley in the 2nd quarter valued at about $28,000. Family Legacy Financial Solutions LLC lifted its position in shares of Morgan Stanley by 91.9% in the third quarter. Family Legacy Financial Solutions LLC now owns 213 shares of the financial services provider's stock worth $34,000 after purchasing an additional 102 shares in the last quarter. Compass Financial Services Inc acquired a new stake in shares of Morgan Stanley during the second quarter worth approximately $32,000. Finally, First PREMIER Bank grew its position in Morgan Stanley by 57.1% during the third quarter. First PREMIER Bank now owns 245 shares of the financial services provider's stock valued at $39,000 after purchasing an additional 89 shares in the last quarter. Institutional investors and hedge funds own 84.19% of the company's stock.
-
-Key Stories Impacting Morgan Stanley
-
-Here are the key news stories impacting Morgan Stanley this week:
-
-Positive Sentiment: Firm-level fundamentals/support — recent writeups emphasize Morgan Stanley's strong Q4 results and a rebound in investment banking, which underpin valuation upside and give investors a reason to buy the dip. Valuation Check After Strong Q4
-
-Positive Sentiment: Business momentum — Morgan Stanley led power-sector M&A advisory in 2025, signalling strong deal activity and fee generation in its investment banking franchise. That performance can support revenue and trading/IB sentiment. MS tops power M&A in 2025
-
-Neutral Sentiment: Industry/regulatory backdrop — Reuters reports big U.S. banks ramped up lobbying last year as policy fights heat up in Washington; this raises regulatory risk attention for the sector but is not MS-specific. Banks boost Washington lobbying
-
-Neutral Sentiment: Small institutional buying — a regional adviser (Linscomb Wealth) reported a modest purchase of ~2,966 MS shares; useful signal of retail/adviser interest but too small to move the stock alone. Linscomb Wealth buys MS shares
-
-Negative Sentiment: Analyst downgrade — Evercore ISI cut Morgan Stanley from ""strong-buy"" to ""hold."" That downgrade is the most direct near-term negative catalyst listed and is likely the primary reason the stock is under pressure today as it lowers short-term demand from Evercore-aligned investors. Evercore ISI downgrades MS
-
-Insiders Place Their Bets
-
-This ETF Caught a Major Tailwind After the Fed’s Rate Cut
-
-In related news, insider Daniel A. Simkowitz sold 32,968 shares of the business's stock in a transaction on Friday, January 30th. The stock was sold at an average price of $182.61, for a total value of $6,020,286.48. Following the sale, the insider owned 357,342 shares of the company's stock, valued at $65,254,222.62. The trade was a 8.45% decrease in their position. The sale was disclosed in a filing with the Securities & Exchange Commission, which is available through this hyperlink. Also, insider Andrew M. Saperstein sold 30,330 shares of the stock in a transaction on Tuesday, January 20th. The stock was sold at an average price of $183.62, for a total value of $5,569,194.60. Following the transaction, the insider owned 280,481 shares of the company's stock, valued at $51,501,921.22. This represents a 9.76% decrease in their ownership of the stock. The disclosure for this sale is available in the SEC filing. Insiders sold a total of 129,191 shares of company stock worth $23,736,506 in the last 90 days. 0.19% of the stock is owned by corporate insiders.
-
-Analyst Ratings Changes
-
-A number of research firms have issued reports on MS. Dbs Bank upgraded shares of Morgan Stanley to a ""moderate buy"" rating in a research report on Wednesday, November 12th. Jefferies Financial Group lifted their price objective on Morgan Stanley from $186.00 to $212.00 and gave the company a ""buy"" rating in a research report on Tuesday, January 6th. Zacks Research raised Morgan Stanley from a ""hold"" rating to a ""strong-buy"" rating in a research report on Tuesday, October 21st. Wolfe Research reiterated an ""outperform"" rating and set a $211.00 price target on shares of Morgan Stanley in a report on Wednesday, January 7th. Finally, Wall Street Zen raised shares of Morgan Stanley from a ""hold"" rating to a ""buy"" rating in a research report on Friday, January 23rd. Three equities research analysts have rated the stock with a Strong Buy rating, seven have assigned a Buy rating and nine have issued a Hold rating to the stock. According to data from MarketBeat.com, the stock presently has an average rating of ""Moderate Buy"" and an average price target of $185.93.
-
-3 Finance Stocks to Buy on Rising 10-Year Treasury Rates
-
-Read Our Latest Research Report on Morgan Stanley
-
-Morgan Stanley Stock Performance
-
-MS opened at $175.77 on Friday. The company has a quick ratio of 0.79, a current ratio of 0.79 and a debt-to-equity ratio of 3.27. The stock's 50 day moving average price is $180.37 and its two-hundred day moving average price is $163.54. The firm has a market capitalization of $279.35 billion, a P/E ratio of 17.22, a price-to-earnings-growth ratio of 1.45 and a beta of 1.20. Morgan Stanley has a 12-month low of $94.33 and a 12-month high of $192.68.
-
-Morgan Stanley (NYSE:MS - Get Free Report) last posted its quarterly earnings data on Thursday, January 15th. The financial services provider reported $2.68 earnings per share for the quarter, beating the consensus estimate of $2.28 by $0.40. Morgan Stanley had a return on equity of 16.92% and a net margin of 14.09%.The company had revenue of $17.90 billion during the quarter, compared to analysts' expectations of $17.69 billion. During the same period in the prior year, the business earned $2.22 earnings per share. Morgan Stanley's revenue for the quarter was up 10.3% compared to the same quarter last year. On average, equities analysts forecast that Morgan Stanley will post 8.56 earnings per share for the current year.
-
-Morgan Stanley Dividend Announcement
-
-The business also recently announced a quarterly dividend, which will be paid on Friday, February 13th. Stockholders of record on Friday, January 30th will be issued a $1.00 dividend. The ex-dividend date of this dividend is Friday, January 30th. This represents a $4.00 dividend on an annualized basis and a dividend yield of 2.3%. Morgan Stanley's dividend payout ratio is presently 39.18%.
-
-About Morgan Stanley
-
-(Free Report)
-
-Morgan Stanley NYSE: MS is a global financial services firm headquartered in New York City. Founded in 1935 by Henry S. Morgan and Harold Stanley, the company provides a broad range of investment banking, securities, wealth management and investment management services to corporations, governments, institutions and individual investors. Leadership has been guided by a senior executive team and board of directors; James P. Gorman has served as the company's chief executive and chairman in recent years.
-
-The firm's primary business activities are organized around three principal businesses: Institutional Securities, Wealth Management and Investment Management.
-
-See Also
-
-Five stocks we like better than Morgan Stanley
-
-Your Bank Account Is No Longer Safe
-
-When to buy gold (mathematically)
-
-Nervous about the stock market? Read this
-
-NEW LAW: Congress Approves Setup For Digital Dollar?
-
-Trade this between 9:30 and 10:45 am EST
-
-Want to see what other hedge funds are holding MS? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Morgan Stanley (NYSE:MS - Free Report).
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in Morgan Stanley Right Now?
-
-Before you consider Morgan Stanley, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Morgan Stanley wasn't on the list.
-
-While Morgan Stanley currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/morgan-stanley-logo-1200x675.png,N,,2026-02-06 18:02:36.111612
-ID43,Thrivent ,2026-02-06 13:23:09+00:00,MarketBeat,"Thrivent Financial for Lutherans Acquires 34,027 Shares of Itron, Inc. $ITRI - MarketBeat",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-acquires-34027-shares-of-itron-inc-itri-2026-02-06/,"The fund owned 77,488 shares of the scientific and technical instruments company's stock after acquiring an additional 34,027 shares during the period.
-Thrivent Financial for Lutherans owned 0.17% of Itron worth $9,653,000 at the end of the most recent quarter.
-Arvin Capital Management LP purchased a new stake in shares of Itron during the second quarter valued at $8,331,000.
-In the last 90 days, insiders have sold 2,971 shares of company stock worth $286,731.
-Itron Stock Performance Don't Be Fooled By Badger Meter's Rise, There's More To Go ITRI stock opened at $99.56 on Friday.","Thrivent Financial for Lutherans lifted its holdings in Itron, Inc. (NASDAQ:ITRI - Free Report) by 78.3% in the third quarter, according to the company in its most recent 13F filing with the Securities and Exchange Commission. The fund owned 77,488 shares of the scientific and technical instruments company's stock after acquiring an additional 34,027 shares during the period. Thrivent Financial for Lutherans owned 0.17% of Itron worth $9,653,000 at the end of the most recent quarter.
-
-3 Inexpensive Mid Cap Tech Stocks With Good Growth Prospects
-
-Several other large investors also recently added to or reduced their stakes in ITRI. Campbell & CO Investment Adviser LLC bought a new position in shares of Itron during the third quarter valued at approximately $1,300,000. Schroder Investment Management Group increased its stake in Itron by 23.6% in the second quarter. Schroder Investment Management Group now owns 376,087 shares of the scientific and technical instruments company's stock worth $49,504,000 after purchasing an additional 71,702 shares during the period. Robeco Schweiz AG lifted its position in shares of Itron by 31.2% during the third quarter. Robeco Schweiz AG now owns 372,176 shares of the scientific and technical instruments company's stock worth $46,358,000 after purchasing an additional 88,504 shares during the last quarter. Arvin Capital Management LP purchased a new stake in shares of Itron during the second quarter valued at $8,331,000. Finally, Wolverine Asset Management LLC bought a new position in shares of Itron in the second quarter worth about $377,000. 96.19% of the stock is owned by institutional investors.
-
-Insider Activity
-
-In other news, SVP Justin K. Patrick sold 379 shares of the company's stock in a transaction dated Monday, November 24th. The shares were sold at an average price of $96.51, for a total transaction of $36,577.29. Following the transaction, the senior vice president owned 20,382 shares in the company, valued at $1,967,066.82. This represents a 1.83% decrease in their ownership of the stock. The transaction was disclosed in a legal filing with the SEC, which is available through this hyperlink. Also, SVP Donald L. Reeves III sold 536 shares of the stock in a transaction that occurred on Monday, November 24th. The shares were sold at an average price of $96.51, for a total transaction of $51,729.36. Following the completion of the transaction, the senior vice president directly owned 19,068 shares of the company's stock, valued at $1,840,252.68. The trade was a 2.73% decrease in their ownership of the stock. Additional details regarding this sale are available in the official SEC disclosure. In the last 90 days, insiders have sold 2,971 shares of company stock worth $286,731. Company insiders own 1.45% of the company's stock.
-
-Itron Stock Performance
-
-Don't Be Fooled By Badger Meter's Rise, There's More To Go
-
-ITRI stock opened at $99.56 on Friday. Itron, Inc. has a one year low of $90.11 and a one year high of $142.00. The firm has a market cap of $4.56 billion, a price-to-earnings ratio of 17.91, a PEG ratio of 0.58 and a beta of 1.48. The company has a debt-to-equity ratio of 0.46, a quick ratio of 1.91 and a current ratio of 2.17. The firm has a 50-day simple moving average of $97.54 and a two-hundred day simple moving average of $112.76.
-
-Analyst Upgrades and Downgrades
-
-A number of brokerages recently weighed in on ITRI. Zacks Research lowered shares of Itron from a ""hold"" rating to a ""strong sell"" rating in a report on Wednesday, January 28th. Robert W. Baird reissued a ""neutral"" rating and issued a $118.00 price objective (down previously from $137.00) on shares of Itron in a research note on Friday, October 31st. Weiss Ratings lowered Itron from a ""buy (b-)"" rating to a ""hold (c+)"" rating in a research report on Monday, January 12th. Stephens upgraded Itron from an ""equal weight"" rating to an ""overweight"" rating and set a $130.00 target price for the company in a report on Monday, November 3rd. Finally, Oppenheimer cut their price target on Itron from $145.00 to $125.00 and set an ""outperform"" rating on the stock in a research note on Tuesday, January 27th. Eight research analysts have rated the stock with a Buy rating, four have assigned a Hold rating and one has assigned a Sell rating to the company's stock. Based on data from MarketBeat, the company presently has an average rating of ""Moderate Buy"" and a consensus price target of $136.10.
-
-Read Our Latest Stock Analysis on ITRI
-
-Itron Profile
-
-(Free Report)
-
-Itron, Inc NASDAQ: ITRI is a global technology company that develops innovative solutions to measure, manage and analyze the use of energy and water. Its comprehensive portfolio includes smart meters, data collection devices, communication networks and advanced software applications designed to optimize utility operations and foster sustainable resource management. The company's offerings enable utilities and cities to accurately monitor consumption patterns, streamline billing processes and improve grid reliability.
-
-Itron's product lineup spans a range of hardware and software solutions, from residential and commercial smart meters to meter data management systems (MDMS), networked communication platforms and analytics tools.
-
-Featured Articles
-
-Five stocks we like better than Itron
-
-Your Bank Account Is No Longer Safe
-
-When to buy gold (mathematically)
-
-Nervous about the stock market? Read this
-
-NEW LAW: Congress Approves Setup For Digital Dollar?
-
-Trade this between 9:30 and 10:45 am EST
-
-Want to see what other hedge funds are holding ITRI? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Itron, Inc. (NASDAQ:ITRI - Free Report).
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in Itron Right Now?
-
-Before you consider Itron, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Itron wasn't on the list.
-
-While Itron currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/itron-inc-logo-1200x675.JPG,N,,2026-02-06 16:02:47.300401
-ID43,Thrivent ,2026-02-06 13:21:06+00:00,MarketBeat,"Thrivent Financial for Lutherans Purchases 192,864 Shares of News Corporation $NWSA",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-purchases-192864-shares-of-news-corporation-nwsa-2026-02-06/,"Thrivent Financial for Lutherans raised its position in News Corporation (NASDAQ:NWSA - Free Report) by 329.9% in the 3rd quarter, according to its most recent Form 13F filing with the SEC.
-The institutional investor owned 251,326 shares of the company's stock after purchasing an additional 192,864 shares during the period.
-Allworth Financial LP now owns 3,361 shares of the company's stock worth $100,000 after buying an additional 2,069 shares during the period.
-Get Our Latest Stock Report on NWSA News Profile (Free Report) News Corporation NASDAQ: NWSA is a global diversified media and information services company headquartered in New York City.
-While News currently has a Hold rating among analysts, top-rated analysts believe these five stocks are better buys.","Thrivent Financial for Lutherans raised its position in News Corporation (NASDAQ:NWSA - Free Report) by 329.9% in the 3rd quarter, according to its most recent Form 13F filing with the SEC. The institutional investor owned 251,326 shares of the company's stock after purchasing an additional 192,864 shares during the period. Thrivent Financial for Lutherans' holdings in News were worth $7,718,000 as of its most recent filing with the SEC.
-
-Several other institutional investors and hedge funds also recently made changes to their positions in NWSA. Cullen Frost Bankers Inc. acquired a new position in News in the second quarter valued at about $30,000. CYBER HORNET ETFs LLC bought a new position in shares of News during the 2nd quarter valued at about $30,000. Root Financial Partners LLC bought a new stake in News during the 3rd quarter worth approximately $35,000. Allworth Financial LP raised its holdings in News by 160.1% during the 2nd quarter. Allworth Financial LP now owns 3,361 shares of the company's stock worth $100,000 after buying an additional 2,069 shares during the period. Finally, True Wealth Design LLC lifted its stake in News by 661.1% in the second quarter. True Wealth Design LLC now owns 3,448 shares of the company's stock valued at $102,000 after buying an additional 2,995 shares in the last quarter. Institutional investors and hedge funds own 66.97% of the company's stock.
-
-News Stock Down 1.9%
-
-NASDAQ:NWSA opened at $24.21 on Friday. News Corporation has a twelve month low of $23.38 and a twelve month high of $31.61. The firm has a market capitalization of $13.59 billion, a price-to-earnings ratio of 11.70 and a beta of 0.99. The company has a quick ratio of 1.63, a current ratio of 1.76 and a debt-to-equity ratio of 0.21. The stock's 50 day moving average price is $26.17 and its two-hundred day moving average price is $27.47.
-
-News (NASDAQ:NWSA - Get Free Report) last released its earnings results on Thursday, February 5th. The company reported $0.40 earnings per share for the quarter, beating the consensus estimate of $0.33 by $0.07. News had a net margin of 13.80% and a return on equity of 5.68%. The business had revenue of $2.36 billion during the quarter, compared to analysts' expectations of $2.30 billion. During the same period last year, the business earned $0.33 earnings per share. The firm's revenue was up 5.5% on a year-over-year basis. Equities research analysts expect that News Corporation will post 0.94 earnings per share for the current fiscal year.
-
-News Announces Dividend
-
-The company also recently announced a dividend, which will be paid on Wednesday, April 8th. Stockholders of record on Wednesday, March 11th will be issued a $0.10 dividend. This represents a dividend yield of 83.0%. The ex-dividend date of this dividend is Wednesday, March 11th. News's dividend payout ratio is presently 9.66%.
-
-News News Summary
-
-Here are the key news stories impacting News this week:
-
-Positive Sentiment: Q2 results beat expectations — reported EPS $0.40 vs. $0.33 est. and revenue $2.36B vs. $2.30B est.; revenue rose ~5.5% year-over-year. This is the primary fundamental driver supporting the stock. News Corp A earnings beat by $0.03, revenue topped estimates
-
-Positive Sentiment: Company signaled an expanded buyback program and continued double‑digit growth at Dow Jones and in digital real‑estate businesses — bullish for cash-return and growth narratives. News Corporation signals expanded buyback and continued double-digit growth
-
-Positive Sentiment: Management commentary and coverage note revenue increases driven by Dow Jones and real‑estate units, with the CEO citing favorable signs for H2 — supports medium‑term outlook. News Corp Revenue Rises on Growth at Dow Jones, Real-Estate Divisions
-
-Positive Sentiment: Board declared a $0.10/share dividend (record Mar 11; payable Apr 8). The cash return is supportive for income investors (the published “83.0%” yield figure appears anomalous and should be verified).
-
-Neutral Sentiment: Analyst mix remains mixed-to-positive — one summary shows an average recommendation of ""Moderate Buy,"" indicating some buy‑side support despite recent discord among firms. News Corporation Receives Average Recommendation of ""Moderate Buy""
-
-Neutral Sentiment: Several post‑earnings writeups (Zacks previews/metrics pieces) dig into segment metrics and estimates — useful for investors digging beyond headline beats but not immediate catalysts. Compared to Estimates, News Corp. Q2 Earnings: A Look at Key Metrics
-
-Negative Sentiment: Zacks Research downgraded NWSA from ""Hold"" to ""Strong Sell"" — a clear near‑term headwind that likely pressured the share price despite the earnings beat. Zacks Downgrade
-
-Analysts Set New Price Targets
-
-A number of brokerages recently commented on NWSA. JPMorgan Chase & Co. dropped their price objective on shares of News from $40.00 to $38.00 and set an ""overweight"" rating on the stock in a report on Tuesday, November 25th. Zacks Research lowered News from a ""hold"" rating to a ""strong sell"" rating in a report on Wednesday. Weiss Ratings downgraded News from a ""buy (b-)"" rating to a ""hold (c+)"" rating in a report on Monday, January 12th. Finally, Guggenheim dropped their target price on News from $45.00 to $43.00 and set a ""buy"" rating on the stock in a research report on Thursday, November 13th. Three investment analysts have rated the stock with a Buy rating, two have assigned a Hold rating and one has given a Sell rating to the company. Based on data from MarketBeat.com, the stock presently has an average rating of ""Hold"" and an average target price of $37.68.
-
-Get Our Latest Stock Report on NWSA
-
-News Profile
-
-(Free Report)
-
-News Corporation NASDAQ: NWSA is a global diversified media and information services company headquartered in New York City. It operates through two principal segments: News and Information Services, and Digital Real Estate Services. The company's news and information division oversees a portfolio of leading newspapers, magazines and digital platforms, offering content across print and online channels. Its properties include Dow Jones, publisher of The Wall Street Journal and Barron's, News UK titles such as The Times and The Sun, as well as News Corp Australia mastheads.
-
-In addition to its journalism assets, News Corp is a significant player in book publishing through HarperCollins, one of the world's largest consumer publishers.
-
-Further Reading
-
-Five stocks we like better than News
-
-Your Bank Account Is No Longer Safe
-
-When to buy gold (mathematically)
-
-Nervous about the stock market? Read this
-
-NEW LAW: Congress Approves Setup For Digital Dollar?
-
-Trade this between 9:30 and 10:45 am EST
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in News Right Now?
-
-Before you consider News, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and News wasn't on the list.
-
-While News currently has a Hold rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/news-co-logo-1200x675.png?v=20221109135543,N,,2026-02-06 13:04:13.657212
-ID43,Thrivent ,2026-02-06 13:21:04+00:00,MarketBeat,Thrivent Financial for Lutherans Boosts Stock Position in NXP Semiconductors N.V. $NXPI,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-boosts-stock-position-in-nxp-semiconductors-nv-nxpi-2026-02-06/,"Thrivent Financial for Lutherans' holdings in NXP Semiconductors were worth $7,791,000 as of its most recent filing with the Securities and Exchange Commission (SEC).
-NXP Semiconductors Stock Down 2.1% NXP Semiconductors Set to Break Out as AI and Analyst Support Surge NXPI stock opened at $222.13 on Friday.
-NXP Semiconductors N.V. has a one year low of $148.09 and a one year high of $255.45.
-On average, equities research analysts anticipate that NXP Semiconductors N.V. will post 10.28 EPS for the current year.
-NXP Semiconductors Announces Dividend NXP Semiconductors: A Buy-and-Hold Stock in the Buy Zone The business also recently announced a quarterly dividend, which was paid on Wednesday, January 7th.","Thrivent Financial for Lutherans increased its holdings in shares of NXP Semiconductors N.V. (NASDAQ:NXPI - Free Report) by 182.9% during the third quarter, according to its most recent filing with the Securities and Exchange Commission (SEC). The institutional investor owned 34,211 shares of the semiconductor provider's stock after buying an additional 22,119 shares during the period. Thrivent Financial for Lutherans' holdings in NXP Semiconductors were worth $7,791,000 as of its most recent filing with the Securities and Exchange Commission (SEC).
-
-Why NXP Semiconductors’ Post-Earnings Dip Could Be a Buying Window
-
-Several other institutional investors and hedge funds also recently added to or reduced their stakes in the stock. CNB Bank acquired a new stake in shares of NXP Semiconductors in the third quarter valued at about $28,000. Delos Wealth Advisors LLC purchased a new stake in NXP Semiconductors during the 2nd quarter worth approximately $35,000. Legacy Investment Solutions LLC acquired a new position in shares of NXP Semiconductors during the second quarter valued at approximately $43,000. True Wealth Design LLC lifted its position in shares of NXP Semiconductors by 375.6% in the second quarter. True Wealth Design LLC now owns 195 shares of the semiconductor provider's stock valued at $43,000 after acquiring an additional 154 shares in the last quarter. Finally, North Capital Inc. lifted its position in shares of NXP Semiconductors by 119.8% in the third quarter. North Capital Inc. now owns 189 shares of the semiconductor provider's stock valued at $43,000 after acquiring an additional 103 shares in the last quarter. Hedge funds and other institutional investors own 90.54% of the company's stock.
-
-Insider Buying and Selling at NXP Semiconductors
-
-In related news, EVP Jennifer Wuamett sold 12,425 shares of the stock in a transaction that occurred on Friday, January 2nd. The shares were sold at an average price of $220.94, for a total transaction of $2,745,179.50. Following the completion of the transaction, the executive vice president owned 11,811 shares of the company's stock, valued at approximately $2,609,522.34. This trade represents a 51.27% decrease in their position. The transaction was disclosed in a document filed with the SEC, which is accessible through this hyperlink. Also, insider Julie Southern bought 225 shares of the company's stock in a transaction that occurred on Wednesday, December 3rd. The stock was bought at an average price of $225.48 per share, with a total value of $50,733.00. Following the acquisition, the insider directly owned 11,937 shares in the company, valued at $2,691,554.76. The trade was a 1.92% increase in their position. The SEC filing for this purchase provides additional information. 0.12% of the stock is currently owned by corporate insiders.
-
-NXP Semiconductors Stock Down 2.1%
-
-NXP Semiconductors Set to Break Out as AI and Analyst Support Surge
-
-NXPI stock opened at $222.13 on Friday. The firm has a market cap of $55.90 billion, a PE ratio of 27.98, a PEG ratio of 2.84 and a beta of 1.47. The company has a debt-to-equity ratio of 1.09, a quick ratio of 1.69 and a current ratio of 2.05. The firm's 50 day moving average price is $228.20 and its 200-day moving average price is $221.30. NXP Semiconductors N.V. has a one year low of $148.09 and a one year high of $255.45.
-
-NXP Semiconductors (NASDAQ:NXPI - Get Free Report) last issued its quarterly earnings data on Monday, February 2nd. The semiconductor provider reported $3.35 earnings per share for the quarter, topping the consensus estimate of $3.31 by $0.04. NXP Semiconductors had a return on equity of 26.72% and a net margin of 16.47%.The company had revenue of $3.34 billion during the quarter, compared to analyst estimates of $3.30 billion. During the same period in the prior year, the business posted $3.18 earnings per share. The firm's revenue for the quarter was up 7.2% compared to the same quarter last year. NXP Semiconductors has set its Q1 2026 guidance at 2.770-3.170 EPS. On average, equities research analysts anticipate that NXP Semiconductors N.V. will post 10.28 EPS for the current year.
-
-NXP Semiconductors Announces Dividend
-
-NXP Semiconductors: A Buy-and-Hold Stock in the Buy Zone
-
-The business also recently announced a quarterly dividend, which was paid on Wednesday, January 7th. Shareholders of record on Wednesday, December 10th were given a $1.014 dividend. The ex-dividend date of this dividend was Wednesday, December 10th. This represents a $4.06 dividend on an annualized basis and a yield of 1.8%. NXP Semiconductors's dividend payout ratio is presently 51.13%.
-
-Analyst Ratings Changes
-
-Several research analysts recently commented on NXPI shares. Morgan Stanley reissued an ""overweight"" rating on shares of NXP Semiconductors in a research note on Friday, January 16th. Bank of America decreased their price target on shares of NXP Semiconductors from $265.00 to $245.00 and set a ""buy"" rating on the stock in a research note on Wednesday. JPMorgan Chase & Co. upped their price objective on shares of NXP Semiconductors from $245.00 to $250.00 and gave the company a ""neutral"" rating in a research note on Wednesday. Wells Fargo & Company boosted their target price on NXP Semiconductors from $260.00 to $265.00 and gave the stock an ""overweight"" rating in a report on Thursday, January 15th. Finally, Truist Financial reduced their price objective on NXP Semiconductors from $265.00 to $255.00 and set a ""buy"" rating on the stock in a research report on Tuesday. Two investment analysts have rated the stock with a Strong Buy rating, fourteen have given a Buy rating and five have issued a Hold rating to the company's stock. Based on data from MarketBeat, the company has an average rating of ""Moderate Buy"" and an average price target of $253.67.
-
-Read Our Latest Research Report on NXPI
-
-About NXP Semiconductors
-
-(Free Report)
-
-NXP Semiconductors N.V. is a global semiconductor company headquartered in Eindhoven, the Netherlands, that designs and supplies mixed-signal and standard product solutions for a broad range of end markets. The company focuses on enabling secure connections and infrastructure for embedded applications, developing technologies used across automotive, industrial and Internet of Things (IoT), mobile, and communication infrastructure segments. NXP's offerings target customers that require reliable, secure, and high-performance semiconductor components for connected devices and systems.
-
-Product lines include microcontrollers and application processors, secure elements and authentication technologies, RF and high-power analog components, connectivity solutions, and vehicle networking and infotainment systems.
-
-Further Reading
-
-Five stocks we like better than NXP Semiconductors
-
-Your Bank Account Is No Longer Safe
-
-When to buy gold (mathematically)
-
-Nervous about the stock market? Read this
-
-NEW LAW: Congress Approves Setup For Digital Dollar?
-
-Trade this between 9:30 and 10:45 am EST
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in NXP Semiconductors Right Now?
-
-Before you consider NXP Semiconductors, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and NXP Semiconductors wasn't on the list.
-
-While NXP Semiconductors currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/nxp-semiconductors-logo-1200x675.jpg,N,,2026-02-06 13:04:17.486812
-ID43,Thrivent ,2026-02-06 13:21:04+00:00,MarketBeat,Thrivent Financial for Lutherans Raises Stake in Brookfield Infrastructure Co. $BIPC,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-raises-stake-in-brookfield-infrastructure-co-bipc-2026-02-06/,"Thrivent Financial for Lutherans owned 0.14% of Brookfield Infrastructure worth $6,712,000 as of its most recent filing with the SEC.
-Morgan Stanley set a $57.00 price objective on Brookfield Infrastructure in a research note on Wednesday, January 28th.
-Read Our Latest Research Report on Brookfield Infrastructure Brookfield Infrastructure Stock Down 0.1% Shares of Brookfield Infrastructure stock opened at $49.07 on Friday.
-Brookfield Infrastructure Profile (Free Report) Brookfield Infrastructure NYSE: BIPC is a global owner, operator and investor in essential infrastructure assets.
-Since its formation in 2008 and U.S. listing in 2017, Brookfield Infrastructure has pursued a disciplined strategy of acquiring and managing high-quality infrastructure businesses.","Thrivent Financial for Lutherans increased its holdings in shares of Brookfield Infrastructure Co. (NYSE:BIPC - Free Report) by 24.4% in the third quarter, according to the company in its most recent filing with the SEC. The institutional investor owned 163,224 shares of the company's stock after purchasing an additional 32,015 shares during the quarter. Thrivent Financial for Lutherans owned 0.14% of Brookfield Infrastructure worth $6,712,000 as of its most recent filing with the SEC.
-
-Other hedge funds and other institutional investors have also recently bought and sold shares of the company. City Holding Co. acquired a new stake in shares of Brookfield Infrastructure in the third quarter worth $25,000. Geneos Wealth Management Inc. lifted its holdings in shares of Brookfield Infrastructure by 338.3% during the 1st quarter. Geneos Wealth Management Inc. now owns 710 shares of the company's stock valued at $26,000 after acquiring an additional 548 shares in the last quarter. Parvin Asset Management LLC purchased a new stake in Brookfield Infrastructure during the 2nd quarter worth $36,000. Citizens National Bank Trust Department acquired a new stake in Brookfield Infrastructure in the 3rd quarter valued at $41,000. Finally, GAMMA Investing LLC increased its holdings in Brookfield Infrastructure by 107.6% in the 3rd quarter. GAMMA Investing LLC now owns 1,119 shares of the company's stock valued at $46,000 after purchasing an additional 580 shares in the last quarter. 70.38% of the stock is owned by institutional investors and hedge funds.
-
-Analysts Set New Price Targets
-
-A number of research analysts have commented on the company. Morgan Stanley set a $57.00 price objective on Brookfield Infrastructure in a research note on Wednesday, January 28th. Wall Street Zen upgraded shares of Brookfield Infrastructure from a ""hold"" rating to a ""buy"" rating in a research note on Saturday, December 6th. Finally, Weiss Ratings reaffirmed a ""sell (d-)"" rating on shares of Brookfield Infrastructure in a report on Monday, December 29th. One investment analyst has rated the stock with a Hold rating and one has given a Sell rating to the company. According to MarketBeat.com, the company currently has an average rating of ""Reduce"" and an average target price of $57.00.
-
-Read Our Latest Research Report on Brookfield Infrastructure
-
-Brookfield Infrastructure Stock Down 0.1%
-
-Shares of Brookfield Infrastructure stock opened at $49.07 on Friday. The business has a 50-day moving average price of $45.93 and a 200 day moving average price of $43.57. Brookfield Infrastructure Co. has a fifty-two week low of $32.08 and a fifty-two week high of $49.70. The firm has a market cap of $5.89 billion, a P/E ratio of 30.85 and a beta of 1.36.
-
-Brookfield Infrastructure Announces Dividend
-
-The company also recently disclosed a dividend, which was paid on Wednesday, December 31st. Investors of record on Monday, December 1st were paid a dividend of $0.43 per share. The ex-dividend date was Friday, November 28th. This represents a yield of 384.0%.
-
-Brookfield Infrastructure Profile
-
-(Free Report)
-
-Brookfield Infrastructure NYSE: BIPC is a global owner, operator and investor in essential infrastructure assets. As the corporate class of Brookfield Infrastructure Partners L.P., the company provides exposure to a diversified portfolio spanning utilities, transport, energy midstream and data infrastructure. Its holdings generate stable cash flows underpinned by regulated or long-term contracted revenue streams.
-
-Since its formation in 2008 and U.S. listing in 2017, Brookfield Infrastructure has pursued a disciplined strategy of acquiring and managing high-quality infrastructure businesses.
-
-Featured Stories
-
-Five stocks we like better than Brookfield Infrastructure
-
-Your Bank Account Is No Longer Safe
-
-When to buy gold (mathematically)
-
-Nervous about the stock market? Read this
-
-NEW LAW: Congress Approves Setup For Digital Dollar?
-
-Trade this between 9:30 and 10:45 am EST
-
-Want to see what other hedge funds are holding BIPC? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Brookfield Infrastructure Co. (NYSE:BIPC - Free Report).
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in Brookfield Infrastructure Right Now?
-
-Before you consider Brookfield Infrastructure, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Brookfield Infrastructure wasn't on the list.
-
-While Brookfield Infrastructure currently has a Reduce rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/brookfield-infrastructure-co-logo-1200x675.png?v=20210326141256,N,,2026-02-06 13:04:21.597199
-ID5,Albertsons,2026-02-06 13:17:09+00:00,The Globe and Mail,Wall Street Analysts Are Bullish on Top Consumer Goods Picks - The Globe and Mail,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/ELF/pressreleases/68830/wall-street-analysts-are-bullish-on-top-consumer-goods-picks/,Detailed price information for E.L.F. Beauty Inc (ELF-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=837,N,,2026-02-06 13:03:50.548598
-ID41,Societe Generale,2026-02-06 13:09:24+00:00,Business in Cameroon,Douala Port to begin work on 300-MW power plant to secure energy supply,"Business in Cameroon, Public management",,,,,https://www.businessincameroon.com/energy/0602-15733-douala-port-to-begin-work-on-300-mw-power-plant-to-secure-energy-supply,"The Port Authority of Douala is preparing to enter the operational phase of an autonomous power plant project at the Douala-Bonabéri port complex, with construction scheduled to begin in March 2026.
-Once completed, the facility is expected to reach a capacity of 300 megawatts, securing electricity supply for port activities and eventually feeding surplus power into Douala’s urban grid.
-The CFA628 billion project is governed by a concession agreement signed on September 12, 2025, between the Port Authority of Douala and Douala Port Power Corporation S.A., the project company designated as the developer.
-The investment is to be fully carried by Douala Port Power Corporation, without financial guarantees from either the port authority or the Cameroonian government.
-The first phase involves the construction of a 102-megawatt power plant, along with a gas pipeline linking Kribi to Douala, at an estimated cost of CFA397 billion.","The Port Authority of Douala is preparing to enter the operational phase of an autonomous power plant project at the Douala-Bonabéri port complex, with construction scheduled to begin in March 2026. Once completed, the facility is expected to reach a capacity of 300 megawatts, securing electricity supply for port activities and eventually feeding surplus power into Douala’s urban grid.
-
-The CFA628 billion project is governed by a concession agreement signed on September 12, 2025, between the Port Authority of Douala and Douala Port Power Corporation S.A., the project company designated as the developer. It is being implemented as a public-private partnership under a build-operate-transfer model spanning 25 years.
-
-Construction has been awarded to a consortium of Chinese firms under an engineering, procurement, and construction contract. The group is led by Genertec CMC, with China Energy participating as a contractor and JD Group acting as consulting engineer. The Port Authority of Douala is providing project oversight.
-
-Financing is structured around a package combining support from the Chinese state and financial institutions, with CCA Bank acting as lead arranger. The investment is to be fully carried by Douala Port Power Corporation, without financial guarantees from either the port authority or the Cameroonian government.
-
-Work on the project is expected to run for 36 months and unfold in two stages. The first phase involves the construction of a 102-megawatt power plant, along with a gas pipeline linking Kribi to Douala, at an estimated cost of CFA397 billion. The second phase, spread over a 10-year period, will gradually increase capacity to 300 megawatts through an additional investment of CFA230 billion.
-
-At the signing of the agreement, Cyrus Ngo’o, the port authority’s director general, said the project would ensure a stable and cleaner energy supply for port operations while easing pressure on Douala’s electricity network, which is frequently affected by outages and related economic losses. The plant is presented as meeting international energy-efficiency standards applied to ports and vessels and as a key component of the port’s long-term development plan.
-
-Beyond energy security, the project is also positioned as a competitiveness lever. Port officials say energy autonomy will improve the reliability of logistics operations and strengthen Douala’s role as a maritime hub in Central Africa. The developers estimate that the project will generate more than 1,100 direct and indirect jobs during construction and operation, while creating recurring revenue streams for both the port authority and the Cameroonian state through electricity sales.",https://www.businessincameroon.com/media/k2/items/cache/61ae2a5223fe2701a160b8464724ecae_M.jpg,N,,2026-02-06 09:00:21.740908
-ID3,Agilent,2026-02-06 13:06:20+00:00,Benzinga,What's Driving the Market Sentiment Around Agilent Technologies Inc? - Benzinga,Benzinga Insights,,,,,https://www.benzinga.com/insights/short-sellers/26/02/50442493/whats-driving-the-market-sentiment-around-agilent-technologies-inc,"Agilent Technologies Inc's (NYSE:A) short interest as a percent of float has risen 15.79% since its last report.
-According to exchange reported data, there are now 3.85 million shares sold short, which is 1.54% of all regular shares that are available for trading.
-Why Short Interest Matters Short interest is the number of shares that have been sold short but have not yet been covered or closed out.
-Short interest is important to track because it can act as an indicator of market sentiment towards a particular stock.
-An increase in short interest can signal that investors have become more bearish, while a decrease in short interest can signal they have become more bullish.","Agilent Technologies Inc's (NYSE:A) short interest as a percent of float has risen 15.79% since its last report. According to exchange reported data, there are now 3.85 million shares sold short, which is 1.54% of all regular shares that are available for trading. Based on its trading volume, it would take traders 2.0 days to cover their short positions on average.
-
-Why Short Interest Matters
-
-Short interest is the number of shares that have been sold short but have not yet been covered or closed out. Short selling is when a trader sells shares of a company they do not own, with the hope that the price will fall. Traders make money from short selling if the price of the stock falls and they lose if it rises.
-
-Short interest is important to track because it can act as an indicator of market sentiment towards a particular stock. An increase in short interest can signal that investors have become more bearish, while a decrease in short interest can signal they have become more bullish.
-
-See Also: List of the most shorted stocks
-
-Agilent Technologies Inc Short Interest Graph (3 Months)
-
-As you can see from the chart above the percentage of shares that are sold short for Agilent Technologies Inc has grown since its last report. This does not mean that the stock is going to fall in the near-term but traders should be aware that more shares are being shorted.
-
-Comparing Agilent Technologies Inc's Short Interest Against Its Peers
-
-Peer comparison is a popular technique amongst analysts and investors for gauging how well a company is performing. A company's peer is another company that has similar characteristics to it, such as industry, size, age, and financial structure. You can find a company's peer group by reading its 10-K, proxy filing, or by doing your own similarity analysis.
-
-According to Benzinga Pro, Agilent Technologies Inc's peer group average for short interest as a percentage of float is 7.35%, which means the company has less short interest than most of its peers.
-
-This article was generated by Benzinga's automated content engine and was reviewed by an editor.",https://cdn.benzinga.com/files/images/story/2025/11/06/movers_4.jpg?width=1200&height=800&fit=crop,N,,2026-02-06 11:06:20.692803
-ID26,J&J,2026-02-06 13:01:56+00:00,POLITICO,Inside Congress Live - Live Updates - POLITICO,"Joe Gould, Hailey Fuchs, Jordain Carney, Aiden Reiter, Connor O'Brien, Calen Razor",,,,,https://www.politico.com/live-updates/2026/02/05/congress,"Real-time news, updates and analysis from Capitol Hill.",Not Available,https://www.politico.com/dims4/default/18bb032/2147483647/resize/1200x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F44%2Fae%2F595952e74a32a7a6262faf6ad408%2F2025-inside-congress-live-cms-shared-graphic-1.jpg,N,,2026-02-06 10:01:55.861362
