@@ -1,4 +1,93 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID7,Barclays,2026-02-18 00:15:55+00:00,Future Banking,Barclays appoints UBS executive as COO for Asia private banking arm,Vidhyamunnangi,,,,,https://www.banking-gateway.com/news/barclays-appoints-ubs-executive-as-coo-for-asia-private-banking-arm/,"Barclays has named Werner Schlossmacher as chief operating officer for its Private Bank operations in Asia, with the role based in Singapore.
+He will report to Leo Müller, the COO for Barclays Private Bank & Wealth Management.
+Schlossmacher has more than 30 years of experience in wealth management, working across Singapore, Hong Kong, and Switzerland.
+Before joining Barclays, he was at UBS where he led digital transformation projects for the wealth management business.
+In his new post, Schlossmacher will oversee operational activity for Barclays Private Bank in Asia.","Barclays has named Werner Schlossmacher as chief operating officer for its Private Bank operations in Asia, with the role based in Singapore.
+
+He will report to Leo Müller, the COO for Barclays Private Bank & Wealth Management.
+
+Schlossmacher has more than 30 years of experience in wealth management, working across Singapore, Hong Kong, and Switzerland.
+
+Before joining Barclays, he was at UBS where he led digital transformation projects for the wealth management business.
+
+His responsibilities included overhauling mobile and electronic banking platforms and introducing generative AI tools aimed at improving experiences for clients and advisors.
+
+Earlier, Schlossmacher held various senior positions at Credit Suisse nearly two decades. His work focused on digital platforms, front-office applications, and wealth management in the Asia-Pacific region.
+
+In his new post, Schlossmacher will oversee operational activity for Barclays Private Bank in Asia.
+
+He will be involved in developing digital initiatives, reinforcing operational frameworks, and preparing for the launch of the bank’s upcoming booking centre in Singapore, according to Entrepreneur.
+
+Leo Müller said: “Werner is an exceptional operator with deep experience across Asia and Europe. His leadership will be instrumental as we continue to scale our business in Asia and prepare for the launch of our booking center in Singapore.
+
+“His track record in digital transformation and platform design positions him perfectly to help us deliver a more modern, intuitive and scalable operating environment for clients and advisors.”
+
+This appointment follows leadership change at Barclays in Japan.
+
+In December last year, Hiroshi Minoura was named chairman of investment banking at Barclays Securities Japan, where he is responsible for guiding the firm’s investment banking efforts in the country.",https://www.banking-gateway.com/wp-content/uploads/sites/24/2026/02/barclays-shutterstock_2684906987-c552c607366c122aa87565697580799b.jpg,N,,2026-02-17 21:00:56.906940
+ID15,Delta Airlines,2026-02-18 00:05:27+00:00,liveandletsfly.com,"American Airlines Sent A 777 From London To Los Angeles With A Dark Galley, Forcing ...",Not Available,,,,,https://liveandletsfly.com/american-airlines-dark-galley-777/,"But it is also sad these type of stories typically, or least anecdotally, are about American Airlines. It's not that Delta Air Lines or United ...",Not Available,,N,,2026-02-17 21:01:05.418706
+ID31,Microsoft,2026-02-18 00:00:26+00:00,MUO,Microsoft is fixing Windows' oldest audio problem and you probably didn't notice - MUO,Brady Snyder,,,,,https://www.makeuseof.com/microsoft-fixing-windows-midi-audio/,"Windows MIDI Services is a major upgrade that retains backwards compatibility with older APIs, and it's completely open-source.
+Now, that's finally changing with the launch of Windows MIDI Services, which is beginning to hit retail Windows 11 builds.
+Microsoft is finally fixing it with Windows MIDI Services Windows MIDI Services started making its way to Windows 11 users via the Release Preview channel in January 2026, and it's arriving through a gradual rollout.
+Additionally, the in-box components for Windows MIDI Services are reaching retail versions of Windows as of now through the standard Windows Update process.
+Note that you'll need to install the right version of the runtime package for your Windows 11 build — the one for Windows 11 24H2 and 25H2 won't be available until later this month.","Windows 11 is built on a few legacy formats and APIs that come with persistent problems. For years, Windows versions relied on MIDI 1.0 technology, which meant that only one application could use a MIDI device at a time. MIDI stands for Musical Instrument Digital Interface, and it's the backbone of hardware devices called MIDI controllers, which can take the form of keyboards, instruments, DJ equipment, synthesizers, and more. It's entirely reasonable to want to use a MIDI controller with multiple applications, but Windows is only just solving that problem.
+
+Microsoft is slowly rolling out support for a new Windows MIDI Services suite. It's a new MIDI stack that adds support for MIDI 2.0, upgrades MIDI 1.0 functionality, and crucially, makes every endpoint multi-client. Yes, that means multiple apps can finally receive data from a single MIDI device at the same time. Windows MIDI Services is a major upgrade that retains backwards compatibility with older APIs, and it's completely open-source. If you've ever been frustrated by how Windows 11 still handles MIDI controllers, you'll be happy to know that the solution is finally coming.
+
+Windows has a longtime MIDI audio limitation
+
+Historically, a MIDI device could only be used with one app at a time
+
+Up until extremely recent versions of Windows, the operating system had a major audio limitation. Only one application could use a MIDI hardware device, like a controller or instrument, at a time. For decades, power users needed to take extreme steps to use their MIDI hardware with multiple apps simultaneously.
+
+One workaround for Windows 7 and Windows 11 was to create virtual loopback MIDI ports that could be shared with each individual app. Software projects like loopMIDI utilize virtualMIDI drivers to make the extra ports and trick Windows apps into thinking one MIDI hardware input was actually multiple. Still, it felt like an annoying workaround for MIDI users on Windows that persisted as the operating system developed.
+
+Now, that's finally changing with the launch of Windows MIDI Services, which is beginning to hit retail Windows 11 builds. The feature was announced about a year ago on the Windows 11 Insider Canary Channel, and has been in the public preview phase ever since.
+
+Microsoft is finally fixing it with Windows MIDI Services
+
+Windows MIDI Services started making its way to Windows 11 users via the Release Preview channel in January 2026, and it's arriving through a gradual rollout. Additionally, the in-box components for Windows MIDI Services are reaching retail versions of Windows as of now through the standard Windows Update process. It's worth noting that it'll take about 30 days for the rollout to complete and all features to be enabled, according to the GitHub release.
+
+The upgraded MIDI experience comes in two parts: the in-box components for Windows MIDI Services and the separate App SDK and Tools package. The latter adds the MIDI Console and the new MIDI Settings app, and it's available on Microsoft's website. Even if you've updated Windows 11 to a version with the MIDI Services upgrade, you'll need to manually download the SDK Runtime and Tools package. They're separate to enable Microsoft ""to move quickly and continue providing new features and capabilities for customers and apps,"" the company says.
+
+The list of Windows MIDI Services upgrades is quite long, but there's one feature that stands out: multi-client by default. It means that any MIDI device that sends data to apps can do so to multiple apps simultaneously. It works with existing apps, eliminating the need for developers to manually add support for multi-client functionality in Windows MIDI Services. In fact, even MIDI 1.0 controllers and instruments become multi-client after your PC gets the Windows MIDI Services upgrade, which is great news. A problem affecting Windows users for decades is finally fixed.
+
+You can comb through the full breakdown of Windows MIDI Services as outlined by Microsoft below:
+
+No need for third-party USB drivers in most cases. Most USB MIDI 1.0 devices are class-compliant and will work without third-party drivers. This means no wrestling with their position in the registry, or worrying about compatibility. Don’t install third-party drivers unless absolutely necessary, and you’ll have a better MIDI experience on Windows.
+
+Supports your Existing Apps. The existing WinMM and WinRT MIDI 1.0 APIs have been repointed to the new Windows Service. This provides a subset of the new features, including multi-client so your apps will continue to work as today, but will be even better.
+
+Multi-client by default. Any endpoint (including MIDI 1.0 devices) can be used by multiple applications at the same time. That means you can use a librarian or controller app at the same time your DAW has a connection open.
+
+Supports your Existing Devices. Windows MIDI Services supports the MIDI 1.0 devices you own today, including those with vendor-supplied kernel streaming drivers, as well as class-compliant MIDI 1.0 and MIDI 2.0 devices. The experience will be better/faster if they use the new class driver, but we recognize that is not always possible or desirable with some existing devices.
+
+Faster. In our testing, we’ve found that the new infrastructure is much faster at sending and receiving messages compared to the older API, even with plugins configured in the service. There are no built-in speed caps or throttling in Windows MIDI Services, even for older USB MIDI 1.0 devices. The new MIDI 2.0 driver is not limited USB full-speed, and supports USB 3.x speeds.
+
+Lower Jitter. Along with higher speed comes lower jitter. This will vary by transport type (USB vs Network vs Virtual), and the device Windows is talking to, but the jitter is in the low microsecond range even without any compensation.
+
+More Deterministic. Speaking of latency compensation, the new API enables timestamp-based message scheduling for outbound messages for any apps using the new API. In addition, incoming messages are tagged with a timestamp when received by the service.
+
+App-to-App and Virtual Device MIDI. Windows MIDI Services includes built-in virtual / app-to-app MIDI 2.0 to enable lightning fast communication between apps on the PC.
+
+Better tools. We supply the midi.exe Windows MIDI Services Console for developers and power users, or anyone comfortable with the command line. You can use it to monitor endpoints, send and receive messages, send/capture SysEx data and much more. We also include the MIDI Settings GUI app for renaming devices, configuring your MIDI setup, testing, and more.
+
+Built-in Scripting Built-in support for scripting MIDI using PowerShell. Want to automate synchronization between mixers? Want to set up a script to initialize all your devices for a show? All this can be done via the PowerShell Cmdlets.
+
+read more
+
+To save you some time, Windows MIDI Services adds support for MIDI 2.0, multi-client connections, and better overall performance. It's more complicated than that, but put simply, this is the MIDI upgrade users have wanted for years.
+
+How to check if you've got MIDI 2.0
+
+It's rolling out now for Windows 11 24H2 and 25H2
+
+There's no way to force Windows MIDI Services to be enabled on your PC ahead of time, so you'll need to be patient. However, there's a midicheckservice tool available on GitHub that can check if the in-box components are installed and ready for Windows MIDI Services on your system. The enablement checker can be downloaded now, and it's available for both x64 and Arm processors.
+
+After that, you can install the SDK and Tools runtime package, available here. Note that you'll need to install the right version of the runtime package for your Windows 11 build — the one for Windows 11 24H2 and 25H2 won't be available until later this month. Being that the public rollout will take time and only half of Insider build users will get Windows MIDI Services early, there's no guarantee you'll have it available now.
+
+However, in just a few short weeks, Windows 11 will have fixed a longtime Windows audio problem affecting MIDI devices — and that's something to be excited about.",https://static0.makeuseofimages.com/wordpress/wp-content/uploads/wm/2026/02/windows-midi-audio-2.jpg?w=1600&h=900&fit=crop,N,,2026-02-17 21:01:09.178295
 ID23,Instacart,2026-02-17 23:44:17+00:00,Supermarket News,Readers react: New Kroger CEO has work to do,Bill Wilson,,,,,https://www.supermarketnews.com/grocery-trends-data/readers-react-new-kroger-ceo-has-work-to-do,"Last week, Supermarket News posted a poll asking what new Kroger CEO Greg Foran should do as one of his first acts as the grocer’s leader.
 Thirty-three percent of respondents said he needs to change the direction of the company and 19% said new executives need to be hired.
 The brands that win next will be the ones grounded in a clear, current understanding of shopper needs.” Suzanna Frank, consumer insights leader “Company culture is what needs to be turned around.
@@ -432,6 +521,162 @@ Clazakizumab blocks IL‑6 ​from binding its receptor, which may ​dampen the
 The ​Australian biopharmaceutical ⁠firm added that closing of the transaction is subject to customary closing conditions.
 
 (Reporting by Shivangi Lahiri in Bengaluru; Editing by ​Maju Samuel)",https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-02/17/2026-02-17T212625Z_1_LYNXMPEM1G13T_RTROPTP_3_ORNA-THERAPEUTICS-M-A-LILLY.JPG,N,,2026-02-17 18:03:57.283686
+ID7,Barclays,2026-02-17 22:18:18+00:00,Transport Topics,Autonomous Vehicles Steer Robotics Growth - TT - Transport Topics,Felice Maranz,,,,,https://www.ttnews.com/articles/autonomous-vehicles-robotics,"The market for AI-powered robots and autonomous machines has the potential to balloon into a trillion-dollar opportunity by 2035, orders of magnitude bigger than it is now, according to a team of Barclays analysts.
+While China dominates humanoid and industrial robot deployment, the Barclays analysts identified close to 200 public issuers that could be involved in the theme over the next decade, including 100 with at least one corporate bond outstanding.
+“We see automakers emerging as potential major participants, alongside growing deployment of robotic systems across warehousing, logistics and retail,” they wrote.
+They note Amazon has more than 1 million robots operating in its fulfillment network, “which is likely still only a fraction of the long-term potential.” Amazon ranks No.
+1 on the Transport Topics Top 100 list of the largest logistics companies in North America, No.","The market for AI-powered robots and autonomous machines has the potential to balloon into a trillion-dollar opportunity by 2035, orders of magnitude bigger than it is now, according to a team of Barclays analysts.
+
+Autonomous vehicles, which are already relatively advanced, will lead the way, followed by drones and then more complicated general-purpose humanoid robots, the analysts wrote in a report Feb. 17 titled “The Decade of the Robot.”
+
+“Advances in brains, brawn and batteries are pushing AI-enabled robotics to an inflection point, setting the investment agenda for the next decade,” wrote the team led by Zornitsa Todorova, head of thematic fixed-income research at Barclays.
+
+The development of robotics and other real-world, “physical AI” marks a paradigm shift from digital-focused AI, one that lays the foundation for a “value chain” that will be more diverse and deeper than the first wave of AI products, they said.
+
+While China dominates humanoid and industrial robot deployment, the Barclays analysts identified close to 200 public issuers that could be involved in the theme over the next decade, including 100 with at least one corporate bond outstanding.
+
+“We see automakers emerging as potential major participants, alongside growing deployment of robotic systems across warehousing, logistics and retail,” they wrote. Examples include Mercedes-Benz Group AG’s use of Nvidia Corp.’s Omniverse to “virtually retool factories with minimal disruption” and Tesla Inc.’s focus on robots during its fourth-quarter earnings call.
+
+The team highlighted the software and hardware underpinning the technology, including semiconductor and infrastructure providers such as Taiwan Semiconductor Manufacturing Co., Samsung Electronics Co. and Nvidia Corp. They also flag “robotic hardware and motion systems that perform physical tasks,” along with batteries, which “provide the energy backbone for these platforms,” citing Chinese manufacturers like EVE Energy Co. and Contemporary Amperex Technology Co.
+
+The Barclays analysts also point to a group they call enablers, which are companies that either build full robots, like Tesla, or “shape the broader ecosystem” by developing technology, like Amazon.com Inc.
+
+A shift toward physical AI is already showing in large-scale logistics and retail operations at companies such as Amazon and Walmart Inc. They note Amazon has more than 1 million robots operating in its fulfillment network, “which is likely still only a fraction of the long-term potential.”
+
+Amazon ranks No. 1 on the Transport Topics Top 100 list of the largest logistics companies in North America, No. 15 on the TT Top 100 list of the largest private carriers and No. 1 on the TT Top 50 list of the largest global freight companies.
+
+Walmart ranks No. 1 on the private TT100 and No. 32 on the global TT50.",https://www.ttnews.com/sites/default/files/styles/social_media_1200x630/public/2026-02/Car-1200.jpg,N,,2026-02-17 21:01:00.972365
+ID1,Accor,2026-02-17 22:15:54+00:00,ACCA Careers,Financial Controller job with Accor | 13746774 - ACCA Careers,Not Available,,,,,https://jobs.accaglobal.com/job/13746774/financial-controller/,"Founded in 2008 by Serge Trigano and his sons Jérémie and Benjamin (co-founders of Club Med), Mama Shelter is a creator of living spaces and a daily director!
+Mama Shelter is part of Ennismore, a creative hotel group rooted in cultures and destinations, with a global portfolio of brands.
+Job Description THE MISSION You are the guardian of Mama's numbers Where the numbers are as essential as the vibes!
+Here's what you'll be responsible for: Guardian of the Numbers Accounting, reporting, forecasting, budgeting, treasury, and taxation-all balanced perfectly like a financial superhero.
+Accounting Maestro Handle daily and monthly accounting tasks: income control, sales journal prep, revenue control, reconciliations, cash management, and receivables follow-up.","Job Details
+
+Company Description
+
+MAMA?
+
+Founded in 2008 by Serge Trigano and his sons Jérémie and Benjamin (co-founders of Club Med), Mama Shelter is a creator of living spaces and a daily director!
+
+These are atypical places, where everyone feels at home, places born of a blend of influences, freedoms, sensations and emotions. Each Mama tells the story of the city in which it is located, and all influences blend together. We offer our guests a joyful atmosphere and exceptional service at an affordable price.
+
+More than just rooms and restaurants, Mama Shelter is a dynamic, a vibe: they are true urban refuges, not only aesthetically pleasing and modern but also popular, welcoming and sexy.
+
+Whatever your role, we're all here to make the customer experience as unforgettable as possible.
+
+Our mission: to bring little moments of happiness to people.
+
+Our growth has enabled us to offer our teams great career paths through internal development and international mobility, and it's not a question of diplomas or years of experience.
+
+Mama Shelter is part of Ennismore, a creative hotel group rooted in cultures and destinations, with a global portfolio of brands. Ennismore is a joint venture with Accor, founded in 2021.
+
+Our commitment to diversity and inclusion:
+
+Mama is an inclusive company, and our ambition is to recruit and promote diverse talent.
+
+Job Description
+
+THE MISSION
+
+You are the guardian of Mama's numbers Where the numbers are as essential as the vibes!
+
+As our Financial Controller, you'll be at the heart of the action, orchestrating all financial matters behind the scenes. From budgets to audits , cash flow to compliance , you keep Mama running smoothly, efficiently, and profitably-all while inspiring your team and supporting the wider business.
+
+Here's what you'll be responsible for:
+
+Guardian of the Numbers
+
+Accounting, reporting, forecasting, budgeting, treasury, and taxation-all balanced perfectly like a financial superhero.
+
+Master of Financial Statements
+
+Balance sheets, P&L, and cash flow management kept spotless. Ensure audit-ready, accurate, and compliant financial data.
+
+Revenue & Cost Optimizer
+
+Provide detailed analysis to boost revenue and cost-efficiency, guiding the business to financial success.
+
+Bridge Builder
+
+Connect finance with operations, Ennismore regional support, and hotel owners-ensuring smooth communication and aligned goals.
+
+Forecasting Guru
+
+Manage budgets and forecasts to keep financial planning on track and forward-looking.
+
+Accounting Maestro
+
+Handle daily and monthly accounting tasks: income control, sales journal prep, revenue control, reconciliations, cash management, and receivables follow-up.
+
+Cash Flow Commander
+
+Oversee cash control, accounts payable, and receivable management, keeping the property's liquidity healthy.
+
+Compliance Officer
+
+Ensure adherence to accounting policies, licenses, contracts, leases, operational taxes, and internal controls. Support audits and guide management in enforcing standards.
+
+Leader with Passion
+
+Guide, develop, and inspire the Mama Finance team. Collaborate with operations and Ennismore support teams to run a perfectly tuned financial engine.
+
+Qualifications
+
+MADE FOR YOU... ONLY IF
+
+You bring 5+ years' experience in senior finance positions in hospitality
+
+You know the SA financial landscape-compliance, local ordinances, and market complexities
+
+You juggle priorities with ease and thrive on organization and accuracy
+
+You love numbers and are obsessive about every penny and decimal point
+
+You're a people person , able to collaborate across teams while keeping operations seamless
+
+You respect confidentiality ♂-what happens at Mama, stays at Mama
+
+You live, breathe, and dream in Excel -master of formulas, pivot tables, and reporting
+
+You inspire with high energy , motivate others, and lead by example
+
+You are action-oriented , roll up your sleeves, and embrace participative management
+
+You thrive under pressure ♂ and navigate stress with calm and clarity
+
+Your hospitality passion shows in everything , delivering guest-centered experiences
+
+You are highly responsible, reliable, and ethical -a reputation for honesty and integrity
+
+Strong financial reporting, budgeting, and forecasting skills
+
+Experience in audits, compliance, and financial controls
+
+Ability to think strategically while managing operational finance
+
+YOUR LITTLE EXTRAS
+
+You've been part of a hotel opening and know how to make numbers work during early stages
+
+You're familiar with Opera and Sun Systems
+
+You balance vibrancy with meticulousness ⚖-fun, high-energy, and detail-oriented
+
+International exposure is a plus
+
+Additional Information
+
+Next, we're sure you know the tune :
+
+First melody: ""At Mama, no AI! We review your application in person and take the time to understand your background.
+
+First verse: We organise an initial telephone interview with our People & Culture Team to see if your application fits in with our rhythm.
+
+Chorus: Once you've passed the phone interview, we'll arrange a remote meeting or a meeting at Mama to meet the Gang!
+
+Last verse: Naturally, you'll receive a response from us within two to three weeks at the latest, whether it's a
+
+• or a ✖.",https://jobs.accaglobal.com/images/_display/job/13746774/facebook.png,N,,2026-02-17 21:00:53.372225
 ID1,Accor,2026-02-17 21:38:38+00:00,Hospitality ON,CSR: from speech to strategic management - Anglais | Hospitality ON,Hospitality On,,,,,https://hospitality-on.com/en/csr/csr-speech-strategic-management,"Governance: CSR as a strategic management tool Sustainability is gradually being integrated into decision-making bodies, incentive systems and reporting mechanisms.
 It becomes a strategic management parameter, just like financial performance.
 Radisson Hotel Group, Mandarin Oriental and AO Hostels publish detailed sustainability reports, integrating environmental, social and governance indicators into their annual reporting.
@@ -11654,65 +11899,6 @@ Before you consider Kohl's, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Kohl's wasn't on the list.
 
 While Kohl's currently has a Reduce rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/kohls-co-logo-1200x675.png?v=20221117151850,N,,2026-02-14 09:02:01.196134
-ID43,Thrivent ,2026-02-14 11:51:05+00:00,MarketBeat,"Thrivent Financial for Lutherans Trims Stake in Cogent Communications Holdings, Inc. $CCOI",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-trims-stake-in-cogent-communications-holdings-inc-ccoi-2026-02-14/,"Thrivent Financial for Lutherans owned 0.07% of Cogent Communications worth $1,315,000 as of its most recent SEC filing.
-2 Mid-Cap Telecom Stocks Offering Superior Returns View Our Latest Stock Report on CCOI Cogent Communications Trading Up 0.6% Cogent Communications stock opened at $26.46 on Friday.
-Cogent Communications Holdings, Inc. has a one year low of $15.96 and a one year high of $84.06.
-About Cogent Communications (Free Report) Cogent Communications NASDAQ: CCOI is a multinational Internet service provider specializing in high-speed Internet access and data transport services.
-Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Cogent Communications Holdings, Inc. (NASDAQ:CCOI - Free Report).","Thrivent Financial for Lutherans lowered its position in Cogent Communications Holdings, Inc. (NASDAQ:CCOI - Free Report) by 96.5% in the 3rd quarter, according to its most recent 13F filing with the SEC. The institutional investor owned 34,287 shares of the technology company's stock after selling 957,064 shares during the period. Thrivent Financial for Lutherans owned 0.07% of Cogent Communications worth $1,315,000 as of its most recent SEC filing.
-
-Big Dippers: 3 Stocks Near 1-Year Lows That Could Surge in 2025
-
-Several other hedge funds also recently made changes to their positions in the company. Keybank National Association OH raised its holdings in Cogent Communications by 5.7% in the third quarter. Keybank National Association OH now owns 6,835 shares of the technology company's stock worth $262,000 after purchasing an additional 370 shares in the last quarter. Triton Financial Group Inc grew its position in shares of Cogent Communications by 6.2% in the 3rd quarter. Triton Financial Group Inc now owns 16,859 shares of the technology company's stock worth $647,000 after buying an additional 982 shares during the period. Envestnet Portfolio Solutions Inc. grew its position in shares of Cogent Communications by 3.6% in the 3rd quarter. Envestnet Portfolio Solutions Inc. now owns 7,534 shares of the technology company's stock worth $289,000 after buying an additional 262 shares during the period. Covestor Ltd increased its stake in shares of Cogent Communications by 34.0% in the 3rd quarter. Covestor Ltd now owns 2,705 shares of the technology company's stock worth $104,000 after acquiring an additional 686 shares in the last quarter. Finally, Universal Beteiligungs und Servicegesellschaft mbH purchased a new position in Cogent Communications during the 3rd quarter valued at about $466,000. 92.45% of the stock is currently owned by institutional investors.
-
-Analyst Ratings Changes
-
-CCOI has been the topic of a number of recent research reports. KeyCorp restated an ""overweight"" rating on shares of Cogent Communications in a report on Wednesday, December 10th. Weiss Ratings restated a ""sell (d+)"" rating on shares of Cogent Communications in a research note on Monday, December 22nd. The Goldman Sachs Group reduced their price objective on Cogent Communications from $40.00 to $25.00 and set a ""neutral"" rating for the company in a research report on Friday, November 7th. Royal Bank Of Canada dropped their target price on Cogent Communications from $40.00 to $23.00 and set a ""sector perform"" rating on the stock in a report on Thursday, November 13th. Finally, JPMorgan Chase & Co. cut their target price on Cogent Communications from $37.00 to $23.00 and set a ""neutral"" rating on the stock in a research note on Thursday, November 13th. One analyst has rated the stock with a Buy rating, seven have given a Hold rating and one has assigned a Sell rating to the company. According to MarketBeat, the company presently has a consensus rating of ""Hold"" and a consensus target price of $25.71.
-
-2 Mid-Cap Telecom Stocks Offering Superior Returns
-
-View Our Latest Stock Report on CCOI
-
-Cogent Communications Trading Up 0.6%
-
-Cogent Communications stock opened at $26.46 on Friday. Cogent Communications Holdings, Inc. has a one year low of $15.96 and a one year high of $84.06. The business's fifty day moving average is $23.20 and its 200 day moving average is $30.89. The stock has a market capitalization of $1.30 billion, a PE ratio of -6.49 and a beta of 0.81. The company has a debt-to-equity ratio of 49.06, a current ratio of 2.02 and a quick ratio of 2.02.
-
-Insider Buying and Selling at Cogent Communications
-
-In related news, Director Lewis H. Ferguson sold 4,000 shares of the stock in a transaction that occurred on Tuesday, December 2nd. The shares were sold at an average price of $20.34, for a total transaction of $81,360.00. Following the transaction, the director owned 19,267 shares in the company, valued at $391,890.78. This represents a 17.19% decrease in their ownership of the stock. The sale was disclosed in a document filed with the Securities & Exchange Commission, which is available at the SEC website. 11.40% of the stock is owned by insiders.
-
-About Cogent Communications
-
-(Free Report)
-
-Cogent Communications NASDAQ: CCOI is a multinational Internet service provider specializing in high-speed Internet access and data transport services. The company operates one of the largest Tier 1 IP networks in the world, offering wholesale and enterprise customers reliable, low-latency connectivity. Cogent's core services include dedicated Internet access, Ethernet transport, wavelength services, and MPLS-based IP Virtual Private Networks, all delivered over its privately owned, fiber-optic backbone.
-
-In addition to network connectivity, Cogent provides data center colocation and managed services designed to support businesses with demanding bandwidth and redundancy requirements.
-
-Featured Stories
-
-Five stocks we like better than Cogent Communications
-
-ALERT: Drop these 5 stocks before January 2026!
-
-Think You Missed Silver? You’re Wrong. Here’s Why.
-
-Trump Planning to Use Public Law 63-43: Prepare Now
-
-Buy This Stock Now
-
-Is Trump Done? Shocking leak…
-
-Want to see what other hedge funds are holding CCOI? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Cogent Communications Holdings, Inc. (NASDAQ:CCOI - Free Report).
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in Cogent Communications Right Now?
-
-Before you consider Cogent Communications, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Cogent Communications wasn't on the list.
-
-While Cogent Communications currently has a Hold rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/cogent-communications-holdings-inc-logo-1200x675.png?v=20240426110742,N,,2026-02-14 09:02:04.482821
 ID43,Thrivent ,2026-02-14 11:51:05+00:00,MarketBeat,Park Hotels & Resorts Inc. $PK Shares Sold by Thrivent Financial for Lutherans - MarketBeat,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-park-hotels-resorts-inc-pk-shares-sold-by-thrivent-financial-for-lutherans-2026-02-14/,"Arrow Investment Advisors LLC increased its position in shares of Park Hotels & Resorts by 10.7% in the 3rd quarter.
 Finally, Accel Wealth Management raised its holdings in shares of Park Hotels & Resorts by 20.0% in the 3rd quarter.
 Park Hotels & Resorts Inc. has a one year low of $8.27 and a one year high of $13.22.
@@ -11774,6 +11960,65 @@ Before you consider Park Hotels & Resorts, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Park Hotels & Resorts wasn't on the list.
 
 While Park Hotels & Resorts currently has a Reduce rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/park-hotels-amp;-resorts-inc-logo-1200x675.jpg,N,,2026-02-14 09:02:08.946973
+ID43,Thrivent ,2026-02-14 11:51:05+00:00,MarketBeat,"Thrivent Financial for Lutherans Trims Stake in Cogent Communications Holdings, Inc. $CCOI",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-trims-stake-in-cogent-communications-holdings-inc-ccoi-2026-02-14/,"Thrivent Financial for Lutherans owned 0.07% of Cogent Communications worth $1,315,000 as of its most recent SEC filing.
+2 Mid-Cap Telecom Stocks Offering Superior Returns View Our Latest Stock Report on CCOI Cogent Communications Trading Up 0.6% Cogent Communications stock opened at $26.46 on Friday.
+Cogent Communications Holdings, Inc. has a one year low of $15.96 and a one year high of $84.06.
+About Cogent Communications (Free Report) Cogent Communications NASDAQ: CCOI is a multinational Internet service provider specializing in high-speed Internet access and data transport services.
+Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Cogent Communications Holdings, Inc. (NASDAQ:CCOI - Free Report).","Thrivent Financial for Lutherans lowered its position in Cogent Communications Holdings, Inc. (NASDAQ:CCOI - Free Report) by 96.5% in the 3rd quarter, according to its most recent 13F filing with the SEC. The institutional investor owned 34,287 shares of the technology company's stock after selling 957,064 shares during the period. Thrivent Financial for Lutherans owned 0.07% of Cogent Communications worth $1,315,000 as of its most recent SEC filing.
+
+Big Dippers: 3 Stocks Near 1-Year Lows That Could Surge in 2025
+
+Several other hedge funds also recently made changes to their positions in the company. Keybank National Association OH raised its holdings in Cogent Communications by 5.7% in the third quarter. Keybank National Association OH now owns 6,835 shares of the technology company's stock worth $262,000 after purchasing an additional 370 shares in the last quarter. Triton Financial Group Inc grew its position in shares of Cogent Communications by 6.2% in the 3rd quarter. Triton Financial Group Inc now owns 16,859 shares of the technology company's stock worth $647,000 after buying an additional 982 shares during the period. Envestnet Portfolio Solutions Inc. grew its position in shares of Cogent Communications by 3.6% in the 3rd quarter. Envestnet Portfolio Solutions Inc. now owns 7,534 shares of the technology company's stock worth $289,000 after buying an additional 262 shares during the period. Covestor Ltd increased its stake in shares of Cogent Communications by 34.0% in the 3rd quarter. Covestor Ltd now owns 2,705 shares of the technology company's stock worth $104,000 after acquiring an additional 686 shares in the last quarter. Finally, Universal Beteiligungs und Servicegesellschaft mbH purchased a new position in Cogent Communications during the 3rd quarter valued at about $466,000. 92.45% of the stock is currently owned by institutional investors.
+
+Analyst Ratings Changes
+
+CCOI has been the topic of a number of recent research reports. KeyCorp restated an ""overweight"" rating on shares of Cogent Communications in a report on Wednesday, December 10th. Weiss Ratings restated a ""sell (d+)"" rating on shares of Cogent Communications in a research note on Monday, December 22nd. The Goldman Sachs Group reduced their price objective on Cogent Communications from $40.00 to $25.00 and set a ""neutral"" rating for the company in a research report on Friday, November 7th. Royal Bank Of Canada dropped their target price on Cogent Communications from $40.00 to $23.00 and set a ""sector perform"" rating on the stock in a report on Thursday, November 13th. Finally, JPMorgan Chase & Co. cut their target price on Cogent Communications from $37.00 to $23.00 and set a ""neutral"" rating on the stock in a research note on Thursday, November 13th. One analyst has rated the stock with a Buy rating, seven have given a Hold rating and one has assigned a Sell rating to the company. According to MarketBeat, the company presently has a consensus rating of ""Hold"" and a consensus target price of $25.71.
+
+2 Mid-Cap Telecom Stocks Offering Superior Returns
+
+View Our Latest Stock Report on CCOI
+
+Cogent Communications Trading Up 0.6%
+
+Cogent Communications stock opened at $26.46 on Friday. Cogent Communications Holdings, Inc. has a one year low of $15.96 and a one year high of $84.06. The business's fifty day moving average is $23.20 and its 200 day moving average is $30.89. The stock has a market capitalization of $1.30 billion, a PE ratio of -6.49 and a beta of 0.81. The company has a debt-to-equity ratio of 49.06, a current ratio of 2.02 and a quick ratio of 2.02.
+
+Insider Buying and Selling at Cogent Communications
+
+In related news, Director Lewis H. Ferguson sold 4,000 shares of the stock in a transaction that occurred on Tuesday, December 2nd. The shares were sold at an average price of $20.34, for a total transaction of $81,360.00. Following the transaction, the director owned 19,267 shares in the company, valued at $391,890.78. This represents a 17.19% decrease in their ownership of the stock. The sale was disclosed in a document filed with the Securities & Exchange Commission, which is available at the SEC website. 11.40% of the stock is owned by insiders.
+
+About Cogent Communications
+
+(Free Report)
+
+Cogent Communications NASDAQ: CCOI is a multinational Internet service provider specializing in high-speed Internet access and data transport services. The company operates one of the largest Tier 1 IP networks in the world, offering wholesale and enterprise customers reliable, low-latency connectivity. Cogent's core services include dedicated Internet access, Ethernet transport, wavelength services, and MPLS-based IP Virtual Private Networks, all delivered over its privately owned, fiber-optic backbone.
+
+In addition to network connectivity, Cogent provides data center colocation and managed services designed to support businesses with demanding bandwidth and redundancy requirements.
+
+Featured Stories
+
+Five stocks we like better than Cogent Communications
+
+ALERT: Drop these 5 stocks before January 2026!
+
+Think You Missed Silver? You’re Wrong. Here’s Why.
+
+Trump Planning to Use Public Law 63-43: Prepare Now
+
+Buy This Stock Now
+
+Is Trump Done? Shocking leak…
+
+Want to see what other hedge funds are holding CCOI? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Cogent Communications Holdings, Inc. (NASDAQ:CCOI - Free Report).
+
+This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
+
+Should You Invest $1,000 in Cogent Communications Right Now?
+
+Before you consider Cogent Communications, you'll want to hear this.
+
+MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Cogent Communications wasn't on the list.
+
+While Cogent Communications currently has a Hold rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/cogent-communications-holdings-inc-logo-1200x675.png?v=20240426110742,N,,2026-02-14 09:02:04.482821
 ID16,Ecolab,2026-02-14 11:26:59+00:00,MarketBeat,Pacific Point Advisors LLC Takes Position in Ecolab Inc. $ECL - MarketBeat,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-pacific-point-advisors-llc-takes-position-in-ecolab-inc-ecl-2026-02-14/,"Pacific Point Advisors LLC acquired a new position in Ecolab Inc. (NYSE:ECL - Free Report) in the third quarter, according to its most recent filing with the Securities and Exchange Commission (SEC).
 Finally, Salomon & Ludwin LLC bought a new position in shares of Ecolab in the second quarter worth about $41,000.
 Insider Buying and Selling at Ecolab In other news, Director David Maclennan bought 750 shares of Ecolab stock in a transaction dated Monday, December 8th.
@@ -28501,15 +28746,6 @@ It does not reflect the views or opinion of our website and is not to be conside
 To make things simpler for you to identity or distinguish advertised or sponsored articles or links, you may consider all articles or links hosted on our site as a commercial article placement.","Editorial & Advertiser disclosure
 
 Global Banking & Finance Review® is an online platform offering news, analysis, and opinion on the latest trends, developments, and innovations in the banking and finance industry worldwide. The platform covers a diverse range of topics, including banking, insurance, investment, wealth management, fintech, and regulatory issues. The website publishes news, press releases, opinion and advertorials on various financial organizations, products and services which are commissioned from various Companies, Organizations, PR agencies, Bloggers etc. These commissioned articles are commercial in nature. This is not to be considered as financial advice and should be considered only for information purposes. It does not reflect the views or opinion of our website and is not to be considered an endorsement or a recommendation. We cannot guarantee the accuracy or applicability of any information provided with respect to your individual or personal circumstances. Please seek Professional advice from a qualified professional before making any financial decisions. We link to various third-party websites, affiliate sales networks, and to our advertising partners websites. When you view or click on certain links available on our articles, our partners may compensate us for displaying the content to you or make a purchase or fill a form. This will not incur any additional charges to you. To make things simpler for you to identity or distinguish advertised or sponsored articles or links, you may consider all articles or links hosted on our site as a commercial article placement. We will not be responsible for any loss you may suffer as a result of any omission or inaccuracy on the website.",https://cdn.sanity.io/images/v0gkry1w/production/5f56a7da4be76ec9079652e497da17d7e30fe109-640x430.webp?w=1200&q=85&fit=max&auto=format,N,,2026-02-11 14:04:53.259953
-ID2,Adobe,2026-02-11 17:09:15+00:00,TradingView,"Oracle, Adobe Face AI Fear Pressure - TradingView",Not Available,,,,,https://www.tradingview.com/news/gurufocus:78992bd75094b:0-oracle-adobe-face-ai-fear-pressure/,"Oracle Corporation ORCL and Adobe Inc. ADBE were back in focus Tuesday as BNP Paribas stepped in to address the recent slide in enterprise software stocks, suggesting the sell-off may be driven more by AI anxiety than collapsing fundamentals.
-For Adobe, analyst Stefan Slowinski said the stock is feeling the weight of AI disruption fears.
-The company now has about 70 million free monthly active users, which is expanding its reach but stretching out monetization timelines.
-Management has guided to at least flat NNARR growth this year, but BNP believes it could take time before revenue growth meaningfully reaccelerates.
-April's Adobe Summit may help reset the narrative, likely focusing on how AI is enhancing products rather than replacing them.","Oracle Corporation ORCL and Adobe Inc. ADBE were back in focus Tuesday as BNP Paribas stepped in to address the recent slide in enterprise software stocks, suggesting the sell-off may be driven more by AI anxiety than collapsing fundamentals.
-
-For Adobe, analyst Stefan Slowinski said the stock is feeling the weight of AI disruption fears. The company now has about 70 million free monthly active users, which is expanding its reach but stretching out monetization timelines.
-
-Management has guided to at least flat NNARR growth this year, but BNP believes it could take time before revenue growth meaningfully reaccelerates. April's Adobe Summit may help reset the narrative, likely focusing on how AI is enhancing products rather than replacing them.",https://s.tradingview.com/static/images/illustrations/news-story.jpg,N,,2026-02-11 14:04:40.977413
 ID11,Capgemini,2026-02-11 17:09:15+00:00,TradingView,CAC 40 Edges Lower — TradingView News,Not Available,,,,,https://www.tradingview.com/news/te_news:525100:0-cac-40-edges-lower/,"The CAC 40 closed 0.2% lower at 8,313 on Thursday as steep losses in technology and luxury heavyweights dragged the index despite firm gains in energy and cyclicals.
 On the other hand, TotalEnergies jumped 2.7% to its highest level since July 2024 on firmer crude prices, while Schneider Electric rose 3.5% and ArcelorMittal surged 4.7%, offering cyclical support.
 Orange gained 4.3% and ENGIE added 2.5%, highlighting resilience in defensive segments.
@@ -28525,6 +28761,15 @@ Orange gained 4.3% and ENGIE added 2.5%, highlighting resilience in defensive se
 Financials were softer, with BNP Paribas and Société Générale edging lower.
 
 Investors also monitored the political backdrop ahead of next year’s presidential election, as polls point to a credible National Rally bid, though business leaders remain cautious over fiscal clarity.",https://s.tradingview.com/static/images/illustrations/news-story.jpg,N,,2026-02-11 13:06:08.458749
+ID2,Adobe,2026-02-11 17:09:15+00:00,TradingView,"Oracle, Adobe Face AI Fear Pressure - TradingView",Not Available,,,,,https://www.tradingview.com/news/gurufocus:78992bd75094b:0-oracle-adobe-face-ai-fear-pressure/,"Oracle Corporation ORCL and Adobe Inc. ADBE were back in focus Tuesday as BNP Paribas stepped in to address the recent slide in enterprise software stocks, suggesting the sell-off may be driven more by AI anxiety than collapsing fundamentals.
+For Adobe, analyst Stefan Slowinski said the stock is feeling the weight of AI disruption fears.
+The company now has about 70 million free monthly active users, which is expanding its reach but stretching out monetization timelines.
+Management has guided to at least flat NNARR growth this year, but BNP believes it could take time before revenue growth meaningfully reaccelerates.
+April's Adobe Summit may help reset the narrative, likely focusing on how AI is enhancing products rather than replacing them.","Oracle Corporation ORCL and Adobe Inc. ADBE were back in focus Tuesday as BNP Paribas stepped in to address the recent slide in enterprise software stocks, suggesting the sell-off may be driven more by AI anxiety than collapsing fundamentals.
+
+For Adobe, analyst Stefan Slowinski said the stock is feeling the weight of AI disruption fears. The company now has about 70 million free monthly active users, which is expanding its reach but stretching out monetization timelines.
+
+Management has guided to at least flat NNARR growth this year, but BNP believes it could take time before revenue growth meaningfully reaccelerates. April's Adobe Summit may help reset the narrative, likely focusing on how AI is enhancing products rather than replacing them.",https://s.tradingview.com/static/images/illustrations/news-story.jpg,N,,2026-02-11 14:04:40.977413
 ID5,Albertsons,2026-02-11 17:06:42+00:00,internationalsupermarketnews.com,The Aftermath of the Blocked Kroger–Albertsons Merger: What Comes Next for American ...,ISN Magazine,,,,,https://internationalsupermarketnews.com/the-aftermath-of-the-blocked-kroger-albertsons-merger-what-comes-next-for-american-supermarkets/,"The question now is not just what went wrong, but what comes next for Kroger, Albertsons, and the supermarket industry as a whole.
 Kroger and Albertsons Turn from Partners to Rivals in Court In the months following the FTC’s decision, tensions between Kroger and Albertsons have only intensified.
 The FTC’s Broader Message: A Line in the Sand The blocking of the Kroger–Albertsons merger was more than just a single deal being challenged.
@@ -31926,157 +32171,3 @@ ID20,H&M,2026-02-11 03:03:53+00:00,13newsnow.com,Why App State's Tiebreaker EDGE
 
 Example video title will go here for this video",https://media.13newsnow.com/assets/LOCKEDON/images/fc19ec2c-68b0-483a-ae98-444601bc16e1/20260211T025257/fc19ec2c-68b0-483a-ae98-444601bc16e1_1140x641.jpg,N,,2026-02-11 00:59:55.721007
 ID47,Walmart,2026-02-11 02:30:11+00:00,www.youtube.com,We Uncovered the Scheme Keeping Grocery Prices High - YouTube,,,,,,https://www.youtube.com/watch%3Fv%3DodhVF_xLIQA,"Walmart found a creative, illegal way to make sure they have the lowest prices. They're forcing companies to raise prices on any competitor who ...",Not Available,,Y,,2026-02-11 04:59:31.357736
-ID6,AXA,2026-02-11 01:55:36+00:00,www.atlas-mag.net,Axa enhances its presence in Africa - Atlas Magazine,Not Available,,,,,http://www.atlas-mag.net/en/articles/axa-enhances-its-presence-africa-0,"The group Axa is in partnership with Africa Internet Group (AIG), the leader of e-commerce in Africa.
-Based on the terms of this agreement, Axa shall become the sole supplier of insurance products not only on the platform Jumia, but also on the other online platforms or on AIG’s mobile telephony.
-The French group will be developing tailor-made insurance plans for all AIG customers.
-Axa shall, in return, benefit from all the aids set up by the group specialized in communication: service ecosystems, small announcements and marketplaces.
-The European insurer will also enter AIG’s capital.","The group Axa is in partnership with Africa Internet Group (AIG), the leader of e-commerce in Africa. Based on the terms of this agreement, Axa shall become the sole supplier of insurance products not only on the platform Jumia, but also on the other online platforms or on AIG’s mobile telephony. The French group will be developing tailor-made insurance plans for all AIG customers.
-
-Axa shall, in return, benefit from all the aids set up by the group specialized in communication: service ecosystems, small announcements and marketplaces. The European insurer will also enter AIG’s capital.",http://www.atlas-mag.net/themes/news_pro/favicon.svg,N,,2026-02-11 04:58:59.092371
-ID15,Delta Airlines,2026-02-11 01:52:20+00:00,MarketBeat,"Insider Selling: Delta Air Lines (NYSE:DAL) Insider Sells 27,000 Shares of Stock",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/insider-selling-delta-air-lines-nysedal-insider-sells-27000-shares-of-stock-2026-02-10/,"Delta Air Lines, Inc. (NYSE:DAL - Get Free Report) insider Peter Carter sold 27,000 shares of Delta Air Lines stock in a transaction dated Friday, February 6th.
-Delta Air Lines, Inc. has a 12-month low of $34.74 and a 12-month high of $75.72.
-Delta Air Lines (NYSE:DAL - Get Free Report) last released its earnings results on Tuesday, January 13th.
-One equities research analyst has rated the stock with a Strong Buy rating and twenty-two have assigned a Buy rating to the stock.
-SEC Filing (Alain Bellemare) Insider Selling: DAL EVP Sells Delta Air Lines Company Profile (Get Free Report) Delta Air Lines is a major U.S.-based global airline that provides scheduled passenger and cargo air transportation, aircraft maintenance and repair services, and related travel products.","Delta Air Lines, Inc. (NYSE:DAL - Get Free Report) insider Peter Carter sold 27,000 shares of Delta Air Lines stock in a transaction dated Friday, February 6th. The shares were sold at an average price of $74.82, for a total transaction of $2,020,140.00. Following the completion of the sale, the insider directly owned 421,744 shares in the company, valued at approximately $31,554,886.08. The trade was a 6.02% decrease in their position. The sale was disclosed in a filing with the Securities & Exchange Commission, which is accessible through this link.
-
-Delta Air Lines Stock Performance
-
-3 Stocks to Play the Summer Travel Boom as Demand Surges Again
-
-NYSE DAL traded down $0.51 during trading hours on Tuesday, hitting $74.49. 6,419,620 shares of the stock were exchanged, compared to its average volume of 8,438,701. The company has a quick ratio of 0.34, a current ratio of 0.40 and a debt-to-equity ratio of 0.60. The company has a market cap of $48.64 billion, a price-to-earnings ratio of 9.71, a price-to-earnings-growth ratio of 0.72 and a beta of 1.37. Delta Air Lines, Inc. has a 12-month low of $34.74 and a 12-month high of $75.72. The stock has a 50-day moving average of $69.68 and a 200 day moving average of $62.57.
-
-Delta Air Lines (NYSE:DAL - Get Free Report) last released its earnings results on Tuesday, January 13th. The transportation company reported $1.55 earnings per share (EPS) for the quarter, topping the consensus estimate of $1.53 by $0.02. The company had revenue of $14.61 billion for the quarter, compared to analysts' expectations of $15.80 billion. Delta Air Lines had a return on equity of 20.99% and a net margin of 7.90%.The firm's quarterly revenue was up 2.9% on a year-over-year basis. During the same quarter in the previous year, the firm posted $1.85 EPS. Delta Air Lines has set its Q1 2026 guidance at 0.500-0.900 EPS and its FY 2026 guidance at 6.500-7.500 EPS. As a group, equities research analysts forecast that Delta Air Lines, Inc. will post 7.63 earnings per share for the current year.
-
-Delta Air Lines Dividend Announcement
-
-Top 5 MarketRank™ Stocks Backed by Analysts and Big Institutions
-
-The firm also recently disclosed a quarterly dividend, which will be paid on Thursday, March 19th. Shareholders of record on Thursday, February 26th will be given a $0.1875 dividend. The ex-dividend date is Thursday, February 26th. This represents a $0.75 annualized dividend and a yield of 1.0%. Delta Air Lines's dividend payout ratio is presently 9.78%.
-
-Institutional Inflows and Outflows
-
-Several institutional investors have recently modified their holdings of the stock. Vanguard Group Inc. grew its holdings in Delta Air Lines by 2.3% during the 2nd quarter. Vanguard Group Inc. now owns 74,572,577 shares of the transportation company's stock valued at $3,667,479,000 after buying an additional 1,648,071 shares during the last quarter. State Street Corp raised its holdings in shares of Delta Air Lines by 2.6% in the second quarter. State Street Corp now owns 23,059,848 shares of the transportation company's stock worth $1,134,083,000 after acquiring an additional 581,421 shares during the last quarter. Geode Capital Management LLC boosted its stake in shares of Delta Air Lines by 1.2% during the fourth quarter. Geode Capital Management LLC now owns 17,413,841 shares of the transportation company's stock valued at $1,215,766,000 after acquiring an additional 202,865 shares during the last quarter. Bank of New York Mellon Corp boosted its stake in shares of Delta Air Lines by 23.9% during the fourth quarter. Bank of New York Mellon Corp now owns 9,496,296 shares of the transportation company's stock valued at $659,043,000 after acquiring an additional 1,834,385 shares during the last quarter. Finally, Life Cycle Investment Partners Ltd purchased a new stake in Delta Air Lines during the 4th quarter worth about $471,532,000. 69.93% of the stock is currently owned by institutional investors and hedge funds.
-
-Wall Street Analysts Forecast Growth
-
-Delta and United Earnings Point to Less Turbulence Ahead
-
-A number of equities analysts have recently issued reports on the stock. Argus set a $80.00 price target on shares of Delta Air Lines in a report on Wednesday, January 14th. Wolfe Research upped their target price on shares of Delta Air Lines from $70.00 to $83.00 and gave the stock an ""outperform"" rating in a research report on Wednesday, January 14th. Barclays increased their target price on shares of Delta Air Lines from $65.00 to $85.00 and gave the company an ""overweight"" rating in a report on Monday, January 12th. BMO Capital Markets restated an ""outperform"" rating on shares of Delta Air Lines in a report on Wednesday, January 14th. Finally, Sanford C. Bernstein reaffirmed an ""outperform"" rating and issued a $81.00 price objective on shares of Delta Air Lines in a research note on Wednesday, January 14th. One equities research analyst has rated the stock with a Strong Buy rating and twenty-two have assigned a Buy rating to the stock. According to MarketBeat.com, the stock currently has an average rating of ""Buy"" and an average target price of $80.47.
-
-Get Our Latest Stock Analysis on DAL
-
-Trending Headlines about Delta Air Lines
-
-Here are the key news stories impacting Delta Air Lines this week:
-
-Positive Sentiment: MarketBeat highlights Delta as a top travel play for 2026 — citing a Q4 EPS beat, a record ~$4.6B free cash balance and management’s guidance implying ~20% EPS growth driven by premium/corporate travel tailwinds. 3 Stocks to Play the Summer Travel Boom as Demand Surges Again
-
-Positive Sentiment: Short interest fell ~19.8% in late January (to ~15.9M shares), reducing a near‑term bearish crowd and lowering short‑squeeze risk; that technical change is supportive of the stock.
-
-Positive Sentiment: Competitor weakness: unions publicly criticizing American Airlines for lagging performance reinforces Delta’s relative operating strength and competitive positioning. Pilots and Flight Attendants Criticize American Airlines’ Performance
-
-Positive Sentiment: Broker consensus remains upbeat — a recent roundup shows brokerages with a consensus ""Buy"" view on DAL, supporting longer‑term investor conviction. Delta Air Lines, Inc. Given Consensus Recommendation of ""Buy"" by Brokerages
-
-Neutral Sentiment: Media coverage asking whether DAL is a buy (Yahoo Finance piece) reflects debate between strong fundamentals and recent run‑up; useful reading but not a decisive catalyst by itself. Is It Time To Consider Buying Delta Air Lines, Inc. NYSE: DAL?
-
-Negative Sentiment: Insider selling: multiple senior executives (including EVPs Alain Bellemare, Steven Sear and Peter Carter) sold large blocks in early February (~100k+ shares across filings), totaling several million dollars — a near‑term negative that can prompt profit‑taking after the stock’s run. SEC filings and coverage available. SEC Filing (Alain Bellemare) Insider Selling: DAL EVP Sells
-
-Delta Air Lines Company Profile
-
-(Get Free Report)
-
-Delta Air Lines is a major U.S.-based global airline that provides scheduled passenger and cargo air transportation, aircraft maintenance and repair services, and related travel products. Its operations include mainline domestic and international passenger services, a branded regional network operating under the Delta Connection name, dedicated air cargo carriage, and in-house maintenance, repair and overhaul through Delta TechOps. Delta offers a range of cabin products for different customer segments, including premium business-class service on long-haul routes and tiered economy offerings on domestic and international flights, and it markets customer loyalty benefits through the SkyMiles frequent-flyer program.
-
-The carrier operates a mixed fleet of narrow- and wide-body aircraft from multiple U.S.
-
-See Also
-
-Five stocks we like better than Delta Air Lines
-
-Think You Missed Silver? You’re Wrong. Here’s Why.
-
-How to collect $500-$800 weekly (BlackRock's system)
-
-Your Bank Account Is No Longer Safe
-
-HCTI: Under the Radar and Building an AI Healthcare Empire
-
-Is Trump Done? Shocking leak…
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in Delta Air Lines Right Now?
-
-Before you consider Delta Air Lines, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Delta Air Lines wasn't on the list.
-
-While Delta Air Lines currently has a Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/delta-air-lines-logo-1200x675.jpg,N,,2026-02-11 02:00:44.013715
-ID31,Microsoft,2026-02-11 01:48:37+00:00,Yahoo Finance,"Melius Downgrades Microsoft (MSFT) to Hold, Flags AI Capex and Cash Flow Risks",Ghazal Ahmed,,,,,https://finance.yahoo.com/news/melius-downgrades-microsoft-msft-hold-113637408.html,"Microsoft Corporation (NASDAQ:MSFT) is one of the 10 AI Stocks Analysts Are Watching.
-manaemedia / Shutterstock.com The tech giant’s decreased free cash flow will make it look much less attractive when compared to its competitors.
-“Given the free cash flow shortage, one could argue equity values for these stocks are nothing more than ‘vibes’ on AI prospects that hinge on what stronger free cash flow may look like in the 2030’s,” he wrote.
-“We may be only in the early stages of this investor aversion to ‘vibes’ that puts the premium back on free cash flow.
-Microsoft Corporation (NASDAQ:MSFT) provides AI-powered cloud, productivity, and business solutions, focusing on efficiency, security, and AI advancements.","Microsoft Corporation (NASDAQ:MSFT) is one of the 10 AI Stocks Analysts Are Watching. On February 9, Melius analyst Ben Reitzes downgraded the stock from Buy to Hold with a $430 price target.
-
-Investors have been growing increasingly wary about the potential disruption software stocks face from AI. Particularly for MSFT, analyst sees structural AI risks and limited near-term upside at current valuation.
-
-Melius highlighted that Microsoft’s 365 business is facing threats from AI, implying a need to increase its capital expenditure substantially to keep up with Amazon and Google. However, it noted that cash flow may take another hit.
-
-If Microsoft doesn’t increase its spending now, analysts at Melius believe that it may either be an execution issue or a need to manage earnings. Both cases, however, aren’t good.
-
-manaemedia / Shutterstock.com
-
-The tech giant’s decreased free cash flow will make it look much less attractive when compared to its competitors.
-
-“Given the free cash flow shortage, one could argue equity values for these stocks are nothing more than ‘vibes’ on AI prospects that hinge on what stronger free cash flow may look like in the 2030’s,” he wrote. “We may be only in the early stages of this investor aversion to ‘vibes’ that puts the premium back on free cash flow. That’s why we’ve kept buys on AI semis and select hardware names like Apple that all directly benefit from other people’s spending — and generate a ton of cash.”
-
-Reitzes also criticized how slow the company is moving when it comes to its AI-powered assistant, Copilot.
-
-“Anthropic developed Cowork in 10 days and most think it works better with Excel and other plug-ins vs. Copilot,” he said. “Due to things like Cowork from Anthropic, Microsoft’s powerful 365 suite could see challenges and may need to give Copilot away just to stay relevant — hurting growth and margins in its most profitable Productivity segment. This reality will consume internal capacity of Azure, limiting beats there too.”
-
-Melius also highlighted valuation concerns for MSFT, stating that it appears expensive based on their revised free cash flow estimates.
-
-Microsoft Corporation (NASDAQ:MSFT) provides AI-powered cloud, productivity, and business solutions, focusing on efficiency, security, and AI advancements.",https://s.yimg.com/os/en/insidermonkey.com/bcb836688e9efa621c3fe27ded2b41ec,N,,2026-02-11 01:00:01.935645
-ID47,Walmart,2026-02-11 01:44:34+00:00,The Roanoke Rambler,"Walmart To Build Bus Stop at Valley View, Finally Breaking Bureaucratic Impasse",Jeff Sturgeon,,,,,https://www.roanokerambler.com/walmart-to-build-bus-stop-at-valley-view-finally-breaking-bureaucratic-impasse/,"Walmart will solve a longstanding Roanoke transit problem by building a bus stop and shelter at its store at Valley View Mall.
-The Valley View Walmart is a top destination in the Valley Metro system and draws 150 to 250 bus riders daily, according to a November 2024 estimate.
-“It just doesn’t look like a bus stop.
-Valley Metro reallocated the money to the improvement of other bus stops.
-Valley Metro still needed to decide which of two bus lines that routinely go through the area will service the stop.","Walmart will solve a longstanding Roanoke transit problem by building a bus stop and shelter at its store at Valley View Mall.
-
-A 14-foot-long shelter with a bench at the edge of the store parking lot will be a step up for riders who today sometimes stand in mud and ice. The project will coincide with a store remodeling this winter and spring, according to details on file with the city.
-
-Bus advocates have urged officials to improve the stop for more than 15 years but efforts stalled. Some people blamed red tape and said this week that breaking through it is cause for celebration. Walmart plans to celebrate its remodeling April 24, by which time the new stop should be done, Walmart spokeswoman Mariel Messier said Tuesday.
-
-The Valley View Walmart is a top destination in the Valley Metro system and draws 150 to 250 bus riders daily, according to a November 2024 estimate. It sits on two routes that connect downtown Roanoke with the mall area.
-
-Right now, buses drop riders headed to the Walmart at a spot on the shoulder of the Valley View Mall ring road marked by a sign. Patrons must negotiate a small hill — slick from wet weather this week — when going to or from the closest store entrance about 90 feet away.
-
-“Look at it, I mean, it’s terrible,” rider Debra Smith said as she waited for the bus with five bags of groceries. “It just doesn’t look like a bus stop. It looks like something that they just threw together.”
-
-Karen Michalski-Karney of the board of directors of Greater Roanoke Transit Co., which operates Valley Metro, recalled that the deficiencies of the bus stop were an issue before she joined the panel more than 10 years ago and date at least as far back as 2009.
-
-“We saw people standing there in the heat, in the rain, in the cold, in the snow and really thought that there was a need for a shelter,” said Michalski-Karney, the board’s longest-serving incumbent and executive director of the Blue Ridge Independent Living Center.
-
-Progress on making it better “has taken forever,” said former city councilwoman Anita Price, also a bus transportation advocate. “Why it took so long, it had to do with a whole lot of bureaucratic red tape – who had the right of way, who did this, who did that.”
-
-In 2016, Valley Metro received grant money and settled on a contractor to enclose the stop along the ring road with a shelter and add a ramp to the parking lot, which is below the elevation of the road, at a cost of $255,000. Walmart endorsed the plan. But mall management and retailer Sears weren’t immediately on board. Sears’ lack of support – the reason for which remains unclear – factored in halting the initiative, even though the retailer owned only a small part of the proposed bus stop expansion footprint.
-
-The Sears store later closed.
-
-Valley Metro reallocated the money to the improvement of other bus stops. There are 800 in the system.
-
-Valley Metro General Manager Kevin Price said in 2019 that officials would revisit the need for a bus stop enhancement “at a later date.”
-
-Last summer, a Walmart construction official and Price hashed out the final details of the upcoming new bus stop over emails, a copy of which were released to The Rambler. With the decision to put it on Walmart’s property, consent from the owner of the former Sears and mall management were no longer needed.
-
-Price said Tuesday he and Walmart officials hadn’t yet determined such details as whether or how to share undisclosed costs. Valley Metro still needed to decide which of two bus lines that routinely go through the area will service the stop. In addition, discontinuation of the current stop when the new one opens “sounds about right” but hadn’t been fully decided, he said.
-
-Mayor Joe Cobb said by email that he recognized the project as “a collaborative effort made possible through staying in conversation and working relationship with Walmart. I’m excited that we’re getting closer to this becoming a reality.”
-
-The new bus stop will be about a third of the size of the one planned for the ring road location 10 years ago. But the final result will be a boon to riders such as Doug Jordan. Tired from shopping, riders sometimes overturn a grocery cart so they have somewhere to sit other than a small bench suitable for only two or three people, he said. This spring, they should be under a roof.",https://www.roanokerambler.com/content/images/size/w1200/2026/02/_DBH4017.jpg,N,,2026-02-10 21:00:54.075034
-ID16,Ecolab,2026-02-11 01:19:40+00:00,Seeking Alpha,Ecolab outlines 12%–15% EPS growth for 2026 as growth engines accelerate and Ovivo ...,"SA Transcript Insights Editor, SA News Editor",,,,,https://seekingalpha.com/news/4549907-ecolab-outlines-12-percent-15-percent-eps-growth-for-2026-as-growth-engines-accelerate-and,"Ecolab outlines 12%–15% EPS growth for 2026 as growth engines accelerate and Ovivo boosts portfolio Feb. 10, 2026 6:45 PM ETEcolab Inc. (ECL) StockAI-Generated Earnings Calls Insights Comments","Ecolab outlines 12%–15% EPS growth for 2026 as growth engines accelerate and Ovivo boosts portfolio
-
-Feb. 10, 2026 6:45 PM ETEcolab Inc. (ECL) StockAI-Generated Earnings Calls Insights
-
-Comments",https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png,N,,2026-02-10 22:01:00.373937
-ID5,Albertsons,2026-02-11 01:02:53+00:00,https://www.kxii.com,Albertsons begins renovation of second Oklahoma location in Durant - KXII,Mia Medellin,,,,,https://www.kxii.com/2026/02/11/albertsons-begins-renovation-second-oklahoma-location-durant/,"Albertsons kicked off development on its second location in Oklahoma on Tuesday, beginning renovation work on what will be a 62,000-square-foot store in Durant. The target opening date for the new Albertsons location is set for fall 2026.",Not Available,https://gray-kxii-prod.gtv-cdn.com/resizer/v2/RA43BDGMNNDL3F5QOPGHCCMDU4.png?auth=a50bdc6b04050796fbeafce05e83b5b2efb89752bff336b6865622acb246a5fe&width=1200&height=600&smart=true,N,,2026-02-10 21:00:40.337646
