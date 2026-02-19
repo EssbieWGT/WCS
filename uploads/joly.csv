@@ -14,6 +14,33 @@ Each bank contributed EUR 75 million to the facility, supporting the mall that o
 Prime Kapital said the refinancing reflected the strong performance of Mall Moldova since launch and was completed ahead of schedule.
 
 irina.marica@romania-insider.com",https://cdn.romania-insider.com/sites/default/files/styles/article_large_image/public/2026-02/mall_moldova_-_photo_unicredit_bank_pr.jpg,N,,2026-02-19 06:02:40.553040
+ID31,Microsoft,2026-02-19 10:42:50+00:00,BleepingComputer,"Microsoft: Anti-phishing rules mistakenly blocked emails, Teams messages",Sergiu Gatlan,,,,,https://www.bleepingcomputer.com/news/microsoft/microsoft-anti-phishing-rules-mistakenly-blocked-emails-teams-messages/,"Microsoft says an Exchange Online issue that mistakenly quarantined legitimate emails last week was triggered by faulty heuristic detection rules designed to block credential phishing campaigns.
+During that period, users across Exchange Online and Microsoft Teams were unable to open links in messages, with some of their emails quarantined entirely.
+Microsoft has addressed other issues over the last several years that resulted in emails being quarantined or incorrectly tagged as spam or malicious.
+For instance, an Exchange Online bug caused a machine learning model to incorrectly flag emails from Gmail accounts as spam, while another one caused anti-spam systems to mistakenly quarantine some users' emails.
+More recently, in September, an anti-spam service issue blocked Exchange Online and Microsoft Teams users from opening URLs and mistakenly quarantined some of their emails.","Microsoft says an Exchange Online issue that mistakenly quarantined legitimate emails last week was triggered by faulty heuristic detection rules designed to block credential phishing campaigns.
+
+As Microsoft explains in a preliminary post-incident report published this week, a software error in its email security system incorrectly flagged thousands of legitimate URLs as phishing links for nearly a week, blocking users from opening emails and Teams messages.
+
+The incident, tracked by Microsoft under EX1227432, began on February 5 and was not fully resolved until February 12. During that period, users across Exchange Online and Microsoft Teams were unable to open links in messages, with some of their emails quarantined entirely.
+
+Administrators also received warnings that a ""potentially malicious URL click was detected,"" alerts that Microsoft later confirmed were false positives.
+
+The root cause was a logic error in a detection system designed to identify new credential phishing attacks. Shortly after the system was updated, it began flagging legitimate URLs at a far higher rate than intended, triggering a cascade of automated responses that aggravated the problem.
+
+Other security tools within Microsoft's detection infrastructure also amplified the incident's impact, and a separate bug in the company's security signature systems further delayed efforts to roll back the flawed detection rules.
+
+""This issue occurred due to a logic error in a heuristic detection aimed at novel credential phishing campaigns that spiked several hours after release,"" Microsoft explained.
+
+""This spike in detection resulted in thousands of URL's being incorrectly identified as phishing, triggering blocks for newly delivered emails containing those URL's, ZAP events to remove email and Teams messages with those URL's in them, and also generating XDR alerts for click events related to these alerts.""
+
+Microsoft said that any user who received emails or Teams messages containing specific URLs may have been affected, but the company has yet to disclose the total number of impacted users. However, as BleepingComputer previously reported, Microsoft classified the issue as an ""incident,"" which usually involves noticeable user impact.
+
+While this preliminary report was published on Monday, Microsoft said that it will issue a final report within five business days of full resolution.
+
+Microsoft has addressed other issues over the last several years that resulted in emails being quarantined or incorrectly tagged as spam or malicious. For instance, an Exchange Online bug caused a machine learning model to incorrectly flag emails from Gmail accounts as spam, while another one caused anti-spam systems to mistakenly quarantine some users' emails.
+
+More recently, in September, an anti-spam service issue blocked Exchange Online and Microsoft Teams users from opening URLs and mistakenly quarantined some of their emails.",https://www.bleepstatic.com/content/hl-images/2025/03/14/Exchange-Online.jpg,N,,2026-02-19 06:59:32.463955
 ID1,Accor,2026-02-19 10:14:21+00:00,Investing.com Australia,"Earnings call transcript: Accor beats Q4 2025 revenue forecast, shares dip",Not Available,,,,,https://au.investing.com/news/transcripts/earnings-call-transcript-accor-beats-q4-2025-revenue-forecast-shares-dip-93CH-4265899,"M&F, Management and Franchise, revenue was up 6% at constant currency year-over-year, with total revenue reaching EUR 5,639 million.
 In the fourth quarter, PME M&F revenue growth was a very solid 6.7% at constant currency.
 As for hotel assets and others, EBITDA growth mainly stems from the solid revenue growth mentioned previously and a margin improvement in our FNB operations at Paris Society.
@@ -366,6 +393,39 @@ Click For Restrictions - https://agency.reuters.com/en/copyright.html Login or c
 
 Login or create a forever free account to read this news",https://s.tradingview.com/static/images/illustrations/news-story.jpg,N,,2026-02-19 06:01:11.308742
 ID37,Philips,2026-02-19 09:05:10+00:00,www.philips.com,Philips publishes its Annual Report 2025,Not Available,,,,,https://www.philips.com/a-w/about/news/archive/standard/news/press/2026/philips-publishes-its-annual-report-2025,Philips filed the Annual Report 2025 with the Netherlands Authority for the Financial Markets (AFM) in European Single Electronic Format (ESEF) and ...,Not Available,,N,,2026-02-19 06:02:28.753286
+ID19,Eli Lilly,2026-02-19 09:01:42+00:00,www.law360.com,Genetic Testing Co.'s Acquisition Draws Privacy Suit - Law360 UK,Not Available,,,,,https://www.law360.com/cybersecurity-privacy/articles/2442370/genetic-testing-co-s-acquisition-draws-privacy-suit%3Fabout%3Dcybersecurity-privacy,"A Law360 subscription puts you at the center of fast-moving legal issues, trends and developments so you can act with speed and confidence.
+Over 200 articles are published daily across more than 60 topics, industries, practice areas and jurisdictions.
+A Law360 subscription includes features such as Daily newsletters Expert analysis Mobile app Advanced search Judge information Real-time alerts 450K+ searchable archived articles And more!
+Law360 may contact you in your professional capacity with information about our other products, services and events that we believe may be of interest.
+You’ll be able to update your communication preferences via the unsubscribe link provided within our communications.","Law360 is on it, so you are, too.
+
+A Law360 subscription puts you at the center of fast-moving legal issues, trends and developments so you can act with speed and confidence. Over 200 articles are published daily across more than 60 topics, industries, practice areas and jurisdictions.
+
+A Law360 subscription includes features such as
+
+Daily newsletters
+
+Expert analysis
+
+Mobile app
+
+Advanced search
+
+Judge information
+
+Real-time alerts
+
+450K+ searchable archived articles
+
+And more!
+
+Experience Law360 today with a free 7-day trial.
+
+Law360 may contact you in your professional capacity with information about our other products, services and events that we believe may be of interest.
+
+You’ll be able to update your communication preferences via the unsubscribe link provided within our communications.
+
+We take your privacy seriously. Please see our Privacy Policy.",https://www.law360.co.uk/images/law360-stacked.png,N,,2026-02-19 06:59:28.255134
 ID31,Microsoft,2026-02-19 09:00:54+00:00,www.microsoft.com,Microsoft 365,Not Available,,,,,https://www.microsoft.com/en/microsoft-365/microsoft-365-business,"Microsoft 365 for business Bring your business ideas to life Get the tools you need with Microsoft 365, including custom-branded email, professional apps, advanced security, and scalable admin controls.
 Plus, invest in Microsoft 365 Copilot to get AI-powered assistance for work.
 Work more productively, boost efficiency, and improve business outcomes with Microsoft 365 Copilot.
@@ -10440,53 +10500,6 @@ Mastercard said: “Mastercard has been fully invested in the UK for decades, de
 The trade association UK Finance, which has been providing administrative support to the DeliveryCo project, declined to comment.
 
 The Treasury was contacted for comment. The Bank of England declined to comment.","https://i.guim.co.uk/img/media/04ad840807444209d6969b2fa3b60181efde8564/1393_209_1934_1548/master/1934.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=e2a1d0cbc6df9f3bd5990a3f850feddc",N,,2026-02-16 15:04:08.023421
-ID10,Boston Scientific,2026-02-16 18:23:51+00:00,simplywall.st,A Look At Boston Scientific (BSX) Valuation As Electrophysiology Concerns Follow Strong ...,Simply Wall St,,,,,https://simplywall.st/stocks/us/healthcare/nyse-bsx/boston-scientific/news/a-look-at-boston-scientific-bsx-valuation-as-electrophysiolo,"Boston Scientific (BSX) is back in focus after Q4 2025 adjusted earnings came in above consensus.
-The share price has retreated sharply in recent months, with a 30 day share price return of 15.15% and a 90 day share price return of 24.68%, even though the 3 year total shareholder return sits at 60.57% and the 5 year total shareholder return at 90.64%.
-Enhanced scale and operational efficiency through supply chain initiatives, digitalization, and manufacturing automation alongside robust cash flow positions Boston Scientific to expand operating margins and generate sustainable earnings growth over the long term.
-Build Your Own Boston Scientific Narrative If this story does not quite match your view or you prefer to test the assumptions yourself, you can build a custom Boston Scientific narrative in a few minutes.
-A great starting point for your Boston Scientific research is our analysis highlighting that could impact your investment decision.","Boston Scientific (BSX) is back in focus after Q4 2025 adjusted earnings came in above consensus. However, investor attention has shifted to signs of stagnation in the company’s U.S. electrophysiology business.
-
-The share price has retreated sharply in recent months, with a 30 day share price return of 15.15% and a 90 day share price return of 24.68%, even though the 3 year total shareholder return sits at 60.57% and the 5 year total shareholder return at 90.64%. That pullback, together with Q4 earnings, 2026 sales guidance, upcoming CHAMPION AF trial results and board changes, has shifted the conversation toward how much risk investors are pricing into Boston Scientific at its latest share price of $74.73.
-
-If Boston Scientific’s recent volatility has you looking around the sector, this could be a good moment to scan a list of as potential next ideas.
-
-With the stock down sharply over 30 and 90 days but still showing strong multi year total returns, and with earnings guidance and trial catalysts on the horizon, is Boston Scientific now mispriced, or is the market already baking in future growth?
-
-Most Popular Narrative: 31.2% Undervalued
-
-At a last close of $74.73 versus a narrative fair value of $108.66, the most followed view sees Boston Scientific trading at a meaningful discount and ties that gap to a very specific growth and margin story.
-
-Investment in proprietary, high margin technologies (e.g., next gen mapping, advanced diagnostic tools, differentiated urology/neuromodulation pipelines) combined with successful integration of recent acquisitions (Axonics, SoniVie, Intera, Silk Road) expands Boston Scientific's addressable market and is likely to drive margin expansion as product mix improves.
-
-Enhanced scale and operational efficiency through supply chain initiatives, digitalization, and manufacturing automation alongside robust cash flow positions Boston Scientific to expand operating margins and generate sustainable earnings growth over the long term.
-
-Want to see what earnings trajectory and margin profile sit behind that valuation gap? The narrative leans on ambitious growth, richer mix and a premium future earnings multiple. Curious which financial swing factors matter most in the model?
-
-Result: Fair Value of $108.66 (UNDERVALUED)
-
-However, that upbeat story still hinges on sensitive areas such as tariff headwinds, with an expected $100m impact in late 2025, and ongoing U.S. reimbursement pressure.
-
-Another View: What The P/E Tells You
-
-The earlier narrative leans on a fair value of $108.66, yet on raw P/E Boston Scientific looks quite full. The shares trade on 38.2x earnings versus 30.4x for the US Medical Equipment industry, very close to a fair ratio of 38.8x. That leaves less room for error if growth or margins fall short, so the question is whether you think this premium is really earned.
-
-Build Your Own Boston Scientific Narrative
-
-If this story does not quite match your view or you prefer to test the assumptions yourself, you can build a custom Boston Scientific narrative in a few minutes. All you need to do is .
-
-A great starting point for your Boston Scientific research is our analysis highlighting that could impact your investment decision.
-
-Looking for more investment ideas?
-
-If you are serious about making your next move count, do not stop at a single stock. Use the screener to surface ideas that match your style before others act.
-
-Target potential mispricings by reviewing our list of that pair fundamental strength with discounted prices.
-
-Prioritize resilience first and check out that score well on stability and balance sheet quality.
-
-Hunt for tomorrow's leaders early by scanning our with solid fundamentals but limited market attention so far.
-
-This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.",https://images.simplywall.st/asset/company-cover/317627-main-header/1756255518234,N,,2026-02-16 14:04:03.877003
 ID21,HP Inc,2026-02-16 18:23:51+00:00,simplywall.st,Is HP's CEO Change And Reaffirmed Outlook Altering The Investment Case For HP (HPQ)?,Simply Wall St,,,,,https://simplywall.st/stocks/us/tech/nyse-hpq/hp/news/is-hps-ceo-change-and-reaffirmed-outlook-altering-the-invest,"We’ll now examine how HP’s leadership transition and reaffirmed earnings guidance might influence the existing investment narrative around margin pressure and cost actions.
 The most relevant recent announcement here is HP’s reaffirmation of its first quarter and full year 2026 earnings guidance on the same day the leadership change and bylaw amendments were disclosed.
 This requires 1.3% yearly revenue growth and about a $0.3 billion earnings increase from $2.6 billion today.
@@ -10536,6 +10549,53 @@ Find .
 AI is about to change healthcare. These . The best part - they are all under $10b in market cap - there's still time to get in early.
 
 This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.",https://images.simplywall.st/asset/industry/9621091-choice2-main-header/1585186855318,N,,2026-02-16 15:04:18.233963
+ID10,Boston Scientific,2026-02-16 18:23:51+00:00,simplywall.st,A Look At Boston Scientific (BSX) Valuation As Electrophysiology Concerns Follow Strong ...,Simply Wall St,,,,,https://simplywall.st/stocks/us/healthcare/nyse-bsx/boston-scientific/news/a-look-at-boston-scientific-bsx-valuation-as-electrophysiolo,"Boston Scientific (BSX) is back in focus after Q4 2025 adjusted earnings came in above consensus.
+The share price has retreated sharply in recent months, with a 30 day share price return of 15.15% and a 90 day share price return of 24.68%, even though the 3 year total shareholder return sits at 60.57% and the 5 year total shareholder return at 90.64%.
+Enhanced scale and operational efficiency through supply chain initiatives, digitalization, and manufacturing automation alongside robust cash flow positions Boston Scientific to expand operating margins and generate sustainable earnings growth over the long term.
+Build Your Own Boston Scientific Narrative If this story does not quite match your view or you prefer to test the assumptions yourself, you can build a custom Boston Scientific narrative in a few minutes.
+A great starting point for your Boston Scientific research is our analysis highlighting that could impact your investment decision.","Boston Scientific (BSX) is back in focus after Q4 2025 adjusted earnings came in above consensus. However, investor attention has shifted to signs of stagnation in the company’s U.S. electrophysiology business.
+
+The share price has retreated sharply in recent months, with a 30 day share price return of 15.15% and a 90 day share price return of 24.68%, even though the 3 year total shareholder return sits at 60.57% and the 5 year total shareholder return at 90.64%. That pullback, together with Q4 earnings, 2026 sales guidance, upcoming CHAMPION AF trial results and board changes, has shifted the conversation toward how much risk investors are pricing into Boston Scientific at its latest share price of $74.73.
+
+If Boston Scientific’s recent volatility has you looking around the sector, this could be a good moment to scan a list of as potential next ideas.
+
+With the stock down sharply over 30 and 90 days but still showing strong multi year total returns, and with earnings guidance and trial catalysts on the horizon, is Boston Scientific now mispriced, or is the market already baking in future growth?
+
+Most Popular Narrative: 31.2% Undervalued
+
+At a last close of $74.73 versus a narrative fair value of $108.66, the most followed view sees Boston Scientific trading at a meaningful discount and ties that gap to a very specific growth and margin story.
+
+Investment in proprietary, high margin technologies (e.g., next gen mapping, advanced diagnostic tools, differentiated urology/neuromodulation pipelines) combined with successful integration of recent acquisitions (Axonics, SoniVie, Intera, Silk Road) expands Boston Scientific's addressable market and is likely to drive margin expansion as product mix improves.
+
+Enhanced scale and operational efficiency through supply chain initiatives, digitalization, and manufacturing automation alongside robust cash flow positions Boston Scientific to expand operating margins and generate sustainable earnings growth over the long term.
+
+Want to see what earnings trajectory and margin profile sit behind that valuation gap? The narrative leans on ambitious growth, richer mix and a premium future earnings multiple. Curious which financial swing factors matter most in the model?
+
+Result: Fair Value of $108.66 (UNDERVALUED)
+
+However, that upbeat story still hinges on sensitive areas such as tariff headwinds, with an expected $100m impact in late 2025, and ongoing U.S. reimbursement pressure.
+
+Another View: What The P/E Tells You
+
+The earlier narrative leans on a fair value of $108.66, yet on raw P/E Boston Scientific looks quite full. The shares trade on 38.2x earnings versus 30.4x for the US Medical Equipment industry, very close to a fair ratio of 38.8x. That leaves less room for error if growth or margins fall short, so the question is whether you think this premium is really earned.
+
+Build Your Own Boston Scientific Narrative
+
+If this story does not quite match your view or you prefer to test the assumptions yourself, you can build a custom Boston Scientific narrative in a few minutes. All you need to do is .
+
+A great starting point for your Boston Scientific research is our analysis highlighting that could impact your investment decision.
+
+Looking for more investment ideas?
+
+If you are serious about making your next move count, do not stop at a single stock. Use the screener to surface ideas that match your style before others act.
+
+Target potential mispricings by reviewing our list of that pair fundamental strength with discounted prices.
+
+Prioritize resilience first and check out that score well on stability and balance sheet quality.
+
+Hunt for tomorrow's leaders early by scanning our with solid fundamentals but limited market attention so far.
+
+This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.",https://images.simplywall.st/asset/company-cover/317627-main-header/1756255518234,N,,2026-02-16 14:04:03.877003
 ID41,Societe Generale,2026-02-16 18:22:34+00:00,Yahoo Finance,Societe Generale: Information regarding executed transactions within the framework of a ...,Société Générale,,,,,https://sg.finance.yahoo.com/news/societe-generale-information-regarding-executed-181300310.html,"INFORMATION REGARDING EXECUTED TRANSACTIONS WITHIN THE FRAMEWORK OF A SHARE BUY-BACK PROGRAMME Regulated Information Paris, 16 February 2026 As of 13 February 2026, Societe Generale has completed 18.2% of the share buy-back related to the 2025 ordinary distribution announced on 6 February 2026*.
 The purchases performed from 9 to 13 February 2026 are described below.
 Press contacts: Jean-Baptiste Froville_+33 1 58 98 68 00_ jean-baptiste.froville@socgen.com Fanny Rouby_+33 1 57 29 11 12_ fanny.rouby@socgen.com * Societe Generale announced on 6 February 2026 the launch of a EUR 1,462m share buy-back on 9 February 2026.
@@ -16547,6 +16607,69 @@ Before you consider Inspire Medical Systems, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Inspire Medical Systems wasn't on the list.
 
 While Inspire Medical Systems currently has a Hold rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/inspire-medical-systems-inc-logo-1200x675.jpg?v=20221114155654,N,,2026-02-14 09:01:57.481576
+ID43,Thrivent ,2026-02-14 11:51:05+00:00,MarketBeat,Thrivent Financial for Lutherans Decreases Position in Kohl's Corporation $KSS - MarketBeat,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-decreases-position-in-kohls-corporation-kss-2026-02-14/,"Thrivent Financial for Lutherans owned about 0.07% of Kohl's worth $1,246,000 as of its most recent SEC filing.
+Geode Capital Management LLC raised its position in shares of Kohl's by 43.0% in the 2nd quarter.
+View Our Latest Stock Analysis on Kohl's Kohl's Price Performance The Bottom Is in for Kohl’s, But Let the Share Price Come to You NYSE:KSS opened at $19.85 on Friday.
+Research analysts expect that Kohl's Corporation will post 1.3 EPS for the current year.
+MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis.","Thrivent Financial for Lutherans decreased its holdings in Kohl's Corporation (NYSE:KSS - Free Report) by 50.2% in the third quarter, according to its most recent filing with the Securities and Exchange Commission (SEC). The institutional investor owned 81,046 shares of the company's stock after selling 81,576 shares during the quarter. Thrivent Financial for Lutherans owned about 0.07% of Kohl's worth $1,246,000 as of its most recent SEC filing.
+
+Kohl’s Stock Rebound Faces a Showdown With Short Sellers
+
+Several other hedge funds also recently added to or reduced their stakes in KSS. American Century Companies Inc. boosted its holdings in Kohl's by 4.9% in the second quarter. American Century Companies Inc. now owns 4,690,642 shares of the company's stock worth $39,777,000 after acquiring an additional 220,427 shares in the last quarter. Allianz Asset Management GmbH increased its holdings in shares of Kohl's by 21.0% during the second quarter. Allianz Asset Management GmbH now owns 4,303,123 shares of the company's stock valued at $36,490,000 after acquiring an additional 745,543 shares in the last quarter. Geode Capital Management LLC raised its position in shares of Kohl's by 43.0% in the 2nd quarter. Geode Capital Management LLC now owns 2,615,482 shares of the company's stock valued at $22,182,000 after purchasing an additional 785,936 shares during the last quarter. First Trust Advisors LP raised its position in shares of Kohl's by 11.5% in the 2nd quarter. First Trust Advisors LP now owns 2,380,359 shares of the company's stock valued at $20,185,000 after purchasing an additional 244,761 shares during the last quarter. Finally, Bank of New York Mellon Corp boosted its stake in Kohl's by 2.7% in the 2nd quarter. Bank of New York Mellon Corp now owns 838,666 shares of the company's stock worth $7,112,000 after purchasing an additional 22,339 shares in the last quarter. 98.04% of the stock is owned by institutional investors and hedge funds.
+
+Insider Buying and Selling
+
+In other news, CFO Jill Timm sold 10,000 shares of the firm's stock in a transaction that occurred on Wednesday, December 10th. The shares were sold at an average price of $24.00, for a total transaction of $240,000.00. Following the sale, the chief financial officer owned 325,561 shares of the company's stock, valued at $7,813,464. This trade represents a 2.98% decrease in their position. The sale was disclosed in a document filed with the Securities & Exchange Commission, which is available through this link. Corporate insiders own 1.00% of the company's stock.
+
+Analysts Set New Price Targets
+
+What's Behind Opendoor Technologies' Rally? Is Meme Mania Back?
+
+A number of research analysts have issued reports on KSS shares. Robert W. Baird set a $24.00 price target on shares of Kohl's in a research note on Wednesday, December 17th. Telsey Advisory Group reissued a ""market perform"" rating and set a $23.00 price objective (up from $16.00) on shares of Kohl's in a report on Tuesday, November 25th. BTIG Research restated a ""neutral"" rating on shares of Kohl's in a research note on Tuesday, November 25th. Zacks Research raised Kohl's from a ""hold"" rating to a ""strong-buy"" rating in a research report on Monday, December 1st. Finally, UBS Group boosted their price target on Kohl's from $4.50 to $7.00 and gave the company a ""sell"" rating in a research note on Wednesday, November 26th. One investment analyst has rated the stock with a Strong Buy rating, one has issued a Buy rating, eight have given a Hold rating and six have assigned a Sell rating to the company's stock. According to MarketBeat.com, the stock presently has a consensus rating of ""Reduce"" and an average price target of $15.55.
+
+View Our Latest Stock Analysis on Kohl's
+
+Kohl's Price Performance
+
+The Bottom Is in for Kohl’s, But Let the Share Price Come to You
+
+NYSE:KSS opened at $19.85 on Friday. Kohl's Corporation has a one year low of $6.04 and a one year high of $25.22. The company has a debt-to-equity ratio of 0.99, a quick ratio of 0.12 and a current ratio of 1.30. The firm has a market cap of $2.23 billion, a price-to-earnings ratio of 11.54 and a beta of 1.44. The firm's fifty day moving average is $20.09 and its two-hundred day moving average is $17.50.
+
+Kohl's (NYSE:KSS - Get Free Report) last released its quarterly earnings data on Tuesday, November 25th. The company reported $0.10 earnings per share for the quarter, beating analysts' consensus estimates of ($0.19) by $0.29. Kohl's had a return on equity of 4.30% and a net margin of 1.23%.The business had revenue of $3.58 billion during the quarter, compared to analyst estimates of $3.37 billion. During the same quarter last year, the business posted $0.20 EPS. The company's revenue was down 3.6% on a year-over-year basis. Kohl's has set its FY 2025 guidance at 1.250-1.450 EPS. Research analysts expect that Kohl's Corporation will post 1.3 EPS for the current year.
+
+Kohl's Company Profile
+
+(Free Report)
+
+Kohl's Corporation, founded in 1962 by Maxwell Kohl and headquartered in Menomonee Falls, Wisconsin, is a leading American department store retailer. The company operates approximately 1,100 stores across 49 states, offering a combination of value-oriented pricing, private-label brands and national labels. Since its initial public offering in 1992, Kohl's has focused on broadening its product assortment and enhancing the in-store and online shopping experience.
+
+The retailer's merchandise portfolio spans apparel, footwear, accessories, and beauty products for women, men and children, as well as home goods, kitchenware and seasonal décor.
+
+See Also
+
+Five stocks we like better than Kohl's
+
+ALERT: Drop these 5 stocks before January 2026!
+
+Think You Missed Silver? You’re Wrong. Here’s Why.
+
+Trump Planning to Use Public Law 63-43: Prepare Now
+
+Buy This Stock Now
+
+Is Trump Done? Shocking leak…
+
+Want to see what other hedge funds are holding KSS? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Kohl's Corporation (NYSE:KSS - Free Report).
+
+This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
+
+Should You Invest $1,000 in Kohl's Right Now?
+
+Before you consider Kohl's, you'll want to hear this.
+
+MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Kohl's wasn't on the list.
+
+While Kohl's currently has a Reduce rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/kohls-co-logo-1200x675.png?v=20221117151850,N,,2026-02-14 09:02:01.196134
 ID43,Thrivent ,2026-02-14 11:51:05+00:00,MarketBeat,"Thrivent Financial for Lutherans Trims Stake in Cogent Communications Holdings, Inc. $CCOI",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-trims-stake-in-cogent-communications-holdings-inc-ccoi-2026-02-14/,"Thrivent Financial for Lutherans owned 0.07% of Cogent Communications worth $1,315,000 as of its most recent SEC filing.
 2 Mid-Cap Telecom Stocks Offering Superior Returns View Our Latest Stock Report on CCOI Cogent Communications Trading Up 0.6% Cogent Communications stock opened at $26.46 on Friday.
 Cogent Communications Holdings, Inc. has a one year low of $15.96 and a one year high of $84.06.
@@ -16667,69 +16790,6 @@ Before you consider Park Hotels & Resorts, you'll want to hear this.
 MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Park Hotels & Resorts wasn't on the list.
 
 While Park Hotels & Resorts currently has a Reduce rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/park-hotels-amp;-resorts-inc-logo-1200x675.jpg,N,,2026-02-14 09:02:08.946973
-ID43,Thrivent ,2026-02-14 11:51:05+00:00,MarketBeat,Thrivent Financial for Lutherans Decreases Position in Kohl's Corporation $KSS - MarketBeat,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-decreases-position-in-kohls-corporation-kss-2026-02-14/,"Thrivent Financial for Lutherans owned about 0.07% of Kohl's worth $1,246,000 as of its most recent SEC filing.
-Geode Capital Management LLC raised its position in shares of Kohl's by 43.0% in the 2nd quarter.
-View Our Latest Stock Analysis on Kohl's Kohl's Price Performance The Bottom Is in for Kohl’s, But Let the Share Price Come to You NYSE:KSS opened at $19.85 on Friday.
-Research analysts expect that Kohl's Corporation will post 1.3 EPS for the current year.
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis.","Thrivent Financial for Lutherans decreased its holdings in Kohl's Corporation (NYSE:KSS - Free Report) by 50.2% in the third quarter, according to its most recent filing with the Securities and Exchange Commission (SEC). The institutional investor owned 81,046 shares of the company's stock after selling 81,576 shares during the quarter. Thrivent Financial for Lutherans owned about 0.07% of Kohl's worth $1,246,000 as of its most recent SEC filing.
-
-Kohl’s Stock Rebound Faces a Showdown With Short Sellers
-
-Several other hedge funds also recently added to or reduced their stakes in KSS. American Century Companies Inc. boosted its holdings in Kohl's by 4.9% in the second quarter. American Century Companies Inc. now owns 4,690,642 shares of the company's stock worth $39,777,000 after acquiring an additional 220,427 shares in the last quarter. Allianz Asset Management GmbH increased its holdings in shares of Kohl's by 21.0% during the second quarter. Allianz Asset Management GmbH now owns 4,303,123 shares of the company's stock valued at $36,490,000 after acquiring an additional 745,543 shares in the last quarter. Geode Capital Management LLC raised its position in shares of Kohl's by 43.0% in the 2nd quarter. Geode Capital Management LLC now owns 2,615,482 shares of the company's stock valued at $22,182,000 after purchasing an additional 785,936 shares during the last quarter. First Trust Advisors LP raised its position in shares of Kohl's by 11.5% in the 2nd quarter. First Trust Advisors LP now owns 2,380,359 shares of the company's stock valued at $20,185,000 after purchasing an additional 244,761 shares during the last quarter. Finally, Bank of New York Mellon Corp boosted its stake in Kohl's by 2.7% in the 2nd quarter. Bank of New York Mellon Corp now owns 838,666 shares of the company's stock worth $7,112,000 after purchasing an additional 22,339 shares in the last quarter. 98.04% of the stock is owned by institutional investors and hedge funds.
-
-Insider Buying and Selling
-
-In other news, CFO Jill Timm sold 10,000 shares of the firm's stock in a transaction that occurred on Wednesday, December 10th. The shares were sold at an average price of $24.00, for a total transaction of $240,000.00. Following the sale, the chief financial officer owned 325,561 shares of the company's stock, valued at $7,813,464. This trade represents a 2.98% decrease in their position. The sale was disclosed in a document filed with the Securities & Exchange Commission, which is available through this link. Corporate insiders own 1.00% of the company's stock.
-
-Analysts Set New Price Targets
-
-What's Behind Opendoor Technologies' Rally? Is Meme Mania Back?
-
-A number of research analysts have issued reports on KSS shares. Robert W. Baird set a $24.00 price target on shares of Kohl's in a research note on Wednesday, December 17th. Telsey Advisory Group reissued a ""market perform"" rating and set a $23.00 price objective (up from $16.00) on shares of Kohl's in a report on Tuesday, November 25th. BTIG Research restated a ""neutral"" rating on shares of Kohl's in a research note on Tuesday, November 25th. Zacks Research raised Kohl's from a ""hold"" rating to a ""strong-buy"" rating in a research report on Monday, December 1st. Finally, UBS Group boosted their price target on Kohl's from $4.50 to $7.00 and gave the company a ""sell"" rating in a research note on Wednesday, November 26th. One investment analyst has rated the stock with a Strong Buy rating, one has issued a Buy rating, eight have given a Hold rating and six have assigned a Sell rating to the company's stock. According to MarketBeat.com, the stock presently has a consensus rating of ""Reduce"" and an average price target of $15.55.
-
-View Our Latest Stock Analysis on Kohl's
-
-Kohl's Price Performance
-
-The Bottom Is in for Kohl’s, But Let the Share Price Come to You
-
-NYSE:KSS opened at $19.85 on Friday. Kohl's Corporation has a one year low of $6.04 and a one year high of $25.22. The company has a debt-to-equity ratio of 0.99, a quick ratio of 0.12 and a current ratio of 1.30. The firm has a market cap of $2.23 billion, a price-to-earnings ratio of 11.54 and a beta of 1.44. The firm's fifty day moving average is $20.09 and its two-hundred day moving average is $17.50.
-
-Kohl's (NYSE:KSS - Get Free Report) last released its quarterly earnings data on Tuesday, November 25th. The company reported $0.10 earnings per share for the quarter, beating analysts' consensus estimates of ($0.19) by $0.29. Kohl's had a return on equity of 4.30% and a net margin of 1.23%.The business had revenue of $3.58 billion during the quarter, compared to analyst estimates of $3.37 billion. During the same quarter last year, the business posted $0.20 EPS. The company's revenue was down 3.6% on a year-over-year basis. Kohl's has set its FY 2025 guidance at 1.250-1.450 EPS. Research analysts expect that Kohl's Corporation will post 1.3 EPS for the current year.
-
-Kohl's Company Profile
-
-(Free Report)
-
-Kohl's Corporation, founded in 1962 by Maxwell Kohl and headquartered in Menomonee Falls, Wisconsin, is a leading American department store retailer. The company operates approximately 1,100 stores across 49 states, offering a combination of value-oriented pricing, private-label brands and national labels. Since its initial public offering in 1992, Kohl's has focused on broadening its product assortment and enhancing the in-store and online shopping experience.
-
-The retailer's merchandise portfolio spans apparel, footwear, accessories, and beauty products for women, men and children, as well as home goods, kitchenware and seasonal décor.
-
-See Also
-
-Five stocks we like better than Kohl's
-
-ALERT: Drop these 5 stocks before January 2026!
-
-Think You Missed Silver? You’re Wrong. Here’s Why.
-
-Trump Planning to Use Public Law 63-43: Prepare Now
-
-Buy This Stock Now
-
-Is Trump Done? Shocking leak…
-
-Want to see what other hedge funds are holding KSS? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Kohl's Corporation (NYSE:KSS - Free Report).
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in Kohl's Right Now?
-
-Before you consider Kohl's, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Kohl's wasn't on the list.
-
-While Kohl's currently has a Reduce rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/kohls-co-logo-1200x675.png?v=20221117151850,N,,2026-02-14 09:02:01.196134
 ID16,Ecolab,2026-02-14 11:26:59+00:00,MarketBeat,Pacific Point Advisors LLC Takes Position in Ecolab Inc. $ECL - MarketBeat,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-pacific-point-advisors-llc-takes-position-in-ecolab-inc-ecl-2026-02-14/,"Pacific Point Advisors LLC acquired a new position in Ecolab Inc. (NYSE:ECL - Free Report) in the third quarter, according to its most recent filing with the Securities and Exchange Commission (SEC).
 Finally, Salomon & Ludwin LLC bought a new position in shares of Ecolab in the second quarter worth about $41,000.
 Insider Buying and Selling at Ecolab In other news, Director David Maclennan bought 750 shares of Ecolab stock in a transaction dated Monday, December 8th.
@@ -30438,148 +30498,3 @@ Financial services represents roughly 35% of Creatio’s revenue, which helped t
 Although the agents are designed to independently coordinate decisions, actions and handoffs across systems, human-in-the-loop controls are maintained, according to Creatio.
 
 The agents are designed to deliver on tangible business outcomes, Burley Kawasaki, SVP of Creatio Industries for Creatio, told CIO Dive.",https://imgproxy.divecdn.com/28qHB4hLrs0JFUXQW8VB8OSzGPE4tC4adK9cUSrMWwc/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjA1NjE4MTE4LmpwZw==.webp,N,,2026-02-12 09:00:08.061513
-ID7,Barclays,2026-02-12 11:57:14+00:00,FinancialContent,Pentair to Attend Citi and Barclays Industrial Conferences - FinancialContent,Pentair plc,,,,,https://markets.financialcontent.com/stocks/article/bizwire-2026-2-12-pentair-to-attend-citi-and-barclays-industrial-conferences,"Pentair plc (NYSE: PNR), a leader in helping the world sustainably move, improve and enjoy water, life’s most essential resource, will be attending Citi’s 2026 Global Industrial Tech and Mobility Conference on February 18th and Barclays Annual Industrial Select Conference on February 19th, both conferences in Miami, Florida.
-A live webcast of the presentations can be accessed through the “Investor Relations” section of Pentair’s website (www.pentair.com).
-ABOUT PENTAIR PLC At Pentair, we help the world sustainably move, improve, and enjoy water, life’s most essential resource.
-From our residential and commercial water solutions, to industrial water management and everything in between, Pentair is a core large cap value S&P 500 equity stock focused on smart, sustainable water solutions that help our planet and people thrive.
-Pentair had revenue in 2025 of approximately $4.2 billion, and trades under the ticker symbol PNR.","Pentair plc (NYSE: PNR), a leader in helping the world sustainably move, improve and enjoy water, life’s most essential resource, will be attending Citi’s 2026 Global Industrial Tech and Mobility Conference on February 18th and Barclays Annual Industrial Select Conference on February 19th, both conferences in Miami, Florida. Executive Vice President and Chief Financial Officer, Bob Fishman (outgoing); Nick Brazis, Chief Financial Officer (incoming) and Executive Vice President, Pentair Flow & Water Solutions, De’Mon Wiggins will present at 1:50 p.m. on February 18th and at 9:50 a.m. on February 19th Eastern Time.
-
-A live webcast of the presentations can be accessed through the “Investor Relations” section of Pentair’s website (www.pentair.com). A replay of the presentations will be available approximately 24 hours after the events and will remain available on the website for 90 days.
-
-ABOUT PENTAIR PLC
-
-At Pentair, we help the world sustainably move, improve, and enjoy water, life’s most essential resource. From our residential and commercial water solutions, to industrial water management and everything in between, Pentair is a core large cap value S&P 500 equity stock focused on smart, sustainable water solutions that help our planet and people thrive.
-
-Pentair had revenue in 2025 of approximately $4.2 billion, and trades under the ticker symbol PNR. With approximately 9,000 global employees serving customers in more than 150 countries, we work to help improve lives and the environment around the world. To learn more, visit www.pentair.com.",https://images.financialcontent.com/investcenter/favicon.svg,N,,2026-02-12 10:06:00.986107
-ID22,IBM,2026-02-12 11:42:48+00:00,www.marketsandmarkets.com,Microsoft (US) and IBM (US) are Leading Players in the Asia Pacific Identity and Access ...,Not Available,,,,,https://www.marketsandmarkets.com/ResearchInsight/asia-pacific-identity-access-management-companies.asp,"These market players have adopted strategies such as product development and launches, partnerships, contracts, expansions, and acquisitions to strengthen their positions in the Asia Pacific IAM market.
-Microsoft is a leading US-based global technology company offering a broad portfolio of identity and access management solutions.
-Ping Identity is a US-based global leader in identity and access management solutions for enterprises of all sizes.
-Recent product enhancements include just-in-time privileged access, extending privileged access management within its platform.
-Related Reports: Asia Pacific Identity and Access Management (IAM) Market by Solution, Service, Technology [Access Management, Identity Governance & Administration (IGA), Privileged Access Management (PAM)], Type (Workforce, CIAM, B2B), Identity Type - Forecast to 2030","The identity and access management (IAM) market in the Asia Pacific region is projected to grow from USD 5.29 billion in 2025 to USD 9.55 billion by 2030, at a CAGR of 12.5% over the forecast period. The market is being driven by strong regulatory pressure and rapid digitalization across major economies. Governments in India, Japan, Singapore, and Southeast Asia are enforcing stricter data protection and cybersecurity laws. Enterprises are modernizing legacy identity systems as cloud and SaaS adoption accelerates. Digital banking, fintech platforms, and super apps are increasing demand for customer identity management. Zero-trust security models are gaining broader acceptance in regulated industries. Talent shortages are also pushing organizations toward IAM automation and managed IAM services.
-
-Competitive overview:
-
-The Asia Pacific IAM market is led by globally established players, including Microsoft (US), IBM (US), Okta (US), Oracle (US), Ping Identity (US), CyberArk (US), HID Global (US), NuSummit Cybersecurity (Aujas) (India), WSO2 (US), Wipro (India), Signzy (India), miniOrange (India), RSA Security (US), Delinea (US), ManageEngine (US), One Identity (US), and Auth0 (US), among others. These market players have adopted strategies such as product development and launches, partnerships, contracts, expansions, and acquisitions to strengthen their positions in the Asia Pacific IAM market. These organic and inorganic strategies have helped market players expand globally by providing advanced IAM solutions and services.
-
-To know about the assumptions considered for the study download the pdf brochure
-
-In November 2025, Microsoft Entra introduced “Agent ID” for AI agent identity management. This is a new IAM capability that applies Zero Trust principles to AI system identities, providing enhanced access control and auditing.
-
-In March 2025, ManageEngine expanded its AD360 IAM platform with more than 100 new prebuilt integrations for enterprise applications. The expansion aims to strengthen identity management and integration across IT ecosystems worldwide.
-
-Microsoft is a leading US-based global technology company offering a broad portfolio of identity and access management solutions. The company’s IAM capabilities are delivered primarily through Microsoft Entra, which includes Azure Active Directory (Azure AD), identity governance, and privileged identity management. Microsoft focuses on secure authentication, single sign-on (SSO), multi-factor authentication (MFA), conditional access, and identity protection to help enterprises enforce Zero Trust principles at scale. These solutions support hybrid and multi-cloud environments and integrate deeply with Microsoft 365, Azure, and third-party applications. Microsoft’s IAM offerings help organizations meet compliance and data-protection requirements while improving access control, automation, and operational efficiency. Its identity services are widely adopted across industries, including finance, healthcare, government, retail, and technology, in markets worldwide, enhancing secure access and reducing risk.
-
-Ping Identity is a US-based global leader in identity and access management solutions for enterprises of all sizes. The company provides a unified IAM platform that secures digital identities across the workforce, customers, and API access with capabilities such as federation, adaptive authentication, multi-factor authentication (MFA), single sign-on (SSO), and identity governance. Ping’s solutions support hybrid and cloud environments and are designed to enable Zero Trust security and seamless user experiences across applications. It serves regulated industries, including finance, healthcare, government, and technology, and operates in more than 60 countries, indicating a broad enterprise customer base. Recent product enhancements include just-in-time privileged access, extending privileged access management within its platform.
-
-Market Ranking
-
-The IAM market in the Asia Pacific region is led by a mix of global technology providers and strong regional players that serve diverse regulatory and digital needs. Microsoft holds a leading position, driven by widespread adoption of Microsoft Entra across enterprises embracing cloud and hybrid IT. Okta and Ping Identity play key roles in workforce and customer IAM, particularly for cloud-first and standards-based deployments. IBM and Oracle remain influential in large enterprises and regulated sectors, supported by deep governance and integration capabilities. CyberArk leads in privileged access management, with strong demand from the banking, critical infrastructure, and large-enterprise sectors.
-
-Overall, rapid digital transformation, cloud migration, and the expansion of digital services are intensifying competition across the region. Vendors are focusing on zero-trust adoption, identity governance, and automation. Regional players, including Wipro, miniOrange, Signzy, and NuSummit Cybersecurity (Aujas), are strengthening the market by offering cost-effective, region-specific IAM solutions and services, further driving growth and innovation in the APAC IAM landscape.
-
-Related Reports:
-
-Asia Pacific Identity and Access Management (IAM) Market by Solution, Service, Technology [Access Management, Identity Governance & Administration (IGA), Privileged Access Management (PAM)], Type (Workforce, CIAM, B2B), Identity Type - Forecast to 2030",,N,,2026-02-12 08:02:00.818191
-ID7,Barclays,2026-02-12 11:40:56+00:00,Investing.com,Barclays lowers Unity Software stock price target to $28 from $35 - Investing.com,Not Available,,,,,https://www.investing.com/news/analyst-ratings/barclays-lowers-unity-software-stock-price-target-to-28-from-35-93CH-4502195,"Investing.com - Barclays has reduced its price target on to $28.00 from $35.00 while maintaining an Equalweight rating on the stock.
-The new target aligns closely with InvestingPro’s Fair Value assessment, though Unity shares have already fallen to $21.41, down over 51% year-to-date.
-Unity reported revenue and EBITDA that exceeded consensus expectations by 2% and 6% respectively, though the company provided guidance that was slightly below market expectations.
-InvestingPro data shows analysts expect Unity to become profitable this fiscal year with an EPS forecast of $0.89.
-Citizens also adjusted its outlook, reducing the price target from $50.00 to $37.00 but kept a Market Outperform rating after the recent earnings report.","Investing.com - Barclays has reduced its price target on to $28.00 from $35.00 while maintaining an Equalweight rating on the stock. The new target aligns closely with InvestingPro’s Fair Value assessment, though Unity shares have already fallen to $21.41, down over 51% year-to-date.
-
-Unity reported revenue and EBITDA that exceeded consensus expectations by 2% and 6% respectively, though the company provided guidance that was slightly below market expectations. The company generated $1.85 billion in revenue over the last twelve months with a healthy 74.27% gross profit margin, despite not yet achieving profitability.
-
-Barclays noted that world models are improving rapidly, which could potentially benefit Unity as more developers create gaming content, particularly as artificial intelligence advances with additional computing power and reinforcement learning techniques for gaming.
-
-The firm highlighted that Unity should be positioned to scale its advertising business as more runtime data is integrated and performance improves, which could bring high incremental margins likely in the second half of the year. InvestingPro data shows analysts expect Unity to become profitable this fiscal year with an EPS forecast of $0.89.
-
-Despite these potential tailwinds, Barclays indicated that investors may not assign a premium valuation to Unity until uncertainties are resolved, particularly regarding the risk that AI might eventually replace the game engine business model. Currently trading at 2.86 times book value with volatile price movements, Unity is among 1,400+ US equities covered by InvestingPro’s comprehensive Research Reports, which provide deeper insights into its financial health and growth prospects.
-
-In other recent news, Unity Software reported mixed fourth-quarter 2025 results, with revenue and EBITDA surpassing the high end of guidance by $13 million and $10 million, respectively. Despite these positive earnings, the company’s first-quarter 2026 guidance did not meet expectations, with midpoint revenue and EBITDA projections falling 1.5% and 8% below consensus estimates. Furthermore, Unity’s decision to shut down its ironSource ad operation led BTIG to lower its price target for the company from $60.00 to $41.00, though the firm maintained a Buy rating. Citizens also adjusted its outlook, reducing the price target from $50.00 to $37.00 but kept a Market Outperform rating after the recent earnings report.
-
-Additionally, Unity’s Vector platform showed a 15% growth quarter-over-quarter, which was below the anticipated 20% or more. The company achieved a 14.29% surprise in earnings per share (EPS) and a 2.89% revenue surprise compared to forecasts, even though the stock saw a significant pre-market decline. These developments reflect investor concerns over future growth prospects or market conditions.
-
-This article was generated with the support of AI and reviewed by an editor. For more information see our T&C.",https://i-invdn-com.investing.com/news/World_News_9_800x533_L_1420026261.jpg,N,,2026-02-12 10:06:12.170426
-ID43,Thrivent ,2026-02-12 11:40:10+00:00,MarketBeat,Thrivent Financial for Lutherans Decreases Stock Holdings in Ball Corporation $BALL,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-thrivent-financial-for-lutherans-decreases-stock-holdings-in-ball-corporation-ball-2026-02-12/,"Thrivent Financial for Lutherans' holdings in Ball were worth $1,810,000 as of its most recent SEC filing.
-Ball Stock Performance BALL opened at $67.42 on Thursday.
-Eight analysts have rated the stock with a Buy rating and six have assigned a Hold rating to the company's stock.
-Check Out Our Latest Stock Analysis on BALL Ball Profile (Free Report) Ball Corporation is a leading provider of sustainable aluminum packaging solutions and advanced aerospace technologies.
-Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Ball Corporation (NYSE:BALL - Free Report).","Thrivent Financial for Lutherans lessened its stake in shares of Ball Corporation (NYSE:BALL - Free Report) by 32.8% during the third quarter, according to the company in its most recent 13F filing with the Securities & Exchange Commission. The fund owned 35,882 shares of the company's stock after selling 17,500 shares during the quarter. Thrivent Financial for Lutherans' holdings in Ball were worth $1,810,000 as of its most recent SEC filing.
-
-Berry Global, The Backbone Of Consumer Packaging You Should Own
-
-Other large investors have also recently made changes to their positions in the company. Rosenberg Matthew Hamilton boosted its holdings in Ball by 145.0% in the second quarter. Rosenberg Matthew Hamilton now owns 517 shares of the company's stock worth $29,000 after purchasing an additional 306 shares during the last quarter. SJS Investment Consulting Inc. lifted its holdings in shares of Ball by 4,236.8% during the 3rd quarter. SJS Investment Consulting Inc. now owns 824 shares of the company's stock valued at $42,000 after buying an additional 805 shares during the period. MUFG Securities EMEA plc bought a new position in shares of Ball during the 2nd quarter valued at $46,000. CYBER HORNET ETFs LLC purchased a new position in shares of Ball in the 2nd quarter worth $47,000. Finally, IFP Advisors Inc grew its holdings in shares of Ball by 103.2% in the second quarter. IFP Advisors Inc now owns 1,142 shares of the company's stock worth $68,000 after acquiring an additional 580 shares during the period. 86.51% of the stock is currently owned by institutional investors.
-
-Ball Stock Performance
-
-BALL opened at $67.42 on Thursday. The company has a 50 day simple moving average of $55.23 and a two-hundred day simple moving average of $52.10. The company has a debt-to-equity ratio of 1.26, a current ratio of 1.11 and a quick ratio of 0.72. The firm has a market cap of $18.07 billion, a P/E ratio of 20.31, a PEG ratio of 1.35 and a beta of 1.13. Ball Corporation has a 1-year low of $43.51 and a 1-year high of $68.29.
-
-Ball (NYSE:BALL - Get Free Report) last announced its quarterly earnings data on Tuesday, February 3rd. The company reported $0.91 EPS for the quarter, beating the consensus estimate of $0.90 by $0.01. The firm had revenue of $3.35 billion for the quarter, compared to the consensus estimate of $3.11 billion. Ball had a net margin of 6.93% and a return on equity of 18.10%. The company's revenue was up 16.2% on a year-over-year basis. During the same period last year, the firm earned $0.84 EPS. Ball has set its FY 2026 guidance at 3.930- EPS. Equities analysts forecast that Ball Corporation will post 3.48 earnings per share for the current fiscal year.
-
-Ball Announces Dividend
-
-The firm also recently disclosed a quarterly dividend, which will be paid on Monday, March 16th. Stockholders of record on Monday, March 2nd will be paid a $0.20 dividend. The ex-dividend date of this dividend is Monday, March 2nd. This represents a $0.80 dividend on an annualized basis and a dividend yield of 1.2%. Ball's dividend payout ratio is 24.10%.
-
-Wall Street Analyst Weigh In
-
-A number of research firms have weighed in on BALL. Jefferies Financial Group increased their target price on Ball from $64.00 to $71.00 and gave the company a ""buy"" rating in a report on Wednesday, February 4th. Morgan Stanley set a $66.00 price objective on shares of Ball in a research note on Wednesday, February 4th. Weiss Ratings restated a ""hold (c)"" rating on shares of Ball in a research report on Monday, December 29th. Wells Fargo & Company upped their target price on shares of Ball from $60.00 to $70.00 and gave the company an ""overweight"" rating in a report on Wednesday, February 4th. Finally, Bank of America upgraded shares of Ball from a ""neutral"" rating to a ""buy"" rating and set a $61.00 price target on the stock in a research note on Monday, November 17th. Eight analysts have rated the stock with a Buy rating and six have assigned a Hold rating to the company's stock. According to data from MarketBeat, the company has a consensus rating of ""Moderate Buy"" and a consensus target price of $68.46.
-
-Check Out Our Latest Stock Analysis on BALL
-
-Ball Profile
-
-(Free Report)
-
-Ball Corporation is a leading provider of sustainable aluminum packaging solutions and advanced aerospace technologies. Headquartered in Broomfield, Colorado, the company serves customers in the beverage, food and aerosol markets through a global network of manufacturing facilities. With an emphasis on sustainability and innovation, Ball designs and produces metal cans, bottles and ends that support recycling and reduce environmental impact.
-
-The company's packaging segment specializes in beverage cans for soft drinks, beer and energy drinks, as well as metal packaging for food and personal care applications.
-
-Featured Stories
-
-Five stocks we like better than Ball
-
-Is THIS the Next Big Money Rush?
-
-Wall Street Legend Names #1 Stock of 2026 Live On-Camera
-
-Trump’s Hand-Written Letter Will Shock his Haters
-
-ISPC: From Small Cap to Life Sciences Market Disruptor!
-
-The Crash Has Already Started (Most Just Don’t See It Yet)
-
-Want to see what other hedge funds are holding BALL? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for Ball Corporation (NYSE:BALL - Free Report).
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in Ball Right Now?
-
-Before you consider Ball, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and Ball wasn't on the list.
-
-While Ball currently has a Moderate Buy rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/ball-corp-logo-1200x675.jpg?v=20220511075000,N,,2026-02-12 11:08:36.778779
-ID18,Elevance Health,2026-02-12 11:35:28+00:00,www.insurancebusinessmag.com,Humana's Q4 loss widens | Insurance Business,Josh Recamara,,,,,https://www.insurancebusinessmag.com/us/news/life-insurance/humanas-q4-loss-widens-565084.aspx,"Humana has reported a Q4 net loss and guided to a sharp decline in 2026 EPS as it prepares for a Medicare Advantage (MA) Star Ratings headwind.
-For the quarter ended Dec. 31, Humana posted a GAAP net loss of $6.61 per share, compared with a loss of $5.76 per share a year earlier.
-On an adjusted basis, the company reported a Q4 loss of $3.96 per share, compared with an adjusted loss of $2.16 per share a year earlier.
-Looking ahead, Humana introduced full-year 2026 GAAP EPS guidance of ""at least $8.89"" and adjusted EPS guidance of ""at least $9.00.""
-As a result, the 2026 Star Ratings impact shows up more starkly in Humana’s EPS outlook.","Humana has reported a Q4 net loss and guided to a sharp decline in 2026 EPS as it prepares for a Medicare Advantage (MA) Star Ratings headwind.
-
-For the quarter ended Dec. 31, Humana posted a GAAP net loss of $6.61 per share, compared with a loss of $5.76 per share a year earlier. On an adjusted basis, the company reported a Q4 loss of $3.96 per share, compared with an adjusted loss of $2.16 per share a year earlier.
-
-The company reported a GAAP benefit ratio of 93.1% for its insurance segment in Q4. For the full year, the insurance segment GAAP benefit ratio was 90.4%, slightly better than the top end of its guidance range of 90.1% to 90.5%.
-
-Looking ahead, Humana introduced full-year 2026 GAAP EPS guidance of ""at least $8.89"" and adjusted EPS guidance of ""at least $9.00.""
-
-The company said the projected decline “results from the Star Ratings headwind for Bonus Year 2026, net of mitigation,” referring to the impact of lower MA Star Ratings on quality bonus payments and related revenue. Unlike 2025, the 2026 adjusted guidance does not include large nonrecurring items such as valuation changes, restructuring initiatives, or impairments.
-
-Against a peer set that includes UnitedHealth Group, CVS Health (Aetna), Elevance Health, Cigna Group, and Centene, Humana remains one of the most MA‑concentrated players. Its earnings rely heavily on individual Medicare Advantage and senior-focused care, with smaller contributions from commercial group and pharmacy benefits than some rivals.
-
-That business mix leaves Humana more sensitive to MA-specific shocks, such as Star Ratings changes, than diversified carriers that can lean on commercial, Medicaid, PBM, or health services earnings to offset pressure. As a result, the 2026 Star Ratings impact shows up more starkly in Humana’s EPS outlook.
-
-Even so, Humana is guiding to approximately 25% individual MA membership growth in 2026 versus 2025, driven by new sales and improved retention under its “customer-led benefit strategy” and revised service model. The strong growth target suggests Humana is still leaning into MA scale despite near-term margin pressure.
-
-Humana also pointed to continued expansion in its care delivery and Medicaid platforms. In CenterWell Senior Primary Care, the company reported patient growth of 100,600 in 2025, an increase of more than 25%, including roughly 32,000 patients from the acquisition of The Villages Health.
-
-Its Medicaid footprint now spans 13 states, with Georgia and Texas expected to launch in 2027. While these businesses provide additional growth avenues, they are not yet large enough to fully offset volatility in the MA franchise.
-
-“We were pleased with our solid financial performance and operational progress in 2025,” said Humana president and CEO Jim Rechtin. “We continue to feel good about our consumer-focused strategy and our individual Medicare Advantage membership growth in 2026, which will allow us to build for the future with even better outcomes and experiences.”",https://cdn-res.keymedia.com/cms/images/us/003/0382_639064644211975750.png,N,,2026-02-12 11:07:55.621752
