@@ -1,4 +1,10 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID35,Nvidia,2026-02-27 10:05:27+00:00,www.youtube.com,Nvidia has MORE demand than supply: Landsberg Bennett Private Wealth Management CIO,,,,,,https://www.youtube.com/watch%3Fv%3DHGZLSYxJ9sw,... nvidia #ai #technology #stocks #markets #earnings #investing #finance #business #economy #wallstreet #analysis #innovation Subscribe to Fox ...,Not Available,,Y,,2026-02-27 06:00:52.583852
+ID33,Moody's,2026-02-27 08:49:40+00:00,Bloomberg.com,Son of 'Gasoline Godfather' Jailed in Indonesia Graft Case - Bloomberg.com,"Eddie Spence, Chandra Asmara",,,,,https://www.bloomberg.com/news/articles/2026-02-27/son-of-gasoline-godfather-convicted-in-indonesia-graft-case,"The son of a reclusive oil merchant who dominated Indonesia’s fuel trade for decades received a prison sentence as part of a $17 billion corruption case centered on the country’s state-owned energy firm.
+Muhamad Kerry Adrianto Riza was sentenced to 15 years in jail on Thursday by a panel of judges at the Central Jakarta District Court, according to a statement from the Attorney General’s Office.
+He must also pay a 1 billion rupiah fine and compensate the state for losses totaling 2.9 trillion rupiah ($173 million) or face his assets being seized.","The son of a reclusive oil merchant who dominated Indonesia’s fuel trade for decades received a prison sentence as part of a $17 billion corruption case centered on the country’s state-owned energy firm.
+
+Muhamad Kerry Adrianto Riza was sentenced to 15 years in jail on Thursday by a panel of judges at the Central Jakarta District Court, according to a statement from the Attorney General’s Office. He must also pay a 1 billion rupiah fine and compensate the state for losses totaling 2.9 trillion rupiah ($173 million) or face his assets being seized.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/igAVQdcxgvWY/v0/1200x800.jpg,N,,2026-02-27 06:00:48.700373
 ID51,Wellington Management,2026-02-27 07:54:41+00:00,Defense World,HCI Group (NYSE:HCI) Shares Gap Up Following Better-Than-Expected Earnings,Defense World Staff,,,,,https://www.defenseworld.net/2026/02/27/hci-group-nysehci-shares-gap-up-following-better-than-expected-earnings.html,"HCI Group, Inc. (NYSE:HCI – Get Free Report) shares gapped up before the market opened on Thursday following a stronger than expected earnings report.
 HCI Group shares last traded at $174.1850, with a volume of 19,450 shares changing hands.
 Wall Street Analysts See HCI Group (HCI) as a Buy Neutral Sentiment: Underlying operational details: gross premiums earned increased (policy volume up) and Q4 gross loss ratio improved to 15.6%; full‑year gross loss ratio was 19.6%.
@@ -69,6 +75,29 @@ Bloomberg posted on X, highlighting Schwartz's remarks on the importance of clea
 Schwartz's comments come amid growing scrutiny of investment products and their accessibility to retail investors.
 The call for transparency aims to ensure that investors are fully informed about the nature of their investments, particularly in terms of liquidity, which can impact their ability to access funds when needed.","Carlyle Chief Executive Officer Harvey Schwartz emphasized the need for asset managers to be more transparent about the liquidity of investment funds offered to individual investors. Bloomberg posted on X, highlighting Schwartz's remarks on the importance of clear communication regarding the relative illiquidity of these funds. Schwartz's comments come amid growing scrutiny of investment products and their accessibility to retail investors. The call for transparency aims to ensure that investors are fully informed about the nature of their investments, particularly in terms of liquidity, which can impact their ability to access funds when needed.",https://public.bnbstatic.com/images/common/feed-og-image-2.png,N,,2026-02-27 05:00:35.888036
 ID39,Philips,2026-02-27 06:43:57+00:00,www.ctpost.com,"Netflix walks away from Warner Bros deal, clearing the path for Paramount - Connecticut Post",Not Available,,,,,https://www.ctpost.com/business/article/warner-bros-discovery-deems-paramount-s-takeover-21943828.php,"Netflix walks away from Warner Bros deal, clearing the path for Paramount. By WYATTE GRANTHAM-PHILIPS, AP Business WriterUpdated Feb 26, 2026 9:38 ...",Not Available,,N,,2026-02-27 05:01:10.999749
+ID32,Microsoft,2026-02-27 06:37:20+00:00,community.qlik.com,AR_H_USER populating as NULL for Microsoft SQL Ser... - Qlik Community - 2543891,"community.qlik.com, user-id",,,,,https://community.qlik.com/t5/Qlik-Replicate/AR-H-USER-populating-as-NULL-for-Microsoft-SQL-Server-source-Log/td-p/2543891,"We have a task that is replicating data to Kafka using a Microsoft SQL Server source (reading from a Log Stream file, which was populated by a Microsoft SQL Server task, not CDC).
+So, then I switched it over to be a simple Add Column Transformation where I am mapping `$AR_H_USER` to a new column named `QLIK_AR_H_USER`.
+When looking at the messages being sent to Kafka, the new `QLIK_AR_H_USER` column is showing as null.
+I thought maybe I had done something incorrectly, so I added another Transformation column which mapped `$AR_H_OPERATION` to a new column named `QLIK_AR_H_OPERATION`.
+Our server is running version 2024.11.0.577 and the source Microsoft SQL Server is running SQL Server 2022.","We have a task that is replicating data to Kafka using a Microsoft SQL Server source (reading from a Log Stream file, which was populated by a Microsoft SQL Server task, not CDC).
+
+We want to apply a global rule that filters out all changes committed by a specific user.
+
+I started off with testing this against one table instead of a global rule filter, however, the filter was not working.
+
+So, then I switched it over to be a simple Add Column Transformation where I am mapping `$AR_H_USER` to a new column named `QLIK_AR_H_USER`.
+
+When looking at the messages being sent to Kafka, the new `QLIK_AR_H_USER` column is showing as null.
+
+I thought maybe I had done something incorrectly, so I added another Transformation column which mapped `$AR_H_OPERATION` to a new column named `QLIK_AR_H_OPERATION`. After stopping the task and reloading the target, I reviewed the messages sent to Kafka and I properly see `QLIK_AR_H_OPERATION` getting populated with appropriate values, yet `QLIK_AR_H_USER` is still null.
+
+I also made sure to test both with implicit transactions as well as explicit transactions, neither made any difference.
+
+Our server is running version 2024.11.0.577 and the source Microsoft SQL Server is running SQL Server 2022.
+
+I can't seem to find anyone else complaining about this issue. The only thing I could find is that for the May 2021 release this was a known issue that was ""fixed"":
+
+Qlik Replicate Release notes - May 2021 Initial Re... - Qlik Community - 1981408",https://community.qlik.com/html/assets/Qlik-New-Logo.png?version=preview,N,,2026-02-27 06:00:44.797244
 ID19,Eli Lilly,2026-02-27 06:27:27+00:00,uk.finance.yahoo.com,"RBC Capital Initiates Eli Lilly (LLY), Cites Long-Term Leadership in Obesity Market",Not Available,,,,,https://uk.finance.yahoo.com/news/rbc-capital-initiates-eli-lilly-061818278.html,"If you click 'Accept all', we and our partners, including 246 who are part of the IAB Transparency & Consent Framework, will also store and / or access information on a device (in other words, use cookies) and use precise geolocation data and other personal data such as technical identifiers and browsing and search data, for analytics, personalised advertising and content, advertising and content measurement, and audience research and services development.
 If you do not want us and our partners to use cookies and personal data for these additional purposes, click 'Reject all'.
 If you would like to customise your choices, click 'Manage privacy settings'.","If you click 'Accept all', we and our partners, including 246 who are part of the IAB Transparency & Consent Framework, will also store and / or access information on a device (in other words, use cookies) and use precise geolocation data and other personal data such as technical identifiers and browsing and search data, for analytics, personalised advertising and content, advertising and content measurement, and audience research and services development.
@@ -1243,6 +1272,39 @@ Barclays and Atlas each lent it hundreds of millions of dollars.
 Jefferies Financial Group and Wells Fargo are also among those with exposure.","While some may disagree about the threat private credit poses to markets, a new crisis reared its head on Thursday. It seems that Barclays and Atlas Partners—the structured-credit arm of Apollo Global Management—are among firms that helped arrange more than $2.7 billion of loans to a UK mortgage-finance company that’s unraveled amid allegations of financial irregularities.
 
 Market Financial Solutions collapsed into a UK form of insolvency yesterday, with the judge overseeing the case citing accusations of fraud and double-pledging of assets. Barclays and Atlas each lent it hundreds of millions of dollars. Jefferies Financial Group and Wells Fargo are also among those with exposure.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i4dhtr67lnMM/v0/1200x800.jpg,N,,2026-02-26 22:00:22.165032
+ID36,OpenAI,2026-02-27 01:23:36+00:00,www.law360.com,"Musk, OpenAI Spar Over AG OKs, Altman Firing, AI Safety - Law360 UK",Not Available,,,,,https://www.law360.com/ip/articles/2446434/musk-openai-spar-over-ag-oks-altman-firing-ai-safety,"A Law360 subscription puts you at the center of fast-moving legal issues, trends and developments so you can act with speed and confidence.
+Over 200 articles are published daily across more than 60 topics, industries, practice areas and jurisdictions.
+A Law360 subscription includes features such as Daily newsletters Expert analysis Mobile app Advanced search Judge information Real-time alerts 450K+ searchable archived articles And more!
+Law360 may contact you in your professional capacity with information about our other products, services and events that we believe may be of interest.
+You’ll be able to update your communication preferences via the unsubscribe link provided within our communications.","Law360 is on it, so you are, too.
+
+A Law360 subscription puts you at the center of fast-moving legal issues, trends and developments so you can act with speed and confidence. Over 200 articles are published daily across more than 60 topics, industries, practice areas and jurisdictions.
+
+A Law360 subscription includes features such as
+
+Daily newsletters
+
+Expert analysis
+
+Mobile app
+
+Advanced search
+
+Judge information
+
+Real-time alerts
+
+450K+ searchable archived articles
+
+And more!
+
+Experience Law360 today with a free 7-day trial.
+
+Law360 may contact you in your professional capacity with information about our other products, services and events that we believe may be of interest.
+
+You’ll be able to update your communication preferences via the unsubscribe link provided within our communications.
+
+We take your privacy seriously. Please see our Privacy Policy.",https://www.law360.com/images/law360-stacked.png,N,,2026-02-27 06:00:55.899052
 ID9,BNY Mellon,2026-02-27 01:17:41+00:00,StreetInsider.com,Form 485BPOS BNY Mellon Investment - StreetInsider,Not Available,,,,,https://www.streetinsider.com/SEC%2BFilings/Form%2B485BPOS%2BBNY%2BMellon%2BInvestment/26068926.html,"FREE Breaking News Alerts from StreetInsider.com!
 E-mail Address StreetInsider.com Top Tickers, 2/26/2026 1.","FREE Breaking News Alerts from StreetInsider.com!
 
@@ -3717,6 +3779,37 @@ BDO is the brand name for the BDO network and for each of the BDO Member Firms.
 BDO USA, P.C., a Virginia professional corporation, is the U.S. member of BDO International Limited, a UK company limited by guarantee, and forms part of the international BDO network of independent member firms.","Our purpose is helping people thrive, every day. Together, we are focused on delivering exceptional and sustainable outcomes and value for our people, our clients and our communities. BDO is proud to be an ESOP company, reflecting a culture that puts people first. BDO professionals provide assurance, tax and advisory services for a diverse range of clients across the U.S. and in over 160 countries through our global organization.
 
 BDO is the brand name for the BDO network and for each of the BDO Member Firms. BDO USA, P.C., a Virginia professional corporation, is the U.S. member of BDO International Limited, a UK company limited by guarantee, and forms part of the international BDO network of independent member firms. For more information, please visit: www.bdo.com.",https://www.bdo.com/getmedia/761df2e2-9119-4ea2-8d56-8825975779a4/OpenGraph-Default-122x630.png,N,,2026-02-26 17:04:20.368923
+ID3,Agilent,2026-02-26 19:53:41+00:00,www.gurufocus.com,Agilent Technologies (A) Sees Analyst Price Target Adjustment by - GuruFocus,GuruFocus News,,,,,https://www.gurufocus.com/news/8658267/agilent-technologies-a-sees-analyst-price-target-adjustment-by-ubs-a-stock-news,"Price target lowered from $180.00 to $165.00, marking an 8.33% decrease.
+On February 26, 2026, UBS analyst Dan Leonard maintained a ""Buy"" rating for Agilent Technologies (A) but adjusted the price target from $180.00 to $165.00.
+In recent months, Agilent Technologies (A, Financial) has received various ratings and price target changes from different analysts.
+On December 15, 2025, Barclays analyst Luke Sergott upgraded Agilent Technologies to ""Overweight"" and maintained the price target at $165.00.
+Based on the consensus recommendation from 23 brokerage firms, Agilent Technologies Inc's (A, Financial) average brokerage recommendation is currently 2.1, indicating ""Outperform"" status.","Key Takeaways
+
+UBS maintains its ""Buy"" rating for Agilent Technologies (A, Financial).
+
+Price target lowered from $180.00 to $165.00, marking an 8.33% decrease.
+
+On February 26, 2026, UBS analyst Dan Leonard maintained a ""Buy"" rating for Agilent Technologies (A) but adjusted the price target from $180.00 to $165.00. This change marks an 8.33% decrease in the price target for the stock.
+
+In recent months, Agilent Technologies (A, Financial) has received various ratings and price target changes from different analysts. Below is a summary of historical ratings:
+
+On January 20, 2026, HSBC analyst Sidharth Sahoo initiated coverage on Agilent Technologies with a ""Buy"" rating and announced a price target of $180.00.
+
+On January 5, 2026, Evercore ISI Group analyst Vijay Kumar upgraded the stock to ""Outperform"" and raised the price target from $155.00 to $160.00, a 3.23% increase.
+
+On December 15, 2025, Barclays analyst Luke Sergott upgraded Agilent Technologies to ""Overweight"" and maintained the price target at $165.00.
+
+On December 9, 2025, Goldman Sachs analyst Evie Koslosky initiated coverage on the stock with a ""Buy"" rating and set a price target of $170.00.
+
+On December 2, 2025, Morgan Stanley analyst Kallum Titchmarsh initiated coverage with an ""Overweight"" rating and announced a price target of $180.00.
+
+Originally spun out of Hewlett-Packard in 1999, Agilent has evolved into a leading life science and diagnostic firm. Today, Agilent's measurement technologies serve a broad base of customers with its three operating segments: life science and diagnostics, cross lab operations consisting of consumables and services, and applied end markets. Over half of its sales are generated from the biopharmaceutical, chemical, and advanced materials end markets, which we view as the stickiest end markets, but it also supports clinical lab, environmental, forensics, food, academic, and government-related organizations. The company is geographically diverse, with operations in the US and China representing the largest country concentrations.
+
+Wall Street Analysts Forecast
+
+Based on the one-year price targets offered by 19 analysts, the average target price for Agilent Technologies Inc (A, Financial) is $166.28 with a high estimate of $185.00 and a low estimate of $150.00. The average target implies an upside of 40.75% from the current price of $118.14. More detailed estimate data can be found on the Agilent Technologies Inc (A) Forecast page.
+
+Based on the consensus recommendation from 23 brokerage firms, Agilent Technologies Inc's (A, Financial) average brokerage recommendation is currently 2.1, indicating ""Outperform"" status. The rating scale ranges from 1 to 5, where 1 signifies Strong Buy, and 5 denotes Sell.",https://static.gurufocus.com/logos/0C000009AO.png?20,N,,2026-02-27 06:00:38.328429
 ID32,Microsoft,2026-02-26 19:47:14+00:00,Cloud Wars,"Microsoft, SAP, Oracle: Cloud at Least 50% of Revenue",Bob Evans,,,,,https://cloudwars.com/cloud-wars-minute/microsoft-sap-oracle-cloud-at-least-50-of-revenue/,"Welcome to the Cloud Wars Minute — your daily cloud news and commentary show.
 Each episode provides insights and perspectives around the “reimagination machine” that is the cloud.
 In today’s Cloud Wars Minute, I explain why deep on-premises expertise is becoming a strategic advantage in the AI-driven cloud economy.
@@ -31476,234 +31569,3 @@ IBM Engineering AI Hub empowers teams to manage complex programs, with focus on 
 Beyond Work Item compose agent, the IBM Engineering AI Hub includes agents for Requirements quality analysis (improving clarity and precision), an Engineering assistant (for conversational queries, topic search or translation), MBSE use case discovery (connecting natural language requirements to system models), and Work Item synopsis (summarizing complex work or defects).
 
 Together, these agents strengthen digital continuity and traceability-from requirements through planning and execution-so engineering organizations can scale delivery without sacrificing quality, alignment or visibility.",https://www.marketscreener.com/images/twitter_MS_fdnoir.png,N,,2026-02-21 23:58:01.615352
-ID11,Capgemini,2026-02-20 10:58:26+00:00,The Tribune,"CGC University, Capgemini Launch Industry-Integrated Technology Center on Campus",Not Available,,,,,https://www.tribuneindia.com/news/business/cgc-university-capgemini-launch-industry-integrated-technology-center-on-campus/,"Recognising this shift, CGC University, Mohali has inaugurated the CodeXperience Center powered by Capgemini, an industry-model technology facility designed to recreate real-world tech workplaces within the campus learning environment.
-The Center represents a deepened academic collaboration between CGC University and Capgemini, bringing enterprise-grade practices, workflows and project environments directly into the academic framework.
-Dr. Sushil Prashar, Executive Vice President, stated that the launch of the CodeXperience Center powered by Capgemini marks yet another decisive step towards making CGC University India's first Industry Integrated Learning Hub, where structured industry immersion is embedded within the academic framework itself.
-Senior representatives from Capgemini, including Samir Shah, Executive Vice President, I&D - India, Capgemini, Ashish Minocha, Vice President, DCX - India, Capgemini , Puneet Kumra, Vice President & Head, Early Careers Program - India, Capgemini and Suman Bhattacharya, Director, Early Careers Program - India, Capgemini were present at the inauguration ceremony alongside members of the CGC University leadership and academic fraternity.
-With the launch of the CodeXperience Center powered by Capgemini, CGC University further advances its commitment to developing an ecosystem where enterprise exposure is embedded within academic delivery.","PNN
-
-Mohali (Punjab) [India], February 20:The future of work is being shaped long before graduates enter their first office. Recognising this shift, CGC University, Mohali has inaugurated the CodeXperience Center powered by Capgemini, an industry-model technology facility designed to recreate real-world tech workplaces within the campus learning environment.
-
-Conceived as a dynamic and immersive environment rather than a conventional computer laboratory, the Center reflects the evolving belief that professional readiness must begin during the learning journey itself. Rooted in the vision of Sardar Rashpal Singh Dhaliwal, Founder Chancellor of CGC University, the initiative reinforces the conviction that students must step into the professional world prepared with degrees as well as demonstrated capability, confidence, and clarity of practice.
-
-The Center represents a deepened academic collaboration between CGC University and Capgemini, bringing enterprise-grade practices, workflows and project environments directly into the academic framework. Conceived as a cutting-edge experiential learning space, the facility moves beyond traditional laboratory formats to reflect the structure, pace and collaborative culture of contemporary technology organisations.
-
-Unlike conventional computer labs, the CodeXperience Center powered by Capgemini has been designed as a professional simulation environment. The facility incorporates collaborative coding zones, discussion pods, structured development bays, and integrated digital systems that enable students to work on live project simulations using industry-aligned tools and processes. The Center is equipped to support engagement for over 500 students, making it one of the largest structured industry-integrated learning spaces of its kind within the region.
-
-The inauguration ceremony was attended by the senior leadership of CGC University, including Sardar Rashpal Singh Dhaliwal, Founder Chancellor; Mr. Arsh Dhaliwal, Managing Director; and Dr. Sushil Prashar, Executive Vice President, along with senior representatives from Capgemini.
-
-Addressing the gathering, Sardar Rashpal Singh Dhaliwal, Founder Chancellor, reaffirmed that higher education must continuously adapt to ensure that students experience professional expectations during their academic journey itself. He emphasised that CGC University has consistently focused on building learning ecosystems that integrate academic rigour with applied exposure, enabling students to graduate with both knowledge and demonstrable capability.
-
-Mr. Arsh Dhaliwal, Managing Director, described the Capgemini collaboration as a strategic step in strengthening long term industry alignment. He noted that the initiative reflects a shared commitment between CGC University and Capgemini to create structured platforms where students can engage with enterprise level challenges, team based problem solving, and contemporary digital technologies within a guided academic environment.
-
-Dr. Sushil Prashar, Executive Vice President, stated that the launch of the CodeXperience Center powered by Capgemini marks yet another decisive step towards making CGC University India's first Industry Integrated Learning Hub, where structured industry immersion is embedded within the academic framework itself.
-
-The CodeXperience Center powered by Capgemini will support structured engagement across domains such as software engineering, full-stack application development, cloud platforms, data-driven systems and emerging digital technologies. Through live project simulations, workflow based assignments, expert interactions and industry-guided modules, students will gain exposure to the functional dynamics of professional technology teams.
-
-Beyond student engagement, the Center will also facilitate faculty upskilling and curriculum alignment initiatives, ensuring sustained academic relevance in line with evolving industry standards. The collaboration is intended to operate as a long-term academic partnership rather than a standalone infrastructure development.
-
-Senior representatives from Capgemini, including Samir Shah, Executive Vice President, I&D - India, Capgemini, Ashish Minocha, Vice President, DCX - India, Capgemini , Puneet Kumra, Vice President & Head, Early Careers Program - India, Capgemini and Suman Bhattacharya, Director, Early Careers Program - India, Capgemini were present at the inauguration ceremony alongside members of the CGC University leadership and academic fraternity.
-
-With the launch of the CodeXperience Center powered by Capgemini, CGC University further advances its commitment to developing an ecosystem where enterprise exposure is embedded within academic delivery. The initiative reinforces the growing association between CGC University and Capgemini, aimed at preparing students to transition confidently into professional environments shaped by technology, collaboration, and innovation.
-
-https://www.cgcuniversity.in/
-
-(ADVERTORIAL DISCLAIMER: The above press release has been provided by PNN. ANI will not be responsible in any way for the content of the same.)
-
-(This content is sourced from a syndicated feed and is published as received. The Tribune assumes no responsibility or liability for its accuracy, completeness, or content.)",https://www.tribuneindia.com/sortd-service/imaginary/v22-01/jpg/large/high?url=dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9tZWRpYWNkOTMyZjYwLTBlNGEtMTFmMS1hN2NkLWExNzYyOTNmNDNjZS5qcGc=,N,,2026-02-20 11:04:47.689154
-ID22,HP Inc,2026-02-20 10:50:27+00:00,MarketBeat,BNP PARIBAS ASSET MANAGEMENT Holding S.A. Cuts Position in HP Inc. $HPQ,MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/filing-bnp-paribas-asset-management-holding-sa-cuts-position-in-hp-inc-hpq-2026-02-20/,"BNP PARIBAS ASSET MANAGEMENT Holding S.A.'s holdings in HP were worth $6,559,000 at the end of the most recent quarter.
-Insiders Place Their Bets In other news, insider Ketan M. Patel sold 33,321 shares of HP stock in a transaction dated Friday, December 26th.
-Over the last three months, insiders have sold 91,969 shares of company stock valued at $2,277,993.
-HP Stock Performance 3 Low P/E Stocks: Separating Multibaggers From a Value Trap NYSE:HPQ opened at $18.33 on Friday.
-Check Out Our Latest Stock Analysis on HP HP Company Profile (Free Report) HP Inc is an American multinational information technology company that designs, manufactures and sells personal computing devices, printers and related supplies and services.","BNP PARIBAS ASSET MANAGEMENT Holding S.A. reduced its holdings in shares of HP Inc. (NYSE:HPQ - Free Report) by 29.5% in the 3rd quarter, according to the company in its most recent disclosure with the Securities & Exchange Commission. The firm owned 240,892 shares of the computer maker's stock after selling 100,710 shares during the quarter. BNP PARIBAS ASSET MANAGEMENT Holding S.A.'s holdings in HP were worth $6,559,000 at the end of the most recent quarter.
-
-The AI in a Box Trade: Hardware Is the Next Boom
-
-A number of other hedge funds have also made changes to their positions in HPQ. DekaBank Deutsche Girozentrale raised its position in HP by 7.2% in the second quarter. DekaBank Deutsche Girozentrale now owns 768,305 shares of the computer maker's stock valued at $19,017,000 after purchasing an additional 51,706 shares during the period. Cullen Frost Bankers Inc. grew its stake in shares of HP by 15.1% in the second quarter. Cullen Frost Bankers Inc. now owns 12,797 shares of the computer maker's stock valued at $313,000 after buying an additional 1,681 shares in the last quarter. Brookstone Capital Management raised its holdings in shares of HP by 7.6% during the 2nd quarter. Brookstone Capital Management now owns 375,218 shares of the computer maker's stock valued at $9,178,000 after buying an additional 26,415 shares during the period. Rehmann Capital Advisory Group lifted its position in HP by 26.5% during the 2nd quarter. Rehmann Capital Advisory Group now owns 13,877 shares of the computer maker's stock worth $339,000 after acquiring an additional 2,903 shares in the last quarter. Finally, ARK Investment Management LLC lifted its position in HP by 7.7% during the 2nd quarter. ARK Investment Management LLC now owns 110,674 shares of the computer maker's stock worth $2,707,000 after acquiring an additional 7,953 shares in the last quarter. Hedge funds and other institutional investors own 77.53% of the company's stock.
-
-Insiders Place Their Bets
-
-In other news, insider Ketan M. Patel sold 33,321 shares of HP stock in a transaction dated Friday, December 26th. The shares were sold at an average price of $23.19, for a total value of $772,713.99. Following the completion of the transaction, the insider directly owned 34,572 shares of the company's stock, valued at approximately $801,724.68. The trade was a 49.08% decrease in their position. The transaction was disclosed in a filing with the SEC, which is accessible through this hyperlink. Also, CEO Enrique Lores sold 41,922 shares of the business's stock in a transaction dated Friday, December 5th. The shares were sold at an average price of $26.00, for a total transaction of $1,089,972.00. Following the sale, the chief executive officer directly owned 141,456 shares of the company's stock, valued at approximately $3,677,856. This represents a 22.86% decrease in their position. The SEC filing for this sale provides additional information. Over the last three months, insiders have sold 91,969 shares of company stock valued at $2,277,993. Company insiders own 0.38% of the company's stock.
-
-HP Stock Performance
-
-3 Low P/E Stocks: Separating Multibaggers From a Value Trap
-
-NYSE:HPQ opened at $18.33 on Friday. The company has a market capitalization of $16.82 billion, a price-to-earnings ratio of 6.92, a price-to-earnings-growth ratio of 0.29 and a beta of 1.21. HP Inc. has a one year low of $18.25 and a one year high of $35.28. The stock has a 50-day simple moving average of $20.99 and a 200 day simple moving average of $24.66.
-
-HP (NYSE:HPQ - Get Free Report) last released its earnings results on Tuesday, November 25th. The computer maker reported $0.93 EPS for the quarter, topping analysts' consensus estimates of $0.91 by $0.02. The company had revenue of $14.64 billion for the quarter, compared to the consensus estimate of $14.50 billion. HP had a negative return on equity of 330.68% and a net margin of 4.57%.HP's quarterly revenue was up 4.2% compared to the same quarter last year. During the same quarter last year, the business posted $0.93 EPS. HP has set its FY 2026 guidance at 2.900-3.200 EPS and its Q1 2026 guidance at 0.730-0.810 EPS. On average, equities research analysts forecast that HP Inc. will post 3.56 EPS for the current fiscal year.
-
-HP Dividend Announcement
-
-Dell and HP Are Raising Prices—And Investors Should Take Note
-
-The firm also recently announced a quarterly dividend, which will be paid on Wednesday, April 1st. Shareholders of record on Wednesday, March 11th will be paid a dividend of $0.30 per share. The ex-dividend date is Wednesday, March 11th. This represents a $1.20 annualized dividend and a yield of 6.5%. HP's payout ratio is presently 45.28%.
-
-Analyst Ratings Changes
-
-A number of research firms have recently issued reports on HPQ. Citigroup dropped their price objective on shares of HP from $22.00 to $20.00 and set a ""neutral"" rating on the stock in a research note on Tuesday. Bank of America reaffirmed an ""underperform"" rating and set a $20.00 price target (down previously from $26.00) on shares of HP in a research note on Tuesday, February 3rd. Wall Street Zen lowered shares of HP from a ""buy"" rating to a ""hold"" rating in a report on Sunday, October 26th. Zacks Research downgraded HP from a ""hold"" rating to a ""strong sell"" rating in a research note on Friday, November 28th. Finally, JPMorgan Chase & Co. dropped their target price on HP from $30.00 to $25.00 and set a ""neutral"" rating on the stock in a research report on Wednesday, November 26th. Two investment analysts have rated the stock with a Strong Buy rating, ten have given a Hold rating and six have given a Sell rating to the stock. According to data from MarketBeat, the stock currently has an average rating of ""Reduce"" and an average target price of $23.62.
-
-Check Out Our Latest Stock Analysis on HP
-
-HP Company Profile
-
-(Free Report)
-
-HP Inc is an American multinational information technology company that designs, manufactures and sells personal computing devices, printers and related supplies and services. Its product portfolio spans consumer and commercial notebooks and desktops, workstations, displays and accessories, as well as an extensive line of printing hardware that includes home, office and production printers. HP also provides consumables such as ink and toner, managed print services, device deployment and lifecycle support, and software for device and print management.
-
-Founded from the original Hewlett‑Packard Company, HP Inc became a separately traded public company in 2015 following a corporate split that created Hewlett Packard Enterprise to focus on enterprise hardware and services.
-
-Featured Stories
-
-Five stocks we like better than HP
-
-Buffett, Gates and Bezos Quietly Dumping Stocks—Here's Why
-
-Unlocked: Elon Musk’s Next Big IPO
-
-My Epstein Story
-
-This $15 Stock Could Go Down as the #1 Stock of 2026
-
-What a Former CIA Agent Knows About the Coming Collapse
-
-Want to see what other hedge funds are holding HPQ? Visit HoldingsChannel.com to get the latest 13F filings and insider trades for HP Inc. (NYSE:HPQ - Free Report).
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in HP Right Now?
-
-Before you consider HP, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and HP wasn't on the list.
-
-While HP currently has a Reduce rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/hp-inc-logo-1200x675.png,N,,2026-02-20 10:03:01.354737
-ID3,Agilent,2026-02-20 10:26:06+00:00,www.bitget.com,Why Grail Stock Is Sinking Friday | Bitget News,Finviz,,,,,https://www.bitget.com/amp/news/detail/12560605210070,"GRAIL Inc. (NASDAQ:GRAL) stock plunged during Friday’s premarket session following the announcement of results from the NHS-Galleri trial, which evaluated the effectiveness of the Galleri test in reducing late-stage cancer diagnoses.
-Trial Data The company’s NHS-Galleri trial results, released on Thursday, showed a favorable trend in the reduction of Stage IV cancer diagnoses, although the primary endpoint was not met.
-Detailed data from the PATHFINDER 2 study and the NHS-Galleri trial will be shared in mid-2026.
-Earnings Snapshot GRAIL reported a quarterly loss of $2.44 per share, beating the analyst consensus estimate of a $2.73 loss.
-GRAL Price Action: Grail shares were down 47.90% at $52.90 during premarket trading on Friday, according to Benzinga Pro data.","GRAIL Inc. (NASDAQ:GRAL) stock plunged during Friday’s premarket session following the announcement of results from the NHS-Galleri trial, which evaluated the effectiveness of the Galleri test in reducing late-stage cancer diagnoses.
-
-The Galleri multi-cancer early detection test is a proactive tool to screen for cancer. With a simple blood draw, Galleri can detect more than 50 types of cancer before symptoms appear.
-
-The stock’s decline comes as the broader market experienced gains, with the Nasdaq rising 0.43% and the S&P 500 up 0.35%, indicating that company-specific factors may be influencing the price action.
-
-Trial Data
-
-The company’s NHS-Galleri trial results, released on Thursday, showed a favorable trend in the reduction of Stage IV cancer diagnoses, although the primary endpoint was not met.
-
-Following the disclosure, Johnson Fistel has launched an investigation into GRAIL to assess whether the company's executive officers complied with federal securities laws on investor disclosures and whether investor losses may be recoverable.
-
-The trial evaluated annual multi-cancer screening with the Galleri test in England’s National Health Service (NHS) over three years in 142,000 participants aged 50 to 77.
-
-Adding Galleri to standard of care screening resulted in a substantial and clinically meaningful reduction in Stage IV diagnoses compared with standard of care alone across the pre-specified group of 12 deadly cancers.
-
-Stage IV diagnoses in these cancers decreased with each year of sequential screening, with a greater than 20% reduction in the second and third rounds. Similar reductions were observed across all cancers.
-
-Annual screening with the Galleri test plus standard of care screening resulted in a four-fold improvement in the overall cancer detection rate compared to standard of care screening alone in England for breast, colorectal, cervical, and high-risk lung cancer.
-
-For the U.S. market, the Galleri premarket approval application is pending review by the U.S. Food and Drug Administration (FDA).
-
-The company on Thursday said it completed analysis of the full 35,000 participant PATHFINDER 2 study, demonstrating performance consistent with the 25,000 patient analysis presented in October, and a safety profile. Detailed data from the PATHFINDER 2 study and the NHS-Galleri trial will be shared in mid-2026.
-
-In addition, the company announced plans to expand its U.S. sales force based on NHS-Galleri and PATHFINDER 2 trial results.
-
-Earnings Snapshot
-
-GRAIL reported a quarterly loss of $2.44 per share, beating the analyst consensus estimate of a $2.73 loss.
-
-Quarterly revenue totaled $43.597 million, essentially in line with the analyst consensus estimate of $43.600 million.
-
-Technical Analysis
-
-The stock is currently trading 47.3% below its 20-day simple moving average (SMA) and 40.5% below its 100-day SMA, indicating significant short-term weakness. Over the past 12 months, shares have increased by 112.58%, and they are currently positioned closer to their 52-week lows than highs.
-
-The RSI is at 50.93, which is considered neutral territory, while the MACD is at 0.2738, below its signal line at 0.5506, indicating bearish pressure on the stock. The combination of neutral RSI and bearish MACD suggests mixed momentum.
-
-Key Resistance: $64.50
-
-Key Support: $20.50
-
-Analyst Consensus & Recent Actions: The stock carries a Buy Rating with an average price target of $114.50. Recent analyst moves include:
-
-Baird: Initiated with Outperform (Target $113.00) (Feb. 17)
-
-Guggenheim: Buy (Raises Target to $130.00) (Jan. 26)
-
-Morgan Stanley: Equal-Weight (Raises Target to $110.00) (Dec. 2, 2025)
-
-Benzinga Edge Rankings
-
-Below is the Benzinga Edge scorecard for GRAIL, highlighting its strengths and weaknesses compared to the broader market:
-
-Momentum: Strong (Score: 97.96) — Stock is outperforming the broader market.
-
-The Verdict: GRAIL’s Benzinga Edge signal reveals a classic ‘High-Flyer’ setup. While the Momentum (97.96) confirms the strong trend, the mixed technical indicators suggest that investors should monitor for potential volatility.
-
-GRAL Price Action: Grail shares were down 47.90% at $52.90 during premarket trading on Friday, according to Benzinga Pro data.
-
-Photo by Aunt Spray via Shutterstock",,N,,2026-02-20 15:01:50.356909
-ID40,Publicis Groupe,2026-02-20 10:23:17+00:00,Campaign Asia,Omnicom to axe and relocate more jobs as it doubles cost savings target to $1.5 billion,"Gideon Spanier, Claudia Mastromauro, Staff Reporters, Robin Langford, Campaign India Team, Shawn Lim, Tom Jones-Barlow, Minnie Wang",,,,,https://www.campaignasia.com/article/omnicom-to-axe-and-relocate-more-jobs-as-it-doubles-cost-savings-target-to-1-5-billion/42mfv3jhzj2hq2vvfj45r0h5cd,"The increased savings target suggests Omnicom is likely to axe and relocate a significant number of jobs, in addition to the 4000 redundancies that were announced in a big restructure at the start of December, immediately after the IPG acquisition completed.
-An Omnicom spokesperson declined to comment when asked about the scale or nature of any potential further job losses.
-Omnicom said it will also save $240 million because of “real estate consolidation” and $260 million from IT, procurement and other operational savings.
-Omnicom’s share price leapt more than 15% to close above $80 on news of the bigger-than-expected savings and a separate move to buy back $5 billion of stock.
-The $1.5 billion in efficiencies is double the “initial estimate” of $750 million that Omnicom announced when it first revealed it was buying IPG at the end of 2024.","There will be $645 million of “labour-related” synergies in 2026 alone and the savings will rise to $920 million by 2027 and $1 billion by 2028, a slide in its Q4 results presentation showed.
-
-The increased savings target suggests Omnicom is likely to axe and relocate a significant number of jobs, in addition to the 4000 redundancies that were announced in a big restructure at the start of December, immediately after the IPG acquisition completed.
-
-An Omnicom spokesperson declined to comment when asked about the scale or nature of any potential further job losses.
-
-Omnicom said it will also save $240 million because of “real estate consolidation” and $260 million from IT, procurement and other operational savings.
-
-Omnicom’s share price leapt more than 15% to close above $80 on news of the bigger-than-expected savings and a separate move to buy back $5 billion of stock.
-
-The $1.5 billion in efficiencies is double the “initial estimate” of $750 million that Omnicom announced when it first revealed it was buying IPG at the end of 2024.
-
-John Wren, the chief executive of Omnicom, said he wants to make $900 million of the total synergies by the end of 2026 and wants the full amount to have taken effect within 30 months — by the middle of 2028.
-
-Wren and Phil Angelastro, the chief financial officer, cited a number of areas where Omnicom is looking to reduce staffing costs at the Q4 results.
-
-One of their first moves has been “the elimination of duplicative corporate network and operational functions” after moving from two holding companies to one. “Unfortunately, we had to make some difficult decisions because you couldn't keep two of everything,” Angelastro said, referring to executive roles.
-
-Omnicom has also been “streamlining our regional, country and brand structure”, which included the axing of DDB, FCB and MullenLowe, and reorganising around nine practice areas, known as Connected Capabilities, such as Omnicom Advertising and Omnicom Media. That has also involved eliminating some “duplicate roles”, Angelastro said.
-
-Other initiatives include “optimising utilisation by shifting to a more unified resourcing model, including accelerating outsourcing and offshoring” of back office functions. Omnicom has offshore hubs in Colombia, Costa Rica and India.
-
-The rise of artificial intelligence has not been a “primary driver” when deciding where to cut staffing, according to Angelastro, although the company is looking at AI and automation to drive savings across the business.
-
-Angelastro said Omnicom had identified many of the areas for potential savings when it was “going into the deal” — “but, really, we didn't have a lot of data to do the due diligence”. The agency group is now “accelerating those efforts” after closing the acquisition.
-
-Analysts at Bank of America welcomed the doubling of cost synergies to $1.5 billion and the $5 billion share buyback as “key positives”, although it said Omnicom’s plan not to give organic revenue growth figures for 2026, because of the difficulty of comparing numbers with the two companies from last year, was a “negative”.
-
-Tim Nollen, analyst at Sector & Sovereign Research, said: “We like the story [for investors] here, recognising the importance of a scaled yet lean and versatile operation to take advantage of the opportunities AI brings, and to fend off competition.”
-
-Omnicom previously said in December that it expected total headcount to be around 105,000 compared to 128,000 for both Omnicom and IPG at the end of 2024. Redundancies were not the only factor as the company will cut the payroll by 10,000 by selling and exiting non-core agency assets. On that basis, some analysts predicted Omnicom could axe up to 3000 additional jobs in 2026 and 2027, although the company dismissed that as “speculation and inaccurate” at the time.
-
-The New York-based group posted an annual net loss of $54.5 million on revenue of $17.3 billion, which included one month following the IPG acquisition. One-off costs included $347 million of “IPG acquisition-related” costs, $1.2 billion of “repositioning” costs such as redundancies and a $547 million loss on planned agency sales and other “dispositions”.
-
-Omnicom’s 15% share price rise meant the stock has recovered all of the ground that it lost at the start of February when fears about the impact of AI led to a widespread sell-off across the agency sector and beyond.
-
-Omnicom plans an investor day on 12 March. The new shape of the group means media, including precision marketing, generates more than 50% of revenues and advertising creative less than 20%, Wren and Angelastro said on the earnings call. The remainder comes chiefly from healthcare, public relations, experiential and branding.",https://www.campaignasia.com/media/default.jpg,N,,2026-02-20 06:00:48.749085
-ID40,Publicis Groupe,2026-02-20 10:04:29+00:00,Media Update,Sven Huberts Joins LePub as Global President to Lead Next Phase of Growth,Media Update,,,,,https://www.mediaupdate.co.za/media/160766/sven-huberts-joins-lepub-as-global-president-to-lead-next-phase-of-growth,"Huberts will scale LePub's connected creative engine, integrating data, culture and technology to deliver measurable business impact for brands, says the agency.
-In his new role, he will lead LePub's global go-to-market strategy, operations and expansion.
-Under Huberts' leadership, LePub is evolving into a connected creative agency where data, culture, technology and AI work as one system to drive sustained growth for clients.
-At LePub, we're building a new model where culture and innovation strengthen one another, creating transformative experiences that set new standards,"" adds Sven Huberts, Global President, LePub.
-Huberts joins from Dentsu where he was most recently President of Global Innovation and Experience and President of Dentsu Lab.","Huberts will scale LePub's connected creative engine, integrating data, culture and technology to deliver measurable business impact for brands, says the agency.
-
-With more than two decades at the forefront of brand and experience transformation, Huberts is a global innovation leader known for shaping strategic direction and driving growth at scale. In his new role, he will lead LePub's global go-to-market strategy, operations and expansion. His appointment represents an important step in LePub's evolution, reinforcing leadership and driving the implementation of an increasingly advanced operating model, adds the agency.
-
-Under Huberts' leadership, LePub is evolving into a connected creative agency where data, culture, technology and AI work as one system to drive sustained growth for clients. Anchored by proprietary platforms such as LePub's Data and Culture Lab and amplified by Publicis Groupe's industry-leading data and agentic capabilities, the agency is designing an intelligent model where data fuels creativity that infuses culture, says the agency.
-
-""Sven is a future-facing leader who has great ambition for our clients and our business. He is perfectly placed to build on LePub's momentum and lead the agency into its next chapter — one that is grounded in creativity, fuelled by data and powered by a new level of connectedness,"" says Demet Ikiler, EMEA CEO, Publicis Groupe.
-
-""LePub has always believed in ideas that earn their place in consumers life. As culture and technology accelerate, we need leadership that can navigate complexity. With Sven onboard, we are defining the standard for a visionary, intelligence-driven creative company. His appointment will drive our unique proposition forward embedding culture and intelligence across every experience,"" says Bruno Bertelli, CEO and CCO, LePub Worldwide.
-
-""Creativity remains the most powerful driver of difference and growth. What's changing is how it works, how it scales and how it learns. At LePub, we're building a new model where culture and innovation strengthen one another, creating transformative experiences that set new standards,"" adds Sven Huberts, Global President, LePub.
-
-Huberts joins from Dentsu where he was most recently President of Global Innovation and Experience and President of Dentsu Lab. Previously, Huberts was EMEA President, Experience at Dentsu Creative, overseeing growth and experience-led work across the region. Prior to this he held senior leadership roles at Isobar. Huberts also co-founded mobile agency Marvellous, says the agency.
-
-The appointment follows a period of strong strategic momentum for LePub, a new phase focused on shaping a futuredefining creative company, one that blends human-powered insight with data, intelligence, and creative technology, partnering with brands to drive enduring value, and sustained business success, concludes the agency.
-
-For more information, visit www.le.pub. You can also follow LePub on Facebook, LinkedIn, or on Instagram.
-
-*Image courtesy of contributor",https://dash.mediaupdate.co.za/story/image/160766/160766.jpg?v=639071892520450496,N,,2026-02-20 06:00:59.486292
