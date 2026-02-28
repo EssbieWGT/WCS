@@ -1,4 +1,185 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID32,Microsoft,2026-02-28 20:44:25+00:00,SiliconANGLE,Satya's sacrifice: Why agents threaten Office and how Microsoft responds - SiliconANGLE,"Dave Vellante, George Gilbert, GUEST AUTHOR, MARIA DEUTSCHER, MARK ALBERTSON, ROBERT HOF",,,,,https://siliconangle.com/2026/02/28/satyas-sacrifice-agents-threaten-office-microsoft-responds/,"And when knowledge workers collaborate with agents, Office is moved from the center of their world to a bunch of plug-ins.
+It’s a future where agents don’t need to use his Office apps, and users interact with Office through some new container or work surface.
+Wall Street’s SaaSpocalypse reaction to AI and the impact on Microsoft Office Let’s take a look at how the market reacted to the recent headlines out of Anthropic.
+If the world doesn’t need Office as the execution engine for agents, the whole “army of agents each licensed for Office” model gets a lot shakier.
+If Microsoft can make that work, that’s the salvation, because Microsoft then owns the container and the work surface.","Last year, Microsoft Corp. Chief Executive Satya Nadella made the claim that “SaaS will dissolve into a bunch of agents” sitting on top of CRUD databases. In describing how software-as-a-service applications will become artificial intelligence agents atop standard “create, read, update and delete” databases, he was actually trolling Salesforce Inc. CEO Marc Benioff, who had called Microsoft’s Copilot the next “Clippy.”
+
+Ironically, it increasingly looks like Nadella was partially right, but only for single-user apps, such as Microsoft Office. And that is creating a threat to the company that clearly he did not anticipate. The collapse of SaaS valuations as the threat of Anthropic agents looms over traditional enterprise software vendors is actually a different issue. We see the stock market reaction as mostly a threat to the SaaS pricing model. But it’s missing the larger picture: the potential for massive market expansion for those whose applications can be part of a platform that supports armies of agents and humans collaborating on end-to-end business processes.
+
+The real issue is that Nadella’s prediction exposes a vulnerability to Microsoft’s single-user productivity franchise. Specifically, we see agents and a new work surface as the primary interface for knowledge work. Office risks being partially disintermediated – reduced from the place where humans and agents collaborate to a set of file formats that agents can create, edit and orchestrate using open-source engines while users live inside a new work surface – some container that’s more editable than Claude Cowork, and where Word, Excel and PowerPoint are plug-ins.
+
+In other words, imagine a world where agents can create Office documents without the need for Microsoft apps, by reading and writing the underlying file formats. And when knowledge workers collaborate with agents, Office is moved from the center of their world to a bunch of plug-ins.
+
+This sets up Nadella’s hard choice – that is, protect the Office annuity, or sacrifice parts of its app-centric model to ensure Microsoft owns the governed agent platform. Microsoft’s current model largely assumes that Copilot 365 drives Office apps via application programming interfaces, with Microsoft aiming for an army of agents licensed to use Office.
+
+In our view, the market will flatly reject this approach. In this Breaking Analysis, George Gilbert and I lay out what we see as a likely path for Microsoft — and how Microsoft will change its productivity software architecture to shift from app-centric to a more platform-centric approach. There, the value proposition forms around a new work surface, identity, security, information management and governance, and enterprise control — and more work is orchestrated by agents.
+
+Watch the full video analysis
+
+Nadella’s sacrifice: The fork in the road
+
+All right, let’s start with a little tongue-in-cheek setup. We’re showing “Nadella’s sacrifice” and the conundrum he faces. “Satya Abraham” is about to sacrifice his Office son named Isaac. Below we further explain the metaphor and what Microsoft is being asked to sacrifice.
+
+The issue is Nadella is facing a fork in the road.
+
+On one fork, he continues on the same path he’s on now: Keep trying to make Copilot agents work with the Office apps, which apparently were never really designed to expose the complete functionality programmatically for access by agents.
+
+On the other fork is the sacrifice: He accommodates the very future he was trolling Benioff about. It’s a future where agents don’t need to use his Office apps, and users interact with Office through some new container or work surface.
+
+To put a finder point on it, to really own the future of work, he needs to sacrifice Office’s centrality – both for agents and for users – so he can have the new work surface that everything else plugs into. In our view, Nadella didn’t originally envision sacrificing Office’s centrality. He put forth an approach where Microsoft can keep pushing Copilot deeper into apps, but our observation is those apps were not designed for agentic access. The right path in our view is for Microsoft to build a new work surface that becomes the primary interface for users and agents, even if that means Office becomes less central to the experience.
+
+How the worm turned on Nadella
+
+Okay, let’s have some more fun. The slide below uses the sandworm from the movie “Dune” as the metaphor – Claude Cowork is the giant worm, and Nadella and Office are the people about to get swallowed.
+
+The point is the worm has turned on Nadella.
+
+Nadella was trolling Benioff with the idea that apps become secondary and the application logic moves into agents. That jab came after Benioff took a shot at Office Copilot by calling it “Clippy.” But now the same logic is boomeranging back on Microsoft. Agents can increasingly work without using the Office apps at all.
+
+In that world, Office starts to look like the logic tier, and the “CRUD database” becomes the Office file format. The sandworm represents the existential threat to Microsoft’s productivity franchise in that if agents can do the work without going through Office, the center of gravity shifts away from the apps and toward the agent layer.
+
+Wall Street’s SaaSpocalypse reaction to AI and the impact on Microsoft Office
+
+Let’s take a look at how the market reacted to the recent headlines out of Anthropic. The chart below captures Wall Street’s response to the Claude Cowork news. Investors didn’t treat it like a routine product update. They kind of freaked out – almost like another ChatGPT moment – and the result was a reset in software valuations generally, and Microsoft specifically.
+
+The first big drop after Microsoft’s earnings announcement was tied to Microsoft confirming fears that returns on its enormous capital expenditures have been modest so far. Microsoft even had to rob Peter to pay Paul by taking about two percentage points worth of what otherwise would have been graphics processing units for Azure growth and using that capacity for research and development. This ties back to an earlier Breaking Analysis point that the market is reacting to a perceived decoupling between capex, which is growing in percentage terms, and Azure, which decelerated in percentage terms.
+
+The drop that followed earnings was the SaaS scare – triggered by the release of Claude Cowork and the narrative that it was the new work surface, an agent that would make SaaS apps disappear. That narrative is misguided, as we’ll explain, but it does highlight an issue that forces Microsoft to adapt and respond.
+
+Nadella’s original argument: SaaS gets hollowed out in the agent era
+
+Let’s go back and explain what Nadella was originally saying, because it’s the key context for this whole analysis.
+
+As described above, traditional SaaS is basically three layers: a CRUD database – create, read, update, delete – with business logic on top of that, and then the user interface we’re all familiar with on top of that. In the agent era, the argument is the focus changes. The business logic and workflow move into the agent tier, into the AI tier, and the SaaS app gets hollowed out into data, permissioning and so on. That was the shot across the bow to SaaS incumbents, Salesforce in particular.
+
+It also sets up a bigger question for Microsoft. Specifically, if agents become the interface and the logic layer, what happens to Microsoft’s app-centric franchise such as Office and now Copilot?
+
+The graphic above captures what Nadella was describing – the logic tier moving into the agent tier and replacing what used to sit in the middle. It was such a clear statement of direction and vision that a lot of people in the industry treated it like a manifesto, written by Nadella, the “philosopher king.”
+
+But as we’re going to get into, it never really works the way he described it for multi-user SaaS apps. It can work for single-user apps, and Office is the prime example. And therein lies the unexpected vulnerability.
+
+AI doesn’t vaporize SaaS but it shifts the battleground to the System of Intelligence
+
+SaaS isn’t going to just go away. The change is the app starts to look less like the traditional UI we’re all used to and more like an intelligent conversation layer between people, agents and data. That’s the shift the slide below is capturing. The fight is not “apps versus agents.” It’s who owns the intelligence layer that sits between them – what we’ve been calling the System of Intelligence, or SOI.
+
+The key distinction is where Nadella’s premise holds and and where it breaks. It works for single-user apps. It doesn’t work for multi-user SaaS. And the former is a massive threat to Microsoft.
+
+In multi-user environments, the logic tier doesn’t go away. It changes shape. It becomes the mediating layer – the “4D map” – that agents and humans use to navigate the estate of operational apps and analytic data. It harmonizes the systems and gives one view of the state of the business so you can get context to make decisions. And over time, it has to do more than context.
+
+When an agent takes an action that touches multiple underlying applications, you need transactional consistency across systems – either all of it happens or none of it happens. You also need governance of the action space and the data that informs it, inclusive of the workflow.
+
+That’s why the deterministic combination of logic and database never goes away for multi-user apps. If agents talk directly to databases across hundreds of applications, all in their own language, you get a Tower of Babel, and it’s ungoverned. That’s where this SOI layer shows up and why it pulls in players such as Palantir Technologies Inc., Celonis SE and Microsoft itself.
+
+Single-user productivity apps are a different animal. You don’t need to build a digital representation of the enterprise to write a Word doc, a PowerPoint or a spreadsheet. It’s a sequential stream of activities that a user controls. There may be dependencies and variables, but you can accommodate them as placeholders in a spreadsheet, comments in a document, or a simple variable in a spreadsheet. It’s a much simpler environment than multi-user enterprise apps.
+
+And that’s the irony in what Nadella put forth last year. In the single-user world, the CRUD database is the Office file formats. Those formats are well-known and readable and writable – Microsoft opened them up a long time ago. Agents can talk to the Office file format directly as if it were a CRUD database. In other words, the SaaS collapse argument he was making as a shot across the bow was, in a weird way, mostly true for his own Office franchise.
+
+Copilot 365 and Nadella’s dream: An army of agents licensed to run Office
+
+Satya’s original bet was that agents increase the value of Office. They drive more work through the existing SaaS and desktop apps. Copilot becomes the intelligence layer sitting inside Word, Excel, PowerPoint and Teams, using those apps as the execution environment.
+
+The bigger dream was even more ambitious – not just a user with Copilot, but an army of specialized agents. Analytics, finance, sales ops, legal – each effectively licensed to operate inside the Office platform. It’s a massive total available market expansion with a very attractive pricing model if it works.
+
+This is the world Nadella described as recently as last November on the Dwarkesh podcast: an army of agents, each needing their own Office license. He even pointed to a version of Excel where an OpenAI model had been post-trained to navigate it like a data scientist.
+
+The problem is what Cowork surfaced. You don’t necessarily need to work through the Office app to do the work. You can operate on the underlying data model directly – think DataFrame libraries rather than clicking around Excel. Everything about Copilot had been predicated on using Office as the app engine for agents – leaning on the Office object model as the control surface. That’s different from agents working directly with the Office file formats or the underlying data structures.
+
+And that’s where the script starts to flip. If the world doesn’t need Office as the execution engine for agents, the whole “army of agents each licensed for Office” model gets a lot shakier.
+
+There’s a historical echo here. Microsoft had a vision in the mid-to-late ’90s that it would be the gatekeeper and tollbooth for internet commerce. That toll-taking model did happen – just not through Microsoft. Apple Inc. and Google LLC’s Android ended up taking a cut of digital commerce at scale. The fear for Microsoft is this plays out the same way. In other words, Office was supposed to be the front end that drags Azure along behind it, but the agents may not want – and may not need – to go through Office at all.
+
+And that’s the trap in big platform transitions. When a company tries to apply its existing model to the next wave, sometimes it works. Often it doesn’t.
+
+How Anthropic’s Claude Cowork changes the game
+
+If you haven’t seen Cowork in action – take 1 minute to watch this clip which is summarized below:
+
+Claude Cowork demo clip: what it’s doing
+
+Finance uses Cowork to identify growth blockers.
+
+Claude pulls details across customer touchpoints and surfaces the most actionable insights.
+
+Cowork creates a spreadsheet with the findings, synthesizing data across sales pipelines that would have taken an analyst days.
+
+It flags a competitive driver: Clear Edge winning 38% of competitive deals, tied to faster onboarding timelines.
+
+Claude turns the spreadsheet output into a PowerPoint presentation, translating raw data into digestible insights.
+
+The deck includes product loss trends plus recommended actions.
+
+Claude cleans up the slide design on request.
+
+The finished deck is shared to the wider team on Slack.
+
+Cowork drives Office without the apps: Office shifts from container to component
+
+That clip resonates because it flips Microsoft’s original Copilot premise on its head. Nadella’s dream was that agents drive more value through the Office apps – more usage, more seats, more revenue and more Copilot adoption. Cowork is pointing at a different world where agents operate on Office artifacts directly – documents, spreadsheets, presentations – through open libraries and file interfaces, with the user living in a separate agent work surface.
+
+Two things in that model likely really unsettle Microsoft.
+
+First, Cowork becomes the work surface – not Office and not Copilot. As Anthropic expands MCP for connecting agents with apps, apps such as Office can display their UI as a component inside a work surface controlled by Anthropic. Cowork today isn’t really an editing surface, but it can move in that direction. If Anthropic controls the work surface, it controls the feature surface area that plugin apps can use, and ultimately the pricing. It can control the bundle and the boundary for what gets plugged in.
+
+Second, when Cowork is working in agent mode, it doesn’t need to work through the Office apps. The “agent data scientist” idea Nadella talked about can use a DataFrame library, read and write results to an Excel file, and then the user works with it. That removes the need for agents to have their own copies of the apps and eliminates the TAM expansion Nadella was counting on.
+
+That’s why “without the apps – just files and CRUD” is economically disruptive to Microsoft. Office still exists, but it stops being the container where the work happens and becomes a component that gets called when needed.
+
+Microsoft’s likely response: More platform, less application
+
+Microsoft isn’t going to let Anthropic wipe out its productivity franchise without a fight. The company has been through these platform transitions before. If agents can disintermediate the app UI, the question becomes how Microsoft responds without gripping the legacy so tightly that it misses the transition.
+
+The path that makes the most sense is “more platform, less application.”
+
+Instead of Copilot being a feature inside Word and Excel, the emphasis shifts to a new work surface where humans and agents collaborate, and the Office apps become plugins. A likely candidate for that new work surface is Copilot Pages. It’s a collaborative surface where spreadsheets can plug in, presentations can plug in, and communications can plug in. The individual apps become plugins, and the work surface orchestrates the apps, orchestrates the agents and orchestrates the people. Everyone collaborates there.
+
+If Microsoft can make that work, that’s the salvation, because Microsoft then owns the container and the work surface. That’s vital. Otherwise, Office becomes a plugin component inside someone else’s work surface.
+
+And there’s another set of embedded attributes shown above that are invisible but it’s where the value sits — specifically, governance, security and information management native to the platform. While largely invisible, it can still be monetized. If Copilot becomes the control plane for the agent era – not just an add-on to Office – that’s where Microsoft has leverage that others don’t.
+
+Copilot pricing: Sticker shock, tokenomics and the outcome-based gap
+
+The slide below captures the customer sentiment from an Enterprise Technology Research roundable. There’s consternation at $30 per user per month for Copilot. One information technology director calls it “sticker shock.” A nonprofit chief information officer says the pricing “seems exorbitant.” A municipal IT manager says they felt “a little bit of potential sticker shock” when they saw it. It’s polite language, but the point is obvious.
+
+The bigger issue is the pricing model transition. When we moved from on-premises to SaaS, pricing changed. Now we’re moving again. The productivity bundle becomes more platform and user experience shell and less a suite of applications. Underneath, it’s held together by information management, governance and security. That value is there, but as we stated, it’s embedded natively into the platform. The value will shift to platform and Microsoft will monetize it.
+
+The seat-based model Microsoft wanted to extend into the agentic era probably doesn’t hold. Everybody is still struggling with how AI pricing should work. Vendors want to get to something closer to outcome-based pricing where they capture some of the value created when the system actually does the work, not just pay for tooling.
+
+So far, nobody has really figured that out. The only thing working today is token-based pricing – basically an extension of the infrastructure consumption model. Sometimes it gets packaged as an entitlement, a periodic bucket of tokens. That’s what’s working. It’s also not the last word on pricing.
+
+Outcome-based pricing is the dream. If you resolve a customer service case without involving a human, there’s a price per resolution. That’s outcome-based. You can imagine pricing based on completing an end-to-end workflow. But the reality is that vendors are using tokens as a proxy for outcomes because outcomes are hard to measure and even harder to forecast. Tokens start looking like cell phone minutes. It’s not clean, and it’s not a long-term solution.
+
+There’s also a bigger tension under all of this. Benioff has said the trillion-dollar software industry can now address $13 trillion in human labor. That’s the TAM expansion argument, and outcome-based pricing was supposed to be how vendors captured a piece of that labor value. Customers are pushing back. If the industry stays stuck in token-based pricing, vendors are still essentially selling infrastructure, and everyone is trying to get past that.
+
+That’s part of why the market keeps getting nervous. Vendors are putting enormous capital in the ground to produce tokens. If they can’t charge for some of the value they’re creating by substituting for labor, Wall Street’s concern about whether vendors can capture enough value to pay for that capex becomes valid. And of course, this isn’t only a Microsoft problem. Salesforce, ServiceNow Inc. and every other software vendor has to deal with the same transition.
+
+Closing: Wall Street confusion, the pricing gap and the transition risk
+
+The market is sending a pretty strong signal right now. It doesn’t understand what the world is going to do with all this manufactured intelligence – all these tokens – and how it gets monetized. What it sees first is job displacement. That feeds fear of higher unemployment, less disposable income, weaker demand.
+
+What it doesn’t yet see clearly is the incremental value – the new services, new products and new categories that create demand and eventually create jobs. That uncertainty is what’s driving the ticker tape, and it’s fascinating to watch because it’s what happens in every major transition.
+
+The near-term irony is that we just had what felt like a second ChatGPT moment when coding agents really started to work. This wasn’t just a chat window next to a developer. You could hand it a big task and it would go off and do it. Senior developers who have seen a lot of tech shifts are saying they haven’t ever experienced an abrupt change like this.
+
+And unlike the first ChatGPT moment, there is already a business model that works here. Coding agents and the derivatives of that are paid for. Tokens are consumed and billed. That’s a known model. So when Wall Street freaks out that “we can’t monetize this,” it’s missing at least one major point: Some of the most important early value is already monetized, and the market has a working consumption model.
+
+The harder part is the longer-term outlook. Previous industrial revolutions played out over decades, even a century, giving societies time to absorb the transition. This one is happening faster. The risk isn’t that every company is going to do mass layoffs in 2027. The risk is the disruption shows up quicker than organizations, labor markets and institutions can adjust.
+
+Longer-term, there will be roles for humans. They may look very different, but the evidence is already there in tech organizations watching certain individuals become monstrously productive with these tools. The worry is the transition period and the structure it reinforces – a platform-based economy where winner takes most, and the number of winners shrinks as the tools get more powerful. If that dynamic spreads across the broader economy, our economic and political systems aren’t ready for it.
+
+That’s where we leave off. The Cowork moment was a Microsoft awakening but it’s much more. This is a reminder that the AI era is forcing two resets at the same time:
+
+A software reset: Apps versus agents quickly becomes a fight over the work surface and the system of intelligence that sits between humans, agents and data.
+
+A business model reset: Seat pricing doesn’t fit cleanly to agentic work, token pricing is an imperfect proxy for outcomes, and vendors are trying to find a way to capture value without breaking the customer’s willingness to pay.
+
+The train isn’t stopping. The question is whether the industry can get the pricing and trust layers right fast enough to keep the transition from turning into a drawn-out dip.
+
+Disclaimer: All statements made regarding companies or securities are strictly beliefs, points of view and opinions held by SiliconANGLE Media, Enterprise Technology Research, other guests on theCUBE and guest writers. Such statements are not recommendations by these individuals to buy, sell or hold any security. The content presented does not constitute investment advice and should not be used as the basis for any investment decision. You and only you are responsible for your investment decisions.
+
+Disclosure: Many of the companies cited in Breaking Analysis are sponsors of theCUBE and/or clients of theCUBE Research. None of these firms or other companies have any editorial control over or advanced viewing of what’s published in Breaking Analysis.
+
+Image: theCUBE Research",https://d15shllkswkct0.cloudfront.net/wp-content/blogs.dir/1/files/2026/02/308-_-Breaking-Analysis-_-Nadellas-sacrifice_-Why-agents-threaten-Office-how-Microsoft-responds.jpg,N,,2026-02-28 17:00:45.839151
 ID30,Medtronic,2026-02-28 19:37:02+00:00,Renaissance Capital,US IPO Weekly Winners & Losers - Renaissance Capital,Renaissance Capital,,,,,https://www.renaissancecapital.com/IPO-Center/Winners-Losers/1331,"New filings this week firmed up our expectations: we're in for a modest start to the March IPO market.
 Most tech IPO candidates continue to wait for the ""right moment"" at a time when shifting sands in the AI space can make or break performance.
 That said, we still expect AI to be a major theme in the 2026 IPO market and beyond.
@@ -27,6 +208,33 @@ Visit our homepage to explore our latest stories.
 Reach out to us at support@fortune.com if you need assistance or have questions.
 
 Go to Homepage",,N,,2026-02-28 16:02:13.009864
+ID36,OpenAI,2026-02-28 19:24:36+00:00,sfstandard.com,"War on Iran, crisis in AI: SF reacts to combat and diverging moves by Anthropic, OpenAI",Jon Steinberg,,,,,https://sfstandard.com/2026/02/28/war-iran-crisis-ai-sf-reacts-war-diverging-moves-anthropic-openai/,"By Jon SteinbergAdditional reporting by Zara StonePublished Feb. 28, 2026 • 9:58am San Francisco awoke Saturday morning to a barrage of news from Washington, the Middle East, and Silicon Valley.
+Overnight, President Donald Trump announced (opens in new tab) that his administration had launched a war of choice on Iran, joining Israel in raining airstrikes down on at least nine cities.
+The violence began just hours after the president declared on Truth Social that he was ending all government work with AI company Anthropic over its refusal to give the Department of War unfettered access to its technology.
+San Francisco rallies in support of Anthropic, against war in Iran On Friday night in Golden Gate Park, workers from Anthropic and other startups, lawyers, and concerned citizens gathered for a peaceful rally.
+They expressed their support for Amodei’s decision (opens in new tab) (opens in new tab)to refuse the Pentagon’s demand (opens in new tab) that it allow Claude to be used in autonomous weapons or for mass surveilance of U.S .","By Jon SteinbergAdditional reporting by Zara StonePublished Feb. 28, 2026 • 9:58am
+
+San Francisco awoke Saturday morning to a barrage of news from Washington, the Middle East, and Silicon Valley. Overnight, President Donald Trump announced (opens in new tab) that his administration had launched a war of choice on Iran, joining Israel in raining airstrikes down on at least nine cities.
+
+The violence began just hours after the president declared on Truth Social that he was ending all government work with AI company Anthropic over its refusal to give the Department of War unfettered access to its technology. Anthropic CEO Dario Amodei told CBS News Friday that there were “red lines” that his company refused to cross, saying, “We wanted to stand up for American values.”
+
+ADVERTISEMENT
+
+OpenAI CEO Sam Altman took the opposite path, announcing late Friday night that his company would be acceding to the government’s demands, saying that the firm had “r eached an agreement with the Department of War to deploy our models in their classified network. In all of our interactions, the DoW displayed a deep respect for safety and a desire to partner to achieve the best possible outcome.”
+
+The divergent decisions by two of the world’s largest private AI companies, both headquartered in San Francisco, ignited a firestorm of debate and accusations on social media.
+
+Eagle-eyed social media trackers quickly scrounged up previous tweets and posts from Trump allies, like venture capitalist David Sacks, who one year ago railed against earlier U.S. incursions into the Middle East.
+
+San Francisco rallies in support of Anthropic, against war in Iran
+
+On Friday night in Golden Gate Park, workers from Anthropic and other startups, lawyers, and concerned citizens gathered for a peaceful rally. They expressed their support for Amodei’s decision (opens in new tab) (opens in new tab)to refuse the Pentagon’s demand (opens in new tab) that it allow Claude to be used in autonomous weapons or for mass surveilance of U.S . citizens. The Standard’s column The Waggle reported from the scene: “A guy with a guitar did a song. People gave speeches. And Claude Opus 4.5 closed out the night with speech of its own, praising the company for courage and attendees for their solidarity, using a voice language model and a microphone.”
+
+Supporters of Anthropic left messages in chalk outside its offices in SoMA on Friday. The messages included exhortations to keep up the resistance against the Trump Administration: “Keep going.” “You give your courage.” “God loves Anthropic.”
+
+A large anti-war rally was reportedly being planned for 3pm on Saturday at the Speaker Nancy Pelosi Federal Building at 90 7th St. in SoMa.
+
+The former Speaker herself released a statement Saturday morning opposing the strikes on Iran, writing, “ President Trump’s decision to initiate military hostilities into Iran starts another unnecessary war which endangers our servicemembers and destabilizes an already fragile region.”",https://assets.sfstandard.com/image/994911177489/image_370udfivml0jrf4opjjqgdk969/-S1200x630-FPNG,N,,2026-02-28 17:00:50.446456
 ID15,Delta Airlines,2026-02-28 19:22:00+00:00,The Seattle Times,Commercial flight operations across the Middle East and beyond disrupted by strikes on Iran,"MARC LEVY, Cara Rubinsky",,,,,https://www.seattletimes.com/business/attack-on-iran-disrupts-flights-across-the-middle-east-and-beyond/,"Not Emirates, Emirates don’t have a clue.
 At least 850 flights were canceled Saturday by Middle Eastern airlines, including Emirates, Flydubai, Gulf Air, Qatar Airways and Kuwait Airways, Cirium said.
 Dubai International Airport — the world’s busiest airport for international flights — and Zayed International Airport in Abu Dhabi together reported more than 1,000 inbound and outbound flights canceled, according to flight tracking site FlightAware.
@@ -85,6 +293,19 @@ ___
 
 Levy reported from Harrisburg, Pennsylvania. Associated Press writer Adam Schreck in Bangkok and Josh Funk, in Omaha, Nebraska, contributed to this report.",https://images.seattletimes.com/wp-content/uploads/2026/02/02282026_flightsdisruptediranmideastsat_tzr_054222.jpg?d=1200x630,N,,2026-02-28 16:01:56.453855
 ID31,Michelin,2026-02-28 19:21:31+00:00,www.youtube.com,More layoffs in tech industry - YouTube,,,,,,https://www.youtube.com/watch%3Fv%3DBWyvEKZBnEk,"Block, Jack Dorsey's financial tech company, said it will cut 40% of its workforce.",Not Available,,Y,,2026-02-28 16:02:23.949676
+ID6,AXA,2026-02-28 19:19:14+00:00,"News France et internationales : médias, politique, sport, culture et people - ENTREVUE.FR",Axa is projected to achieve record profits and revenues in 2025 - Entrevue,"Service Actualités, Omar Harfouch, Walid Harfouch",,,,,https://entrevue.fr/en/entreprises/axa-enregistre-un-benefice-et-un-chiffre-daffaires-records-en-2025/,"The insurance group Axa announced record results for fiscal year 2025, with net profit up 24% to €9,8 billion and revenue up 5% to €115 billion.
+This performance was driven by all of the group's activities and by the sale of asset manager Axa Investment Managers to BNP Paribas for €5,1 billion.
+Life and health insurance activities reached €56,5 billion, of which €37,5 billion was for life insurance alone, fueled by the growth of unit-linked products.
+Operating profit per share came in at €3,86, up 8%.
+Following a €3,8 billion share buyback program linked to the sale of Axa IM, the group announced a new plan of up to €1,25 billion and an 8% increase in the dividend to €2,32 per share.","The insurance group Axa announced record results for fiscal year 2025, with net profit up 24% to €9,8 billion and revenue up 5% to €115 billion. This performance was driven by all of the group's activities and by the sale of asset manager Axa Investment Managers to BNP Paribas for €5,1 billion.
+
+Operating profit also improved, while the solvency ratio, an indicator of financial strength, remained stable at 215%. Management highlighted sustained commercial momentum in all countries, supported by investments in automation and artificial intelligence.
+
+Growth in all branches
+
+In detail, property and casualty insurance posted revenues of €58 billion, a significant increase, driven in particular by higher volumes and rates, especially in motor insurance in France. Life and health insurance activities reached €56,5 billion, of which €37,5 billion was for life insurance alone, fueled by the growth of unit-linked products.
+
+Operating profit per share came in at €3,86, up 8%. Following a €3,8 billion share buyback program linked to the sale of Axa IM, the group announced a new plan of up to €1,25 billion and an 8% increase in the dividend to €2,32 per share.",https://entrevue.fr/wp-content/uploads/2026/02/Axa-enregistre-un-benefice-et-un-chiffre-daffaires-records-en-2025.jpg,N,,2026-02-28 17:00:36.838491
 ID23,IBM,2026-02-28 17:50:18+00:00,DQ,COBOL's AI moment: Anthropic rattles IBM as India spots a $1.6 trillion services opening,Shrikanth G,,,,,https://www.dqindia.com/news/cobols-ai-moment-anthropic-rattles-ibm-as-india-spots-a-16-trillion-services-opening-11163075,"Reuters captured the investor fear clearly: the claim raised questions about IBM’s relevance and revenue potential in system modernisation services.
 Velamakanni’s said: “With over 800 billion lines of COBOL code in play, even $2 a line translates into a $1.6 trillion tech services opportunity.
 The Indian services industry was built on a simple engine: more revenue, more people.
@@ -2696,6 +2917,7 @@ Indianapolis, IN 46285 U.S.A.
 Lilly is proud to be an EEO Employer and does not discriminate on the basis of age, race, color, religion, gender identity, sex, gender expression, sexual orientation, genetic information, ancestry, national origin, protected veteran status, disability, or any other legally protected status.
 
 Our employee resource groups (ERGs) offer strong support networks for their members and are open to all employees. Our current groups include: Africa, Middle East, Central Asia (AMECA), Black Employees at Lilly (BE@Lilly), Chinese Culture Network (CCN), EnAble, Evolve, Lilly Indian Network (LIN), Organization of Latinx at Lilly (OLA), Pride (LGBTQ+ Allies), Veterans Leadership Network (VLN), Women’s Initiative for Leading at Lilly (WILL).",https://assets.phenompeople.com/CareerConnectResources/pp/LILLUS/images/Hiring-1200x630-1687808497442.jpg,N,,2026-02-28 12:03:08.510865
+ID44,Stolt Nielsen,2026-02-28 09:41:02+00:00,in.investing.com,Dampskibsselskabet Norden AS (DNORD) Shares Outstanding - Investing.com IN,Not Available,,,,,https://in.investing.com/pro/XCSE:DNORD/explorer/shares_out,InvestingPro,Not Available,https://in.investing.com/pro/assets/favicon.ico?5f047992a351bbec4dbdeb895fdbd6a3ba415ff9-779,N,,2026-02-28 17:00:54.744463
 ID42,S&P Global,2026-02-28 09:39:44+00:00,Investing News Network (INN),S&P Global to Present at the BofA Securities Information and Business Services Conference ...,Investing News Network,,,,,https://investingnews.com/sp-global-to-present-at-the-bofa-securities-information-and-business-services-conference-2026-on-march-12-2026/,"Session will be Webcast Mark Grant, Senior Vice President of Investor Relations and Treasurer of S&P Global (NYSE: SPGI), will participate in the BofA Securities Information and Business Services Conference 2026 on March 12, 2026, in New York, NY.
 Heather Balsky, Senior Director of Investor Relations, will join for investor meetings.
 Webcast Instructions: Live and Replay The webcast (audio-only) will be available live and in replay through the Company's Investor Relations website http://investor.spglobal.com/Investor-Presentations.
@@ -3090,6 +3312,28 @@ This page has been blocked by Microsoft Edge
 ERR_BLOCKED_BY_CLIENT",,N,,2026-02-28 08:00:41.137117
 ID22,HP Inc,2026-02-28 06:50:26+00:00,www.fitchratings.com,Fitch Places NCR Atleos Corp. on Rating Watch Positive,Not Available,,,,,https://www.fitchratings.com/research/corporate-finance/fitch-places-ncr-atleos-corp-on-rating-watch-positive-27-02-2026,"Fitch rates numerous hardware companies much larger than NCR Atleos as investment grade, including Motorola Solutions, Inc. (BBB/Stable), HP Inc. (BBB ...",Not Available,https://www.fitchratings.com/favicon-32x32.png?v=b699907ea1d10d61f36bdbb9f4d8a203,N,,2026-02-28 13:01:38.705648
 ID11,Capgemini,2026-02-28 06:45:08+00:00,in.investing.com,Capgemini SE Compare against Competitors - Investing.com IN,Not Available,,,,,"https://in.investing.com/pro/BATS-CHIXE:CAPP/compare/ENXTPA:AUB,ENXTPA:ATE,ENXTPA:WAVE,ENXTPA:NRO,ENXTPA:INF,DB:ADN1",InvestingPro,Not Available,https://in.investing.com/pro/assets/favicon.ico?5f047992a351bbec4dbdeb895fdbd6a3ba415ff9-779,N,,2026-02-28 16:01:51.181129
+ID5,Albertsons,2026-02-28 06:25:10+00:00,The Press Democrat,Linda Catherine Baker OBITUARY - The Press Democrat,The Press Democrat,,,,,https://www.pressdemocrat.com/obituaries/linda-catherine-baker-santa-rosa-ca/,"Linda Catherine Baker OBITUARY Linda (Lynette) Catherine Baker Linda (Lynette) Catherine Baker was born August 22, 1949 to Clair and Betty Baker.
+She was born and raised in Kelseyville, CA, and resided in Sonoma County for most of her adult life.
+Linda’s first employment was at her father’s grocery store, Food Center in Kelseyville California.
+Linda was preceded in death by her mother, Betty Baker; father, Clair Baker; aunt, Bobby Burley and Uncle Neal.
+Linda’s final place of rest will be at the Kelseyville Cemetery, next to her father, mother and her uncle Neal.","Linda Catherine Baker OBITUARY
+
+Linda (Lynette) Catherine Baker Linda (Lynette) Catherine Baker was born August 22, 1949 to Clair and Betty Baker. She was born and raised in Kelseyville, CA, and resided in Sonoma County for most of her adult life.
+
+Linda’s first employment was at her father’s grocery store, Food Center in Kelseyville California. She graduated from Kelseyville High School in 1967. She then moved to Santa Rosa where she continued her grocery career at Albertsons.
+
+Linda was preceded in death by her mother, Betty Baker; father, Clair Baker; aunt, Bobby Burley and Uncle Neal. She is survived by her daughter, Christina and son-in-law Levi; her grandchildren, Shailee and Asher; her sisters Connie, Darla, and Becky; her aunt Nora; her nieces and nephews, Jared, Colleen, Jake, Josh and Jennifer; many cousins and dear friends.
+
+Linda went to be with the Lord on April 24, 2020. She will be dearly remembered by her love for Jesus, her wit, her full laugh, her determination, how she turned everything into a song, her amazing legs, her love of pinball, animal print, shoes and massive sunglasses and her heart to help others.
+
+Linda’s final place of rest will be at the Kelseyville Cemetery, next to her father, mother and her uncle Neal.
+
+Memorial service will take place on July 25th at Daniels Chapel of Roses in Santa Rosa at 2:00 p.m. Due to social distancing and the number of guests allowed to be present, we will also have it on zoom. Please email: Cmpalmer82@gmail.com to request the zoom link.",https://s0.wp.com/_si/?t=eyJpbWciOiJodHRwczpcL1wvczAud3AuY29tXC9pXC9ibGFuay5qcGciLCJ0eHQiOiJUaGUgUHJlc3MgRGVtb2NyYXQiLCJ0ZW1wbGF0ZSI6ImhpZ2h3YXkiLCJmb250IjoiIiwiYmxvZ19pZCI6MjQ1OTQ1OTM4fQ._WZVbQVoOcI0-Ds0fYKqUCIfMQXgsjtsbN2uQPmXNFAMQ&w=1200&h=630,N,,2026-02-28 17:00:33.151211
+ID44,Stolt Nielsen,2026-02-28 06:13:10+00:00,in.investing.com,Hafnia Ltd (HAFNI) Book Value / Share - Investing.com IN,Not Available,,,,,https://in.investing.com/pro/XOSL:HAFNI/explorer/bv_share,in.investing.com is blocked This page has been blocked by Microsoft Edge ERR_BLOCKED_BY_CLIENT,"in.investing.com is blocked
+
+This page has been blocked by Microsoft Edge
+
+ERR_BLOCKED_BY_CLIENT",,N,,2026-02-28 17:01:00.237257
 ID19,Eli Lilly,2026-02-28 05:40:27+00:00,Seeking Alpha,LLY:CA Eli Lilly and Company Latest Stock Analysis - Seeking Alpha,Not Available,,,,,https://seekingalpha.com/symbol/LLY:CA/analysis%3Fpage%3D4,Javascript is Disabled Your current browser configuration is not compatible with this site.,"Javascript is Disabled
 
 Your current browser configuration
@@ -3989,6 +4233,13 @@ Importantly, practitioners caution against overstating the investment narrative.
 The emerging pattern is clear. Buyers have not become fearful. They have become deliberate.
 
 In a volatile environment, that deliberateness may be the strongest signal of all.",https://biz-file.com/c/2602/804519-1200x624.jpg?1,N,,2026-02-28 11:03:23.572669
+ID48,UniCredit,2026-02-28 00:37:31+00:00,www.borsaitaliana.it,IS EXP UNICREDIT/STM/BANCO BPM 50 130229 - Borsa Italiana,Not Available,,,,,https://www.borsaitaliana.it/borsa/cw-e-certificates/contratti.html%3Fisin%3DIT0005694796%26lang%3Den,"Borsa Italiana non ha responsabilità per il contenuto del sito a cui sta per accedere e non ha responsabilità per le informazioni contenute.
+Accedendo a questo link, Borsa Italiana non intende sollecitare acquisti o offerte in alcun paese da parte di nessuno.
+Sarai automaticamente diretto al link in cinque secondi.","Borsa Italiana non ha responsabilità per il contenuto del sito a cui sta per accedere e non ha responsabilità per le informazioni contenute.
+
+Accedendo a questo link, Borsa Italiana non intende sollecitare acquisti o offerte in alcun paese da parte di nessuno.
+
+Sarai automaticamente diretto al link in cinque secondi.",,N,,2026-02-28 17:01:03.401780
 ID40,Publicis Groupe,2026-02-28 00:36:05+00:00,Seeking Alpha,Page 25 | Wolf Report's Analysis - Seeking Alpha,Not Available,,,,,https://seekingalpha.com/author/wolf-report/analysis%3Fpage%3D25%26ticker%3Dasazy,Javascript is Disabled Your current browser configuration is not compatible with this site.,"Javascript is Disabled
 
 Your current browser configuration
@@ -10947,6 +11198,8 @@ It reported ​record ‌revenue of $33.4 billion in the fourth quarter, beating
 Dell’s revenue from its infrastructure solutions group, which includes its storage, software and server offerings, jumped 73% to $19.60 billion, while sales from the client solutions group – home to PCs – rose 14% to $13.49 billion.
 
 (Reporting by Jaspreet Singh in Bengaluru; Editing ​by Shinjini Ganguli)",https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-02/26/2026-02-26T210929Z_1_LYNXMPEM1P1BC_RTROPTP_3_DELL-TECH-RESULTS.JPG,N,,2026-02-26 19:03:51.614748
+ID18,Elevance Health,2026-02-26 22:09:31+00:00,MarketScreener,"Elevance Health, Inc. Announces Transition of Peter D. Haytaian as Executive Vice ...","S&amp;P Capital IQ, S&P Capital IQ",,,,,https://www.marketscreener.com/news/elevance-health-inc-announces-transition-of-peter-d-haytaian-as-executive-vice-president-and-pres-ce7e5cd9d181f62d,"Elevance Health, Inc. announced Peter D. Haytaian has announced that he will transition from his role as Executive Vice President and President of Carelon effective May 4, 2026, in order to devote more time to family commitments.
+Haytaian will serve the Company as Special Advisor through December 31, 2026, to support an orderly leadership transition and ensure continuity across Carelon?s operations and client and partner relationships.","Elevance Health, Inc. announced Peter D. Haytaian has announced that he will transition from his role as Executive Vice President and President of Carelon effective May 4, 2026, in order to devote more time to family commitments. Haytaian will serve the Company as Special Advisor through December 31, 2026, to support an orderly leadership transition and ensure continuity across Carelon?s operations and client and partner relationships.",https://www.marketscreener.com/images/twitter_MS_fdnoir.png,N,,2026-02-26 18:05:18.654575
 ID20,FactSet,2026-02-26 22:09:31+00:00,MarketScreener,"(SOLV) Solventum Expects 2026 Adjusted EPS Range $6.40-$6.60, vs. FactSet Est of $6.34",MT Newswires,,,,,https://www.marketscreener.com/news/solv-solventum-expects-2026-adjusted-eps-range-6-40-6-60-vs-factset-est-of-6-34-ce7e5cd9d18ff427,"We recommend that you carefully review the associated descriptions.
 We recommend that you carefully review the associated descriptions.
 Global This composite rating is the result of an average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), Financial Estimates Revisions (Composite), Consensus (Composite), and Visibility (Composite).
@@ -10966,8 +11219,6 @@ This composite rating is the result of an average of the rankings based on the f
 Quality
 
 This composite rating is the result of an average of the rankings based on the following ratings: Capital Efficiency (Composite), Quality of Financial Reporting (Composite), and Financial Health (Composite). The company must be covered by at least 2 of these 3 ratings for the calculation to be performed. We recommend that you carefully review the associated descriptions.",https://www.marketscreener.com/images/twitter_MS_fdnoir.png,N,,2026-02-26 19:03:40.685018
-ID18,Elevance Health,2026-02-26 22:09:31+00:00,MarketScreener,"Elevance Health, Inc. Announces Transition of Peter D. Haytaian as Executive Vice ...","S&amp;P Capital IQ, S&P Capital IQ",,,,,https://www.marketscreener.com/news/elevance-health-inc-announces-transition-of-peter-d-haytaian-as-executive-vice-president-and-pres-ce7e5cd9d181f62d,"Elevance Health, Inc. announced Peter D. Haytaian has announced that he will transition from his role as Executive Vice President and President of Carelon effective May 4, 2026, in order to devote more time to family commitments.
-Haytaian will serve the Company as Special Advisor through December 31, 2026, to support an orderly leadership transition and ensure continuity across Carelon?s operations and client and partner relationships.","Elevance Health, Inc. announced Peter D. Haytaian has announced that he will transition from his role as Executive Vice President and President of Carelon effective May 4, 2026, in order to devote more time to family commitments. Haytaian will serve the Company as Special Advisor through December 31, 2026, to support an orderly leadership transition and ensure continuity across Carelon?s operations and client and partner relationships.",https://www.marketscreener.com/images/twitter_MS_fdnoir.png,N,,2026-02-26 18:05:18.654575
 ID16,Ecolab,2026-02-26 22:00:12+00:00,www.stocktitan.net,"Ecolab director exercises options, sells 1,265 shares | ECL SEC Filing - Form 4 - Stock Titan",Stock Titan,,,,,https://www.stocktitan.net/sec-filings/ECL/form-4-ecolab-inc-insider-trading-activity-d066870e7411.html,"Ecolab director Tracy B. McKibben exercised 2,300 stock options at $115.075 and sold 1,265 shares at $308.66, ending with 11,357.58 directly owned shares.",Not Available,https://static.stocktitan.net/company-logo/ecl-lg.png,N,,2026-02-26 18:05:05.827461
 ID21,H&M,2026-02-26 21:51:11+00:00,UK Finance,Spring Statement 2026: UK Finance letter to the Chancellor | Policy and Guidance,Not Available,,,,,https://www.ukfinance.org.uk/policy-and-guidance/consultation-responses/spring-statement-2026-uk-finance-letter-chancellor,"As the Chancellor prepares the Spring Statement which will take place on 3 March, UK Finance has set out the decisions that will be particularly important this year for financial services to play a fuller role in supporting the Government’s growth mission and efforts to improve living standards across the UK.
 This year UK Finance is calling for a decisive shift from strategy to implementation.
@@ -35534,22 +35785,3 @@ Risk is more macro than company-specific right now: The bigger swing factors are
 US investors need to think in net terms: Experts keep reminding international investors to look at net dividend yield after taxes and FX, not just headline payout ratios.
 
 So where does that leave you? If you want a global, large-cap insurance name with a history of dividends and you're cool with FX and tax complexity, AXA S.A. can be a legit candidate for the ""boring but essential"" slot in your portfolio. If you're chasing flashy upside and viral earnings swings, this stock probably won’t move fast enough to match your feed.",https://mdb.ad-hoc-news.de/bilder/bild-2404996_600_800.jpg,N,,2026-02-21 19:00:37.024463
-ID32,Microsoft,2026-02-21 21:32:29+00:00,spectrumnews1.com,"Microsoft to build data center in Hebron, Ohio - Spectrum News",Cody Thompson,,,,,https://spectrumnews1.com/oh/toledo/news/2026/02/21/microsoft-to-built-data-center-in-hebron--ohio,"HEBRON, Ohio — A Microsoft data center is being built in central Ohio, with the company saying construction is expected to begin this month and conclude in November.
-The bulk of the construction, the company said in a post on its website, will be taking place in between March and August.
-AMES Construction was chosen as the general contractor for the project in Hebron, Ohio, which is approximately 30 miles east of Columbus.
-Two Ohio state representatives recently introduced a bill that would impose various requirements on data centers’ agreements with electric utility companies in an attempt to make sure infrastructure and upgrade costs aren’t passed on to existing Ohio customers.
-Ohio Senate Democrats also recently held a press conference where they pushed for bipartisan legislation related to data centers.","HEBRON, Ohio — A Microsoft data center is being built in central Ohio, with the company saying construction is expected to begin this month and conclude in November.
-
-The bulk of the construction, the company said in a post on its website, will be taking place in between March and August.
-
-AMES Construction was chosen as the general contractor for the project in Hebron, Ohio, which is approximately 30 miles east of Columbus.
-
-“Datacenters provide the physical infrastructure for the technology we depend on at work and in our personal lives,” Microsoft's post reads. “Whenever you open an app on your phone, join a virtual classroom or meeting, snap and save photos, or play a game with your friends online, you are using a datacenter. Local businesses, government, hospitals, and schools rely on datacenters every day to deliver goods and services to you.”
-
-This comes as legislation is being introduced, seeking to further regulate data centers in the state.
-
-Two Ohio state representatives recently introduced a bill that would impose various requirements on data centers’ agreements with electric utility companies in an attempt to make sure infrastructure and upgrade costs aren’t passed on to existing Ohio customers.
-
-Ohio Senate Democrats also recently held a press conference where they pushed for bipartisan legislation related to data centers.
-
-Microsoft said it will update the community about its plans in the state: here.",https://s7d2.scene7.com/is/image/TWCNews/Microsoft_AP_25183490805096_NAT_0702,N,,2026-02-21 20:58:58.659128
