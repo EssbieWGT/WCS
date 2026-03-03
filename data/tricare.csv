@@ -1,4 +1,157 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2026-03-03 14:28:34+00:00,www.dovepress.com,Drivers of Variation in the Rate of Radiotherapy Following Lumpectomy in the Military Health System,"Mark Louie F Ramos, Nicholas G Zaorsky, William Patrick Luan, William A Calo, Alison Chetlen, Eugene J Lengerich, Guangqing Chi, Joel E Segel, Dove Press",,,,,https://www.dovepress.com/drivers-of-variation-in-the-rate-of-radiotherapy-following-lumpectomy--peer-reviewed-fulltext-article-BCTT,"To further understand how catchment area impacted RT rates, we plotted catchment area lumpectomy and RT rates along with the correlation between number of lumpectomies and RT rate.
+Further, we plotted 2018–2019 RT rates by catchment area quartile of RT rate (using 2007–2017 rates).
+We found that officers and more senior service members (or spouses) tended to have higher RT rates than enlisted or more junior service members or spouses; retirees or spouses of retirees had higher RT rates than active duty members; and older patients have higher RT rates than younger patients.
+Figure 4 shows that patients who had lumpectomies in catchment areas with historically higher RT rates had a greater chance of receiving RT than patients who had lumpectomies in catchment areas with historically lower RT rates.
+In addition, we found that provider or place characteristics appear to be important drivers of variation in RT rates.","Introduction
+
+For early-stage breast cancer, substantial evidence suggests that breast conserving surgery (BCS) or lumpectomy followed by radiation therapy (RT) is associated with survival outcomes equivalent to or better than full mastectomy. Full mastectomy has an overall survival hazard ratio of 1.79 and breast cancer-specific survival hazard ratio of 1.66 compared to BCS with RT.1–3 BCS may be chosen in part to improve psychological and quality of life outcomes resulting from the less disfiguring treatment.4–6 However, a critical follow-up to BCS is subsequent RT. Numerous studies have demonstrated significant improvement in survival for women undergoing BCS who then receive RT such that it has become the standard guideline for BCS.2,3,7–12 Yet, despite practice guidelines to provide post-surgical RT (ie adjuvant RT), there is evidence that both individual factors, such as distance,13,14 as well as practice factors15 can lead to significant variation in the rates of RT following BCS within the civilian population. However, less is known about RT within the Military Health System (MHS). Given that service members and their dependents typically live where they are stationed, it is important to examine how such assignments impact different facets of their health.
+
+Within the MHS, prior studies have shown improved survival among breast cancer patients within the MHS compared to the civilian setting, in part due to earlier stage of diagnosis.16 However, evidence suggests lower rates of RT within the MHS.16 The MHS provides a unique setting to examine drivers of rates of RT following BCS because of universal health insurance coverage within the MHS compared to the civilian sector, where health coverage is a major factor for RT rates in the civilian population.17,18 We therefore have two objectives in this paper: first, we seek to examine which patient-level factors are associated with increased rates of RT following BCS in the MHS; second, we seek to examine the extent to which service members’ catchment area assignment is associated with RT with the goal of better understanding how to improve guideline concordant breast cancer care within the MHS.
+
+Methods
+
+Data
+
+We conducted a retrospective cohort study using the 2007–2019 MHS Data Repository (MDR) data, which aggregates and validates health care data from the MHS.19 The MDR includes data on beneficiary characteristics, health care utilization, clinical factors, and enrollment. The utilization information includes claims data on all inpatient and outpatient care received by service members and their enrolled dependents.
+
+We define the analytic sample for all MHS beneficiaries who had a lumpectomy following a breast cancer diagnosis. The different International Classification of Diseases, 9th Revision (ICD-9) and International Classification of Diseases, 10th Revision (ICD-10) diagnosis codes and Current Procedural Terminology (CPT) codes used for identifying the sample were collected from relevant sources20–28 and enumerated in Appendix Table 1. To ensure we have sufficient observation time to observe RT following lumpectomy, we only included members who remained enrolled in the MHS for at least 6 months after their lumpectomy. Specifically, we wanted to avoid missing RT that may have occurred shortly after diagnosis but was missed because the patient was no longer enrolled in TRICARE coverage so we excluded these observations.
+
+Analysis
+
+We first estimated descriptive measures of the proportion of the cohort that underwent RT within 6 months following lumpectomy across demographic and health measures including age, race/ethnicity (only available for service members), and marital status; service variables such as rank and service branch (either the patient if a service member or the service member spouse if a dependent spouse) and health variables, particularly any mental health (MH) diagnosis, and if the patient underwent chemotherapy or endocrine therapy as part of treatment for breast cancer. Next, we estimated univariate Kaplan–Meier (KM) time-to-event curves for each of the demographic and health variables to describe differences in the trends that exist in the cohort with respect to time between lumpectomy and the initiation of RT. The demographic and health variables were selected as confounders based on previous studies that identified these as factors that affected patients’ undergoing of RT after lumpectomy.29–32
+
+Third, we estimated a Cox proportional hazards (Cox-PH) model to estimate the association of the demographic and health variables on months to RT since lumpectomy. This model was preferred since we are interested in both the occurrence of RT and its timeliness as per standard of care. Since the outcome is desirable (earlier RT), we labeled the cox hazard rate as a benefit rate. We then estimated a similar model that focused on RT between 2018 and 2019 so that we could add a measure of catchment area RT. Specifically, we included quartile of 2007–2017 catchment area RT as a lagged measure of RT meant to capture whether a patient living in a catchment area with a higher historical rate of RT was more likely to receive RT in subsequent years. To further understand how catchment area impacted RT rates, we plotted catchment area lumpectomy and RT rates along with the correlation between number of lumpectomies and RT rate. Further, we plotted 2018–2019 RT rates by catchment area quartile of RT rate (using 2007–2017 rates). We then divided catchment areas into the top and bottom quartile of 2007–2017 to plot a Kaplan–Meier curve that describes the difference in RT experience for service members belonging to each catchment area grouping who had a lumpectomy in 2018–2019.
+
+All analyses were conducted using a 0.05 significance level using R 4.5.1 and the survival and survminer packages. Our study complies with the Declaration of Helsinki and was approved by the Penn State Institutional Review Board (IRB) (Study #00014029) and by the Defense Health Agency Office of Research Protections Human Research Protection Official (DHQ-20-2044). Data access protocols used comply with relevant data protection and privacy regulations. Given the retrospective nature of the study and that only de-identified data were received, the IRB waived the informed consent requirement.
+
+Results
+
+Of all patients within the sample who had a breast cancer diagnosis from 2007 to 2019 (n=55,533), there were 14,234 patients who underwent lumpectomy. Among them, there were 9681 who remained in the MHS at least 6 months after their lumpectomy. Among these, 5554 (57.4%) had at least one RT session within 6 months after their lumpectomy (see Appendix Figure 1).
+
+Table 1 compares the characteristics of women who received RT following a lumpectomy to those who did not receive RT. The mean age in years at lumpectomy was 48 (sd=9). We found that women receiving RT were significantly older (Table 1A), more likely a senior officer (or married to one), retired (Table 1B), had a mental health diagnosis, or had undergone chemotherapy or endocrine therapy (Table 1C). We did not observe differences in race/ethnicity (Table 1A).
+
+We found that officers and more senior service members (or spouses) tended to have higher RT rates than enlisted or more junior service members or spouses; retirees or spouses of retirees had higher RT rates than active duty members; and older patients have higher RT rates than younger patients. Among different service branches, the Coast Guard has the lowest RT rates. Members with a mental health diagnosis prior to or after lumpectomy and those undergoing chemotherapy had higher RT rates. Members who had an endocrine therapy session after their lumpectomy had a lower rate of RT, which is consistent with the practice found in literature of endocrine therapy being used instead of RT.33,34
+
+Figure 1 shows the univariate KM curves which reflect similar trends as seen in Table 1 which shows univariate analysis for undertaking RT for each demographic, health, and service variable. The first panel shows the time-to-event curve for the sample cohort, showing that about 40% of the cohort has their first RT session within 3 months after lumpectomy and about 57% after 6 months. Subsequent panels show comparisons of time to RT across different age groups, rank, sponsor, marital status, chemotherapy treatment, endocrine therapy treatment, and mental health diagnosis. Likelihood ratio tests conducted for each confounding variables showed consistent results with univariate tests in Table 1.
+
+Table 2 shows results from the Cox PH model of the time to first RT session for the cohort within 6 months of observation following their lumpectomy. The model included age, race, rank, retirement status, and service branch at the time of lumpectomy, marital status and mental health diagnosis prior and up to 6 months following lumpectomy, and endocrine therapy following lumpectomy. Catchment area was included as a stratification variable. Results show that older age (p<0.0001), senior rank (p<0.05) and having a mental health diagnosis (p<0.0001) were positively associated with time to RT within 6 months after lumpectomy.
+
+Figure 2 provides a detailed description of the distributions of lumpectomies and RT rates. The first panel shows that catchment areas most commonly performed between 20 to over 100 lumpectomies across the 12-year period and that RT rates after lumpectomy commonly ranged from 40% to 55%. The third panel shows a positive correlation between the number of lumpectomies and RT rate (r=0.26).
+
+Next, we examined whether patients living in catchment areas with higher RT rates ended up being more likely to receive RT after lumpectomy. The catchment area RT rates were computed using data from all lumpectomies that occurred between 2007 and 2017 (n=8443). We plotted 2007–2018 catchment area RT rates by quartile in Figure 3. Figure 4 shows that patients who had lumpectomies in catchment areas with historically higher RT rates had a greater chance of receiving RT than patients who had lumpectomies in catchment areas with historically lower RT rates. We find similar results with controlling for all the aforementioned confounders (see Table 3).
+
+Discussion
+
+We found that 57.4% of lumpectomy patients in the MHS from 2007 to 2019 received RT within 6 months after lumpectomy. Adjusting for age, this proportion is lower than those found in studies in the civilian population, which ranges from 60% to more than 90%.31,35 Looking at demographic and health variables, we found older patients, married patients, and those undergoing chemotherapy and not undergoing endocrine therapy were more likely to undergo RT. Lower income has also been associated with RT refusal in prior studies31, and while we did not have income in our data, service variables on rank showed that more senior ranked service members also had a higher likelihood of undergoing RT.
+
+In addition, we found that provider or place characteristics appear to be important drivers of variation in RT rates. Specifically, patients who had lumpectomy in 2018–2019 in a catchment area within the top quartile of RT rates (based on data from 2007–2017) were 20% more likely to receive RT within 6 months than those in lower quartiles at any time during that post-lumpectomy period. Understanding what factors drive this variation, such as specific provider practice styles, hospital procedures, or other system-level factors, is important for learning from catchment areas with high rates of RT in order to improve rates in areas with lower rates of RT.
+
+Our study has several important strengths to note. We have a unique perspective to observe RT utilization with a very large sample of all claims data within the MHS 2007–2019; with which we can observe actual RT. Finally, our study has several important limitations to note. First, much of our results assess associations between factors and rates of RT following lumpectomy and so have limited causal interpretations. However, for the effect of historical catchment area RT rates on subsequent patient RT rates, we note that patients are largely located randomly due to the random nature of stations resulting from a permanent change of station (PCS). Second, we cannot observe the stage of diagnosis or tumor size, a common limitation for claims, data, nor can we observe the reasons for why patients may opt not to undergo RT. Third, racial and ethnic data are missing for dependents so our results by race/ethnicity are limited to service members. Fourth, we may not fully observe dependents’ utilization if they receive care using exclusively another type of insurance, although we note that we focus our analyses on only those with continuous TRICARE coverage. Fifth, while the overall study includes a large number of patients, some of the subsets are relatively small. Specifically, only 36 patients identified as Hispanic and only 57 had endocrine therapy.
+
+Conclusion
+
+Variability of undertaking radiotherapy after lumpectomy among service members is driven by factors similar to those of the general US population. However, the rate at which service members undergo this important standard of care after BCS is lower than the rate in the general population, particularly in cases where service members and their dependents are stationed in catchment areas with historically low rates. This implies a need to understand what modifiable factors drive catchment areas with higher rates of RT to achieve these higher rates of RT in order improve RT rates following lumpectomy in the MHS.
+
+Data Sharing Statement
+
+Data are not publicly available due to the terms of the data sharing agreement.
+
+Ethical Approval Statement
+
+The study was approved by the Penn State Institutional Review Board (IRB) (Study #00014029) and by the Defense Health Agency Office of Research Protections Human Research Protection Official (DHQ-20-2044).
+
+Informed Consent
+
+Since the study was retrospective and all data received were already de-identified, exemption was granted by the Penn State Institutional Review Board (IRB).
+
+Acknowledgments
+
+We gratefully acknowledge support from the Defense Health Agency from a Military Health Systems Research Program grant. We also acknowledge excellent analytic assistance from Don Miller and Astrid Berge. The views expressed in this material are those of the authors and do not reflect the official policy or position of the US Government, the Department of Defense, or the Defense Health Agency.
+
+Author Contributions
+
+All authors made a significant contribution to the work reported, whether that is in the conception, study design, execution, acquisition of data, analysis and interpretation, or in all these areas; took part in drafting, revising or critically reviewing the article; gave final approval of the version to be published; have agreed on the journal to which the article has been submitted; and agreed to be accountable for all aspects of the work.
+
+Funding
+
+Defense Health Agency Grant #HQ00342010002.
+
+Disclosure
+
+The authors report no conflicts of interest in this work.
+
+References
+
+1. de Boniface J, Szulkin R, Johansson ALV. Survival after breast conservation vs mastectomy adjusted for comorbidity and socioeconomic status: a Swedish National 6-year follow-up of 48 986 women. JAMA Surg. 2021;156(7):628–11. doi:10.1001/jamasurg.2021.1438
+
+2. Guadagnoli E, Weeks JC, Shapiro CL, Gurwitz JH, Borbas C, Soumerai SB. Use of breast-conserving surgery for treatment of stage I and stage II breast cancer. J Clin Oncol. 1998;16(1):101–106. doi:10.1200/JCO.1998.16.1.101
+
+3. Kovács A, Stenmark Tullberg A, Werner Rönnerman E, et al. Effect of radiotherapy after breast-conserving surgery depending on the presence of tumor-infiltrating lymphocytes: a long-term follow-up of the SweBCG91RT randomized trial. J Clin Oncol. 2019;37(14):1179–1187. doi:10.1200/JCO.18.02157
+
+4. Engel J, Kerr J, Schlesinger-Raab A, Sauer H, Hölzel D. Quality of life following breast-conserving therapy or mastectomy: results of a 5-year prospective study. Breast J. 2004;10(3):223–231. doi:10.1111/j.1075-122X.2004.21323.x
+
+5. Al-Ghazal SK, Fallowfield L, Blamey RW. Comparison of psychological aspects and patient satisfaction following breast conserving surgery, simple mastectomy and breast reconstruction. Eur J Cancer. 2000;36(15):1938–1943. doi:10.1016/s0959-8049(00)00197-0
+
+6. Parker PA, Youssef A, Walker S, et al. Short-term and long-term psychosocial adjustment and quality of life in women undergoing different surgical procedures for breast cancer. Ann Surg Oncol. 2007;14(11):3078–3089. doi:10.1245/s10434-007-9413-9
+
+7. Moran MS, Schnitt SJ, Giuliano AE, et al. SSO-ASTRO Consensus Guideline on Margins for breast-conserving surgery with whole breast irradiation in stage I and II invasive breast cancer. Int J Radiat Oncol Biol Phys. 2014;88(3):553–564. doi:10.1016/j.ijrobp.2013.11.012
+
+8. Moran MS, Schnitt SJ, Giuliano AE, et al. Society of Surgical Oncology-American Society for Radiation Oncology consensus guideline on margins for breast-conserving surgery with whole-breast irradiation in stages I and II invasive breast cancer. J Clin Oncol. 2014;32(14):1507–1515. doi:10.1200/JCO.2013.53.3935
+
+9. Park CC, Mitsumori M, Nixon A, et al. Outcome at 8 years after breast-conserving surgery and radiation therapy for invasive breast cancer: influence of margin status and systemic therapy on local recurrence. J Clin Oncol. 2000;18(8):1668–1675. doi:10.1200/JCO.2000.18.8.1668
+
+10. DeSnyder SM, Hunt KK, Dong W, et al. American Society of Breast Surgeons’ practice patterns after publication of the SSO-ASTRO-ASCO DCIS Consensus Guideline on Margins for breast-conserving surgery with whole-breast irradiation. Ann Surg Oncol. 2018;25(10):2965–2974. doi:10.1245/s10434-018-6580-9
+
+11. Rajan KK, Fairhurst K, Birkbeck B, et al. Overall survival after mastectomy versus breast-conserving surgery with adjuvant radiotherapy for early-stage breast cancer: meta-analysis. BJS Open. 2024;8(3):zrae040. doi:10.1093/bjsopen/zrae040
+
+12. Ali AA, Xiao H, Kiros GE. Health insurance and breast-conserving surgery with radiation treatment. Am J Manag Care. 2014;20(6):502–516.
+
+13. Athas WF, Adams-Cameron M, Hunt WC, Amir-Fazli A, Key CR. Travel distance to radiation therapy and receipt of radiotherapy following breast-conserving surgery. J Natl Cancer Inst. 2000;92(3):269–271. doi:10.1093/jnci/92.3.269
+
+14. Mandelblatt JS, Hadley J, Kerner JF, et al. Patterns of breast carcinoma treatment in older women: patient preference and clinical and physical influences. Cancer. 2000;89(3):561–573. doi:10.1002/1097-0142(20000801)89:3<561::AID-CNCR11>3.0.CO;2-A
+
+15. Feinstein AJ, Soulos PR, Long JB, et al. Variation in receipt of radiation therapy after breast-conserving surgery: assessing the impact of physicians and geographic regions. Med Care. 2013;51(4):330–338. doi:10.1097/MLR.0b013e31827631b0
+
+16. Lin J, Hu H, Shriver CD, Zhu K. Survival among breast cancer patients: comparison of the U.S. Military Health System with the surveillance, epidemiology and end results program. Clin Breast Cancer. 2022;22(4):e506–e516. doi:10.1016/j.clbc.2021.11.010
+
+17. Bradley CJ, Sabik LM, Liang R, Lindrooth RC, Perraillon MC. Treatment disparities in radiation and hormone therapy among women covered by medicaid vs private insurance in cancer registry and claims data. JAMA Health Forum. 2023;4(5):e230673. doi:10.1001/jamahealthforum.2023.0673
+
+18. Shenker RF, Moss H, Chino JP. Trends in health insurance among cancer patients receiving radiation therapy from 2008–2017. Int J Radiat Oncol Biol Phys. 2021;111(3):e329. doi:10.1016/j.ijrobp.2021.07.1007
+
+19. Fact Sheets. Defense Health Agency. MDR: Military Health System Data Repository - IT Starts with Healthy Data. Available from: https://www.health.mil/Reference-Center/Fact-Sheets/2019/04/05/Military-Health-System-Data-Repository. Accessed December 16, 2024.
+
+20. Kimball CC, Nichols CI, Vose JG, Peled AW. Trends in lumpectomy and oncoplastic breast-conserving surgery in the US, 2011–2016. Ann Surg Oncol. 2018;25(13):3867–3873. doi:10.1245/s10434-018-6760-7
+
+21. Kaczmarski K, Wang P, Gilmore R, et al. Surgeon re-excision rates after breast-conserving surgery: a measure of low-value care. J Am Coll Surg. 2019;228(4):504–512.e2. doi:10.1016/j.jamcollsurg.2018.12.043
+
+22. Pan IW, Smith BD, Shih YCT. Factors contributing to underuse of radiation among younger women with breast cancer. J Natl Cancer Inst. 2014;106(1):djt340. doi:10.1093/jnci/djt340
+
+23. Xu WY, Wickizer TM, Jung JK. Effectiveness of Medicare cost-sharing elimination for Cancer screening on utilization. BMC Health Serv Res. 2019;19(1):392. doi:10.1186/s12913-019-4135-9
+
+24. Camacho F, Anderson R, Kimmick G. Investigating confounders of the association between survival and adjuvant radiation therapy after breast conserving surgery in a sample of elderly breast Cancer patients in Appalachia. BMC Cancer. 2019;19:1228. doi:10.1186/s12885-019-6263-3
+
+25. Tran L, Chetlen AL, Leslie DL, Segel JE. Effect of out-of-pocket costs on subsequent mammography screening. J Am Coll Radiol. 2022;19(1 Pt A):24–34. doi:10.1016/j.jacr.2021.09.028
+
+26. Kunst N, Long JB, Xu X, et al. Use and costs of breast cancer screening for women in their 40s in a US population with private insurance. JAMA Intern Med. 2020;180(5):799–801. doi:10.1001/jamainternmed.2020.0262
+
+27. Richman IB, Long JB, Hoag JR, et al. Comparative effectiveness of digital breast tomosynthesis for breast cancer screening among women 40–64 years old. J Natl Cancer Inst. 2021;113(11):1515–1522. doi:10.1093/jnci/djab063
+
+28. Halasz LM, Patel SA, McDougall JA, et al. Intensity modulated radiation therapy following lumpectomy in early-stage breast cancer: patterns of use and cost consequences among Medicare beneficiaries. PLoS One. 2019;14(9):e0222904. doi:10.1371/journal.pone.0222904
+
+29. Layne TM, Aminawung JA, Soulos PR, et al. Quality of breast cancer care in The US Territories: insights from medicare. Health Aff. 2018;37(3):421–428. doi:10.1377/hlthaff.2017.1045
+
+30. Cleveland Clinic. What Is a Lumpectomy? Cleveland Clinic. Available from: https://my.clevelandclinic.org/health/procedures/12962-lumpectomy. Accessed June 3, 2024.
+
+31. Liu J, Zhu Z, Hua Z, et al. Radiotherapy refusal in breast cancer with breast-conserving surgery. Radiat Oncol. 2023;18:130. doi:10.1186/s13014-023-02297-2
+
+32. Tuttle TM, Jarosek S, Habermann EB, Yee D, Yuan J, Virnig BA. Omission of radiation therapy after breast-conserving surgery in the United States: a population-based analysis of clinicopathologic factors. Cancer. 2012;118(8):2004–2013. doi:10.1002/cncr.26505
+
+33. Haussmann J, Budach W, Corradini S, et al. Whole breast irradiation in comparison to endocrine therapy in early stage breast cancer-a direct and network meta-analysis of published randomized trials. Cancers. 2023;15(17):4343. doi:10.3390/cancers15174343
+
+34. Buszek S, Lin H, Bedrosian I, et al. Lumpectomy plus hormone or radiation therapy alone for women aged 70 years or older with hormone receptor-positive early stage breast cancer in the modern era: an analysis of the national cancer database. Int J Radiat Oncol Biol Phys. 2019;105(4):795–802. doi:10.1016/j.ijrobp.2019.07.052
+
+35. Lui G, Hassett MJ, Tramontano AC, Uno H, Punglia RS. Regional disparities in the use and delivery of adjuvant radiation therapy after lumpectomy for breast cancer in the medicare population. Adv Radiat Oncol. 2022;7(6):101017. doi:10.1016/j.adro.2022.101017",https://www.dovepress.com/assets/img/addon/og_logo.png,N,0.0,2026-03-03 10:41:21.976428
 ,,2026-03-03 09:18:51+00:00,Leidos Careers,"TRICARE Beneficiary Services Representative – Kunsan, S. Korea - Leidos Careers",Not Available,,,,,https://careers.leidos.com/jobs/17413052-tricare-beneficiary-services-representative-kunsan-s-korea,"Make a Difference – Join Our Leidos TRICARE Team in Kunsan, S. Korea!
 Leidos is accepting applications for a TRICARE Beneficiary Services Representative (BSR), an essential role in supporting active-duty military members and their families.
 As a BSR, you will provide key beneficiary education and enrollment services for the TRICARE Overseas Program (TOP) under the Defense Health Agency (DHA).
@@ -154,6 +307,50 @@ More care access pathways, including VA Community Care under the MISSION Act
 Telehealth support that reduces travel and access barriers
 
 Ready to use your benefits to take the next step?",https://www.findarticles.com/wp-content/uploads/2026/03/generated_image_1772473785_1.jpeg,N,1.0,2026-03-03 00:41:15.094708
+,,2026-03-03 03:47:48+00:00,www.pressreader.com,CVS warns 134 pharmacies could close if bill passes - PressReader,Not Available,,,,,https://www.pressreader.com/usa/knoxville-news-sentinel/20260303/281573772183154,Digital newsstand featuring 7000+ of the world’s most popular newspapers & magazines. Enjoy unlimited reading on up to 5 devices with 7-day free trial.,Not Available,,N,0.0,2026-03-03 10:41:26.086942
+,,2026-03-03 03:42:23+00:00,stockhouse,"2026-03-02 | Bronstein, Gewirtz & Grossman LLC Urges Zynex, Inc. Investors to Act: Class ...",Stockhouse.com,,,,,https://stockhouse.com/news/press-releases/2026/03/02/bronstein-gewirtz-grossman-llc-urges-zynex-inc-investors-to-act-class-action,"or his Client Relations Manager, Nathan Miller, of Bronstein, Gewirtz & Grossman, LLC at 917-590-0911.
+No Cost to Zynex Investors We, Bronstein, Gewirtz & Grossman LLC, represent investors in class actions on a contingency fee basis.
+Why Bronstein, Gewirtz & Grossman, LLC for Zynex Securities Class Action?
+Bronstein, Gewirtz & Grossman, LLC is a nationally recognized firm that represents investors in securities fraud class actions and shareholder derivative suits.
+or Nathan Miller Bronstein, Gewirtz & Grossman, LLC 917-590-0911 | info@bgandg.com Attorney advertising.","Nationally Recognized Firm Urges Zynex Investors to Explore Class Action Representation
+
+NEW YORK, March 02, 2026 (GLOBE NEWSWIRE) -- Bronstein, Gewirtz & Grossman, LLC, a nationally recognized investor-rights law firm, announces that a class action lawsuit has been filed against Zynex, Inc. (OTCMKTS: ZYXIQ) and certain of its officers.
+
+This lawsuit seeks to recover damages against Defendants for alleged violations of the federal securities laws on behalf of all persons and entities that purchased or otherwise acquired Zynex securities between February 25, 2021 and December 15, 2025, both dates inclusive (the “Class Period”). Such investors are encouraged to join this case by visiting the firm’s site: bgandg.com/ZYXIQ.
+
+Zynex Case Details
+
+The Complaint alleges that throughout the Class Period, Defendants made materially false and/or misleading statements and failed to disclose material adverse facts about the Company’s business, operations, and prospects. Specifically, the Complaint alleges that Defendants failed to disclose to investors that:
+
+(1) Zynex shipped products, including electrodes, in excess of need; (2) as a result of this practice, the Company inflated its revenue; (3) the Company’s practice of filing false claims drew scrutiny from insurers, including Tricare; (4) on August 21, 2023, Travelers commenced an action against Zynex, Sandgaard, Lucsok and Fox in the Superior Court of California alleging that Zynex and the defendants had embarked on a fraudulent overbilling scheme and sought more than $23 million in damages and civil penalties relating to hundreds of fraudulent claims between 2018 and 2023; (5) management had prioritized aggressive sales strategies to drive orders over compliance with industry laws, rules and regulations; (6) the Company was not committed to maintaining a strong internal control environment; (7) the Company’s order growth was a result of illegal overbilling; (8) as a result, it was reasonably likely that Zynex would face adverse consequences, including removal from insurer networks and penalties from the federal government; and (9) as a result of the foregoing, Defendants’ positive statements about the Company’s business, operations, and prospects were materially misleading and/or lacked a reasonable basis.
+
+What's Next for Zynex Investors?
+
+A class action lawsuit has already been filed. If you wish to review a copy of the Complaint, you can visit the firm’s site: bgandg.com/ZYXIQ. or you may contact Peretz Bronstein, Esq. or his Client Relations Manager, Nathan Miller, of Bronstein, Gewirtz & Grossman, LLC at 917-590-0911. If you suffered a loss in Zynex you have until April 21, 2026, to request that the Court appoint you as lead plaintiff. Your ability to share in any recovery doesn't require that you serve as lead plaintiff.
+
+No Cost to Zynex Investors
+
+We, Bronstein, Gewirtz & Grossman LLC, represent investors in class actions on a contingency fee basis. That means we will ask the court to reimburse us for out-of-pocket expenses and attorneys’ fees, usually a percentage of the total recovery, only if we are successful.
+
+Why Bronstein, Gewirtz & Grossman, LLC for Zynex Securities Class Action?
+
+Bronstein, Gewirtz & Grossman, LLC is a nationally recognized firm that represents investors in securities fraud class actions and shareholder derivative suits. Our firm has recovered hundreds of millions of dollars for investors nationwide. More at www.bgandg.com
+
+""Our practice centers on restoring investor capital and ensuring corporate accountability, which serves to uphold the essential integrity of the marketplace,"" said Peretz Bronstein, Founding Partner of Bronstein, Gewirtz & Grossman, LLC.
+
+Follow us for updates on LinkedIn, X, Facebook, or Instagram.
+
+Contact Info
+
+Peretz Bronstein, Esq. or Nathan Miller
+
+Bronstein, Gewirtz & Grossman, LLC
+
+917-590-0911 | info@bgandg.com
+
+Attorney advertising.
+
+Prior results do not guarantee similar outcomes.",https://assets.stockhouse.com/kentico-cms/0356-00/images/stockhouse-logo-og.png,N,0.0,2026-03-03 10:41:29.899648
 ,,2026-03-03 03:39:44+00:00,www.reddit.com,Disclosing Tricare to the VA Pros & Cons : r/VeteransBenefits - Reddit,Not Available,,,,,https://www.reddit.com/r/VeteransBenefits/comments/1rjdm9c/disclosing_tricare_to_the_va_pros_cons/,"Well you’re required by law to disclose any health insurance policies to the VA so I’d say a pro is you’re not breaking the law.
 The VA is mandated by federal law to bill private health insurance providers for care, supplies, or medicine provided for the treatment of non-service-connected conditions.
 That means you have to disclose any outside insurance you have to the VHA including Tricare.
@@ -972,18 +1169,3 @@ Navy Material Accountability Campaign (NMAC) OM&S-R Excess
 Navy Material Accountability Campaign (NMAC) OM&S-R Excess
 
 37096 Article rating: 4.8",,N,0.0,2026-02-28 18:56:27.478646
-,,2026-02-28 13:05:37+00:00,ttlc.intuit.com,"My taxes are flagging for 1095 a but we didnot have marketplace insurance, we had Tricare ...",Not Available,,,,,https://ttlc.intuit.com/community/taxes/discussion/my-taxes-are-flagging-for-1095-a-but-we-didnot-have-marketplace-insurance-we-had-tricare-what-do-i/00/3806877/amp,"You must obtain a Form 1095-A to successfully e-file your tax return.
-Before trying to file again, contact Tricare to make sure whether or not they issue Form 1095-A.
-If they double-check that they don't issue this form, you will need to paper-file your return.","You must obtain a Form 1095-A to successfully e-file your tax return.
-
-Before trying to file again, contact Tricare to make sure whether or not they issue Form 1095-A. If they double-check that they don't issue this form, you will need to paper-file your return.",,N,0.0,2026-02-28 11:56:49.415452
-,,2026-02-28 12:12:33+00:00,TRICARE.com,TRICARE During Deployment - Family Coverage Guide,Not Available,,,,,https://tricare.com/life-events/deployment,"Family Coverage Continues Deployment does not affect your family's TRICARE eligibility.
-Spouses and children continue to receive full benefits.
-The deploying service member receives care through military medical channels.
-Keep them in your phone, on your refrigerator, and anywhere else easily accessible.
-In a medical emergency, always call 911 first.","Family Coverage Continues
-
-Deployment does not affect your family's TRICARE eligibility. Spouses and children continue to receive full benefits. The deploying service member receives care through military medical channels.
-
-Save these numbers now. Keep them in your phone, on your refrigerator, and anywhere else easily accessible. In a medical emergency, always call 911 first.",https://tricare.com/og-image.png,N,0.0,2026-02-28 15:56:26.368979
-,,2026-02-28 12:12:00+00:00,health.mil,Articles | Health.mil,Not Available,,,,,https://health.mil/sitecore/content/MHSHome/News/Articles%3Fpage%3D171,The Military Health System is an interconnected network of service ... Although the Defense Health Agency may or may not use these sites as ...,Not Available,,N,0.0,2026-02-28 12:56:42.853126
