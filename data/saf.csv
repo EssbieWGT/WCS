@@ -1,8 +1,665 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2026-03-16 13:35:59+00:00,MDPI,An Improved Flame Volume Mixing Method for Lean Blowout Prediction of Sustainable Aviation Fuels,"Tian Deng, Pengjing Du, Yaobo Li, Xiaojun Yang",,,,,https://www.mdpi.com/1996-1073/19/6/1479,"For combustion chamber structural terms, the combustion chamber structural constant K is usually considered as a constant [33].
+There is a mutual coupling relationship between the LBO limit fuel-to-air ratio and the dimensionless flame volume in the lean blowout state, and the final LBO limit prediction value needs to be obtained by setting the initial fuel-to-air ratio.
+This study does not consider heat transfer between the combustion chamber and the outside environment; therefore, the combustion chamber walls are set as adiabatic, no-slip walls.
+LBO Prediction Using the Flame Volume Mixing Method Using the flame volume method, the LBO limit was predicted through four iterations (Table 4).
+A larger gas mixture will carry more energy and be discharged from the combustion chamber outlet, further reducing the combustion chamber temperature and decreasing the lean blowout performance of the combustion chamber.","1
+
+Science and Technology Innovation Research Institute, Civil Aviation University of China, Tianjin 300300, China
+
+2
+
+Sino-European Institute of Aviation Engineering, Civil Aviation University of China, Tianjin 300300, China
+
+*
+
+Author to whom correspondence should be addressed.
+
+Energies 2026, 19(6), 1479; https://doi.org/10.3390/en19061479
+
+Submission received: 3 February 2026 / Revised: 5 March 2026 / Accepted: 7 March 2026 / Published: 16 March 2026
+
+Abstract
+
+This study investigates the fuel discrimination capability of the flame volume mixing method (FV mixing method) in predicting the lean blowout (LBO) limits of different fuels. Conventional FV-based models exhibit limited sensitivity to variations in fuel properties, especially under lean conditions and for sustainable aviation fuels. In this work, an improved FV mixing method is proposed by replacing the classical droplet evaporation treatment with the Abramzon–Sirignano droplet evaporation model, which accounts for fuel-dependent liquid properties, Stefan flow, and coupled convective heat and mass transfer between the gas phase and droplets. As a result, the proposed method shows enhanced sensitivity to fuel variability and improves the prediction accuracy of the LBO limit for the sustainable aviation fuel Cat-C1. The model performance is validated through numerical simulations and compared with experimental data. The results indicate that, compared with the baseline FV mixing method, the proposed approach reduces the LBO prediction error by 5.7%. The improved FV mixing method provides a more robust framework for LBO prediction, with potential applications in fuel characterization and combustion optimization.
+
+1. Introduction
+
+The rapid development of the aviation industry has brought increasingly severe carbon emission challenges. Sustainable aviation fuel (SAF) can substantially reduce lifecycle emissions compared with conventional jet fuels [1], making it a promising alternative to traditional aviation fuel in the future. However, with the development of aviation engines towards high temperature and lean combustion, the working environment of the combustion chamber gradually approaches the limit of lean blowout (LBO), which may cause problems such as oscillatory combustion and even lean blowout, seriously threatening flight safety [2]. Therefore, it is necessary to accurately grasp the key parameters of the LBO limit to ensure that the combustion state of the engine is always within the safe threshold. The current LBO limit obtained through experimental testing has limitations, such as long testing cycles and high costs. In contrast, the LBO limit prediction method can efficiently obtain the LBO limit of the fuel by knowing the physical properties of the fuel, greatly reducing the experimental measurement steps and research and development costs. Therefore, building LBO rapid prediction models has become a key technological breakthrough in promoting SAF engineering applications and aviation engine safety design.
+
+At present, the mainstream methods for predicting the limit of LBO mainly include semi-empirical models, numerical simulation methods, and hybrid models. Semi-empirical models can be divided into two categories: Perfectly Stirred Reactor (PSR) and Characteristic Time (CT) models. The earliest Perfectly Stirred Reactor model was proposed by Longwell et al. [3], who found that a vortex-driven recirculation zone forms in the bluff-body wake downstream of the stabilizer, which had high mixing intensity and approximately uniform composition. Therefore, it is proposed to consider the recirculation zone behind the blunt body as a homogeneous and temperature gradient-free reactor. On this basis, in 1985, Lefebvre [4] combined fuel vaporization fraction [5] on the basis of homogeneous mixtures to obtain an LBO correlation under heterogeneous conditions. By comparing with the experimental results of multiple combustion chambers, the accuracy of the prediction formula was verified, with an error of ± 30 % . This prediction formula is one of the most widely recognized LBO limit prediction formulas today. The Characteristic Time model is based on the Damkohler (Da) number and was first proposed by Zukoski and Marble [6] in 1955 in their study of semi-empirical models. In the study, the ignition delay time of the fuel/air mixture is considered as the equivalent value of the time required for shear layer mixing, and the critical condition for LBO is the state where the ignition delay time is equal to the residence time of fuel particles. Plee and Mellor [7] found that the concept of shear layer mixing time was superior to the residence time of fuel in the recirculation zone when processing experimental data. They proposed the concept of droplet evaporation time, which was later validated [8,9,10,11]. Xie et al. [12] conducted visual combustion experiments on swirl combustion chambers to explore the LBO mechanism and found that predicting the LBO characteristics of existing engines by studying combustion volume is not accurate. The research focus should shift to the analysis of flame volume [13]. Subsequently, Xie et al. [14] proposed a flame volume (FV) model and an FV Lean Blowout Limit Correlation based on assumptions.
+
+With the improvement in theoretical foundations and computational abilities, the use of numerical simulation to study LBO has received widespread attention. Numerical simulation can effectively study the conditions of reacting and non-reacting flow fields, capturing the dynamic characteristics of flames approaching the LBO limit. Hu Bin et al. [15,16] used the fuel iterative approximation (FIA) method to obtain the relationship between the LBO limit, flame volume V f , and the mass flow rate m r of return air entering the combustible zone. They successfully predicted the LBO limit with an uncertainty range of 17.5. After further combining it with the FV model, a new hybrid model for predicting the LBO limit was proposed, which improved the prediction accuracy. This method can greatly reduce computation time and obtain the LBO limit in a short period of time. In addition, several studies [17,18,19,20] use the characteristic parameter values of a certain section of the combustion chamber to determine the occurrence of LBO and use the fuel steady-state successive approximation method to predict the LBO limit. The prediction process usually requires a large number of iteration steps.
+
+The hybrid model combines semi-empirical models and numerical simulation methods, which have their respective advantages. Sturgess et al. [21,22,23,24] studied a hybrid model that separates the combustion chamber flow field and combustion field for computation. A relatively simple model is used to obtain representative combustor flow fields, and the resulting flow-field data are then processed to construct a Perfectly Stirred Reactor network. The combustion chamber area is divided into multiple sub-zones, and the local LBO limit of each sub-zone is calculated separately. Finally, the global LBO limit is obtained through data processing. Hu Bin et al. [25] combined the relationship between the LBO limit function obtained through numerical simulation using the FIA method with the FV model to propose a new hybrid model for predicting LBO limits. The model further shortened the prediction cycle of LBO and improved the accuracy of the prediction. Compared with experimental data from the combustion chamber, the average uncertainty in the LBO limit obtained by this hybrid model was 16.5%. In addition, Hu Bin and Wang Zhonghao [26,27,28,29,30] proposed using numerical simulation software such as CHEMKIN to obtain the fuel residence time and chemical reaction time of each subregion in the key reaction zone of the combustion chamber and obtain the local Da number of each subregion, thereby deriving the global Da number and using it as a criterion for the occurrence of lean blowout.
+
+Moreover, the complex composition of SAF and its combustion characteristics differ from those of traditional aviation fuel, leading to the challenge of insufficient fuel discrimination ability in existing lean blowout prediction methods. And the applicability verification process of new fuels often requires many tedious steps, known as the time-consuming and costly qualification/certification process [31]. If the LBO limit value can be quickly obtained, the certification process for new sustainable aviation fuels can be greatly reduced. This article uses numerical simulation methods to compare the accuracy of LBO limit prediction using the fuel flow iteration method, characteristic section method, and flame volume mixing method. Using the Abramzon–Sirignano droplet evaporation model instead of the classical droplet evaporation model, considering the effects of droplet property changes, Stefan flow, and gas heat and mass transfer on droplet evaporation, an improved modified Nusselt number flame volume model is obtained to enhance the predictive method’s ability to distinguish sustainable aviation fuels.
+
+2. Research Methods
+
+2.1. Characteristic Cross-Section Method
+
+The characteristic cross-section method analyzes the combustion stability mechanism from the perspective of energy. When the energy released by the combustion of the fuel–air mixture in the recirculation zone is insufficient to ignite the fresh mixture, LBO occurs. In practical combustors, extinction typically initiates in the main reaction zone and then propagates to the recirculation zone. The temperature changes dramatically in the recirculation zone, so specific variables in the recirculation zone can be used as indicators of lean blowout. The characteristic section method selects a characteristic cross-section located near the boundary of the recirculation zone as the research object, monitors the temperature changes on this section, and uses it as the standard to measure the occurrence of LBO. When the temperature changes on the characteristic section meet certain conditions, it is considered as the occurrence of LBO.
+
+Regarding the shape of the recirculation zone in the combustion chamber, this article selected a characteristic cross-section that is tangent to the recirculation zone at x = 57 mm in the combustion chamber, as shown in Figure 1. The rate of change in the temperature-to-fuel–air ratio on the characteristic cross-section Γ was used as a feature parameter to measure the occurrence of LBO. The temperature-to-fuel–air ratio change rate Γ is defined as follows:
+
+Γ = T n − T n − 1 T n − 1 / φ n − φ n − 1 φ n − 1
+
+(1)
+
+In the formula, Γ : change rate of the temperature-to-fuel–air ratio in the characteristic section, T : average temperature in the characteristic section, and φ : the combustion chamber fuel-to-air ratio. Subscript n represents the current iteration step parameter and subscript n − 1 represents the previous iteration step parameter.
+
+We define the rate of change in the temperature-to-fuel–air ratio Γ > 0.45 as the basis for judging the occurrence of LBO, and the specific prediction process is shown in Figure 2.
+
+2.2. Fuel Flow Iteration Method
+
+The fuel flow iteration method assumes that, under fixed inlet, ambient, and fuel conditions, the flame remains stable [32]. At this point, as the fuel mass flow rate gradually decreases, the combustion efficiency and flame temperature of the combustion chamber decrease, and the ignition distance increases; the ignition point will move downstream of the combustion chamber, resulting in a decrease in temperature in the recirculation zone. According to this principle, when the fuel mass flow rate decreases to a certain value, that is, when the fuel-to-air ratio in the combustion chamber decreases to a critical value, the air–fuel mixture in the recirculation zone cannot be ignited, the temperature drops sharply, and LBO occurs. The basis for judging the fuel flow iteration method for lean blowout is the temperature change rate in the recirculation zone, and the characteristic parameter of the average temperature change rate γ in the recirculation zone is defined. When γ > 3 , LBO occurs. The average temperature change rate in the recirculation zone is defined as follows:
+
+γ = T n − T n − 1 T n − 2 − T n − 1 / φ n − φ n − 1 φ n − 2 − φ n − 1
+
+(2)
+
+In the formula, γ : average temperature change rate in the recirculation zone, T : average temperature in the characteristic section, and φ : fuel–air ratio in the combustion chamber. Subscript n represents the current step parameter, subscript n − 1 represents the previous step parameter, and subscript n − 2 represents the first two step parameters.
+
+Based on the definition of the recirculation zone, its corresponding location can be identified. The recirculation zone is approximately spherical in shape in this study, and its volume varies only weakly with changes in the fuel-to-air ratio. Therefore, to facilitate the subsequent evaluation of the mean temperature within the recirculation zone, it is approximated as an equivalent sphere with a radius of 34 mm in this study. In Figure 3, the region where the axial velocity equals zero is displayed; the green region located between the swirler outlet and the primary fuel injection holes corresponds to the combustor recirculation zone under different fuel-to-air ratios. The detailed procedure of the fuel flow iteration method is illustrated in Figure 4.
+
+2.3. Flame Volume Mixing Model
+
+The flame volume mixing method is a hybrid model based on the flame volume (FV) model proposed by Professor Huang Yong’s team at Beihang University [12]. This method assumes that the flame formed by the combustion of the fuel–air mixture in the combustion chamber under lean blowout conditions will fill the entire combustion chamber. Using numerical simulation methods to obtain the combustion chamber head airflow fraction α and dimensionless flame volume β in the prediction formula, the combustion chamber structural parameters, intake air parameters, and fuel property parameters are input into the lean blowout prediction formula, and the final LBO limit prediction value is obtained through iteration. The above method has the advantages of simplicity, speed, and high calculation accuracy compared to the method of simply obtaining the LBO limit through numerical simulation. Based on the above model, Professor Huang Yong’s team further proposed a formula for predicting flame volume, which is expressed as follows:
+
+q L B O = K α β + 1 − α β 2 ( 1 V C ) ( m ˙ a P 3 1.3 exp ( T 3 / 300 ) ) ( D 0 2 λ e f f L H V )
+
+(3)
+
+In the formula: q L B O is the LBO limit fuel-to-air ratio, K is the empirical constant of the combustion chamber structure determined through experiments, V C is the volume of the combustion chamber flame tube, m ˙ a is the mass flow rate of the intake air, P 3 is the intake air pressure, T 3 is the intake air temperature, D 0 is the initial droplet diameter, λ e f f is the effective evaporation coefficient of the droplet, and L H V is the low heating value of the fuel.
+
+According to the flame volume prediction Formula (3), it is necessary to first calculate the parameters of the combustion chamber structure, incoming air, and liquid fuel parameters. For combustion chamber structural terms, the combustion chamber structural constant K is usually considered as a constant [33]. Sun Lei et al. [34] believe that the head airflow fraction α can be represented by the swirler airflow fraction, and by monitoring the changes in the air mass flow rate of each intake duct, the flow fraction α = 0.114 for this type of double radial cyclone is obtained. The specific expression formula for dimensionless flame volume is as follows:
+
+β = V f V C
+
+(4)
+
+where β is the dimensionless flame volume, V f is the flame volume size, and V C is the volume size of the main combustion zone of the combustion chamber.
+
+At normal temperature and pressure, the equivalence ratio of the flammability limits of hydrocarbon fuels is 0.5 – 2.0 , which is mainly affected by pressure, temperature, and the combustion environment. The increase in pressure mainly expands the rich combustion boundary. The expansion effect of temperature on the flammable boundary is relatively small. Therefore, this study considers the region within this equivalence ratio range as the flame volume.
+
+For the incoming air term, the combustion chamber structural constants obtained by Lefebvre when proposing the prediction formula were experimentally estimated under specific incoming air pressure and temperature conditions. When the incoming air conditions change, it will have an impact on the results. Huang Xia et al. [33] proposed that the principle of flow similarity can be used to obtain the equivalent air mass flow rate under different operating conditions. This similarity transformation is based on the assumption that in order to ensure that the lean blowout characteristics in the combustion chamber do not change under a specific operating condition, the inlet Mach number before and after the similarity transformation should not change. According to aerodynamic principles such as the ideal gas state equation, the expression for the mass air flow rate at the inlet of the combustion chamber can be obtained:
+
+m ˙ = C P 3 A T 3 q ( λ )
+
+(5)
+
+In the equation, C can be regarded as a constant term when the working fluid remains constant, A is the inlet area of the combustion chamber, which can be regarded as a constant term when the combustion chamber structure remains constant, and q ( λ ) is related to the Mach number. When the inlet Mach number remains constant, it can also be regarded as a constant term. Therefore, an equivalent relationship can be derived that is only related to the inlet air pressure, temperature, and mass flow rate:
+
+m ˙ T 3 P 3 = m ˙ ′ T 3 ′ P 3 ′
+
+(6)
+
+In the formula, m ˙ represents the actual inlet air flow rate, P 3 represents the actual inlet air pressure, T 3 represents the actual inlet air temperature, m ˙ ′ represents the inlet air mass flow rate after similar changes, P 3 ′ represents the Lefebvre experimental inlet air pressure, and T 3 ′ represents the Lefebvre experimental inlet temperature. The incoming air term can be obtained by taking the inlet air pressure of P 3 = 2.3 atm and the inlet air temperature of T 3 = 495 K . To obtain a similar transformed air mass flow rate m ˙ ′ = 1.37 kg / s , the incoming air term can be determined.
+
+For the parameter term of liquid fuel, Ateshkadi et al. [35] believe that a representative Sauter mean diameter (SMD) can be obtained from the correlation of gas swirl atomizers [36], and the SMD value can be used to replace the initial droplet diameter value in the lean blowout prediction formula. This study used numerical simulation to obtain the droplet diameter distribution in the combustion chamber and the SMD value of RP-3 fuel relative to JP-4 fuel. The effective evaporation constant of RP-3 fuel was obtained as 0.47 in the function curve of Lefebvre’s effective evaporation constant at different boiling points through interpolation.
+
+There is a mutual coupling relationship between the LBO limit fuel-to-air ratio and the dimensionless flame volume in the lean blowout state, and the final LBO limit prediction value needs to be obtained by setting the initial fuel-to-air ratio. Among them, the judgment basis of this iterative method is the key parameter ε ≤ 0.1 , and its specific expression is as follows:
+
+ε = q L B O , n − q n q n
+
+(7)
+
+In the formula: q n represents the initial fuel-to-air ratio set at step n and q L B O , n represents the predicted value of the LBO limit fuel-to-air ratio obtained through numerical simulation calculation at step n . Among them, ε ≥ 0 means that the initial fuel-to-air ratio should be increased for the next round of commuting. When 0, it means that the initial fuel-to-air ratio should be reduced for the next iteration. Figure 5 shows a flowchart for predicting the LBO limit using the flame volume method.
+
+2.4. Revised Nusselt Number Flame Volume Formula
+
+In comparison to numerous methods for predicting LBO limits, the flame volume method is more accurate in predicting the LBO limits of traditional fuels. However, sustainable aviation fuels with complex compositions have significant differences in properties, such as density, viscosity, and surface tension, compared to traditional aviation fuels, resulting in a significant decrease in the prediction accuracy of this method.
+
+To improve this issue, the Abramzon–Sirignano droplet evaporation model [37] was introduced based on the flame volume model, making the model more sensitive to changes in fuel properties. For the flame volume model, the combustion chamber structure term and incoming air term are obviously independent of the physical properties and sensitivity of the liquid fuel. Through the derivation process of the Lefebvre formula, it was found that the liquid fuel parameter term in the prediction formula is actually derived from the fuel droplet evaporation model [38]. Specifically, Lefebvre combined Spalding’s classic droplet evaporation model [39] with Godsave’s D2 law [40] to obtain the average evaporation rate of a single liquid droplet of liquid fuel over its lifecycle. Equations (8) and (9) are the mathematical expressions of the Spalding evaporation model and Godsave’s D2 law, respectively:
+
+m ˙ F = 2 π D k / c p g ln 1 + B
+
+(8)
+
+In the formula: m ˙ F represents the vaporization rate of the liquid droplet, D represents the diameter of the liquid droplet, k represents the thermal conductivity of the fuel liquid droplet, c p represents the heat capacity of the liquid fuel, and B represents the Spalding mass transfer number.
+
+m F = π 4 ρ F λ D
+
+(9)
+
+In the formula: m F represents the instantaneous evaporation rate of fuel droplets, ρ F represents the fuel density, and λ represents the rate of change in the square of the fuel droplet diameter over time.
+
+λ = d D 2 d t
+
+(10)
+
+However, Spalding’s droplet vaporization model only involves the simplest droplet evaporation process and cannot reflect the true evaporation process of fuel droplets. Abramzon [37] proposed a new droplet evaporation model based on the classical droplet evaporation model, considering the effects of changes in droplet properties, heat and mass transfer between Stefan flow and gas on droplet evaporation, a new droplet evaporation model has been proposed:
+
+m ˙ F = 2 π k / c p R d N u * ln 1 + B
+
+(11)
+
+In the formula: N u * is the modified Nusselt number and R d is the droplet radius.
+
+N u * = 2 + N u 0 − 2 / F T
+
+(12)
+
+In the formula: N u 0 is the initial Nusselt number and F T is the heat transfer correction factor.
+
+The evaporation time of a single droplet can be derived from the Abramzon droplet evaporation model in Equation (11):
+
+t e = ρ F D 0 2 / 4 N u * k / c p ln 1 + B
+
+(13)
+
+In the formula, t e is the time taken for the droplet to evaporate.
+
+The average evaporation rate and evaporation time of a single droplet can be derived from the D2 law:
+
+m ˙ F = π 6 ρ F λ D 0
+
+(14)
+
+t e = D 0 2 λ
+
+(15)
+
+Combining Equations (13) and (15) regarding evaporation time yields the expression for λ :
+
+λ = N u * 2 8 k / c p ln 1 + B / ρ F
+
+(16)
+
+Substituting the expression (16) of λ into Equation (9) and the D2 law yields the average evaporation rate of a single droplet throughout its lifecycle:
+
+w ˙ F = N u * 2 1.33 π D 0 k / c p g ln 1 + B
+
+(17)
+
+The evaporation rate for n droplets is:
+
+w ˙ n F = n w ˙ F = N u * 2 1.33 n π D 0 k / c p ln 1 + B
+
+(18)
+
+The fuel-to-air ratio relationship between air with a volume of V and n fuel droplets is:
+
+q = m F m a = n ρ F π 6 D 3 ρ a V
+
+(19)
+
+In the formula: ρ a is the density of air.
+
+Thus, the expression for the number of droplets n represented by the fuel-to-air ratio can be obtained:
+
+n = 6 π ρ a ρ F V D 3 q
+
+(20)
+
+Substituting Equation (20) into Equation (18) yields new expressions for n droplet evaporation rates:
+
+w ˙ n F = N u * 2 8 q ρ a / ρ F k / c p g ln 1 + B V D 0 2
+
+(21)
+
+Therefore, the fuel vaporization fraction can be expressed as:
+
+f = w ˙ n F q w ˙ a = N u * 2 8 ρ a / ρ F k / c p g ln 1 + B V p z m ˙ p z D 2
+
+(22)
+
+In the formula: V p z is the volume of the main combustion zone and m ˙ p z is the amount of air consumed by the main combustion zone.
+
+The effective evaporation constant λ e f f is defined as follows:
+
+λ e f f = 8 k / c p g ln 1 + B 1 + 0.22 Re D 0 0.5 ρ F
+
+(23)
+
+By introducing the Abramzon model into the FV formula, a lean blowout prediction formula for the Abramzon fuel droplet evaporation model can be obtained, named the “Development of the Modified Nusselt-Number Flame Volume Formula”:
+
+q L B O = K V C α β + 1 − α β 2 m ˙ a P 3 1.3 exp T 3 / 300 D 0 2 N u * 2 λ e f f L H V
+
+(24)
+
+3. Numerical Simulation
+
+3.1. Geometric Model and Grid Division
+
+This paper simulates the reactive flow field within the combustion chamber. Considering the high computational cost of modeling the entire annular combustion chamber and the periodic symmetry of the annular structure, only 1/18 of the actual combustion chamber is used as the study object for modeling. The model adopts a specific dual-radial swirl combustion chamber, as shown in Figure 6. The computational domain of the combustion chamber starts from the throat of the upstream diffuser and extends to the flame tube outlet. It covers the inner and outer chambers, the annular region between the inner and outer diffusers, the dual swirl inlet device, and the flame tube (including the swirlers, Venturi tube, main fuel holes, mixing holes, and film holes). The cross-sectional area of the computational domain is shown in Figure 7. The combustion chamber uses a dual-radial counter-swirl system, with the first-stage swirler rotating counterclockwise and the blade installation angle set at 64°, and the second-stage swirler rotating clockwise with a blade installation angle of 70°. The fluid computational domain is set with the airflow inlet at the far left. Fresh air enters the combustion chamber through the main fuel holes and mixing holes, participating in fuel mixing and combustion, and is then exhausted through cooling holes downstream of the combustion chamber. The total length of the computational domain is 339 mm, the height is 150 mm, and the width is 120 mm.
+
+The grid division adopts a mixed structured and unstructured grid. The surface of the model is an unstructured polygonal mesh, while the interior is a structured mesh. Polyhedral meshes are generated on the computational domain surface and complex structured surface areas. Local mesh refinement is applied in the swirler and flame tube region to better resolve complex flow structures. The cross-sectional shape of the grid is shown in Figure 8.
+
+The temperature variation along the X-direction and velocity variation along the Y-direction for different grid numbers of 1.09 million, 2.27 million, 3.60 million, and 5.78 million grids are shown in Figure 9 and Figure 10. Due to the frictional force of the combustion chamber wall on the fluid, a velocity gradient and boundary layer are formed. Comparing the grid cases, it can be observed that coarser grids struggle to capture the velocity development near the combustion chamber wall boundary layer. The temperature distribution along the centerline is generally consistent across different grid numbers, with minimal differences in velocity distribution between the 3.6 million and 4.4 million grid cases. To ensure computational accuracy and efficiency, a grid of 3.6 million is chosen for the subsequent numerical simulations.
+
+To verify the correctness of the computational model used in this article, calculations were performed on the steady-state cold flow field and hot temperature field. Figure 11 shows a comparison between the Y-direction axial distribution at x = 50 mm obtained from the steady-state cold flow field calculation of the dual radial swirl combustion chamber model and the literature [41]. The comparison results show that the numerical simulation calculation results are in good agreement with the literature results, and the axial velocity shows a “bimodal” distribution, with the lowest velocity at the y = 0 position. Due to the significant impact of the temperature in the recirculation zone in front of the main combustion hole on the accuracy of the simulation results of the combustion process, a point on the central axis in front of the main combustion hole was taken to compare the simulation temperature results. As shown in Figure 12, the average error of the simulation results is only 3.97%, so the numerical simulation research in this paper is based on this model.
+
+3.2. Relevant Models
+
+By solving the conservation equations of mass, momentum, and energy, combined with turbulence closure and non-premixed combustion models, the reactive flow inside the combustion chamber is simulated.
+
+The governing equations for the general control volume are as follows:
+
+Mass Conservation Equation:
+
+∂ ρ ∂ t + ∇ ⋅ ρ V → = 0
+
+(25)
+
+In the above equation, ρ denotes the fluid density, t represents time, and V is the velocity vector. The momentum equation is expressed as follows:
+
+Momentum Equation:
+
+∂ ∂ t ρ V → + ∇ ⋅ ρ V → V → = − ∇ p + ∇ ⋅ τ ¯ ¯ + F →
+
+(26)
+
+where p is the pressure, τ is the viscous stress tensor, and F is the body force term.
+
+Energy Equation:
+
+∂ ∂ t ρ E + ∇ ⋅ V → ρ E + p = ∇ ⋅ k ∇ T + ( τ ¯ ¯ ⋅ V → ) + S h
+
+(27)
+
+where E is the total energy contained in the control volume, T is the temperature, k is the thermal conductivity, and Sh is the volumetric heat source term resulting from chemical reaction heat release or other energy sources.
+
+In this study, the Reynolds-Averaged Navier–Stokes (RANS) approach is adopted to simulate the reactive flow field. The realizable k − ε model is used for turbulence modeling. The transport equations for the turbulent kinetic energy k and the turbulent dissipation rate ε are given as follows:
+
+∂ ∂ t ρ k + ∂ ∂ x i ρ k u i = ∂ ∂ x j μ + μ t σ k ∂ k ∂ x j + ρ C 1 S ε + G b − ρ ε − Y M
+
+(28)
+
+∂ ∂ t ρ ε + ∂ ∂ x i ρ ε u i = ∂ ∂ x j μ + μ t σ ε ∂ ε ∂ x j + C 1 ε ε k ρ C 1 S ε + C 3 ε G b − C 2 ε ρ ε 2 k
+
+(29)
+
+where μ is the molecular viscosity, μ t is the turbulent viscosity, G b is the turbulence generation term, and YM is the compressibility correction term for turbulent expansion.
+
+In the realizable k − ε model, the strain rate tensor S i j is used as:
+
+C 1 ε = max 1.44 , η η + 5
+
+(30)
+
+η = S k ε
+
+(31)
+
+S = 2 S i j S i j
+
+(32)
+
+where S i j is the mean strain rate tensor.
+
+The combustion process is described by a non-premixed combustion model based on the mixture fraction (PDF). The mixture fraction Z is used to characterize the mixing state between the fuel and oxidizer, with its value ranging from 0 to 1. Based on the conserved scalar ϕ , the mixture fraction is defined as:
+
+Z = f i − f i , o x f i , f u e l − f i , o x
+
+(33)
+
+where fi is the mass fraction of a conserved scalar at the local position and f i , o x and f i , f u e l are the mass fractions of the same scalar in the oxidizer and fuel streams, respectively. The relationship between the mixture fraction and the equivalence ratio ϕ can be written as:
+
+Z = ϕ ϕ + 1 / F A R s t
+
+(34)
+
+where F A R s t is the fuel-to-air ratio at chemical equivalence.
+
+To account for turbulent mixing effects, the mixture fraction is decomposed into its mean and fluctuating components:
+
+Z = Z ¯ + Z ′
+
+(35)
+
+The transport equations for the mean mixture fraction Z ¯ and its variance Z ′ are solved:
+
+∂ ∂ t ρ Z ¯ + ∇ ⋅ ρ V → Z ¯ = ∇ ⋅ k C p + μ t σ t ∇ Z ¯ + S m
+
+(36)
+
+∂ ∂ t ρ Z ′ 2 ¯ + ∇ ⋅ ρ V → Z ′ 2 ¯ = ∇ ⋅ k C p + μ t σ t ∇ Z ′ 2 ¯ + C g μ t ⋅ ∇ Z ¯ 2 − C d ρ ε k Z ′ 2 ¯
+
+(37)
+
+where Cp is the specific heat at constant pressure, σ t is the turbulent Schmidt number, and S m is the scalar transport source term. The model characterizes the mixture fraction fluctuations by assuming a probability density function (PDF) and obtains thermochemical quantities such as temperature and species composition via PDF integration based on the flame sheet model or lookup table database, thereby achieving the mean solution of the turbulence–chemistry interaction.
+
+3.3. Boundary Conditions
+
+The models and comparison methods used in this study are implemented through the built-in models of ANSYS Fluent 2024R1. This study simplifies the fuel atomization process and uses the Discrete Phase Model (DPM) to numerically simulate the atomization of liquid fuel. Fuel injectors are set at the centerline x = 12 m m of the combustion chamber to simulate the injection of liquid aviation fuel into the combustion chamber. The particle breakup model used is the KH-RT model. The calculations are performed using an unsteady implicit solver with the SIMPLE algorithm. A pressure-based approach is used for unsteady state solving, with second-order implicit time discretization and a time step of 2 × 10−5 s, lasting approximately 80 ms, with monitored variables converging.
+
+To evaluate the effect of time discretization errors on the results, a time step sensitivity check is performed. With all other numerical settings kept unchanged, a time-step sensitivity study was conducted using three time-step sizes (1 × 10−5 s, 2 × 10−5 s, and 4 × 10−5 s). The results indicate that the variations in the outlet-plane mean temperature and the pressure drop among the three cases are both within 4%, demonstrating that the selected time-step size provides sufficient accuracy for the simulations reported in this study.
+
+This study does not consider heat transfer between the combustion chamber and the outside environment; therefore, the combustion chamber walls are set as adiabatic, no-slip walls. All contours in this paper represent instantaneous results. The boundary conditions for the air inlet and outlet are set as shown in Table 1.
+
+4. Results and Discussion
+
+This section first discusses three commonly used methods for predicting LBO limits, namely, the characteristic section method, fuel flow iteration method, and FV mixing method, and analyzes and compares their application effects. The air mass flow rate in the combustion chamber remained constant at 0.9 kg/s. Using traditional aviation fuel RP-3 as the research object, Kunda’s [42] 16-component, 23-step C12H23 simplified combustion reaction mechanism was used to simulate the flow and combustion process in the combustion chamber. Subsequently, the FV flame volume method was optimized.
+
+4.1. LBO Prediction Using the Characteristic Cross-Section Method
+
+Using the characteristic cross-section method, the occurrence of LBO was predicted through several iterations (see Table 2). The results indicate that when the fuel–air ratio is 0.0057, the rate of change in temperature with respect to the fuel–air ratio exceeds 0.45. Moreover, among all iterative cases, only this fuel–air ratio yields a change rate greater than 0.45. Accordingly, the LBO limit fuel-to-air ratio is 0.0057. In comparison, Huang Xia [33] obtained an LBO limit fuel-to-air ratio of 0.00497 through numerical simulations under the same operating conditions, with a difference of about 14.7%. It is important to note that during the iteration process, the initial fuel-to-air ratio should be set greater than the LBO limit fuel-to-air ratio to avoid iteration convergence to an incorrect value. Additionally, the rate of change in the fuel-to-air ratio between each iteration step should remain appropriate to ensure the stability and accuracy of the numerical solution.
+
+4.2. LBO Prediction Using the Fuel Flow Iteration Method
+
+Using the fuel flow iteration method, the LBO limit was predicted through several iterative calculations. It was found that the average temperature change rate exceeds 3 only when the fuel-to-air ratio is 0.0057. Accordingly, the predicted LBO limit fuel-to-air ratio is 0.0057, which differs by about 14.7% compared to the predicted result obtained by Huang Xia [33]. The specific iteration process is detailed in Table 3. After obtaining the predicted value of the LBO limit fuel-to-air ratio, three further iterations were carried out. The results showed that the average temperature change rate in the recirculation zone did not meet the conditions γ > 3 when the fuel-to-air ratio was greater than 0.0057 or less than 0.0057, proving the uniqueness of this characteristic parameter and indicating that there is only one predicted value.
+
+4.3. LBO Prediction Using the Flame Volume Mixing Method
+
+Using the flame volume method, the LBO limit was predicted through four iterations (Table 4). It was found that, at the fourth iteration, the absolute value of the relative error was below 0.1, corresponding to a fuel-to-air ratio of 0.00459. Therefore, the predicted LBO limit fuel-to-air ratio under this operating condition is 0.00459. This value differs from the prediction reported by Huang Xia [33] (0.00497) by approximately 7.6%. Compared with the characteristic cross-section method and the fuel flow iteration method, both of which yield a relative error of 14.7%, the flame volume mixing method provides the closest result to the experimental data among the three methods.
+
+4.4. LBO Prediction Using the Modified Nusselt Number Flame Volume Model
+
+Using the new Cat-C1 fuel, a sustainable aviation fuel produced from alcohol by Gevo [43], as the subject, the combustion field in this dual-radial combustion chamber model is calculated using the 42-component, 656-step reaction surrogate model from Wang et al. [44]. The modified Nusselt number prediction model is used to predict the LBO limit fuel-to-air ratio for the fuel. Compared to RP-3, Cat-C1 contains almost no aromatic hydrocarbons, with a composition primarily of isomerized alkanes, a higher H/C ratio, and a significantly lower DCN, reflecting its weaker auto-ignition reactivity. These differences affect spray evaporation and local mixing stratification, as well as the robustness of flame anchoring in the recirculation zone, leading to changes in the LBO limit. Such fuel property-driven differences in LBO behavior have also been discussed in existing studies on gas turbine combustion stability [45].
+
+Figure 13 shows the predicted LBO limits at different inlet temperatures. This trend is consistent with the conclusions obtained in the study by Luo [46]. As the combustion chamber inlet temperature increases from 340 K to 400 K, the LBO limit fuel-to-air ratio decreases significantly. This is mainly because, as the inlet temperature increases, the droplet evaporation rate accelerates, fuel spray evaporation becomes more complete, and the fuel–air mixing quality improves. This results in a more easily formed and stable combustible mixture. At the same time, a higher initial temperature also helps shorten ignition delay, enhance the chemical reaction rate, and improve the stability of the flame under near-LBO conditions, thereby reducing the minimum fuel supply required to maintain combustion, which is reflected as a significant decrease in the LBO limit fuel-to-air ratio. After the combustion chamber inlet temperature exceeds 400 K, the change in the LBO limit decreases sharply, and as the temperature increases, it gradually stabilizes. This indicates that the impact of inlet temperature on the LBO boundary is highly sensitive in the early stages, but after the temperature reaches a certain range, the improvement effect of droplet evaporation and mixing processes is essentially exhausted, and the marginal gains from further temperature increases are significantly reduced. At this point, the LBO boundary is more constrained by factors such as the combustion chamber flow organization, the flame stabilization capability of the recirculation zone, and residence time. Therefore, its change becomes gradual and eventually stabilizes. The fitted curve of the LBO limit fuel-to-air ratio with inlet temperature variation in this combustion chamber model is obtained as:
+
+q L B O = 67.3 e − T 3 / 30.3 + 0.00464
+
+(38)
+
+As the inlet pressure increases, the LBO limit fuel-to-air ratio of the combustion chamber gradually decreases (as shown in Figure 14), meaning that increasing the combustion chamber inlet pressure helps improve the LBO performance of the combustion chamber. This conclusion is consistent with that of Suo [47]. The main reason is that when the inlet pressure increases, the gas density in the combustion chamber increases, enhancing the heat and mass transfer processes between the fuel droplets and the surrounding gas, which leads to more complete droplet evaporation and facilitates the formation of a more uniform and stable combustible mixture. At the same time, higher pressure typically increases the chemical reaction rate and enhances the heat release intensity of the flame, thereby improving the stability of the flame under near-LBO conditions and allowing combustion to be maintained even at lower fuel-to-air ratios. However, this change is not linear. As the inlet pressure continues to increase, the decrease in the LBO limit fuel-to-air ratio becomes less pronounced, indicating that the improvement effect of inlet pressure on LBO performance exhibits a clear diminishing marginal effect. This is because, in lower pressure ranges, increasing pressure has a more significant promoting effect on evaporation, mixing, and reaction processes. Once the pressure reaches a certain level, these processes have already been sufficiently improved, and further pressure increases result in limited gains. At this point, the LBO limit is more constrained by factors such as the combustion chamber flow organization, the flame stabilization capability of the recirculation zone, local mixing uniformity, and residence time. Therefore, the effect of increasing inlet pressure on LBO performance gradually saturates. The following fitted curve is obtained:
+
+q L B O = 0.00416 e − P 3 / 1.1 + 0.00424
+
+(39)
+
+To investigate the reason for the nonlinear variation of the LBO limit fuel–air ratio with the inlet pressure shown in Figure 14, the temperature distributions on the central axial plane of the combustor at different inlet pressures with a fuel–air ratio of 0.0050 are presented in Figure 15. Although slight differences in the temperature fields can be observed under different inlet pressures, the overall distributions remain essentially similar. Therefore, the increase in inlet pressure does not significantly enhance the fuel–air mixing and combustion efficiency in the combustor to release more heat. As a result, the lean blowout performance of the combustor is not improved, and the LBO limit fuel–air ratio does not decrease.
+
+In Figure 16, as the inlet pressure increases, the contour of the combustion chamber recirculation zone gradually becomes fuller from the “M” shape, that is, the recirculation zone gradually increases. From a timescale perspective, when the residence time of liquid fuel in the recirculation zone of the combustion chamber is less than the chemical timescale, LBO occurs. An increase in the recirculation zone means that the residence time of liquid fuel particles in the recirculation zone increases, so even without providing additional energy to the combustion chamber, its lean blowout characteristics can be improved.
+
+As the inlet mass flow rate increases, the lean blowout (LBO) limit fuel–air ratio of the combustor gradually increases (Figure 17), indicating that an increase in combustor inlet mass flow rate deteriorates the lean blowout performance. This trend is consistent with that reported by Liu Wei et al. [48]. This is because after the inlet mass flow rate increases, the average flow velocity in the combustor rises, and the fluid residence time in the combustion zone is shortened, thereby reducing the time available for fuel evaporation, fuel–air mixing, and chemical reactions. As a result, under near-LBO conditions, the flame becomes more difficult to sustain stably. Meanwhile, the higher flow velocity enhances flame stretch and flow-induced disturbances, increasing the risks of flame destabilization and blowout. Therefore, a higher fuel supply rate (i.e., a higher fuel–air ratio) is required to maintain combustion stability. The fitted curve obtained is as follows:
+
+q L B O = 0.00211 m ˙ a + 0.00304
+
+(40)
+
+To investigate the reason for the linear variation in Figure 17, we provide Figure 18. It was found that as the inlet mass flow rate of the combustion chamber increases, the overall temperature change on the axial surface of the combustion chamber shows a downward trend. The reasons for the above results can be divided into two aspects. Firstly, as the inlet mass flow rate increases, more cooler air enters the combustion chamber, directly causing the overall temperature field to decrease. A larger gas mixture will carry more energy and be discharged from the combustion chamber outlet, further reducing the combustion chamber temperature and decreasing the lean blowout performance of the combustion chamber. Secondly, a larger mass flow rate means an increase in air velocity, which shortens the residence time of the gas mixture in the combustion chamber. This means that the fuel chemical reaction time remains unchanged, and the residence time of the fuel is shortened, thereby reducing the lean blowout performance of the combustion chamber. Under the combined effect of the above two aspects, the lean blowout performance of the combustion chamber decreases, and the LBO limit air–fuel ratio increases.
+
+According to the modified Nusselt number flame volume model, the global modified Nusselt number Nu Cat − C 1 ∗ = 2.26 for Cat-C1 fuel under this operating condition is obtained, and the predicted results are compared with the original model results. The predicted iteration processes are shown in Table 5 and Table 6.
+
+The results indicate that there is a discrepancy between the Cat-C1 fuel LBO limit fuel-to-air ratios obtained by iterative calculations using the improved prediction model and the original model. Under the same operating conditions, the improved model predicts an LBO limit fuel-to-air ratio of 0.00514, which differs from the experimental value of 0.00548 reported by Esclapez [45] under identical conditions by approximately 6.2%. Compared with the prediction of 0.00483 obtained from the original model, the prediction accuracy is improved by 5.7%.
+
+5. Conclusions
+
+This study compares the accuracy of three lean blowout (LBO) prediction methods using numerical simulations. In response to the bias in LBO prediction caused by the complex physical properties of sustainable aviation fuel (SAF), an improved flame volume model based on the Abramzon–Sirignano droplet evaporation model is proposed. The main conclusions are as follows:
+
+Among the three prediction methods, the flame volume mixing method has the highest accuracy in predicting the LBO limit of traditional aviation fuel RP-3, with a deviation of 7.6% from experimental values, significantly better than the characteristic section method and fuel flow iteration method (both with a deviation of 14.7%). Its prediction process is simpler, and its description of the physical mechanism of the combustion process is more realistic.
+
+The existing flame volume models have insufficient resolution ability for SAF, mainly because the classical droplet evaporation model does not fully consider the special properties of SAF in density, viscosity, surface tension, and other physical properties. The modified Nusselt number flame volume model constructed by introducing the Abramzon–Sirignano droplet evaporation model and incorporating the effects of droplet property changes, Stefan flow, and gas–liquid heat and mass transfer significantly improved the prediction accuracy of SAF. Among them, the prediction error of Cat-C1 fuel was reduced by 5.7% compared to the original model, which verified the sensitivity of the improved model to changes in fuel properties.
+
+Improving the model can effectively capture the LBO characteristics of SAF under different operating conditions. As the inlet temperature of the combustion chamber increases, the limit fuel-to-air ratio of LBO first significantly decreases and then tends to stabilize. Increasing the inlet pressure can narrow the LBO limit and improve the lean blowout performance, but the effect gradually saturates with increasing pressure. An increase in the inlet air mass flow rate will expand the LBO limit and reduce lean blowout performance, mainly related to a shortened combustion residence time.
+
+Although the proposed method achieves some improvement in predicting the lean blowout (LBO) limits of sustainable aviation fuels (SAFs), several limitations remain. First, the current reduction in prediction error relative to the baseline FV model is still limited, and broader datasets as well as further model refinement are still needed to improve the method’s performance. Second, only one SAF surrogate fuel (Cat-C1) was validated in this study, and the robustness and generalization capability of the proposed method still need to be further assessed using more SAF types and a wider range of operating-condition datasets. In addition, the combustor walls were treated as adiabatic in the current CFD framework, and wall thermal effects and wall heat loss on LBO behavior were not considered; these effects will be included in future three-cup combustor studies to improve the physical completeness of the analysis. Finally, the model was mainly developed and validated for a specific combustor configuration, and its applicability to other geometries has not yet been sufficiently demonstrated, which requires further validation under different combustor configurations and operating conditions.
+
+Author Contributions
+
+T.D. and Y.L. designed and performed the experiments. T.D., P.D., Y.L. and X.Y. contributed to the manuscript writing. All authors have read and agreed to the published version of the manuscript.
+
+Funding
+
+This study was supported by the Fundamental Research Funds for the Central Universities (Grant No.3122025100).
+
+Data Availability Statement
+
+The original contributions presented in the study are included in the article, further inquiries can be directed to the corresponding author.
+
+Acknowledgments
+
+I would like to express my sincere gratitude to my supervisor, Tian Deng, for her invaluable guidance, insightful suggestions, and continuous academic support throughout the research process, which greatly contributed to the completion of this work.
+
+Conflicts of Interest
+
+The authors declare no conflicts of interest.
+
+References
+
+Yan, R.; Wang, L. SAF industry enters a fast track of development. Sinopec Mon. 2024, 7, 49–53. [Google Scholar] [CrossRef]
+
+Wang, X.; Liu, Y.; Zhang, X.; Yang, C.; Li, H. Characteristic analysis of dynamic pressure signal of unstable combustion in central staged swirl combustor. J. Aerosp. Power 2023, 38, 2883–2894. [Google Scholar] [CrossRef]
+
+Longwell, J.P.; Frost, E.E.; Weiss, M.A. Flame stability in bluff body recirculation zones. Ind. Eng. Chem. 1953, 45, 1629–1633. [Google Scholar] [CrossRef]
+
+Lefebvre, A.H. Fuel effects on gas turbine combustion—Ignition, stability, and combustion efficiency. J. Eng. Gas Turbines Power 1985, 107, 24–37. [Google Scholar] [CrossRef]
+
+Ballal, D.R.; Lefebvre, A.H. Weak extinction limits of turbulent heterogeneous fuel/air mixtures. J. Eng. Power. Apr. 1980, 102, 416–421. [Google Scholar] [CrossRef]
+
+Zukoski, E.E.; Marble, F.E. Experiments concerning the mechanism of flame blowoff from bluff bodies. In Proceedings of the Gas Dynamics Symposium on Aerothermochemistry; Caltech Library: Pasadena, CA, USA, 1956; pp. 205–210. [Google Scholar]
+
+Plee, S.L.; Mellor, A.M. Review of flashback reported in prevaporizing/premixing combustors. Combust. Flame 1978, 32, 193–203. [Google Scholar] [CrossRef]
+
+Plee, S.L.; Mellor, A.M. Characteristic time correlation for lean blowoff of bluff-body-stabilized flames. Combust. Flame 1979, 35, 61–80. [Google Scholar] [CrossRef]
+
+Derr, W.S.; Mellor, A.M. Characteristic times for lean blowoff in turbine combustors. J. Propuls. Power 1987, 3, 377–380. [Google Scholar] [CrossRef]
+
+Jarymowycz, T.A.; Mellor, A.M. Correlation of lean blowoff in an annular combustor. J. Propuls. Power 1986, 2, 190–192. [Google Scholar] [CrossRef]
+
+Leonard, P.A.; Mellor, A.M. Correlation of lean blowoff of gas turbine combustors using alternative fuels. J. Energy 1983, 7, 729–732. [Google Scholar] [CrossRef]
+
+Xie, F.; Huang, Y.; Wang, F.; Hu, B. Visualization of the lean blowout process in a model combustor with a swirl cup. In Turbo Expo: Power for Land, Sea, and Air; American Society of Mechanical Engineers (ASME): New York, NY, USA, 2010; pp. 433–439. [Google Scholar]
+
+Mongia, H.; Vermeersch, M.; Held, T. A simple reactor-based approach for correlating lean blowout of turbopropulsion engine combustors. In Proceedings of the 37th Joint Propulsion Conference and Exhibit, Salt Lake City, UT, USA, 8–11 July 2001; p. 3420. [Google Scholar]
+
+Xie, F.; Huang, Y.; Hu, B.; Wang, F. Improved semiempirical correlation to predict lean blowout limits for gas turbine combustors. J. Propuls. Power 2012, 28, 197–203. [Google Scholar] [CrossRef]
+
+Hu, B.; Huang, Y.; Wang, F.; Xie, F. CFD predictions of LBO limits for aero-engine combustors using fuel iterative approximation. Chin. J. Aeronaut. 2013, 26, 74–84. [Google Scholar] [CrossRef]
+
+Hu, B.; Huang, Y.; Wang, F.; Xie, F. Lean Blow-Out Prediction of Aero-Engine Combustor Based on Cold Flow Field Numerical Simulation. J. Propuls. Technol. 2012, 33, 232–238. [Google Scholar]
+
+Zhang, X. Numerical Prediction for Lean Blowout of Annular Combustion. Master’s Thesis, Harbin Engineering University, Harbin, China, 2013. [Google Scholar] [CrossRef]
+
+Zhang, Z.B.; Zheng, H.T.; Li, Y.J. Prediction of lean blowout on marine gas turbine combustor based on Feature-Parameter-Criterion. J. Harbin Eng. Univ. 2014, 35, 177–183. [Google Scholar]
+
+Zhang, Z.; Zheng, H.; Ling, R. Feature-parameter-criterion for predicting lean blowout limit of aero-engine combustor. J. Aerosp. Power 2014, 7, 1631–1638. [Google Scholar] [CrossRef]
+
+Wang, C.J.; Tong, F.; Chen, K.H.; Chen, B.D.; Liu, A.G. Numerical study on lean blow-out characteristics of high temperature rise combustor. J. Gas Turbine Exp. Res. 2016, 29, 1–6. [Google Scholar]
+
+Sturgess, G.J.; Heneghan, S.P.; Vangsness, M.D.; Ballal, D.R.; Lesmerises, A.L. Lean blowout in a research combustor at simulated low pressures. J. Eng. Gas Turbines Power 1996, 118, 773–781. [Google Scholar] [CrossRef]
+
+Sturgess, G.J.; Sloan, D.G.; Lesmerises, A.L.; Heneghan, S.P.; Ballal, D.R. Design and development of a research combustor for lean blow-out studies. J. Eng. Gas Turbines Power 1992, 114, 13–19. [Google Scholar] [CrossRef]
+
+Sturgess, G.J.; Heneghan, S.P.; Vangsness, M.D.; Ballal, D.R.; Lesmerises, A.L.; Shouse, D. Effects of Back-Pressure in a Lean Blowout Research Combustor. In Turbo Expo: Power for Land, Sea, and Air; American Society of Mechanical Engineers: New York, NY, USA, 1992; Volume 78958, p. V003T06A001. [Google Scholar]
+
+Sturgess, G.J.; Shouse, D. Lean blowout research in a generic gas turbine combustor with high optical access. In Turbo Expo: Power for Land, Sea, and Air; American Society of Mechanical Engineers: New York, NY, USA, 1993; Volume 78910, p. V03BT16A088. [Google Scholar]
+
+Hu, B.; Huang, Y.; Xu, J. A hybrid semi-empirical model for lean blow-out limit predictions of aero-engine combustors. J. Eng. Gas Turbines Power 2015, 137, 031502. [Google Scholar] [CrossRef]
+
+Wang, Z.; Hu, B.; Zhao, Q.; Xu, J. Towards predicting lean blow-off based on Damköhler number and practical reaction zone. In Turbo Expo: Power for Land, Sea, and Air; American Society of Mechanical Engineers: New York, NY, USA, 2017; Volume 50848, p. V04AT04A039. [Google Scholar]
+
+Wang, Z.H.; Hu, B.; Deng, A.M.; Zhao, Q. Predicting lean blow-off of bluffbody stabilized flames based on Damköhler number. Chin. J. Aeronaut. 2019, 32, 308–323. [Google Scholar] [CrossRef]
+
+Wang, Z.H. Investigation on Lean Blowout Prediction Method for Aeroengine Combustors Based on Damköhler Number. Ph.D. Thesis, University of Chinese Academy of Sciences (Institute of Engineering Thermophysics), Beijing, China, 2019. [Google Scholar]
+
+Wang, Z.; Hu, B.; Fang, A.; Deng, A.; Zhang, J.; Zhao, Q. Predicting lean blow-off limit of gas turbine combustors based on Damköhler number and detailed atomization information. Proc. Inst. Mech. Eng. Part A J. Power Energy 2021, 235, 262–278. [Google Scholar] [CrossRef]
+
+Wang, Z.; Hu, B.; Fang, A.; Zhao, Q.; Chen, X. Analyzing lean blow-off limits of gas turbine combustors based on local and global Damköhler number of reaction zone. Aerosp. Sci. Technol. 2021, 111, 106532. [Google Scholar] [CrossRef]
+
+Yang, Z.; Zeng, P.; Yang, X.; Qian, J.; Wang, B. Management, verification standards and validation process of aviation biofuel. J. Aerosp. Power 2018, 33, 440–447. [Google Scholar] [CrossRef]
+
+Mongia, H.; Vermeersch, M.; Held, T. Data reduction and analysis(DRA) for emissions and lean blowout. In Proceedings of the 41st Aerospace Sciences Meeting and Exhibit, Reno, Nevada, 6–9 January 2003; p. 823. [Google Scholar]
+
+Huang, X.; Wang, H.R. Numerical simulation and prediction of combustor blowout characteristics based on flame volume method. J. Gas Turbine Exp. Res. 2018, 31, 8–13. [Google Scholar]
+
+Sun, L.; Huang, Y.; Zhang, D.; Xiao, W. An Improved Semi-Empirical Correlation for Prediction of Lean Blowout Limits for Gas Turbine Combustors Using Gas Fuel. J. Propuls. Technol. 2015, 36, 1677–1685. [Google Scholar]
+
+Ateshkadi, A.; McDonell, V.G.; Samuelsen, G.S. Lean blowout model for a spray-fired swirl-stabilized combustor. Proc. Combust. Inst. 2000, 28, 1281–1288. [Google Scholar] [CrossRef]
+
+Lefebvre, A.H.; Ballal, D.R. Gas Turbine Combustion: Alternative Fuels and Emissions; CRC Press: Boca Raton, FL, USA, 2010. [Google Scholar]
+
+Abramzon, B.; Sirignano, W.A. Droplet vaporization model for spray combustion calculations. Int. J. Heat Mass Transf. 1989, 32, 1605–1618. [Google Scholar] [CrossRef]
+
+Lefebvre, A.H.; McDonell, V.G. Atomization and Sprays; CRC Press: Boca Raton, FL, USA, 2017. [Google Scholar]
+
+Spalding, D.B. Combustion of liquid fuels. Nature 1950, 4187, 160. [Google Scholar] [CrossRef]
+
+Godsave, G.A.E. Studies of the combustion of drops in a fuel spray—The burning of single drops of fuel. Symp. (Int.) Combust. 1953, 4, 818–830. [Google Scholar] [CrossRef]
+
+He, Y.; Deng, T. Numerical Study of low-pressure modeling of bio-jet fuel combustion. J. Beijing Univ. Aeronaut. Astronaut. 2024. (In Chinese) [Google Scholar] [CrossRef]
+
+Kundu, K.P.; Penko, P.F.; Yang, S.L. Reduced reaction mechanisms for numerical calculations in combustion of hydrocarbon fuels. In Proceedings of the 36th AIAA Aerospace Sciences Meeting and Exhibit, Reno, NV, USA, 12–15 January 1998. [Google Scholar]
+
+Hasti, V.R.; Kundu, P.; Kumar, G.; Drennan, S.A.; Som, S.; Won, S.H.; Dryer, F.L.; Gore, J.P. Lean blow-out (LBO) computations in a gas turbine combustor. In Proceedings of the 2018 Joint Propulsion Conference, Cincinnati, OH, USA, 9–11 July 2018; p. 4958. [Google Scholar]
+
+Wang, K.; Xu, R.; Parise, T.; Shao, J.; Movaghar, A.; Lee, D.J.; Park, J.W.; Gao, Y.; Lu, T.; Egolfopoulos, F.N. A physics-based approach to modeling real-fuel combustion chemistry-IV. HyChem modeling of combustion kinetics of a bio-derived jet fuel and its blends with a conventional Jet A. Combust. Flame 2018, 198, 477–489. [Google Scholar] [CrossRef]
+
+Esclapez, L.; Ma, P.C.; Mayhew, E.; Xu, R.; Stouffer, S.; Lee, T.; Wang, H.; Ihme, M. Fuel effects on lean blow-out in a realistic gas turbine combustor. Combust. Flame 2017, 181, 82–99. [Google Scholar] [CrossRef]
+
+Luo, R.; Fu, Y.; Jiang, J.; Shi, P.; Liu, P.; Wang, Z.; Fan, W. Experimental study on ignition and lean blowout characteristicsof high temperature rise combustor. J. Phys. Conf. Ser. 2022, 2364, 012058. [Google Scholar] [CrossRef]
+
+Suo, J.; Yu, H.; Zheng, L. Experimental study on lean blowout of a high temperature risecombustor. In Proceedings of the 55th AIAA Aerospace Sciences Meeting, Grapevine, TX, USA, 9–13 January 2017; p. 1056. [Google Scholar]
+
+Liu, W.; Wang, C.; Zheng, S.; Yu, L.; Zeng, W.; Zhen, B. Experimental study and numerical simulation of lean blowout in a centrally staged combustor. J. Propuls. Technol. 2020, 41, 642–649. [Google Scholar]
+
+Figure 1. The schematic diagram of the characteristic section location.
+
+Figure 2. The flowchart of LBO prediction in the characteristic section method.
+
+Figure 3. Equivalent spherical representation of the recirculation zone under different fuel-to-air ratios (The gray region represents the area where the axial velocity is zero, while the green region denotes the equivalent recirculation zone).
+
+Figure 4. The flowchart of LBO prediction in the fuel iterative approximation method.
+
+Figure 5. The flowchart of LBO prediction in the FV method.
+
+Figure 6. The geometric model of a dual-radial swirler combustion chamber.
+
+Figure 7. Schematic diagram of a cross-section of the combustion chamber.
+
+Figure 8. The internal mesh distribution of the combustion chamber(The dark area represents the grid refinement region).
+
+Figure 9. Temperature distribution along the central axis of the combustor chamber for different meshes.
+
+Figure 10. Comparison of axial velocity at different mesh numbers.
+
+Figure 11. Comparison of the axial velocity in the Y-direction in a cold flow field.
+
+Figure 12. Comparison of temperature simulation results on the central axis.
+
+Figure 13. Predicted LBO limit values at different inlet temperatures and the fitted curve (R2 = 0.8575).
+
+Figure 14. Predicted LBO limit values at different inlet pressures and the fitted curve (R2= 0.9101).
+
+Figure 15. The central-axial plane temperature distribution situation of different inlet air pressures in a 0.0050 fuel–air ratio.
+
+Figure 16. The recirculation zone of different inlet air pressures in a 0.0050 fuel−air ratio.
+
+Figure 17. Predicted LBO limit values at different inlet mass flow rates and the fitted curve (R2 = 0.9278).
+
+Figure 18. The central-axial plane temperature distribution situation of different inlet air mass flow rates in a 0.0050 fuel–air ratio.
+
+Table 1. The boundary condition setting of the air inlet and outlet.
+
+Air InletParameterInlet boundary typeMass Flow InletOutlet boundary typePressure OutletOutlet pressure (atm)1Turbulence intensity11%Inlet hydraulic diameter (m)0.0360Outlet hydraulic diameter (m)0.0540
+
+Table 2. The iterative process of LBO prediction in the characteristic section method (The symbol ‘——’ denotes data that is either unavailable or not applicable in this context).
+
+Fuel-to-Air RatioAverage Temperature of Characteristic Cross-Section (K)Temperature Change RateFuel–Air Ratio VariationRate of Change in Temperature with Respect to Fuel–Air Ratio0.00961198.32——————0.00681090.370.09000.29170.30880.00591073.140.01580.13230.11940.00571056.450.01550.03390.45880.00551041.350.01430.03510.40730.00541036.460.00470.01820.25820.00521031.560.00470.03700.1276
+
+Table 3. The iterative process of LBO prediction in fuel iterative approximation (The symbol ‘——’ denotes data that is either unavailable or not applicable in this context).
+
+Fuel-to-Air RatioMean Recirculation Zone Temperature (K)Rate of Change in the Mean Temperature with Respect to Fuel–Air RatioFuel–Air Ratio Variation0.00961669.3————0.00681484.2——0.29170.00591445.10.65630.13230.00571382.77.19240.03390.00551374.90.12490.03510.00541358.80.91910.01820.00521339.50.59830.0370
+
+Table 4. The iterative process of LBO prediction in the FV method.
+
+n q n − 1 α β n − 1 q L B O , n − 1 ε 10.00570.1140.0470.00371−0.348920.00540.1140.0400.00400−0.259330.00520.1140.0370.00422−0.187740.00490.1140.0320.00459−0.0612
+
+Table 5. The iterative process of the LBO limit under operating condition 0.
+
+n q n − 1 α V f β n − 1 q LBO , n − 1 ε 10.00500.1140.000013800.01070.005810.16220.00480.1140.000014010.01090.004830.006
+
+Table 6. The iterative process of LBO prediction of Cat-C1 fuel.
+
+n
+
+q n − 1
+
+α
+
+V f
+
+β n − 1
+
+q LBO , n − 1
+
+ε
+
+10.00500.1140.000013800.01070.005140.028
+
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
+
+© 2026 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license.
+
+Share and Cite
+
+MDPI and ACS Style
+
+Deng, T.; Du, P.; Li, Y.; Yang, X. An Improved Flame Volume Mixing Method for Lean Blowout Prediction of Sustainable Aviation Fuels. Energies 2026, 19, 1479. https://doi.org/10.3390/en19061479
+
+AMA Style
+
+Deng T, Du P, Li Y, Yang X. An Improved Flame Volume Mixing Method for Lean Blowout Prediction of Sustainable Aviation Fuels. Energies. 2026; 19(6):1479. https://doi.org/10.3390/en19061479
+
+Chicago/Turabian Style
+
+Deng, Tian, Pengjing Du, Yaobo Li, and Xiaojun Yang. 2026. ""An Improved Flame Volume Mixing Method for Lean Blowout Prediction of Sustainable Aviation Fuels"" Energies 19, no. 6: 1479. https://doi.org/10.3390/en19061479
+
+APA Style
+
+Deng, T., Du, P., Li, Y., & Yang, X. (2026). An Improved Flame Volume Mixing Method for Lean Blowout Prediction of Sustainable Aviation Fuels. Energies, 19(6), 1479. https://doi.org/10.3390/en19061479
+
+Note that from the first issue of 2016, this journal uses article numbers instead of page numbers. See further details here.
+
+Article Metrics
+
+No
+
+No
+
+Article metric data becomes available approximately 24 hours after publication online.",https://pub.mdpi-res.com/energies/energies-19-01479/article_deploy/html/images/energies-19-01479-g001-550.jpg?1773656968,N,,2026-03-16 10:58:36.820500
 ,,2026-03-16 13:12:08+00:00,BioEnergy Times,Vietnam ethanol fuel Archives - BioEnergy Times,Not Available,,,,,https://bioenergytimes.com/tag/vietnam-ethanol-fuel/,"BioEnergy Times brings the latest News & Information from India & around the world related to the BioFuels and BioEnergy.
 Contact us: news@bioenergytimes.com","BioEnergy Times brings the latest News & Information from India & around the world related to the BioFuels and BioEnergy.
 
 Contact us: news@bioenergytimes.com",https://bioenergytimes.com/wp-content/uploads/2024/03/cropped-bioenergytimes-thumbnail-32x32.png,N,,2026-03-16 09:56:46.371027
+,,2026-03-16 12:35:45+00:00,H2 View,Mandates and Scope 3 deals begin shaping e-SAF deals | Aerospace & Aviation | H2 View,"Connor Jack, Dominic Ellis, Charlie Currie, connor-jack",,,,,https://www.h2-view.com/story/mandates-and-scope-3-deals-begin-shaping-e-saf-deals/2138458.article/,"Green hydrogen-based sustainable aviation fuel (SAF) offtake deals are already ramping up ahead of incoming mandates.
+Robert Schuetzle, CEO of e-fuel producer Infinium, told a H2 View webinar that long-term green hydrogen-based SAF deals are accelerating in both compulsory and voluntary markets.
+That agreement has been driven by policies like the ReFuelEU Aviation regulation and the UK’s net-zero aviation strategy, as airlines begin lining up SAF supplies ahead of mandates.
+Alongside IAG, American Airlines has signed a 10-year offtake deal to receive volumes of e-SAF from Infinium’s 23,000-tonne project.
+Unlike the mandate-driven deals, however, Schuetzle said the move is underpinned by Scope 3 emissions savings.","Green hydrogen-based sustainable aviation fuel (SAF) offtake deals are already ramping up ahead of incoming mandates.
+
+Robert Schuetzle, CEO of e-fuel producer Infinium, told a H2 View webinar that long-term green hydrogen-based SAF deals are accelerating in both compulsory and voluntary markets.
+
+Infinium has been operating a pilot plant in Texas since 2023 and is currently building a project, named Roadrunner, designed to produce 23,000 tonnes of e-SAF per year, using 100MW of electrolysis.
+
+The project, which is due online in 2027, will supply fuels to International Airlines Group (IAG), which owns British Airways and more, under a 10-year deal.
+
+That agreement has been driven by policies like the ReFuelEU Aviation regulation and the UK’s net-zero aviation strategy, as airlines begin lining up SAF supplies ahead of mandates.
+
+“Most of the SAF produced from Roadrunner will be shipped over to the UK for [use] by IAG,” the Infinium boss said.
+
+However, airlines operating in regions without mandates are beginning to line up for the fuel.
+
+Alongside IAG, American Airlines has signed a 10-year offtake deal to receive volumes of e-SAF from Infinium’s 23,000-tonne project. The US currently has no legislative incentive for airlines to switch.
+
+Unlike the mandate-driven deals, however, Schuetzle said the move is underpinned by Scope 3 emissions savings.
+
+“American [Airlines] partnered with Citi [Bank] on the back end of that deal to buy Scope 3 emissions for that SAF utilisation,” he told the webinar. “So, really a three-way deal to allow the economics to work through American.”
+
+While voluntary uptake is encouraging, Schuetzle recognised it as a “harder sell” than e-fuel destined for regulated markets like the EU and UK, which he said will remain the firm’s “primary” targets.
+
+But regulation outside of those core European markets is building.
+
+Brazil has confirmed a 10% reduction in greenhouse gas emissions from domestic flights by 2037, while Japan, Malaysia, Indonesia, and Turkey all have mandates in the policy pipeline.
+
+Moving forward, however, costs will be key. “We can’t rely on policy forever,” Schuetzle asserted.
+
+However, the firm has used policy backing to drive funding for its projects, which it said has allowed it to focus on production cost reduction.
+
+Its current focus is on bringing down total installed costs. Schuetzle said this ethos was behind its selection of Electric Hydrogen’s factory-made, 100MW electrolyser plant for Roadrunner.
+
+“Framework will be the ultimate driver, but getting volume into the market…with Electric Hydrogen gets that cost curve down. We have to get down to, or close to parity with fossil [fuels],” Schuetzle added.","https://www.h2-view.com/cdn-cgi/image/width=1200,height=900,fit=contain,quality=75,metadata=none,format=auto,gravity=auto/https://www.h2-view.com/wp-content/files/plane-scaled.jpg",N,,2026-03-16 10:58:48.250416
+,,2026-03-16 12:24:49+00:00,TradingView,Cielo Announces Strategic Partnership Framework Agreement With Tano T'Enneh ... - TradingView,Not Available,,,,,"https://www.tradingview.com/news/reuters.com,2026:newsml_TUA4STLPX:0-cielo-announces-strategic-partnership-framework-agreement-with-tano-t-enneh-enterprises-for-proposed-sustainable-aviation-fuel-facility-in-british-columbia/","RefinitivLess than 1 min read © Copyright Thomson Reuters 2026.
+Click For Restrictions - https://agency.reuters.com/en/copyright.html Login or create a forever free account to read this news","RefinitivLess than 1 min read
+
+© Copyright Thomson Reuters 2026. Click For Restrictions - https://agency.reuters.com/en/copyright.html
+
+Login or create a forever free account to read this news",https://s.tradingview.com/static/images/illustrations/news-story.jpg,N,,2026-03-16 10:58:59.030872
+,,2026-03-16 12:17:36+00:00,www.msn.com,Airbus Joins Gati Shakti Vishwavidyalaya To Advance R&D In Sustainable Aviation Fuel,Not Available,,,,,https://www.msn.com/en-in/money/topstories/airbus-joins-gati-shakti-vishwavidyalaya-to-advance-r-d-in-sustainable-aviation-fuel/ar-AA1PXQfy?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1,Airbus Joins Gati Shakti Vishwavidyalaya To Advance R&D In Sustainable Aviation Fuel. Story by Lakshya Rana. • 4mo.,Not Available,,N,,2026-03-16 10:59:02.584947
 ,,2026-03-16 11:58:35+00:00,Petro Online,Upgrade of chemical recycling technologies at Porvoo refinery - Petro Online,Petro Industry News,,,,,https://www.petro-online.com/news/fuel-for-thought/13/neste/upgrade-of-chemical-recycling-technologies-at-porvoo-refinery/67055,"Neste has commissioned a new liquefied waste plastic (LWP) upgrading unit at its Porvoo refinery, marking a significant development in the industrial deployment of chemical recycling technologies.
 Neste has been processing liquefied plastic waste, including pyrolysis oil, since 2020.
 Construction of the new upgrading unit began in 2023 as part of a broader integration with existing refinery infrastructure and was completed in late 2025.
@@ -20,6 +677,16 @@ Maiju Helin, Director of Polymers and Chemicals at Neste, said the new unit enab
 At the Porvoo facility, liquefied plastic waste is co-processed with conventional crude oil streams. Neste applies a mass-balance methodology to allocate recycled feedstock inputs to its recycled product stream, marketed as Neste RE. According to the company, use of recycled Neste RE in plastics production can reduce virgin fossil resource consumption by more than 70% and lower greenhouse gas emissions by over 35% compared with the incineration of plastic waste and the use of fossil-based feedstocks.
 
 In parallel with the development of its own infrastructure, Neste is also working with Alterra and Technip Energies to license liquefaction technologies aimed at enabling chemical recycling of hard-to-recycle plastic waste streams, supporting the broader expansion of circular plastics solutions.",https://www.petro-online.com/assets/file_store/pr_files/67055/thumbnails/images/768w-432h-t-fit-Neste-launches-world’s-largest-liquefied-waste-plastic-upgrading-facility.jpg,N,,2026-03-16 09:56:53.935676
+,,2026-03-16 11:58:02+00:00,MarketScreener,Cielo announces strategic partnership framework agreement with Tano T'Enneh Enterprises ...,Not Available,,,,,https://www.marketscreener.com/news/cielo-announces-strategic-partnership-framework-agreement-with-tano-t-enneh-enterprises-for-proposed-ce7e5edadd81f723,"Published on 03/16/2026 at 07:49 am EDT Reuters This article is reserved for members Unlock the article: REGISTER NOW!
+Already a customer?","Published on 03/16/2026 at 07:49 am EDT
+
+Reuters
+
+This article is reserved for members
+
+Unlock the article: REGISTER NOW!
+
+Already a customer? Log In",https://www.marketscreener.com/images/twitter_MS_fdblanc.png,N,,2026-03-16 10:59:11.760598
 ,,2026-03-16 11:45:38+00:00,matthey.com,PGM Horizons: PhD funding programme - Johnson Matthey,Not Available,,,,,https://matthey.com/pgm-horizons-phd-funding,"Assessment criteria A panel of experts will review the applications independently against the specified criteria: 1.
 Technical feasibility & TRL Applications should demonstrate opportunities where the properties of PGMs provide a clear competitive advantage over alternatives to support uptake in the market.
 PGM demand generation and market impact Projects should show potential to generate significant demand of PGMs, especially Pd and Rh.
@@ -5423,31 +6090,3 @@ This is a major step forward in decarbonising Bentley’s end to end supply chai
 
 The Beyond100+ strategy places sustainability at the core of the brand, redefining every aspect of the business to lead in sustainable luxury mobility. It secures Bentley’s long‑term commitment to low‑carbon, responsible luxury, combining care for the environment with supporting people and innovation.",https://memuknews.com/wp-content/uploads/2026/03/ezgif-3e9a9aac17438d12.webp,N,,2026-03-13 13:57:40.530818
 ,,2026-03-13 15:08:43+00:00,www.chartmill.com,Southern Energy Renewables Announce $1.4 Billion Methanol and Sustainable Aviation ...,Not Available,,,,,https://www.chartmill.com/news/DEVS/accwirecq-2026-3-13-southern-energy-renewables-announce-14-billion-methanol-and-sustainable-aviation-fuel-facility-in-st-charles-parish,Southern Energy Renewables Announce $1.4 Billion Methanol and Sustainable Aviation Fuel Facility in St. Charles Parish.,Not Available,https://www.chartmill.com/news/DEVS/assets/icons/favicon-32x32.png,N,,2026-03-13 13:57:45.033876
-,,2026-03-13 14:57:31+00:00,"Energetica India Magazine, India Energy News, Renewable Energy News, Conventional Power Generation, Companies Guide...",From Export Strength to Ethanol Supremacy: The Dual Growth Engine of India's Sugar Sector,Energética India,,,,,https://www.energetica-india.net/articles/from-export-strength-to-ethanol-supremacy-the-dual-growth-engine-of-indias-sugar-sector,"The industry is moving towards Sustainable Aviation Fuel (SAF), with pilot projects already in progress at top refineries.
-As the global aviation industry works towards rapid decarbonisation, the Indian sugar sector is set to be a vital supplier of green fuel for aviation.
-March 13, 2026.
-By News Bureau","The industry is moving towards Sustainable Aviation Fuel (SAF), with pilot projects already in progress at top refineries. As the global aviation industry works towards rapid decarbonisation, the Indian sugar sector is set to be a vital supplier of green fuel for aviation.
-
-March 13, 2026. By News Bureau",https://www.energetica-india.net/images/articles/ga2zomWvXOeAzr7Rm5Nxyt3lqsJMyjy47Yf5fxJjCbz68xEgxErG0bt.jpg,N,,2026-03-13 12:59:48.928509
-,,2026-03-13 14:21:05+00:00,www.themanufacturer.com,Why precision engineering now defines internal combustion engine confidence,Not Available,,,,,https://www.themanufacturer.com/articles/why-precision-engineering-now-defines-internal-combustion-engine-confidence/,... sustainable aviation fuel (SAF). Many of these fuels will coexist for decades. Combustion engines will remain part of the global fleet for a long ...,Not Available,,N,,2026-03-13 10:58:39.653688
-,,2026-03-13 14:02:15+00:00,Oils & Fats International,Eni moves forward with biorefining project in Italy - Oils & Fats International,Not Available,,,,,https://www.ofimagazine.com/news/eni-moves-forward-with-biorefining-project-in-italy,"Both projects represented a significant step forward in developing the biofuel production capacity of Eni’s biofuels arm Enilive, the company said on 25 February.
-Both biorefineries were scheduled to be completed by 2028 and would offer flexibility to produce hydrogenated vegetable oil (HVO) and sustainable aviation fuel (SAF).
-The new biorefinery in Sannazzaro de’ Burgondi, which would have the capacity to produce 550,000 tonnes/year of SAF or HVO, would not affect the plant’s existing traditional fuels production capacity, Eni said.
-According to its website, Eni is active in the natural gas and oil sectors, as well as the co-generated electricity and renewables sectors.
-Through Enilive, Eni is a leading HVO producer in Europe and globally.","The final investment decision on the refinery in Pavia, Lombardy, followed a previous announcement by the company that as part of a joint venture with Q8 Italy – the international arm of Kuwait Petroleum Corporation – it would be constructing a biorefinery in Priolo, Sicily.
-
-Both projects represented a significant step forward in developing the biofuel production capacity of Eni’s biofuels arm Enilive, the company said on 25 February.
-
-First announced by Eni in October 2024, the plan for the Priolo site would support the company’s aim of increasing its biorefining capacity from the current 1.65M tonnes/year to over 3M tonnes/year in 2028 and 5M tonnes/year by 2030, with the potential to produce up to 2M tonnes/year of SAF by 2030.
-
-Both biorefineries were scheduled to be completed by 2028 and would offer flexibility to produce hydrogenated vegetable oil (HVO) and sustainable aviation fuel (SAF).
-
-The new biorefinery in Sannazzaro de’ Burgondi, which would have the capacity to produce 550,000 tonnes/year of SAF or HVO, would not affect the plant’s existing traditional fuels production capacity, Eni said.
-
-As part of the project, the hydrocracker (HDC2) unit would be converted using Eni’s Ecofining technology – developed in conjunction with Honeywell UOP to convert waste, residues and vegetable oils into biofuels that could be used in 100% pure form – and a pre-treatment unit for waste and residues would be constructed.
-
-The company said preparatory activities were underway ahead of the award of procurement and construction contracts for new units at the Priolo biorefinery, which would have a capacity of 500,000 tonnes/year of HVO or SAF.
-
-According to its website, Eni is active in the natural gas and oil sectors, as well as the co-generated electricity and renewables sectors. It operates in the domestic and international market, as well as through a wide range of subsidiaries and affiliates, including Enilive.
-
-Through Enilive, Eni is a leading HVO producer in Europe and globally.",https://www.ofimagazine.com/content-images/news/_1200x630_crop_center-center_82_none/Eni-logo-sized-for-website.-Source-Eni.jpg?mtime=1754581474,N,,2026-03-13 13:57:49.034152
