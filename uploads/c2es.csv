@@ -1,4 +1,469 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,Detroit and Evs,2026-04-10 03:52:51+00:00,www.techbriefs.com,Powering the Future: Beyond Lithium-Ion - Tech Briefs,SAE Media Group,,,,,https://www.techbriefs.com/component/content/article/54997-powering-the-future-beyond-lithium-ion,"Transcript 00:00:09 Good evening.
+I am a science communicator and a Caltech alum 00:00:37 and I very proudly got my PhD from the uh academic division that's going to be represented on stage tonight, chemistry and chemical engineering.
+Our undergraduate culture and 00:01:50 undergraduate life is incredibly unique here at Caltech.
+The orange boxes show what you would need for this sort of range of energy um for 100 to 400 terowatt hours.
+Okay, usually think of solids as sort of 01:01:57 things that stay in one place and don't move but you can get atoms to move in solids and we study that quite heavily.","Batteries are at the heart of modern life—from phones to EVs—and key to a sustainable energy future. In this talk, Caltech’s Kimberly See explores next-generation battery chemistries that move beyond lithium-ion, using abundant, low-cost materials while maintaining high energy density. Discover how her lab is tackling the challenges that could unlock greener, more accessible energy storage for renewables and electric vehicles.
+
+Transcript
+
+00:00:09 Good evening. [applause] Welcome to the Watson lectures at Keltech. It's so lovely to have all of you and I'm so glad that the weather was so nice for you and you got a chance to see I hope you know some pretty exciting lemons out [laughter] there. I'm your host Crystal Dworth. I am a science communicator and a Caltech alum
+
+00:00:37 and I very proudly got my PhD from the uh academic division that's going to be represented on stage tonight, chemistry and chemical engineering. So let's give a round of applause. Thank you. Yes. [cheering]
+
+>> [applause]
+
+>> I have been the host of the Watson lectures for three of the 103 years that right [laughter] that Caltech has been
+
+00:01:03 hosting these lectures and you know giving you the public an opportunity to come to campus and learn what the cutting edge um of science and technology is is happening here on campus. And usually in these lectures, you know, we talk about our commitment to connecting the esoteric research that's done in our labs to our community. And we talk about the Junior
+
+00:01:27 Watson program that allows students to come to campus, talk to researchers, visit labs, and really understand what it means to study science and technology here. But we don't actually talk about the experience of studying science and technology here. So, we're going to do that. Our undergraduate culture and
+
+00:01:50 undergraduate life is incredibly unique here at Caltech. Not just because of the problem sets and late nights and the incredibly difficult course material, but because Keltech undergraduate body is less than 1,000 students in all four years. We have a 3:1 studentto faculty ratio. That means there is no hiding in the
+
+00:02:17 back. Everybody knows your name and you're expected to be an active colleague from day one asking questions, challenging what's being presented and thinking on your own independently. And that's reflected by the fact that in our undergraduate population, over 80% are already engaged in laboratory research. And that's not cleaning floors and making solutions like what I did in
+
+00:02:47 my undergrad. That's real research. They're co-authoring papers with faculty that you've seen on this stage. And when they're not doing that or homework, they're probably planning a prank or a puzzle. We really love our pranks. It's one of the things that we feel really defines us as a university. We prank ourselves. Undergrads prank
+
+00:03:14 each other um and give them puzzle stacks to solve during senior ditch day every year. We prank the city of Los Angeles like in 1987 when we changed the famous Hollywood sign to say Caltech. Look it up. But a lot of time what we like to do when we're schedule when we're planning pranks is antagonize MIT. I mean it's just so easy. It's right
+
+00:03:41 there. And we've done a lot of amazing pranks. We have um we've passed out transfer forms um as part of the orientation week in front of MIT's registars's office. We've distributed over 400 free t-shirts in their visit during their visit day which proudly announced MIT on the front and because not everyone can go to Caltech on the back.
+
+00:04:11 But one of my favorite Caltech MIT stories has to do with battery technology which you're going to be hearing about today. So in 1968, one of our undergrads, Wally Ripple, was really concerned about some of the things that we talked about last month, actually. The air pollution as a result of exhaust combustion from cars. And he was like, we've got to figure out a better way to
+
+00:04:37 propel these cars. And so he started getting interested in electric vehicles. And when someone from Caltech is interested in a topic, it's not just research. it's always we're going to do something really crazy. And so what he did is he called up MIT and he challenged their students and actually some of their engineers to a race, an electric vehicle race in 1968.
+
+00:05:03 So MIT had an amazing new I think it was a Corvair from General Motors that they got a chance to put a ton of batteries into and really like spruce it up. Caltech in typical Caltech fashion had Wall-E's own 1958 Volkswagen bus and they figured that was good enough. So they modified the bus. They both set out from their respective campuses
+
+00:05:30 MIT all the way to Pasadena, Caltech, all the way to Boston. It wasn't um the fast race that they were really expecting, but they did eventually both make it to each other's prospective campuses. Now, MIT got to Caltech first, but they were towed across the finish line, disqualified.
+
+00:05:59 So after judge review, Caltech actually won that race. Um, and or at least was announced the winner, which is, you know, obviously what the the reason I'm telling you that story. Now, you're going to hear a lot more about what's at the cutting edge of battery technology from tonight's speaker, Kimberly C. So, I'm not going to spoil that for you. Um, but I really
+
+00:06:24 wanted to kind of give you a sense of what it's like to be engaged in a topic when you're a student here at Caltech because my experience was very special and everybody else is special in their own way. Now, before we send Kimberly on stage, you're going to hear an introduction from the CCE division chair, Sarah Reeseman, who's been on campus as long as I have. I told her I
+
+00:06:49 wasn't going to tell the story, and now I'm telling it. I met her my visit weekend as a graduate student. We were all prospective graduate students. We'd been accepted, but we hadn't said we were coming to Caltech yet. There's a group of us and we're all in the lobby in the hotel all worried that we're going to make a decision that's going to ruin our lives and this is the most
+
+00:07:06 important thing that's ever happened to us ever. Um, and Sarah was in that group and I remember one of the students turned to her and said, ""Whose lab do you want to work in?"" And she looked at them and she said, ""Oh, I have my own lab. Would you like to join my lab? and it was she was a new faculty member and was recruiting uh for her first her first graduate students. Um so you'll
+
+00:07:30 hear from Sarah. Then you'll see a video that kind of gives you a little bit more context about Kimberly and her work. Um and then after Kimberly's talk, as most of you know, you'll get a chance to ask some questions. So you'll see a QR code that will appear on the screen. You can take a photo of that that will lead you on your phone to a place where you can send in your questions. If digital isn't
+
+00:07:54 your thing, there's a few friendly ushers in the back that will give you a card that you can write your question on and they'll get it uploaded so that I can see it. And then after the Q&A, there's of course tea and coffee and the opportunity to maybe ask Kimberly some more personal questions. All right. Well, that's everything from me. So, please silence your phones, your
+
+00:08:15 watches, find your nearest exits, and help me welcome to the stage the chair of the division of chemistry and chemical engineering, Dr. Sarah Reeseman. [applause] All right, good evening. Uh, thank you, Crystal, for that very nice uh story. Okay, I'm I'm I have to confess I'm no longer confused for an incoming uh
+
+00:08:42 graduate student after being here for for 18 years. Um all right. Well, uh welcome everyone. It's a real pleasure to be here and to be able to introduce tonight's speaker, uh my friend and colleague, uh Professor Kimberly C. So Kim was born and raised in Evergreen, Colorado, um a town that's sort of nestled in the edge of the Rocky Mountains west of Denver. um where she
+
+00:09:08 has said um that her childhood chemistry kit was going outside and playing in the streams and being in nature and climbing in the mountains and trees. And I think this appreciation for the natural world and our planet uh have been an ongoing motivation throughout her scientific career. Kim earned her BS in chemistry from the Colorado School of Minds in 2009. Um, and as an undergraduate, she
+
+00:09:36 worked at the National Renewable Energy Laboratory, which is now known as the National Laboratory of the Rockies, on photoelerrochemical water splitting. So, the goal of this research was to convert sunlight into chemical fuels, and it was an early experience that I think really helped draw Kim into energy related research. Uh Kim Kim then went on to the University of California at Santa
+
+00:09:59 Barbara uh to work on the development of next generation battery materials and she earned her PhD in 2014. Um she was then awarded a St. Elmo Brady future faculty post-doal fellowship at the University of Illinois at Urbana Champagne where she carried out fundamental investigations of electrolyte solutions for lithium sulfur and magnesium batteries. and her
+
+00:10:22 graduate and post-doal studies really combined solid state chemistry um materials design and electrochemistry and it's this sort of interdisciplinary research that serves as the basis of her current research program here at Caltech. Um, Kim joined the faculty here in in uh uh two uh in 2017 and she's since assembled a vibrant group of interdisciplinary researchers from
+
+00:10:48 graduate programs in chemistry and chemical engineering and material science. I think many of you got to see them performing all of the demonstrations out uh uh on the lawn before tonight's presentation and I think uh it was a real testament to Kim's vision and leadership to just see how engaged and how excited they were to be here and participating in this event.
+
+00:11:10 Um the mission of the C lab is to develop the chemistry and fundamental science needed to advance electrochemical technologies that enhance sustainability. And a big part of their work focuses on fundamental studies that seek to develop um the next generation battery. And for example, they study new materials that might be solid state electrolytes or um materials
+
+00:11:34 for highdensity batteries that use earthabundant um elements like iron or sulfur or aluminum. Um Kim's research has been well recognized with many honors including the Packard Foundation Fellowship for Science and Engineering, the Beckman Young Investigator Award, the EPA Green Chemistry Challenge Award, and the Volkswagen BASF Science Award in Electrochemistry.
+
+00:11:57 And um as I mentioned, Kim is uh committed to teaching and mentoring and she is uh an instructor for Chem 1A. That's the required chemistry course that all of our Caltech undergraduates uh have to take in their first year. And in fact, one student commented in their teaching evaluation that professors see as fantastic. I really approach uh appreciate her approach to lecture. It's
+
+00:12:20 packed with content and well organized. She does a great job showing us why chemistry is cool with demos, discussing connections with uh between the material and her research. And it made a big impact on me to have her as a professor in the first term I was at Caltech. And I think you could see that um sort of impact that Kim has uh in the demonstrations that were outside this
+
+00:12:42 evening. Um Kim is uh joined here tonight by um her husband Max who's also on the faculty here at Caltech. Actually her mom is here, her aunt. Uh Kim has two amazing daughters, Finley and Morgan. And uh she has two cats, Ru and Zaka. And I would say the only questionable aspect of Kim's character is that she does not care for the music of Taylor
+
+00:13:08 Swift. Instead, she prefers the sounds of bands like Tulle. So um but for that she can be forgiven I think. Okay. So tonight um Kim's going to share her perspective on chemistry that underlines modern batteries and opportunities for innovation at the frontiers of energy science. Um and before she comes out here, I'll direct your attention up to
+
+00:13:30 the screen where there will be a brief video um uh with a little bit more about Kim and her lab. I grew up in Colorado. I was born and raised there and I spent most of my childhood outside playing in the mountains and in the trees and climbing on rocks. So I always had a really strong connection to the
+
+00:13:54 outdoors. When I was an undergrad at the Colorado School of Mines, I worked as a researcher at the National Renewable Energy Laboratory, taking water and converting it to oxygen and hydrogen and harnessing the electrons associated with that. I got really excited about chemistry and just saw chemistry as a tool to
+
+00:14:12 understand the world. My name is Kimberly C. I'm a professor of chemistry at Caltech and my group works on next generation battery chemistry. Batteries are this just beautiful marriage of electrochemistry and solid state chemistry which are two sciences that I really fell in love with. And
+
+00:14:36 luckily enough for me, it also has the application and sustainability. Lithium ion batteries are are absolutely incredible, but they're built off of materials that are expensive and they're not found all over the world. And that's where the sustainability piece comes in.
+
+>> [music]
+
+>> You know, we can think about these
+
+00:14:55 things like mining and production and geographical diversity and earth abundance to try and predict what might be a usable element in a sustainable battery chemistry. It's a fundamental gap understanding how do we actually use, you know, what would be sustainable elements and still get those high energy densities so
+
+00:15:16 that we can store charge for these other types of applications. The students at Caltech are amazing and being able to work with them every day is a huge honor and it's something that, you know, I don't take for granted in any way. They come into your office and they're like, ""Ah, this experiment finally
+
+00:15:37 worked or I understand why this happened,"" you know, and you see that that like spark just light up and I think everyone celebrates that. It's a it's a privilege. I think there will be another breakthrough in battery chemistry. There's a few things on the table that could change our ability to use batteries and change
+
+00:16:00 their application and how we use them. People are asking really important questions and you know this this fundamental understanding is the cornerstone on which we can build the next best thing. [music]
+
+>> [applause]
+
+>> All right.
+
+00:16:22 All right. Good evening, everyone. Um, it's my absolute pleasure to be here tonight with you. Not only because Metallica told us that they were going to play the sphere today, which is super exciting. Um, so I'm so glad that Sarah let you know about my musical taste. So, that was a huge surprise. Um, but also because I you're here with me talking about batteries and I just it's it's
+
+00:16:42 super fun. I'm excited to share what we're excited about with you. Um and I'm going to tell you about the types of chemistries that we're trying to do um or trying to develop for next generation batteries. So what you can expect from tonight is shown here. This is the outline. So in the beginning we're going to give a brief story about the history of batteries, how they were invented.
+
+00:17:02 Then we'll talk about why we need batteries that go beyond lithium ion. Right? We all have lithium ion batteries with us right now for the most part. So why do I have a job? I'll tell you that. Um, and then I'll give you a brief lesson on how batteries work. So, you're going to have to learn some chemistry tonight. So, buckle up for that. And then we'll uh discuss how our chemistry
+
+00:17:23 plays into um the sort of chemistry that's that's used right now in lithium ion. So, so let's get started. So, where do batteries come from and how are they invented? Well, it turns out that like all great things, it was invented from a disagreement between two scientists, right? So science moves forward when we try to prove each other wrong. That happens a lot. Um and that's true in the
+
+00:17:45 case of batteries. So this guy here, this is Luigi Galvani. Um and he was doing experiments with these severed frog legs. Don't ask me why. It's very macob, but there you go. Um and he was taking severed frog legs and touching them with these forceps that were made from dissimilar metals. And when he did that, the frog leg would twitch. So he hypothesized that animals contained what
+
+00:18:06 he called animal electric fluid. So animals had this like intrinsic energy associated with them and that was his hypothesis. And this guy Alisandra Volta said, ""Nope, I think you're wrong. I think this has to do more with the metals than with the frog leg."" Um, and these are images from these early papers in the late 1700s on these experiments. And you can see some of these actually
+
+00:18:26 in the Huntington Library if you go over there. So Volulta's desire to disprove Galvani led to the development of the very first battery, which is the voltaic pile, and that's what's shown over here. Um so what he did is he basically did a control experiment. He made a battery that contained alternating units of dissimilar metals. So in this case zinc and copper is sort of the canonical
+
+00:18:47 example and separated them with what we call an electrolyte. So you can think of this as just like cardboard soaked in salt water and stacked them up. And if he did that and wired them up then electricity would flow through that wire. So there would be a current that flowed through the external circuit. Um, and the first time that I taught electrochemistry at Caltech, Caltech
+
+00:19:08 students ask incredible questions. A student raised their hand and they said, ""If we didn't know anything about electricity, how did they know that electricity was flowing through the circuit?"" Well, the answer is in this early paper in the Philosophical magazine, which is one of the first scientific publications. Um, where basically he was shocking himself. So,
+
+00:19:25 he would touch the wire and shock himself, which was a very good explanation of, you know, there's electric current happening there. Um, this is an image of what one of those voltaic piles looks like just to give you a sense of scale. Um, of course, you don't go to the grocery store and buy that, right? That's not sitting at the checkout for you. So, when you think of
+
+00:19:43 batteries, you probably think of something more like this. So, this is probably what pops into your mind when you think of a battery. There are different form factors. AAA's, double A's, C's, D's. This one's actually called a PP3. A lot of people call it a 9volt. Um, there's different formats that these things can come in. I'd like to introduce you to another format that
+
+00:20:01 maybe you're less familiar with. This is called an 18650 cell and it's shown in comparison to what you know probably very well, which is a battery. So, it's actually pretty small, but just a little bit bigger than a battery. And to give you an idea of how much energy is stored in an 18650, there are about five of these 18650 batteries in a laptop. All right, so I bet you didn't know that
+
+00:20:25 you were going to get quizzed tonight. So, I'm a professor. I'm going to give you guys a pop quiz. All right. So, how many 18650s do you think power an electric vehicle? All right. So, we don't have clickers or anything. You're going to have to raise your hand. Hold your part hold your neighbors accountable and you'll vote one for 150, two for 7,000, three for 15,000, and
+
+00:20:47 four for 150,000. So, go ahead and put your vote. I'm looking at my group right here to make sure you guys get this right. Okay. All right. [laughter] All right. Everyone look at your neighbors so you can humiliate them if they're really wrong. Okay. All right. So the answer is 7,000. Okay. So all right. So well done. Right.
+
+00:21:10 That is a lot of batteries, right? Can you envision? It's basically 7,000 AA batteries. That's a lot of batteries that are powering this car. Okay. Um so and that actually all lives in the in in the chassis of the car and they're basically stacked in the chassis of the car. Okay. Another pop quiz. you can redeem yourself. Okay. All right. In what year was the first production
+
+00:21:31 electric vehicle sold? Now, I bet you were paying wish you were paying attention when the voltaic pilot was invented, weren't you? Okay. So, who says 1820s, 1880s, 1920s, 1980s? So, put your vote up. Looking at my group down here again. Okay. Don't cheat and look at them. They're all right. [laughter]
+
+00:21:52 All right. This is the answer. All right. The 1880s, that's when the first production electric car was sold. Okay, that's a long time ago. That's only about a hundred years after the voltaic pile was invented. That's pretty incredible. Okay, they did not use the voltaic pile in these cars. Okay. Um the first one was actually in Germany. This
+
+00:22:13 is the the flocking electrovagon. Excuse my German. Um that was sold in Germany in 1888. And then the US sort of response to that was this Detroit electric bugum. is a picture that I took at the Peterson Automotive Museum. So, you can actually go down and see these cars if you want to. Um, that was the first one in the US in 1915. Okay, these cars used lead acid
+
+00:22:35 batteries. So, not the voltaic pile, but also not a lithium-ion battery. So, where are we today? We've come a long way since these Detroit electric program cars. Right now, we have cars that look like this. This is the Volkswagen IDR. Um, this car won the Pikes Peak International Hill Climb in 2018. That is a very intensive car race. It won it by 16 seconds. Blew everyone out of the
+
+00:22:57 water, right? The reason is that these internal combustion engine cars lose power when you go in higher altitudes. Electric cars don't. Um, so that's why it blew them out of the water. But the the point is that they're very high power vehicles. EVs have also infiltrated our everyday lives. So if we think of the number of EV car sales back 10 years ago in 2015,
+
+00:23:16 it was about one in 150. Fast forward to now, it's about one in nine. There are a lot of EVs on the road now and a lot in California especially. This has all been enabled by the invention of the lithium-ion battery. So the lithium ion battery has completely changed our lives. It's why you have laptops. It's why you have cell phones and it's why we have electric cars.
+
+00:23:37 And all of the innovation in a lithiumion a lot of the innovation in a lithium-ion battery was in the chemistry of the lithium-ion battery. And that's why it was awarded the Nobel Prize in 2019. So, let's talk a little bit about why we're interested in batteries that go beyond lithium ion, right? So, we're going to motivate why we need this. Um, and I have to point out Ishan Ptheria,
+
+00:24:00 who you guys probably met if you went to the demos today. Um, he is a huge driving force in the group that who's really interested in like the technoeconomics and the reason the sustainability reasons for why we do what we do. So, I have to acknowledge him because he helped me put some of this together. So, thank you, Ean. I see you there despite the bright lights.
+
+00:24:17 [applause] Yes. [applause] Okay. So, what is a battery do? Okay. A battery is a pretty simple device, right? The first rule that you need to know is that energy cannot be created or destroyed, but it can be converted. Right? So, that's what batteries do. They convert chemical energy to electrical energy. And they can do that
+
+00:24:39 sometimes reversibly, sometimes not. So, if you think of the batteries that you throw away in the trash when you're done and you put a new one in, that's something that can only go one direction. But the batteries that you can plug into the wall, you can go both directions. And that's what we're going to talk about tonight. That's called a secondary battery. So, a device that can
+
+00:24:55 control that can convert chemical energy into electrical energy is extremely powerful. And it's a huge part of thinking about our sustainable energy infrastructure for the future. And how does it play into that? So, there's two main components that I'll sort of touch on tonight. One is that we can use batteries to store intermittent renewable energy. So things like wind
+
+00:25:16 and solar so that we can use that energy when the sun's not shining and the wind's not blowing. So we'll take the electricity generated by those sources, store it in the battery, and then use it when we want. Um so we call these green electrons because there's minimal emissions associated with the generation of that power. And the benefits of that is it greatly reduces the emissions
+
+00:25:35 associated with grid electricity of course which is extremely important but also it can reduce our reliance on natural gas and coal. The other component where batteries are really important is in the electrification of transportation. So to power electric vehicles. So we can use the energy stored in a battery to power an electric car through an electric
+
+00:25:53 motor. And that reduces the emissions associated with gas power engines of course because now we don't have a gas powered engine. And it also reduces reliance on petroleum. And so that's how batteries sort of fit into the sustainability puzzle. And if we think about sort of where we're going in the future and what that might look like, um, first we'll talk about the EV side.
+
+00:26:12 So the the application of EVs in our life has increased dramatically, which I've already shown you. Um, but this is a plot that shows lithium ion battery deployment on the y- axis and year on the x- axis. And in white you have the number of gigawatt hours. We'll talk about these units in a bit. um that have been deployed for electric cars. So there's a massive increase in EV storage
+
+00:26:32 technology for electric cars. Um and so the the lithium ion market is really driven by the EV market, right? So it's all driven by the uses of electric cars. So if we're going to continue this rise, we really need materials that are sustainable and inexpensive. Additionally, you can see this pink bar increasing, right? So this pink bar is battery storage. That's storage of
+
+00:26:54 renewable energy on the grid. And we're going to need more of that too. And you can see that pretty easily by looking at the deployment of photovoltaics over time. So now on the y-axis we're showing solar PV capacity over time. So this is year. The white data is the actual capacity. The yellow data is the predicted capacity in any one year. And you can see that the deployed capacity
+
+00:27:17 is three times the predicted capacity at any one year. So the amount of PV that's being put on the market and being used is massive, right? So these are huge increases in energy. And to better use this energy, we need to be able to store it because sun only shines when during the day. We don't have sun at night. And in the high peak times when we need energy, that's not usually when it's
+
+00:27:39 generated by PV. So we really need batteries for that. Okay. So we talk a little bit about in the sort of sustainability world, right? There's been this discussion of net zero by 2050. So net zero emissions by 2050. that means that we have no um carbon emissions and in order to reach that there are suggestions that we need about 100 to 400 terowatt hours of battery
+
+00:28:02 capacity to reach that. So in applications like EVs and intermittent renewable energy storage okay to give you an idea of what a terowatt hour is one terowatt hour can power 100,000 homes for a year. That's an incredible amount of energy. Okay, so who knows what a 100,000 homes is? So 100,000 homes is like two Pasadenas. So two Pasadinas for an entire year is one
+
+00:28:28 terowatt hour. We need enough energy for 100 to 400 terowatt hours. That's a ton of energy. Okay. So if we think about the way that um that this this MIT energy initiative thought about this was to look at the compound annual growth uh rate for the production of elements that are used in batteries. The two most critical are cobalt and nickel. And so these are the historical CAGRs for
+
+00:28:50 cobalt and nickel in the white boxes. The orange boxes show what you would need for this sort of range of energy um for 100 to 400 terowatt hours. And you can see there's a massive gap, right? So cobalt and nickel production is not going to keep up with what we need for a sustainable energy infrastructure. On top of that, these values that we're getting are only going to increase. And
+
+00:29:13 I want to highlight this because I think it's very timely. So who here has used a large language model recently? Say chat GPT something like that. Okay, these things are causing a a huge energy um requirement, right? So in order to power the AI boom, we need things like data centers and there's been an increase in the number of data centers that have been um built and deployed over over the
+
+00:29:38 years. You can see that this is starting to look exponential, right? These do values over here are the predicted models which is very hard to predict how much we're going to um need for data centers but you can see there's a big spread right data centers require a ton of energy. So in order to power one data center that would be enough energy to power 100,000 to two million homes. So
+
+00:30:01 there's a big range in in what how big these data centers are. Um, and depending on how many of these data centers we we we make and how big they are, you could easily assume that by the year, you know, 2027 or 2028, you could have 12% of the total US electricity consumed by just data centers. So that number should make you gasp, right? This is a massive amount of
+
+00:30:29 energy required for data centers. So this problem is only getting harder. It's not getting easier. Okay. Okay. So, hopefully I've convinced you that we need something different than lithium ion batteries and we need it for this sustainability reason, right? We need to be able to store renewable energy. We need to be able to power electric cars. Okay? That was the easy
+
+00:30:47 part. Now, you have to sit through a chemistry lesson. Okay? And I'm going to teach you first how lithium ion batteries work. And that will allow me to talk to you about how what we're doing in our lab or one small part of what we're doing in our lab to go to go beyond lithium-ion battery chemistry. All right. So buckle up. Remember that batteries take chemical
+
+00:31:09 energy and convert it to electrical energy. So inside the battery, that's where the chemistry happens. And then you have the external circuit that powers your load. So you have electricity that flows through this external circuit to power your light bulb or your car, whatever it is. Okay? So that's the electrical energy component.
+
+00:31:27 Inside the battery, you have three main components. You have an anode electrode. So you can think of this as like a conductive material. This is the thing that supplies electrons, right? We need electrons to run through this external circuit. So, they need to be supplied here. And they need to have somewhere to go. And they go to this electrode called the cathode. And this material accepts
+
+00:31:45 the electrons. So, they run through this. And if you guys did the human battery demo, you already know this and you could come up here and teach it yourself. Um, so the electrons run through this external circuit and the electrolyte plays a pivotal role. It's basically a barrier between the two electrodes that prevent the electrons simply from running through it to the
+
+00:32:02 other side, which wouldn't allow you to power your light bulb. Okay? So, it's electronically insulating, but it allows for ions to move through. Okay? All right. So, maybe none of this made sense to you, so I'm going to explain it in another way. Okay? So, I'm going to flip this thing 90°. Okay? There's an animation group. Um, I always tell my group never to use animations in talks,
+
+00:32:23 and I told them there's going to be a lot of animations, but don't say anything. Okay? So I'm going to flip it 90°. Okay, we have our components again. Okay, we have the anode on the top, the electrolyte, and the cathode. Remember, our electrons need to go through this external circuit when we sort of close the circuit. And so I'm going to make an analogy to something that you are
+
+00:32:39 familiar with and that's buckets of water. Okay? So if you imagine that you have a bucket of water at a high sort of up uphill and you had a bucket of water downhill. If I gave this bucket of water a pathway to flow from this bucket to this bucket through this let's say pipe by opening this spigot then the water would flow through the pipe right it would flow downhill.
+
+00:33:02 So the water think of this as electrons and then the the the height difference between these two are is associated with the energy of those electrons. Okay. And so when I open the spigot here and I have to keep this pathway open. So I'm gonna put a load here or something. Think of this like a flywheel or something like that. Um if I open that spigot, what's going to happen? The
+
+00:33:22 electrons going to flow. I'm going to power my load and my water is moving from the top bucket to the bottom bucket. So it's going downhill. Okay, that's discharge. Okay, so I've gone from a charged battery to a discharge battery. This is what we call a spontaneous reaction, which means it required no energy input. I just opened this spigot and the water flew down.
+
+00:33:41 Okay, now there's one more complication which is that ion that I told you about. So, we can't just add bucket water to another bucket with al without also adding a positively charged ion. And that's because electrons are charged and we can't build up a bunch of charge without something else there to to counter it. So, we'll do that again. the
+
+00:34:01 water is going to flow from here to here. But now that ion can move through the electrolyte because this electrolyte conducts ions um to meet that electron on the other side. Okay, so that's how a battery works. So if you think of the electrons like water flowing downhill and the ion is just basically following the path of the electron, then you essentially know how a battery works.
+
+00:34:19 Okay, so that's the discharge reaction. Now we have to think about the charge reaction. So the charge now we have to pump that water back uphill. This is the non-spontaneous reaction that requires an energy input. Okay. So, if you imagine we have photovoltaics or something, imagine there's a pump here that we're powering to pump that water back uphill. Then what's going to happen
+
+00:34:40 is that the electrons or the water is going to get removed from this bucket, be pumped uphill and fill this bucket and the lithium will follow. Okay? So, that's the non-spontaneous reaction and that's going from charge from a discharge to a charged state. So there are two main performance metrics that we care about when we think about battery performance. Well, there are others, but
+
+00:35:01 the two that I'm going to talk about today are voltage and capacity. So let me tell you how to think about those in terms of our bucket analogy. Okay, so the voltage is basically the height difference of the two buckets. So the further apart your cathode and your anode bucket get, the higher the voltage you can get in the cell and the more energy that you have.
+
+00:35:22 The other component that we care about is capacity. And the way that you can think about capacity is it's basically the amount of water that you have in the buckets. So the amount of electrons that you have stored in the materials. Okay, so that's capacity. Now I have the most complicated equation that I can deal with up here, which is the energy of this battery, which is
+
+00:35:42 just the product of the capacity times the voltage. So very simple. Multiply those two numbers together and that gives me the amount of energy stored in the battery. So we care about both of those things. Okay. Now we can normalize this to mass or volume. And if we normalize it to volume, we call this energy density. So if you have a high energy density, that means you have a
+
+00:36:02 very small battery. If you normalize it to mass, then we call that specific energy. If you have a high specific energy, then you have a very lightweight battery. So you can imagine that depending on your application, you might care about these one more than the other. So for instance, your phone. If your phone was a few millimeters thicker, you might care a little bit
+
+00:36:20 about that, right? But if it was a little bit heavier, you might not care so much. So volutric energy density is more important for things like phones. But if you think of like electrified aircraft, weight becomes incredibly important. And so you need to make sure those batteries are lightweight because whatever you put on there, you have to fly it. And so it's a sort of a you need
+
+00:36:38 to make sure that it's very light. Okay. So the the difference between the two buckets is the voltage. The amount of water in the bucket is the capacity. And those are the two things we're going to talk about today. The last thing that I want you to remember from this analogy is that there are two states of this battery, right? There's a charge state and a discharge state. And if I think
+
+00:36:57 about this with our bucket analogy, this is the charge state. So today we're going to focus on mostly the cathode. And so we'll focus on that. In the charge state, we have an empty bucket. There's no electrons in the in the in the material. In the discharge state, we have a full bucket. So we have electrons in that material. And to go between these two states, I need to be able to
+
+00:37:18 fill and unfill the bucket. Okay? And that's the reaction that we're going to talk about tonight is filling and unfilling this bucket. Okay? So, where do these electrons actually come from? There's not actually buckets of water in your pocket, unfortunately. Um, you have materials that have electrons in them. Okay. So, all atoms contain protons, neutrons, and
+
+00:37:38 electrons. Okay? So, this is part of your chemistry lesson. And it turns out that we can rip electrons off of atoms and we can put electrons back on atoms. So if you think of the bucket as the atom and the water as the electron, then you can take the electron on and off the atom and that allows you to fill and unfill the bucket, right? So in this case, I'm going to give the example of
+
+00:37:59 iron because this is actually a reaction that you are are all familiar with if you've ever had seen something rust. Um, so iron in its elemental state is actually quite gray. This is elemental iron. So iron is a main component of steel. So if you think of steel then you have a good idea of what what iron looks like. We can oxidize iron which means we can take electrons out. So oxidation
+
+00:38:21 means taking electrons out. Oil rig if you remember that oxidation um is loss. We're taking electrons out and we can make a positively charged cation Fe3+ iron 3+. And this is a different color. So this is rust. This is iron oxide. So the properties of this have obviously changed. Um, and we can do the reverse reaction. We can take iron 3+ and reduce it back to iron metal. So, this is what
+
+00:38:45 we call a redux reaction because we're doing reduction and oxidation. So, we're filling and unfilling these buckets with electrons is what we're doing. So, how is that done in a battery? Um, I'm going to tell you how the um normal or the conventional lithium ion intergalation materials, I'll tell you what intercolation is in a minute, um, were invented. And so I'm going to start with
+
+00:39:08 um the canonical material that our group reveres which is titanium dulfide. And when I talk about a material, what's the definition of a material? A material is a solid, something that's solid that has something some function that it can do. So in this case, our material looks like this. It's a really ugly black powder, but it's an incredible compound. So this is titanium dulfide. If I zoom
+
+00:39:31 in, I'm a chemist, so I think a lot about where those atoms are. If I zoom in, this is what the crystal structure of the material looks like. So this particular structure is an array of atoms that have some um defined periodicity. And to give you an idea of length scale, this scale bar is 10 angstroms and that's 1 millionth the width of a human
+
+00:39:50 hair. Okay, so we're on the atomic scale, those very small length scales. But we normally don't talk about these materials by drawing out the entire crystal structure because that would be very ownorous. Instead, we take the smallest repeat unit that defines the periodicity of this material. And this is called the unit cell to understand what these materials are doing. And we
+
+00:40:10 just sort of zoom in on this to understand the chemistry. So this is the smallest repeat unit of titanium dulfide. So here's the titanium atom. Here's the sulfur atom. And what you can see is that it's a layered material. So you have layers here and a layer here. And in between there's nothing there. Okay? And if I go back, you can see the layers here too, right? And that's a
+
+00:40:33 really important component of this battery of this material's structure. So we call this a layered compound. And it turns out what Stan Whittingham discovered um was that this material can be reduced with an electron. So you can add water to the bucket of this of this material and in this case the bucket is titanium in the presence of lithium. So lithium
+
+00:40:55 is that thing that's that's charge compensating. It's the positive charge that's following the negative charge. And the lithium basically goes in between the layers. So if you think of these layers as like bread and then the lithium in between is like cheese, right? It's like a sandwich. You put cheese inside of the bread. We call this intercolation. And that word actually
+
+00:41:14 comes from uh the origin of that word is putting a date into the calendar. So you're kind of sticking it into the calendar. We're doing the same thing here. We're sticking cheese in between the two bread pieces. Okay. Um and and Stan Whittingham won the Nobel Prize for this in 2019. Um and we celebrated him. So we all went out to dinner. He did not join us. Um and celebrated the Nobel
+
+00:41:38 Prize because we were all very excited about that. Uh and what is so amazing about this reaction is that if you look at the atom positions of the material that has no lithium in it and you compare it to the atom positions of the material that has lithium in it, you can see that they're very very very similar. Even though we've changed this the the the the stochometry is what we call it,
+
+00:42:00 we changed the amount of lithium in this material significantly. This is a big change right here and there's minimal changes in the structure. So really we have bread. We're putting cheese in it. The bread's not changing. Okay? And what that means is that you can go the reverse direction and you can take the lithium out and you can remove water from the bucket. You can take the
+
+00:42:19 electrons out. Um and this is a very reversible process because you're just putting cheese in and out of the bread. So there's really no not much structural change. And the way that we think about where these buckets are. So what are the atoms that are holding the electrons and releasing them in this case is mainly the titanium. So the titanium is undergoing redux, reduction oxidation,
+
+00:42:39 loss and gain of electrons going from a 4 plus oxidation state to a 3 plus oxidation state. If you're not comfortable with that, that's totally fine. You can just think about this as there's an empty titanium bucket and a filled titanium bucket and you can go back and forth. Okay, so that's how these intercolation chemistry materials work. Um, titanium dulfide, as much as
+
+00:42:59 we love this material, is not the material that was commercialized by Sony. The material that was commercialized by Sony, was invented by this guy, um, John Good Enough, who also shared the Nobel Prize in 2019 with Stan Woodingham. Um, and it's based on instead of sulfur, now we have oxygen. And instead of titanium, we have metals like nickel, manganese, cobalt, and
+
+00:43:20 aluminum. So we can get a mixture of metals there and that gives us these weird acronyms NMC or NCA. You don't need to remember that only to know that these just describe the kind of metals that are in the material. But by and large this material works exactly the same way except now our bread is made up of different atoms made up of different transition metals and different um
+
+00:43:40 instead of sulfur now we have oxygen. Okay. All right. We also love John good enough and so we celebrated his 100th birthday. Um, this was in 2022. John Goodnuff did not come to our party. Um, but we celebrated him nonetheless. And I assure you, we were actually wearing party hats. Even though they look like they're AI, they are not. So, we were definitely wearing party hats um to to
+
+00:44:04 celebrate his birthday. So, he's a very incredible solid state chemist. Okay. So, we have this metal oxide material. We have this minimal structural changes. We have the buckets that have are basically the transition metals. Okay. All right. And now you can see where the nickel and the cobalt come in that I was talking about before. Those are those sort of uns unsustainable components of
+
+00:44:26 our battery material. Okay. So where do we go from here? All right. So now I'm going to tell you a little bit about what we do in our lab and the types of contributions that we're trying to make to next generation chemistry um in the context of of how these sort of conventional materials work. Okay. So I told you that conventional materials contain nickel and cobalt. We think that
+
+00:44:48 those elements are unsustainable for sort of shephering this in the sustainable energy infrastructure. And so the metal that we like to try to use instead is iron. Iron is a metal that's found all over the world. Um and it's naturally abundant. And I'm sure you've seen it. Um this is a picture I took of of Devil's Bridge near Sedona. And you can see the red rocks. So the red rocks
+
+00:45:09 are hematite or Fe23 iron oxide. Um, so there's tons of iron. Iron is also produced on massive, massive industrial scales every year at very high purity, mostly for steel. Um, and so, you know, we already have a a way to mine it and produce it in quantities and purities that would allow us to make materials. Okay? So, we like iron for those reasons. And I could get into more of
+
+00:45:34 this in greater detail, but I don't want to bore you and I want to show you some cool chemistry. And they only gave me 30 minutes. So, here we go. So what's the problem with iron? Why don't we use why isn't iron in that m that nickel manganesees cobalt material? So one of the primary reasons is because of where iron's bucket is on the hill. Okay. So if I think about let's say I
+
+00:45:58 have the same anode, we're not changing that. We're just talking about the downhill bucket now, right? The cathode material. And if I have a cathode material that has like cobalt in it for let's say and the cobalt bucket is down here, the iron bucket is actually uphill from the cobalt bucket. Okay? And so the cell voltage that you get from these two chemistries is fundamentally different.
+
+00:46:20 And unfortunately the cell voltage for an ironbased material is always going to be lower, okay? Because it's uphill, okay, from the cobalt bucket. So you get a lower voltage. Well, what does that mean? And that means that your energy that you store is also going to be inherently lower because the energy is the the product of the capacity and the voltage together. So if we have lower
+
+00:46:40 voltage, our energy will also be lower. Okay? So we said, well maybe there's something we can do about that, right? We have two variables here. Like I'm not very good at math, but if this one goes down and we make this one go up, maybe we can do something, right? And so that was our sort of hypothesis and that's what we were trying to do. Um, so what we're trying to do is make this capacity
+
+00:47:00 number go up. And the way that we were going to do that was to add more buckets or use more buckets of water in the material. So I told you that normal materials usually use buckets that are transition metals. So the the the electrons are sitting on the transition metal. So iron for example or nickel or cobalt. But there's a lot of other atoms in this structure namely the annions the
+
+00:47:23 sulfur. So for instance, sulfur or the oxygen in John Goodnuff's material. And so we said, well, why can't we just use the sulfur in these two buckets? And we weren't the first people to think of this by any means. There was a large number of people in the field trying to do this. Um, and basically access the bucket of electrons that sit on the annion in the material instead of the
+
+00:47:46 cation. Okay. So that's why we call this annion redux. And so we had this hypothesis that we could we could do this with a material that looks like this. So this is Li2 Fees2 as we lovingly call it, lithium iron sulfide. Okay? And we're not the first people to study this either. People like Jeff Don and Emma Kendrick have studied this in the past. Um but what we did do is try
+
+00:48:06 to figure out the mechanism by which this material works. And so this material now the bread is made up of sulfur, iron, and lithium. So lithium is actually in the bread. Now, if you remember before there was no lithium in the bread and the cheese is still lithium, okay? So, the in between and now we have a different coordination environment for those of you with eagle
+
+00:48:27 eyes um on this transition metal. So, it's a little bit different structure, which is quite cool. And we said, well, maybe if we um rip electrons out of this material, maybe we can rip them out of iron and then maybe we can access the sulfur electrons. And I want to stress that this was a very fundamental question. And this was a a fundamentally science-driven question. We weren't
+
+00:48:48 trying to make the next best battery. We were trying to understand the chemistry of a material that looks like this and understand if we can actually do this oxidation and reduction reaction. That's what we were trying to do. So how do we do this? Right? So we want to decide if we can do anion oxidation in a material that looks like this. And this is sort of our workflow. Um so first we make
+
+00:49:09 materials. So we're synthetic solid state chemists. We make the materials. Then we characterize the materials. And what I mean by that is that we try to figure out where the atoms are and we try to figure out where the electrons are. And if we have made the wrong thing, then sometimes we have to go back and remake the materials and do that again. But if we made the thing we think
+
+00:49:27 we wanted to make, then we go forward and we we unfill and fill the buckets. We oxidize and reduce those materials. And then we go back and we figure out what happened. We say, okay, if I pulled the bucket, if I dumped the um bucket out and I got the electrons out, what happened to the material? Did my atoms move? Where did the electrons come from? What happened? And we spend a lot of
+
+00:49:48 time here trying to understand what happened. That's a huge part of our work. Once we understand that, then we can go back and now make new materials that do something different because we understand why the materials work. Okay? So, this is very fundamental science. Now, I'm sure all of you are envisioning this in your head, right? you're like, ""Oh, there's Kim in the lab in the glove
+
+00:50:08 box working making materials."" But I don't do that anymore. I used to do that and I miss it very much. Um, the people who do that are my group and so I have to acknowledge them because they are the ones who do all the hard work. [applause] Absolutely. So, [applause] and I've I've listed everyone here who's
+
+00:50:30 been in the group, graduate students, posttos, and undergraduates as well. and everyone has contributed an incredible way to to work that we do in the lab. And I think um these are two of our most recent group pictures. Um so these are the people in the lab doing the work and making the discoveries and teaching me every day. Um so I have to definitely acknowledge them. And I also want to
+
+00:50:48 thank them so much for an amazing pre-show. You guys did awesome. Thank you. Thank you. Thank you. [applause] It was amazing. Yeah. Hopefully no one got hurt, right? Everybody was okay. Good. Okay. Good.
+
+>> [laughter]
+
+>> All right. So, I'm going to take you into the lab with us. Okay. So, I'm going to show you how we make materials.
+
+00:51:08 Well, my grad students are going to show you how that how we make materials. So, that we're on the make materials component of this. And I wish I had a video for every single step, but we would be here all night. So, we only have one video for you. Okay. So, this is Niara. She's a grad student in the lab. And I have to thank Peter Holderness and Lance Hayasha for putting
+
+00:51:24 this together. Thank you so much for helping us with this. Um, so here's Nara. What she's doing is she's about to go into what's called a glove box. Okay? And that's what I was in in that picture back here. I was in a glove box looking very happy. Um, glove boxes are actually really great, but if you work in them too much, it gets gets to be a lot. Um, but you guys don't work in them too
+
+00:51:43 much. It's so fun, right? Um, okay. So, this is it's basically a big box filled with gas that doesn't react with anything. So, we call that inert gas. So, it's either filled with nitrogen or argon. This particular box is filled with argon because that's really important to the way that we make these materials. Um, and I'll tell you a little bit about that. Okay. So, Nara is
+
+00:52:02 going to go into the glove box. And you might be more familiar with glove boxes that have gloves pulled in. These are pulled out because we're trying to protect ourselves from what's in here. Okay. And then the um or trying to protect the materials, sorry. Nara is going to weigh out a precursor. This is sulfur. She knows how much she needs because of the the the relative ratios
+
+00:52:21 of elements in the compound that she's trying to make. She's going to put it in this mortar and pestle and then she's going to add another component to it and mix it up. So, we do solid state reactions. So, we have to grind these things really, really hard. So, they, you know, they go to the gym in the morning and they come back in and they're grinding, grinding, grinding um
+
+00:52:40 to make a intimate mixture. We put them in a die set and then we compress them with an arbor press to take the spaces between particles away. So, we get the gas out of there. We're still in the glove box. That leaves you with this pellet here. And this pellet then goes into an ampule or a glass tube shown here. That glass tube is then taken to a torch. This is Colin taking it to the
+
+00:53:03 torch. And that blanket of argon, argon is is dense. So it sits in the tube. Colin's going to what we call neck the tube with a torch and make that a little bit smaller. And then he's going to put it on this vacuum line shown here. So he's sealing it up to the vacuum line. He's going to open that valve. It's going to evacuate. So we're going to pull vacuum on it. We're going to pull
+
+00:53:21 all the gas out. And then what he's going to do is take that torch and seal off the end to get this beautiful ampule that's shown here. So now this is there's no air in here at all. No no argon. It's evacuated. We can This is Jaden putting into a furnace. So we heat it up to like 900 C, something like that. It reacts. Magic happens. We take it out. Sometimes we quench it, which
+
+00:53:44 looks cool. So we put it in the video. Um, and then we take that, we put it back into the glove box. So, this is called an anti-chamber. It comes back into the glove box. And now, um, Zion, who you'll see in just a second. And there's Zion, is going to open up the tube. So, he scribes it with a diamond scribe. Puts a little scribe on there. And then pops it open. Pop. And then
+
+00:54:08 pours it out. And here's our beautiful material. We chose the most crystallin material that we make, um, which is this nice white material here. White is actually really bad for cathodes. So this is one of our electrolyte materials that we make but it it looked cool so we put it in the video. Um so then what we can do is once we have the material then we can do the characterization and then
+
+00:54:29 we can do the electrochemistry. And I'm going to skip some of the details associated with that and just tell you what we found out. Okay. So what we found out is that this material does do we can unfill and fill the buckets on the annions which is really super exciting. So the initial oxidation, so here's our material here. So the initial unfilling of the bucket occurs on the
+
+00:54:50 iron bucket. So you should the red bucket is iron, okay? And that occurs on the iron bucket. And you can see that there's minimal structural changes associated with that even though we're removing bread lithium instead of cheese lithium. So that's also very cool. Um, so this is similar to that intercolgation mechanism that I showed you before. But then we can go one step
+
+00:55:08 further and we can do another oxidation. and that oxidation. So by oxidation, we're pulling electrons off. We're unfilling the bucket. That oxidation is localized on the sulfur bucket. So we actually have the ability to unfill the sulfur bucket, get an empty sulfur bucket. But what's really unique about unfilling the sulfur bucket is that this is not a happy place for sulfur to be.
+
+00:55:30 It does not want to be unfilled. And so what it does is it makes a bond with its neighbor who's also unhappy. So you can think about sulfur that's an empty bucket as like a person who doesn't want to be alone at the party. Like they want to go hang out with another empty sulfur bucket. And so they get closer together and they form a bond. Okay? And this is critical. This is what allows us to
+
+00:55:50 actually do this this annion oxidation is the formation of this new bond in this material. So we don't get that when we do it on transition metals. Iron empty bucket at the party. Totally cool. Like happy to be alone. No problem. sulfur, not cool. Wants to hang out with a buddy. Okay, so it makes a bond. Um, and that's the way that it stabilizes itself. Okay, I can't give a talk
+
+00:56:14 without showing electrochemistry. So, I'm sorry. I have to show you what this looks like. Um, so here on the y ais, this is voltage. So, this is the difference between our buckets. Basically, it's the position of the filled bucket on the hill. Okay? And then on the x-axis here, we have this ridiculous thing, mole of electrons per formula unit. Just think about this as
+
+00:56:32 the amount of water that we're able to pull out of the material. Okay? So, as we go here, it's more water. Okay? So, what we can see is that there's two components to this curve. There's this sort of sloping region here, and then there's this flat region here. And I've colored them differently so you can pick them out a little bit. Um, this is where we're unfilling the iron bucket. We're
+
+00:56:54 emptying the iron bucket. That's a better word for unfilling, isn't it? Emptying. Yes. Okay. And then on this part, this plateau part, this is where we're emptying the sulfur bucket. Okay? And so to think about this in our bucket analogy, now instead of having one bucket on the cathode side, we have two. We have the iron bucket and we have the sulfur bucket. And we can access both of
+
+00:57:12 those. Okay? So that gives us more water in our material. That gives us more capacity. And so what does that mean from an energy density perspective? Well, if I calculate it, so I do this really hard calculation. Again, this is all the math I can do. 2.4 24 vol* 350. This unit is also ridiculous and makes me crazy. This is just number of electrons. That's all this is, but it
+
+00:57:34 looks crazy. Um, and that gives you this number here, 833 watt hours per kilogram. That means nothing to you, right? So, I put it in context with this material. I told you you didn't need to remember what NFC stands for, but you need to remember that it's the conventional cathode material that we're trying to beat. Okay? And that material is at around 950 watt hours per
+
+00:57:53 kilogram. Okay? So, we're still a little bit lower than conventional materials, but it's not bad, right? And it's very reversible. So, the amount of water that we take out of the bucket is equal to the amount of water that we put back in the bucket. So, that's this trace here putting water back in the bucket. And you can see that we end up at about the same place. And that's incredible for
+
+00:58:12 this this annion oxidation reaction that we're trying to do. And so, it's very very cool. Okay, but we're solid state chemists. We don't want to just work with everybody else's materials. We want to make our own. Um so we figured out how this material works and now we can modify it. Okay. And so what this is work so you already met Isan. He said why don't I put aluminum in the
+
+00:58:31 material. Okay. And what what that means is that he's going to take during the synthesis. So in the make materials phase he's going to take out two of his iron equivalents and instead put in an aluminum and a lithium. The total charge here is 4 plus. The total charge here is 4 plus. So we call this is electronic. It's the same electronic structure. So, we're not putting in charge or taking it
+
+00:58:51 out. And it's isomic, too. So, we're taking out two atoms. We're putting in two atoms. So, there's no missing atoms either. Okay? And why this is cool is because iron is much much heavier than lithium and aluminum. Here we're showing the sizes, but the the mass is also critical, right? So, you can think of iron is like bowling balls, and you can think of these as like balloons. Okay?
+
+00:59:12 So, we're replacing bowling balls with balloons. That's going to make our material lighter. That is not why we did this, but it turns out to be a huge benefit. Okay. And what happens is that you get this really interesting structure where the aluminum sits on the site where iron used to be or lithium used to be. Um, which is very very cool. And you now have bread that has aluminum
+
+00:59:32 in it. Okay. And so the question is what does this do to our ability to unfill the sulfur bucket? And it actually has a huge effect. So if I look at the again I have to show electrochemistry. If I look at the electrochemistry, what I want to show you on the top, this is the material without aluminum. On the bottom, this is the material with aluminum. And what we see is that that
+
+00:59:53 maroon region, this is the iron bucket region is smaller. Well, that makes sense because we have less iron. We have 6 here. We have one here. So, okay, we have less iron, we have less abil, we have less water on our iron. That makes sense. But what we didn't expect and what was very very interesting is that the sulfur got much much bigger. So if you compare the the length of this
+
+01:00:14 yellow region to the length of this yellow region, it's much much bigger, right? This is actually a huge increase. And that allows us to get a lot more water out of the material um when we have aluminum in it compared to when we don't. And so what that means in our bucket analogy is that if we think about iron and sulfur buckets in the L2 FS2 case, in our aluminum substituted case,
+
+01:00:36 even though the iron bucket is smaller, the sulfur bucket is much bigger, which is super interesting. So by putting aluminum in here, we're able to get more water out of the sulfur bucket. And what does that mean in terms of energy density? Well, that means now we're pushing a thousand watt hours per kilogram, which is massive energy densities. So [applause]
+
+01:00:56 yeah, now I don't want to mislead you. There are other problems that we need to solve, which is why I didn't buy a house in, you know, wherever I wanted to live and go live there, right? So um we have things we still have to do, but this is this is a huge energy density and we think that these materials are something that we should continue studying even
+
+01:01:16 though they're not oxides, they're sulfides, right? So this is a this is a big difference from what is is conventionally done. Okay, I also want to quickly mention that this isn't the only thing that we do. We have a lot of other cool stuff, but you guys I don't know, we could stay and chat if you want. Um, we work on these next generation electrodes, but we also have
+
+01:01:36 a huge effort trying to understand how ions move through solid materials. So, we mentioned that lithium is going in and out of the bread of this material. You're actually moving mass in a solid. So, think about this like you have a vase at home. You have a ceramic vase. That vase can have stuff moving in it like atoms mass moving in it. Okay, usually think of solids as sort of
+
+01:01:57 things that stay in one place and don't move but you can get atoms to move in solids and we study that quite heavily. So that's called solid state ionics. It's something we care a lot about. We also think a lot about metal liquid interfaces. So we do things associated with metal anodess for batteries. So lithium is also a critical component that we need to sort of try and find an
+
+01:02:16 alternative for. So we think about things like sodium, magnesium, calcium, and zinc. I didn't have time to talk about that. Um, we think about these things for electroynthesis. So, a green way to make organic m organic molecules. And we've also started looking into electrocatalysis. So, these are other things in my lab that we work on that I didn't have time to talk about, but I
+
+01:02:35 know it's something that I'm very proud of too. So, it's um something I wanted to mention. And we don't do this alone. We have a long list of collaborators. This is one of my favorite things about being in science and being in academia is that we get to work with people all over the world. You get to still work with your friends even in when they go away and start in another institution
+
+01:02:52 and you get to like hang out with them on Zoom and you get paid for it which is really cool. Um you get to meet their students and see how they mentor and that's also awesome. It's like a huge family that you have all over the world which is super super cool. And then I also have to thank funding agencies. We can't do any of this without funding and we are certainly reliant on federal
+
+01:03:11 funding. So thank you all for contributing to that. And we are also reliance on foundations, private foundations as well, which has been a huge support for us. And I would be remiss if I didn't thank Caltech. Caltech has been incredibly supportive and helpful. And thank everybody associated with the Watson series. This there's a huge team associated with
+
+01:03:29 this. They put together an amazing amazing night. Um I wouldn't have been able to do this without them. And I'll just put up these pictures have has everyone that's ever been in my group. So I wanted to throw this up there. Um and just thank you so much for coming and spending your evening with me. It's been really fun. All
+
+>> [applause]
+
+01:03:50 [applause]
+
+>> right, it's your time to submit your questions. So, I hope you've already kind of thought about what those questions might be.
+
+>> I have a quick question while they're getting their
+
+>> their questions in. Do you drive an electric vehicle?
+
+>> I do. Yes, we have an electric car.
+
+01:04:15
+
+>> Yeah,
+
+>> we've had one since 2019. So,
+
+>> okay.
+
+>> Relatively
+
+>> early adopter.
+
+>> Yes.
+
+>> Yes.
+
+>> So, I'm totally with you. I've got, you know, my bread and my cheese and I
+
+01:04:31 understand. We're great. Take me from that to what the implications are for commercial applications of batteries. So let's say there's no other problems. It can go into you know commercial batteries. What does that mean?
+
+>> Yeah. So the the um the energy densities that we're talking about you know which are defined by how much mass you have in
+
+01:04:56 the electrode or how big the material is. Um when I put these up these are really on like the active material scale. So when we say that we mean you know the the lithium iron sulfide material can do this right that's the active material scale. But there are many many other components to an electrode. There's um inactive components that don't store charge for
+
+01:05:14 you. So there's like a conductive carbon. There's a a sticky polymer binder that holds things together. You put that on a substrate. So there's also pack what we would call pack level energy density. So once you put the pack together, you have to consider all of that, right? Because you're not just carrying around an active material. You have an anode, a cathode, an electrode,
+
+01:05:32 a separator, blah blah blah, all of this stuff. But a lot of that um you know can't be in some cases it can be modified a little bit and we can talk about that like this bipolar stacking if you have solid state materials but we won't talk about that right now. Assume that everything else won't change then the only thing that you can change is the active material and so the only way
+
+01:05:52 to get higher energy densities in a pack level is to change the chemistry and to change the active material. So it sort of translates in that way. It's not quite linear like that but that's the way to think about it. And that was hopefully goes in some way to to answering my colleague Jen's question which was what are the main holdups for you um your chemistry taking off and you
+
+01:06:16 getting that new home. [laughter]
+
+>> Um yeah, there's a lot. Yeah, we have um so so one thing you may if if you're super into this stuff and you look at these charge discharge curves um what you might have noticed is that there's a gap between these two. So the the charge curve was at a higher energy than the discharge curve, which means the energy that it takes to put electrons into the
+
+01:06:37 bucket is less than the energy you get when you take them out. So that means your energy efficiency is low. Um so that's one thing we're working on. This is called hysteresus. So we're trying to drop the hysteresis and make those things come together. Um another thing is is cyclability. So that's another thing we're working on. And actually that problem is really hairy because it
+
+01:06:56 could be inherent to the material or it could be the way that you make the electrode. So there's some engineering component to that too. So that's another thing that we're working on right now.
+
+>> Uh are there theoretical maximum for electrochemical efficiencies?
+
+>> Uh yeah. So yeah, there's always so okay that's there's always going to be some gap between the charge and the discharge
+
+01:07:21 curve. It's never going to be exactly on top of each other. So, um I actually don't know exactly what that number would be, but there will always be a gap. So, it won't be 100%.
+
+>> Yeah.
+
+>> Do you believe that sodium ion chemistries will overtake lithium ion chemistries?
+
+>> So, sodium Okay. So, so lithium is the
+
+01:07:41 thing that's carrying charge between the two electrodes, right? So, it's the thing that's allowing you to put electrons in and out. If you replace it with sodium, sodium is much much much much bigger than lithium. And so you have additional issues associated with trying to put lithium in and out. So now you're now instead of putting cheese into your bread, you're putting like
+
+01:08:01 salami and cheese and like lettuce and tomatoes and you're trying to do that in and out of your bread, right? So it gets much harder. Um, but there's still been uh a lot of a lot of emphasis in that area. Um, and there's been quite reversible materials that have been developed. The only problem is that the energy densities are lower. And so you can't use them in the same types of
+
+01:08:21 applications that you might need high energy densities for. Um, but they might be good for things like grid storage where you don't really care so much about how big or how heavy your battery is, but you care about how much it costs, right? So sodium is a huge cost savings if you go from sodium to lithium. Um, so that's what a lot of people are trying to work on for for
+
+01:08:40 sodium. So nothing is ever going to overtake lithium. Lithium ion will be here forever. And it's incredibly useful for the applications we use it in today. And the question is how do we enable new applications by changing the chemistry? And that's what sodium does.
+
+>> Does the oxidation of iron and sulfur happen sequentially? Um and does that matter for output?
+
+01:09:02
+
+>> Yeah. So in this material, the oxidation of iron and sulfur does happen sequentially. So those buckets are in different energy levels on the mountain. Uh, and that's actually very very interesting. Um, and [clears throat] there's there's interesting mechanistic reasons why that's that's uh interesting. Um, because once you have a bucket
+
+01:09:22 that's unfilled near a bucket that's filled, you can fill the unfilled bucket with the filled bucket within the cathode material. And we've seen that that actually happens in these. So, um, so that's that's that's something that we're studying now, too, from a very fundamental perspective. um it doesn't doesn't matter. So, we've actually been able to show um and this
+
+01:09:42 is Ean's work again that if you put a different metal in there, then you can bridge both the metal oxidation and the sulfur oxidation in the same energy range. So, it just depends on where your bucket is on the mountain and you change where that is on the mountain by changing the identity of the atom. So, by going to a different atom, for instance,
+
+01:10:00
+
+>> can I put you on the spot? Can you at least raise your hand or stand up or something? There we go. [applause] We have so many questions. So, I'm going to let the audience catch both of you now um outside at Tea and Coffee and ask you um kind of a a um softball last question, which is what is your favorite thing about your graduate students and
+
+01:10:32 mentoring students in general? Um, one that's not a soft one thing. It's not a softball question. Um, I don't know. I think just their their curiosity and intellectual drive to figure out what's going on is, you know, something that I can identify with strongly and makes me, you know, they just keep working at it. Even when things even when things don't work, you","http://res.cloudinary.com/tbmg/ar_16:9,c_thumb,g_auto:subject,f_auto,q_auto/c_limit,w_400/v1775674017/sites/tb/econa-16x9/54997/1000/sustainable-battery-chemistries.jpeg",N,,2026-04-10 02:01:12.599355
 ,Clean Energy ,2026-04-10 02:35:28+00:00,JD Supra,Massachusetts Commercial Property Assessed Clean Energy (CPACE): A New Era on the Horizon?,Not Available,,,,,https://www.jdsupra.com/legalnews/massachusetts-commercial-property-1757794/,"Nearly a decade ago, Massachusetts joined many other states in authorizing a Commercial Property Assessed Clean Energy (CPACE) program called PACE Massachusetts to support energy efficiency and renewable energy investments in commercial real estate.
 Key Benefits for Property Owners and Lenders The program’s financing structure offers distinct advantages for property owners and lenders alike.
 For property owners, CPACE financing does not result in new balance sheet debt or mortgage liens, but rather the CPACE financing is repaid through a voluntary betterment assessment on the owner’s municipal property tax bill over a term of up to 20 years.
@@ -101,6 +566,18 @@ There’s a claim that the AI boom will continue unchecked—but that may not be
 “We cannot sit back and allow a handful of billionaire Big Tech oligarchs to make decisions that will reshape our economy, our democracy and the future of humanity. We need serious public debate and democratic oversight over this enormously consequential issue. The time for action is now. We need a federal moratorium on AI data centers,” said Sen. Bernie Sanders in a press release, co-sponsoring legislation with Rep. Alexandria Ocasio-Cortez.
 
 The AI Data Center Moratorium Act, introduced in late March 2026, would temporarily pause new AI data centers, giving lawmakers and communities time to consider infrastructure, environmental, and utility impacts.",https://wcti12.com/resources/media2/16x9/1234/1320/0x2/90/37b82090-d8f9-44f5-a63b-2f51ba2e1549-Screenshot20260211053631.png,N,,2026-04-09 23:59:18.708899
+,North Carolina Environment,2026-04-10 02:18:56+00:00,E&E News by POLITICO,Whitehouse puts further scrutiny on Interior offshore wind lease deal,"Kelsey Tamborrino, Jason Plautz, Christa Marshall, Benjamin Storrow, Sara Schonhardt",,,,,https://www.eenews.net/articles/whitehouse-puts-further-scrutiny-on-interior-offshore-wind-lease-deal/,"Democratic Sen. Sheldon Whitehouse sent a letter Thursday to French energy giant TotalEnergies raising legal concerns over its deal with the federal government on its offshore wind leases.
+The Trump administration last month announced it reached a nearly $928 million agreement with TotalEnergies to cancel its offshore wind leases off the coasts of New York and North Carolina.
+As part of the deal, TotalEnergies committed to invest the value of those leases into oil and natural gas production in the United States.
+The administration is reportedly in talks with other developers to enact similar deals over their leases.
+Advertisement","Democratic Sen. Sheldon Whitehouse sent a letter Thursday to French energy giant TotalEnergies raising legal concerns over its deal with the federal government on its offshore wind leases.
+
+The Trump administration last month announced it reached a nearly $928 million agreement with TotalEnergies to cancel its offshore wind leases off the coasts of New York and North Carolina.
+
+As part of the deal, TotalEnergies committed to invest the value of those leases into oil and natural gas production in the United States. The administration is reportedly in talks with other developers to enact similar deals over their leases.
+
+Advertisement",https://static.politico.com/dims4/default/55a1666/2147483647/resize/1200/quality/100/?url=https://static.politico.com/ea/53/1a5038074d3a95b7a21c08e863df/mehmet-oz-senate-60426.jpg,N,,2026-04-10 02:01:17.216706
+,North Carolina Environment,2026-04-10 02:17:34+00:00,Carolina Coast Online,Commissioners lobby NC legislature to secure sewer and wastewater infrastructure funds,"TODD WETHERINGTON NEWS TIMES, TODD WETHERINGTON  NEWS TIMES",,,,,https://www.carolinacoastonline.com/news_times/article_ce20188c-bf74-4e65-9dff-42990c634059.html,MOREHEAD CITY — The Carteret County Board of Commissioners have lent their support to Morehead City’s request for state funding for sewer and wastewater repairs.,Not Available,https://bloximages.chicago2.vip.townnews.com/carolinacoastonline.com/content/tncms/assets/v3/editorial/a/97/a9774496-857d-46b3-b26a-d356080cc822/69d8078c6feb3.image.jpg?crop=1600%2C840%2C0%2C30&resize=1200%2C630&order=crop%2Cresize,N,,2026-04-10 02:01:21.896374
 ,Congress,2026-04-10 02:07:00+00:00,defenders.org,Oregon Governor Signs Historic Bill Investing in the Environment | Defenders of Wildlife,Not Available,,,,,https://defenders.org/newsroom/oregon-governor-signs-historic-bill-investing-environment,"... environment. Other ... The Center for Biological Diversity, Defenders of Wildlife and more than 150 conservation groups today urged Congress ...",Not Available,https://defenders.org/themes/custom/particle/apps/drupal/favicon.png,N,,2026-04-09 22:59:27.465731
 ,North Carolina American Energy ,2026-04-10 02:06:53+00:00,www.houstonchronicle.com,Trump administration proposes gutting rules targeting coal plant ash that threatens groundwater,Not Available,,,,,https://www.houstonchronicle.com/news/article/trump-administration-guts-rules-targeting-toxic-22198116.php,"EPA Administrator Lee Zeldin said the proposal reflects the agency's ""commitment to restoring American energy dominance, strengthening cooperative ...",Not Available,,N,,2026-04-09 23:00:25.041707
 ,North Carolina American Energy ,2026-04-10 02:00:40+00:00,KOAT,Trump aims to gut rules protecting groundwater near coal ash sites - KOAT,"Michael Phillis and Alexa St. John, Associated Press",,,,,https://www.koat.com/article/trump-administration-rules-targeting-toxic-coal-plant-ash/70977524,"Local activists are worried about the land created at the site, which is composed in part of coal ash.
@@ -253,6 +730,27 @@ A coalition of coal and energy associations wrote last year: “EPA’s recent u
 
 Disasters first prompted the EPA to regulate coal ash. The agency started looking into the problem after a dike failed in Tennessee in 2008, spreading coal ash over 300 acres or 120 hectares and forcing a massive cleanup. Workers involved in that effort said the ash exposure caused cancers. In 2014, tens of thousands of tons spilled in North Carolina.",https://www.sandiegouniontribune.com/wp-content/uploads/2026/04/Coal_Fired_Power_Plant_23389-1.jpg?w=1024&h=682,N,,2026-04-09 23:00:30.878409
 ,Detroit American Energy ,2026-04-10 01:31:22+00:00,Source ONE News,Trump administration proposes gutting rules targeting coal plant ash that threatens groundwater,MICHAEL PHILLIS,,,,,https://www.yoursourceone.com/news/national_news/trump-administration-proposes-gutting-rules-targeting-coal-plant-ash-that-threatens-groundwater/article_1fbdf4f0-2fad-5dd9-a8fa-4adc19d6ba0a.html,The Environmental Protection Agency on Thursday proposed weakened rules governing the safe disposal of ash produced by burning coal. Those regulations were strengthened under the Biden administration as part of,Not Available,https://bloximages.newyork1.vip.townnews.com/yoursourceone.com/content/tncms/assets/v3/editorial/f/3d/f3d5a68f-74be-5b12-9e3d-53ec5eb3a2c1/69d7fd0a6de93.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize,N,,2026-04-09 22:00:24.823379
+,North Carolina and Evs,2026-04-10 01:17:38+00:00,North Texas e-News,"McKinney earns SolSmart Bronze designation, advances clean energy and sustainability efforts",Not Available,,,,,https://www.ntxe-news.com/artman/publish/article_145307.shtml,"McKinney, Texas (April 8, 2026) – The City of McKinney has received a SolSmart Bronze designation through the national Energy Ready program, recognizing the city’s efforts to expand access to solar energy and support emerging energy technologies.
+The designation reflects collaboration between Public Works’ Office of Environmental Sustainability and the Planning Division to implement strategies that expand access to solar energy.
+“With growing energy demand and evolving technologies, it’s critical that we take proactive steps to support sustainable solutions,” said Sujata Gautam, Sustainability Manager for McKinney’s Office of Environmental Sustainability.
+McKinney has also earned recognition for its broader sustainability and energy initiatives: Fleet Services Recognition: McKinney Fleet Services received the Shining Star Award and a Bronze designation from the Dallas-Fort Worth Clean Cities Coalition for efforts to reduce transportation energy use and improve air quality.
+Together, these achievements underscore McKinney’s commitment to forward-thinking energy strategies, improved air quality, and sustainable growth.","McKinney, Texas (April 8, 2026) – The City of McKinney has received a SolSmart Bronze designation through the national Energy Ready program, recognizing the city’s efforts to expand access to solar energy and support emerging energy technologies.
+
+The designation reflects collaboration between Public Works’ Office of Environmental Sustainability and the Planning Division to implement strategies that expand access to solar energy. These efforts included updating development codes, training staff, and reviewing zoning standards to align with best practices.
+
+“With growing energy demand and evolving technologies, it’s critical that we take proactive steps to support sustainable solutions,” said Sujata Gautam, Sustainability Manager for McKinney’s Office of Environmental Sustainability. “This designation reflects the meaningful work our teams have done to remove barriers and create opportunities for solar adoption, and we’re committed to continuing that progress for our community.”
+
+Led by the International City/County Management Association (ICMA) and the Interstate Renewable Energy Council (IREC), the Energy Ready program supports local governments in reducing barriers to solar adoption and modernizing energy systems. McKinney joins more than 600 communities nationwide that have earned SolSmart designation.
+
+McKinney has also earned recognition for its broader sustainability and energy initiatives:
+
+Fleet Services Recognition: McKinney Fleet Services received the Shining Star Award and a Bronze designation from the Dallas-Fort Worth Clean Cities Coalition for efforts to reduce transportation energy use and improve air quality. The recognition highlights the city’s success in integrating alternative fuels and adding electric vehicles (EVs) to its fleet.
+
+Regional EV Infrastructure Funding: The North Central Texas Council of Governments (NCTCOG) recommended five of McKinney’s six proposed EV charging station sites for funding, with the sixth site placed on a waitlist. These five locations will host a total of 10 new charging stations. Out of 109 eligible sites, McKinney had the second-highest number of selected projects in the region. These investments will expand EV charging access, strengthen the city’s transportation network, and support long-term environmental resilience.
+
+Earlier this year, City Council also officially adopted McKinney’s first Sustainability Roadmap, which outlines long-term strategies focused on environmental stewardship and efficient use of resources to help guide future policies affecting utilities, transportation, and quality of life for residents.
+
+Together, these achievements underscore McKinney’s commitment to forward-thinking energy strategies, improved air quality, and sustainable growth.",http://www.ntxe-news.com/images/icons/fb_logo.gif,N,,2026-04-10 02:02:03.456692
 ,Detroit American Energy ,2026-04-10 01:06:23+00:00,WWMT,Fact Check Team: AI data centers spark local backlash across the US - WWMT,"MORGAN STEPHENS, EMMA WITHROW, Fact Check Team",,,,,https://wwmt.com/news/nation-world/ai-data-centers-spark-local-backlash-across-the-us-artificial-intelligence-electricity-utilities-noise-land-use-tax-incentives,"Communities are starting to push back against the massive data centers powering AI, citing concerns over utilities, noise, land use, and tax incentives.
 It’s powered by massive data centers that require huge amounts of electricity and water.
 In some areas, there are also concerns that the massive energy demand from these facilities could drive up utility costs for residents.
@@ -714,6 +1212,39 @@ We take your privacy seriously. Please see our Privacy Policy.",https://assets.l
 When I consider the integrity and diverse agenda of PennEnvironment, I know it is a privilege to stand with them.
 Their mission includes action against polluters of our waterways, protection of wildlife (from songbirds to black bears), promoting wind and solar energy and a greener America.
 Supporting PennEnvironment is a statement of hope.","When I consider the rolling green hills folding one into another across Pennsylvania, I am reminded of the responsibility we have as stewards of this beautiful state. When I consider the integrity and diverse agenda of PennEnvironment, I know it is a privilege to stand with them. Their mission includes action against polluters of our waterways, protection of wildlife (from songbirds to black bears), promoting wind and solar energy and a greener America. Supporting PennEnvironment is a statement of hope.",https://environmentamerica.org/florida/wp-content/uploads/2026/04/GeorgeVaccaPAEMemberVoice.png,N,,2026-04-09 22:59:47.923311
+,North Carolina and Evs,2026-04-09 23:19:57+00:00,www.law360.com,Stellantis Faces Investor Suit Over EV-Linked Biz Slump - Law360,Not Available,,,,,https://www.law360.com/articles/2463728/stellantis-faces-investor-suit-over-ev-linked-biz-slump-,"A Law360 subscription puts you at the center of fast-moving legal issues, trends and developments so you can act with speed and confidence.
+Over 200 articles are published daily across more than 60 topics, industries, practice areas and jurisdictions.
+A Law360 subscription includes features such as Daily newsletters Expert analysis Mobile app Advanced search Judge information Real-time alerts 450K+ searchable archived articles And more!
+Law360 may contact you in your professional capacity with information about our other products, services and events that we believe may be of interest.
+You’ll be able to update your communication preferences via the unsubscribe link provided within our communications.","Law360 is on it, so you are, too.
+
+A Law360 subscription puts you at the center of fast-moving legal issues, trends and developments so you can act with speed and confidence. Over 200 articles are published daily across more than 60 topics, industries, practice areas and jurisdictions.
+
+A Law360 subscription includes features such as
+
+Daily newsletters
+
+Expert analysis
+
+Mobile app
+
+Advanced search
+
+Judge information
+
+Real-time alerts
+
+450K+ searchable archived articles
+
+And more!
+
+Experience Law360 today with a free 7-day trial.
+
+Law360 may contact you in your professional capacity with information about our other products, services and events that we believe may be of interest.
+
+You’ll be able to update your communication preferences via the unsubscribe link provided within our communications.
+
+We take your privacy seriously. Please see our Privacy Policy.",https://www.law360.com/images/law360-stacked.png,N,,2026-04-10 02:02:07.586215
 ,EPA,2026-04-09 23:17:51+00:00,www.jurist.org,Environmental groups challenge EPA repeal of greenhouse gas study - JURIST - News,"Sofia Jenkins | U. Pittsburgh School of Law, US, Sofia Jenkins",,,,,https://www.jurist.org/news/2026/04/environmental-groups-challenge-epa-repeal-of-greenhouse-gas-study/,"Several environmental groups and Alaskan tribes sued the Trump administration on Wednesday, challenging the administration’s recent repeal of the Environmental Protection Agency’s (EPA) 2009 greenhouse gas endangerment findings.
 Plaintiffs challenged a final rule issued by the EPA on February 12 that rescinded the 2009 Greenhouse Gas Endangerment Finding, which served as a basis for issuance of new regulations regarding new motor vehicles and engines.
 As a result of the rescission, the EPA now lacks statutory authority under Section 202(a) of the Clean Air Act to prescribe standards for greenhouse gas emissions.
@@ -731,6 +1262,21 @@ The 2009 finding came following pivotal 2007 environmental law case Massachusett
 Based on the 2009 study and others, Brian Lynk, senior attorney at Environmental Law & Policy Center, emphasized the need for motor vehicle emissions regulation, stating:
 
 The transportation sector is the nation’s leading source of carbon emissions that drive climate change and damage public health and welfare. Repealing sensible regulations on pollution from vehicles puts the Midwest, and the nation, at a higher risk of serious harm to the public. EPA cannot be permitted to recklessly abandon its duty to protect American public health and well-being.",https://www.jurist.org/news/wp-content/uploads/sites/4/2026/04/Environmental_Protection_Agency_building_15011151177.jpg,N,,2026-04-09 20:07:14.388139
+,North Carolina Environment,2026-04-09 23:14:32+00:00,Manhattan Institute,The Battle over Fort Sumter's Climate Sign - Manhattan Institute,"Shawn Regan, Jarrett Dieterle",,,,,https://manhattan.institute/article/the-battle-over-fort-sumters-climate-sign,"The Trump administration has made headlines for removing signs in several national parks that reference climate change.
+One prominent removal occurred at Fort Sumter, the historic park in South Carolina where the opening shots of the Civil War were fired in 1861.
+The sign had detailed changes to the fort’s structure from rising sea levels.
+But protecting sites like Fort Sumter shouldn’t hinge on a political battle over climate change.
+We already know how to protect Fort Sumter.","Rising sea levels have made repairs to the historic site necessary. Some would rather fight global warming.
+
+The Trump administration has made headlines for removing signs in several national parks that reference climate change. One prominent removal occurred at Fort Sumter, the historic park in South Carolina where the opening shots of the Civil War were fired in 1861. The sign had detailed changes to the fort’s structure from rising sea levels.
+
+The left has reacted as you would expect, interpreting the removals as an attack on science itself. But protecting sites like Fort Sumter shouldn’t hinge on a political battle over climate change. Americans may disagree on the topic, but they share an interest in preserving national parks and historic landmarks. Instead of virtue signaling about the signage, policymakers should focus on building the funding mechanisms and policies needed to help parks adapt to environmental challenges, whatever their cause.
+
+We already know how to protect Fort Sumter. Exposure to saltwater has made repairs to its brick walls necessary. Its surrounding sea walls need reinforcement. The National Park Service estimates more than $100 million are needed for maintenance and repairs at Fort Sumter and the nearby Fort Moultrie complex, much of it tied to stabilizing historic structures.
+
+Continue reading the entire piece here at The Wall Street Journal (paywall)
+
+______________________",https://media4.manhattan-institute.org/wp-content/uploads/battle-over-fort-sumters-climateGettyImages-586020226.jpg,N,,2026-04-10 02:01:25.908084
 ,EPA,2026-04-09 23:05:42+00:00,Door County Pulse,EPA Sued Over Pollution Protection Rollbacks - Door County Pulse,Door County Pulse,,,,,https://doorcountypulse.com/epa-sued-over-pollution-protection-rollbacks/,"Clean Wisconsin joined a coalition of public health, environmental and community advocates to file a lawsuit challenging the Trump administration’s repeal of standards that limit mercury, lead, arsenic and other hazardous air pollution from coal-fired power plants.
 The lawsuit also challenges the Environmental Protection Agency’s (EPA) rollback of real-time continuous emissions monitoring at power plants, which would have given communities real-time pollution data and a stronger tool for enforcing compliance.
 According to Clean Wisconsin, the repeal violates the Clean Air Act, ignores the scientific record and abandons safeguards that protect communities living near coal plants and downwind of their pollution.
@@ -1661,6 +2207,7 @@ Key points (taken from pages 37 and 45 of the hyperlink above)
 * The original ""best case"" scenario of Hinkley Unit 1 becoming operational in 2029 has been scrapped. The schedule has been ""adjusted"" with Reactor 1 now operational in 2030 - with the risk of a further 1 year delay - and Reactor 2 following approximately 12 months later (i.e. 2030/31 or 2031/32 for both reactors).
 
 * While previous estimates were £31 - £34 billion [2015 money], the latest is £35bn, or £36bn if there was a 12 month delay as above. £35 - 36bn in 2015 money is £48.8 - £50.2bn in 2026 money according to the Bank of England's inflation calculator.",https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/669950712_18548144986071775_3666653131758268891_n.jpg?stp=c216.0.648.648a_dst-jpg_e35_s640x640_tt6&_nc_cat=101&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=I1R-gKzat8oQ7kNvwEthFC9&_nc_oc=AdrURMHgYjYglparD8GtFFd1r4IFtwOkC5EXe6B0HE0WOay9XXPLGjiJtoNXVj2lMW4&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=wXsmt70px1_0zmpoI-RV-w&_nc_ss=7a289&oh=00_Af2KhKv6rjDya6OA4cTug9mFuHeL78TbeTrOJ4K24W4OHQ&oe=69DE1689,N,,2026-04-09 19:02:01.689554
+,North Carolina Environment,2026-04-09 21:18:52+00:00,www.berkshireeagle.com,"Taking 'No Kings' lead, it's time to rally for the climate again - The Berkshire Eagle",Not Available,,,,,https://www.berkshireeagle.com/opinion/columnists/lauren-r-stevens-time-to-rally-for-the-climate-again/article_a3d4130a-0a90-4ead-8ff6-bce95c56ec14.html,"... climate movement and the environment. If it were not for. ... North Carolina and New York. Instead, the company will invest in fossil ...",Not Available,,N,,2026-04-10 02:01:59.195626
 ,Clean Energy ,2026-04-09 21:18:03+00:00,edie,£86.5m hydrogen project planned for South Yorkshire - Edie.net,Matilda Cox,,,,,https://www.edie.net/86-5m-hydrogen-project-planned-for-south-yorkshire/,"Electrolysers are central to clean hydrogen generation.
 They are used to split water into oxygen and hydrogen in a process powered by renewable energy, in the case of green hydrogen production.
 Slow hydrogen uptake Despite the buzz around hydrogen and the huge role it could play in the green transition, progress in ramping up clean hydrogen production has been slow to date.
@@ -4297,6 +4844,7 @@ Release ID: 26-136
 Media Contact: Tommy Heyboer 240-777-7867
 
 Categories: Natali Fani-González",,N,,2026-04-09 17:06:05.488441
+,Clean Energy ,2026-04-09 17:45:35+00:00,whatsupnewp.com,McKee announces $60M bond proposal for CCRI workforce training center in Warwick,Not Available,,,,,https://whatsupnewp.com/2026/04/mckee-announces-60m-bond-proposal-for-ccri-workforce-training-center-in-warwick/,This will only take a few seconds...,This will only take a few seconds...,"data:;base64,=",N,,2026-04-09 16:03:15.900501
 ,Congress,2026-04-09 17:45:35+00:00,Mexico Business,"Baja California Sur Congress, ECOCE Sign Circular Pact - Mexico Business News",Not Available,,,,,https://mexicobusiness.news/sustainability/news/baja-california-sur-congress-ecoce-sign-circular-pact,"In an effort to translate environmental awareness into concrete action, the Congress of Baja California Sur and ECOCE formalized a collaboration agreement focused on promoting waste separation, recycling and circular economy principles across the state.
 Under this framework, both institutions will work jointly to bring these concepts into public institutions and broader society.
 The agreement includes initiatives designed to encourage active participation, such as eco-rescues, which are cleanup campaigns targeting areas with environmental waste.
@@ -4316,7 +4864,6 @@ As part of the agreement, an annual impact report will be developed to measure p
 The agreement was signed by Erick Iván Agúndez, President of the Standing Committee and the Permanent Commission on Ecology and Environment of the state congress, and Jorge Alberto Terrazas Ornelas, Director General, ECOCE. Representatives from both institutions also participated in the signing.
 
 Agúndez said the agreement will support the implementation of concrete actions to promote circular economy practices and strengthen viable legislation and public policies on waste. He added that the initiative seeks to involve public officials in adopting sustainable practices and changing long-standing habits.",https://mexicobusiness.news/sites/default/files/styles/crop_16_9/public/2026-04/caucasian-senior-couple-of-people-throwing-away-wa-2026-01-05-23-27-37-utc.jpg?h=4c0eecad&itok=0Fjf7qpE,N,,2026-04-09 16:05:17.540674
-,Clean Energy ,2026-04-09 17:45:35+00:00,whatsupnewp.com,McKee announces $60M bond proposal for CCRI workforce training center in Warwick,Not Available,,,,,https://whatsupnewp.com/2026/04/mckee-announces-60m-bond-proposal-for-ccri-workforce-training-center-in-warwick/,This will only take a few seconds...,This will only take a few seconds...,"data:;base64,=",N,,2026-04-09 16:03:15.900501
 ,American Energy,2026-04-09 17:36:12+00:00,gov.texas.gov,Governor Abbott Celebrates Groundbreaking Of Two New Power Stations In Southeast Texas,Not Available,,,,,https://gov.texas.gov/es/news/post/governor-abbott-celebrates-groundbreaking-of-two-new-power-stations-in-southeast-texas,"At the groundbreaking ceremony, Governor Abbott highlighted Texas as America's undisputed energy leader, ranking No. 1 for energy and electricity ...",Not Available,https://gov.texas.gov/uploads/images/press/_large/Photo_Apr_09_2026%2C_12_21_17_PM.jpg,N,,2026-04-09 14:02:48.483437
 ,Clean Energy ,2026-04-09 17:35:40+00:00,Buffalo Business First,"CleanCapital, Viridi, Floe on Buffalo's clean energy sector - The Business Journals",Josh Gully,,,,,https://www.bizjournals.com/buffalo/news/2026/04/09/buffalo-clean-tech-energy-cleancapital-viridi-floe.html,"Buffalo is well-positioned to become a hub for renewable energy, according to the leaders of clean-tech firms CleanCapital, Floe and Viridi.",Not Available,https://media.bizj.us/view/img/13159884/cleancpaital*1200xx2048-1152-0-107.jpg,N,,2026-04-09 15:04:50.614807
 ,Texas American Energy ,2026-04-09 17:32:45+00:00,naturalgasintel.com,End of Fracking Freeze? Mexico Eyes 141 Tcf in Unconventional Resources to Slash U.S. Imports,Christopher Lenton,,,,,https://naturalgasintel.com/news/end-of-fracking-freeze-mexico-eyes-141-tcf-in-unconventional-resources-to-slash-us-imports/,"Christopher was promoted to Managing Editor, Mexico, in December 2024, having joined NGI as a Senior Editor for Mexico and Latin America in November 2018.
@@ -4935,6 +5482,27 @@ Prior to 1970, the U.S. lacked comprehensive legal frameworks for protecting the
 We see Wisconsin’s legacy of protecting the environment through democratic participation carried forward in countless ways. It shows up when residents pack public hearings on Clean Water Act permits. It drives communities to insist on transparency and careful review before major data centers and energy projects are allowed to advance. It is strengthened by young people urging courts and policymakers to reckon with the realities of climate change. And it is deepened by the leadership of Native Nations whose own environmental laws and traditions continue to guide stewardship of the lands and waters we now call Wisconsin.
 
 Wisconsin lawyers also have an important role in carrying forward our state’s environmental legacy. As we mark another Earth Day, we encourage lawyers to consider how their skills, voices, and expertise can help safeguard the natural resources that make Wisconsin such an extraordinary place to call home.",https://www.wisbar.org,N,,2026-04-09 16:05:24.095036
+,EPA,2026-04-09 16:59:34+00:00,US EPA,EPA Recognizes Excellence and Innovation in Mid-Atlantic Water Infrastructure Projects,US EPA,,,,,https://www.epa.gov/newsreleases/epa-recognizes-excellence-and-innovation-mid-atlantic-water-infrastructure-projects,"PHILADELPHIA (April 8, 2026)– U.S. Environmental Protection Agency (EPA) Assistant Administrator for Water Jessica Kramer recently recognized 48 water infrastructure projects for excellence and innovation, including the City of Baltimore, Maryland’s Compliance Program Inventory to replace lead service lines in their water system.
+This project, financed in part by state revolving fund (SRF) programs, demonstrates the importance of water infrastructure for supporting healthy Americans and laying a foundation for economic prosperity.
+Drinking Water: AQUARIUS Awards EPA’s AQUARIUS program celebrates drinking water projects financed in part by the DWSRFs that are innovative, resilient, and protect public health.
+Twenty-two projects carried out by state or local governments and drinking water utilities were recognized by the 2026 AQUARIUS program.
+Completing this inventory marks a major step in the city's initiative to remove lead from drinking water.","PHILADELPHIA (April 8, 2026)– U.S. Environmental Protection Agency (EPA) Assistant Administrator for Water Jessica Kramer recently recognized 48 water infrastructure projects for excellence and innovation, including the City of Baltimore, Maryland’s Compliance Program Inventory to replace lead service lines in their water system. This project, financed in part by state revolving fund (SRF) programs, demonstrates the importance of water infrastructure for supporting healthy Americans and laying a foundation for economic prosperity.
+
+“This AQUARIUS recognition highlights how federal‑state‑local partnerships translate into real progress: better information, smarter investments, and safer water,” said EPA Mid-Atlantic Regional Administrator Amy Van Blarcom-Lackey. “Baltimore’s inventory shows that when water systems meet people where they are—on their blocks and in their homes—we can protect health, build trust, and move faster to replace lead service lines.”
+
+The Clean Water State Revolving Fund (CWSRF) and Drinking Water State Revolving Fund (DWSRF) programs have provided a foundation of federal investment in water infrastructure for decades. The SRF programs directly support EPA’s Powering the Great American ComebackInitiative, which emphasizes the need for clean air, land, and water for every American and the importance of cooperative federalism.
+
+Drinking Water: AQUARIUS Awards
+
+EPA’s AQUARIUS program celebrates drinking water projects financed in part by the DWSRFs that are innovative, resilient, and protect public health. Twenty-two projects carried out by state or local governments and drinking water utilities were recognized by the 2026 AQUARIUS program.
+
+Baltimore secured a $6.95 million Drinking Water State Revolving Fund loan with $3.68 million in principal forgiveness using 2022 Infrastructure Investment and Jobs Act Lead Service Line Replacement funding, plus $9.59 million in local contributions, to accelerate its lead service line inventory, identifying over 9,600 service lines for replacement and taking the critical first step toward targeted replacement.
+
+Baltimore’s water system serves about 1.6 million residents across the city and suburbs and has a significant number of lead service lines in its system. EPA’s Lead and Copper Rule Revisions (LCRR) require complete inventories and prompt replacement to reduce exposure. The city submitted its interim inventory as required by the LCRR and continues review of the historical records, field investigations, inventory programming, and predictive modeling. Completing the inventory is a critical first step that will enable them to target replacement and deliver major public health benefits.
+
+Community engagement is central to this effort. The city effectively boosted participation and response rates by combining door‑to‑door canvassing, online guidance for at‑home testing, in‑person assistance, flyers and notices, public events, and information booths. This was complemented by minimally invasive Swordfish pipe material readings. In some neighborhoods, response rates increased nearly tenfold following outreach, according to Johns Hopkins University. This comprehensive, community responsive strategy builds trust, secures permissions, reduces the need for disruptive inspections, and accelerates inventory completion. Completing this inventory marks a major step in the city's initiative to remove lead from drinking water.
+
+Honorable mentions were also made for the following projects:",https://www.epa.gov/sites/all/themes/epa/img/epa-news-releases-og.jpg,N,,2026-04-09 14:03:37.819835
 ,North Carolina Environment,2026-04-09 16:59:34+00:00,US EPA,EPA Recognizes Excellence and Innovation in South Carolina Water Infrastructure Projects,US EPA,,,,,https://www.epa.gov/newsreleases/epa-recognizes-excellence-and-innovation-south-carolina-water-infrastructure-projects,"April 9, 2026 COLUMBIA, South Carolina (April 9, 2026) – U.S. Environmental Protection Agency (EPA) Assistant Administrator for Water Jessica Kramer recently recognized 48 water infrastructure projects for excellence and innovation, including two in South Carolina.
 Batesburg-Leesville recognized with AQUARIUS award EPA’s AQUARIUS program celebrates drinking water projects financed in part by the DWSRFs that are innovative, resilient and protect public health.
 This project delivered safe drinking water to all customers while resolving PFAS contamination and longstanding capacity concerns.
@@ -4970,27 +5538,6 @@ Background
 The SRF programs are EPA-state partnerships that provide communities with low-cost financing for a wide range of water quality and drinking water infrastructure projects. The SRFs have provided over $265 billion in financial assistance to more than 50,000 water quality infrastructure projects and 76,000 drinking water projects across the country.
 
 ###",https://www.epa.gov/sites/all/themes/epa/img/epa-news-releases-og.jpg,N,,2026-04-09 14:04:31.111475
-,EPA,2026-04-09 16:59:34+00:00,US EPA,EPA Recognizes Excellence and Innovation in Mid-Atlantic Water Infrastructure Projects,US EPA,,,,,https://www.epa.gov/newsreleases/epa-recognizes-excellence-and-innovation-mid-atlantic-water-infrastructure-projects,"PHILADELPHIA (April 8, 2026)– U.S. Environmental Protection Agency (EPA) Assistant Administrator for Water Jessica Kramer recently recognized 48 water infrastructure projects for excellence and innovation, including the City of Baltimore, Maryland’s Compliance Program Inventory to replace lead service lines in their water system.
-This project, financed in part by state revolving fund (SRF) programs, demonstrates the importance of water infrastructure for supporting healthy Americans and laying a foundation for economic prosperity.
-Drinking Water: AQUARIUS Awards EPA’s AQUARIUS program celebrates drinking water projects financed in part by the DWSRFs that are innovative, resilient, and protect public health.
-Twenty-two projects carried out by state or local governments and drinking water utilities were recognized by the 2026 AQUARIUS program.
-Completing this inventory marks a major step in the city's initiative to remove lead from drinking water.","PHILADELPHIA (April 8, 2026)– U.S. Environmental Protection Agency (EPA) Assistant Administrator for Water Jessica Kramer recently recognized 48 water infrastructure projects for excellence and innovation, including the City of Baltimore, Maryland’s Compliance Program Inventory to replace lead service lines in their water system. This project, financed in part by state revolving fund (SRF) programs, demonstrates the importance of water infrastructure for supporting healthy Americans and laying a foundation for economic prosperity.
-
-“This AQUARIUS recognition highlights how federal‑state‑local partnerships translate into real progress: better information, smarter investments, and safer water,” said EPA Mid-Atlantic Regional Administrator Amy Van Blarcom-Lackey. “Baltimore’s inventory shows that when water systems meet people where they are—on their blocks and in their homes—we can protect health, build trust, and move faster to replace lead service lines.”
-
-The Clean Water State Revolving Fund (CWSRF) and Drinking Water State Revolving Fund (DWSRF) programs have provided a foundation of federal investment in water infrastructure for decades. The SRF programs directly support EPA’s Powering the Great American ComebackInitiative, which emphasizes the need for clean air, land, and water for every American and the importance of cooperative federalism.
-
-Drinking Water: AQUARIUS Awards
-
-EPA’s AQUARIUS program celebrates drinking water projects financed in part by the DWSRFs that are innovative, resilient, and protect public health. Twenty-two projects carried out by state or local governments and drinking water utilities were recognized by the 2026 AQUARIUS program.
-
-Baltimore secured a $6.95 million Drinking Water State Revolving Fund loan with $3.68 million in principal forgiveness using 2022 Infrastructure Investment and Jobs Act Lead Service Line Replacement funding, plus $9.59 million in local contributions, to accelerate its lead service line inventory, identifying over 9,600 service lines for replacement and taking the critical first step toward targeted replacement.
-
-Baltimore’s water system serves about 1.6 million residents across the city and suburbs and has a significant number of lead service lines in its system. EPA’s Lead and Copper Rule Revisions (LCRR) require complete inventories and prompt replacement to reduce exposure. The city submitted its interim inventory as required by the LCRR and continues review of the historical records, field investigations, inventory programming, and predictive modeling. Completing the inventory is a critical first step that will enable them to target replacement and deliver major public health benefits.
-
-Community engagement is central to this effort. The city effectively boosted participation and response rates by combining door‑to‑door canvassing, online guidance for at‑home testing, in‑person assistance, flyers and notices, public events, and information booths. This was complemented by minimally invasive Swordfish pipe material readings. In some neighborhoods, response rates increased nearly tenfold following outreach, according to Johns Hopkins University. This comprehensive, community responsive strategy builds trust, secures permissions, reduces the need for disruptive inspections, and accelerates inventory completion. Completing this inventory marks a major step in the city's initiative to remove lead from drinking water.
-
-Honorable mentions were also made for the following projects:",https://www.epa.gov/sites/all/themes/epa/img/epa-news-releases-og.jpg,N,,2026-04-09 14:03:37.819835
 ,IRA Tax Credits,2026-04-09 16:55:39+00:00,pv-magazine-usa.com,Lion Energy takes equity stake in American Battery Factory aimed at securing domestic ...,Not Available,,,,,https://pv-magazine-usa.com/2026/04/09/lion-energy-takes-equity-stake-in-american-battery-factory-aimed-at-securing-domestic-battery-supply/,"... Inflation Reduction Act. Lion Energy plans to bring new US assembly ... tax credits. From ABF's Tucson facility, Lion Energy intends to use ...",Not Available,,N,,2026-04-09 17:07:56.525339
 ,Louisiana American Energy ,2026-04-09 16:53:25+00:00,www.quiverquant.com,Press Release: Steve Scalise Discusses Louisiana's Energy Leadership and National ...,Quiver CongressRadar,,,,,https://www.quiverquant.com/news/Press+Release:+Steve+Scalise+Discusses+Louisiana's+Energy+Leadership+and+National+Security+on+Fox+News,"House Majority Leader Steve Scalise discussed Louisiana's energy leadership, Trump’s Iran strategy, and his New Orleans roots on Fox News.
 Check out the Quiver Quantitative API to build on top of data on congressional stock trading, insider transactions, hedge fund moves, and more.
@@ -15125,6 +15672,13 @@ At the same time, Vingroup, VinFast's parent company, is rolling out a range of 
 Hashtag: #VinFast
 
 The issuer is solely responsible for the content of this announcement.",https://bloximages.newyork1.vip.townnews.com/voiceofalexandria.com/content/tncms/assets/v3/editorial/d/b7/db7fec10-0924-56c6-a371-8398a0538456/69d5e290b6222.image.jpg?crop=1024%2C538%2C0%2C72,N,,2026-04-08 14:06:13.037634
+,EPA,2026-04-08 17:17:01+00:00,US EPA,Public Notice: Proposed CAFO CWA-05-2026-0010 | US EPA,US EPA,,,,,https://www.epa.gov/publicnotices/proposed-cafo-cwa-05-2026-0010,"Email comments to the Regional Hearing Clerk at (r5hearingclerk@epa.gov) Be sure to include Case Docket No.
+CWA-05-2026-0010.
+If you are unable to submit written comments by email, please contact the Regional Hearing Clerk at (312) 886-9868.","Email comments to the Regional Hearing Clerk at (r5hearingclerk@epa.gov)
+
+Be sure to include Case Docket No. CWA-05-2026-0010.
+
+If you are unable to submit written comments by email, please contact the Regional Hearing Clerk at (312) 886-9868.",https://www.epa.gov/system/files/images/2022-03/epa-standard-twitter.jpg,N,,2026-04-08 16:03:02.125176
 ,EPA,2026-04-08 17:17:01+00:00,US EPA,"Midwest Manufacturing/North Farm Superfund Site, Kellogg, Jasper County, Iowa | US EPA",US EPA,,,,,https://www.epa.gov/ia/midwest-manufacturingnorth-farm-superfund-site-kellogg-jasper-county-iowa-1,"Summary Sixth Five-Year Review Completed The U.S. Environmental Protection Agency (EPA) Region 7 has completed the Sixth Five-Year Review for the Midwest Manufacturing/North Farm Superfund site.
 Five-Year Reviews provide an opportunity to evaluate the site remedy to determine whether it remains protective of human health and the environment.
 This Five-Year Review found that the remedy at the site is short-term protective of human health and the environment.
@@ -15164,13 +15718,6 @@ Newton, IA 50208
 641-792-4108
 
 If you have questions about the site, please contact:",https://www.epa.gov/sites/all/themes/epa/img/epa-standard-og.jpg,N,,2026-04-08 15:04:03.037524
-,EPA,2026-04-08 17:17:01+00:00,US EPA,Public Notice: Proposed CAFO CWA-05-2026-0010 | US EPA,US EPA,,,,,https://www.epa.gov/publicnotices/proposed-cafo-cwa-05-2026-0010,"Email comments to the Regional Hearing Clerk at (r5hearingclerk@epa.gov) Be sure to include Case Docket No.
-CWA-05-2026-0010.
-If you are unable to submit written comments by email, please contact the Regional Hearing Clerk at (312) 886-9868.","Email comments to the Regional Hearing Clerk at (r5hearingclerk@epa.gov)
-
-Be sure to include Case Docket No. CWA-05-2026-0010.
-
-If you are unable to submit written comments by email, please contact the Regional Hearing Clerk at (312) 886-9868.",https://www.epa.gov/system/files/images/2022-03/epa-standard-twitter.jpg,N,,2026-04-08 16:03:02.125176
 ,Indiana Environment,2026-04-08 17:16:41+00:00,News From The States,"Federal reversal on Pecos mining protections prompts outcry from federal officials, advocates",News From The States,,,,,https://www.newsfromthestates.com/article/federal-reversal-pecos-mining-protections-prompts-outcry-federal-officials-advocates,"Two federal agencies on Monday issued a notice to formally reverse efforts to ban mining in the Upper Pecos, potentially opening up nearly 165,000 acres for mineral extraction.
 The U.S. Forest Service and Bureau of Land Management under the Biden administration had supported an administrative mining ban on mining in the area, but backtracked in April 2025 after the start of the second Trump administration.
 The area is home to the Terrero Mining disaster from 1991, during which floodwaters breached a defunct mine and sent mining tailing sludge downriver.
@@ -15938,6 +16485,17 @@ To read Indiana's State Implementation Plan and learn more about regional haze, 
 ,Texas Environment,2026-04-08 15:45:22+00:00,www.expressnews.com,Tesla files site plan for 'ecological paradise' - San Antonio Express-News,Not Available,,,,,https://www.expressnews.com/business/article/tesla-ecological-paradise-austin-22187811.php,"may finally be making headway. Years after it was first pitched, Tesla is proposing restoration of 28 acres of riverfront land at Gigafactory Texas, a ...",Not Available,,N,,2026-04-08 15:05:55.191449
 ,EPA,2026-04-08 15:43:11+00:00,https://www.cleveland19.com,"EPA, Gov. DeWine share announcement on NE Ohio air quality - Cleveland 19",Madeline Harden,,,,,https://www.cleveland19.com/2026/04/08/epa-gov-dewine-share-announcement-ne-ohio-air-quality/,"The Environmental Protection Agency, Governor Mike and other Ohio lawmakers are set to share a major clean air update on Wednesday afternoon.",Not Available,https://gray-woio-prod.gtv-cdn.com/resizer/v2/EIVO2JBPPNFPRN4F3NNW3Q5UIE.jpg?auth=4f2b6e42f72300fd31079ac4faa9c2e205d838d7bb4680f07c6f3df4280226cf&width=1200&height=600&smart=true,N,,2026-04-08 12:04:05.619862
 ,North Carolina and Evs,2026-04-08 15:39:22+00:00,www.wardsauto.com,End of EV mandate tempts out-of-state buyers to acquire California dealerships | WardsAuto,Not Available,,,,,https://www.wardsauto.com/news/end-of-sales-mandate-tempts-more-buyers-to-acquire-california-dealerships/816756/,"RBM Automotive Group, a newly established dealership group based in Atlanta, just acquired three dealerships in South Carolina and is eager to grow.",Not Available,,N,,2026-04-08 18:03:31.749577
+,EVs,2026-04-08 15:36:46+00:00,www.canada.ca,Government of Canada invests in electric vehicles,Natural Resources Canada,,,,,https://www.canada.ca/en/natural-resources-canada/news/2026/04/government-of-canada-invests-in-electric-vehicles.html,"April 8, 2026 Toronto, Ontario Natural Resources Canada Building on the new Auto Strategy, the federal government is making it easier for Canadian families and businesses to switch to an electric vehicle (EV) by making charging infrastructure more accessible across the country.
+Today, Karim Bardeesy, Parliamentary Secretary to the Minister of Industry, on behalf of the Honourable Tim Hodgson, Minister of Energy and Natural Resources, announced $10.6 million for 14 EV charging infrastructure projects across Canada at the EV & Charging Expo in Toronto.
+Additionally, Plug’n Drive will continue to offer a cross-country EV test drive tour with an additional $1.1 million in funding from Natural Resources Canada.
+That is why the Government of Canada is positioning Canada as a global leader in vehicle electrification, autonomous and self-driving technologies, and battery supply chains.
+Today’s investments support this strategy by enabling Canadians from coast to coast to coast to choose clean, affordable transportation with confidence.","April 8, 2026 Toronto, Ontario Natural Resources Canada
+
+Building on the new Auto Strategy, the federal government is making it easier for Canadian families and businesses to switch to an electric vehicle (EV) by making charging infrastructure more accessible across the country. Today, Karim Bardeesy, Parliamentary Secretary to the Minister of Industry, on behalf of the Honourable Tim Hodgson, Minister of Energy and Natural Resources, announced $10.6 million for 14 EV charging infrastructure projects across Canada at the EV & Charging Expo in Toronto. These projects will install more than 1,600 chargers across Canada.
+
+Additionally, Plug’n Drive will continue to offer a cross-country EV test drive tour with an additional $1.1 million in funding from Natural Resources Canada. The tour will give Canadians, especially in small and medium-sized communities where EV adoption is lower, the chance to learn about how an EV can fit into their lifestyle, compare multiple EV models in one place, ask questions and learn from EV experts.
+
+The choices we make now will shape the future of Canadian transportation and our auto industry for decades to come. That is why the Government of Canada is positioning Canada as a global leader in vehicle electrification, autonomous and self-driving technologies, and battery supply chains. Today’s investments support this strategy by enabling Canadians from coast to coast to coast to choose clean, affordable transportation with confidence.",https://www.canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico,N,,2026-04-08 12:02:46.907195
 ,EVs,2026-04-08 15:36:46+00:00,www.canada.ca,Backgrounder: Government of Canada invests in electric vehicles,Natural Resources Canada,,,,,https://www.canada.ca/en/natural-resources-canada/news/2026/04/backgrounder-government-of-canada-invests-in-electric-vehicles.html,"Location: Quebec Funding amount: $2,452,500 Description: The proponent will install 981 Level 2 EV chargers.
 Recipient: EV Start Inc.
 Location: London, Ontario Funding amount: $365,757 Description: The proponent will install 11 EV chargers.
@@ -16061,17 +16619,6 @@ Funding amount: $99,999
 Description: The proponent will install 20 Level 2 EV chargers.
 
 Education and awareness project funding",https://www.canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico,N,,2026-04-08 14:02:02.487167
-,EVs,2026-04-08 15:36:46+00:00,www.canada.ca,Government of Canada invests in electric vehicles,Natural Resources Canada,,,,,https://www.canada.ca/en/natural-resources-canada/news/2026/04/government-of-canada-invests-in-electric-vehicles.html,"April 8, 2026 Toronto, Ontario Natural Resources Canada Building on the new Auto Strategy, the federal government is making it easier for Canadian families and businesses to switch to an electric vehicle (EV) by making charging infrastructure more accessible across the country.
-Today, Karim Bardeesy, Parliamentary Secretary to the Minister of Industry, on behalf of the Honourable Tim Hodgson, Minister of Energy and Natural Resources, announced $10.6 million for 14 EV charging infrastructure projects across Canada at the EV & Charging Expo in Toronto.
-Additionally, Plug’n Drive will continue to offer a cross-country EV test drive tour with an additional $1.1 million in funding from Natural Resources Canada.
-That is why the Government of Canada is positioning Canada as a global leader in vehicle electrification, autonomous and self-driving technologies, and battery supply chains.
-Today’s investments support this strategy by enabling Canadians from coast to coast to coast to choose clean, affordable transportation with confidence.","April 8, 2026 Toronto, Ontario Natural Resources Canada
-
-Building on the new Auto Strategy, the federal government is making it easier for Canadian families and businesses to switch to an electric vehicle (EV) by making charging infrastructure more accessible across the country. Today, Karim Bardeesy, Parliamentary Secretary to the Minister of Industry, on behalf of the Honourable Tim Hodgson, Minister of Energy and Natural Resources, announced $10.6 million for 14 EV charging infrastructure projects across Canada at the EV & Charging Expo in Toronto. These projects will install more than 1,600 chargers across Canada.
-
-Additionally, Plug’n Drive will continue to offer a cross-country EV test drive tour with an additional $1.1 million in funding from Natural Resources Canada. The tour will give Canadians, especially in small and medium-sized communities where EV adoption is lower, the chance to learn about how an EV can fit into their lifestyle, compare multiple EV models in one place, ask questions and learn from EV experts.
-
-The choices we make now will shape the future of Canadian transportation and our auto industry for decades to come. That is why the Government of Canada is positioning Canada as a global leader in vehicle electrification, autonomous and self-driving technologies, and battery supply chains. Today’s investments support this strategy by enabling Canadians from coast to coast to coast to choose clean, affordable transportation with confidence.",https://www.canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico,N,,2026-04-08 12:02:46.907195
 ,EVs,2026-04-08 15:35:41+00:00,Seeking Alpha,Lucid: Supplier Snags Not A Problem (NASDAQ:LCID) | Seeking Alpha,The Asian Investor,,,,,https://seekingalpha.com/article/4889241-lucid-supplier-snags-not-a-problem,"Analyst’s Disclosure: I/we have a beneficial long position in the shares of RIVN either through stock ownership, options, or other derivatives.
 I am not receiving compensation for it (other than from Seeking Alpha).
 Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole.
@@ -20325,7 +20872,6 @@ These updates support implementation of Executive Order 14154, Unleashing Americ
 
 ###",https://www.usda.gov/sites/default/files/usda-press-release-twitter-final.jpg,N,,2026-04-08 03:58:35.653075
 ,Indiana American Energy ,2026-04-08 06:09:24+00:00,www.chronicleonline.com,US Energy Crisis | National | chronicleonline.com,Not Available,,,,,https://www.chronicleonline.com/news/national/us-energy-crisis/image_c15c672e-7b5c-5065-aa46-9630441f8afe.html,"A truck moves past parked trucks at a gas station on Tuesday, April 7, 2026, in Aurora, Ore. (AP Photo/Jenny Kane)",Not Available,,N,,2026-04-08 02:59:29.822204
-,Louisiana American Energy ,2026-04-08 06:08:00+00:00,www.dailyrecordnews.com,US Energy Crisis | Us - Ellensburg Daily Record,Not Available,,,,,https://www.dailyrecordnews.com/ap_news/us/us-energy-crisis/image_661dc3f0-88d4-5486-84b3-cf4e159cc5c8.html,"Fuel prices are displayed at a gas station on Tuesday, April 7, 2026, in Aurora, Ore. (AP Photo/Jenny Kane)",Not Available,,N,,2026-04-08 03:00:45.034859
 ,Indiana American Energy ,2026-04-08 06:08:00+00:00,Daily Record,US Energy Crisis - dailyrecordnews.com - Ellensburg Daily Record,Jenny Kane,,,,,https://www.dailyrecordnews.com/ap_news/us/us-energy-crisis/image_94aeeb22-cd24-5f90-a7c1-848ffba7a2f3.html,"Submitting this form below will send a message to your email with a link to change your password.
 Email or Screen Name CAPTCHA An email message containing instructions on how to reset your password has been sent to the email address listed on your account.","Submitting this form below will send a message to your email with a link to change your password.
 
@@ -20334,6 +20880,7 @@ Email or Screen Name
 CAPTCHA
 
 An email message containing instructions on how to reset your password has been sent to the email address listed on your account.",https://bloximages.chicago2.vip.townnews.com/dailyrecordnews.com/content/tncms/assets/v3/editorial/9/4a/94aeeb22-cd24-5f90-a7c1-848ffba7a2f3/69d5ec7b1c42f.image.jpg?crop=1763%2C926%2C0%2C125&resize=1200%2C630&order=crop%2Cresize,N,,2026-04-08 02:59:54.657000
+,Louisiana American Energy ,2026-04-08 06:08:00+00:00,www.dailyrecordnews.com,US Energy Crisis | Us - Ellensburg Daily Record,Not Available,,,,,https://www.dailyrecordnews.com/ap_news/us/us-energy-crisis/image_661dc3f0-88d4-5486-84b3-cf4e159cc5c8.html,"Fuel prices are displayed at a gas station on Tuesday, April 7, 2026, in Aurora, Ore. (AP Photo/Jenny Kane)",Not Available,,N,,2026-04-08 03:00:45.034859
 ,Indiana American Energy ,2026-04-08 06:08:00+00:00,Daily Record,US Energy Crisis | Us - Ellensburg Daily Record,Jenny Kane,,,,,https://www.dailyrecordnews.com/ap_news/us/us-energy-crisis/image_b748302c-3831-5893-99e0-ff03ddad7bca.html,"Submitting this form below will send a message to your email with a link to change your password.
 Email or Screen Name CAPTCHA An email message containing instructions on how to reset your password has been sent to the email address listed on your account.","Submitting this form below will send a message to your email with a link to change your password.
 
@@ -20831,16 +21378,16 @@ Frenzel, a former nuclear engineer in the U.S. Navy, also advocates for developi
 
 ""If we want to be carbon free, if we want to serve large, high energy intensive loads, I think nuclear has to play a role in the future, because of its carbon free nature,"" he said. ""And I think that’s a down payment I think we should be making as a country.""",https://images.foxtv.com/static.fox9.com/www.fox9.com/content/uploads/2026/04/1200/630/xcel-energy-ceo-data-centers-wont-impact-your-electric-bill.jpg?ve=1&tl=1,N,,2026-04-08 09:03:12.809955
 ,North Carolina American Energy ,2026-04-08 01:14:18+00:00,www.gazettextra.com,US Energy Crisis | Nation/World - Janesville Gazette,Not Available,,,,,https://www.gazettextra.com/news/nation_world/us-energy-crisis/image_17075c8a-b6d3-5e4a-91a8-1c44cbac1544.html,"US Energy Crisis. Jae C. Hong - AP; Apr 7, 2026; 15 mins ago. Facebook ... North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode ...",Not Available,,N,,2026-04-07 23:02:45.244034
-,North Carolina American Energy ,2026-04-08 01:13:04+00:00,www.dailyrecordnews.com,US Energy Crisis - dailyrecordnews.com - Ellensburg Daily Record,Not Available,,,,,https://www.dailyrecordnews.com/ap_news/us/us-energy-crisis/image_f1ceee54-8188-53ec-a12e-1921ef0da62a.html,"US Energy Crisis. Jae C. Hong - AP; Apr 7, 2026; 18 mins ago; Comments ... North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode ...",Not Available,,N,,2026-04-07 23:03:17.474145
 ,Louisiana American Energy ,2026-04-08 01:13:04+00:00,www.dailyrecordnews.com,US Energy Crisis | Us | dailyrecordnews.com,Not Available,,,,,https://www.dailyrecordnews.com/ap_news/us/us-energy-crisis/image_0482d33a-63fc-59b0-ac35-38b010842188.html,"A cargo truck is parked by shipping containers at the Port of Los Angeles in Los Angeles, Tuesday, April 7, 2026. (AP Photo/Jae C. Hong)",Not Available,,N,,2026-04-07 23:04:19.766910
-,Indiana American Energy ,2026-04-08 01:13:03+00:00,The Lufkin Daily News,US Energy Crisis | Us | lufkindailynews.com,Jae C. Hong,,,,,https://lufkindailynews.com/anpa/us/us-energy-crisis/image_7a8e4544-dfbd-553d-8c50-117abd7f58a6.html,"Your browser is out of date and potentially vulnerable to security risks.
-We recommend switching to one of the following browsers:","Your browser is out of date and potentially vulnerable to security risks.
-
-We recommend switching to one of the following browsers:",https://bloximages.chicago2.vip.townnews.com/lufkindailynews.com/content/tncms/assets/v3/editorial/7/a8/7a8e4544-dfbd-553d-8c50-117abd7f58a6/69d5a5abae160.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize,N,,2026-04-07 23:03:37.971375
+,North Carolina American Energy ,2026-04-08 01:13:04+00:00,www.dailyrecordnews.com,US Energy Crisis - dailyrecordnews.com - Ellensburg Daily Record,Not Available,,,,,https://www.dailyrecordnews.com/ap_news/us/us-energy-crisis/image_f1ceee54-8188-53ec-a12e-1921ef0da62a.html,"US Energy Crisis. Jae C. Hong - AP; Apr 7, 2026; 18 mins ago; Comments ... North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode ...",Not Available,,N,,2026-04-07 23:03:17.474145
 ,Louisiana American Energy ,2026-04-08 01:13:03+00:00,The Lufkin Daily News,US Energy Crisis | Us | lufkindailynews.com,Jae C. Hong,,,,,https://lufkindailynews.com/anpa/us/us-energy-crisis/image_d625380a-5921-5be9-b1bd-27d9af49dd79.html,"Your browser is out of date and potentially vulnerable to security risks.
 We recommend switching to one of the following browsers:","Your browser is out of date and potentially vulnerable to security risks.
 
 We recommend switching to one of the following browsers:",https://bloximages.chicago2.vip.townnews.com/lufkindailynews.com/content/tncms/assets/v3/editorial/d/62/d625380a-5921-5be9-b1bd-27d9af49dd79/69d5a5aca72b1.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize,N,,2026-04-07 23:04:24.739920
+,Indiana American Energy ,2026-04-08 01:13:03+00:00,The Lufkin Daily News,US Energy Crisis | Us | lufkindailynews.com,Jae C. Hong,,,,,https://lufkindailynews.com/anpa/us/us-energy-crisis/image_7a8e4544-dfbd-553d-8c50-117abd7f58a6.html,"Your browser is out of date and potentially vulnerable to security risks.
+We recommend switching to one of the following browsers:","Your browser is out of date and potentially vulnerable to security risks.
+
+We recommend switching to one of the following browsers:",https://bloximages.chicago2.vip.townnews.com/lufkindailynews.com/content/tncms/assets/v3/editorial/7/a8/7a8e4544-dfbd-553d-8c50-117abd7f58a6/69d5a5abae160.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize,N,,2026-04-07 23:03:37.971375
 ,American Energy,2026-04-08 00:48:47+00:00,BNamericas.com,Hitachi Energy invests US$150mn to expand transformer capacity in Latin America,BNamericas,,,,,https://www.bnamericas.com/en/news/hitachi-energy-invests-us150mn-to-expand-transformer-capacity-in-latin-america,"Hitachi Energy press release Hitachi Energy announced an additional investment of US$ 150 million (mn) aimed at expanding its power transformer manufacturing capacity in Latin America.
 Alexandre Malveiro, Hub South America Manager, Business Unit Transformers at Hitachi Energy, stated that “demand for transformers is growing faster than ever.
 Luis Francisco Flores, Head of North LATAM at Hitachi Energy, emphasized that “Colombia demonstrates that it is possible to invest and lead in sophisticated electrical technology.
@@ -22148,7 +22695,6 @@ I believe this is Hyundai's four-wheeled love letter to the off-road life. Wheth
 Enjoyed the article? Give us a 'LIKE' and FOLLOW us on MSN! OR Buy us Coffee :) Thank you for All Your Support.
 
 Source",http://static1.squarespace.com/static/63c94d36684e583a7ae37e3b/63c9902c75d8e10d6417bae5/69d563c0d38c495547ef322d/1775593406698/hyundai-boulder-concept-detroit-comic-ford-fleeing.png?format=1500w,N,,2026-04-07 17:02:38.642416
-,Clean Energy ,2026-04-07 20:25:19+00:00,YouTube,FULL INTERVIEW: Utah communities begin process to join statewide clean energy program,Not Available,,,,,https://www.youtube.com/watch?v=RdFvf_XtXb0,"19 communities across Utah, including Springdale, are set to begin the process of moving to 100% renewable energy by 2030. This program was created under a 2...",Not Available,https://i.ytimg.com/vi/RdFvf_XtXb0/maxresdefault.jpg,N,,2026-04-07 18:02:21.232386
 ,Clean Energy ,2026-04-07 20:25:19+00:00,Bloom Energy,Powering U.S. Manufacturing: Strategies for Navigating a Constrained Grid - Bloom Energy,Not Available,,,,,https://bloomenergy.com/events/powering-us-manufacturing/,"Reshoring, federal incentives, and growth across key sectors are powering a rapid expansion of domestic manufacturing — and this wave of production is adding to an already stressed electrical grid.
 But there’s a mismatch between supply and demand, with capacity additions falling behind and extreme weather events and grid condition fluctuations heightening instability and threatening uptime and long-term competitiveness.
 As energy markets become more volatile, fuel cells have emerged as a reliable, efficient, and sustainable solution to enhance operational resilience and accelerate time to power.
@@ -22164,6 +22710,7 @@ The role of onsite power in ensuring resilience and reliability
 Why fuel cells are a strategic investment for the future
 
 Speakers:",https://www.bloomenergy.com/wp-content/uploads/manfucturers-on-deman-thumb.png,N,,2026-04-07 20:05:04.636617
+,Clean Energy ,2026-04-07 20:25:19+00:00,YouTube,FULL INTERVIEW: Utah communities begin process to join statewide clean energy program,Not Available,,,,,https://www.youtube.com/watch?v=RdFvf_XtXb0,"19 communities across Utah, including Springdale, are set to begin the process of moving to 100% renewable energy by 2030. This program was created under a 2...",Not Available,https://i.ytimg.com/vi/RdFvf_XtXb0/maxresdefault.jpg,N,,2026-04-07 18:02:21.232386
 ,Indiana and Evs,2026-04-07 20:24:42+00:00,WSBT,"South Bend Topic Extension cord | WSBT 22: News, Weather and Sports for Michiana",www.facebook.com,,,,,https://wsbt.com/topic/Extension cord,"12 hours ago Indiana woman accused of using extension cord to steal neighbor's power ""My roommate told me, 'Hey, you need to come back and look at this.'''
 8 years ago Ford recalls electric car power cables for more than 50K cars due to fire risk Ford is recalling the charging cords for more than 50,000 plug-in hybrid and electric cars in North America because they could cause fires in electrical outlets.The company says the 120-volt cords came with certain 2012 through 2015 Focus electrics and...","12 hours ago
 
@@ -28665,271 +29212,3 @@ DOE announced project funding cuts and an unconfirmed list of additional cuts co
 ,EPA,2026-04-07 06:20:57+00:00,X (formerly Twitter),Ohio to distribute $65 million in DuPont settlement funds for water projects,Not Available,,,,,https://x.com/WOWK13News/status/2041388050631029013,WOWK 13 News (@WOWK13News). 16 views. Ohio Governor Mike DeWine and Ohio Environmental Protection Agency Director John Logue gave details Monday ...,"JavaScript is not available.
 
 We’ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of supported browsers in our Help Center.",,N,,2026-04-07 06:58:54.676417
-,EPA,2026-04-07 05:51:25+00:00,US EPA,Risk Management Plan Delay Rule Vacatur | US EPA,US EPA,,,,,https://www.epa.gov/rmp/risk-management-plan-delay-rule-vacatur,"The June 2017 rule delayed the effective date of the January 2017 Risk Management Program regulatory requirements (known as the RMP Amendments rule).
-The purpose of the delay was to provide time to consider petitions for reconsideration of the RMP Amendments rule and take further regulatory action which included proposing a rule to revise or rescind these amendments.
-For more information on the RMP Amendments rule, please see: Final Amendments to the Risk Management Program Rule.
-RMP Delay Rule https://wcms.epa.gov/rmp/final-amendments-risk-management-program-rmp-rule#rule-history On June 14, 2017, the EPA published a final rule to further delay the effective date of the RMP rule amendments until February 19, 2019.
-RMP Reconsideration Rule On May 30, 2018, EPA proposed changes to the final RMP Amendments rule issued on January 13, 2017.","Overview
-
-On August 17, 2018, the U.S. Court of Appeals for the D.C. Circuit Court issued its decision vacating a June 2017 EPA rulemaking.
-
-The June 2017 rule delayed the effective date of the January 2017 Risk Management Program regulatory requirements (known as the RMP Amendments rule).
-
-The purpose of the delay was to provide time to consider petitions for reconsideration of the RMP Amendments rule and take further regulatory action which included proposing a rule to revise or rescind these amendments.
-
-On September 21, 2018, the U.S. Court of Appeals for the D.C. Circuit Court issued its mandate which makes the 2017 RMP Amendments rule now effective.
-
-On December 3, 2018, EPA published a final rule that will incorporate the RMP Amendments into the Code of Federal Regulations (40 CFR Part 68). Final Rule: Accidental Release Prevention Requirements: Risk Management Programs Under the Clean Air Act (83 FR 62268) (2 pp, 216 K, About PDF)
-
-RMP Amendments Compliance Information
-
-EPA will provide additional information on the impacts of this court decision as soon as it is available.
-
-History
-
-RMP Amendments Rule
-
-On January 13, 2017, EPA finalized amendments to the Accidental Release Prevention Requirements for Risk Management Programs under the Clean Air Act, Section 112(r)(7). The amendments were intended to modify:
-
-accident prevention program elements;
-
-emergency preparedness requirements; and
-
-provisions related to sharing information with the public and local emergency planners/responders.
-
-For more information on the RMP Amendments rule, please see: Final Amendments to the Risk Management Program Rule.
-
-Final Rule: Accidental Release Prevention Requirements: Risk Management Programs Under the Clean Air Act (82 FR 4594)(112 pp, 792 K, About PDF)
-
-RMP Reconsideration Petitions
-
-EPA received multiple petitions to reconsider and stay the RMP rule amendments (112 pp, 792 K, About PDF), published January 13, 2017. For more information on the RMP petitions, please see: Final Amendments to the Risk Management Program Rule History.
-
-RMP Delay Rule
-
-https://wcms.epa.gov/rmp/final-amendments-risk-management-program-rmp-rule#rule-history
-
-On June 14, 2017, the EPA published a final rule to further delay the effective date of the RMP rule amendments until February 19, 2019. EPA is conducting a reconsideration proceeding to review objections raised by petitioners to the final RMP Amendments rule. The purpose of the delay was to:
-
-provide time to consider petitions for reconsideration of the RMP Amendments rule and
-
-take further regulatory action which included proposing a rule to revise or rescind these amendments.
-
-Final Rule: Accidental Release Prevention Requirements: Risk Management Programs Under the Clean Air Act; Further Delay of Effective Date (82 FR 27133)(12 pp, 323 K, About PDF)
-
-RMP Delay Rule Litigation
-
-In July 2017, various parties filed a petition for judicial review of the Delay Rule (Air Alliance Houston et al. v. EPA et al., No. 17-1155 (DC Cir.)). On August 17, 2018, the United States Court of Appeals for the District of Columbia Circuit issued a decision in the Air Alliance Houston case, vacating the June 2017 EPA regulation (82 FR 27133, June 14, 2017) that delayed the effective date of the final RMP Amendments rule.
-
-On September 21, 2018, the U.S. Court of Appeals for the D.C. Circuit Court issued its mandate which makes the 2017 RMP Amendments rule now effective. On December 3, 2018, EPA published a final rule that will incorporate the RMP Amendments into the Code of Federal Regulations (40 CFR Part 68).
-
-Final Rule: Accidental Release Prevention Requirements: Risk Management Programs Under the Clean Air Act (83 FR 62268) (2 pp, 216 K, About PDF)
-
-EPA will provide additional information on the impacts of this court decision as soon as it is available.
-
-RMP Reconsideration Rule
-
-On May 30, 2018, EPA proposed changes to the final RMP Amendments rule issued on January 13, 2017. EPA is proposing to rescind amendments relating to:
-
-safer technology and alternatives analyses,
-
-third-party audits,
-
-incident investigations,
-
-information availability, and
-
-several other minor regulatory changes.
-
-EPA is also proposing to modify amendments relating to local emergency coordination, emergency exercises, public meetings, and to change the compliance dates for these provisions. EPA is proposing these changes to address:
-
-potential security risks associated with new information disclosure requirements introduced in the final Amendments rule,
-
-reasonableness of regulatory costs compared to benefits of the rule
-
-concerns about maintaining consistency with the OSHA PSM standard,
-
-any impacts of the finding by the Bureau of Alcohol, Tobacco, Firearms, and Explosives that the West Fertilizer incident was caused by arson, and
-
-other issues.",https://www.epa.gov/sites/all/themes/epa/img/epa-standard-og.jpg,N,,2026-04-07 06:58:59.968806
-,Detroit American Energy ,2026-04-07 05:11:59+00:00,www.indexbox.io,Electrification Fails to Fully Insulate Companies from Gas Market Volatility - IndexBox,IndexBox Inc,,,,,https://www.indexbox.io/blog/electrification-fails-to-fully-insulate-companies-from-gas-market-volatility/,"In the United States, firms undergoing electrification can remain indirectly connected to fossil fuel markets.
-Organizations that believed electrification resolved their energy market exposure are now observing their costs increase alongside natural gas prices.
-For numerous companies, the solution involves incorporating an additional layer of flexibility and intelligent control over their interactions with the electrical grid, rather than passively accepting market prices.
-Report scope The report combines market sizing with trade intelligence and price analytics for the United States.
-The model captures both cyclical and structural factors and reflects known policy and technology shifts in the United States.","Electrification Fails to Fully Insulate Companies from Gas Market Volatility
-
-According to pv magazine USA, many businesses that have adopted solar power and storage systems, or are shifting to renewable energy, may have expected protection from fossil fuel price swings. However, this may not be the complete picture.
-
-In the United States, firms undergoing electrification can remain indirectly connected to fossil fuel markets. This is because electricity prices and the stability of the power grid continue to be frequently influenced by natural gas market dynamics, regional transmission bottlenecks, and capacity limitations. This indirect exposure through grid pricing mechanisms is reportedly more substantial than numerous corporations anticipated.
-
-Static power supply agreements are unable to adjust to real-time market fluctuations. Consequently, electrification by itself does not remove vulnerability unless the fundamental energy system is updated. Organizations that believed electrification resolved their energy market exposure are now observing their costs increase alongside natural gas prices. Many had misjudged the degree of their exposure and associated risk.
-
-While consistently elevated prices are difficult, they can be predicted and budgeted for. The greater challenge for corporate planning is unpredictability. This realization is hastening conversations about next steps for many businesses.
-
-For numerous companies, the solution involves incorporating an additional layer of flexibility and intelligent control over their interactions with the electrical grid, rather than passively accepting market prices. Battery storage is central to this approach. However, many operators still view electrification as a static, one-time infrastructure choice rather than a potential source of ongoing revenue in a volatile energy landscape. Adopting a more intelligent and adaptable strategy is seen as increasingly critical for future operational resilience.
-
-The fundamental economic rationale remains, but urgency has intensified as rising gas prices affect the financial performance of both electrified and traditional fossil-fueled facilities. Even if this urgency diminishes when prices settle, the strategic importance of combining electrification with storage is expected to persist. The core drivers for change, including the need for more resilient operations, more flexible systems, and a credible route to lower-carbon performance, are not disappearing. Recent market instability has reinforced this strategic direction but is not its original cause.
-
-Interactive table based on the Store Companies dataset for this report.
-
-# Company Headquarters Focus Scale Note 1TeslaAustin, TexasEVs & Energy StorageGigafactoriesMajor cell & pack producer2Panasonic Energy of North AmericaNewark, New JerseyEV Battery CellsGigafactoryJV with Tesla at Giga NV3GM (Ultium Cells LLC)Detroit, MichiganEV Battery Cells & PacksMulti-plant JVJV with LG Energy Solution4Ford (BlueOval SK)Dearborn, MichiganEV Battery CellsMulti-plant JVJV with SK On5Stellantis (StarPlus Energy)Amsterdam, Michigan (Ops)EV Battery CellsMulti-plant JVJV with Samsung SDI6MicrovastStafford, TexasBattery Cells & SystemsGlobal, US plantSpecialty & commercial vehicles7EnovixFremont, CaliforniaSilicon Anode Li-ionPilot to FabHigh energy density for electronics8Romeo Power (Nikola)Cypress, CaliforniaEV Battery Modules/PacksMediumAcquired by Nikola, heavy-duty focus9QuantumScapeSan Jose, CaliforniaSolid-State Battery CellsPilotDeveloping next-gen technology10Solid PowerLouisville, ColoradoSolid-State Battery CellsPilotPartner with auto OEMs11Sila NanotechnologiesAlameda, CaliforniaSilicon Anode MaterialsPilot to PlantComponent supplier, scaling12Group14 TechnologiesWoodinville, WashingtonSilicon-Carbon AnodeCommercial PlantComponent supplier, scaling13Our Next Energy (ONE)Novi, MichiganEV Battery Packs & CellsPilot to GigafactoryDeveloping LFP & dual-chemistry14Freyr BatteryNew York, New YorkGiga Arctic (Norway) focusGigafactory PlannedUS HQ, initial production abroad15KORE PowerCoeur d'Alene, IdahoBattery Cells & SystemsGigafactory PlannedBuilding KOREPlex in AZ16American Battery FactoryTucson, ArizonaLFP Battery CellsGigafactory PlannedFocus on stationary storage17SparkzLivermore, CaliforniaCobalt-free Battery CellsGigafactory PlannedLicensing ORNL tech18Natron EnergySanta Clara, CaliforniaSodium-ion Battery CellsCommercial PlantFor data center & industrial UPS19Ion Storage SystemsBeltsville, MarylandSolid-State Battery CellsPilotCeramic electrolyte technology20Factorial EnergyWoburn, MassachusettsSolid-State Battery CellsPilotPartner with Stellantis & others21Amprius TechnologiesFremont, CaliforniaHigh-Si Anode CellsCommercialFor aviation & specialized EVs22EnevateIrvine, CaliforniaSilicon-dominant Anode TechLicensingIP licensing to cell makers23Navitas SystemsWoodridge, IllinoisBattery Packs & SystemsMediumDefense, industrial, commercial24Inventus PowerWoodridge, IllinoisBattery Packs & SystemsMediumMedical, industrial, military25EaglePicher TechnologiesJoplin, Missouri (Ops)Specialty Battery CellsMediumDefense, aerospace, medical26Electric EraSeattle, WashingtonStationary Storage SystemsSmallFocus on EV fast charging27Battery StreakSan Diego, CaliforniaBattery Pack AssemblySmallCustom packs for various markets28Power EdisonEdison, New JerseyStationary Storage SystemsMediumUtility & C&I projects29Stryten EnergyAlpharetta, GeorgiaBattery SystemsMediumBroad portfolio incl. lithium30Lithion BatteryValencia, CaliforniaBattery Pack AssemblySmallCustom packs for OEMs
-
-This report provides a comprehensive view of the lithium-ion accumulator industry in the United States, tracking demand, supply, and trade flows across the national value chain. It explains how demand across key channels and end-use segments shapes consumption patterns, while also mapping the role of input availability, production efficiency, and regulatory standards on supply.
-
-Beyond headline metrics, the study benchmarks prices, margins, and trade routes so you can see where value is created and how it moves between domestic suppliers and international partners. The analysis is designed to support strategic planning, market entry, portfolio prioritization, and risk management in the lithium-ion accumulator landscape in the United States.
-
-Quick navigation
-
-Key findings
-
-Report scope
-
-Product coverage
-
-Country coverage
-
-Methodology
-
-Forecasts to 2035
-
-Price analysis
-
-Market participants
-
-Country profiles
-
-How to use this report
-
-FAQ
-
-Key findings
-
-Domestic demand is shaped by both household and industrial usage, with trade flows linking local supply to imports and exports.
-
-Pricing dynamics reflect unit values, freight costs, exchange rates, and regulatory shifts that affect sourcing decisions.
-
-Supply depends on input availability and production efficiency, creating a distinct national cost curve.
-
-Market concentration varies by segment, creating different competitive landscapes and entry barriers.
-
-The 2035 outlook highlights where capacity investment and demand growth are most aligned within the country.
-
-Report scope
-
-The report combines market sizing with trade intelligence and price analytics for the United States. It covers both historical performance and the forward outlook to 2035, allowing you to compare cycles, structural shifts, and policy impacts.
-
-Market size and growth in value and volume terms
-
-Consumption structure by end-use segments
-
-Production capacity, output, and cost dynamics
-
-Trade flows, exporters, importers, and balances
-
-Price benchmarks, unit values, and margin signals
-
-Competitive context and market entry conditions
-
-Product coverage
-
-Prodcom 27202350 - Lithium-ion accumulators
-
-Country coverage
-
-United States
-
-Country profile and benchmarks
-
-This report provides a consistent view of market size, trade balance, prices, and per-capita indicators for the United States. The profile highlights demand structure and trade position, enabling benchmarking against regional and global peers.
-
-Methodology
-
-The analysis is built on a multi-source framework that combines official statistics, trade records, company disclosures, and expert validation. Data are standardized, reconciled, and cross-checked to ensure consistency across time series.
-
-International trade data (exports, imports, and mirror statistics)
-
-National production and consumption statistics
-
-Company-level information from financial filings and public releases
-
-Price series and unit value benchmarks
-
-Analyst review, outlier checks, and time-series validation
-
-All data are normalized to a common product definition and mapped to a consistent set of codes. This ensures that comparisons across time are aligned and actionable.
-
-Forecasts to 2035
-
-The forecast horizon extends to 2035 and is based on a structured model that links lithium-ion accumulator demand and supply to macroeconomic indicators, trade patterns, and sector-specific drivers. The model captures both cyclical and structural factors and reflects known policy and technology shifts in the United States.
-
-Historical baseline: 2012-2025
-
-Forecast horizon: 2026-2035
-
-Scenario-based sensitivity to income growth, substitution, and regulation
-
-Capacity and investment outlook for major producing companies
-
-Each projection is built from national historical patterns and the broader regional context, allowing the report to show where growth is concentrated and where risks are elevated.
-
-Price analysis and trade dynamics
-
-Prices are analyzed in detail, including export and import unit values, regional spreads, and changes in trade costs. The report highlights how seasonality, freight rates, exchange rates, and supply disruptions influence pricing and margins.
-
-Price benchmarks by country and sub-region
-
-Export and import unit value trends
-
-Seasonality and calendar effects in trade flows
-
-Price outlook to 2035 under baseline assumptions
-
-Profiles of market participants
-
-Key producers, exporters, and distributors are profiled with a focus on their operational scale, geographic footprint, product mix, and market positioning. This helps identify competitive pressure points, partnership opportunities, and routes to differentiation.
-
-Business focus and production capabilities
-
-Geographic reach and distribution networks
-
-Cost structure and pricing strategy indicators
-
-Compliance, certification, and sustainability context
-
-How to use this report
-
-Quantify domestic demand and identify the most attractive segments
-
-Evaluate export opportunities and prioritize target destinations
-
-Track price dynamics and protect margins
-
-Benchmark performance against leading competitors
-
-Build evidence-based forecasts for investment decisions
-
-This report is designed for manufacturers, distributors, importers, wholesalers, investors, and advisors who need a clear, data-driven picture of lithium-ion accumulator dynamics in the United States.
-
-FAQ
-
-What is included in the lithium-ion accumulator market in the United States?
-
-The market size aggregates consumption and trade data, presented in both value and volume terms.
-
-How are the forecasts to 2035 built?
-
-The projections combine historical trends with macroeconomic indicators, trade dynamics, and sector-specific drivers.
-
-Does the report cover prices and margins?
-
-Yes, it includes export and import unit values, regional spreads, and a pricing outlook to 2035.
-
-Which benchmarks are included?
-
-The report benchmarks market size, trade balance, prices, and per-capita indicators for the United States.
-
-Can this report support market entry decisions?
-
-Yes, it highlights demand hotspots, trade routes, pricing trends, and competitive context.",https://www.indexbox.io/landing/img/blog/telegram-fallback/c84e3988150a40301bcbb8e234da6798.webp,N,,2026-04-07 03:58:40.102774
-,Indiana American Energy ,2026-04-07 05:05:37+00:00,www.goskagit.com,US Energy Crisis | National News | goskagit.com,Not Available,,,,,https://www.goskagit.com/news/nation/us-energy-crisis/image_9eddb4ae-9cd7-5e5a-9303-41420682f02c.html,"The per-gallon prices are displayed electronically above the grades of gasoline available at QuikTrip convenience store, Monday, April 6, 2026, ...",Not Available,,N,,2026-04-07 02:02:31.478071
-,Indiana American Energy ,2026-04-07 05:02:08+00:00,www.hjnews.com,US Energy Crisis | Nation | hjnews.com,Not Available,,,,,https://www.hjnews.com/nation/us-energy-crisis/image_61f6a641-b5e9-5a43-b7c2-8f19e5c884a2.html,"US Energy Crisis. David Zalubowski - AP; Apr 6, 2026; 3 hrs ago; 0 ... Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts ...",Not Available,,N,,2026-04-07 08:02:41.162107
