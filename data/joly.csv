@@ -34,6 +34,83 @@ OpenAI, which faced backlash for striking a deal with the Pentagon after the Ant
 Other tech companies, such as Microsoft, Oracle and Amazon Web Services, have also said they want to support the military and ensure they have access to the best AI tools.
 
 “We look forward to continuing to support the Department of War’s modernization efforts, building AI solutions that help them accomplish their critical missions,” Amazon Web Services spokesperson Tim Barrett said in a statement.",https://ca-times.brightspotcdn.com/dims4/default/2d580fc/2147483647/strip/true/crop/5842x3067+0+414/resize/1200x630!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F33%2F4a%2Fb0083e0d605635d4f4544a21e005%2Fe01d5d7a63e34c68a3166a33b96b4576,N,,2026-05-01 19:09:59.995547
+ID23,IBM,2026-05-01 21:03:12+00:00,www.willkie.com,Does IBM's Settlement Usher in a New Era of Corporate Exposure Under the False Claims ...,Not Available,,,,,https://www.willkie.com/publications/2026/05/does-ibms-settlement-usher-in-a-new-era-of-corporate-exposure-under-the-false-claims-act,Does IBM's Settlement Usher in a New Era of Corporate Exposure Under the False Claims Act for DEI Programs? WILLKIE FARR & GALLAGHER LLP | WILLKIE ...,Not Available,,N,,2026-05-01 20:08:33.745680
+ID32,Microsoft,2026-05-01 20:35:22+00:00,www.washingtonpost.com,Top AI companies agree to work with Pentagon on secret data - The Washington Post,,,,,,https://www.washingtonpost.com/technology/2026/05/01/pentagon-ai-deals-microsoft-amazon-google-classified-military/,"The Pentagon has signed agreements with leading AI firms, including Microsoft, Amazon and Google, advancing military capabilities amid a dispute ...",Not Available,https://www.washingtonpost.com/favicon.svg,Y,,2026-05-01 20:08:37.781146
+ID32,Microsoft,2026-05-01 20:14:53+00:00,www.virtru.com,Why Microsoft's New Legal Agent Needs Data-Centric Security to Deliver on Its Promise,Matt Howard,,,,,https://www.virtru.com/blog/microsoft-legal-agent?hs_amp=true,"Microsoft just announced a Legal Agent in Word, an AI assistant built to support the precision and rigor that legal work demands.
+But, it also surfaces important questions the legal profession has been wrestling with for decades: what happens after the file leaves your possession?
+The moment data crosses a platform or organizational boundary (which is the entire point of legal collaboration) the model breaks down.
+The Promise RMS Was Always Meant to Deliver Microsoft deserves credit for recognizing two decades ago that persistent, data-level rights management was the right idea.
+Microsoft raised the bar on intelligent legal drafting with the new Legal Agent.","Microsoft just announced a Legal Agent in Word, an AI assistant built to support the precision and rigor that legal work demands. Brad Smith, Microsoft's Vice Chair, framed it well: every clause matters, every redline tells a story, and the agent is designed to follow the structured workflows lawyers use while keeping them fully in control.
+
+It's a genuinely exciting step forward. But, it also surfaces important questions the legal profession has been wrestling with for decades: what happens after the file leaves your possession? Can you still control it? Can you audit it? Can you revoke it? Expire it?
+
+The Last Mile Problem in Legal Work
+
+A lawyer can now draft, redline, and refine a privileged memo or M&A term sheet with AI-assisted precision. But the moment that document needs to be shared with outside counsel, counterparties, regulators, or clients, it crosses organizational boundaries. The author typically loses all control over who can access it, forward it, copy it, or retain it.
+
+This isn't a new problem. It's the defining tension of modern legal practice: sensitive data has to move, but the tools designed to protect it were built to keep it locked down.
+
+Every lawyer knows the friction. You need to share a sensitive draft with co-counsel at another firm. You need to send diligence materials to a counterparty. You need to transmit CJIS-sensitive case files to a government agency. In each case, the document leaves your environment; and, your ability to govern it effectively ends at the boundary.
+
+Microsoft Has Been Trying to Solve This for 20 Years
+
+To Microsoft's credit, they recognized this problem early. In 2003, Microsoft launched Windows Rights Management Services (RMS) with a genuinely powerful premise: attach persistent permissions directly to the data itself, so that access controls travel with the file regardless of where it goes. In theory, you could revoke access to a document even after it had been emailed outside your organization.
+
+Revolutionary idea. But in practice, it never fully delivered.
+
+RMS was trapped inside the Microsoft ecosystem. Key management was brittle. It required every party (sender and recipient) to be enrolled in a compatible RMS infrastructure. For a law firm sharing documents with clients across dozens of different technology environments, that was a non-starter.
+
+Microsoft evolved the approach into Azure Information Protection, then folded it into Purview. Each iteration was more capable. But the fundamental constraint remained: the protection model was tethered to the Microsoft universe and notoriously difficult to deploy at enterprise scale across heterogeneous environments.
+
+A former senior Microsoft engineering leader, now a security architect at one of the world's largest banks, recently reviewed Virtru's architecture and summarized the situation candidly: Microsoft's approach to RMS ""was painful.""
+
+The Architectural Difference That Matters
+
+Why did Microsoft's approach struggle where Virtru's succeeds? It comes down to a fundamental architectural choice.
+
+Microsoft tried to solve a data-centric problem with a platform-centric approach. If everyone is on Microsoft, the protection works. The moment data crosses a platform or organizational boundary (which is the entire point of legal collaboration) the model breaks down.
+
+Virtru's co-founder, Will Ackerly, took a fundamentally different approach when he created the Trusted Data Format (TDF), an open standard that wraps the file itself in a cryptographic envelope. Encryption, policy, and access controls travel with the data object; not with the network, not with the application, not with the platform.
+
+In simple terms: instead of trying to get the whole world onto one platform and then protecting files within that walled garden, TDF protects the file itself and lets it move freely across any platform, any organization, any environment.
+
+This is what makes TDF a natural complement to what Microsoft just announced:
+
+Protection that travels with the document. Whether the Word file is emailed, uploaded to a cloud drive, shared via a portal, or downloaded locally, the protection doesn't stop at the Microsoft boundary. The cryptographic envelope goes wherever the file goes.
+
+No enrollment required for recipients. This is where Microsoft's RMS consistently broke down. With TDF, outside counsel, clients, and counterparties don't need to be on the same platform or enrolled in any special infrastructure. The rights travel with the data. Recipients simply authenticate and access, regardless of what tools they use.
+
+Instant revocation and expiry. If a deal falls through, an engagement ends, or a document was shared in error, access can be revoked instantly even after delivery. Lawyers can also set expiration dates on sensitive drafts so they don't live forever in someone's inbox or cloud drive.
+
+Full audit visibility. Every access event is logged: who opened the document, when, and from where. This is critical for privilege logs, regulatory compliance, ethical walls, and litigation hold obligations.
+
+Granular cryptographic key control. The sending organization maintains control over the encryption keys that govern who can decrypt the data. This is NOT a feature bolted on at the perimeter. It's the architectural foundation, and it's what gives organizations genuine, enforceable sovereignty over their most sensitive information.
+
+What This Means for Legal Teams
+
+The combination of Microsoft's Legal Agent and data-centric governance powered by TDF creates something the legal profession has never had: the ability to draft with AI-assisted precision and then share the output with anyone, across any platform and any organizational boundary, without sacrificing security, control, or productivity.
+
+Consider the practical scenarios:
+
+M&A transactions. Deal teams can share sensitive term sheets and diligence materials with counterparties, knowing that access can be revoked the moment a deal falls through. That every access event is logged for regulatory purposes.
+
+Litigation. Privileged communications and work product can be shared with co-counsel at other firms with persistent protection, expiration policies, and a complete audit trail without requiring the receiving firm to deploy any special infrastructure.
+
+Regulatory compliance. Legal teams handling CJIS-sensitive materials, HIPAA-protected health information, or ITAR-controlled data can share documents with the confidence that protection travels with the file and that access controls are enforced regardless of where the data lands.
+
+Client communications. Sensitive legal advice can be delivered to clients with the assurance that the document remains under the firm's cryptographic control—revocable, auditable, and protected even if the client's own environment is compromised.
+
+Recommended Reading: What Is a Blind Subpoena, and How Can You Protect Your Data?
+
+The Promise RMS Was Always Meant to Deliver
+
+Microsoft deserves credit for recognizing two decades ago that persistent, data-level rights management was the right idea. The vision was correct. The architectural approach (requiring the world to run on a single platform) was the constraint that prevented it from being realized.
+
+TDF was designed from the ground up to solve that constraint. It's an open standard, not a proprietary lock-in. It works across Microsoft, Google, and any other environment. It doesn't require recipients to be customers of anything. And it gives the data owner genuine, cryptographically enforced control that persists for the entire lifecycle of the data, wherever it travels.
+
+Microsoft raised the bar on intelligent legal drafting with the new Legal Agent. TDF and Virtru can help ensure that the trust and rigor Brad Smith described extends beyond the four corners of the document and into every hand it reaches.
+
+That's the promise RMS was always meant to deliver. And for the first time, the architecture to deliver it actually exists.",,N,,2026-05-01 20:08:39.896339
 ID19,Eli Lilly,2026-05-01 20:10:59+00:00,Yahoo Finance,Eli Lilly Sales Surge 56% as Booming GLP-1 Demand Eclipses Lower Prices,Mallika Mitra,,,,,https://finance.yahoo.com/sectors/healthcare/articles/eli-lilly-sales-surge-56-040100565.html,"Sign up for The Daily Upside for smart and actionable market news, built for investors.
 Eli Lilly isn’t just a pharmaceutical giant anymore; it’s a global appetite suppressant for an economy built on over-consumption.
 The results were driven by a 65% jump in volume amid booming demand for weight-loss drugs like Lilly’s Mounjaro and Zepbound and rival Novo Nordisk’s Wegovy.
@@ -14731,43 +14808,6 @@ Thank you, Aude, and good morning, everyone. It's my pleasure to share L'Air Liq
 Business wise, our project backlog has reached a new",https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png,N,,2026-04-28 13:48:01.582770
 ID21,H&M,2026-04-28 17:03:09+00:00,www.youtube.com,Bangladesh faces mobile disruption as fuel crisis hits telecom towers - YouTube,Not Available,,,,,https://www.youtube.com/watch?v=B3I3v_9LSiQ,Go to channel HM News Updates · Xabad Baa Agtayda Ku Dhacday “Xasan Isagaa Mucaaridnimo Isugu Filan ○ Waraysiga Farmaajo - P-1/6. HM News Updates.,Not Available,,N,,2026-04-28 13:51:58.644642
 ID39,Philips,2026-04-28 17:01:21+00:00,www.moneycontrol.com,Philips looks to make India its centre of excellence for innovation - Moneycontrol.com,Not Available,,,,,https://www.moneycontrol.com/news/business/philips-looks-to-make-india-its-centre-of-excellence-for-innovation-13902445.html,"Philips spends about 5-6 per cent of its revenue in R&D against an average 2-3 per cent in the consumer industry globally, according to Deeptha ...",Not Available,,N,,2026-04-28 13:58:22.001341
-ID19,Eli Lilly,2026-04-28 17:00:53+00:00,Dealroom.co,Profluent signs $2.25B partnership with Eli Lilly for AI-designed gene editors | Dealroom.co,Not Available,,,,,https://app.dealroom.co/news/note/profluent-signs-2-25b-partnership-with-eli-lilly-for-ai-designed-gene-editors,"Profluent has signed a multi-programme research collaboration with Eli Lilly worth up to $2.25B.
-Lilly will have exclusive rights to develop and commercialise selected enzymes designed by Profluent’s AI platform.
-For Lilly, this is part of a broader bet on AI-driven drug discovery.
-The Lilly–Profluent deal, the Lilly–InSilico deal, and similar pacts signal that the industry now treats AI protein design as a viable drug discovery modality, not a research curiosity.
-What separates Profluent is the ambition to go beyond editing: designing entirely new enzymes that can rewrite entire passages of genetic code.","What’s the deal? Profluent has signed a multi-programme research collaboration with Eli Lilly worth up to $2.25B. Lilly will have exclusive rights to develop and commercialise selected enzymes designed by Profluent’s AI platform.
-
-Profluent receives an undisclosed upfront payment and research funding, with the potential for up to $2.25B in development and commercial milestone payments plus royalties on net sales. The deal marks Profluent’s first big pharma partnership.
-
-Why now? The collaboration targets a problem current gene-editing tools cannot solve. CRISPR and its variants typically fix small DNA errors, but many genetic diseases — cystic fibrosis and GJB2-related hearing loss among them — involve hundreds of different mutations across patients. No single edit can address them all.
-
-Profluent’s approach uses AI to design site-specific recombinases — enzymes capable of inserting entire kilobase-scale stretches of DNA at precise locations in the genome. Founded in 2022 by CEO Ali Madani, the Emeryville, California-based company trains large language models on protein databases, then prompts them to design enzymes for specific disease targets. Head of gene editing Peter Cameron described the challenge: “If you didn’t have AI, this would be utterly intractable.” The company first drew attention in 2024 when it published an AI model that designed novel Cas enzymes from scratch — a proof of concept inspired by research at Salesforce. Profluent raised $106M in November 2025, co-led by Altimeter Capital and Bezos Expeditions.
-
-For Lilly, this is part of a broader bet on AI-driven drug discovery. The pharma struck a $2.75B deal with InSilico Medicine in March 2026 and has signed at least 15 AI-related deals in the past five years — more than any other drugmaker, according to Bloomberg Intelligence. Lilly has also partnered with Nvidia to build an AI supercomputer for drug discovery, and separately signed a $1.2B recombinase deal with Seamless Therapeutics earlier in 2026 focused on hearing loss.
-
-What could go wrong? No AI-designed drug has won US approval. Recombinase-based gene editing is even earlier-stage than CRISPR therapeutics, which took over a decade from discovery to the first approved treatment (Casgevy, December 2023). The deal discloses no target diseases, no programme count, and no upfront figure — so the $2.25B headline is entirely contingent on milestones that may never be reached.
-
-Profluent has $149M in total funding and 60 employees. Delivering on a multi-programme collaboration with a $790B pharma partner will test the company’s operational capacity. And the competitive landscape is intensifying: Lilly alone has signed Kelonia Therapeutics, CrossBridge Bio, and Ajax Therapeutics acquisitions in the past month.
-
-The signal: Big pharma is pricing AI-designed biology at billions before a single clinical proof point. The Lilly–Profluent deal, the Lilly–InSilico deal, and similar pacts signal that the industry now treats AI protein design as a viable drug discovery modality, not a research curiosity.
-
-What separates Profluent is the ambition to go beyond editing: designing entirely new enzymes that can rewrite entire passages of genetic code. If it works, the implications stretch well beyond Lilly’s pipeline — kilobase-scale insertion could open a universal approach to genetic diseases that today require mutation-by-mutation treatments.
-
-Sources:
-
-Reuters
-
-Bloomberg
-
-STAT News
-
-BioSpace
-
-Pharmaphorum
-
-Image generated by AI
-
-J.V.",https://webshotter.dealroom.co/?width=1600&height=800&wait_until=networkidle0&url=https%3A%2F%2Fapp.dealroom.co%2Fnews%2Fnote%2Fprofluent-signs-2-25b-partnership-with-eli-lilly-for-ai-designed-gene-editors%3Fscreenshot%3Dtrue,N,,2026-04-28 17:14:58.613049
 ID19,Eli Lilly,2026-04-28 17:00:53+00:00,Dealroom.co,Eli Lilly to acquire Ajax Therapeutics for up to $2.3B in blood cancer bet | Dealroom.co,Not Available,,,,,https://app.dealroom.co/news/note/eli-lilly-to-acquire-ajax-therapeutics-for-up-to-2-3b-in-blood-cancer-bet-2,"Eli Lilly will acquire Ajax Therapeutics for up to $2.3B in cash.
 Current JAK2 inhibitors for myeloproliferative neoplasms (MPNs) — including Incyte’s Jakafi — bind the active (Type I) conformation of JAK2.
 No proof-of-concept data has been presented yet, meaning the $2.3B headline rests on preclinical promise and an untested mechanism in humans.
@@ -14809,6 +14849,43 @@ Image credit:
 Ajax Therapeutics
 
 J.V.",https://webshotter.dealroom.co/?width=1600&height=800&wait_until=networkidle0&url=https%3A%2F%2Fapp.dealroom.co%2Fnews%2Fnote%2Feli-lilly-to-acquire-ajax-therapeutics-for-up-to-2-3b-in-blood-cancer-bet-2%3Fscreenshot%3Dtrue,N,,2026-04-28 17:15:02.751939
+ID19,Eli Lilly,2026-04-28 17:00:53+00:00,Dealroom.co,Profluent signs $2.25B partnership with Eli Lilly for AI-designed gene editors | Dealroom.co,Not Available,,,,,https://app.dealroom.co/news/note/profluent-signs-2-25b-partnership-with-eli-lilly-for-ai-designed-gene-editors,"Profluent has signed a multi-programme research collaboration with Eli Lilly worth up to $2.25B.
+Lilly will have exclusive rights to develop and commercialise selected enzymes designed by Profluent’s AI platform.
+For Lilly, this is part of a broader bet on AI-driven drug discovery.
+The Lilly–Profluent deal, the Lilly–InSilico deal, and similar pacts signal that the industry now treats AI protein design as a viable drug discovery modality, not a research curiosity.
+What separates Profluent is the ambition to go beyond editing: designing entirely new enzymes that can rewrite entire passages of genetic code.","What’s the deal? Profluent has signed a multi-programme research collaboration with Eli Lilly worth up to $2.25B. Lilly will have exclusive rights to develop and commercialise selected enzymes designed by Profluent’s AI platform.
+
+Profluent receives an undisclosed upfront payment and research funding, with the potential for up to $2.25B in development and commercial milestone payments plus royalties on net sales. The deal marks Profluent’s first big pharma partnership.
+
+Why now? The collaboration targets a problem current gene-editing tools cannot solve. CRISPR and its variants typically fix small DNA errors, but many genetic diseases — cystic fibrosis and GJB2-related hearing loss among them — involve hundreds of different mutations across patients. No single edit can address them all.
+
+Profluent’s approach uses AI to design site-specific recombinases — enzymes capable of inserting entire kilobase-scale stretches of DNA at precise locations in the genome. Founded in 2022 by CEO Ali Madani, the Emeryville, California-based company trains large language models on protein databases, then prompts them to design enzymes for specific disease targets. Head of gene editing Peter Cameron described the challenge: “If you didn’t have AI, this would be utterly intractable.” The company first drew attention in 2024 when it published an AI model that designed novel Cas enzymes from scratch — a proof of concept inspired by research at Salesforce. Profluent raised $106M in November 2025, co-led by Altimeter Capital and Bezos Expeditions.
+
+For Lilly, this is part of a broader bet on AI-driven drug discovery. The pharma struck a $2.75B deal with InSilico Medicine in March 2026 and has signed at least 15 AI-related deals in the past five years — more than any other drugmaker, according to Bloomberg Intelligence. Lilly has also partnered with Nvidia to build an AI supercomputer for drug discovery, and separately signed a $1.2B recombinase deal with Seamless Therapeutics earlier in 2026 focused on hearing loss.
+
+What could go wrong? No AI-designed drug has won US approval. Recombinase-based gene editing is even earlier-stage than CRISPR therapeutics, which took over a decade from discovery to the first approved treatment (Casgevy, December 2023). The deal discloses no target diseases, no programme count, and no upfront figure — so the $2.25B headline is entirely contingent on milestones that may never be reached.
+
+Profluent has $149M in total funding and 60 employees. Delivering on a multi-programme collaboration with a $790B pharma partner will test the company’s operational capacity. And the competitive landscape is intensifying: Lilly alone has signed Kelonia Therapeutics, CrossBridge Bio, and Ajax Therapeutics acquisitions in the past month.
+
+The signal: Big pharma is pricing AI-designed biology at billions before a single clinical proof point. The Lilly–Profluent deal, the Lilly–InSilico deal, and similar pacts signal that the industry now treats AI protein design as a viable drug discovery modality, not a research curiosity.
+
+What separates Profluent is the ambition to go beyond editing: designing entirely new enzymes that can rewrite entire passages of genetic code. If it works, the implications stretch well beyond Lilly’s pipeline — kilobase-scale insertion could open a universal approach to genetic diseases that today require mutation-by-mutation treatments.
+
+Sources:
+
+Reuters
+
+Bloomberg
+
+STAT News
+
+BioSpace
+
+Pharmaphorum
+
+Image generated by AI
+
+J.V.",https://webshotter.dealroom.co/?width=1600&height=800&wait_until=networkidle0&url=https%3A%2F%2Fapp.dealroom.co%2Fnews%2Fnote%2Fprofluent-signs-2-25b-partnership-with-eli-lilly-for-ai-designed-gene-editors%3Fscreenshot%3Dtrue,N,,2026-04-28 17:14:58.613049
 ID23,IBM,2026-04-28 16:51:41+00:00,Seeking Alpha,"IBM in spotlight as HSBC upgrades on margins, valuation - Seeking Alpha","Chris Ciaccia, SA News Editor",,,,,https://seekingalpha.com/news/4580713-ibm-in-spotlight-as-hsbc-upgrades-on-margins-valuation,"To ensure this doesn’t happen in the future, please enable Javascript and cookies in your browser.
 Is this happening to you frequently?
 Please report it on our feedback forum.
@@ -15915,7 +15992,6 @@ Seeking Alpha is not a licensed securities dealer, broker or US investment advis
 Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.","Analyst’s Disclosure: I/we have a beneficial long position in the shares of MSFT either through stock ownership, options, or other derivatives. I wrote this article myself, and it expresses my own opinions. I am not receiving compensation for it (other than from Seeking Alpha). I have no business relationship with any company whose stock is mentioned in this article.
 
 Seeking Alpha's Disclosure: Past performance is no guarantee of future results. No recommendation or advice is being given as to whether any investment is suitable for a particular investor. Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole. Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank. Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.",https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2248883890/image_2248883890.jpg?io=getty-c-w1536,N,,2026-04-28 12:50:51.116145
-ID47,Uber,2026-04-28 15:39:39+00:00,www.freightwaves.com,"Phantom capacity tightens US-Mexico trucking market, Uber Freight says - FreightWaves",Not Available,,,,,https://www.freightwaves.com/news/phantom-capacity-tightens-us-mexico-trucking-market-uber-freight-says,Uber Freight executive says “phantom capacity” is masking a tightening market as compliant drivers and secure lanes become harder to access.,Not Available,,N,,2026-04-28 12:57:22.085345
 ID43,Societe Generale,2026-04-28 15:39:39+00:00,TradingView,Société Générale Effekten GmbH: Preliminary announcement of the publication of financial ...,Not Available,,,,,https://www.tradingview.com/news/eqs:6268b2b7b094b:0-soci-t-g-n-rale-effekten-gmbh-preliminary-announcement-of-the-publication-of-financial-reports-according-to-articles-114-115-117-of-the-wphg-the-german-securities-act/,"28.04.2026 / 16:17 CET/CEST Preliminary announcement of the publication of financial reports according to Articles 114, 115, 117 of the WpHG [the German Securities Act] transmitted by EQS News - a service of EQS Group.
 The issuer is solely responsible for the content of this announcement.
 Société Générale Effekten GmbH hereby announces that the following financial reports shall be disclosed:Report Type: Annual financial report Language: German Date of disclosure: April 29, 2026 Address: https://www.sg-zertifikate.de/service-kontakt/rechtliche-dokumente/registrierungsformulare-und-jahresabschluesseReport Type: Annual financial report of the group Language: German Date of disclosure: April 29, 2026 Address: https://www.sg-zertifikate.de/service-kontakt/rechtliche-dokumente/registrierungsformulare-und-jahresabschluesse 28.04.2026 CET/CEST The EQS Distribution Services include Regulatory Announcements, Financial/Corporate News and Press Releases.
@@ -15930,6 +16006,7 @@ Société Générale Effekten GmbH hereby announces that the following financial
 28.04.2026 CET/CEST The EQS Distribution Services include Regulatory Announcements, Financial/Corporate News and Press Releases.
 
 2316994 28.04.2026 CET/CEST",https://s.tradingview.com/static/images/illustrations/news-story.jpg,N,,2026-04-28 13:59:46.510019
+ID47,Uber,2026-04-28 15:39:39+00:00,www.freightwaves.com,"Phantom capacity tightens US-Mexico trucking market, Uber Freight says - FreightWaves",Not Available,,,,,https://www.freightwaves.com/news/phantom-capacity-tightens-us-mexico-trucking-market-uber-freight-says,Uber Freight executive says “phantom capacity” is masking a tightening market as compliant drivers and secure lanes become harder to access.,Not Available,,N,,2026-04-28 12:57:22.085345
 ID24,Instacart,2026-04-28 15:39:38+00:00,www.complianceweek.com,"IPO prep & SOX compliance: Instacart, Armanino share hard-earned knowledge",Not Available,,,,,https://www.complianceweek.com/risk-management/cpe-webcast-ipo-prep-and-sox-compliance-instacart-armanino-share-hard-earned-knowledge/,This will only take a few seconds...,This will only take a few seconds...,"data:;base64,=",N,,2026-04-28 13:53:37.632237
 ID7,Barclays,2026-04-28 15:39:00+00:00,YouTube,"Barclays CEO on inflation: 'In the longer term, you've got to be worried' - YouTube",Not Available,,,,,https://www.youtube.com/watch?v=SbUCl2UOZqM,"Barclays CEO C.S. Venkatakrishnan joins 'Squawk on the Street' to discuss the company's latest earnings reports, inflationary impacts on the consumer, and more.",Not Available,https://i.ytimg.com/vi/SbUCl2UOZqM/maxresdefault.jpg,N,,2026-04-28 12:40:09.488419
 ID9,BNY Mellon,2026-04-28 15:38:43+00:00,www.complianceweek.com,CPE Webcast: COVID-19: Responding to cascading risk - Compliance Week,Not Available,,,,,https://www.complianceweek.com/risk-management/cpe-webcast-covid-19-responding-to-cascading-risk/,This will only take a few seconds...,This will only take a few seconds...,"data:;base64,=",N,,2026-04-28 12:41:49.496841
@@ -17870,8 +17947,8 @@ For the latest, visit KIRO7.com.
 
 ©2026 Cox Media Group",https://cmg-cmg-tv-10020-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FHVP5OS7L3ZFH5PK3TKI7ABHHGE.jpeg?auth=a158dfb5ba2a47b5782b5bc6f15948c80ffb6079024e7592dd1db80e27df7739&width=1200&height=630&smart=true,N,,2026-04-28 12:36:57.974814
 ID16,Ecolab,2026-04-28 14:29:19+00:00,www.reuters.com,Ecolab forecasts second-quarter profit below estimates as Iran war pushes up costs,,,,,,https://www.reuters.com/business/ecolab-forecasts-second-quarter-profit-below-estimates-iran-war-pushes-up-costs-2026-04-28/,"Water-treatment and sanitation services provider Ecolab on Tuesday forecast second-quarter profit below Wall Street estimates, as surging ...",Not Available,,Y,,2026-04-28 12:44:48.255988
-ID19,Eli Lilly,2026-04-28 14:27:18+00:00,www.precisionmedicineonline.com,"Eli Lilly, AI Firm Profluent Partner on Large-Scale DNA-Editing Effort",Not Available,,,,,https://www.precisionmedicineonline.com/business-news/eli-lilly-ai-firm-profluent-partner-large-scale-dna-editing-effort,NEW YORK – Artificial intelligence firm Profluent announced Tuesday that it is collaborating with drugmaker Eli Lilly to develop recombinases that ...,Not Available,,N,,2026-04-28 12:47:28.922011
 ID19,Eli Lilly,2026-04-28 14:27:18+00:00,www.precisiononcologynews.com,"Eli Lilly, AI Firm Profluent Partner on Large-Scale DNA-Editing Effort",Not Available,,,,,https://www.precisiononcologynews.com/business-news/eli-lilly-ai-firm-profluent-partner-large-scale-dna-editing-effort,NEW YORK – Artificial intelligence firm Profluent announced Tuesday that it is collaborating with drugmaker Eli Lilly to develop recombinases that ...,Not Available,,N,,2026-04-28 11:20:38.150867
+ID19,Eli Lilly,2026-04-28 14:27:18+00:00,www.precisionmedicineonline.com,"Eli Lilly, AI Firm Profluent Partner on Large-Scale DNA-Editing Effort",Not Available,,,,,https://www.precisionmedicineonline.com/business-news/eli-lilly-ai-firm-profluent-partner-large-scale-dna-editing-effort,NEW YORK – Artificial intelligence firm Profluent announced Tuesday that it is collaborating with drugmaker Eli Lilly to develop recombinases that ...,Not Available,,N,,2026-04-28 12:47:28.922011
 ID18,Elevance Health,2026-04-28 14:26:37+00:00,www.theglobeandmail.com,"Analysts Conflicted on These Healthcare Names: Moderna (MRNA), Molina ... - The Globe and Mail",Not Available,,,,,https://www.theglobeandmail.com/investing/markets/stocks/PFE/pressreleases/1561671/analysts-conflicted-on-these-healthcare-names-moderna-mrna-molina-healthcare-moh-and-pfizer-pfe/,"... Healthcare (MOH) and Pfizer (PFE) ... 8.7% and a 63.5% success rate. Fidel covers the Healthcare sector, focusing on stocks such as Elevance Health, ...",Not Available,,N,,2026-04-28 12:45:59.058909
 ID36,OpenAI,2026-04-28 14:25:50+00:00,Decrypt,OpenAI Is Building Its Own Smartphone Chip With Qualcomm and MediaTek: Report - Decrypt,Jose Antonio Lanz,,,,,https://decrypt.co/365726/openai-smartphone-chip-qualcomm-mediatek,"OpenAI is co-developing a smartphone chip with Qualcomm and MediaTek, with Luxshare handling system co-design and manufacturing, according to Ming-Chi Kuo, a reputable leaker and analyst at TF International Securities.
 None of the named companies have confirmed anything as of yet, and OpenAI didn't respond to Decrypt’s request for comments.
@@ -27896,6 +27973,7 @@ Carter added:
 
 “The introduction of the Stealth AXiS system to Europe reflects our focus on delivering connected platforms that improve precision, efficiency, and consistency across diverse healthcare systems. By bringing planning, navigation, and robotic guidance into a unified workflow, we are helping surgeons translate insight into action in the operating room, supporting more predictable and personalized care while building a strong foundation for continued innovation.”",https://wtwh-marketing.s3.amazonaws.com/wp-content/uploads/massdevice/2026/02/13084826/Medtronic-Stealth-AXiS-surgical-robot-for-spine-procedures-1.jpg,N,,2026-04-28 09:28:18.679841
 ID9,BNY Mellon,2026-04-28 10:55:00+00:00,sg.finance.yahoo.com,Ultimus Fund Solutions Strengthens Board with Appointment of Lou Maiuri - Yahoo Finance,Not Available,,,,,https://sg.finance.yahoo.com/news/ultimus-fund-solutions-strengthens-board-104500950.html,"... BNY Mellon and Eagle Investment Systems. Maiuri brings a long‑standing familiarity with Ultimus' business model, competitive landscape, and ...",Not Available,,N,,2026-04-28 07:22:47.973248
+ID20,FactSet,2026-04-28 10:54:18+00:00,www.marketscreener.com,"Earnings Flash (CMS) CMS Energy Reports Q1 Revenue $2.73B, vs. FactSet Est of $2.46B",Not Available,,,,,https://www.marketscreener.com/news/earnings-flash-cms-cms-energy-reports-q1-revenue-2-73b-vs-factset-est-of-2-46b-ce7f59d2d988f022,"Earnings Flash (CMS) CMS Energy Reports Q1 Revenue $2.73B, vs. FactSet Est of $2.46B. Published on 04/28/2026 at 06:45 am EDT. MT Newswires. Lock ...",Not Available,,N,,2026-04-28 09:25:48.798244
 ID20,FactSet,2026-04-28 10:54:18+00:00,MarketScreener,"(TRU) TransUnion Expects 2026 Adjusted EPS Range $4.68 - $4.75, vs. FactSet Est of $4.77",MT Newswires,,,,,https://www.marketscreener.com/news/tru-transunion-expects-2026-adjusted-eps-range-4-68-4-75-vs-factset-est-of-4-77-ce7f59d2d989fe26,"Trader This super rating is the result of a weighted average of the rankings based on the following ratings: Valuation (Composite), EPS Revisions (4 months), and Visibility (Composite).
 We recommend that you carefully review the associated descriptions.
 Investor This super composite rating is the result of a weighted average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), EPS Revisions (1 year), and Visibility (Composite).
@@ -27915,7 +27993,6 @@ This composite rating is the result of an average of the rankings based on the f
 Quality
 
 This composite rating is the result of an average of rankings based on the following ratings: Returns (Composite), Profitability (Composite) and Quality of Financial Reporting (Composite), and Financial Health (Composite). The company must be covered by at least 2 of these 3 ratings for the calculation to be performed. We recommend that you carefully read the associated descriptions.",https://www.marketscreener.com/images/twitter_MS_fdnoir.png,N,,2026-04-28 09:25:15.747116
-ID20,FactSet,2026-04-28 10:54:18+00:00,www.marketscreener.com,"Earnings Flash (CMS) CMS Energy Reports Q1 Revenue $2.73B, vs. FactSet Est of $2.46B",Not Available,,,,,https://www.marketscreener.com/news/earnings-flash-cms-cms-energy-reports-q1-revenue-2-73b-vs-factset-est-of-2-46b-ce7f59d2d988f022,"Earnings Flash (CMS) CMS Energy Reports Q1 Revenue $2.73B, vs. FactSet Est of $2.46B. Published on 04/28/2026 at 06:45 am EDT. MT Newswires. Lock ...",Not Available,,N,,2026-04-28 09:25:48.798244
 ID33,Moody's,2026-04-28 10:53:44+00:00,chinadailyhk,"China welcomes Moody's A1 rating affirmation, outlook upgrade",Not Available,,,,,https://www.chinadailyhk.com/hk/article/632662,"Moody's Ratings has affirmed China's A1 sovereign credit rating and revised the country's outlook up to stable from negative.
 Despite multiple risks and challenges, China maintained an average annual growth rate of 5.4 percent during the 14th Five-Year Plan (2021-25) period, contributing around 30 percent to global economic growth.
 This year marks the start of China's 15th Five-Year Plan (2026-30), and the economy achieved a strong growth rate of 5 percent in the first quarter, exceeding market expectations.
@@ -28152,21 +28229,6 @@ VANGUARD VARIABLE INSURANCE FUNDS (Filer) CIK: 0000857490 (see all company filin
 EIN.: 000000000 | State of Incorp.: DE | Fiscal Year End: 1231
 
 Type: 485BPOS | Act: 33 | File No.: 033-32216 | Film No.: 26902340",,N,,2026-04-28 07:22:52.162754
-ID9,BNY Mellon,2026-04-28 10:30:19+00:00,www.sec.gov,EDGAR Filing Documents for 0000889519-26-000039 - SEC.gov,Not Available,,,,,https://www.sec.gov/Archives/edgar/data/889519/000088951926000039/0000889519-26-000039-index.htm,"VANGUARD VALLEY FORGE FUNDS (Filer) CIK: 0000889519 (see all company filings) EIN.
-: 000000000 | State of Incorp.
-: DE | Fiscal Year End: 1231 Type: 485BPOS | Act: 40 | File No.
-: 26902328 VANGUARD VALLEY FORGE FUNDS (Filer) CIK: 0000889519 (see all company filings) EIN.
-: DE | Fiscal Year End: 1231 Type: 485BPOS | Act: 33 | File No.","VANGUARD VALLEY FORGE FUNDS (Filer) CIK: 0000889519 (see all company filings)
-
-EIN.: 000000000 | State of Incorp.: DE | Fiscal Year End: 1231
-
-Type: 485BPOS | Act: 40 | File No.: 811-58431 | Film No.: 26902328
-
-VANGUARD VALLEY FORGE FUNDS (Filer) CIK: 0000889519 (see all company filings)
-
-EIN.: 000000000 | State of Incorp.: DE | Fiscal Year End: 1231
-
-Type: 485BPOS | Act: 33 | File No.: 033-48863 | Film No.: 26902327",,N,,2026-04-28 10:09:33.577780
 ID9,BNY Mellon,2026-04-28 10:30:19+00:00,www.sec.gov,EDGAR Filing Documents for 0000036405-26-000181 - SEC.gov,Not Available,,,,,https://www.sec.gov/Archives/edgar/data/36405/000003640526000181/0000036405-26-000181-index.htm,"VANGUARD INDEX FUNDS (Filer) CIK: 0000036405 (see all company filings) EIN.
 : 231999755 | State of Incorp.
 : DE | Fiscal Year End: 1231 Type: 485BPOS | Act: 40 | File No.
@@ -28182,6 +28244,21 @@ VANGUARD INDEX FUNDS (Filer) CIK: 0000036405 (see all company filings)
 EIN.: 231999755 | State of Incorp.: DE | Fiscal Year End: 1231
 
 Type: 485BPOS | Act: 33 | File No.: 002-56846 | Film No.: 26902342",,N,,2026-04-28 07:22:56.686641
+ID9,BNY Mellon,2026-04-28 10:30:19+00:00,www.sec.gov,EDGAR Filing Documents for 0000889519-26-000039 - SEC.gov,Not Available,,,,,https://www.sec.gov/Archives/edgar/data/889519/000088951926000039/0000889519-26-000039-index.htm,"VANGUARD VALLEY FORGE FUNDS (Filer) CIK: 0000889519 (see all company filings) EIN.
+: 000000000 | State of Incorp.
+: DE | Fiscal Year End: 1231 Type: 485BPOS | Act: 40 | File No.
+: 26902328 VANGUARD VALLEY FORGE FUNDS (Filer) CIK: 0000889519 (see all company filings) EIN.
+: DE | Fiscal Year End: 1231 Type: 485BPOS | Act: 33 | File No.","VANGUARD VALLEY FORGE FUNDS (Filer) CIK: 0000889519 (see all company filings)
+
+EIN.: 000000000 | State of Incorp.: DE | Fiscal Year End: 1231
+
+Type: 485BPOS | Act: 40 | File No.: 811-58431 | Film No.: 26902328
+
+VANGUARD VALLEY FORGE FUNDS (Filer) CIK: 0000889519 (see all company filings)
+
+EIN.: 000000000 | State of Incorp.: DE | Fiscal Year End: 1231
+
+Type: 485BPOS | Act: 33 | File No.: 033-48863 | Film No.: 26902327",,N,,2026-04-28 10:09:33.577780
 ID10,Boston Scientific,2026-04-28 10:28:07+00:00,www.moomoo.com,"Barclays Maintains Boston Scientific(BSX.US) With Buy Rating, Maintains Target Price $96",Moomoo News,,,,,https://www.moomoo.com/news/post/69006847/barclays-maintains-boston-scientific-bsxus-with-buy-rating-maintains-target,"Success rate is the number of the analyst's successful ratings, divided by his/her total number of ratings over the past year.
 Total average return is the average rate of return that the TipRanks' virtual portfolio has earned over the past year.
 These portfolios are established based on the analyst's preliminary rating and are adjusted according to the changes in the rating.
@@ -38555,8 +38632,8 @@ None of this eliminates uncertainty. But it does ensure that when boards make de
 
 As Henderson puts it, “None of us can predict the future. But we can be rigorous in how we think about the implications of the decisions we make.”",https://www.directorsandboards.com/wp-content/uploads/2026/04/DB-MakingBetterDecisions-NinaHenderson-1000.jpg,N,,2026-04-27 15:25:27.168832
 ID12,Carrier,2026-04-27 18:07:46+00:00,The Globe and Mail,Here's What Investors Must Know Ahead of Vulcan's Q1 Earnings - The Globe and Mail,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/MTZ/pressreleases/1540081/heres-what-investors-must-know-ahead-of-vulcans-q1-earnings/,Detailed price information for Mastec Inc (MTZ-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=883,N,,2026-04-27 19:25:42.781159
-ID26,JED Foundation,2026-04-27 18:07:19+00:00,LinkedIn,What's Driving the Student Mental Health Crisis? | The Jed Foundation (JED) - LinkedIn,The Jed Foundation (JED),,,,,https://www.linkedin.com/posts/the-jed-foundation_whats-driving-the-student-mental-health-activity-7454567566196445184-Xi1i,"🎧 Tune in to the inaugural episode of “Voices of Student Success,” a podcast from Inside Higher Ed hosted by student success reporter Joshua Bay. The first guest is Dr. Katie Hurley, JED’s vice president of community initiatives. Listen to their conversation on the state of student mental health on college campuses today: bit.ly/4sNZtl1",Not Available,https://media.licdn.com/dms/image/v2/D4E10AQFVd_0BJH633Q/image-shrink_1280/B4EZ3PxtA4JUAg-/0/1777307406787?e=2147483647&v=beta&t=KgHyYek2cWkHp1F9o__0pPTupdTUHcqV79SBDvlq0Sw,N,,2026-04-27 23:09:02.385432
 ID5,Albertsons,2026-04-27 18:07:19+00:00,www.nbcrightnow.com,"Washington AG suing Albertsons, Safeway & Haggen over 'buy one get one free' deals",Not Available,,,,,https://www.nbcrightnow.com/regional/washington-ag-suing-albertsons-safeway-haggen-over-buy-one-get-one-free-deals/article_2435fd5d-186f-58ff-a0a1-1f1002a71d9a.html,"Washington's Attorney General has filed a lawsuit against Albertsons, Safeway and Haggen, accusing the stores of overcharging customers through ...",Not Available,,N,,2026-04-27 15:24:15.905674
+ID26,JED Foundation,2026-04-27 18:07:19+00:00,LinkedIn,What's Driving the Student Mental Health Crisis? | The Jed Foundation (JED) - LinkedIn,The Jed Foundation (JED),,,,,https://www.linkedin.com/posts/the-jed-foundation_whats-driving-the-student-mental-health-activity-7454567566196445184-Xi1i,"🎧 Tune in to the inaugural episode of “Voices of Student Success,” a podcast from Inside Higher Ed hosted by student success reporter Joshua Bay. The first guest is Dr. Katie Hurley, JED’s vice president of community initiatives. Listen to their conversation on the state of student mental health on college campuses today: bit.ly/4sNZtl1",Not Available,https://media.licdn.com/dms/image/v2/D4E10AQFVd_0BJH633Q/image-shrink_1280/B4EZ3PxtA4JUAg-/0/1777307406787?e=2147483647&v=beta&t=KgHyYek2cWkHp1F9o__0pPTupdTUHcqV79SBDvlq0Sw,N,,2026-04-27 23:09:02.385432
 ID5,Albertsons,2026-04-27 18:06:43+00:00,KIRO 7 News Seattle,Trump administration fires independent board overseeing the National Science Foundation - KIRO 7,ADITHI RAMAKRISHNAN,,,,,https://www.kiro7.com/news/science/trump-administration/4PESABTYCMZA3MDAJ23X3DTPSQ/,"NEW YORK — The Trump administration has fired members of an independent board that oversees the National Science Foundation.
 Stassun, who works at Vanderbilt University, added that the decision was “enormously disappointing.” The National Science Board was created in 1950 to advise the president and Congress on science and engineering policy, approve major funding awards and guide NSF's future.
 The Trump administration tried to cut the science foundation's $9 billion budget by more than half last year.
@@ -44919,11 +44996,6 @@ Powered by Adobe’s creative agent, Firefly AI Assistant lets creators use natu
 Firefly AI Assistant includes a library of Creative Skills and users can customize and create their own. It understands the types of content one might be creating, including images, videos, designs, and brand assets, and it can learn the creator’s preferences over time, including their preferred tools, workflows and aesthetic choices, to deliver more consistent, tailored results, Adobe says.
 
 The Firefly AI Assistant public beta is now available globally in Adobe Firefly for customers with a Creative Cloud Pro, Firefly Pro, Firefly Pro Plus, or Firefly Premium plan.",https://thurrott-assets.nyc3.digitaloceanspaces.com/web/wp-content/uploads/sites/2/2026/04/adobe-firefly-ai-assistant.jpg,N,,2026-04-27 14:21:52.018110
-ID1,Accor,2026-04-27 16:52:45+00:00,LinkedIn,Ranjith HALAN's Post - Acknowledgement & Gratitude - LinkedIn,Ranjith HALAN,,,,,https://www.linkedin.com/posts/ranjith-halan-4b0518a_acknowledgement-gratitude-celebrating-activity-7454525282998407168-ish5,"Acknowledgement & Gratitude – Celebrating 10 Years with Accor As I celebrate 10 glorious years with Accor, I would like to begin by expressing my sincere gratitude to Ashwin Shirali for providing me the opportunity to be part of the Accor Group.
-Internal Transfer – Accor Group I had the privilege of working with Pullman & Novotel New Delhi Aerocity as Complex Talent & Culture Manager.
-Pre‑Opening Experience – ibis Hyderabad HITEC City A special note of gratitude to Rubin Cherian and the entire pre‑opening team of ibis Hyderabad HITEC City.
-I sincerely appreciate the trust and collaboration extended to me during my tenure as Talent & Culture Manager (Pre‑opening Team Member).
-Being part of a pre‑opening journey was an invaluable experience that laid a strong foundation for my growth and success within Accor.","Acknowledgement & Gratitude – Celebrating 10 Years with Accor As I celebrate 10 glorious years with Accor, I would like to begin by expressing my sincere gratitude to Ashwin Shirali for providing me the opportunity to be part of the Accor Group. My journey with Accor has been enriching, inspiring, and deeply rewarding, filled with continuous learning, professional growth, and meaningful relationships. I am currently associated with Accor – Novotel & ibis Bengaluru Outer Ring Road as Director – People & Culture (HR). This role continues to strengthen my professional capabilities and leadership journey, enabling me to contribute meaningfully to Accor’s strong people‑first culture. My sincere thanks to Sandeep Johri, Area General Manager – Karnataka, for his mentorship and guidance, and to the entire NIBORR team for their unwavering support and collaboration. Internal Transfer – Accor Group I had the privilege of working with Pullman & Novotel New Delhi Aerocity as Complex Talent & Culture Manager. This phase of my journey significantly shaped my understanding of complex hotel operations, people leadership, and organizational culture, further strengthening my HR leadership capabilities. My heartfelt thanks to Srinivas Rao and the HR team — Abhishek, Smriti Lamba, Komal, Deepika, Rimi, Manish, Srinath, and Tristan Delegate (GM) — for their constant guidance, trust, and encouragement. I am also deeply grateful to Ajay (General Manager), Biswajit Chakravarty (CGM), and Vineet Mishra (VP) for their leadership, mentorship, and continued support. Pre‑Opening Experience – ibis Hyderabad HITEC City A special note of gratitude to Rubin Cherian and the entire pre‑opening team of ibis Hyderabad HITEC City. I sincerely appreciate the trust and collaboration extended to me during my tenure as Talent & Culture Manager (Pre‑opening Team Member). Being part of a pre‑opening journey was an invaluable experience that laid a strong foundation for my growth and success within Accor. I remain deeply grateful to Satish, Swati, Lokesh, Sathyam, Udaya, Vikrant, Salil, Sethu, Manjula, Mohan Anand, Divya Nair, Anamika, and to all the leaders, mentors, teams, and colleagues who have supported, guided, and believed in me throughout this 10‑year journey. I look forward to continuing to contribute with passion, purpose, and commitment to Accor’s culture, people, and vision in the years ahead. Ashwin A Shirali Sandeep Johri Srinivasa Rao Tristan Beau de Lomenie Ajay Sampige Biswajit Chakraborty Vineet Mishra Abhishek Thakur Smriti Lamba Komal Arora Rimi Kaping Kashung Deepika Thakur Manish Chaudhary Srinath Chowdary Rubin Cherian Satish Kumar Swati Sharma Lokesh Sharma S.V. Sathyam Udayan Damodharan Vikrant Usgaonkar SALIL DESAI Sethumadhavan Raman Manjula Lakshmanan Mohan Anand Divya Nair Anamika Chhetri Radha Smruthi Suhridha P V",https://media.licdn.com/dms/image/v2/D5622AQFNFYI5Ze3bXw/feedshare-shrink_800/B56Z3PLPVnKkAc-/0/1777297323647?e=2147483647&v=beta&t=bthzZ9SznKnaiO8i5yVdRuHO2TJqcZqYVLuilWUTUEw,N,,2026-04-27 20:27:13.200764
 ID18,Elevance Health,2026-04-27 16:52:45+00:00,24/7 Wall St.,S&P 500 Holding Pattern: Mag 7 Earnings Collide With Oil Surge and Fed Fears,Gerelyn Terzo,,,,,https://247wallst.com/investing/2026/04/27/sp-500-holding-pattern-mag-7-earnings-collide-with-oil-surge-and-fed-fears/,"Stocks opened in a holding pattern, with the S&P 500 (^GSPC) heading into the trading session fractionally lower after rising to all-time highs last week.
 The S&P 500 (^GSPC) enters that gauntlet near record territory after a 8.7% rally over the past month.
 With the recent rally, the S&P 500 (^GSPC) is up about 5% YTD and Wall Street analysts are turning increasingly bullish on year-end estimates.
@@ -44945,6 +45017,11 @@ WTI crude trades near $91 a barrel, up 6% in a single session, after President T
 What the cross-currents mean
 
 Two signals say investors are calm. The VIX sits near 19, in the normal range, and the 10-year Treasury yield is steady near 4.34%. The discordant note is University of Michigan consumer sentiment at 53.3, deep in pessimistic territory, even as small caps (IWM up 12% YTD) and mega-cap tech rip higher. Equities are pricing AI-driven earnings; consumers are pricing their grocery bill.",https://247wallst.com/wp-content/uploads/2026/04/shutterstock-2603902755-huge-licensed-scaled.jpg,N,,2026-04-27 14:22:14.560975
+ID1,Accor,2026-04-27 16:52:45+00:00,LinkedIn,Ranjith HALAN's Post - Acknowledgement & Gratitude - LinkedIn,Ranjith HALAN,,,,,https://www.linkedin.com/posts/ranjith-halan-4b0518a_acknowledgement-gratitude-celebrating-activity-7454525282998407168-ish5,"Acknowledgement & Gratitude – Celebrating 10 Years with Accor As I celebrate 10 glorious years with Accor, I would like to begin by expressing my sincere gratitude to Ashwin Shirali for providing me the opportunity to be part of the Accor Group.
+Internal Transfer – Accor Group I had the privilege of working with Pullman & Novotel New Delhi Aerocity as Complex Talent & Culture Manager.
+Pre‑Opening Experience – ibis Hyderabad HITEC City A special note of gratitude to Rubin Cherian and the entire pre‑opening team of ibis Hyderabad HITEC City.
+I sincerely appreciate the trust and collaboration extended to me during my tenure as Talent & Culture Manager (Pre‑opening Team Member).
+Being part of a pre‑opening journey was an invaluable experience that laid a strong foundation for my growth and success within Accor.","Acknowledgement & Gratitude – Celebrating 10 Years with Accor As I celebrate 10 glorious years with Accor, I would like to begin by expressing my sincere gratitude to Ashwin Shirali for providing me the opportunity to be part of the Accor Group. My journey with Accor has been enriching, inspiring, and deeply rewarding, filled with continuous learning, professional growth, and meaningful relationships. I am currently associated with Accor – Novotel & ibis Bengaluru Outer Ring Road as Director – People & Culture (HR). This role continues to strengthen my professional capabilities and leadership journey, enabling me to contribute meaningfully to Accor’s strong people‑first culture. My sincere thanks to Sandeep Johri, Area General Manager – Karnataka, for his mentorship and guidance, and to the entire NIBORR team for their unwavering support and collaboration. Internal Transfer – Accor Group I had the privilege of working with Pullman & Novotel New Delhi Aerocity as Complex Talent & Culture Manager. This phase of my journey significantly shaped my understanding of complex hotel operations, people leadership, and organizational culture, further strengthening my HR leadership capabilities. My heartfelt thanks to Srinivas Rao and the HR team — Abhishek, Smriti Lamba, Komal, Deepika, Rimi, Manish, Srinath, and Tristan Delegate (GM) — for their constant guidance, trust, and encouragement. I am also deeply grateful to Ajay (General Manager), Biswajit Chakravarty (CGM), and Vineet Mishra (VP) for their leadership, mentorship, and continued support. Pre‑Opening Experience – ibis Hyderabad HITEC City A special note of gratitude to Rubin Cherian and the entire pre‑opening team of ibis Hyderabad HITEC City. I sincerely appreciate the trust and collaboration extended to me during my tenure as Talent & Culture Manager (Pre‑opening Team Member). Being part of a pre‑opening journey was an invaluable experience that laid a strong foundation for my growth and success within Accor. I remain deeply grateful to Satish, Swati, Lokesh, Sathyam, Udaya, Vikrant, Salil, Sethu, Manjula, Mohan Anand, Divya Nair, Anamika, and to all the leaders, mentors, teams, and colleagues who have supported, guided, and believed in me throughout this 10‑year journey. I look forward to continuing to contribute with passion, purpose, and commitment to Accor’s culture, people, and vision in the years ahead. Ashwin A Shirali Sandeep Johri Srinivasa Rao Tristan Beau de Lomenie Ajay Sampige Biswajit Chakraborty Vineet Mishra Abhishek Thakur Smriti Lamba Komal Arora Rimi Kaping Kashung Deepika Thakur Manish Chaudhary Srinath Chowdary Rubin Cherian Satish Kumar Swati Sharma Lokesh Sharma S.V. Sathyam Udayan Damodharan Vikrant Usgaonkar SALIL DESAI Sethumadhavan Raman Manjula Lakshmanan Mohan Anand Divya Nair Anamika Chhetri Radha Smruthi Suhridha P V",https://media.licdn.com/dms/image/v2/D5622AQFNFYI5Ze3bXw/feedshare-shrink_800/B56Z3PLPVnKkAc-/0/1777297323647?e=2147483647&v=beta&t=bthzZ9SznKnaiO8i5yVdRuHO2TJqcZqYVLuilWUTUEw,N,,2026-04-27 20:27:13.200764
 ID50,Walmart,2026-04-27 16:52:25+00:00,11Alive.com,Lovejoy officer on leave after video shows encounter at Walmart; internal review underway,John Dodge,,,,,https://www.11alive.com/article/news/local/lovejoy-officer-on-leave-after-video-shows-encounter-at-walmart-internal-review-underway/85-3a5aeba6-a69c-49f2-a962-45212037774b,"LOVEJOY, Ga. — An officer with the City of Lovejoy Police Department has been placed on administrative leave after a video circulating online appears to show a physical encounter at a local Walmart store.
 Officials said the video shows an officer engaged with a person whose hands appear to be behind his back.
 This happened on April 25, around 8 p.m. at the Walmart at 11465 Tara Blvd, in Hampton.
@@ -47430,23 +47507,6 @@ Signify said it is currently not providing a full-year revenue outlook for 2026 
 Net profit dropped sharply to 8 million euros from 67 million euros a year earlier. The company attributed the decline mainly to higher restructuring costs, including 63 million euros related to the January-announced reorganization.
 
 Employment also fell significantly. The number of full-time employees decreased to 26,008 from 29,697 at the end of the first quarter of 2025. Signify said the reduction was primarily driven by lower factory staffing needs due to reduced production volumes.",https://nltimes.nl/sites/nltimes.nl/files/styles/news_article_full_desktop_2x/public/2024-01/Screenshot%202024-01-26%20at%2009.46.07.png?h=2cca7c6b,N,,2026-04-27 13:48:03.579609
-ID6,AXA,2026-04-27 15:04:39+00:00,Investing.com,Erste Group initiates AXA stock with buy on strong profitability - Investing.com,Not Available,,,,,https://www.investing.com/news/analyst-ratings/erste-group-initiates-axa-stock-with-buy-on-strong-profitability-93CH-4639321,"Investing.com - Erste Group initiated coverage on AXA SA (OTC:AXAHY) with a buy stock rating.
-AXA achieved a combined ratio of 90.6%, partly due to price adjustments to insurance contracts.
-Erste Group analyst Hans Engel stated the group delivers a solid operating performance.
-AXA is a French multinational insurance firm with a market capitalization of $98.6 billion, with shares trading on the Swiss exchange and over-the-counter in the United States.
-The European insurance sector has faced challenges such as high-profile bankruptcies, refinancing needs, and concerns about AI obsolescence.","Investing.com - Erste Group initiated coverage on AXA SA (OTC:AXAHY) with a buy stock rating.
-
-The research firm cited the company’s property and casualty insurance performance in the 2025 financial year. AXA achieved a combined ratio of 90.6%, partly due to price adjustments to insurance contracts.
-
-Erste Group analyst Hans Engel stated the group delivers a solid operating performance. The significant increase in return on equity to 15% reflects the company’s high profitability, while the insurer maintains a healthy 4.16% dividend yield.
-
-The analyst noted the stock’s price-to-earnings ratio is low. Trading at a P/E of 11.95 with a PEG ratio of just 0.4, the valuation is also below the sector average. According to InvestingPro analysis, AXA appears undervalued based on its Fair Value assessment, placing it among compelling opportunities on the Most Undervalued stocks list.
-
-AXA is a French multinational insurance firm with a market capitalization of $98.6 billion, with shares trading on the Swiss exchange and over-the-counter in the United States. Investors seeking deeper insights can access AXA’s comprehensive Pro Research Report, available on InvestingPro alongside 1,400+ other US equities.
-
-In other recent news, RBC Capital initiated coverage on AXA SA with an Outperform rating, setting a price target of EUR48.00. The firm highlighted AXA’s successful business transformation, emphasizing its shift towards technical insurance and fee-based earnings, which has resulted in improved profitability and reduced earnings volatility. These developments are part of AXA’s broader strategy to enhance its business model. Meanwhile, Bank of America analysts have reviewed European insurers’ exposure to private assets amid recent share price pressures. They found that the actual risk levels appear lower than market concerns suggest, despite investor anxiety over asset quality and potential exposure to private credit. The European insurance sector has faced challenges such as high-profile bankruptcies, refinancing needs, and concerns about AI obsolescence. Other factors impacting the sector include a weakening property and casualty pricing outlook and geopolitical tensions in the Middle East. These recent developments provide a snapshot of the evolving landscape for AXA and the broader insurance industry.
-
-This article was generated with the support of AI and reviewed by an editor. For more information see our T&C.",https://i-invdn-com.investing.com/news/World_News_9_800x533_L_1420026261.jpg,N,,2026-04-27 13:34:55.916786
 ID39,Philips,2026-04-27 15:04:39+00:00,Investing.com,Morgan Stanley cuts ResMed stock price target on market competition - Investing.com,Investing.com,,,,,https://m.investing.com/news/analyst-ratings/morgan-stanley-cuts-resmed-stock-price-target-on-market-competition-93CH-4639315?ampMode=1,"Investing.com - Morgan Stanley lowered its price target on ResMed shares to $286 from $310 while maintaining an Overweight rating on the stock.
 The firm’s analyst David Bailey made the adjustment to the price target for ResMed (NYSE:RMD).
 Morgan Stanley said the current share price reflects bear-case assumptions within its Philips scenario analysis.
@@ -47468,6 +47528,23 @@ Needham reiterated its Hold rating on ResMed, noting the company’s improved or
 This article was generated with the support of AI and reviewed by an editor. For more information see our T&C.
 
 .",https://i-invdn-com.investing.com/news/world_news_2_69x52._800x533_L_1419494365.jpg,N,,2026-04-27 14:26:25.626998
+ID6,AXA,2026-04-27 15:04:39+00:00,Investing.com,Erste Group initiates AXA stock with buy on strong profitability - Investing.com,Not Available,,,,,https://www.investing.com/news/analyst-ratings/erste-group-initiates-axa-stock-with-buy-on-strong-profitability-93CH-4639321,"Investing.com - Erste Group initiated coverage on AXA SA (OTC:AXAHY) with a buy stock rating.
+AXA achieved a combined ratio of 90.6%, partly due to price adjustments to insurance contracts.
+Erste Group analyst Hans Engel stated the group delivers a solid operating performance.
+AXA is a French multinational insurance firm with a market capitalization of $98.6 billion, with shares trading on the Swiss exchange and over-the-counter in the United States.
+The European insurance sector has faced challenges such as high-profile bankruptcies, refinancing needs, and concerns about AI obsolescence.","Investing.com - Erste Group initiated coverage on AXA SA (OTC:AXAHY) with a buy stock rating.
+
+The research firm cited the company’s property and casualty insurance performance in the 2025 financial year. AXA achieved a combined ratio of 90.6%, partly due to price adjustments to insurance contracts.
+
+Erste Group analyst Hans Engel stated the group delivers a solid operating performance. The significant increase in return on equity to 15% reflects the company’s high profitability, while the insurer maintains a healthy 4.16% dividend yield.
+
+The analyst noted the stock’s price-to-earnings ratio is low. Trading at a P/E of 11.95 with a PEG ratio of just 0.4, the valuation is also below the sector average. According to InvestingPro analysis, AXA appears undervalued based on its Fair Value assessment, placing it among compelling opportunities on the Most Undervalued stocks list.
+
+AXA is a French multinational insurance firm with a market capitalization of $98.6 billion, with shares trading on the Swiss exchange and over-the-counter in the United States. Investors seeking deeper insights can access AXA’s comprehensive Pro Research Report, available on InvestingPro alongside 1,400+ other US equities.
+
+In other recent news, RBC Capital initiated coverage on AXA SA with an Outperform rating, setting a price target of EUR48.00. The firm highlighted AXA’s successful business transformation, emphasizing its shift towards technical insurance and fee-based earnings, which has resulted in improved profitability and reduced earnings volatility. These developments are part of AXA’s broader strategy to enhance its business model. Meanwhile, Bank of America analysts have reviewed European insurers’ exposure to private assets amid recent share price pressures. They found that the actual risk levels appear lower than market concerns suggest, despite investor anxiety over asset quality and potential exposure to private credit. The European insurance sector has faced challenges such as high-profile bankruptcies, refinancing needs, and concerns about AI obsolescence. Other factors impacting the sector include a weakening property and casualty pricing outlook and geopolitical tensions in the Middle East. These recent developments provide a snapshot of the evolving landscape for AXA and the broader insurance industry.
+
+This article was generated with the support of AI and reviewed by an editor. For more information see our T&C.",https://i-invdn-com.investing.com/news/World_News_9_800x533_L_1420026261.jpg,N,,2026-04-27 13:34:55.916786
 ID36,OpenAI,2026-04-27 15:04:33+00:00,The Seattle Times,OpenAI Breaks Free From Exclusive AI Pact With Microsoft | The Seattle Times,Matt Day,,,,,https://www.seattletimes.com/business/openai-breaks-free-from-exclusive-ai-pact-with-partner-microsoft/,"OpenAI has since pursued deals with multiple cloud providers, including Amazon, to meet its growing computing needs to build and serve AI software to a wider audience.
 Microsoft remains OpenAI’s “primary cloud provider,” and new products from the startup will be made available first on Azure, Microsoft’s cloud unit.
 Revenue share paid by OpenAI on sales of its products that it makes itself will be capped, the companies said.
@@ -49614,11 +49691,11 @@ None of this changes Nvidia's strategic importance. The company remains the domi
 In Kindig's framework, the question for 2026 isn't whether Nvidia leads AI—but whether it still offers the best risk-reward to play it.
 
 Image via Shutterstock",https://cdn.benzinga.com/files/images/story/2026/04/27/The-Modern-Nvidia-Logo-And-Company-Name-.jpeg?width=1200&height=800&fit=crop,N,,2026-04-27 11:36:03.666004
-ID42,S&P Global,2026-04-27 14:00:59+00:00,finance.yahoo.com,S&P Global (SPGI) To Report Earnings Tomorrow: Here Is What To Expect - Yahoo Finance,Not Available,,,,,https://finance.yahoo.com/markets/stocks/articles/p-global-spgi-report-earnings-134855051.html,"S&P Global met analysts' revenue expectations last quarter, reporting revenues of $3.92 billion, up 9% year on year. It was a slower quarter for the ...",Not Available,,N,,2026-04-27 11:39:00.062833
 ID33,Moody's,2026-04-27 14:00:59+00:00,Bloomberg.com,Moody's Upgrades China Outlook to Stable on Economic Resilience - Bloomberg News,"Isobel Finkel, Fran Wang",,,,,https://www.bloomberg.com/news/articles/2026-04-27/moody-s-upgrades-china-outlook-to-stable-on-economic-resilience,"Moody’s Ratings revised China’s outlook up to stable from negative, citing the country’s sustained growth and debt management, despite lingering domestic and external headwinds.
 The upgrade “reflects our assessment that economic and fiscal strength will be resilient to ongoing domestic as well as trade and geopolitical challenges,” Moody’s said on Monday.","Moody’s Ratings revised China’s outlook up to stable from negative, citing the country’s sustained growth and debt management, despite lingering domestic and external headwinds.
 
 The upgrade “reflects our assessment that economic and fiscal strength will be resilient to ongoing domestic as well as trade and geopolitical challenges,” Moody’s said on Monday.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iCsNXM9HGBGU/v0/1200x800.jpg,N,,2026-04-27 11:35:05.800522
+ID42,S&P Global,2026-04-27 14:00:59+00:00,finance.yahoo.com,S&P Global (SPGI) To Report Earnings Tomorrow: Here Is What To Expect - Yahoo Finance,Not Available,,,,,https://finance.yahoo.com/markets/stocks/articles/p-global-spgi-report-earnings-134855051.html,"S&P Global met analysts' revenue expectations last quarter, reporting revenues of $3.92 billion, up 9% year on year. It was a slower quarter for the ...",Not Available,,N,,2026-04-27 11:39:00.062833
 ID32,Microsoft,2026-04-27 14:00:38+00:00,Forrester,Microsoft Unveils AI-Powered Innovations Across Microsoft Teams And SharePoint - Forrester,Cheryl McKinnon,,,,,https://www.forrester.com/blogs/microsoft-unveils-ai-powered-innovations-across-microsoft-teams-and-sharepoint-highlights-of-the-m365-community-event-2026/,"The agenda focused on the Microsoft 365 suite, with over 200 sessions primarily on M365 Copilot, SharePoint, and Teams.
 The Forrester AI app for Microsoft Teams is an example of this human and AI collaboration in action.
 The Forrester AI app for Microsoft Teams provides insights, advice, and best practices grounded in Forrester’s proprietary research and data not available to public AI models.
@@ -51029,6 +51106,31 @@ Gen
 press@GenDigital.com
 
 SOURCE Gen Digital Inc.",https://mma.prnewswire.com/media/1939092/Gen_Logo.jpg?p=facebook,N,,2026-04-27 10:12:19.006827
+ID28,L’Oréal,2026-04-27 13:03:29+00:00,Valeurs actuelles,"CAC 40 : L'Oréal, un des rares satisfactions - Valeurs actuelles","Frederic Beriot, Frédéric Bériot",,,,,https://www.valeursactuelles.com/clubvaleurs/bourse/cac-40-loreal-un-des-rares-satisfactions,"Autre satisfaction, les deux plus grands marchés que sont les Etats-Unis (+7,6% en Amérique du Nord) et la Chine (+5%) confirment leur redressement amorcé depuis le second semestre de l’an dernier.
+En attendant, la base de comparaison plus exigeante au deuxième trimestre risque de freiner la dynamique de croissance.
+Ce qui n’empêche pas L’Oréal d’anticiper sur l’ensemble de l’année une croissance organique du chiffre d’affaires supérieure à celle de 2025 (+4%).
+Quant au bénéfice net, il pourrait s’apprécier de 7% et 8% à 7,26 et 7,87 milliards.
+Notre conseil : achetez le titre L’Oréal à moins de 370 euros pour viser un objectif de cours de 440 euros (code : FR0000120321) A LIRE Le conseil bourse de la semaine : L’Oréal, une belle résilience Bourse, actions… posez toutes vos questions à notre expert","Au sein d’une saison des publications trimestrielles très mitigée pour ne pas dire décevante, L’Oréal est sorti du lot la semaine dernière en extériorisant une dynamique interne de ses ventes très supérieure aux attentes. Là où le consensus des analystes financiers visait en moyenne une croissance organique de 3,7% du chiffre d’affaires, celle-ci s’est révélée presque deux fois plus élevée à +6,7% conduisant à des ventes de 12,15 milliards. Une performance également beaucoup plus robuste que le marché mondial de la beauté (en hausse légèrement inférieure à +4%), soutenue par une progression de plus de 10% des branches produits pour professionnels (+13,1%) et beauté dermatologique (+10,2%).
+
+A LIRE
+
+Le conseil bourse de la semaine : L’Oréal, une sanction excessive
+
+La tendance a aussi été robuste sur le pôle des produits grand public (+4,1%) et en net progrès dans le luxe (+5,6%) grâce à la reprise en Chine et sur le segment des parfums. Autre satisfaction, les deux plus grands marchés que sont les Etats-Unis (+7,6% en Amérique du Nord) et la Chine (+5%) confirment leur redressement amorcé depuis le second semestre de l’an dernier. Peu présent au Moyen-Orient (moins de 3% du chiffre d’affaires), le groupe est peu inquiet des conséquences de la guerre en Iran. Il note une baisse des ventes dans les aéroports et dans les centres commerciaux de la région sur le mois de mars.
+
+La filiale Creed en soutien à partir du deuxième trimestre
+
+En revanche, les effets indirects du conflit sur le comportement du consommateur est plus difficile à apprécier. Également, l’impact de l’envolée des prix du pétrole sur les coûts logistiques et d’approvisionnement pourrait être de 90 à 100 millions sur l’ensemble de l’exercice. En attendant, la base de comparaison plus exigeante au deuxième trimestre risque de freiner la dynamique de croissance. Ce qui n’empêche pas L’Oréal d’anticiper sur l’ensemble de l’année une croissance organique du chiffre d’affaires supérieure à celle de 2025 (+4%). Le marché vise une dynamique de l’ordre de 5,8%.
+
+Le groupe profitera à partir du deuxième trimestre du rachat pour 4 milliards de l’ancienne filiale beauté de Kering, Creed, qui lui permettra d’exploiter sous licence pour une durée de 50 ans les prestigieuses marques Balenciaga, Bottega Veneta et Gucci. A ce stade, le consensus de marché agrégé par Factset anticipe pour cette année et 2027 une progression de 6% et 7% du résultat opérationnel courant à 9,39 et 10,07 milliards. Quant au bénéfice net, il pourrait s’apprécier de 7% et 8% à 7,26 et 7,87 milliards. Des hypothèses valorisées à 27,7 et 25,6 fois. Des ratios chers en absolu par rapport au reste du marché mais qui décotent par rapport à la moyenne de 30,5 fois observée sur le titre L’Oréal sur longue période. Nous renouvelons notre limite d’achat de l’action à moins de 370 euros.
+
+Notre conseil : achetez le titre L’Oréal à moins de 370 euros pour viser un objectif de cours de 440 euros (code : FR0000120321)
+
+A LIRE
+
+Le conseil bourse de la semaine : L’Oréal, une belle résilience
+
+Bourse, actions… posez toutes vos questions à notre expert",https://www.valeursactuelles.com/assets/uploads/2026/04/SIPA_01261579_000013-1.jpg,N,,2026-04-27 13:42:30.170744
 ID8,Best Buy,2026-04-27 13:03:29+00:00,www.stjude.org,St. Jude Children's Research Hospital and ALSAC announce new and continuing Board officers,Not Available,,,,,https://www.stjude.org/media-resources/news-releases/2026-fundraising-news/st-jude-alsac-board-officers.html,"St. Jude Children’s Research Hospital® and ALSAC, its fundraising and awareness organization, announced today the election and re-election of Board officers for a one-year term beginning July 1.
 Jude Boards of Directors and Governors will be led by: St. Jude Chair Judy A. Habib, an experienced business leader and brand strategist, has served on the Boards since 1994.
 She chaired the ALSAC Board of Directors from 2019 to 2021 and has chaired the St. Jude Board of Governors since 2023, becoming the first woman to chair both Boards.
@@ -51062,31 +51164,6 @@ Kurt Rossler
 (901) 297-3512
 
 kurt.rossler@alsac.stjude.org",https://www.stjude.org/media-resources/news-releases/2026-fundraising-news/st-jude-alsac-board-officers/_jcr_content/image.img.800.high.png/1777062696028.png,N,,2026-04-27 11:25:20.646143
-ID28,L’Oréal,2026-04-27 13:03:29+00:00,Valeurs actuelles,"CAC 40 : L'Oréal, un des rares satisfactions - Valeurs actuelles","Frederic Beriot, Frédéric Bériot",,,,,https://www.valeursactuelles.com/clubvaleurs/bourse/cac-40-loreal-un-des-rares-satisfactions,"Autre satisfaction, les deux plus grands marchés que sont les Etats-Unis (+7,6% en Amérique du Nord) et la Chine (+5%) confirment leur redressement amorcé depuis le second semestre de l’an dernier.
-En attendant, la base de comparaison plus exigeante au deuxième trimestre risque de freiner la dynamique de croissance.
-Ce qui n’empêche pas L’Oréal d’anticiper sur l’ensemble de l’année une croissance organique du chiffre d’affaires supérieure à celle de 2025 (+4%).
-Quant au bénéfice net, il pourrait s’apprécier de 7% et 8% à 7,26 et 7,87 milliards.
-Notre conseil : achetez le titre L’Oréal à moins de 370 euros pour viser un objectif de cours de 440 euros (code : FR0000120321) A LIRE Le conseil bourse de la semaine : L’Oréal, une belle résilience Bourse, actions… posez toutes vos questions à notre expert","Au sein d’une saison des publications trimestrielles très mitigée pour ne pas dire décevante, L’Oréal est sorti du lot la semaine dernière en extériorisant une dynamique interne de ses ventes très supérieure aux attentes. Là où le consensus des analystes financiers visait en moyenne une croissance organique de 3,7% du chiffre d’affaires, celle-ci s’est révélée presque deux fois plus élevée à +6,7% conduisant à des ventes de 12,15 milliards. Une performance également beaucoup plus robuste que le marché mondial de la beauté (en hausse légèrement inférieure à +4%), soutenue par une progression de plus de 10% des branches produits pour professionnels (+13,1%) et beauté dermatologique (+10,2%).
-
-A LIRE
-
-Le conseil bourse de la semaine : L’Oréal, une sanction excessive
-
-La tendance a aussi été robuste sur le pôle des produits grand public (+4,1%) et en net progrès dans le luxe (+5,6%) grâce à la reprise en Chine et sur le segment des parfums. Autre satisfaction, les deux plus grands marchés que sont les Etats-Unis (+7,6% en Amérique du Nord) et la Chine (+5%) confirment leur redressement amorcé depuis le second semestre de l’an dernier. Peu présent au Moyen-Orient (moins de 3% du chiffre d’affaires), le groupe est peu inquiet des conséquences de la guerre en Iran. Il note une baisse des ventes dans les aéroports et dans les centres commerciaux de la région sur le mois de mars.
-
-La filiale Creed en soutien à partir du deuxième trimestre
-
-En revanche, les effets indirects du conflit sur le comportement du consommateur est plus difficile à apprécier. Également, l’impact de l’envolée des prix du pétrole sur les coûts logistiques et d’approvisionnement pourrait être de 90 à 100 millions sur l’ensemble de l’exercice. En attendant, la base de comparaison plus exigeante au deuxième trimestre risque de freiner la dynamique de croissance. Ce qui n’empêche pas L’Oréal d’anticiper sur l’ensemble de l’année une croissance organique du chiffre d’affaires supérieure à celle de 2025 (+4%). Le marché vise une dynamique de l’ordre de 5,8%.
-
-Le groupe profitera à partir du deuxième trimestre du rachat pour 4 milliards de l’ancienne filiale beauté de Kering, Creed, qui lui permettra d’exploiter sous licence pour une durée de 50 ans les prestigieuses marques Balenciaga, Bottega Veneta et Gucci. A ce stade, le consensus de marché agrégé par Factset anticipe pour cette année et 2027 une progression de 6% et 7% du résultat opérationnel courant à 9,39 et 10,07 milliards. Quant au bénéfice net, il pourrait s’apprécier de 7% et 8% à 7,26 et 7,87 milliards. Des hypothèses valorisées à 27,7 et 25,6 fois. Des ratios chers en absolu par rapport au reste du marché mais qui décotent par rapport à la moyenne de 30,5 fois observée sur le titre L’Oréal sur longue période. Nous renouvelons notre limite d’achat de l’action à moins de 370 euros.
-
-Notre conseil : achetez le titre L’Oréal à moins de 370 euros pour viser un objectif de cours de 440 euros (code : FR0000120321)
-
-A LIRE
-
-Le conseil bourse de la semaine : L’Oréal, une belle résilience
-
-Bourse, actions… posez toutes vos questions à notre expert",https://www.valeursactuelles.com/assets/uploads/2026/04/SIPA_01261579_000013-1.jpg,N,,2026-04-27 13:42:30.170744
 ID18,Elevance Health,2026-04-27 13:03:28+00:00,www.beckerspayer.com,Investing in access: A financial strategy to improve consumer experience and community health,,,,,,https://www.beckerspayer.com/leadership/investing-in-access-a-financial-strategy-to-improve-consumer-experience-and-community-health/,"... healthcare system. Shantanu Agrawal, MD, MPhil, serves as chief health officer at Elevance Health and Mark Kaye serves as executive vice president ...",Not Available,,Y,,2026-04-27 13:38:52.847306
 ID7,Barclays,2026-04-27 13:03:11+00:00,www.gurufocus.com,What To Expect From Barclays PLC (LSE:BARC) Q1 2026 Earnings - GuruFocus,GuruFocus News,,,,,https://www.gurufocus.com/news/8819640/what-to-expect-from-barclays-plc-lsebarc-q1-2026-earnings,"Barclays PLC LSE:BARC is set to release its Q1 2026 earnings on Apr 28, 2026.
 Barclays PLC LSE:BARC Estimates Trends Over the past 90 days, revenue estimates for Barclays PLC (LSE:BARC) have increased from $30.51 billion to $30.91 billion for the full year 2026, and from $31.75 billion to $32.24 billion for 2027.
@@ -51369,99 +51446,6 @@ We’ve detected that JavaScript is disabled in this browser. Please enable Java
 ID19,Eli Lilly,2026-04-27 12:47:26+00:00,X (formerly Twitter),Eli Lilly ( $LLY) announced today that it is acquiring privately-held Ajax Therapeutics in a ...,Not Available,,,,,https://x.com/marketsday/status/2048745808309420440,Markets Today (@marketsday). Eli Lilly: $2.3 Billion Acquisition of Ajax Therapeutics Strategic Takeover: Eli Lilly ( $LLY) announced today that ...,"JavaScript is not available.
 
 We’ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of supported browsers in our Help Center.",,N,,2026-04-27 10:12:04.864216
-ID36,OpenAI,2026-04-27 12:47:23+00:00,TIKR.com,Qualcomm Stock Surges 13% as Report Links Chipmaker to OpenAI Project | TIKR.com,Aditya Raghunath,,,,,https://www.tikr.com/blog/qualcomm-nasdaq-qcom-surges-13-as-report-links-chipmaker-to-openai-project,"Key Stats for Qualcomm Stock Pre-market price change for Qualcomm stock: 13% $QCOM Share Price as of Apr.
-Qualcomm (QCOM) stock jumped 13% on Monday in pre-market after a report suggested the company is working with OpenAI on smartphone processors.
-The news sent Qualcomm stock up more than 13% in premarket trading.
-If the project moves toward mass production in 2028, it could represent a meaningful revenue opportunity for Qualcomm stock beyond its existing design win pipeline.
-In the meantime, Qualcomm stock remains exposed to memory-driven handset softness in the near term.","Key Stats for Qualcomm Stock
-
-Pre-market price change for Qualcomm stock: 13%
-
-$QCOM Share Price as of Apr. 24: $149
-
-52-Week High: $206
-
-$QCOM Stock Price Target: $150
-
-Now Live: Discover how much upside your favorite stocks could have using TIKR’s new Valuation Model (It’s free)>>>
-
-What Happened?
-
-Qualcomm (QCOM) stock jumped 13% on Monday in pre-market after a report suggested the company is working with OpenAI on smartphone processors.
-
-TF International Securities analyst Ming-Chi Kuo, who has a strong track record of accurate supply chain predictions, posted on X that OpenAI is partnering with both Qualcomm and MediaTek to develop chips for smartphones.
-
-Luxshare is expected to serve as the exclusive manufacturing partner, with mass production targeted for 2028.
-
-The news sent Qualcomm stock up more than 13% in premarket trading.
-
-It extended a strong run that had already seen the stock climb 11% on Friday, when the broader semiconductor sector rallied after Intel posted blowout Q1 2026 earnings.
-
-The OpenAI report matters because it suggests a new source of long-term demand. If AI continues to drive smartphone upgrade cycles, chipmakers with a strong mobile processor position — like Qualcomm — stand to benefit directly.
-
-Kuo noted that both Qualcomm and MediaTek could see sustained demand tailwinds as consumers upgrade devices to handle more advanced on-device AI tasks. That thesis aligns closely with Qualcomm’s own strategy, which has centered on building AI-capable chips for smartphones, PCs, and automotive applications.
-
-The news also rattled Apple, which slipped 1.5% on concerns that OpenAI could be developing an alternative to Apple’s in-house chips. A Qualcomm-OpenAI partnership could eventually put competitive pressure on Apple’s tight hardware-software ecosystem.
-
-See analysts’ growth forecasts and price targets for Qualcomm stock (It’s free) >>>
-
-What the Market Is Telling Us About Qualcomm Stock
-
-The market reaction to this report tells you something important: investors are hungry for catalysts in the semiconductor space, and the OpenAI name still carries enormous weight.
-
-Qualcomm stock had been navigating some near-term headwinds.
-
-In its Q1 fiscal 2026 earnings call in February, the company reported record revenues of $12.3 billion and earnings of $3.50 per share.
-
-But management flagged a memory shortage as a drag on handset volumes for the year.
-
-AI data center demand has pulled DRAM supply away from consumer devices, putting pressure on smartphone build plans — especially in China.
-
-Despite that, the fundamentals of Qualcomm’s business looked solid.
-
-Automotive revenue hit a record $1.1 billion, up 15% year over year.
-
-IoT grew 9%.
-
-Management reaffirmed its long-term diversification targets for fiscal 2029.
-
-The OpenAI news adds a potential new growth layer on top of all that. If the project moves toward mass production in 2028, it could represent a meaningful revenue opportunity for Qualcomm stock beyond its existing design win pipeline.
-
-For investors, the key question now is whether this partnership develops as described. Kuo’s track record lends credibility, but 2028 is still two years away.
-
-In the meantime, Qualcomm stock remains exposed to memory-driven handset softness in the near term.
-
-Estimate a company’s fair value instantly (Free with TIKR) >>>
-
-How Much Upside Does Qualcomm Stock Have From Here?
-
-With TIKR’s new Valuation Model tool, you can estimate a stock’s potential share price in under a minute.
-
-All it takes is three simple inputs:
-
-Revenue Growth
-
-Operating Margins
-
-Exit P/E Multiple
-
-If you’re not sure what to enter, TIKR automatically fills in each input using analysts’ consensus estimates, giving you a quick, reliable starting point.
-
-From there, TIKR calculates the potential share price and total returns under Bull, Base, and Bear scenarios so you can quickly see whether a stock looks undervalued or overvalued.
-
-See a stock’s true value in under 60 seconds (Free with TIKR) >>>
-
-Looking for New Opportunities?
-
-See what stocks billionaire investors are buying so you can follow the smart money.
-
-Analyze stocks in as little as 5 minutes with TIKR’s all-in-one, easy-to-use platform.
-
-The more rocks you overturn… the more opportunities you’ll uncover. Search 100K+ global stocks, global top investor holdings, and more with TIKR.
-
-Disclaimer:
-
-Please note that the articles on TIKR are not intended to serve as investment or financial advice from TIKR or our content team, nor are they recommendations to buy or sell any stocks. We create our content based on TIKR Terminal’s investment data and analysts’ estimates. Our analysis might not include recent company news or important updates. TIKR has no position in any stocks mentioned. Thank you for reading, and happy investing!","https://res.cloudinary.com/tikr/images/w_600,h_400,c_scale/f_webp,q_auto/v1777290805/images/QCOM-stock_103778f5a31/QCOM-stock_103778f5a31.png?_i=AA",N,,2026-04-27 10:12:42.033182
 ID29,Levi Strauss,2026-04-27 12:47:23+00:00,TIKR.com,Dollar General Q4 Earnings: $10.9B Revenue and 6% Operating Margin Signal Recovery Is Real,Gian Estrada,,,,,https://www.tikr.com/blog/dollar-general-q4-earnings-10-9b-revenue-and-6-operating-margin-signal-recovery-is-real,"The prior-year Q4 EPS included approximately $0.81 per share of impairment charges, which suppresses the headline rate; on an underlying basis, EPS growth was approximately 15%.
 For fiscal 2026, management guided net sales growth of 3.7%–4.2%, same-store sales growth of 2.2%–2.7%, and EPS of $7.10–$7.35.
 See the exact moment Wall Street upgrades a stock before the rest of the market piles in — track analyst rating changes in real time with TIKR for free → Dollar General Stock Financials The Q4 income statement shows Dollar General stock in clear margin recovery, with operating profitability expanding off the compressed levels seen throughout fiscal 2024.
@@ -51567,6 +51551,99 @@ The only way to really know is to look at the numbers yourself. TIKR gives you f
 Pull up DG stock and you’ll see years of historical financials, what Wall Street analysts expect for revenue and earnings in the quarters ahead, how valuation multiples have moved over time, and whether price targets are trending up or down.
 
 You can build a free watchlist to track Dollar General Corporation alongside every other stock on your radar. No credit card required. Just the data you need to decide for yourself.","https://res.cloudinary.com/tikr/images/w_600,h_360,c_scale/f_webp,q_auto/v1777260306/images/FEATURED-IMAGE-MAKER-438_1036093f355/FEATURED-IMAGE-MAKER-438_1036093f355.png?_i=AA",N,,2026-04-27 13:42:43.022911
+ID36,OpenAI,2026-04-27 12:47:23+00:00,TIKR.com,Qualcomm Stock Surges 13% as Report Links Chipmaker to OpenAI Project | TIKR.com,Aditya Raghunath,,,,,https://www.tikr.com/blog/qualcomm-nasdaq-qcom-surges-13-as-report-links-chipmaker-to-openai-project,"Key Stats for Qualcomm Stock Pre-market price change for Qualcomm stock: 13% $QCOM Share Price as of Apr.
+Qualcomm (QCOM) stock jumped 13% on Monday in pre-market after a report suggested the company is working with OpenAI on smartphone processors.
+The news sent Qualcomm stock up more than 13% in premarket trading.
+If the project moves toward mass production in 2028, it could represent a meaningful revenue opportunity for Qualcomm stock beyond its existing design win pipeline.
+In the meantime, Qualcomm stock remains exposed to memory-driven handset softness in the near term.","Key Stats for Qualcomm Stock
+
+Pre-market price change for Qualcomm stock: 13%
+
+$QCOM Share Price as of Apr. 24: $149
+
+52-Week High: $206
+
+$QCOM Stock Price Target: $150
+
+Now Live: Discover how much upside your favorite stocks could have using TIKR’s new Valuation Model (It’s free)>>>
+
+What Happened?
+
+Qualcomm (QCOM) stock jumped 13% on Monday in pre-market after a report suggested the company is working with OpenAI on smartphone processors.
+
+TF International Securities analyst Ming-Chi Kuo, who has a strong track record of accurate supply chain predictions, posted on X that OpenAI is partnering with both Qualcomm and MediaTek to develop chips for smartphones.
+
+Luxshare is expected to serve as the exclusive manufacturing partner, with mass production targeted for 2028.
+
+The news sent Qualcomm stock up more than 13% in premarket trading.
+
+It extended a strong run that had already seen the stock climb 11% on Friday, when the broader semiconductor sector rallied after Intel posted blowout Q1 2026 earnings.
+
+The OpenAI report matters because it suggests a new source of long-term demand. If AI continues to drive smartphone upgrade cycles, chipmakers with a strong mobile processor position — like Qualcomm — stand to benefit directly.
+
+Kuo noted that both Qualcomm and MediaTek could see sustained demand tailwinds as consumers upgrade devices to handle more advanced on-device AI tasks. That thesis aligns closely with Qualcomm’s own strategy, which has centered on building AI-capable chips for smartphones, PCs, and automotive applications.
+
+The news also rattled Apple, which slipped 1.5% on concerns that OpenAI could be developing an alternative to Apple’s in-house chips. A Qualcomm-OpenAI partnership could eventually put competitive pressure on Apple’s tight hardware-software ecosystem.
+
+See analysts’ growth forecasts and price targets for Qualcomm stock (It’s free) >>>
+
+What the Market Is Telling Us About Qualcomm Stock
+
+The market reaction to this report tells you something important: investors are hungry for catalysts in the semiconductor space, and the OpenAI name still carries enormous weight.
+
+Qualcomm stock had been navigating some near-term headwinds.
+
+In its Q1 fiscal 2026 earnings call in February, the company reported record revenues of $12.3 billion and earnings of $3.50 per share.
+
+But management flagged a memory shortage as a drag on handset volumes for the year.
+
+AI data center demand has pulled DRAM supply away from consumer devices, putting pressure on smartphone build plans — especially in China.
+
+Despite that, the fundamentals of Qualcomm’s business looked solid.
+
+Automotive revenue hit a record $1.1 billion, up 15% year over year.
+
+IoT grew 9%.
+
+Management reaffirmed its long-term diversification targets for fiscal 2029.
+
+The OpenAI news adds a potential new growth layer on top of all that. If the project moves toward mass production in 2028, it could represent a meaningful revenue opportunity for Qualcomm stock beyond its existing design win pipeline.
+
+For investors, the key question now is whether this partnership develops as described. Kuo’s track record lends credibility, but 2028 is still two years away.
+
+In the meantime, Qualcomm stock remains exposed to memory-driven handset softness in the near term.
+
+Estimate a company’s fair value instantly (Free with TIKR) >>>
+
+How Much Upside Does Qualcomm Stock Have From Here?
+
+With TIKR’s new Valuation Model tool, you can estimate a stock’s potential share price in under a minute.
+
+All it takes is three simple inputs:
+
+Revenue Growth
+
+Operating Margins
+
+Exit P/E Multiple
+
+If you’re not sure what to enter, TIKR automatically fills in each input using analysts’ consensus estimates, giving you a quick, reliable starting point.
+
+From there, TIKR calculates the potential share price and total returns under Bull, Base, and Bear scenarios so you can quickly see whether a stock looks undervalued or overvalued.
+
+See a stock’s true value in under 60 seconds (Free with TIKR) >>>
+
+Looking for New Opportunities?
+
+See what stocks billionaire investors are buying so you can follow the smart money.
+
+Analyze stocks in as little as 5 minutes with TIKR’s all-in-one, easy-to-use platform.
+
+The more rocks you overturn… the more opportunities you’ll uncover. Search 100K+ global stocks, global top investor holdings, and more with TIKR.
+
+Disclaimer:
+
+Please note that the articles on TIKR are not intended to serve as investment or financial advice from TIKR or our content team, nor are they recommendations to buy or sell any stocks. We create our content based on TIKR Terminal’s investment data and analysts’ estimates. Our analysis might not include recent company news or important updates. TIKR has no position in any stocks mentioned. Thank you for reading, and happy investing!","https://res.cloudinary.com/tikr/images/w_600,h_400,c_scale/f_webp,q_auto/v1777290805/images/QCOM-stock_103778f5a31/QCOM-stock_103778f5a31.png?_i=AA",N,,2026-04-27 10:12:42.033182
 ID18,Elevance Health,2026-04-27 12:45:15+00:00,www.thelayoff.com,Repayment signing bonus - post regarding Elevance Health (Anthem) layoffs,Not Available,,,,,https://www.thelayoff.com/t/1kq2x18mr?reply=%40OP+1kq2x18mr,Layoff discussion - User says: ``Repayment signing bonus'' regarding Elevance Health (Anthem) - See full discussion thread at TheLayoff.com.,Not Available,,N,,2026-04-27 11:27:35.147770
 ID34,New York Public Library,2026-04-27 12:43:46+00:00,english.kyodonews.net,"Kyodo News Digest: April 27, 2026",Not Available,,,,,https://english.kyodonews.net/articles/-/74938,(Photo not for sale)(Kyodo). TOKYO - The following is the latest list of selected news summaries by Kyodo News.,Not Available,,N,,2026-04-27 13:46:28.884683
 ID19,Eli Lilly,2026-04-27 12:39:10+00:00,pharmaphorum,Lilly's M&A team strikes again with $2.3bn Ajax takeover | pharmaphorum,Not Available,,,,,https://pharmaphorum.com/news/lillys-ma-team-strikes-again-23bn-ajax-takeover,"With the ink barely dry on an agreement to buy Kelonia, Eli Lilly has signed a deal to take ownership of Ajax Therapeutics and its pipeline of blood cancer therapies.
@@ -52273,39 +52350,6 @@ Altman said last year that the devices OpenAI is designing with io will be diffe
 ""You can then go for a vibe that is not like walking through Times Square and getting bumped into and having all this stuff compete for your attention,"" Altman said. ""But, like, sitting in the most beautiful cabin by a lake and in the mountains and sort of just enjoying the peace and calm.""
 
 Additionally, it was reported in September that Luxshare signed a deal with OpenAI to produce consumer devices.",https://image.cnbcfm.com/api/v1/image/108178363-1753794609661-gettyimages-1251437334-porzycki-microchi230410_npEgg.jpeg?v=1762432274&w=1920&h=1080,N,,2026-04-27 09:46:19.162468
-ID36,OpenAI,2026-04-27 12:13:09+00:00,Yahoo Finance,SpaceX and OpenAI IPOs: 1 warning to not overlook - Yahoo Finance,Brian Sozzi,,,,,https://finance.yahoo.com/news/spacex-and-openai-ipos-1-warning-to-not-overlook-115551526.html,"The post-IPO trade: The average 2026 IPO has generated a first-day return of 19%, in line with the 30-year median, according to new data crunched by Goldman Sachs.
-The average recent IPO has traded particularly poorly ahead of lockup expiration, but the share price recovery afterward has been stronger than the historical average.""
-Nonetheless, the average recent IPO has recovered to its initial closing pricing within three months following lockup expiration.""
-2026 IPO market at a glance: So far in 2026, there have been 25 IPOs greater than $25 million in value, totaling $14 billion in gross proceeds.
-""Geopolitical uncertainty and recent equity market volatility suggest there will be fewer IPOs this year than we had previously expected.","The excitement is starting to build for a lot of hot companies debuting on public markets this year, led by potential initial public offerings (IPOs) for Elon Musk's SpaceX (SPAX.PVT) and Sam Altman's OpenAI (OPAI.PVT).
-
-One thing to remember, however, is that post-IPO life lately hasn't been great for investors who got sucked into the early hype.
-
-The post-IPO trade: The average 2026 IPO has generated a first-day return of 19%, in line with the 30-year median, according to new data crunched by Goldman Sachs. However, returns have deteriorated in the following weeks, as reflected in the 1% year-to-date decline in the GS Liquid IPO Index.
-
-The index is composed on a rolling basis of the last 70 liquid US companies that were listed via IPO or direct listing — it has returned a 1% decline year to date vs. a 12% gain for the small-cap Russell 2000 (^RUT).
-
-The callout: Goldman strategist Ben Snider explained, ""Consistent with the results of our long-term study of IPO returns, the best-performing recent IPOs have been characterized by elevated revenue growth and a near-term path to profitability. The average recent IPO has traded particularly poorly ahead of lockup expiration, but the share price recovery afterward has been stronger than the historical average.""
-
-""IPOs during the past decade have declined by an average of 4% in the weeks prior to the conclusion of the standard 180-day lockup window,"" Snider continued. ""This pattern has generally been more pronounced and more prolonged for recent offerings. Nonetheless, the average recent IPO has recovered to its initial closing pricing within three months following lockup expiration.""
-
-2026 IPO market at a glance: So far in 2026, there have been 25 IPOs greater than $25 million in value, totaling $14 billion in gross proceeds. This represents a nearly 80% increase in both the number and value of IPOs relative to this time last year, Snider said.
-
-Roughly 40% of this year’s IPOs have been industrial companies compared with the historical annual average of 10% since 1995. In contrast, there have been no IPOs year to date in the information technology sector, despite the sector representing 25% of IPOs since 1995.
-
-Snider expects roughly 100 IPOs totaling $160 billion will come to market this year, adjusted from a previous forecast of 120 IPOs totaling $160 billion.
-
-""Geopolitical uncertainty and recent equity market volatility suggest there will be fewer IPOs this year than we had previously expected. The 20% concentration of the IPO backlog since 2025 in software is another headwind,"" Snider added.
-
-Bottom line: Finding success in public markets after a super hyped IPO isn't guaranteed for a company, no matter how amazing the prospectus sounds. Just look at the post-IPO stock price disaster stories of Beyond Meat (BYND) and Snap (SNAP).
-
-Keep this in mind as the hype machine begins to spin out of control a week before any SpaceX and OpenAI IPO this year or next.
-
-Brian Sozzi is Yahoo Finance's Executive Editor and a member of Yahoo Finance's editorial leadership team. Follow Sozzi on X @BrianSozzi, Instagram, and LinkedIn. Tips on stories? Email brian.sozzi@yahoofinance.com.
-
-Click here for in-depth analysis of the latest stock market news and events moving stock prices
-
-Read the latest financial and business news from Yahoo Finance",https://s.yimg.com/ny/api/res/1.2/FwRx8J9pHhkztMcxzRRCqg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04NjQ-/https://s.yimg.com/os/creatr-uploaded-images/2026-04/a0c41ab0-2f58-11f1-ab98-597e3fcf13ce,N,,2026-04-27 09:46:31.864174
 ID29,Levi Strauss,2026-04-27 12:13:09+00:00,TIKR.com,"Nike Stock Q3 FY2026: Revenue Flat, EPS Down 35%, But North America Is Healing",Gian Estrada,,,,,https://www.tikr.com/blog/nike-stock-q3-fy2026-revenue-flat-eps-down-35-but-north-america-is-healing,"Build your own Nike model now on TIKR and stress-test the numbers yourself, for free → Nike Stock Q3 FY2026 Earnings Breakdown Nike stock (NKE) reported Q3 FY26 revenue of $11.3B, flat on a reported basis and down 3% currency-neutral, with EPS of $0.35 as the company absorbed a deliberate 5-point revenue headwind from pulling unhealthy classic footwear inventory off the market.
 According to Elliott Hill, President and CEO, on the Q3 FY26 earnings call, February marked the first time in two years that Nike drove positive growth across all channels in North America simultaneously.
 For Q4 FY26, management guided revenue down 2% to 4%, with North America expected to grow modestly and Greater China guided down approximately 20% as marketplace cleanup actions accelerate.
@@ -52411,6 +52455,39 @@ The only way to really know is to look at the numbers yourself. TIKR gives you f
 Pull up NKE stock and you’ll see years of historical financials, what Wall Street analysts expect for revenue and earnings in the quarters ahead, how valuation multiples have moved over time, and whether price targets are trending up or down.
 
 You can build a free watchlist to track NIKE, Inc. alongside every other stock on your radar. No credit card required. Just the data you need to decide for yourself.","https://res.cloudinary.com/tikr/images/w_600,h_360,c_scale/f_webp,q_auto/v1777259651/images/FEATURED-IMAGE-MAKER-437_10360234e72/FEATURED-IMAGE-MAKER-437_10360234e72.png?_i=AA",N,,2026-04-27 13:42:46.758709
+ID36,OpenAI,2026-04-27 12:13:09+00:00,Yahoo Finance,SpaceX and OpenAI IPOs: 1 warning to not overlook - Yahoo Finance,Brian Sozzi,,,,,https://finance.yahoo.com/news/spacex-and-openai-ipos-1-warning-to-not-overlook-115551526.html,"The post-IPO trade: The average 2026 IPO has generated a first-day return of 19%, in line with the 30-year median, according to new data crunched by Goldman Sachs.
+The average recent IPO has traded particularly poorly ahead of lockup expiration, but the share price recovery afterward has been stronger than the historical average.""
+Nonetheless, the average recent IPO has recovered to its initial closing pricing within three months following lockup expiration.""
+2026 IPO market at a glance: So far in 2026, there have been 25 IPOs greater than $25 million in value, totaling $14 billion in gross proceeds.
+""Geopolitical uncertainty and recent equity market volatility suggest there will be fewer IPOs this year than we had previously expected.","The excitement is starting to build for a lot of hot companies debuting on public markets this year, led by potential initial public offerings (IPOs) for Elon Musk's SpaceX (SPAX.PVT) and Sam Altman's OpenAI (OPAI.PVT).
+
+One thing to remember, however, is that post-IPO life lately hasn't been great for investors who got sucked into the early hype.
+
+The post-IPO trade: The average 2026 IPO has generated a first-day return of 19%, in line with the 30-year median, according to new data crunched by Goldman Sachs. However, returns have deteriorated in the following weeks, as reflected in the 1% year-to-date decline in the GS Liquid IPO Index.
+
+The index is composed on a rolling basis of the last 70 liquid US companies that were listed via IPO or direct listing — it has returned a 1% decline year to date vs. a 12% gain for the small-cap Russell 2000 (^RUT).
+
+The callout: Goldman strategist Ben Snider explained, ""Consistent with the results of our long-term study of IPO returns, the best-performing recent IPOs have been characterized by elevated revenue growth and a near-term path to profitability. The average recent IPO has traded particularly poorly ahead of lockup expiration, but the share price recovery afterward has been stronger than the historical average.""
+
+""IPOs during the past decade have declined by an average of 4% in the weeks prior to the conclusion of the standard 180-day lockup window,"" Snider continued. ""This pattern has generally been more pronounced and more prolonged for recent offerings. Nonetheless, the average recent IPO has recovered to its initial closing pricing within three months following lockup expiration.""
+
+2026 IPO market at a glance: So far in 2026, there have been 25 IPOs greater than $25 million in value, totaling $14 billion in gross proceeds. This represents a nearly 80% increase in both the number and value of IPOs relative to this time last year, Snider said.
+
+Roughly 40% of this year’s IPOs have been industrial companies compared with the historical annual average of 10% since 1995. In contrast, there have been no IPOs year to date in the information technology sector, despite the sector representing 25% of IPOs since 1995.
+
+Snider expects roughly 100 IPOs totaling $160 billion will come to market this year, adjusted from a previous forecast of 120 IPOs totaling $160 billion.
+
+""Geopolitical uncertainty and recent equity market volatility suggest there will be fewer IPOs this year than we had previously expected. The 20% concentration of the IPO backlog since 2025 in software is another headwind,"" Snider added.
+
+Bottom line: Finding success in public markets after a super hyped IPO isn't guaranteed for a company, no matter how amazing the prospectus sounds. Just look at the post-IPO stock price disaster stories of Beyond Meat (BYND) and Snap (SNAP).
+
+Keep this in mind as the hype machine begins to spin out of control a week before any SpaceX and OpenAI IPO this year or next.
+
+Brian Sozzi is Yahoo Finance's Executive Editor and a member of Yahoo Finance's editorial leadership team. Follow Sozzi on X @BrianSozzi, Instagram, and LinkedIn. Tips on stories? Email brian.sozzi@yahoofinance.com.
+
+Click here for in-depth analysis of the latest stock market news and events moving stock prices
+
+Read the latest financial and business news from Yahoo Finance",https://s.yimg.com/ny/api/res/1.2/FwRx8J9pHhkztMcxzRRCqg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04NjQ-/https://s.yimg.com/os/creatr-uploaded-images/2026-04/a0c41ab0-2f58-11f1-ab98-597e3fcf13ce,N,,2026-04-27 09:46:31.864174
 ID6,AXA,2026-04-27 12:11:40+00:00,Insurance Day,Beazley names Khera head of marine - Insurance Day,Queenie Shaikh,,,,,https://www.insuranceday.com/ID1155835/Beazley-names-Khera-head-of-marine,"Ask The Analyst Ask The Analyst - Ask Your Question Send your question to our team of expert analysts.
 You can: • Ask for background information on/explanation of articles in Insurance Day * • Find out more about our views on industry developments • Ask for an interpretation of market trends • Source supplementary data relating to articles • Request explanations to further your understanding of current issues (* This relates to any Insurance Day that is included as part of your subscription) We will do the research and get back to you personally with the information you need.","Ask The Analyst
 
@@ -53618,6 +53695,7 @@ This composite rating is the result of an average of the rankings based on the f
 Quality
 
 This composite rating is the result of an average of rankings based on the following ratings: Returns (Composite), Profitability (Composite) and Quality of Financial Reporting (Composite), and Financial Health (Composite). The company must be covered by at least 2 of these 3 ratings for the calculation to be performed. We recommend that you carefully read the associated descriptions.",https://www.marketscreener.com/images/twitter_MS_fdnoir.png,N,,2026-04-27 09:36:33.924307
+ID20,FactSet,2026-04-27 11:26:43+00:00,www.marketscreener.com,"Earnings Flash (HBT) HBT Financial Posts Q1 Operating Revenue $67.3M, vs. FactSet Est of $66.8M",Not Available,,,,,https://www.marketscreener.com/news/earnings-flash-hbt-hbt-financial-posts-q1-operating-revenue-67-3m-vs-factset-est-of-66-8m-ce7f59dcd189f223,"Earnings Flash (HBT) HBT Financial Posts Q1 Operating Revenue $67.3M, vs. FactSet Est of $66.8M. Published on 04/27/2026 at 07:21 am EDT.",Not Available,,N,,2026-04-27 09:36:27.306971
 ID20,FactSet,2026-04-27 11:26:43+00:00,MarketScreener,"(VZ) Verizon Expects 2026 Adjusted EPS Range $4.95 - $4.99, vs. FactSet Est of $4.90",MT Newswires,,,,,https://www.marketscreener.com/news/vz-verizon-expects-2026-adjusted-eps-range-4-95-4-99-vs-factset-est-of-4-90-ce7f59dcd189f121,"Trader This super rating is the result of a weighted average of the rankings based on the following ratings: Valuation (Composite), EPS Revisions (4 months), and Visibility (Composite).
 We recommend that you carefully review the associated descriptions.
 Investor This super composite rating is the result of a weighted average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), EPS Revisions (1 year), and Visibility (Composite).
@@ -53637,7 +53715,6 @@ This composite rating is the result of an average of the rankings based on the f
 Quality
 
 This composite rating is the result of an average of rankings based on the following ratings: Returns (Composite), Profitability (Composite) and Quality of Financial Reporting (Composite), and Financial Health (Composite). The company must be covered by at least 2 of these 3 ratings for the calculation to be performed. We recommend that you carefully read the associated descriptions.",https://www.marketscreener.com/images/twitter_MS_fdnoir.png,N,,2026-04-27 09:35:54.223673
-ID20,FactSet,2026-04-27 11:26:43+00:00,www.marketscreener.com,"Earnings Flash (HBT) HBT Financial Posts Q1 Operating Revenue $67.3M, vs. FactSet Est of $66.8M",Not Available,,,,,https://www.marketscreener.com/news/earnings-flash-hbt-hbt-financial-posts-q1-operating-revenue-67-3m-vs-factset-est-of-66-8m-ce7f59dcd189f223,"Earnings Flash (HBT) HBT Financial Posts Q1 Operating Revenue $67.3M, vs. FactSet Est of $66.8M. Published on 04/27/2026 at 07:21 am EDT.",Not Available,,N,,2026-04-27 09:36:27.306971
 ID20,FactSet,2026-04-27 11:25:59+00:00,"Morningstar, Inc.",Verizon's stock rises as the company posts surprise subscriber growth under new CEO,Not Available,,,,,https://www.morningstar.com/news/marketwatch/2026042735/verizons-stock-rises-as-the-company-posts-surprise-subscriber-growth-under-new-ceo,"By Emily Bary Earnings per share topped expectations, while revenue came up short Verizon posted 55,000 postpaid phone net additions in the first quarter.
 ""Transformation efforts and strong first-quarter performance give Verizon the confidence"" in this new guidance, the company noted in its release.
 ""This disciplined approach is already delivering healthier economics, lower churn and the first positive first-quarter postpaid phone net adds we've seen in over a decade,"" Schulman said in a release.
@@ -55508,19 +55585,6 @@ Leerink Partners analyst David Risinger lowered the price target on Eli Lilly (N
 This is a premium only article. To continue reading this and other premium stock market news articles please sign-in or upgrade to StreetInsider.com Premium below (Free Trial) LEARN MORE
 
 Member Login",http://www.streetinsider.com/https://www.streetinsider.com/images/summaries/434/resize_,N,,2026-04-27 09:34:58.869102
-ID48,UniCredit,2026-04-27 10:31:27+00:00,Il Sole 24 ORE,"Generali races towards all-time highs, the pivot company of the new risiko - Il Sole 24 ORE",Enrico Miele,,,,,https://en.ilsole24ore.com/art/generali-runs-all-time-highs-pivot-company-new-risiko-AIDP7PjC,"(Il Sole 24 Ore Radiocor) - Once the long reorganisation of Banca Monte Paschi Siena is over, it could now be the turn of Generali .
-Remaining in the background for months, the company has now suddenly returned to centre stage after the shareholders' meeting, which witnessed the rise of Unicredit , which market sources now speculate is close to 10% of the insurance company (between recent purchases and the future effect of the buyback).
-Loading... And the main suspect for a merger remains Banco Bpm , which, however, has a weighty partner such as the French of Credit Agricole.
-Not to mention the reorganisation of the Delfin holding, where Leonardo Maria del Vecchio aims to become the relative majority shareholder and the always very dialectic relations within the Monte dei Paschi shareholding structure.
-A puzzle with a difficult fit, and many pieces and fronts open.","(Il Sole 24 Ore Radiocor) - Once the long reorganisation of Banca Monte Paschi Siena is over, it could now be the turn of Generali . The new banking risiko, in fact, and the future balances of Italian finance promise to pass from the Lion of Trieste, which in the meantime is travelling above 38 euro per share at Piazza Affari, not far from its historical highs reached in the distant autumn of 2000, as its CEO Philippe Donnet, who has been at the helm of Trieste for 10 years now, recalled last week at the opening of the shareholders' meeting.
-
-Remaining in the background for months, the company has now suddenly returned to centre stage after the shareholders' meeting, which witnessed the rise of Unicredit , which market sources now speculate is close to 10% of the insurance company (between recent purchases and the future effect of the buyback). Net of the role that Andrea Orcel will decide to play, the other major unknown factor is represented by the moves of the Sienese bank, with rumours (immediately denied) suggesting that Luigi Lovaglio is inclined to sell 13% of Generali (which he controls via Mediobanca ) in order to have extra resources to invest in further acquisitions.
-
-Loading...
-
-And the main suspect for a merger remains Banco Bpm , which, however, has a weighty partner such as the French of Credit Agricole. Not to mention the reorganisation of the Delfin holding, where Leonardo Maria del Vecchio aims to become the relative majority shareholder and the always very dialectic relations within the Monte dei Paschi shareholding structure.
-
-A puzzle with a difficult fit, and many pieces and fronts open. Intermonte's analysts, for example, shift their gaze not so much to Trieste as to Germany: 'UniCredit's attention is currently focused on the acquisition of Commerzbank, which would lead to significant value creation,' they explain, even if the barricades of German politics (and of Commerz's own top management) remain.",https://i2.res.24o.it/images2010/S24/Documenti/2026/04/28/Immagini/Ritagli/Imagoeconomica_535411-U50471424256pDV-1440x752@IlSole24Ore-Web.jpg?r=1170x507,N,,2026-04-27 10:15:24.148870
 ID50,Walmart,2026-04-27 10:31:27+00:00,simplywall.st,What Walmart (WMT)'s Exclusive BTS‑Backed ARIH Launch Says About Its Evolving Brand Strategy,Simply Wall St,,,,,https://simplywall.st/stocks/us/consumer-retailing/nasdaq-wmt/walmart/news/what-walmart-wmts-exclusive-btsbacked-arih-launch-says-about,"We’ll now examine how Walmart’s exclusive ARIH partnership with BTS and broader tech‑enabled expansion could reshape the company’s investment narrative.
 The BTS backed ARIH launch is more brand than earnings news, so it does not materially change near term earnings expectations, but it does reinforce Walmart’s push to deepen engagement with younger shoppers.
 The key near term swing factor remains whether ecommerce and grocery delivery economics can keep improving despite cost pressures.
@@ -55736,6 +55800,19 @@ Fair Value:US$579.5726.7 % undervalued
 ·
 
 11 likesusers have liked this narrative",https://images.simplywall.st/asset/company-cover/313055-main-header/1756255492641,N,,2026-04-27 09:51:10.822096
+ID48,UniCredit,2026-04-27 10:31:27+00:00,Il Sole 24 ORE,"Generali races towards all-time highs, the pivot company of the new risiko - Il Sole 24 ORE",Enrico Miele,,,,,https://en.ilsole24ore.com/art/generali-runs-all-time-highs-pivot-company-new-risiko-AIDP7PjC,"(Il Sole 24 Ore Radiocor) - Once the long reorganisation of Banca Monte Paschi Siena is over, it could now be the turn of Generali .
+Remaining in the background for months, the company has now suddenly returned to centre stage after the shareholders' meeting, which witnessed the rise of Unicredit , which market sources now speculate is close to 10% of the insurance company (between recent purchases and the future effect of the buyback).
+Loading... And the main suspect for a merger remains Banco Bpm , which, however, has a weighty partner such as the French of Credit Agricole.
+Not to mention the reorganisation of the Delfin holding, where Leonardo Maria del Vecchio aims to become the relative majority shareholder and the always very dialectic relations within the Monte dei Paschi shareholding structure.
+A puzzle with a difficult fit, and many pieces and fronts open.","(Il Sole 24 Ore Radiocor) - Once the long reorganisation of Banca Monte Paschi Siena is over, it could now be the turn of Generali . The new banking risiko, in fact, and the future balances of Italian finance promise to pass from the Lion of Trieste, which in the meantime is travelling above 38 euro per share at Piazza Affari, not far from its historical highs reached in the distant autumn of 2000, as its CEO Philippe Donnet, who has been at the helm of Trieste for 10 years now, recalled last week at the opening of the shareholders' meeting.
+
+Remaining in the background for months, the company has now suddenly returned to centre stage after the shareholders' meeting, which witnessed the rise of Unicredit , which market sources now speculate is close to 10% of the insurance company (between recent purchases and the future effect of the buyback). Net of the role that Andrea Orcel will decide to play, the other major unknown factor is represented by the moves of the Sienese bank, with rumours (immediately denied) suggesting that Luigi Lovaglio is inclined to sell 13% of Generali (which he controls via Mediobanca ) in order to have extra resources to invest in further acquisitions.
+
+Loading...
+
+And the main suspect for a merger remains Banco Bpm , which, however, has a weighty partner such as the French of Credit Agricole. Not to mention the reorganisation of the Delfin holding, where Leonardo Maria del Vecchio aims to become the relative majority shareholder and the always very dialectic relations within the Monte dei Paschi shareholding structure.
+
+A puzzle with a difficult fit, and many pieces and fronts open. Intermonte's analysts, for example, shift their gaze not so much to Trieste as to Germany: 'UniCredit's attention is currently focused on the acquisition of Commerzbank, which would lead to significant value creation,' they explain, even if the barricades of German politics (and of Commerz's own top management) remain.",https://i2.res.24o.it/images2010/S24/Documenti/2026/04/28/Immagini/Ritagli/Imagoeconomica_535411-U50471424256pDV-1440x752@IlSole24Ore-Web.jpg?r=1170x507,N,,2026-04-27 10:15:24.148870
 ID36,OpenAI,2026-04-27 10:31:12+00:00,NPR,Musk vs. Altman: Tech CEOs head to court Monday over fate of OpenAI - NPR,John Ruwitch,,,,,https://www.npr.org/2026/04/27/nx-s1-5795661/trial-openai-elon-musk-sam-altman,"Musk alleges he was duped when Altman transformed OpenAI from a nonprofit entity into a for-profit juggernaut.
 ""This is a clash of two enormous personalities in Elon Musk and Sam Altman,"" said Casey Newton, a longtime tech journalist and founder of the tech newsletter Platformer.
 ""And I think what is at stake is potentially the future of OpenAI and the future development of all AI.""
@@ -63058,57 +63135,6 @@ The owner addressed frequent comparisons to the Harlem Globetrotters by noting t
 The Savannah Bananas currently compete in a dedicated six-team league managed by Fans First Entertainment, featuring high-level athletic talent.
 
 “We have seriously talented players,” said Cole.",https://www.harianbasis.co/media/images/2026/04/CGkaAtoFH4.jpeg?location=1&width=1200&height=674&quality=80&watermark=1,N,,2026-04-26 23:11:54.992705
-ID30,Medtronic,2026-04-26 19:41:21+00:00,www.gurufocus.com,Medtronic (MDT) Secures Breakthrough Device Designation for Sphe - GuruFocus,GuruFocus News,,,,,https://www.gurufocus.com/news/8818775/medtronic-mdt-secures-breakthrough-device-designation-for-sphere9-catheter,"On April 26, 2026, Medtronic MDT received the Breakthrough Device Designation from the U.S. Food and Drug Administration for its Sphere-9 catheter, designed for the treatment of ventricular tachycardia (VT).
-GF Score™: 90/100, indicating strong potential for long-term returns.
-The Breakthrough Device Designation awarded to Medtronic for its Sphere-9 catheter represents a significant milestone in cardiac care.
-The GF Score™ ranks stocks from 0 to 100 based on five key aspects: Financial Strength, Profitability, Growth, Valuation, and Momentum.
-MDT's GF Score™ is 90/100, indicating strong potential for long-term returns based on various financial metrics.","On April 26, 2026, Medtronic MDT received the Breakthrough Device Designation from the U.S. Food and Drug Administration for its Sphere-9 catheter, designed for the treatment of ventricular tachycardia (VT). This designation facilitates a faster regulatory approval process, allowing for quicker access to this innovative technology for patients in need.
-
-Medtronic has a market capitalization of approximately $106.97 billion.
-
-GF Score™: 90/100, indicating strong potential for long-term returns.
-
-Insider activity shows a significant sell-off, with $5.1 million in shares sold over the past three months.
-
-What's Behind the News?
-
-The Breakthrough Device Designation awarded to Medtronic for its Sphere-9 catheter represents a significant milestone in cardiac care. Ventricular tachycardia is a serious heart rhythm disorder that can lead to severe complications, including sudden cardiac arrest. The FDA's expedited approval process not only highlights the potential clinical benefits of this device but also underscores Medtronic's commitment to advancing treatment options in the cardiovascular space.
-
-Medtronic PLC is one of the largest medical-device companies globally, specializing in developing and manufacturing therapeutic medical devices for chronic diseases. With a market cap of approximately $106.97 billion, the company operates in the healthcare sector, specifically within the Medical Devices & Instruments industry. Medtronic's diverse portfolio includes pacemakers, defibrillators, and various other medical devices, catering primarily to healthcare institutions and physicians in the U.S., Western Europe, and Japan.
-
-How Is MDT Valued?
-
-While GF Value™ data is not available for Medtronic at this time, the company's current P/E ratio stands at 23.21, which is close to its 3-year low of 22.29. This suggests that the stock may be undervalued relative to its historical performance. Investors should consider this context when evaluating the stock's potential. For more detailed information, visit the MDT stock page.
-
-What Does MDT's GF Score™ Tell Us?
-
-The GF Score™ ranks stocks from 0 to 100 based on five key aspects: Financial Strength, Profitability, Growth, Valuation, and Momentum. Stocks with higher GF Score™ values have been found to generate higher long-term returns (backtested 2006-2021).
-
-MetricRating GF Score™90 Financial Strength6/10 Profitability8/10 Growth8/10
-
-Medtronic's strengths lie in its high GF Score™ of 90, indicating robust potential for long-term returns, alongside strong profitability and growth rankings. However, its Financial Strength score of 6 suggests that the company is under some financial stress, as indicated by its Altman Z-Score of 2.82. For further insights, visit the MDT stock page.
-
-What Are Insiders Doing with MDT Stock?
-
-In the past three months, insider activity has shown a notable trend, with $5.1 million worth of shares sold and no purchases reported. This could indicate a lack of confidence among insiders regarding the stock's short-term performance.
-
-What This Means for Investors
-
-Overall, Medtronic presents a compelling case for investors, highlighted by its strong GF Score™ and solid growth potential. However, the recent insider selling and financial strength indicators warrant caution. The company's advancements in cardiac care through the Sphere-9 catheter could enhance its market position, but investors should remain vigilant about the financial signals. For the complete analysis, visit the MDT stock page. You can also use the GuruFocus Stock Screener to find similar opportunities.
-
-Frequently Asked Questions
-
-What is MDT's GF Score™?
-
-MDT's GF Score™ is 90/100, indicating strong potential for long-term returns based on various financial metrics.
-
-How is MDT valued?
-
-MDT's P/E ratio is currently 23.21, which is close to its 3-year low of 22.29, suggesting that the stock may be undervalued compared to its historical performance.
-
-What is MDT's P/E ratio compared to historical?
-
-MDT's current P/E ratio of 23.21 is near its 3-year low, indicating that the stock may be trading at a lower valuation compared to its historical averages.",https://static.gurufocus.com/logos/0C000008BI.png?20,N,,2026-04-26 16:10:42.240691
 ID30,Medtronic,2026-04-26 19:41:21+00:00,www.gurufocus.com,Medtronic (MDT) Advances Cardiac Technology with Promising Trial Results - GuruFocus,GuruFocus News,,,,,https://www.gurufocus.com/news/8818774/medtronic-mdt-advances-cardiac-technology-with-promising-trial-results,"On April 26, 2026, Medtronic PLC MDT announced significant progress with its Affera product line aimed at treating cardiac arrhythmias.
 Market Cap: $106.97 billion GF Score™: 90/100, indicating strong overall performance and potential for long-term returns.
 For further insights, you can visit the MDT stock page.
@@ -63160,6 +63186,57 @@ MDT has a P/E ratio of 23.21, which is relatively close to its historical median
 What is MDT's P/E ratio compared to historical?
 
 MDT's current P/E ratio of 23.21 is close to its historical median, indicating that the stock is valued in line with its earnings potential.",https://static.gurufocus.com/logos/0C000008BI.png?20,N,,2026-04-26 16:10:29.144396
+ID30,Medtronic,2026-04-26 19:41:21+00:00,www.gurufocus.com,Medtronic (MDT) Secures Breakthrough Device Designation for Sphe - GuruFocus,GuruFocus News,,,,,https://www.gurufocus.com/news/8818775/medtronic-mdt-secures-breakthrough-device-designation-for-sphere9-catheter,"On April 26, 2026, Medtronic MDT received the Breakthrough Device Designation from the U.S. Food and Drug Administration for its Sphere-9 catheter, designed for the treatment of ventricular tachycardia (VT).
+GF Score™: 90/100, indicating strong potential for long-term returns.
+The Breakthrough Device Designation awarded to Medtronic for its Sphere-9 catheter represents a significant milestone in cardiac care.
+The GF Score™ ranks stocks from 0 to 100 based on five key aspects: Financial Strength, Profitability, Growth, Valuation, and Momentum.
+MDT's GF Score™ is 90/100, indicating strong potential for long-term returns based on various financial metrics.","On April 26, 2026, Medtronic MDT received the Breakthrough Device Designation from the U.S. Food and Drug Administration for its Sphere-9 catheter, designed for the treatment of ventricular tachycardia (VT). This designation facilitates a faster regulatory approval process, allowing for quicker access to this innovative technology for patients in need.
+
+Medtronic has a market capitalization of approximately $106.97 billion.
+
+GF Score™: 90/100, indicating strong potential for long-term returns.
+
+Insider activity shows a significant sell-off, with $5.1 million in shares sold over the past three months.
+
+What's Behind the News?
+
+The Breakthrough Device Designation awarded to Medtronic for its Sphere-9 catheter represents a significant milestone in cardiac care. Ventricular tachycardia is a serious heart rhythm disorder that can lead to severe complications, including sudden cardiac arrest. The FDA's expedited approval process not only highlights the potential clinical benefits of this device but also underscores Medtronic's commitment to advancing treatment options in the cardiovascular space.
+
+Medtronic PLC is one of the largest medical-device companies globally, specializing in developing and manufacturing therapeutic medical devices for chronic diseases. With a market cap of approximately $106.97 billion, the company operates in the healthcare sector, specifically within the Medical Devices & Instruments industry. Medtronic's diverse portfolio includes pacemakers, defibrillators, and various other medical devices, catering primarily to healthcare institutions and physicians in the U.S., Western Europe, and Japan.
+
+How Is MDT Valued?
+
+While GF Value™ data is not available for Medtronic at this time, the company's current P/E ratio stands at 23.21, which is close to its 3-year low of 22.29. This suggests that the stock may be undervalued relative to its historical performance. Investors should consider this context when evaluating the stock's potential. For more detailed information, visit the MDT stock page.
+
+What Does MDT's GF Score™ Tell Us?
+
+The GF Score™ ranks stocks from 0 to 100 based on five key aspects: Financial Strength, Profitability, Growth, Valuation, and Momentum. Stocks with higher GF Score™ values have been found to generate higher long-term returns (backtested 2006-2021).
+
+MetricRating GF Score™90 Financial Strength6/10 Profitability8/10 Growth8/10
+
+Medtronic's strengths lie in its high GF Score™ of 90, indicating robust potential for long-term returns, alongside strong profitability and growth rankings. However, its Financial Strength score of 6 suggests that the company is under some financial stress, as indicated by its Altman Z-Score of 2.82. For further insights, visit the MDT stock page.
+
+What Are Insiders Doing with MDT Stock?
+
+In the past three months, insider activity has shown a notable trend, with $5.1 million worth of shares sold and no purchases reported. This could indicate a lack of confidence among insiders regarding the stock's short-term performance.
+
+What This Means for Investors
+
+Overall, Medtronic presents a compelling case for investors, highlighted by its strong GF Score™ and solid growth potential. However, the recent insider selling and financial strength indicators warrant caution. The company's advancements in cardiac care through the Sphere-9 catheter could enhance its market position, but investors should remain vigilant about the financial signals. For the complete analysis, visit the MDT stock page. You can also use the GuruFocus Stock Screener to find similar opportunities.
+
+Frequently Asked Questions
+
+What is MDT's GF Score™?
+
+MDT's GF Score™ is 90/100, indicating strong potential for long-term returns based on various financial metrics.
+
+How is MDT valued?
+
+MDT's P/E ratio is currently 23.21, which is close to its 3-year low of 22.29, suggesting that the stock may be undervalued compared to its historical performance.
+
+What is MDT's P/E ratio compared to historical?
+
+MDT's current P/E ratio of 23.21 is near its 3-year low, indicating that the stock may be trading at a lower valuation compared to its historical averages.",https://static.gurufocus.com/logos/0C000008BI.png?20,N,,2026-04-26 16:10:42.240691
 ID27,J&J,2026-04-26 19:31:23+00:00,fortworthreport.org,Texas Health brings emergency medical simulation training to Johnson County EMS,Not Available,,,,,https://fortworthreport.org/2026/04/26/texas-health-brings-emergency-medical-simulation-training-to-johnson-county-ems/,This will only take a few seconds...,This will only take a few seconds...,"data:;base64,=",N,,2026-04-26 18:17:34.463493
 ID19,Eli Lilly,2026-04-26 19:24:28+00:00,www.baystreet.ca,"Housing Figures, Bank Rate in Vogue Next Week - Baystreet.ca",Glenn Wilkins,,,,,https://www.baystreet.ca/articles/the_week_ahead.aspx?articleid=120389,"Canada Featured Earnings Celestica, Inc. (T.CLS) (Q1) EPS of $2.82, compared to $2.56 in the prior-year quarter.
 TFI International Inc. (T.TFII) (Q1) EPS of 61 cents, compared to $1.09 in the prior-year quarter.
@@ -64407,6 +64484,7 @@ Can this report support market entry decisions?
 
 Yes, it highlights demand hotspots, trade routes, pricing trends, and competitive context.",https://www.indexbox.io/landing/img/blog/telegram-fallback/20a2f1c081517fa6c9ba31c0d1f3c975.webp,N,,2026-04-26 14:18:13.024893
 ID32,Microsoft,2026-04-26 17:24:05+00:00,www.neowin.net,"Microsoft's secret ""K2"" plan leaks, could bring big Windows 11 performance upgrade",Not Available,,,,,https://www.neowin.net/news/microsofts-secret-k2-plan-leaks-could-bring-big-windows-11-performance-upgrade/,"Microsoft may reportedly be working on a secret ""K2"" plan which is currently in play to improve Windows 11 performance.",Not Available,,N,,2026-04-26 16:11:45.318573
+ID20,FactSet,2026-04-26 17:21:47+00:00,www.msn.com,"Cadence Design Systems shares pop on earnings beat, custom chip optimism - MSN",Not Available,,,,,https://www.msn.com/en-us/money/companies/cadence-design-systems-shares-pop-on-earnings-beat-custom-chip-optimism/ar-AA1WCc5q?ocid=finance-verthp-feeds&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1&bundles=feat-es2020-c,"The company said it expects $5.9 billion to $6 billion in revenue for the next fiscal year, at the top end of FactSet's $5.94 billion expectation.",Not Available,,N,,2026-04-26 16:09:20.785563
 ID45,Thompson Reuters,2026-04-26 17:21:47+00:00,store.legal.thomsonreuters.com,"Texas Practice V.15 Foreclosure, 2026 ed. - Thomson Reuters",Not Available,,,,,https://store.legal.thomsonreuters.com/en-us/products/texas-foreclosure-law-and-practice-v15-2d-edition-tx-practice-30921641,"All annual subscriptions are subject to a continuous subscription agreement meaning your subscription will automatically renew in future years unless you tell us otherwise.
 Each Automatic Renewal Term will be 12 months in length (“Automatic Renewal Term”) and we will notify you of any changes - including your new price - at least 60 days before each Automatic Renewal Term begins.
 Either of us may cancel in writing at least 30 days before an Automatic Renewal Term starts.
@@ -64422,7 +64500,6 @@ Read our Terms and Conditions.
 ProView is the way to read Thomson Reuters eBooks and eLooseleafs, published primarily for legal, accounting, human resources, and tax professions. The Thomson Reuters ProView web-based application is accessed via your browser. With the new ProView web-app, offline capability is now available from your browser. The web application has a responsive design and is compatible with desktop, laptop, and mobile devices.
 
 Get started with ProView training",,N,,2026-04-26 20:08:26.176418
-ID20,FactSet,2026-04-26 17:21:47+00:00,www.msn.com,"Cadence Design Systems shares pop on earnings beat, custom chip optimism - MSN",Not Available,,,,,https://www.msn.com/en-us/money/companies/cadence-design-systems-shares-pop-on-earnings-beat-custom-chip-optimism/ar-AA1WCc5q?ocid=finance-verthp-feeds&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1&bundles=feat-es2020-c,"The company said it expects $5.9 billion to $6 billion in revenue for the next fiscal year, at the top end of FactSet's $5.94 billion expectation.",Not Available,,N,,2026-04-26 16:09:20.785563
 ID19,Eli Lilly,2026-04-26 17:20:49+00:00,medcitynews.com,Novartis Antimalarial Clears Key WHO Review to Get the Combo Drug to Babies,Not Available,,,,,https://medcitynews.com/2026/04/novartis-antimalarial-coartem-baby-who-prequalification-malaria-infectious-disease-mmv-nvs/,"—In other obesity drug news, Eli Lilly received FDA approval for ... Like Wegovy HD, the approval for Lilly's once-daily pill came under the new FDA ...",Not Available,,N,,2026-04-26 14:16:15.165350
 ID19,Eli Lilly,2026-04-26 17:20:05+00:00,www.msn.com,Eli Lilly warns of safety risks from compounded obesity drugs after finding impurity - MSN,Not Available,,,,,http://www.msn.com/en-us/health/other/eli-lilly-warns-of-safety-risks-from-compounded-obesity-drugs-after-finding-impurity/ar-AA1YsZNA?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1&bundles=feat-es2020-c,Eli Lilly (LLY) has issued a public warning about potential safety risks associated with compounded tirzepatide mixed with vitamin B12.,Not Available,,N,,2026-04-26 16:09:09.070652
 ID32,Microsoft,2026-04-26 17:19:27+00:00,LinkedIn,Tom Rizzo's Post - LinkedIn,Tom Rizzo,,,,,https://www.linkedin.com/posts/torizzo_after-a-long-time-at-microsoft-ive-decided-activity-7454207672989581312-1fGE,"After a long time at Microsoft, I've decided to try something new.
@@ -70612,27 +70689,6 @@ Read our full analysis of HCA Healthcare’s results here and Elevance Health’
 There has been positive sentiment among investors in the healthcare providers & services segment, with share prices up 9.6% on average over the last month. Universal Health Services is down 5% during the same time and is heading into earnings with an average analyst price target of $247.35 (compared to the current share price of $174.90).
 
 ONE MORE THING: The $21 AI Application Stock Wall Street Forgot. While Wall Street obsesses over who’s building AI, one company is already using it to print money. And nobody’s paying attention.",https://stockstory.org/stockstory/company-image/UHS,N,,2026-04-25 23:58:48.002411
-ID2,Adobe,2026-04-26 03:16:00+00:00,StockStory,Cadence Design Systems (CDNS) To Report Earnings Tomorrow: Here Is What To Expect,Radek Strnad,,,,,https://stockstory.org/us/stocks/nasdaq/cdns/news/earnings/cadence-design-systems-cdns-to-report-earnings-tomorrow-here-is-what-to-expect,"Electronic design automation company Cadence Design Systems (NASDAQ:CDNS) will be announcing earnings results this Monday after market close.
-Cadence Design Systems beat analysts’ revenue expectations last quarter, reporting revenues of $1.44 billion, up 6.2% year on year.
-Is Cadence Design Systems a buy or sell going into earnings?
-Cadence Design Systems rarely misses Wall Street’s revenue estimates.
-Looking at Cadence Design Systems’s peers in the vertical software segment, only Adobe has reported results so far.","Electronic design automation company Cadence Design Systems (NASDAQ:CDNS) will be announcing earnings results this Monday after market close. Here’s what to expect.
-
-Cadence Design Systems beat analysts’ revenue expectations last quarter, reporting revenues of $1.44 billion, up 6.2% year on year. It was a strong quarter for the company, with EPS guidance for next quarter exceeding analysts’ expectations and an impressive beat of analysts’ EBITDA estimates.
-
-Is Cadence Design Systems a buy or sell going into earnings? Read our full analysis here, it’s free for active Edge members.
-
-This quarter, the market is expecting Cadence Design Systems’s revenue to grow 16.4% year on year, slowing from the 23.1% increase it recorded in the same quarter last year.
-
-The majority of analysts covering the company have reconfirmed their estimates over the last 30 days, suggesting they anticipate the business to stay the course heading into earnings. Cadence Design Systems rarely misses Wall Street’s revenue estimates.
-
-Looking at Cadence Design Systems’s peers in the vertical software segment, only Adobe has reported results so far. It exceeded analysts’ revenue estimates, delivering year-on-year sales growth of 12%. The stock was down 7.6% on the results.
-
-Read our full analysis of Adobe’s earnings results here.
-
-There has been positive sentiment among investors in the vertical software segment, with share prices up 8.1% on average over the last month. Cadence Design Systems is up 22.5% during the same time and is heading into earnings with an average analyst price target of $371.53 (compared to the current share price of $332.95).
-
-ONE MORE THING: 3 Hidden Platforms Growing 3X Faster than Amazon, Google, and PayPal. Amazon, Google, and Meta all followed the same playbook: Dominate an ignored market. Build an unbeatable moat. Scale until you’re unstoppable.",https://stockstory.org/stockstory/company-image/CDNS,N,,2026-04-26 02:00:53.494073
 ID42,S&P Global,2026-04-26 03:16:00+00:00,StockStory,Kforce Earnings: What To Look For From KFRC - StockStory,Kayode Omotosho,,,,,https://stockstory.org/us/stocks/nyse/kfrc/news/earnings/kforce-earnings-what-to-look-for-from-kfrc-2,"Professional staffing firm Kforce (NYSE:KFRC) will be reporting results this Monday after market close.
 Kforce beat analysts’ revenue expectations last quarter, reporting revenues of $332 million, down 3.4% year on year.
 Is Kforce a buy or sell going into earnings?
@@ -70654,6 +70710,27 @@ Read our full analysis of Robert Half’s results here and ManpowerGroup’s res
 There has been positive sentiment among investors in the professional services segment, with share prices up 12.2% on average over the last month. Kforce is up 13.4% during the same time and is heading into earnings with an average analyst price target of $39 (compared to the current share price of $32.15).
 
 ONE MORE THING: The $21 AI Application Stock Wall Street Forgot. While Wall Street obsesses over who’s building AI, one company is already using it to print money. And nobody’s paying attention.",https://stockstory.org/stockstory/company-image/KFRC,N,,2026-04-26 07:04:47.591374
+ID2,Adobe,2026-04-26 03:16:00+00:00,StockStory,Cadence Design Systems (CDNS) To Report Earnings Tomorrow: Here Is What To Expect,Radek Strnad,,,,,https://stockstory.org/us/stocks/nasdaq/cdns/news/earnings/cadence-design-systems-cdns-to-report-earnings-tomorrow-here-is-what-to-expect,"Electronic design automation company Cadence Design Systems (NASDAQ:CDNS) will be announcing earnings results this Monday after market close.
+Cadence Design Systems beat analysts’ revenue expectations last quarter, reporting revenues of $1.44 billion, up 6.2% year on year.
+Is Cadence Design Systems a buy or sell going into earnings?
+Cadence Design Systems rarely misses Wall Street’s revenue estimates.
+Looking at Cadence Design Systems’s peers in the vertical software segment, only Adobe has reported results so far.","Electronic design automation company Cadence Design Systems (NASDAQ:CDNS) will be announcing earnings results this Monday after market close. Here’s what to expect.
+
+Cadence Design Systems beat analysts’ revenue expectations last quarter, reporting revenues of $1.44 billion, up 6.2% year on year. It was a strong quarter for the company, with EPS guidance for next quarter exceeding analysts’ expectations and an impressive beat of analysts’ EBITDA estimates.
+
+Is Cadence Design Systems a buy or sell going into earnings? Read our full analysis here, it’s free for active Edge members.
+
+This quarter, the market is expecting Cadence Design Systems’s revenue to grow 16.4% year on year, slowing from the 23.1% increase it recorded in the same quarter last year.
+
+The majority of analysts covering the company have reconfirmed their estimates over the last 30 days, suggesting they anticipate the business to stay the course heading into earnings. Cadence Design Systems rarely misses Wall Street’s revenue estimates.
+
+Looking at Cadence Design Systems’s peers in the vertical software segment, only Adobe has reported results so far. It exceeded analysts’ revenue estimates, delivering year-on-year sales growth of 12%. The stock was down 7.6% on the results.
+
+Read our full analysis of Adobe’s earnings results here.
+
+There has been positive sentiment among investors in the vertical software segment, with share prices up 8.1% on average over the last month. Cadence Design Systems is up 22.5% during the same time and is heading into earnings with an average analyst price target of $371.53 (compared to the current share price of $332.95).
+
+ONE MORE THING: 3 Hidden Platforms Growing 3X Faster than Amazon, Google, and PayPal. Amazon, Google, and Meta all followed the same playbook: Dominate an ignored market. Build an unbeatable moat. Scale until you’re unstoppable.",https://stockstory.org/stockstory/company-image/CDNS,N,,2026-04-26 02:00:53.494073
 ID34,New York Public Library,2026-04-26 03:12:48+00:00,theday.com,"Book bans, attempted bans remain at record highs | The Day",HILLEL ITALIE  National,,,,,https://theday.com/news/887205/book-bans-attempted-bans-remain-at-record-highs/,"NEW YORK (AP) — Book bans and attempted bans remain at record highs, according to the American Library Association.
 The ALA on Monday issued its annual list of the books most challenged at the country's libraries, part of the association's State of America's Libraries Report.
 Patricia McCormick's “Sold,” a 2006 novel about sex trafficking in India, topped the list for 2025.
@@ -77341,6 +77418,33 @@ Subscribe to Newsletters
 Recommended For You
 
 More Trending News",https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1581810849/image_1581810849.jpg?io=getty-c-w630,N,,2026-04-25 12:14:42.809856
+ID43,Societe Generale,2026-04-25 15:02:09+00:00,cryptonews.net,Euro stablecoins explode 1200% under MiCA as capital pours into regulated assets,CryptoNews,,,,,https://cryptonews.net/news/finance/32762743/,"Euro stablecoins have surged 1,200% under MiCA as regulatory clarity attracts institutional capital into euro-denominated digital assets.
+Major financial players like Société Générale and Deutsche Börse are already using euro stablecoins for tokenized fund management and wholesale payments.
+Their goal is to create a default euro stablecoin for global crypto markets, leveraging their existing massive depositor base.
+Circle’s $EURC dominates the European stablecoin market As of April 2026, Circle’s $EURC dominates the European stablecoin market, holding over 50% of the euro stablecoin market share.
+However, while the growth rate of euro stablecoins has been dramatic (exceeding 1,200% in transaction volume for specific tokens), the euro stablecoin market still lags behind the $300 billion U.S. dollar-pegged stablecoin market.","Euro stablecoins have surged 1,200% under MiCA as regulatory clarity attracts institutional capital into euro-denominated digital assets. Controlled reserve management (requiring 100% fiat-backing for EU stablecoin issuers) has boosted investor confidence by nearly 50%.
+
+While the 1,200% growth has not been uniform across all euro-denominated digital assets, it reflects a massive shift in market structure following the implementation of MiCA. Consequently, the striking growth is notably concentrated in MiCA-compliant tokens that have absorbed liquidity from their unregulated rivals. Major financial players like Société Générale and Deutsche Börse are already using euro stablecoins for tokenized fund management and wholesale payments.
+
+Additionally, traditional banks now account for nearly 40% of new e-money token (EMT) issuers, driving active crypto usage among lower-income brackets (retailers). However, this usage is mostly flat or on the decline. The European stablecoin market has consolidated into a high-stakes race between crypto native issuers and banking consortia, leaving a vacuum now filled by a few dominant players.
+
+MiCA’s ‘E-Money Token’ classification changes stablecoin demand
+
+The strict classification of euro-pegged stablecoins as “E-Money Tokens” has fundamentally changed their demand. Clear rules requiring at least 30%-60% of fiat-backed reserves to be held as bank deposits have increased institutional trust. Regulated EMTs now account for approximately 25% of all stablecoin transaction volume in the EU.
+
+Consumer interest in euro-backed stablecoins has also risen significantly, driven by increased demand. Search activity for these assets has risen by 313% in Italy and ~400% in Finland. MiCA has established uniform rules across all 27 EU member states, allowing “passporting” (the ability to operate across all 27 EU member states with a single license). However, flows are notably concentrated in jurisdictions like Malta, Germany, and the Netherlands. These countries lead in MiCA license issuance.
+
+Major players like UniCredit, BBVA, and BNP Paribas have also formed the Qivalis consortium to launch a shared, MiCA-compliant euro stablecoin rail by late 2026. The consortium of 12 major European banks is targeting institutional settlement and treasury operations. Their goal is to create a default euro stablecoin for global crypto markets, leveraging their existing massive depositor base. They are responding to the narrowing stablecoin market in 2026 amid full MiCA enforcement. Many non-compliant giants, such as Tether’s USDT and EURT, were forced to exit the EU.
+
+Circle’s $EURC dominates the European stablecoin market
+
+As of April 2026, Circle’s $EURC dominates the European stablecoin market, holding over 50% of the euro stablecoin market share. The company secured its French EMI license early, allowing it to “passport” $EURC across all 27 EU member states. The $EURC is now deeply integrated into physical commerce via Ingenico’s 40 million POS terminals. It is also embedded into institutional settlement via the Stellar network. Consequently, the $EURC token has seen transaction volume grow by over 1,100%.
+
+Société Générale-FORGE’s $EURCV has also recorded over 340% growth in transaction volume. The $EURCV token focuses on tokenized bond settlement and wholesale payments. It recently expanded its multichain strategy to the Stellar network and XRP Ledger to tap into cross-border payment ecosystems.
+
+The rise of MiCA-licensed euro-backed stablecoins is also fueling a massive capital rotation as investors migrate from unregulated offshore stablecoins to on-chain RWAs. These euro stablecoins are projected to reach 40% market share in the RWA sector as the year progresses. Market share is particularly important, as regulators expect tokenized real estate in the EU to reach €500 billion by 2027. Additional MiCA-aligned tokens gaining traction include EURI (Member Finance), EURQ (Quantoz), and EURE (Monerium).
+
+However, while the growth rate of euro stablecoins has been dramatic (exceeding 1,200% in transaction volume for specific tokens), the euro stablecoin market still lags behind the $300 billion U.S. dollar-pegged stablecoin market. Nevertheless, the trend indicates a new, stable, and compliant environment for European digital assets. Euro stablecoins account for nearly 13% of the total global payments activity.",https://cnews24.ru/uploads/eb3/eb363732d7a6a6417ff2acc118400fa399083bec.jpg,N,,2026-04-25 13:13:41.503304
 ID42,S&P Global,2026-04-25 15:02:09+00:00,The Motley Fool,Lessons From a Black Swan Event: How to Prepare to Navigate Your Future Strait of ...,"Matt DiLallo, www.facebook.com",,,,,https://www.fool.com/investing/2026/04/25/lessons-from-a-black-swan-event-how-to-prepare-to/,"The Strait of Hormuz closure is a classic black swan event, a term popularized by economist Nassim Nicholas Taleb.
 Here's a look at the impact the Strait of Hormuz closure is having on the global economy and lessons we can glean from this black swan event.
 Preparing for black swans in advance Iran's closing of the Strait of Hormuz has always been a risk facing the global economy.
@@ -77372,33 +77476,6 @@ These bypass pipelines are like having passive income streams, such as a portfol
 Hope for the best, but prepare for the worst
 
 Black swans, like the Strait of Hormuz closure, are outlier events that we hope will never happen. However, we should still prepare for potential black swans that could affect our finances, such as a job loss or a medical diagnosis. By preparing to navigate them before they happen with a strategic reserve and bypass capacity, you can make these potentially catastrophic events much less financially impactful.",https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F866535%2Fgettyimages-2265963204-1200x800-5b2df79.jpg&w=1200&op=resize,N,,2026-04-25 14:11:03.439616
-ID43,Societe Generale,2026-04-25 15:02:09+00:00,cryptonews.net,Euro stablecoins explode 1200% under MiCA as capital pours into regulated assets,CryptoNews,,,,,https://cryptonews.net/news/finance/32762743/,"Euro stablecoins have surged 1,200% under MiCA as regulatory clarity attracts institutional capital into euro-denominated digital assets.
-Major financial players like Société Générale and Deutsche Börse are already using euro stablecoins for tokenized fund management and wholesale payments.
-Their goal is to create a default euro stablecoin for global crypto markets, leveraging their existing massive depositor base.
-Circle’s $EURC dominates the European stablecoin market As of April 2026, Circle’s $EURC dominates the European stablecoin market, holding over 50% of the euro stablecoin market share.
-However, while the growth rate of euro stablecoins has been dramatic (exceeding 1,200% in transaction volume for specific tokens), the euro stablecoin market still lags behind the $300 billion U.S. dollar-pegged stablecoin market.","Euro stablecoins have surged 1,200% under MiCA as regulatory clarity attracts institutional capital into euro-denominated digital assets. Controlled reserve management (requiring 100% fiat-backing for EU stablecoin issuers) has boosted investor confidence by nearly 50%.
-
-While the 1,200% growth has not been uniform across all euro-denominated digital assets, it reflects a massive shift in market structure following the implementation of MiCA. Consequently, the striking growth is notably concentrated in MiCA-compliant tokens that have absorbed liquidity from their unregulated rivals. Major financial players like Société Générale and Deutsche Börse are already using euro stablecoins for tokenized fund management and wholesale payments.
-
-Additionally, traditional banks now account for nearly 40% of new e-money token (EMT) issuers, driving active crypto usage among lower-income brackets (retailers). However, this usage is mostly flat or on the decline. The European stablecoin market has consolidated into a high-stakes race between crypto native issuers and banking consortia, leaving a vacuum now filled by a few dominant players.
-
-MiCA’s ‘E-Money Token’ classification changes stablecoin demand
-
-The strict classification of euro-pegged stablecoins as “E-Money Tokens” has fundamentally changed their demand. Clear rules requiring at least 30%-60% of fiat-backed reserves to be held as bank deposits have increased institutional trust. Regulated EMTs now account for approximately 25% of all stablecoin transaction volume in the EU.
-
-Consumer interest in euro-backed stablecoins has also risen significantly, driven by increased demand. Search activity for these assets has risen by 313% in Italy and ~400% in Finland. MiCA has established uniform rules across all 27 EU member states, allowing “passporting” (the ability to operate across all 27 EU member states with a single license). However, flows are notably concentrated in jurisdictions like Malta, Germany, and the Netherlands. These countries lead in MiCA license issuance.
-
-Major players like UniCredit, BBVA, and BNP Paribas have also formed the Qivalis consortium to launch a shared, MiCA-compliant euro stablecoin rail by late 2026. The consortium of 12 major European banks is targeting institutional settlement and treasury operations. Their goal is to create a default euro stablecoin for global crypto markets, leveraging their existing massive depositor base. They are responding to the narrowing stablecoin market in 2026 amid full MiCA enforcement. Many non-compliant giants, such as Tether’s USDT and EURT, were forced to exit the EU.
-
-Circle’s $EURC dominates the European stablecoin market
-
-As of April 2026, Circle’s $EURC dominates the European stablecoin market, holding over 50% of the euro stablecoin market share. The company secured its French EMI license early, allowing it to “passport” $EURC across all 27 EU member states. The $EURC is now deeply integrated into physical commerce via Ingenico’s 40 million POS terminals. It is also embedded into institutional settlement via the Stellar network. Consequently, the $EURC token has seen transaction volume grow by over 1,100%.
-
-Société Générale-FORGE’s $EURCV has also recorded over 340% growth in transaction volume. The $EURCV token focuses on tokenized bond settlement and wholesale payments. It recently expanded its multichain strategy to the Stellar network and XRP Ledger to tap into cross-border payment ecosystems.
-
-The rise of MiCA-licensed euro-backed stablecoins is also fueling a massive capital rotation as investors migrate from unregulated offshore stablecoins to on-chain RWAs. These euro stablecoins are projected to reach 40% market share in the RWA sector as the year progresses. Market share is particularly important, as regulators expect tokenized real estate in the EU to reach €500 billion by 2027. Additional MiCA-aligned tokens gaining traction include EURI (Member Finance), EURQ (Quantoz), and EURE (Monerium).
-
-However, while the growth rate of euro stablecoins has been dramatic (exceeding 1,200% in transaction volume for specific tokens), the euro stablecoin market still lags behind the $300 billion U.S. dollar-pegged stablecoin market. Nevertheless, the trend indicates a new, stable, and compliant environment for European digital assets. Euro stablecoins account for nearly 13% of the total global payments activity.",https://cnews24.ru/uploads/eb3/eb363732d7a6a6417ff2acc118400fa399083bec.jpg,N,,2026-04-25 13:13:41.503304
 ID7,Barclays,2026-04-25 15:01:55+00:00,The Globe and Mail,Barclays Keeps Their Hold Rating on Dover (DOV) - The Globe and Mail,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/DOV/pressreleases/1514651/barclays-keeps-their-hold-rating-on-dover-dov/,Detailed price information for Dover Corp (DOV-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=880,N,,2026-04-26 00:59:46.427819
 ID32,Microsoft,2026-04-25 14:59:10+00:00,BleepingComputer,Windows Update gets new controls to reduce forced restarts - Bleeping Computer,Lawrence Abrams,,,,,https://www.bleepingcomputer.com/news/microsoft/windows-update-gets-new-controls-to-reduce-forced-restarts/,"Microsoft is rolling out Windows Update improvements that give users more control over how updates are installed while reducing disruption from frequent or poorly timed restarts.
 ""We are continually reading the feedback submitted about the Windows update experience.
@@ -85684,231 +85761,3 @@ ID42,S&P Global,2026-04-25 00:17:13+00:00,www.spglobal.com,Tiberius Group AG to 
 ID33,Moody's,2026-04-25 00:14:55+00:00,www.economy.com,Geopolitical Risk Tracker: White House Calls for More Defense Spending - Economy.com,Not Available,,,,,https://www.economy.com/economicview/analysis/422620/Geopolitical-Risk-Tracker-White-House-Calls-for-More-Defense-Spending,"As of July 14th 2021 Economic View will no longer support Internet Explorer.
 To use this site please use an alternative browser.",As of July 14th 2021 Economic View will no longer support Internet Explorer. To use this site please use an alternative browser.,,N,,2026-04-25 07:02:35.239170
 ID2,Adobe,2026-04-25 00:13:36+00:00,www.ajmc.com,"How Implementing Clinical Pharmacists, Community Health Specialists Could Prevent ...",Not Available,,,,,https://www.ajmc.com/view/how-implementing-clinical-pharmacists-community-health-specialists-could-prevent-hospitalizations,Washington DC Monuments with USA - Nomad_Soul - stock.adobe.com.jpeg · “Fraud Pays”: Congressional Hearing Exposes Deep Cracks in Medicare's ...,Not Available,,N,,2026-04-25 02:01:29.708497
-ID28,L’Oréal,2026-04-25 00:07:16+00:00,www.ideal-investisseur.fr,"Hermès Shares Drop 30% in a Year, Sliding Towards Technical Support at €1,609",Not Available,,,,,https://www.ideal-investisseur.fr/en/actions-b/hermes-shares-drop-30-in-a-year-sliding-towards-technical-support-at-eur1609/18198.html,"L'Oréal drops 0.78% at the same time. Across the Atlantic, Ralph Lauren fell by 1.11% at the last close. The surge in oil above $106 a barrel ...",Not Available,,N,,2026-04-25 00:00:00.701024
-ID1,Accor,2026-04-25 00:03:34+00:00,magicpin,"Menu of Lattice - Grand Mercure (An Accor Hotel), Tajganj, Agra | April, 2026 - magicpin",Not Available,,,,,https://magicpin.in/Agra/Tajganj/Restaurant/Lattice---Grand-Mercure-(An-Accor-Hotel)/store/16771b1/menu,"Menu for Lattice - Grand Mercure (An Accor Hotel), Tajganj, Agra - View the Menu for Lattice - Grand Mercure (An Accor Hotel), Tajganj, Agra. Check out the Food Menu item prices of Lattice - Grand Mercure (An Accor Hotel)",Not Available,http://lh3.googleusercontent.com/wK_pJHvjSSIqMEzuFbWvgmA_XTtqAMZmIWDDzaHQcHWqoZ5LccEudRaCuTFQ47wlPtvG-hiAStozsSyDVtEto4x1wA=s750,N,,2026-04-24 22:02:39.239024
-ID18,Elevance Health,2026-04-25 00:00:21+00:00,www.youtube.com,"Benjamin Kennady, Striim & Vinod Ramachandran, Google Cloud - YouTube",Not Available,,,,,https://www.youtube.com/watch?v=jVjq-LxPqp4,"Venkat Alladi & Danny Brakebill, Elevance Health, Balaji Ramdoss, Deloitte | Google Cloud Next 2026. SiliconANGLE theCUBE. New. 8 views · 14:31.",Not Available,,N,,2026-04-24 22:04:16.865483
-ID33,Moody's,2026-04-24 23:59:06+00:00,www.icra.in,Reason for delay in carrying out periodic review - ICRA An Affiliate of Moody's,ICRA Limited,,,,,https://www.icra.in/RegulatoryDisclosure/DelayInSurveillanceArchive?page=40,Vision & Values To be the preferred partner in providing best in class ... Life At ICRA Life at ICRA inspires you to give your best and make most ...,"Vision & Values
-
-To be the preferred partner in providing best in class ...
-
-Life At ICRA
-
-Life at ICRA inspires you to give your best and make most ...",https://www.icra.in/Content/assets-2/images/icra-favicon.ico,N,,2026-04-24 23:01:49.989442
-ID20,FactSet,2026-04-24 23:57:45+00:00,www.moomoo.com,Woori Financial Group 1Q Net Profit Missed FactSet-Compiled Consensus - Moomoo,Dow Jones,,,,,https://www.moomoo.com/news/post/68817201/woori-financial-group-1q-net-profit-missed-factset-compiled-consensus,WooriFinancial Group 1Q Net Profit Missed FactSet-Compiled,Not Available,https://pubimg.futunn.com/20220509000002785386ec02285.jpg,N,,2026-04-25 02:59:07.810620
-ID32,Microsoft,2026-04-24 23:57:04+00:00,Seeking Alpha,Microsoft: The Voluntary Buyout Is A Warning Shot Before Earnings - Seeking Alpha,Summit Research,,,,,https://seekingalpha.com/article/4894021-microsoft-the-voluntary-buyout-is-a-warning-shot-before-earnings,"I am not receiving compensation for it (other than from Seeking Alpha).
-I have no business relationship with any company whose stock is mentioned in this article.
-Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole.
-Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank.
-Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.","Analyst’s Disclosure: I/we have no stock, option or similar derivative position in any of the companies mentioned, and no plans to initiate any such positions within the next 72 hours. I wrote this article myself, and it expresses my own opinions. I am not receiving compensation for it (other than from Seeking Alpha). I have no business relationship with any company whose stock is mentioned in this article.
-
-Seeking Alpha's Disclosure: Past performance is no guarantee of future results. No recommendation or advice is being given as to whether any investment is suitable for a particular investor. Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole. Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank. Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.",https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1729779122/image_1729779122.jpg?io=getty-c-w1536,N,,2026-04-24 21:00:45.829444
-ID22,HP Inc,2026-04-24 23:55:11+00:00,Electronic Frontier Foundation,EFF Challenges Secrecy In Eastern District of Texas Patent Case,Betty Gedlu,,,,,https://www.eff.org/deeplinks/2026/04/eff-challenges-secrecy-eastern-district-texas-patent-case,"In the Eastern District of Texas, that standard is often not enforced.
-EFF Pushes For Public Access EFF raised these concerns with Wilus’s counsel and pressed for public access to the sealed records.
-The Eastern District of Texas allows litigants to bypass the requirement to explain why.
-EFF confronted this very same issue in its attempt to intervene in another Eastern District of Texas case, Entropic v. Charter.
-The Eastern District of Texas’ current approach falls short.","Clinic students Emily Ko and Zoe Lee at the Technology Law and Policy Clinic at the NYU School of Law were the principal authors of this post.
-
-Courts are not private forums for business disputes. They are public institutions, and their records belong to the public. But too often, courts forget that and allow for massive over-sealing, especially in patent cases.
-
-EFF recently discovered another case of this in the Eastern District of Texas, where key court filings about Wi-Fi technology used by billions of people every day were hidden entirely from public view. The public could not see the parties’ arguments about patent ownership, the plaintiff’s standing in court, or licensing obligations tied to standardized technologies.
-
-EFF Seeks to Uncover Sealed Information in Wilus
-
-The case Wilus Institute of Standards and Technology Inc. v. HP Inc., highlights a recurring transparency problem in patent litigation.
-
-Wilus claims to own standard essential patents (SEPs) related to Wi-Fi 6 — technology embedded in everyday devices. Wilus sued Samsung and HP for patent infringement. HP argued that Wilus failed to offer licenses on Fair, Reasonable, and Non-Discriminatory (FRAND) terms, which are required to prevent SEP holders from exploiting their position, by blocking fair access to widely used technologies.
-
-In reviewing the docket, EFF found that many filings were improperly sealed under a lenient protective order without the required, specific justification needed in a proper motion to seal. Because there is a presumption of public access to court filings, litigants must file a motion to seal and demonstrate compelling reasons for secrecy. This typically requires a document-by-document and line-by-line justification.
-
-In the Eastern District of Texas, that standard is often not enforced. Instead, district judges allow litigants to hide information using boilerplate justification in a protective order without explaining why specific documents or specific parts in a document should be hidden.
-
-In Wilus, two sets of documents stood out.
-
-First, Samsung moved to dismiss the case, arguing Wilus may not have validly obtained the patents — raising doubts about whether they had standing to sue at all. Wilus’s opposition to that motion was filed completely under seal, with no redacted public version available at all. That briefing likely addresses the patent assignment agreements that underpin Wilus’s business model — information the public has an interest in, especially in cases involving non-practicing entities (NPEs) like Wilus.
-
-Second, filings related to HP’s supplemental briefing on FRAND obligations were also sealed in full, with no redacted versions available to the public. Whether Wilus is bound by FRAND has implications far beyond this case. Companies subject to FRAND must adhere to reasonable licensing terms, while those that are not can charge significantly higher licensing fees.
-
-In both instances, the public was shut out of arguments that bear directly on how essential technologies are licensed and controlled.
-
-EFF Pushes For Public Access
-
-EFF raised these concerns with Wilus’s counsel and pressed for public access to the sealed records. Wilus ultimately agreed to file redacted versions of several documents now available as Document Numbers 387, 388, and 389.
-
-That result is progress, but it shouldn’t require outside intervention. Public versions of court filings should be the default, not something negotiated after outside pressure.
-
-Even now, these newly filed redacted versions conceal significant portions of the parties’ arguments. The public still cannot fully see how this case about technologies that are used every day is being litigated.
-
-Why Public Access Matters
-
-Sealing court records is designed to be rare. To overcome the presumption of public access, litigants must show compelling reasons for secrecy. That’s because open courts are a distinguishing feature of American democracy. The public, journalists, and policymakers all have the right to observe proceedings and hold both government actors and private litigants accountable.
-
-Some filings do contain trade secrets or commercially sensitive information. But that doesn’t mean litigants should be able to hide information without explaining why. The Eastern District of Texas allows litigants to bypass the requirement to explain why.
-
-EFF confronted this very same issue in its attempt to intervene in another Eastern District of Texas case, Entropic v. Charter. The same pattern appeared again in Wilus: instead of narrowly tailored redactions supported by specific reasoning, filings were withheld wholesale.
-
-Courts Must Enforce the Standard
-
-Courts, not third parties, are responsible for protecting the public’s right of access.
-
-That means enforcing the “compelling reasons” standard, as a matter of course. Parties seeking to seal sensitive information should be required to justify each proposed redaction. The Eastern District of Texas’ current approach falls short. By allowing broad, unsupported sealing through expansive protective orders, it effectively treats judicial records as confidential by default.
-
-Heavy caseloads don’t change the rule. Administrative burden cannot override constitutional and common law rights. Judicial records are presumptively public. Courts, including the Eastern District of Texas, should enforce that presumption.
-
-Other Federal Courts Get It Right
-
-The Eastern District of Texas is an outlier. In the Northern District of California, judges routinely reject overbroad sealing requests. As Judge Chhabria’s Civil Standing Order explains:
-
-[M]otions to seal . . . are almost always without merit. . . . Federal courts are paid for by the public, and the public has the right to inspect court records, subject only to narrow exceptions.
-
-The filing party must make a specific showing explaining why each document that it seeks to seal may justifiably be sealed . . . Generic and vague references to “competitive harm” are almost always insufficient justification for sealing.
-
-This approach reflects the law: sealing must be narrowly tailored and specifically justified.
-
-Court Transparency is Fundamental
-
-At first glance, secrecy in patent litigation may not seem alarming. But it signals a broader erosion of transparency. The widespread use of expansive protective orders in the Eastern District of Texas is a practice that risks spreading if courts do not enforce the law.
-
-These practices allow private parties to obscure information about disputes involving technologies that shape modern life. That undermines a core principle of a free society: transparency regarding the actions of powerful actors.
-
-Courts are not private forums for business disputes. They are public institutions, and their records belong to the public.
-
-So long as these practices continue, EFF will keep advocating for transparency and working to vindicate the public’s right to access court records.",https://www.eff.org/files/banner_library/patents-2.png,N,,2026-04-24 21:00:37.987830
-ID32,Microsoft,2026-04-24 23:55:10+00:00,Instagram,"The more than 20,000 potential job cuts Meta and Microsoft revealed on Thursday, months ...",Not Available,,,,,https://www.instagram.com/p/DXh_5wlIP0g/,"cnbc Verified 3h The more than 20,000 potential job cuts Meta and Microsoft revealed on Thursday, months after Amazon announced its most widespread layoffs ever, may only be the beginning.
-The same companies that are collectively spending hundreds of billions of dollars a year to build out artificial intelligence infrastructure to meet soaring demand for AI services are seeking efficiencies from AI by slashing head count.
-They’re also still trying to rightsize from the pandemic-fueled overhiring.
-Read the full story at the link in bio.","cnbc
-
-Verified
-
-3h
-
-The more than 20,000 potential job cuts Meta
-
-and Microsoft revealed on Thursday, months after Amazon announced its most widespread layoffs ever, may only be the beginning.
-
-The same companies that are collectively spending hundreds of billions of dollars a year to build out artificial intelligence infrastructure to meet soaring demand for AI services are seeking efficiencies from AI by slashing head count. They’re also still trying to rightsize from the pandemic-fueled overhiring.
-
-Read the full story at the link in bio.",https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/673196370_18578619847013358_1810869343308872136_n.jpg?stp=c216.0.648.648a_dst-jpg_e35_s640x640_tt6&_nc_cat=1&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=39F6Pv_DMTsQ7kNvwHx9CAD&_nc_oc=AdondhiZt-1VlDoeKBozv8JRsaZmLnXN4tQliT6f4pDPm0CTdSIaZV-JN1kUwcvRG-g&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_gid=aW1F3L3YHJqUSGqSDoioNw&oh=00_Af1BuFv1DKNkWki3ctNOcmpT4rV19sJZ2MAkM-MPoXNplg&oe=69F1EBA6,N,,2026-04-24 22:05:07.449845
-ID38,Pearson,2026-04-24 23:52:07+00:00,BOLSAMANIA,Holding(s) in Company - Sharecast.com,Regulatory News,,,,,https://www.sharecast.com/amp/news/Holding-s-in-Company/Holding-s-in-Company--dl35888327.html,By Regulatory News Whatsapp Facebook Twitter Reddit LinkedIn Email,"By Regulatory News
-
-Whatsapp
-
-Facebook
-
-Twitter
-
-Reddit
-
-LinkedIn
-
-Email",,N,,2026-04-25 10:06:41.387969
-ID10,Boston Scientific,2026-04-24 23:47:25+00:00,openPR.com,Boston Scientific Corporation (NYSE: BSX) Investor Alert: - openPR.com,"Shareholders Foundation, Inc, Shareholders Foundation",,,,,https://www.openpr.com/news/4488212/boston-scientific-corporation-nyse-bsx-investor-alert,"A Deadline is coming up on May 4, 2026 in the lawsuit for certain investors in Boston Scientific Corporation (NYSE: BSX).","A Deadline is coming up on May 4, 2026 in the lawsuit for certain investors in Boston Scientific Corporation (NYSE: BSX).",https://cdn.open-pr.com/L/4/L425667350_g.jpg,N,,2026-04-24 21:00:27.835078
-ID32,Microsoft,2026-04-24 23:41:48+00:00,www.reddit.com,"20000 job cuts at Meta, Microsoft raise concern that AI-driven labor crisis is here - Reddit",Not Available,,,,,https://www.reddit.com/r/technology/comments/1sulp81/20000_job_cuts_at_meta_microsoft_raise_concern/,"1.1K votes, 128 comments. Or they invested heavily into AI and are making cuts because there have been no returns? The same companies that are…",Not Available,,N,,2026-04-24 20:10:53.873019
-ID45,Thompson Reuters,2026-04-24 23:34:38+00:00,today.westlaw.com,Auto insurer need not pay coverage limit for Medicaid recipient's injuries - Westlaw Today,Not Available,,,,,https://today.westlaw.com/Document/I0de146383ff911f1862b9116c91f07bc/View/FullText.html?transitionType=Default&contextData=%28sc.Default%29,"(April 24, 2026) - A car accident victim is not owed payment for her medical expenses beyond the amount Medicaid paid to her providers, the South Carolina Supreme Court has ruled, despite a higher coverage amount listed in the car owner's auto...","(April 24, 2026) - A car accident victim is not owed payment for her medical expenses beyond the amount Medicaid paid to her providers, the South Carolina Supreme Court has ruled, despite a higher coverage amount listed in the car owner's auto...",https://s1-today.westlaw.com/WLN-WestlawToday-SC_2604.1.1007/favicon.ico,N,,2026-04-25 14:11:58.201202
-ID19,Eli Lilly,2026-04-24 23:30:18+00:00,Threads,Eli Lilly (NYSE: LLY) bets on oral GLP-1 Foundayo and retatrutide to - Threads,Not Available,,,,,https://www.threads.com/@jewellerymakingmaterials/post/DXhhCehGBEb/eli-lilly-nyse-lly-bets-on-oral-glp-foundayo-and-retatrutide-to-reclaim-its-tn,"Log in or sign up for ThreadsSee what people are talking about and join the conversation.
-Instagram Log in with username instead © 2026 Threads Terms Privacy Policy Consumer Health Privacy Policy Cookies Policy Report a problem","Log in or sign up for ThreadsSee what people are talking about and join the conversation.
-
-Instagram
-
-Log in with username instead
-
-© 2026
-
-Threads Terms
-
-Privacy Policy
-
-Consumer Health Privacy Policy
-
-Cookies Policy
-
-Report a problem",https://scontent-iad6-1.cdninstagram.com/v/t51.2885-19/362345934_1459607964578947_9131327925855231396_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby41MTUuYzIifQ&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=107&_nc_oc=Q6cZ2gE2BjfgMvFPlZjXbC1RgI5h3anPpURQ0lwiviVRLMv4c4Tis_Q_TbCJYIgZsUPqKW4&_nc_ohc=XnhPt9gZxVkQ7kNvwEduU3W&_nc_gid=ZXCT4S0Bht_svnJadf2gGg&edm=APs17CUBAAAA&ccb=7-5&oh=00_Af3UfGR61XUglKN8BNNm9L8h_Wi4YG1TgGH9HB5-jNmXuA&oe=69F1BEDF&_nc_sid=10d13b,N,,2026-04-24 20:08:42.066774
-ID45,Thompson Reuters,2026-04-24 23:29:51+00:00,www.greatplacetowork.in,Thomson Reuters India - Great Place To Work,Not Available,,,,,https://www.greatplacetowork.in/great/company/thomson-reuters/,"Thomson Reuters (TSX/NYSE: TRI) (TR) informs the way forward by bringing together the trusted content and technology that people and organizations need to make the right decisions.
-The company serves professionals across legal, tax, accounting, compliance, government, and media.
-Its products combine highly specialized software and insights to empower professionals with the data, intelligence, and solutions needed to make informed decisions, and to help institutions in their pursuit of justice, truth, and transparency.
-Reuters, part of Thomson Reuters, is the worlds leading provider of trusted journalism and news.","Thomson Reuters (TSX/NYSE: TRI) (TR) informs the way forward by bringing together the trusted content and technology that people and organizations need to make the right decisions. The company serves professionals across legal, tax, accounting, compliance, government, and media. Its products combine highly specialized software and insights to empower professionals with the data, intelligence, and solutions needed to make informed decisions, and to help institutions in their pursuit of justice, truth, and transparency. Reuters, part of Thomson Reuters, is the worlds leading provider of trusted journalism and news.",,N,,2026-04-25 13:13:49.143151
-ID51,Wellington Management,2026-04-24 23:28:34+00:00,ION Analytics,Wellington's macro strategist says China may come out as a winner from the oil shock,Ben Miller,,,,,https://ionanalytics.com/insights/debtwire/wellingtons-macro-strategist-says-china-may-come-out-as-a-winner-from-the-oil-shock/,"Global economies are adjusting to the oil shock from the Iran war, says Juhi Dhawan, macro strategist at Wellington Management, on the latest episode of the Credit Exchange podcast with Lisa Lee – and China has shown surprising resilience that may improve its competitiveness against Europe, Japan and some other Asian countries.
-Looking at the past performance of economies and markets to oil shocks, one of the surprises this time has been China, Dhawan says.
-It has held up better because it has reduced its reliance on oil due to its big push into renewables and coal.
-“One of the questions we are asking ourselves is, will China again gain competitiveness as Europe struggles with this energy shock; as Japan faces this energy shock,” Dhawan says.
-Besides energy prices, Dhawan also discusses productivity gains from AI, the labour market, trade flows and demographics.","Global economies are adjusting to the oil shock from the Iran war, says Juhi Dhawan, macro strategist at Wellington Management, on the latest episode of the Credit Exchange podcast with Lisa Lee – and China has shown surprising resilience that may improve its competitiveness against Europe, Japan and some other Asian countries.
-
-Looking at the past performance of economies and markets to oil shocks, one of the surprises this time has been China, Dhawan says. It has held up better because it has reduced its reliance on oil due to its big push into renewables and coal. That’s good news in that China is a big driver of global growth, but less good in that China is already in a very competitive position from a manufacturing standpoint relative to Europe, Japan, and some other countries in south-east Asia.
-
-“One of the questions we are asking ourselves is, will China again gain competitiveness as Europe struggles with this energy shock; as Japan faces this energy shock,” Dhawan says. “[Will] China end up being relatively better off compared to what its past would have suggested?”
-
-Dhawan, who leads analysis of the US economy at Wellington, an asset manager with more than $1.3 trillion in AUM, says the United States came into 2026 with some of the most accommodative fiscal and monetary policy set-up in a few years. That creates some buffer room for the economy to withstand these higher energy prices.
-
-Besides energy prices, Dhawan also discusses productivity gains from AI, the labour market, trade flows and demographics. In addition, financial markets are reacting to the Iran war, resulting in adjustments. There could be boosts coming into AI-related areas, power, and energy, she says.",https://ionanalytics.com/wp-content/uploads/2026/04/Creditflux-cover-2.27-410x240-1.jpg,N,,2026-04-24 22:05:50.016246
-ID5,Albertsons,2026-04-24 23:27:28+00:00,The Press Democrat,Gilbert Fautley OBITUARY - The Press Democrat,The Press Democrat,,,,,https://www.pressdemocrat.com/obituaries/gilbert-fautley-ca/,"Gilbert Fautley OBITUARY Passed away on March 17, 2010 in Petaluma after a six year battle with Alzheimer’s disease.
-Gil was born in Detroit, Michigan on November 5, 1935 and came to Petaluma with his family in 1942.
-He was a retail clerk for 47 years in Petaluma.
-He was a loving husband to his wife Diane for 46 years and proud of his three children, Timothy Michael “Tim” Fautley of Larkfield, Christine Ann “Tina” Harms of San Anselmo, and Terence Daniel “Terry” Fautley of Santa Rosa; and his three granddaughters: Diana and Heather Harms of San Anselmo, and Brianna Fautley of Santa Rosa.
-A private family Celebration of his Life was held in Santa Rosa on April 4th for family and friends.","Gilbert Fautley OBITUARY
-
-Passed away on March 17, 2010 in Petaluma after a six year battle with Alzheimer’s disease. Gil was born in Detroit, Michigan on November 5, 1935 and came to Petaluma with his family in 1942. He was a retail clerk for 47 years in Petaluma. The last thirty years at the original Albertson’s (#720) on McDowell Blvd. before that, Carl’s Market and Purity Market. He also served in the Army. He was a devoted clerk and loved to work in retail, only retiring ten years ago when Albertson’s closed that store. He enjoyed collecting lead soldiers (Brittains), trains, “American Flyers”, model cars and gnomes! He was a loving husband to his wife Diane for 46 years and proud of his three children, Timothy Michael “Tim” Fautley of Larkfield, Christine Ann “Tina” Harms of San Anselmo, and Terence Daniel “Terry” Fautley of Santa Rosa; and his three granddaughters: Diana and Heather Harms of San Anselmo, and Brianna Fautley of Santa Rosa. A private family Celebration of his Life was held in Santa Rosa on April 4th for family and friends. If so desired memorial donations may be given to American Cancer Society Sonoma County, 1451 Guerneville Road, Suite 220, Santa Rosa, CA which has been so helpful to the family.",https://s0.wp.com/_si/?t=eyJpbWciOiJodHRwczpcL1wvczAud3AuY29tXC9pXC9ibGFuay5qcGciLCJ0eHQiOiJUaGUgUHJlc3MgRGVtb2NyYXQiLCJ0ZW1wbGF0ZSI6ImhpZ2h3YXkiLCJmb250IjoiIiwiYmxvZ19pZCI6MjQ1OTQ1OTM4fQ._WZVbQVoOcI0-Ds0fYKqUCIfMQXgsjtsbN2uQPmXNFAMQ&w=1200&h=630,N,,2026-04-24 21:00:17.901306
-ID15,Delta Airlines,2026-04-24 23:25:18+00:00,www.kulr8.com,Rocky Mountain College Aviation joins Delta Air Lines career path program - KULR-8,Not Available,,,,,https://www.kulr8.com/news/rocky-mountain-college-aviation-joins-delta-air-lines-career-path-program/article_3492a834-0557-4e44-b1ec-eea1b36586e5.html,"Rocky Mountain College's Aviation program just became a Delta Air Lines Propel affiliate, giving students a direct path to becoming Delta pilots.",Not Available,,N,,2026-04-24 20:07:26.334513
-ID6,AXA,2026-04-24 23:24:36+00:00,Morningstar,AXA World Funds - Global Responsible Aggregate ZI Capitalisation EUR LU2498149207,Not Available,,,,,https://global.morningstar.com/en-nd/investments/funds/F00001E8Q6/quote?marketID=no,"Get a detailed summary of AXA World Funds - Global Responsible Aggregate ZI Capitalisation EUR, including investment strategy, performance history, expert analysis, and key metrics. Stay informed to make smarter investment decisions.",Not Available,https://global.morningstar.com/favicon.ico,N,,2026-04-25 01:02:37.255231
-ID5,Albertsons,2026-04-24 23:20:47+00:00,ČSFD.cz,Frank Albertson | ČSFD.cz,Not Available,,,,,https://www.csfd.cz/sk/tvorca/92951-frank-albertson/,"Všetko o tvorcovi Frank Albertson: Filmografia, Biografia, Zaujímavosti, Videá, Galéria, Diskusia a ďalšie...",Not Available,https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/042/873/42873005_f4fafc.jpg,N,,2026-04-25 12:09:42.675797
-ID38,Pearson,2026-04-24 23:20:31+00:00,www.lse.co.uk,UK shareholder meetings calendar - next 7 days | Financial News,Not Available,,,,,https://www.lse.co.uk/news/uk-shareholder-meetings-calendar-next-7-days-ozkzzab173khscl.html,UK shareholder meetings calendar - next 7 days | Financial News,Not Available,https://static.lse.co.uk/images/logo-og.jpg,N,,2026-04-24 20:12:06.586853
-ID5,Albertsons,2026-04-24 23:19:43+00:00,www.msn.com,"Albertsons' opioid settlement widens Q4 GAAP loss, overshadows dividend, share repurchase hike",Not Available,,,,,http://www.msn.com/en-us/money/topstocks/albertsons-opioid-settlement-widens-q4-gaap-loss-overshadows-dividend-share-repurchase-hike/ar-AA20RJeV?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1&bundles=feat-es2020-c,Shares of Albertsons (ACI) were under pressure ahead of Tuesday's open as mixed fourth-quarter results—in which both sales and adjusted profits ...,Not Available,,N,,2026-04-24 21:00:22.572503
-ID32,Microsoft,2026-04-24 23:19:12+00:00,GeekWire,Tech Moves: Expedia names CFO; former Tune CEO leaves Roku; Amazon and Microsoft departures,"Lisa Stiffler, www.facebook.com",,,,,https://www.geekwire.com/2026/tech-moves-expedia-names-cfo-former-tune-ceo-leaves-roku-amazon-and-microsoft-departures/,"The Seattle-based travel giant hired Andersen from Snap, the company behind Snapchat, where he served as CFO for more than seven years.
-In announcing the news, Expedia CEO Ariane Gorin praised Andersen’s fit for the CFO role and thanked Schenkel, who previously served as CFO and interim CEO at eBay, for his impact.
-The Seattle-based executive was previously CEO of Tune, a mobile marketing startup, for more than a decade.
-Hamilton added that he’ll once again step into a CEO role, but did not say at which company.
-Amy Schmidt is executive director and chief HR officer, transitioning from the role of head of talent management.","— Expedia Group named Derek Andersen as its new chief financial officer starting May 11. He succeeds Scott Schenkel, who is stepping down after more than two years in the role.
-
-The Seattle-based travel giant hired Andersen from Snap, the company behind Snapchat, where he served as CFO for more than seven years. Before that, was Amazon’s vice president of finance, overseeing its global suite of video businesses, including Prime Video and Amazon Studios.
-
-Andersen said he’s looking forward to returning to Seattle to join Expedia.
-
-“The company has built strong assets, from its technology and consumer brands to one of the largest B2B businesses in the industry and is well positioned to shape the future of travel,” he said in a statement.
-
-In announcing the news, Expedia CEO Ariane Gorin praised Andersen’s fit for the CFO role and thanked Schenkel, who previously served as CFO and interim CEO at eBay, for his impact.
-
-— Peter Hamilton has left Roku, where he served as head of ad innovation for the streaming platform for more than four years. The Seattle-based executive was previously CEO of Tune, a mobile marketing startup, for more than a decade.
-
-“I came to Roku to see what it feels like to turn on innovation at massive scale, and I left better understanding the village of people that make it all possible,” he said in a LinkedIn post.
-
-Hamilton added that he’ll once again step into a CEO role, but did not say at which company.
-
-— Ann Johnson is leaving Microsoft after more than a decade, most recently serving as corporate vice president and executive security advisor. On May 4, the Seattle-based leader will become executive VP of Security (Identity & Fraud) Services at Mastercard.
-
-In a Q&A posted by Mastercard, Johnson described her work in cybersecurity as “purpose-driven” and said she was eager to join the company. In her new role, she’ll work to help secure commerce and financial transactions — “such an important part of the ecosystem,” she said.
-
-— Microsoft’s Annie Pearl has a new role as CVP of the Copilot product for Microsoft AI. Pearl previously led product, engineering and design for Azure Experiences and has been with the company for more than three years. She is based in San Francisco.
-
-— After more than 20 years with Amazon, Vidya Shastri left the company as a director of software development and is taking a career break. Shastri departed last year, but this week shared a lengthy post on Substack reflecting on his decades at the tech giant.
-
-Shastri said on LinkedIn that he had two mantras at Amazon: people first, then product, and nothing matters more than trust. “It’s the ‘virtuous cycle of trust’ that makes teams and organizations great, even in this era of downsizing and AI,” he said.
-
-— Judd Lee is now chief financial officer for Safe Software, a Surrey, B.C., data software company. Lee joins from BrightEdge, and was previously CFO at Seattle’s RealNetworks, Parallels and SignalSense. Safe Software also named Vanessa Ribreau as chief people officer.
-
-— Jake Oster, Amazon’s former director of energy, environment and sustainability policy, is now VP of sustainability policy and community relations for Oracle.
-
-“At Oracle Cloud Infrastructure, each AI data center is designed with the surrounding community’s future in mind and we are making investments in job creation, water infrastructure, and new sources of energy generation,” he said on LinkedIn, adding that he will remain in Seattle.
-
-— Gen. James Rainey, a retired four-star general from the U.S. Army, was welcomed as an advisor to Overland AI. The Seattle-based startup in February raised $100 million to meet demand for its autonomous ground vehicles used by the U.S. military.
-
-— Former Starbucks CEO Howard Schultz is joining the board of directors for Gopuff, a Philadelphia-based delivery app offering snacks and everyday essentials.
-
-— Jonathan Bricker, a Fred Hutch Cancer Center public health scientist, was awarded the institution’s Endowed Chair in Cancer Prevention. Bricker has helped develop tools to reduce cancer risk, including the AI-powered QuitBot app.
-
-— Pacific Northwest National Laboratory announced leadership changes:
-
-William “Bill” Pike is now deputy director for science and technology, previously having served as chief science and technology officer for PNNL’s National Security Directorate.
-
-Angela Becker-Dippmann is associate laboratory director for the Energy and Environment Directorate, having previously worked as director of EED’s Program Development Office.
-
-Amy Schmidt is executive director and chief HR officer, transitioning from the role of head of talent management.
-
-And in case you missed it, GeekWire reported some big tech moves earlier this week.
-
-— Amazon made two notable promotions:
-
-AWS infrastructure chief Prasad Kalyanaraman joined the S-team leadership group.
-
-Cloud computing and AI services leader Dave Brown was promoted to SVP.
-
-— LinkedIn announced two promotions as well:",https://cdn.geekwire.com/wp-content/uploads/2026/04/Derek-Andersen.jpg,N,,2026-04-24 20:11:03.817663
-ID20,FactSet,2026-04-24 23:12:58+00:00,www.msn.com,DR Horton stock rises on earnings beat. Have home builders hit bottom? - MSN,Not Available,,,,,https://www.msn.com/en-us/money/topstocks/home-builder-margins-haven-t-hit-bottom-yet-dr-horton-s-earnings-will-offer-clues/ar-AA21lwlg?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1&bundles=feat-es2020-t,"... FactSet. Revenue totaled $7.6 billion, down from $7.7 billion last year and in line with Wall Street's forecast. Pressure Washers Are Becoming ...",Not Available,,N,,2026-04-26 11:05:45.476014
