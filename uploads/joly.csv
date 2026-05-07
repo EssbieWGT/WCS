@@ -1,4 +1,176 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID36,OpenAI,2026-05-07 10:33:11+00:00,Fast Company,"Shop 'til you bot: Google, OpenAI, and the race to build agentic commerce - Fast Company",Elizabeth Segran,,,,,https://www.fastcompany.com/91533534/shop-til-you-bot-google-openai-and-the-race-to-build-agentic-commerce,"As we entered 2026, the retail industry’s newest buzzword was “agentic commerce,” which refers to AI agents shopping autonomously on the user’s behalf.
+“Nobody has figured it out, but everyone has FOMO,” says Emily Pfeiffer, principal analyst at Forrester, who covers AI and commerce.
+“Shopify has major egg on their face,” says Omar Qari, the CEO of Logicbroker, which helps brands feed product data into LLMs.
+It also has better access to product data.
+There’s currently a race to create a new standard to make retailers’ real-time product data readable by LLMs.","OpenAI’s false start and new vision
+
+Last year, as AI became the fastest-adopted technology in history, AI companies realized they needed to turn their attention to commerce. There’s a lot of money hanging in the balance. According to McKinsey, AI-driven commerce could generate $1 trillion in U.S. revenue and up to $5 trillion globally by 2030.
+
+As we entered 2026, the retail industry’s newest buzzword was “agentic commerce,” which refers to AI agents shopping autonomously on the user’s behalf. “Nobody has figured it out, but everyone has FOMO,” says Emily Pfeiffer, principal analyst at Forrester, who covers AI and commerce. “Everyone is prematurely rushing to market.”
+
+Case in point: The botched Instant Checkout roll-out. When they announced the checkout feature, Shopify and OpenAI had promised that millions of Shopify merchants would soon be shoppable from ChatGPT, alongside Etsy sellers and Walmart. A tiny fraction of the integrations were built.
+
+“Shopify has major egg on their face,” says Omar Qari, the CEO of Logicbroker, which helps brands feed product data into LLMs. “If you go back to late last year, OpenAI said, ‘We’ve solved it. We’re connecting all the world’s products inside ChatGPT and it’s going to be an amazing shopping experience.’ But they literally couldn’t even get it live.” (Shopify declined to comment on this story.)
+
+Neel Ajjarapu, who leads commerce at OpenAI, admits that building a checkout was more complex than the company had envisaged, and ultimately, merchants were best positioned to build these tools.
+
+“It’s not enough to have a basic checkout page,” says Ajjarapu. “You need to think about things like loyalty points, in-store pickup, basket promos, and dozens of features that are specific to the geography, category, and merchant type.”
+
+Rather than try to build all of that from scratch, OpenAI decided merchants should own checkout themselves. “Merchants are already optimized this part of the funnel,” says Ajjarapu. “We’re going to make it really easy for them to bring that into ChatGPT.”
+
+But even without Instant Checkout, consumers are already turning to ChatGPT for their shopping needs: According to Pew, roughly 2% of queries to the chatbot—about 50 million a day—are shopping related. Ajjarapu says that ChatGPT is good at helping users figure out how to buy products that require a lot of research, like electronics, appliances, and sports gear. OpenAI has every intention of transforming ChatGPT into the world’s personal shopper.
+
+“The goal is for ChatGPT to be a super assistant,” he says. “When it comes to shopping, it should be able to help you find products, optimize carts, and buy things. It will be able to help you discover things that you never knew before, but are tailored to your personal circumstances.”
+
+The Google advantage
+
+Predicting taste is precisely where ChatGPT is at a disadvantage. The chatbot only has access to information you share in conversations to tailor product recommendations to your needs and taste. But its biggest competitor—Gemini — has access to a much deeper trove of knowledge about you thanks to all the information you have shared with Google over the years.
+
+In March, Google rolled out a feature called Personal Intelligence, which lets Gemini’s 750 million active users tap into their data in Gmail, Photos, and Drive when answering queries. Once you give Google the permission to access this data, the model will know everything from your travel plans to which brands’ marketing emails you open. According to Google’s early projections, 75 million users had activated the feature.
+
+“Once the model has the opportunity to learn about you, it can start at a better point than starting from scratch and expecting that you will tell us everything about you,” Srinivasan says. “Because it is much easier to give Gemini five pictures of clothes you like than to describe your dressing style.”
+
+Without years of data about the people using ChatGPT, OpenAI is in a much weaker position. It must gather crumbs from the details you happen to share in your conversations.
+
+“ChatGPT is starting to learn so much more about you as a user, not just in your retail taste, but everything else happening in your life,” says Ajjarapu. “We can start using that data to help make extremely well-personalized recommendations that match your taste.”
+
+But user data isn’t Google’s only advantage. It also has better access to product data. The Shopping Graph—Google’s real-time database of product pricing, inventory, and merchant relationships—traces its origins back to Froogle, a shopping platform that Google launched in 2002. That graph has been refined, expanded, and integrated with every part of Google’s ad and merchant infrastructure ever since.
+
+“We’ve had decades of experience with the Shopping Graph,” says Vidhya Srinivasan, Google’s vice president and general manager of advertising and commerce. “We’ve invested a lot in having the repository of products that has the diversity of merchants, but more importantly, it’s updated every second, every minute of every day.”
+
+Building the plumbing of agentic shopping
+
+One reason AI companies have struggled so much to build shopping tools is that their underlying technology wasn’t designed for commerce. Large language models are trained by scraping the entire textual archive of the internet—learning to predict the next word in a sentence or the next fragment of code. This has proven remarkably effective for drafting a college term paper or writing an app.
+
+But a product page is different from a web page. A lot of crucial product information—like inventory, shipping costs, and when it launched—does not appear on websites. “OpenAI’s first attempt at trying to get products into ChatGPT was to screen-scrape Dick’s Sporting Goods or Ulta and show their products,” says Qari. “And you can’t blame them, because that’s how they trained the model.”
+
+AI companies now realize they need to build the plumbing for agentic commerce from scratch. There’s currently a race to create a new standard to make retailers’ real-time product data readable by LLMs.
+
+OpenAI and Stripe co-developed the Agentic Commerce Protocol (ACP), which they open-sourced last year. Google, Shopify, and a coalition of two dozen retailers and payment companies—including Etsy, Wayfair, Target, Walmart, Visa, Mastercard, and Stripe itself—launched the Universal Commerce Protocol (UCP) in January. UCP is more robust, since it can handle complicated things like scheduling and returns. But, for the moment, every brand and retailer is being told it needs to support both.
+
+In a sign that Gemini is pulling ahead of ChatGPT in retail, Google has been announcing a string of new features over the last few months. Real-time pricing and inventory are already live on Gemini, as are in-chat checkout via Google Pay. As of March, Gap became the first major fashion retailer to allow shoppers to complete a purchase entirely inside the chat and in April, Ulta Beauty announced it would be doing the same thing.
+
+What happens next
+
+Today, shopping via chatbot means you’re ultimately shopping via the tradition web, with tabs that mushroom on your screen. But a few years from now, it’s likely that the ingredients I need for dinner will be ordered the moment I share the recipe with my AI agent.
+
+Christmas gifts—which currently eat an entire December weekend—will be handled in the time it takes to drink a coffee: the agent knows that my mother likes gardening books, that my daughter’s best friend is obsessed with slime, that I always overspend on my husband and should probably have a hard limit.
+
+When a wedding comes up, the agent will see it on my calendar and suggest appropriate dresses I like. Some purchases I’ll sanction with a tap. Others will simply show up, correctly, without my having asked.
+
+The infrastructure to make this happen is being built slowly, in fits and starts, with the occasional embarrassing pullback. But there’s a lot of money on the table, which is incentivizing AI companies to pour resources into building shopping tools. Whoever builds the best agentic commerce platform is going to have the first mover advantage and lock in a generation of consumers.
+
+Right now, the smart money is on Google. It has both the merchant relationships and deep knowledge of users, if they opt in to Personal Intelligence. And the protocol that Gemini’s checkout runs on— UCP—looks like the stronger foundation.
+
+But as with everything in AI, things are moving fast. And OpenAI is not out of the race. And the field is changing so fast, nobody can call the winner yet.
+
+“Every couple months, we just see such massive changes to what our models are able to do,” says OpenAI’s Ajjarapu. It is impossible for me to predict what’s going to happen on what timeline.”","https://images.fastcompany.com/image/upload/f_webp,q_auto,c_fit,w_1024/wp-cms-2/2026/05/p-2-91533534-gemini.jpg",N,,2026-05-07 08:06:04.907233
+ID36,OpenAI,2026-05-07 10:31:22+00:00,Bloomberg.com,OpenAI Is So Yesterday — Even for SoftBank's Son - Bloomberg,Shuli Ren,,,,,https://www.bloomberg.com/opinion/articles/2026-05-06/openai-is-so-yesterday-even-for-softbank-s-son,"SoftBank Group Corp. founder Masayoshi Son is known for making audacious multibillion-dollar bets.
+Some acquisition deals, such as chip designer Arm Holdings Plc, have paid off nicely, while others, most notoriously WeWork Inc., became big flops.
+So what about OpenAI, by far Son’s largest investment?
+In March, the ChatGPT maker completed a historic funding round, raising $122 billion, with SoftBank promising to put in $30 billion more.
+Upon completion of this follow-on investment, the Japanese conglomerate will have deployed $64.6 billion into the AI startup, for about a 13% stake.","SoftBank Group Corp. founder Masayoshi Son is known for making audacious multibillion-dollar bets. Some acquisition deals, such as chip designer Arm Holdings Plc, have paid off nicely, while others, most notoriously WeWork Inc., became big flops. So what about OpenAI, by far Son’s largest investment?
+
+In March, the ChatGPT maker completed a historic funding round, raising $122 billion, with SoftBank promising to put in $30 billion more. Upon completion of this follow-on investment, the Japanese conglomerate will have deployed $64.6 billion into the AI startup, for about a 13% stake.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVwqaIiaAa5I/v1/1200x800.jpg,N,,2026-05-07 08:06:10.643081
+ID36,OpenAI,2026-05-07 10:03:15+00:00,www.marketplace.org,Elon Musk is in court arguing that OpenAI abandoned its nonprofit model - Marketplace,"Stephanie Hughes, Nancy Farghalli, Daisy Palacios, Daniel Shin, Jesús  Alvarado",,,,,https://www.marketplace.org/episode/2026/05/07/elon-musk-is-in-court-arguing-that-openai-abandoned-its-nonprofit-model,"Back in 2015, Elon Musk and Sam Altman got the idea to start a nonprofit AI lab to develop artificial general intelligence that benefits all humanity.
+All that is according to a complaint filed by Elon Musk, who has since parted ways with the organization.
+And now he is suing OpenAI, its CEO Sam Altman and its president Greg Brockman, saying they have abandoned the founding principles of the organization in pursuit of profits.
+They are currently facing off in federal court in the Northern District of California.
+Audio only, when Court is active.” from US District Court Northern District of California “Musk v. Altman Trial” from Wired","Back in 2015, Elon Musk and Sam Altman got the idea to start a nonprofit AI lab to develop artificial general intelligence that benefits all humanity. The lab would also make its technology open source, calling it OpenAI.
+
+All that is according to a complaint filed by Elon Musk, who has since parted ways with the organization. And now he is suing OpenAI, its CEO Sam Altman and its president Greg Brockman, saying they have abandoned the founding principles of the organization in pursuit of profits.
+
+They are currently facing off in federal court in the Northern District of California. Paresh Dave at Wired has been in the courtroom. He explains more on what the core of Musk's case is.
+
+More on this
+
+“Musk v. Altman. Audio only, when Court is active.” from US District Court Northern District of California
+
+“Musk v. Altman Trial” from Wired",https://img.apmcdn.org/80fd8b255ed5342e93568c4c15b5349fe1a28b29/widescreen/f7a292-20260506-musk-v-openai-2000.jpg,N,,2026-05-07 08:06:14.474149
+ID36,OpenAI,2026-05-07 09:15:34+00:00,Business Insider,Sam Altman's management style comes under the microscope at OpenAI trial - Business Insider,"Katherine Li, Kaja Whitehouse",,,,,https://www.businessinsider.com/openai-execs-testify-about-sam-altman-management-style-2026-5,"Witnesses at the OpenAI trial had criticisms about Sam Altman's management style.
+Shivon Zilis, a former OpenAI board member and the mother of four of Musk's children, took the stand as a live witness.
+The jury also heard video depositions from another former OpenAI board member and a former company executive.
+Jurors watched a recorded video deposition of Murati, who was also OpenAI's interim CEO after the board briefly ousted Sam Altman.
+Although the executives had disclosed the investment to the board, Zilis said the deal talk made her uneasy.","Witnesses at the OpenAI trial had criticisms about Sam Altman's management style.
+
+The high-stakes OpenAI trial, where Elon Musk is seeking more than $100 billion in compensation from OpenAI after accusing its founders of ""stealing"" a nonprofit, entered its seventh day on Wednesday.
+
+Shivon Zilis, a former OpenAI board member and the mother of four of Musk's children, took the stand as a live witness. The jury also heard video depositions from another former OpenAI board member and a former company executive.
+
+Many of the criticisms raised by witnesses emerged during Altman's brief ouster as CEO in 2023, but the trial is resurfacing them.
+
+In a recent blog post following a New Yorker article questioning Altman's honesty, the OpenAI CEO wrote that he is ""not proud of being conflict-averse,"" which caused ""great pain"" for OpenAI and led to a ""huge mess for the company.""
+
+Here is what three witnesses said about working with Altman while at OpenAI.
+
+Sam Altman 'told people what they wanted to hear,' ex-OpenAI exec tells jury
+
+The first witness was Mira Murati, OpenAI's former chief technology officer and now founder of her own AI shop, Thinking Machines Lab.
+
+Jurors watched a recorded video deposition of Murati, who was also OpenAI's interim CEO after the board briefly ousted Sam Altman.
+
+Murati's testimony focused on her concerns about Altman's ""difficult and chaotic"" management style. She said Altman had trouble ""making decisions on big controversial things."" He also had a habit of telling people what they wanted to hear.
+
+""My concern was about Sam saying one thing to one person and a completely different thing to another person, and that makes it a very difficult and chaotic environment to work with,"" said Murati.
+
+Murati said that her issue with Altman was not about safety, ""it is about Sam creating chaos.""
+
+She said she supported Altman's return to OpenAI because the company ""was at catastrophic risk of falling apart"" at the time of his ousting. ""I was concerned about the company completely blowing up.""
+
+Zilis also took issue with Altman's communication
+
+Zilis said she was upset that Altman rolled out ChatGPT without involving the board.
+
+""It wasn't just me but the entire board raised concern about that whole thing happening without any board communication,"" she said.
+
+Zilis said she was also concerned about a potential OpenAI deal with a nuclear energy startup called Helion Energy because both Altman and Greg Brockman were investors.
+
+Although the executives had disclosed the investment to the board, Zilis said the deal talk made her uneasy.
+
+It ""felt super out of left field,"" she said. ""How is it the case that we want to place a major bet on a speculative technology?""
+
+Another board member said she learned more about ChatGPT from Twitter
+
+In a video deposition, Helen Toner, a former member of OpenAI's board who resigned in 2023, said she first became aware of ChatGPT's release when an OpenAI employee asked another board member whether the board was aware of the development.
+
+The researcher described that she then started seeing screenshots of ChatGPT on Twitter, and the board knew little about it. When asked if she was surprised, Toner said: ""No, because I was used to the board not being very informed about things.""
+
+Toner also elaborated on why the board, including herself, voted to remove Altman as CEO in 2023.
+
+""There were a number of things — the pattern of behavior related to his honesty and candor, his resistance of board oversight, as well as the concerns that two os his inner management team raised to the board about his management practices, his manipulation of board processes,"" said Toner.",https://i.insider.com/69fbb5d1e1443b8dc48e2954?width=1200&format=jpeg,N,,2026-05-07 08:06:22.296893
+ID9,BNY Mellon,2026-05-07 08:53:37+00:00,Coinpedia Fintech News,BNY Expands Crypto Custody Push to Abu Dhabi as UAE's Digital Asset Race Heats Up,Debashree Patra,,,,,https://coinpedia.org/news/bny-expands-crypto-custody-push-to-abu-dhabi-as-uaes-digital-asset-race-heats-up/amp/,"The Wall Street giant is expanding its digital asset custody business into Abu Dhabi through partnerships with Finstreet and ADI Foundation.
+BNY Is Going Bigger on Crypto This is another sign that traditional finance is moving deeper into blockchain infrastructure.
+According to him, BNY wants to help connect traditional finance with digital assets through regulated infrastructure.
+It gives institutions confidence to safely manage crypto assets with the same standards used for traditional financial products.
+As one of the biggest names in traditional finance, its move adds major credibility to Abu Dhabi’s ambition of becoming a global hub for regulated digital finance.","BNY, the world’s largest custodian bank with nearly $59 trillion in assets under custody and administration, is making a bigger move into crypto. The Wall Street giant is expanding its digital asset custody business into Abu Dhabi through partnerships with Finstreet and ADI Foundation.
+
+As per the report, the new initiative will operate inside Abu Dhabi Global Market (ADGM), one of the Middle East’s fastest-growing crypto and blockchain hubs. Initially, the focus will be on custody services for Bitcoin and Ethereum, but the plan is to later expand into stablecoins and tokenized assets.
+
+BNY Is Going Bigger on Crypto
+
+This is another sign that traditional finance is moving deeper into blockchain infrastructure. BNY was already the first major U.S. global systemically important bank to launch digital asset custody services, and now it’s taking that business into one of the world’s most crypto-friendly regions.
+
+Hani Kablawi, Executive Vice Chair at BNY, said the UAE is entering a “new phase of financial development” driven by stronger digital connectivity and deeper capital markets. According to him, BNY wants to help connect traditional finance with digital assets through regulated infrastructure.
+
+Why Abu Dhabi? The ADGM Advantage
+
+A big reason behind the move is regulation. Unlike many regions still figuring out crypto laws, ADGM has spent years building a clear framework for digital assets through its Financial Services Regulatory Authority (FSRA).
+
+For a 240-year-old bank like BNY, legal clarity matters. It gives institutions confidence to safely manage crypto assets with the same standards used for traditional financial products.
+
+The Bigger Play: Tokenization
+
+This expansion is not just about storing Bitcoin and Ethereum. The real opportunity is tokenization, putting real-world assets like real estate, bonds, and private equity on blockchain networks.
+
+By working with ADI Chain infrastructure, BNY is positioning itself for a future where trading, settlement, and custody all happen on-chain in one regulated ecosystem.
+
+What This Means for Crypto
+
+BNY’s arrival in the UAE signals a “domino effect” for other global banks. As one of the biggest names in traditional finance, its move adds major credibility to Abu Dhabi’s ambition of becoming a global hub for regulated digital finance.
+
+The UAE is no longer just attracting crypto startups; it’s now becoming a serious destination for trillion-dollar institutional players.",https://image.coinpedia.org/wp-content/uploads/2025/12/09183406/Circle-Secures-Full-Regulatory-License-in-Abu-Dhabi-Expands-UAE-Presence.webp,N,,2026-05-07 08:06:01.104371
+ID36,OpenAI,2026-05-07 08:49:03+00:00,YouTube,Ex-OpenAI CTO Mira Murati Testifies Sam Altman Pit OpenAI Leaders Against Each Other ...,Not Available,,,,,https://www.youtube.com/watch?v=J6pSZI0saAA,"Former OpenAI chief technology officer Mira Murati testified via video on Wednesday in the trial between Elon Musk and OpenAI, describing a dishonest leaders...",Not Available,https://i.ytimg.com/vi/J6pSZI0saAA/maxresdefault.jpg,N,,2026-05-07 08:06:30.195442
 ID1,Accor,2026-05-07 08:48:07+00:00,TRAICY Global,American Express and Accor Launch New Points Partnership for ALL Accor,Editorial Department,,,,,https://en.traicy.com/posts/2026050735290/,"American Express and Accor are launching a new partnership.
 American Express Membership Rewards points can now be converted to ALL Accor, Accor’s loyalty program.
 The conversion rate is 3,500 points = 1,000 ALL Accor points for members enrolled in Membership Rewards Plus, and 7,000 points = 1,000 ALL Accor points for those who are not enrolled.
@@ -17156,239 +17328,3 @@ The companies also plan to integrate Uber rides into Expedia’s app, allowing t
 Uber also introduced “Travel Mode,” a new feature that offers recommendations for restaurants, activities and reservations, along with delivery options for hotel stays. The company said the tool is designed to act as a ""personal travel concierge.""
 
 Additional features include “Shop for Me,” which allows users to request items from stores not listed on the app, and “Voice Bookings,” an artificial intelligence-powered tool that lets users request rides using conversational prompts. A redesigned search function will also allow users to look up rides, food and retail items in one place.",https://media.cbs8.com/assets/CCT/images/aa045b87-436d-4d6c-8129-da47a1e6a84f/aa045b87-436d-4d6c-8129-da47a1e6a84f_1140x641.jpg,N,,2026-04-30 09:12:39.757490
-ID47,Uber,2026-04-30 12:01:04+00:00,investor.uber.com,Hertz and Uber Partner to Power Autonomous Robotaxi and Driver-Led Fleet Operations,Not Available,,,,,https://investor.uber.com/news-events/news/press-release-details/2026/Hertz-and-Uber-Partner-to-Power-Autonomous-Robotaxi-and-Driver-Led-Fleet-Operations/default.aspx,"Hertz and Uber announce two strategic fleet partnerships, accelerating Hertz’s growth into new mobility vectors through Oro Mobility and advancing Uber’s autonomous robotaxi and driver-led strategic fleet services.
-As one of the world’s largest vehicle fleet operators, Hertz established Oro Mobility (Oro) to provide integrated fleet management solutions across a range of mobility segments.
-Autonomous Robotaxi Fleet Management Oro will support Uber’s autonomous robotaxi program of Lucid vehicles equipped with Nuro AV technology, providing day-to-day vehicle asset management, including charging, maintenance, repairs, cleaning, and depot staffing.
-About Oro Mobility Oro Mobility (Oro) is a separate operating affiliate of Hertz Global Holdings, Inc., established to expand the company's presence in mobility channels beyond its core rental business.
-About Hertz Hertz Global Holdings, Inc. is one of the world’s leading car rental and mobility solutions providers.","Hertz Global Holdings, Inc.’s (NASDAQ: HTZ) affiliated operating company, Oro Mobility, and Uber Technologies, Inc. (NYSE: UBER) today announced two strategic fleet partnerships, accelerating Hertz’s growth into new mobility vectors and advancing Uber’s autonomous robotaxi and driver-led strategic fleet services.
-
-Hertz and Uber announce two strategic fleet partnerships, accelerating Hertz’s growth into new mobility vectors through Oro Mobility and advancing Uber’s autonomous robotaxi and driver-led strategic fleet services.
-
-As one of the world’s largest vehicle fleet operators, Hertz established Oro Mobility (Oro) to provide integrated fleet management solutions across a range of mobility segments. As the industry transitions from personally owned vehicles to commercially operated driver-led and autonomous fleets, Oro aims to fill a critical orchestration and operations gap. Backed by Hertz’s core strengths in fleet and facility management, large-scale logistics, and vehicle maintenance, Oro is designed to manage and service fleets reliably, efficiently, and at scale.
-
-Through its partnerships with Uber, Oro will deliver scalable operational and maintenance services across both autonomous and driver‑led operations in key U.S. markets, reflecting the breadth of the companies’ collaboration across multiple mobility models.
-
-Autonomous Robotaxi Fleet Management
-
-Oro will support Uber’s autonomous robotaxi program of Lucid vehicles equipped with Nuro AV technology, providing day-to-day vehicle asset management, including charging, maintenance, repairs, cleaning, and depot staffing. Services are expected to launch in the San Francisco Bay Area later this year, as Hertz and Uber explore expansion opportunities in 2027.
-
-Driver-Led Fleet Management
-
-Oro has also partnered with Uber to offer strategic fleet services on the Uber platform, utilizing a fleet of high-quality, well‑maintained vehicles operated by Oro‑employed drivers. The model better enables Uber to meet increasing rider demand with a seamless customer experience, while demonstrating Hertz’s ability to deliver turnkey fleet solutions at scale. Following a successful pilot in Atlanta last year, Oro is now also active on the Uber platform in Los Angeles and San Francisco, with Northern New Jersey expected to launch this spring.
-
-“Hertz has spent over a century mastering complex fleet operations at scale, and Oro is how we put that expertise to work in the next era of mobility,” said Gil West, CEO at Hertz. “This partnership with Uber establishes Oro as an integrated solution that connects demand with scalable fleet management services. Through this work, we’re deepening our capabilities across diverse mobility use cases, and positioning Hertz to play a significant role as the industry evolves.”
-
-""Partnering with Hertz's Oro Mobility will help us continue to bring the best autonomous technology onto the Uber platform and accelerate the transition to a hybrid network in which both driver-led and autonomous rideshare operations can scale and serve communities reliably and efficiently,"" said Andrew Macdonald, President and COO of Uber. ""By combining Uber's global platform and marketplace leadership with Oro's dedicated fleet management expertise, we are well-equipped to meet increasing rideshare demand and deliver a seamless, high-quality rider experience across the entire mobility ecosystem.""
-
-This announcement builds on Hertz and Uber’s long-standing rideshare rental partnership, through which Hertz operates one of the largest rideshare rental fleets in the world. Oro represents the next phase of the companies’ collaboration and reflects Hertz’s strategy to diversify beyond its core Rent-A-Car business and build capabilities that will be central to managing more complex fleets, whether driver-led or autonomous.
-
-About Oro Mobility
-
-Oro Mobility (Oro) is a separate operating affiliate of Hertz Global Holdings, Inc., established to expand the company's presence in mobility channels beyond its core rental business. Designed as the critical ownership, orchestration, and operations layer between autonomous technology, vehicles, and demand platforms, Oro delivers integrated fleet management solutions for both driver-led and autonomous vehicles. For more information about Oro, visit www.oromobility.com.
-
-About Hertz
-
-Hertz Global Holdings, Inc. is one of the world’s leading car rental and mobility solutions providers. Its subsidiaries, including The Hertz Corporation, and licensees operate the Hertz, Dollar, Thrifty, and Firefly vehicle rental brands, with approximately 11,000 rental locations in 160 countries around the globe. The Company also operates the Hertz Car Sales brand, which offers a range of quality, competitively priced used cars for sale online and at locations across the United States, and the Hertz 24/7 car-sharing business in Europe. For more information about Hertz, visit www.hertz.com.
-
-About Uber
-
-Uber’s mission is to create opportunity through movement. We started in 2010 to solve a simple problem: how do you get access to a ride at the touch of a button? More than 72 billion trips later, we’re building products to get people closer to where they want to be. By changing how people, food, and things move through cities, Uber is a platform that opens up the world to new possibilities.
-
-Forward-Looking Statements:
-
-This press release contains forward-looking statements regarding Uber and Hertz’s expectations relating to the commercial partnership described herein. These statements are based on current expectations and assumptions and are subject to risks and uncertainties that could cause actual results to differ materially. Forward-looking statements include statements that are not historical facts and may be identified by words such as “expect,” “plan,” “anticipate,” “intend,” “may,” “will,” and similar expressions and the negatives of those terms. Risks and uncertainties include, among others, the ability of the parties to implement the partnership as expected, realize anticipated benefits, economic, financial, social or political conditions that could adversely affect us, and other factors beyond our control. For additional information on risks and uncertainties, please see Uber and Hertz's filings with the SEC, including each of their most recent Annual Reports on Form 10-K and subsequent 10-Qs and other filings filed with the SEC from time to time. Each of Uber and Hertz undertake no obligation to update any forward-looking statements except as required by law.
-
-Source: Uber Technologies, Inc.",https://mms.businesswire.com/media/20260430845957/en/2790078/4/Hertz_Oro_Uber.jpg,N,,2026-04-30 09:12:42.777644
-ID19,Eli Lilly,2026-04-30 11:54:44+00:00,CNBC,"Eli Lilly CEO David Ricks on Q1 results, Zepbound-Mounjaro sales growth and launch of ...",Not Available,,,,,https://www.cnbc.com/video/2026/04/30/eli-lilly-ceo-david-ricks-on-q1-results-zepbound-mounjaro-sales-growth-and-launch-of-foundayo-pill.html,"CNBC’s Angelica Peebles and Eli Lilly CEO David Ricks join 'Squawk Box' to discuss the company's quarterly earnings results, Mounjaro and Zepbound sales growth, launch of the company's GLP-1 pill Foundayo, M&A outlook, and more.",Not Available,https://image.cnbcfm.com/api/v1/image/108299829-17775490031777548999-45610785768-1080pnbcnews.jpg?v=1777549002&w=1920&h=1080,N,,2026-04-30 09:10:41.544719
-ID43,Societe Generale,2026-04-30 11:48:09+00:00,www.ft.com,French lenders miss out on trading boom powering Wall Street banks - Financial Times,Sarah White,,,,,https://www.ft.com/content/17ddd0e0-6484-4467-ae6d-ac3f149da23a?syn-25a6b1a6=1,"Try unlimited access Only $1 for 4 weeks Then $75 per month.
-Complete digital access to quality FT journalism on any device.
-Check whether you already have access via your university or organisation.
-Terms & Conditions apply For individuals Discover all the plans currently available in your country For multiple readers Digital access for organisations.
-Includes exclusive features and content.","Try unlimited access
-
-Only $1 for 4 weeks
-
-Then $75 per month. Complete digital access to quality FT journalism on any device. Cancel anytime during your trial.
-
-Check whether you already have access via your university or organisation.
-
-Terms & Conditions apply
-
-For individuals
-
-Discover all the plans currently available in your country
-
-For multiple readers
-
-Digital access for organisations. Includes exclusive features and content.",https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ff64f7e9c-e1ab-4f24-aadf-710297963a95.jpg?source=next-barrier-page,N,,2026-04-30 09:12:04.681959
-ID19,Eli Lilly,2026-04-30 11:37:48+00:00,BioSpace,"Lilly CEO shades amylin rivals AbbVie, Pfizer in cutthroat battle for obesity's next act","Annalee Armstrong, www.biospace.com, annalee-armstrong",,,,,https://www.biospace.com/drug-development/lilly-ceo-shades-amylin-rivals-abbvie-pfizer-in-cutthroat-battle-for-obesitys-next-act,"Eli Lilly CEO David Ricks has fired a shot across the bow to aspiring weight loss competitors like AbbVie and Pfizer with amylin assets under development.
-Eloralintide is a selective amylin receptor agonist, which differs from rival products, which are dual amylin and calcitonin receptor agonists (DACRA)—hitting two receptors.
-“There’s a receptor in that family that they all hit that causes some GI that’s the calcitonin receptor.
-The company is eyeing a combination approach with its blockbuster tirzepatide—marketed as Zepbound for weight loss and Mounjaro for diabetes—to boost weight loss.
-And we know with rapid weight loss, you do see loss of bone density,” Thakker said.","Eli Lilly CEO David Ricks has fired a shot across the bow to aspiring weight loss competitors like AbbVie and Pfizer with amylin assets under development. Lilly has “dialed out” a key hormone receptor in its molecule to drive better efficacy without side effects—something the rival companies have not done, according to Ricks.
-
-The scientific tit-for-tat began Monday, when Ricks, appearing on a podcast with investment company Woodline Partners, said his company’s up-and-coming obesity drug eloralintide is better than its rivals because of a heavy bias for amylin. A Phase 2 trial showed that eloralintide is biased 12-1 for amylin and just 1 to calcitonin, which Ricks suggested drives higher weight loss.
-
-This pathway has become the next big thing in the obesity pipeline. The amylin hormone is involved in satiation and control of food intake.
-
-Eloralintide is a selective amylin receptor agonist, which differs from rival products, which are dual amylin and calcitonin receptor agonists (DACRA)—hitting two receptors.
-
-“There’s a receptor in that family that they all hit that causes some GI that’s the calcitonin receptor. We pushed that out,” Ricks explained on the podcast. That way, the drug should avoid common gastrointestinal side effects and require less complex titration.
-
-Lilly has already achieved 20% weight loss at 48 weeks with eloralintide in a Phase 2 clinical trial, results Ricks said will lead to the drug becoming a major product. The company is eyeing a combination approach with its blockbuster tirzepatide—marketed as Zepbound for weight loss and Mounjaro for diabetes—to boost weight loss. Eloralintide has now moved on to a registrational Phase 3 trial.
-
-AbbVie’s executives were asked to respond to Rick’s dismissal of the dual amylin approach during a first quarter earnings call on Wednesday. The company’s weight loss work is still early days, with ABBV-295 in Phase 1 testing.
-
-Chief Scientific Officer Roopal Thakker argued that the calcitonin receptor has benefits to bone health and that this could be a key asset to AbbVie’s approach
-
-“That could be very important for women, especially as they get older. And we know with rapid weight loss, you do see loss of bone density,” Thakker said. “At this stage, we see this as a potential advantage because of the efficacy and tolerability that we’ve seen to date.”
-
-The current trial mostly enrolls men with BMIs around 29, in which Thakker told analysts that ABBV-295 has shown “substantial” weight loss. AbbVie plans to conduct scans throughout testing to monitor for bone preservation. Future testing will include more woman, bringing the gender ratio closer to 50/50.
-
-Besides AbbVie, companies such as Novo Nordisk, Pfizer and Structure Therapeutics are also developing DACRA molecules.
-
-Amylin has not been an easy target. Another Big Pharma aspiring to tap into the obesity market, Roche, recently suffered a blow to its plans as the Zealand Pharma–partnered asset petrelintide achieved just 9% weight loss at 42 weeks in a Phase 2 trial. CEO Thomas Schinecker, however, stood by the asset on the company’s first quarter earnings call last week, insisting that the drug has a future as “it’s so tolerable.”",https://static.biospace.com/dims4/default/55a5c9e/2147483647/strip/true/crop/3864x2174+0+201/resize/1440x810!/quality/90/?url=https%3A%2F%2Fk1-prod-biospace.s3.us-east-2.amazonaws.com%2Fbrightspot%2Ff1%2Fb1%2Fd144c7f74f3ab271f9ab4a15e973%2Fistock-1573643594.jpg,N,,2026-04-30 09:10:48.446889
-ID48,UniCredit,2026-04-30 11:18:27+00:00,UniCredit’s Takeover Gamble Hits a Regulatory Roadblock as Commerzbank Digs In,UniCredit's Takeover Gamble Hits a Regulatory Roadblock as Commerzbank Digs In,Not Available,,,,,https://www.ad-hoc-news.de/boerse/news/ueberblick/unicredit-s-takeover-gamble-hits-a-regulatory-roadblock-as-commerzbank/69263678,"Andrea Orcel is playing the long game, but the Italian banker’s aggressive push for Commerzbank has just run into an unexpected obstacle.
-BaFin warned that any wilful breach of the order could trigger a fine, citing its powers under Germany’s securities acquisition and takeover act.
-May D-Day Approaches UniCredit intends to table its formal takeover bid on 5 May, the day after its extraordinary general meeting.
-Bank of America raised its price target to €42 with a buy rating, arguing that even in a standalone scenario, the bank holds significant value through to 2030.
-Ad Commerzbank Stock: New Analysis - 30 April Fresh Commerzbank information released.","Andrea Orcel is playing the long game, but the Italian banker’s aggressive push for Commerzbank has just run into an unexpected obstacle. Germany’s financial watchdog, BaFin, has ordered UniCredit to pull a series of social media ads that painted the Frankfurt-based lender as “neglected,” “unsafe,” and “short-term oriented” while touting its own credentials as “strong” and “leading.” The regulator’s intervention, formalised in a 24 April ruling, marks a rare regulatory clampdown in the midst of a hostile takeover battle.
-
-The ads are now offline, but the damage to UniCredit’s public relations effort may already be done. BaFin warned that any wilful breach of the order could trigger a fine, citing its powers under Germany’s securities acquisition and takeover act. For Orcel, the setback is more than a slap on the wrist — it complicates his narrative just weeks before he plans to fire the starting gun on a formal offer.
-
-May D-Day Approaches
-
-UniCredit intends to table its formal takeover bid on 5 May, the day after its extraordinary general meeting. The offer will take the form of a share swap, with the exchange ratio pegged to the volume-weighted three-month average price of both stocks. Orcel told the Frankfurter Allgemeine Zeitung that the process is now unstoppable, though he left the door open to improving terms if negotiations continue. Should the bid fail, he made clear that UniCredit would remain on the shareholder register as a critical investor.
-
-The Italian lender already holds 26.77 per cent of Commerzbank’s shares directly, with derivatives pushing its economic exposure to 29.99 per cent — just a whisker below the 30 per cent threshold that would trigger a mandatory offer for all remaining shareholders.
-
-Should investors sell immediately? Or is it worth buying Commerzbank?
-
-Frankfurt Fires Back
-
-Commerzbank’s management continues to reject the approach, criticising UniCredit for failing to provide concrete details on integration costs or timelines. Chief executive Bettina Orlopp is racing to craft a standalone defence, with an updated strategy and medium-term financial targets due on 8 May, when the bank also releases its first-quarter results.
-
-The numbers are expected to show a bank that can go it alone. Management has set a net profit target of €4.2 billion by 2028, underpinned by cost cuts and higher fee income. But those savings come with a human cost. In February, Commerzbank announced plans to eliminate 3,900 full-time positions by 2028. Now, according to reports, that figure could rise. Works council chief Sascha Uebel acknowledged that further redundancies are likely as part of the strategic overhaul, though he argued they would be far less severe than under UniCredit’s ownership.
-
-Berlin, which still holds a 12 per cent stake, is reportedly scouting for a “white knight” to fend off the Italian advance — though no saviour has yet emerged.
-
-Market Sentiment Cools, but Floor Holds
-
-The euphoria that lifted Commerzbank’s shares in recent weeks has faded slightly. The stock slipped around 3 per cent on Thursday to €34.38, though it remains up roughly 13 per cent over the past 30 days and trades well above its 200-day moving average. The relative strength index sits at 80, signalling a heavily overbought condition.
-
-Commerzbank at a turning point? This analysis reveals what investors need to know now.
-
-Analysts remain broadly bullish. Bank of America raised its price target to €42 with a buy rating, arguing that even in a standalone scenario, the bank holds significant value through to 2030. Deutsche Bank’s Benjamin Goy pegs fair value at €40, pointing to what he calls the “UniCredit put” — the bid prospect effectively floors the share price.
-
-The coming days will bring clarity. UniCredit’s formal offer lands on 5 May, followed three days later by Commerzbank’s quarterly numbers and strategic update. For Orlopp, 8 May is the moment to prove that independence is not just a slogan — it is a better bet for shareholders than a tie-up with Milan.
-
-Ad
-
-Commerzbank Stock: New Analysis - 30 April
-
-Fresh Commerzbank information released. What's the impact for investors? Our latest independent report examines recent figures and market trends.",https://mdb.ad-hoc-news.de/bild/bild-2576977_1200_800.webp,N,,2026-04-30 12:33:30.934690
-ID32,Microsoft,2026-04-30 11:18:18+00:00,YouTube,"Musk lawsuit against Altman, Microsoft gets heated; seeks to revert OpenAI to non-profit",Not Available,,,,,https://www.youtube.com/watch?v=OgMfUu0uN7o,Elon Musk's lawsuit against OpenAI got heated on Wednesday with the former business partners showing little affection for one another. The exchanges came on ...,Not Available,https://i.ytimg.com/vi/OgMfUu0uN7o/maxresdefault.jpg,N,,2026-04-30 13:22:49.086793
-ID19,Eli Lilly,2026-04-30 11:15:54+00:00,www.prnewswire.com,"Lilly reports first-quarter 2026 financial results, raises full year guidance, and highlights ...",Eli Lilly,,,,,https://www.prnewswire.com/news-releases/lilly-reports-first-quarter-2026-financial-results-raises-full-year-guidance-and-highlights-momentum-of-new-medicines-302758113.html,"The Q1 2026 reported and non-GAAP EPS included $0.52 of acquired IPR&D charges compared to $1.72 in Q1 2025.
-Key Products revenue in the Immunology, Oncology, and Neuroscience therapeutic areas grew 160% in Q1 2026 compared to Q1 2025.
-EPS in Q1 2026 and Q1 2025 included acquired IPR&D charges of $0.52 and $1.72, respectively.
-Non-GAAP EPS in Q1 2026 and Q1 2025 included acquired IPR&D charges of $0.52 and $1.72, respectively.
-The company's 2026 financial guidance (other than revenue) is provided on a non-GAAP basis, as described in ""2026 Financial Guidance"" above.","Revenue in Q1 2026 increased 56% to $19.8 billion primarily driven by volume growth, partially offset by lower realized prices from Mounjaro and Zepbound.
-
-Q1 2026 EPS increased by 170% to $8.26 on a reported basis and increased by 156% to $8.55 on a non-GAAP basis. The Q1 2026 reported and non-GAAP EPS included $0.52 of acquired IPR&D charges compared to $1.72 in Q1 2025.
-
-Increased 2026 full-year revenue guidance to be in the range of $82.0 billion to $85.0 billion and non-GAAP EPS guidance to be in the range of $35.50 to $37.00.
-
-Regulatory progress included U.S. FDA approval of Foundayo (orforglipron) for adults with obesity, or overweight with weight-related medical problems.
-
-Pipeline progress included positive Phase 3 results from Foundayo (orforglipron) in adults with type 2 diabetes and obesity or overweight at increased cardiovascular risk, Jaypirca in combination with venetoclax and rituximab in relapsed or refractory CLL or SLL, Taltz and Zepbound used together for adults with psoriasis and obesity or overweight, and retatrutide in type 2 diabetes.
-
-Business development activity included the agreements to acquire Orna Therapeutics, Centessa Pharmaceuticals plc., Kelonia Therapeutics, and Ajax Therapeutics.
-
-Company announces planned Investment Community Meeting for December 7, 2026
-
-INDIANAPOLIS, April 30, 2026 /PRNewswire/ -- Eli Lilly and Company (NYSE: LLY) today announced its financial results for the first quarter of 2026 and provided updated 2026 financial guidance.
-
-""2026 is off to a strong start, we delivered 56% revenue growth in the first quarter and raised our full-year revenue guidance by $2 billion,"" said David A. Ricks, Lilly chair and CEO. ""A key milestone was the U.S. FDA approval of Foundayo—the only approved GLP-1 pill that can be taken any time of day, without food and water restrictions. Foundayo will meaningfully expand the number of people who can benefit from GLP-1s. We also delivered pipeline progress across all four therapeutic areas and continued investing in Lilly's future growth through four acquisitions.""
-
-Financial Results
-
-A discussion of the non-GAAP financial measures is included below under ""Reconciliation of GAAP Reported to Selected Non-GAAP Adjusted Information (Unaudited).""
-
-First-Quarter Reported Results
-
-In Q1 2026, worldwide revenue was $19.8 billion, an increase of 56% compared with Q1 2025, driven by a 65% increase in volume, partially offset by a 13% decrease due to lower realized prices. Key Products1 revenue grew to $13.4 billion in Q1 2026, led by Mounjaro and Zepbound. Key Products revenue in the Immunology, Oncology, and Neuroscience therapeutic areas grew 160% in Q1 2026 compared to Q1 2025.
-
-Revenue in the U.S. increased 43% to $12.1 billion, driven by a 49% increase in volume, partially offset by a 7% decrease due to lower realized prices. The increase in U.S. volume was driven by Zepbound and Mounjaro and the decline in realized prices was primarily driven by Zepbound and Taltz.
-
-Revenue outside the U.S. increased 81% to $7.7 billion, driven by a 95% increase in volume, partially offset by a 25% decrease due to lower realized prices. The lower realized prices outside the U.S. were driven primarily by the addition of Mounjaro to the National Reimbursed Drug List (NRDL) in China. The volume increase outside the U.S. was driven by Mounjaro. Jardiance revenue outside the U.S. included one-time benefits of $250 million in Q1 2026 compared to $370 million in Q1 2025, associated with the company's collaboration with Boehringer Ingelheim.
-
-Gross margin increased 54% to $16.2 billion in Q1 2026. Gross margin as a percent of revenue was 81.9%, a decrease of 0.6 percentage points versus the same quarter last year. The change was primarily driven by lower realized prices.
-
-In Q1 2026, research and development expenses increased 28% to $3.5 billion, or 18% of revenue, driven by continued investments in the company's early and late-stage portfolio.
-
-Marketing, selling, and administrative expenses increased 19% to $2.9 billion in Q1 2026, primarily driven by promotional efforts supporting ongoing and planned launches.
-
-In Q1 2026, the company recognized acquired in-process research and development (IPR&D) charges of $584 million compared with $1.6 billion in Q1 2025. The Q1 2025 charges primarily related to the acquisition of Scorpion Therapeutics, Inc.'s PI3Kα inhibitor program STX-478.
-
-Asset impairment, restructuring and other special charges of $279 million in Q1 2026 were primarily related to litigation matters. In Q1 2025, there was a charge of $35 million related to intangible asset impairments.
-
-The effective tax rate was 16.4% in Q1 2026 compared with 20.2% in Q1 2025, primarily driven by the unfavorable tax impact of a non-deductible acquired IPR&D charge in Q1 2025. The 2026 and 2025 effective tax rates were impacted by net discrete tax benefits in each period.
-
-In Q1 2026, net income and earnings per share (EPS) were $7.4 billion and $8.26, respectively, compared with net income of $2.8 billion and EPS of $3.06 in Q1 2025. EPS in Q1 2026 and Q1 2025 included acquired IPR&D charges of $0.52 and $1.72, respectively.
-
-First-Quarter Non-GAAP Measures
-
-On a non-GAAP basis, Q1 2026 gross margin increased 54% to $16.4 billion. Gross margin as a percent of revenue was 82.6%, a decrease of 0.9 percentage points versus the same quarter last year. The change was primarily driven by lower realized prices.
-
-The non-GAAP effective tax rate was 16.5% in Q1 2026 compared with 20.2% in Q1 2025, primarily driven by the unfavorable tax impact of a non-deductible acquired IPR&D charge in Q1 2025. The 2026 and 2025 effective tax rates were impacted by net discrete tax benefits in each period.
-
-On a non-GAAP basis, Q1 2026 net income and EPS were $7.7 billion and $8.55, respectively, compared with net income of $3.0 billion and EPS of $3.34 in Q1 2025. Non-GAAP EPS in Q1 2026 and Q1 2025 included acquired IPR&D charges of $0.52 and $1.72, respectively.
-
-For further detail on non-GAAP measures, see the reconciliation below as well as the ""Reconciliation of GAAP Reported to Selected Non-GAAP Adjusted Information (Unaudited)"" table later in this press release.
-
-Selected Revenue Highlights
-
-Mounjaro
-
-For Q1 2026, worldwide Mounjaro revenue increased 125% to $8.7 billion. U.S. revenue was $4.2 billion, an increase of 59%, reflecting strong demand, partially offset by lower realized prices. Lower realized prices were partially offset by a favorable one-time adjustment to estimates for rebates and discounts in Q1 2026. Revenue outside the U.S. increased to $4.4 billion compared with $1.2 billion in Q1 2025, primarily driven by volume growth, partially offset by lower realized prices driven by the addition of Mounjaro to the NRDL within the China market.
-
-Zepbound
-
-For Q1 2026, U.S. Zepbound revenue increased 79% to $4.1 billion, compared with $2.3 billion in Q1 2025, primarily driven by strong demand, partially offset by lower realized prices, including previously announced reductions in cash pay prices. Lower realized prices were partially offset by a favorable one-time adjustment to estimates for rebates and discounts in Q1 2026.
-
-Lilly shared numerous updates recently on key regulatory, clinical, business development and other events, including:
-
-For information on important public announcements, visit the news section of Lilly's website.
-
-2026 Financial Guidance
-
-In addition to providing guidance for GAAP revenue, Lilly provides guidance for certain non-GAAP measures.
-
-The following table summarizes the company's updated full-year 2026 non-GAAP financial guidance, reflecting the strong revenue performance in Q1:
-
-Webcast of Conference Call
-
-As previously announced, investors and the general public can access a live webcast of the Q1 2026 financial results conference call through a link on Lilly's website at investor.lilly.com/webcasts-and-presentations. The conference call will begin at 10 a.m. Eastern time today and will be available for replay via the website.
-
-Non-GAAP Financial Measures
-
-Certain financial information is presented on both a reported and a non-GAAP basis. Some numbers in this press release may not add due to rounding. Reported results were prepared in accordance with U.S. generally accepted accounting principles (GAAP) and include all revenue and expenses recognized during the periods. Historical non-GAAP measures reflect adjustments for the items described in the reconciliation tables later in the release. Related materials provide certain GAAP and non-GAAP figures excluding the impact of foreign exchange rates. Lilly recalculates current period figures on a constant currency basis by keeping constant the exchange rates from the base period. The company's 2026 financial guidance (other than revenue) is provided on a non-GAAP basis, as described in ""2026 Financial Guidance"" above. Non-GAAP measures are presented to provide additional insights into the underlying trends in the company's business.
-
-About Lilly
-
-Lilly is a medicine company turning science into healing to make life better for people around the world. We've been pioneering life-changing discoveries for nearly 150 years, and today our medicines help tens of millions of people across the globe. Harnessing the power of biotechnology, chemistry and genetic medicine, our scientists are urgently advancing new discoveries to solve some of the world's most significant health challenges: redefining diabetes care; treating obesity and curtailing its most devastating long-term effects; advancing the fight against Alzheimer's disease; providing solutions to some of the most debilitating immune system disorders; and transforming the most difficult-to-treat cancers into manageable diseases. With each step toward a healthier world, we're motivated by one thing: making life better for millions more people. That includes delivering innovative clinical trials that reflect the diversity of our world and working to ensure our medicines are accessible and affordable. To learn more, visit Lilly.com and Lilly.com/news. F-LLY
-
-Cautionary Statement Regarding Forward-Looking Statements
-
-This press release and the related attachments contain management's intentions and expectations for the future, all of which are forward-looking statements within the meaning of Section 27A of the Securities Act of 1933 and Section 21E of the Securities Exchange Act of 1934. The words ""estimate"", ""project"", ""intend"", ""expect"", ""believe"", ""target"", ""plan"", ""anticipate"", ""may"", ""could"", ""aim"", ""seek"", ""will"", ""continue"", and similar expressions are intended to identify forward-looking statements. Actual results may differ materially due to various factors. The following include some but not all of the factors that could cause actual results or events to differ from those anticipated, including the significant costs and uncertainties in the pharmaceutical research and development process, including with respect to the timing and process of obtaining regulatory approvals and the ability of the company's clinical trials to meet expectations; the impact and uncertain outcome of acquisitions and business development transactions and related costs; intense competition affecting the company's products, pipeline, or industry; market uptake of launched products and indications; continued pricing pressures and the impact of actions of governmental and private actors affecting pricing of, reimbursement for, and patient access to pharmaceuticals, or reporting obligations related thereto; the implementation of our voluntary agreement with the U.S. government related to drug pricing and access; Developments or uncertainties related to our or competitive products, including as may relate to safety or efficacy concerns; dependence on relatively few products or product classes for a significant percentage of the company's total revenue and a consolidated supply chain; the expiration of intellectual property protection for certain of the company's products and competition from generic and biosimilar products; the company's ability to protect and enforce patents and other intellectual property and changes in patent law or regulations related to data package exclusivity; information technology system inadequacies, inadequate controls or procedures, security breaches, or operating failures; unauthorized access, disclosure, misappropriation, or compromise of confidential information or other data stored in the company's information technology systems, networks, and facilities, or those of third parties with whom the company shares its data and violations of data protection laws or regulations; issues with product supply, regulatory approvals, or other negative outcomes stemming from manufacturing difficulties, disruptions, or shortages, including as a result of unpredictability and variability in demand, labor shortages, third-party performance, quality, cyber-attacks, or regulatory actions related to the company's and third-party facilities; reliance on third-party relationships and outsourcing arrangements; the use of artificial intelligence or other emerging technologies in various facets of the company's operations, including partnerships related to the use of, or the sharing of such technologies with third parties, which may exacerbate competitive, regulatory, litigation, cybersecurity, and other risks; the impact of global macroeconomic conditions, including uneven economic growth or downturns or uncertainty, trade and other global disputes and interruptions, including related to tariffs, trade protection measures, and similar restrictions, international tension, conflicts, regional dependencies, or other costs, uncertainties, and risks related to engaging in business globally; fluctuations in foreign currency exchange rates, changes in interest rates and inflation or deflation; significant and sudden declines or volatility in the trading price of the company's common stock and market capitalization; litigation, investigations, or other similar proceedings involving past, current, or future products, activities, or intellectual property; changes in tax law and regulations, tax rates, or events that differ from our assumptions related to tax positions; regulatory changes, developments, and uncertainty; regulatory oversight and actions regarding the company's operations and products; regulatory compliance problems or government investigations; risks from the proliferation of counterfeit, misbranded, adulterated, or illegally compounded products; actual or perceived deviation from environmental-, social-, or governance-related requirements or expectations; asset impairments and restructuring charges; and changes in accounting and reporting standards. For additional information about the factors that could cause actual results or events to differ materially from forward-looking statements, please see the company's latest Form 10-K and subsequent Forms 8-K and 10-Q filed with the Securities and Exchange Commission. You should not place undue reliance on forward-looking statements contained in this press release and the related attachments, which, except as otherwise noted, speak only as of the date of this release. Except as is required by law, the company expressly disclaims any obligation to publicly release any revisions to forward-looking statements contained in this press release and the related attachments to reflect events or circumstances after the date of this release.
-
-Website Information
-
-The information contained on, or that may be accessed through, our website or any third-party website is not incorporated by reference into, and is not a part of, this earnings release.
-
-Trademarks and Trade Names
-
-All trademarks or trade names referred to in this press release are the property of the company, or, to the extent trademarks or trade names belonging to other companies are referenced in this press release, the property of their respective owners. Solely for convenience, the trademarks and trade names in this press release are referred to without the ® and ™ symbols, but such references should not be construed as any indicator that the company or, to the extent applicable, their respective owners will not assert, to the fullest extent under applicable law, the company's or their rights thereto. We do not intend the use or display of other companies' trademarks and trade names to imply a relationship with, or endorsement or sponsorship of us by, any other companies.
-
-SOURCE Eli Lilly and Company",https://mma.prnewswire.com/media/133140/eli_lilly_and_company_logo.jpg?p=facebook,N,,2026-04-30 09:10:54.067533
-ID19,Eli Lilly,2026-04-30 11:11:06+00:00,www.investing.com,Eli Lilly raises annual profit forecast as GLP-1 drugs fuel growth By Reuters - Investing.com,Not Available,,,,,https://www.investing.com/news/stock-market-news/eli-lilly-raises-annual-profit-forecast-on-sustained-weightloss-drug-demand-4648662,"Lilly's once-daily oral weight-loss drug, Foundayo, was launched earlier this month and was prescribed 3,707 times in the U.S. in the week ended April ...",Not Available,,N,,2026-04-30 09:11:26.286540
