@@ -1,4 +1,117 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID35,Nvidia,2026-05-11 10:03:37+00:00,WIRED,CUDA Proves Nvidia Is a Software Company | WIRED,Sheon Han,,,,,https://www.wired.com/story/cuda-proves-nvidia-is-a-software-company/,"He created a programming language called Brook, was hired by Nvidia, and, with John Nickolls, led the development of CUDA.
+But even a kitchen with 30 grilling stations won’t run any faster without a capable head chef deftly assigning tasks—as CUDA does for GPU cores.
+Its engineers went below this already deep layer of abstraction to work directly in PTX, a kind of assembly language for Nvidia GPUs.
+Nvidia’s edge in software might be that, unusual for a chip company, it hires more software engineers than hardware engineers.
+While it’s easy to brush it off as a failing chipmaker, its recent history reveals it’s also a failing software company.","Forgive me for starting with a cliché, a piece of finance jargon that has recently slipped into the tech lexicon, but I’m afraid I must talk about “moats.” Popularized decades ago by Warren Buffett to refer to a company’s competitive advantage, the word found its way into Silicon Valley pitch decks when a memo purportedly leaked from Google, titled “We Have No Moat, and Neither Does OpenAI,” fretted that open-source AI would pillage Big Tech’s castle.
+
+A few years on, the castle walls remain safe. Apart from a brief bout of panic when DeepSeek first appeared, open-source AI models have not vastly outperformed proprietary models. Still, none of the frontier labs—OpenAI, Anthropic, Google—has a moat to speak of.
+
+The company that does have a moat is Nvidia. CEO Jensen Huang has called it his most precious “treasure.” It is not, as you might assume for a chip company, a piece of hardware. It’s something called CUDA. What sounds like a chemical compound banned by the FDA may be the one true moat in AI.
+
+CUDA technically stands for Compute Unified Device Architecture, but much like laser or scuba, no one bothers to expand the acronym; we just say “KOO-duh.” So what is this all-important treasure good for? If forced to give a one-word answer: parallelization.
+
+Here’s a simple example. Let’s say we task a machine with filling out a 9×9 multiplication table. Using a computer with a single core, all 81 operations are executed dutifully one by one. But a GPU with nine cores can assign tasks so that each core takes a different column—one from 1×1 to 1×9, another from 2×1 to 2×9, and so on—for a ninefold speed gain. Modern GPUs can be even cleverer. For example, if programmed to recognize commutativity—7×9 = 9×7—they can avoid duplicate work, reducing 81 operations to 45, nearly halving the workload. When a single training run costs a hundred million dollars, every optimization counts.
+
+Nvidia’s GPUs were originally built to render graphics for video games. In the early 2000s, a Stanford PhD student named Ian Buck, who first got into GPUs as a gamer, realized their architecture could be repurposed for general high-performance computing. He created a programming language called Brook, was hired by Nvidia, and, with John Nickolls, led the development of CUDA. If AI ushers in the age of a permanent white-collar underclass and autonomous weapons, just know that it would all be because someone somewhere playing Doom thought a demon’s scrotum should jiggle at 60 frames per second.
+
+CUDA is not a programming language in itself but a “platform.” I use that weasel word because, not unlike how The New York Times is a newspaper that’s also a gaming company, CUDA has, over the years, become a nested bundle of software libraries for AI. Each function shaves nanoseconds off single mathematical operations—added up, they make GPUs, in industry parlance, go brrr.
+
+A modern graphics card is not just a circuit board crammed with chips and memory and fans. It’s an elaborate confection of cache hierarchies and specialized units called “tensor cores” and “streaming multiprocessors.” In that sense, what chip companies sell is like a professional kitchen, and more cores are akin to more grilling stations. But even a kitchen with 30 grilling stations won’t run any faster without a capable head chef deftly assigning tasks—as CUDA does for GPU cores.
+
+To extend the metaphor, hand-tuned CUDA libraries optimized for one matrix operation are the equivalent of kitchen tools designed for a single job and nothing more—a cherry pitter, a shrimp deveiner—which are indulgences for home cooks but not if you have 10,000 shrimp guts to yank out. Which brings us back to DeepSeek. Its engineers went below this already deep layer of abstraction to work directly in PTX, a kind of assembly language for Nvidia GPUs. Let’s say the task is peeling garlic. An unoptimized GPU would go: “Peel the skin with your fingernails.” CUDA can instruct: “Smash the clove with the flat of a knife.” PTX lets you dictate every sub-instruction: “Lift the blade 2.35 inches above the cutting board, make it parallel to the clove’s equator, and strike downward with your palm at a force of 36.2 newtons.”
+
+You can begin to see why CUDA is so valuable to Nvidia—and so hard for anyone else to touch. Tuning GPU performance is a gnarly problem. You can’t just conscript some tender-footed undergrad on Market Street, hand them a Claude Max plan, and expect them to hack GPU kernels. Writing at this level is a grindsome enterprise—unless you’re a cracker-jack programmer at DeepSeek.
+
+A disclosure: In previous Machine Readable columns, I was already familiar with the languages I was analyzing. Not so here. In the interest of maintaining this standard, I decided to spend a day with CUDA. It ruined my afternoon.
+
+A simple matrix multiplication that usually takes me three lines in PyTorch—a popular machine-learning framework—took me 50-plus lines in CUDA. Wringing out the last drop of performance, it turns out, is an admirable but tedious business. Having dipped my toe in the moat, I can report that it is indeed deep and forbidding.
+
+CUDA’s dominance is built not just on the quality of its ecosystem but on a lock-in effect. Because modern machine-learning frameworks are built on CUDA, which crucially runs on Nvidia chips, AMD’s chips underperform even when they have more cores and memory. Comparing chips by spec sheets is like comparing race cars by cylinder count, whereas real performance can only be measured on the track.
+
+A second disclosure: I intended to benchmark two chips, but there was no way to expense an Nvidia H100 and an AMD MI300X without landing on Condé Nast’s blacklist. Instead, you will have to take the word of independent researchers who found that even with better specs on paper, AMD was outmatched by Nvidia.
+
+Nvidia’s edge in software might be that, unusual for a chip company, it hires more software engineers than hardware engineers. If I were running AMD, I might follow suit. (But who’s asking me?)
+
+Every year, there are new hopefuls attempting to drain Nvidia’s moat, only to drown in it. OpenCL, an open standard backed by a consortium that included Apple, AMD, and Qualcomm, was a kind of Android manqué to CUDA’s iOS. It barely gained traction.
+
+Meanwhile, AMD’s answer to CUDA, ROCm, is an even worse name than CUDA—is it pronounced “rock cum”? (Forget about hiring more programmers—get a new marketing team.) It has also has been so plagued by bugs and compatibility issues that its subreddit reads like a support group.
+
+Let’s not forget Intel. While it’s easy to brush it off as a failing chipmaker, its recent history reveals it’s also a failing software company. In a last spasm at relevance, it launched oneAPI, but as of 2026, we know for dead sure that CUDA still reigns. If there’s any challenger, it’s Modular, led by Chris Lattner, the legendary language designer who counts among his creations Apple’s Swift and LLVM.
+
+But the open secret is that, much as theoretical physicists cannot change a tire to save their lives, most AI researchers can’t so much as write a single line of C++. There are very few good GPU kernel engineers alive, and many of them are employed by Nvidia. Long before AI researchers started trafficking in clout, these engineers were diligently working on CUDA without kudos. Even trusty coding agents still hobble through kernel code.","https://media.wired.com/photos/69fb095746deb466a6e86080/191:100/w_1280,c_limit/WRD_CUDA_FINAL_RGB.png",N,,2026-05-11 07:16:00.305222
+ID32,Microsoft,2026-05-11 09:13:01+00:00,Quartz,"Microsoft pauses carbon credit buying, rattles market - Quartz",qz.com,,,,,https://qz.com/microsoft-pauses-carbon-credit-buying,Microsoft’s halt on new carbon removal purchases shakes the young carbon market as AI growth and regulation reshape future demand,Not Available,"https://qz.com/cdn-cgi/image/width=1200,quality=85,format=auto/api/media/file/02068e4c-80e7-42ed-b5fa-7d511cb65b67-300x201.jpg",N,,2026-05-11 07:15:55.978433
+ID35,Nvidia,2026-05-11 08:50:46+00:00,www.eenewseurope.com,NVIDIA and ServiceNow extend AI governance from desktops to data centres,Not Available,,,,,https://www.eenewseurope.com/en/nvidia-and-servicenow-extend-ai-governance-from-desktops-to-data-centres/,ServiceNow is expanding its partnership with NVIDIA to bring governance and security controls to autonomous AI agents running across enterprise ...,Not Available,,N,,2026-05-11 07:16:31.900510
+ID19,Eli Lilly,2026-05-11 08:15:47+00:00,MarketScreener,Eli Lilly To Acquire Kelonia Therapeutics | MarketScreener,Acquiremedia,,,,,https://www.marketscreener.com/news/eli-lilly-to-acquire-kelonia-therapeutics-ce7f5bd8df8ef623,"On April 20, 2026, Eli Lilly & Company (“Lilly”) and Kelonia Therapeutics, Inc. (“Kelonia”) announced an agreement for Lilly to acquire Kelonia in an all-cash transaction expected to close in the second half of 2026.
+Under the terms of the agreement, Kelonia shareholders will receive an upfront payment of $3.25 billion and a possible total of $7 billion dependent on the achievement of certain clinical, regulatory, and commercial milestones.
+Kelonia, a clinical-stage biotechnology company, has developed a lentiviral-based system capable of delivering transgenes selectively to T-cells.
+This proprietary gene placement system, iGPS®, enables a patient's body to generate chimeric antigen receptor T-cells (CAR-T) in vivo for the treatment of cancer.
+Goodwin Procter is legal counsel for Kelonia in this transaction.","On April 20, 2026, Eli Lilly & Company (“Lilly”) and Kelonia Therapeutics, Inc. (“Kelonia”) announced an agreement for Lilly to acquire Kelonia in an all-cash transaction expected to close in the second half of 2026. Under the terms of the agreement, Kelonia shareholders will receive an upfront payment of $3.25 billion and a possible total of $7 billion dependent on the achievement of certain clinical, regulatory, and commercial milestones.
+
+Kelonia, a clinical-stage biotechnology company, has developed a lentiviral-based system capable of delivering transgenes selectively to T-cells. This proprietary gene placement system, iGPS®, enables a patient's body to generate chimeric antigen receptor T-cells (CAR-T) in vivo for the treatment of cancer. Kelonia's lead program, KLN-1010, an anti-BCMA (B-cell maturation antigen) CAR-T therapy, is currently being evaluated in a Phase I trial enrolling patients with relapsed and refractory multiple myeloma (RRMM).
+
+Goodwin Procter is legal counsel for Kelonia in this transaction.
+
+Darlene Staines
+
+Goodwin Procter LLP
+
+The New York Times Building
+
+620 Eighth Avenue
+
+New York
+
+NY 10018
+
+UNITED STATES
+
+Tel: 212813 8800
+
+E-mail: rmertz@goodwinlaw.com
+
+URL: www.goodwinlaw.com",https://www.marketscreener.com/images/twitter_MS_fdblanc.png,N,,2026-05-11 07:15:42.565967
+ID42,S&P Global,2026-05-11 08:12:30+00:00,www.ft.com,Coal shipments jump as countries seek alternatives to disrupted gas supplies - Financial Times,"Leslie Hook, Alice Hancock, Owen Walker",,,,,https://www.ft.com/content/94346fc1-ab8b-4113-98dd-0045bddb391f?syn-25a6b1a6=1,"Try unlimited access Only $1 for 4 weeks Then $75 per month.
+Complete digital access to quality FT journalism on any device.
+Check whether you already have access via your university or organisation.
+Terms & Conditions apply For individuals Discover all the plans currently available in your country For multiple readers Digital access for organisations.
+Includes exclusive features and content.","Try unlimited access
+
+Only $1 for 4 weeks
+
+Then $75 per month. Complete digital access to quality FT journalism on any device. Cancel anytime during your trial.
+
+Check whether you already have access via your university or organisation.
+
+Terms & Conditions apply
+
+For individuals
+
+Discover all the plans currently available in your country
+
+For multiple readers
+
+Digital access for organisations. Includes exclusive features and content.",https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa657eaf6-f31a-4d26-952a-7cab2b275cb8.jpg?source=next-barrier-page,N,,2026-05-11 07:16:36.159351
+ID19,Eli Lilly,2026-05-11 06:54:17+00:00,medwatch.com,Novo Nordisk loses China momentum: Analysts point out Eli Lilly's special advantage,Not Available,,,,,https://medwatch.com/News/Pharma___Biotech/article19284232.ece,"I want to receive customized email newsletters from Watch Medier A/S , including information about our brands and group companies , conferences, courses, networking, competitions and digital services.
+With my consent, I also agree to the processing of my personal data and that information about my interaction with marketing messages (such as opening and reading) is collected using tracking pixels and similar technologies.
+Read more in our privacy policy and cookie policy .
+Consent can always be revoked via the unsubscribe link in newsletters.","I want to receive customized email newsletters from
+
+Watch Medier A/S
+
+, including information about
+
+our brands and group companies
+
+, conferences, courses, networking, competitions and digital services. With my consent, I also agree to the processing of my personal data and that information about my interaction with marketing messages (such as opening and reading) is collected using tracking pixels and similar technologies. Read more in our
+
+privacy policy
+
+and
+
+cookie policy
+
+. Consent can always be revoked via the unsubscribe link in newsletters.",https://imgproxy.watchmedier.dk/tRUBxbuLMcD5b86ENHpjCoE2nfSD8erjEnoO-pvX1Lc/resize:fill:960:0:0/plain/https%3A%2F%2Fphotos.watchmedier.dk%2FImages%2F19281542%2F5mbv5u%2FALTERNATES%2Fschema-16_9%2Fchina-healthweightloss,N,,2026-05-11 07:15:45.615441
 ID7,Barclays,2026-05-11 05:51:54+00:00,www.thebanker.com,Are Revolut's days of big profits behind it? - The Banker,Sally Hickey,,,,,https://www.thebanker.com/content/1d150ef8-711e-4c78-a98f-6f180da6c549,"In recent years, Revolut has seemed unstoppable.
 With profits soaring, customer numbers continuing to climb and revenues compounding, the group has outgunned many of its competitors around the world.
 Revolut Group has more customers than Monzo, Starling, N26, Bunq, Wise and Remitly combined, according to JPMorgan, and its ambitions are bigger still.
@@ -4233,6 +4346,221 @@ Discover all the plans currently available in your country
 For multiple readers
 
 Digital access for organisations. Includes exclusive features and content.",https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fc4918c83-7545-4847-a61b-dc666c1fed7e.jpg?source=next-barrier-page,N,,2026-05-08 05:01:07.371649
+ID47,Uber,2026-05-08 06:43:30+00:00,simplywall.st,Uber Expands Mobility Platform With SpotHero Deal And Autonomous Partnerships,Simply Wall St,,,,,https://simplywall.st/stocks/us/transportation/nyse-uber/uber-technologies/news/uber-expands-mobility-platform-with-spothero-deal-and-autono-1,"Advertisement United States / Transportation / NYSE:UBER Uber Expands Mobility Platform With SpotHero Deal And Autonomous Partnerships May 08, 2026 Uber Technologies (NYSE:UBER) is acquiring parking platform SpotHero in a $600m deal, expanding its core Mobility offering.
+The company is ramping up its autonomous vehicle plans through large new supply agreements with Rivian and Lucid, alongside a supporting investment.
+For investors following NYSE:UBER, the $600m SpotHero deal and the scale of new autonomous vehicle commitments represent a meaningful expansion of what the platform could cover over time.
+Head to Simply Wall St's Key Considerations 📊 The US$600m SpotHero deal plus Rivian and Lucid agreements push Uber further into infrastructure and autonomous supply.
+Alternatively, email editorial-team@simplywallst.com About NYSE:UBER Uber Technologies Develops and operates proprietary technology applications in the United States, Canada, Latin America, Europe, the Middle East, Africa, and the Asia Pacific.","Advertisement
+
+United States
+
+/
+
+Transportation
+
+/
+
+NYSE:UBER
+
+Uber Expands Mobility Platform With SpotHero Deal And Autonomous Partnerships
+
+May 08, 2026
+
+Uber Technologies (NYSE:UBER) is acquiring parking platform SpotHero in a $600m deal, expanding its core Mobility offering.
+
+The company is ramping up its autonomous vehicle plans through large new supply agreements with Rivian and Lucid, alongside a supporting investment.
+
+The moves broaden Uber's role in transportation infrastructure, beyond ride hailing and delivery, into parking and future mobility.
+
+Uber Technologies, trading at $76.73, sits at the center of app based transport with a mix of ride hailing, delivery, and related services. The stock shows a 2.8% return over the past week and a 7.0% return over the past month, with longer term returns of 99.7% over three years and 72.5% over five years. Recent performance year to date and over one year has been weaker, with returns of 7.4% and 6.8% declines. This context may shape how investors view new capital deployment decisions.
+
+For investors following NYSE:UBER, the $600m SpotHero deal and the scale of new autonomous vehicle commitments represent a meaningful expansion of what the platform could cover over time. These steps indicate an effort to control more of the transportation value chain, from parking to vehicle supply, which may influence how you think about Uber's risk profile, capital allocation priorities, and potential growth drivers.
+
+Stay updated on the most important news stories for by adding it to your or . Alternatively, explore our to discover new perspectives on Uber Technologies.
+
+Advertisement
+
+Investor Checklist
+
+Quick Assessment
+
+✅ Price vs Analyst Target: At US$76.73 versus a consensus target of about US$104.94, the stock trades roughly 27% below analyst expectations.
+
+✅ Simply Wall St Valuation: Simply Wall St currently views the shares as undervalued, trading about 55.6% below its estimated fair value.
+
+✅ Recent Momentum: The stock has returned about 7.0% over the past 30 days, which is positive into this news.
+
+There is only one way to know the right time to buy, sell or hold Uber Technologies. Head to Simply Wall St's
+
+Key Considerations
+
+📊 The US$600m SpotHero deal plus Rivian and Lucid agreements push Uber further into infrastructure and autonomous supply. This could change how you think about its Mobility earnings mix over time.
+
+📊 Watch how capital spend on parking and autonomous partnerships interacts with the current P/E of about 18.3 versus the Transportation industry average of about 40.6.
+
+⚠️ Profit margins of 15.9% are lower than last year and recent results included large one off items. Tracking margin trends alongside this heavier investment phase is important.
+
+Dig Deeper
+
+For the full picture including more risks and rewards, check out the . Alternatively, you can check out the to see how other investors believe this latest news will impact the company's narrative.
+
+This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.
+
+New: AI Stock Screener & Alerts
+
+Our new AI Stock Screener scans the market every day to uncover opportunities.
+
+• Dividend Powerhouses (3%+ Yield)
+
+• Undervalued Small Caps with Insider Buying
+
+• High growth Tech and AI Companies
+
+Or build your own from over 50 metrics.
+
+Explore Now for Free
+
+Have feedback on this article? Concerned about the content? Get in touch with us directly. Alternatively, email editorial-team@simplywallst.com
+
+About NYSE:UBER
+
+Uber Technologies
+
+Develops and operates proprietary technology applications in the United States, Canada, Latin America, Europe, the Middle East, Africa, and the Asia Pacific.
+
+Very undervalued with excellent balance sheet.
+
+Advertisement
+
+Weekly Picks
+
+ST
+
+stuart_roberts on Upside Gold · 2 months ago
+
+An Undervalued 3.3Moz Gold Project in Canada
+
+Fair Value:CA$5.0768.0 % undervalued
+
+284 followersusers have followed this narrative
+
+·
+
+1 commentusers have commented on this narrative
+
+·
+
+41 likesusers have liked this narrative
+
+GO
+
+GoldenSands on QuantumScape · 2 months ago
+
+QuantumScape: A Mispriced Deep‑Tech Inflection Point With Multi‑Billion‑Dollar Optionality
+
+Fair Value:US$8591.3 % undervalued
+
+92 followersusers have followed this narrative
+
+·
+
+1 commentusers have commented on this narrative
+
+·
+
+23 likesusers have liked this narrative
+
+TO
+
+Tokyo on Anheuser-Busch InBev · 7 days ago
+
+EU#8 - Anheuser-Busch InBev: Courage, Capital, and the Discipline to Build an Empire
+
+Fair Value:€89.4524.2 % undervalued
+
+7 followersusers have followed this narrative
+
+·
+
+3 commentsusers have commented on this narrative
+
+·
+
+3 likesusers have liked this narrative
+
+OS
+
+oscargarcia on Amazon.com · 8 days ago
+
+The capitalist colossus that makes your parcels magically appear, powers half the internet, and knows your shopping habits.
+
+Fair Value:US$2803.2 % undervalued
+
+62 followersusers have followed this narrative
+
+·
+
+1 commentusers have commented on this narrative
+
+·
+
+2 likesusers have liked this narrative
+
+Popular Narratives
+
+GO
+
+GoldenSands on QuantumScape · 2 months ago
+
+QuantumScape: A Mispriced Deep‑Tech Inflection Point With Multi‑Billion‑Dollar Optionality
+
+Fair Value:US$8591.3 % undervalued
+
+92 followersusers have followed this narrative
+
+·
+
+1 commentusers have commented on this narrative
+
+·
+
+23 likesusers have liked this narrative
+
+KI
+
+Kingman1152 on NVIDIA · 22 days ago
+
+NVIDIA will see a profit margin surge of 55% in the next 5 years
+
+Fair Value:US$305.230.7 % undervalued
+
+68 followersusers have followed this narrative
+
+·
+
+2 commentsusers have commented on this narrative
+
+·
+
+24 likesusers have liked this narrative
+
+AN
+
+AnalystConsensusTarget on Microsoft · 6 days ago
+
+Analyst Commentary Highlights Microsoft AI Momentum and Upward Valuation Amid Growth and Competitive Risks
+
+Fair Value:US$561.9325.1 % undervalued
+
+1396 followersusers have followed this narrative
+
+·
+
+2 commentsusers have commented on this narrative
+
+·
+
+12 likesusers have liked this narrative",https://images.simplywall.st/asset/company-cover/144524848-main-header/1756256222441,N,,2026-05-08 04:01:19.963059
 ID32,Microsoft,2026-05-08 06:43:30+00:00,simplywall.st,"How Record AI Revenue, 40% Azure Growth And Massive Capex At Microsoft (MSFT) Have ...",Simply Wall St,,,,,https://simplywall.st/stocks/us/software/nasdaq-msft/microsoft/news/how-record-ai-revenue-40-azure-growth-and-massive-capex-at-m,"Advertisement United States / Software / NasdaqGS:MSFT How Record AI Revenue, 40% Azure Growth And Massive Capex At Microsoft (MSFT) Have Changed Its Investment Story May 08, 2026 In late April 2026, Microsoft reported fiscal third‑quarter results showing revenue of US$82.89 billion and net income of US$31.78 billion, alongside an AI business now exceeding a US$37 billion annual revenue run rate and Azure growth of 40%.
 We’ll now examine how this combination of very high AI‑driven growth and sharply higher capex reshapes Microsoft’s existing investment narrative.
 Advertisement Microsoft Investment Narrative Recap To own Microsoft today, you need to believe that its AI and cloud engines can grow fast enough to justify unprecedented capital spending while preserving profitability.
@@ -4454,221 +4782,6 @@ Fair Value:US$561.9325.1 % undervalued
 ·
 
 12 likesusers have liked this narrative",https://images.simplywall.st/asset/company-cover/21835-main-header/1756191612247,N,,2026-05-08 07:03:46.788699
-ID47,Uber,2026-05-08 06:43:30+00:00,simplywall.st,Uber Expands Mobility Platform With SpotHero Deal And Autonomous Partnerships,Simply Wall St,,,,,https://simplywall.st/stocks/us/transportation/nyse-uber/uber-technologies/news/uber-expands-mobility-platform-with-spothero-deal-and-autono-1,"Advertisement United States / Transportation / NYSE:UBER Uber Expands Mobility Platform With SpotHero Deal And Autonomous Partnerships May 08, 2026 Uber Technologies (NYSE:UBER) is acquiring parking platform SpotHero in a $600m deal, expanding its core Mobility offering.
-The company is ramping up its autonomous vehicle plans through large new supply agreements with Rivian and Lucid, alongside a supporting investment.
-For investors following NYSE:UBER, the $600m SpotHero deal and the scale of new autonomous vehicle commitments represent a meaningful expansion of what the platform could cover over time.
-Head to Simply Wall St's Key Considerations 📊 The US$600m SpotHero deal plus Rivian and Lucid agreements push Uber further into infrastructure and autonomous supply.
-Alternatively, email editorial-team@simplywallst.com About NYSE:UBER Uber Technologies Develops and operates proprietary technology applications in the United States, Canada, Latin America, Europe, the Middle East, Africa, and the Asia Pacific.","Advertisement
-
-United States
-
-/
-
-Transportation
-
-/
-
-NYSE:UBER
-
-Uber Expands Mobility Platform With SpotHero Deal And Autonomous Partnerships
-
-May 08, 2026
-
-Uber Technologies (NYSE:UBER) is acquiring parking platform SpotHero in a $600m deal, expanding its core Mobility offering.
-
-The company is ramping up its autonomous vehicle plans through large new supply agreements with Rivian and Lucid, alongside a supporting investment.
-
-The moves broaden Uber's role in transportation infrastructure, beyond ride hailing and delivery, into parking and future mobility.
-
-Uber Technologies, trading at $76.73, sits at the center of app based transport with a mix of ride hailing, delivery, and related services. The stock shows a 2.8% return over the past week and a 7.0% return over the past month, with longer term returns of 99.7% over three years and 72.5% over five years. Recent performance year to date and over one year has been weaker, with returns of 7.4% and 6.8% declines. This context may shape how investors view new capital deployment decisions.
-
-For investors following NYSE:UBER, the $600m SpotHero deal and the scale of new autonomous vehicle commitments represent a meaningful expansion of what the platform could cover over time. These steps indicate an effort to control more of the transportation value chain, from parking to vehicle supply, which may influence how you think about Uber's risk profile, capital allocation priorities, and potential growth drivers.
-
-Stay updated on the most important news stories for by adding it to your or . Alternatively, explore our to discover new perspectives on Uber Technologies.
-
-Advertisement
-
-Investor Checklist
-
-Quick Assessment
-
-✅ Price vs Analyst Target: At US$76.73 versus a consensus target of about US$104.94, the stock trades roughly 27% below analyst expectations.
-
-✅ Simply Wall St Valuation: Simply Wall St currently views the shares as undervalued, trading about 55.6% below its estimated fair value.
-
-✅ Recent Momentum: The stock has returned about 7.0% over the past 30 days, which is positive into this news.
-
-There is only one way to know the right time to buy, sell or hold Uber Technologies. Head to Simply Wall St's
-
-Key Considerations
-
-📊 The US$600m SpotHero deal plus Rivian and Lucid agreements push Uber further into infrastructure and autonomous supply. This could change how you think about its Mobility earnings mix over time.
-
-📊 Watch how capital spend on parking and autonomous partnerships interacts with the current P/E of about 18.3 versus the Transportation industry average of about 40.6.
-
-⚠️ Profit margins of 15.9% are lower than last year and recent results included large one off items. Tracking margin trends alongside this heavier investment phase is important.
-
-Dig Deeper
-
-For the full picture including more risks and rewards, check out the . Alternatively, you can check out the to see how other investors believe this latest news will impact the company's narrative.
-
-This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.
-
-New: AI Stock Screener & Alerts
-
-Our new AI Stock Screener scans the market every day to uncover opportunities.
-
-• Dividend Powerhouses (3%+ Yield)
-
-• Undervalued Small Caps with Insider Buying
-
-• High growth Tech and AI Companies
-
-Or build your own from over 50 metrics.
-
-Explore Now for Free
-
-Have feedback on this article? Concerned about the content? Get in touch with us directly. Alternatively, email editorial-team@simplywallst.com
-
-About NYSE:UBER
-
-Uber Technologies
-
-Develops and operates proprietary technology applications in the United States, Canada, Latin America, Europe, the Middle East, Africa, and the Asia Pacific.
-
-Very undervalued with excellent balance sheet.
-
-Advertisement
-
-Weekly Picks
-
-ST
-
-stuart_roberts on Upside Gold · 2 months ago
-
-An Undervalued 3.3Moz Gold Project in Canada
-
-Fair Value:CA$5.0768.0 % undervalued
-
-284 followersusers have followed this narrative
-
-·
-
-1 commentusers have commented on this narrative
-
-·
-
-41 likesusers have liked this narrative
-
-GO
-
-GoldenSands on QuantumScape · 2 months ago
-
-QuantumScape: A Mispriced Deep‑Tech Inflection Point With Multi‑Billion‑Dollar Optionality
-
-Fair Value:US$8591.3 % undervalued
-
-92 followersusers have followed this narrative
-
-·
-
-1 commentusers have commented on this narrative
-
-·
-
-23 likesusers have liked this narrative
-
-TO
-
-Tokyo on Anheuser-Busch InBev · 7 days ago
-
-EU#8 - Anheuser-Busch InBev: Courage, Capital, and the Discipline to Build an Empire
-
-Fair Value:€89.4524.2 % undervalued
-
-7 followersusers have followed this narrative
-
-·
-
-3 commentsusers have commented on this narrative
-
-·
-
-3 likesusers have liked this narrative
-
-OS
-
-oscargarcia on Amazon.com · 8 days ago
-
-The capitalist colossus that makes your parcels magically appear, powers half the internet, and knows your shopping habits.
-
-Fair Value:US$2803.2 % undervalued
-
-62 followersusers have followed this narrative
-
-·
-
-1 commentusers have commented on this narrative
-
-·
-
-2 likesusers have liked this narrative
-
-Popular Narratives
-
-GO
-
-GoldenSands on QuantumScape · 2 months ago
-
-QuantumScape: A Mispriced Deep‑Tech Inflection Point With Multi‑Billion‑Dollar Optionality
-
-Fair Value:US$8591.3 % undervalued
-
-92 followersusers have followed this narrative
-
-·
-
-1 commentusers have commented on this narrative
-
-·
-
-23 likesusers have liked this narrative
-
-KI
-
-Kingman1152 on NVIDIA · 22 days ago
-
-NVIDIA will see a profit margin surge of 55% in the next 5 years
-
-Fair Value:US$305.230.7 % undervalued
-
-68 followersusers have followed this narrative
-
-·
-
-2 commentsusers have commented on this narrative
-
-·
-
-24 likesusers have liked this narrative
-
-AN
-
-AnalystConsensusTarget on Microsoft · 6 days ago
-
-Analyst Commentary Highlights Microsoft AI Momentum and Upward Valuation Amid Growth and Competitive Risks
-
-Fair Value:US$561.9325.1 % undervalued
-
-1396 followersusers have followed this narrative
-
-·
-
-2 commentsusers have commented on this narrative
-
-·
-
-12 likesusers have liked this narrative",https://images.simplywall.st/asset/company-cover/144524848-main-header/1756256222441,N,,2026-05-08 04:01:19.963059
 ID23,IBM,2026-05-08 05:32:31+00:00,www.pipelinepub.com,IBM Consulting Expands AI Capabilities to Accelerate Enterprise Transformation,Not Available,,,,,https://www.pipelinepub.com/news/ibm-consulting-expands-ai-capabilities,"IBM Consulting Expands AI Capabilities to Accelerate Enterprise Transformation New updates to IBM Enterprise Advantage fast-track enterprise AI transformation across hybrid and regulated environments Pearson and Providence accelerate AI transformation with IBM Expanded AWS and SAP collaborations boost multi agent interoperability and deployment flexibility IBM announced new capabilities delivered through IBM Enterprise Advantage, a first-of-its-kind asset-based consulting service that helps clients build and operate their own hybrid-AI platforms.
 IBM also introduced updates across IBM Consulting Advantage, its internal hybrid-AI platform for delivering consulting services to clients.
 Pioneering Organizations Rebuild Workforce Systems with AI From certifying AI agents to accelerating caregiver hiring, organizations are modernizing essential workforce systems with AI.
@@ -16801,126 +16914,3 @@ The company’s transformation reflects broader trends in the global education s
 Importantly, Pearson’s approach demonstrates how AI can deliver tangible benefits beyond efficiency gains. By improving pass rates, enhancing learning outcomes, and reducing content creation time, the company is creating value for learners, educators, and enterprises. This focus on measurable impact differentiates Pearson from many peers that are still in the early stages of AI adoption.
 
 Looking ahead, Pearson is expected to continue expanding its AI-powered platforms and digital offerings, further strengthening its position as a leader in the edtech space. As the company deepens its integration of AI, data, and digital delivery, it is likely to unlock new opportunities for growth and innovation.",https://infotechlead.com/wp-content/uploads/2023/02/Laptop-for-online-learning-students.jpg,N,,2026-05-04 12:19:23.137211
-ID36,OpenAI,2026-05-04 10:45:15+00:00,Quartz,OpenAI's talk show signals the rise of corporate media - Quartz,qz.com,,,,,https://qz.com/openai-talk-show-corporate-media-brands-as-studios,"As brands build studios and buy platforms, companies are reshaping media by turning marketing into entertainment and journalism into in-house content",Not Available,"https://qz.com/cdn-cgi/image/width=1200,quality=85,format=auto/api/media/file/75dd82af-09eb-4397-85c5-8d9daafd0339-300x199.jpg",N,,2026-05-04 08:09:51.521214
-ID48,UniCredit,2026-05-04 10:25:46+00:00,XYZ,UniCredit deepens embedded finance push with Wealthon deal - XYZ,Not Available,,,,,https://xyz.pl/poland-unpacked/unicredit-deepens-embedded-finance-push-with-wealthon-deal-1271/,"“We decided to cooperate with UniCredit under a financing model previously implemented, when it was still Aion Bank, among others with PayPo and Allegro Pay.
-Its offering includes, among others, financing based on turnover generated via payment terminals (Wealthon Poscash) and a business finance management app (Wealthon Wallet).
-Financial results and path to profitability In 2025, Wealthon generated just under PLN 30 million (EUR 6.9 million) in revenue.
-For the current year, the company expects to reach approximately PLN 40 million (EUR 9.2 million) in revenue.
-This was followed by leasing at PLN 50 billion (EUR 11.5 billion), factoring at PLN 966 million (EUR 222 million), and other forms of financing at PLN 132 million (EUR 30 million).","UniCredit has signed a three-year agreement with Wealthon to finance a portfolio of receivables. The cooperation model, based on the sale of those receivables, is designed to support further scaling of the fintech’s business in the small and medium-sized enterprise (SME) segment.
-
-UniCredit says it is open to working with mature fintech companies. One such partner, in its view, is Wealthon, a firm that has been providing financing to SMEs since 2019 while building its own ecosystem of payment processing and management tools. Under the three-year agreement, the bank will provide the necessary financial backing.
-
-“We decided to cooperate with UniCredit under a financing model previously implemented, when it was still Aion Bank, among others with PayPo and Allegro Pay. It is a form of financing based on the ability to sell receivables, incorporating elements of securitization. The agreement runs for three years and envisages portfolio sales of PLN 0.5 billion (EUR 115 million),” said Aleksander Majchrzak, CEO of Wealthon.
-
-In practice, Wealthon provides financing to its clients and then – through assignment – sells the receivables to UniCredit, while continuing to handle full customer servicing.
-
-“Wealthon has an innovative product ecosystem, including its flagship product Poscash, which assesses a business owner’s creditworthiness based on daily turnover at payment terminals. Equally important was the technological synergy enabling integration of Wealthon’s ecosystem with the Vodeno platform in order to optimize automated receivables buyout processes,” said Paweł Ławecki, Director of Banking as a Service (BaaS) at UniCredit and board member at Vodeno.
-
-Good to know
-
-Wealthon – expanding SME financing and business services
-
-Wealthon is a Polish fintech company founded in 2019, operating in the small and medium-sized enterprise (SME) financing segment. The company was created in response to limited access to funding for this segment within the traditional banking system.
-
-Over time, Wealthon has expanded beyond pure lending to develop tools supporting business management and payment processing. Its offering includes, among others, financing based on turnover generated via payment terminals (Wealthon Poscash) and a business finance management app (Wealthon Wallet).
-
-Last year, the company obtained a license as a National Payment Institution from the Polish Financial Supervision Authority (KNF), allowing it to provide payment services on a broader scale and laying the foundation for further expansion of its corporate offering. Wealthon’s business model combines financing with operational tools for companies.
-
-UniCredit expands its Banking-as-a-Service model in Europe
-
-The Banking-as-a-Service (BaaS) segment – also known as embedded finance – is one of the three core pillars of UniCredit’s strategy in Poland.
-
-“These are services that enable non-financial companies, fintechs, and financial platforms without a banking license in a given jurisdiction to embed banking ecosystems. We provide partners both with the necessary technology (via API integration with the Vodeno platform) and licensed financial solutions. One element of our offering is also the automation of receivables buyouts under the RPA (Receivables Purchase Agreement) model. This allows a partner, for example, to scale lending activity thanks to greater capital availability. RPA supports the expansion of lending operations. It is fast and cost-efficient (without lengthy securitization processes) and available on a rolling basis (through daily buyouts). The model is highly flexible and operates on a pay-as-you-use basis – partners do not bear costs for unused limits. In addition, the partner benefits from lower financing costs (bank-provided funding),” explains Paweł Ławecki.
-
-Dozens of companies across various industries in Europe already use UniCredit’s offering in this area.
-
-“As one of the leaders of the BaaS model on the continent, we are continuously expanding our portfolio in this segment. We are among the few players that, in addition to offering solutions for local markets [Poland – ed.], can support partners’ expansion into multiple other European markets,” Mr. Ławecki notes.
-
-Change of financing partner and lower cost of capital
-
-The new agreement replaces earlier cooperation with funds managed by entities affiliated with Fortress Investment Group. A year ago, the company secured debt financing of up to PLN 500 million (EUR 115 million) under a three-year agreement, which is now being phased out and is set to expire at the end of May.
-
-“Partnership with UniCredit provides access to bank-grade financing, which significantly reduces its cost. As a result, the financing cost of our flagship product is currently roughly twice as low, enabling us to offer clients more attractive terms and compete more effectively in the fintech market. This will allow us to scale much more significantly than before,” said Aleksander Majchrzak.
-
-The company reports that in 2025 it extended approximately PLN 110 million (EUR 25 million) in financing. Over a three-year horizon, under an optimistic scenario, it plans to scale up its operations to as much as PLN 1 billion (EUR 230 million) in SME financing.
-
-Wealthon does not have exclusivity with UniCredit and is formally free to secure additional financing partners.
-
-Payment license and expansion of offering
-
-At the same time, the company is expanding its product portfolio. Last year, Wealthon obtained a license as a National Payment Institution (Krajowa Instytucja Płatnicza) from the Polish Financial Supervision Authority (KNF). This opens the way to building a full ecosystem of services for small and medium-sized enterprises. The licensing process took around two years and was demanding from a regulatory perspective.
-
-“We want to offer, in the future, a full package of services that our clients need to run their businesses,” said Aleksander Majchrzak.
-
-The company currently offers an app with a payment card, a credit line, a sales management system, and financing of up to PLN 600,000 (approx. EUR 140,000).
-
-“The financing model based on repayments from payment terminals will remain the foundation of our business,” Majchrzak noted.
-
-The automated repayment model reduces risk and simplifies the debt recovery process. The company is now focused on further development and scaling of its existing offering.
-
-Expert's perspective
-
-Why SMEs struggle to access bank financing
-
-Small and medium-sized enterprises (SMEs) – particularly micro businesses – continue to face barriers in accessing bank financing. From the perspective of financial institutions, this is a demanding client segment, among other reasons due to short operating histories and limited availability of financial data.
-
-Although universal banks in Poland offer SME-targeted products, the market still lacks specialized institutions focused exclusively on this segment – such as those operating in more developed foreign markets. In Poland, Nest Bank is relatively close to microentrepreneurs; however, its offering for small and medium-sized companies is already more limited.
-
-As a result, credit processes are not always adequately tailored to the specifics of SMEs. For entrepreneurs, the key factor is not only the cost of financing. Speed and predictability of credit decisions are equally important. In practice, this means that companies are often willing to accept higher costs in exchange for a smooth process and rapid access to funds.
-
-The resulting gap is partially filled by non-bank institutions such as Wealthon. However, the company operates on a broader model than traditional lenders – beyond financing, it also provides tools supporting business management, including solutions for payment handling and processing. In addition, it uses proprietary systems that automate both the lending process and repayment, which is linked to companies’ ongoing turnover.
-
-Financial results and path to profitability
-
-In 2025, Wealthon generated just under PLN 30 million (EUR 6.9 million) in revenue. For the current year, the company expects to reach approximately PLN 40 million (EUR 9.2 million) in revenue.
-
-“The company is still reporting a loss, mainly due to earlier financing costs and investments in product development. This is a natural stage in a startup’s development. Our goal is to achieve profitability in the second half of 2026,” said Aleksander Majchrzak.
-
-Shifting approach to working capital financing
-
-Expert's perspective
-
-Structure of SME and microenterprise financing in Poland
-
-Taking into account microenterprises and SMEs (excluding farmers, large companies, local government units, and other types of borrowers), data from the Credit Information Bureau (BIK) show that as of March 31, 2026, bank loans dominated the financing portfolio at PLN 211 billion (EUR 48.5 billion). This was followed by leasing at PLN 50 billion (EUR 11.5 billion), factoring at PLN 966 million (EUR 222 million), and other forms of financing at PLN 132 million (EUR 30 million).
-
-Access to financing for SMEs in Poland is one of the key market challenges.
-
-According to Paweł Ławecki from UniCredit, traditional loans are often less flexible in terms of working capital management.
-
-“This gap has recently been increasingly filled by fintechs, offering modern processes and alternative models such as Merchant Cash Advance (MCA) or financing based on payment terminal turnover. These solutions enable real-time capital management and automated repayment of liabilities. One element of our strategy in reaching businesses is to meet entrepreneurs where they already are and deliver our services within the ecosystems they already use. This is made possible by our cloud-based technological infrastructure and our know-how in building embedded finance offerings. In this context, cooperation with Wealthon serves the objectives of both parties to the benefit of the end client – the entrepreneur,” said Paweł Ławecki.",https://xyz.pl/wp-content/uploads/2026/04/Wealthon_0701_full.jpg,N,,2026-05-04 11:23:17.690354
-ID7,Barclays,2026-05-04 10:23:42+00:00,MarketScreener,Barclays completes acquisition of Best Egg - MarketScreener,Not Available,,,,,https://www.marketscreener.com/news/barclays-completes-acquisition-of-best-egg-ce7f58dedf8bfe2c,"Barclays PLC ('Barclays') today announces that, further to the announcement on 28 October 2025, its wholly owned U.S. consumer banking subsidiary, Barclays Bank Delaware (operating as 'Barclays US Consumer Bank'), has successfully completed the acquisition of Best Egg, Inc. ('Best Egg'), a leading U.S. direct-to-consumer personal loan origination platform.
-The acquired business will continue to operate under the 'Best Egg' brand and be managed by Barclays US Consumer Bank.
-The Best Egg acquisition strengthens our US Consumer Bank with a proven, capital-light personal lending platform.
-Denny Nealon, Chief Executive Officer of Barclays US Consumer Bank, commented: 'We're excited to welcome Best Egg's customers and colleagues to Barclays.
-Paul Ricci, Chief Executive Officer of Best Egg, commented: 'Joining Barclays marks an important moment for Best Egg.","Acquisition supports Barclays' growth ambitions by expanding its U.S. personal lending capabilities.
-
-Barclays PLC ('Barclays') today announces that, further to the announcement on 28 October 2025, its wholly owned U.S. consumer banking subsidiary, Barclays Bank Delaware (operating as 'Barclays US Consumer Bank'), has successfully completed the acquisition of Best Egg, Inc. ('Best Egg'), a leading U.S. direct-to-consumer personal loan origination platform.
-
-The acquisition is a milestone in the delivery of Barclays' U.S. growth strategy. Best Egg adds a scaled, proven, and capital-light personal lending platform that complements the US Consumer Bank's partnership-driven credit card and deposit businesses.
-
-The acquired business will continue to operate under the 'Best Egg' brand and be managed by Barclays US Consumer Bank.
-
-C.S. Venkatakrishnan, Group Chief Executive Officer of Barclays, commented:
-
-'The U.S. is a strategically important growth market for Barclays. The Best Egg acquisition strengthens our US Consumer Bank with a proven, capital-light personal lending platform. It supports greater diversification, capital efficiency, and attractive returns over time, while enhancing our ability to serve customers across the U.S. consumer finance market.'
-
-Denny Nealon, Chief Executive Officer of Barclays US Consumer Bank, commented:
-
-'We're excited to welcome Best Egg's customers and colleagues to Barclays. This acquisition aligns with our strategy by expanding our personal lending capabilities and supporting the development of a more diversified, digitally-focused consumer bank. Best Egg brings a proven platform and a talented team, and we look forward to building on those strengths together.'
-
-Paul Ricci, Chief Executive Officer of Best Egg, commented:
-
-'Joining Barclays marks an important moment for Best Egg. We're proud of the business we've built, our talented team, and the trust we've earned from customers. Together with Barclays, we look forward to accelerating growth and continuing to deliver innovative solutions that support customers' financial wellbeing.
-
-About Barclays
-
-Our vision is to be the UK-centred leader in global finance. We are a diversified bank with comprehensive UK consumer, corporate and wealth and private banking franchises, a leading investment bank and a strong, specialist US consumer bank. Through these five divisions, we are working together for a better financial future for our customers, clients and communities. For further information about Barclays, please visit our website home.barclays
-
-About Best Egg
-
-Best Egg is a leading fintech that drives financial confidence, providing flexible solutions to help people with limited savings adapt to their changing needs. Best Egg supports customers through a growing suite of personal loans and financial health tools. Leveraging real-time customer insights and data engineering, Best Egg gives more people access to the resources they need to be money confident. For more information, visit https://www.bestegg.com
-
-Forward-looking statements
-
-This document contains forward-looking statements within the meaning of Section 21E of the US Securities Exchange Act of 1934, as amended, and Section 27A of the US Securities Act of 1933, as amended, with respect to the Group ('Barclays'). Barclays cautions readers that no forward-looking statement is a guarantee of future performance and that actual results or other financial condition or performance measures could differ materially from those contained in the forward-looking statements. Forward-looking statements can be identified by the fact that they do not relate only to historical or current facts. Forward-looking statements sometimes use words such as 'may', 'will', 'seek', 'continue', 'aim', 'anticipate', 'target', 'projected', 'expect', 'estimate', 'intend', 'plan', 'goal', 'believe', 'achieve' or other words of similar meaning. Forward-looking statements are based on the current beliefs and expectations of Barclays' directors, officers and employees and are subject to significant risks and uncertainties. Actual outcomes may differ materially from those expressed in the forward-looking statements. In setting its targets and outlook for the period 2024 to 2026 and 2026 to 2028, Barclays has made certain assumptions about the macroeconomic environment, including, without limitations, inflation, interest rates, the different markets and competitive conditions in which Barclays operates, and its ability to grow certain businesses and achieve costs savings and other structural actions. Factors that could impact Barclays' future financial condition and performance are identified in Barclays PLC's filings with the SEC (including, without limitation, Barclays PLC's Annual Report on Form 20-F for the financial year ended 31 December 2025), which are available on the SEC's website at www.sec.gov.",https://www.marketscreener.com/images/twitter_MS_fdnoir.png,N,,2026-05-04 10:12:43.827573
