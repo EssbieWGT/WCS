@@ -1,4 +1,585 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2026-05-13 09:20:27+00:00,GOV.UK,Change of frequency of Renewable Transport Fuel Obligation (RTFO) and Sustainable ... - GOV.UK,Department for Transport,,,,,https://www.gov.uk/government/publications/change-of-frequency-of-renewable-transport-fuel-obligation-rtfo-and-sustainable-aviation-fuel-saf-mandate-official-statistics-results,"We use some essential cookies to make this website work.
+We’d like to set additional cookies to understand how you use GOV.UK, remember your settings and improve government services.
+We also use cookies set by other sites to help us deliver content from their services.","We use some essential cookies to make this website work.
+
+We’d like to set additional cookies to understand how you use GOV.UK, remember your settings and improve government services.
+
+We also use cookies set by other sites to help us deliver content from their services.",https://www.gov.uk/assets/frontend/govuk-opengraph-image-4196a4d6333cf92aaf720047f56cfd91b3532d7635fc21ebcf0d5897df6b5f77.png,N,,2026-05-13 06:58:00.728293
+,,2026-05-13 09:17:34+00:00,www.ijert.org,A Quantitative Chemical and Computational Study of E-Kerosene as a Sustainable Aviation Fuel,Not Available,,,,,https://www.ijert.org/carbon-capture-and-synthetic-e-fuels-a-quantitative-chemical-and-computational-study-of-e-kerosene-as-a-sustainable-aviation-fuel-ijertv15is050720,"Carbon Capture and Synthetic E-Fuels: A Quantitative Chemical and Computational Study of E-Kerosene as a Sustainable Aviation Fuel A Quantitative Chemical and Computational Study of E-Kerosene as a Sustainable Aviation Fuel Avyaay Rathi Mahindra International School Pune Abstract – Synthetic e-fuels derived from captured atmospheric CO and green hydrogen represent a potentially carbon-neutral alternative to fossil fuels for the aviation sector, where electrification remains energy-density-constrained.
+This corresponds to an electrical energy requirement of 5055 kWh per kg H, compared to the theoretical minimum of 39.4 kWh/kg (HHV basis).
+return E_kWh / kwh_per_litre(p) def net_emissions(CI: float, p: Params) -> float: """"""Net life-cycle CO2 emissions (kg CO2 / litre).
+Cumulative energy efficiency at each process stage, expressed as percentage of initial renewable electricity input retained.
+Electricity cost dominates production cost in all scenarios (5568% of total).","Carbon Capture and Synthetic E-Fuels: A Quantitative Chemical and Computational Study of E-Kerosene as a Sustainable Aviation Fuel
+
+A Quantitative Chemical and Computational Study of E-Kerosene as a Sustainable Aviation Fuel
+
+Avyaay Rathi
+
+Mahindra International School Pune
+
+Abstract – Synthetic e-fuels derived from captured atmospheric CO and green hydrogen represent a potentially carbon-neutral alternative to fossil fuels for the aviation sector, where electrification remains energy-density-constrained. This paper presents a rigorous quantitative investigation of e-kerosene production via the Power-to-Liquid (PtL) pathway, integrating: (i) full stoichiometric and thermodynamic derivations for PEM electrolysis, Direct Air Capture (DAC), and FischerTropsch (FT) synthesis; (ii) AndersonSchulzFlory (ASF) product distribution modelling; (iii) a complete Python simulation computing fuel yield, life-cycle CO emissions, and levelised production cost under six electricity supply scenarios; and (iv) Monte Carlo uncertainty quantification (n = 50,000 trials) and tornado sensitivity analysis. Results show that e-kerosene produced with wind or solar electricity yields net life-cycle emissions of 0.080.74 kg CO/L (mean 0.27 kg/L), an 88% reduction relative to conventional jet fuel (2.31 kg/L). With coal-based electricity, emissions exceed fossil baseline by more than 6×. Overall PtL energy efficiency is 42%, representing a hard thermodynamic ceiling. Levelised cost ranges from USD 1.354.50/L, falling to USD 0.85/L under 2035 optimistic projections. Six original quantitative conclusions are derived, including the identification of a critical electricity carbon intensity threshold (~200 g CO/kWh) below which e-kerosene is climate-beneficial, and the prioritisation of electrolyser efficiency as the dominant technical lever for both emissions and cost reduction.
+
+Keywords: e-fuels; e-kerosene; Power-to-Liquid; FischerTropsch synthesis; PEM electrolysis; Direct Air Capture; sustainable aviation fuel; AndersonSchulzFlory; Monte Carlo; techno-economics
+
+INTRODUCTION
+
+Global aviation consumes approximately 300330 billion litres of jet fuel annually and contributes ~2.5% of global CO emissions; rising to 3.54.0% of effective radiative forcing when non-CO effects (contrail cirrus, NOx chemistry) are included (IPCC, 2023). Unlike road transport, long-haul aviation cannot be straightforwardly electrified: the gravimetric energy density of lithium-ion batteries (~250 Wh/kg) is approximately 5060× lower than kerosene (~12,000 Wh/kg), making battery-powered intercontinental flight physically implausible within the foreseeable technological horizon.
+
+Synthetic e-kerosene; produced by combining electrolytic green hydrogen with CO captured from the atmosphere or industrial point sources via the FischerTropsch (FT) process, offers a chemically identical, drop-in replacement for fossil jet fuel that is potentially carbon-neutral over its full life cycle. The Power-to-Liquid (PtL) pathway, as this process chain is termed, has attracted growing scientific and commercial attention: Porsche AG's Haru Oni pilot plant in southern Chile began producing synthetic fuels in 2022 using Chilean wind electricity; Norsk e-Fuel has announced a 12.5 million litre/year facility in Norway; and the International Civil Aviation Organisation (ICAO) has included PtL SAF within its CORSIA carbon offsetting scheme. The European Union's ReFuelEU Aviation regulation mandates a 2% SAF blending rate by 2025, rising to 70% by 2050.
+
+Despite this momentum, a comprehensive, quantitative, peer-reviewed academic study incorporating all three major process stages, simulation-backed life-cycle analysis, probabilistic uncertainty quantification, and original techno-economic projections remains scarce in accessible literature. This paper addresses that gap.
+
+Research Objectives
+
+Derive and present the complete governing equations for PEM electrolysis, Direct Air Capture, and FischerTropsch synthesis from thermodynamic and kinetic first principles.
+
+Develop and present a complete, runnable Python simulation computing fuel yield, life-cycle CO emissions, and production cost as functions of process parameters.
+
+Apply AndersonSchulzFlory distribution modelling to characterise FT product selectivity and identify the optimal chain-growth probability for kerosene-range hydrocarbons.
+
+Quantify life-cycle CO emissions across six electricity supply scenarios (coal to wind) using simulation data, including comparison against fossil baseline.
+
+Conduct Monte Carlo uncertainty analysis (n = 50,000) and tornado sensitivity analysis to identify dominant process variables.
+
+Project techno-economic cost trajectories to 2035 and derive original, evidence-based conclusions on scalability, policy requirements, and fundamental constraints.
+
+Scope and Approach
+
+This study focuses exclusively on e-kerosene for aviation. The feedstocks are (a) water for electrolytic hydrogen production and
+
+(b) atmospheric CO via Direct Air Capture. Point-source CO capture from industrial exhausts is noted as an alternative but not modelled separately, as DAC represents the more demanding and universally applicable scenario. The functional unit for all analyses is one litre of e-kerosene (Jet-A1 specification, LHV 43.2 MJ/kg, density 0.80 kg/L).
+
+THEORETICAL BACKGROUND AND GOVERNING EQUATIONS
+
+Complete Combustion and the Fossil Baseline
+
+Conventional jet fuel (approximated as n-dodecane, CH, M = 170.34 g/mol) undergoes complete combustion according to:
+
+CH + 18.5 O 12 CO + 13 HO H°comb = 7,513 kJ mol¹
+
+The lower heating value (LHV) per unit mass is:
+
+LHV = |H°comb| / M = 7,513,000 J mol¹ / 170.34 g mol¹ 44.1 MJ kg¹ 43.2 MJ kg¹ (Jet-A1 measured)
+
+The stoichiometric CO emission factor per litre of fuel is:
+
+E_CO = (12 × M_CO / M_fuel) × _fuel = (12 × 44.01 / 170.34) × 0.800 = 2.477 kg CO/L
+
+Including upstream refining and transport, the life-cycle emission factor rises to approximately 2.55 kg CO/L. The industry standard value adopted here (and used by ICAO/CORSIA) is 2.31 kg CO/L for fossil Jet-A1, which serves as the reference for all comparative calculations.
+
+PEM Water Electrolysis: Thermodynamics and Kinetics
+
+Green hydrogen is produced by electrochemical splitting of liquid water:
+
+2 HO(l) 2 H(g) + O(g) G° = +237.1 kJ mol¹ H H° = +285.8 kJ mol¹ H
+
+The reversible (thermodynamic minimum) cell voltage is determined by the Gibbs free energy of reaction:
+
+E_rev = G° / (n_e × F) = 237,100 / (2 × 96,485) = 1.229 V
+
+The thermoneutral voltage, at which no heat exchange with the environment is required, corresponds to the enthalpy change:
+
+E_tn = H° / (n_e × F) = 285,800 / (2 × 96,485) = 1.481 V
+
+In practice, a PEM electrolyser operates at higher voltage due to three overpotential losses:
+
+V_cell = E_rev + _act(anode) + _act(cathode) + _ohm + _mass
+
+The activation overpotential at each electrode is described by the ButlerVolmer equation. At high overpotential (Tafel approximation):
+
+_act = (RT / _BV n_e F) × ln(j /j)
+
+where: R = 8.314 J mol¹ K¹; T is cell temperature (K); _BV 0.5 (charge transfer coefficient); j is current density (A cm²); j 10³ A cm² (exchange current density for PEM anode). The ohmic overpotential reflects membrane and contact resistance:
+
+_ohm = j × R_ohm [R_ohm 0.100.20 cm² for Nafion-based PEM at 80°C]
+
+The electrolyser energy efficiency (fraction of electrical input converted to H HHV) is:
+
+_el = E_rev / V_cell = 1.229 / V_cell
+
+At practical operating current densities of 1.01.5 A cm² and 80°C, V_cell 1.701.85 V, giving _el 6672%. This corresponds to an electrical energy requirement of 5055 kWh per kg H, compared to the theoretical minimum of 39.4 kWh/kg (HHV basis).
+
+Figure 1. PEM electrolyser polarisation curve (cell voltage vs. current density) and energy efficiency at T = 80°C, modelled using ButlerVolmer kinetics with R_ohm = 0.15 cm² and j = 10³ A cm². Efficiency declines from ~83% at low current density to ~64% at 2.0 A cm², illustrating the capital-vs-energy trade-off in electrolyser design.
+
+Direct Air Capture of CO
+
+Direct Air Capture (DAC) extracts CO directly from ambient air (concentration ~420 ppm) using solid sorbents (temperature-vacuum swing adsorption, TVSA) or liquid solvents (Potassium Hydroxide, KOH). For solid sorbent systems using amine-functionalised materials (e.g., supported polyethylenimine, sPEI), the capture and regeneration reactions are:
+
+Adsorption: CO(g) + 2 R-NH R-NH + R-NHCOO (H 85 kJ mol¹ CO)
+
+Regeneration: R-NH + R-NHCOO CO(g) + 2 R-NH (at 80120°C, vacuum)
+
+The energy requirement for full-cycle DAC (including compression to 20 bar for FT feed) ranges from 1,5002,500 kWh_th per tonne of CO captured, plus 200400 kWh_el/tCO for fans and vacuum pumps. At current technology maturity (Climeworks Mammoth facility, 36,000 tCO/year), cost is approximately USD 300400/tCO, with projections to USD 100150/tCO by 2030 under scale-up.
+
+The net CO capture efficiency _CC quantifies the genuine atmospheric carbon offset:
+
+_CC = m_CO_captured_and_retained / m_CO_emitted_on_combustion
+
+Factors reducing _CC below 1.0 include sorbent degradation, parasitic emissions from thermal regeneration energy supply, CO transport and storage leakage, and the limited lifetime of captured carbon in the fuel product (immediate re-emission on combustion). In well-designed systems with renewable heat, _CC achievable values are 0.850.95.
+
+Reverse Water-Gas Shift and FischerTropsch Synthesis
+
+Before FischerTropsch synthesis, the captured CO must be converted to CO via the Reverse Water-Gas Shift (RWGS) reaction, which occurs over iron or copper/zinc catalysts at 600800°C:
+
+CO + H CO + HO H° = +41.2 kJ mol¹ (endothermic) K_eq(700°C) 1.37
+
+The resulting syngas (H + CO at optimal H:CO ratio of 2.102.15) is then fed to the FischerTropsch reactor. FT synthesis proceeds via surface polymerisation on cobalt or iron catalysts, described by two overall reactions:
+
+Paraffin formation: n CO + (2n+1) H C_n H_(2n+2) + n HO H 165 kJ per mol CH
+
+Olefin formation: n CO + 2n H C_n H_(2n) + n HO H 152 kJ per mol CH
+
+Optimal conditions for kerosene-range (C8C16) products use cobalt catalysts at 180220°C and 2040 bar. The H:CO ratio, temperature, pressure, and catalyst type collectively determine the chain-growth probability (see Section 2.5). The FT reaction is highly exothermic; this waste heat can be recovered to supply the RWGS endotherm and/or regenerate DAC sorbent, improving overall process efficiency.
+
+AndersonSchulzFlory Product Distribution
+
+The molecular weight distribution of FT products follows the AndersonSchulzFlory (ASF) model, derived from a chain-growth kinetic mechanism:
+
+W_n = n × (1 )² × ^(n1)
+
+where W_n is the mass fraction of hydrocarbon chains with carbon number n, and is the dimensionless chain-growth probability (0 < < 1). This equation has a single maximum: for < 0.5, methane dominates; for > 0.9, heavy wax (C20+) dominates. The kerosene window (C8C16) is maximised at 0.820.87.
+
+Range
+
+Dominant Product
+
+Carbon Range
+
+Application
+
+< 0.50
+
+Methane (C1)
+
+C1C4
+
+No liquid fuel value
+
+0.650.78
+
+Gasoline
+
+C5C11
+
+Road transport fuel
+
+0.800.87
+
+Kerosene / Jet fuel
+
+C8C16
+
+Aviation (TARGET)
+
+> 0.90
+
+Wax (C20+)
+
+C20+
+
+Requires hydrocracking; can yield kerosene via upgrading
+
+Table 1. AndersonSchulzFlory chain-growth probability () ranges and corresponding FischerTropsch product selectivity.
+
+Green row indicates target regime for this study.
+
+Figure 2. ASF product mass fraction distributions for = 0.72 (gasoline-range), 0.82 (kerosene-optimal), and 0.88 (wax/kerosene). At = 0.82, the C8C16 mass fraction reaches approximately 34% of raw FT output before distillation upgrading. Wax (C20+) fractions at = 0.88 can be hydrocracked to increase overall kerosene yield to ~6065%.
+
+A key practical implication of the ASF model is that no single value produces a pure kerosene fraction. Real FT plants therefore combine an tuned toward heavier products (0.880.92) with downstream hydrocracking of the wax fraction, achieving effective kerosene yields of 5565% of total carbon throughput. This additional processing step is captured in the FT efficiency parameter _FT in the simulation.
+
+SIMULATION MODEL
+
+Model Architecture
+
+A Python simulation was developed to compute three primary outputs: litres of e-kerosene produced, net life-cycle CO emissions (kg CO/L), and production cost (USD/L), as functions of five independent input parameters. The model integrates the thermodynamic and kinetic equations derived in Section 2 into a unified numerical framework, enabling systematic scenario analysis and probabilistic uncertainty quantification.
+
+Input Parameters
+
+Table 2. Simulation input parameters, symbols, baseline values,and physical interpretations.
+
+Governing Simulation Equations
+
+The electrical energy required per litre of e-kerosene is derived from the energy cascade:
+
+kWh_per_L = (LHV_ker [MJ/kg] × _ker [kg/L]) / (3.6 [MJ/kWh] × _el × _FT)
+
+At baseline parameters: kWh_per_L = (43.2 × 0.800) / (3.6 × 0.70 × 0.75) = 18.3 kWh/L Litres of e-kerosene produced from a given electrical input E_in:
+
+L_ker = E_in [kWh] / kWh_per_L
+
+Net life-cycle CO emissions per litre of e-kerosene:
+
+E_net [kg CO/L] = (CI [g CO/kWh] × kWh_per_L) / 1000 + E_fossil × (1 _CC)
+
+The first term represents emissions from electricity generation; the second represents the fraction of combustion CO not genuinely offset by the DAC system. Total production cost per litre:
+
+C_prod [USD/L] = P_el × kWh_per_L + C_CAPEX + C_DAC + C_O&M
+
+At baseline solar electricity (USD 0.040/kWh): C_prod = 0.040 × 18.3 + 0.50 + 0.80 + 0.30 = USD 2.33/L
+
+Complete Python Simulation Code
+
+The following is the complete, self-contained Python simulation implementing all equations above, including scenario analysis, ASF distribution, Monte Carlo uncertainty quantification, and sensitivity analysis. All results in Section 4 are generated by this code.
+
+# ============================================================
+
+# e_kerosene_simulation.py | Avyaay Rathi, 2025
+
+# Full PtL e-kerosene simulation: yield, emissions, cost, # ASF distribution, Monte Carlo, sensitivity analysis
+
+# ============================================================
+
+import numpy as np
+
+import matplotlib.pyplot as plt from dataclasses import dataclass
+
+# Physical constants LHV_KEROSENE = 43.2 # MJ/kg (Jet-A1 lower heating value)
+
+RHO_KEROSENE = 0.800 # kg/L (Jet-A1 density at 15 C) E_FOSSIL = 2.31 # kg CO2/L (fossil Jet-A1 life-cycle) MJ_PER_KWH = 3.6 # unit conversion
+
+# Electricity scenarios: carbon intensity (g CO2/kWh) SCENARIOS = {
+
+""Coal Grid"" : 820, ""Nat. Gas Grid"" : 490, ""EU Average"" : 295, ""Solar PV"" : 48, ""Wind Onshore"" : 11, ""Nuclear"" : 12,
+
+}
+
+@dataclass class Params:
+
+eta_el : float = 0.70 # PEM electrolyser efficiency
+
+eta_FT : float = 0.75 # FT synthesis + distillation efficiency eta_CC : float = 0.85 # CO2 capture efficiency
+
+P_el : float = 0.040 # electricity price USD/kWh
+
+C_CAPEX : float = 0.50 # annualised plant CAPEX contribution USD/L C_DAC : float = 0.80 # DAC cost contribution USD/L
+
+C_OM : float = 0.30 # operation & maintenance USD/L
+
+def kwh_per_litre(p: Params) -> float:
+
+""""""Electrical energy needed per litre of e-kerosene (kWh/L).""""""
+
+return (LHV_KEROSENE * RHO_KEROSENE) / (MJ_PER_KWH * p.eta_el * p.eta_FT)
+
+def litres_from_energy(E_kWh: float, p: Params) -> float: """"""Litres of e-kerosene from E_kWh electrical input."""""" return E_kWh / kwh_per_litre(p)
+
+def net_emissions(CI: float, p: Params) -> float: """"""Net life-cycle CO2 emissions (kg CO2 / litre). CI: grid carbon intensity in g CO2/kWh.
+
+""""""
+
+e_elec = (CI * kwh_per_litre(p)) / 1000.0 # kg CO2/L from electricity
+
+e_leak = E_FOSSIL * (1.0 – p.eta_CC) # kg CO2/L from DAC leakage return e_elec + e_leak
+
+def cost_per_litre(p: Params) -> float:
+
+""""""Total levelised production cost (USD / litre).""""""
+
+return p.P_el * kwh_per_litre(p) + p.C_CAPEX + p.C_DAC + p.C_OM
+
+# ASF product distribution def asf_distribution(alpha: float, n_max: int = 30) -> np.ndarray:
+
+n = np.arange(1, n_max + 1)
+
+return n * (1 – alpha)**2 * alpha**(n – 1)
+
+def kerosene_fraction(alpha: float) -> float:
+
+""""""Mass fraction of C8-C16 in raw FT product (ASF model)."""""" Wn = asf_distribution(alpha)
+
+return Wn[7:16].sum() # indices 7..15 = carbon numbers 8..16
+
+# Monte Carlo uncertainty analysis def monte_carlo_emissions(n: int = 50000) -> np.ndarray:
+
+rng = np.random.default_rng(seed=42)
+
+eta_el = rng.normal(0.70, 0.05, n).clip(0.50, 0.85)
+
+eta_FT = rng.normal(0.75, 0.05, n).clip(0.60, 0.88)
+
+eta_CC = rng.normal(0.85, 0.07, n).clip(0.60, 0.98)
+
+CI = rng.uniform(10, 60, n) # g CO2/kWh renewable
+
+kWh_L = (LHV_KEROSENE * RHO_KEROSENE) / (MJ_PER_KWH * eta_el * eta_FT) return CI * kWh_L / 1000.0 + E_FOSSIL * (1.0 – eta_CC)
+
+# Scenario table printout if name == "" main "":
+
+p = Params()
+
+print(f"" kWh per litre (baseline): {kwh_per_litre(p):.2f} kWh/L"") print(f"" Litres per 1000 kWh input: {litres_from_energy(1000, p):.1f} L"") print(f"" Cost (solar, baseline): USD {cost_per_litre(p):.2f}/L"")
+
+print()
+
+hdr = f"" {'Scenario':<20} {'CI (g/kWh)':>12} {'Net CO2 (kg/L)':>16} {'vs. Fossil':>12}"" print(hdr)
+
+print("" "" + ""-""*63)
+
+for name, ci in SCENARIOS.items(): e = net_emissions(ci, p)
+
+pct = (1 – e / E_FOSSIL) * 100
+
+sign = ""better"" if pct > 0 else ""WORSE""
+
+print(f"" {name:<20} {ci:>12} {e:>16.3f} {abs(pct):>8.1f}% {sign}"") mc = monte_carlo_emissions()
+
+print(f""\n MC mean : {mc.mean():.3f} kg/L"")
+
+print(f"" MC 5th95th pct: {np.percentile(mc,5):.3f}{np.percentile(mc,95):.3f} kg/L"") print(f"" Kerosene fraction (=0.82): {kerosene_fraction(0.82)*100:.1f}% of raw FT output"")
+
+Simulation Output (Executed Results)
+
+Running the above code with the baseline parameters produces the following verified output:
+
+Electricity Scenario
+
+CI (g
+
+CO/kWh)
+
+Net Emissions (kg CO/L)
+
+vs. Fossil Jet-A1
+
+Cost (USD/L)
+
+Coal Grid
+
+820
+
+15.35
+
+6× worse
+
+4.50
+
+Natural Gas Grid
+
+490
+
+9.30
+
+4× worse
+
+2.50
+
+EU Average Grid
+
+295
+
+5.74
+
+2.5× worse
+
+2.10
+
+Solar PV
+
+48
+
+1.23
+
+47% better
+
+1.40
+
+Wind Onshore
+
+11
+
+0.55
+
+76% better
+
+1.35
+
+Nuclear
+
+12
+
+0.57
+
+75% better
+
+1.70
+
+Conventional Jet-A1 (baseline)
+
+2.31 (reference)
+
+0.55
+
+Table 3. Simulation output: net life-cycle CO emissions and estimated production cost per litre of e-kerosene by electricity scenario. Parameters: _el = 0.70, _FT = 0.75, _CC = 0.85, kWh/L = 18.3. Green rows indicate climate benefit; orange/red indicate climate disbenefit versus fossil Jet-A1.
+
+RESULTS AND ANALYSIS
+
+Life-Cycle CO Emissions Across Electricity Scenarios
+
+Figure 3. Life-cycle CO emissions of e-kerosene vs. conventional Jet-A1 across six electricity scenarios (simulation output, baseline process parameters). Only solar V, wind, and nuclear electricity sources produce climate-beneficial e-kerosene. The coal scenario exceeds fossil emissions by over 6×, demonstrating that electricity source is the single most critical determinant of e-fuel environmental performance.
+
+Figure 3 and Table 3 establish the central quantitative finding: the climate impact of e-kerosene is entirely and non-linearly dependent on the electricity supply carbon intensity. With coal-based electricity (820 g CO/kWh), the PtL process amplifies the carbon intensity of the input energy by approximately 18.3 kWh/L, resulting in 15.35 kg CO/L; more than six times worse than conventional jet fuel. This amplification occurs because the ~42% overall process efficiency means that for every unit of useful energy in the kerosene product, ~2.4 units of electrical energy (and its associated emissions) are consumed upstream.
+
+A critical threshold exists at approximately CI = 200 g CO/kWh (interpolating between EU Average at 295 g/kWh and Solar PV at 48 g/kWh), below which e-kerosene achieves net emission reductions. This threshold is not currently met by any major
+
+national grid average, meaning that grid-connected e-fuel production, even in countries with high renewable penetration, is environmentally counterproductive unless certified renewable electricity procurement with hourly matching is employed.
+
+Among renewable sources, wind onshore (11 g CO/kWh) and nuclear (12 g CO/kWh) deliver the greatest emission reductions (7576%). The residual emissions at these CI values (0.550.57 kg CO/L) arise predominantly from the DAC leakage term: at _CC = 0.85, the 15% uncaptured combustion CO contributes 0.35 kg CO/L regardless of electricity source.
+
+Energy Efficiency Cascade
+
+Figure 4. Cumulative energy efficiency at each process stage, expressed as percentage of initial renewable electricity input retained. Of 100 kWh input, only 42 kWh is stored as chemical energy in the final e-kerosene product. This 42% round-trip efficiency represents a hard thermodynamic constraint of the PtL pathway.
+
+The energy cascade analysis reveals that of every 100 kWh of renewable electricity consumed at the plant boundary: 70 kWh is converted to H by the electrolyser (30% loss to ohmic heating and activation overpotentials); ~63 kWh reaches the FT reactor after accounting for CO capture compression energy (~10% of electrolyser output); ~50 kWh is retained in raw FT products after synthesis (25% thermal loss in exothermic FT reaction, partially recoverable); and ~42 kWh is stored in the final Jet-A1-grade kerosene after distillation and upgrading.
+
+This 42% well-to-tank efficiency compares unfavourably with battery electric vehicles (~8590% well-to-wheel) and hydrogen fuel cell vehicles (~4050% well-to-wheel), underscoring that PtL e-fuels impose the highest renewable energy demand per unit of end-use energy. For aviation, where the alternative is continued fossil fuel use, this inefficiency is accepted as the price of decarbonisation in a hard-to-abate sector. For road transport, the same inefficiency renders e-fuels economically and energetically irrational relative to direct electrification.
+
+Monte Carlo Uncertainty Analysis
+
+Figure 5. Monte Carlo simulation results (n = 50,000 trials) for net life-cycle CO emissions of e-kerosene under renewable electricity conditions. Parameter distributions: _el ~ N(0.70, 0.05), _FT ~ N(0.75, 0.05), _CC ~ N(0.85, 0.07); CI ~ Uniform(10, 60) g CO/kWh. The distribution is positively skewed with mean 0.27 kg/L (88% reduction vs. fossil). All 50,000 outcomes fall below the fossil baseline of 2.31 kg/L.
+
+The Monte Carlo analysis provides original probabilistic quantification of e-kerosene performance that goes beyond prior deterministic literature. Key statistics from the simulation:
+
+Table 4. Monte Carlo simulation statistics (n = 50,000) for net life-cycle CO emissions of e-kerosene under renewable electricity, with _el, _FT, _CC varied stochastically and CI sampled uniformly from [10, 60] g CO/kWh.
+
+The most significant finding from the Monte Carlo analysis is that zero of the 50,000 simulated outcomes exceeds the fossil fuel baseline, providing strong statistical confidence that e-kerosene produced with genuinely renewable electricity is robustly climate-beneficial across all realistic technology parameter combinations. The positive skew of the distribution (mean > median) reflects the influence of high-CI tail scenarios within the renewable electricity range, confirming that even best-case renewable sources are not uniform in their life-cycle carbon intensity.
+
+Sensitivity Analysis
+
+Figure 6. Tornado sensitivity analysis showing the influence of six key process parameters on net e-kerosene CO emissions relative to the base case (0.38 kg CO/L). Each bar shows the emission change when the parameter is shifted by ±1 from its baseline value. Blue bars: favourable (emission-reducing) shift. Red bars: unfavourable (emission-increasing) shift.
+
+The tornado analysis reveals a clear hierarchy of parameter importance. Electricity carbon intensity has the largest single unfavourable impact (+0.70 kg CO/L for a 1 upward shift from the solar PV baseline), confirming that CI is the primary driver of environmental performance. Electrolyser efficiency (_el) has the largest combined span (0.48 to +0.32 kg CO/L), making it the most impactful individual technology parameter.
+
+CO capture efficiency (_CC) and the renewable electricity fraction are the next most important parameters, each with combined spans of ~0.58 and ~0.75 kg CO/L respectively. FT selectivity () and plant CAPEX have comparatively minor influence on the emissions metric specifically (though CAPEX dominates cost sensitivity). These findings directly prioritise technology development: improvements in electrolyser efficiency and DAC capture rate offer the greatest emissions co-benefits alongside continued reduction in renewable electricity carbon intensity.
+
+Techno-Economic Analysis
+
+Figure 7. Levelised cost of e-kerosene production by component and scenario (2024 and projected). The horizontal red dashed line at USD 0.55/L represents current conventional Jet-A1 price. Electricity cost dominates production cost in all scenarios (5568% of total). Renewable scenarios approach fossil parity under 20302035 optimistic projections with electricity at USD 0.020.03/kWh.
+
+E-kerosene production costs range from USD 1.354.50/L under 2024 technology and market conditions, representing a 2.58× premium over fossil jet fuel (USD 0.500.60/L). Electricity accounts for 5568% of total cost across all scenarios, making the levelised cost of electricity (LCOE) the dominant economic variable. A USD 0.01/kWh reduction in electricity price translates directly to a USD 0.18/L reduction in e-kerosene cost (at baseline kWh_per_L = 18.3).
+
+The cost projections to 20302035 are built on three convergent trends: (1) onshore and offshore wind LCOE falling to USD 0.020.03/kWh in resource-optimal locations (Chilean Patagonia, Moroccan coast, Australianinterior) driven by continuing learning curves; (2) PEM electrolyser stack costs declining from ~USD 700/kW to ~USD 200/kW by 2030 as manufacturing scales; and (3) DAC costs reducing from ~USD 350/tCO to ~USD 100/tCO by 2030 under accelerated scale-up. Under these assumptions, e-kerosene production cost could fall to USD 0.851.10/L by 20332035, requiring only a modest carbon price of
+
+~USD 100/tCO to achieve full fossil parity.
+
+Scale-Up Trajectory
+
+Figure 8. Projected global e-kerosene production (log scale, kt/year) and cost trajectory (USD/L) from 2024 to 2035. Current global production is ~1 tonne/year from pilot plants; reaching 200 kt/year by 2035 requires ~50 GW of dedicated electrolysis capacity and ~USD 35 billion in capital investment. This represents ~0.07% of current global jet fuel demand, confirming that e-kerosene is a long-term supplement, not a near-term replacement.
+
+Even under optimistic projections, e-kerosene will supply a negligible fraction of global aviation fuel demand before 2030. Current production from all operating pilot plants (Haru Oni, Air Company, Norsk e-Fuel, Infinium) amounts to less than 10 tonnes/year globally. Scaling to 200 kt/year by 2035; sufficient to fuel approximately 500 long-haul flights per day, or ~0.07% of global aviation demand, would require approximately 50 GW of dedicated electrolyser capacity (representing ~2× the entire 2024 global electrolyser installed base), 400 kt/year of CO capture capacity, and an estimated USD 3545 billion in total capital investment. This scale-up challenge is fundamentally one of industrial infrastructure, not chemistry.
+
+DISCUSSION
+
+Comparison with Prior Literature
+
+The 4776% emission reduction found in this study for solar and wind electricity is consistent with, but more precisely bounded than, earlier literature estimates. Schmidt et al. (2018) estimated 7080% reduction under idealised assumptions (_el = 0.80, _FT = 0.80); the more conservative baselines used here (0.70 and 0.75), combined with explicit treatment of DAC leakage, produce a lower central estimate of 4776% that more accurately reflects current technology readiness. The IEA (2023) reports life-cycle emissions of 0.32.0 kg CO/L depending on assumptions; this study's simulation-derived range of 0.551.23 kg CO/L for solar and grid-average scenarios falls within this published range, providing cross-validation.
+
+The Monte Carlo result: that 100% of 50,000 simulated outcomes under renewable electricity conditions fall below the fossil baseline, is an original contribution providing probabilistic robustness evidence not found in prior deterministic studies. The identification of a critical CI threshold at ~200 g CO/kWh is also a quantitative original finding derived from simulation data rather than from literature assumptions.
+
+Cost estimates of USD 1.354.50/L are broadly consistent with IEA (2023) projections of USD 1.504.00/L for current conditions, with the coal scenario extending the range for completeness. The 2035 projection of USD 0.85/L is at the optimistic end of literature projections but not inconsistent with BloombergNEF (2023) scenarios that assume aggressive electrolyser cost reduction and sub-USD 0.02/kWh wind electricity in the best global locations.
+
+Why E-Kerosene Is Sector-Specific
+
+The 42% overall PtL energy efficiency, combined with the ~28% thermal efficiency of a turbofan engine, produces a well-to-wheel efficiency of approximately 12% for e-kerosene aviation. In contrast, a battery electric vehicle operating on the same unit of renewable electricity achieves ~85% well-to-wheel efficiency; approximately 7× more efficient per kilometre. This comparison makes clear that e-fuels are enormously wasteful of renewable electricity relative to direct electrification, and should only be deployed where direct electrification is not feasible.
+
+For long-haul aviation (>3,000 km range), this condition is satisfied: no commercially viable battery aircraft technology exists or is projected to exist within the next 20 years for this range category. Hydrogen aircraft (liquid H combustion or fuel cells) offer an alternative PtL-comparable pathway with ~55% well-to-thrust efficiency, but require complete aircraft redesign, new airport infrastructure, and resolution of safety certification challenges. E-kerosene's key advantage: drop-in compatibility with 100% of the existing global aviation fleet and infrastructure, makes it the most near-term deployable long-haul decarbonisation pathway.
+
+For short-haul aviation (<1,000 km), battery and hydrogen options are increasingly viable (e.g., Heart Aerospace ES-30, ZeroAvia H2 turboprop), and the case for e-kerosene is less compelling economically. The technology optimisation strategy should therefore differentiate by route length.
+
+The Electricity Supply Challenge
+
+The simulation's critical CI threshold (~200 g CO/kWh) has a stark policy implication: most current national electricity grids: including Germany (380 g/kWh in 2023), the United States (386 g/kWh), and India (700 g/kWh), are above this threshold. Even the EU grid average (295 g/kWh) sits in the climate-disbenefit zone. This means that any e-fuel plant connected to a national grid without certified renewable electricity procurement would produce fuel worse for the climate than fossil kerosene.
+
+This has immediate implications for regulatory design: e-fuel blending mandates (EU ReFuelEU, UK Jet Zero) must include robust renewable electricity additionality and temporal matching requirements, similar to the EU Delegated Regulation on renewable hydrogen; to ensure that mandated e-fuel volumes deliver genuine emission reductions rather than regulatory carbon laundering. The simulation results quantify for the first time the magnitude of the climate disbenefit if such requirements are absent.
+
+Equity and Ethical Considerations
+
+At USD 1.354.50/L, e-kerosene represents a production cost premium of USD 0.803.95/L over fossil fuel. Blending mandates that require 510% SAF content in all jet fuel would raise average fuel costs by USD 0.040.40/L, translating to approximately
+
+USD 550 per long-haul return ticket at current aviation fuel burn rates. Whilst modest for high-income travellers, this has a regressive impact on lower-income passengers and is disproportionate for regions where aviation is essential for economic connectivity (island nations, remote communities).
+
+The geographic concentration of optimal renewable resources (Patagonian wind, Saharan solar, Australian outback) raises questions of resource sovereignty and energy colonialism: wealthy nations may effectively outsource their aviation decarbonisation by purchasing e-kerosene produced in lower-income countries, capturing the climate benefit while exporting land use and infrastructure costs. International e-fuel trade frameworks must address these equity dimensions through technology transfer requirements, benefit-sharing mechanisms, and host-country sustainability standards.
+
+ORIGINAL CONCLUSIONS
+
+This study derives six original, quantitative conclusions from the combination of first-principles chemistry, simulation modelling, Monte Carlo analysis, and sensitivity analysis:
+
+Conclusion 1: Electricity Source is Non-Negotiable, and the Threshold is Sharp
+
+The simulation identifies a critical electricity carbon intensity threshold of approximately 200 g CO/kWh, below which e-kerosene achieves net life-cycle emission reductions relative to fossil Jet-A1, and above which it causes net harm. This threshold is not met by any current national grid average. The implication is unambiguous: e-kerosene production must use certified, additionality-verified renewable electricity with hourly matching, not grid electricty or renewable energy certificates without physical delivery verification. This conclusion, derived from simulation data, provides a concrete quantitative criterion for regulatory carbon intensity thresholds: a parameter not explicitly defined in current EU or ICAO SAF regulations.
+
+Conclusion 2: Monte Carlo Analysis Establishes Robust 88% Mean Emission Reduction
+
+The probabilistic simulation (n = 50,000) provides, for the first time in this context, a statistically robust characterisation of e-kerosene emission reductions under renewable electricity conditions. The mean reduction is 88% (0.27 vs. 2.31 kg CO/L), with a 90% confidence interval of 0.080.64 kg CO/L. Crucially, zero of 50,000 outcomes exceeds the fossil baseline, confirming that the climate benefit of e-kerosene with renewable electricity is robust across all plausible parameter combinations within current technology bounds. This probabilistic robustness finding goes beyond prior deterministic analyses and provides a stronger evidentiary basis for policy support.
+
+Conclusion 3: Electrolyser Efficiency is the Master Technology Variable
+
+Sensitivity analysis identifies electrolyser efficiency (_el) as having the largest combined influence on both net emissions (0.48 to +0.32 kg CO/L per 1 shift) and production cost (~USD 0.25/L per 0.10 improvement in _el). This prioritises continued R&D investment in advanced PEM and solid oxide electrolyser cell (SOEC) technologies; particularly high-temperature SOEC, which can exploit waste heat from FT synthesis to reduce electrical energy demand by 1520% relative to PEM at ambient temperature. A target electrolyser efficiency of 0.80 (achievable with current best-in-class SOEC technology) would reduce e-kerosene emissions by ~0.26 kg CO/L and cost by ~USD 0.36/L relative to the PEM baseline, making it the single highest-return technology investment in the PtL chain.
+
+Conclusion 4: E-Kerosene Cannot Achieve Zero Emissions Without Near-Perfect DAC
+
+Residual emissions at wind electricity (0.55 kg CO/L) are dominated by the DAC leakage term (0.35 kg CO/L), which persists regardless of electricity source at _CC = 0.85. Achieving net emissions below 0.10 kg CO/L requires either _CC > 0.96 (requiring improvements beyond current best-in-class DAC) or negative-emission electricity supply (bioenergy with carbon capture). This confirms that e-kerosene should be classified as a deep-decarbonisation tool (7588% reduction) rather than a zero-emission solution in any near-to-medium-term deployment scenario: a distinction that ICAO's CORSIA accounting framework currently obscures by allowing full credit for any certified SAF regardless of actual emission reduction depth.
+
+Conclusion 5: Economic Parity Requires Carbon Pricing of USD 100150/tCO
+
+Under realistic 2030 conditions (wind electricity at USD 0.025/kWh, electrolyser CAPEX at USD 300/kW, DAC at USD 150/tCO), the projected e-kerosene cost is USD 1.351.60/L; still USD 0.801.00/L above fossil fuel. Full economic parity
+
+without government subsidy requires either continued cost reduction beyond current projections or a carbon price of USD 100150/tCO (consistent with IPCC mitigation pathway requirements for 1.5°C). This finding directly calibrates the carbon pricing level required to incentivise private investment in e-fuel infrastructure without direct subsidy: a concrete policy design parameter derived from the simulation's cost model.
+
+Conclusion 6: E-Kerosene is Irreplaceable for Long-Haul Aviation but Inappropriate for Road Transport
+
+The combination of 42% PtL energy efficiency and ~28% turbofan thermal efficiency yields a 12% well-to-wheel efficiency for e-kerosene aviation; approximately 7× less efficient per renewable electricity unit than battery EVs for road transport. This quantitative comparison establishes a clear sectoral boundary: e-fuels should be reserved exclusively for hard-to-abate sectors where direct electrification is impossible or impractical (long-haul aviation, deep-sea shipping, certain industrial processes). Any policy that incentivises e-fuel use in the road transport sector represents a misallocation of scarce renewable electricity that could otherwise achieve 7× greater emission reductions through direct vehicle electrification. This is an original policy recommendation derived from the energy cascade analysis and has direct relevance to current EU discussions on carbon-neutral fuels for internal combustion engine vehicles post-2035.
+
+LIMITATIONS AND FUTURE WORK
+
+Limitations of This Study
+
+Several limitations should be acknowledged:
+
+The simulation uses a steady-state energy balance model and does not account for transient effects from intermittent renewable electricity supply. Real PtL plants must either buffer electricity with energy storage or accept reduced electrolyser utilisation during low-generation periods, both of which increase effective cost and emissions per litre of output.
+
+Non-CO climate forcing effects of aviation (contrail cirrus, NOx-induced ozone formation, water vapour at altitude) are not modelled. These effects may increase effective warming impact by 23× relative to CO alone; e-kerosene does not reduce these non-CO effects, which partially offsets the CO benefit calculated here.
+
+The ASF model represents idealised FT product distribution. Real FT reactors exhibit deviations (particularly methane over-selectivity at high temperatures) and catalyst deactivation over operational lifetimes, reducing average kerosene yield below ASF predictions.
+
+Land use, water consumption, and biodiversity impacts of large-scale renewable energy and DAC infrastructure are not quantified. In water-scarce regions (Atacama, Sahara), electrolytic hydrogen production requires significant freshwater desalination, adding cost and environmental burden.
+
+The techno-economic projections to 2035 involve considerable uncertainty. Electrolyser and DAC cost trajectories are modelled as exponential learning curves based on historical analogues (solar PV, lithium-ion batteries), but these analogies are imperfect and learning rates may vary significantly.
+
+Directions for Future Research
+
+Future work should address these limitations through:
+
+Integration of dynamic renewable electricity supply modelling with electrolyser load-following simulations to quantify the impact of intermittency on effective production efficiency and cost.
+
+Full life-cycle assessment (LCA) including non-CO atmospheric effects, water footprint, land use change, and supply chain emissions for raw materials (platinum group metals for PEM, rare earth catalysts for FT).
+
+High-fidelity process simulation using Aspen HYSYS or gPROMS to replace the simplified efficiency parameters with rigorous thermodynamic models of each unit operation.
+
+Region-specific analysis matching renewable resource availability to aviation demand hubs, identifying optimal PtL plant locations and international e-kerosene trade routes.
+
+Techno-economic comparison of e-kerosene with the competing pathways of Sustainable Aviation Fuel from biogenic feedstocks (bio-SAF), liquid hydrogen combustion, and hydrogen fuel cells, to identify the cost-optimal decarbonisation pathway by route length and time horizon.
+
+REFERENCES",,N,,2026-05-13 06:58:05.482520
+,,2026-05-13 09:05:40+00:00,MarketScreener,"Lufthansa's Swiss Unit, Metafuels to Jointly Develop Sustainable Aviation Fuel",MT Newswires,,,,,https://www.marketscreener.com/news/lufthansa-s-swiss-unit-metafuels-to-jointly-develop-sustainable-aviation-fuel-ce7f5bdfd188f223,"Trader This super rating is the result of a weighted average of the rankings based on the following ratings: Valuation (Composite), EPS Revisions (4 months), and Visibility (Composite).
+We recommend that you carefully review the associated descriptions.
+Investor This super composite rating is the result of a weighted average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), EPS Revisions (1 year), and Visibility (Composite).
+Global This composite rating is the result of an average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), Financial Estimates Revisions (Composite), Consensus (Composite) and Visibility (Composite).
+Quality This composite rating is the result of an average of rankings based on the following ratings: Returns (Composite), Profitability (Composite) and Quality of Financial Reporting (Composite), and Financial Health (Composite).","Trader
+
+This super rating is the result of a weighted average of the rankings based on the following ratings: Valuation (Composite), EPS Revisions (4 months), and Visibility (Composite). We recommend that you carefully review the associated descriptions.
+
+Investor
+
+This super composite rating is the result of a weighted average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), EPS Revisions (1 year), and Visibility (Composite). We recommend that you carefully review the associated descriptions.
+
+Global
+
+This composite rating is the result of an average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), Financial Estimates Revisions (Composite), Consensus (Composite) and Visibility (Composite). The company must be covered by at least 4 of these 5 ratings for the calculation to be carried out. We recommend that you carefully review the associated descriptions.
+
+Quality
+
+This composite rating is the result of an average of rankings based on the following ratings: Returns (Composite), Profitability (Composite) and Quality of Financial Reporting (Composite), and Financial Health (Composite). The company must be covered by at least 2 of these 3 ratings for the calculation to be performed. We recommend that you carefully read the associated descriptions.",https://www.marketscreener.com/images/twitter_MS_fdnoir.png,N,,2026-05-13 06:58:17.312076
 ,,2026-05-13 08:39:48+00:00,GOV.UK,Sustainable Aviation Fuel (SAF) Mandate statistics 2025: Fourth provisional release,Department for Transport,,,,,https://www.gov.uk/government/statistics/sustainable-aviation-fuel-saf-mandate-statistics-2025-fourth-provisional-release,"Statistics on the supply of sustainable aviation fuel (SAF), reported under the SAF Mandate for 2025, based on data available as of 27 April 2026.
 This is the fourth provisional report for 2025 and contains an incomplete dataset for the year.
 The complete and finalised dataset will be published in November 2026 alongside the final report for 2025.
@@ -5486,34 +6067,3 @@ Camelina is more tolerant of drought and dry growing conditions, so growers stru
 “This (geography) is exactly the opportunity,” Bernet said, while standing next to a camelina plot at the Bayer research centre near Saskatoon in 2025.
 
 “These crops (camelina) can produce a high level of yield per acre, with a very low carbon intensity.”",https://static.albertafarmexpress.ca/wp-content/uploads/2026/05/08142952/308803_web1_IMG_9575.jpeg,N,,2026-05-10 11:57:16.501859
-,,2026-05-10 10:05:27+00:00,WEKU,Iran ceasefire tested as cargo ship catches fire after being hit off Qatar's coast - WEKU,The Associated Press,,,,,https://www.weku.org/npr-news/2026-05-10/iran-ceasefire-tested-as-cargo-ship-catches-fire-after-being-hit-off-qatars-coast,"DUBAI, United Arab Emirates — A cargo ship caught fire Sunday after being hit by an unknown projectile off Qatar's coast, the British military said, in the latest attack on vessels in the Persian Gulf since a shaky ceasefire stopped fighting between the U.S. and Iran.
-Washington has been awaiting Iran's response to a new proposal for a deal to end the war, reopen the strait to shipping and roll back Iran's nuclear program.
-One of the main sticking points in the negotiations is the fate of Iran's stockpile of highly enriched uranium.
-The attack happened 23 nautical miles (43 kilometers) northeast of Qatar's capital, Doha, the UKMTO said.
-It gave no details on the owner or origin of the ship, and there was no claim of responsibility.","DUBAI, United Arab Emirates — A cargo ship caught fire Sunday after being hit by an unknown projectile off Qatar's coast, the British military said, in the latest attack on vessels in the Persian Gulf since a shaky ceasefire stopped fighting between the U.S. and Iran.
-
-The Trump administration says the month-old ceasefire remains in effect. But it has been repeatedly tested with Iran restricting traffic through the Strait of Hormuz, a strategic waterway key to the global flow of oil, and the U.S. imposing a blockade of Iranian ports.
-
-Washington has been awaiting Iran's response to a new proposal for a deal to end the war, reopen the strait to shipping and roll back Iran's nuclear program.
-
-One of the main sticking points in the negotiations is the fate of Iran's stockpile of highly enriched uranium. The U.N. nuclear agency says Iran has more than 440 kilograms (970 pounds) of uranium that is enriched up to 60% purity, a short, technical step from weapons-grade levels.
-
-In an interview with Iranian state media, a spokesman for the Iranian military said that forces were on ""full readiness"" to protect nuclear sites where the uranium is stored.
-
-""We considered it possible that they might intend to steal it through infiltration operations or heliborne operations,"" Brig. Gen. Akrami Nia told the IRNA news agency late Saturday. He didn't offer further details.
-
-The majority of Iran's highly enriched uranium is likely still at its Isfahan nuclear complex, the head of the U.N. nuclear agency told The Associated Press last month.
-
-The Isfahan facility was bombarded by U.S.-Israeli airstrikes in the 12-day war last year, and faced less intense attacks in this year's war.
-
-In Sunday's naval attack, the United Kingdom Maritime Trade Operations Centre said that the strike caused a small fire on the ship, which was extinguished. The attack happened 23 nautical miles (43 kilometers) northeast of Qatar's capital, Doha, the UKMTO said.
-
-There were no reported casualties, it said. It gave no details on the owner or origin of the ship, and there was no claim of responsibility.
-
-But there have been several attacks against ships in the Persian Gulf over the past week. On Friday, the U.S. struck two Iranian oil tankers after it said that the vessels were trying to breach its blockade of Iran's ports.
-
-Iran's Revolutionary Guard navy on Sunday reiterated its warning that any attack on Iranian oil tankers or commercial vessels would be met with a ""heavy assault"" on one of the U.S. bases in the region and enemy ships.
-
-U.S. President Donald Trump has reiterated threats to resume full-scale bombing, if Iran doesn't accept an agreement to reopen the strait and roll back its nuclear program. Iran has mostly blocked the critical waterway for global energy since joint strikes on Feb. 28 by the U.S. and Israel launched the war, which has caused a global spike in fuel prices and rattling world markets.
-
-Copyright 2026 NPR",https://npr.brightspotcdn.com/dims4/default/61653c2/2147483647/strip/true/crop/1200x630+0+23/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnpr.brightspotcdn.com%2Fdims3%2Fdefault%2Fstrip%2Ffalse%2Fcrop%2F1200x675%200%2059%2Fresize%2F1200x675%21%2F%3Furl%3Dhttp%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F83%2Fe0%2F497517964c9d867ac307e1a7bd39%2Fap26128463741291.jpg,N,,2026-05-10 12:57:40.842569
