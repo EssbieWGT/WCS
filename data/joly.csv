@@ -1,4 +1,51 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID7,Barclays,2026-05-31 03:49:21+00:00,www.ft.com,Jes Staley to appear before Congress over ties to Jeffrey Epstein - Financial Times,"Ortenca Aliaj, Lauren Fedor",,,,,https://www.ft.com/content/376237d6-64ca-4804-90c5-2f83d78ed288?syn-25a6b1a6=1,"Try unlimited access Only $1 for 4 weeks Then $75 per month.
+Complete digital access to quality FT journalism on any device.
+Check whether you already have access via your university or organisation.
+Terms & Conditions apply For individuals Discover all the plans currently available in your country For multiple readers Digital access for organisations.
+Includes exclusive features and content.","Try unlimited access
+
+Only $1 for 4 weeks
+
+Then $75 per month. Complete digital access to quality FT journalism on any device. Cancel anytime during your trial.
+
+Check whether you already have access via your university or organisation.
+
+Terms & Conditions apply
+
+For individuals
+
+Discover all the plans currently available in your country
+
+For multiple readers
+
+Digital access for organisations. Includes exclusive features and content.",https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fb7da2e76-4400-4b59-821b-a06deab84d8d.jpg?source=next-barrier-page,N,,2026-05-31 00:44:55.483151
+ID23,IBM,2026-05-31 03:19:52+00:00,www.forbes.com,IBM's Agentic Operating Model Puts Sovereignty At The Center - Forbes,,,,,,https://www.forbes.com/sites/stevemcdowell/2026/05/30/ibms-agentic-operating-model-puts-sovereignty-at-the-center/,"IBM unveiled an agentic operating model, Sovereign Core for governance, and expanded IBM Consulting capabilities to move enterprise AI from pilot ...",Not Available,,Y,,2026-05-31 00:45:08.988877
+ID32,Microsoft,2026-05-31 02:22:33+00:00,Startup Fortune,Microsoft is betting its enterprise future on durable AI agents and the infrastructure race has ...,Elroy Fernandes,,,,,https://startupfortune.com/microsoft-is-betting-its-enterprise-future-on-durable-ai-agents-and-the-infrastructure-race-has-already-begun/,"Through a combination of the Durable Task Framework, the newly announced Microsoft Agent Framework, and a May 2026 Copilot Studio release that introduced computer-using agents and a redesigned visual workflow canvas, Microsoft has systematically rebuilt its AI stack from the substrate up.
+The Durable Task Extension for Microsoft Agent Framework is where the technical story gets interesting.
+The Microsoft Agent Framework itself merges two previously separate projects: AutoGen, the multi-agent research system out of Microsoft Research, and Semantic Kernel, the enterprise-oriented SDK that has been Microsoft's primary developer surface for AI integration.
+The connectors ship pre-built for Azure AI Foundry, Microsoft Graph, Fabric, SharePoint, and dozens of SaaS systems via Azure Logic Apps.
+If Microsoft ships durable orchestration, built-in connectors, governance controls, and multi-agent coordination as platform primitives, the surface area for differentiated middleware products shrinks.","Microsoft has quietly assembled the plumbing for a persistent, stateful agentic AI platform inside Azure, and the implications for enterprise developers and independent software vendors are more significant than any single product announcement suggests.
+
+For the past two years, Copilot looked like a chat window bolted onto Microsoft 365. That framing is now obsolete. Through a combination of the Durable Task Framework, the newly announced Microsoft Agent Framework, and a May 2026 Copilot Studio release that introduced computer-using agents and a redesigned visual workflow canvas, Microsoft has systematically rebuilt its AI stack from the substrate up. The goal is not another assistant. It is a durable execution layer that can run multi-step, multi-agent pipelines across enterprise environments for hours, days, or weeks without losing state.
+
+The Durable Task Extension for Microsoft Agent Framework is where the technical story gets interesting. Built on top of Azure Durable Functions, it provides checkpointing and replay semantics for AI workflows, meaning that if an agent is midway through a 200-step orchestration and the infrastructure hiccups, the job resumes from exactly where it left off rather than starting over. According to Temporal's Series D announcement, the company raised $300 million led by Andreessen Horowitz in February 2026, reporting 380 percent year-over-year revenue growth and 9.1 trillion lifetime action executions, at a $5 billion valuation. The market is clearly willing to pay for durable execution at scale, and Microsoft is now offering a version of it as a native Azure capability rather than a separate vendor relationship.
+
+The Microsoft Agent Framework itself merges two previously separate projects: AutoGen, the multi-agent research system out of Microsoft Research, and Semantic Kernel, the enterprise-oriented SDK that has been Microsoft's primary developer surface for AI integration. Combining them into a single commercial-grade runtime is a significant consolidation. For ISVs and enterprise developers already building on Azure, the message is straightforward: you no longer need to stitch together a separate orchestration layer. The connectors ship pre-built for Azure AI Foundry, Microsoft Graph, Fabric, SharePoint, and dozens of SaaS systems via Azure Logic Apps.
+
+The honest comparison to make is not between Microsoft and Salesforce but between Microsoft's stack and the open-source orchestration ecosystem. LangGraph reached v1.0 in late 2025 and is now the default runtime for all LangChain agents, running in production at Klarna, Uber, and LinkedIn. Its model is graph-based reasoning with checkpoint-backed state between nodes. Temporal operates differently, providing event-history-backed durability at the workflow level rather than within individual reasoning steps. The practical architecture that many production teams have landed on is Temporal for macro-level workflow orchestration and LangGraph for micro-level agent reasoning inside each step.
+
+Microsoft's Durable Task approach attempts to collapse that two-layer pattern into a single Azure-native surface. Whether it succeeds depends on how deeply developers are already committed to the LangGraph or Temporal ecosystems, and whether Microsoft's execution guarantees prove as robust in practice as Temporal's replay semantics. The framework is still in public preview, which means the production maturity question is genuinely open.
+
+The Salesforce Agentforce comparison is more about market positioning than architecture. Agentforce 3 with its Atlas reasoning engine is winning on multi-step customer-facing service workflows, particularly in CRM-heavy environments. Copilot Studio is winning on document and email-heavy internal workflows, which makes sense given the 20 million paid Microsoft 365 Copilot enterprise seats as of April 2026, with more than 60 percent of Fortune 500 companies running at least 10,000 seats. Most large enterprises will likely operate both platforms for different functions, meaning the real competition is for developer mindshare and the ISV ecosystem built on top of each.
+
+The lock-in question every enterprise developer should be asking
+
+Infrastructure bets compound. When Microsoft ships pre-built connectors for its own data services, teams that build agentic workflows on Azure naturally wire those workflows into Fabric, Graph, and SharePoint. Each integration makes a future migration more expensive. This is not a criticism so much as an honest description of how platform gravity works. Microsoft's scale advantage, 300 million-plus Microsoft 365 commercial seats globally, means the distribution channel for these agents is already embedded in the daily workflow of most enterprise knowledge workers.
+
+The more granular risk for ISVs is the question of differentiation. If Microsoft ships durable orchestration, built-in connectors, governance controls, and multi-agent coordination as platform primitives, the surface area for differentiated middleware products shrinks. That is the same dynamic Temporal and LangGraph are navigating from the open-source side, leaning into model-agnosticism and portability as their counter to platform gravity.
+
+Microsoft Build 2026, scheduled for June 2 and 3 in San Francisco, is expected to bring more announcements around the Windows Agent Framework APIs and a Windows Agent Store, extending the agentic surface area from cloud to desktop. The Copilot Tasks feature, already in rollout, lets scheduled agents execute autonomously against a user's calendar and email without manual triggering. The infrastructure layer is converging, and enterprises that have been treating Copilot as a chat add-on are about to face a considerably more consequential decision.",https://startupfortune.com/wp-content/uploads/2026/05/sf-12375-1780134725813.jpg,N,,2026-05-31 00:45:16.168983
 ID22,HP Inc,2026-05-31 01:06:50+00:00,Seeking Alpha,"Broadcom, Hewlett Packard Headline Earnings Next Week | Seeking Alpha",Wall Street Week Ahead,,,,,https://seekingalpha.com/article/4910093-broadcom-hewlett-packard-headline-earnings-next-week,"The newsletter keeps you informed of the biggest stories set to make headlines, including upcoming IPOs, investor days, earnings reports, and conference presentations.
 _______________________________________________________________ Earnings spotlight: Monday: Hewlett Packard (HPE) and Credo Technology (CRDO).
 Earnings spotlight: Wednesday: Broadcom (AVGO), CrowdStrike (CRWD), and Medtronic (MDT).
@@ -79,6 +126,99 @@ United Airlines already has more than 300 planes equipped with Starlink and plan
 American Airlines has struggled over the past five years, and its stock is down more than 37% in that time. Good internet service doesn't fix all of the carrier's problems, but it will help a fair amount as consumers become increasingly sensitive to the passenger experience.
 
 The company has long battled business turbulence, with unionized employees going as far as to call for CEO Robert Isom to step down. This customer-friendly move could be the first important step in the carrier's strategy to differentiate itself and build loyalty among higher-paying customers.",https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F871864%2Fairplane-takeoff.jpg&w=1200&op=resize,N,,2026-05-30 23:01:35.769380
+ID32,Microsoft,2026-05-30 23:39:16+00:00,Yahoo News,Microsoft presents data center expansion plans to the public - Yahoo,"Carrie Haderlie, Wyoming Tribune-Eagle, Cheyenne",,,,,https://www.yahoo.com/news/us/articles/microsoft-presents-data-center-expansion-035900244.html,"Microsoft, which has operated data centers in Cheyenne since 2012, has submitted applications with the city of Cheyenne for two additional expansion areas.
+Tuesday night, the Cheyenne City Council voted 9-1 against a moratorium on new data center development, after taking hours of public comment.
+I would like to see more diverse growth, not just data center explosion,” Madrid said.
+Data centers won’t be allowed to take as much power from the grid as they want, unchecked, she continued.
+In addition, a public meeting about data center development has been scheduled for next Saturday, June 6, at the Cheyenne Civic Center (see sidebar).","CHEYENNE — After years of hearing about the tech industry’s economic benefits, from tax revenue to job creation, Wyomingites are now asking if large-scale data centers are worth the potential energy, water and environmental impacts, especially during a historic drought.
+
+Microsoft, which has operated data centers in Cheyenne since 2012, has submitted applications with the city of Cheyenne for two additional expansion areas. The first is on a 385-acre site east of College Drive near Cheyenne Business Parkway, and the second is an approximately 35-acre site south of Happy Jack Road near North Range Business Park.
+
+In addition, the company previously announced plans to buy and develop 3,200 acres of land in Laramie County south of Cheyenne, effectively tripling its current footprint.
+
+Tuesday night, the Cheyenne City Council voted 9-1 against a moratorium on new data center development, after taking hours of public comment. On Thursday, Microsoft hosted a community information session at the Laramie County Community College Flex Tech Building, with employees at stations covering recent expansion announcements, water use, energy, jobs and community investments.
+
+Jonathan Noble, Microsoft’s senior director for infrastructure government affairs, told the Wyoming Tribune Eagle at the event that Microsoft is looking to expand on two sites that are contiguous with existing data center sites, and another one is located “nearby.”
+
+“We are very early in the process, and we are looking to buy and expand,” Noble said, confirming that one of the sites Microsoft is looking at belongs to the Lummis family. Cynthia Lummis, a longtime proponent of technology advancements, including cryptocurrency, is in her last year as one of Wyoming’s two U.S. senators.
+
+“As a part of that process, we announced our intent to purchase the property over a month ago,” he said. “We felt it was important that we come to the community to share what we hope to be doing, what the community supports, as well as hear what their concerns are.”
+
+From Microsoft’s perspective, data centers are a part of the nation’s critical infrastructure systems, from the individual level up.
+
+“We’re focused on working with communities and landowners who are supportive of this economic development,” he said.
+
+For several hours, members of the public streamed into the building, its large picture windows looking westward over a clear blue sky and new spring grasses.
+
+Water, jobs and mitigating risk
+
+Laramie County resident Alex Bowler, who said he believed he was the last person to speak around midnight at the council meeting Tuesday, voiced opposition to Microsoft’s expansion. He had supported the proposed moratorium.
+
+“Our Cheyenne Area Landowners Coalition has questions about water,” Bowler said.
+
+The city’s Board of Public Utilities will supply water to cool the data center, he said, but what isn’t clear is what will happen to the water down the line, when it can no longer be recycled within the system.
+
+“What is going to happen to it four or five years from now, when it becomes wastewater? They will have to haul it away somewhere. Where are they going to haul it away to? What are they going to do with it?” Bowler asked, noting that the cooling system puts additives like chemicals and salts into its water.
+
+Noble said later that if a water and fluid mixture “needs to be taken care of, we will ship it to a facility that is capable and certified to manage that water.”
+
+Heather Madrid, a lifelong Cheyenne resident who has led a petition drive calling for a moratorium like the one rejected this week, looked over the posters and information Thursday and said she remained skeptical.
+
+“As I’m looking at these signs, I appreciate the information, but what I would like to see more of are the risks and what is being done to mitigate them,” she said. “They are saying, ‘Look at all the great things we’re doing,’ and that is probably true, but it doesn’t acknowledge the other side of the issue whatsoever.”
+
+Without understanding the “why,” she said, it’s hard to trust the process.
+
+“I don’t love the idea of expansion. The reason it worries me is that, where are we going to grow beyond data centers if all of our land is being used for that purpose? I would like to see more diverse growth, not just data center explosion,” Madrid said.
+
+But Crystal Edmunds-Carter and her husband, Justin Carter, who attended the session Thursday to gather more information, said they were in favor of the expansion. Carter said he has worked on data center construction in Cheyenne, and was thankful for the job.
+
+“I think it is awesome that we are getting local jobs for local hands,” he said.
+
+Edmunds-Carter said her husband traveled for work for 13 years, but in the last several years, he’s been home.
+
+“People that usually have to travel or be on the road, we’re putting them to work. If they can be here with their families, that’s huge,” she said, adding that she isn’t opposed to reasonable restrictions on where data centers are built or the resources they use.
+
+“But as far as the workforce and the jobs, it is fantastic,” she said.
+
+City and Microsoft officials: ‘We live here too’
+
+Noble said data center growth is foundational to U.S. infrastructure, likening it to the railroad and freeway system.
+
+“This is next-generation, critical infrastructure that is necessary for our U.S. economy, our security,” he said.
+
+Microsoft employs more than 500 people in Cheyenne, in addition to construction jobs, he said.
+
+“We have been under continuous construction for almost 12 years, so these construction jobs are long term,” Noble said.
+
+Both Noble and Cheyenne City Councilwoman Kathy Emmons noted Thursday that there is “misinformation” spreading about data centers statewide. Community members do have good questions, though, Noble said, “and they deserve answers.”
+
+“That is part of the reason why we’re here tonight, to provide community members a chance to talk to subject-matter experts who can provide the answers that we have now, recognizing we are very early in the process. Some of these questions will be answered as the process goes on,” he said.
+
+Emmons said she wishes people knew the process is long. Data centers don’t just pop up overnight.
+
+“It is about an eight- to 12-month processing period between the state, the city, BOPU, all the licensing,” she said. “Then, from the time they start until they finally open a facility, that’s six years. It is not like there is a stampede of buildings that will open tomorrow.”
+
+That allows officials time to “make sure we’re doing our due diligence for the community.”
+
+“We live here too, and we want it to be safe,” Emmons said.
+
+Another misconception is that a data center in Wyoming will use the same amount of water for its cooling systems as those in states like Texas or Arizona, she said.
+
+“It’s going to be a different (cooling) model there, in large part, because of our climate. It is much easier to cool here,” Emmons said.
+
+Data centers won’t be allowed to take as much power from the grid as they want, unchecked, she continued. A third misconception, she added, is that the city will “let anybody build.”
+
+“If somebody did come in and said they wanted to use a huge amount of water, and they meet with BOPU and they say it’s more than we can handle, we will not continue to work with them. That’s it.
+
+“We really are doing our due diligence to make sure that, yes, they can come in, but they have to do it in a safe manner. We have to look out for the community,” Emmons said.
+
+Noble said Thursday’s event was one of the earliest community outreach efforts by Microsoft to date, adding that the company wants to face questions head-on.
+
+“Whenever a development is proposed for a community, that community has questions. What is different, what is a little bit unique (about data center growth) is just the scale of this infrastructure development,” Noble said. “Many communities are raising the same questions at the same time.”
+
+All of the materials from Thursday’s session will be posted on Microsoft’s website, Noble said, and there will continue to be public hearings about the project in coming months.
+
+In addition, a public meeting about data center development has been scheduled for next Saturday, June 6, at the Cheyenne Civic Center (see sidebar).",https://s.yimg.com/cv/apiv2/social/images/yahoo_default_logo-1200x1200.png,N,,2026-05-31 00:45:21.037381
 ID15,Delta Airlines,2026-05-30 22:11:29+00:00,View from the Wing,United Airlines CEO Used To Cut The Product — Now He's Spending More To Build The Brand,Gary Leff,,,,,https://viewfromthewing.com/united-airlines-ceo-used-to-cut-the-product-now-hes-spending-more-to-build-the-brand/,"Long before Kirby became President and then CEO of United Airlines he was known as a spreadsheet guy, not a product guy, and not a brand guy.
 And when he moved to United, it first seemed like more of the same – cutting back on business class wine, eliminating meals from first class on many domestic flights.
 In 2020, United Airlines led the industry by eliminating change fees on most domestic tickets.
@@ -8776,27 +8916,6 @@ For the pharmaceutical manufacturing sector, the transactions may raise question
 Lilly joins a broader industry trend of large pharma companies using strong balance sheets to secure vaccine pipeline assets, with infectious disease prevention increasingly viewed as a long-term growth category.
 
 The news was reported in the Wall Street Journal earlier on Tuesday.",https://manufacturingchemist.com/article-image-alias/eli-lilly-to-expand-into-infectious.png,N,,2026-05-26 09:18:13.787761
-ID36,OpenAI,2026-05-26 11:29:37+00:00,Yahoo Finance,Why Microsoft's Split With OpenAI May Be Great for the Stock in the Long Run,"David Jagielski, CPA, The Motley Fool",,,,,https://finance.yahoo.com/markets/stocks/articles/why-microsofts-split-openai-may-232000482.html,"Should you buy stock in Microsoft right now?
-Before you buy stock in Microsoft, consider this: The Motley Fool Stock Advisor analyst team just identified what they believe are the 10 best stocks for investors to buy now… and Microsoft wasn’t one of them.
-Don't miss the latest top 10 list, available with Stock Advisor, and join an investing community built by individual investors for individual investors.
-See the 10 stocks » *Stock Advisor returns as of May 25, 2026.
-The Motley Fool has a disclosure policy.","At 25 times trailing earnings, the tech stock trades at a very reasonable premium, and it's cheap when compared to the S&P 500, with the average stock on the index trading at a multiple of 26. For long-term investors, Microsoft can make for an excellent stock to buy right now, as being less dependent and reliant on OpenAI should put it in a better position to grow its AI business.
-
-Should you buy stock in Microsoft right now?
-
-Before you buy stock in Microsoft, consider this:
-
-The Motley Fool Stock Advisor analyst team just identified what they believe are the 10 best stocks for investors to buy now… and Microsoft wasn’t one of them. The 10 stocks that made the cut could produce monster returns in the coming years.
-
-Consider when Netflix made this list on December 17, 2004... if you invested $1,000 at the time of our recommendation, you’d have $477,813!* Or when Nvidia made this list on April 15, 2005... if you invested $1,000 at the time of our recommendation, you’d have $1,320,088!*
-
-Now, it’s worth noting Stock Advisor’s total average return is 986% — a market-crushing outperformance compared to 208% for the S&P 500. Don't miss the latest top 10 list, available with Stock Advisor, and join an investing community built by individual investors for individual investors.
-
-See the 10 stocks »
-
-*Stock Advisor returns as of May 25, 2026.
-
-David Jagielski, CPA has no position in any of the stocks mentioned. The Motley Fool has positions in and recommends Microsoft. The Motley Fool has a disclosure policy.",https://s.yimg.com/ny/api/res/1.2/kM_II8jGVzaTtxuCoWDkEA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/motleyfool.com/c00d67bc14459c6e0195292a8c33b75d,N,,2026-05-26 12:35:23.509602
 ID49,U.S. Bank,2026-05-26 11:29:37+00:00,simplywall.st,A Look At U.S. Bancorp (USB) Valuation After New Amazon Card Launches And Recent ...,Simply Wall St,,,,,https://simplywall.st/stocks/us/banks/nyse-usb/us-bancorp/news/a-look-at-us-bancorp-usb-valuation-after-new-amazon-card-lau,"U.S. Bancorp (USB) has teamed up with Amazon to launch new Prime Business Card and Amazon Business Card products, while also issuing multiple fixed income offerings that highlight ongoing capital raising activity at the bank.
 These product launches and ongoing bond issuance come as U.S. Bancorp’s share price sits at US$54.83, with a modest 7 day share price return of 2.87%, set against a stronger 1 year total shareholder return of 30.67% and a very large 3 year total shareholder return of around 11x.
 This suggests longer term momentum that contrasts with a softer 90 day share price return, which declined 2.18%.
@@ -8836,6 +8955,27 @@ Hunt for quality at a discount using the to see which stocks currently trade bel
 Prioritise resilience by focusing on companies screened through the that emphasise stability and controlled downside.
 
 This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.",https://images.simplywall.st/asset/company-cover/305304-main-header/1756190545649,N,,2026-05-26 13:18:44.045094
+ID36,OpenAI,2026-05-26 11:29:37+00:00,Yahoo Finance,Why Microsoft's Split With OpenAI May Be Great for the Stock in the Long Run,"David Jagielski, CPA, The Motley Fool",,,,,https://finance.yahoo.com/markets/stocks/articles/why-microsofts-split-openai-may-232000482.html,"Should you buy stock in Microsoft right now?
+Before you buy stock in Microsoft, consider this: The Motley Fool Stock Advisor analyst team just identified what they believe are the 10 best stocks for investors to buy now… and Microsoft wasn’t one of them.
+Don't miss the latest top 10 list, available with Stock Advisor, and join an investing community built by individual investors for individual investors.
+See the 10 stocks » *Stock Advisor returns as of May 25, 2026.
+The Motley Fool has a disclosure policy.","At 25 times trailing earnings, the tech stock trades at a very reasonable premium, and it's cheap when compared to the S&P 500, with the average stock on the index trading at a multiple of 26. For long-term investors, Microsoft can make for an excellent stock to buy right now, as being less dependent and reliant on OpenAI should put it in a better position to grow its AI business.
+
+Should you buy stock in Microsoft right now?
+
+Before you buy stock in Microsoft, consider this:
+
+The Motley Fool Stock Advisor analyst team just identified what they believe are the 10 best stocks for investors to buy now… and Microsoft wasn’t one of them. The 10 stocks that made the cut could produce monster returns in the coming years.
+
+Consider when Netflix made this list on December 17, 2004... if you invested $1,000 at the time of our recommendation, you’d have $477,813!* Or when Nvidia made this list on April 15, 2005... if you invested $1,000 at the time of our recommendation, you’d have $1,320,088!*
+
+Now, it’s worth noting Stock Advisor’s total average return is 986% — a market-crushing outperformance compared to 208% for the S&P 500. Don't miss the latest top 10 list, available with Stock Advisor, and join an investing community built by individual investors for individual investors.
+
+See the 10 stocks »
+
+*Stock Advisor returns as of May 25, 2026.
+
+David Jagielski, CPA has no position in any of the stocks mentioned. The Motley Fool has positions in and recommends Microsoft. The Motley Fool has a disclosure policy.",https://s.yimg.com/ny/api/res/1.2/kM_II8jGVzaTtxuCoWDkEA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/motleyfool.com/c00d67bc14459c6e0195292a8c33b75d,N,,2026-05-26 12:35:23.509602
 ID32,Microsoft,2026-05-26 11:26:20+00:00,TechRadar,"Microsoft promised it would scale back on AI visibility, but Copilot is now back to its original ...","Isaiah Williams, www.techradar.com, isaiah-williams",,,,,https://www.techradar.com/computing/windows/microsoft-promised-it-would-scale-back-on-ai-visibility-but-copilot-is-now-back-to-its-original-and-invasive-sidebar-design,"As reported by Windows Latest, Copilot has returned to its original sidebar design, which forces applications aside when docking the AI assistant.
 These docking options are also arguably better than just quick view alone, as it gives users more options to customize Copilot's placement.
 However, the return to an old design seems counterintuitive to Microsoft's attempt to wind down AI visibility and bloat on the operating system.
@@ -11956,141 +12096,3 @@ This article by Simply Wall St is general in nature. We provide commentary based
 Companies discussed in this article include ADBE.
 
 Have feedback on this article? Concerned about the content? Get in touch with us directly. Alternatively, email editorial-team@simplywallst.com",https://s.yimg.com/os/en/simply_wall_st__316/d0bd720f24381ca758d4adc12e9dc4d5,N,,2026-05-24 11:04:39.171009
-ID32,Microsoft,2026-05-24 05:20:06+00:00,www.msn.com,Gates Foundation fully exits Microsoft with $3.2B share sale - MSN,Not Available,,,,,https://www.msn.com/en-us/money/topstocks/gates-foundation-exits-microsoft-with-3-2b-final-sale/ss-AA23RK1s,"Historic stake exit: The Gates Foundation Trust sold its last Microsoft shares in Q1 2026, closing a long-standing investment since the charity's ...",Not Available,,N,,2026-05-24 02:00:36.858522
-ID11,Capgemini,2026-05-24 05:17:30+00:00,simplywall.st,How Dividend Move and AI Data Centre Bet May Reframe Capgemini's (ENXTPA:CAP ...,Simply Wall St,,,,,https://simplywall.st/stocks/fr/software/epa-cap/capgemini-shares/news/how-dividend-move-and-ai-data-centre-bet-may-reframe-capgemi/amp,"At its Shareholders’ Meeting held on May 20, 2026, Capgemini SE approved a dividend of €3.40 per share for the 2025 financial year, confirmed multiple board renewals and new independent director appointments, and formalized governance changes including new heads of key committees.
-On the same day, Capgemini’s role in the AION consortium seeking EU backing for a €10.00 billion AI-focused data centre in France underscored its involvement in large-scale digital infrastructure while board...",Not Available,,N,,2026-05-24 03:02:08.418921
-ID35,Nvidia,2026-05-24 04:58:46+00:00,The Motley Fool,Nvidia's Board Just Authorized an Additional $80 Billion Buyback. Here's What That Really ...,"Daniel Sparks, www.facebook.com",,,,,https://www.fool.com/investing/2026/05/23/nvidias-board-just-authorized-an-additional-80-bil/,"A cash cow The new $80 billion authorization stacks on top of the $38.5 billion Nvidia had left under its prior program at the end of the quarter, giving it roughly $118 billion in repurchasing power with no expiration.
-In fiscal Q1, that figure reached $48.6 billion -- nearly double the $26.1 billion from the same period a year earlier.
-""We returned a record $20 billion to our shareholders while executing strategic investments, both upstream supply chain and downstream go to market ecosystem,"" chief financial officer Colette Kress said on Nvidia's fiscal first-quarter earnings call.
-Further, Nvidia's guidance calls for about $91 billion in revenue this quarter -- a level that would mark a further acceleration.
-And the cash behind Nvidia's dividend and share repurchases looks durable.","Nvidia (NVDA 1.86%) rarely has to remind anyone how fast it's growing. So it was a little surprising when, earlier this week, the chipmaker paired its latest quarterly report with a move that looked borrowed from a mature blue chip: its board approved an additional $80 billion for share repurchases and lifted the quarterly dividend from $0.01 to $0.25 a share -- a 25-fold increase.
-
-The backdrop is what makes it notable. This is a business that just grew revenue 85% year over year. Companies growing that fast usually plow every spare dollar back into the business, not into dividends and buybacks. So, it's fair to ask what Nvidia is really telling investors here.
-
-A cash cow
-
-The new $80 billion authorization stacks on top of the $38.5 billion Nvidia had left under its prior program at the end of the quarter, giving it roughly $118 billion in repurchasing power with no expiration. And it isn't sitting on that capacity: in its fiscal first quarter of 2027 (the period ended April 26, 2026), Nvidia returned a record $20 billion to shareholders through buybacks and dividends.
-
-And it's worth emphasizing here that the company can do this without starving its investments, thanks to its robust free cash flow -- the cash left after running and expanding the business. In fiscal Q1, that figure reached $48.6 billion -- nearly double the $26.1 billion from the same period a year earlier.
-
-Notably, management has said it intends to return about half of its free cash flow to shareholders this year -- a pace the first quarter almost matched.
-
-""We returned a record $20 billion to our shareholders while executing strategic investments, both upstream supply chain and downstream go to market ecosystem,"" chief financial officer Colette Kress said on Nvidia's fiscal first-quarter earnings call.
-
-Even after the 25-fold raise, though, the dividend is more symbol than payout: at $0.25 a quarter, it works out to about $1 a share a year, a yield well under 0.5%. The buyback, however, is more material.
-
-Today's Change
-
-( -1.86 %) $ -4.09
-
-Current Price
-
-$ 215.42
-
-Key Data Points
-
-Market Cap
-
-$5.2T
-
-Day's Range
-
-$ 214.84 - $ 221.07
-
-52wk Range
-
-$ 132.92 - $ 236.54
-
-Volume
-
-5.8M
-
-Avg Vol
-
-171.3M
-
-Gross Margin
-
-74.15 %
-
-Dividend Yield
-
-0.02 %
-
-The business that pays for it
-
-None of this works without a business that's still accelerating, supporting the dividend and the share price.
-
-Fiscal Q1 revenue of $81.6 billion rose 85% from a year ago, and the data center segment -- the engine of the AI story -- climbed 92% to $75.2 billion, with sales to the largest cloud providers more than doubling. Further, Nvidia's guidance calls for about $91 billion in revenue this quarter -- a level that would mark a further acceleration.
-
-Nvidia's reported profit jumped 211%, but that was inflated by a roughly $15.9 billion gain on the value of stakes it holds in other companies -- a paper gain, not cash from selling chips. Strip it out, and non-GAAP (adjusted) earnings per share still rose 140%.
-
-And the cash behind Nvidia's dividend and share repurchases looks durable. On the same call, Kress noted that rental prices for Nvidia's older H100 chips have actually risen this year, and that customers keep profiting from graphics processing units (GPUs) long after they're fully depreciated -- factors that paint a rosy picture for Nvidia's customer demand environment.
-
-Of course, there are notable risks, one being China. Nvidia shipped no data center chips there last quarter, down from $4.6 billion a year earlier, and its outlook assumes no data center compute revenue from China this quarter. CEO Jensen Huang has gone further, saying this week that the company has ""largely conceded"" the Chinese AI chip market to domestic rival Huawei.
-
-And closer to home, Nvidia's biggest customers are increasingly designing their own AI chips, which could erode its pricing power over time.
-
-These risks may explain the market's muted response: even with record results and bigger payouts, the stock slipped after the report and has drifted lower since, to around $215.
-
-Yet Nvidia stock's valuation doesn't look stretched. The forward price-to-earnings ratio sits in the low 20s, hardly demanding for a company still growing this fast.
-
-So, what does the $80 billion buyback really signal? Mostly that Nvidia is generating far more cash than it can reinvest, and that management is confident enough in future profits, and its stock's long-term potential to hand more of it back -- and to spend it on its own shares while doing so. That's a real positive, but it doesn't make the stock a sure thing. Between the lost China revenue and customers building their own silicon, the range of outcomes stays wide -- especially with expectations already running high. Ultimately, I think Nvidia stock looks attractive at today's price, but I'd treat it as a high-risk holding, the kind worth owning only in a small position.",https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F871523%2Fnvda-stock-reason-to-buy.jpg&w=1200&op=resize,N,,2026-05-24 03:02:13.475016
-ID35,Nvidia,2026-05-24 03:18:49+00:00,drrobertcastellano.substack.com,Nvidia's Jensen Huang Has a Narrow Window to Fix a Massive AI Infrastructure Mistake,Dr. Robert Castellano,,,,,https://drrobertcastellano.substack.com/p/nvidias-jensen-huang-has-a-narrow,"Every GPU generation became larger, denser, hotter, and more memory-intensive, while Jensen Huang accelerated product cadence to annual launches in an attempt to maintain Nvidia’s overwhelming AI leadership.
-Vera Rubin now attempts to redefine the entire data center as a single AI factory.
-But somewhere during this transformation, Nvidia appears to have forgotten one important detail: It is still a fabless semiconductor company.
-It does not control TSV capacity, CoWoS packaging lines, substrate manufacturing, interposer output, or the electrical grid needed to power its AI factories.
-Jensen Huang built the industry’s most powerful AI roadmap without owning the memory ecosystem required to sustain it.","What’s in This Article
-
-Prolog
-
-Introduction
-
-Why Nvidia’s Annual AI Cadence Changed the Industry
-
-The Historical Parallel: Applied Materials and the 450mm Wafer Mistake
-
-Why Nvidia Forgot It Is Still a Fabless Semiconductor Company
-
-Table 1: Nvidia AI Rack Escalation — GB300 vs Vera Rubin vs Rubin Ultra
-
-Why HBM and LPDDR Demand Are Scaling Faster Than Semiconductor Manufacturing Capacity
-
-Table 2: AI Memory Scaling vs Realistic Semiconductor Manufacturing Growth
-
-My Solution: Why Nvidia Should Delay Vera Rubin and Rubin Ultra
-
-Table 3: HBM Supply Outlook vs Nvidia Rubin Delay Scenario
-
-Table 4: Impact of Delaying Rubin Ultra by One Year on the HBM Market
-
-Investor Takeaway
-
-Prolog
-
-The saga of Nvidia reminds me of a Tale from the Sourcerer’s Apprentice “Master, great is my distress today, the ghosts that I have summoned just will not go away.”
-
-For nearly three years, Nvidia has operated as though the laws governing semiconductor manufacturing no longer applied. Every GPU generation became larger, denser, hotter, and more memory-intensive, while Jensen Huang accelerated product cadence to annual launches in an attempt to maintain Nvidia’s overwhelming AI leadership.
-
-The strategy worked brilliantly — at first.
-
-Hopper created the modern AI training market. Blackwell transformed AI infrastructure into rack-scale systems. Vera Rubin now attempts to redefine the entire data center as a single AI factory. Investors rewarded Nvidia accordingly, driving the company toward a valuation once unimaginable for a semiconductor firm.
-
-But somewhere during this transformation, Nvidia appears to have forgotten one important detail:
-
-It is still a fabless semiconductor company.
-
-It reminds me of an article I wrote on July 22, 2014 in Seeking Alpha entitled “450mm Semiconductor Wafer Manufacturing Stalled, And Applied Materials The Biggest Loser.” I noted that:
-
-“Applied Materials took it upon itself in mid-1996 to foster conversion to 300mm by internally funding development of a full suite of 300mm tools at 0.25 microns. However, they forgot that they had no lithography tool... Lithography vendors ASML and Nikon chose to focus on 193nm instead, spending R&D money on DUV on 200mm wafers at 0.25 microns and didn’t want to spend more money on a 300mm platform at the same time.”
-
-Applied Materials focused on wafer size while forgetting lithography would increasingly dictate semiconductor scaling economics.
-
-Nvidia now appears to be making a remarkably similar mistake.
-
-Nvidia designs extraordinary chips. It does not manufacture HBM. It does not operate DRAM fabs. It does not control TSV capacity, CoWoS packaging lines, substrate manufacturing, interposer output, or the electrical grid needed to power its AI factories. Jensen Huang built the industry’s most powerful AI roadmap without owning the memory ecosystem required to sustain it.
-
-That omission may now be becoming the defining bottleneck of the AI era.
-
-Instead, Nvidia relied on memory suppliers MU, Samsung 005930, and SK hynix to determine how aggressively they wanted to spend capital on fabs and equipment to increase memory supply. But memory companies learned long ago that disciplined capex often produces far greater profits than chasing market share. Rather than dramatically expanding supply, suppliers instead minimized spending, tightened supply growth, and benefited from elevated pricing just as AI demand accelerated and hyperscale data center operators began ramping their own capital expenditures aggressively.","https://substackcdn.com/image/fetch/$s_!4kDk!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdbc5b481-cef7-48e6-abb1-6fdaf0f3fc65_1706x786.png",N,,2026-05-24 03:02:22.209842
-ID1,Accor,2026-05-24 03:16:49+00:00,www.barrons.com,Hotels Strive To Be Found As AI Models Conduct Travel Search - Barron's,,,,,,https://www.barrons.com/news/hotels-strive-to-be-found-as-ai-models-conduct-travel-search-820a7e75,"""The biggest challenge is to understand vague requests like 'I want a romantic hotel in the south',"" Maynard said. Because Accor's systems do not ...",Not Available,,Y,,2026-05-24 00:01:23.742528
