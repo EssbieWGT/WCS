@@ -1,4 +1,128 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID49,U.S. Bank,2026-06-02 18:54:16+00:00,finance.yahoo.com,"U.S. Bancorp Completes BTIG Buyout, Expands Capital Markets Platform - Yahoo Finance",Not Available,,,,,https://finance.yahoo.com/markets/stocks/articles/u-bancorp-completes-btig-buyout-173200167.html,"USB completes BTIG buyout, adding equity trading, equity capital markets and M&A advisory to expand its capital markets platform and fee-based ...",Not Available,,N,,2026-06-02 15:24:50.669862
+ID35,Nvidia,2026-06-02 18:48:09+00:00,NVIDIA Blog,NVIDIA Jetson Brings Agentic AI to the Physical World,Chen Su,,,,,https://blogs.nvidia.com/blog/jetson-agentic-ai-physical-world/,"Agentic AI is getting physical.
+At COMPUTEX on Tuesday, NVIDIA announced NVIDIA JetPack 7.2 and NVIDIA NemoClaw support on NVIDIA Jetson.
+JetPack 7.2 brings agentic AI skills, Yocto project support, NVIDIA CUDA 13 on NVIDIA Jetson Orin, a substantial performance gain on Jetson AGX Orin 32GB module and Multi-Instance GPU (MIG) support on NVIDIA Jetson Thor.
+The release lands NemoClaw, NVIDIA’s agentic AI framework, on the production-grade Jetson stack — taking agentic AI from servers and workstations into the physical world, across robotics, inspection and industrial automation.
+Advantech is building and deploying an agentic factory brain within its own manufacturing facilities to enable AI-native operations using NVIDIA NemoClaw, NVIDIA Nemotron 3 and NVIDIA Jetson Thor.","Agentic AI is getting physical.
+
+At COMPUTEX on Tuesday, NVIDIA announced NVIDIA JetPack 7.2 and NVIDIA NemoClaw support on NVIDIA Jetson.
+
+JetPack 7.2 brings agentic AI skills, Yocto project support, NVIDIA CUDA 13 on NVIDIA Jetson Orin, a substantial performance gain on Jetson AGX Orin 32GB module and Multi-Instance GPU (MIG) support on NVIDIA Jetson Thor.
+
+The launch coincides with the GTC Taipei Build-a-Claw event, bringing the popular hands-on event from GTC San Jose to Taiwan, one of the world’s premier global technology hubs.
+
+The release lands NemoClaw, NVIDIA’s agentic AI framework, on the production-grade Jetson stack — taking agentic AI from servers and workstations into the physical world, across robotics, inspection and industrial automation.
+
+“Agentic AI is here, and Jetson’s programmability and high performance enable developers to instantly deploy physical AI agents in production at the edge,” said Deepu Talla, vice president of robotics and edge computing at NVIDIA. “With purpose-built skills for agentic development and workflows, developers can accelerate time to market, cut total cost of ownership and deploy at scale — all on a memory-optimized platform.”
+
+Jetson is already a multi-generation platform — Orin, Thor and beyond — powering edge AI in robotics, autonomous systems, industrial inspection and medical devices. JetPack 7.2 builds on that foundation; NemoClaw extends it.
+
+Three layers ship in this release. JetPack 7.2 at the base — operating system (OS), compute, deterministic performance. A new layer of agent skills in the middle, automating developer tasks. And NemoClaw at the top.
+
+JetPack 7.2 brings major upgrades to the Jetson software foundation. Yocto-based OS support gives industrial customers a leaner, more customizable Linux foundation — important for memory-bound deployments. CUDA 13 on Jetson Orin brings the latest compute stack to existing devices. MIG plus real-time kernel on Jetson Thor lets developers reserve dedicated GPU resources for deterministic workloads, like robot perception systems that can’t pause for unrelated AI inference. Jetson AGX Orin 32GB also gets a performance boost to 241 TOPS of AI compute, up 20% above its original spec.
+
+The middle layer — agent skills — accelerates the work of building a Jetson-based system itself. Jetson agent skills now include Linux customization, memory optimization, model benchmarking and similar developer tasks. These are now available as agent-deployable skills, developed from NVIDIA documentation and design guides. The result: a task that used to take weeks resolves in days.
+
+At the top, NemoClaw deploys to Jetson with a single command. The pairing lands agentic AI on a production-grade robotics and vision AI stack, accelerating task automation for industrial systems. Developers can go further with NVIDIA Metropolis VSS blueprint skills, adding visual reasoning agents that watch, interpret and act on what they see.
+
+Agentic AI already arriving with Jetson
+
+The Jetson platform is already in deployment across fields such as robotics, industrial automation, drones, healthcare devices, agricultural machinery, humanoid systems and more.
+
+Solomon uses NVIDIA NemoClaw to coordinate AI agents on a humanoid robot, integrating reasoning, perception, sensor fusion, locomotion and manipulation into a single workflow. With Solomon’s active perception technology, powered by NVIDIA’s open source foundation model, the robot can understand tasks, optimize positioning for picking and adapt dynamically. All this enables reliable and autonomous operations in complex environments.
+
+Advantech is building and deploying an agentic factory brain within its own manufacturing facilities to enable AI-native operations using NVIDIA NemoClaw, NVIDIA Nemotron 3 and NVIDIA Jetson Thor. The platform automates robot fleet management, intelligent defect detection and autonomous decision-making to drive next-generation industrial operations. Across industries, the builds are already shipping.
+
+Rebotnix makes smart city cameras with agentic reasoning capabilities for faster city-level decision-making.
+
+Spingence builds manufacturing defect agents to identify root causes and process improvement recommendations through analytics and knowledge reasoning.
+
+And ANIWEAVE and Avalanche Computing are partnering to transform real estate spaces into immersive 3D touring experiences with AI-powered conversational agents.
+
+More AI, less memory
+
+SandStar uses NVIDIA Jetson Orin NX and NemoClaw to power AI vending machines and smart retail operations with AI vision, LLM-driven interaction, standard operating procedure monitoring and store optimization across 30+ countries. By achieving nearly 40% memory optimization, SandStar reports it migrated from 16GB to 8GB devices, significantly reducing deployment costs while maintaining high performance.
+
+NoTraffic develops AI-powered Intelligent Traffic Management Systems that analyze real-time traffic conditions and dynamically optimize signal operations. NoTraffic reports it optimized CUDA library overhead through static compilation and targeted kernel pruning. These optimizations reduced memory usage by 29%, improving efficiency and streamlining the perception stack for faster real-time inference.
+
+GROOVE X, maker of the LOVOT companion robot, is using a variety of AI accelerators on Jetson modules to offload CPU and GPU workload and reduce memory footprint.
+
+Yocto-based JetPack 7.2 in production
+
+Hexagon Robotics is integrating NVIDIA Jetson Thor to power safer and more autonomous humanoid robots with real-time AI, high-speed sensor processing and multimodal data fusion. Combined with Yocto-based OS customization for better reproducibility and safety, these humanoid robots operate more reliably in demanding environments such as manufacturing, logistics and construction.
+
+Zipline uses NVIDIA Jetson Orin NX in its autonomous delivery drones to enable real-time sensor fusion, environmental awareness and safe navigation for rapid medical, food and retail deliveries around the world. Zipline uses Yocto to build its custom operating system which is designed for high-performance onboard AI processing while optimizing for reliability, efficiency and a lower memory footprint.
+
+1X (maker of the Neo Humanoid) and Universal Robots are planning to adopt Yocto-based JetPack 7.2 in their production deployments.
+
+Yocto ecosystem partners
+
+Balena, Konsulko Group, Neurealm, Peridio, RidgeRun and Wind River provide Linux distro products, engineering services and long-term support that help customers ship production-grade Yocto-based deployments faster.
+
+AAEON, ASUS, Avermedia, Connect Tech and YUAN have validated Yocto OS with their production edge computing systems to accelerate customer deployment.
+
+What’s next
+
+NemoClaw started in the data center. Now it runs in a retail store, a humanoid robot on a factory floor, a traffic system at a busy intersection. The era of physical AI agents has just begun.
+
+Developers can start their agentic AI journey from the Jetson software page.
+
+Watch NVIDIA founder and CEO Jensen Huang’s keynote and learn more at NVIDIA GTC Taipei.",https://blogs.nvidia.com/wp-content/uploads/2026/06/robotics-press-jetson-agentic-ready-cptx26-1920x1080-5180550.jpg,N,,2026-06-02 15:23:47.395592
+ID32,Microsoft,2026-06-02 18:40:08+00:00,CNBC,Microsoft unveils new AI models to lessen reliance on OpenAI and lower costs for developers - CNBC,"Jordan Novet, www.facebook.com",,,,,https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html,"The AI coding market, or vibe coding, has taken off of late, with developers and people without technical backgrounds using text-based prompts to produce sophisticated software.
+For Microsoft, there are economic benefits to providing its own models that can be passed onto developers as costs jump for using the leading models.
+In addition to MAI-Code-1-Flash, Microsoft is introducing MAI-Thinking-1, a reasoning model, and is playing up the efficiency for both offerings.
+Customers will be able to increase the accuracy of the reasoning model by incorporating their own data.
+The coding model is ""inference ultra-efficient,"" Daigle wrote, and is available in the GitHub Copilot AI coding service and the Visual Studio Code text editor.","Microsoft has been a major player in the artificial intelligence boom, providing key cloud infrastructure and services and taking multibillion-dollar equity stakes in OpenAI and Anthropic. Now the company is making a concerted effort to compete with proprietary models.
+
+At its Build developer conference in San Francisco on Tuesday, Microsoft announced MAI-Code-1-Flash, its inaugural model that takes written descriptions from people and spits out source code for applications and websites. The AI coding market, or vibe coding, has taken off of late, with developers and people without technical backgrounds using text-based prompts to produce sophisticated software.
+
+For Microsoft, there are economic benefits to providing its own models that can be passed onto developers as costs jump for using the leading models. Microsoft can run its models on its own Azure cloud infrastructure and avoid paying third parties such as OpenAI. In May, Google announced the Gemini 3.5 Flash model that can code and carry out other tasks, running in the search company's data centers.
+
+In addition to MAI-Code-1-Flash, Microsoft is introducing MAI-Thinking-1, a reasoning model, and is playing up the efficiency for both offerings.
+
+The reasoning model is medium-sized and ""built for high efficiency and performance, but importantly, at a low-token cost,"" Kyle Daigle, Microsoft's developer marketing chief and GitHub operating chief, wrote in a blog post. Tokens are used by developers to pay for model use.
+
+Microsoft is attempting to play at more layers of the AI stack as OpenAI and Anthropic continue to record historic growth and push toward the public market. Anthropic said on Monday that it confidentially filed for an IPO, and OpenAI is also pursuing an offering potentially this year. Microsoft has invested $13 billion in OpenAI and $5 billion in Anthropic, while making their models available through Azure.
+
+MAI-Thinking-1 is available in a private preview through Microsoft Foundry, a service for integrating models into applications. Customers can express interest in testing the model before it becomes broadly available.
+
+Customers will be able to increase the accuracy of the reasoning model by incorporating their own data.
+
+""What you just saw is a pretty significant shift,"" Microsoft CEO Satya Nadella said onstage. ""We believe the time has come for every company to just move from consuming a frontier model to fully participating at the frontier in the frontier ecosystem.
+
+After refining its models for the needs of consulting firm McKinsey, Microsoft was able to outperform OpenAI's GPT 5-5, with 10 times better cost efficiency, said Mustafa Suleyman, CEO of Microsoft AI.
+
+The coding model is ""inference ultra-efficient,"" Daigle wrote, and is available in the GitHub Copilot AI coding service and the Visual Studio Code text editor.
+
+Also on Tuesday, Microsoft is revealing updated cloud-based models for speech recognition, synthetic voice generation and image generation, as well as small Aion models that can run on Windows PCs.",https://image.cnbcfm.com/api/v1/image/108315345-1780420463743-Screenshot_2026-06-02_at_11333_PM.png?v=1780420570&w=1920&h=1080,N,,2026-06-02 15:23:39.773973
+ID48,UniCredit,2026-06-02 18:39:30+00:00,Bloomberg.com,UniCredit Says Commerzbank Offer to Push Direct Stake to 34% - Bloomberg,Sonia Sirletti,,,,,https://www.bloomberg.com/news/articles/2026-06-02/unicredit-says-commerzbank-offer-set-to-push-direct-stake-to-34,"UniCredit SpA’s takeover offer for Commerzbank AG has been accepted by enough investors to give it a 34% stake once it takes ownership of the shares, adding momentum to its long running attempt to buy its German rival.
+Shares equivalent to 7.58% of Commerzbank’s capital had been tendered by June 2, according to a filing Tuesday that confirmed an earlier Bloomberg report.
+That gives UniCredit Chief Executive Officer Andrea Orcel growing influence and makes him ever more difficult to fend off despite Berlin’s opposition to the €38.6 billion ($45 billion) bid.","UniCredit SpA’s takeover offer for Commerzbank AG has been accepted by enough investors to give it a 34% stake once it takes ownership of the shares, adding momentum to its long running attempt to buy its German rival.
+
+Shares equivalent to 7.58% of Commerzbank’s capital had been tendered by June 2, according to a filing Tuesday that confirmed an earlier Bloomberg report. That gives UniCredit Chief Executive Officer Andrea Orcel growing influence and makes him ever more difficult to fend off despite Berlin’s opposition to the €38.6 billion ($45 billion) bid.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/idbDXwnDT1rI/v0/1200x800.jpg,N,,2026-06-02 15:24:00.253615
+ID29,Levi Strauss,2026-06-02 18:29:42+00:00,Investing.com Nigeria,Microsoft unveils Project Solara for mobile AI devices - Investing.com Nigeria,Not Available,,,,,https://ng.investing.com/news/stock-market-news/microsoft-unveils-project-solara-for-mobile-ai-devices-93CH-2540717,Microsoft unveils Project Solara for mobile AI devices,Not Available,https://i-invdn-com.investing.com/news/LYNXNPEA8S052_L.jpg,N,,2026-06-02 15:23:29.201107
+ID32,Microsoft,2026-06-02 18:17:16+00:00,TechCrunch,"Microsoft launches Scout, an OpenClaw-inspired personal assistant - TechCrunch",Russell Brandom,,,,,https://techcrunch.com/2026/06/02/microsoft-launches-scout-an-openclaw-inspired-personal-assistant/,"In the first weeks of 2026, OpenClaw spread through the AI world like a sonic boom, introducing many of the industry’s most ambitious technologists to the joy and chaos of an unrestrained AI agent.
+The project’s momentum tailed off after OpenAI scooped up its founder, but the influence is still being felt — particularly at Microsoft Now, Microsoft is launching Scout, a new AI assistant meant to bring the power and flexibility of OpenClaw into the Microsoft 365 ecosystem.
+Built on the OpenClaw framework, Scout is an always-on agentic assistant, designed to work alongside the user with a persistent identity and style.
+As Scout VP Omar Shahine put it, the idea is to create an assistant that actively adapts to the user’s needs.
+“We all have our interesting quirks in how we work, and people are codifying those patterns into memories and skills that persist in their agent,” Shahine told me.","In the first weeks of 2026, OpenClaw spread through the AI world like a sonic boom, introducing many of the industry’s most ambitious technologists to the joy and chaos of an unrestrained AI agent. The project’s momentum tailed off after OpenAI scooped up its founder, but the influence is still being felt — particularly at Microsoft
+
+Now, Microsoft is launching Scout, a new AI assistant meant to bring the power and flexibility of OpenClaw into the Microsoft 365 ecosystem. Built on the OpenClaw framework, Scout is an always-on agentic assistant, designed to work alongside the user with a persistent identity and style. Users name their own Scout instance — in my demo, it was named Sebastian — and are meant to give it ongoing feedback on tasks that want automated.
+
+As Scout VP Omar Shahine put it, the idea is to create an assistant that actively adapts to the user’s needs. “We all have our interesting quirks in how we work, and people are codifying those patterns into memories and skills that persist in their agent,” Shahine told me. “Then the agent becomes more capable, better understanding you and gaining more agency and exercising judgments.”
+
+Available through Microsoft’s Frontier program, which gives early adopters access to experimental Microsoft products, Scout will require a GitHub Copilot subscription to use.
+
+Scout is based in the cloud, but operates across the desktop and web browser also, so it’s easy to connect to inboxes, calendars and other systems. Scout will come with prepackaged skills for calendar management and drafting meeting agendas, among others, but Shahine expects the real value to be in the skills users develop on their own. That customization loop — where the assistant learns from user behavior and becomes more capable over time — is the same dynamic that has made consumer AI tools sticky; the more you invest in training your assistant, the harder it is to walk away.
+
+The system also comes with extensive security protections, meant to address concerns of unsupervised AI agents running amok, a real issue that OpenClaw itself surfaced earlier this year when one agent was reported to have acted erratically inside a researcher’s inbox (among other examples). Scout will come with a built-in “policy conformance system” that will continuously check whether the system is operating according to set guidelines, and each conformance check will produce its own audit trail.","https://techcrunch.com/wp-content/uploads/2025/07/microsoft-logo-1865237814.jpg?resize=1200,863",N,,2026-06-02 15:23:44.065641
+ID35,Nvidia,2026-06-02 18:06:01+00:00,Bloomberg.com,Nvidia's AI Chips Sought by Chinese Labs With Ties to Military - Bloomberg.com,"Kate O'Keeffe, Maggie Eastland",,,,,https://www.bloomberg.com/news/articles/2026-06-01/nvidia-s-ai-chips-sought-by-chinese-labs-with-ties-to-military,"At least seven Chinese universities that support the country’s armed forces and defense industry are seeking access to Nvidia Corp.’s H200 chips, the most powerful artificial intelligence processors ever allowed by the US to be sold in China, according to a review of procurement records.
+Two of the institutions that have expressed interest in the H200 chips — Beihang University and Northwestern Polytechnical University — rank among China’s “Seven Sons of National Defense,” an elite group dedicated to aiding the People’s Liberation Army.
+Both schools have been blacklisted by the US Commerce Department owing to their work advancing China’s military.","At least seven Chinese universities that support the country’s armed forces and defense industry are seeking access to Nvidia Corp.’s H200 chips, the most powerful artificial intelligence processors ever allowed by the US to be sold in China, according to a review of procurement records.
+
+Two of the institutions that have expressed interest in the H200 chips — Beihang University and Northwestern Polytechnical University — rank among China’s “Seven Sons of National Defense,” an elite group dedicated to aiding the People’s Liberation Army. Both schools have been blacklisted by the US Commerce Department owing to their work advancing China’s military.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVyNPrZIb7Tg/v3/1200x800.jpg,N,,2026-06-02 15:23:50.628833
+ID48,UniCredit,2026-06-02 18:01:15+00:00,Reuters,UniCredit says it met its goal in Commerzbank bid as stake reaches 34% | Reuters,Valentina Za,,,,,https://www.reuters.com/business/finance/unicredit-says-take-up-commerzbank-takeover-bid-76-capital-2026-06-02/,"Italian bank UniCredit has increased its direct stake in Commerzbank to 34.4%, it said on Tuesday, ​under the takeover bid it launched on May 5 amid widespread hostility in Germany.",Not Available,https://www.reuters.com/resizer/v2/EDVJNU3T3RNE3MTBMIK5YZUL3E.jpg?auth=6b26451f1193c6ecb8d10c33d5893c7d74bdd1236018ff49a24571ee352c9710&height=1005&width=1920&quality=80&smart=true,N,,2026-06-02 15:24:03.165515
 ID49,U.S. Bank,2026-06-02 17:32:56+00:00,www.zacks.com,"U.S. Bancorp Completes BTIG Buyout, Expands Capital Markets Platform - June 2, 2026",Not Available,,,,,https://www.zacks.com/stock/news/2931094/us-bancorp-completes-btig-buyout-expands-capital-markets-platform,"Please stand by We're getting everything ready for you.
 The page is loading, and you'll be on your way in just a few moments.
 Thanks for your patience!","Please stand by
@@ -75,6 +199,104 @@ Qualcomm and MediaTek are the first chip partners. The badge runs on a new Qualc
 Notably, OpenAI’s reported AI-agent phone is also being developed on MediaTek and Qualcomm silicon, underscoring the competition emerging in this category.
 
 For Bathiche, Solara is a bet on what the next computer looks like. “What is the next thing that comes closer to you?” he asked. That, he contends, is where computing is ultimately going.",https://cdn.geekwire.com/wp-content/uploads/2026/06/stevie-1.jpg,N,,2026-06-02 14:16:11.300682
+ID50,Walmart,2026-06-02 17:24:17+00:00,Progressive Grocer,Walmart Marks 1 Million Drone Deliveries Amid Bigger Delivery Push | Progressive Grocer,Julia Tabisz,,,,,https://progressivegrocer.com/walmart-marks-1-million-drone-deliveries-amid-bigger-delivery-push,"The move would make drone delivery available to more than 40 million Americans, the company said, and Walmart and Wing are looking to establish a network of more than 270 drone delivery locations from coast to coast by 2027.
+Walmart's drone delivery service is part of a bigger delivery strategy for the company, which announced last week that it's also expanding its Express Delivery service to 33 new U.S. markets.
+The company reported e-commerce growth of 26% globally in its Q1 results, marking the company's ninth consecutive quarter of 20%-plus gains in the United States.
+Walmart said that more than 36% of its U.S. store-fulfilled delivery orders arrived in less than three hours in Q1 – an improvement of more than 800 basis points over the last two years.
+Sam’s Club U.S. club-fulfilled delivery shot up over 90% in the quarter, with e-commerce now responsible for 20% of its net sales.","The move would make drone delivery available to more than 40 million Americans, the company said, and Walmart and Wing are looking to establish a network of more than 270 drone delivery locations from coast to coast by 2027.
+
+Walmart's drone delivery service is part of a bigger delivery strategy for the company, which announced last week that it's also expanding its Express Delivery service to 33 new U.S. markets. The service, which offers delivery in 30 minutes or less, will be available to shoppers in more than 19,000 ZIP codes who will be able to buy more than 100,000 items for Express Delivery, including fresh produce, prescription drugs, electronics and pet food.
+
+The company reported e-commerce growth of 26% globally in its Q1 results, marking the company's ninth consecutive quarter of 20%-plus gains in the United States.
+
+Walmart said that more than 36% of its U.S. store-fulfilled delivery orders arrived in less than three hours in Q1 – an improvement of more than 800 basis points over the last two years. Sam’s Club U.S. club-fulfilled delivery shot up over 90% in the quarter, with e-commerce now responsible for 20% of its net sales.
+
+“Fast fuels frequency,” CFO John David Rainey said. “When we see that we are able to deliver to customers in the timeframes that they expect, we see much greater engagement with our customers.”",https://progressivegrocer.com/images/v/16_x_9_480/files/2026-01/walmart_wing_drone_teaser.jpg,N,,2026-06-02 15:24:54.881703
+ID35,Nvidia,2026-06-02 17:23:43+00:00,CNBC,China learns to build without Nvidia - CNBC,"Evelyn Cheng, www.facebook.com",,,,,https://www.cnbc.com/2026/06/01/china-learns-to-build-without-nvidia.html,"Welcome to the latest edition of The China Connection — a succinct snapshot of what I'm seeing and hearing from local businesses.
+Chinese AI developers have increasingly optimized their models to run on homegrown hardware, rather than Nvidia's widely used CUDA ecosystem.
+Kevin Xu, founder of hedge fund Interconnected Capital, expects Chinese companies to continue to need Nvidia chips for the next three to five years.
+""The more Nvidia chips get into the ecosystem, the more dilution you have of that relationship,"" he said.
+China's technological ambitions are no longer defined by access to Nvidia, but by the companies that can build without it.","Cfoto | Future Publishing | Getty Images
+
+Hi, this is Evelyn, writing to you from Beijing. Welcome to the latest edition of The China Connection — a succinct snapshot of what I'm seeing and hearing from local businesses.
+
+China's tech self-sufficiency push is rapidly becoming a reality as companies focus on business questions that run deeper than geopolitics. What does that mean for Nvidia?
+
+The big story
+
+Robovan startup Zelostech plans to use multiple chip suppliers from China and elsewhere, over the next year or two, instead of relying only on Nvidia for its self-driving systems, the company told CNBC.
+
+A major factor is cost, said Shi Yunjian, director of finance and investment. Using China-made chips, for example, would cost far less than the two Nvidia Orin chipsets currently used in each vehicle, he said.
+
+That's a big deal because scale is becoming a competitive advantage. The more autonomous vehicles can deploy, the more operating data they can collect and the easier it becomes to convince regulators that the technology is ready for wider use.
+
+Zelostech claims it already has more than 25,000 vehicles operating in over 20 countries, with plans to expand rapidly. These don't carry people, and many are smaller than a mail truck. Most operate in mainland China, mostly for logistics companies delivering packages.
+
+By comparison, Alphabet -backed Waymo has just under 4,000 vehicles on the road, while Chinese rivals Baidu, WeRide and Pony.ai have yet to deploy fleets at a similar scale.
+
+Beyond Nvidia
+
+Zelostech is hardly alone in pursuing Nvidia alternatives.
+
+Waymo uses custom chips, while Chinese electric car giant BYD last week joined Nio and Xpeng in revealing their own semiconductors for driver-assist systems.
+
+This year, Nio said it's planning a fivefold increase in spending on computing power. When I asked whether that included Nvidia, CEO William Li said the company was no longer buying chips but renting compute power powered by a variety of processors.
+
+A vehicle Xpeng co-developed with Volkswagen is also using the Chinese company's ""Turing chip,"" while the German automaker has partnered with China's Horizon Robotics to develop driver-assist systems in China — without Nvidia.
+
+Nvidia's driver-assist chips are not subject to the same U.S. export restrictions that apply to the more advanced semiconductors used to train and run AI models.
+
+Yet even after Nvidia CEO Jensen Huang joined U.S. President Donald Trump on his trip to Beijing in May, it's clear China is not eager to let more Nvidia chips in.
+
+The shift extends beyond vehicles. Chinese AI developers have increasingly optimized their models to run on homegrown hardware, rather than Nvidia's widely used CUDA ecosystem.
+
+The latest MiniMax and Kimi models, along with DeepSeek's V4, are compatible with local Chinese semiconductors.
+
+""We believe the pivot to domestic chips will accelerate over 2026E-28E,"" Goldman Sachs analysts said in a May 5 report. They pointed out that DeepSeek V4 works with eight China-made chips, including those from Huawei and Alibaba 's T-head chip unit.
+
+A narrowing window
+
+Huawei last week also revealed that it's been using a new scientific approach to developing its chips, and plans to incorporate them in upcoming products. It's the latest sign of a comeback for the Chinese telecom giant, after years of U.S. restrictions.
+
+Kevin Xu, founder of hedge fund Interconnected Capital, expects Chinese companies to continue to need Nvidia chips for the next three to five years.
+
+But he argues Beijing has an incentive to limit that dependence sooner rather than later. China-made chips can only improve if companies use them in real-world scenarios, generating the feedback needed to make the technology useful for businesses.
+
+""The more Nvidia chips get into the ecosystem, the more dilution you have of that relationship,"" he said.
+
+Nvidia's revenue from mainland China and Hong Kong is shrinking anyway, even as the company doubles down on Taiwan with plans to spend as much as $150 billion a year there.
+
+That investment will likely reverse Taiwan's initial plan to limit AI data centers and nuclear power, said Chris Cottorone, president of TriOrient Investments and co-chair of the alternative assets committee at AmCham Taiwan. He also expects more local businesses to adopt AI.
+
+Nvidia's growing presence in Asia — but not in mainland China — is driving the chipmaker to find other ways to maintain technological leadership.
+
+The U.S. company is trying to keep its foot in China's world of ""physical AI' by collaborating with Chinese humanoid startup Unitree on a research robot sold globally. Huang also has an eye on talent as he's reportedly joined a Tsinghua University board, which the company and school have yet to respond to requests for comment on.
+
+It's a sign that the tide is turning. China's technological ambitions are no longer defined by access to Nvidia, but by the companies that can build without it.
+
+Need to know
+
+China is 'losing a chance' by not being at the Shangri-La Dialogue: German defense chief
+
+Germany's chief of defense General Carsten Breuer's comments came after China's defense minister Dong Jun skipped the conference for a second straight year, with Beijing sending a lower-level delegation.
+
+China industrial profits jump 24.7% in April, fastest gain in over two years despite headwinds
+
+For the first four months of the year, industrial profits rose 18.2%, up from 15.5% growth in the first quarter. Computing and electronics equipment manufacturing, the largest sector by profit amount, saw earnings more than double from a year ago.
+
+European companies double down on China manufacturing despite EU de-risking push
+
+More European companies are maintaining or expanding their supply chains in mainland China to remain competitive globally, according to a survey released Wednesday by the European Union Chamber of Commerce in China.
+
+Coming up
+
+May 31 - June 2: Brazil Foreign Minister Mauro Vieira to visit China
+
+June 1 - 3: UK Foreign Secretary Yvette Cooper to visit China for 11th bilateral strategic dialogue
+
+June 3: RatingDog China Services PMI (May)
+
+June 9: Trade data for May",https://image.cnbcfm.com/api/v1/image/108312339-1779872990944-gettyimages-2226453643-2025_WAIC_Held_in_Shanghai.jpeg?v=1779873044&w=1920&h=1080,N,,2026-06-02 15:23:54.381791
 ID47,Uber,2026-06-02 17:11:53+00:00,Bloomberg.com,Uber Caps Usage of AI Tools Like Claude Code to Cut Costs - Bloomberg.com,Natalie Lung,,,,,https://www.bloomberg.com/news/articles/2026-06-02/uber-caps-usage-of-ai-tools-like-claude-code-to-cut-costs,"Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world Uber Technologies Inc. has set usage caps on some artificial intelligence-powered tools used by its staff, a move meant to manage costs after the company blew through its AI budget earlier this year.
 The rideshare giant is limiting all employees to $1,500 in monthly token spending per AI coding tool, an Uber spokesperson said in response to a Bloomberg News inquiry.
 That means spending on one tool doesn’t have a bearing on the budget for another.
@@ -85,6 +307,69 @@ Connecting decision makers to a dynamic network of information, people and ideas
 Uber Technologies Inc. has set usage caps on some artificial intelligence-powered tools used by its staff, a move meant to manage costs after the company blew through its AI budget earlier this year.
 
 The rideshare giant is limiting all employees to $1,500 in monthly token spending per AI coding tool, an Uber spokesperson said in response to a Bloomberg News inquiry. That means spending on one tool doesn’t have a bearing on the budget for another. The limits, which have been instituted in recent months, only apply to agentic coding software such as Cursor or Anthropic PBC’s Claude Code.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/itCJ9qbjMgIY/v1/1200x800.jpg,N,,2026-06-02 14:16:19.261430
+ID19,Eli Lilly,2026-06-02 17:05:44+00:00,Gen5 SCMR,PepsiCo moves its startup sustainability program from pilots to operational scale across Asia Pacific,Brian Straight,,,,,https://www.scmr.com/article/pepsico-moves-its-startup-sustainability-program-from-pilots-to-operational-scale-across-asia-pacific,"After four years and more than 22 startup pilots across Asia Pacific, PepsiCo is changing the focus of its Greenhouse Program from experimentation to operational deployment as the company looks to integrate sustainability technologies deeper into its supply chain network.
+Operational evolution PepsiCo originally launched the program in Asia Pacific in 2023, working primarily with early stage sustainability startups focused on areas such as logistics optimization, sustainable agriculture, packaging circularity, and emissions reduction.
+But according to Brown, both the startup ecosystem and PepsiCo’s own operational maturity have evolved significantly since then.
+Historically, sustainability initiatives often operated separately from core supply chain and procurement functions, but PepsiCo is taking a different approach.
+According to Brown, one of the most important lessons from PepsiCo’s first 22 startup pilots was that technical innovation alone rarely guarantees operational success.","After four years and more than 22 startup pilots across Asia Pacific, PepsiCo is changing the focus of its Greenhouse Program from experimentation to operational deployment as the company looks to integrate sustainability technologies deeper into its supply chain network.
+
+The company recently announced the 2026 “IMPACT Edition” of its Greenhouse Program in Asia Pacific, an initiative designed to move promising startup technologies beyond proof-of-concept and into day-to-day operations across PepsiCo’s regional supply chain.
+
+The shift reflects a broader evolution occurring across the supply chain industry as companies increasingly move toward technologies capable of delivering measurable operational and financial outcomes.
+
+“What encouraged the shift was the recognition that, after four years and 22 pilots, the next important question was no longer whether these solutions had potential, but how to scale the ones that were proving their value,” Ashley Brown, sustainability vice president for Asia Pacific at PepsiCo, told Supply Chain Management Review.
+
+Operational evolution
+
+PepsiCo originally launched the program in Asia Pacific in 2023, working primarily with early stage sustainability startups focused on areas such as logistics optimization, sustainable agriculture, packaging circularity, and emissions reduction. But according to Brown, both the startup ecosystem and PepsiCo’s own operational maturity have evolved significantly since then.
+
+The seven-month program pairs startups with cross-functional PepsiCo mentors and an expanded partner network. The partners across venture capital, agriculture, and innovation support project development, help enable market access, and, where relevant, explore potential investment opportunities as solutions mature. These partners include Artesian, AgFunder Asia, SAIL (Nanyang Technological University Singapore), and AgriFutures growAG, alongside returning partners Circulate Capital, GC Ventures, and CM Venture Capital.
+
+“We began in 2023 by working with earlier-stage innovators, and over time both the program and the cohort have matured,” Brown said. “By 2026, the focus had naturally moved toward later-stage integration, where the challenge is less about identifying promising ideas and more about embedding them into actual operations.”
+
+While many companies have experimented with startup-driven sustainability technologies over the past several years, the number that have successfully moved into operational workflows is much fewer.
+
+Brown said PepsiCo learned quickly that moving from pilot to deployment requires much more than proving a technology works technically. “That requires much more than a successful trial,” she said. “It needs access to the business, the right internal sponsorship, and a practical route to adoption.”
+
+Ready to scale
+
+The 2026 program includes five returning startup participants selected specifically for their readiness to scale across PepsiCo’s operational footprint. Those companies span multiple areas of the supply chain, including transportation optimization, regenerative agriculture, recycling infrastructure, and emissions reduction technologies.
+
+Among the participating startups is Australia-based Adiona, which provides AI-powered logistics optimization tools designed to improve route planning and fleet efficiency while reducing Scope 3 emissions across transportation networks.
+
+Other participants include Takachar, whose biochar technology converts agricultural crop residue into soil-enhancing material; Beijing AIForce Tech, which develops electric agricultural machinery and automation systems; Bali Waste Cycle, focused on low-value plastics recovery and recycling infrastructure; and X-Centric, a digital soil analytics platform supporting regenerative agriculture initiatives.
+
+For PepsiCo, those technologies are increasingly viewed as operational infrastructure supporting long-term resiliency and efficiency goals.
+
+“Through our PepsiCo Positive (pep+) transformation, sustainability is embedded through our business as we aim to create resilient operations for the future,” Brown said. “That means the technologies and solutions we are investing in are not just there to test new ideas or support reporting, they are helping shape how we run supply chains, manage procurement, guide decisions and improve operational performance.”
+
+Cross-functional collaboration
+
+Operational integration is one of the more significant changes occurring within large enterprise sustainability programs. Historically, sustainability initiatives often operated separately from core supply chain and procurement functions, but PepsiCo is taking a different approach.
+
+“One of the biggest shifts has been the move to cross-functional squad teams, where supply chain, procurement, R&D and operations come together much earlier to define the outcomes that matter as we invest in these new innovations,” Brown said.
+
+As a result, sustainability and commercial performance discussions now occur simultaneously rather than independently.
+
+“Conversations about sustainability and commercial value are happening together from the start,” Brown said, “which makes these solutions far more practical, scalable and relevant to core operations.”
+
+Transportation has become one of the clearest examples of that operational convergence. For global food and beverage companies, Scope 3 emissions—those generated throughout the broader value chain—remain among the most difficult sustainability challenges to address. Logistics and transportation networks represent one of the few areas where companies can directly influence both cost and emissions performance simultaneously.
+
+“Transportation optimization and sustainability need to be part of the same conversation,” Brown said. “Transportation optimization is not just about efficiency, service levels or cost; it is also a key part of how organizations make progress on sustainability goals.”
+
+Brown added that companies often miss opportunities when transportation efficiency and sustainability initiatives operate independently.
+
+“When transportation is managed as part of a broader operational workstream, companies are better able to design solutions that improve network performance while also reducing emissions,” she said.
+
+The company’s broader goal is focused on building a repeatable operational model for scaling external innovation into enterprise supply chains. According to Brown, one of the most important lessons from PepsiCo’s first 22 startup pilots was that technical innovation alone rarely guarantees operational success.
+
+“The 22 pilots gave us a much clearer view of what it really takes to move from experimentation to scale,” she said. “They showed that strong ideas on their own are not enough; solutions need cross-functional buy-in, operational feasibility and a clear connection to the biggest sustainability challenges facing food and beverage players.
+
+“Ultimately, the success of this program is measured by the impact that these technologies can have on business [to] help to deliver sustainability ambitions, productivity and efficiency, and process improvements,” she added.",https://www.scmr.com/images/2026_article/PepsiCo-Australia%2C-X-Centric-web.jpg,N,,2026-06-02 15:22:40.635484
+ID19,Eli Lilly,2026-06-02 16:49:37+00:00,Life Science Washington,Eli Lilly to Acquire Seattle-Area Biotech in $1.5B Bet on Next-Generation Shingles Vaccine,Brynne Irish,,,,,https://lifesciencewa.org/2026/06/02/eli-lilly-to-acquire-seattle-area-biotech-in-1-5b-bet-on-next-generation-shingles-vaccine/,"Posted on Last Updated: Eli Lilly has acquired Curevo Vaccine, whose lead shingles vaccine candidate incorporates AAHI’s proprietary SLA-SE adjuvant.
+The deal highlights growing recognition of next-generation vaccine technologies and is one of three acquisitions announced last week as Lilly expands its infectious disease portfolio.","Posted on Last Updated:
+
+Eli Lilly has acquired Curevo Vaccine, whose lead shingles vaccine candidate incorporates AAHI’s proprietary SLA-SE adjuvant. The deal highlights growing recognition of next-generation vaccine technologies and is one of three acquisitions announced last week as Lilly expands its infectious disease portfolio.",https://lifesciencewa.org/wp-content/uploads/2026/06/eli-lilly-buyout-photo.jpg,N,,2026-06-02 15:22:43.444864
 ID19,Eli Lilly,2026-06-02 16:33:04+00:00,Fierce Healthcare,Eli Lilly to hospitals: Send 340B claims data or lose discounts - Fierce Healthcare,Dave Muoio,,,,,https://www.fiercehealthcare.com/providers/eli-lillys-ultimatum-hospitals-send-340b-claims-data-june-1-or-lose-discounts,"Eli Lilly and Company said Monday evening that it will soon end 340B discount pricing for some of the hospitals that have not met a claims data submission policy it implemented on Feb. 1, sparking outrage and calls for federal intervention from the hospital industry.
 The conflict has been simmering for months, with Lilly first announcing its change-up in January and several other major drugmakers following suit shortly after.
 Specifically, Lilly’s policy requires 340B covered entities (excluding some in states with statutory restrictions) to provide claims-level data for all pharmacy and medical dispensations, including in-house pharmacy and contract pharmacy dispenses.
@@ -122,8 +407,10 @@ Additionally, Pollack disputed Lilly’s claims that it made a fair effort to re
 Lilly’s spokesperson, when asked about those claims, countered that AHA hadn’t actually sent that letter directly and described it as a media tactic rather than a genuine offer of collaboration.
 
 The company, in its letter to HRSA, also said in early May it had “individually contacted the fifty largest holdouts, expressly invited them to identify their concerns, and offered live discussions to work through any legitimate issues.” Of these, 11 did not respond and 13 held meetings that yielded no commitments.",https://qtxasset.com/quartz/qcloud5/media/image/LILLYSIGN.jpg?VersionId=YAjx95URbeDvZm3b4yvFa.Dr50m_kl9S,N,,2026-06-02 14:15:50.853114
+ID48,UniCredit,2026-06-02 16:14:14+00:00,Yahoo Finance,Italy's UniCredit secures more than a third of Germany's Commerzbank - Yahoo Finance,Not Available,,,,,https://finance.yahoo.com/markets/stocks/articles/italys-unicredit-secures-more-third-155532081.html,Tip: Try a valid symbol or a specific company name for relevant results,Tip: Try a valid symbol or a specific company name for relevant results,https://s.yimg.com/os/en/dpa_international_526/813cedeef98b6cde53e2f6eb5e229bac,N,,2026-06-02 15:24:07.984627
 ID4,Air Liquide,2026-06-02 16:03:48+00:00,hydrogeninsight.com,ANALYSIS | Why alkaline electrolyser makers are launching 'all-in-one' green hydrogen plants,Polly Martin,,,,,https://www.hydrogeninsight.com/electrolysers/analysis-why-alkaline-electrolyser-makers-are-launching-all-in-one-green-hydrogen-plants/2-1-1996347,"Hydrogen Insight is part of DN Media Group.
 To read more about DN Media Group, click here","Hydrogen Insight is part of DN Media Group. To read more about DN Media Group, click here",https://image.dngroup.com/global/nhst/binary/e224ab4520654036cea2df7ef951fb40?crop=2048%2C1024%2Cx0%2Cy171%2Csafe&width=1200&format=webp&quality=80,N,,2026-06-02 13:19:20.820418
+ID48,UniCredit,2026-06-02 16:00:09+00:00,www.wsj.com,UniCredit Clears Key 30% Threshold in Commerzbank Takeover Bid - WSJ,,,,,,https://www.wsj.com/business/deals/unicredit-clears-key-30-threshold-in-commerzbank-takeover-bid-107d5a5f,"In aggregate, combined with UniCredit's direct shareholding of 26.8%, the tender would give the bank control of around 34.4% of Commerzbank, above the ...",Not Available,,Y,,2026-06-02 15:24:10.456850
 ID19,Eli Lilly,2026-06-02 15:46:04+00:00,Healthcare Dive,Eli Lilly issues data sharing ultimatum to 340B hospitals - Healthcare Dive,"Rebecca Pifer Parduhn, Emily Olsen, Sydney Halleman",,,,,https://www.healthcaredive.com/news/eli-lilly-340b-hospital-ultimatum-data-sharing-hrsa/821698/,"Dive Brief: Eli Lilly is giving hospitals and medical groups in the 340B drug discount program less than a week to comply with the drugmaker’s data sharing requirements or be cut off from valuable savings on Lilly’s medications.
 In January, Lilly said it would begin requiring providers to submit claims data for all of its drugs dispensed in 340B.
 But now, providers that don’t comply with Lilly’s ultimatum by this coming Monday will lose access to 340B discounts on the drugmaker’s medications, Lilly warned this week.
@@ -168,6 +455,140 @@ Still, hospitals urged the Health Resources and Services Administration to stop 
 
 “If the federal government does not act, hundreds of other drugmakers could do the same, massively increasing costs for those hospitals that devote the most resources to caring for low-income patients. The consequences of Lilly’s actions for hospitals and their patients will be severe,” Testoni said.",https://imgproxy.divecdn.com/XpGY4jJ-UhBd7rm3HhwdAlVXa4GmJSVipcn88ZseUP0/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMDkyNDczMjEzX2VHaVhSdTEuanBn.webp,N,,2026-06-02 14:15:53.873402
 ID33,Moody's,2026-06-02 15:32:52+00:00,www.beckershospitalreview.com,$300B patent cliff could reshape hospital drug spending: Moody's,,,,,,https://www.beckershospitalreview.com/pharmacy/300b-patent-cliff-could-reshape-hospital-drug-spending-moodys/,... Moody's report. Moody's estimates the revenue at risk represents roughly 40% of rated pharmaceutical companies' 2025 revenue. For health systems ...,Not Available,,Y,,2026-06-02 12:26:26.826346
+ID48,UniCredit,2026-06-02 15:19:55+00:00,Yahoo Finance,UniCredit says increased Commerzbank stake to 34% in hostile takeover - Yahoo Finance,Not Available,,,,,https://finance.yahoo.com/markets/stocks/articles/unicredit-says-increased-commerzbank-stake-150840011.html,Tip: Try a valid symbol or a specific company name for relevant results,Tip: Try a valid symbol or a specific company name for relevant results,https://s.yimg.com/os/en/afp.com/9a45f90214275f95458a050dda9eee0f,N,,2026-06-02 15:24:19.219665
+ID19,Eli Lilly,2026-06-02 14:48:02+00:00,Eli Lilly and Company,Lilly to spotlight growing hematology portfolio at 2026 European Hematology Association ...,Not Available,,,,,https://lilly.gcs-web.com/news-releases/news-release-details/lilly-spotlight-growing-hematology-portfolio-2026-european,"Across clinical trials, Grade 3 or 4 cytopenias, including decreased neutrophils (27%), decreased platelets (13%), and decreased hemoglobin (11%), developed.
+Drug Interactions Strong CYP3A Inhibitors: Concomitant use increased pirtobrutinib systemic exposure, which may increase risk of Jaypirca ARs.
+If concomitant use is unavoidable, reduce Jaypirca dose according to approved labeling.
+If concomitant use with moderate CYP3A inducers is unavoidable, increase Jaypirca dose according to approved labeling.
+About Lilly Lilly is a medicine company turning science into healing to make life better for people around the world.","Positive results from the Phase 3 BRUIN CLL-322 study comparing time-limited pirtobrutinib plus venetoclax and rituximab versus venetoclax and rituximab in patients with relapsed or refractory CLL/SLL will be highlighted in a late-breaking oral presentation
+
+Ajax Therapeutics, which Lilly has agreed to acquire, will present the first clinical data for its first-in-class type II JAK2 inhibitor for patients with myelofibrosis who have been failed by a type I JAK2 inhibitor
+
+Kelonia Therapeutics, which Lilly has agreed to acquire, will present additional correlative clinical data for its in vivo CAR-T program in patients with multiple myeloma
+
+INDIANAPOLIS, June 2, 2026 /PRNewswire/ -- Eli Lilly and Company (NYSE: LLY) today announced the details of presentations at the European Hematology Association (EHA) Annual Meeting, taking place June 11-14 in Stockholm, Sweden.
+
+Data to be highlighted include an oral presentation detailing results from the Phase 3 BRUIN CLL-322 study of Jaypirca (pirtobrutinib), a non-covalent Bruton tyrosine kinase (BTK) inhibitor, as part of a time-limited regimen for patients with previously treated chronic lymphocytic leukemia (CLL). Lilly is strengthening its hematology portfolio through the recently announced proposed acquisitions of Ajax Therapeutics, Inc.* and Kelonia Therapeutics, Inc.*, each of which will present data at the meeting. Ajax Therapeutics will present the first clinical data from the Phase 1 AJX-101 study evaluating AJ1-11095, an investigational first-in-class type II JAK2 inhibitor, in patients with myelofibrosis who have been failed by a type I JAK2 inhibitor. Kelonia Therapeutics will present additional correlative data from the Phase 1 inMMyCAR study of an investigational anti-B-cell maturation antigen (BCMA) targeted in vivo CAR-T therapy in patients with relapsed and refractory multiple myeloma. Both proposed acquisitions by Lilly are pending transaction closes.
+
+""These data at EHA represent a significant moment for Lilly's hematology ambitions,"" said Jacob Van Naarden, executive vice president and president of Lilly Oncology. ""The Phase 3 BRUIN CLL-322 results address an important question for patients with relapsed or refractory CLL, demonstrating that time-limited pirtobrutinib can meaningfully improve outcomes when added to an already effective venetoclax-based regimen. Alongside the first clinical data from Ajax and additional results from Kelonia in support of the recently presented data at ASCO, these results reflect our relentless commitment to pursue meaningful advancements for people living with blood disorders.""
+
+Presentation Highlights:
+
+Lilly:
+
+In a late-breaking oral presentation, Lilly will share results from the Phase 3 BRUIN CLL-322 study, evaluating a time-limited regimen of pirtobrutinib plus venetoclax and rituximab versus venetoclax and rituximab in patients with relapsed or refractory CLL/SLL. BRUIN CLL-322 is the first Phase 3 readout in CLL to outperform a venetoclax-containing control arm in any CLL setting. Lilly previously announced that the study met its primary endpoint, demonstrating that the addition of pirtobrutinib to venetoclax plus rituximab led to a statistically significant and clinically meaningful improvement in progression-free survival (PFS). These results were also selected to be featured in the EHA press program.
+
+Ajax Therapeutics:
+
+In an oral presentation, Ajax will share the first clinical results from the Phase 1 AJX-101 clinical trial, evaluating AJ1-11095, an investigational first-in-class type II JAK2 inhibitor, in patients with myelofibrosis who have been failed by a type I JAK2 inhibitor. These data will also be featured in the EHA press program.
+
+Kelonia Therapeutics:
+
+In an oral presentation, Kelonia will share additional correlative data from the Phase 1 inMMyCAR dose-escalation study, evaluating KLN-1010 in relapsed or refractory multiple myeloma. Data from this study were recently shared at the American Society of Clinical Oncology (ASCO) Annual Meeting.
+
+A full list of abstract titles and viewing details are listed below:
+
+For more information on Lilly's oncology pipeline click here.
+
+*Lilly and Ajax Therapeutics, Inc., and Lilly and Kelonia Therapeutics, Inc., remain separate, independent companies prior to closing. Both transactions are subject to customary closing conditions, including regulatory approvals, with Ajax Therapeutics expected to close in June 2026 and Kelonia Therapeutics expected to close in the second half of 2026.
+
+About Jaypirca (pirtobrutinib)
+
+Jaypirca (pirtobrutinib) (pronounced jay-pihr-kaa) is a highly selective (300 times more selective for BTK versus 98% of other kinases tested in preclinical studies), non-covalent inhibitor of the enzyme BTK.1 BTK is a validated molecular target found across numerous B-cell leukemias and lymphomas including mantle cell lymphoma (MCL) and chronic lymphocytic leukemia (CLL).2,3 Jaypirca is a U.S. FDA-approved oral prescription medicine, 100 mg or 50 mg tablets taken as a once-daily 200 mg dose with or without food until disease progression or unacceptable toxicity.
+
+INDICATIONS FOR JAYPIRCA (pirtobrutinib)
+
+Jaypirca is indicated for the treatment of
+
+Adult patients with relapsed or refractory chronic lymphocytic leukemia or small lymphocytic lymphoma (CLL/SLL) who have previously been treated with a covalent BTK inhibitor.
+
+Adult patients with relapsed or refractory (R/R) mantle cell lymphoma (MCL) after at least two lines of systemic therapy, including a BTK inhibitor. This indication is approved under accelerated approval based on response rate. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial.
+
+IMPORTANT SAFETY INFORMATION FOR JAYPIRCA (pirtobrutinib)
+
+Infections: Fatal and serious infections (including bacterial, viral, fungal) and opportunistic infections occurred in Jaypirca-treated patients. Across clinical trials, Grade ≥3 infections occurred (25%), most commonly pneumonia (20%); fatal infections (5%), sepsis (6%), and febrile neutropenia (3.8%) occurred. In patients with CLL/SLL, Grade ≥3 infections occurred (32%), with fatal infections occurring in 8%. Opportunistic infections included Pneumocystis jirovecii pneumonia and fungal infection. Consider prophylaxis, including vaccinations and antimicrobial prophylaxis, in patients at increased risk for infection, including opportunistic infections. Monitor for signs and symptoms, evaluate, and treat. Based on severity, reduce dose, temporarily withhold, or permanently discontinue Jaypirca.
+
+Hemorrhage: Fatal and serious hemorrhage has occurred with Jaypirca. Across clinical trials, major hemorrhage (Grade ≥3 bleeding or any central nervous system bleeding) occurred (2.6%), including gastrointestinal hemorrhage; fatal hemorrhage occurred (0.3%). Bleeding of any grade, excluding bruising and petechiae, occurred (16%). Major hemorrhage occurred when taking Jaypirca with (2.0%) and without (0.6%) antithrombotic agents. Consider risks/benefits of co-administering antithrombotic agents with Jaypirca. Monitor for signs of bleeding. Based on severity, reduce dose, temporarily withhold, or permanently discontinue Jaypirca. Consider withholding Jaypirca 3-7 days pre- and post-surgery based on surgery type and bleeding risk.
+
+Cytopenias: Jaypirca can cause cytopenias, including neutropenia, thrombocytopenia, and anemia. Across clinical trials, Grade 3 or 4 cytopenias, including decreased neutrophils (27%), decreased platelets (13%), and decreased hemoglobin (11%), developed. Grade 4 decreased neutrophils (15%) and Grade 4 decreased platelets (6%) developed. Monitor complete blood counts regularly. Based on severity, reduce dose, temporarily withhold, or permanently discontinue Jaypirca.
+
+Cardiac Arrhythmias: Cardiac arrhythmias occurred in patients taking Jaypirca. Across clinical trials, atrial fibrillation or flutter were reported in 3.4% of Jaypirca treated patients, with Grade 3 or 4 atrial fibrillation or flutter in 1.6%. Other serious cardiac arrhythmias such as supraventricular tachycardia and cardiac arrest occurred (0.4%). Cardiac risk factors such as hypertension or previous arrhythmias may increase risk. Monitor and manage signs and symptoms of arrhythmias (e.g., palpitations, dizziness, syncope, dyspnea). Based on severity, reduce dose, temporarily withhold, or permanently discontinue Jaypirca.
+
+Second Primary Malignancies: Across clinical trials, second primary malignancies, including non-skin carcinomas, developed in 9% of Jaypirca-treated patients, most frequently non-melanoma skin cancer (4.4%). Other second primary malignancies included solid tumors (including genitourinary and breast cancers) and melanoma. Advise patients to use sun protection and monitor for development of second primary malignancies.
+
+Hepatotoxicity, Including Drug-Induced Liver Injury (DILI): Hepatotoxicity, including severe, life-threatening, and potentially fatal cases of DILI, has occurred in patients treated with BTK inhibitors, including Jaypirca. Evaluate bilirubin and transaminases at baseline and throughout Jaypirca treatment. For patients who develop abnormal liver tests after Jaypirca, monitor more frequently for liver test abnormalities and clinical signs and symptoms of hepatic toxicity. If DILI is suspected, withhold Jaypirca. If DILI is confirmed, discontinue Jaypirca.
+
+Embryo-Fetal Toxicity: Jaypirca can cause fetal harm. Administration of pirtobrutinib to pregnant rats caused embryo-fetal toxicity, including embryo-fetal mortality and malformations at maternal exposures (AUC) approximately 3-times the recommended 200 mg/day dose. Advise pregnant women of fetal risk and females of reproductive potential to use effective contraception during treatment and for one week after last dose.
+
+Adverse Reactions (ARs) in Patients Who Received Jaypirca
+
+The most common (≥30%) ARs in the pooled safety population of patients with hematologic malignancies (n=704) were decreased neutrophil count (54%), decreased hemoglobin (43%), decreased leukocytes (32%), fatigue (31%), decreased platelets (31%), decreased lymphocyte count (31%), calcium decreased (30%).
+
+Mantle Cell Lymphoma
+
+Serious ARs occurred in 38% of patients, with pneumonia (14%), COVID-19 (4.7%), musculoskeletal pain (3.9%), hemorrhage (2.3%), pleural effusion (2.3%), and sepsis (2.3%) occurring in ≥2% of patients. Fatal ARs within 28 days of last dose occurred in 7% of patients, most commonly due to infections (4.7%), including COVID-19 (3.1% of all patients).
+
+Dose Modifications and Discontinuations Due to ARs: Dose reductions in 4.7%, treatment interruption in 32%, and permanent discontinuation of Jaypirca in 9% of patients. Permanent discontinuation in >1% of patients included pneumonia.
+
+Most common ARs (≥15%) and Select Laboratory Abnormalities (≥10%) (all Grades %; Grade 3-4 %): hemoglobin decreased (42; 9), platelet count decreased (39; 14), neutrophil count decreased (36; 16), lymphocyte count decreased (32; 15), creatinine increased (30; 1.6), fatigue (29; 1.6), musculoskeletal pain (27; 3.9), calcium decreased (19; 1.6), diarrhea (19; -), edema (18; 0.8), dyspnea (17; 2.3), AST increased (17; 1.6), pneumonia (16; 14), bruising (16; -), potassium decreased (13; 1.6), sodium decreased (13; -), lipase increased (12; 4.4), ALT increased (11; 1.6), potassium increased (11; 0.8), alkaline phosphatase increased (11; -). Grade 4 laboratory abnormalities in >5% of patients included neutrophils decreased (10), platelets decreased (7), lymphocytes decreased (6).
+
+Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma from Single-Arm and Randomized Controlled Clinical Trials
+
+Serious ARs occurred in 47-56% of patients across clinical trials. Serious ARs in ≥5% of patients in the single-arm trial were pneumonia (18%), COVID-19 (9%), sepsis (7%), febrile neutropenia (7%). Serious ARs in ≥3% of patients in the randomized controlled trial were pneumonia (21%), COVID-19 (5%), sepsis (3.4%). Fatal ARs within 28-30 days of last Jaypirca dose occurred in 8-11% of patients, most commonly due to infections (7-10%), including sepsis (5%), COVID-19 (2.7-5%), and pneumonia (3.4%).
+
+Dose Modifications and Discontinuations Due to ARs: Dose reductions in 3.6-10%, treatment interruption in 42-51%, and permanent discontinuation of Jaypirca in 9-17% of patients. Permanent discontinuation in >1% of patients included second primary malignancy, pneumonia, COVID-19, neutropenia, sepsis, anemia, and cardiac arrhythmias.
+
+Most common ARs and Select Laboratory Abnormalities (≥20%) (all Grades %, Grade 3-4 %)--in a randomized controlled trial: neutrophil count decreased (54; 26), hemoglobin decreased (45; 10), platelet count decreased (37; 17), pneumonia (28; 16), ALT increased (25; 1.8), creatinine increased (25; -), calcium decreased (23; 0.9), sodium decreased (22; 0.9), bilirubin increased (21; 0.9), upper respiratory tract infections (21; 0.9); in a single-arm trial: neutrophil count decreased (63; 45), hemoglobin decreased (48; 19), calcium decreased (40; 2.8), fatigue (36; 2.7), bruising (36; -), cough (33; -), musculoskeletal pain (32; 0.9), platelet count decreased (30; 15), sodium decreased (30; -), COVID-19 (28; 7), pneumonia (27; 16), diarrhea (26; -), abdominal pain (25; 2.7), lymphocyte count decreased (23; 8), ALT increased (23; 2.8), AST increased (23; 1.9), creatinine increased (23; -), dyspnea (22; 2.7), hemorrhage (22; 2.7), lipase increased (21; 7), alkaline phosphatase increased (21; -), edema (21; -), nausea (21; -), pyrexia (20; 2.7), headache (20; 0.9). Grade 4 laboratory abnormalities in >5% of patients included neutrophils decreased (23).
+
+Drug Interactions
+
+Strong CYP3A Inhibitors: Concomitant use increased pirtobrutinib systemic exposure, which may increase risk of Jaypirca ARs. Avoid using strong CYP3A inhibitors with Jaypirca. If concomitant use is unavoidable, reduce Jaypirca dose according to approved labeling.
+
+Strong or Moderate CYP3A Inducers: Concomitant use decreased pirtobrutinib systemic exposure, which may reduce Jaypirca efficacy. Avoid using Jaypirca with strong or moderate CYP3A inducers. If concomitant use with moderate CYP3A inducers is unavoidable, increase Jaypirca dose according to approved labeling.
+
+Sensitive CYP2C8, CYP2C19, CYP3A, P-gp, or BCRP Substrates: Use with Jaypirca increased their plasma concentrations, which may increase risk of ARs related to these substrates for drugs sensitive to minimal concentration changes. Follow recommendations for these sensitive substrates in their approved labeling.
+
+Use in Specific Populations
+
+Pregnancy and Lactation: Due to potential for Jaypirca to cause fetal harm, verify pregnancy status in females of reproductive potential prior to starting Jaypirca. Presence of pirtobrutinib in human milk is unknown. Advise women to use effective contraception and to not breastfeed while taking Jaypirca and for one week after last dose.
+
+Geriatric Use: In the pooled safety population of patients with hematologic malignancies, patients aged ≥65 years experienced higher rates of Grade ≥3 ARs and serious ARs compared to patients <65 years of age.
+
+Renal Impairment: Because severe renal impairment increases pirtobrutinib exposure, reduce Jaypirca dose in these patients according to approved labeling.
+
+PT HCP ISI MCL_CLL Q42025
+
+Please see Prescribing Information and Patient Information for Jaypirca.
+
+About Lilly
+
+Lilly is a medicine company turning science into healing to make life better for people around the world. We've been pioneering life-changing discoveries for 150 years, and today our medicines help tens of millions of people across the globe. Harnessing the power of biotechnology, chemistry and genetic medicine, our scientists are urgently advancing new discoveries to solve some of the world's most significant health challenges: redefining diabetes care; treating obesity and curtailing its most devastating long-term effects; advancing the fight against Alzheimer's disease; providing solutions to some of the most debilitating immune system disorders; and transforming the most difficult-to-treat cancers into manageable diseases. With each step toward a healthier world, we're motivated by one thing: making life better for millions more people. That includes delivering innovative clinical trials that reflect the diversity of our world and working to ensure our medicines are accessible and affordable. To learn more, visit Lilly.com and Lilly.com/news, or follow us on Facebook, Instagram, and LinkedIn. P-LLY
+
+© Lilly USA, LLC 2026. ALL RIGHTS RESERVED.
+
+Trademarks and Trade Names
+
+All trademarks or trade names referred to in this press release are the property of the company, or, to the extent trademarks or trade names belonging to other companies are referenced in this press release, the property of their respective owners. Solely for convenience, the trademarks and trade names in this press release are referred to without the ® and ™ symbols, but such references should not be construed as any indicator that the company or, to the extent applicable, their respective owners will not assert, to the fullest extent under applicable law, the company's or their rights thereto. We do not intend the use or display of other companies' trademarks and trade names to imply a relationship with, or endorsement or sponsorship of us by, any other companies.
+
+Cautionary Statement Regarding Forward-Looking Statements
+
+This press release contains forward-looking statements (as that term is defined in the Private Securities Litigation Reform Act of 1995) about Jaypirca (pirtobrutinib), as a potential treatment for adults with chronic lymphocytic leukemia or small lymphocytic lymphoma (CLL/SLL), and the timeline for future regulatory submissions, presentations, and other milestones relating to Jaypirca and its clinical trials, and reflects Lilly's current beliefs and expectations. However, as with any pharmaceutical product, there are substantial risks and uncertainties in the process of drug research, development, and commercialization. Among other things, there is no guarantee that planned or ongoing studies will be completed as planned, that future study results will be consistent with study results to date, or that Jaypirca will receive additional regulatory approvals. For further discussion of these and other risks and uncertainties that could cause actual results to differ from Lilly's expectations, see Lilly's Form 10-K and Form 10-Q filings with the United States Securities and Exchange Commission. Except as required by law, Lilly undertakes no duty to update forward-looking statements to reflect events after the date of this release.
+
+Endnotes & References
+
+Mato AR, Shah NN, Jurczak W, et al. Pirtobrutinib in relapsed or refractory B-cell malignancies (BRUIN): a Phase 1/2 study. Lancet. 2021;397(10277):892-901. doi:10.1016/S0140-6736(21)00224-5
+
+Hanel W, Epperla N. Emerging therapies in mantle cell lymphoma. J Hematol Oncol. 2020;13(1):79. Published 2020 Jun 17. doi:10.1186/s13045-020-00914-1
+
+Gu D, Tang H, Wu J, Li J, Miao Y. Targeting Bruton tyrosine kinase using non-covalent inhibitors in B cell malignancies. J Hematol Oncol. 2021;14(1):40. Published 2021 Mar 6. doi:10.1186/s13045-021-01049-7
+
+Refer to: Kyle Owens; Owens_Kyle@lilly.com; 332-259-3932 (Media)
+
+Michael Czapar; czapar_michael_c@lilly.com; 317-617-0983 (Investors)
+
+View original content to download multimedia:https://www.prnewswire.com/news-releases/lilly-to-spotlight-growing-hematology-portfolio-at-2026-european-hematology-association-eha-annual-meeting-302787526.html
+
+SOURCE Eli Lilly and Company",https://investor.lilly.com/static-files/414b590d-5fd8-4d74-bb91-284a3d77fb98,N,,2026-06-02 15:22:46.930330
 ID36,OpenAI,2026-06-02 14:38:54+00:00,the Guardian,Anthropic surges as OpenAI struggles to keep up - The Guardian,"Blake Montgomery, www.theguardian.com, blake-montgomery",,,,,https://www.theguardian.com/technology/2026/jun/01/anthropic-openai-techscape,"With stock market filing, Anthropic takes the lead over OpenAI Anthropic, the AI firm behind the Claude chatbot, announced on Monday it had filed confidentially for an initial public offering on the US stock market.
 If OpenAI continues to lose ground to Anthropic, it seems likely that Sam Altman will become the veep to Amodei’s president.
 The “Vatican-washing” response demands a more severe excoriation of AI from Leo; Anthropic is the villain.
@@ -245,6 +666,27 @@ And OnePay has $50 billion in annualized payments — also double the figure fro
 
 Although it still has little name recognition among most Americans, a firm backed by Walmart — OnePay — is now growing rapidly. The financial-technology service has 6 million monthly active users, double the number a year ago, according to people with knowledge of the company’s results, who asked not to be identified discussing information that isn’t public. And OnePay has $50 billion in annualized payments — also double the figure from the previous year, one of the people said.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iatL6lGY6J9w/v0/1200x630.jpg,N,,2026-06-02 12:26:44.606122
 ID35,Nvidia,2026-06-02 14:29:28+00:00,Reuters,What are AI PCs that Nvidia's Jensen Huang is betting on? - Reuters,Not Available,,,,,https://www.reuters.com/world/asia-pacific/what-are-ai-pcs-that-nvidias-jensen-huang-is-betting-2026-06-01/,PC makers are hoping such powerful AI features will help draw in buyers as more people lean on generative AI for everything from sending emails to planning vacations.,Not Available,https://www.reuters.com/resizer/v2/PA2WWJGT7NLKLOLWV36IBK7RKI.jpg?auth=c9af1c522d44eb7d0bccd065bec471656740ed5e8d2ef6ca10b1376071fe5d4f&height=1005&width=1920&quality=80&smart=true,N,,2026-06-02 12:26:29.260211
+ID23,IBM,2026-06-02 14:17:23+00:00,www.ibm.com,Modernizing infrastructure for logistics at scale - IBM,Not Available,,,,,https://www.ibm.com/case-studies/manitoulin,"Manitoulin Group of Companies is a Canadian transportation and logistics organization supporting complex, time‑sensitive supply chain operations across North America.
+As the business expanded through acquisitions and geographic growth, its IT environment remained centralized within a single primary infrastructure, largely anchored on Manitoulin Island.
+Manitoulin needed a way to support continued growth while reducing infrastructure constraints and operational risk.
+With IBM Power Virtual Server, Manitoulin reduced infrastructure costs while improving operational continuity across its logistics network.
+Moving disaster recovery to the cloud eliminated duplicate on-premises infrastructure, reduced operational overhead, and streamlined replication using IBM Global Replication Services, improving the efficiency of disaster recovery operations.","Manitoulin Group of Companies is a Canadian transportation and logistics organization supporting complex, time‑sensitive supply chain operations across North America. As the business expanded through acquisitions and geographic growth, its IT environment remained centralized within a single primary infrastructure, largely anchored on Manitoulin Island.
+
+This model, while reliable, created increasing constraints as operational scale grew and introduced potential continuity exposure. Distributed teams required faster, more consistent access to core systems, while the concentration of infrastructure introduced additional risks to business continuity. At the same time, maintaining and refreshing on-premises systems required significant ongoing investment, adding cost and limiting flexibility.
+
+Manitoulin needed a way to support continued growth while reducing infrastructure constraints and operational risk.
+
+Working with IBM and business partner Service Express, Manitoulin moved its core IBM® i® workloads to IBM Power® Virtual Server (PowerVS) on IBM Cloud®. The IBM i platform supports mission-critical logistics operations, including financials, payroll, and the company’s transportation management system (TMS), which processes tens of thousands of daily transactions such as shipment tracking, quoting, and delivery operations across the network, supported by scalable infrastructure capable of handling high volumes of customer-facing API requests. This approach allowed the company to extend existing systems into the cloud without requiring application changes, while maintaining the performance and reliability required for these workloads.
+
+The transformation began by migrating disaster recovery to PowerVS, where the environment was validated through a phased approach that included extended role swaps, running production workloads in each environment for months to confirm stability before expanding to full production. Manitoulin then adopted a dual region deployment across IBM Cloud data centers in Toronto and Montreal, replacing its on-premises disaster recovery setup and reducing reliance on geographically concentrated infrastructure.
+
+By shifting to a consumption-based model and consolidating IBM i, x86, and Kubernetes workloads within a unified cloud environment, the organization reduced infrastructure complexity, simplified operations, and created a scalable foundation for continued growth.
+
+With IBM Power Virtual Server, Manitoulin reduced infrastructure costs while improving operational continuity across its logistics network. Moving disaster recovery to the cloud eliminated duplicate on-premises infrastructure, reduced operational overhead, and streamlined replication using IBM Global Replication Services, improving the efficiency of disaster recovery operations. Implementing comparable security standards across hybrid environments was estimated to require more than 1,000 hours using traditional approaches. Testing showed recovery times reduced to 30–40 minutes, compared to 1–2 hours with the previous replication approach.
+
+These changes delivered more than USD 20,000 in recurring monthly savings, along with an additional USD 100,000–150,000 in annual cost reductions after retiring the on-premises DR site—together significantly lowering total infrastructure costs.
+
+The consolidation of workloads into a single cloud environment also improved operational consistency and enabled teams to build expertise more efficiently across a unified platform. With a scalable, dual region cloud foundation in place, Manitoulin is now better positioned to support continued growth, simplify operations across its environment, and accelerate future modernization.",https://www.ibm.com/content/dam/worldwide-content/stock-assets/adb-stk/ul/g/62/57/adobestock_337082912.jpeg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg,N,,2026-06-02 15:23:22.954904
 ID35,Nvidia,2026-06-02 14:00:15+00:00,YouTube,Nvidia Gets Into the PC Market With New Chip | Bloomberg Tech 6/1/2026 - YouTube,Not Available,,,,,https://www.youtube.com/watch?v=wVKL_SpY2Uc,Bloomberg’s Caroline Hyde and Ed Ludlow discuss Nvidia's next target: the PC. A new AI chip sends Nvidia and related stocks soaring while rivals slide after ...,Not Available,https://i.ytimg.com/vi/wVKL_SpY2Uc/maxresdefault.jpg,N,,2026-06-02 12:26:33.124383
 ID35,Nvidia,2026-06-02 13:46:34+00:00,Yahoo Finance,"Nvidia Stock Jumps After New PC Push Triggers Selloff in Intel, AMD - Yahoo Finance",Nauman Khan,,,,,https://finance.yahoo.com/markets/stocks/articles/nvidia-stock-jumps-pc-push-174043570.html,"Nvidia (NASDAQ:NVDA) shares climbed about 4% on Monday after the chipmaker said it is moving deeper into the personal-computer market with a new product called RTX Spark.
 The launch, unveiled at Computex in Taipei, pushed shares of rival PC chip makers lower.
@@ -678,6 +1120,61 @@ Nubank, which has more than 135mn clients in Latin America, received conditional
 He will also oversee finance chiefs across Nubank’s markets, including Brazil, Mexico and Colombia.
 
 Chief executive David Vélez said Livingston “has a lot of knowledge in global financial institutions and a clear vision of the US”. He added: “The problems we’re solving are not only Brazil’s or Mexico’s.”",https://d2iztrg3kgqpue.cloudfront.net/production/a7cc6ac2-7034-4473-b473-0ddc834c99a3.jpg,N,,2026-06-02 08:04:06.052488
+ID31,Michelin,2026-06-02 10:19:56+00:00,www.business-standard.com,Ceat bets on CAMSO to drive next phase of off-highway tyre growth - Business Standard,"Sohini Das, Business Standard",,,,,https://www.business-standard.com/companies/news/ceat-camso-off-highway-tyres-global-growth-north-america-europe-126060200642_1.html,"Ceat acquired CAMSO’s compact construction tracks and tyres business from Michelin last year.
+Tolani said Ceat would gain access to the full CAMSO portfolio from 2028, including agricultural tracks, harvester tracks, power-sports tracks and material-handling equipment categories.
+Motilal Oswal said the acquisition opens up an addressable opportunity of around $850 million beyond the acquired compact construction business.
+“CAMSO is a much bigger brand in the developed markets than what Ceat is in those markets,” he said.
+The company has not yet started measuring market-share recovery in compact construction tracks because customer transition is still underway.","The tyre maker expects tracks and developed markets such as North America and Europe to power growth as access to additional CAMSO categories expands
+
+Amit Tolani, CEO, Ceat Specialty
+
+Sohini Das
+
+Listen to This Article
+
+Ceat aims to make the acquisition of CAMSO’s off-highway tyre (OHT) and compact construction equipment business from Michelin a platform for global growth, particularly in North America and Europe.
+
+The RPG Group company said OHT accounts for 20 per cent of its revenue, up from 12-14 per cent before the acquisition last year. It expects the segment to become a larger part of the business as it gains access to additional CAMSO product categories and brand rights over the next two years.
+
+“We expect that this category shall grow and become more and more dominant,” Amit Tolani, chief executive officer, Ceat Specialty, told Business Standard. “Camso as a brand offers us access to categories that we were not servicing earlier.”
+
+CAMSO accounts for around 40 per cent of Ceat’s revenue in the OHT business, highlighting the acquired brand’s importance in the company’s specialty tyre portfolio.
+
+Ceat acquired CAMSO’s compact construction tracks and tyres business from Michelin last year. Tolani said Ceat would gain access to the full CAMSO portfolio from 2028, including agricultural tracks, harvester tracks, power-sports tracks and material-handling equipment categories. “There will be an inflexion point around 2028 when we get access to the brand and introduce more and more categories.”
+
+Tracks are expected to be the primary growth driver and the company’s key focus area over the next five years. Agricultural, material-handling and compact construction segments will contribute significantly to future expansion, Tolani said.
+
+“The entire proportion” of incremental CAMSO-led revenue growth is expected to come from North America and Europe, underlining Ceat’s strategy of deepening its presence in mature OHT countries rather than relying on emerging-market expansion.
+
+Brokerages tracking the company have also highlighted the scale of the opportunity beyond the business already acquired.
+
+According to a recent report by Nuvama Institutional Equities, the combined Ceat-CAMSO off-highway business has the potential to generate about $1 billion in revenue over the medium term, compared with a current annualised run rate of roughly $400 million.
+
+The brokerage estimates the opportunity will likely be driven by around $500 million from Ceat’s existing agriculture and OTR portfolio, about $100 million from CAMSO agricultural tracks, another $100 million from material-handling equipment and solid tyres, and around $150 million from CAMSO’s radial portfolio. It expects customer transition from Michelin to be completed by October 2026 and value-chain transition by April 2027, supporting margin expansion from FY28.
+
+Motilal Oswal said the acquisition opens up an addressable opportunity of around $850 million beyond the acquired compact construction business. The brokerage identified agricultural tracks, material-handling tyres, solids and radial products as key growth drivers once the brand transition is completed.
+
+Ceat’s investor presentation underlined the growing importance of OHT in the company’s portfolio. Off-highway products contributed 15 per cent of standalone revenue in FY26, making it one of the company’s largest product segments after truck and bus, two-wheeler and passenger vehicle tyres.
+
+Tolani said Ceat has no plans to reposition CAMSO as a low-cost manufacturing play as it leverages the brand’s global presence, particularly in North America and Europe.
+
+“CAMSO is a much bigger brand in the developed markets than what Ceat is in those markets,” he said. “We don’t intend to dilute the positioning of the brand.”
+
+Ceat said Michelin’s decision to exit the OHT segment was linked to its strategic focus on other categories rather than any weakness in CAMSO.
+
+Tolani said CAMSO is the leading brand in construction tracks, power-sports tracks, agricultural tracks and material-handling equipment, adding that the acquisition complements Ceat’s existing portfolio while giving it access to a premium brand with strong customer preference.
+
+The company has not yet started measuring market-share recovery in compact construction tracks because customer transition is still underway.
+
+“Transition shall complete by the end of Q2 and then we shall have access to customers,” Tolani said, indicating that market-share rebuilding efforts will accelerate once direct customer engagement begins.
+
+According to the company’s integration roadmap, customer transition from Michelin is expected to be completed by October 2026, followed by full value-chain control by April 2027 and transfer of the entire CAMSO brand by September 2028. Analysts expect the completion of these milestones to unlock meaningful margin gains and support Ceat’s ambition of building a $1 billion off-highway business.
+
+“The real juice of the value addition or the premiumness will come once the value chain is in our hands,” Tolani said. “That is expected next year.”
+
+Don't miss the most important news and views of the day. Get them on our Telegram channel
+
+First Published: Jun 02 2026 | 3:00 PM IST",https://bsmedia.business-standard.com/_media/bs/img/article/2026-06/03/thumb/fitandfill/1200X628/1780425545-7372.jpg,N,,2026-06-02 15:23:36.081999
 ID48,UniCredit,2026-06-02 10:19:15+00:00,www.bloomberg.com,"Lebanon Tensions, Commerzbank's 30% UniCredit Stake, More - Bloomberg.com",Bloomberg,,,,,https://www.bloomberg.com/news/audio/2026-06-02/lebanon-tensions-commerzbank-s-30-unicredit-stake-more,"Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world","Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world
 
 Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ivgYNYkzs5d4/v0/500x500.png,N,,2026-06-02 08:04:09.794763
@@ -12355,142 +12852,3 @@ Uber spent 3.4% on research and development in 2025, a 9% increase from 2024. Th
 Still, Uber isn’t shying away from technological innovation. Macdonald said the firm is going all in on autonomous driving, something he sees becoming the norm in under a couple decades.
 
 “I don’t think my daughters who are little kids today, I don’t think they will end up getting a driver’s license,” he said.","https://fortune.com/img-assets/wp-content/uploads/2026/05/GettyImages-2245764686-e1779814395855.jpg?resize=1200,600",N,,2026-05-26 18:08:49.946253
-ID36,OpenAI,2026-05-26 19:24:03+00:00,www.forbes.com,Inside OpenAI's New Founder Experience Team - Forbes,,,,,,https://www.forbes.com/sites/timkeary/2026/05/26/inside-openais-new-founder-experience-team/,Image depicts OpenAI CEO Sam Altman (Photo by Justin Sullivan/Getty Images). Getty Images. OpenAI has set its sights firmly on the startup community.,Not Available,,Y,,2026-05-26 18:08:31.713801
-ID35,Nvidia,2026-05-26 19:22:45+00:00,Seeking Alpha,Nvidia: Echoes Of Apple's 2018 Turnaround (NASDAQ:NVDA) | Seeking Alpha,Uttam Dey,,,,,https://seekingalpha.com/article/4908696-nvidia-echoes-of-apple-stock-2018-turnaround,"Analyst’s Disclosure: I/we have a beneficial long position in the shares of AMD either through stock ownership, options, or other derivatives.
-I am not receiving compensation for it (other than from Seeking Alpha).
-Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole.
-Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank.
-Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.","Analyst’s Disclosure: I/we have a beneficial long position in the shares of AMD either through stock ownership, options, or other derivatives. I wrote this article myself, and it expresses my own opinions. I am not receiving compensation for it (other than from Seeking Alpha). I have no business relationship with any company whose stock is mentioned in this article.
-
-Seeking Alpha's Disclosure: Past performance is no guarantee of future results. No recommendation or advice is being given as to whether any investment is suitable for a particular investor. Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole. Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank. Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.",https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2269542491/image_2269542491.jpg?io=getty-c-w1536,N,,2026-05-26 18:08:23.549273
-ID47,Uber,2026-05-26 19:22:03+00:00,www.prnewswire.com,"In an industry-first collaboration, Mews and Uber bring ride booking inside the hotel operating system",Not Available,,,,,https://www.prnewswire.com/news-releases/in-an-industry-first-collaboration-mews-and-uber-bring-ride-booking-inside-the-hotel-operating-system-302782218.html,"AMSTERDAM and SAN FRANCISCO, May 26, 2026 /PRNewswire/ -- Mews, the hospitality operating system, has announced a strategic partnership with Uber to embed ride booking, real-time tracking and integrated billing directly into the Mews platform.
-Airport pickups and last-minute changes will be visible and manageable from within the Mews platform.
-The Mews and Uber integration is in development, with a pilot launching this year.
-1 Mews guide ""How to unlock revenue beyond the room"" About Mews Mews is the operating system for hospitality, unifying workflows across revenue, operations and the guest journey so teams can automate the mundane and focus on memorable guest experiences.
-The Mews platform spans PMS, POS, RMS, Housekeeping and Payments, helping hoteliers move from property management to profit management.","Hotels will be able to request, track and bill Uber rides directly from Mews, turning a manual front desk task into a connected workflow and a new source of ancillary revenue.
-
-AMSTERDAM and SAN FRANCISCO, May 26, 2026 /PRNewswire/ -- Mews, the hospitality operating system, has announced a strategic partnership with Uber to embed ride booking, real-time tracking and integrated billing directly into the Mews platform.
-
-Uber announced GO-GET 2026 last month, organizing the app around three actions: go, get and travel. Alongside a series of partnerships on the rider side, the Mews integration extends the same direction into the hotel's property management system (PMS), giving hoteliers a way to offer Uber rides as part of the guest stay rather than a transaction that happens outside their walls.
-
-At Mews Unfold on May 27 in Amsterdam, Christophe Peymirat, Sr. Director, General Manager, Uber for Business EMEA, and Mike Coscetta, President of Mews, will take the stage together to discuss how collaboration between travel technology, hotels and companies outside the traditional travel sector is reshaping the guest experience.
-
-Transportation bookings are one of the most common guest requests and one of the most manual processes in hotel operations. Mews research from 2026 found that guests arrange their own transportation and spend an average of $50 on it per stay, money that bypasses the hotel entirely1. With this integration, hoteliers can drive additional ancillary revenue by offering this service to guests.
-
-This highlights a significant opportunity: guests today want a 'frictionless' stay where the hotel solves every problem for them, not just the room. By bringing these moments together, this integration allows hotels to move beyond just accommodation and deliver the fully connected experience guests are looking for.
-
-The integration will enable hotel staff to request rides for guests in just a few clicks, track journeys in real time, and manage payments seamlessly — all within Mews. Airport pickups and last-minute changes will be visible and manageable from within the Mews platform.
-
-""Hotels put enormous effort into the guest experience within their four walls,"" said Christophe Peymirat, Sr. Director, GM, Uber for Business EMEA. ""The journey to and from the property is just as much a part of that experience. Connecting Uber's network directly into the Mews platform is a practical step toward giving hotels visibility and control over something they have been managing manually for decades.""
-
-The same logic applies to hotel teams: staff transportation for late and night shifts gives hotels a simple way to arrange stress-free, reliable journeys home for team members and improve staff satisfaction.
-
-The integration is being built to include:
-
-Staff-initiated and guest-initiated ride booking, available via the Mews platform through accounts and the guest portal
-
-Live vehicle tracking and trip confirmations, so staff and guests know exactly where a ride is
-
-Automatic billing to the guest folio through Mews Payments, removing manual reconciliation and keeping every transaction inside the same platform
-
-Full visibility for the hotel regarding all ride activity, and full transparency for the customer regarding costs
-
-Insights into guest transportation patterns to help hotels plan better and manage services across the guest journey
-
-""Embedding Uber into the Mews Operating System means hotels can offer transportation services as part of the stay and add it to the one unified guest bill, making it part of the guest relationship rather than a separate transaction. Transportation is one of the clearest examples of a regular guest requirement that hotels are best positioned to provide, but not currently set up to do seamlessly,"" said Mike Coscetta, President of Mews.
-
-The Mews and Uber integration is in development, with a pilot launching this year. Further details will be shared directly with customers and partners ahead of launch.
-
-The entire Unfold program will be available to stream live and for free, with the session, ""Vision for the industry - Uber"" running on Wednesday, May 27, 11:50 AM to 12:05 PM CET. Sign up here.
-
-1 Mews guide ""How to unlock revenue beyond the room""
-
-About Mews
-
-Mews is the operating system for hospitality, unifying workflows across revenue, operations and the guest journey so teams can automate the mundane and focus on memorable guest experiences. The Mews platform spans PMS, POS, RMS, Housekeeping and Payments, helping hoteliers move from property management to profit management. Powering 15,000 customers across 85 countries, the company was named Best PMS (2024, 2025, 2026), Best POS (2026) and listed among the Best Places to Work in Hotel Tech for six years running by Hotel Tech Report.
-
-Media contact: press@mews.com
-
-About Uber
-
-We reimagine the way the world moves for the better
-
-Movement is what we power. It's our lifeblood. It runs through our veins. It's what gets us out of bed each morning. It pushes us to constantly reimagine how we can move better. For you. For all the places you want to go. For all the things you want to get. For all the ways you want to earn. Across the entire world. In real time. At the incredible speed of now.
-
-More information: https://www.uber.com/nl/en/",https://mma.prnewswire.com/media/2938956/MEWS_Logo.jpg?p=facebook,N,,2026-05-26 18:08:53.472582
-ID45,Thompson Reuters,2026-05-26 18:56:27+00:00,The Globe and Mail,"Dropbox CEO Andrew Houston to step down, be succeeded by insider Ashraf Alkarmi",Not Available,,,,,https://www.theglobeandmail.com/business/article-dropbox-ceo-andrew-houston-to-step-down-be-succeeded-by-insider-ashraf/,"Following transition period, Alkarmi will become sole CEO and Houston will move into role of executive chairman",Not Available,https://www.theglobeandmail.com/resizer/v2/LTKV3BZKXNAEXKP75KRHJ5VF7M.JPG?auth=43fc68dd75ac1b3f55d346e08de6ab896121ce0d2391f294d4f82698bd12d932&width=1200&height=800&quality=80&smart=true,N,,2026-05-26 18:08:45.281548
-ID50,Walmart,2026-05-26 18:53:04+00:00,Progressive Grocer,Walmart Introduces Prepaid Consolidation Supplier Freight Program - Progressive Grocer,Samantha Schober,,,,,https://progressivegrocer.com/walmart-introduces-prepaid-consolidation-supplier-freight-program,"Walmart is retooling how inbound freight flows through its supply chain with the launch of a new program: Prepaid Consolidation.
-Rather than shipping products to multiple destinations with multiple purchase orders, prepaid suppliers can send goods under one national purchase order.
-Walmart takes over from there, merging those shipments and distributing inventory across 42 regional distribution centers.
-[RELATED: Walmart Reports Major Gains in Q1] For suppliers, no changes to their existing prepaid freight terms are required.
-They can either manage their shipments or hand off logistics to one of three approved third-party providers C.H.","Walmart is retooling how inbound freight flows through its supply chain with the launch of a new program: Prepaid Consolidation. According to the company, Prepaid Consolidation is designed to get products onto store shelves more quickly and efficiently while “building a more connected, scalable, tech-enabled supply chain that improves service and lowers costs.”
-
-“By strengthening our first-mile capabilities, we’re reducing complexity and keeping goods moving so we can deliver even more value every day,” said SVP of Supply Chain Mike Gray.
-
-Rather than shipping products to multiple destinations with multiple purchase orders, prepaid suppliers can send goods under one national purchase order. Walmart takes over from there, merging those shipments and distributing inventory across 42 regional distribution centers.
-
-[RELATED: Walmart Reports Major Gains in Q1]
-
-For suppliers, no changes to their existing prepaid freight terms are required. They can either manage their shipments or hand off logistics to one of three approved third-party providers C.H. Robinson, Hub Group and RJW Logistics. Per-case pricing covers both case handling at an automated consolidation center and outbound transportation to Walmart’s distribution network, with a published rate card and no additional markups from participating providers.",https://progressivegrocer.com/images/v/16_x_9_480/files/2026-05/walmart-supplychain-teaser.jpg,N,,2026-05-26 18:11:46.622931
-ID29,Levi Strauss,2026-05-26 18:31:42+00:00,EL PAÍS English,"Heidi O'Neill, the Nike veteran who knows how to turn around a struggling business",Daniel Soufi,,,,,https://english.elpais.com/economy-and-business/2026-05-26/heidi-oneill-the-nike-veteran-who-knows-how-to-turn-around-a-struggling-business.html?outputType=amp,"Heidi O’Neill, 61, learned before she turned 13 how a business can fall apart.
-In 1998 — the same year Chip Wilson opened a design studio in Vancouver with yoga classes at night — O’Neill joined Nike.
-When O’Neill joined Nike in 1998, the Oregon brand was beginning to lose share to the athleisure trend that Lululemon was creating at the same time in Vancouver.
-Twenty-eight years later, the roles have reversed: it is Lululemon that is losing ground to more agile competitors, and a Nike veteran who must reinvent it.
-An executive with rod and fly Heidi O’Neill practices fly-fishing, a technique that does away with natural bait and uses artificial lures — flies — that imitate insects or small fish, hand-tied from feathers, hair and thread.","Heidi O’Neill, 61, learned before she turned 13 how a business can fall apart. Her parents ran a sporting goods store. When the oil crisis of the 1970s crushed consumer spending, the family went bankrupt and lost the shop. O’Neill attended eight schools in eight years. But they managed to move forward.
-
-“What I love about my family is they dared for a comeback after a setback. A comeback requires heart and will and courage, and that’s what I take with me the most,” she told Women’s Wear Daily.
-
-That belief in comebacks will come in handy. On September 8, the U.S. executive will take over as chief executive officer of Lululemon Athletica, the Canadian brand that practically invented athleisure — sportswear designed to be worn beyond the gym — and that today generates more than $10 billion in annual revenue with its premium yoga pants and more than 760 stores worldwide.
-
-She is replacing Calvin McDonald and inheriting a business in crisis: sales are slumping in the United States, its largest market; it is losing share to younger rivals such as Alo Yoga and Vuori; the stock has fallen by nearly half over five years; and it is engaged in a public feud with its own founder, Chip Wilson, who accuses the board of having killed the brand’s creative soul.
-
-Wilson has also questioned O’Neil’s appointment: “I genuinely hope that Heidi is the right person for Lululemon, but a near 30-year veteran of NIKE, Inc., is not the symbol of transformative, creative-first leadership that can instill shareholder confidence in today’s world.”
-
-O’Neill has not waited to respond. Three weeks after the announcement, she addressed Lululemon employees for the first time in a video. “Since the announcement, some people have been underestimating me. Some have been underestimating Lululemon,” she said. “That’s fine. We’ll let the work answer.”
-
-Within the company, the board has closed ranks. Its chair, Marti Morfitt, describes her as the “best, perfect, right next leader for this company,” highlighting her creativity, brand instinct and global experience.
-
-O’Neil is married and has two children. She enjoys fashion and design, but also the outdoors and, above all, fly-fishing. She travels whenever she can. Until now, she has lived in Beaverton, Oregon, Nike’s global headquarters, and in September, she will move to Vancouver, where Lululemon is based. Beyond the office, she maintains a steady commitment to several nonprofit organizations.
-
-The failed shop of her childhood was called Port Side Sports and was located in Charlevoix, a tourist town of fewer than 3,000 people on the shores of Lake Michigan. There, O’Neill grew up surrounded by skis and rain jackets. Her father, an entrepreneur obsessed with bringing sport to the community, introduced cross-country skiing to local residents and organized courses that Heidi herself would later teach as a teenager. After the bankruptcy and years of moves, she studied journalism at the University of Colorado Boulder, graduating in 1986.
-
-Her first professional stop was at Foote, Cone & Belding, the storied San Francisco advertising agency, where she rose to vice president and account supervisor. From there, she moved to Levi Strauss & Co. as marketing director for Dockers. In 1998 — the same year Chip Wilson opened a design studio in Vancouver with yoga classes at night — O’Neill joined Nike. She would remain there for the next 26 years.
-
-In Beaverton, she rose through the ranks to become one of Nike’s most powerful executives. For seven years, she led the women’s business and turned it into a multibillion-dollar division. She later oversaw the company’s vast global consumer engine: stores, digital commerce, product and brand strategy across its main international markets.
-
-When she left the company in 2025, amid a restructuring following the departure of John Donahoe, Nike’s annual revenue had grown to more than $45 billion, up from $9 billion when she joined. At the same time, she built a parallel career as an outside director at companies such as Spotify, Hyatt Hotels Corporation and Lithia & Driveway.
-
-Markets reacted coolly to the news of her appointment. Lululemon Athletica’s stock fell on the day of the announcement, April 23. Williams-Blair analysts called the choice “out-of-left-field”; BNP Paribas spoke of disappointment. The doubts have less to do with O’Neill’s résumé than with the context she comes from. Her name is tied to the Donahoe era at Nike, marked by the company’s aggressive shift toward direct-to-consumer sales. The idea was to cut out much of the middlemen — from department stores to sports chains — and sell through its own website and stores. The strategy weakened the wholesale network and left room for rivals such as Hoka and On to gain ground. It ultimately took a toll on sales. Since Elliott Hill’s arrival, the historic company has been trying to correct course.
-
-There is a touch of irony in her career. When O’Neill joined Nike in 1998, the Oregon brand was beginning to lose share to the athleisure trend that Lululemon was creating at the same time in Vancouver. Twenty-eight years later, the roles have reversed: it is Lululemon that is losing ground to more agile competitors, and a Nike veteran who must reinvent it.
-
-Both brands now share the same diagnosis: cultural disconnect, a worn-out digital strategy and a fading narrative. O’Neill now has to lead her own comeback. As journalist Manuel Jabois recently put it, what interests us in stories of rise and fall is not watching people fail, but watching them rise again.
-
-An executive with rod and fly
-
-Heidi O’Neill practices fly-fishing, a technique that does away with natural bait and uses artificial lures — flies — that imitate insects or small fish, hand-tied from feathers, hair and thread.",https://imagenes.elpais.com/resizer/v2/VM26QD25MZDSVBQFEJUOGO6AXQ.jpg?auth=c8906fe3e768ad5f1b4dfb465067611fb1802cf454fd79e64c4ce01995611277&width=1200,N,,2026-05-26 18:11:41.874076
-ID27,J&J,2026-05-26 18:19:48+00:00,MedTech Dive,"J&J corrects Impella controller over issue linked to 2 injuries, 1 death | MedTech Dive",Nick Paul Taylor,,,,,https://www.medtechdive.com/news/jj-corrects-impella-controller-over-issue-linked-to-2-injuries-1-death/821063/,"Dive Brief: Johnson & Johnson’s Abiomed has recommended updated use instructions for all of its Automated Impella Controllers in response to an issue linked to two serious injuries and one death.
-Abiomed reported two serious injuries and one death as of April 27.
-The letter, which the FDA reported in an early alert notice, extends a series of corrections and recalls related to Impella pumps and controllers.
-The FDA published multiple recall and early alert notices about Impella controllers last year.
-Abiomed asked customers to quarantine certain Impella devices early this year.","Dive Brief:
-
-Johnson & Johnson’s Abiomed has recommended updated use instructions for all of its Automated Impella Controllers in response to an issue linked to two serious injuries and one death.
-
-The action, which the Food and Drug Administration reported last week, relates to a situation in which controllers are forced to restart because of an internal software error.
-
-Abiomed is working on a software update to address the issue with the controllers, which have been the subject of a series of recall notices over the past year.
-
-Dive Insight:
-
-The controllers are the primary user interface for Impella catheters. Using the controllers, physicians adjust and monitor catheters that reduce the work of the heart and support the circulatory system, giving the organ time to recover.
-
-In a letter sent to customers on May 14, Abiomed outlined conditions under which the controller may restart when a patient is being treated with one of its left ventricular Impella devices. During the restart, the controller screen turns black.
-
-Based on preliminary data, Abiomed calculated that the controller stops for about 35 seconds, during which time the patient is unsupported by the Impella system, and regurgitation via the cannula may occur. The pump resumes automatically after the controller restarts. The problem cannot be resolved by swapping the crashed controller for another device.
-
-Unless alternate mechanical support is in place, the pause in Impella activity could increase the risk of serious injury or death by depriving the patient of hemodynamic assistance, the FDA said. Abiomed reported two serious injuries and one death as of April 27.
-
-Hospitals can continue to use the devices but should follow updated recommendations including advice on how to avoid restarts in patients additionally supported with venoarterial extracorporeal membrane oxygenation.
-
-The letter, which the FDA reported in an early alert notice, extends a series of corrections and recalls related to Impella pumps and controllers. The FDA published multiple recall and early alert notices about Impella controllers last year. Abiomed asked customers to quarantine certain Impella devices early this year.",https://imgproxy.divecdn.com/6stR1mWUCc8muugwIASv4Io6Cybi20mudkAAnO9eD_k/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9KSl9tZWRfZGV2aWNlcy5qcGc=.webp,N,,2026-05-26 18:08:10.377777
