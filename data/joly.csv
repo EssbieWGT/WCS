@@ -53,6 +53,7 @@ Is Johnson & Johnson a Good Stock to Buy?
 On Wall Street, Johnson & Johnson’s shares remain a Moderate Buy based on analysts’ consensus rating. This breaks down to 12 Buys and five Holds issued over the past three months.
 
 However, the average JNJ price target of $266.40 implies roughly 11% upside in the months ahead.",https://blog.tipranks.com/wp-content/uploads/2026/06/shutterstock_2633066177-750x406.jpg,N,,2026-06-15 14:19:54.212220
+ID19,Eli Lilly,2026-06-15 17:13:27+00:00,www.forbes.com,Elon Musk's Wealth Rests On A Fragile Market Foundation - Forbes,,,,,,https://www.forbes.com/sites/hershshefrin/2026/06/15/elon-musks-11-trillion-of-wealth-resting-on-a-foundation-of-fluff/,"Visa. V. $326.37. +3.98(1.23%). Eli Lilly & Co. LLY. $1,130.06. -2.94(-0.26%). Mastercard. MA. $491.76. +1.77(0.36%). Exxon Mobil. XOM. $141.97. -5.04 ...",Not Available,,Y,,2026-06-15 15:08:13.806441
 ID27,J&J,2026-06-15 16:52:42+00:00,www.medicaldevice-network.com,J&J outlays $1bn to strengthen Floridian contact lens manufacturing provision,Not Available,,,,,https://www.medicaldevice-network.com/news/jj-outlays-1bn-to-strengthen-floridian-contact-lens-manufacturing-provision/,The investment is anticipated to enhance J&J's supply chain resilience regarding production of its ACUVUE contact lenses.,Not Available,,N,,2026-06-15 14:19:56.990260
 ID19,Eli Lilly,2026-06-15 16:26:39+00:00,news.bloomberglaw.com,Lilly Sues Cipla to Block Copy of Breast Cancer Drug Verzenio - Bloomberg Law News,Christopher Yasiejko,,,,,https://news.bloomberglaw.com/ip-law/lilly-sues-cipla-to-block-copy-of-breast-cancer-drug-verzenio,"Cipla Ltd.'s proposed copy of Verzenio infringes a patent for the blockbuster breast cancer treatment, Eli Lilly & Co. said in a federal lawsuit.
 Cipla’s generic 50-, 100-, 150-, and 200-milligram tablets of abemaciclib, Verzenio’s active ingredient, infringe US Patent No.
@@ -78,6 +79,57 @@ Executives at the company say the campaign is about making that switch feel stra
 L’Oréal also positions the initiative as part of a bigger shift in how the beauty industry operates. Over the past five years, it has increased its range of refillable products seventeen-fold, supported by changes in manufacturing and packaging across its global sites. Some of its best-selling fragrances are now available in refill formats.
 
 The campaign sits under the company’s wider “L’Oréal for the Future” programme, which focuses on reducing environmental impact across its 37-brand portfolio. For the group, refills are no longer an experiment — they are being pushed as a standard option.",https://www.businesstoday.com.my/wp-content/uploads/2026/06/Loreal-Refill-Day.jpg,N,,2026-06-15 13:15:03.451496
+ID2,Adobe,2026-06-15 16:20:43+00:00,Supply & Demand Chain Executive,How Supply Chain Visibility Curbs Cybersecurity Threats,Abby Kearns,,,,,https://www.sdcexec.com/safety-security/risk-compliance/article/22965423/activestate-how-supply-chain-visibility-curbs-cybersecurity-threats,"The Axios supply chain attack is not notable because it was sophisticated.
+How the consumption model enables the attack Package managers were designed for developer convenience, not security governance.
+The Axios attack closed that gap for the attacker before any defender had a chance to act.
+The answer to a broken detection model is not more detection.
+It is whether you have the visibility to know where, and whether the governance model you have built can do something about it before the next one hits.","The Axios supply chain attack is not notable because it was sophisticated. It wasn't. It is notable because of how little sophistication was required.
+
+The entry point was a dependency. The mechanism was trust. And the reason it worked is the same reason the next one will work: most organizations have built production infrastructure on an assumption they have never examined. That assumption is that the packages they pull are what they claim to be, and that the decision to pull them was deliberate in the first place.
+
+Neither of those things is reliably true anymore.
+
+The vulnerability was never Axios
+
+Every dependency an organization pulls carries the implicit trust decisions of every maintainer upstream. That trust is never made explicit, never verified, and almost never revisited.
+
+When a developer pulls a package, they are not just accepting that package. They are accepting its entire dependency tree, the build environment it came from, and the security posture of every maintainer who contributed to it. None of that is visible at the point of consumption.
+
+Axios did not create this problem. Axios revealed it.
+
+When cloud adoption accelerated, the organizations that moved fastest were often the ones with the least visibility into what they were actually running. The tooling caught up years later. The industry is in that same lag right now, except the acceleration is faster, the dependencies are deeper, and the entry points are less visible than they have ever been.
+
+How the consumption model enables the attack
+
+Package managers were designed for developer convenience, not security governance. Automatic installs, deep transitive dependency trees, and no verification at the point of ingestion are features of the model, not failures of implementation.
+
+That model made sense when open source was a supplementary layer in an otherwise controlled environment. It does not make sense when open source is the foundation of production infrastructure and AI coding tools are accelerating the pace at which dependencies enter the codebase, often without explicit developer selection.
+
+This is the part most post-mortems miss. The governance gap is not a resourcing problem. It is an architectural mismatch between how security tools were built and how code is actually being written today. SCA tools and scanners operate on the back end of this problem. They tell you what you already have. They do not prevent vulnerable components from entering the environment, and they do not give you a complete picture of what is running when the dependency tree includes transitive and OS-level libraries that standard tooling was never built to surface.
+
+Research from Sonatype found that 28% of AI-assisted dependency suggestions are hallucinations. That figure is worth sitting with. The model was already under strain before AI accelerated it. The blast radius is now larger, and the entry points are harder to see.
+
+The gap between detection and defense
+
+Large enterprises leave nearly half of discovered vulnerabilities unresolved within a 12-month window. The gap between when a vulnerability is known and when it is fixed is where attackers operate. The Axios attack closed that gap for the attacker before any defender had a chance to act.
+
+Organizations often respond to this by purchasing more detection. More scanners. More alerts. More dashboards surfacing the same backlog that was already there.
+
+Detection is not the problem. When everything is flagged, nothing gets prioritized. Organizations are not lacking information. They are drowning in it, and the volume of alerts generated by modern security tooling is creating its own dysfunction. The answer to a broken detection model is not more detection.
+
+The fix is at the source
+
+The organizations that will reduce their exposure are the ones that move security governance upstream, to the point of ingestion, not downstream at the point of detection.
+
+Built-from-source infrastructure, immutable provenance, and managed remediation are not best practices. They are architectural requirements for a consumption model that can hold up against the current threat environment. Shifting from ""scan what we have"" to ""control what we allow in"" requires policy, tooling, and process working together. None of the three alone is sufficient.
+
+Organizations that treat this as a tool purchase rather than a governance decision will find themselves reacting to the next Axios exactly the same way they are reacting to this one.
+
+Axios was a preview, not an outlier
+
+The conditions that made this attack possible are present in most enterprise stacks. The organizations that recognize this and treat it as a structural problem, not an incident response problem, are the ones that will not be writing the next post-mortem.
+
+The question is not whether your organization is exposed. It is whether you have the visibility to know where, and whether the governance model you have built can do something about it before the next one hits.",https://img.sdcexec.com/mindful/acbm/workspaces/default/uploads/2026/04/adam121-adobestock-315095274.LWJZI5MQ3z.jpg?auto=format%2Ccompress&h=630&q=70&w=1200,N,,2026-06-15 15:08:10.584919
 ID36,OpenAI,2026-06-15 16:04:31+00:00,Portada,Visa Enters ChatGPT: OpenAI's Payments Partnership Opens a New Chapter for E-Commerce,Editorial Staff @portada_online,,,,,https://www.portada-online.com/feature/visa-openai-chatgpt-payments-ecommerce-future/,"The announcement offers a glimpse into where power is shifting in e-commerce: away from websites, apps, and marketplaces—and toward conversational interfaces.
 Visa positions the initiative within Visa Intelligent Commerce, a broader effort to enable secure payments across emerging digital environments.
 The vision was straightforward but powerful: ChatGPT would not only help consumers discover products—it would help them buy them.
@@ -5351,6 +5403,8 @@ ID7,Barclays,2026-06-12 09:49:02+00:00,Bloomberg.com,"Korea Pension Fund's Pivot
 However, we believe the NPS tweak of its operations became an amplifier instead.”","A move by the National Pension Service to temporarily suspend portfolio rebalancing has fueled volatility in South Korea’s stock market and added pressure on the won, according to Barclays Plc.
 
 “While the rebalancing waiver contributed to superior returns for the NPS and Kospi, we believe the key tradeoff was really the increased volatility,” Bum Ki Son , an economist at Barclays, wrote in a note. “Pensions are typically considered a stabilizer in the financial market. However, we believe the NPS tweak of its operations became an amplifier instead.”",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iNVsh4uq9E6w/v1/1200x800.jpg,N,,2026-06-12 07:04:42.097134
+ID47,Uber,2026-06-12 09:48:56+00:00,simplywall.st,Will Uber's European Robotaxi Pilots Shift Uber Technologies' (UBER) Asset-Light ...,Simply Wall St,,,,,https://simplywall.st/stocks/us/transportation/nyse-uber/uber-technologies/news/will-ubers-european-robotaxi-pilots-shift-uber-technologies/amp,"In early June 2026, WeRide announced it had partnered with Uber Technologies and AVOMO to launch Spain’s first commercial robotaxi pilot in Madrid, while Uber also revealed a collaboration with Autobrains and Nvidia to roll out a robotaxi program in Munich, marking its first commercial autonomous deployments in Europe.
+These partnerships highlight Uber’s asset-light approach to autonomous vehicles, using third-party technology and fleet operators to integrate robotaxis directly into its...",Not Available,,N,,2026-06-12 08:07:01.216883
 ID47,Uber,2026-06-12 09:48:56+00:00,simplywall.st,Will Uber's European Robotaxi Pilots Shift Uber Technologies' (UBER) Asset-Light ...,Simply Wall St,,,,,https://simplywall.st/stocks/us/transportation/nyse-uber/uber-technologies/news/will-ubers-european-robotaxi-pilots-shift-uber-technologies,"Advertisement United States / Transportation / NYSE:UBER Will Uber’s European Robotaxi Pilots Shift Uber Technologies' (UBER) Asset-Light Autonomy Narrative June 12, 2026 In early June 2026, WeRide announced it had partnered with Uber Technologies and AVOMO to launch Spain’s first commercial robotaxi pilot in Madrid, while Uber also revealed a collaboration with Autobrains and Nvidia to roll out a robotaxi program in Munich, marking its first commercial autonomous deployments in Europe.
 Yet beneath the optimism around robotaxis, investors should also be aware of growing regulatory and liability efforts that could materially affect how Uber... Uber Technologies' narrative projects $77.7 billion revenue and $11.0 billion earnings by 2029.
 A great starting point for your Uber Technologies research is our analysis highlighting that could impact your investment decision.
@@ -5574,8 +5628,6 @@ Fair Value:US$320.1931.6 % undervalued
 ·
 
 19 likesusers have liked this narrative",https://images.simplywall.st/asset/company-cover/144524848-main-header/1756256222441,N,,2026-06-12 10:08:47.502378
-ID47,Uber,2026-06-12 09:48:56+00:00,simplywall.st,Will Uber's European Robotaxi Pilots Shift Uber Technologies' (UBER) Asset-Light ...,Simply Wall St,,,,,https://simplywall.st/stocks/us/transportation/nyse-uber/uber-technologies/news/will-ubers-european-robotaxi-pilots-shift-uber-technologies/amp,"In early June 2026, WeRide announced it had partnered with Uber Technologies and AVOMO to launch Spain’s first commercial robotaxi pilot in Madrid, while Uber also revealed a collaboration with Autobrains and Nvidia to roll out a robotaxi program in Munich, marking its first commercial autonomous deployments in Europe.
-These partnerships highlight Uber’s asset-light approach to autonomous vehicles, using third-party technology and fleet operators to integrate robotaxis directly into its...",Not Available,,N,,2026-06-12 08:07:01.216883
 ID35,Nvidia,2026-06-12 09:41:41+00:00,Reuters,"Exclusive: Nvidia begins Vera CPU sales pitch to Chinese clients, sources say | Reuters",Not Available,,,,,https://www.reuters.com/world/china/nvidia-begins-vera-cpu-sales-pitch-chinese-clients-sources-say-2026-06-12/,"Nvidia has told Chinese clients that its new ""Vera"" central processors for AI data centres could be available as soon as August and that ​they can begin placing orders, three sources familiar with the matter said.",Not Available,https://www.reuters.com/resizer/v2/2CLPULZVNVP77A577ZFZ5KCTMM.jpg?auth=17f966bddf0ee077ce6ad530dcfe7116ce26c9cac3fe6ce598cf1d7d524cfe8a&height=1005&width=1920&quality=80&smart=true,N,,2026-06-12 06:02:44.044749
 ID4,Air Liquide,2026-06-12 09:27:03+00:00,Carbon Herald,CCS EAC Standard Gains Attention As Energy Markets Seek Better Carbon Capture Accounting,Vasil Velev,,,,,https://carbonherald.com/ccs-eac-standard-gains-attention-as-energy-markets-seek-better-carbon-capture-accounting/,"The future of carbon capture and storage (CCS) markets may depend not only on technology and infrastructure, but also on the credibility of the systems used to track environmental value.
 Discussions around energy attribute certificates, and carbon capture and storage are gaining momentum as stakeholders consider how clean energy accounting can support investment and market participation.
@@ -14078,170 +14130,3 @@ The carrier was invited to join by the Oneworld governing board, although neithe
 Upon entry, the carrier will be the 16th member of the alliance. Members of the airline's Mabuhay Miles loyalty program will be eligible for reciprocal opportunities to earn and redeem miles and points across all Oneworld member carriers. Its eligible to- tier customers also will have access to Oneworld priority benefits and to more than 700 premium airport lounges, according to the alliance.
 
 The other Oneworld members include Alaska Airlines/Hawaiian Airlines, American Airlines, British Airways, Cathay Pacific, Fiji Airways, Finnair, Iberia, Japan Airlines, Malaysia Airlines, Oman Air, Qantas, Qatar Airways, Royal Air Maroc, Royal Jordanian and SriLankan Airlines.",https://ik.imgkit.net/3vlqs5axxjf/BTN/uploadedImages/2015_Site_Maintenance/BTN_Link_PreviewLogo.png?n=3260&tr=w-1200%2Cfo-auto,N,,2026-06-08 17:12:18.288209
-ID18,Elevance Health,2026-06-08 19:04:47+00:00,LinkedIn,"How Elevance Health is rewiring the health care experience | Fortune | Shantanu Agrawal, MD, MPhil","Shantanu Agrawal, MD, MPhil",,,,,https://www.linkedin.com/posts/shantanu-agrawal-md_health-care-is-still-too-often-fragmented-activity-7469455997921591296-wiOn,"Health care is still too often fragmented, and we’re working to change that.
-In a conversation with Fortune, President & CEO Gail K. Boudreaux shared how Elevance Health is moving the experience from fragmented to connected - coordinating care across settings, reducing friction like prior authorization delays, and using AI to enable faster, better-informed decisions.
-As we’re recognized again as a Fortune Top 20 organization, we’re focused on scaling what works: earlier support, less friction, and better outcomes at lower cost.
-Read the full Q&A: https://lnkd.in/esx7AcVt","Health care is still too often fragmented, and we’re working to change that. In a conversation with Fortune, President & CEO Gail K. Boudreaux shared how Elevance Health is moving the experience from fragmented to connected - coordinating care across settings, reducing friction like prior authorization delays, and using AI to enable faster, better-informed decisions. As we’re recognized again as a Fortune Top 20 organization, we’re focused on scaling what works: earlier support, less friction, and better outcomes at lower cost. Read the full Q&A: https://lnkd.in/esx7AcVt",https://media.licdn.com/dms/image/sync/v2/D4E27AQEJZV9qIvaWSQ/articleshare-shrink_800/B4EZ6N3lOjHQAY-/0/1780496619281?e=2147483647&v=beta&t=Ug_59eFBa6OwkP915iDP4PKa_XGH8338LIP0GU2a_bQ,N,,2026-06-08 16:09:50.346969
-ID40,Publicis Groupe,2026-06-08 19:03:39+00:00,Demand Gen Report,Publicis Acquires LiveRamp to Build Smarter AI Agents - Demand Gen Report,James Hickey,,,,,https://www.demandgenreport.com/industry-news/news-brief/publicis-acquires-liveramp-to-build-smarter-ai-agents/53256/,"LiveRamp will continue operating as a neutral, interoperable platform while helping Publicis expand data co-creation and enterprise AI services.
-Publicis Groupe recently entered into an agreement to acquire LiveRamp, a global data collaboration platform.
-Following the acquisition, LiveRamp will continue to be led by CEO Scott Howe, who will report directly to Publicis Groupe CEO Arthur Sadoun.
-Publicis Acquires LiveRamp to Expand Data Collaboration, AI Capabilities As part of Publicis, LiveRamp will benefit from additional investment, scale, and expanded innovation capabilities, while maintaining the openness, interoperability, and trusted neutrality that clients, publishers and partners expect.
-LiveRamp is a global data collaboration platform that enables companies to unify, manage, and activate data across the digital ecosystem.","Key Takeaways:
-
-Publicis is acquiring LiveRamp for $2.2 billion to strengthen its data collaboration, identity, and AI capabilities for the agentic era.
-
-LiveRamp will continue operating as a neutral, interoperable platform while helping Publicis expand data co-creation and enterprise AI services.
-
-Publicis Groupe recently entered into an agreement to acquire LiveRamp, a global data collaboration platform.
-
-With this acquisition, for a total value of $2.2 billion, Publicis furthers its investment in technology, data, and AI-services to unlock new opportunities for the agentic era. The transaction is expected to close before year-end 2026, subject to regulatory approvals, approval by LiveRamp’s shareholders and other closing conditions.
-
-Following the acquisition, LiveRamp will continue to be led by CEO Scott Howe, who will report directly to Publicis Groupe CEO Arthur Sadoun. LiveRamp will operate as a neutral, interoperable platform and provide open access across the ecosystem. No current or prospective customer will be prohibited from accessing, or restricted in using, its services, according to officials from both companies.
-
-Publicis Acquires LiveRamp to Expand Data Collaboration, AI Capabilities
-
-As part of Publicis, LiveRamp will benefit from additional investment, scale, and expanded innovation capabilities, while maintaining the openness, interoperability, and trusted neutrality that clients, publishers and partners expect.
-
-“LiveRamp joining Publicis Groupe is the latest demonstration of our commitment to investing in new talent and innovation, ahead of market shifts,” said Arthur Sadoun, Chairman and CEO of Publicis Groupe, in a statement. “By building the future of data co-creation, we’re empowering our clients to generate new, exclusive and proprietary data, to build the smartest, most differentiated AI agents on top of the leading LLMs.”
-
-LiveRamp: A Data Collaboration Platform
-
-With LiveRamp, Publicis will become a leader in data co-creation, an important capability in the age of artificial intelligence and an enabler of agentic business transformation.
-
-LiveRamp is a global data collaboration platform that enables companies to unify, manage, and activate data across the digital ecosystem. Interoperable by design, it connects over 25,000 publisher domains and 500+ technology and data partners across 14 markets, and enables thousands of brands, retailers, media platforms, and data providers to collaborate and connect data effectively, efficiently and securely.
-
-“Our customers and partners have always been our North Star, and by joining forces with Publicis, we will have greater resources and flexibility to scale our business, continue innovating our platform, and help them unlock even greater value from their data,” said Scott Howe, CEO of LiveRamp. “Above all, this outcome is a testament to our employees, whose hard work and dedication have made LiveRamp the trusted partner it is today, and who will have new opportunities to grow and thrive as part of a global industry leader.”
-
-LiveRamp Will Remain Neutral While Powering Publicis’ Agentic Future
-
-Sadoun said the acquisition will be valuable for their clients’ business growth, and a new addressable market for Publicis. Adding it to their ecosystem of Publicis Sapient, Epsilon, and Marcel, allows the company to go even further,and faster in delivering agentic transformation to clients, whatever their stage of enterprise readiness, safely, transparently, and in their own environments.
-
-Combined with Epsilon’s identity, LiveRamp’s collaborative clean rooms, data connectivity, market place and partner and agent network will build a leader in data co-creation.
-
-“Beyond its technology platform, LiveRamp is a team of outstanding talent, that we have had the opportunity to work closely with through our strategic partnership,” said Sadoun. “We’re looking forward to welcoming them all to the Publicis family.”",https://www.demandgenreport.com/wp-content/uploads/2026/06/Publicis-acquires-LiveRamp-Adobe.jpeg,N,,2026-06-08 16:10:24.317748
-ID32,Microsoft,2026-06-08 18:50:49+00:00,Seeking Alpha,Microsoft: The $37 Billion AI Question Investors Can't Ignore - Seeking Alpha,Ritabrata Das,,,,,https://seekingalpha.com/article/4912822-microsoft-stock-37-billion-ai-question-investors-cant-ignore,"I am not receiving compensation for it (other than from Seeking Alpha).
-I have no business relationship with any company whose stock is mentioned in this article.
-Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole.
-Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank.
-Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.","Analyst’s Disclosure: I/we have no stock, option or similar derivative position in any of the companies mentioned, and no plans to initiate any such positions within the next 72 hours. I wrote this article myself, and it expresses my own opinions. I am not receiving compensation for it (other than from Seeking Alpha). I have no business relationship with any company whose stock is mentioned in this article.
-
-Seeking Alpha's Disclosure: Past performance is no guarantee of future results. No recommendation or advice is being given as to whether any investment is suitable for a particular investor. Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole. Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank. Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.",https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1408775753/image_1408775753.jpg?io=getty-c-w1536,N,,2026-06-08 15:12:24.042669
-ID18,Elevance Health,2026-06-08 18:35:21+00:00,markets.ft.com,Omnicell Selects Dan Mandoli to Lead Specialty Pharmacy Services Business,Not Available,,,,,https://markets.ft.com/data/announce/detail?dockey=600-202606080830BIZWIRE_USPRX____20260608_BW580918-1,"Seasoned healthcare executive with deep expertise in specialty pharmacy operations named Senior Vice President and General Manager FORTH WORTH, Texas--(BUSINESS WIRE)--Jun.
-Prior to that, he was President of Specialty Pharmacy at Elevance Health, where he led strategy, operations, and expansion of a large-scale specialty pharmacy business, including integrating acquisitions and building infrastructure for significant growth.
-Mr. Mandoli also served as a Senior Advisor for McKinsey & Company, where he was a key part of their pharmacy practice.
-He has also held senior leadership roles at Express Scripts, including leading Accredo Specialty Pharmacy, one of the largest specialty pharmacy businesses in the United States.
-“I find that Specialty Pharmacy is one of the most diverse and complex areas of healthcare.","Seasoned healthcare executive with deep expertise in specialty pharmacy operations named Senior Vice President and General Manager
-
-FORTH WORTH, Texas--(BUSINESS WIRE)--Jun. 8, 2026-- Omnicell, Inc. (NASDAQ:OMCL) (“Omnicell” or the “Company”), a leading healthcare technology provider focused on empowering autonomous medication management, today announced that Dan Mandoli, a seasoned healthcare executive with more than 30 years of leadership across pharmacy operations and specialty pharmacy services, has joined the Company as Senior Vice President and General Manager, Specialty Pharmacy Services.
-
-This press release features multimedia. View the full release here: https://www.businesswire.com/news/home/20260608580918/en/
-
-Mr. Mandoli’s deep expertise in leading and driving the growth of specialty pharmacy operations for Fortune 50 and private equity-backed healthcare companies will be instrumental in driving clinical and operational outcomes as the Company seeks to scale and grow its Specialty Pharmacy and 340B businesses.
-
-“Specialty Pharmacy and 340B services are anticipated to be key growth drivers for Omnicell and central to enabling our ability to deliver more value to health systems while improving patient outcomes,” said Nnamdi Njoku, executive vice president and chief operating officer at Omnicell. “Dan brings a strong track record of building and scaling specialty pharmacy businesses, with the operational discipline, market insight, and strategic execution we believe are needed as we strive to accelerate growth in this important market. His leadership is expected to strengthen our ability to expand these capabilities, deepen our value proposition for customers, and advance Omnicell’s long-term growth strategy.”
-
-Most recently, Mr. Mandoli served as Chief Operating Officer at Altruix, where he led operations across specialty pharmacy functions and helped drive significant growth and operational improvements. Prior to that, he was President of Specialty Pharmacy at Elevance Health, where he led strategy, operations, and expansion of a large-scale specialty pharmacy business, including integrating acquisitions and building infrastructure for significant growth. Mr. Mandoli also served as a Senior Advisor for McKinsey & Company, where he was a key part of their pharmacy practice. He has also held senior leadership roles at Express Scripts, including leading Accredo Specialty Pharmacy, one of the largest specialty pharmacy businesses in the United States.
-
-“I find that Specialty Pharmacy is one of the most diverse and complex areas of healthcare. As drug therapies become more targeted, we expect health systems and healthcare entities will need robust solutions to navigate this rapidly growing market,” said Mr. Mandoli. “I’m excited for the opportunity to help shape and lead Omnicell’s global strategy for this growing area of the business.”
-
-Mr. Mandoli holds a Bachelor of Science degree from the University of Michigan. He is actively engaged in expanding educational access for first‑generation college students.
-
-About Omnicell
-
-Since 1992, Omnicell has been committed to delivering innovative, outcomes-centric pharmacy and nursing solutions for all settings of care. As an intelligent medication management technology company, Omnicell empowers autonomous medication management by unifying automation and AI-enabled intelligence, optimized by expert services, to drive clinical and business outcomes that improve efficiency and enhance patient safety for healthcare facilities worldwide. Learn more at omnicell.com.
-
-View source version on businesswire.com: https://www.businesswire.com/news/home/20260608580918/en/
-
-Betsy Martinelli
-
-Director, Corporate Marketing
-
-betsy.martinelli@omnicell.com
-
-Source: Omnicell, Inc.",,N,,2026-06-08 16:09:53.204592
-ID15,Delta Airlines,2026-06-08 18:32:03+00:00,The Air Current,Special Report: The reasons Spirit Airlines failed are also why United wants American,"Jon Ostrower, Julie Johnsson, www.facebook.com",,,,,https://theaircurrent.com/airlines/special-report-us-airlines-reverse-spirit-united-american/,"You won’t see an economy class seat until after the aircraft’s third set of exit doors behind the wing.
-Back then, a round-trip economy class ticket from New York to London cost the equivalent of today’s business class.
-The United States’ air transport system is going in reverse, flying back up the cost curve of the spending that makes an airline run.
-The consolidated hub-and-spoke structure has made the system more brittle as carriers face the constraints of limited runways, taxiways and airspace.
-The failure of twice-bankrupt Spirit Airlines on May 2 and the secretly-floated, publicly-rejected mega-merger between United Airlines and American Airlines are connected by a common thread.","Log-in here if you’re already a subscriber
-
-HEAR FROM THE AIR CURRENT
-
-Leave this field empty if you're human:
-
-The swanky interior of one of United Airlines’ newest Boeing 787-9s is a lodestar for the future of U.S. aviation — and a throwback to a bygone era.
-
-Two-thirds of the 206-foot-long airplane is earmarked for premium seating. You won’t see an economy class seat until after the aircraft’s third set of exit doors behind the wing. It’s a layout reminiscent of the start of the jet age almost seven decades ago, when carriers catered to those who could afford pricey fares to cover the high cost of flying. Back then, a round-trip economy class ticket from New York to London cost the equivalent of today’s business class.
-
-The United States’ air transport system is going in reverse, flying back up the cost curve of the spending that makes an airline run. The forces unleashed by deregulation are fading fast, and it’s not just the soaring cost of fuel triggered by the U.S. and Israel’s war with Iran that is to blame. Prior to the conflict, air travel was already being remade by everything from the price of accessing the gleaming new airport terminals that are springing up across America to systemic inflation.
-
-Airlines are sandwiched between those rising expenditures from below and operational constraints from above. The consolidated hub-and-spoke structure has made the system more brittle as carriers face the constraints of limited runways, taxiways and airspace. The bigger airplanes needed to alleviate congestion are not arriving in sufficient numbers, while that upgauging simultaneously makes accessing small cities across the country’s vast geography ever more challenging and expensive.
-
-“With more than 18,000,000 flights managed and over one billion passenger movements traveling across our skies annually, our current system has reached its limits,” Federal Aviation Administration chief Bryan Bedford wrote in prepared remarks to the U.S. Senate’s aviation subcommittee on May 19.
-
-These trends explain American aviation today and lay the groundwork for what lies ahead. The failure of twice-bankrupt Spirit Airlines on May 2 and the secretly-floated, publicly-rejected mega-merger between United Airlines and American Airlines are connected by a common thread. U.S. carriers are running out of ways to grow organically in the world’s original air transport market and are now hitting a ceiling in the country’s fragile aviation system, developments that keenly and quietly concern industry leaders.
-
-Subscribe to continue reading...",https://theaircurrent.com/wp-content/uploads/2026/06/united-a319-spirit-a320-GettyImages-2155956035.jpg,N,,2026-06-08 17:12:21.292723
-ID40,Publicis Groupe,2026-06-08 18:28:40+00:00,Net Influencer,Accenture Song Goes All-In On Social With Acquisition Of Leading Creator Agency Whalar,"Nii A. Ahene, Jonathan Oberholster, Dragomir Stojkov, Cecilia Carloni",,,,,https://www.netinfluencer.com/accenture-song-goes-all-in-on-social-with-acquisition-of-leading-creator-agency-whalar/,"The Deal The acquisition transfers only the Whalar agency itself, not the wider Whalar Group umbrella.
-Crucially, Whalar Group and Accenture Song will also enter a three-year strategic partnership, giving Accenture Song ongoing access to that broader ecosystem rather than just the agency it is buying.
-It has been named Adweek’s Creator Agency of the Year, Campaign UK’s Agency of the Year, and Ad Age’s Social and Influencer Agency of the Year, and it counts Amazon, Estée Lauder, Google, PetSmart, and Spotify among its clients.
-The three-year partnership keeps Foam, Sixteenth, and the rest of Whalar Group independent while giving Accenture access to them, and Foam in particular helps explain why.
-As Waller has argued, the companies creators are building are still early.","Accenture Song has agreed to acquire Whalar, the independent creator and social agency, from its parent Whalar Group, in what Whalar Group co-founder Neil Waller called the industry’s “largest creator economy transaction.” The deal, announced today, hands one of the world’s biggest professional-services firms a global, award-winning creator agency, and it marks the clearest sign yet that the creator economy’s next phase will be defined less by individual campaigns than by who controls the infrastructure underneath them.
-
-Financial terms were not disclosed. For context, Publicis Groupe’s 2024 acquisition of the influencer agency Influential was reported at roughly $500 million, and Whalar Group was valued at $400 million in a funding round that closed in May 2025.
-
-The Deal
-
-The acquisition transfers only the Whalar agency itself, not the wider Whalar Group umbrella. Whalar’s co-CEOs, Emma Harman and Jo Cronk, will keep their leadership roles, and the agency’s team of more than 170 people across the United States, United Kingdom, Ireland, Germany, and Spain will join Accenture Song.
-
-The remaining five Whalar Group companies will continue to operate independently under co-founders Waller and James Street: Sixteenth, a 360-degree creator talent management firm; The Lighthouse, an in-real-life campus for creators; Foam, an operating system for managing digital talent; Moby Ventures, a creator-focused venture studio; and Umi Games, a gaming studio. Crucially, Whalar Group and Accenture Song will also enter a three-year strategic partnership, giving Accenture Song ongoing access to that broader ecosystem rather than just the agency it is buying. The deal is subject to customary closing conditions.
-
-What Whalar Built
-
-Founded in 2016 by Waller and Street, Whalar grew from a small UK influencer shop into a global agency that has run more than $600 million in creator campaigns, spanning tens of thousands of collaborations across more than 40 countries and 15 languages. It has been named Adweek’s Creator Agency of the Year, Campaign UK’s Agency of the Year, and Ad Age’s Social and Influencer Agency of the Year, and it counts Amazon, Estée Lauder, Google, PetSmart, and Spotify among its clients.
-
-That scale is precisely the asset Accenture is buying. Accenture Song completed nine acquisitions across creative, design, and data in 2024 alone, including the human-understanding firm Unlimited, and it followed in 2025 with the social-first agency Superdigital. Whalar is the capstone, adding global creator relationships to a stack that already included Droga5 in creative, Work & Co in digital products, and The Stable in commerce.
-
-Why Now: From One-Off Posts to Always-On Programs
-
-The strategic logic behind the deal is the same shift that practitioners across the industry have been describing for two years. Brands are trying to move from sporadic influencer activations to continuous, deeply integrated creator programs, and most of them are not there yet.
-
-The data explains the urgency. An average of 63 percent of brand-creator relationships are still one-off, according to The Influencer Marketing Factory’s Brand Deals Report 2026: a brand hires a creator, runs one post, and moves on. Accenture’s bet is that combining Whalar’s creator relationships with its own data, AI, commerce, and measurement infrastructure can convert those one-shot activations into always-on programs that plug into media mix modeling and third-party research. Accenture Song CEO Ndidi Oteh framed social as “where brands are discovered, where modern commerce is happening, and where consumer habits tell us what products and services are going to win next.” US creator economy ad spend is projected to reach $43.9 billion in 2026, per the IAB, making it one of the fastest-growing sectors in all of media.
-
-The Part Accenture Did Not Buy May Be the Point
-
-View this post on Instagram
-
-A post shared by The Lighthouse (@thelighthousecampus)
-
-The most revealing detail of the deal is what Accenture chose to license rather than own. The three-year partnership keeps Foam, Sixteenth, and the rest of Whalar Group independent while giving Accenture access to them, and Foam in particular helps explain why.
-
-Foam is the data layer beneath the agency. In an interview with Net Influencer, Simon Moss, who leads product for Whalar group, described it as “the platform that the managers and the agencies use daily to run their business,” built to solve a problem the rest of the industry had ignored. “If you look at the history of the influencer or creator economy from around 2015, the majority of the investment on the software has gone on what we would call demand-side technology,” Moss said, meaning tools that help brands find creators. “The founders of all of those software companies have naturally just deducted that the brands have the money.” Foam instead sits on the creator and manager side, capturing first-party, authenticated, real-time performance data, the opposite of what Moss called an industry that “benefited from obfuscating whether data is actually real or not.” For a buyer whose entire pitch is data, AI, and measurement, access to authenticated creator data is arguably as valuable as the agency’s client list. It is the difference between estimating a campaign’s reach and proving it.
-
-Neil Waller, in His Own Words
-
-Waller has been telling Net Influencer where this was heading for the better part of a year. In a July 2025 interview, he argued that the creator economy was entering a phase in which creators would be treated as full-fledged companies. “I think the next five years will be about creators truly being media and entertainment companies at the leading edge of it,” he said, predicting that “the biggest thing we’ll see in the next few years is people joining creator companies in different fields of professions that then help a creator build out a successful business.” His framing of Whalar Group’s mission was expansive: “Help creators build big careers, become entrepreneurs, build big media companies, big e-commerce businesses, whatever are their dreams and hopes.”
-
-He was also clear-eyed about why the wave of consolidation now sweeping the industry is happening, and it is not only about strategic fit. “Lots of people got investment five to seven years ago in their companies,” Waller said, “and those investors are now looking for a return, and therefore companies go on the market.” On the May 2025 round that brought in Salesforce founder Marc Benioff, Shopify, and Hollywood producer Neal H. Moritz at a $400 million valuation, he said the signal mattered more than the money. “With Shopify, it says a lot about the future of creators and commerce,” he said. “It says something about how Hollywood feels about the creator economy and creators’ ability to build valuable IP.” Whalar Group also acquired the creator education platform Business of Creativity for $20 million in May 2025.
-
-The Holding Companies and Consultancies Are Circling
-
-The Whalar deal does not stand alone. It is the highest-profile move in an accelerating contest among holding companies and consultancies to own scaled creator infrastructure. Publicis Groupe, which bought Influential for around $500 million in 2024, has since added the influencer software platform Captiv8 for roughly $150 million, the sports and culture agency 160over90 for more than $500 million, and the UK social agency Fabric Social, with CEO Arthur Sadoun stating the group’s goal of sitting “at the centre of the new media ecosystem.” Creator economy mergers and acquisitions totaled 81 deals globally in 2025, up 17.4 percent year over year, according to Quartermast Advisors data, with agencies representing 21 percent of transactions and commanding reported valuation multiples of 4.9 to 9.0 times EBITDA.
-
-For the founders who built the independent agencies now being acquired, the math has become hard to argue with. Jennifer Quigley-Jones, who sold her agency Digital Voices to PMG in January 2026, put the pressure plainly to Net Influencer. “The space for independent agencies is really going to be squeezed,” she said. “Brands are seeing stronger results from integrating media and influencer. They really need tech and scale.” That is the same combination Whalar gains inside Accenture, and the same one the consultancy gains by absorbing Whalar.
-
-What It Signals
-
-The acquisition marks an inflection point. The creator economy is moving beyond campaign execution and into enterprise-grade, AI-powered, always-on creator commerce, and the largest buyers in the world now see scaled creator infrastructure as something worth competing for. By keeping Whalar Group’s talent management, technology, and venture arms independent while embedding the agency inside Accenture Song, the deal also models a structure others are likely to copy: acquire the client-facing scale, partner for the data and the talent pipeline, and leave the founders room to keep building. As Waller has argued, the companies creators are building are still early. The difference in 2026 is that the institutions buying into them are no longer early at all.
-
-Subscribe to Our Newsletter
-
-Check Out Our Podcast",https://www.netinfluencer.com/wp-content/uploads/2026/06/ach2-20260608_181740-7d1d76-1000x591.png,N,,2026-06-08 15:12:29.136784
-ID27,J&J,2026-06-08 18:25:06+00:00,Mergers & Acquisitions,Johnson & Johnson Buys Firefly Bio for $1B - Mergers & Acquisitions,Cassidy Cavanagh,,,,,https://www.themiddlemarket.com/latest-news/johnson-johnson-buys-firefly-bio-for-1b,"Johnson & Johnson has agreed to acquire Firefly Bio for $1 billion in cash.
-The acquisition adds Firefly Bio’s proprietary Firelink degrader antibody conjugate (DAC) platform to Johnson & Johnson’s (NYSE: JNJ) oncology portfolio, strengthening its efforts to develop targeted therapies for KRAS-driven tumors and other difficult-to-treat solid cancers with significant unmet medical need.
-Firefly Bio is a biotechnology company developing the Firelink DAC platform, an emerging therapeutic modality designed to selectively deliver protein degraders to tumor cells while minimizing exposure to healthy tissue.
-The platform seeks to address limitations associated with existing cancer therapies and has generated preclinical candidates targeting multiple KRAS-driven solid tumor indications.","Johnson & Johnson has agreed to acquire Firefly Bio for $1 billion in cash.
-
-The acquisition adds Firefly Bio’s proprietary Firelink degrader antibody conjugate (DAC) platform to Johnson & Johnson’s (NYSE: JNJ) oncology portfolio, strengthening its efforts to develop targeted therapies for KRAS-driven tumors and other difficult-to-treat solid cancers with significant unmet medical need.
-
-Firefly Bio is a biotechnology company developing the Firelink DAC platform, an emerging therapeutic modality designed to selectively deliver protein degraders to tumor cells while minimizing exposure to healthy tissue. The platform seeks to address limitations associated with existing cancer therapies and has generated preclinical candidates targeting multiple KRAS-driven solid tumor indications.",https://www.themiddlemarket.com/wp-content/uploads/2020/11/Mergers-and-Acquisitions-logo.jpeg,N,,2026-06-08 15:12:11.144842
