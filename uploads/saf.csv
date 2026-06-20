@@ -1,4 +1,55 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2026-06-20 01:41:43+00:00,startups.aws.com,Cleared for takeoff: Aura Aero pioneers the future of electric air travel on AWS,Not Available,,,,,https://startups.aws.com/learn/cleared-for-takeoff-aura-aero-pioneers-the-future-of-electric-air-travel-on-aws,"Aura Aero is advancing more sustainable aviation by developing hybrid-electric and electric aircraft.
+We don’t sell dreams, we build aircraft.” Aura Aero first built INTEGRAL, a two-seat training plane.
+To that end, Aura Aero is the first aerospace company awarded by the EU Innovation Fund, receiving €95 million in funding.
+Everything we’ve built is in the cloud.” Since its founding, Aura Aero has worked closely with AWS.
+For example, Aura Aero took part in AWS Activate, a dedicated program that supports startups with technical expertise and funding in the form of AWS Credits.","As global air travel reaches new heights, the aviation industry must balance increased demand with a need to become more sustainable. Recent data from IATA reveals that we’re flying further, more frequently than ever before, with an all-time high of 5.2 billion passengers projected to fly in the next twelve months. At the same time, regulatory pressure to reduce emissions is also on the rise. The use of sustainable aviation fuel (SAF) is increasing, with production doubling from 2024-2025 to a projected 1.9 million tonnes. However, IATA estimates airlines will need 500 million tonnes to reach net zero by 2050.
+
+Aura Aero is advancing more sustainable aviation by developing hybrid-electric and electric aircraft. The company leverages Amazon Web Services (AWS) to operate a scalable cloud infrastructure defined as code using Terraform, with containerized workloads orchestrated via Amazon Elastic Kubernetes Service (EKS). This cloud foundation supports a multi-stage data platform, leveraging services such as Amazon Neptune and Amazon Simple Storage Service (S3), providing global scalability as the company expands. It also enables the execution of complex high-performance computing (HPC) simulations to model aerodynamics and aircraft systems.
+
+On the runway to net zero
+
+Aura Aero was founded in 2018 by three engineers—Jérémy Caussade, Wilfried Dufaud, and Fabien Raison—driven by a shared ambition to create more sustainable air travel. Today, the company has established itself as a pioneer in decarbonized aviation with a presence in France, the United States, and the United Arab Emirates. Unlike other operators in the space, the Aura Aero team doesn’t just develop proof-of-concepts for showcasing the potential of sustainable technologies; they operationalize them. “We are a complete company,” says Marc Germain, Chief Digital Officer. “We’re a design office, but also a manufacturer. We don’t sell dreams, we build aircraft.”
+
+Aura Aero first built INTEGRAL, a two-seat training plane. “First, we designed INTEGRAL using a conventional combustion-powered engine. We certified it, we made it fly, and we sold it to customers,” says David Roche, Deputy Chief Digital Officer. “We then transformed that design into a fully electric model.” The team is also currently working on ERA, a 19-seat hybrid-electric regional aircraft which enables up to an 80 percent reduction in CO2 emissions.
+
+These innovative designs contribute to industry emission targets of a 55 percent reduction by 2030 and carbon neutrality by 2050. To that end, Aura Aero is the first aerospace company awarded by the EU Innovation Fund, receiving €95 million in funding. “It's a strategy of small but pragmatic steps towards sustainability,” says Germain.
+
+Finding the right co-pilot
+
+The Aura Aero team is not only forward-facing in their aircraft design, but also in how they manufacture and operate as a business. “Our main markets are in the United States and Europe,” says Germain. We plan to sell worldwide and are already considering building our next factories in France and the US, after recently obtaining the construction permit for our Aura Factory in Toulouse.” A key part of the company’s ability to plan ahead and actively pursue future initiatives, investments, and expansion is the fact that Aura Aero is cloud native, with its entire digital infrastructure built on AWS.
+
+“From the beginning, we were convinced that a new company needs to embrace the digital way of working, especially in manufacturing,” says Germain. “We do not have any on-premises hardware. Everything we’ve built is in the cloud.” Since its founding, Aura Aero has worked closely with AWS. “For us, AWS is not a supplier, it’s a partner,” says Germain. “We are not just buying some services or resources; we are collaborating with them.” That collaboration goes beyond technology.
+
+For example, Aura Aero took part in AWS Activate, a dedicated program that supports startups with technical expertise and funding in the form of AWS Credits. The team used those credits to help them rapidly build their first AWS Landing Zone. Thanks to its ground-breaking work in electric aviation, the company was also selected to take part in the Compute for Climate Fellowship, a global R&D funding program founded in 2023 by AWS and the International Research Centre on Artificial Intelligence (IRCAI).
+
+Every year, a select group of companies is accepted into the program and empowered to turn bold ideas into climate solutions that deliver real results. “It’s been very useful for us to take advantage of the support the fellowship provides,” says Germain. “We’re investing the funding it has provided into running simulations for our upcoming ERA model aircraft.” Those simulations form a crucial part of Aura Aero’s aircraft design and development, helping the team analyze aerodynamics and model performance in different contexts.
+
+Innovating in the cloud, and above them
+
+“AWS provides the HPC we need to run aeronautical simulations,” says Germain. “These simulations can take multiple days, even a week to complete and require massive core and memory capacity. Sometimes we need 100 cores, other times we may need 1,000 or 2,000.” There are three steps in the process: preparing the simulation, running it, and then processing the results. “For each step we need different kinds of computers and software,” says Germain.
+
+The Aura Aero team uses AWS infrastructure to dynamically allocate computing resources for each stage of the simulation process using services like Amazon Elastic Compute Cloud (EC2). “We can prepare a new simulation on EC2 with a lot of CPU cores and RAM,” says Germain. “We then send that computation to HPC to start the campaign. Once complete, we use another type of instance to process the results.” Roche adds: “AWS makes it all very easy because all the resources you need are available on-demand.”
+
+Engineering insights with structured data
+
+Aura Aero has also built a multi-stage data platform on AWS designed to organize the large volumes of engineering and operational data generated throughout the aircraft development lifecycle. “Within Aura Aero we have a very strong data strategy, and we have developed and are continuing to develop our own data platform,” says Germain. That platform is structured across three layers that transform raw data into usable business insights.
+
+In the first stage, data is collected from multiple software systems across the company. Much of this information arrives as unstructured or semi-structured data, such as JSON files retrieved through APIs, and is stored in Amazon S3. This layer acts as the foundation of Aura Aero’s data architecture, storing raw data from across the organization. Germain explains: “In case of issues with an aircraft, we need to prove to authorities that we can get back to the original data from 20, even 30 years ago.”
+
+In the second stage, raw data is cleaned and structured using Amazon Relational Database Service (Amazon RDS) running PostgreSQL. This process transforms fragmented system outputs into standardized datasets that can be analyzed and used across the organization. The final stage introduces a semantic data layer powered by Amazon Neptune. Here, Aura Aero models the relationships between data objects originating from different systems, such as Enterprise Resource Planning (ERP), Product Lifecycle Management (PLM), and Computer Aided Design (CAD) software.
+
+The result is a unified view of key business objects like parts, suppliers, and engineering components. “Amazon Neptune is very convenient because we have the ability to create links and to attribute relationships between the different objects,” explains Germain. By linking these datasets together, the platform makes complex engineering information easier for teams and software systems to understand, query, and analyze.
+
+Ready for the next ascent
+
+Going forward, Aura Aero will continue to shape a more sustainable future for the aviation industry. “ERA is our next big step,” says Germain. “We are currently building modern facilities that will feature a lot of Industry 4.0 and Internet of Things (IoT) capabilities.”.
+
+Aura Aero will continue to collaborate with AWS as it expands. “AWS was our first choice because of the breadth of services it provides,” says Germain. “It allows us to scale very quickly and support our customers around the world. When we opened our facilities in Daytona Beach, we had an operational AWS landing zone in America in a few minutes. We simply ran our Terraform script and the landing zone was ready.”
+
+The data platform Aura Aero has built on AWS also creates a strong foundation for AI implementation, an area the company has been exploring for the last two years. “AI is better when you are using more structured data, and when you learn to prompt correctly, you really start to see the benefits,” Roche explains. “Our developers are around 15 percent more efficient and the quality of our code and documentation has improved by 30–40 percent.” The company is now considering how Amazon Bedrock can be leveraged to extend its use of AI.
+
+Ambitious startups like Aura Aero are finding success on AWS. Programs like AWS Activate have helped over 350,000 disruptors get up and running, attract investor interest, and turn their ideas into marketable products with direct funding in the form of AWS Credits. If you want to build boldly, scale without limits, and launch with confidence, apply today.",https://startups.aws.com/startups/resource/favicon/favicon.ico,N,,2026-06-20 02:57:11.765422
 ,,2026-06-20 01:23:50+00:00,Morning Ag Clips,Field Day Looks at New Soil Moisture Data Tools - Morning Ag Clips,Chandler,,,,,https://www.morningagclips.com/field-day-looks-at-new-soil-moisture-data-tools/,"– Attendees at the University of Missouri Crop & Pest Management Field Day, July 8 in Columbia, will learn about new statewide soil moisture monitoring tools.
 The Missouri Hydrology Information Center (MoHIC), a statewide collaboration among MU Extension, and state and federal partners, has expanded soil moisture monitoring across the state.
 Leasor will demonstrate how soil moisture conditions have changed across Missouri during the 2026 growing season and discuss how recent weather patterns have affected soil moisture.
@@ -42,6 +93,31 @@ AirPlant One also produces E-Naphtha, which is chemically identical to tradition
 Jet fuel is the third-most-consumed transportation fuel in the U.S., accounting for about 10% of the total, and its high energy density — combined with the high reliability and efficiency of today’s jet engines — enables modern aircraft to fly long distances without refueling (see Come Clean). But barring a major technological breakthrough in batteries or other alternatives, the most viable option to achieve significant reductions in greenhouse gas (GHG) emissions from the aviation industry is to replace an increasing share of the jet fuel consumed with SAF. As we noted in Just a Little Bit Better, electrofuels (also referred to as e-fuels) like SAF and renewable diesel (RD) are an emerging type of alternative fuel that serve as a drop-in replacement for traditional fuels and also contribute to a reduction in net CO2 emissions.
 
 AirPlant One also produces E-Naphtha, which is chemically identical to traditional naphtha and serves as a drop-in substitute for thousands of everyday products, including plastics, packaging, solvents and synthetic fibers.",https://rbnenergy.com/sites/default/files/styles/social_image/public/single-use/2026-06/Twelve.png?itok=eR7cx94x,N,,2026-06-19 20:56:57.827454
+,,2026-06-19 22:39:19+00:00,advancedbiofuelsusa.info,Grupo Bimbo and Aeroméxico Join Forces to Drive Descarbonization in Latin America,Not Available,,,,,https://advancedbiofuelsusa.info/grupo-bimbo-and-aerom-xico-join-forces-to-drive-descarbonization-in-latin-america,"Grupo Bimbo and Aeroméxico Join Forces to Drive Descarbonization in Latin America (Groupo Bimbo) This corporate alliance is a pioneer in the region, focused on promoting the use of Sustainable Aviation Fuel (SAF) -- Grupo Aeroméxico announced that it has established a strategic alliance with Grupo Bimbo through which it will promote the use of Sustainable Aviation Fuel (SAF) in its corporate and business travel in Latin America.
+Through this alliance, the first of its kind in the region, Grupo Bimbo and Aeroméxico combine capabilities, vision, and commitment to accelerate emissions reduction through the use of SAF, joining efforts to move toward more sustainable aviation.
+Emissions reductions will be credited through internationally recognized mechanisms for SAF allocation and traceability.
+This joint effort reinforces the long-term decarbonization objectives of both organizations and consolidates their leadership in corporate sustainability.
+This alliance with Aeroméxico demonstrates how collaboration with strategic partners can help us reduce emissions beyond our direct operations and make tangible progress toward our net zero emissions goal by 2050.""","Grupo Bimbo and Aeroméxico Join Forces to Drive Descarbonization in Latin America
+
+(Groupo Bimbo) This corporate alliance is a pioneer in the region, focused on promoting the use of Sustainable Aviation Fuel (SAF) -- Grupo Aeroméxico announced that it has established a strategic alliance with Grupo Bimbo through which it will promote the use of Sustainable Aviation Fuel (SAF) in its corporate and business travel in Latin America.
+
+Through this alliance, the first of its kind in the region, Grupo Bimbo and Aeroméxico combine capabilities, vision, and commitment to accelerate emissions reduction through the use of SAF, joining efforts to move toward more sustainable aviation.
+
+Emissions reductions will be credited through internationally recognized mechanisms for SAF allocation and traceability.
+
+In this way, both companies will contribute to the mitigation of greenhouse gases in the case of Aeroméxico, through the reduction of Scope 1 emissions generated from fuel use; while Grupo Bimbo will reduce its Scope 3 emissions, generated by business travel. This joint effort reinforces the long-term decarbonization objectives of both organizations and consolidates their leadership in corporate sustainability.
+
+This collaboration represents a milestone for the aviation industry in Mexico and Latin America, as it reflects the commitment and vision of both organizations in integrating sustainability into their business models and corporate strategies; as well as in adopting tangible solutions to move toward a low-carbon economy. Likewise, this alliance not only drives emissions reduction, but also reflects both companies' commitment to investing in Mexico to increase the use and development of more sustainable fuels.
+
+With respect to Aeroméxico, this initiative will allow it to continue progressing toward its net zero emissions goal by 2050, strengthening its leadership as one of the main drivers of the viability of sustainable aviation fuels in the region.
+
+In this regard, Karen Farías, Director of Sustainability & ESG at Aeroméxico, stated: “This alliance reflects how collaboration can accelerate the transition toward more sustainable aviation in Mexico and Latin America, driving concrete actions to reduce emissions in key activities such as business travel,” and added: “The transition will only be possible through a network of allies committed to significantly reducing the environmental impact across their entire value chain and advancing toward long-term goals for 2050. This agreement sets a precedent in the region and demonstrates that it is possible to move toward concrete, measurable solutions aligned with global climate challenges.”
+
+For her part, Alejandra Vázquez, Global Director of Sustainability at Grupo Bimbo, mentioned: ""We have a clear goal for 2050: for Grupo Bimbo to be a company with net zero carbon emissions. To achieve this, initiatives such as the one we have today with Aeroméxico add a grain of flour to this goal, which requires the joint effort of all stakeholders across our value chain.”
+
+Additionally, David Hernández, Global Director of Procurement at Grupo Bimbo, stated: ""At Grupo Bimbo, we believe that sustainability must be integrated into every business and sourcing decision. This alliance with Aeroméxico demonstrates how collaboration with strategic partners can help us reduce emissions beyond our direct operations and make tangible progress toward our net zero emissions goal by 2050.""
+
+Currently, SAF is considered the main available solution to reduce emissions from air transport, as it enables up to an 80% reduction in carbon emissions compared to conventional fossil fuel. Its production is based on renewable feedstocks such as organic waste, and it has the necessary certifications for use, making it a product compatible with current airline fleets.",https://advancedbiofuelsusa.info/assets/images/Advanced-Biofuels-Logo.jpg,N,,2026-06-20 02:57:16.473184
 ,,2026-06-19 21:31:28+00:00,russiancouncil.ru,Russia — Latin America: Cooperation for Building Sustainable Energy Systems - RIAC,Alexandra Terzi,,,,,https://russiancouncil.ru/en/activity/conferencereports/russia-latin-america-cooperation-for-building-sustainable-energy-systems/,"On 20 May 2026, in Moscow, the Russian International Affairs Council (RIAC) and the Center for Integration and Cooperation between Russia and Latin America (CICRAL) held the international conference “Russia – Latin America: Cooperation for Building Sustainable Energy Systems.” The global energy sector is undergoing a period of profound transformation.
 The international conference “Russia–Latin America: Cooperation for Building Sustainable Energy Systems” served as a platform for the exchange of views and expert assessments.
 The State of Energy Cooperation Between Russia and Latin America Energy cooperation between Russia and Latin America has deep historical roots.
@@ -5725,362 +5801,3 @@ Listen to every episode of Short Wave sponsor-free and support our work at NPR b
 Listen to Short Wave on Spotify and Apple Podcasts.
 
 This episode was produced by Hannah Chinn. It was edited by Rebecca Ramirez. Tyler Jones checked the facts. The audio engineer was Kwesi Lee. Special thanks to Daniel Ofman, Sarah Robbins, and Julia Simon for their support with this reporting.",https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3377x1900+0+0/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F9e%2F33%2F2343306249cdac32d3bcea00ea8e%2Fbb4ead9e-ef04-41b8-9867-22319074d837.jpg,N,,2026-06-17 04:57:17.563047
-,,2026-06-17 06:29:44+00:00,dairynews.today,Circularity Fuels Converts Dairy Manure Biogas into Sustainable Jet Fuel - DairyNews,Not Available,,,,,https://dairynews.today/news/circularity_fuels_converts_dairy_manure_biogas_into_sustainable_jet_fuel_6785041.html,"California technology startup Circularity Fuels has successfully converted raw farm digester biogas into certified sustainable aviation fuel (SAF) through a pioneering project conducted on a dairy farm near Madera, California.
-This six-month pilot project processed raw methane, sourced from over 5,000 head of cattle, into jet fuel that meets international aviation safety standards.
-Circularity Fuels bypassed these challenges using a modular, skid-mounted dual-reactor stack.
-The model qualifies for federal and state renewable fuel subsidies, including the EPA’s Renewable Fuel Standard and California’s Low Carbon Fuel Standard.
-Circularity Fuels plans to construct its first commercial-scale processing facilities in 2027, targeting biogas reserves in the U.S., Latin America, and Europe.","California technology startup Circularity Fuels has successfully converted raw farm digester biogas into certified sustainable aviation fuel (SAF) through a pioneering project conducted on a dairy farm near Madera, California. This six-month pilot project processed raw methane, sourced from over 5,000 head of cattle, into jet fuel that meets international aviation safety standards.
-
-The primary economic barrier for agricultural biogas projects traditionally has been the high carbon dioxide content in raw methane, necessitating expensive cleaning infrastructure. Circularity Fuels bypassed these challenges using a modular, skid-mounted dual-reactor stack. This system processes approximately 65% methane and 35% carbon dioxide, achieving a 98% methane and 90% carbon dioxide conversion rate in a bi-reforming reactor, followed by Fischer-Tropsch synthesis to produce liquid hydrocarbons.
-
-This innovation opens a lucrative revenue stream for producers and reduces capital expenditure associated with SAF production. The modular design of Circularity Fuels can produce commercial-grade SAF at a cost of under $100,000 per barrel-per-day of installed capacity, roughly one-fifth of current industry costs.
-
-Environmental metrics from the on-farm process have drawn significant interest, as the system captures methane emissions that would otherwise enter the atmosphere. The resultant fuel achieves a carbon intensity score of -350.7 gCO2e/MJ. Each gallon of this jet fuel is equivalent to removing 100 pounds of carbon dioxide from the atmosphere, according to corporate models.
-
-The fuel is classified as Fischer-Tropsch synthetic paraffinic kerosene (FT-SPK), allowing commercial airlines to use it in up to 50% blends with conventional fuel. The model qualifies for federal and state renewable fuel subsidies, including the EPA’s Renewable Fuel Standard and California’s Low Carbon Fuel Standard.
-
-Circularity Fuels plans to construct its first commercial-scale processing facilities in 2027, targeting biogas reserves in the U.S., Latin America, and Europe. Thousands of testing hours have validated the technology, paving the way for its broader application.",https://dairynews.today/local/templates/dn2025localized/favicon/android-chrome-512x512.png,N,,2026-06-17 04:57:22.473461
-,,2026-06-17 06:19:34+00:00,www.publicnow.com,Kuehne+Nagel to reduce air freight emissions for Google Cloud shipments with sustainable ...,Not Available,,,,,https://www.publicnow.com/view/074C7AB6808C02112B352BD3A61F5A7B2532C570,Kuehne+Nagel is collaborating with Google to support the reduction of air freight emissions through the use of sustainable aviation fuel (SAF) for ...,Not Available,,N,,2026-06-17 02:58:14.617380
-,,2026-06-17 06:06:42+00:00,www.groupmaire.com,Nextchem (MAIRE) awarded a licensing agreement for a biomass-to-syn...,Not Available,,,,,https://www.groupmaire.com/en/newsroom/press-releases/detail/nextchem-maire-awarded-a-licensing-agreement-for-a-biomass-to-syngas-project-to-advance-saf-production-in-canada-based-on-nx-circular-proprietary-technology/,"Under the agreement, Nextchem will provide the license for its proprietary NX CircularTM technology for the biomass-to-syngas section of the plant, representing the first step of production.
-Nextchem’s proprietary NX CircularTM process covers the high-temperature gasification and melting of wastes and biomass residues to synthetic gas and its further purification.
-Through solutions such as NX CircularTM, this abundant feedstock can be transformed into low-carbon fuels, while also contributing to the reduction of environmental risks and supporting a more circular and resilient ecosystem.
-SUSTAERO is developing SAF capacity in Canada from wood waste, leveraging its proprietary SOAR™ process and integrating Nextchem’s NX Circular™ gasification technology.
-Fabio Fritelli, Managing Director of Nextchem, commented: “This agreement confirms the market interest in our proprietary gasification solutions for advanced and versatile waste-to-value applications from multiple feedstocks.","Nextchem will provide the license for the biomass-to-syngas section of a Sustainable Aviation Fuel (SAF) plant in Canada, based on its proprietary NX CircularTM technology
-
-The project is designed to convert residual biomass into purified chemical grade syngas for subsequent conversion into SAF
-
-Following the Final Investment Decision (FID), the agreement also provides for a potential extension of scope, including the Process Design Package (PDP), proprietary equipment (PEQ), technical services and catalyst supply
-
-Milan, 17 June 2026 –MAIRE (MAIRE.MI) announces that Nextchem, through its subsidiary MyRechemical, has signed a licensing agreement with SUSTAERO GP Inc. in relation to a project for the production of Sustainable Aviation Fuel (SAF) from biomass in Canada. Under the agreement, Nextchem will provide the license for its proprietary NX CircularTM technology for the biomass-to-syngas section of the plant, representing the first step of production.
-
-The project is aimed at producing purified chemical grade syngas from forest residues, which will then be used for subsequent conversion into SAF. Nextchem’s proprietary NX CircularTM process covers the high-temperature gasification and melting of wastes and biomass residues to synthetic gas and its further purification.
-
-Set to be operational in 2030, the plant will produce up to 144 thousand tons of SAF annually from residual biomass, with expansion potential of up to four times its initial capacity.
-
-Countries such as Canada and the Scandinavian region are increasingly focusing on the sustainable valorization of forest residues, which, if left unmanaged, accumulate on the ground and increase the risk of wildfires. Through solutions such as NX CircularTM, this abundant feedstock can be transformed into low-carbon fuels, while also contributing to the reduction of environmental risks and supporting a more circular and resilient ecosystem. SUSTAERO is developing SAF capacity in Canada from wood waste, leveraging its proprietary SOAR™ process and integrating Nextchem’s NX Circular™ gasification technology. The company focuses on sustainable and reliable feedstock supply chains to support the production of low-carbon aviation fuels.
-
-Following the Final Investment Decision (FID), the agreement also provided for a scope expansion potential, including the Process Design Package (PDP), as well as the supply of proprietary equipment (PEQ), technical services and catalyst.
-
-Fabio Fritelli, Managing Director of Nextchem, commented: “This agreement confirms the market interest in our proprietary gasification solutions for advanced and versatile waste-to-value applications from multiple feedstocks. By enabling the production of purified syngas for SAF, we are supporting SUSTAERO in the development of an innovative pathway that combines circularity with decarbonization objectives.”",https://www.groupmaire.com/static/project/share/maire-social-share.jpg,N,,2026-06-17 02:58:18.280697
-,,2026-06-17 05:57:25+00:00,Instagram,"MEET OUR SPEAKER Join Nicolas Guillaume, CO-Founder at BookBetter, who will be ...",Not Available,,,,,https://www.instagram.com/p/DZo9eFSivBa/,"leadvent 22h MEET OUR SPEAKER Join Nicolas Guillaume, CO-Founder at BookBetter, who will be speaking at the 2nd Annual World Sustainable Aviation Fuel Forum.
-Aviation connects us, enabling cultural exchange, business growth, access to new flavors, sports, and so much more.
-Experience in providing sustainable aviation consulting to airlines, airports, and registries.
-Formerly Neste's aviation team and strategy consulting in aviation at Seabury Consulting/Accenture.
-For details and group participation, contact us: info@leadventgrp.com Leadvent Group – Industry Leading Events for Business Leaders!","leadvent
-
-22h
-
-MEET OUR SPEAKER
-
-Join Nicolas Guillaume, CO-Founder at BookBetter, who will be speaking at the 2nd Annual World Sustainable Aviation Fuel Forum.
-
-I am passionate about making aviation better. Aviation connects us, enabling cultural exchange, business growth, access to new flavors, sports, and so much more.
-
-Yet, the way we travel today can be significantly improved to make it more sustainable, and I am committed to being a part of that transformation.
-
-Throughout my career, sustainability and aviation have been constant themes, and therefore, Louis Lammertyn and I co-founded BookBetter to provide innovative solutions for everyone to be able to travel more sustainably.
-
-Experience in providing sustainable aviation consulting to airlines, airports, and registries. Formerly Neste's aviation team and strategy consulting in aviation at Seabury Consulting/Accenture.
-
-Education: MSc. Aerospace Engineering, Delft University of Technology & MSc. Economics, Universidad Carlos III Madrid.
-
-Don’t miss out on the chance to be part of this transformative movement!
-
-Event Details: 23rd – 24th June, 2026 | Amsterdam, Netherlands
-
-Learn more here: https://lnkd.in/gy8nWeVi.
-
-For details and group participation, contact us: info@leadventgrp.com
-
-Leadvent Group – Industry Leading Events for Business Leaders!
-
-www.leadventgrp.com | info@leadventgrp.com
-
-#SustainableAviationFuel #AviationSustainability #GreenAviation #CleanAirTravel #NetZeroAviation #AviationInnovation #FutureOfFlight #SAF #DecarbonizingAviation #AirlineSustainability #AviationNetZero #AlternativeFuels #EcoFriendlyAviation #AviationClimateAction #RenewableJetFuel #AviationLeaders #FlightSustainability #SustainableTravel #AviationForum #LeadventEventsMEET",https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/722960818_18104729024282684_8153332855174505754_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=pqZSl8VAPHEQ7kNvwHqVFsy&_nc_oc=AdpWtw4xp_NGfI5J3kIBo99Jirvo-Z1Vh4sejbWcxI4VHuXSM6xoWVs8BInt1LERzRw&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_gid=hGfByJakAhuHH64w5kKuYQ&_nc_ss=7b289&oh=00_Af8VeMp5bNszmvOV7qeB-DySiwbgyaeOQGOkQk10tHeNdw&oe=6A380F86,N,,2026-06-17 02:58:21.515919
-,,2026-06-17 05:37:53+00:00,Investing.com,XCF Global advances Reno renewable fuel facility startup - Investing.com,Not Available,,,,,https://www.investing.com/news/company-news/xcf-global-advances-reno-renewable-fuel-facility-startup-93CH-4744860,XCF Global advances Reno renewable fuel facility startup,Not Available,https://i-invdn-com.investing.com/redesign/images/seo/investing_300X300.png,N,,2026-06-17 04:57:27.154542
-,,2026-06-17 04:50:50+00:00,Carbon Credits,Google and American Airlines Sign Record 35M Gallon SAF Deal to Cut Aviation Emissions,Jennifer L,,,,,https://carboncredits.com/google-american-airlines-record-saf-deal-sustainable-aviation-fuel/,"Google and American Airlines have signed a major sustainable aviation fuel (SAF) agreement that could help reduce emissions from air travel.
-Inside the Record-Breaking 35-Million-Gallon Deal Under the agreement, American Airlines will purchase and use SAF at Chicago O’Hare International Airport.
-SEE MORE: Google Expands SAF Strategy with Amex GBT and Shell Aviation to Cut Aviation Emissions American Airlines’ Multi-Pronged Strategy to Cut Flight Emissions For American Airlines, SAF remains a key part of its climate strategy.
-The Supply Crunch Facing Sustainable Aviation Fuel The Google-American Airlines deal reflects a broader trend across the aviation industry.
-A Growing Model for Climate Partnerships The agreement between Google and American Airlines highlights a larger shift in corporate climate action.","Google and American Airlines have signed a major sustainable aviation fuel (SAF) agreement that could help reduce emissions from air travel. The deal covers 35 million gallons (132 million liters) of SAF over three years. It is the largest publicly announced sustainable aviation fuel certificate (SAFc) agreement between an airline and a single corporate customer so far.
-
-The two companies estimate the agreement will reduce nearly 300,000 metric tons of carbon dioxide equivalent (CO2e) emissions.
-
-The partnership arrives when airlines and large corporations face growing pressure to cut emissions. Air travel demand continues to rise, but so does the need to lower its environmental impact.
-
-For both Google and American Airlines, the agreement supports broader climate goals. It also shows how companies are working together to help expand the market for cleaner aviation fuels.
-
-Why SAF Has Become Aviation’s Best Near-Term Climate Solution
-
-Aviation is one of the hardest industries to decarbonize. Most commercial aircraft need energy-dense fuels to fly long distances. Current battery and hydrogen technologies cannot yet replace jet fuel for many routes. Because of this, SAF has become one of the most important tools for reducing aviation emissions.
-
-According to American Airlines, SAF can lower lifecycle greenhouse gas emissions by up to 80% compared with conventional jet fuel, depending on the feedstock and production process. The fuel used under this agreement will be made from waste-based materials such as used cooking oil.
-
-Another advantage is that SAF can be blended with traditional jet fuel and used in today’s aircraft. Airlines do not need to replace fleets or build entirely new fueling systems. This makes SAF one of the fastest ways to reduce emissions from flying while longer-term technologies continue to develop.
-
-The aviation sector currently produces about 2% to 3% of global carbon dioxide emissions. At the same time, it supports more than 86 million jobs worldwide and generates over $4 trillion in economic activity each year.
-
-This creates a difficult challenge. The industry must continue supporting global travel and trade while reducing its carbon footprint.
-
-The International Air Transport Association (IATA) report shows that SAF could account for about 65% of the emissions cuts the sector needs to reach net zero by 2050.
-
-Inside the Record-Breaking 35-Million-Gallon Deal
-
-Under the agreement, American Airlines will purchase and use SAF at Chicago O’Hare International Airport. Google will receive the environmental benefits through the SAFc Registry using a system known as “book-and-claim.”
-
-In simple terms, American Airlines uses the fuel, while Google claims the emissions reductions linked to that fuel purchase.
-
-This model is becoming more common in the aviation sector. It allows companies to support SAF production even when the fuel is not physically used on their own flights.
-
-The agreement also helped American Airlines secure a new SAF supply deal with Valero Marketing and Supply Company. Long-term commitments like this are important because they give fuel producers greater confidence to invest in new SAF production capacity.
-
-The project also received support from Illinois’ SAF tax credit program, which helped improve its economics.
-
-How Google Uses Buying Power to Scale Cleaner Aviation
-
-The agreement fits into Google’s broader climate strategy. The tech giant has committed to reaching net-zero emissions across its operations and value chain by 2030. The company plans to achieve this through deep emissions cuts and investments in carbon removal.
-
-It is also working toward a goal of operating on 24/7 carbon-free energy by 2030. This means matching its electricity use with carbon-free energy every hour of every day.
-
-Google has already become one of the world’s largest corporate buyers of renewable energy. However, business travel remains one of the harder emissions sources to address.
-
-SAF offers a practical way to reduce emissions linked to employee travel while helping increase demand for cleaner aviation fuels. By signing a long-term agreement, Google is helping create a stronger market signal for fuel producers and investors.
-
-That support is important because SAF production remains limited compared with global demand for jet fuel.
-
-In recent years, Google has expanded its support for climate solutions beyond its own operations. These efforts include renewable energy, carbon removal, and cleaner transportation technologies.
-
-SEE MORE: Google Expands SAF Strategy with Amex GBT and Shell Aviation to Cut Aviation Emissions
-
-American Airlines’ Multi-Pronged Strategy to Cut Flight Emissions
-
-For American Airlines, SAF remains a key part of its climate strategy. The airline has invested in cleaner fuels, newer aircraft, operational improvements, and other technologies aimed at reducing emissions. It seeks to achieve net-zero emissions by 2050.
-
-Jill Blickstein, Chief Sustainability Officer at American Airlines, remarked:
-
-“Our industry-leading agreement with Google is a critical step forward in reducing emissions from our operations. By working with leaders like Google who share our commitment to innovation, we’re helping to grow demand for SAF and support the development of a stronger, more resilient market.”
-
-Modern aircraft use less fuel and produce fewer emissions than older models. As a result, fleet renewal remains an important part of the airline’s environmental efforts. The company has also explored other ways to reduce aviation’s climate impact.
-
-Earlier this year, American Airlines worked with Google, Contrails.org, and Flightkeys on a 16-week trial focused on reducing contrails. These are the cloud-like trails that form behind aircraft and can contribute to warming. According to American Airlines, the project reduced contrail formation by 62% during the trial period.
-
-The SAF agreement builds on these efforts by targeting emissions from fuel use, which make up the largest share of an airline’s carbon footprint.
-
-The Supply Crunch Facing Sustainable Aviation Fuel
-
-The Google-American Airlines deal reflects a broader trend across the aviation industry. Governments, airlines, corporations, and investors are increasingly supporting SAF as a key climate solution.
-
-However, supply remains limited. SAF also costs more than conventional jet fuel, making large-scale adoption more challenging. Industry groups and airlines have repeatedly said that more investment is needed to increase production.
-
-Long-term agreements like this one help address that challenge. They give producers greater certainty that demand will be there before they invest in new facilities and equipment.
-
-Corporate buyers are playing a growing role in this process.
-
-Through SAF certificates, companies can help support cleaner aviation even if they do not operate aircraft themselves. This allows businesses to address emissions linked to employee travel while helping expand the SAF market.
-
-As more companies adopt net-zero targets, demand for sustainable aviation fuel is expected to continue growing.
-
-A Growing Model for Climate Partnerships
-
-The agreement between Google and American Airlines highlights a larger shift in corporate climate action. The record-setting 35-million-gallon agreement is important not only because of its size, but also because it shows how corporate buyers can help accelerate cleaner aviation.
-
-The deal suggests that SAF will play a growing role in the industry’s path toward lower-carbon air travel.
-
-For Google, the deal supports progress toward its climate goals. For American Airlines, it advances efforts to reduce emissions and expand SAF use.
-
-For the aviation sector, it offers another example of how partnerships can help turn climate commitments into measurable action and help cut airlines’ environmental footprint.",https://carboncredits.com/wp-content/uploads/2026/06/google-and-american-airlines-SAF-deal.jpg,N,,2026-06-17 04:57:31.264248
-,,2026-06-17 04:47:34+00:00,Kuehne+Nagel to reduce air freight emissions for Google Cloud shipments with sustainable aviation fuel,Kuehne+Nagel to reduce air freight emissions for Google Cloud shipments with sustainable ...,Kuehne+Nagel,,,,,https://newsroom.kuehne-nagel.com/kuehnenagel-to-reduce-air-freight-emissions-for-google-cloud-shipments-with-sustainable-aviation-fuel/,"Kuehne+Nagel is collaborating with Google to support the reduction of air freight emissions through the use of sustainable aviation fuel (SAF) for Google Cloud’s shipments in 2026.
-Kuehne+Nagel offers its customers the opportunity to lower their scope 3 emissions through its SAF certification programme.
-By investing together in sustainability, Google Cloud and Kuehne+Nagel reinforce a long-term dedication to increasing demand for SAF and supporting the transition toward lower-emission air freight operations.
-By collaborating with Kuehne+Nagel, we can help advance the adoption of sustainable aviation fuel and support the transition toward lower-emission air freight operations,” says Brian Stewart, Senior Director, Logistics, Google Cloud.
-We are proud that Google Cloud has selected Kuehne+Nagel to support the decarbonisation of its supply chains and to jointly advance practical, scalable sustainability initiatives,” says Fabiano Piccinno, Global Head of Sustainability Air Logistics at Kuehne+Nagel.","Kuehne+Nagel is collaborating with Google to support the reduction of air freight emissions through the use of sustainable aviation fuel (SAF) for Google Cloud’s shipments in 2026. This reinforces both companies’ commitment to advancing sustainable logistics.
-
-The agreement, totaling up to 5.2 million litres of SAF, covers a key set of Google Cloud’s infrastructure shipments, representing a reduction of up to 12,600 tonnes of CO₂e emissions. The agreement serves as a pilot for future collaboration.
-
-SAF is produced from renewable resources that are considered waste, residues or by-products, such as used cooking oil and tallow, and can reduce lifecycle greenhouse gas emissions from air transportation by around 80% compared to fossil-based jet fuel. SAF is a key lever for the aviation sector to reduce emissions.
-
-Kuehne+Nagel offers its customers the opportunity to lower their scope 3 emissions through its SAF certification programme. The programme meets strict sustainability requirements while simplifying the process for customers worldwide and contributes to the accelerated scaling of global demand for SAF.
-
-By investing together in sustainability, Google Cloud and Kuehne+Nagel reinforce a long-term dedication to increasing demand for SAF and supporting the transition toward lower-emission air freight operations.
-
-“This agreement builds on Google Cloud's ongoing work to reduce emissions across our logistics value chain and supports our broader sustainability goals. By collaborating with Kuehne+Nagel, we can help advance the adoption of sustainable aviation fuel and support the transition toward lower-emission air freight operations,” says Brian Stewart, Senior Director, Logistics, Google Cloud.
-
-“As leaders in our respective industries, it is important to set a precedent by jointly driving sustainability. It demonstrates the importance of sustainability as a core business priority and as a foundation for strong partnerships. We are proud that Google Cloud has selected Kuehne+Nagel to support the decarbonisation of its supply chains and to jointly advance practical, scalable sustainability initiatives,” says Fabiano Piccinno, Global Head of Sustainability Air Logistics at Kuehne+Nagel.",https://content.presspage.com/uploads/1918/1920_kn3.jpg?40841,N,,2026-06-17 01:56:31.875083
-,,2026-06-17 04:44:13+00:00,www.endswasteandbioenergy.com,Government opens £219m SAF fund alongside mandate consultation,Nivedita Nayak,,,,,https://www.endswasteandbioenergy.com/article/1961849/government-opens-219m-saf-fund-alongside-mandate-consultation,"Views sought on waste-based feedstock availability which remains key concern for scale-up by Nivedita Nayak Sign in to continue Sign in or Register now Email address Password Stay signed in Take a 7-day trial Join ENDS Waste & Bioenergy now and pay nothing for your first 7 days.
-SIGN UP Need to activate your subscription?
-Complete your subscription activation here","Views sought on waste-based feedstock availability which remains key concern for scale-up
-
-by Nivedita Nayak
-
-Sign in to continue
-
-Sign in
-
-or Register now
-
-Email address
-
-Password
-
-Stay signed in
-
-Take a 7-day trial
-
-Join ENDS Waste & Bioenergy now and pay nothing for your first 7 days.
-
-SIGN UP
-
-Need to activate your subscription? Complete your subscription activation here",https://cached.imagescaler.hbpl.co.uk/resize/scaleHeight/150/cached.offlinehbpl.hbpl.co.uk/news/NWE/GettyImages-2271683675-fotor-2026061617207.jpg,N,,2026-06-17 04:57:35.674800
-,,2026-06-17 04:14:13+00:00,ethanolproducer.com,"UK announces additional funding for low carbon fuels, opens call for evidence on non-HEFA ...",Not Available,,,,,https://ethanolproducer.com/articles/uk-announces-additional-funding-for-low-carbon-fuels-opens-call-for-evidence-on-non-hefa-saf-supply,"The U.K. Department for Transport on June 16 announced plans to launch a new £219 million ($294.03 million) low carbon fuels fund (LCFF) to support domestic sustainable aviation fuel (SAF) production.
-The agency also launched a call for evidence regarding expected SAF supplies.
-According to the U.K. Department for Transport, innovative companies from across the U.K. are invited to bid for a share of £93 million over the next two years to develop low carbon fuels.
-“This call for evidence provides those stakeholders with an opportunity to engage with DfT on the extent and drivers of uncertainty around future non-HEFA SAF supply,” the agency added.
-Additional information is available on the U.K. Department for Transport website.","The U.K. Department for Transport on June 16 announced plans to launch a new £219 million ($294.03 million) low carbon fuels fund (LCFF) to support domestic sustainable aviation fuel (SAF) production. The agency also launched a call for evidence regarding expected SAF supplies.
-
-The U.K. in late 2024 finalized a law creating a SAF mandate, which took effect Jan. 1, 2025, and requires an increasing proportion of jet fuel supplied in the U.K. to be sustainable. The mandate began at 2% in 2025 and set to rise to 10% by 2030 and 22% by 2040. Hydroprocessed esters and fatty acids (HEFA) will be allowed to contribute up to 100% of SAF demand in 2025 and 2026, decreasing to 71% in 2030 and 35% in 2040. A requirement for SAF produced via power-to-liquid (PtL) technology will be introduced starting in 2028 at 0.2% of total jet fuel demand, increasing to 2.5% of total jet fuel demand in 2040.
-
-The new £219 million LCFF, which is scheduled to launch later this summer, aims to help position the U.K. as a hub for low carbon fuels, supporting 15,000 jobs and adding £5 billion to the economy by 2050.
-
-According to the U.K. Department for Transport, innovative companies from across the U.K. are invited to bid for a share of £93 million over the next two years to develop low carbon fuels. The application period is scheduled to open in mid-July. The fund will support projects that are closest to the actual production stage.
-
-In a related action, the agency has also issued a call for evidence seeking insight and information from stakeholders on the expected availability of future non-HEFA SAF supply once the HEFA cap and PtL obligation take effect.
-
-“Since the SAF Mandate launched, we have received feedback from industry that once the HEFA cap and PtL obligation come into force, availability of advanced non-HEFA and PtL SAF risks being lower than previously anticipated,” the U.K. Department for Transport said in the call for evidence, noting it is seeking additional input from fuel producers and suppliers, feedstock suppliers, airlines, airports and the wider aviation industry, investors, and industry bodies, including NGOs and other interested parties. “This call for evidence provides those stakeholders with an opportunity to engage with DfT on the extent and drivers of uncertainty around future non-HEFA SAF supply,” the agency added.
-
-The U.K. Department of Transport also confirmed it plans to maintain its overall SAF mandate targets and said it will not propose to make any changes to the SAF mandate unless there is sufficient evidence that maintaining the current policy design would cause significant harm for industry and consumers.
-
-The call for evidence is open through July 28. Additional information is available on the U.K. Department for Transport website.",https://bbi-strapi.s3.us-east-2.amazonaws.com/archived/biomassmagazine/posts/web/2018/04/UKGoogle_15239131038488.jpg,N,,2026-06-17 00:56:27.725516
-,,2026-06-17 04:12:27+00:00,The AgriBiz,Brazil Races Against Time to Finalize SAF Rules Ahead of 2027 Mandate - The AgriBiz,Rafael Gregorio,,,,,https://www.theagribiz.com/international/brazil-races-against-time-to-finalize-saf-rules-ahead-of-2027-mandate/,"To meet its sustainable aviation fuel (SAF) mandate set to take effect in 2027, Brazil must move quickly on several fronts, including securing approval for additional feedstocks under the aviation sector’s global carbon-reduction framework and advancing long-delayed regulations.
-According to Pinto, current global SAF production is insufficient to cover even 1% of worldwide aviation fuel demand.
-In Japan, for example, sustainable fuels are expected to account for 10% of aviation fuel consumption by 2030.
-Corsia currently recognizes 57 eligible feedstocks for SAF production, including palm oil and soybean oil.
-Although Congress approved the Fuel of the Future law in 2024, the federal government has not yet issued the decree needed to implement the SAF mandate.","To meet its sustainable aviation fuel (SAF) mandate set to take effect in 2027, Brazil must move quickly on several fronts, including securing approval for additional feedstocks under the aviation sector’s global carbon-reduction framework and advancing long-delayed regulations.
-
-Executives, analysts and government officials speaking at an Argus Media event in São Paulo on Monday warned that Brazil faces mounting pressure to expand the range of SAF feedstocks approved under Corsia, the International Civil Aviation Organization’s (ICAO) program for reducing emissions from air travel.
-
-Corsia will make emissions reductions mandatory from 2027, prompting countries around the world to introduce blending mandates and other measures. Brazil’s program requires a 1% reduction in aviation emissions beginning next year.
-
-Sign Up The AgriBiz Weekly, a newsletter for global investors
-
-“The most important task is developing and certifying feedstocks,” said Ricardo Pinto, a senior specialist at Petrobras, which supplies 92% of the jet fuel consumed in Brazil.
-
-According to Pinto, current global SAF production is insufficient to cover even 1% of worldwide aviation fuel demand. “That’s why every possible feedstock needs to be certified under Corsia,” he said, adding that the process is challenging due to a shortage of auditors.
-
-The issue is expected to become more pressing as targets tighten. In Japan, for example, sustainable fuels are expected to account for 10% of aviation fuel consumption by 2030.
-
-Brazil currently has nine feedstock certification requests under review by Corsia, including corn ethanol, beef tallow and macaúba palm. Corsia currently recognizes 57 eligible feedstocks for SAF production, including palm oil and soybean oil.
-
-Push for Aligned Metrics
-
-Certification is only part of the challenge. Industry and government officials also stressed the importance of aligning Brazil’s measurement standards with international benchmarks.
-
-Marlon Arraes Jardim Leal, director of the Biofuels Department at the Ministry of Mines and Energy (MME), said Brazil should adopt global standards and methodologies to reduce costs and improve access to export markets.
-
-According to Leal, that alignment began last year with the inclusion of the HEFA pathway—SAF produced from oils and fats—into RenovaCalc, the emissions-accounting tool used under Brazil’s RenovaBio biofuels program.
-
-Celso Macedo, Analytics and Trading Intelligence manager at fuel distributor Vibra, echoed the call for consistency.
-
-“There cannot be a mismatch between Corsia and Brazil’s framework,” Macedo said. “Legal certainty is also essential, particularly because we do not do business with companies that fail to comply with CBio requirements.”
-
-Long-Awaited Decree Still Pending
-
-At the same time, Brazil has yet to finalize the regulatory framework governing SAF.
-
-Although Congress approved the Fuel of the Future law in 2024, the federal government has not yet issued the decree needed to implement the SAF mandate. The proposal has remained with the Civil House, the presidential chief-of-staff office, since the public consultation process ended on Dec. 28.
-
-Leal criticized the delay, saying the decree governing SAF production in Brazil “should already have been published.” According to him, the text establishing the mandate is now “in the hands of the President” and “could be published in the Official Gazette on any given day.”
-
-Even after the decree is issued, additional approvals will still be required from Brazil’s oil regulator, the National Agency of Petroleum, Natural Gas and Biofuels (ANP), and from civil aviation regulator Anac.
-
-Pedro Carvalho da Silva, Gol’s director of corporate finance and treasury, noted that the industry will also need time to adjust once the rules are finalized.
-
-“It is difficult to anticipate the economic mechanisms without regulation,” he said, “especially in a sector that sells its product—the airline ticket—up to a year in advance.”
-
-The Office of the President did not respond to requests for comment on when the decree may be published.
-
-This story was translated with the assistance of artificial intelligence.",https://uploads.theagribiz.com/2026/06/gol_aviao_saf-1536x864.jpg,N,,2026-06-17 04:57:45.619047
-,,2026-06-17 03:49:43+00:00,X (formerly Twitter),Phelan Green has licensed technology from Johnson Matthey and Honeywell for a 200 MW ...,Bryan Groenendaal,,,,,https://x.com/GBADigitalMedia/status/2067048616146149862,"Sign up now to get your own personalized timeline!
-By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.","Sign up now to get your own personalized timeline!
-
-By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.",https://pbs.twimg.com/profile_images/1372176654987055105/LDjM9v46_200x200.jpg,N,,2026-06-17 02:58:30.051997
-,,2026-06-17 03:23:53+00:00,www.ecoceres.com,EcoCeres and British Airways Extend Sustainable Aviation Fuel Supply Agreement to ...,Not Available,,,,,https://www.ecoceres.com/en/news/view?id=105,"Hong Kong – 17 June 2026 – EcoCeres, a global leader in the innovation and commercialization of renewable fuels and green molecules, announced the extension of its sustainable aviation fuel (SAF) supply agreement with British Airways until the end of 2030.
-Produced from 100% waste-based feedstocks such as used cooking oil (UCO), EcoCeres’ SAF can achieve lifecycle greenhouse gas emissions reductions of up to 94.4% compared with fossil jet fuel.
-“We are proud to extend our collaboration with British Airways as we continue working together to advance the adoption of sustainable aviation fuel in commercial aviation,” said Matti Lievonen, CEO of EcoCeres.
-EcoCeres continues to enhance its production capabilities and strategic partnerships to meet growing demand for renewable fuel solutions across the aviation sector and beyond.
-The extended agreement with British Airways marks another important milestone in EcoCeres’ mission to turn waste into renewable energy and accelerate the transition to a lower-carbon transport system.","Hong Kong – 17 June 2026 – EcoCeres, a global leader in the innovation and commercialization of renewable fuels and green molecules, announced the extension of its sustainable aviation fuel (SAF) supply agreement with British Airways until the end of 2030. Under the extended agreement, EcoCeres’ SAF is expected to help British Airways avoid approximately 198,000 tonnes[1] of lifecycle carbon emissions compared with using the same volume of fossil jet fuel – equivalent to offsetting the carbon footprint of around 341,000 round-trip economy class seats on direct flights between London and New York[2].
-
-Produced from 100% waste-based feedstocks such as used cooking oil (UCO), EcoCeres’ SAF can achieve lifecycle greenhouse gas emissions reductions of up to 94.4% compared with fossil jet fuel. As a drop-in fuel that can be used in existing aircraft and airport fueling infrastructure without modification, SAF is one of the most immediate and practical solutions currently available to help reduce aviation emissions.
-
-“We are proud to extend our collaboration with British Airways as we continue working together to advance the adoption of sustainable aviation fuel in commercial aviation,” said Matti Lievonen, CEO of EcoCeres. “This extension reflects the strength of our partnership and our shared commitment to accelerating practical decarbonization solutions for the aviation sector. At EcoCeres, we remain focused on expanding the availability of waste-based SAF and supporting our customers as they progress on their emissions-reduction journeys.”
-
-The extension underscores the importance of long-term collaboration across the aviation value chain to support SAF market development and strengthen supply visibility as demand continues to grow. As airlines and industry stakeholders work toward their net-zero ambitions, partnerships such as this play a critical role in accelerating the scale-up of SAF production and use globally.
-
-EcoCeres continues to enhance its production capabilities and strategic partnerships to meet growing demand for renewable fuel solutions across the aviation sector and beyond. The extended agreement with British Airways marks another important milestone in EcoCeres’ mission to turn waste into renewable energy and accelerate the transition to a lower-carbon transport system.
-
-[1]ICAO document ""CORSIA default life cycle emission values for CORSIA eligible fuels"".",,N,,2026-06-17 00:56:34.692952
-,,2026-06-17 03:18:08+00:00,OkDiario,Rolls-Royce built a jet engine so powerful it forced Airbus to redesign the aircraft around it,Kevin Montien,,,,,https://okdiario.com/techy/en/rolls-royce-built-a-jet-engine-so-powerful-it-forced-airbus-to-redesign-the-aircraft-around-it/5252/,"Rolls-Royce did not simply bolt a huge engine onto the Airbus A380 and call it a day.
-A giant built for the A380 The Airbus A380 remains a one-of-a-kind aircraft.
-The A380 can be powered by four Rolls-Royce Trent 900 engines or four Engine Alliance GP7000 engines, according to Airbus.
-of thrust in November 2023 after testing that used 100% sustainable aviation fuel and generated 35 terabytes of data.
-SAF is not a magic fix Sustainable aviation fuel is often presented as the clean answer for aviation.","Rolls-Royce did not simply bolt a huge engine onto the Airbus A380 and call it a day. The Trent 900 was part of the superjumbo’s DNA from the beginning, a massive powerplant built for the world’s largest passenger aircraft and powerful enough to shape decisions around wings, braking, noise, and efficiency.
-
-Now, that same engineering story has a second chapter. As aviation tries to cut emissions without grounding the global travel network, Rolls-Royce is using lessons from the Trent family to push UltraFan, a next-generation engine program aimed at burning less fuel, reducing noise, and working with sustainable aviation fuel.
-
-This matters because aviation accounted for 2.5% of global energy-related carbon dioxide emissions in 2023, according to the International Energy Agency.
-
-A giant built for the A380
-
-The Airbus A380 remains a one-of-a-kind aircraft. Airbus describes it as the largest passenger plane ever built, about 239 ft. long with a wingspan of nearly 262 ft., and the only full-length double-deck commercial aircraft. It can carry more than 850 passengers in an all-economy layout.
-
-That size demanded serious thrust. The A380 can be powered by four Rolls-Royce Trent 900 engines or four Engine Alliance GP7000 engines, according to Airbus. In practical terms, the aircraft was a flying city block, and every gallon of fuel mattered.
-
-Rolls-Royce says the Trent 900 delivers the “lowest lifetime fuel burn” for the A380 and has received fuel-burn improvements of up to 1.6% since entry into service. That may sound small, but across long-haul fleets, tiny efficiency gains can add up quickly in fuel costs and emissions.
-
-The redesign was more nuanced
-
-Some versions of the story make it sound as if Airbus had to dramatically redesign the A380 after Rolls-Royce produced an engine that was too powerful, but the better reading is more nuanced. The aircraft and engine were developed in parallel, with Airbus already planning for a very large thrust class.
-
-Still, the Trent 900’s size and the A380’s weight shaped the airplane around it. The wings, pylons, cooling systems, hydraulic integration, and braking strategy all had to fit an aircraft with four huge engines and a maximum takeoff weight of roughly 1.27 million lbs.
-
-One notable design decision came with thrust reversers. Airbus ultimately used reverse thrust on the two inboard engines rather than all four, relying heavily on carbon brakes and wing spoilers while still adding extra help for wet or contaminated runways.
-
-Power meets climate pressure
-
-This is where the story moves from aviation trivia to environmental technology. Modern jet engines are not just about getting heavier planes into the sky. They are also about squeezing more distance out of each pound of fuel.
-
-The IEA says aviation emissions reached over 1 billion tons of carbon dioxide in 2023, more than 90% of pre-pandemic levels. It also says the sector needs low-carbon fuels, better engine and airframe design, improved operations, and some demand restraint to align with a net-zero pathway.
-
-That is a tall order. Planes last for decades, airlines run on thin margins, and passengers still expect affordable tickets. So the engine bay has become one of the most important battlegrounds in cleaner flight.
-
-UltraFan changes the scale
-
-Rolls-Royce’s UltraFan program is the company’s answer to that challenge. The UltraFan 80 demonstrator uses a 140-inch fan system, which Rolls-Royce describes as the largest in the world, and the company is aiming for a 25% fuel-efficiency improvement over first-generation Trent engines.
-
-The engine has already hit major test milestones. Rolls-Royce says the UltraFan demonstrator reached full power at 85,000 lbs. of thrust in November 2023 after testing that used 100% sustainable aviation fuel and generated 35 terabytes of data. More testing for a second UltraFan 80 build is planned later in 2026.
-
-At the end of the day, the idea is simple even if the machinery is not. A bigger, slower-turning fan can move more air more efficiently, while new materials, gear systems, and combustor technology try to cut fuel burn without giving up the reliability airlines demand.
-
-The narrowbody prize
-
-The next target may be even bigger from a business standpoint. Rolls-Royce is working on UltraFan 30, a demonstrator aimed at future narrowbody aircraft, the kind of planes most people board for everyday domestic and regional trips.
-
-In March 2026, Rolls-Royce said it had secured about $74.5 million in European Union Clean Aviation funding to lead UNIFIED, a research project supporting UltraFan 30 development and planned ground testing in 2028. The broader Clean Aviation funding round represents about $1.1 billion in total research effort across selected projects.
-
-That matters because narrowbody jets dominate airline fleets. Cleaner long-haul aircraft help, of course, but the daily rhythm of aviation is also shaped by short and medium-range routes, from early-morning business flights to family trips during school breaks.
-
-SAF is not a magic fix
-
-Sustainable aviation fuel is often presented as the clean answer for aviation. It is important, but it is not a silver bullet.
-
-IATA estimates SAF could contribute up to 65% of the emissions reductions needed for aviation to reach net-zero carbon dioxide emissions by 2050. It also says current waste-oil-based SAF can reduce lifecycle emissions by around 80% compared with conventional jet fuel, depending on how it is made.
-
-The trouble is supply. The European Union Aviation Safety Agency, or EASA, reported that SAF production represented only 0.53% of global jet fuel use in 2024, and that it can cost three to 10 times more than conventional fuel. That is why engines that burn less fuel still matter, even in a future with more SAF.
-
-What passengers should watch
-
-For travelers, this will not show up as a dramatic change at the gate tomorrow morning. The plane will still look like a plane, the boarding line will still move too slowly, and the overhead bins will still fill up fast.
-
-Behind the scenes, however, engine technology can influence ticket costs, airline route planning, airport noise, and carbon footprints. Rolls-Royce’s Trent 900 helped make the A380 possible, and UltraFan is trying to make the next generation of aircraft less fuel-hungry.
-
-The big question is whether the industry can move fast enough. Cleaner engines, more SAF, smarter operations, and better aircraft design all need to arrive together. No single invention will carry the whole load.",https://okdiario.com/techy/en/wp-content/uploads/2026/06/rolls-royce-trent-900-a380-ultrafan-1.jpg,N,,2026-06-17 04:57:48.049109
-,,2026-06-17 03:02:57+00:00,www.thecommonsense.co.za,Environmental Catastrophe Looming for Western Cape,,,,,,https://www.thecommonsense.co.za/Economics & Policy/environmental-catastrophe-looming-western-cape,"Plans are afoot to build a plant in the Western Cape that would produce electro-sustainable aviation fuel, or eSAF. a synthetic jet fuel made by ...",Not Available,,Y,,2026-06-17 01:56:34.418094
