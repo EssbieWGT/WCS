@@ -18,7 +18,133 @@ Subscribe to Newsletters
 Recommended For You
 
 More Trending News",https://static.seekingalpha.com/cdn/s3/uploads/getty_images/521503208/image_521503208.jpg?io=getty-c-w630,N,,2026-06-23 16:10:29.852290
+ID47,Uber,2026-06-23 18:44:53+00:00,Uber,Scaling Verify with Wallet for Identity Verification at Uber,Not Available,,,,,https://www.uber.com/ca/en/blog/scaling-verify-wallet/,"Introduction Identity verification is one of the priorities of Uber’s Trusted Identity organization to promote market expansion, compliance, and support legal accountability on the Uber platform.
+These powerful capabilities from Verify with Wallet, now incorporated into Uber’s Identity Verification Platform, are opening doors to a new era of digital identity verification—one where users can verify their Uber account in seconds rather than minutes, without needing to locate a physical ID.
+Orchestrating Data Elements The orchestration is centralized within the Identity Verification Service, which manages the request flow via server-side configurations.
+In addition, the following are potential focus areas to Uber’s Identity Verification Platform: Support new digital document types.
+Conclusion Integrating Apple’s Verify with Wallet marks a significant step forward for our Identity Verification Platform.","Introduction
+
+Identity verification is one of the priorities of Uber’s Trusted Identity organization to promote market expansion, compliance, and support legal accountability on the Uber platform. The existing portfolio of verification methods, which includes technical solutions such as in-house document scanning and selfie capture, is constantly expanding at a global scale through partnerships with technology leaders in the segment.
+
+As technology evolved, mobile wallets such as Apple Wallet gained the ability to store mobile documents (mDocs), such as mDL (Mobile Driver’s License) and photo IDs, allowing users to seamlessly present their IDs in person, in apps, or to websites for identity or age verification.
+
+Adding to the extensive list of mechanisms for verifying a person’s identity, Uber was an early adopter of Apple's Verify with Wallet API—a reliable and modern solution introduced at WWDC 2022—into multiple use cases in Uber’s cross-app Identity Verification Platform.
+
+About Verify with Wallet
+
+In contrast to the verification methods operating based on document scanning or user input, Verify with Wallet merges convenience, platform security, and seamless user experiences with a privacy focus, allowing Uber apps to verify digital ID data with government-backed provenance. This verification method drastically reduces user friction, improves conversion rates by reducing operational and image processing errors, and increases the number of verified users.
+
+The API also encourages privacy-focused practices, providing full transparency into the identity information apps request and for how long. Apps are entitled to request only the specific data required to complete the transaction, preventing users from having to overshare their identity information. Neither the issuing authority nor Apple can see when and where a user shares their mDL or photo ID.
+
+These powerful capabilities from Verify with Wallet, now incorporated into Uber’s Identity Verification Platform, are opening doors to a new era of digital identity verification—one where users can verify their Uber account in seconds rather than minutes, without needing to locate a physical ID. By eliminating this friction, the platform enables a faster and more efficient experience across eligible use cases in Uber, Uber Eats, and Postmates.
+
+Challenge
+
+Uber operates across multiple apps and marketplace segments, each with legitimately different identity verification needs: a driver onboarding flow requires different identity data than an age-gated ordering flow, which differs again from a car rental scenario.
+
+While Verify with Wallet supports this breadth and scale through an app-level Entitlement configuration, covering the full set of data elements the app is permitted to request, each data element must still be individually approved by Apple through an Entitlement Request for its intended use case. This means that the platform capabilities provided at Uber must be flexible enough to serve any combination of approved data elements, yet strict enough to ensure a given use case never exceeds its own approved scope.
+
+In addition to the orchestration of these data elements, the solution had to address several architectural requirements:
+
+Building a platform-agnostic mapping layer to translate Uber’s internal identity models into domain-specific objects
+
+Managing high-assurance cryptographic validations according to the ISO/IEC 18013-5 standard
+
+Establishing a reliable mechanism to track and update trust anchors as government issuing authorities rotate their root certificates
+
+Integrating and orchestrating Verify with Wallet through this scalable, compliant platform—rather than a series of separate one-off integrations—was the core engineering challenge.
+
+Architecture
+
+Figure 1: Diagram of Uber’s Verify with Wallet integration.
+
+Configuring the App for Multiple Use Cases
+
+By design, each Uber app includes an Entitlements file encompassing the full set of required identity elements for all of its use cases. The enforcement of per-use-case scoping happens in Uber’s Identity Verification Service: the back end orchestrates the identity requests, ensuring every request is strictly limited to the data elements pre-vetted for its specific use case. This approach enables platform scalability without compromising on compliance or user privacy.
+
+Each app is also configured with an NSIdentityUsageDescription—a message that tells users why the app is requesting identity information—conveying the context for app-level usage. Additionally, a new usageDescriptionKey API was introduced in iOS 26.2, allowing the service to tailor this message for each specific use case upon configuring the PKIdentityRequest.
+
+Orchestrating Data Elements
+
+The orchestration is centralized within the Identity Verification Service, which manages the request flow via server-side configurations. These configurations define the specific data elements associated with each use case, along with the corresponding IntentToStore—a parameter specifying whether data is accessed for a one-time verification or persisted for long-term use.
+
+To maintain a scalable architecture, the service implements a mapping layer that translates Uber’s internal identity configuration objects into PassKit-specific objects required by the Verify with Wallet API, such as PKIdentityIntentToStore. By decoupling service logic from vendor-specific APIs, the system remains ready to support future integrations compliant with the ISO/IEC 18013-5 standard.
+
+Server-side validations are performed on every response. These checks confirm that the returned data elements match the expected configuration for the active use case. Additional cryptographic validations are then performed on each received data element to ensure origin and integrity.
+
+Decrypting and Validating Data
+
+Uber’s Identity Verification service handles decryption of the Apple Wallet payload and runs validation checks based on the ISO/IEC 18013-5 standard and the Apple Developer Documentation.
+
+Security in transit relies on HPKE (Hybrid Public Key Encryption, RFC 9180). When the mobile app initiates a request, the response is encrypted using the app's Identity Access Certificate, which is generated from the Apple Developer website. The Uber back end then decrypts the payload, which is encoded in CBOR (Concise Binary Object Representation)—a compact, binary format used to keep identity data payloads small and efficient.
+
+A key part of this exchange is the session transcript. This structure binds the response to a specific transaction by combining a unique generated nonce, the requesting client’s identifiers, and the public key hash. This cryptographic link prevents replay attacks by ensuring a response can’t be intercepted and reused.
+
+Once decrypted, the service executes a three-step validation:
+
+MSO verification: The MSO (Mobile Security Object)is checked to ensure no data has been modified since issuance and that the current date falls within the MSO’s validity period.
+
+Device binding: The device signature is validated against the public key in the MSO. This ensures the ID is being requested by the original, authorized device and isn’t a spoofed payload.
+
+Issuer certificate: The system verifies the signing of certificate chains to a trusted IACA (Issuing Authority Certificate Authority) root certificate.
+
+The IACA certificate serves as the government-backed root of trust. Verifying this chain confirms the credential’s authenticity before the data is passed to Uber’s internal identity checks for further use-case-specific checks. Maintaining this chain of trust at scale requires a persistent strategy for managing the rotation of these root certificates.
+
+Updating IACA Certificates
+
+Reliable verification requires a consistent root of trust. The system maintains a registry of IACA certificates from every supported issuing authority. These trust anchors are sourced from official jurisdictional portals, such as DMV websites, and the AAMVA Digital Trust Service VICAL (Verified Issuer Certificate Authority List)—a centralized trust service that aggregates certificates from North American motor vehicle administrators.
+
+The registry is also designed for certificate rotations. Since jurisdictions often issue new root certificates or rotate authority keys, the system supports multiple active certificates per jurisdiction. This ensures IDs signed with older keys remain valid while newer ones are simultaneously accepted, preventing disruption when a state updates its infrastructure.
+
+We work closely with key ecosystem partners to keep the registry current, handling the ingestion of new authority keys and the deprecation of revoked certificates as they are updated. This keeps our verification logic secure and uninterrupted as jurisdictions update keys and new standards emerge.
+
+Next Steps
+
+As ‌adoption towards digital identity documents continues to evolve, our focus remains on expanding the reach and technical capabilities of Uber’s integration with Verify with Wallet API. The service has been built as a platform to easily accommodate future use cases, with the flexibility to request additional specific data elements to meet the needs of different marketplace segments.
+
+In addition, the following are potential focus areas to Uber’s Identity Verification Platform:
+
+Support new digital document types. The platform is designed to accommodate new document types with high-assurance credentials, such as Photo IDs complying to the ISO/IEC 23220-2 standard. By integrating with a wider range of document types, the service can reach a more diverse user base, while maintaining a high bar for authenticity.
+
+Cross-platform support. Deepening integration with global identity solutions that adhere to the ISO/IEC 18013-5 standard and the broader digital credentials ecosystem. This commitment to open standards ensures that Uber’s Identity Verification service remains platform-agnostic, future-proof, and interoperable with the expanding landscape of government-backed digital credentials.
+
+Conclusion
+
+Integrating Apple’s Verify with Wallet marks a significant step forward for our Identity Verification Platform. This feature integration supports acceptance of reliable, government-issued digital IDs, making the identity verification process smoother, boosting successful verifications, and reinforcing our commitment to robust security and privacy.
+
+The privacy-preserving design is built to only request the data required to complete the transaction and prevent users from having to overshare their identity information. Beyond that, the solution employs data encryption with HPKE and session transcript and validates data against the global standard ISO/IEC 18013-5.
+
+This strong, adaptable solution reflects our ongoing dedication to user protection, privacy, and providing a straightforward experience as digital identity evolves globally.
+
+Acknowledgments
+
+This product was built by a cross-functional team including areas such as design, product management, engineering, legal, marketing, business development, and partnership management.
+
+The following people were instrumental in adopting and scaling Verify with Wallet at Uber, in addition to the authors of this post: Duncan Carey, Allan Fukasawa, Ryan Stentz, Gustavo Tiengo, Flavia Rangel, Boldtulga Ganbaatar, Victoria Reis, Shea Hoffpauer, Shalmali Rajadhyax, Gustavo Daud, Anna Gassot, and Lizzie Ross.
+
+Cover Photo Attribution: Image by Gabriel D’Luca and Victoria Reis. Apple UI elements © Apple Inc.; licensed under the Apple Design Resources License Agreement.
+
+AAMVA is a trademark of the American Association of Motor Vehicle Administrators.",https://tb-static.uber.com/prod/udam-assets/dc660d61-9591-4725-bc23-45ace01f287a.png,N,,2026-06-23 17:12:26.235033
 ID23,IBM,2026-06-23 18:34:33+00:00,www.wsj.com,IBM Getting Ready to Scale Quantum Computing - WSJ,,,,,,https://www.wsj.com/tech/ibm-getting-ready-to-scale-quantum-computing-b2418cd5,The venture is seeded by a $1 billion investment from the Trump administration and another $1 billion of IBM's own cash. Advertisement. Anderon will ...,Not Available,,Y,,2026-06-23 16:10:35.588057
+ID35,Nvidia,2026-06-23 18:12:04+00:00,GEN - Genetic Engineering and Biotechnology News,Nvidia Unveils Science Reasoning AI Suite with BioNeMo Agent Toolkit,"Fay Lin, PhD, Fay Lin",,,,,https://www.genengnews.com/topics/artificial-intelligence/nvidia-unveils-science-reasoning-ai-suite-with-bionemo-agent-toolkit/,"Nvidia has announced the NVIDIA BioNeMo Agent Toolkit, which turns complex scientific workflows into agent-executable tasks, including model selection, input preparation, workflow execution, output inspection, and results explanation.
+The toolkit includes NVIDIA BioNeMo and is powered by NVIDIA NIM microservices, NVIDIA Parabricks, NVIDIA NeMo, and NVIDIA Nemotron and has applications across protein structure prediction, molecular docking, generative chemistry, genomic analysis, protein design, and biomarker discovery.
+“Every tool we’ve built for protein design is only as powerful as the scientists who can efficiently access it,” said David Baker, PhD, professor of biochemistry at the University of Washington and director of the Institute for Protein Design, in a public release.
+In genomic analysis and target discovery, agents can identify genetic insights and biological targets from raw sequencing data.
+Diagnostics and pharmaceutical companies, including Lilly and Natera, are using BioNeMo Agent Toolkit to scale agentic workflows across discovery, translational research, and clinical insight.","Nvidia has announced the NVIDIA BioNeMo Agent Toolkit, which turns complex scientific workflows into agent-executable tasks, including model selection, input preparation, workflow execution, output inspection, and results explanation.
+
+The toolkit includes NVIDIA BioNeMo and is powered by NVIDIA NIM microservices, NVIDIA Parabricks, NVIDIA NeMo, and NVIDIA Nemotron and has applications across protein structure prediction, molecular docking, generative chemistry, genomic analysis, protein design, and biomarker discovery.
+
+“For the first time, researchers can build AI agents that understand scientific knowledge, use scientific tools, and execute scientific workflows,” said Jensen Huang, founder and CEO of Nvidia, in a press release. “This is a new way to do science—one that can dramatically accelerate discovery across biology, chemistry, genomics, and medicine.”
+
+Nvidia has entered collaborations with research organizations, including the Arc Institute, Open Molecular Software Foundation, and the University of Washington’s Institute for Protein Design (IPD). The partnership with IPD has accelerated runtimes for the biomolecular complex prediction tool, RosettaFold3, resulting in two times faster performance than the prior generation model.
+
+“Every tool we’ve built for protein design is only as powerful as the scientists who can efficiently access it,” said David Baker, PhD, professor of biochemistry at the University of Washington and director of the Institute for Protein Design, in a public release. “The next leap in science won’t come from a single discovery; it will come from the speed of iterative designs and agents that can repeatedly reason through the complexity of biology at a speed humans never could.”
+
+The toolkit’s applications include virtual screening, where agents identify promising small-molecule drug candidates by generating compound designs, docking them to a target, predicting binding strength, and filtering for developability properties. The agent can then output which candidates should be prioritized to compress timelines.
+
+In genomic analysis and target discovery, agents can identify genetic insights and biological targets from raw sequencing data. Agents can also connect real-world data to reasoning models for biomedical research, improving the efficiency and accuracy of clinical development processes, including literature review, protocol generation, clinical trial screening, and pharmacovigilance. In medical imaging analysis, agents can process, segment, synthesize, and reason over medical imaging data to support biomarker discovery.
+
+AI-native biology companies, including Boltz, Basecamp Research, Chai Discovery, PerturbAI, Dyno, and Proxima, have collaborated with NVIDIA to develop tools to accelerate therapeutic design workflows. Diagnostics and pharmaceutical companies, including Lilly and Natera, are using BioNeMo Agent Toolkit to scale agentic workflows across discovery, translational research, and clinical insight.",https://www.genengnews.com/wp-content/uploads/2026/06/BioNeMo-Agent-Toolkit-Image-2.png,N,,2026-06-23 17:12:19.639132
 ID19,Eli Lilly,2026-06-23 18:08:09+00:00,Dealroom.co,Nvidia launches BioNeMo toolkit targeting $300B pharma market with Eli Lilly and OpenAI ...,Not Available,,,,,https://app.dealroom.co/news/feed/nvidia-launches-bionemo-toolkit-targeting-300b-pharma-market-with-eli-lilly-and-openai-among-50-adopters,"All answers are AI generated.
 They may be incomplete or incorrect.",All answers are AI generated. They may be incomplete or incorrect.,https://webshotter.dealroom.co/?width=1600&height=800&wait_until=networkidle0&url=https%3A%2F%2Fapp.dealroom.co%2Fnews%2Ffeed%2Fnvidia-launches-bionemo-toolkit-targeting-300b-pharma-market-with-eli-lilly-and-openai-among-50-adopters%3Fscreenshot%3Dtrue,N,,2026-06-23 16:10:32.972283
 ID32,Microsoft,2026-06-23 18:00:14+00:00,InfoQ,"Microsoft Expands Azure Kubernetes Service with Bare Metal, Fleet Management and AI ...",Craig Risi,,,,,https://www.infoq.com/news/2026/06/microsoft-build-aks-ai/,"At this year's Microsoft Build 2026, Microsoft unveiled a broad set of enhancements to Azure Kubernetes Service (AKS) aimed at making Kubernetes a first-class platform for AI training, inference, and large-scale cloud-native applications.
@@ -304,6 +430,31 @@ Enhanced customer satisfaction driven by consistent, relevant brand experiences
 See it in action at Cannes.
 
 We're showcasing AAOM at Cannes Lions this year (June 22-26) — including a live demonstration of an end-to-end workflow running on the platform.",https://business.adobe.com/blog/media_1d91d328dddf67937cd40aced92f7a31b35158b31.png?width=1200&format=pjpg&optimize=medium,N,,2026-06-23 14:22:33.514288
+ID37,Parker-Hannifin,2026-06-23 16:28:08+00:00,Yahoo Finance,HWM Gains From Strength in Commercial Aerospace: Can the Momentum Last? - Yahoo Finance,Zacks Equity Research,,,,,https://finance.yahoo.com/markets/stocks/articles/hwm-gains-strength-commercial-aerospace-150900921.html,"Howmet Aerospace Inc. HWM has been benefiting from persistent strength in the commercial aerospace market.
+Revenues from the commercial aerospace market increased 20% year over year (exceeding $1.2 billion) in the first quarter of 2026, constituting 53% of HWM's business.
+HWM is expected to maintain strong business momentum going forward, supported by a solid pipeline of commercial aircraft programs and strength in global air travel.
+HWM's Peers in the Commercial Aerospace Market RBC Bearings Incorporated RBC is gaining from the strong performance of the Aerospace/Defense segment.
+Strength in the commercial aerospace market, driven by strong growth in orders from the OEM and the aftermarket verticals, is driving the Aerospace/Defense segment.","Howmet Aerospace Inc. HWM has been benefiting from persistent strength in the commercial aerospace market. Strong air travel activities have been a major tailwind for the company, as the increased usage of aircraft is driving spending on parts and products that it provides.
+
+Revenues from the commercial aerospace market increased 20% year over year (exceeding $1.2 billion) in the first quarter of 2026, constituting 53% of HWM's business. Also, revenues from the market increased 12% year over year in 2025.
+
+The sustained strength was attributed to healthy demand for engine spares and a record backlog for new, more fuel-efficient aircraft with reduced carbon emissions. Boeing is also witnessing a gradual production increase, particularly in the 737 MAX widebody aircraft, which is likely to boost demand for Howmet's products in the market. Also, healthy build rates at Airbus for A320 (narrowbody) and A350 (widebody) aircraft hold promise for its spare engine demand.
+
+HWM is expected to maintain strong business momentum going forward, supported by a solid pipeline of commercial aircraft programs and strength in global air travel. Driven by strength across its businesses, HWM raised its 2026 outlook and currently expects total revenues of $9.575-$9.725 billion and adjusted EBITDA of $3.025-$3.095 billion.
+
+HWM's Peers in the Commercial Aerospace Market
+
+RBC Bearings Incorporated RBC is gaining from the strong performance of the Aerospace/Defense segment. Strength in the commercial aerospace market, driven by strong growth in orders from the OEM and the aftermarket verticals, is driving the Aerospace/Defense segment. The segment's revenues were up 41.2% year over year in fourth-quarter fiscal 2026 (ended March 2026).
+
+Parker-Hannifin Corp.'s PH Aerospace Systems segment is experiencing strength in the commercial and military markets across both the OEM and aftermarket channels. Revenues from Parker-Hannifin's Aerospace Systems segment jumped 15.5% year over year in the third quarter of fiscal 2026 (ended March 2026). Parker-Hannifin's Aerospace Systems segment is poised to gain from strong demand for its products and aftermarket support services in the general aviation market.
+
+HWM's Price Performance, Valuation and Estimates
+
+Shares of Howmet have gained 17.1% in the past three months against the industry's decline of 0.2%.
+
+Image Source: Zacks Investment Research
+
+From a valuation standpoint, HWM is trading at a forward price-to-earnings ratio of 51.74X, above the industry's average of 33.01X.",https://s.yimg.com/lo/mysterio/api/775DB2809644ACD6BA609F2A583BA292983898E2ED09F0E3D32B64615FC3F13A/subgraphmysterio/resizefill_w1200_h756;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fzacks.com%2Fe43c2be6d449d928bb43187a3663aa6b,N,,2026-06-23 17:12:23.691130
 ID11,Capgemini,2026-06-23 16:26:03+00:00,www.ft.com,Things look bad for IT consultants — but not that bad - Financial Times,Louise Lucas,,,,,https://www.ft.com/content/619e3bb0-759d-46b6-99cd-389aa13c5480?syn-25a6b1a6=1,"""Expert, reliable, considered, actionable opinion"" ""Brief with no waffle, to the point and has real insight into the corporate world"" ""Entertaining and often insightful in a way that’s different to most newsletters"" ""It's topical and succinct - a timely and convenient round up of key stories"" Why the FT?
 See why over a million readers pay to read the Financial Times.","""Expert, reliable, considered, actionable opinion""
 
@@ -926,6 +1077,25 @@ Copyright ©2026 eFinancial News Limited. All Rights Reserved. 87990cbe856818d5e
 Don’t miss the biggest stories
 
 Sign up to our industry-leading newsletters and stay in the loop",https://images.fnlondon.com/im-98663794?size=1.5,N,,2026-06-23 12:15:24.950867
+ID49,U.S. Bank,2026-06-23 13:46:47+00:00,Yahoo Finance,U.S. Bank Names Eric Levine to Lead Healthcare Payments - Yahoo Finance,Business Wire,,,,,https://finance.yahoo.com/healthcare/articles/u-bank-names-eric-levine-130000780.html,"Veteran payments leader connects treasury, merchant and payments capabilities for healthcare clients MINNEAPOLIS, June 23, 2026--(BUSINESS WIRE)--Eric Levine has joined U.S. Bank to lead the bank's strategy to deliver more connected treasury, payments and merchant solutions to healthcare organizations.
+Geronimo joined U.S. Bank in February from Citi to build the new PMI Sales Distribution team.
+Levine has more than 20 years of experience in global payments, treasury solutions and the healthcare and pharmaceutical sectors.
+""I'm excited to join U.S. Bank to help clients modernize their revenue cycle, streamline payments and unlock working capital.
+U.S. Bank continues to invest in its payments capabilities and leadership team as part of a broader Payments Transformation, one of the top three enterprise priorities at U.S. Bank.","Veteran payments leader connects treasury, merchant and payments capabilities for healthcare clients
+
+MINNEAPOLIS, June 23, 2026--(BUSINESS WIRE)--Eric Levine has joined U.S. Bank to lead the bank's strategy to deliver more connected treasury, payments and merchant solutions to healthcare organizations.
+
+As head of healthcare for Payments: Merchant and Institutional (PMI) Sales Distribution, Levine will advance the company's focus on aligning cross-bank teams to deliver tailored solutions to the healthcare industry, including hospital systems, payers, medical device manufacturers and life sciences companies.
+
+Levine will report to Peter Geronimo, executive vice president and head of PMI Sales Distribution. Geronimo joined U.S. Bank in February from Citi to build the new PMI Sales Distribution team.
+
+""Healthcare is a priority area for U.S. Bank, with significant opportunity to help clients simplify complex payments, improve working capital and create better experiences for the people and organizations they serve,"" said Geronimo. ""Eric brings deep sector expertise, a strong treasury and payments background and a client-first mindset that will help us accelerate growth and deliver more value to healthcare clients.""
+
+Levine has more than 20 years of experience in global payments, treasury solutions and the healthcare and pharmaceutical sectors. He joins U.S. Bank from Bank of America, where he helped deliver global payment solutions to large pharmaceutical and medical device companies. Previously, he served in payments leadership roles at Citi and JPMorgan. He is based in Chicago.
+
+""Healthcare finance leaders are under increasing pressure to improve margins, strengthen cash flow visibility and simplify an increasingly complex payments landscape,"" Levine said. ""I'm excited to join U.S. Bank to help clients modernize their revenue cycle, streamline payments and unlock working capital. By bringing together treasury, merchant and payment capabilities, we can deliver practical, integrated solutions that improve financial performance while supporting a better experience for patients and providers alike.""
+
+U.S. Bank continues to invest in its payments capabilities and leadership team as part of a broader Payments Transformation, one of the top three enterprise priorities at U.S. Bank. The company's PMI organization brings together merchant acquiring, treasury management and corporate payments capabilities to help large institutional clients move money with greater speed, visibility and control.",https://s.yimg.com/lo/mysterio/api/818D84F975626771856D8508E8A5446C09CFC7BB9EE55FD479CE01D58317E96C/subgraphmysterio/resizefill_w1200_h335;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fbusiness-wire.com%2Fd02b695aff3d59a8f237ae65db07f038,N,,2026-06-23 17:12:30.410968
 ID49,U.S. Bank,2026-06-23 13:43:49+00:00,Yahoo Finance,U.S. Bank Names Eric Levine to Lead Healthcare Payments - Yahoo Finance UK,Business Wire,,,,,https://uk.finance.yahoo.com/news/u-bank-names-eric-levine-130000780.html,"Veteran payments leader connects treasury, merchant and payments capabilities for healthcare clients MINNEAPOLIS, June 23, 2026--(BUSINESS WIRE)--Eric Levine has joined U.S. Bank to lead the bank’s strategy to deliver more connected treasury, payments and merchant solutions to healthcare organizations.
 Geronimo joined U.S. Bank in February from Citi to build the new PMI Sales Distribution team.
 Levine has more than 20 years of experience in global payments, treasury solutions and the healthcare and pharmaceutical sectors.
@@ -12524,86 +12694,3 @@ Team access to our exclusive tech news
 Newsletters
 
 Journalists who break and shape the news, in your inbox",https://tii.imgix.net/production/articles/17301/d4bc615c-02e6-43dc-b704-54a931e52e9f.png?fm=jpg&auto=compress&w=1200&frame=0,N,,2026-06-16 19:11:12.505884
-ID2,Adobe,2026-06-16 21:06:19+00:00,The Verge,Disney is using Adobe AI for theme park Imagineering. | The Verge,Jess Weatherbed,,,,,https://www.theverge.com/streaming/950670/disney-is-using-adobe-ai-for-theme-park-imagineering,"J External Link Disney is using Adobe AI for theme park Imagineering.
-The R&D team at Walt Disney Imagineering has embraced Adobe’s Firefly Foundry platform to “accelerate the design and pre-production visualization pipeline” for Disney Parks and Experiences.
-The partnership will use AI models trained on Disney assets to turn sketches into fully rendered concept art, 2D images into 3D prototypes, and more.
-Adobe and Disney Imagineering Collaborate to Bring Firefly Foundry to the Theme Park Design Toolkit [ Adobe ] Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates.
-Email (required) By submitting your email, you agree to our Terms and Privacy Notice.","J
-
-External Link
-
-Disney is using Adobe AI for theme park Imagineering.
-
-The R&D team at Walt Disney Imagineering has embraced Adobe’s Firefly Foundry platform to “accelerate the design and pre-production visualization pipeline” for Disney Parks and Experiences. The partnership will use AI models trained on Disney assets to turn sketches into fully rendered concept art, 2D images into 3D prototypes, and more.
-
-Adobe and Disney Imagineering Collaborate to Bring Firefly Foundry to the Theme Park Design Toolkit
-
-[ Adobe ]
-
-Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates.
-
-Comments
-
-Loading comments
-
-Getting the conversation ready...
-
-The Verge Daily
-
-A free daily digest of the news that matters most.
-
-Email (required)
-
-By submitting your email, you agree to our Terms and Privacy Notice. This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.","https://platform.theverge.com/wp-content/uploads/sites/2/2025/01/verge-placeholder_f212b3.png?quality=90&strip=all&crop=0,0.13712291199202,100,99.725754176016",N,,2026-06-16 19:11:00.048857
-ID35,Nvidia,2026-06-16 21:04:06+00:00,Yahoo Finance,Micron Technology Inc (MU) Gets Nvidia Nod For AI Memory Supply - Yahoo Finance,Abdul Rahman,,,,,https://finance.yahoo.com/technology/ai/articles/micron-technology-inc-mu-gets-185947561.html,"Micron Technology Inc (NASDAQ:MU) is one of billionaire Ken Fisher's top high growth stock picks.
-Dragon Images/Shutterstock.com Micron Technology Inc (NASDAQ:MU) has been approved to supply HBM4 memory for Nvidia's Vera Rubin platform.
-The HBM4 memory that Micron has been selected to supply for the Nvidia platform is the most advanced high-bandwidth memory product and a crucial component of AI servers.
-Micron Technology Inc (NASDAQ:MU) is an American semiconductor company focused on memory products.
-If you're looking for an extremely undervalued AI stock that also stands to benefit significantly from Trump-era tariffs and the onshoring trend, see our free report on thebest short-term AI stock.","Micron Technology Inc (NASDAQ:MU) is one of billionaire Ken Fisher's top high growth stock picks. Micron has emerged as one of investors' favorite semiconductor stocks amid the AI boom. The stock has surged more than 196% year-to-date and exploded 720% over the past year.
-
-Dragon Images/Shutterstock.com
-
-Micron Technology Inc (NASDAQ:MU) has been approved to supply HBM4 memory for Nvidia's Vera Rubin platform. According to a Bloomberg report on June 5, Micron is already producing for the Nvidia platform as its launch nears. Micron joins Samsung and SK Hynix as HBM4 suppliers for the Vera Rubin platform.
-
-The Vera Rubin platform is Nvidia's next-generation AI accelerator, and it is set for deliveries in Q3 2026. The race is on to meet the platform's advanced memory demand. The HBM4 memory that Micron has been selected to supply for the Nvidia platform is the most advanced high-bandwidth memory product and a crucial component of AI servers. It supports the high-bandwidth computing capacity needed to efficiently train and run AI models.
-
-Demand for HBM4 memory has surged amid the rapid buildout of AI infrastructure. The Nvidia approval gives Micron a foothold in one of the AI market's fastest-growing segments.
-
-Micron Technology Inc (NASDAQ:MU) is an American semiconductor company focused on memory products. The company manufactures memory chips and data storage products used in consumer devices, cars, and AI data center facilities.
-
-While we acknowledge the potential of MU as an investment, we believe certain AI stocks offer greater upside potential and carry less downside risk. If you're looking for an extremely undervalued AI stock that also stands to benefit significantly from Trump-era tariffs and the onshoring trend, see our free report on thebest short-term AI stock.
-
-READ NEXT: 10 Best Hot Stocks to Buy for June and 8 Best Defensive Stocks to Buy Amid Geopolitical Tensions.",https://s.yimg.com/lo/mysterio/api/59BAE81C7FCB648BB7ED4F262DF76F0AE9812C5614F1E5742B43D1939FED249B/subgraphmysterio/resizefill_w1200_h800;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Finsidermonkey.com%2Fedeb2e9b75a1f5cacf34b09d36e2166f,N,,2026-06-16 20:05:44.646714
-ID1,Accor,2026-06-16 20:34:52+00:00,LinkedIn,The CEO of Accor said it... AI is coming for 40% of hotel jobs...and I truly believe the industry ...,Not Available,,,,,https://www.linkedin.com/posts/samuel-miele-5923361b2_the-ceo-of-accor-said-it-ai-is-coming-activity-7472642877697941504-NCrz,"The CEO of Accor said it... AI is coming for 40% of hotel jobs...and I truly believe the industry isn't ready.
-We're already seeing hotels in China being built with robotic housekeeping in mind from the ground up.
-And it's projected that 30-40% of on-the-ground hotel jobs will be shifted or replaced by AI, that's not a small number.
-Think about front desk staffing, Hilton-level standards call for 1 staff member at the front desk per 100 rooms at peak check-in.
-Like Comment Transcript In China, the hotels are built for robotic housekeeping.","The CEO of Accor said it... AI is coming for 40% of hotel jobs...and I truly believe the industry isn't ready. We're already seeing hotels in China being built with robotic housekeeping in mind from the ground up. And it's projected that 30-40% of on-the-ground hotel jobs will be shifted or replaced by AI, that's not a small number. Think about front desk staffing, Hilton-level standards call for 1 staff member at the front desk per 100 rooms at peak check-in. The opportunity to rethink that through automation is real, and honestly, mobile check-in is already the first step. But here's where it gets nuanced: this isn't a one-size-fits-all shift. High-touch luxury? Guests are there for the human experience. Select-service? That's where digitization makes the most sense and where I think we'll see the fastest adoption. The technology is coming either way. The question is just which segment embraces it first, and which ones push back. Huge thanks to Cameron Sperance from Questex Hospitality & Travel for taking the time to dig into this with me.
-
-Like Comment
-
-Transcript
-
-In China, the hotels are built for robotic housekeeping. Yeah, CEO of Acorus Sebastian came out and said, hey, yeah, about 30 to 40% of on the ground workforce in hotels are going to be shifted by AI. Like right now Hilton Standard, for example, is for every 100 rooms you need one front desk person during check, check out thousand rooms, they have to have 11-12 people at the front desk. Could you get that down to like 6? There are certain segments of the market that do want that high touch experience. There are certain segments of the market that kind of lend itself to be. I mean a select service hotel obviously I think can you can digitize that or find a way and they're already kind of trying to like slow drift that with mobile check in things like that. So I think there's genuine opportunity there. It's just it's not a one-size-fits-all model.
-
-To view or add a comment, sign in",https://dms.licdn.com/playlist/vid/v2/D4D05AQG6VwUBmqRZcg/thumbnail-with-play-button-overlay-high/B4DZ7QpC0dJ8C0-/0/1781616885438?e=2147483647&v=beta&t=kmUli20Y4fNfx_GL4nF3chWuwuXaLTyYn0phibMfQZk,N,,2026-06-17 02:02:08.972691
-ID19,Eli Lilly,2026-06-16 20:30:17+00:00,MarketScreener,Eli Lilly Acquires 4E Therapeutics | MarketScreener,MT Newswires,,,,,https://www.marketscreener.com/news/eli-lilly-acquires-4e-therapeutics-ce7f5cdfdf89f223,"Trader This super rating is the result of a weighted average of the rankings based on the following ratings: Valuation (Composite), EPS Revisions (4 months), and Visibility (Composite).
-We recommend that you carefully review the associated descriptions.
-Investor This super composite rating is the result of a weighted average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), EPS Revisions (1 year), and Visibility (Composite).
-Global This composite rating is the result of an average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), Financial Estimates Revisions (Composite), Consensus (Composite) and Visibility (Composite).
-Quality This composite rating is the result of an average of rankings based on the following ratings: Returns (Composite), Profitability (Composite) and Quality of Financial Reporting (Composite), and Financial Health (Composite).","Trader
-
-This super rating is the result of a weighted average of the rankings based on the following ratings: Valuation (Composite), EPS Revisions (4 months), and Visibility (Composite). We recommend that you carefully review the associated descriptions.
-
-Investor
-
-This super composite rating is the result of a weighted average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), EPS Revisions (1 year), and Visibility (Composite). We recommend that you carefully review the associated descriptions.
-
-Global
-
-This composite rating is the result of an average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), Financial Estimates Revisions (Composite), Consensus (Composite) and Visibility (Composite). The company must be covered by at least 4 of these 5 ratings for the calculation to be carried out. We recommend that you carefully review the associated descriptions.
-
-Quality
-
-This composite rating is the result of an average of rankings based on the following ratings: Returns (Composite), Profitability (Composite) and Quality of Financial Reporting (Composite), and Financial Health (Composite). The company must be covered by at least 2 of these 3 ratings for the calculation to be performed. We recommend that you carefully read the associated descriptions.",https://www.marketscreener.com/images/twitter_MS_fdblanc.png,N,,2026-06-16 17:11:37.399946
-ID32,Microsoft,2026-06-16 20:15:49+00:00,Reuters,"Microsoft's cloud infrastructure talks with Oracle collapse, Business Insider reports - Reuters",Not Available,,,,,https://www.reuters.com/technology/microsofts-cloud-infrastructure-talks-with-oracle-collapse-business-insider-2026-06-16/,Oracle said on Tuesday that details in a Business Insider ​report on the collapse of its discussions with ‌Microsoft over a potential leasing deal were inaccurate.,Not Available,https://www.reuters.com/resizer/v2/NZCDTFA35JNS7KCTKYIIKRISHE.jpg?auth=9e1f9661a7b7ed1b113dbc6bfac3a467492180a9d10dff7bc61a79bccf807c2f&height=1005&width=1920&quality=80&smart=true,N,,2026-06-16 18:15:35.846459
