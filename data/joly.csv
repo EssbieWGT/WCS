@@ -1,5 +1,45 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID32,Microsoft,2026-06-23 18:00:14+00:00,InfoQ,"Microsoft Expands Azure Kubernetes Service with Bare Metal, Fleet Management and AI ...",Craig Risi,,,,,https://www.infoq.com/news/2026/06/microsoft-build-aks-ai/,"At this year's Microsoft Build 2026, Microsoft unveiled a broad set of enhancements to Azure Kubernetes Service (AKS) aimed at making Kubernetes a first-class platform for AI training, inference, and large-scale cloud-native applications.
+The announcements span infrastructure, multi-cluster management, AI orchestration, and model serving, underscoring Microsoft's view that the future of AI will increasingly run on Kubernetes rather than bespoke AI infrastructure stacks.
+This is particularly valuable for GPU-heavy AI workloads, where system services competing for resources can affect performance and predictability.
+The company also announced the general availability of Azure Kubernetes Fleet Manager for Arc-enabled clusters, extending fleet-wide management beyond Azure to include hybrid and multi-cloud environments.
+Beyond the Kubernetes infrastructure itself, Microsoft announced several AI-focused capabilities intended to simplify model training and inference.","At this year's Microsoft Build 2026, Microsoft unveiled a broad set of enhancements to Azure Kubernetes Service (AKS) aimed at making Kubernetes a first-class platform for AI training, inference, and large-scale cloud-native applications. The announcements span infrastructure, multi-cluster management, AI orchestration, and model serving, underscoring Microsoft's view that the future of AI will increasingly run on Kubernetes rather than bespoke AI infrastructure stacks.
+
+Among the most notable updates are AKS on Bare Metal, which gives workloads direct access to hardware without a hypervisor; Azure Kubernetes Fleet Manager for Arc-enabled clusters, extending centralized management across cloud and on-premises environments; Anyscale on Azure, a managed Ray service for distributed AI workloads; and improvements to AI model deployment through AI Runway and the Kubernetes AI Toolchain Operator (KAITO). Together, the announcements signal Microsoft's ambition to make Kubernetes the operational backbone for enterprise AI at scale.
+
+Microsoft's first focus area is simplifying cluster operations. Two features announced as generally available are Managed System Node Pools in AKS Automatic and Azure Container Linux, a lightweight operating system optimized for containers.
+
+Managed System Node Pools separate core Kubernetes components from application workloads, allowing Azure to handle capacity management, patching, and scaling automatically. This is particularly valuable for GPU-heavy AI workloads, where system services competing for resources can affect performance and predictability. Meanwhile, Azure Container Linux offers a minimal, Microsoft-maintained operating system designed to reduce configuration drift and simplify maintenance across large Kubernetes fleets.
+
+The approach reflects a broader trend among cloud providers to abstract away the operational complexity of Kubernetes itself, allowing teams to focus more on applications and AI models rather than cluster administration.
+
+Perhaps the most technically significant announcement is AKS on Bare Metal, currently in public preview. By removing the virtualization layer, AKS can now provide direct access to technologies such as NVLink, RDMA, and high-performance networking, capabilities that are increasingly important for large language model training and latency-sensitive inference workloads.
+
+Microsoft argues that while virtualization offers flexibility, some AI workloads incur measurable performance penalties from additional abstraction layers. Bare-metal AKS aims to provide the best of both worlds: the operational consistency of Kubernetes and the raw performance of dedicated hardware. This is particularly relevant as enterprises train larger AI models and deploy increasingly demanding inference workloads where even small efficiency gains can translate into significant cost savings.
+
+The company also announced the general availability of Azure Kubernetes Fleet Manager for Arc-enabled clusters, extending fleet-wide management beyond Azure to include hybrid and multi-cloud environments.
+
+Rather than treating Kubernetes clusters as isolated systems, Fleet Manager enables centralized policy enforcement, workload placement, staged rollouts, and RBAC governance across entire fleets of clusters. This capability becomes increasingly important as enterprises deploy AI applications across multiple regions, cloud providers, and on-premises environments while seeking consistent operational practices and governance controls.
+
+This emphasis on fleet management mirrors a growing realization within the industry that Kubernetes maturity is less about operating individual clusters and more about managing entire estates as unified platforms. Microsoft has increasingly positioned AKS around this philosophy in its broader open-source and Kubernetes strategy.
+
+Beyond the Kubernetes infrastructure itself, Microsoft announced several AI-focused capabilities intended to simplify model training and inference.
+
+Anyscale on Azure, now in public preview, brings managed Ray to AKS, allowing organizations to orchestrate distributed AI workloads using CPUs and GPUs across dynamically scaling clusters. The service integrates directly into Azure subscriptions and governance models, enabling enterprises to train and deploy large AI models without managing the complexity of Ray clusters independently.
+
+Microsoft also highlighted AI Runway, a Kubernetes-native model deployment framework first introduced earlier in 2026. AI Runway enables users to select models, validate GPU requirements, estimate deployment costs, and launch production endpoints through Kubernetes-native abstractions. Under the hood, KAITO provisions resources, launches optimized runtimes such as vLLM, and integrates with Kubernetes autoscaling and networking technologies like KEDA and Gateway API.
+
+The result is a model-serving platform that seeks to simplify AI deployment without obscuring the underlying Kubernetes primitives that platform engineers rely on for control and observability.
+
+Microsoft's announcements come amid intensifying competition among cloud providers seeking to become the preferred platform for AI infrastructure. AWS continues to expand its Kubernetes and AI services through EKS and Bedrock, while Google Cloud is investing heavily in GKE and AI-native infrastructure. Meanwhile, open-source ecosystems centered around Ray, vLLM, KubeRay, and Gateway API continue to mature rapidly.
+
+What differentiates Microsoft's approach is its attempt to unify these components into a cohesive platform. Rather than building entirely proprietary AI infrastructure, Microsoft is leaning heavily on open-source technologies such as Kubernetes, Ray, Gateway API, and cloud-native networking, while wrapping them with managed services, governance capabilities, and enterprise integrations.
+
+This strategy aligns with a growing industry belief that AI infrastructure will evolve similarly to cloud-native computing itself: open standards and shared operational patterns will become more important than proprietary orchestration systems as AI moves from experimentation into mainstream production environments.
+
+The broader message from Microsoft's Build announcements is that the question of whether AI belongs on Kubernetes has largely been settled. The challenge has shifted toward operating AI workloads reliably while balancing cost, performance, and scalability.",https://res.infoq.com/news/2026/06/microsoft-build-aks-ai/en/headerimage/generatedHeaderImage-1782126504672.jpg,N,,2026-06-23 15:19:53.401117
 ID50,Walmart,2026-06-23 17:39:53+00:00,www.wsj.com,"Walmart, in Biggest Deal in Two Years, Buys Advertising Tech Firm - WSJ",,,,,,https://www.wsj.com/business/retail/walmart-in-biggest-deal-in-two-years-buys-advertising-tech-firm-ccd6c03b,"On Tuesday Walmart announced it would buy Vibe.co, a company that enables advertising through connected televisions, particularly focused on small and ...",Not Available,,Y,,2026-06-23 14:23:18.356207
+ID32,Microsoft,2026-06-23 17:39:42+00:00,www.forbes.com,"Microsoft, Satya Nadella And The Most Courteous Acknowledgment In Technology - Forbes",,,,,,https://www.forbes.com/sites/greatspeculations/2026/06/23/microsoft-satya-nadella-and-the-most-courteous-acknowledgment-in-technology/,"... Microsoft Deutschland GmbH headquarters building in Parkstadt Schwabing in Munich (Bavaria, Germany). Microsoft Corporation is the world's largest ...",Not Available,,Y,,2026-06-23 15:19:57.433635
 ID19,Eli Lilly,2026-06-23 17:14:15+00:00,Endpoints News,Sangamo's three-decade run comes to a close as Lilly and Astellas eye assets,Lei Lei Wu,,,,,https://endpoints.news/sangamos-three-decade-run-comes-to-a-close-as-lilly-and-astellas-eye-assets/,"De­spite be­ing an ear­ly play­er in the gene edit­ing field and de­vel­op­ing nu­mer­ous clin­i­cal pro­grams, Sang­amo Ther­a­peu­tics will be sell­ing off … Sign up to read this article for free.
 Get free access to a limited number of articles, plus choose newsletters to get straight to your inbox.
 Think we're worth reading - tell Google.
@@ -13621,112 +13661,3 @@ Delta Air Lines, Inc. (NYSE:DAL) offers scheduled air transportation for passeng
 While we acknowledge the potential of DAL as an investment, we believe certain AI stocks offer greater upside potential and carry less downside risk. If you're looking for an extremely undervalued AI stock that also stands to benefit significantly from Trump-era tariffs and the onshoring trend, see our free report on thebest short-term AI stock.
 
 READ NEXT: 10 Best FMCG Stocks to Invest In According to Analysts and 11 Best Long-Term Tech Stocks to Buy According to Analysts.",https://s.yimg.com/lo/mysterio/api/3840DD95E989B856749A45385E70AB260C9DED3050EC71EE8AA4C28FAB6E1FBC/subgraphmysterio/resizefill_w1200_h673;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Finsidermonkey.com%2F6063309cea48816349150e8e1129f294,N,,2026-06-16 19:11:09.341126
-ID12,Carrier,2026-06-16 19:12:16+00:00,The Globe and Mail,"Comfort Systems Capital Strategy: Growth, Dividends or Buybacks? - The Globe and Mail",Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/FIX/pressreleases/2497875/comfort-systems-capital-strategy-growth-dividends-or-buybacks/,Detailed price information for Comfort Systems USA (FIX-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=917,N,,2026-06-16 17:11:30.340539
-ID51,Wellington Management,2026-06-16 19:02:27+00:00,Funds Society,Guinness Global Investors Expands Its Real Assets Platform With a New Acquisition,"Marta Rodriguez, Martin Litwak, Matt Burdett, Felipe Vargas Dominguez, Funds Society",,,,,https://www.fundssociety.com/en/news/business/guinness-global-investors-expands-its-real-assets-platform-with-a-new-acquisition/,"Guinness Global Investors (Guinness) has announced the acquisition of Foresight Capital Management (FCM), the public markets division of Foresight Group.
-The transaction includes seven investment strategies focused on listed real assets and sustainable and impact investing funds.
-According to the firm, FCM’s listed real assets team will be integrated into Guinness’ Real Assets team, led by Mark Brennan, who helped develop and manage these strategies at FCM before joining Guinness.
-“The diversification benefits offered by listed real assets are more relevant than ever in today’s markets.
-Reuniting Mark Brennan with the funds he launched at FCM represents an excellent opportunity to strengthen our real assets investment platform,” said Edward Guinness, CEO of Guinness Global Investors.","Guinness Global Investors (Guinness) has announced the acquisition of Foresight Capital Management (FCM), the public markets division of Foresight Group. The transaction includes seven investment strategies focused on listed real assets and sustainable and impact investing funds.
-
-According to the firm, FCM’s listed real assets team will be integrated into Guinness’ Real Assets team, led by Mark Brennan, who helped develop and manage these strategies at FCM before joining Guinness. Meanwhile, Nick Scullion, Partner and Head of FCM, will remain at Foresight.
-
-“The diversification benefits offered by listed real assets are more relevant than ever in today’s markets. Reuniting Mark Brennan with the funds he launched at FCM represents an excellent opportunity to strengthen our real assets investment platform,” said Edward Guinness, CEO of Guinness Global Investors.
-
-For his part, Mark Brennan, Portfolio Manager at Guinness, commented: “The addition of these strategies and the listed real assets team to Guinness accelerates our growth plans by providing greater scale and expanding our investment team.”
-
-Eric Bright and Mayank Markanday, Portfolio Managers at FCM, added: “Guinness will provide our listed real assets teams with an outstanding platform to support future growth. Collaborating with Guinness and with Mark is a natural evolution that will allow us to expand our capabilities.”
-
-WHEB Strategies
-
-The transaction also includes WHEB’s sustainable and impact investing team, now part of FCM, which will work alongside the Guinness team responsible for the Guinness Sustainable Energy strategy, launched in 2006, and the Guinness Global Environment strategy, launched in 2025.
-
-WHEB’s impact investing approach—widely regarded as a market benchmark—will be maintained. Its framework combines the impact generated by portfolio companies with the contribution made by investors, while incorporating measurement criteria, stewardship, corporate governance, and transparency.
-
-Edward Guinness added: “FCM’s WHEB team is recognized as a thought leader in responsible investing and will strengthen the expertise we have built at Guinness in this area. FCM’s WHEB funds offer attractive long-term prospects, and their portfolio companies are currently trading at historically low relative valuations.”",https://www.fundssociety.com/wp-content/uploads/2026/06/sharonang-sphere-3105670_640.jpg,N,,2026-06-16 16:10:33.739481
-ID41,Ralph Lauren,2026-06-16 19:02:05+00:00,Talk Business & Politics,"Walmart's fashion boss garners top company award, transforms business",Kim Souza,,,,,https://talkbusiness.net/2026/06/walmarts-fashion-boss-garners-top-company-award-transforms-business/,"Incandela recently received Walmart’s highest award, the Sam M. Walton Entrepreneur of the Year Award.
-I believe it was up over 10% in the first quarter.” ‘FASHION MAVERICKS’ Incandela thanked the Walton family for recognizing the work of the fashion group.
-She said Incandela and the fashion group had to convince the entire company to buy into the need to transform fashion, and it took time.
-“She is a driven leader who is tenacious about bringing fashion to Walmart customers in all income brackets,” Baker said.
-But we were not serving our growth customers — the more urban millennials and Gen Z. Walmart fashion had mostly been in the socks and underwear business.","Walmart has not always been known for its fashion sense, but the category has grown into a $20 billion business in recent years behind the leadership of Denise Incandela and a group of Walmart employees, with some based in New York and some in Bentonville.
-
-Incandela recently received Walmart’s highest award, the Sam M. Walton Entrepreneur of the Year Award. The award was given at the retailer’s annual meeting on June 5. Steuart Walton, grandson of Sam and Helen, and Walmart Board Chair Greg Penner, the grandson-in-law of the Walmart founders, presented her with the award before a crowd of 11,000 at Bud Walton Arena in Fayetteville. The Walton family annually chooses the recipient of the award.
-
-“Entrepreneurship is the relentless pursuit of solutions through resilience, through taking risks, and through innovation,” said Steuart Walton. “We look for someone who embodies this idea of an entrepreneur, innovation, resilience and taking risks.”
-
-He described Incandela as a maverick who developed a New York fashion office with more than 100 people. Walton recently traveled to New York’s fashion district to visit the operation.
-
-“It was great to see the initiative and innovation she’s taken in setting up this office, and then the results that she’s been able to achieve,” he said. “Our fashion business has been growing at a very healthy clip. I believe it was up over 10% in the first quarter.”
-
-‘FASHION MAVERICKS’
-
-Incandela thanked the Walton family for recognizing the work of the fashion group.
-
-“I am incredibly honored and humbled to receive the Sam M. Walton Entrepreneur of the Year Award,” Incandela noted in a social media post following the event. “While my name may be on the award, this recognition truly belongs to the extraordinary team of fashion mavericks I have the privilege to work alongside every day. Sam Walton often spoke about the power of mavericks — people willing to challenge convention, think differently, and find new ways to serve customers. That spirit is alive and well across our Walmart fashion organization.”
-
-Incandela’s career has spanned more than two decades in fashion, logging nearly nine years at Walmart, 2.5 years at Ralph Lauren overseeing digital strategy, and 15 years at Saks Fifth Avenue, where she was chief marketing and digital officer.
-
-She said during a leadership podcast on “The Robin Report” in March 2025 that professional women need to build functional relationships in an organization and seek out mentors and advocates, something they don’t do enough. She said it’s impossible to succeed alone. Incandela said for her, leadership is creating a culture of empowerment, customer obsession, and accountability with risk-taking and the relentless pursuit to win without compromising integrity.
-
-THE TRANSFORMATION
-
-She said over the past several years the fashion group has been on a mission to transform Walmart apparel by elevating the assortment, creating better shopping experiences, reaching new customers and changing perceptions of Walmart fashion.
-
-The progress, according to Incandela, is the “direct result of talented associates, bold thinking and a relentless focus on the customer. I am also deeply grateful to our incredible cross-functional partners across Walmart. Great things happen when teams unite around a shared vision. The recognition is meaningful, but the opportunity ahead of us is even more exciting.”
-
-Walmart’s fashion transformation began years ago, according to Deanah Baker, a retired fashion executive from Walmart who worked directly with Incandela. She said Incandela and the fashion group had to convince the entire company to buy into the need to transform fashion, and it took time. Baker said the work began in earnest around 2017, and the fashion team worked through a major reduction in brands carried by the retailer, developing and promoting private brands, and adopting advanced RFID technology to enable more online sales. The group also began focusing on best-in-class suppliers and factories. The store-of-the-future remodels allowed for a different presentation for apparel that bridged online inventory offerings with in-store shoppers.
-
-Baker credits Incandela with assembling a world-class team in New York, where fashion talent is first-rate.
-
-“She is a driven leader who is tenacious about bringing fashion to Walmart customers in all income brackets,” Baker said.
-
-Walmart CEO John Furner also recently made a trip to one of the four pop-up stores the fashion group has opened in New York City. He noted on his social media feed that the fashion team pulled together a great opportunity for non-customers to experience Walmart in new and exciting ways. Incandela said the recent pop-up event featured designer Brandon Maxwell and a new fashion line recognizing “The Devil Wears Prada” look ahead of the launch of the movie’s sequel, which was released in theaters in May.
-
-David Guggina, CEO of Walmart U.S., said during a recent investor conference that the fashion team’s efforts continue to draw new customers to the brand, and sales from the April event increased 70% from the prior event.
-
-“I think the bigger story here is that customers are increasingly seeing Walmart as a destination for both value and style, and we believe there is a lot of runway ahead of us to continue this momentum,” Guggina said.
-
-THE CUSTOMER CLOSET
-
-Incandela earlier this year spoke at the National Retail Federation Big Show Event about Walmart’s effort to draw more customers to the Walmart brand. She said part of the transformation sought was to target “white space” in apparel prices from $15 to $40, which was somewhat risky because 60% of the retailer’s customers had been shopping at $15 or below.
-
-“We realized we were not supporting our customers’ closets, just the bottom of the closet,” Incandela said. “That was a big ‘a-ha’ for us, because we have 145 million shoppers in our stores weekly for groceries and consumables. But we were not serving our growth customers — the more urban millennials and Gen Z. Walmart fashion had mostly been in the socks and underwear business. We were winning on price, but we weren’t winning on quality, aesthetic and style.”
-
-Walmart said fashion is working to create a halo effect for its brand and its stores. Walmart said it is taking market share, and customers are responding to store remodels. Company executives have also said Walmart is capturing new customers and has grown its $100,000 and higher household income customer penetration and spend, while also maintaining its core customer.",https://talkbusiness.net/wp-content/uploads/2026/06/CVR_WalmartFashion_popupstore_6-15-26.jpg,N,,2026-06-16 16:10:27.340838
-ID19,Eli Lilly,2026-06-16 18:37:14+00:00,Fierce Biotech,Eli Lilly's M&A spree continues with acquisition of non-opioid pain drugmaker 4E,Angus Liu,,,,,https://www.fiercebiotech.com/biotech/eli-lilly-ma-spree-continues-acquisition-non-opioid-pain-drugmaker-4e,"In its latest deal, Lilly has acquired neuroscience startup 4E Therapeutics for an undisclosed amount, the Austin, Texas-based biotech said Tuesday.
-The deal gives Lilly a pipeline of early-stage, non-opioid therapeutics designed for various types of pain management, including neuropathic pain, migraine and acute pain, according to 4E’s pipeline webpage, which has not been updated since 2023.
-The 4E acquisition comes about a year after Lilly bought SiteOne Therapeutics and its phase 2 non-opioid pain candidate for up to $1 billion.
-Called turigrobart (LY3848575), the drug is undergoing phase 2 trials for chronic neuropathic pain associated with distal sensory polyneuropathy.
-The 4E deal marks the 11th Lilly acquisition announced this year, according to a Fierce tally.","Eli Lilly is taking another shot at the pain market, continuing a recent M&A binge that shows no signs of slowing down.
-
-In its latest deal, Lilly has acquired neuroscience startup 4E Therapeutics for an undisclosed amount, the Austin, Texas-based biotech said Tuesday.
-
-The deal gives Lilly a pipeline of early-stage, non-opioid therapeutics designed for various types of pain management, including neuropathic pain, migraine and acute pain, according to 4E’s pipeline webpage, which has not been updated since 2023.
-
-4E is developing orally available MNK inhibitors, attempting to tame chronic pain by targeting the MNK-eIF4E signaling pathway in peripheral sensory neurons while avoiding any potential effects on the central nervous system such as addiction and cognitive impairment.
-
-Currently, no other notable biopharma companies are working on this target for neurological disorders.
-
-“Lilly’s clinical development, translational, and global commercial capacity—and its deep commitment to tackling the challenges of chronic pain for patients—make it the right home for realizing the full potential of this work for patients,” Joe Price, 4E’s co-founder, president and chairman, said in a June 16 statement.
-
-The 4E acquisition comes about a year after Lilly bought SiteOne Therapeutics and its phase 2 non-opioid pain candidate for up to $1 billion. The centerpiece of that deal, now coded LY4515100, is a Nav1.8 inhibitor that acts on a sodium ion channel primarily found in the peripheral nervous system.
-
-Lilly remains persistent in pursuing non-opioid pain options after recent setbacks with a P2X7 inhibitor and an SSTR4 agonist, both of which were in-licensed from other companies.
-
-Besides the 4E and SiteOne assets, Lilly is also developing an epiregulin antibody. Called turigrobart (LY3848575), the drug is undergoing phase 2 trials for chronic neuropathic pain associated with distal sensory polyneuropathy.
-
-Another asset, an antagonist of the angiotensin II type 2 receptor coded LY4065967, is being evaluated in patients with diabetic peripheral neuropathic pain in a phase 2 trial that launched this February.
-
-The 4E deal marks the 11th Lilly acquisition announced this year, according to a Fierce tally. In neuroscience alone, the Indianapolis pharma is also offering $6.3 billion upfront to snap up Centessa Pharmaceuticals and its sleep disorder pipeline with a focus on orexin receptor 2 agonists.
-
-As Lilly continues to execute a rapid string of M&As, the latest neuroscience play signals that the pharma giant remains intent on leveraging its obesity market windfall to capture the next generation of blockbuster medicines.
-
-The company is pursuing two strategies in dealmaking, Lilly’s business development head and oncology president, Jake Van Naarden, recently told Fierce.
-
-Under the first model, the company is spreading the net by striking a large volume of early-stage deals.
-
-“The strategy there is, most of these things won’t work,” Van Naarden explained. “But we haven’t spent that much money in total, so if one or two work, it easily pays for the entire endeavor.”
-
-The other model focuses on candidates with proof-of-concept data—or, as Van Naarden put it, drugs that “at the time of the deal, you know are real.”
-
-“On the balance of 2026 but also going forward, we’re not done with either of these two strategies,” he said.",https://qtxasset.com/quartz/qcloud5/media/image/GettyImages-2162492912.jpg?VersionId=MygHPlNt5Ayj5mNhfbQj4_CKcmyyUtcw,N,,2026-06-16 15:12:20.455956
-ID19,Eli Lilly,2026-06-16 18:37:12+00:00,www.barrons.com,Eli Lilly Takes Another Stab at the Market for Painkillers. This Attempt Might Work. - Barron's,,,,,,https://www.barrons.com/articles/eli-lilly-stock-painkillers-acquisition-8da0dbbe,"Eli Lilly is acquiring Austin-based 4E Therapeutics, the developer of non-addictive painkillers, for an undisclosed amount.",Not Available,,Y,,2026-06-16 15:12:23.109951
