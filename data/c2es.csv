@@ -1,4 +1,119 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,Clean Energy ,2026-06-27 23:42:36+00:00,AZoCleantech,New Murakkab System Slashes Energy Costs for Complex AI Workflows - AZoCleantech,Not Available,,,,,https://www.azocleantech.com/news.aspx?newsID=36463,"To improve efficiency, researchers from MIT and Microsoft developed an intelligent system that streamlines the process of designing agentic workflows and automatically optimizes how those workflows are implemented.
+""Agentic workflows are getting very complicated and quickly becoming the backbone of what cloud providers are doing.
+With this new system, called Murakkab (an Urdu word that means a composition of things), the researchers sought to optimize the entire agentic workflow process.
+When tested on diverse agentic workflows for video Q&A and code generation, Murakkab met user requirements while using only about 35 percent of the computation required by other methods.
+Next, the researchers plan to expand their system to more complex workflows and larger computing clusters while exploring opportunities to optimize new agentic applications.","Agentic workflows are artificial intelligence-powered software systems that chain together multiple models and external tools to tackle complicated tasks, like analyzing a video and answering questions about it.
+
+But the way these highly fragmented systems are designed and deployed often causes inefficiencies that can lead to wasted computation, energy, and cost.
+
+To improve efficiency, researchers from MIT and Microsoft developed an intelligent system that streamlines the process of designing agentic workflows and automatically optimizes how those workflows are implemented.
+
+With this new method, a developer can describe what they want the agentic workflow to do in plain language, without needing to specify all the details of their application in advance.
+
+The system automatically figures out the best models and tools to use, as well as the ideal hardware configuration and computational resource allocation when the workflow is executed by a cloud provider.
+
+It adjusts those configurations on the fly based on each user's priorities, such as minimizing costs or maximizing speed.
+
+When tested on several agentic workloads, this new system reduced the number of computational units needed for deployment, significantly cutting energy requirements and costs compared to traditional approaches without hampering performance.
+
+""Agentic workflows are getting very complicated and quickly becoming the backbone of what cloud providers are doing. Energy usage is a huge concern, so we need to be very careful about how efficient these workflows are. It is very easy to over-allocate resources, wasting energy and money. Enabling a cloud provider to intelligently make these workflows more resource-optimal is a win for everyone involved,"" says Gohar Chaudhry, an electrical engineering and computer science (EECS) graduate student and lead author of a paper on this system.
+
+He is joined on the paper by Adam Belay, an associate professor of EECS and a member of the MIT Computer Science and Artificial Intelligence Laboratory; senior author Ricardo Bianchini, technical fellow and corporate vice president at Microsoft Azure; and others at Microsoft Azure. The paper will be presented at the USENIX Symposium on Operating Systems Design and Implementation.
+
+A Configuration Conundrum
+
+An agentic workflow is a system composed of several autonomous AI agents that collaboratively use various models and tools, like databases or Python programs, to dynamically complete a multi-step task, such data processing or code generation.
+
+These workflows can serve as behind-the-scenes processes that power user-facing applications.
+
+Typically, developers must hard-code all technical choices upfront. They need to define which AI agents, models, and tools to use, and the order in which to use them. They also must specify the hardware that runs the workflow and how to balance tradeoffs like speed versus cost.
+
+This is especially challenging because agentic workflows bring together multiple black-box models and diverse tools, each with their own configuration options, which may be offered by different companies.
+
+If a new AI model is released that would improve the application's accuracy or efficiency, the developer would need to start from scratch to implement it.
+
+""Even if you wanted to do all this manually, it is unlikely that you'll be able to configure the workflow optimally because the space of possible configurations is so large,"" Chaudhry says.
+
+In addition, the cloud data center that deploys the application for customers can't see inside the workflow to allocate its hardware resources in the most efficient manner at the time of the user's request.
+
+With this new system, called Murakkab (an Urdu word that means a composition of things), the researchers sought to optimize the entire agentic workflow process.
+
+Dynamic Decision-Making
+
+First, Murakkab enables developers to create an agentic workflow by describing their intent for the application in high-level terms, rather than detailing how the many components of that workflow should be combined.
+
+For instance, a developer might describe a video Q&A application that extracts key frames, generates a transcript, and then answers user queries about the video.
+
+""There are many ways to do this, and all these different models and tools have implications on how fast the application can finish the task,"" he says.
+
+Murakkab takes the developer's straightforward specifications and automatically identifies the best existing models and tools to put together into the workflow.
+
+It also determines which components need to run sequentially and which can be run in parallel to boost performance.
+
+""The platform makes configuration decisions dynamically over time, so if a new model or GPU accelerator comes out tomorrow, the developer doesn't need to worry about that,"" he says.
+
+When the cloud provider deploys that application for a customer, Murakkab optimizes the workflow by configuring its components to meet the user's constraints, such as prioritizing accuracy while meeting a latency requirement.
+
+It adaptively identifies ideal hardware allocations and deployment schedules to maximize efficiency in real time, then generates a workflow that is ready for the cloud provider to execute.
+
+""Our system also gives cloud providers visibility into multiple workloads, so the provider can share computational resources in the most efficient manner while satisfying the constraints of users,"" he says.
+
+When tested on diverse agentic workflows for video Q&A and code generation, Murakkab met user requirements while using only about 35 percent of the computation required by other methods. It consumed only about 27 percent as much energy for less than 25 percent of the cost.
+
+The dynamic nature of Murakkab also enables users to balance tradeoffs. In one instance, the system lowered energy consumption of an agentic workflow by more than an order of magnitude with only about a 2 percent drop in accuracy for the customer.
+
+The system was also able to identify an unexpectedly ideal configuration for a model that selects video frames, optimizing performance for a video Q&A task. This type of optimization would be nearly impossible for a developer to do manually, Chaudhry says.
+
+Next, the researchers plan to expand their system to more complex workflows and larger computing clusters while exploring opportunities to optimize new agentic applications.
+
+""There is a lot of potential to make these workflows more resource-optimal so they consume far less energy, but we need to be thinking about this at the scale of major cloud platforms,"" says Chaudhry.
+
+This research was supported, in part, by the Semiconductor Research Corporation and the U.S. Defense Advanced Research Projects Agency.",https://www.azocleantech.com/images/news/ThumbForNews_36463_17825819575863404.jpg,N,,2026-06-27 20:00:32.487573
+,North Carolina Environment,2026-06-27 23:26:12+00:00,https://www.foxcarolina.com,Environmental Protection Agency updates public on current status of 'Superfund',Not Available,,,,,https://www.foxcarolina.com/video/2026/06/27/environmental-protection-agency-updates-public-current-status-superfund/,Live recording,Not Available,https://gray-whns-prod.gtv-cdn.com/resizer/v2/https%3A%2F%2Fdo0bihdskp9dy.cloudfront.net%2F06-27-2026%2Ft_0d57b3a176174ec2932b57279543f93c_name_file_1280x720_2000_v3_1_.jpg?auth=7ee542572cc2494e443d16a695b8dec492c7cd9f2235e711164da98c2d39060e&width=1200&height=600&smart=true,N,,2026-06-27 20:00:53.423618
+,EVs,2026-06-27 23:09:27+00:00,The Cool Down,New Jersey moves to slash AI data center tax breaks and reroute money to power relief,Ray Brennan,,,,,https://www.thecooldown.com/green-business/lawmakers-advance-data-center-tax-credits/,"On that front, the state Senate Budget and Appropriations Committee unanimously advanced the ""End Data Center Tax Credits Act.""
+Residents in Andover have spoken out against one proposal, and Millville has passed an ordinance banning data centers altogether.
+Around the country, communities have also issued warnings about the water demands and environmental pressures associated with large-scale data facilities.
+The tax-credit measure is one response, but it fits into a broader effort in New Jersey to define firmer rules for data center growth.
+If that approach advances, it could provide stronger safeguards against shifting costs onto others while also supporting a cleaner grid through energy storage investment.","With resistance to artificial intelligence data centers growing in New Jersey, lawmakers are rethinking whether the state should keep offering large tax breaks to facilities that consume vast amounts of electricity.
+
+On that front, the state Senate Budget and Appropriations Committee unanimously advanced the ""End Data Center Tax Credits Act."" According to Yahoo News, the measure would remove $250 million from a program tied to AI and data center projects and send part of that money toward energy storage and relief for household electric bills.
+
+What happened?
+
+At the center of the proposal is the Next New Jersey Program, which, as Yahoo News reported, has reserved $500 million for AI- or data-center-related development. The bill would leave untouched the $250 million already awarded to one project while cutting the remaining funding pool in half.
+
+The legislation would also allow up to $125 million to flow through existing New Jersey Board of Public Utilities programs for energy storage projects. In addition, it would establish a one-time $100 gross income tax credit for residential electric customers making up to $55,000 a year.
+
+Supporters say taxpayer dollars would be better spent elsewhere than on subsidizing giant facilities with heavy power needs. Yahoo News reported that Peter Chen of New Jersey Policy Perspective supported the measure and said the current tax credit mostly benefits major data centers.
+
+Critics of the change say the consequences would reach beyond server farms. New Jersey Business & Industry Association research analyst Jack Ramirez cautioned, ""It's not just data centers. It is an entire industry that we are really stunting the growth of here, and it's important that we prioritize it.""
+
+Why does it matter?
+
+The dispute is unfolding as electricity remains expensive for many households and as data centers face growing criticism for the strain they can place on the grid. Sherrill recently said some of the facilities ""use 300 megawatts, enough to power entire towns.""
+
+Within four years, Yahoo News reported, data centers could be responsible for nearly 10% of New Jersey's electricity consumption.
+
+People who oppose rapid data center expansion argue that ordinary customers too often absorb the downsides through higher utility bills, stressed infrastructure, and subsidy packages that do little for nearby communities.
+
+Pushback is already taking shape at the local level. Residents in Andover have spoken out against one proposal, and Millville has passed an ordinance banning data centers altogether.
+
+Electricity is not the only concern. Around the country, communities have also issued warnings about the water demands and environmental pressures associated with large-scale data facilities.
+
+What's being done?
+
+The tax-credit measure is one response, but it fits into a broader effort in New Jersey to define firmer rules for data center growth. Sherrill has laid out a four-part plan designed to make the facilities ""pay their fair share by bringing their own energy to the table, operate transparently, add value to the grid and our communities, and support good-paying jobs long-term.""
+
+If that approach advances, it could provide stronger safeguards against shifting costs onto others while also supporting a cleaner grid through energy storage investment. Batteries and similar storage systems can help manage electricity supply and demand, a role that becomes more important as large new power loads are added.
+
+The proposed $100 tax credit is meant to provide direct help to lower-income households while utility bills remain elevated.",https://www.thecooldown.com/wp-content/uploads/2026/06/data-centers-new-jerseyimage-rec1cceHd7ei7Zd9w-1.jpg,N,,2026-06-27 20:00:27.582239
+,Detroit American Energy ,2026-06-27 22:57:43+00:00,News-Topic,Energy group praises bill curbing EPA regulatory 'abuses' | National | newstopicnews.com,"Thérèse Boudreaux, The Center Square",,,,,https://www.newstopicnews.com/news/national/energy-group-praises-bill-curbing-epa-regulatory-abuses/article_1dc30e1c-0d1b-53e1-90bd-de3409640e0b.html,(The Center Square) – Recently introduced legislation that would rein in certain regulatory powers of the Environmental Protection Agency has drawn praise from dozens of energy industry groups.,Not Available,https://bloximages.newyork1.vip.townnews.com/newstopicnews.com/content/tncms/custom/image/d5a6407a-f9c4-11ef-a38f-4f21c1e7ff04.png?crop=75%2C75%2C162%2C0&resize=200%2C200&order=crop%2Cresize,N,,2026-06-27 20:00:42.721923
+,Texas American Energy ,2026-06-27 22:27:19+00:00,www.energyindepth.org,"New Jersey Legislative Analysis Can't Quantify Costs of Climate Superfund Bill, Warns of ...",Kyle Kohli,,,,,https://www.energyindepth.org/new-jersey-legislative-analysis-cant-quantify-costs-of-climate-superfund-bill-warns-of-potential-non-trivial-legal-costs/,"It’s crunch time for the activists and Democratic lawmakers pushing New Jersey’s climate superfund bill – flawed legislation that would target the American energy industry with a multi-billion dollar retroactive tax for historical emissions.
+As the deadline looms for legislation to pass out of committees, the New Jersey State Legislature’s Office of Legislative Services published its fiscal estimate on the Assembly’s version of the bill, A 3735, and explicitly stated it cannot quantify the revenue and expenditure increases that may result from the bill’s enactment.
+It also warned of the potential for “non-trivial legal costs” if the state has to defend the legislation in court.","It’s crunch time for the activists and Democratic lawmakers pushing New Jersey’s climate superfund bill – flawed legislation that would target the American energy industry with a multi-billion dollar retroactive tax for historical emissions.
+
+As the deadline looms for legislation to pass out of committees, the New Jersey State Legislature’s Office of Legislative Services published its fiscal estimate on the Assembly’s version of the bill, A 3735, and explicitly stated it cannot quantify the revenue and expenditure increases that may result from the bill’s enactment. It also warned of the potential for “non-trivial legal costs” if the state has to defend the legislation in court.",https://www.energyindepth.org/wp-content/uploads/2018/03/eid_favicon_new.png,N,,2026-06-27 20:00:49.819770
 ,Texas American Energy ,2026-06-27 21:50:59+00:00,Amarillo Globe-News,"Xcel Energy Foundation gives $580,000 in grants to 37 nonprofits - Amarillo Globe-News",Kristina Wood,,,,,https://www.amarillo.com/story/news/2026/06/27/xcel-energy-foundation-gives-580000-in-grants-to-37-nonprofits/90691976007/,"The Xcel Energy Foundation awarded $580,000 to 37 nonprofits in Texas and New Mexico on Wednesday, June 24 to recognize their contributions in the areas of Science, Technology, Engineering and Math (STEM) career pathways, environmental sustainability and community vitality.
 “Nonprofit organizations across our region are creating opportunities and making a real difference in the communities we serve,” said Brad Baldridge, interim president, Xcel Energy — Texas, New Mexico.
 Window on a Wider World West Texas A&M University Foundation Women in Science Endeavors (WISE) WTAMU Program Project Feed the Kids (in Dumas) The grant program is one of several ways in which the foundation supports communities within the Xcel Energy service area.
@@ -247,10 +362,101 @@ AI-powered commercial real estate platforms are beginning to change this by inte
 The efficiency improvement is meaningful. Evaluating infrastructure readiness across a large number of potential acquisitions or markets is time-consuming when done manually. Technology that does this work systematically allows investors to apply their professional judgment to a better-screened, more consistently analysed opportunity set – which is exactly where human expertise delivers its highest value.
 
 Energy infrastructure has moved from the periphery of commercial real estate analysis to somewhere close to the center of how industrial sites are evaluated, priced, and competed for. The industries driving that shift – AI infrastructure, advanced manufacturing, electrification – are not going away, and their power requirements are growing rather than stabilizing.",https://energiesmedia.com/wp-content/uploads/2026/06/How-Energy-Infrastructure-Is-Reshaping-Demand-for-Industrial-Land-and-Specialized-Commercial-Real-Estate.jpg,N,,2026-06-27 18:59:57.558384
+,Clean Energy ,2026-06-27 20:19:18+00:00,Yahoo News,"'Jenga approach' helps Philadelphia campaign produce 11,000 jobs, $1.4 billion in savings",Vivian Tran,,,,,https://www.yahoo.com/news/us/articles/jenga-approach-helps-philadelphia-campaign-073800454.html,"Since 2016, the city's energy campaign has generated job growth, new investment, and more than $1.4 billion in savings.
+Utility Dive described the campaign's impact in three big numbers: over $1.4 billion in energy savings, $1.3 billion in economic investment, and more than 11,000 jobs tied to the effort.
+And we turned that into $1.3 billion and over 11,000 jobs.""
+Along with lowering emissions, the effort, according to the report, ""has saved millions in utility bills for the City of Philadelphia, homeowners, and commercial property owners.""
+Despite the loss of federal backing, including a $156 million Solar for All award, Schapira said: ""Our model is incredibly resilient on purpose.""","Philadelphia's decadelong effort to cut energy waste is producing results that extend far beyond lower utility bills.
+
+Since 2016, the city's energy campaign has generated job growth, new investment, and more than $1.4 billion in savings.
+
+For homeowners, going solar is one of the best ways to save money on home energy.
+
+What happened?
+
+Utility Dive described the campaign's impact in three big numbers: over $1.4 billion in energy savings, $1.3 billion in economic investment, and more than 11,000 jobs tied to the effort.
+
+Beyond those totals, the alliance among the Philadelphia Energy Authority, the city, and the City Council is generating $25.3 million annually in tax revenue and directing more than $130 million annually into energy efficiency and infrastructure.
+
+To show how much value the effort produced from city support, Philadelphia Energy Authority President and CEO Emily Schapira said: ""We got $14.7 million total over the 10 years from the city of Philadelphia towards our operating budget. That was their investment. And we turned that into $1.3 billion and over 11,000 jobs.""
+
+Instead of centering on one flagship project, the campaign used what Schapira called a ""Jenga approach,"" moving where quick progress seemed possible. That method contributed to more than 130,000 LED streetlights, upgrades at the Philadelphia Museum of Art that reduced electricity use by 28%, and programs aimed at reducing water losses from leaking pipes.
+
+Why does it matter?
+
+Along with lowering emissions, the effort, according to the report, ""has saved millions in utility bills for the City of Philadelphia, homeowners, and commercial property owners.""
+
+Through the Built to Last program, more than 400 low-income homeowners have received repair and energy upgrades, with estimated yearly savings of $300 to $1,000 per household.
+
+Another major piece of the campaign has been widening access to solar. Solarize Greater Philadelphia has helped more than 4,300 homeowners install solar systems, and over half of them are low-income residents.
+
+What's being done?
+
+Part of the reason the campaign has been able to expand is the way it combines different funding sources.
+
+Schapira said, ""The stacking and layering of different types of funding is really the unique thing that's happening in Philadelphia,"" referring to an approach that pairs private capital with public and philanthropic backing.
+
+Commercial Property Assessed Clean Energy financing has been one of the main tools, supporting about $400 million across 22 projects.
+
+The Philadelphia Green Capital Corp., a nonprofit green bank launched in 2021, has also widened access to lower-cost financing for renewable energy and efficiency projects.
+
+Despite the loss of federal backing, including a $156 million Solar for All award, Schapira said: ""Our model is incredibly resilient on purpose.""",https://s.yimg.com/lo/mysterio/api/4e8f2fc80c3a66798d7064b3084fa432d68ad2cc5d4ab091d6991671cc3849cf/lightyear_networkapi/resizefill_w1200;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fthe_cool_down_737%2Fb582df4ff5f8f5f95a001366e34bf55a,N,,2026-06-27 20:00:36.271025
 ,Congress,2026-06-27 20:06:07+00:00,www.gjsentinel.com,Why permitting reform can't wait | Columns - The Grand Junction Daily Sentinel,Not Available,,,,,https://www.gjsentinel.com/opinion/columns/why-permitting-reform-cant-wait/article_f8eba7b1-325f-424f-a04c-f5eee177f83c.html,Congress knows that. ... The Chamber of Commerce and environment and climate organizations like Nature Conservancy and Citizens' Climate Lobby.,Not Available,,N,,2026-06-27 17:06:35.219392
 ,EPA,2026-06-27 20:05:55+00:00,www.facebook.com,A U.S. federal appeals court on Friday rejected the Environmental Protection Agency's bid ‌to ...,Not Available,,,,,https://www.facebook.com/yahoonews/photos/a-us-federal-appeals-court-on-friday-rejected-the-environmental-protection-agenc/1397262768926071/,A U.S. federal appeals court on Friday rejected the Environmental Protection Agency's bid ‌to withdraw Biden-era limits on soot pollution from coal-fired...,Not Available,https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/729451853_1397262772259404_9040814492062337657_n.jpg?stp=dst-jpg_tt6&cstp=mx800x533&ctp=p206x206&_nc_cat=103&ccb=1-7&_nc_sid=27488d&_nc_ohc=PVSd2lP-YisQ7kNvwEHh1-E&_nc_oc=AdpLpgad932Z-8X2Z9qpibsKhkn7yHnX7sdGk08tfLH2qlpqY7ad8AjoSP25CGihDu8&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=lp-uwf7oJzj7ksgkYpp6Eg&_nc_ss=7b289&oh=00_Af_3Hcc6Hlk5NIj7nRWxe4DhfVmVWIMnsOE5AxjiK9_D2w&oe=6A45F60F,N,,2026-06-27 17:06:38.289233
 ,North Carolina and Evs,2026-06-27 19:51:34+00:00,nrtoday.com,"American EV Jobs Alliance Applauds Governor Newsom, Legislature for Landmark First ...",EVs for All America,,,,,https://www.nrtoday.com/online_features/press_releases/american-ev-jobs-alliance-applauds-governor-newsom-legislature-for-landmark-first-time-ev-buyer-incentive/article_19cfa5c4-9dae-52b2-ad5c-d390e598c579.html,"$135 million state investment, matched dollar-for-dollar by automakers, delivers more than $270 million in point-of-sale savings for California's first-time EV buyers as America marks its 250th birthday",Not Available,https://bloximages.newyork1.vip.townnews.com/nrtoday.com/content/tncms/assets/v3/editorial/7/e7/7e7dcbc5-9604-579c-b92d-b90f4a635497/6a3f997948284.image.jpg?crop=1859%2C976%2C131%2C0&resize=1200%2C630&order=crop%2Cresize,N,,2026-06-27 19:00:12.336225
+,Clean Energy ,2026-06-27 19:29:47+00:00,Representative Troy Carter,Congressman Carter Statement on Soot Pollution Ruling,Not Available,,,,,https://troycarter.house.gov/media/press-releases/congressman-carter-statement-soot-pollution-ruling,"WASHINGTON, D.C. – Today, Congressman Troy A. Carter, Sr. (D-LA) issued the following statement: “This ruling is a win for Louisianians and for every American who just wants to breathe clean air.
+The court was clear: the EPA's arguments for walking away from this rule simply did not hold up.
+“I understand the concerns raised by industry about compliance costs, and I will always fight for policies that keep Louisiana businesses competitive and our energy workforce strong.
+But protecting public health and supporting a responsible energy and manufacturing sector are not mutually exclusive goals.
+I'll continue pushing the EPA to implement this standard fully and fairly, and to work with us on a realistic path to compliance that protects both our families and our economy.” ###","WASHINGTON, D.C. – Today, Congressman Troy A. Carter, Sr. (D-LA) issued the following statement:
+
+“This ruling is a win for Louisianians and for every American who just wants to breathe clean air. The court was clear: the EPA's arguments for walking away from this rule simply did not hold up. That matters. The 2024 standard was grounded in science and built through a public process, and it's projected to prevent thousands of premature deaths and tens of thousands of asthma attacks every single year. Louisianans deserve those protections as much as anyone.
+
+“I understand the concerns raised by industry about compliance costs, and I will always fight for policies that keep Louisiana businesses competitive and our energy workforce strong. But protecting public health and supporting a responsible energy and manufacturing sector are not mutually exclusive goals. Cleaner air doesn't have to come at the expense of good jobs, and an EPA that simply refuses to enforce the law isn't doing right by the people it's supposed to serve.
+
+“I'm glad the courts stepped in here. I'll continue pushing the EPA to implement this standard fully and fairly, and to work with us on a realistic path to compliance that protects both our families and our economy.”
+
+###",https://troycarter.house.gov/sites/evo-subsites/troycarter.house.gov/files/evo-media-image/unnamed-1.png,N,,2026-06-27 20:00:39.493712
 ,American Energy,2026-06-27 19:29:19+00:00,YouTube,Indonesian government counts on waste-to-energy plants as landfills run out of space,Not Available,,,,,https://www.youtube.com/watch?v=Ip116rZuSpA,"Indonesia is facing a waste crisis, with landfills from Bali to Jakarta running out of space. The country is banking on waste-to-energy plants to ease the pr...",Not Available,https://i.ytimg.com/vi/Ip116rZuSpA/hqdefault.jpg,N,,2026-06-27 17:05:53.204902
+,North Carolina American Energy ,2026-06-27 19:19:55+00:00,The North State Journal,6 western NC counties plan microgrids for emergency power - The North State Journal,Elizabeth Lincicome,,,,,https://nsjonline.com/article/2026/06/6-western-nc-counties-plan-microgrids-for-emergency-power/,"The North Carolina Department of Environmental Quality recently announced it will invest $5 million to build 24 emergency power sources, known as microgrids, including in six counties in western North Carolina.
+Microgrids power essential equipment during a disaster and are often deployed when hurricanes cause outages, like those following Hurricane Helene in 2024.
+In addition, there will be two mobile Beehive Microgrids set up for western North Carolina and along the coast of eastern North Carolina, expected to be completed by March 2027.
+“Hurricane Helene knocked out power, water and communications for much of western North Carolina,” Trowbridge said.
+The group has been at the forefront of rebuilding in western North Carolina following Helene.","The North Carolina Department of Environmental Quality recently announced it will invest $5 million to build 24 emergency power sources, known as microgrids, including in six counties in western North Carolina.
+
+Microgrids power essential equipment during a disaster and are often deployed when hurricanes cause outages, like those following Hurricane Helene in 2024.
+
+The new microgrids will be available in Avery, Buncombe, Madison, Mitchell, Rutherford and Yancey counties, and located at vital community hubs, such as fire stations, food banks and churches. In addition, there will be two mobile Beehive Microgrids set up for western North Carolina and along the coast of eastern North Carolina, expected to be completed by March 2027.
+
+The idea is to make sure people have access to things like medical devices, fresh food and information.
+
+William Heegard, CEO and co-founder of the Footprint Project, a nonprofit that helps deploy renewable energy equipment after climate disasters, said he has seen firsthand how microgrids supply power to areas of the state that need it most.
+
+“Folks that often need it can’t get back to the physical locations where grids are available to charge things like their phone or computer, get oxygen, you name it,” he said.
+
+“Instead of moving electrons across the power lines and hoping the power lines are still up, we can move the batteries to the places where the poles are down the longest and place the microgrid downstream and build back greener from there.”
+
+Invest Appalachia is a nonprofit community investment organization and financing partner working with the Footprint Project on the new grids. Since Hurricane Helene, the two groups have partnered to build community resilience hubs and microgrid development across the region.
+
+Jamie Trowbridge, senior program manager for Footprint Project’s Appalachia Hub, said solar microgrids are a hedge against cascading system failures.
+
+“Hurricane Helene knocked out power, water and communications for much of western North Carolina,” Trowbridge said. “When the grid goes down, gas station pumps stop working, well pumps stop working, cell phone towers stop working. People who knew the backroads were driving to Tennessee to get gas for their vehicles, chainsaws and generators. We’re outfitting important community hubs with microgrids — places like fire stations and food pantries — so that we’ll be more prepared for next time.”
+
+Trowbridge said after Helene, the Burnsville Fire Department became a major hub for first responders and a field hospital. As such, the Burnsville Fire Department is one of the first sites chosen for one of the six new stationary microgrids.
+
+Land of Sky Regional Council, a multicounty local government planning and development organization, is also partnering on the initiative. The group has been at the forefront of rebuilding in western North Carolina following Helene.
+
+Experts say no matter how prepared a city or municipality thinks it is during power outages, what matters is whether people can keep medicine cold, charge a phone, access information, power essential services and support their neighbors during a natural disaster.
+
+Residents quickly learned after Helene that solar and battery storage can play an invaluable role in keeping the lights on throughout the region.
+
+“After Hurricane Helene, we saw firsthand how quickly a disaster can disrupt the systems our communities depend on,” said Claire Neal, CEO of MANNA FoodBank.
+
+“For MANNA, reliable cold storage and power are not just operational needs — they are essential to keeping food safe and getting it to families when they need it most. These solar-powered refrigerated units give us another way to respond in moments of crisis while helping build a stronger, more resilient food system for western North Carolina. We are grateful to Footprint Project, NCDEQ, Land of Sky Regional Council and NCSEA for bringing this kind of practical innovation to our region.”
+
+Investing in emergency power in the form of microgrids will help ensure North Carolina is better prepared for future storms and other grid events.
+
+“These are much more mobile than those trailers, so we would’ve been able to pack one of these full of food, fill it up, ship it and keep it at a county or an agency that was using it, and just service it and refill it with all the produce they need,” said Kelcey Brown-Meacham of MANNA FoodBank.",https://nsjonline.com/wp-content/uploads/2026/06/BURNSVILLERESPONSE-scaled.jpg,N,,2026-06-27 20:00:57.297654
 ,North Carolina American Energy ,2026-06-27 19:11:57+00:00,KPVI,Energy group praises bill curbing EPA regulatory 'abuses' | National News | kpvi.com,"Thérèse Boudreaux, The Center Square, Maclane Westbrook, Marcus Lamb, Amber Morgan, Fremont County",,,,,https://www.kpvi.com/news/national_news/energy-group-praises-bill-curbing-epa-regulatory-abuses/article_29a912c2-ed6c-5720-ac67-69daa6a03df3.html,(The Center Square) – Recently introduced legislation that would rein in certain regulatory powers of the Environmental Protection Agency has drawn praise from dozens of energy industry groups.,Not Available,https://bloximages.newyork1.vip.townnews.com/kpvi.com/content/tncms/custom/image/bf1ba152-8718-11e5-bca7-b7df38990b4a.jpg?resize=600%2C315,N,,2026-06-27 18:04:35.357125
 ,Indiana and Evs,2026-06-27 19:06:39+00:00,Indiana Gazette Online,Energy group praises bill curbing EPA regulatory 'abuses' - Indiana Gazette,"Thérèse Boudreaux, The Center Square",,,,,https://www.indianagazette.com/the_wire/energy-group-praises-bill-curbing-epa-regulatory-abuses/article_6482a2b6-6f1e-5482-b089-b6d397db792e.html,"Originally published on thecentersquare.com, part of the BLOX Digital Content Exchange.","Originally published on thecentersquare.com, part of the BLOX Digital Content Exchange.",https://bloximages.newyork1.vip.townnews.com/indianagazette.com/content/tncms/custom/image/c7a2337e-54f6-11e7-a069-27b302f33e37.jpg?resize=600%2C315,N,,2026-06-27 16:01:32.969501
 ,Clean Energy ,2026-06-27 19:01:21+00:00,www.facebook.com,Colorado is proving that clean energy and reducing costs go hand in hand. This partnership ...,Not Available,,,,,https://www.facebook.com/jaredpolis/posts/colorado-is-proving-that-clean-energy-and-reducing-costs-go-hand-in-hand-this-pa/1577301050635274/,"regulations on oil and gas are driving the cost up not down.
@@ -356,6 +562,7 @@ Another 80 PSS design methods take these criteria (CRI) into account either full
 Furthermore, the paper introduces a new classification of PSS DM that allows simultaneous assessment of the breadth, intensity, and depth of integration.
 It is based on four main indicators: PSS Integration Score (PSS IS), Direct Integration Count (DIC), Direct ratio (DR), and Coverage ratio (CR).","Recent decades have seen the dynamic development of the Product-Service System (PSS). This concept is considered one of the best instruments for enabling traditional industrial companies (COM) to transition toward energy-efficient, resource-saving, and environmentally friendly business practices. Furthermore, it enables extending product life through systematic maintenance and reuse. It also enables the generation of economic benefits and provides entirely new value for the development of industrial COM. The potential of PSS regarding environmental (ENV) and energy (EN) issues makes its widespread use justified, especially in the industrial sector This paper utilizes a multi-stage research methodology. A three-stage systematic literature review (SLR) constitutes a key step in this methodology. This approach allows for the study of PSS design methods (PSS DM) in the context of EN, sustainable transformation (ST), and environmental protection (EP). It also allows for the description of interconnections and relationships, ensuring a comprehensive understanding of PSS design in the context of EN, ST, and EP. This represents a novelty that has not yet been studied and published in the scientific literature on EN, sustainable development (SD), EP, and management. The results of this work indicate that the scientific literature contains 110 PSS DM, 30 of which do not address EN, ST, or EP. Another 80 PSS design methods take these criteria (CRI) into account either fully or partially. By conducting a comprehensive analysis of 80 PSS DM using 26 selected CRI related to EN, ST, and EP, we aim to highlight the issues identified in the context of PSS design. The most important features of design methods in this area, along with their gaps, are also highlighted. Furthermore, the current state of the literature on this phenomenon is critically reviewed. Furthermore, the paper introduces a new classification of PSS DM that allows simultaneous assessment of the breadth, intensity, and depth of integration. It is based on four main indicators: PSS Integration Score (PSS IS), Direct Integration Count (DIC), Direct ratio (DR), and Coverage ratio (CR). Based on the four indicators presented, 80 PSS DM were classified into four groups (T1 – Systemic Integrators, T2 – Focused Integrators, T3 – Exploratory Integrators, and T4 – Limited Integrators) reflecting different integration profiles. Finally, directions for future research are identified.",https://www.nature.com/static/images/favicons/nature/favicon-48x48-b52890008c.png,N,,2026-06-27 18:04:16.567206
 ,Clean Energy ,2026-06-27 18:01:51+00:00,Oswego County News Now,Constellation looks to renew Nine Mile through 2049 | News - The Palladium Times,Mike Perkins,,,,,https://www.oswegocountynewsnow.com/news/constellation-looks-to-renew-nine-mile-through-2049/article_8aadaa75-12cc-4911-b626-b9ee0498044b.html,"SCRIBA — Constellation Energy, the owner of Nine Mile Point, Unit 1, filed its license renewal extension with the Nuclear Regulatory Commission (NRC).",Not Available,https://bloximages.chicago2.vip.townnews.com/oswegocountynewsnow.com/content/tncms/assets/v3/editorial/2/b0/2b0b500a-bd45-11ed-9a78-c3563e822c0f/6407d1cd9b290.image.jpg?crop=1920%2C1008%2C0%2C35&resize=1200%2C630&order=crop%2Cresize,N,,2026-06-27 18:04:03.003581
+,Texas Clean Energy,2026-06-27 18:00:06+00:00,www.msn.com,Trump tax credit cutoff triggers U.S. solar project surge - MSN,Not Available,,,,,https://www.msn.com/en-us/news/insight/trump-tax-credit-cutoff-triggers-u-s-solar-project-surge/gm-GMDEF98656?gemSnapshotKey=GMDEF98656-snapshot-1&fdhead=hp-de-cb-t,"... credits, with some Texas deals already seeing 120% increases. ... 4 references. 1. Reuters· 1d. Trump clean energy tax credit cutoff drives project rush ...",Not Available,,N,,2026-06-27 20:00:45.522417
 ,Clean Energy ,2026-06-27 17:52:47+00:00,AZoCleantech,Flexible Data Centers Could Lower Energy Costs but Increase Emissions - AZoCleantech,Not Available,,,,,https://www.azocleantech.com/news.aspx?newsID=36464,"Specifically, if data centers move a significant portion of their energy consumption to non-peak hours, it might actually help lower average energy costs.
 The paper is titled ""Flexible Data Centers Reduce Power System Costs But Can Increase Emissions,"" and appears today in the journal iScience.
 The researchers studied these regions because they collectively host most of the country's data centers - about 82 percent of U.S. data centers by 2030, according to one analysis.
@@ -9233,45 +9440,6 @@ Editor's note: This story has been updated to revise the solar project figures f
 * ADDITIONAL DETAILS... - Rounds of showers and embedded thunderstorms may produce locally heavy rainfall that could lead to flash flooding.
 PRECAUTIONARY/PREPAREDNESS ACTIONS... People in the watch area, especially those living in areas prone to flooding, should be prepared to take action should flooding develop.
 Monitor the latest forecasts and be alert for possible flood warnings.","...FLOOD WATCH REMAINS IN EFFECT THROUGH SATURDAY MORNING... * WHAT...Flash flooding caused by excessive rainfall continues to be possible. * WHERE...The following counties, in southeast Indiana, Dearborn, Franklin, Ohio, Ripley and Switzerland, the following counties, in Kentucky, Boone, Bracken, Campbell, Carroll, Gallatin, Grant, Kenton, Lewis, Mason, Owen, Pendleton and Robertson, and the following counties, in Ohio, Adams, Brown, Butler, Clermont, Clinton, Fayette, Hamilton, Highland, Pike, Ross, Scioto and Warren. * WHEN...Through Saturday morning. * IMPACTS...Excessive runoff may result in flooding of rivers, creeks, streams, and other low-lying and flood-prone locations. * ADDITIONAL DETAILS... - Rounds of showers and embedded thunderstorms may produce locally heavy rainfall that could lead to flash flooding. PRECAUTIONARY/PREPAREDNESS ACTIONS... People in the watch area, especially those living in areas prone to flooding, should be prepared to take action should flooding develop. Monitor the latest forecasts and be alert for possible flood warnings. &&",https://bloximages.chicago2.vip.townnews.com/journal-news.com/content/tncms/assets/v3/editorial/4/d8/4d869e69-a482-52b2-87d7-827a949da170/6a3e71ca41081.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize,N,,2026-06-26 14:14:49.674039
-,Indiana American Energy ,2026-06-26 12:52:31+00:00,The Killeen Daily Herald,US Energy Crisis | Associated Press | kdhnews.com,Nam Y. Huh,,,,,https://kdhnews.com/news/ap/us-energy-crisis/image_e14b321c-db7a-5874-883f-c74b6642f904.html,"Signup today!
-Signup today!
-Signup today!
-Signup today!
-Signup today!","Would you like to receive sports news from all the schools we cover? Signup today!
-
-Sports Updates Tuesday - Saturday
-
-Would you like to receive news about the Copperas Cove Bulldawgs? Signup today!
-
-Sports Updates Tuesday - Saturday
-
-Would you like to receive news about the Belton Tigers? Signup today!
-
-Sports Updates Tuesday - Saturday
-
-Would you like to receive news about the Ellison Eagles? Signup today!
-
-Sports Updates Tuesday - Saturday
-
-Would you like to receive news about the Florence Buffaloes? Signup today!
-
-Sports Updates Tuesday - Saturday
-
-Would you like to receive news about the Gatesville Hornets? Signup today!
-
-Sports Updates Tuesday - Saturday
-
-Would you like to receive news about the Harker Heights knights? Signup today!
-
-Sports Updates Tuesday - Saturday
-
-Would you like to receive news about the Killeen Kangaroos? Signup today!
-
-Sports Updates Tuesday - Saturday
-
-Would you like to receive news about the Lampasas Badger? Signup today!
-
-Sports Updates Tuesday - Saturday",https://bloximages.newyork1.vip.townnews.com/kdhnews.com/content/tncms/assets/v3/editorial/e/14/e14b321c-db7a-5874-883f-c74b6642f904/6a3e729d37cb3.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize,N,,2026-06-26 10:59:59.683928
 ,Louisiana American Energy ,2026-06-26 12:52:31+00:00,The Killeen Daily Herald,US Energy Crisis | Associated Press | kdhnews.com,Nam Y. Huh,,,,,https://kdhnews.com/news/ap/us-energy-crisis/image_f023ba63-e38b-52ee-becd-dfc14a8c5267.html,"Signup today!
 Signup today!
 Signup today!
@@ -9311,6 +9479,45 @@ Sports Updates Tuesday - Saturday
 Would you like to receive news about the Lampasas Badger? Signup today!
 
 Sports Updates Tuesday - Saturday",https://bloximages.newyork1.vip.townnews.com/kdhnews.com/content/tncms/assets/v3/editorial/f/02/f023ba63-e38b-52ee-becd-dfc14a8c5267/6a3e72a058aaf.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize,N,,2026-06-26 09:55:17.147010
+,Indiana American Energy ,2026-06-26 12:52:31+00:00,The Killeen Daily Herald,US Energy Crisis | Associated Press | kdhnews.com,Nam Y. Huh,,,,,https://kdhnews.com/news/ap/us-energy-crisis/image_e14b321c-db7a-5874-883f-c74b6642f904.html,"Signup today!
+Signup today!
+Signup today!
+Signup today!
+Signup today!","Would you like to receive sports news from all the schools we cover? Signup today!
+
+Sports Updates Tuesday - Saturday
+
+Would you like to receive news about the Copperas Cove Bulldawgs? Signup today!
+
+Sports Updates Tuesday - Saturday
+
+Would you like to receive news about the Belton Tigers? Signup today!
+
+Sports Updates Tuesday - Saturday
+
+Would you like to receive news about the Ellison Eagles? Signup today!
+
+Sports Updates Tuesday - Saturday
+
+Would you like to receive news about the Florence Buffaloes? Signup today!
+
+Sports Updates Tuesday - Saturday
+
+Would you like to receive news about the Gatesville Hornets? Signup today!
+
+Sports Updates Tuesday - Saturday
+
+Would you like to receive news about the Harker Heights knights? Signup today!
+
+Sports Updates Tuesday - Saturday
+
+Would you like to receive news about the Killeen Kangaroos? Signup today!
+
+Sports Updates Tuesday - Saturday
+
+Would you like to receive news about the Lampasas Badger? Signup today!
+
+Sports Updates Tuesday - Saturday",https://bloximages.newyork1.vip.townnews.com/kdhnews.com/content/tncms/assets/v3/editorial/e/14/e14b321c-db7a-5874-883f-c74b6642f904/6a3e729d37cb3.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize,N,,2026-06-26 10:59:59.683928
 ,Detroit and Evs,2026-06-26 12:48:23+00:00,www.chinadaily.com.cn,Why legacy automakers are losing the race - Opinion - Chinadaily.com.cn,Muhammad Haris,,,,,https://www.chinadaily.com.cn/a/202606/26/WS6a3dcbc8a310986e2b461fb9.html,"It is why the legacy automakers — with their century of accumulated engineering, brand equity, and distribution reach — are so structurally incapable of matching the speed of their Chinese competitors.
 The recent entry of Chinese manufacturers through EVs is a classic case of the innovator's dilemma.
 They compete with legacy automakers on two fronts simultaneously — one regulatory, the other technological.
@@ -11676,6 +11883,29 @@ GNA
 Edited by Kenneth Sackey
 
 Reporter: Jibril Abdul Mumuni",https://gna.org.gh/web/wp-content/uploads/2026/06/Economics-Automotive-Investments-.jpg,N,,2026-06-26 10:59:32.275554
+,American Energy,2026-06-26 02:32:59+00:00,www.publicpower.org,Plan for Fusion Power Plant Advances with Washington State Licenses,Not Available,,,,,https://www.publicpower.org/periodical/article/plan-fusion-power-plant-advances-with-washington-state-licenses,"Helion, a Washington-based fusion energy company, on June 16 said it became the first company in the world to secure the regulatory licenses needed for a fusion power plant, following receipt of two licenses from the Washington Department of Health (DOH).
+""These licenses demonstrate Helion’s commitment to engaging early and often with state regulators to ensure compliance with system requirements.
+They enable Helion to continue building on the site of Orion, the world’s first fusion power plant,"" it said.
+Washington’s pathway was strengthened by bipartisan state legislation in 2024 and 2025 – HB 1924 and HB 1018 – that clarified fusion’s role in clean energy policy and provided permitting certainty for fusion power plants.
+Orion’s RAEL and RML are the latest in a group of key permits and licenses required for Helion to build and operate its first fusion power plant in Washington state.","Helion, a Washington-based fusion energy company, on June 16 said it became the first company in the world to secure the regulatory licenses needed for a fusion power plant, following receipt of two licenses from the Washington Department of Health (DOH).
+
+The licenses – Radioactive Materials License (RML) and Radioactive Air Emissions License (RAEL) – ""mark a major milestone for the company, confirming Helion has the facilities, trained personnel, and safety programs in place at its Orion facility in Malaga, WA, to meet the rigorous safety standards required for fusion operations,"" the company said.
+
+""These licenses demonstrate Helion’s commitment to engaging early and often with state regulators to ensure compliance with system requirements. They enable Helion to continue building on the site of Orion, the world’s first fusion power plant,"" it said.
+
+The Washington DOH is the licensing body for fusion power in the state, following the U.S. Nuclear Regulatory Commission’s decision to regulate fusion under the byproduct material framework, alongside particle accelerators and hospitals, rather than like nuclear fission reactors.
+
+This distinction, codified by Congress in the bipartisan ADVANCE Act of 2024, reflects fusion’s fundamentally different safety profile and enables a right-sized path to deployment, Helion said.
+
+Washington’s pathway was strengthened by bipartisan state legislation in 2024 and 2025 – HB 1924 and HB 1018 – that clarified fusion’s role in clean energy policy and provided permitting certainty for fusion power plants.
+
+Orion’s RAEL and RML are the latest in a group of key permits and licenses required for Helion to build and operate its first fusion power plant in Washington state.
+
+Their receipt follows Helion’s deep community engagement efforts in Chelan County -- where Malaga is located -- dating back to 2023, including more than 10 public meetings to discuss the project.
+
+The company is also working toward a transmission interconnection agreement with Chelan County Public Utility District, in what will be the first such agreement for a fusion power plant, marking another key step toward delivering electricity to the grid.
+
+Helion continues to build Orion in Malaga, with the assembly and office building construction complete.",https://www.publicpower.org/themes/custom/appa_foundation/favicon.ico,N,,2026-06-26 00:59:48.818577
 ,EVs,2026-06-26 02:32:59+00:00,www.publicpower.org,CPS Energy Unveils New EV Smart Rewards Program | American Public Power Association,Not Available,,,,,https://www.publicpower.org/periodical/article/cps-energy-unveils-new-ev-smart-rewards-program,"With electric vehicles becoming more common across San Antonio, Texas, CPS Energy is partnering with WeaveGrid on a new program designed to help customers save money while supporting grid reliability, CPS Energy said on June 25.
 Through the EV Smart Rewards Program, eligible customers can earn bill credits for charging their electric vehicles during times that reduce strain on the electric grid.
 EV Smart Rewards provides an automated charging experience designed to help drivers maximize savings.
@@ -11707,29 +11937,6 @@ The program supports up to two devices per household and is available to drivers
 • Eligible vehicles: Tesla, Jeep, Toyota, and Lexus electric vehicle or plug-in hybrid.
 
 • Eligible chargers: ChargePoint®, Emporia®, and Wallbox® home charging station.",https://www.publicpower.org/themes/custom/appa_foundation/favicon.ico,N,,2026-06-26 00:59:33.963623
-,American Energy,2026-06-26 02:32:59+00:00,www.publicpower.org,Plan for Fusion Power Plant Advances with Washington State Licenses,Not Available,,,,,https://www.publicpower.org/periodical/article/plan-fusion-power-plant-advances-with-washington-state-licenses,"Helion, a Washington-based fusion energy company, on June 16 said it became the first company in the world to secure the regulatory licenses needed for a fusion power plant, following receipt of two licenses from the Washington Department of Health (DOH).
-""These licenses demonstrate Helion’s commitment to engaging early and often with state regulators to ensure compliance with system requirements.
-They enable Helion to continue building on the site of Orion, the world’s first fusion power plant,"" it said.
-Washington’s pathway was strengthened by bipartisan state legislation in 2024 and 2025 – HB 1924 and HB 1018 – that clarified fusion’s role in clean energy policy and provided permitting certainty for fusion power plants.
-Orion’s RAEL and RML are the latest in a group of key permits and licenses required for Helion to build and operate its first fusion power plant in Washington state.","Helion, a Washington-based fusion energy company, on June 16 said it became the first company in the world to secure the regulatory licenses needed for a fusion power plant, following receipt of two licenses from the Washington Department of Health (DOH).
-
-The licenses – Radioactive Materials License (RML) and Radioactive Air Emissions License (RAEL) – ""mark a major milestone for the company, confirming Helion has the facilities, trained personnel, and safety programs in place at its Orion facility in Malaga, WA, to meet the rigorous safety standards required for fusion operations,"" the company said.
-
-""These licenses demonstrate Helion’s commitment to engaging early and often with state regulators to ensure compliance with system requirements. They enable Helion to continue building on the site of Orion, the world’s first fusion power plant,"" it said.
-
-The Washington DOH is the licensing body for fusion power in the state, following the U.S. Nuclear Regulatory Commission’s decision to regulate fusion under the byproduct material framework, alongside particle accelerators and hospitals, rather than like nuclear fission reactors.
-
-This distinction, codified by Congress in the bipartisan ADVANCE Act of 2024, reflects fusion’s fundamentally different safety profile and enables a right-sized path to deployment, Helion said.
-
-Washington’s pathway was strengthened by bipartisan state legislation in 2024 and 2025 – HB 1924 and HB 1018 – that clarified fusion’s role in clean energy policy and provided permitting certainty for fusion power plants.
-
-Orion’s RAEL and RML are the latest in a group of key permits and licenses required for Helion to build and operate its first fusion power plant in Washington state.
-
-Their receipt follows Helion’s deep community engagement efforts in Chelan County -- where Malaga is located -- dating back to 2023, including more than 10 public meetings to discuss the project.
-
-The company is also working toward a transmission interconnection agreement with Chelan County Public Utility District, in what will be the first such agreement for a fusion power plant, marking another key step toward delivering electricity to the grid.
-
-Helion continues to build Orion in Malaga, with the assembly and office building construction complete.",https://www.publicpower.org/themes/custom/appa_foundation/favicon.ico,N,,2026-06-26 00:59:48.818577
 ,Texas American Energy ,2026-06-26 02:20:46+00:00,www.army.mil,Army announces conditional lease awards for domestic critical mineral processing facilities ...,Not Available,,,,,https://www.army.mil/article/293503/army_announces_conditional_lease_awards_for_domestic_critical_mineral_processing_facilities_to_secure_defense_supply_chains,"WASHINGTON — In a major step toward strengthening national defense and securing domestic supply chains, the U.S. Army announced today the conditional award of long-term leases to four companies to design, finance, build, and operate critical mineral processing facilities on Army installations.
 ; Red River Army Depot, Texas; and Tooele Army Depot, Utah, the Army is engaging with industry leaders to establish domestic processing capacity for minerals foundational to the warfighting capability of the Joint Force.
 Anniston Army Depot and Pine Bluff Arsenal: Empire State Mines, LLC, a wholly owned subsidiary of Titan Mining Corporation.
@@ -14727,15 +14934,6 @@ The automaker's next fully new model, the compact Polestar 7 SUV, is slated for 
 ,EVs,2026-06-25 18:17:35+00:00,ETAuto.com,"EU EV sales surge weakens push to dilute 2035 combustion-engine ban, says commissioner","ET Auto, www.ETAuto.com",,,,,https://auto.economictimes.indiatimes.com/amp/news/industry/electric-vehicle-sales-surge-challenges-eus-combustion-engine-ban-rollback/132000897,"Join the community of 2M+ industry professionals Subscribe to our Daily, Weekly, and Evening NewsLetter, Take a look","Join the community of 2M+ industry professionals
 
 Subscribe to our Daily, Weekly, and Evening NewsLetter, Take a look","https://etimg.etb2bimg.com/thumb/msid-132000897,imgsize-259937,width-1200,height=627,overlay-etauto,resizemode-75/industry/electric-vehicle-sales-surge-challenges-eus-combustion-engine-ban-rollback.jpg",N,,2026-06-25 20:02:36.692258
-,North Carolina and Evs,2026-06-25 18:15:03+00:00,www.edmunds.com,Government Bans Polestar Sales in U.S. Starting in 2027,Not Available,,,,,https://www.edmunds.com/car-news/polestar-brand-banned-usa-2027.html,"403 Access Denied We're sorry, but you don't have permission to access this page.
-This may be due to network restrictions or unusual activity.
-If you believe this is an error, please include the reference ID and IP Address when contacting support.","403
-
-Access Denied
-
-We're sorry, but you don't have permission to access this page. This may be due to network restrictions or unusual activity.
-
-If you believe this is an error, please include the reference ID and IP Address when contacting support.",,N,,2026-06-25 15:05:41.849348
 ,Detroit and Evs,2026-06-25 18:15:03+00:00,Automotive Manufacturing Solutions,Nissan halts electric Qashqai - pressure on Sunderland plant increases,AMS Editorial,,,,,https://www.automotivemanufacturingsolutions.com/news/nissan-reportedly-halts-development-of-the-electric-qashqai/2688381,"According to Reuters, the Japanese manufacturer is thus responding to the increasing competitive pressure in the European electric car market.
 The Sunderland plant, with around 6,000 employees, is the largest vehicle site in Great Britain and is regarded as a central building block of Nissan's European strategy.
 While the future of a fully electric Qashqai remains unclear, Nissan is sticking to other electrification projects in Sunderland.
@@ -14779,6 +14977,15 @@ Advertisement
 The current development fits with the long-term realignment of the Japanese manufacturer. Nissan is planning a reduction of its global model portfolio from 56 to 45 vehicles and is placing greater emphasis on shared vehicle architectures, higher volumes per model and a flexibly usable production structure. At the same time, the range of electrified powertrains is to be expanded, with in particular hybrid technologies taking on an important role in the transition phase.
 
 This article was first published in our sister magazine, automobil-produktion.de.",https://image.automotivemanufacturingsolutions.com/2687205.jpg?imageId=2687205&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683,N,,2026-06-25 15:05:29.672766
+,North Carolina and Evs,2026-06-25 18:15:03+00:00,www.edmunds.com,Government Bans Polestar Sales in U.S. Starting in 2027,Not Available,,,,,https://www.edmunds.com/car-news/polestar-brand-banned-usa-2027.html,"403 Access Denied We're sorry, but you don't have permission to access this page.
+This may be due to network restrictions or unusual activity.
+If you believe this is an error, please include the reference ID and IP Address when contacting support.","403
+
+Access Denied
+
+We're sorry, but you don't have permission to access this page. This may be due to network restrictions or unusual activity.
+
+If you believe this is an error, please include the reference ID and IP Address when contacting support.",,N,,2026-06-25 15:05:41.849348
 ,EVs,2026-06-25 18:14:46+00:00,Inc,This Bezos-Backed Startup Just Launched America's Cheapest EV. There's No Touchscreen ...,Abigail Bassett,,,,,https://www.inc.com/abigail-bassett/bezos-backed-slate-just-launched-americas-cheapest-ev-theres-no-touchscreen-or-radio-but-customers-are-lining-up/91365719,"The bare-bones “Blank Slate” pickup starts at $24,950 before the destination charge, making it the least expensive new electric vehicle in the country.
 It is also the least expensive new pickup of any kind, and costs roughly half the price of the average new vehicle sold in the United States.
 Buyers at the bottom are stretched The problem for Slate isn’t simply that it’s selling an inexpensive vehicle.
@@ -17095,6 +17302,57 @@ Hybrid powertrains offered 1%-26% emission reductions.
 
 SEAS doctoral student Spencer Checkoway also contributed to the research, as did Robert De Kleine, Hyung Chul Kim and James Anderson at Ford Motor Co.",https://news.umich.edu/wp-content/uploads/mc-image-cache/2026/06/sustainable_trucks_MCOMMONS-AssortedCampusSelects-4.jpg.jpg,N,,2026-06-25 12:15:25.037627
 ,American Energy,2026-06-25 14:56:32+00:00,www.wsj.com,The Power Plant Hiding In Plain Sight | Climate & Energy for June 25 - WSJ,,,,,,https://www.wsj.com/business/energy-oil/the-power-plant-hiding-in-plain-sight-d7ec8dd4,"The U.S. needs to build more power plants, poles and wires to meet rising electricity demand, but projects and supply chains are backlogged in every ...",Not Available,,Y,,2026-06-25 12:13:47.415823
+,North Carolina Environment,2026-06-25 14:51:47+00:00,WFAE 90.7 - Charlotte's NPR News Source,First in Conservation: Farm Bill extends tax credit | WFAE 90.7 - Charlotte's NPR News Source,"Lilly Knoepp | NC Local, www.wfae.org, lilly-knoepp-nc-local",,,,,https://www.wfae.org/energy-environment/2026-06-25/first-in-conservation-farm-bill-extends-tax-credit,"North Carolina boasts a number of firsts: first in flight, the nation’s first public university and the first colony to officially sanction independence in 1776.
+And more than four decades ago, North Carolina added another first: the first state in the country to offer a tax credit to support land conservation efforts.
+The credit allows donors to receive a tax credit for up to 25% of the fair market value of the donated land.
+A new cap and statewide impact The 2024 Farm Bill brought back the conservation tax credit for the first time in 2025.
+In 2025, the N.C. Department of Natural & Cultural Resources certified 43 applications for the Conservation Tax Credit, which totaled 4,129 acres conserved.","North Carolina boasts a number of firsts: first in flight, the nation’s first public university and the first colony to officially sanction independence in 1776.
+
+And more than four decades ago, North Carolina added another first: the first state in the country to offer a tax credit to support land conservation efforts.
+
+The credit was a tool used to incentivize the donation of land to an eligible nonprofit or state agency for preservation from 1983 to 2013. Now, under the Farm Bill signed into law this week, the credit, which was reinstated on a two-year basis in 2024 will extend through 2031.
+
+“Agriculture is a key driver of North Carolina’s economy, and I appreciate the General Assembly’s collaboration on this law. I am grateful that it strengthens the preservation of North Carolina’s natural and agricultural lands by extending conservation tax credits until 2031,” Governor Josh Stein said in a press release.
+
+The credit allows donors to receive a tax credit for up to 25% of the fair market value of the donated land. The credit can’t exceed $250,000 for a single person or $500,000 for a business.
+
+In the three decades before the credit was revoked in 2013, the effort helped protect more than 260,000 acres of land in North Carolina, according to estimates from the N.C. Department of Natural & Cultural Resources.
+
+“We're not against all development, but we feel like there are those special places that really give Western North Carolina and the community we work in a special character. These public lands that attract tourists, are great for the local economy, create these recreational healthy ways to get outside and do some healthy outdoor activities for our local residents, Conserving Carolina executive director Kieran Roe said. “So, we feel like that's a priority for us to protect those places and enhance them.”
+
+One project in western North Carolina leveraged the credit last year: a 20-acre tract along the Green River in a Game Lands area.
+
+The 14,000-acre Green River Game Lands are owned and managed by the State Wildlife Resources Commission on the Polk-Henderson County line. This easement will create a buffer between the game lands and nearby development, Roe explained.
+
+A new cap and statewide impact
+
+The 2024 Farm Bill brought back the conservation tax credit for the first time in 2025.
+
+“I am pleased to say that despite the program being on a hiatus for over a decade, we had strong demand during the first year,” Will Summer, Director of the Division of Land and Water Stewardship at the Natural & Cultural resources department, told NC Local in an email.
+
+“It was a great value to conservation and to the NC taxpayer, delivering at least 6 dollars’ worth of land protection for every dollar of tax credit,” Summer said.
+
+In 2025, the N.C. Department of Natural & Cultural Resources certified 43 applications for the Conservation Tax Credit, which totaled 4,129 acres conserved.
+
+Summer said roughly two-thirds of the applications were for working farmland and forestland projects while one-third was for fish and wildlife habitat. There was one additional project that was certified for historic landscape conservation.
+
+The program caps the credits at $5 million cap for these credits across the state each year, but the 2025 program did not exceed the threshold, according to Summer.
+
+If 25% of the conserved land reaches that $5 million cap then donors will receive a proportionate amount of tax credit based on their donation, according to the statute.
+
+“While estimated value for the donations was over $30 million, the cost of the program in tax credits will not be more that $5 million – coincidentally the same six to one benefit to cost ratio we saw during the first 30 years of the program,” Summer said.
+
+The tax incentive motivated donations in prior years, Roe at Conserving Carolinas, which serves primarily Henderson,Transylvania and Polk counties, said. The end of the credit prompted a rush of donations in 2013.
+
+“I think 2013 may have been our single busiest year for projects. I think we did over 20 in that single year,” Roe, who has served as the director for 27 years, said.
+
+While the tax break provided motivation, Roe said most people donate land because they value conservation.
+
+“Western North Carolina is one of the most biodiverse places in the country, if not the world,” Roe said. “If you're going to work in conservation, I always feel like this is a great place to work. People not only appreciate the bounty of nature, but tend to have an emotional connection to these lands, to the mountains, to the beautiful, natural landscapes that we have.”
+
+The conservation has built more than 100 miles of trails and 50 miles of two new rail trails which follow historic rail lines like the Saluda Grade Trail.
+
+Roe said the five-year extension in the Farm Bill will help property owners plan how to move forward.",https://npr.brightspotcdn.com/dims4/default/96a9441/2147483647/strip/true/crop/1415x743+0+137/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F01%2F45%2F700dcdb94416a4ed05d10b6d5c67%2Fscreenshot-2026-06-25-101501.png,N,,2026-06-25 12:15:51.509028
 ,North Carolina Environment,2026-06-25 14:51:47+00:00,WFAE 90.7 - Charlotte's NPR News Source,A Pipeline Company Says It Will Protect the Environment in North Carolina. Its Record in ... - WFAE,"Lisa Sorg | Inside Climate News, www.wfae.org, lisa-sorg-nc-newsline",,,,,https://www.wfae.org/energy-environment/2026-06-25/a-pipeline-company-says-it-will-protect-the-environment-in-north-carolina-its-record-in-tennessee-says-otherwise,"Enbridge’s East Tennessee Natural Gas is building the 122-mile Ridgeline project to supply natural gas to the Tennessee Valley Authority’s Kingston Gas plant, scheduled to open late next year.
 Yet a week after the SELC’s letter, East Tennessee Natural Gas incurred its most serious known violation since construction began.
 The commission also required East Tennessee Natural Gas to provide extensive documentation about the decision to prematurely build the bridge.
@@ -17176,57 +17434,6 @@ And second, “Following the existing electric transmission easement in its enti
 Alderman, who has mapped the potentially affected properties—including his own—said some landowners with existing transmission easements could lose as much as 40 percent of their land if Enbridge builds alongside those rights-of-way.
 
 “For people who have only a few acres, the power line easement is a true burden,” Alderman said.",https://npr.brightspotcdn.com/dims4/default/14ed2a0/2147483647/strip/true/crop/1232x647+98+0/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F1b%2Ff7%2F65dca9d24235963fec153194667a%2F102422-mvp-pipeline-construction.JPG,N,,2026-06-25 12:15:48.422541
-,North Carolina Environment,2026-06-25 14:51:47+00:00,WFAE 90.7 - Charlotte's NPR News Source,First in Conservation: Farm Bill extends tax credit | WFAE 90.7 - Charlotte's NPR News Source,"Lilly Knoepp | NC Local, www.wfae.org, lilly-knoepp-nc-local",,,,,https://www.wfae.org/energy-environment/2026-06-25/first-in-conservation-farm-bill-extends-tax-credit,"North Carolina boasts a number of firsts: first in flight, the nation’s first public university and the first colony to officially sanction independence in 1776.
-And more than four decades ago, North Carolina added another first: the first state in the country to offer a tax credit to support land conservation efforts.
-The credit allows donors to receive a tax credit for up to 25% of the fair market value of the donated land.
-A new cap and statewide impact The 2024 Farm Bill brought back the conservation tax credit for the first time in 2025.
-In 2025, the N.C. Department of Natural & Cultural Resources certified 43 applications for the Conservation Tax Credit, which totaled 4,129 acres conserved.","North Carolina boasts a number of firsts: first in flight, the nation’s first public university and the first colony to officially sanction independence in 1776.
-
-And more than four decades ago, North Carolina added another first: the first state in the country to offer a tax credit to support land conservation efforts.
-
-The credit was a tool used to incentivize the donation of land to an eligible nonprofit or state agency for preservation from 1983 to 2013. Now, under the Farm Bill signed into law this week, the credit, which was reinstated on a two-year basis in 2024 will extend through 2031.
-
-“Agriculture is a key driver of North Carolina’s economy, and I appreciate the General Assembly’s collaboration on this law. I am grateful that it strengthens the preservation of North Carolina’s natural and agricultural lands by extending conservation tax credits until 2031,” Governor Josh Stein said in a press release.
-
-The credit allows donors to receive a tax credit for up to 25% of the fair market value of the donated land. The credit can’t exceed $250,000 for a single person or $500,000 for a business.
-
-In the three decades before the credit was revoked in 2013, the effort helped protect more than 260,000 acres of land in North Carolina, according to estimates from the N.C. Department of Natural & Cultural Resources.
-
-“We're not against all development, but we feel like there are those special places that really give Western North Carolina and the community we work in a special character. These public lands that attract tourists, are great for the local economy, create these recreational healthy ways to get outside and do some healthy outdoor activities for our local residents, Conserving Carolina executive director Kieran Roe said. “So, we feel like that's a priority for us to protect those places and enhance them.”
-
-One project in western North Carolina leveraged the credit last year: a 20-acre tract along the Green River in a Game Lands area.
-
-The 14,000-acre Green River Game Lands are owned and managed by the State Wildlife Resources Commission on the Polk-Henderson County line. This easement will create a buffer between the game lands and nearby development, Roe explained.
-
-A new cap and statewide impact
-
-The 2024 Farm Bill brought back the conservation tax credit for the first time in 2025.
-
-“I am pleased to say that despite the program being on a hiatus for over a decade, we had strong demand during the first year,” Will Summer, Director of the Division of Land and Water Stewardship at the Natural & Cultural resources department, told NC Local in an email.
-
-“It was a great value to conservation and to the NC taxpayer, delivering at least 6 dollars’ worth of land protection for every dollar of tax credit,” Summer said.
-
-In 2025, the N.C. Department of Natural & Cultural Resources certified 43 applications for the Conservation Tax Credit, which totaled 4,129 acres conserved.
-
-Summer said roughly two-thirds of the applications were for working farmland and forestland projects while one-third was for fish and wildlife habitat. There was one additional project that was certified for historic landscape conservation.
-
-The program caps the credits at $5 million cap for these credits across the state each year, but the 2025 program did not exceed the threshold, according to Summer.
-
-If 25% of the conserved land reaches that $5 million cap then donors will receive a proportionate amount of tax credit based on their donation, according to the statute.
-
-“While estimated value for the donations was over $30 million, the cost of the program in tax credits will not be more that $5 million – coincidentally the same six to one benefit to cost ratio we saw during the first 30 years of the program,” Summer said.
-
-The tax incentive motivated donations in prior years, Roe at Conserving Carolinas, which serves primarily Henderson,Transylvania and Polk counties, said. The end of the credit prompted a rush of donations in 2013.
-
-“I think 2013 may have been our single busiest year for projects. I think we did over 20 in that single year,” Roe, who has served as the director for 27 years, said.
-
-While the tax break provided motivation, Roe said most people donate land because they value conservation.
-
-“Western North Carolina is one of the most biodiverse places in the country, if not the world,” Roe said. “If you're going to work in conservation, I always feel like this is a great place to work. People not only appreciate the bounty of nature, but tend to have an emotional connection to these lands, to the mountains, to the beautiful, natural landscapes that we have.”
-
-The conservation has built more than 100 miles of trails and 50 miles of two new rail trails which follow historic rail lines like the Saluda Grade Trail.
-
-Roe said the five-year extension in the Farm Bill will help property owners plan how to move forward.",https://npr.brightspotcdn.com/dims4/default/96a9441/2147483647/strip/true/crop/1415x743+0+137/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F01%2F45%2F700dcdb94416a4ed05d10b6d5c67%2Fscreenshot-2026-06-25-101501.png,N,,2026-06-25 12:15:51.509028
 ,Texas American Energy ,2026-06-25 14:51:00+00:00,auroraer.com,Aurora Energy Research Supports $1.3 Billion Financing of Matrix Renewables' U.S. Solar ...,Not Available,,,,,https://auroraer.com/company/press-room/aurora-energy-research-supports-1-3-billion-financing-of-matrix-renewables-u-s-solar-and-storage-portfolio,"We use cookies to help you navigate efficiently and perform certain functions.
 You will find detailed information about all cookies under each consent category below.
 The cookies that are categorised as ""Necessary"" are stored on your browser as they are essential for enabling the basic functionalities of the site.","We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below.
@@ -22069,210 +22276,3 @@ By signing up, you agree to the Terms of Service and Privacy Policy, including C
 By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.","Sign up now to get your own personalized timeline!
 
 By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.",https://pbs.twimg.com/profile_images/1441111357386940417/onii3dei_200x200.jpg,N,,2026-06-24 21:01:42.164219
-,EPA,2026-06-24 23:51:12+00:00,US EPA,EPA Announces Over $15.8 Million in Brownfields Grants to Revitalize Communities in California,US EPA,,,,,https://www.epa.gov/newsreleases/epa-announces-over-158-million-brownfields-grants-revitalize-communities-california,"June 24, 2026 Today, the U.S. Environmental Protection Agency (EPA) announced more than $15.3 million in Brownfields Multipurpose, Assessment and Cleanup (MAC) grants to accelerate the cleanup of polluted sites across California.
-“Addressing environmental contamination and reusing brownfield properties revitalizes neighborhoods, drives local job creation, and unleashes new economic opportunities.
-$7,000,000 for selected recipients for Assessment Grants to conduct brownfield inventories, planning, environmental assessments, and community outreach.
-$6,380,379 for selected recipients for Cleanup Grants to carry out cleanup activities at brownfield sites owned by the recipient.
-Through fiscal year 2025, on average, $19.47 was leveraged for each EPA Brownfields Grant dollar awarded through multipurpose, assessment, revolving loan fund and cleanup cooperative agreements.","June 24, 2026
-
-Today, the U.S. Environmental Protection Agency (EPA) announced more than $15.3 million in Brownfields Multipurpose, Assessment and Cleanup (MAC) grants to accelerate the cleanup of polluted sites across California. EPA also provided $500,000 in supplemental funding to the City of Fresno’s Brownfields Revolving Loan Fund (RLF). With these funds, EPA is investing directly in American communities to cleanup and redevelop blighted properties, delivering on the Trump Administration’s commitment to ensure that clean air, land, and water goes hand-in-hand with economic growth and opportunity.
-
-“EPA is focused on delivering practical results that transform contaminated properties into clean, valuable spaces that spark economic growth and that directly benefit American families,” said Acting Assistant Administrator for Land and Emergency Management Thomas Croci. “Addressing environmental contamination and reusing brownfield properties revitalizes neighborhoods, drives local job creation, and unleashes new economic opportunities. EPA is proud to partner with local communities to ensure they have the cleanest air, land, and water as we power the Great American Comeback.”
-
-""From a former ship scavenging site on the San Francisco waterfront to vacant lots in Fresno's Chinatown and South Los Angeles, these grants reach communities across California that have waited years for the resources to deal with these properties,"" said Mike Martucci, Acting Regional Administrator for EPA's Pacific Southwest Region. ""Local governments, housing developers, and community organizations know cleaning these sites means safe housing, public space, and new jobs, and this funding helps them get there.""
-
-Clean air, land, and water for all Americans is the first pillar of President Trump and Administrator Zeldin’s Powering the Great American Comeback initiative. These grants put that commitment into action while simultaneously powering economic growth in communities across the country. Selected applications for the 2026 Brownfield Multipurpose, Assessment, and Cleanup Grants and RLF supplemental funding in California include:
-
-$2,000,000 for selected recipients for Multipurpose Grants to conduct brownfield inventories, planning, environmental assessments, community outreach, and cleanup activities at a brownfield site owned by the recipient.
-
-$7,000,000 for selected recipients for Assessment Grants to conduct brownfield inventories, planning, environmental assessments, and community outreach.
-
-$6,380,379 for selected recipients for Cleanup Grants to carry out cleanup activities at brownfield sites owned by the recipient.
-
-$500,000 for a high-performing RLF grantee to continue operating revolving loan funds that finance cleanup activities and promote redevelopment at brownfields sites.
-
-Grant recipients with viable cleanup projects ready for work will help communities continue their work to carry out cleanup and redevelopment projects on contaminated brownfield properties.
-
-View the list of selected applicants in California here.
-
-Background
-
-EPA’s Brownfields Program began in 1995 and, once these grants are awarded, will have provided over $3 billion in grant funding to assess and clean up contaminated properties and return blighted properties to productive reuse. To date, brownfields investments leveraged more than $45 billion in cleanup and redevelopment. Over the years, the relatively small investment of federal funding was able to leverage, from both public and private sources, more than 228,900 jobs. Through fiscal year 2025, on average, $19.47 was leveraged for each EPA Brownfields Grant dollar awarded through multipurpose, assessment, revolving loan fund and cleanup cooperative agreements.
-
-After selection, awards will be made once all legal and administrative requirements are satisfied by selected applicants.",https://www.epa.gov/sites/all/themes/epa/img/epa-news-releases-og.jpg,N,,2026-06-25 02:01:06.127833
-,American Energy,2026-06-24 23:45:56+00:00,www.facebook.com,"Ember ""Solar overtakes coal in US electricity for the first month on record"" by Rashmi Mishra ...",,,,,,https://www.facebook.com/progressntwrk/posts/we-didnt-see-this-coming-either-️for-the-first-time-ever-solar-has-overtaken-coa/1355208850039055/,"We didn't see this coming either. ☀️For the first time ever, solar has overtaken coal in US electricity generation in America. In May 2026, solar.",Not Available,,Y,,2026-06-25 03:00:36.208145
-,EPA,2026-06-24 23:37:45+00:00,www.grassley.senate.gov,Grassley-Backed Infrastructure Law Delivers $2.5 Million in Environmental Protection ...,Not Available,,,,,https://www.grassley.senate.gov/news/news-releases/grassley-backed-infrastructure-law-delivers-25-million-in-environmental-protection-agency-funding-to-clean-up-iowa-communities,"WASHINGTON – Sen. Chuck Grassley (R-Iowa) welcomed an announcement from the Environmental Protection Agency (EPA) that Iowa will receive $2.5 million in federal funding authorized by the Infrastructure Investment and Jobs Act, which Grassley supported in 2021.
-“I voted for the bipartisan infrastructure law to invest in Iowa and support clean air, land and water.
-City of Dubuque: $500,000 to fund an Assessment grant to conduct brownfield inventories, planning, environmental assessments and community outreach.
-Nahant Marsh Education Center: $500,000 to fund an Assessment grant to conduct brownfield inventories, planning, environmental assessments and community outreach.
-East Central Intergovernmental Association: $500,000 to continue operating revolving loan funds that finance cleanup activities and promote redevelopment at brownfields sites.","WASHINGTON – Sen. Chuck Grassley (R-Iowa) welcomed an announcement from the Environmental Protection Agency (EPA) that Iowa will receive $2.5 million in federal funding authorized by the Infrastructure Investment and Jobs Act, which Grassley supported in 2021. The total includes $2 million in Brownfields Multipurpose, Assessment and Cleanup (MAC) grants to accelerate the cleanup of polluted sites and $500,000 to one high-performing Brownfields Revolving Loan Fund (RLF) grantee.
-
-The EPA defines a brownfield as a property where expansion, redevelopment or reuse could be complicated due to the presence, or potential presence, of hazardous substances, pollutants or contaminants. By helping to clean up and redevelop these properties, brownfield grants help transform spaces, safeguard public health and foster economic growth.
-
-“I voted for the bipartisan infrastructure law to invest in Iowa and support clean air, land and water. These EPA funds will strengthen our communities and grow local economies,” Grassley said. “In the Senate, I’ll keep working to ensure our state gets the funding we need to help Iowa prosper.”
-
-Details on the EPA awards resulting from the bipartisan infrastructure law follow:
-
-City of Burlington: $1,000,000 to fund an MAC grant to conduct brownfield inventories, planning, environmental assessments, community outreach and cleanup activities.
-
-City of Dubuque: $500,000 to fund an Assessment grant to conduct brownfield inventories, planning, environmental assessments and community outreach.
-
-Nahant Marsh Education Center: $500,000 to fund an Assessment grant to conduct brownfield inventories, planning, environmental assessments and community outreach.
-
-East Central Intergovernmental Association: $500,000 to continue operating revolving loan funds that finance cleanup activities and promote redevelopment at brownfields sites.",https://www.grassley.senate.gov/assets/images/sharelogo.png,N,,2026-06-24 21:01:44.893963
-,EPA,2026-06-24 23:32:13+00:00,ecology.wa.gov,Ecology proposes fallback plan to protect progress on clean vehicles in case of federal rollbacks,Not Available,,,,,https://ecology.wa.gov/about-us/who-we-are/news/2026/ecology-proposes-fallback-plan-to-protect-progress-on-clean-vehicles-in-case-of-federal-rollbacks,"OLYMPIA – The Washington Department of Ecology has proposed a contingency plan for the state’s vehicle emissions standards, which have been challenged at the federal level.
-Vehicle emissions standards are a critical tool for addressing climate change and improving air quality.
-Gas- and diesel-powered vehicles are the state’s biggest source of greenhouse gas emissions, and a leading source of toxic air pollutants, including those that cause cancer.
-In 2026, the U.S. Environmental Protection Agency repealed the “endangerment finding,” illegally undoing its own authority to regulate vehicle pollution at the federal level.
-If the federal government’s actions are upheld, all state and federal regulations on vehicle pollution will be weakened or eliminated.","OLYMPIA –
-
-The Washington Department of Ecology has proposed a contingency plan for the state’s vehicle emissions standards, which have been challenged at the federal level. The plan is being considered through Ecology’s rulemaking process and would ensure that Washington continues decarbonizing transportation, lowering costs for drivers, and protecting communities from harmful air pollution, regardless of federal actions.
-
-Vehicle emissions standards are a critical tool for addressing climate change and improving air quality. Washington’s standards expand clean car options for consumers and ensure that new gas- and diesel-powered vehicles pollute less.
-
-Gas- and diesel-powered vehicles are the state’s biggest source of greenhouse gas emissions, and a leading source of toxic air pollutants, including those that cause cancer. People living near major transportation corridors are especially vulnerable to these pollutants. As of 2019, nearly one million Washingtonians lived within a quarter mile of heavy traffic roadways. Since then, the state’s population has increased by over 500,000 people, with the majority of that growth occurring in major metro areas.
-
-In 2025, Congress attempted to strip Washington and other states of their longstanding authority to protect residents from harmful vehicle pollution by opting for emissions standards that are stronger than the federal government’s. Washington is part of a bipartisan, multistate coalition challenging this move. In 2026, the U.S. Environmental Protection Agency repealed the “endangerment finding,” illegally undoing its own authority to regulate vehicle pollution at the federal level. Washington and 38 other jurisdictions challenged that action in federal court.
-
-If the court rules in Washington’s favor, the state’s current standards will remain in full force. If the federal government’s actions are upheld, all state and federal regulations on vehicle pollution will be weakened or eliminated. The contingency plan proposed by Ecology would reinstate older standards that have so far been unaffected by federal actions. While these standards are not as strong as what Washington currently has in place, they would ensure that the state has the strongest standards available.
-
-All gas- and diesel-powered vehicles sold in Washington already meet the criteria laid out in the older standards, and drivers and businesses that have purchased a vehicle in the state previously won’t be affected by these changes. Meanwhile, Ecology and other state agencies are exploring new policies to make clean vehicles more affordable and accessible through Governor Ferguson’s ZEVergreen effort.",https://ecology.wa.gov/getattachment/220cfdbf-b3a3-4c82-8eca-f92c62683246/Electric-cars-charging.jpg?width=630 ,N,,2026-06-24 21:01:47.925294
-,Indiana American Energy ,2026-06-24 23:25:41+00:00,Indiana Gazette Online,Oppenheimer's grandson supports nuclear energy bill | National News | indianagazette.com,"Madeline Shannon, The Center Square",,,,,https://www.indianagazette.com/the_wire/oppenheimer-s-grandson-supports-nuclear-energy-bill/article_20dfd83e-49bd-5116-a90e-2b2ab9a8ba02.html,"Originally published on thecentersquare.com, part of the BLOX Digital Content Exchange.","Originally published on thecentersquare.com, part of the BLOX Digital Content Exchange.",https://bloximages.newyork1.vip.townnews.com/indianagazette.com/content/tncms/custom/image/c7a2337e-54f6-11e7-a069-27b302f33e37.jpg?resize=600%2C315,N,,2026-06-24 20:04:19.064336
-,American Energy,2026-06-24 23:12:35+00:00,"Energy News, Top Headlines, Commentaries, Features & Events - EnergyNow.com",Canada's AtkinsRealis Seeks U.S. Approval for Nuclear Tech to Power AI Boom,"www.facebook.com, US.EnergyNow",,,,,https://energynow.com/2026/06/canadas-atkinsrealis-seeks-u-s-approval-for-nuclear-tech-to-power-ai-boom/,"The Montreal-based company has filed a notice of intent with the U.S. Nuclear Regulatory Commission to get certification of its Enhanced Candu Six nuclear reactor.
-U.S. data centre requirements for electricity are expected to nearly triple by 2035 to over 100 gigawatts, according to a BloombergNEF report.
-In the U.S., cumulative installed nuclear capacity should increase 58 per cent to 164 gigawatts by then, according to its forecast.
-The Nuclear Regulatory Commission has made changes to lower the burden for applicants and speed up approvals of new reactor designs within 18 months.
-It also includes a commitment to modernizing the design of Candu reactor technology, which the Canadian government owns and to which AtkinsRealis is the exclusive licensee.","The Nuclear Regulatory Commission has made changes to lower the burden for applicants and speed up approvals
-
-By Mathieu Dion
-
-The surge in new data centres for artificial intelligence is translating into growth for the United States electricity sector, and Canadian nuclear company AtkinsRealis Group Inc. wants in.
-
-The Montreal-based company has filed a notice of intent with the U.S. Nuclear Regulatory Commission to get certification of its Enhanced Candu Six nuclear reactor. Chief executive Ian Edwards said the company has been in talks with U.S. utilities and hyperscalers.
-
-“It’s becoming increasingly difficult to find energy on the grid, so they’re looking to develop power sources for themselves,” he said. “We need to be ahead of this in terms of getting the regulatory approval in place.”
-
-Data centres, electric vehicles and air conditioning will push power demand sharply higher over the next few decades. U.S. data centre requirements for electricity are expected to nearly triple by 2035 to over 100 gigawatts, according to a BloombergNEF report.
-
-BloombergNEF says solar and wind will be the leaders in global electricity production by 2050, but nuclear will still grow. In the U.S., cumulative installed nuclear capacity should increase 58 per cent to 164 gigawatts by then, according to its forecast.
-
-But U.S. President Donald Trump’s ambitions go much further, with the goal of facilitating the expansion of nuclear energy capacity to as much as 400 gigawatts by 2050. His administration is seeking to jumpstart the nuclear industrial base by improving the efficiency of licensing advanced nuclear reactors, among other measures.
-
-The Nuclear Regulatory Commission has made changes to lower the burden for applicants and speed up approvals of new reactor designs within 18 months.
-
-“We are going to be the first one with a proven design, a licensed design, to go through that process, and we think we could get there probably in 12 to 14 months,” said Joe St. Julian, AtkinsRealis’ president of nuclear.
-
-After that, the company’s executives think they could build quite rapidly. An EC6 700-megawatt reactor was constructed in China within a five-year timeframe, according to chief executive Edwards. “It’s become fairly competitive even with gas from a time perspective,” he said. “It’s very competitive on a price perspective too, because it’s not a first of a kind.” The Candu technology uses natural uranium, and not more expensive enriched uranium.
-
-Shares of AtkinsRealis got a boost Monday after the Canadian government announced a strategy to enable construction of as many as 10 large-scale nuclear reactors. It also includes a commitment to modernizing the design of Candu reactor technology, which the Canadian government owns and to which AtkinsRealis is the exclusive licensee.
-
-AtkinsRealis is currently developing a nuclear reactor model, the Candu Monark, that could potentially reach about 1,000 megawatts and compete with the AP1000 technology from rival Westinghouse Electric Co.
-
-The firm’s nuclear unit represented slightly more than 20 per cent of its total revenue at $2.3 billion last year, and is expected to reach as much as $3 billion in 2027. “We can definitely see this evolving where it could be 40 per cent of the business,” Edwards said.
-
-Bloomberg.com
-
-Share This:
-
-More News Articles",https://energynow.com/wp-content/uploads/A-cooling-tower-at-a-nuclear-power-plant-in-Middletown-Pennsylvania-1200x810-1.jpg,N,,2026-06-24 20:03:21.763107
-,Texas Clean Energy,2026-06-24 23:11:09+00:00,E&E News by POLITICO,Solar has a PR problem. Could 'Got Milk?' help? - E&E News by POLITICO,"Jason Plautz, Camille von Kaenel, Shelby Webb, Timothy Cama, Corbin Hiar, Adam Aton, Jeffrey Tomich, Ian M. Stevenson, Jason Plautz, Camille von Kaenel",,,,,https://www.eenews.net/articles/solar-has-a-pr-problem-could-got-milk-help/,"Advertisement “We need to do more to talk about the benefits of solar power, to get away from some of the opposition that has demonized solar power,” said Luigi Resta, CEO of the Utah-based solar company rPlus Energies.
-The solar industry is badly outspent by fossil fuel interests in Washington, contributing to a roller coaster of policy and tax incentive changes.
-The money could be used to fund research and marketing aimed at speeding renewable energy projects.
-It’s still unclear what a solar checkoff campaign would look like.
-If we behave like the energy industry that we are, we should have a much bigger presence.”","Is it time for “Got Solar?”
-
-After a brutal start to the second Trump administration, some solar energy insiders are pushing for a public relations blitz to boost the industry’s image and counter opposition from landowners or local officials who have stalled large projects.
-
-There’s even talk of borrowing a tactic from the agriculture industry and tacking a small fee on new solar panels to support public education and workforce development campaigns. The checkoff model is best known for the “Got Milk?” ads — backed by a surcharge on dairy products — that featured celebrities such as Michael Jordan, Britney Spears and the Simpsons with milk mustaches.
-
-Advertisement
-
-“We need to do more to talk about the benefits of solar power, to get away from some of the opposition that has demonized solar power,” said Luigi Resta, CEO of the Utah-based solar company rPlus Energies. “Solar power is ours, we have a right to it.”
-
-Resta’s company — which has not advocated for the checkoff fee — has released three self-funded ads with the tagline “Our Power,” including one from the perspective of a solar energy worker comparing his job to the work of his coal mining grandfather.
-
-A checkoff fee could fund similar ads — if industry groups can get on board.
-
-The idea has been kicking around for years, but it’s picked up steam in Democratic-led statehouses across the country in the year since President Donald Trump and congressional Republicans eliminated renewable energy tax credits in the One Big Beautiful Bill Act.
-
-The solar industry is badly outspent by fossil fuel interests in Washington, contributing to a roller coaster of policy and tax incentive changes.
-
-But within the industry, there’s debate about whether an image makeover would make a difference — especially if it involves a small price increase at a time when energy affordability is front and center.
-
-It’s getting the most serious look in California, one of the country’s largest renewable-energy markets. But there’s been discussion too in states such as Virginia, Colorado, New York and Maryland.
-
-California lawmakers and energy companies have been in early conversations since last year on a possible measure to raise money for the industry.
-
-The talks come as Gov. Gavin Newsom and other state officials have sought to accelerate the permitting of renewable energy projects to meet increasingly strict emissions targets, handle rising demand for electricity, and make up for the loss of federal incentives — all while reckoning with rising anger over high electric bills.
-
-“I’m open to doing it,” said state Sen. Henry Stern, a Democrat from Santa Monica, who’s working with the advocacy group Coalition to Power America to draft legislative language.
-
-The draft bill, which has not yet been introduced, would set up an independent board composed of energy industry representatives that could levy a fee on solar, battery and wind projects. The money could be used to fund research and marketing aimed at speeding renewable energy projects.
-
-Talking points circulated with the draft bill say its goal is to pool and organize industry resources to build utility-scale renewable energy faster and eventually bring down ratepayer costs with cheaper renewable energy. They also emphasize “safety awareness,” a nod to the pushback battery projects have received in local communities after a spate of fires.
-
-Early discussions within industry groups, however, have laid bare disagreements over which projects should be eligible and who should control the funding, stalling negotiations. The issue of energy affordability looms large too, and it is generating some opposition to any added fee on new energy.
-
-“I’m just waiting to see if they can agree,” Stern said. “There’s competing industry priorities.”
-
-The state Legislature has until Aug. 31 to pass bills, which must then get a signature from Newsom to become law.
-
-California Energy Commission Chair David Hochschild, meanwhile, has convened industry players to discuss the idea of marketing funding, according to an email invite obtained by POLITICO.
-
-Niki Woodard, a spokesperson for the California Energy Commission, said the agency does not comment on pending legislation but added that “we support efforts that help California deploy clean energy resources faster in support of our climate and energy affordability goals.”
-
-A bill to create a checkoff program was also floated this year in Virginia, although it was unsuccessful.
-
-The checkoff model
-
-Commodity checkoff campaigns have been widely used in the agriculture sector, supporting products such as eggs, beef, cotton, Haas avocados, softwood lumber and even Christmas trees.
-
-USDA’s Agricultural Marketing Service currently oversees 21 research and promotion boards. The campaigns must focus on generic promotion, rather than ads for individual products, and can’t include political lobbying.
-
-It’s still unclear what a solar checkoff campaign would look like. The bill introduced in Virginia would have placed a 2-cent-per-watt fee on new solar projects and energy storage systems, with proceeds going to a state treasury fund managed by a 13-member promotion board.
-
-The draft legislation circulated in California this year would impose a similar 1.3-cent-per-watt fee on solar panels. That would add roughly 0.65 percent to the estimated $2-per-watt cost of commercial solar and 0.45 percent to the $2.90-per-watt cost of rooftop solar, according to federal figures.
-
-The bill would also create a $2-per-kilowatt surcharge for energy storage and a $7-per-kilowatt-hour fee for land-based wind projects. The members of the board overseeing the money all would come from the renewable energy industry.
-
-According to a memo circulated as part of the California discussions, the solar fee could raise between $35 million and $81 million per year. The storage fee could raise between $61 million and $86 million.
-
-Many developers, however, question whether that fee is worthwhile, especially when the economics of solar power have made it one of the cheapest new sources of energy.
-
-Even “Got Milk,” while a brand awareness juggernaut, did not stem a decline in cow’s milk consumption.
-
-Some industry officials granted anonymity to discuss ongoing negotiations said it might be better to just let solar win on the economic merits alone. Others said there was disagreement over which types of projects should pay a checkoff fee and who should control the resulting funding.
-
-Supporters of the program say it’s a necessary step to get a leg up in Washington, especially after recent policy defeats have left companies sore over federal lobbying failures. For example, industry veteran Steve McBee recently launched a fundraising and advocacy group to shake up traditional clean energy lobbying.
-
-By the numbers, the Solar Energy Industries Association spent $2.8 million on federal lobbying in 2025, by far the group’s biggest outlay, according to data from OpenSecrets. The American Clean Power Association spent more than $5 million that year, also the group’s biggest year.
-
-But those totals pale in comparison to more established energy interests. The Edison Electric Institute, which represents investor-owned utilities, spent $9.4 million that year. The American Petroleum Institute spent $7.8 million, and even individual companies such as Occidental Petroleum and Exxon Mobil outspent the clean energy groups on their own.
-
-SEIA declined to comment. A spokesperson for the American Clean Power Association said the group is not participating in checkoff conversations and declined to comment.
-
-An industry official granted anonymity to discuss the fluid negotiations said the checkoff program is not designed to compete with existing lobbying groups and that the checkoff funds would not support any direct staff. Instead, a governing board would make grants that could go to ACP or SEIA to address the “noneconomic barriers to accelerated deployment of zero-fuel-cost clean energy.”
-
-“However,” the source added, “neither SEIA nor ACP have substantial state and local presence, which is where these barriers to deployment show up, so there is a gap to close.”
-
-The Coalition to Power America, which worked with Stern on the California bill and also advocated for the Virginia bill, is founded by Tom Matzzie, the CEO of CleanChoice Energy.
-
-Matzzie, who has also bankrolled efforts to oust elected officials who oppose renewable energy, declined to comment.
-
-The industry must also navigate issues beyond Washington, with policies around land use, permitting and incentives differing across states, utilities, counties and local governments.
-
-“Trump’s actions are federal, but at the end of the day these projects are implemented at the local level,” said KC Becker, the head of the Colorado Solar and Storage Association and a former speaker of the Colorado House.
-
-“And that takes resources to show up and understand where local governments are or their level of engagement and knowledge,” Becker added. “That means working with municipalities, utilities, building departments, every level of the government.”
-
-Andrew Birch, the founder of the Australian company Open Solar who has also worked in the U.S., said there is a challenge with rooftop solar, which is more expensive in the U.S. than other countries in large part because of slow permitting rules that delay installations. Birch has advocated for the industry to push a federal permitting process to ease the delays and lower costs but said there has been little engagement.
-
-“In the states, we can’t get through the barrier of permitting reform until we get organized as an industry,” Birch said. “We’re an industry that employs several thousand people in every state. Why does the coal industry have such a massive lobby? If we behave like the energy industry that we are, we should have a much bigger presence.”",https://static.politico.com/dims4/default/55a1666/2147483647/resize/1200/quality/100/?url=https://static.politico.com/5e/d7/6750aee441c1b3787fa4a7229a5d/solar-farm-laguardia-airport-17606.jpg,N,,2026-06-24 22:59:56.116277
-,Louisiana and Evs,2026-06-24 23:06:30+00:00,elkintribune.com,Frustration at the Pump: Why Americans are Exploring Electric Vehicles - The Elkin Tribune,Not Available,,,,,https://www.elkintribune.com/online_features/money_and_finance/frustration-at-the-pump-why-americans-are-exploring-electric-vehicles/article_3da7c1b7-cbb3-5ece-a876-bd05d043a258.html,"(Feature Impact) For more than one-third of Americans, one simple number is leading them to research electric vehicles: the final tally at a ...",Not Available,https://bloximages.chicago2.vip.townnews.com/elkintribune.com/content/tncms/assets/v3/editorial/c/84/c8442a2d-80ab-5055-a65b-f9e6dd7e727a/6a0ab33b65444.image.jpg?crop=650%2C341%2C0%2C24,N,,2026-06-24 21:58:25.148304
-,EPA,2026-06-24 23:03:06+00:00,www.law360.com,EPA Proposal Tightens Scope And Length Of NEPA Reviews - Law360,Keith Goldberg,,,,,https://www.law360.com/amp/articles/2493345,"The U.S. Environmental Protection Agency on Wednesday floated an overhaul of how it conducts environmental reviews that includes limiting the scope of what environmental impacts the agency considers and establishing a... To view the full article, register now.
-Already a subscriber?
-Click here to view full article","The U.S. Environmental Protection Agency on Wednesday floated an overhaul of how it conducts environmental reviews that includes limiting the scope of what environmental impacts the agency considers and establishing a...
-
-To view the full article, register now.
-
-Already a subscriber? Click here to view full article",,N,,2026-06-24 21:01:50.272468
