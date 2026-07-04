@@ -1,4 +1,73 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID32,Microsoft,2026-07-04 20:35:29+00:00,Tech Times,Microsoft Copilot Merges Into One App in August as Feature Cuts Reveal a Paid-Adoption Crisis,Jerry Owens,,,,,https://www.techtimes.com/articles/319706/20260704/microsoft-copilot-merges-one-app-august-feature-cuts-reveal-paid-adoption-crisis.htm,"The unified app will connect GitHub Copilot, Copilot chat, Copilot Cowork, and the new AutoPilot agent layer under a shared identity graph — one login across GitHub and Microsoft 365 rather than separate authentications for each.
+The gap between where Microsoft Copilot is (installed everywhere) and what it has achieved (paid by very few) is precisely the problem Andreou was promoted in March to solve.
+Microsoft Copilot vs. ChatGPT vs. Gemini: Where the Race Stands The unified Copilot super app places Microsoft directly in competition with OpenAI's evolving ChatGPT interface and Anthropic's Claude, both of which have been consolidating their own agent and coding capabilities.
+What is AutoPilot in Microsoft Copilot and why does it cost extra?
+When will the unified Microsoft Copilot super app launch?","Microsoft told its 11,000-person Copilot team this week that the product must ""earn the right to exist"" — an unusually blunt internal mandate that arrived alongside a plan to merge every consumer and enterprise Copilot into a single unified app by August, cut features that failed to gain users, and introduce a new paid tier of background AI agents. The language, contained in a 1,200-word memo written by Executive Vice President Jacob Andreou and first reported by The Decoder on July 3, 2026, is an internal acknowledgment that the biggest distribution footprint in enterprise software has not translated into paying, engaged AI users. Fewer than 4.5% of Microsoft's 450 million commercial Microsoft 365 customers currently pay for Copilot features — and for those who do, only 20 to 30 percent use it on a weekly basis, according to enterprise surveys.
+
+If you pay for a Microsoft 365 subscription, or your employer does, this restructuring will change what Copilot looks like, what it costs, and what features are still there when you open it in August.
+
+What Is Being Cut and Why It Matters
+
+Andreou's memo named Copilot Podcasts and Copilot Labs as the first casualties. Copilot Podcasts auto-generated audio summaries of meetings and documents; Copilot Labs was the experimental-features channel Microsoft used to test ideas that never reached the main product. Both generated minimal sustained user engagement and neither had become a reason for any enterprise buyer to pay for Copilot. Their removal signals something more significant than routine cleanup: it is the first time Microsoft has publicly acknowledged that Copilot features can and will be cut rather than indefinitely maintained.
+
+The memo's framing — that Copilot should focus on ""real work"" rather than chasing AI capability ""for intelligence's sake,"" and should be ""optimized for outcomes"" — represents a direct repudiation of Microsoft's previous Copilot messaging, which leaned on demonstrating everything the AI could do. The new mandate is narrower: the product must justify each feature against the question of whether it helps a user accomplish something measurable.
+
+One App to Replace All of Them: How the Merger Works
+
+The engineering effort, running internally under the codename ""Copilot Fusion,"" aims to produce a single codebase that serves both personal and enterprise users, with the interface adapting based on which account a user is signed into. The unified app will connect GitHub Copilot, Copilot chat, Copilot Cowork, and the new AutoPilot agent layer under a shared identity graph — one login across GitHub and Microsoft 365 rather than separate authentications for each. Users will toggle between personal and work contexts within the same application window.
+
+For IT administrators, the compliance mechanics are the most immediate concern. A single application that spans personal Microsoft account activity and corporate Microsoft 365 data requires new Conditional Access rules, data loss prevention policies, and governance controls to prevent organizational data from surfacing in personal Copilot sessions. Microsoft has indicated these controls will be available, but the specifics of what enterprise tenants must configure before August have not been published.
+
+Why AutoPilot Agents Will Cost Extra: The Engineering Reason
+
+The addition of AutoPilot as a separately priced premium tier is not an arbitrary pricing decision — it reflects a structural reality about how AI agents work. A conventional Copilot chatbot query requires one model call. An AutoPilot agent running a background task — booking a meeting across multiple attendees' calendars, summarizing email threads, or managing a recurring document workflow — may require 10 to 20 separate model calls per task. Each call sends a full context window back to the model, including system prompts, tool definitions, and accumulated session state. Analysts at Gartner estimated in March 2026 that agentic AI tasks require between 5 and 30 times more tokens than a simple chatbot query, per TechTimes coverage of the underlying token cost architecture.
+
+This is why Microsoft already shifted its Copilot Cowork product to usage-based billing when it launched in June — flat-rate pricing does not cover the cost of real agentic workloads at meaningful usage levels. AutoPilot in the unified app is the consumer-facing version of the same problem. Microsoft has not disclosed what AutoPilot will cost. Until it does, any enterprise IT budget projection for the post-August Copilot should treat AutoPilot as an unpriced line item.
+
+The specific technical mechanism behind AutoPilot agents is worth understanding. According to Microsoft's official engineering documentation, Autopilot agents operate with their own persistent identity — they do not wait for a user prompt but instead monitor ongoing signals from Teams, Outlook, OneDrive, and SharePoint via Microsoft Graph, the company's unified organizational data API. When a trigger condition is met (an incoming meeting conflict, an email thread that matches a watched pattern, a document reaching a defined state), the agent initiates action autonomously. Microsoft Scout, the first publicly named Autopilot, can carry out tasks within the permissions and policies the user and organization have set, including across cloud, desktop, and web surfaces simultaneously.
+
+The Adoption Gap Behind the Memo
+
+Andreou's memo — and the restructuring it represents — only makes full sense against the numbers Microsoft has largely avoided foregrounding in investor presentations. Recon Analytics, which tracks paid AI subscriber share across US enterprise users, recorded Copilot's position falling from 18.8% in July 2025 to 11.5% by January 2026 — a 39% contraction over six months. During the same period, Google's Gemini surpassed Copilot in paid subscriber share for the first time. When enterprise workers in a Recon Analytics survey of more than 150,000 users were given simultaneous access to Copilot, ChatGPT, and Gemini, only 8% chose Copilot as their preferred tool.
+
+These numbers describe a product that has massive presence — bundled into the world's largest enterprise software suite, installed on hundreds of millions of machines — but minimal voluntary adoption. The gap between where Microsoft Copilot is (installed everywhere) and what it has achieved (paid by very few) is precisely the problem Andreou was promoted in March to solve.
+
+Who Is Jacob Andreou and What His Background Signals
+
+Andreou, 33, spent years at Microsoft leading product and growth for Microsoft AI before his March promotion to EVP overseeing all of Copilot — a remit that now includes a team of more than 11,000 people. Before Microsoft he spent eight years at Snap, scaling its user base from 80 million to over 360 million daily active users. His background is in engagement funnels: understanding why users try a product, why they stop, and what it takes to make a product habit-forming. That is a different skill set from platform engineering, and it was clearly chosen deliberately. Microsoft is not asking Andreou to add more surfaces; it is asking him to explain why the surfaces it already has are not converting.
+
+As part of the March reorganization that created Andreou's unified Copilot team, Mustafa Suleyman — Microsoft's AI CEO who had previously led consumer Copilot — stepped back from product leadership to focus on building Microsoft's own frontier AI models under the internal MAI program. The first MAI models for speech-to-text, voice, and image generation launched in April 2026. Suleyman's stated cost logic is that it is cheaper for Microsoft to wait three to six months for the AI frontier to advance and then build a more efficient, specialized enterprise model than to rent the newest OpenAI models for every interaction.
+
+Microsoft Copilot vs. ChatGPT vs. Gemini: Where the Race Stands
+
+The unified Copilot super app places Microsoft directly in competition with OpenAI's evolving ChatGPT interface and Anthropic's Claude, both of which have been consolidating their own agent and coding capabilities. GitHub Copilot, Microsoft's developer-focused product with more than 4.7 million paid subscribers, faces specific pressure from Cursor and Claude Code, which have captured significant developer loyalty in the past 12 months.
+
+The fact that GitHub Copilot — a product with a focused use case, immediate value verification for developers, and strong engagement — has 4.7 million paying users, while the far more broadly distributed Microsoft 365 Copilot has only reached roughly 20 million paid seats against 450 million available, is the most important competitive data point in this story. Developers pay for AI tools that demonstrably save them time in a way they can measure immediately. Knowledge workers do not yet have an equivalent moment of certainty that Copilot delivers that return. AutoPilot is Microsoft's bet that background task automation — things that happen without the user having to initiate them — will create that moment.
+
+What This Means Before August
+
+For individuals and businesses using Microsoft 365, the most immediate practical questions are these: Which Copilot features currently in use will survive the August consolidation? What will AutoPilot cost on top of the existing Copilot add-on price? And will the merged app require any IT configuration before enterprise data governance policies carry over?
+
+Microsoft has not yet published detailed answers to any of those questions. The Andreou memo set the direction; the August product itself will determine whether the direction translates into a product Microsoft 365 users want rather than one they tolerate because it was installed for them.
+
+Frequently Asked Questions
+
+What features is Microsoft cutting from Copilot?
+
+Microsoft has confirmed the discontinuation of Copilot Podcasts, which auto-generated audio summaries of meetings and documents, and Copilot Labs, the experimental feature-testing channel. Both were cut for low user engagement. Additional cuts may follow as the team audits features against the ""real work"" standard set in the Andreou memo, but no further removals have been announced as of July 4, 2026.
+
+What is AutoPilot in Microsoft Copilot and why does it cost extra?
+
+AutoPilot is Microsoft's new category of always-on AI agents that operate autonomously in the background — monitoring email, calendar, and organizational data through Microsoft Graph and taking action without requiring a user to initiate each task. Unlike a chatbot query (which requires a single model call), an AutoPilot agent may trigger 10 to 20 model calls per background task. Analysts estimate agentic AI workflows consume 5 to 30 times more computing resources than conventional chatbot interactions, which is why Microsoft is pricing AutoPilot as a separately paid tier. The specific price has not been disclosed.
+
+Why is Microsoft merging its consumer and enterprise Copilot apps?
+
+Microsoft's own research found that customers dislike switching between multiple separate Copilot products and cannot identify clear value from the fragmented experience. An internal audit also found that fewer than 4.5% of Microsoft 365's 450 million seats have converted to paid Copilot add-ons — a conversion rate that the Andreou memo frames as unacceptable for a product that has been embedded into every major Microsoft surface for nearly three years.
+
+When will the unified Microsoft Copilot super app launch?
+
+Microsoft has targeted August 2026 for the unified app release, though as of July 4, 2026, specific pricing for AutoPilot agents and detailed IT administration guidance for enterprise context separation have not been published. The plans, described by sources familiar with the project, are subject to change before the release date.",https://d.techtimes.com/en/full/468048/microsoft-ceo-satya-nadella-microsoft-copilot-agents.jpg,N,,2026-07-04 18:02:47.249191
 ID19,Eli Lilly,2026-07-04 20:07:31+00:00,BigGo Finance,J&J Bets on Diversification Over GLP-1 Hype as Eli Lilly's Revenue Surges 56%,BigGo Finance,,,,,https://finance.biggo.com/news/8bd8b803-8c65-4a40-bc73-7f088910a2ed,"J&J reported $24.062 billion in revenue, a 9.9% increase, split between Innovative Medicine at $15.426 billion and MedTech at $8.636 billion.
 J&J’s Diversification Play J&J is taking the opposite tack.
 The strategy focuses on oncology, immunology, and medical devices—areas where J&J already holds commanding positions.
@@ -382,6 +451,37 @@ Palantir's growth streak sets the stage
 
 This partnership comes right after Palantir posted one of the strongest quarters in the company's history.",https://s.yimg.com/lo/mysterio/api/6BD133DF42C387245CCB0717BADC7F86A38A79D6EAFC40F6A3E9BDD100D504B7/subgraphmysterio/resizefill_w1200_h767;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fthestreet_881%2Fe57bf4bc90104f55fdcd8a80fc3b4bce,N,,2026-07-04 13:23:42.710278
 ID47,Uber,2026-07-04 13:58:15+00:00,finance.yahoo.com,"WeRide (WRD), Uber (UBER) Announce Commercial Robotaxi Launch in Zurich",Not Available,,,,,https://finance.yahoo.com/technology/ai/articles/weride-wrd-uber-uber-announce-132242940.html,"WeRide Inc. (NASDAQ:WRD) is one of the best new tech stocks to buy according to analysts. On June 17, WeRide and Uber announced plans to launch ...",Not Available,,N,,2026-07-04 12:11:41.405124
+ID47,Uber,2026-07-04 13:46:10+00:00,Crypto Briefing,"WeRide and Uber launch commercial robotaxi service in Zurich, expanding autonomous ...",Editorial Team,,,,,https://cryptobriefing.com/weride-uber-robotaxi-zurich-launch-2/,"WeRide and Uber are bringing robotaxis to Switzerland.
+From Guangzhou to Zurich WeRide, which trades on NASDAQ under the ticker WRD after going public in October 2024, has been building Level 4 autonomous driving technology since its founding in 2017.
+That’s the core logic of the partnership: WeRide builds the self-driving brains, Uber supplies the demand network and consumer interface.
+After burning through billions on its in-house autonomous program before selling it to Aurora in 2020, Uber pivoted to the partnership model.
+For Uber, robotaxis address a fundamental cost problem.","WeRide and Uber are bringing robotaxis to Switzerland. The two companies announced on June 17 that they plan to launch commercial autonomous ride-hailing services in the Greater Zurich Region later this year, pending regulatory approval from Switzerland’s Federal Roads Office, known as FEDRO.
+
+Zurich becomes the fifth city activated under a broader partnership agreement that spans 15 cities globally.
+
+From Guangzhou to Zurich
+
+WeRide, which trades on NASDAQ under the ticker WRD after going public in October 2024, has been building Level 4 autonomous driving technology since its founding in 2017. Level 4, in plain terms, means the car can handle all driving tasks in specific conditions without any human intervention.
+
+The Guangzhou-headquartered company has already notched deployments in locations like Dubai. Zurich represents the second European city in its pipeline, following an earlier announcement about launching in Madrid.
+
+Both cities are on track for fully driverless operations by mid-2027. That’s a meaningful distinction: the initial Zurich launch will likely feature safety operators in the vehicles, with the training wheels coming off roughly a year later.
+
+Riders will book these autonomous trips exclusively through the Uber app. That’s the core logic of the partnership: WeRide builds the self-driving brains, Uber supplies the demand network and consumer interface.
+
+Why Switzerland, and why now
+
+For Uber, the calculus is different but complementary. The company has been steadily positioning itself as the platform layer for autonomous mobility rather than building its own self-driving tech. After burning through billions on its in-house autonomous program before selling it to Aurora in 2020, Uber pivoted to the partnership model.
+
+The 15-city framework with WeRide alone suggests Uber is serious about making robotaxis a meaningful share of its ride volume over the next several years.
+
+What this means for investors watching tech and markets
+
+For WRD shareholders, the Zurich announcement validates the company’s ability to secure international partnerships and navigate foreign regulatory regimes. Five cities active out of 15 contracted means the next 10 represent a pipeline of potential catalysts.
+
+For Uber, robotaxis address a fundamental cost problem. Human drivers take a significant cut of every fare. Autonomous vehicles, once the upfront capital is deployed, dramatically change the unit economics of ride-hailing.
+
+The regulatory dimension matters enormously here. FEDRO approval isn’t guaranteed, and any delays could push timelines. The mid-2027 target for fully driverless operations in both Zurich and Madrid will serve as a real-world test of whether European regulatory caution translates into extended timelines.",https://static.cryptobriefing.com/wp-content/uploads/2026/07/04094329/an-illustration-of-weride-and-uber-s-robotaxi-gxr-in-zurich-800x420.jpeg,N,,2026-07-04 18:02:51.218474
 ID32,Microsoft,2026-07-04 13:39:24+00:00,"With 5,000 Layoffs and a 6,000-Strong Engineering Unit, Microsoft Puts AI Strategy into High Gear","With 5,000 Layoffs and a 6,000-Strong Engineering Unit, Microsoft Puts AI Strategy into High Gear",Not Available,,,,,https://www.ad-hoc-news.de/boerse/news/ueberblick/with-5-000-layoffs-and-a-6-000-strong-engineering-unit-microsoft-puts-ai/69683888,"The timing coincides with the start of the new fiscal year in July, a period Microsoft has historically used for personnel adjustments.
 Instead of selling pre-packaged software, Microsoft’s engineers will build custom AI systems on-site, tailored to each customer’s data and workflows.
 AWS unveiled a similar program days earlier with a $1 billion pledge; Microsoft’s outlay more than doubles that bet.
@@ -729,6 +829,11 @@ Continue after ad
 FDE programs are also motivated by the question of how providers can generate reliable revenue from AI. While the consumer business heavily depends on reach, subscriptions, and usage frequency, the enterprise market promises stable income through implementation, integration, and ongoing operation. The more individual AI models converge in performance and price, the more important this service business becomes. At the same time, it is intended to secure demand for the AI and cloud infrastructure into which Microsoft and other providers are investing heavily.
 
 A lot is at stake for Microsoft: The company traditionally earns from enterprise software, cloud services, and developer tools. These are precisely the markets that could be significantly altered by AI agents and automated software development.",https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/5/1/1/1/2/1/8/shutterstock_2402135107-3594f61ef2198a5b.jpg,N,,2026-07-04 12:11:08.816992
+ID1,Accor,2026-07-04 11:33:22+00:00,Yahoo Finance,Accor S.A. (ADRs) (US00435F3091.SG) H2 FY2025 earnings call transcript,Not Available,,,,,https://finance.yahoo.com/quote/US00435F3091.SG/earnings/US00435F3091.SG-H2-2025-earnings_call-401837.html,"Good morning.
+Good morning, everyone.
+Thank you so much for joining the year-end release for Accor.
+So I'm gonna start pretty short and sweet, if I may.
+So you have the first slide in front of you, those looking at us or looking at your screen.","Good morning. Good morning, everyone. Thank you so much for joining the year-end release for Accor. So I'm gonna start pretty short and sweet, if I may. So you have the first slide in front of you, those looking at us or looking at your screen. Four things, four takeaways for the group. The first is we are, we are happy with the results of the last year. We are certainly overachieving what we expected the last time we've talked in September and end of the third quarter, or certainly after the end of the first semester number, when we've met physically late July and August.",https://s.yimg.com/cv/apiv2/cv/apiv2/social/images/yahoo-finance-default-logo.png,N,,2026-07-04 18:02:44.178898
 ID19,Eli Lilly,2026-07-04 11:10:42+00:00,Yahoo Finance,AbbVie (ABBV) Faces Congressional Probe Over China Clinical Trials - Yahoo Finance,Bailey Pemberton,,,,,https://finance.yahoo.com/healthcare/articles/abbvie-abbv-faces-congressional-probe-231045102.html,"How This Fits Into The AbbVie Narrative The focus on data security and site governance in China touches directly on the narrative point that AbbVie relies on a broad late stage and early stage pipeline, because maintaining that pipeline will likely require robust, globally credible compliance frameworks.
 The investigation challenges the idea that AbbVie can simply use international expansion and extensive clinical programs to support growth, since geopolitical and ethical constraints may limit flexibility in where and how some trials are run.
 The Risks and Rewards Investors Should Consider ⚠️ Lawmaker scrutiny of AbbVie's China trials could lead to tighter controls, higher compliance costs, or the need to relocate some studies, which may affect timelines for selected drugs in the immunology and oncology pipeline.
