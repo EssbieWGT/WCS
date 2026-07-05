@@ -1,4 +1,149 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2026-07-04 22:17:06+00:00,North Central Insurance Agency,TRICARE And Medicare Coverage Made Clear | North Central Insurance Agency,North Central Insurance Blogging Team,,,,,https://northcentralinsurance.com/tricare-and-medicare-coverage/,"TRICARE and Medicare Coverage creates a dual-coverage environment where payer sequencing, enrollment status, and provider type determine whether Medicare or TRICARE pays first.
+For Minnesota residents who are veterans or dependents, understanding how TRICARE and Medicare Coverage applies can change out-of-pocket exposure substantially.
+Recent enrollment dynamics and region-specific network constraints make TRICARE and Medicare Coverage an operational issue, not just theoretical policy.
+What Most Get Completely Wrong About TRICARE and Medicare Coverage Summary: Common misconceptions center on which payer is primary, how supplemental plans affect liability, and whether TRICARE automatically fills Medicare cost-sharing.
+This section examines audit risks, documentation standards, and best practices for provider billing teams handling TRICARE and Medicare Coverage.","Quick Summary & Key Takeaways
+
+TRICARE and Medicare Coverage overlap for many eligible veterans and service members; coordination rules determine primary payer and out-of-pocket exposure.
+
+Minnesota-specific provider contracting, state Medicaid wraparound, and the Minnesota Senior Health Options program materially affect reimbursements and patient access.
+
+Claims timing, prior authorization patterns, and dual-eligibility flags drive denials; implement claims sequencing using CMS and Defense Health Agency standards to reduce denials.
+
+Practical rule: maintain dual-enrollment verification, keep 837 claim loops clean, and document provider network agreements to avoid retroactive recoupments.
+
+TRICARE and Medicare Coverage overlaps are a frequent source of confusion for active duty families, retirees, and Minnesota-based providers. TRICARE and Medicare Coverage creates a dual-coverage environment where payer sequencing, enrollment status, and provider type determine whether Medicare or TRICARE pays first. For Minnesota residents who are veterans or dependents, understanding how TRICARE and Medicare Coverage applies can change out-of-pocket exposure substantially.
+
+Recent enrollment dynamics and region-specific network constraints make TRICARE and Medicare Coverage an operational issue, not just theoretical policy. Enrollment in Medicare Part A and Part B among Minnesota beneficiaries rose by an estimated 11.7% between 2023 and early 2026 in state reports, pressuring providers in Twin Cities clinics to reconcile claims under two payers. This article untangles policy, offers Minnesota-focused tactics, and cites 2026 federal and state sources to support practical decisions.
+
+Advanced Insights & Strategy
+
+Summary: This section presents targeted frameworks for payer coordination, denial reduction, and revenue-cycle optimization specific to dual TRICARE and Medicare claims. It synthesizes Defense Health Agency rules with CMS 2026 billing guidance and Minnesota Medicaid wrap policies to deliver strategic levers for financial and clinical leaders.
+
+Aligning Payer Sequencing With Official Guidance
+
+Start with payer hierarchy codified by the Defense Health Agency and CMS: Medicare is primary in most retiree scenarios when the beneficiary is enrolled in Medicare Part A/B; TRICARE acts as secondary for eligible retirees. The Defense Health Agency updated coordination protocols in 2026 clarifying exceptions for active duty family members and specific Foreign Country claims (see Defense Health Agency).
+
+Implementation requires record-level flags: enrollments, entitlement dates, and coverage type. Configure eligibility engines to check Medicare HICN/MBI match and TRICARE beneficiary ID before claim submission. Systems that fail to do automated sequencing see denial rates escalate; pilot programs in Minnesota clinics reduced secondary denials by roughly 14.2% when a dual-verification rule was enforced over a 12-week period.
+
+Revenue-Cycle Framework For Dual-Eligible Patients
+
+Revenue leaders should adopt a three-layer model: pre-claim eligibility verification; claim orchestration (primary claim to primary payer, secondary to secondary); and retrospective reconciliation with provider-level remittance advice (RAs). Use 837 institutional and professional loops properly—employ loop 2310 for payer details and loop 2320 for secondary coverage events.
+
+Practical KPIs: percent of claims with correct payer sequencing, days-to-pay for primary vs secondary, and percent of retroactive recoupments. A Minneapolis specialty group measured DSO (days sales outstanding) improvements of 9.8% after reengineering their secondary billing pipeline and implementing batch 271/270 eligibility checks against CMS and TRICARE directories.
+
+Network Strategy And Provider Contracting
+
+Contract language should address dual-payment scenarios explicitly: negotiated rates when Medicare is primary, hold-harmless clauses, and responsibility for cost-sharing when TRICARE serves as secondary. For Minnesota-based FQHCs and hospital systems, aligning hospital chargemaster entries with Medicare allowable amounts prevents inadvertent overbilling and subsequent refunds.
+
+Include clauses requiring electronic remittance acceptance (835) and timely appeal coordination—this reduced a Duluth hospital’s provider-level write-offs by approximately 6.3% in the first quarter after renegotiation, using model contract language vetted against CMS 2026 provider billing guidance (CMS).
+
+“When the payer stack is codified and measurable at the eligibility layer, denials drop and clinical access improves because staff can give precise cost expectations.” – Karen Holm, Director of Revenue Management, Benedictine Health System
+
+Understanding TRICARE and Medicare Coverage in Minnesota
+
+Summary: For Minnesota residents, TRICARE and Medicare Coverage interplays with state Medicaid, MA plans, and local provider networks. This section reviews enrollment rules, state-specific programs like Minnesota Senior Health Options, and how local market dynamics affect care access.
+
+State Program Interaction And Dual Eligibility
+
+Minnesota operates several programs—Minnesota Senior Health Options (MSHO) and Minnesota Senior Care Plus—that can fill gaps when Medicare and TRICARE leave residual cost-sharing. When a beneficiary is dually eligible for Medicare and Minnesota Medicaid, Medicaid typically pays cost-sharing after Medicare and TRICARE have processed claims; the sequencing matters for net patient liability.
+
+Data from the Minnesota Department of Human Services in 2026 shows a complicated mix of dual-eligibles: roughly 7.4% of the state’s Medicare population was also on Medicaid, with higher concentrations in greater Minnesota counties. Providers must know the beneficiary’s MSP (Medicare Secondary Payer) status and Minnesota Medicaid enrollment to route claims accurately (Minnesota DHS).
+
+Enrollment Patterns Among Minnesota Veterans And Retirees
+
+Veterans and retirees in Minnesota exhibit enrollment behaviors influenced by local benefits offices and TRICARE regional contractors. The Twin Cities area has a higher window of retiree Medicare enrollment through employer-sponsored outreach events. Rural counties have slower Part B take-up, which creates intermittent primary payer designation between TRICARE and private insurers.
+
+Veterans Service Organizations in Minnesota (e.g., American Legion posts, Disabled American Veterans) provide enrollment assistance; their outreach was correlated with faster Part B enrollment in a 2026 review by the Minnesota Board of Veterans Affairs, improving coordination where TRICARE would otherwise be primary for certain service-connected scenarios (Minnesota Board of Veterans Affairs).
+
+Provider Access And Network Coverage In Minnesota
+
+Access to TRICARE-authorized providers varies: large systems in the Twin Cities (Mayo Clinic, Allina Health) have established billing workflows for Medicare/TRICARE coordination, while smaller rural clinics often lack staff trained in dual-eligibility claims filing. The Mayo Clinic publishes guidance for veterans seeking Medicare/DoD coverage alignment, which influences patient routing decisions.
+
+Practically, Minnesota-based providers should inventory which outpatient services require TRICARE authorization versus Medicare prior authorization. When enrollment and authorization are not aligned, claim rework increases. A 2026 internal audit at a St. Cloud health system found 12.9% of TRICARE-related claims required manual rebilling due to authorization mismatches.
+
+TRICARE and Medicare Coverage: How Claims Interact With Minnesota Providers
+
+Summary: This section outlines claim flow, common denial triggers, and reconciliation tactics specific to Minnesota clinics and hospitals. Focused examples include 837/835 loop configurations, prior-authorization timing, and state-based remittance practices.
+
+Claims Flow And Electronic Transaction Standards
+
+Claim submission must honor HIPAA 837 transaction standards and include proper Loop 2000B/2300 details for primary payer information. For beneficiaries with TRICARE and Medicare, the 837 should list Medicare as the primary payer when Part A/B entitlement is active; secondary TRICARE claims must reference the primary payer remittance advice with accurate CAS segment codes.
+
+Failing to include primary RA references or mispopulating the SBR02 (subscriber sequence number) leads to automated denials. Minnesota clinics using clearinghouses that validate 270/271 responses reduce payment delays; one Minneapolis billing operation reported a 10.6% improvement in first-pass acceptance after configuring their clearinghouse to enforce payer-sequence rules.
+
+Common Denials Specific To TRICARE And Medicare Coverage
+
+Denials tend to cluster around: misordered payer sequencing, missing prior authorizations, and incorrect beneficiary identifiers (MBI mismatch). TRICARE has unique requirements for provider credentials and authorizations for non-network providers that differ from standard Medicare credential checks.
+
+In Minnesota, denial audits for combined TRICARE and Medicare claims revealed that 16.4% of denied claims were due to expired prior authorizations. Providers should implement expiration tracking for TRICARE authorizations alongside Medicare’s prior-authorization lists, which was shown to reduce denials in a 2026 revenue-cycle improvement pilot by a Minnesota orthopedic group.
+
+Coordination Of Benefits And Subrogation Issues
+
+Coordination Of Benefits (COB) between TRICARE and Medicare can create subrogation situations when third-party liability exists (e.g., automobile accidents). TRICARE’s cost recovery rights require accurate reporting of third-party liability to avoid retroactive payment demands.
+
+Minnesota providers must integrate third-party liability fields into intake systems; failure to do so can result in provider recoupments when TRICARE exercises recovery rights. A 2026 case at Hennepin Healthcare involved a $44,762 recovery demand after third-party liability was not flagged on initial claims, illustrating the fiscal risk.
+
+What Most Get Completely Wrong About TRICARE and Medicare Coverage
+
+Summary: Common misconceptions center on which payer is primary, how supplemental plans affect liability, and whether TRICARE automatically fills Medicare cost-sharing. This contrarian section cuts through conventional wisdom with a candid perspective.
+
+My Rule For Coverage Sequencing Clarity
+
+I insist on a single source of truth for enrollment status: a monthly reconciliation between Defense Enrollment Eligibility Reporting System (DEERS) data and CMS Medicare enrollment files. When those two sources disagree, treat the CMS enrollment file as the payer-determining source and log the DEERS discrepancy for appeal.
+
+That rule reduced ambiguous claims in a practice by nearly 22.3% within two months. The practical implication is stark: treating both systems as equal without reconciliation invites conflicting payer instructions and increases administrative overhead.
+
+Why Automatic Cost-Sharing Assumptions Fail
+
+Many assume TRICARE will absorb Medicare cost-sharing automatically. That is not universally true. TRICARE Standard and TRICARE Select have differing treatment of Medicare coinsurance and deductible responsibilities based on beneficiary category and whether Medicare is primary.
+
+Consequences are real: patients receiving outpatient surgical care in Minnesota were surprised by bills when TRICARE applied its secondary payment limit to certain durable medical equipment, leaving a residual patient responsibility. Clear pre-service counseling and automated estimates prevent those breakdowns.
+
+A Real Result That Changes How Teams Operate
+
+Shifting intake teams to verify both MBI and DEERS status at scheduling—not just at registration—cut scheduling errors and late authorizations. It also improved patient satisfaction scores in one Minnesota multispecialty practice by 3.1 points on a 100-point scale across a quarter.
+
+Operationally, front-end verification prevents mid-cycle denials and preserves clinician time. It is more effective than back-end appeals that rarely recover the full administrative cost of correcting the record.
+
+Compliance, Billing, And Insurance For Minnesota Providers
+
+Summary: Compliance sits at the intersection of federal payer rules and Minnesota-specific statutes. This section examines audit risks, documentation standards, and best practices for provider billing teams handling TRICARE and Medicare Coverage.
+
+Audit Exposure And Documentation Standards
+
+Coding and documentation audits for combined TRICARE and Medicare claims must demonstrate medical necessity per CMS and TRICARE policy. Minnesota providers risk recoupments if clinical notes do not substantiate the level of service billed or prior-authorizations lack a matching medical-necessity rationale.
+
+Audit preparedness requires retaining authorization records, signed advanced beneficiary notices, and a log of eligibility checks. A 2026 compliance review by an independent auditor in Minneapolis flagged that inadequate documentation correlated with a 9.2% increase in recoupment notices for dual-covered claims.
+
+Timely Filing Rules And Retroactive Enrollment
+
+Timely filing deadlines differ across TRICARE regions and Medicare contractors; Minnesota providers must adhere to the Medicare Administrative Contractor (MAC) deadlines relevant to their geography and to TRICARE East/West rules. Retroactive enrollment in Medicare Part B can retroactively change payer responsibility, generating resubmissions and potential appeals.
+
+When retroactive Part B enrollment occurs, providers should resubmit the claim to Medicare as primary and then submit TRICARE as secondary with the original Medicare RA attached. Case work in 2026 at a St. Paul neurology clinic showed that resubmissions handled within 45 days of discovery had a 78.6% success rate compared with late appeals.
+
+Integration With Minnesota Insurance Markets (Auto, Home, Business Impacts)
+
+TRICARE and Medicare Coverage intersects with other insurance types: third-party liability from auto accidents often shifts responsibility, and business insurance (employer-provided plans) can affect coordination when retirees maintain COBRA coverage. For Minnesota employers, offering retiree medical plans that mirror Medicare reduces complexity but can increase employer liability.
+
+Insurance brokers in Minnesota reported a 5.7% uptick in client inquiries in 2026 about retiree plans’ interaction with TRICARE and Medicare, particularly from businesses with multi-state operations. Clear plan documentation and COB language reduce misrouting of claims and downstream audits.
+
+Conclusion
+
+TRICARE and Medicare Coverage create a layered payment landscape that affects patient access, provider revenue, and compliance risk, particularly for Minnesota residents where state wraparound programs and regional provider networks add complexity. Clear eligibility verification, precise claims sequencing, and contract language aligned to CMS and Defense Health Agency 2026 guidance reduce financial surprises and administrative friction. Minnesota-based providers and insurers that treat TRICARE and Medicare as an integrated, measurable process retain more revenue and deliver clearer patient cost expectations.
+
+Why Conventional Wisdom About Payer Priority Is Misleading
+
+Many assume Medicare is always straightforwardly primary; the reality is a set of conditional rules and retroactive changes that often flip payer responsibility. Treating payer priority as dynamic rather than fixed prevents costly resubmissions and recoupments.
+
+Mayo Clinic Example Of Practical Coordination
+
+Mayo Clinic’s outpatient surgery scheduling integrates DEERS checks and Medicare enrollment validation before finalizing authorization for veterans and retirees, reducing post-service billing adjustments and improving cash collections in 2026 fiscal reports.
+
+The Single Rule To Follow
+
+Validate both DEERS and CMS enrollment each time services are scheduled; make the verification the definitive step that determines prior authorization, sequencing, and patient financial counseling.",https://northcentralinsurance.com/wp-content/uploads/2026/07/TRICARE-and-Medicare-Coverage-1783181799.png,N,0.0,2026-07-04 21:56:15.394776
 ,,2026-07-04 21:25:21+00:00,www.facebook.com,How to navigate Tricare medical bills for a child when the non-custodial veteran parent is,Not Available,,,,,https://www.facebook.com/groups/509726748156038/posts/my-ex-and-i-have-a-son-togetherwe-were-never/899506975844678/,My ex and I have a son together...we were never married...but our son is on his insurance (tricare).   His dad refuses to help me with anything regarding...,Not Available,https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/603825527_1604184213934130_1125413920506653221_n.jpg?stp=dst-jpg_tt6&cstp=mx442x960&ctp=s442x960&_nc_cat=108&ccb=1-7&_nc_sid=0b1479&_nc_ohc=Yomep2yuIggQ7kNvwFqK56Y&_nc_oc=Adr8DAekGEqli7eVweg2jmrir-LZhFCnChuL7q4Vs8VUr6jTBkqbopd7CiH5V8D8ZIg&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=D4j_ULijQe6OggMFrYePOA&_nc_ss=7b289&oh=00_AQCrnI6ReOSsqkxw6wMxsj3_lcc_npCEi3uk9KCiRQF7gg&oe=6A4F6280,N,0.0,2026-07-04 19:56:31.662614
 ,,2026-07-04 18:36:37+00:00,X (formerly Twitter),Military Health System,Not Available,,,,,https://x.com/MilitaryHealth/status/2073388888685420674/photo/1,"Military Health System (@MilitaryHealth). 92 views. From the fields of the American Revolution to advanced care around the globe today, ...","JavaScript is not available.
 
@@ -14,6 +159,11 @@ Verified
 What new miracle substance did combat medics start carrying onto the battlefield to treat shock, saving thousands of lives before patients reached a hospital?
 
 #MilitaryMedicine250 #MM250",https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/731495681_18459509290119680_265144231706395865_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=L3LTRz2r7sgQ7kNvwHwGWZl&_nc_oc=AdpiNLktz9SNegvHSnsofLmbhenjMMUiKtGgJyX5VdH4dt1-RbuggIdREAkQZIU8aoU&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_gid=upuddvYlA_GIIfwoc9V4gQ&_nc_ss=7b689&oh=00_AQC79kSH9jzLUyZIw7pBnUKNs4aFCSXAE4YvKlb_-rlEyg&oe=6A4F018E,N,0.0,2026-07-04 12:56:11.847573
+,,2026-07-04 15:18:03+00:00,LinkedIn,Defense Health Agency - america250 #mm250 - LinkedIn,Defense Health Agency,,,,,https://www.linkedin.com/posts/defense-health-agency_america250-mm250-activity-7479168430131191808-tyPt,"🎆For 250 years, America has been defined by courage, service, and an unwavering commitment to freedom.
+As fireworks light up the sky this Independence Day, we honor that legacy and celebrate the military medical professionals who work every day to keep our nation's warfighters healthy, resilient, and ready to protect our way of life wherever, whenever.
+From battlefield medicine to military hospitals and clinics around the world, their dedication helps ensure our force remains ready to defend the freedoms we celebrate today.
+Happy 250th Birthday, America!
+🎇 The Defense Health Agency is proud to deliver the health care enterprise our beneficiaries deserve and our country needs.","🎆For 250 years, America has been defined by courage, service, and an unwavering commitment to freedom. As fireworks light up the sky this Independence Day, we honor that legacy and celebrate the military medical professionals who work every day to keep our nation's warfighters healthy, resilient, and ready to protect our way of life wherever, whenever. From battlefield medicine to military hospitals and clinics around the world, their dedication helps ensure our force remains ready to defend the freedoms we celebrate today. Happy 250th Birthday, America! 🎇 The Defense Health Agency is proud to deliver the health care enterprise our beneficiaries deserve and our country needs. ❤️🤍💙 #America250 | #MM250",https://media.licdn.com/dms/image/v2/D4E10AQGCJq-8kiUnhw/image-shrink_1280/B4EZ8tYCuVKoAc-/0/1783172705441?e=2147483647&v=beta&t=JyKzqc1wRXGdfBqwcp9M1DZQ89ufZk3-ROrx6mFt0P8,N,1.0,2026-07-04 21:56:18.871914
 ,,2026-07-04 12:51:06+00:00,RealClearDefense,Why Is the VA Turning Its Back on Those Who Served? - RealClearDefense,Dean Forest,,,,,https://www.realcleardefense.com/articles/2026/07/04/why_is_the_va_turning_its_back_on_those_who_served_1192621.html,"Nearly one in four veterans enrolled in the VA health care system lives in a rural community like mine, where getting care often means driving hours to the nearest VA medical center.
 Those veterans also tend to be older and sicker, yet the VA continues to struggle with giving veterans timely access to the care that they need and deserve.
 I served my country with dignity, got married, and had a beautiful daughter.
@@ -1877,21 +2027,3 @@ what you might be confusing is the fact that some retirees who are 100% P&T can 
 for the community care part, that's frustrating. you mentioned no in-network doctors near you, that's exactly what community care is for. call the tricare nurse advice line (1-800-TRICARE) and explain your situation with the driving problem, they can sometimes authorize care without you seeing a military doc first. also try contacting your regional contractor directly, sometimes they move faster than the VA side. don't wait on the website, make some calls, the people on phone actually get stuff done sometimes.",,N,0.0,2026-07-02 10:56:30.488220
 ,,2026-07-02 04:53:57+00:00,www.nespecialists.com,Accepted Insurance — Northwest Extremity Specialists · Portland,Not Available,,,,,https://www.nespecialists.com/insurance,"Northwest Extremity Specialists: board-certified podiatrists and orthopedists across eight Portland-area clinics. Same-day appointments for foot & ankle pain, sports injuries, diabetic foot care, custom orthotics, and surgical podiatry.",Not Available,https://www.nespecialists.com/favicon.png,N,0.0,2026-07-02 16:56:17.047597
 ,,2026-07-02 04:38:53+00:00,www.facebook.com,DHA Out & About ✈️ - Facebook,,,,,,https://www.facebook.com/DefenseHealthAgency/posts/dha-out-about-️/1430469102463995/,Defense Health Agency 󱢏. 16h󰞋󱟠. 󳄫. DHA Out & About ✈️. Naval ... Defense Health Agency. Mangaran was given a tour of facility upgrades ...,Not Available,,Y,0.0,2026-07-02 18:56:27.276169
-,,2026-07-02 01:38:24+00:00,LinkedIn,#militarymedicine250 | Military Health System - LinkedIn,Not Available,,,,,https://www.linkedin.com/posts/militaryhealthsystem_militarymedicine250-activity-7478172681050308608-Z8CK,"Maj. Gen. Malcolm C. Grow defined modern military medicine for future airmen.
-His legacy as the first surgeon general of the United States Air Force carries on today through innovation and exceptional health care at Malcolm Grow Medical Clinics and Surgery Center.
-Air Force Medical Service | #MilitaryMedicine250",Maj. Gen. Malcolm C. Grow defined modern military medicine for future airmen. His legacy as the first surgeon general of the United States Air Force carries on today through innovation and exceptional health care at Malcolm Grow Medical Clinics and Surgery Center. Air Force Medical Service | #MilitaryMedicine250,https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7,N,1.0,2026-07-01 23:56:19.680750
-,,2026-07-02 01:21:07+00:00,www.reddit.com,Other Health Insurance Options? : r/AirForce - Reddit,Not Available,,,,,https://www.reddit.com/r/AirForce/comments/1ul090n/other_health_insurance_options/,"And if you’re near any base, their pharmacy fills TRICARE scripts for free once you’re showing active.
-Skip calling your unit and call your regional contractor instead, because your unit doesn’t run your TRS civilian care.
-Ask them whether your coverage is active, what your effective date is, and why your claims are denying, and get the actual denial reason on those ER claims.
-Call the hospital, tell them TRICARE is being straightened out, and ask them to hold the account off collections and rebill once you’re active.
-For regular civilian care on TRS there’s no unit approval and no referral at all.","Everything you’re describing from the ER getting denied, to the pharmacy not filling, to a provider who’s supposedly authorized but somehow nothing’s covered, is what it looks like when there’s no active plan sitting behind you in the system. TRS is way cheaper and better than anything you’d buy on the civilian side, so do not spend money on a second plan and lets fix your current one.
-
-On getting your migraine meds, 2 different things can block a refill, either no active coverage or no refills left on the script, so call whoever prescribed them and make sure you actually still have refills (or check with the pharmacy). Deoending on your script, just cover it yourself, because most migraine generics like sumatriptan, or topiramate or propranolol if you’re on a preventive, run a few bucks with a GoodRx or SingleCare coupon and are usually cheaper than a copay anyway. And if you’re near any base, their pharmacy fills TRICARE scripts for free once you’re showing active.
-
-Being eligible for TRS and being *enrolled* in TRS aren’t the same thing. It’s a plan you have to buy and pay premiums on, and if a card on file gets declined it’ll quietly cancel you without much of a heads up. Log into milConnect and look at your health plan status. If you came off active orders around three months ago, you are likely on a gap where your old coverage ended and TRS never really kicked in, and that gap is why you’re paying out of pocket for everything.
-
-Skip calling your unit and call your regional contractor instead, because your unit doesn’t run your TRS civilian care. If you’re east of the Mississippi you’re almost certainly Humana Military at 800-444-5445, and out west it’s TriWest at 888-874-9378. Ask them whether your coverage is active, what your effective date is, and why your claims are denying, and get the actual denial reason on those ER claims. If you do happen to be out west, heads up that TriWest had a messy contract takeover with a ton of claims getting misprocessed, so denials out there sometimes trace back to that, which just means you keep pushing instead of assuming it’s your fault.
-
-ER care doesn’t need a referral or any approval under TRS, so if your enrollment gets fixed and backdated, those claims can reprocess and actually get covered. Call the hospital, tell them TRICARE is being straightened out, and ask them to hold the account off collections and rebill once you’re active. And that whole “your unit has to approve you first” line somebody gave you is just a mix-up. That only applies to line of duty care, meaning you got hurt or sick while on drill or orders and the military covers that one condition. For regular civilian care on TRS there’s no unit approval and no referral at all. The only time your unit’s medical section belongs in this is if that ER trip was actually duty related.",,N,0.0,2026-07-02 11:56:56.268425
-,,2026-07-02 00:29:05+00:00,www.phenomenajournal.com,Does Tricare Prime Cover Skin Tag Removal? A Complete Guide To Coverage [S9ANLXF37TY],Not Available,,,,,https://www.phenomenajournal.com/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=%2Findex.php%2Findex%2Flogin%2FsignOut%3Fsource%3D.solalal.com%2Fskin3%2F&id=S9ANLXF37TY,Enter the password to open this PDF file:,Enter the password to open this PDF file:,,N,0.0,2026-07-01 23:56:22.788376
-,,2026-07-02 00:20:34+00:00,www.lytepsych.com,"Therapists Accepting Tricare in Sherman, TX - Lyte Psychiatry",Not Available,,,,,https://www.lytepsych.com/providers/therapist/insurance/tricare/sherman,"Find therapists accepting Tricare in Sherman, Texas. Lyte Psychiatry is in-network with Tricare Ã¢Â€Â” most patients pay $0–$25/visit.",Not Available,,N,0.0,2026-07-02 14:56:14.147962
