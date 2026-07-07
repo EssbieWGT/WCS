@@ -1,4 +1,228 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2026-07-06 22:11:43+00:00,www.reddit.com,Tricare prime question : r/USMilitarySO - Reddit,Not Available,,,,,https://www.reddit.com/r/USMilitarySO/comments/1up1qrv/tricare_prime_question/,"Hi all, I'm now on Tricare prime after being on Tricare Reserve Select.
+I understand I now need referrals from my PCM for specialty visits.
+This might be nuanced but I'm turning to Reddit cause my PCP office isn't helping and has left me more confused.
+I went to the dermatologist for the first time in May under Tricare Reserve Select.
+The office is saying that since my PCP is aware of my derm visits, nothing needs to be done.","Hi all,
+
+I'm now on Tricare prime after being on Tricare Reserve Select. I understand I now need referrals from my PCM for specialty visits. This might be nuanced but I'm turning to Reddit cause my PCP office isn't helping and has left me more confused.
+
+I've been seeing my current PCP for the past few years and now have a PCM in the same practice. Have not met her yet as this all just happened in the last 2 weeks.
+
+I went to the dermatologist for the first time in May under Tricare Reserve Select. Now since I'm on Tricare Prime, I called the office and asked for a referral from the PCM for my ""specialty"" visit coming up in August, which is just a follow up appt with the derm.
+
+The office is saying that since my PCP is aware of my derm visits, nothing needs to be done. But I'm 99% certain I need a referral with my PCMs name on it for billing purposes so I don't get charged, right?",,N,-1.0,2026-07-06 19:56:21.188628
+,,2026-07-06 22:08:42+00:00,North Central Insurance Agency,TRICARE For Life: Stop Surprise Bills In Minnesota | North Central Insurance Agency,North Central Insurance Blogging Team,,,,,https://northcentralinsurance.com/tricare-for-life/,"Architecting Claims Workflows Between Medicare, TRICARE, And Minnesota Carriers Claims routing for TRICARE for Life requires precise mapping: Medicare processes primary claims for Part A/B.
+Understanding TRICARE for Life in Minnesota Summary: A targeted primer describing how TRICARE for Life functions inside Minnesota’s insurance ecosystem—eligibility verification, coordination with Medicare, local provider practices, and state guidance from Minnesota agencies.
+How TRICARE for Life Coordinates With Medicare In Minnesota Claims TRICARE for Life picks up where Medicare leaves off.
+TRICARE for Life Claims And Surprise Billing Scenarios Summary: Dissects typical scenarios that trigger surprise bills—ambulance transports, out-of-network consultants, and billing errors—and quantifies where failures occur in the claims lifecycle using verifiable operational levers.
+Coordination-Of-Benefits Rules Specific To Minnesota Carriers Each Minnesota carrier has plan documents that describe how TRICARE for Life should be applied.","Quick Summary & Key Takeaways
+
+TRICARE for Life acts as a Medicare-wraparound for eligible military retirees and certain family members; proper coordination with Medicare and Minnesota insurers prevents most surprise bills.
+
+Minnesota-specific procedures—filing a coordination-of-benefits form with Blue Cross and Blue Shield of Minnesota or contacting the Minnesota Attorney General’s Health Care unit—reduce unpaid balances quickly.
+
+When a provider issues a surprise bill, a three-step pathway—document, escalate to insurer/TRICARE contractor, and file a formal appeal—resolves roughly 82.7% of cases within 120 days in comparable CMS pilot programs.
+
+Use concrete tools: the Defense Finance and Accounting Service (DFAS) eligibility file, the TRICARE Claims Portal, and Minnesota Department of Health billing complaint forms to expedite corrections.
+
+Advanced Insights & Strategy
+
+Summary: This section lays out high-level strategic frameworks for preventing and resolving surprise bills when TRICARE for Life is primary or secondary, including coordination-of-benefits architecture, data flows between Medicare, TRICARE contractors (like Humana Military), and Minnesota carriers, plus actionable KPIs to track resolution performance.
+
+Architecting Claims Workflows Between Medicare, TRICARE, And Minnesota Carriers
+
+Claims routing for TRICARE for Life requires precise mapping: Medicare processes primary claims for Part A/B. TRICARE contractors such as Humana Military then act as a secondary payer for covered beneficiaries. In practice, the Defense Health Agency (DHA) publishes technical guides for X12 837 transactions that specify the COB segments; Minnesota carriers such as Blue Cross and Blue Shield of Minnesota (BCBSMN) must honor the Medicare adjudication before applying their plan rules.
+
+For Minnesota hospitals — Mayo Clinic and Fairview Health Services among the largest systems — ensuring the presence of a TRICARE/Medicare combination number (HICN/MBI and DEERS verification) in the claim header drops the average reject rate from a typical 18.7% to near 3.6% in tested provider workflows. Track rejects per 1,000 claims as a KPI. Real-time eligibility lookups against DEERS and Medicare Enrollment Data match decrease balance billing events substantially.
+
+Measurement Frameworks And KPIs For Minnesota Health Systems
+
+Set three KPIs for any insurer or hospital aiming to minimize surprise bills: 1) Time To Correct Coordination Of Benefits (median target: 12 business days), 2) Percentage Of Inpatient Claims With Corrected Primary/Secondary Flow (target: 95.4%), and 3) Consumer Balance Write-Off Rate (target: < 1.2% of billed dollars). Audits using a rolling 90-day sample size of 1,250 claims expose errors in front-end demographic capture and payor sequencing.
+
+Adopt control charts for claim rejections and conduct weekly root-cause analysis sessions with revenue cycle vendors (e.g., Change Healthcare or Optum). For Minnesota-based revenue cycle teams, integrate the state-specific payer IDs used by BCBSMN and Medica into the claims scrubber to eliminate misrouting that leads to surprise bills.
+
+“The single biggest failure point is mismatch in eligibility data: an old DEERS record or a swapped Medicare MBI leads to the wrong payer being billed.” – Dr. Susan Harrell, Director, Minnesota Department of Human Services
+
+Legal And Regulatory Overlay To Inform Strategy
+
+Federal law—the No Surprises Act implemented by the Department of Health and Human Services and enforced by CMS—sets guardrails for emergency and certain nonemergency out-of-network billing. For TRICARE for Life beneficiaries, the coordination-of-benefits provisions in 32 CFR part 199 remain relevant; they interact with federal Medicare rules. Use state enforcement as a lever: Minnesota’s Attorney General and the Department of Commerce can mediate consumer complaints where provider billing violates state protections.
+
+Strategic teams should maintain a compliance checklist: verify provider network status, confirm whether the care was emergency versus scheduled, and flag any instance of balance billing exceeding a beneficiary’s expected cost-share. For Minnesota hospitals, align policy on pre-service estimates and advanced beneficiary notices with federal and state regulations to reduce violations that prompt legal escalations.
+
+Understanding TRICARE for Life in Minnesota
+
+Summary: A targeted primer describing how TRICARE for Life functions inside Minnesota’s insurance ecosystem—eligibility verification, coordination with Medicare, local provider practices, and state guidance from Minnesota agencies.
+
+TRICARE for Life Eligibility And DEERS Verification
+
+TRICARE for Life eligibility is linked to enrollment in Medicare Part A and Part B with concurrent DEERS (Defense Enrollment Eligibility Reporting System) registration. Minnesota residents should confirm their DEERS status through the Defense Manpower Data Center or via the TRICARE East Region contractor portals, since an outdated DEERS file causes 11.2x more manual corrections in Minnesota hospital billing offices.
+
+For Minnesota-based beneficiaries, the most common administrative failure is a mismatch between the DEERS record and the Medicare Beneficiary Identifier (MBI). Hospitals like Mayo Clinic typically use batch eligibility queries against both DEERS and Medicare to preempt denials. Keep the DFAS retiree file and DEERS synchronized; benefits administrators at Minnesota VA clinics can assist with this process.
+
+How TRICARE for Life Coordinates With Medicare In Minnesota Claims
+
+TRICARE for Life picks up where Medicare leaves off. After Medicare adjudicates a claim, the explanation of benefits (EOB) shows the patient responsibility. The TRICARE contractor (Humana Military or previously other contractors) should then process the secondary payment for allowable TRICARE-eligible charges. Minnesota billers must ensure the Medicare claim control number (CCN) or remittance ID is included so the TRICARE contractor ties secondary payments correctly.
+
+Data from Medicare administrative trials indicate that including the CCN in electronic remittances reduces follow-up tasks by a messy but meaningful margin—claims requiring manual intervention drop by about 23.4% when remittance data is complete. For Minnesota clinics, that equates to fewer surprise bills landing on veteran doorsteps.
+
+Local Minnesota Considerations: Provider Networks And Veterans’ Clinics
+
+Minnesota’s health landscape includes large integrated systems (Mayo Clinic, Allina Health, Fairview) and rural critical-access hospitals that often lack dedicated TRICARE billing specialists. Those smaller facilities see higher rates of out-of-network billing mistakes. State agencies such as the Minnesota Department of Veteran Affairs offer resources to educate providers on TRICARE for Life rules and coordinate outreach to rural billing offices.
+
+Additionally, Minnesota’s Office of the Attorney General has a consumer health unit that receives billing complaints. Use it when balance billing persists after insurer escalations. For Minnesota residents attending the Minneapolis VA or one of the community-based outpatient clinics, confirming VA billing versus civilian provider billing lines is key to avoiding duplicate or surprise charges.
+
+TRICARE for Life Claims And Surprise Billing Scenarios
+
+Summary: Dissects typical scenarios that trigger surprise bills—ambulance transports, out-of-network consultants, and billing errors—and quantifies where failures occur in the claims lifecycle using verifiable operational levers.
+
+Emergency Department Encounters And Balance Billing Risks
+
+Emergency care is protected under federal rules, but administrative friction still produces surprise bills. For TRICARE for Life beneficiaries in Minnesota, emergency visits first process through Medicare. If a specialist who treated the patient is out-of-network, a separate provider bill can follow. In many cases audited by payer-centric studies, the specialist bill is the one that becomes a surprise, not the ED hospital charge.
+
+Hospitals in Minnesota can reduce this by issuing a consolidated bill and including the provider taxonomy and NPI information so the TRICARE contractor and Medicare can reconcile liability. In pilot programs tracked by CMS, consolidated submissions lowered consumer-facing balance notices by a granular 9.8% compared to non-consolidated flows.
+
+Planned Procedures And Patient Estimation Failures
+
+Scheduled surgeries carry the risk of out-of-network consultant involvement—anesthesia groups, pathology, or radiology—each a potential source of surprise billing. For TRICARE for Life patients, preauthorization and accurate provider network checks are essential. The pre-service estimate should include expected Medicare payment, TRICARE secondary coverage, and an honest patient liability projection.
+
+Minnesota hospitals that implement a two-week pre-op verification window and a triage checklist for TRICARE for Life status experience fewer last-minute denials. That checklist should include DEERS confirmation, Medicare Part B status, and a coordination-of-benefits routing code. Institutional audits in comparable systems reported a messy but actionable 14.6% drop in post-procedure billing disputes after implementing similar windows.
+
+Common Administrative Errors Leading To Surprise Bills
+
+Typical errors are straightforward: incorrect benefit sequencing, missing Medicare remittance numbers, swapped MBIs, and failure to record patient payor-consent forms. These failures are process problems, not policy gaps. Minnesota-based revenue cycle managers can reduce these by enforcing seven front-end data fields on the registration form—SSN/MBI, DEERS ID, TRICARE sponsor name, sponsor SSN/MBI, Medicare effective dates, phone verification timestamp, and consent checkbox.
+
+Automated edits in the EHR or registration system that enforce these fields as required reduce downstream billing exceptions by a precise, measurable amount—an institutional trial reported a decline of 21.9% in claim rework for facilities that enforced the seven-field policy.
+
+How Minnesota Insurers Coordinate With TRICARE for Life
+
+Summary: Explains how Minnesota commercial payers (BCBSMN, Medica, UCare) and TRICARE contractors exchange information, typical friction points, and practical remedies such as payer ID alignment and COB enrollment processes used by state entities.
+
+Key Payer IDs And Technical Integrations In Minnesota
+
+Successful coordination depends on correct payer IDs and EDI routings. Blue Cross and Blue Shield of Minnesota uses specific payer IDs for TRICARE secondary claims; if those IDs are not used, claims can go to a general Medicaid or commercial queue and be misprocessed. Minnesota providers must map their clearinghouse (e.g., Availity, Change Healthcare) to the exact TRICARE secondary payer ID to avoid misrouting.
+
+Technical integrations also involve the use of 835 remittance advice loops and X12 277 CA status checks. When these are configured correctly, automated posting reduces manual crosswalk work and speeds patient statements that reflect only the true patient liability. Minnesota health systems that fortified EDI mapping reported a reduction in manual remits of 31.7% over 90 days.
+
+Working With Humana Military And Other TRICARE Contractors
+
+Humana Military is the primary TRICARE contractor for many regions and provides portals for claim submission and status checks. Minnesota providers should register with the contractor portal, load payer-specific claim forms, and maintain a dedicated contact point for escalations. Humana Military’s provider relations desk escalates complex balance-billing issues to TRICARE policy teams when necessary.
+
+Contracts with local insurers should stipulate a data-exchange SLA. Wisconsin and Minnesota multi-state systems have used SLAs that require provider inquiry responses within 10 business days and technical remittance reconciliation within 20 business days; these proved effective at minimizing beneficiary-facing billing aftercare.
+
+Coordination-Of-Benefits Rules Specific To Minnesota Carriers
+
+Each Minnesota carrier has plan documents that describe how TRICARE for Life should be applied. Carriers such as Medica publish provider manuals with detailed steps for secondary billing. Accurate application of these manuals avoids improper patient balance bills; carriers are obligated to apply the Medicare explanation of benefits before calculating patient responsibility.
+
+When a Minnesota carrier fails to apply Medicare first, the legal remedy is often an internal fair-claims review. Monitoring the percentage of claims where Medicare was not applied first is a useful metric; industry benchmarks suggest this should be under 2.9% for a compliant payer network.
+
+Disputes, Appeals, And Legal Remedies For Minnesota Members
+
+Summary: Outlines the escalation ladder for disputed bills: patient-biller resolution, insurer/TRICARE contractor appeal, state consumer protection, and—if required—binding arbitration or court action, with Minnesota-focused steps and agency contacts.
+
+Immediate Steps When A Surprise Bill Arrives In Minnesota
+
+First, document everything. Save the itemized bill, all EOBs, phone call logs with timestamps, and any preauthorization documents. Contact the provider billing office and request an itemized bill breakdown and the provider’s internal appeals form. If the provider claims the patient is liable because TRICARE for Life did not process, ask for the date/time the claim was sent to Medicare and the claim control number.
+
+Next, contact the TRICARE contractor (Humana Military) and the Medicare Administrative Contractor (MAC) for Minnesota — often Noridian or CGS depending on jurisdiction — to confirm receipt and processing. For Minnesota-specific assistance, reach out to the Minnesota Attorney General’s Health Care unit or the Minnesota Department of Commerce consumer helpline; they can mediate when billing errors persist.
+
+Formal Appeals With TRICARE Contractors And Medicare
+
+File a formal appeal if internal discussions do not resolve the disagreement. TRICARE for Life beneficiaries should follow Medicare’s appeal processes (redetermination, reconsideration, ALJ hearing) when the primary Medicare determination is at stake, and submit a separate TRICARE appeal to the TRICARE contractor for secondary payments. Track deadlines: Medicare redetermination generally requires filing within 120 days of the date of the initial determination; TRICARE appeals have their own, often shorter, windows.
+
+Keep copies of all submissions and use certified mail or portal receipts. In successful appeals tracked in federal pilot studies, claim reversals occurred in a messy but meaningful 44.5% of first-level appeals when pro-forma documentation (EOBs, itemized bills, DEERS proof) was submitted within 30 days.
+
+State Remedies: Minnesota Attorney General And Consumer Protection Tools
+
+If a provider in Minnesota continues to pursue payment after appeals, file a complaint with the Minnesota Attorney General’s Office and the Minnesota Department of Commerce, which oversees insurance complaints. These offices can open investigations that prompt provider write-offs or force corrected billing. The Attorney General’s consumer complaint portal also lists templates for complaint letters that expedite triage.
+
+In addition, Minnesota has rules about hospital price transparency and surprise billing notices; use those statutes when drafting a complaint. For persistent cases, the state’s consumer protection unit has, in the past year, negotiated settlements where providers reduced erroneous patient balances by an average of 37.2% after official mediation.
+
+Practical Steps To Stop A Surprise Bill
+
+Summary: A tactical, actionable set of steps (with “Step” H3 headings) that Minnesota-based TRICARE for Life beneficiaries and provider revenue-cycle teams can follow to resolve and prevent surprise bills.
+
+Step 1: Gather Documentation And Lock Down Eligibility
+
+Collect the itemized bill, all EOBs from Medicare and TRICARE, and DEERS proof. Confirm Medicare Part A/B effective dates and the MBI on the EOB. For Minnesota veterans, contact the local VA benefits office or the Minnesota Department of Veterans Affairs to verify DEERS enrollment if any discrepancy exists.
+
+Document phone calls with date/time, agent name, and reference numbers. These artifacts are the foundation for appeals; absence of any field—MBI, DEERS ID, claim control number—creates grounds for a provider to claim administrative impossibility instead of admitting a billing error.
+
+Step 2: Escalate To The Provider Billing Office And TRICARE Contractor
+
+Open a written dispute with the provider’s billing office and copy the TRICARE contractor and Medicare MAC. Use the TRICARE contractor’s portal to upload supporting documents and request adjudication. For Minnesota providers, ensure that Blue Cross or other local carrier IDs are CC’d if they were involved in initial processing to prevent duplicate workflows.
+
+Ask for an internal audit of the claim routing and a remittance trace. If the claim was misrouted, request a provider adjustment and an updated patient statement showing zero responsibility while awaiting adjudication; hospitals that follow this process produce a corrected bill within an average 44.9 business-day window in tested workflows.
+
+Step 3: File Formal Appeals And Use State Consumer Channels
+
+If the provider refuses to rescind the balance, file an appeal with TRICARE and with Medicare as appropriate. Simultaneously, file a complaint with the Minnesota Attorney General’s Health Care unit and the Minnesota Department of Commerce. These state offices have outreach teams that contact providers directly and can freeze collections while an investigation proceeds.
+
+Maintain a spreadsheet tracking appeal deadlines, evidence submitted, and response dates. Escalate to arbitration or small claims only after state remedies are exhausted; many disputes are resolved through administrative appeals and state mediation, avoiding court costs and lengthy litigation timelines.
+
+What Most Get Completely Wrong About TRICARE for Life
+
+Summary: A candid, contrarian perspective that exposes common myths and a rule-of-thumb derived from real experience about how to aggressively prevent surprise billing for TRICARE for Life beneficiaries.
+
+My Rule For Fast Resolution
+
+My direct experience with dozens of member disputes across Minnesota shows one pattern: rapid, documented escalation beats polite patience. If a beneficiary waits for a provider to “fix it,” the balance often reaches collections even after correction. Immediate, documented escalation to the TRICARE contractor, Medicare MAC, and the Minnesota Attorney General reduces collection letters by over 60% within 90 days.
+
+Another lesson: providers respond faster to documented regulatory threats than to patient pleas. A short, two-paragraph letter to the billing office referencing the No Surprises Act and the Minnesota AG complaint process prompts quicker write-offs than repeated phone calls.
+
+Why The “It Was A Billing Error” Explanation Is Dangerous
+
+Accepting the phrase “it was a billing error” without action often leads to repeat errors. Billing errors should be followed by process fixes—registration form updates, EDI mapping corrections, training for front-desk staff. In Minnesota clinics where root-cause correction occurred, the error recurrence rate dropped by a precise 26.8% over six months.
+
+Holding the provider accountable for process change—requesting a corrective action plan and evidence of staff retraining—creates institutional incentives to prevent future harm. This is the only way to move beyond one-off fixes to durable reductions in surprise billing incidence.
+
+How To Pressure Commercial Payers To Fix Systemic Issues
+
+Engage the insurance company’s provider relations and regulatory compliance teams simultaneously. Many fixes require the payer to change how it maps TRICARE secondary claims; applying pressure through documented consumer complaints to the Minnesota Department of Commerce expedites payer-level corrections. Payers will often deploy IT patches or clearinghouse remapping within weeks after receiving regulatory attention.
+
+Track outcomes: request specific timelines and follow-up evidence (e.g., new payer ID mappings, updated provider manuals). When those appear, confirm via test claims to ensure the depositions actually reduce consumer-impacting billing issues.
+
+Summary: Lists practical tools, portals, and Minnesota-specific offices for TRICARE for Life cases, including direct links to federal and state contact points for quick action.
+
+Key Federal Portals And Contractor Links
+
+Use Medicare’s official portal for appeals and claim lookups, and TRICARE contractor portals (Humana Military provider portals) to check secondary adjudication. For federal rule context, consult the Centers for Medicare & Medicaid Services guidance on surprise billing and Medicare appeals; these pages explain statutory timelines and documentation requirements in granular detail: CMS.
+
+Additionally, the Defense Finance and Accounting Service (DFAS) provides retiree pay and eligibility details that can affect TRICARE status. The DEERS verification portal (managed by the Defense Manpower Data Center) prevents the largest source of billing mismatches when used before registration.
+
+Minnesota State Contacts And Advocacy Groups
+
+For Minnesota-based help, contact the Minnesota Attorney General’s Health Care unit and the Minnesota Department of Commerce consumer insurance division. Both offices accept complaints and can mediate provider disputes. Veteran service organizations—American Legion posts, VFW chapters, and the Minnesota Department of Veterans Affairs—offer hands-on assistance verifying DEERS and pushing for billing corrections.
+
+Minnesota health systems often maintain dedicated patient financial counselors with experience handling TRICARE for Life cases; ask for that role during the first billing call. This bypasses generalist billing agents and reduces back-and-forth time.
+
+Technical Tools For Providers To Reduce Errors
+
+Deploy EDI validation tools that check the presence of MBI, DEERS ID, and CCN before claim submission. Use clearinghouses with robust mapping tools (Change Healthcare, Availity) and schedule weekly clearinghouse reconciliation jobs. For Minnesota hospitals, include regular training on TRICARE-specific payer IDs and the 835 remittance loops to ensure remittance data flows into the AR system correctly.
+
+Measure progress with monthly dashboards showing claim rejects, manual remits, and patient balance write-offs attributable to TRICARE coordination issues. Those dashboards make the ROI case for allocating staff time to fix the root causes.
+
+Conclusion
+
+TRICARE for Life protects many military retirees and their families from residual medical costs, but administrative failures and coordination-of-benefits errors are the real drivers of surprise bills in Minnesota. Combine immediate documentation, assertive escalation to TRICARE and Medicare, and state-level complaints to the Minnesota Attorney General or Department of Commerce to convert balance bills into corrected claims. Vigilant registration practices, proper EDI mapping, and proactive local advocacy reduce the incidence and duration of billing disputes for TRICARE for Life beneficiaries across the state.
+
+Contrarian Take: Systems Fixes Matter More Than Individual Appeals
+
+Focusing solely on individual appeals treats the symptom, not the disease. Pushing for provider process changes—mandatory DEERS checks, payer-ID audits, and weekly clearinghouse reconciliation—yields systemic reductions in surprise billing that far outpace repeated appeals for isolated patients.
+
+Real-World Example: Mayo Clinic’s TRICARE Coordination Initiative
+
+Mayo Clinic launched a targeted initiative to reduce veteran billing errors by integrating DEERS verification into patient intake and creating a veteran liaison role. The program cut TRICARE-related claim reworks by roughly 28.1% within six months and reduced beneficiary complaints forwarded to the Minnesota AG by a tangible margin.
+
+Core Rule: Document Fast, Escalate Faster
+
+Never wait. Immediate, well-documented escalation to the TRICARE contractor, Medicare MAC, and Minnesota regulatory channels is the single most effective action to stop a surprise bill turning into collections. Hold providers to a process fix, not just a one-off correction.",https://northcentralinsurance.com/wp-content/uploads/2026/07/TRICARE-for-Life-1783354642.png,N,0.0,2026-07-06 19:56:36.171400
+,,2026-07-06 21:41:36+00:00,www.law360.com,"DOD, Humana Seek Toss Of $270K Tricare Coverage Row - Law360 Healthcare Authority",Not Available,,,,,https://www.law360.com/healthcare-authority/policy-compliance/articles/2497297/dod-humana-seek-toss-of-270k-tricare-coverage-row,"PLEASE NOTE: A verification email will be sent to your address before you can access your trial.
+Password (at least 8 characters required) Confirm Password","PLEASE NOTE: A verification email will be sent to your address before you can access your trial.
+
+Password (at least 8 characters required)
+
+Confirm Password",https://www.law360.com/images/law360-stacked.png,N,0.0,2026-07-06 19:56:40.996525
 ,,2026-07-06 21:40:20+00:00,San Antonio Express-News,San Antonio renews push to land Defense Health Agency headquarters,"Brandon Lingle, Staff",,,,,https://www.expressnews.com/business/article/san-antonio-defense-health-agency-headquarters-22334325.php,"Brandon Lingle covers technology, cybersecurity and aerospace for the Express-News.
 You can reach him at Brandon.Lingle@express-news.net.
 Before writing for the Business team, he was an Editorial Board member and opinion columnist.
@@ -2236,7 +2460,3 @@ We're making quick improvements to serve you better.
 Thanks for your patience!","We'll be right back!
 
 We're making quick improvements to serve you better. Thanks for your patience!",https://directory-resources.psychologytoday.com/pt/992c12df/favicon-pt.ico,N,1.0,2026-07-04 19:56:37.862999
-,,2026-07-03 23:12:34+00:00,Gifthealth,"I have TRICARE, am I eligible for the Bridge Program? - Gifthealth",Not Available,,,,,https://gifthealth.zendesk.com/hc/en-us/articles/51832332036635-I-have-TRICARE-am-I-eligible-for-the-Bridge-Program,"You are eligible for the Bridge program if you have TRICARE and are also enrolled in an eligible Medicare Part D plan and meet the clinical requirements.
-TRICARE by itself does not qualify you for the Bridge program.","You are eligible for the Bridge program if you have TRICARE and are also enrolled in an eligible Medicare Part D plan and meet the clinical requirements.
-
-TRICARE by itself does not qualify you for the Bridge program.",https://gifthealth.zendesk.com/hc/theming_assets/01KM5YRG0J22ZRNJX9ARQSNR7F,N,0.0,2026-07-04 18:56:16.782408
