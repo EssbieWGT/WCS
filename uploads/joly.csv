@@ -33,6 +33,65 @@ It will be capable of controlling smart home appliances, ⁠playing ‌media, an
 OpenAI did not immediately respond to a Reuters request for comment.
 
 (Reporting by Juby Babu in Mexico City; Editing by ​Pooja Desai)",https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-07/14/2026-07-14T205325Z_1_LYNXMPEM6D1EG_RTROPTP_3_TECH-OPENAI-TEXAS.JPG,N,,2026-07-14 20:11:11.760861
+ID32,Microsoft,2026-07-14 22:33:12+00:00,JanBakker.tech,Passkeys by default and retirement of Microsoft-provided SMS and voice authentication,Jan Bakker,,,,,https://janbakker.tech/passkeys-by-default-and-retirement-of-microsoft-provided-sms-and-voice-authentication-a-guide-to-stay-calm/,"Microsoft dropped a bomb by announcing it will stop funding phone-based MFA, such as SMS and voice, and that passkeys will become the new standard.
+For reference, here are the supporting articles: Passkeys by default and retirement of Microsoft-provided SMS and voice authentication – Microsoft Entra ID | Microsoft Learn Microsoft Entra ID security updates: Passkeys are the default authentication method in Entra ID | Microsoft Security Blog Timelines Microsoft is pretty aggressive about timelines because the first milestone will be in 50 days from the day the news came out.
+On September 1, 2026, users enabled for SMS or Voice in the Entra Authentication Methods Policy (AMP), or in legacy MFA settings, will be auto-enabled for passkeys in AMP.
+Going from phone-based MFA to passkeys is a huge step, and I’m sure companies need much more time to make that transition.
+The message is clear: we will stop paying for your phone-based MFA, and passkeys are the way forward.","I don’t have all the answers, but I promise to keep this post updated with all the details I find.
+
+Microsoft dropped a bomb by announcing it will stop funding phone-based MFA, such as SMS and voice, and that passkeys will become the new standard.
+
+For reference, here are the supporting articles:
+
+Passkeys by default and retirement of Microsoft-provided SMS and voice authentication – Microsoft Entra ID | Microsoft Learn
+
+Microsoft Entra ID security updates: Passkeys are the default authentication method in Entra ID | Microsoft Security Blog
+
+Timelines
+
+Microsoft is pretty aggressive about timelines because the first milestone will be in 50 days from the day the news came out. Here in the Netherlands, everyone is packing or has already packed for a 30-day sabbatical (summer holiday), which leaves us with about 20 days of preparation before the first milestone.
+
+The first milestone
+
+This is a guide to not panicking, so let’s take it step by step. Let’s see how organizations will survive the summer. We deal with the other milestones in later posts.
+
+What will happen on September 1st?
+
+On September 1, 2026, users enabled for SMS or Voice in the Entra Authentication Methods Policy (AMP), or in legacy MFA settings, will be auto-enabled for passkeys in AMP. These in scope users will be put into a passkey profile allowing all types of passkeys. Your Registration Campaign settings will be set to Microsoft Managed state targeting passkeys, and will automatically bring these users into scope.
+
+When these users next sign-in and complete MFA, the registration campaign will nudge them to register a passkey. By default, users will have unlimited snoozes of the nudge prompt. If you do not want this to occur, move users out of SMS or Voice in AMP before September 1st.
+
+Hmm, that sounds like a big change to me. Going from phone-based MFA to passkeys is a huge step, and I’m sure companies need much more time to make that transition. What about other methods like:
+
+Microsoft Authenticator App push
+
+Microsoft Authenticator App TOTP
+
+Passwordless Phone Sign-in
+
+Software OTP
+
+Hardware OTP
+
+QR code sign-in
+
+Here is the catch:
+
+A temporary opt-out will be available for the September 1, 2026 through February 1, 2027 changes. This allows you to delay passkey and Registration Campaign enablement while you complete transition activities, such as configuring customer-managed telecom providers or migrating to other authentication methods. API support and information for opting out will be available starting August 1, 2026.
+
+So that leaves us with two options for now:
+
+Ditch your summer plans, and move everyone over to passkeys within the next 50 days
+
+Take a break and use the opt-out/delay API to breathe deeply and develop a good plan to move forward. No need to panic.
+
+Conclusion
+
+I fully agree with Microsoft that we need to eliminate weak MFA methods, but I think we need a bit more time and guidance to get there. I’ll try to keep you posted on any news around this topic.
+
+The message is clear: we will stop paying for your phone-based MFA, and passkeys are the way forward. Thanks for the heads-up, Microsoft, but we need a lot more details to land this plane properly.
+
+Stay safe.",https://janbakker.tech/wp-content/uploads/2026/07/pexels-ivan-s-6648545.jpg,N,,2026-07-14 22:03:50.923112
 ID18,Elevance Health,2026-07-14 22:08:21+00:00,www.barrons.com,Elevance Is Overcoming Medicare Advantage Hurdles. Earnings Could Show It. - Barron's,,,,,,https://www.barrons.com/articles/elevance-health-earnings-stock-price-a310dd71,Health insurer stocks have rallied this year after a tough run of rising medical costs that hampered earnings in 2024 and 2025. Advertisement - Scroll ...,Not Available,,Y,,2026-07-14 19:18:42.171260
 ID23,IBM,2026-07-14 21:58:47+00:00,CNBC,Cybersecurity stocks rally on AI spending change comments from IBM's Krishna - CNBC,"Samantha Subin, www.facebook.com",,,,,https://www.cnbc.com/2026/07/14/cybersecurity-stocks-ai-spending-mythos.html,"Cybersecurity stocks jumped on Tuesday after IBM CEO Arvind Krishna flagged cyber fears as a top priority for customers in the company's preliminary second-quarter results.
 During the period, Krishna said customers shifted spending to servers and memory and that ""rapidly-evolving, industry-wide cybersecurity concerns"" distracted customers.
@@ -12482,62 +12541,3 @@ It gave Commerzbank’s shareholders the chance to swap one share for 0.485 of U
 When the tender process opened in May, Unicredit owned 26.8% of Commerzbank directly (plus more via derivatives).
 It probably has more than 40% in its hands now.","The battle for Commerzbank, a leading German lender, reaches a critical point on Wednesday when UniCredit, a big Italian bank, announces the outcome of its takeover bid. It gave Commerzbank’s shareholders the chance to swap one share for 0.485 of Unicredit’s, an offer that implicitly valued the German bank at a discount. When the tender process opened in May, Unicredit owned 26.8% of Commerzbank directly (plus more via derivatives). It probably has more than 40% in its hands now.",https://www.economist.com/content-assets/images/20260711_ibp311.jpg,N,,2026-07-08 03:00:51.203911
 ID29,Levi Strauss,2026-07-08 02:56:47+00:00,www.barrons.com,Review & Preview: SpaceX Meets Gravity - Barron's,,,,,,https://www.barrons.com/articles/stocks-today-spacex-chip-equities-fall-major-indexes-close-lower-a6ec31ac,Levi Strauss reports second-quarter fiscal-2026 results tomorrow. Advertisement - Scroll to Continue. The Federal Open Market Committee releases ...,Not Available,,Y,,2026-07-08 00:04:11.637520
-ID24,Instacart,2026-07-08 01:27:52+00:00,HappyGamer,"Microsoft Sets Biggest Gaming Layoff Record Ever: 3200 Xbox Jobs Cut, Four Studios Leaving",Ethan Carter,,,,,https://happygamer.com/microsoft-xbox-biggest-gaming-layoff-record-3200-jobs-four-studios-leaving-158822/,"4,800 jobs cut in a single round.
-4,800 JOBS GONE, AND XBOX TAKES THE BIGGEST GAMING LAYOFF EVER ANNOUNCED.” – @LayoffAI The 3,200 Xbox cuts include 1,600 people walked out on day one.
-Microsoft Cut 4,800 Employees the Same Week It Funded 6,000 AI Engineers Here’s where the math gets hard to ignore.
-Four days before these layoffs, it announced a $2.5 billion unit that embeds 6,000 AI engineers inside customer companies.
-Microsoft cut roughly 15,000 jobs across two rounds last year.","Microsoft made it official on July 7. 4,800 jobs cut in a single round. Xbox absorbs 3,200 of those, breaking the all-time record for a gaming layoff. The previous record was 1,900. Microsoft set that one too, back in 2024. Two records in two years, both owned by the same company.
-
-This one is different in scale and in what it signals. The cuts reach studios, the executive level, and the company’s stated direction for Xbox as a whole.
-
-“MICROSOFT JUST MADE IT OFFICIAL. 4,800 JOBS GONE, AND XBOX TAKES THE BIGGEST GAMING LAYOFF EVER ANNOUNCED.” – @LayoffAI
-
-The 3,200 Xbox cuts include 1,600 people walked out on day one. The rest fall on Microsoft’s sales and consulting units. That’s 2.1% of the entire company in one announcement.
-
-Asha Sharma Inherited a Division Losing 64 Cents on Every Dollar
-
-Asha Sharma took the Xbox CEO role in February 2026 when Phil Spencer stepped back. She came from Instacart and Meta. No gaming background before this role. Her message to staff this week was blunt: “Our business today is not healthy.” The division was losing 64 cents for every dollar invested. Her stated fix: “We must reset Xbox.”
-
-The word “reset” is doing a lot of work there. The layoffs are part of it. So are the studio departures. Sharma has been in the seat less than six months. This is her first major move.
-
-Four Studios Are Leaving Microsoft, and Arkane Lyon Is Still Waiting
-
-Double Fine and Compulsion Games are going independent. Ninja Theory and Undead Labs are being sold to new owners. Arkane Lyon sits in something Microsoft is calling a “strategic review.”
-
-Double Fine is Tim Schafer’s studio. Psychonauts 2 was one of the better-reviewed Xbox exclusives in recent memory. They’ve been under Microsoft since 2019. Going independent is a real shift. Compulsion Games, known for South of Midnight, is also heading out on its own.
-
-Ninja Theory made Hellblade II. Undead Labs runs State of Decay. Both going to new owners beats closure. Still, these are established studios being handled as transferable assets in a balance sheet cleanup.
-
-Arkane Lyon made Dishonored 2 and Deathloop. Their Austin counterpart was shut down entirely in 2024. That precedent makes “strategic review” a phrase worth watching carefully.
-
-Microsoft Cut 4,800 Employees the Same Week It Funded 6,000 AI Engineers
-
-Here’s where the math gets hard to ignore. Microsoft spent over $100 billion on AI infrastructure in the fiscal year that just ended. Four days before these layoffs, it announced a $2.5 billion unit that embeds 6,000 AI engineers inside customer companies. It cut 4,800 workers the same week it funded 6,000 new ones.
-
-The layoff announcement came from the head of HR. Satya Nadella, who earned $96.5 million last year, has not made a public statement.
-
-HR’s message to departing staff: “AI is changing how work gets done,” and that everyday tasks “can now be automated.” That’s a fairly direct explanation from a company cutting thousands of workers while funding thousands of AI roles at the same time.
-
-Notably, Microsoft closed its worst stock month since 2000, down roughly 20%. More than $570 billion in market value erased. The market is not reading this as a clean turnaround.
-
-Xbox is not a standalone operation. It’s a division inside one of the world’s largest companies. When that parent redirects $100 billion toward AI in a single year, every other budget competes harder for space. Gaming is not Microsoft’s growth story right now. AI is.
-
-15,000 Cuts in 2025 and a Buyout Program in April: July Wasn’t the Beginning
-
-None of this arrived without a trail. Microsoft cut roughly 15,000 jobs across two rounds last year. In April 2026, it launched the “Rule of 70,” the first buyout program in company history. The offer went to about 9,000 older US workers. Around 3,000 took packages.
-
-In May, LinkedIn cut 875 jobs in a quarter where its own revenue grew 12%. Layoffs during a growth quarter. The logic isn’t financial distress. It’s replacement.
-
-Microsoft has also ranked as the sixth largest H-1B visa filer in the US since 2020. Bringing in specialized workers while cutting others. The through-line is AI transition, not budget crisis.
-
-Game Pass Just Lost Its Lock on Double Fine and Compulsion Games
-
-The studio exits are what hits players most directly. Double Fine and Compulsion going independent means their future games won’t automatically land on Game Pass. That’s not confirmed policy, but it’s the rational expectation. Independent studios pick their own platforms.
-
-Ninja Theory and Undead Labs under new ownership could go in many directions. That depends entirely on who acquires them. No clarity there yet.
-
-Arkane Lyon’s situation is the most uncertain of the four. “Strategic review” can mean a lot of things. The Austin studio closure in 2024 is not a reassuring comparison.
-
-Xbox still has strong studios: id Software, Playground Games, Bethesda. But the lineup is noticeably lighter than it was a year ago. First-party releases are already sparse. More studio departures make that harder to fix.
-
-Whether Asha Sharma’s reset builds something more durable is the real question. The next 12 months will answer it.",https://happygamer.com/wp-content/uploads/2026/07/microsoft-xbox-layoffs-3200-158822.jpg,N,,2026-07-08 01:59:55.178773
