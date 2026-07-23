@@ -1,4 +1,160 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID32,Microsoft,2026-07-23 13:07:32+00:00,Windows Latest,"Microsoft admits SMS and voice MFA can't stop AI attacks, mandates passkeys in Entra by ...",Kareem Anderson,,,,,https://www.windowslatest.com/2026/07/22/microsoft-admits-sms-and-voice-mfa-cant-stop-ai-attacks-mandates-passkeys-in-entra-by-february-2027/,"Microsoft no longer believes SMS and voice are reliable MFA (Multi-Factor Authentication) and wants everyone to embrace passkeys.
+Starting February 2027, Microsoft Entra customers will be required to use passkeys, particularly because of AI-assisted threats.
+Then, by October 30, 2026, you will be forced to configure a supported telecom provider through the Microsoft Security Store if you can’t get off telephony-based MFA.
+Lastly, on February 1, 2027, Microsoft-provided SMS and voice authentication will officially be dead.
+Your first step is to identify who in your tenant is still using SMS or voice authentication.","Microsoft no longer believes SMS and voice are reliable MFA (Multi-Factor Authentication) and wants everyone to embrace passkeys. Starting February 2027, Microsoft Entra customers will be required to use passkeys, particularly because of AI-assisted threats.
+
+Microsoft’s research found that SMS and voice authentication become less of a security vault and more of a liability in the age of AI. In May 2026, Windows Latest reported that Microsoft is killing off SMS codes for personal Microsoft account sign-in, and enforcing passkeys instead.
+
+“Microsoft is committed to advancing security standards, and as such, we will start phasing out SMS as a method of authentication and account recovery for personal Microsoft accounts,” Microsoft previously noted in a document spotted by Windows Latest. “Microsoft believes that the future of authentication is passwordless, secure, and user-friendly.”
+
+Now, similar changes are coming to enterprises.
+
+According to the company, AI has changed the economics of phishing and socially engineered attack vectors by leveraging fake sign-in pages, automating credential theft, and running SIM-swap operations at scale, and in half the time.
+
+“The AI era demands stronger, phishing-resistant authentication. We are making passkeys the default authentication experience in Microsoft Entra to help customers securely adopt AI at scale,” Microsoft noted in a new advisory seen by Windows Latest.
+
+The document is being circulated internally and sent out to IT admins ahead of the deadline.
+
+“As part of this transition, SMS and voice will no longer be available as multifactor authentication methods starting February 1, 2027. SMS and voice do not offer sufficient levels of security in comparison to passkeys,” the company explained. “Traditional authentication methods including passwords, SMS one-time passcodes, and voice-based verification remain vulnerable to phishing, interception, and social engineering attacks.”
+
+Microsoft really wants you to use Passkeys, and it started before AI
+
+Microsoft has been making this argument for years, not just since AI accelerated things. Alex Weinert, the company’s identity security lead, wrote back in 2020 that SMS is roughly 40% less effective at stopping bad actors compared to the Microsoft Authenticator app.
+
+The issue has only widened since, which is partly why the company is finally cutting the cord. Microsoft has a solution, and it’s Passkeys.
+
+Microsoft believes that Passkeys will help solve this issue by removing shared secrets from the authentication flow, thereby reducing the number of vectors through which unwitting users can deliver Trojan horses.
+
+How Does Passkey Solve Microsoft’s Authentication Problems
+
+Microsoft’s Passkey solution relies on public-key cryptography tied to a user’s device. The kicker is that the private key never leaves the device, so attackers cannot steal it via a fake prompt or a cloned login page.
+
+It’s worth knowing there are two flavors of passkey Entra supports, since the choice affects how you plan a rollout. Synced passkeys live in a platform credential manager like iCloud Keychain or Google Password Manager and follow the user across devices, which suits people who already use one of those ecosystems.
+
+Device-bound passkeys are tied to a single piece of hardware, whether that’s Windows Hello for Business, a FIDO2 security key, or the Microsoft Authenticator app.
+
+Microsoft’s guidance nudges toward device-bound credentials like FIDO2 security keys for admins and highly regulated users, and synced passkeys for everyone else, which is a reasonable starting point if you’re not sure where to draw the line.
+
+The groundwork for the Passkey transition has been months in the making as Microsoft sprinkles the same sort of authentication across Windows 11 and Microsoft accounts, phasing out SMS codes in the process. Entra is simply the enterprise version of this change catching up.
+
+How Microsoft plans to enforce Entra’s Passkey
+
+On September 1, 2026, you will be prompted to register a passkey during your next MFA challenge. On September 18, 2026, Microsoft will publish telecom provider details for organizations that require SMS or voice for regulatory or operational reasons.
+
+Then, by October 30, 2026, you will be forced to configure a supported telecom provider through the Microsoft Security Store if you can’t get off telephony-based MFA.
+
+Lastly, on February 1, 2027, Microsoft-provided SMS and voice authentication will officially be dead. Unlike the Windows 10 security patch saga, where public pressure bought consumers an extra year of ESU, Microsoft has been unusually blunt about this one.
+
+The company’s documentation states that there is no opt-out from the February 1 enforcement and that it applies to every tenant, full stop.
+
+The one flexibility Microsoft is offering is a temporary opt-out that only covers the period between September 1, 2026 and February 1, 2027, meant to give admins breathing room to finish their migration. API support for that temporary opt-out becomes available August 1, 2026.
+
+Also, you need to know what “dead” means here, since it isn’t an account lockout. After February 1, 2027, anyone whose only registered MFA method is SMS or voice will hit a blocking prompt to register a passkey the next time they sign in. They can’t skip it, and they can’t sign in until they complete it.
+
+Data won’t be lost, and the account will not be disabled, but nobody is getting into their account without setting up a passkey first, so this is a problem worth solving before the deadline.
+
+How to prepare your organization for the Passkey shift
+
+As far as you’re concerned, preparation should start now. Your first step is to identify who in your tenant is still using SMS or voice authentication. Fortunately, Microsoft provides a policy scanner to help speed up your investigations.
+
+The scanner Microsoft provides is a PowerShell script published on GitHub, and you’ll need one of the Global Reader, Authentication Policy Administrator, or Security Reader roles to run it. Any tenant that comes back with a non-zero result is in scope for this whole migration.
+
+After identifying the stragglers, you can now get down to business by drafting communications early enough to let them know the shift is on its way. You’ll also have enough time to identify device compatibility and passkey registration support, using Windows Hello for Business, FIDO2 security keys, or platform-stored passkeys on mobile and desktop systems.
+
+The following are the minimum requirements for switching to passkeys:
+
+Windows 10 22H2 for Windows Hello for Business
+
+Windows 11 22H2 for the best passkey experience
+
+macOS 13 Ventura
+
+iOS 17
+
+Android 14
+
+Anything older than that can still work through external FIDO2 security keys, but the built-in platform experience won’t be available. If you’re unsure how much of your fleet meets these numbers, Microsoft’s phishing-resistant passwordless deployment guide includes a readiness workbook that pulls this straight from your sign-in logs.
+
+The company also suggests enabling a registration campaign ahead of the September 1 auto-enrolment.
+
+Once you have communications and verified device support, you can start the migration to phishing-resistant methods, or you can contract with your preferred telecom provider to continue using SMS or voice.
+
+Microsoft sets February 2027 deadline for SMS codes and voice MFA
+
+For consumers, Microsoft says it has already started phasing out SMS codes, and most of you’ll begin seeing changes in the coming months.
+
+In the case of enterprises, if your organization has to maintain telephony-based MFA, you’ll need to set your configurations in place before February 2027. As far as we know, Microsoft is dead set on February 2027 as its cutoff date with no extended support lifelines.
+
+Migrating existing SMS and voice users to passkeys costs nothing extra since passkeys are included in every Microsoft Entra plan, but a customer-managed telecom provider through the Security Store is a paid add-on, priced per message and varying by provider and region.
+
+The retirement isn’t limited to standard sign-in either. It covers self-service password reset (SSPR) too, so any SSPR flows that use SMS or voice need the same attention. B2B and guest users are in scope as well, though Microsoft says passkey support for that group is planned to land by the end of 2026, so external users are slightly later.
+
+Note that this whole timeline currently applies to public cloud tenants only, with other cloud environments following on a separate schedule Microsoft hasn’t detailed yet.
+
+Microsoft’s decision is a bit of a headache for IT admins and adds another to-do on your list, but it’s designed to be a much smaller and less costly headache than having your whole system succumb to a user-introduced phishing scheme as they become more prevalent thanks to AI.",https://www.windowslatest.com/wp-content/uploads/2026/07/Microsoft-Passkeys.jpg,N,,2026-07-23 10:05:44.357244
+ID30,Medtronic,2026-07-23 12:54:16+00:00,MassDevice,Lung cancer treatment developer Maverix Medical picks former Medtronic exec as CEO,Sean Whooley,,,,,https://www.massdevice.com/maverix-medical-medtronic-exec-jung-ceo/,"Lung cancer diagnostics and treatment developer Maverix Medical announced today that it appointed Carla Jung as its new CEO.
+The company also develops molecular diagnostic tools to triage lung cancer and a suite of steerable endobronchial instruments designed to target difficult-to-reach and off-airway nodules.
+Commentary from Maverix Medical and Ajax Health leadership Duke Rohlen, founder and CEO of Ajax Health, said: “Carla is a seasoned professional who delivers results by seeking to bring out the best in everyone around her.
+Since she joined as Chief Commercial Officer, the team has grown revenue by more than 30 percent year over year.
+In lung cancer, earlier diagnosis is one of the most powerful ways to improve outcomes.","Lung cancer diagnostics and treatment developer Maverix Medical announced today that it appointed Carla Jung as its new CEO.
+
+Jung joins to lead the company’s strategy, execution and continued growth as it scales its commercial organization and brings new products to market.
+
+Menlo Park, California-based Maverix — formed in 2023 under the Ajax Health umbrella through investments from KKR and Hologic — develops a range of products for diagnosing and treating lung cancer. It acquired Thoracent in 2025, bringing in a stent portfolio that offers supportive scaffolds for the airways and GI tract. It aims to alleviate symptoms from obstruction, providing relief for improved quality of life. Thoracent biopsy devices also support early and accurate diagnosis.
+
+The company also develops molecular diagnostic tools to triage lung cancer and a suite of steerable endobronchial instruments designed to target difficult-to-reach and off-airway nodules.
+
+Jung brings 29 years of medtech experience, having joined Maverix as chief commercial officer (CCO) in 2025. Prior to that, she spent 13 years at Medtronic, culminating in her post as VP, Coronary and Renal Denervation.
+
+Before Medtronic, Jung spent more than a decade in sales at Boston Scientific. She began her career in women’s health at Eli Lilly.
+
+As part of the leadership changes at Maverix, the company named David Beylik, previously COO, as executive chair. Brian Lynch, who built Thoracent’s sales organization, becomes chief revenue officer and president of the Medical Device division.
+
+Commentary from Maverix Medical and Ajax Health leadership
+
+Duke Rohlen, founder and CEO of Ajax Health, said:
+
+“Carla is a seasoned professional who delivers results by seeking to bring out the best in everyone around her. Since she joined as Chief Commercial Officer, the team has grown revenue by more than 30 percent year over year. In my view, her dedication to her team and to giving physicians the best possible solutions for their patients is unmatched.”
+
+Jung added:
+
+“I’m honored to lead this team. In lung cancer, earlier diagnosis is one of the most powerful ways to improve outcomes. Our ambition is to make an impact across the entire continuum of care, from detection through treatment, with the goal of helping more patients survive this disease.”",https://wtwh-marketing.s3.amazonaws.com/wp-content/uploads/massdevice/2026/07/23084810/Carla-Jung-Maverix-Medical-CEO.png,N,,2026-07-23 10:05:40.766100
+ID7,Barclays,2026-07-23 12:40:46+00:00,the Guardian,Former Barclays CEO Jes Staley faces US congressional hearing over Epstein ties,"Anna Betts, Kalyeena Makortoff, www.theguardian.com, anna-betts, kalyeena-makortoff",,,,,https://www.theguardian.com/us-news/2026/jul/23/jes-staley-barclays-ceo-epstein-hearing,"Former Barclays boss Jes Staley is due to be questioned by US lawmakers on Thursday in a closed-door interview about his past ties to convicted child sex offender Jeffrey Epstein.
+The panel has released transcripts or videos of interviews with previous witnesses, including Bill and Hillary Clinton and Bill Gates.
+The former Barclays chief was eventually banned from taking any job in the UK’s financial sector for playing down those ties.
+Barclays said in a recent statement that the FCA concluded the bank was also was “misled by Jes Staley”.
+But over the last year, documents released by the US Department of Justice (DoJ) have renewed scrutiny of Staley’s ties to Epstein.","Former Barclays boss Jes Staley is due to be questioned by US lawmakers on Thursday in a closed-door interview about his past ties to convicted child sex offender Jeffrey Epstein.
+
+Staley, who spent more than three decades at JPMorgan Chase before joining Barclays in 2015, is the latest in a series of high-profile figures to appear in front of the House committee on oversight and reform as part of its investigation into Epstein, who died in prison in August 2019 while awaiting trial over child sex-trafficking charges.
+
+A transcript of Staley’s interview is expected to be released at a later date. The panel has released transcripts or videos of interviews with previous witnesses, including Bill and Hillary Clinton and Bill Gates. It is also expected to release a transcript of its recent exchange with Goldman Sachs’ former top lawyer Kathy Ruemmler.
+
+Staley’s ties with the well-connected billionaire spelled the end of his career, with the American banker having resigned as the chief executive of Barclays in November 2021 after UK regulators launched an investigation into Staley’s ties to Epstein and Barclays said the pair “did not have a close relationship”.
+
+However, the FCA investigation, triggered by a cache of 1,200 emails from Staley’s former employer JP Morgan, concluded that the pair were “indeed close” and had a relationship that “went beyond one that was professional in nature”. The former Barclays chief was eventually banned from taking any job in the UK’s financial sector for playing down those ties.
+
+Barclays said in a recent statement that the FCA concluded the bank was also was “misled by Jes Staley”. The bank added that its own internal investigation was “based on the information that was available to us at the time”.
+
+Staley unsuccessfully tried to challenge the regulator’s ruling, resulting in a court hearing that publicly detailed Epstein’s role in Staley’s life.
+
+During that hearing, Staley admitted to having sex with a member of Epstein’s staff in New York but agreed with a lawyer during cross-examination that he would describe the intercourse as “consensual”.
+
+Judges ultimately sided with the FCA, upholding its ban and scuppering efforts to restore his reputation. He also lost out on £18m ($24m) worth of pay and bonuses from Barclays as a result of the ruling.
+
+After losing his legal challenge, Staley said he was “disappointed” by the outcome but was “never dishonest”. He previously said of Epstein in 2020, “obviously I thought I knew him well, and I didn’t” and “with hindsight of what we all know now, I deeply regret having had any relationship with Jeffrey Epstein.”
+
+Staley originally met Epstein in 2000 after he became head of JP Morgan’s private bank, where Epstein was a client. He remained in touch with Epstein for several years after the financier pleaded guilty to state charges in Florida of solicitation of prostitution and of solicitation of prostitution with a minor, even visiting Epstein while he was serving his sentence and out on work release.
+
+Staley has said that their relationship tapered off after he left JP Morgan, with the two men meeting for a final time in 2015, when Staley took his own yacht, the Bequia, to visit Epstein’s private island.
+
+In March 2023, JPMorgan Chase sued Staley, arguing that he should be held liable for any financial penalties the bank faces from lawsuits accusing the bank of helping to facilitate Epstein’s sex trafficking. Later that year, the two sides reached a settlement, of which the terms are confidential.
+
+But over the last year, documents released by the US Department of Justice (DoJ) have renewed scrutiny of Staley’s ties to Epstein. They included files, reported by the Guardian, showing that DoJ prosecutors had reviewed allegations of rape and serious bodily harm against a woman by Staley. There is no evidence that prosecutors decided to pursue the allegations. Staley has denied any wrongdoing and has never been charged with a crime related to the allegations.
+
+Staley’s US lawyers were contacted for comment.","https://i.guim.co.uk/img/media/879defccb50bc5c62b1b42a888ef343c9b4af4cb/721_112_2719_2176/master/2719.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=af52248a6586e6b3789210e962a79ac2",N,,2026-07-23 10:05:28.877850
+ID2,Adobe,2026-07-23 12:06:29+00:00,www.forbes.com,A Gamble That Could Revitalize Adobe Stock After A 38% Drop - Forbes,,,,,,https://www.forbes.com/sites/greatspeculations/2026/07/23/a-gamble-that-could-revitalize-adobe-stock-after-a-38-drop/,"Adobe's stock has plummeted 38% in the past year, sparking investor concern. However, the company is executing a deliberate strategy, ...",Not Available,,Y,,2026-07-23 10:04:54.300257
 ID10,Boston Scientific,2026-07-23 11:56:36+00:00,"Morningstar, Inc.",Maverix Names Carla Jung Chief Executive Officer to Lead Next Phase of Growth,Not Available,,,,,https://www.morningstar.com/news/pr-newswire/20260723sf10271/maverix-names-carla-jung-chief-executive-officer-to-lead-next-phase-of-growth,"Jung will lead the company's strategy, execution, and continued growth as Maverix scales its commercial organization and brings new products to market.
 ""Since she joined as Chief Commercial Officer, the team has grown revenue by more than 30 percent year over year.
 ""In lung cancer, earlier diagnosis is one of the most powerful ways to improve outcomes.
@@ -80,6 +236,56 @@ Use of and/or registration on any portion of this site constitutes acceptance of
 The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of American City Business Journals.","GSK's $10.6B Nuvalent acquisition delivers first FDA approval ahead of schedule
 
 © 2026 American City Business Journals. All rights reserved. Use of and/or registration on any portion of this site constitutes acceptance of our User Agreement (updated August 13, 2024) and Privacy Policy (updated December 16, 2025). The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of American City Business Journals.",https://media.bizj.us/view/img/13105179/gskcambridgeabn0155*1200xx3600-2025-0-188.jpg,N,,2026-07-23 07:03:30.435045
+ID2,Adobe,2026-07-23 10:04:04+00:00,www.modernhealthcare.com,CMS stars redo lifts big Medicare Advantage insurers - Modern Healthcare,Not Available,,,,,https://www.modernhealthcare.com/insurance/mh-aetna-unitedhealthcare-medicare-advantage-star-ratings/,"A hand holding a marker. (Modern Healthcare illustration, Adobe Stock). NT. By. Nona Tepper. TB. By. Tim Broderick. July 23, 2026 05:00 AM CDT. Dozens ...",Not Available,,N,,2026-07-23 10:05:25.495750
+ID1,Accor,2026-07-23 08:58:24+00:00,Yahoo Finance,American Express and ALL Accor Expand the Power of Membership with New Global Partnership,PR Newswire,,,,,https://sg.finance.yahoo.com/news/american-express-accor-expand-power-085000342.html,"Details of the launch date for the Elite Status Match benefit in Hong Kong will be announced at a later date.
+ABOUT AMERICAN EXPRESS American Express (NYSE: AXP) is a global payments and premium lifestyle brand powered by technology.
+Founded in 1850 and headquartered in New York, American Express' brand is built on trust, security and service, and a rich history of delivering innovation and Membership value for our customers.
+For more information about American Express, visit americanexpress.com/hk, americanexpress.com/en-us/newsroom/, and ir.americanexpress.com.
+Discover ALL Accor: ALL.com For media inquiries, please contact: American Express Eric Chan Tel: +852 3970 4072 Email: eric.chan1@aexp.com Edelman Crystal Poon Tel: +852 9839 4965 Email: crystal.poon@edelman.com ALL Accor / Accor Phyllis Sio Email: phyllis.sio@accor.com","Transferred points may be redeemed within the ALL Accor program across its vast global hotel network of 45 hotel brands, dining, experiences, and more than 110 partners, in accordance with ALL Accor program terms and conditions.
+
+Elite Status Match for Eligible Card Members
+
+Eligible American Express Card Members will be able to match their American Express status to an equivalent tier within ALL Accor, unlocking enhanced travel benefits and meaningful on-property recognition when staying at participating Accor properties around the world, including:
+
+American Express Platinum® Card Members will be eligible to receive ALL Accor Gold status which includes free Wi-Fi, welcome amenities, late check-out, complimentary room upgrades (subject to availability) and bonus ALL Accor points. Details of the launch date for the Elite Status Match benefit in Hong Kong will be announced at a later date.
+
+ABOUT AMERICAN EXPRESS
+
+American Express (NYSE: AXP) is a global payments and premium lifestyle brand powered by technology. Our colleagues around the world back our customers with differentiated products, services and experiences that enrich lives and build business success.
+
+Founded in 1850 and headquartered in New York, American Express' brand is built on trust, security and service, and a rich history of delivering innovation and Membership value for our customers. With over a hundred million merchant locations across our global network, we seek to provide the world's best customer experience every day to a broad range of consumers, small and medium-sized businesses, and large corporations.
+
+For more information about American Express, visit americanexpress.com/hk, americanexpress.com/en-us/newsroom/, and ir.americanexpress.com.
+
+ABOUT ALL ACCOR
+
+ALL Accor is a booking platform and loyalty programme embodying the Accor promise during and beyond the hotel stay. Through the ALL.com website and app, customers can access an unrivalled choice of stays from more than 45 Accor brands in 110 countries, always at the best price. The ALL Accor loyalty programme gives members access to a wide range of rewards, services and experiences, along with over 100 renowned partners. ALL Accor supports its members daily, enabling them to live their passions with over 7,000 events worldwide each year: local activities, chef masterclasses, major sports tournaments and the most eagerly awaited concerts. ALL Accor is the loyalty program preferred by travellers.
+
+Discover ALL Accor: ALL.com
+
+For media inquiries, please contact:
+
+American Express
+
+Eric Chan
+
+Tel: +852 3970 4072
+
+Email: eric.chan1@aexp.com
+
+Edelman
+
+Crystal Poon
+
+Tel: +852 9839 4965
+
+Email: crystal.poon@edelman.com
+
+ALL Accor / Accor
+
+Phyllis Sio
+
+Email: phyllis.sio@accor.com",https://s.yimg.com/lo/mysterio/api/25936D50D27AEDED114D86BCDBF689C53A10066F70C193FA837B4E1D6E575789/subgraphmysterio/resizefill_w1200_h675;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fprnewswire.com%2Fff7ec780d90559e03dd9ee4174b9a938,N,,2026-07-23 10:04:51.039403
 ID47,Uber,2026-07-23 08:33:34+00:00,news.bloomberglaw.com,Uber's New Litigation Funding Terms Would Hinder Accountability - Bloomberg Law,Brianne Holland-Stergar​,,,,,https://news.bloomberglaw.com/legal-exchange-insights-and-commentary/ubers-new-litigation-funding-terms-would-hinder-accountability,"Litigation funders provide money to attorneys and plaintiffs, who typically owe nothing unless they win their case.
 Plaintiffs and attorneys in resource-intensive mass tort cases — such as Uber’s multidistrict sexual assault lawsuit — often rely on litigation funding.
 Disclosure could be even more harmful to litigation funders themselves, as they might reveal sensitive business information.
@@ -4693,15 +4899,15 @@ But getting the cloud providers to buy the chips could still be a challenge, eve
 Coutand said that Vera was in ""early innings"" of adoption. The company didn't list any major cloud service providers except Oracle on its list of partners but said OpenAI plans to deploy Vera chips in large quantities starting this quarter.
 
 ""The CPU is something they've done to kind of unhook their customers from using Intel or AMD CPUs, and they covet that revenue,"" said Freund. ""What they've done is they decided to focus on a unique CPU that isn't available in the market from anyone right now.""",https://image.cnbcfm.com/api/v1/image/108330581-1783302717764-gettyimages-2266485037-NVIDIA_GTC.jpeg?v=1784578669&w=1920&h=1080,N,,2026-07-21 13:13:39.472329
+ID35,Nvidia,2026-07-21 15:12:49+00:00,Bloomberg.com,Nvidia Touts Progress Getting New Rubin Design to Customers - Bloomberg,Ian King,,,,,https://www.bloomberg.com/news/articles/2026-07-21/nvidia-touts-progress-getting-new-rubin-design-to-customers,"Nvidia Corp. , the semiconductor company at the heart of the artificial intelligence boom, said its latest chip designs are making their way to customers and will help solidify the chipmaker’s leadership in the industry.
+Computing systems based on new Vera Rubin technology have been delivered to major AI companies and are about to make their way into use, according to Ian Buck , an Nvidia vice president and general manager.","Nvidia Corp. , the semiconductor company at the heart of the artificial intelligence boom, said its latest chip designs are making their way to customers and will help solidify the chipmaker’s leadership in the industry.
+
+Computing systems based on new Vera Rubin technology have been delivered to major AI companies and are about to make their way into use, according to Ian Buck , an Nvidia vice president and general manager.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/it7Mns.7ykic/v1/1200x800.jpg,N,,2026-07-21 13:13:43.583575
 ID2,Adobe,2026-07-21 15:12:49+00:00,Bloomberg.com,"Adobe, Salesforce Downgrades Are Latest Show of AI Fears - Bloomberg.com",Ryan Vlastelica,,,,,https://www.bloomberg.com/news/articles/2026-07-21/adobe-salesforce-downgrades-are-latest-show-of-ai-fears,"Concerns about the impact artificial intelligence will have on software companies have prompted more Wall Street analysts to recommend selling Adobe Inc. and Salesforce Inc. stock than they have in years.
 Morgan Stanley is the latest to caution about the risk, downgrading both the companies along with several other stocks in the sector.
 At least five — including Stifel, Evercore ISI, Wolfe Research, and Phillip Securities — have cut their recommendation on Adobe since the start of June, and more than a dozen firms have downgraded it in 2026.","Concerns about the impact artificial intelligence will have on software companies have prompted more Wall Street analysts to recommend selling Adobe Inc. and Salesforce Inc. stock than they have in years.
 
 Morgan Stanley is the latest to caution about the risk, downgrading both the companies along with several other stocks in the sector. At least five — including Stifel, Evercore ISI, Wolfe Research, and Phillip Securities — have cut their recommendation on Adobe since the start of June, and more than a dozen firms have downgraded it in 2026.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilGFFfVBXUr8/v1/1200x800.jpg,N,,2026-07-21 13:13:04.034466
-ID35,Nvidia,2026-07-21 15:12:49+00:00,Bloomberg.com,Nvidia Touts Progress Getting New Rubin Design to Customers - Bloomberg,Ian King,,,,,https://www.bloomberg.com/news/articles/2026-07-21/nvidia-touts-progress-getting-new-rubin-design-to-customers,"Nvidia Corp. , the semiconductor company at the heart of the artificial intelligence boom, said its latest chip designs are making their way to customers and will help solidify the chipmaker’s leadership in the industry.
-Computing systems based on new Vera Rubin technology have been delivered to major AI companies and are about to make their way into use, according to Ian Buck , an Nvidia vice president and general manager.","Nvidia Corp. , the semiconductor company at the heart of the artificial intelligence boom, said its latest chip designs are making their way to customers and will help solidify the chipmaker’s leadership in the industry.
-
-Computing systems based on new Vera Rubin technology have been delivered to major AI companies and are about to make their way into use, according to Ian Buck , an Nvidia vice president and general manager.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/it7Mns.7ykic/v1/1200x800.jpg,N,,2026-07-21 13:13:43.583575
 ID27,J&J,2026-07-21 15:10:33+00:00,24/7 Wall St.,Johnson & Johnson vs Abbott Laboratories: Two Healthcare Giants on Opposite Trajectories,Vandita Jadeja,,,,,https://247wallst.com/investing/2026/07/21/johnson-johnson-vs-abbott-laboratories-two-healthcare-giants-on-opposite-trajectories/,"Johnson & Johnson (NYSE:JNJ | JNJ Price Prediction) and Abbott Laboratories (NYSE:ABT) both recently posted earnings that show two healthcare giants moving in opposite strategic directions.
 JNJ is tightening its focus by spinning off Orthopaedics, while Abbott just closed a $21 billion Exact Sciences deal.
 JNJ’s Q1 report leaned on its Innovative Medicine engine, with segment revenue of $15.43 billion, up 11.2%.
@@ -14208,336 +14414,3 @@ MONARCH Expands the Company’s Robotics Portfolio: The company announced plans 
 Device-Enabled Delivery Extends Technology Into Oncology Care: Johnson & Johnson discussed INLEXZO alongside an investigational erdafitinib device for bladder cancer treatment. The erdafitinib device is designed to provide three months of sustained medicine delivery, compared with the three-week delivery period associated with INLEXZO. Management said the platform could support additional medicines over time. The approach combines therapeutic development with device engineering to address different patient needs within bladder cancer care.
 
 Go Deeper -> Johnson & Johnson’s Earnings Report – MarketBeat",https://nationalcioreview.com/wp-content/uploads/2026/07/TNCR-Graphics-600-x-400-72.gif,N,,2026-07-16 11:11:31.503406
-ID19,Eli Lilly,2026-07-16 14:00:23+00:00,www.pharmaceuticalcommerce.com,How Lilly's AtaiBeckley Deal Accelerates Psychedelic Drug Commercialization Push,Stephen Appezzato,,,,,https://www.pharmaceuticalcommerce.com/view/how-lilly-s-ataibeckley-deal-accelerates-psychedelic-drug-commercialization-push,"The companies expect the deal to close in the third quarter of 2026.
-Beyond BPL-003, AtaiBeckley is also developing a treatment for social anxiety disorder, extending its psychiatric portfolio.
-How Is the Regulatory Environment Shaping Psychedelic Drug Development?
-The Lilly-AtaiBeckley deal is the company's second major neuroscience acquisition in the past few months.
-Late-stage development status does not guarantee regulatory approval, and BPL-003 has not yet completed the full clinical and regulatory review process.","Eli Lilly has agreed to acquire AtaiBeckley for up to $3.8 billion, marking the pharmaceutical giant's formal entry into the psychedelic-based treatment space and underscoring how rapidly the sector has moved from the fringes of drug development toward mainstream commercialization.1 The deal, announced July 16, centers on BPL-003, a psychedelic-based nasal spray in late-stage development for treatment-resistant depression, a condition defined by its lack of response to standard therapeutic approaches.
-
-""Millions of people are still searching for relief and desperately need a therapy that works,"" said Carole Ho, president of Lilly Neuroscience, in a press release.2 The acquisition raises substantive questions about how psychedelic-derived medicines will be developed, regulated, distributed, and ultimately delivered to patients at scale.
-
-What Are the Terms of the Agreement?
-
-Under the terms of the agreement, Lilly will pay $6.75 per AtaiBeckley share in cash, which is a premium of approximately 26% to the stock's closing price on July 15.1 The transaction consists of $2.8 billion upfront with up to $1 billion in additional milestone-based payments. The companies expect the deal to close in the third quarter of 2026.
-
-Beyond BPL-003, AtaiBeckley is also developing a treatment for social anxiety disorder, extending its psychiatric portfolio.
-
-How Is the Regulatory Environment Shaping Psychedelic Drug Development?
-
-The deal arrives against a backdrop of shifting federal policy. In April 2026, US President Donald Trump directed health regulators to expedite reviews of certain psychedelic treatments and increased federal funding for research in the emerging sector.3 That directive generated measurable momentum among investors and drugmakers alike, lending additional urgency to pipeline acquisitions already under consideration.
-
-Lilly is not alone in its pursuit of psychedelic-based treatments. AbbVie acquired an experimental psychedelic-based depression drug from Gilgamesh Pharmaceuticals for up to $1.2 billion in 2025, signaling that large pharmaceutical companies are treating this category as a credible commercial opportunity rather than a speculative bet.1
-
-What Are the Market Access and Supply Chain Implications for Psychedelic-Based Medicines?
-
-Treatment-resistant depression represents a significant unmet need. Patients with the condition do not achieve adequate relief from conventional antidepressants, leaving a population with limited options and substantial disease burden. A nasal spray delivery format, as employed by BPL-003, may carry particular relevance for commercialization teams evaluating distribution logistics, controlled substance scheduling, cold chain requirements, and patient access pathways, all of which will hinge on the specific regulatory classification the compound ultimately receives.
-
-The Lilly-AtaiBeckley deal is the company's second major neuroscience acquisition in the past few months. In June, Lilly completed its up to $7.8 billion purchase of Centessa Pharmaceuticals, which added experimental compounds that target the brain system that regulates sleep and wakefulness. The pace of investment reflects a deliberate strategy: deploying revenue generated by strong demand for its obesity drug portfolio into pipeline diversification across immunology, oncology, and neuroscience.¹
-
-What Remains Uncertain in the Psychedelic Treatment Commercialization Landscape?
-
-Late-stage development status does not guarantee regulatory approval, and BPL-003 has not yet completed the full clinical and regulatory review process. How the compound will be scheduled, what distribution controls will apply, and what patient support infrastructure will be required remain open questions that will directly affect commercial planning. The accelerated federal review timeline introduced under the Trump administration adds a degree of regulatory unpredictability that market access teams will need to monitor closely as the program advances.
-
-References",https://cdn.sanity.io/images/0vv8moc6/pharma_commerce/b2dcac46913c7a7d8e1576e2d5ea46d1762c7bfa-6500x4333.jpg,N,,2026-07-16 10:14:08.822379
-ID19,Eli Lilly,2026-07-16 13:52:19+00:00,www.reuters.com,Lilly enters psychedelic drug race with up to $3.8 billion AtaiBeckley deal | Reuters,,,,,,https://www.reuters.com/business/healthcare-pharmaceuticals/lilly-enters-psychedelic-drug-race-with-up-38-billion-ataibeckley-deal-2026-07-16/,"Eli Lilly will buy AtaiBeckley for up to $3.8 billion, the company said on Thursday, joining ​a race among pharma majors to develop psychedelic ...",Not Available,,Y,,2026-07-16 10:14:11.676432
-ID47,Uber,2026-07-16 13:49:59+00:00,Axios,Uber plans to buy Delivery Hero in a $14.8B deal - Axios,Chelsea Naso,,,,,https://www.axios.com/pro/merger-deals/2026/07/16/uber-delivery-hero-ssw,"Uber said Thursday it plans to buy out the rest of Delivery Hero in a deal valuing the Berlin, Germany-based food delivery company at $14.8 billion.
-Why it matters: The deal unites two of the world's largest food delivery platforms, targeting nearly 100 markets.","Uber said Thursday it plans to buy out the rest of Delivery Hero in a deal valuing the Berlin, Germany-based food delivery company at $14.8 billion.
-
-Why it matters: The deal unites two of the world's largest food delivery platforms, targeting nearly 100 markets.",https://images.axios.com/DgMgiAXGHVXxYKZhH1Rk7tpebe4=/1366x768/smart/2022/05/31/165914-1654016354240.jpg,N,,2026-07-16 12:18:53.027682
-ID19,Eli Lilly,2026-07-16 13:40:03+00:00,Yahoo Finance,Eli Lilly to buy psychedelic drugmaker AtaiBeckley for up to $3.8 billion in bet on depression therapy,Ines Ferré,,,,,https://finance.yahoo.com/markets/article/eli-lilly-to-buy-psychedelic-drugmaker-ataibeckley-for-up-to-38-billion-in-bet-on-depression-therapy-132324945.html,"What happened: AtaiBeckley (ATAI) stock jumped 30% pre-market Thursday after Eli Lilly (LLY) said it would acquire the clinical-stage biopharmaceutical company.
-What's behind the move: Eli Lilly is making a bet on neuroscience and psychiatric pharmaceuticals after announcing it will buy AtaiBeckley in a deal valued at $2.8 billion upfront, with the potential to reach $3.8 billion if certain milestones are met.
-The acquisition gives Lilly access to AtaiBeckley's experimental therapy being developed for patients with treatment-resistant depression.
-""AtaiBeckley's therapies are designed to restore synaptic connectivity and aim to promote the growth of new neural connections, offering a distinct mechanism from conventional antidepressants,"" said Eli Lilly in a statement.
-Ines Ferre is a Senior Business Reporter for Yahoo Finance covering the US stock market, publicly traded companies, and commodities.","What happened: AtaiBeckley (ATAI) stock jumped 30% pre-market Thursday after Eli Lilly (LLY) said it would acquire the clinical-stage biopharmaceutical company.
-
-What's behind the move: Eli Lilly is making a bet on neuroscience and psychiatric pharmaceuticals after announcing it will buy AtaiBeckley in a deal valued at $2.8 billion upfront, with the potential to reach $3.8 billion if certain milestones are met.
-
-The acquisition gives Lilly access to AtaiBeckley's experimental therapy being developed for patients with treatment-resistant depression.
-
-""AtaiBeckley's therapies are designed to restore synaptic connectivity and aim to promote the growth of new neural connections, offering a distinct mechanism from conventional antidepressants,"" said Eli Lilly in a statement.
-
-What else you need to know: Under the agreement, Lilly will pay $6.75 per share in cash, representing an upfront equity value of roughly $2.8 billion.
-
-The offer represents a roughly 26% premium to AtaiBeckley's Wednesday closing price of $5.36.
-
-Shareholders could receive up to an additional $2.50 per share tied to future clinical and regulatory milestones for its therapies BPL-003 and VLS-01.
-
-Ines Ferre is a Senior Business Reporter for Yahoo Finance covering the US stock market, publicly traded companies, and commodities.",https://s.yimg.com/lo/mysterio/api/FF1B5E2FEC36C1565D7A4100A8D01E4D23315DE4FBDDBB887D50CAAE072EA840/subgraphmysterio/resizefill_w1200_h800;quality_80;format_webp/https:%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2020-10%2F7bd59110-187b-11eb-bffd-d401bdead5b2,N,,2026-07-16 10:14:15.219636
-ID30,Medtronic,2026-07-16 13:36:30+00:00,MarketScreener,Medtronic Completes $650 Million Acquisition of SPR Therapeutics | MarketScreener,MT Newswires,,,,,https://www.marketscreener.com/news/medtronic-completes-650-million-acquisition-of-spr-therapeutics-ce7f5ed3db89f126,"Trader This super rating is the result of a weighted average of the rankings based on the following ratings: Valuation (Composite), EPS Revisions (4 months), and Visibility (Composite).
-We recommend that you carefully review the associated descriptions.
-Investor This super composite rating is the result of a weighted average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), EPS Revisions (1 year), and Visibility (Composite).
-Global This composite rating is the result of an average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), Financial Estimates Revisions (Composite), Consensus (Composite) and Visibility (Composite).
-Quality This composite rating is the result of an average of rankings based on the following ratings: Returns (Composite), Profitability (Composite) and Quality of Financial Reporting (Composite), and Financial Health (Composite).","Trader
-
-This super rating is the result of a weighted average of the rankings based on the following ratings: Valuation (Composite), EPS Revisions (4 months), and Visibility (Composite). We recommend that you carefully review the associated descriptions.
-
-Investor
-
-This super composite rating is the result of a weighted average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), EPS Revisions (1 year), and Visibility (Composite). We recommend that you carefully review the associated descriptions.
-
-Global
-
-This composite rating is the result of an average of the rankings based on the following ratings: Fundamentals (Composite), Valuation (Composite), Financial Estimates Revisions (Composite), Consensus (Composite) and Visibility (Composite). The company must be covered by at least 4 of these 5 ratings for the calculation to be carried out. We recommend that you carefully review the associated descriptions.
-
-Quality
-
-This composite rating is the result of an average of rankings based on the following ratings: Returns (Composite), Profitability (Composite) and Quality of Financial Reporting (Composite), and Financial Health (Composite). The company must be covered by at least 2 of these 3 ratings for the calculation to be performed. We recommend that you carefully read the associated descriptions.",https://www.marketscreener.com/images/twitter_MS_fdnoir.png,N,,2026-07-16 11:11:58.054993
-ID40,Publicis Groupe,2026-07-16 13:27:20+00:00,"Morningstar, Inc.",Dow Jones Top Company Headlines at 9 AM ET: Uber to Buy Delivery Hero in $14.8 Billion Deal,Not Available,,,,,https://www.morningstar.com/news/dow-jones/202607165061/dow-jones-top-company-headlines-at-9-am-et-uber-to-buy-delivery-hero-in-148-billion-deal-fda,"Uber to Buy Delivery Hero in $14.8 Billion Deal The takeover of the German company brings together two of the world's biggest food-delivery platforms.
----- FDA Approves First-of-Its-Kind Cholesterol Pill Merck's Lipfendra, to be taken once a day, is designed to help lower cholesterol levels beyond what statins alone can achieve.
----- Eli Lilly to Buy Psychedelic Firm AtaiBeckley for Initial $2.8 Billion Eli Lilly has struck a deal to buy mental-health-focused AtaiBeckley for an initial $2.8 billion, continuing the drugmaker's recent buying spree.
----- UnitedHealth Results Handily Beat Wall Street Expectations The healthcare company substantially raised its full-year earnings projection.
-(END) Dow Jones Newswires July 16, 2026 09:15 ET (13:15 GMT) Copyright (c) 2026 Dow Jones & Company, Inc.","Uber to Buy Delivery Hero in $14.8 Billion Deal
-
-The takeover of the German company brings together two of the world's biggest food-delivery platforms.
-
-----
-
-FDA Approves First-of-Its-Kind Cholesterol Pill
-
-Merck's Lipfendra, to be taken once a day, is designed to help lower cholesterol levels beyond what statins alone can achieve.
-
-----
-
-Eli Lilly to Buy Psychedelic Firm AtaiBeckley for Initial $2.8 Billion
-
-Eli Lilly has struck a deal to buy mental-health-focused AtaiBeckley for an initial $2.8 billion, continuing the drugmaker's recent buying spree.
-
-----
-
-UnitedHealth Results Handily Beat Wall Street Expectations
-
-The healthcare company substantially raised its full-year earnings projection.
-
-----
-
-GE Aerospace Raises FY Outlook on Higher Sales, Profit
-
-The maker of jet engines said it now expects adjusted earnings per share to be $7.65 to $7.85, up from a previous range of $7.10 to $7.40.
-
-----
-
-EU Gives Google Binding Instructions to Open Android to AI Rivals
-
-The European Union gave Google binding instructions to open up its Android operating system and search engine data to greater competition.
-
-----
-
-Publicis Raises Guidance on New Business Wins
-
-Publicis Groupe raised its annual guidance, saying new business wins give the company confidence in its ability to keep up momentum after top-line growth accelerated in the second quarter.
-
-----
-
-Abbott Laboratories Sales Rise on Diagnostics Growth
-
-The healthcare company said its profit fell to $928 million, or 53 cents a share, in the second quarter, from $1.78 billion, or $1.01 a share, a year earlier.
-
-----
-
-U.S. Bancorp Quarterly Revenue Rises to Record
-
-U.S. Bancorp notched record second-quarter revenue due to strong loan growth, broad momentum on fees and a one-month boost from the recent acquisition of financial-services firm BTIG.
-
-----
-
-Cyber M&A Heads for Record Year
-
-Dealmaking in cybersecurity soared in the first half, turbocharged by a thirst for the AI security startups that are remaking the sector.
-
-----
-
-Japan to Buy Nvidia Chips to Power Its AI Push
-
-Nvidia chips are set to power Japan's artificial-intelligence push, with the government planning to buy thousands of the company's next-generation semiconductors to build an AI ecosystem on its own soil.
-
-----
-
-TSMC to Invest a Further $100 Billion in U.S. After AI Fuels Surge in Earnings
-
-The world's largest contract chip maker posted its fifth straight quarter of record earnings amid voracious global appetite for artificial-intelligence infrastructure.
-
-----
-
-TotalEnergies Expects Earnings Boost From War-Fueled Price Rally
-
-TotalEnergies expects second-quarter results to receive a boost from the extended rally in energy prices prompted by the Middle East conflict, and for income from liquefied natural gas to fall sharply.
-
-----
-
-ABB to Buy U.K.'s Rotork for $5.6 Billion
-
-ABB is riding a wave of demand for products used in data centers and has turned to dealmaking to expand its electrification and automation portfolios.
-
-----
-
-U.K. Probes TikTok Over Child Safety Measures
-
-The U.K.'s media watchdog is investigating TikTok over how the company conducts age checks on its users to prevent children from seeing harmful content such as pornography.
-
-----
-
-Telenor Cuts Guidance Following Challenging Quarter
-
-Telenor's second-quarter performance was hit by tough year-on-year comparables, the timing of commercial initiatives, transformation costs and a challenging macro situation in Bangladesh.
-
-----
-
-The New York Times Files Motion to Quash Trump Administration Subpoenas
-
-Several reporters were subpoenaed to appear before a grand jury following reporting on security concerns with the Qatari-gifted jet used as Air Force One.
-
-(END) Dow Jones Newswires
-
-July 16, 2026 09:15 ET (13:15 GMT)
-
-Copyright (c) 2026 Dow Jones & Company, Inc.",https://images.contentstack.io/v3/assets/blt4eb669caa7dc65b2/blta7dd42ebdd7b93b8/61899b34a3c7df383578294c/morningstar-og.png,N,,2026-07-16 13:19:34.996637
-ID8,Best Buy,2026-07-16 13:24:04+00:00,MarketScreener,Best Buy : powers up sustainability with new solar sites in NY and CA | MarketScreener,Publicnow,,,,,https://www.marketscreener.com/news/best-buy-powers-up-sustainability-with-new-solar-sites-in-ny-and-ca-ce7f5ed3d881f324,"Best Buy Co., Inc. : After the Reset: What Still Works ?
-February 02, 2026 at 03:52 am EST","Best Buy Co., Inc. : After the Reset: What Still Works ?
-
-February 02, 2026 at 03:52 am EST",https://www.marketscreener.com/images/twitter_MS_fdblanc.png,N,,2026-07-16 16:14:53.081424
-ID42,S&P Global,2026-07-16 13:19:51+00:00,News Release Archive,Liquefied Natural Gas Set to Become United States' 2nd Largest Net Export Industry within ...,Not Available,,,,,"https://press.spglobal.com/2026-07-16-Liquefied-Natural-Gas-Set-to-Become-United-States-2nd-Largest-Net-Export-Industry-within-Five-Years,-S-P-Global-Energy-Study-Finds","Impact on Domestic Prices Negligible Notably, the economic benefits occur while the impact on U.S. domestic natural gas prices is negligible.
-It is produced by S&P Global CERA Consulting and represents the collaboration of S&P Global Energy and S&P Global Market Intelligence, supported by the world's largest expert team of more than 1,400 energy and economic research analysts and consultants continuously monitoring, modelling and evaluating markets and assets.
-About S&P Global Energy At S&P Global Energy, our comprehensive view of global energy and commodities markets enables our customers to make superior decisions and create long-term, sustainable value.
-S&P Global Energy is a division of S&P Global (NYSE: SPGI).
-Media Contacts: Jeff Marn S&P Global Energy +1 202 463 8213 jeff.marn@spglobal.com SOURCE S&P Global Energy","Growth of U.S. LNG exports now expected to support 555,000 jobs annually and add $1.4 trillion to GDP through 2040 while domestic natural gas prices will remain among lowest in the world
-
-WASHINGTON, July 16, 2026 /PRNewswire/ -- Growing exports of U.S. liquefied natural gas (LNG) are now on track to support 550,000 jobs annually and contribute $1.4 trillion to U.S. gross domestic product through 2040—exceeding previous expectations—while having a negligible impact on domestic gas prices, according to a comprehensive new study by S&P Global Energy.
-
-The new study projects that, under current conditions, U.S. feedgas demand for LNG exports will double to 36 billion cubic feet per day (bcf/d) in the next five years, 25% higher than previous base case projections. The United States, already the world's leading supplier of LNG, is expected to surpass a one-third share of the global market during this time, almost certainly making LNG exports the second largest net export industry in the United States, second only to U.S. civilian aircraft and parts.
-
-The study, Price and Economic Impacts of an Accelerating Export Industry updates the findings of a December 2024 study to account for a surge in LNG investment that has occurred since the lifting of the U.S. LNG 'pause' in January 2025, with seven new projects taking final investment decision and several more expected in the next 6-12 months.
-
-S&P Global Energy now estimates that total investment in the LNG supply chain will exceed $1 trillion through 2040. In addition to the increased jobs and GDP gains, the new study expects future LNG export activity to generate more than $2.9 trillion in total revenues for U.S. businesses, $206 billion in federal and state tax revenues and nearly $630 billion in labor income.
-
-The economic impacts extend far beyond gas-producing states, with 42% of jobs and 33% of GDP contributions occurring in non-gas-producing areas.
-
-""The profound growth of U.S. LNG is exceeding all expectations,"" said Daniel Yergin, Vice Chairman, S&P Global and study chair. ""What has become a $44 billion annual industry in just the last decade is now poised to be the country's second largest net export within five years.
-
-""The economic gains in terms of jobs, GDP and labor income are on track to surpass all prior expectations, while the abundance of U.S. gas resources means that domestic prices remain among the lowest in the world. The economic benefits and low domestic prices, along with significant contributions to global energy security and the influence that comes from being the world's largest supplier add up to the benefit of the United States.""
-
-Impact on Domestic Prices Negligible
-
-Notably, the economic benefits occur while the impact on U.S. domestic natural gas prices is negligible. The study projects an average increase in end user gas costs of just 1.6% per household from 2026 to 2031. United States domestic natural gas prices will continue to rank among the lowest in the world for both residential and industrial sectors.
-
-""More than 45 years of identified commercial gas resource in the United States at today's production levels and the world's most interconnected pipeline network are what enable both exports and low domestic prices,"" said Eric Eyberg, Vice President, Gas and LNG, S&P Global Energy. ""Since 2010, domestic prices have trended downward even as demand for U.S. gas has grown 70 percent. The recent Iran conflict has proven the U.S. domestic gas market resilient to external shocks relative to global gas and other commodities. U.S. Henry Hub gas prices declined during the conflict.""
-
-Additionally, flexible U.S. LNG has turned export capacity into a domestic gas price shock absorber, the study says. During Winter Storm Fern, up to 9 bcf/d of feedgas was redirected for domestic consumption, providing critical supply for residential markets amid surging winter heating demand.
-
-Major Implications for Global Gas Prices and Energy Security
-
-The study also considered the implications of any curtailment of export volumes from U.S. LNG projects sanctioned post-U.S. LNG 'pause'.
-
-Under an ""Extended Pause"" scenario where the new investment since 2025 in U.S. export capacity was not realized, global LNG markets would tighten significantly by 2031, pushing prices 50% higher for Europe and Asia and effectively transferring up to $76 billion per year to non-U.S. energy suppliers that would step in to fill demand, mostly with other fossil fuels, including coal, the study says.
-
-As the United States is currently the number one supplier of LNG to Europe, the largest beneficiary of any curtailment of U.S. flows would be Russia, the study says. Due to current sanctions, Russia has up to 14 bcf/d of underutilized gas pipeline and LNG export infrastructure – connected with and proximate to Europe – that could quickly increase flows to meet regional needs.
-
-The Role of Infrastructure in Domestic Price Relief
-
-The shale gas revolution and abundance of the U.S. natural gas resource base have shifted the domestic market dynamic to a new paradigm where infrastructure constraints are often the key driver of higher-priced regional markets and price volatility, the study says.
-
-The United States has the world's most interconnected gas infrastructure network, with more than 300,000 miles of natural gas transmission pipelines. The annual volume of natural gas transported through the system exceeds the combined consumption of 130 countries. Nevertheless, key bottlenecks remain.
-
-The study examines the potential impact of expanded pipeline capacity in the U.S. Northeast, where winter heating and growing winter power loads have led to highly seasonal demand and extreme price volatility.
-
-New capacity additions could reduce peak winter month gas prices by more than 20% in key New England and New York markets during the 2028-2031 period, the study finds.
-
-""The United States is in the enviable position where supply and demand are not a major issue,"" Eyberg said. ""Since 2010, domestic gas production has been able to grow three times the amount of U.S. LNG exports. Infrastructure constraints and imbalances are what drive higher regional prices and volatility. The ability to build pipelines is the main challenge.""
-
-U.S. LNG Exports Today
-
-$44 billion in 2025 exports
-
-2.3 times the value of U.S. corn exports
-
-2.8 times the value of U.S. soybean exports
-
-Nearly triple the exports value of U.S. movie and TV related revenues
-
-70% the value of U.S. semiconductor exports
-
-More than 80% of the total value of U.S. passenger cars exports.
-
-U.S. LNG Exports – Base Case Economic Impacts Through 2040
-
-(Change from December 2024 Projections)
-
-555,000 annual jobs supported through 2040 (+55,000 jobs annually)
-
-$1.4 trillion contribution to U.S. gross domestic product (+$100 billion)
-
-$2.9 trillion total business revenues through 2040 (+$400 billion)
-
-$206 billion in U.S. federal and state taxes (+$40 billion)
-
-$630 billion in labor income (+$130 billion)
-
-Projected second largest U.S. net export industry by 2031
-
-About the Study:
-
-Price and Economic Impacts of an Accelerating Export Industry is available at: https://www.spglobal.com/en/research-insights/special-reports/price-and-economic-impacts-of-an-accelerating-export-industry-us-lng-impact-study-phase-4.html
-
-This study offers an independent and objective assessment of the economic, market and global impact of the U.S. LNG Industry built from a detailed bottom-up approach, at the asset and market level, technology by technology. It is produced by S&P Global CERA Consulting and represents the collaboration of S&P Global Energy and S&P Global Market Intelligence, supported by the world's largest expert team of more than 1,400 energy and economic research analysts and consultants continuously monitoring, modelling and evaluating markets and assets. The analysis and metrics developed during the course of this research represent the independent analysis and views of S&P Global Energy. The study makes no policy recommendations. This research was supported by the U.S. Chamber of Commerce.
-
-S&P Global Energy is exclusively responsible for all of the analysis, content and conclusions of the study.
-
-About S&P Global Energy
-
-At S&P Global Energy, our comprehensive view of global energy and commodities markets enables our customers to make superior decisions and create long-term, sustainable value. Our four core capabilities are: Platts for pricing and news; CERA for research and advisory; Horizons for energy expansion and sustainability solutions; and Events for industry collaboration.
-
-S&P Global Energy is a division of S&P Global (NYSE: SPGI). S&P Global enables businesses, governments, and individuals with trusted data, expertise, and technology to make decisions with conviction. We are Advancing Essential Intelligence through world-leading benchmarks, data, and insights that customers need in order to plan confidently, act decisively, and thrive in a rapidly changing global landscape. Learn more at www.spglobal.com/energy.
-
-Media Contacts:
-
-Jeff Marn
-
-S&P Global Energy
-
-+1 202 463 8213
-
-jeff.marn@spglobal.com
-
-SOURCE S&P Global Energy",https://media.mhfi.com/images/spg-facebook.jpg,N,,2026-07-16 12:18:41.042551
-ID30,Medtronic,2026-07-16 13:04:32+00:00,Medtronic News,"Medtronic completes acquisition of SPR, expanding patient access to minimally invasive ...",Not Available,,,,,"https://news.medtronic.com/2026-07-16-Medtronic-completes-acquisition-of-SPR,-expanding-patient-access-to-minimally-invasive,-non-opioid-treatment-of-chronic-and-acute-pain","Chronic pain affects nearly 50 million U.S. adults2, and for some, it can significantly impact their mobility, sleep quality, work performance, and overall quality of life.
-About SPR SPR is a medical technology company focused on advancing minimally invasive therapies for the treatment of pain.
-Chronic pain and high-impact chronic pain in U.S. adults, 2023.
-SPR SPRINT® PNS System Indications for Use.
-SPR Pain Relief.","Acquisition adds category-defining SPRINT® PNS technology to Medtronic's pain therapy portfolio—the broadest in the industry.¹
-
-GALWAY, Ireland, July 16, 2026 /PRNewswire/ -- Medtronic plc (NYSE: MDT), a global leader in healthcare technology, today announced it has completed its acquisition of SPR Therapeutics, Inc. (SPR), a privately held medical technology company and recognized leader in short-term, percutaneous peripheral nerve stimulation (PNS) therapies for chronic and acute pain management. The acquisition is valued at $650 million, consisting of an upfront cash payment.
-
-Chronic pain affects nearly 50 million U.S. adults2, and for some, it can significantly impact their mobility, sleep quality, work performance, and overall quality of life. PNS is a form of neuromodulation that delivers mild electrical stimulation near targeted peripheral nerves to help reduce pain. As a non-opioid and non-surgical therapy, PNS can expand pain management treatment options, support earlier intervention in the care continuum, and help create additional opportunities for individualized patient care.
-
-SPR's FDA-cleared SPRINT® PNS System is a short-term therapy designed to provide pain relief using a 60-day, minimally invasive treatment approach that does not require a permanent implant. SPRINT® is supported by a growing body of clinical research, including multiple prospective clinical studies, case series, and multi-center randomized controlled trials. Pooled results from 13 studies show that 60% of patients achieved meaningful pain relief (≥50% reduction in pain intensity) at the end of the 60-day treatment completion, with responders experiencing an average 76% reduction in pain intensity. Across all patients, there was a 56% reduction in pain intensity.3
-
-""Medtronic is committed to expanding access to innovative therapies that can meaningfully improve patient lives,"" said Domenico De Paolis, Interim President of the Neuromodulation Operating Unit, part of the Medtronic Neuroscience Portfolio. ""The addition of SPRINT® extends our ability to serve patients across the continuum of pain care and broadens patient access to a minimally invasive treatment option to address both chronic and acute pain.""
-
-""At SPR, our mission has always been to help people living with pain reclaim their lives,"" said Maria Bennett, President, Founder, and Chief Executive Officer of SPR. ""We are proud of the impact our team has made in advancing innovative therapies that offer meaningful pain relief. Joining Medtronic enables us to build on that foundation, expand access to our technology, and serve more patients living with pain.""
-
-This acquisition reflects Medtronic's continued focus on strategic deals that strengthen its leadership across core businesses. It is expected to be minimally dilutive to Medtronic adjusted EPS in FY27 and neutral to accretive thereafter. The company remains committed to pursuing high-growth opportunities that complement its portfolio and enhance therapy options for physicians and hospital partners.
-
-About Medtronic
-
-Bold thinking. Bolder actions. We are Medtronic. Medtronic plc, headquartered in Galway, Ireland, is the leading global healthcare technology company that boldly attacks the most challenging health problems facing humanity by searching out and finding solutions. Our Mission – to alleviate pain, restore health, and extend life – unites a global team of 95,000+ passionate people across more than 150 countries. Our technologies and therapies treat 70 health conditions and include cardiac devices, surgical robotics, insulin pumps, surgical tools, patient monitoring systems, and more. Powered by our diverse knowledge, insatiable curiosity, and desire to help all those who need it, we deliver innovative technologies that transform the lives of two people every second, every hour, every day. Expect more from us as we empower insight-driven care, experiences that put people first, and better outcomes for our world. In everything we do, we are engineering the extraordinary. For more information on Medtronic, visit medtronic.com and follow us on LinkedIn.
-
-About SPR
-
-SPR is a medical technology company focused on advancing minimally invasive therapies for the treatment of pain. Its SPRINT® PNS System is designed to deliver short-term peripheral nerve stimulation therapy for sustained pain relief of up to three months following treatment and is supported by a growing body of clinical evidence and expanding reimbursement coverage. For more information on SPR Therapeutics, visit sprpainrelief.com and follow SPR on LinkedIn.
-
-Any forward-looking statements are subject to risks and uncertainties such as those described in Medtronic's periodic reports on file with the U.S. Securities and Exchange Commission. Actual results may differ materially from anticipated results.
-
-References
-
-Medtronic SCS Value Summary FY25; Lo Bianco, G., et al. (2025). Barriers to neuromodulation. J Anesth Analg Crit Care, 5(1):3.
-
-Lucas JW, Sohi I. Chronic pain and high-impact chronic pain in U.S. adults, 2023. NCHS Data Brief, no 518. Hyattsville, MD: National Center for Health Statistics. 2024. DOI: https://dx.doi.org/10.15620/cdc/169630.
-
-SPR SPRINT® PNS System Indications for Use. SPR Pain Relief. Accessed July 2, 2026. https://www.sprpainrelief.com/indications
-
-SOURCE Medtronic plc",https://mmx.prnewswire.com/media/MS974964/Medtronic-Logo.jpg?id=OA2766820&p=facebook,N,,2026-07-16 11:12:02.261050
-ID19,Eli Lilly,2026-07-16 13:04:25+00:00,Yahoo Finance,Eli Lilly to Buy Psychedelic Firm AtaiBeckley for Initial $2.8 Billion - Yahoo Finance,Colin Kellaher,,,,,https://finance.yahoo.com/healthcare/articles/eli-lilly-buy-ataibeckley-initial-114100056.html,"Trading disclosure The above button links to Coinbase.
-Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading.
-Coinbase pays us for certain activity generated through this link.
-Prices displayed are informational.","Trading disclosure
-
-The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational.",https://s.yimg.com/lo/mysterio/api/A629B76BE3187E72C90D922AEBB71B7D4B40987BB0A1751C00DF2C45D5C19576/subgraphmysterio/resizefill_w1200_h600;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fthe_wall_street_journal_hosted_996%2F3b9137df88a60ff7317a3c0f59c8bc83,N,,2026-07-16 10:14:20.076589
