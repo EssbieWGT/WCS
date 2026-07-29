@@ -1,4 +1,52 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID36,OpenAI,2026-07-29 18:55:28+00:00,The Economist,OpenAI's alarming escape - The Economist,The Economist,,,,,https://www.economist.com/podcasts/2026/07/29/openais-alarming-escape,"AI is becoming harder to contain.
+Recently, OpenAI admitted that its model broke out of a testing environment to carry out an assault on Hugging Face, another AI firm.
+It was the first ever fully autonomous AI hack.
+OpenAI has now revealed its models have targeted other companies, too.
+What makes these incidents so worrying—and what will they mean for regulating AI?","AI is becoming harder to contain. Recently, OpenAI admitted that its model broke out of a testing environment to carry out an assault on Hugging Face, another AI firm. It was the first ever fully autonomous AI hack. OpenAI has now revealed its models have targeted other companies, too. What makes these incidents so worrying—and what will they mean for regulating AI?
+
+Guests and hosts:",https://www.economist.com/content-assets/images/20260801_PDP505.jpg,N,,2026-07-29 16:12:23.505405
+ID35,Nvidia,2026-07-29 18:34:24+00:00,Computerworld,Q&A: Nvidia genAI chief explains why open models matter in AI - Computerworld,"Agam Shah, Viktor Eriksson, Jonny Evans",,,,,https://www.computerworld.com/article/4202408/qa-nvidia-genai-chief-explains-why-open-models-matter-in-ai.html,"But it also has its own AI models that include Nemotron, an open-weight model that’s free to download and modify.
+The company is also pushing for open AI technologies and security through the Nemotron Coalition and the newly launched Open Secure AI Alliance.
+“Open models allow enterprises and countries to own, inspect, and adapt models with their own data.
+That’s different for every enterprise and every local region, which is why we match local models to local ecosystems, with post-training on those local models.
+Open models and open data are that bootstrap.","When Nvidia CEO Jensen Huang speaks, the tech industry listens. He used his first-ever post on X last week to argue that open AI models “strengthen safety and cybersecurity, accelerate innovation and diffusion, and enable sovereignty.”
+
+Nvidia is a chip company (with a focus on GPUs). But it also has its own AI models that include Nemotron, an open-weight model that’s free to download and modify. The company is also pushing for open AI technologies and security through the Nemotron Coalition and the newly launched Open Secure AI Alliance.
+
+With Huang’s recent comments in mind, Computerworld sat down with Kari Briski, Nvidia’s vice president of generative AI (genAI) software, to find out more about open models and why they matter for enterprise and sovereign applications.
+
+Nvidia
+
+What do open models really give enterprises and countries? “Open models allow enterprises and countries to own, inspect, and adapt models with their own data. The learning rate of adoption differs by region and enterprise, so there are different pockets of acceleration, but all the models have made tremendous progress closing the gap. What’s interesting about Nemotron is that we also publish our data, and that opened up a new world of engagement.
+
+“Enterprises reached out, saying, ‘Thank you, but I want to understand why you put this set of data out.’ That got them in the mindset that they could curate, create, capture, and control their own data.”
+
+When you develop these open models, do you have CIOs in mind, or sovereign uses? Where does the rubber hit the road? “Both. At the highest level, it’s very much the same: use cases, data sets, outcomes you want to achieve. It used to be question and answer, now it’s agentic workloads, getting stuff done, calling tools. To get a task done, which tool do you call? That’s different for every enterprise and every local region, which is why we match local models to local ecosystems, with post-training on those local models.
+
+“One enterprise can have 2,000 tools; a local region, 2,000 regional tools. [They’re] fundamentally the same, but with different go-to-market motions: reinforcement learning environments, synthetic data generation, or anonymizing and differential privacy for healthcare and banking data.”
+
+Why does Nvidia put its models out in the open? What do you get out of it? “We’re building Nemotron first and foremost for ourselves, to understand our systems running at scale — not just for training but also for inference, which allows us to iterate on things like model architecture for token efficiency. We believe in a thriving ecosystem. When you put a model out into the open, you get more startups, more builders, lower entry barriers.”
+
+What’s the connection between open models and sovereign AI? “To be very honest, it’s about bootstrapping a region that otherwise didn’t have the compute to get to a base-level model. Centers of excellence historically lived in higher education or research, and in certain pockets of the world, getting onto a compute cluster was grant-based: get on, get off, then find another grant. That start-stop, not being able to constantly iterate, is difficult. It’s the scaling laws of AI: the more compute, the more intelligence; the more access, the faster you can ride them. Open models and open data are that bootstrap. You don’t have to recreate capturing the knowledge of the internet as a pre-training model.”
+
+Regionally, things are different. Voice and word of mouth are big in South Asia, chatbots less so. What’s the approach going forward? Is it an SLM approach? “You’re going to hate my answer: it depends. Language is ever evolving. Go back to first principles: AI is infrastructure. Not just the model, but the harness, the skills, the runtime. All of this is a new computing platform, and when we deploy it, it’s how can it understand and adapt. We’re at the tip of the iceberg integrating AI into everyday applications. The more it can understand and update even dialects, the better.
+
+“Understanding those niche areas is what drives the data flywheel of deploying AI. It won’t be overnight. That’s why this is a new industrial revolution. We have to lay the infrastructure everywhere for these models to update. And to your point, it could be a large teacher model that at the edge is an SLM. It depends.”
+
+AI companies in Nepal told me, “We can’t innovate because we don’t have access to a GPU.” They want a model that runs on the hardware they have. Is that the way you look at it? “If you know Nvidia, it’s all about the ecosystem, and we want to enable developers. This is why we have many different sizes: Nano, Super, and Ultra of the Nemotron family, not just for where you deploy, but for developers to iterate on smaller GPUs, then scale to a more robust model like Ultra.
+
+“We run as a model-as-a-service across the cloud providers. Day zero, they all had it ready to go, along with our inference partners, optimized and efficient for their workload. We don’t pitch the checkpoint over the wall; we help them take it that last mile, and partners get early access, so on release day it’s available on whatever platforms they use.”
+
+The industry works together on open technology like Linux. Can you partner on models, and is the focus on performance or quality? “On performance versus quality, it’s both. You can’t have a high-quality model that is slow or heavy, and you can’t have a fast model that sucks. We’re going after three dimensions: efficient, state-of-the-art, and open. And models do work together today — a planning agent routes a question to the best model to complete the task.
+
+“On partnering, that’s our goal in true open source and in the Nemotron Coalition, bringing the best and brightest minds with the commitment to open source and collaboration. Members contribute in different ways: pre-training new architectures, post-training RL environments, contributing data. The goal is everybody working together on one model. That’s why the coalition matters for model architecture — token efficiency, latent mixture of experts, changing how we route it. These are new architectures we’re thinking about. We need these ideas coming in from others.”
+
+Is the latest open-source model always the best? In developing countries, some go back to older models they’ve tested enough to predict the responses. “Models aside, that’s true for any software. You do an upgrade and it’s just not working the way it worked before. The results aren’t better. When you build a system around it with certain prompts, a model might not react the way it used to. This is why we built the coalition, why we work with a very close set of partners. We pull their evaluation benchmarks in-house to make sure we’re not regressing, only improving.
+
+“You have to switch your mind with AI and the way you test it. Is the latest model necessarily the best? I’m going to say yes. Companies and countries need the skills to quickly evaluate, update prompts, and adopt new models.”
+
+Can I fork an Nvidia model, put it on Hugging Face, and do what I want with it? Do you take lessons from the forks and benchmarks? “We have a very open license. We put out reduced precision NVFP4 checkpoints. Those are the most popular, especially with Ultra, because people want the smallest footprint to run that robust model. Even with mature models, there’s all kinds of quantization happening and getting posted back, and I love that community engagement. I love seeing different forks of our models. We track those, too, which gives us an idea of what matters to people. That’s the purpose of putting it out in the open: to see how they change it, how they need to adapt it, then put it back out for the rest of the world to enjoy.",https://www.computerworld.com/wp-content/uploads/2026/07/4202408-0-93011300-1785323021-shutterstock_2413231837.jpg?quality=50&strip=all&w=1024,N,,2026-07-29 16:12:13.176641
 ID41,Ralph Lauren,2026-07-29 18:31:13+00:00,GV Wire,Trump's Tariffs Are Sending Some Companies Back to China - GV Wire,The New York Times,,,,,https://gvwire.com/2026/07/29/trumps-tariffs-are-sending-some-companies-back-to-china/,"When President Donald Trump’s tariffs on China hit 145% last year, companies embarked on a panicked search for cheaper alternatives in countries such as Vietnam and Thailand, including this facility.
 But since then, U.S. tariffs on China have come down sharply, leaving the leaders of some of those same companies with second thoughts.
 “If tariffs on China settle near those on alternative locations, we expect to see some companies returning to their Chinese suppliers,” Lovely said.
@@ -82,6 +130,7 @@ For now, Laster is still sending some shipments to his Southeast Asian factories
 —
 
 This article originally appeared in The New York Times.",https://gvwire.com/wp-content/uploads/2026/07/Factory-workers-assemble-lighting-products-at-Ningbo-Bright-Electric-in-Rayong-Thailand-July-20-2026.-One-of-the-most-surprising-outcomes-from-a-whiplash-year-of-tariffs-may-be-that-China-has-e.jpg,N,,2026-07-29 15:18:08.954429
+ID35,Nvidia,2026-07-29 18:17:21+00:00,www.livemint.com,"Nvidia's $750 billion circular financing loop: How it became banker, supplier and investor",,,,,,https://www.livemint.com/market/stock-market-news/nvidias-750-billion-circular-financing-loop-how-it-became-banker-supplier-and-investor-and-how-big-is-the-risk-11785243777113.html,"Nvidia is pursuing AI deals worth more than $750 billion, raising concerns about circular financing that could artificially inflate chip demand.",Not Available,,Y,,2026-07-29 16:12:20.479493
 ID35,Nvidia,2026-07-29 18:07:32+00:00,www.ft.com,"Nvidia's chips may be novel, but its 'circular financing' isn't - Financial Times",Not Available,,,,,https://www.ft.com/content/33714af0-a646-4271-8078-49a87182917f?syn-25a6b1a6=1,"Weekly Briefing Our Wednesday newsletter brings you the best of the column and what we're reading Lex takes a stance Sharp financial opinion, delivered daily by a team of international experts","Weekly Briefing
 
 Our Wednesday newsletter brings you the best of the column and what we're reading
@@ -104,6 +153,46 @@ The good news is that these destinations haven't disappeared from Delta's New Yo
 The cuts also reflect a broader reality of modern airline scheduling. Carriers routinely adjust their networks based on demand, operating costs and aircraft availability, and routes that don't perform as expected can quickly disappear from the schedule. This year's spike in fuel prices appears to have accelerated that process for these three JFK services.
 
 It’s a good reminder that airline schedules are anything but permanent. Before heading to the airport (or booking that next weekend escape), it's worth making sure your favorite nonstop is still on the map.",https://media.timeout.com/images/106431783/image.jpg,N,,2026-07-29 15:17:46.185534
+ID27,J&J,2026-07-29 17:35:15+00:00,www.reuters.com,Can J&J finally put the talc litigation behind it? - Reuters,,,,,,https://www.reuters.com/business/healthcare-pharmaceuticals/can-jj-finally-put-talc-litigation-behind-it-2026-07-29/,"After years of failed attempts to resolve thousands of lawsuits alleging that its talc products caused cancer, Johnson & Johnson says it has ...",Not Available,,Y,,2026-07-29 16:12:10.310603
+ID19,Eli Lilly,2026-07-29 17:32:04+00:00,www.bbc.com,Matcha and protein pivot pays off for Greggs as profits rise - BBC,Emer Moreau,,,,,https://www.bbc.com/news/articles/cx2r0nyx99yo,"Greggs's pivot towards healthier products and trending drinks has helped it boost sales, with the bakery chain reporting a 20% rise in profit over the first half of the year.
+Greggs, the UK's largest fast-food chain, has launched a range of new products this year, many of which latch onto trends such as high-protein salads and matcha.
+Greggs, which has more UK outlets than McDonald's, opened 34 stores in the first half of 2026.
+More than half of the new openings were in areas with no Greggs stores within a mile.
+""The iced matcha latte has emerged as one of the hits of its latest menu revamp, demonstrating that the bakery chain can blend social media-inspired tastes with its trademark value offering.""","Greggs's pivot towards healthier products and trending drinks has helped it boost sales, with the bakery chain reporting a 20% rise in profit over the first half of the year.
+
+Greggs, the UK's largest fast-food chain, has launched a range of new products this year, many of which latch onto trends such as high-protein salads and matcha.
+
+Greggs's chief executive Roisin Currie previously told BBC News the rise of weight-loss drugs has led customers to to look for ""smaller portions"", which could affect its bottom line.
+
+Total sales for the bakery topped £1.1 billion for the 26 weeks to the end of June - 7.2% higher than the same period a year ago.
+
+Pre-tax profit for the first half of the year was £76.0m - up from £63.5m for the first six months of 2025.
+
+Currie said the company was ""broadening and innovating our menu in line with changing tastes and trends"".
+
+It is also trying to appeal to ""new and younger customers"" through its new iced matcha lattes, and to health-conscious consumers by making nutritional information on its labels clearer.
+
+Greggs, which has more UK outlets than McDonald's, opened 34 stores in the first half of 2026. That brings the total to 2,773, taking into account 31 store closures.
+
+More than half of the new openings were in areas with no Greggs stores within a mile. A similar proportion opened away from the High Street in locations including petrol forecourts, supermarkets, retail parks, hospitals and university campuses, it said.
+
+She also said Greggs had no price rises planned after its breakfast, lunch and ""big"" deals went up in May, following multiple hikes last year.
+
+""Our prices are in a good place and we will now be working hard to protect the consumer and making sure that we can offer that value throughout the rest of the year,"" she said.
+
+Susannah Streeter, chief investment strategist at Wealth Club, said the results showed that ""there's still healthy appetite for affordable treats"" even as many consumers become more health-conscious.
+
+""It's also proving nimble at keeping pace with the latest food trends, showing it can compete with far more premium cafes.
+
+""The iced matcha latte has emerged as one of the hits of its latest menu revamp, demonstrating that the bakery chain can blend social media-inspired tastes with its trademark value offering.""
+
+She added, however, that the company is warning investment in expanding its supply chain will weigh on profits for the rest of 2026 unless customer confidence improves.
+
+""After a summer of sport, beer gardens and heatwaves, Greggs will be banking on autumn and winter seeing demand for its hot pastries and convenient on-the-go products returning.
+
+""Keeping prices low and continuing to expand product ranges to meet changing food trends will be key to luring people back into its vast number of stores to achieve this.""
+
+Last year Currie addressed questions about whether ""peak Greggs"" had been reached after its rapid expansion, saying ""we have gone out...to demonstrate that this is not the case"".",https://ichef.bbci.co.uk/news/1024/branded_news/d65a/live/f1815bb0-8b2a-11f1-841c-ef08db9db338.jpg,N,,2026-07-29 16:12:07.231149
 ID36,OpenAI,2026-07-29 17:31:13+00:00,Business Insider,Disney is ditching Microsoft's GitHub Copilot and adding OpenAI's Codex - Business Insider,James Faris,,,,,https://www.businessinsider.com/disney-microsoft-github-copilot-openai-codex-ai-tools-claude-cursor-2026-7,"These changes don't apply internationally, a Disney tech leader told employees.
 GitHub Copilot is the coding assistant in Microsoft's AI product suite.
 Copilot's challenges Eight Disney tech employees told Business Insider that they rarely or never used GitHub Copilot.
@@ -4678,7 +4767,6 @@ This isn't happening in a vacuum. Google Cloud continues to put up massive numbe
 And while they're not as complete an offering as Azure, Meta and SpaceX are also getting in the compute-for-hire game.
 
 So as Microsoft continues to debate how it wants to split up its compute, its customers have alternatives. And they might not stick around to find out what Microsoft decides.",https://i.insider.com/6a63cf3c54f9875261779acf?width=1200&format=jpeg,N,,2026-07-27 17:10:25.779240
-ID47,Uber,2026-07-27 17:09:50+00:00,CNBC,Uber and Waymo revive robotaxi rivalry as partnership unravels - CNBC,MacKenzie Sigalos,,,,,https://www.cnbc.com/video/2026/07/27/uber-and-waymo-revive-robotaxi-rivalry-as-partnership-unravels.html,"CNBC’s MacKenzie Sigalos reports on the companies’ deteriorating alliance, Uber’s renewed autonomous-vehicle push, and the fight over who controls the rider relationship.",Not Available,https://image.cnbcfm.com/api/v1/image/108340607-17851709391785170937-47420079172-1080pnbcnews.jpg?v=1785170938&w=1920&h=1080,N,,2026-07-27 14:14:45.036577
 ID15,Delta Airlines,2026-07-27 17:09:50+00:00,CNBC,JetBlue overhauls fare options from basic economy to basic first class - CNBC,"Leslie Josephs, www.facebook.com",,,,,https://www.cnbc.com/2026/07/27/jetblue-new-fare-options-basic-economy-first-class.html,"JetBlue Airways is overhauling its fare options as it gears up to launch its domestic first-class seats and, yes, there is a restrictive basic option at the front of the plane.
 Travelers flying on JetBlue will start by choosing how much legroom they want and how premium they want their seat to be.
 With the new groupings, JetBlue is getting rid of the ""Core"" fares it sells now and putting economy class options in a ""Main"" category.
@@ -4702,6 +4790,7 @@ JetBlue's lie-flat Mint business class, which is used on longer-haul flights lik
 JetBlue stopped short of offering a basic lie-flat business option that competitors United Airlines and Delta Air Lines launched this year. Those airlines have made similar moves to break up premium economy by offering different fares even at the front of the cabin. United this month said that on some aircraft it will charge a premium for a blocked middle seat.
 
 JetBlue hasn't yet provided a date for its BlueFirst seats, but the changes come as airlines are racing to capitalize on high demand for pricier seats from consumers seeking extra comfort and perks on board. JetBlue is set to report results on Tuesday.",https://image.cnbcfm.com/api/v1/image/108224140-1762867114672-gettyimages-2246060080-anotherday143728090_duwywm2f.jpeg?v=1762867211&w=1920&h=1080,N,,2026-07-27 15:11:53.181895
+ID47,Uber,2026-07-27 17:09:50+00:00,CNBC,Uber and Waymo revive robotaxi rivalry as partnership unravels - CNBC,MacKenzie Sigalos,,,,,https://www.cnbc.com/video/2026/07/27/uber-and-waymo-revive-robotaxi-rivalry-as-partnership-unravels.html,"CNBC’s MacKenzie Sigalos reports on the companies’ deteriorating alliance, Uber’s renewed autonomous-vehicle push, and the fight over who controls the rider relationship.",Not Available,https://image.cnbcfm.com/api/v1/image/108340607-17851709391785170937-47420079172-1080pnbcnews.jpg?v=1785170938&w=1920&h=1080,N,,2026-07-27 14:14:45.036577
 ID35,Nvidia,2026-07-27 17:03:38+00:00,Bloomberg.com,Nvidia to Invest $5 Billion in Ilya Sutskever's AI Research Lab - Bloomberg.com,Shirin Ghaffary,,,,,https://www.bloomberg.com/news/articles/2026-07-27/nvidia-makes-substantial-investment-in-sutskever-s-ai-startup,"Nvidia Corp. has committed to invest $5 billion in Ilya Sutskever’s artificial intelligence startup Safe Superintelligence Inc., according to people familiar with the matter, marking one of the chipmaker’s largest funding deals of the AI boom.
 In addition to the funding, Safe Superintelligence will receive access to Nvidia’s next-generation Vera Rubin platform, according to a joint statementBloomberg Terminal on Monday.
 Financial terms of the deal were not disclosed.
@@ -5698,12 +5787,12 @@ SoftBank, First Abu Dhabi Bank, Standard Chartered Bank and GIC declined to comm
 The bridge deal would pay an initial interest margin of about 250 basis points over the Secured Overnight Financing Rate. That would mean an interest rate of 6.14% at current SOFR levels.
 
 SoftBank founder and CEO Masayoshi Son has pledged to go “all in” on OpenAI, with commitments now exceeding $60 billion. OpenAI filed for a public listing last month and was valued at $852 billion in a fundraising round in March.",https://www.japantimes.co.jp/japantimes/uploads/images/2026/07/27/553749.jpg?v=3.1,N,,2026-07-27 04:02:23.408148
-ID33,Moody's,2026-07-27 04:06:58+00:00,www.thedailyupside.com,"Meta, Microsoft and Amazon Test Limits of Investor Appetite for AI Spending",Not Available,,,,,https://www.thedailyupside.com/technology/artificial-intelligence/meta-microsoft-and-amazon-set-to-test-limits-of-investor-appetites-for-ai-spending/,"The company's shares fell more than 7%: Investors, racked by anxiety over the company's massive capital expenditure plans, paid more mind to the ...",Not Available,,N,,2026-07-27 03:02:42.855960
 ID23,IBM,2026-07-27 04:06:58+00:00,DIGITIMES,IBM agrees to acquire HRL Laboratories to expand quantum computing capabilities,"Jingyue Hsiao, DIGITIMES, Taipei, Jingyue Hsiao",,,,,https://www.digitimes.com/news/a20260727VL200/ibm-quantum-computing-acquisition-development-communications.html,"Keep me signed in Some subscribers prefer to save their log-in information so they do not have to enter their User ID and Password each time they visit the site.
 To activate this function, check the 'Keep me signed in' box in the log-in section.
 This will save the password on the computer you're using to access the site.","Keep me signed in
 
 Some subscribers prefer to save their log-in information so they do not have to enter their User ID and Password each time they visit the site. To activate this function, check the 'Keep me signed in' box in the log-in section. This will save the password on the computer you're using to access the site.",https://img.digitimes.com/newsshow/20260727vl200_files/2_b.jpg,N,,2026-07-27 01:01:42.074410
+ID33,Moody's,2026-07-27 04:06:58+00:00,www.thedailyupside.com,"Meta, Microsoft and Amazon Test Limits of Investor Appetite for AI Spending",Not Available,,,,,https://www.thedailyupside.com/technology/artificial-intelligence/meta-microsoft-and-amazon-set-to-test-limits-of-investor-appetites-for-ai-spending/,"The company's shares fell more than 7%: Investors, racked by anxiety over the company's massive capital expenditure plans, paid more mind to the ...",Not Available,,N,,2026-07-27 03:02:42.855960
 ID32,Microsoft,2026-07-27 04:05:07+00:00,www.ft.com,AI companies spend record sums on Washington lobbying - Financial Times,Not Available,,,,,https://www.ft.com/content/d8a5f95e-3b6d-463a-a848-c9ef8e2394db?syn-25a6b1a6=1,"Join FT Edit Only $4.99 per month Access to eight surprising articles a day, hand-picked by FT editors.
 For seamless reading, access content via the FT Edit page on FT.com and receive the FT Edit newsletter.
 For individuals Discover all the plans currently available in your country","Join FT Edit
@@ -9419,7 +9508,6 @@ The company is not wasting time on using that money for acquisitions. The day af
 ""Quantum computing is no longer decades away, it is upon us and we are investing aggressively,"" Krishna said. ""Along with the U.S. Department of Commerce, we announced a letter of intent to build Anderon, the world's first pure-play quantum foundry in Albany, New York. It will be supported by $1 billion in chips incentives provided by the Commerce Department and a billion-dollar cash contribution by IBM.""
 
 Ed Scannell is a freelance writer and journalist based in Needham, Mass. He reports on a wide range of technologies and issues related to corporate IT. He can be reached at ed.scannell@gmail.com.",https://www.techtarget.com/rms/onlineimages/mobile_g1182604339.jpg,N,,2026-07-24 17:13:13.587550
-ID20,FactSet,2026-07-24 18:59:17+00:00,www.marketwatch.com,"World Kinect Climbs on Boost to Full-Year Outlook, Swing to 2Q Profit - MarketWatch",,,,,,https://www.marketwatch.com/story/world-kinect-climbs-on-boost-to-full-year-outlook-swing-to-2q-profit-b93a45ce?mod=markets,Analysts polled by FactSet had been expecting $2.79 a share prior to the earnings release. ... Intraday Data provided by FACTSET and subject to terms of ...,Not Available,,Y,,2026-07-24 17:13:10.721112
 ID30,Medtronic,2026-07-24 18:59:17+00:00,MassDevice,Medtronic pulls hundreds of remote workers back to the office - MassDevice,Skyler Rivera,,,,,https://www.massdevice.com/medtronic-return-to-office-remote-workers-hybrid/,"Medtronic is telling remote employees who live near its Minneapolis-area sites to return to the office at least four days a week.
 “We recently announced that more of our Minneapolis teams will transition from remote work to four days a week onsite beginning in early November to continue driving in-person collaboration and operational efficiency,” Paquette said.
 Its latest initiative to bring remote employees back to the office aligns with the continued trend to roll back the work-from-home movement spurred by the COVID-19 pandemic.
@@ -9443,6 +9531,7 @@ Medtronic is the world’s largest medical device company. Its latest initiative
 In recent years, Medtronic has launched rounds of restructuring, manufacturing site consolidation, global layoffs and offered a voluntary early retirement program.
 
 Medtronic said in its most recent annual report that it has more than 95,000 global employees as of April 24. The company reported a more precise employee count of 100,229 as of Feb. 1, 2025.",https://www.massdevice.com/wp-content/uploads/2025/05/Medtronic-operational-headquarters.jpg,N,,2026-07-24 16:10:05.456602
+ID20,FactSet,2026-07-24 18:59:17+00:00,www.marketwatch.com,"World Kinect Climbs on Boost to Full-Year Outlook, Swing to 2Q Profit - MarketWatch",,,,,,https://www.marketwatch.com/story/world-kinect-climbs-on-boost-to-full-year-outlook-swing-to-2q-profit-b93a45ce?mod=markets,Analysts polled by FactSet had been expecting $2.79 a share prior to the earnings release. ... Intraday Data provided by FACTSET and subject to terms of ...,Not Available,,Y,,2026-07-24 17:13:10.721112
 ID39,Philips,2026-07-24 18:35:30+00:00,Wccftech,Apple Squeezes OLED Suppliers As “Chipflation” Drives Up iPhone 18 Pro Production Costs,"Omar Sohail, www.facebook.com",,,,,https://wccftech.com/apple-iphone-18-pro-oled-costs-chiplation/,"This reduction represents a 20 percent difference compared to the previous model, and since both the iPhone 18 Pro and iPhone 18 Pro Max will ship with the newest M16 OLED panel, Apple is getting a discount while obtaining an advanced display.
 In contrast, the average OLED price for the iPhone 17 Pro Max was $80, with iPhone 16 Pro Max panels often exceeding $100.
 Based on the report, Samsung and LG appear to have better flexibility in offering Apple a discount for the iPhone 18 Pro Max OLED.
@@ -12248,22 +12337,6 @@ Write to Mauro Orru at mauro.orru@wsj.com
 July 23, 2026 12:17 ET (16:17 GMT)
 
 Copyright (c) 2026 Dow Jones & Company, Inc.",https://images.contentstack.io/v3/assets/blt4eb669caa7dc65b2/blta7dd42ebdd7b93b8/61899b34a3c7df383578294c/morningstar-og.png,N,,2026-07-23 14:19:23.871685
-ID4,Air Liquide,2026-07-23 16:24:21+00:00,MarketScreener,Air Liquide to Invest Over $150 Million to Supply Gases to Memory Chip Maker,Dow Jones,,,,,https://www.marketscreener.com/news/air-liquide-to-invest-over-150-million-to-supply-gases-to-memory-chip-maker-ce7f51dede8df223,"By Mauro Orru Air Liquide said it would invest over $150 million into a new facility in the U.S. that will supply gases to an undisclosed memory chip manufacturer.
-The French industrial-gases supplier said it would build, own and operate a new industrial gas production facility in Idaho that will deliver ultra-pure nitrogen, oxygen and argon to the chip maker, with operations slated to kick off in 2028.
-Nitrogen, oxygen and argon are essential to make advanced memory chips, which are in high demand as companies race to build artificial-intelligence infrastructure.
-Write to Mauro Orru at mauro.orru@wsj.com (END) Dow Jones Newswires 07-23-26 1217ET","By Mauro Orru
-
-Air Liquide said it would invest over $150 million into a new facility in the U.S. that will supply gases to an undisclosed memory chip manufacturer.
-
-The French industrial-gases supplier said it would build, own and operate a new industrial gas production facility in Idaho that will deliver ultra-pure nitrogen, oxygen and argon to the chip maker, with operations slated to kick off in 2028.
-
-Nitrogen, oxygen and argon are essential to make advanced memory chips, which are in high demand as companies race to build artificial-intelligence infrastructure.
-
-Write to Mauro Orru at mauro.orru@wsj.com
-
-(END) Dow Jones Newswires
-
-07-23-26 1217ET",https://www.marketscreener.com/images/twitter_MS_fdnoir.png,N,,2026-07-23 13:27:27.969451
 ID32,Microsoft,2026-07-23 16:24:21+00:00,CNBC,Amazon and Microsoft pivot cloud gaming strategies to target different players - CNBC,"Jordan Novet, Annie Palmer, www.facebook.com",,,,,https://www.cnbc.com/2026/07/23/amazon-microsoft-cloud-gaming.html,"Amazon and Microsoft have devised new ways to get people playing video games in the cloud.
 Amazon , meanwhile, announced plans to add the Luna cloud gaming service to its Prime Video streaming platform.
 Amazon includes Prime Video in Prime subscriptions, which cost $14.99 per month.
@@ -12307,6 +12380,22 @@ Amazon is working to fix an awareness gap among consumers who may not know about
 ""I always say people don't have to like our strategy or agree with it, but it is important,"" he said. ""Hopefully, they understand it.""
 
 WATCH: Inside Nintendo's money machine: How the gaming giant built a high-margin empire without chasing scale",https://image.cnbcfm.com/api/v1/image/108319932-1781125150302-gettyimages-2279118333-BLOOMBERG_TECH.jpeg?v=1784818063&w=1920&h=1080,N,,2026-07-23 13:27:51.563810
+ID4,Air Liquide,2026-07-23 16:24:21+00:00,MarketScreener,Air Liquide to Invest Over $150 Million to Supply Gases to Memory Chip Maker,Dow Jones,,,,,https://www.marketscreener.com/news/air-liquide-to-invest-over-150-million-to-supply-gases-to-memory-chip-maker-ce7f51dede8df223,"By Mauro Orru Air Liquide said it would invest over $150 million into a new facility in the U.S. that will supply gases to an undisclosed memory chip manufacturer.
+The French industrial-gases supplier said it would build, own and operate a new industrial gas production facility in Idaho that will deliver ultra-pure nitrogen, oxygen and argon to the chip maker, with operations slated to kick off in 2028.
+Nitrogen, oxygen and argon are essential to make advanced memory chips, which are in high demand as companies race to build artificial-intelligence infrastructure.
+Write to Mauro Orru at mauro.orru@wsj.com (END) Dow Jones Newswires 07-23-26 1217ET","By Mauro Orru
+
+Air Liquide said it would invest over $150 million into a new facility in the U.S. that will supply gases to an undisclosed memory chip manufacturer.
+
+The French industrial-gases supplier said it would build, own and operate a new industrial gas production facility in Idaho that will deliver ultra-pure nitrogen, oxygen and argon to the chip maker, with operations slated to kick off in 2028.
+
+Nitrogen, oxygen and argon are essential to make advanced memory chips, which are in high demand as companies race to build artificial-intelligence infrastructure.
+
+Write to Mauro Orru at mauro.orru@wsj.com
+
+(END) Dow Jones Newswires
+
+07-23-26 1217ET",https://www.marketscreener.com/images/twitter_MS_fdnoir.png,N,,2026-07-23 13:27:27.969451
 ID33,Moody's,2026-07-23 16:21:06+00:00,LinkedIn,MCS moves from spreadsheets to Diligent Risk Management and Moody's Benchmarking Data,Not Available,,,,,https://www.linkedin.com/posts/diligent-board-member-services_mcs-moves-from-spreadsheets-to-diligent-risk-activity-7486066173202071552-j6Dy,"What happens when 15 years of spreadsheet-driven risk management finally gives way to a more effective approach?
 Hear from James Wade, CISO at MCS, on how the team moved from manual risk assessments and questionnaires to a more modern approach with Diligent Risk Management and Moody's Analytics Benchmarking Data.
 Like Comment Transcript This is James Wade, CISO at MCS.
@@ -14949,168 +15038,3 @@ Software unit annual sales will gain 6% to 8%, Chief Financial Officer Jim Kavan
 Revenue will increase 4% to 5% this year, down from a prior outlook of more than 5%, the company said Wednesday in a statementBloomberg Terminal. Software unit annual sales will gain 6% to 8%, Chief Financial Officer Jim Kavanaugh said in an interview.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihmHkVwEK8y0/v0/1200x800.jpg,N,,2026-07-22 18:12:54.663815
 ID20,FactSet,2026-07-22 20:16:22+00:00,www.marketwatch.com,Alphabet faces a cash-flow squeeze from heavy AI spending - MarketWatch,,,,,,https://www.marketwatch.com/livecoverage/alphabet-earnings-google-stock-results-q2/card/alphabet-faces-a-cash-flow-squeeze-from-heavy-ai-spending-Dv9mnREimfjVgXVLuBVW?mod=mw_FV,... FactSet consensus estimates calling for $231 million in negative. ... Heavy spending is expected to turn Alphabet's free cash flow negative in the ...,Not Available,,Y,,2026-07-22 18:12:37.001109
 ID23,IBM,2026-07-22 20:15:30+00:00,www.wsj.com,IBM Lowers Its Growth Outlook as Sales of Data Center Mainframes Sink 42% - WSJ,,,,,,https://www.wsj.com/business/earnings/ibm-q2-earnings-report-2026-stock-ded1f568,"In the second quarter, IBM failed to close “tens of deals,” which led to the disappointing results, James Kavanaugh, IBM's chief financial officer, ...",Not Available,,Y,,2026-07-22 18:12:57.292306
-ID32,Microsoft,2026-07-22 20:03:49+00:00,www.linkedin.com,Microsoft Confirms Final October 2026 Deadline For Exchange Server 2016 and 2019 ...,The Cyber Security Hub™,,,,,https://www.linkedin.com/pulse/microsoft-confirms-final-october-2026-deadline-judke,"ESU was designed as a temporary safety net Exchange Server 2016 and Exchange Server 2019 officially left support on the same date, despite being released several years apart.
-Exchange Server 2019 CU14 and CU15 support an in-place upgrade to the initial Exchange Server SE release.
-Exchange 2016 requires a legacy migration Exchange Server 2016 cannot be upgraded to Exchange SE by simply running the SE installer over the existing installation.
-This is different from an in-place upgrade: the Exchange 2016 server itself does not become an SE server.
-Organisations choosing an Exchange 2019 intermediate step must first deploy Exchange 2019 on supported hardware and Windows Server, migrate away from Exchange 2016 and then upgrade the Exchange 2019 servers to SE.","Microsoft has confirmed that security updates for Exchange Server 2016 and Exchange Server 2019 will permanently end after October 2026, ruling out another extension to the temporary Extended Security Update programme protecting organisations that have not yet completed their migrations.
-
-The decision establishes a final deadline for businesses still operating either product. Once the programme expires, Microsoft will no longer release vulnerability fixes for Exchange 2016 or 2019—even for organisations that purchased the second period of ESU coverage.
-
-Microsoft introduced the temporary programme after both server releases reached their formal end of support on October 14, 2025. It was intended to provide a short security bridge for organisations that could not move to Exchange Server Subscription Edition or Exchange Online before the lifecycle deadline.
-
-The company initially offered six months of additional coverage, running from October 2025 through April 2026. In April, however, it announced a separately purchased second ESU period extending protection until the end of October 2026.
-
-That second concession prompted questions over whether Microsoft might offer another extension. The Exchange Server team has now delivered an unequivocal answer.
-
-“There will be no further extension of Exchange 2016/2019 ESU program timeline,” Microsoft said. “Once October 2026 ends, there will be no further updates for Exchange 2016/2019, even if you currently have a Period 2 ESU.”
-
-Microsoft’s wording means customers should treat October as a hard security boundary rather than another negotiable migration milestone. The company’s official announcement says organisations must complete their transition to Exchange Server Subscription Edition or a supported Microsoft 365 service.
-
-ESU was designed as a temporary safety net
-
-Exchange Server 2016 and Exchange Server 2019 officially left support on the same date, despite being released several years apart.
-
-Exchange 2016 entered general availability in 2015. Its mainstream support period ended in October 2020, followed by extended support until October 14, 2025. Exchange 2019 was released in October 2018, reached the end of mainstream support in January 2024 and exited extended support in October 2025.
-
-Under Microsoft’s Fixed Lifecycle Policy, the end of support normally means the termination of security updates, non-security fixes, bug fixes, time-zone updates and assisted technical support. The servers do not stop running, but their continued operation creates increasing security and compliance exposure as newly discovered vulnerabilities remain unpatched.
-
-Microsoft’s Exchange supportability guidance consequently lists Exchange 2016 and 2019 as unsupported products, with Exchange Server Subscription Edition now the company’s supported platform for organisations retaining on-premises email infrastructure.
-
-The ESU programme did not reverse that lifecycle status. Instead, it gave eligible customers access to selected security fixes while they completed an upgrade or cloud migration. It did not restore full product support, provide feature development or include the broader range of reliability and functionality fixes normally delivered to a supported release.
-
-Microsoft also did not publish Exchange 2016 and 2019 ESU packages through the ordinary public distribution process. Organisations had to enrol in the programme and follow Microsoft’s procedures to obtain applicable updates.
-
-The first period covered vulnerabilities rated Critical or Important from October 14, 2025, until April 14, 2026. Period 2, announced in April 2026, was sold separately and runs from May through October 2026. Purchasing the first period did not automatically entitle a customer to the second.
-
-Microsoft’s Period 2 announcement made clear that the programme was aimed at organisations already making progress towards Exchange Server Subscription Edition but requiring additional time to finish.
-
-Unsupported Exchange servers will become an expanding liability
-
-The end of updates is particularly significant because Exchange is a high-value target for state-sponsored groups, ransomware operators and initial-access brokers.
-
-An on-premises Exchange server is closely integrated with an organisation’s identity, messaging and directory infrastructure. Depending on its configuration, a compromised server can expose email, address-book information, authentication material and sensitive business communications. It may also give an attacker a foothold from which to move further into the Windows domain.
-
-Exchange vulnerabilities have repeatedly been exploited in widespread attacks, sometimes before organisations could complete normal patching cycles. Internet-facing servers are especially attractive because an attacker can potentially reach them without first compromising an endpoint inside the network.
-
-The risk will change fundamentally after October 2026. While ESU-enrolled servers can presently receive fixes for qualifying vulnerabilities, an Exchange 2016 or 2019 vulnerability discovered after the programme ends may remain permanently unpatched on those platforms.
-
-Security controls such as web application firewalls, network segmentation, endpoint detection and response, restricted administrative access and Microsoft’s Exchange Emergency Mitigation Service may reduce particular risks, but they are not substitutes for vendor-supported security updates.
-
-Temporary mitigations can also be incomplete or specific to one exploitation technique. They cannot guarantee protection against every future vulnerability affecting an obsolete codebase.
-
-Running unsupported Exchange software may create additional governance difficulties. Organisations in regulated industries could have to explain why a critical messaging system no longer receives vendor security fixes. Cyber-insurance requirements, customer security questionnaires, contractual obligations and internal risk policies may also prohibit or severely restrict unsupported infrastructure.
-
-The end of ESU therefore affects more than patch availability. It may require changes to risk registers, audit documentation, business-continuity plans and incident-response procedures.
-
-Exchange Server Subscription Edition becomes the on-premises destination
-
-For organisations that must retain Exchange on their own infrastructure, Microsoft’s preferred migration target is Exchange Server Subscription Edition, commonly shortened to Exchange Server SE.
-
-Exchange SE became generally available on July 1, 2025. Rather than following the traditional model of releasing a new numbered Exchange version every several years, SE operates under Microsoft’s Modern Lifecycle Policy.
-
-The product has no predetermined retirement date as long as customers remain licensed, run supported configurations and install required updates. Microsoft describes it as an evergreen release that will receive cumulative and security updates without another planned year-based Exchange Server successor.
-
-According to Microsoft’s Exchange SE availability notice, the change is intended to provide continuous support for organisations with on-premises, cloud and hybrid email environments.
-
-The licensing model is also different. Organisations must maintain qualifying subscription rights rather than treating Exchange SE as a conventional perpetual release that can remain unchanged for years.
-
-That continuous servicing approach places greater emphasis on update discipline. Remaining supported will depend on installing cumulative updates within Microsoft’s required timeframes and maintaining compatible operating systems, .NET Framework versions, Active Directory environments and other prerequisites.
-
-Exchange 2019 offers the simplest in-place route
-
-The migration process depends heavily on the version and configuration currently deployed.
-
-Exchange Server 2019 CU14 and CU15 support an in-place upgrade to the initial Exchange Server SE release. Microsoft designed this transition to resemble the installation of a cumulative update, allowing administrators to retain the existing server, configuration and databases where all prerequisites are satisfied.
-
-Although technically less disruptive than a traditional version migration, it should not be treated as a routine patch. Administrators must confirm that each server runs a supported Exchange 2019 cumulative update, verify operating-system compatibility, review third-party integrations, back up critical data and test recovery procedures.
-
-Microsoft recommends using the latest available cumulative and security updates before beginning. Organisations should also run the Exchange Health Checker and resolve unsupported or insecure configurations rather than carrying them into the new installation.
-
-The in-place route does not include an in-place operating-system upgrade. Microsoft explicitly states that upgrading Windows Server between major versions while Exchange is installed is unsupported. If an organisation must move to a newer operating system or replace ageing hardware, it will generally need to deploy a new Exchange SE server and perform a traditional migration.
-
-Microsoft provides a detailed Exchange SE upgrade guide covering both supported methods.
-
-Exchange 2016 requires a legacy migration
-
-Exchange Server 2016 cannot be upgraded to Exchange SE by simply running the SE installer over the existing installation.
-
-These environments require what Microsoft calls a legacy upgrade. Administrators deploy a new server running Exchange SE—or, depending on their selected route and existing environment, introduce Exchange 2019 first—then move mailboxes, connectors, certificates, transport functions and other services before retiring the older system.
-
-A direct legacy migration from a properly updated Exchange 2016 organisation to Exchange SE may be possible by adding new SE servers to the organisation and transferring workloads. This is different from an in-place upgrade: the Exchange 2016 server itself does not become an SE server.
-
-Organisations choosing an Exchange 2019 intermediate step must first deploy Exchange 2019 on supported hardware and Windows Server, migrate away from Exchange 2016 and then upgrade the Exchange 2019 servers to SE.
-
-Exchange 2013 presents an additional problem. Exchange Server SE RTM does not support coexistence with Exchange 2013, which reached the end of support in April 2023. Any remaining Exchange 2013 servers must be removed through a supported migration sequence before Exchange SE can be introduced.
-
-The distinction is important because an incomplete or incorrectly sequenced upgrade can disrupt mail flow, client connectivity, hybrid integration and administrative functions.
-
-Migrations involve more than moving mailboxes
-
-An Exchange migration can appear straightforward when measured only by mailbox count, but production deployments frequently contain dependencies accumulated over many years.
-
-Administrators must identify applications and appliances that submit mail through Exchange, including scanners, monitoring systems, business applications and multifunction printers. They must also review receive and send connectors, transport rules, accepted domains, certificates, namespaces, load balancers, antivirus integrations, journaling systems, archive platforms and backup products.
-
-Public folders and arbitration mailboxes require particular attention. Hybrid environments must verify connectivity with Microsoft 365 and ensure that the Hybrid Configuration Wizard, OAuth configuration and mail-flow connectors remain correct after changes.
-
-Client compatibility must also be examined. Older Outlook releases, mobile clients or line-of-business software may not behave as expected with the new environment.
-
-Security settings should be reviewed rather than automatically duplicated. A migration provides an opportunity to remove obsolete protocols, restrict administrative interfaces, enable Extended Protection where supported and eliminate unnecessary internet exposure.
-
-Organisations should also account for Active Directory. Exchange writes configuration data into the directory, so retiring the last legacy server without following Microsoft’s supported process can leave behind dependencies and complicate recipient management.
-
-Exchange Online provides an alternative to maintaining servers
-
-Microsoft is also encouraging customers to consider Exchange Online, either as a standalone service or as part of Microsoft 365.
-
-A cloud migration transfers responsibility for maintaining the underlying Exchange server software to Microsoft. Customers continue to control identities, policies, data governance and service configuration, but they no longer patch the Exchange operating environment themselves.
-
-Migration options include staged or cutover approaches for some smaller environments and hybrid migration for organisations requiring coexistence during a longer transition. The appropriate method depends on the existing Exchange version, directory configuration, number of mailboxes, identity model and operational requirements.
-
-Moving to Exchange Online does not automatically mean that every Exchange-related server can be removed immediately. Organisations using Microsoft Entra Connect or retaining on-premises Active Directory may still need supported recipient-management arrangements. Administrators should follow Microsoft’s documented procedures instead of simply shutting down or deleting the final Exchange server.
-
-A cloud move also requires assessment of data residency, compliance, retention, eDiscovery, backup, network capacity and third-party integrations. For some businesses, these considerations will justify keeping Exchange on premises. For others, eliminating responsibility for patching internet-facing email servers may significantly reduce operational risk.
-
-Microsoft’s end-of-support roadmap directs customers towards Microsoft 365, Office 365 or Exchange Server SE and warns that unsupported installations no longer receive the ordinary protections delivered during the product lifecycle.
-
-Organisations now have only months to complete the work
-
-The October deadline leaves organisations with a limited migration window, especially where the project requires procurement, architectural changes or new server hardware.
-
-A realistic migration may involve inventory and dependency discovery, licensing approval, infrastructure deployment, testing, change-control review, mailbox movement and the orderly decommissioning of legacy systems. Large or highly regulated organisations may also need disaster-recovery exercises, security assessments and formal business sign-off.
-
-Administrators should begin by confirming every Exchange server and build present in the organisation. They should then establish whether each system is enrolled in the correct ESU period and verify that all available updates have been installed.
-
-The next step is to select a destination architecture—Exchange SE, Exchange Online or a hybrid arrangement—and create a migration plan based on Microsoft’s supported upgrade paths.
-
-Companies should not assume that an October migration can be postponed until the final security update arrives. Any deployment issue discovered late in the process could leave an organisation operating unsupported servers with no remaining vendor safety net.
-
-The fact that Microsoft previously authorised a second ESU period may have encouraged some customers to expect further flexibility. Its latest announcement is intended to remove that ambiguity.
-
-Exchange Server 2016 and 2019 will continue to function after October, but they will do so without future Microsoft security fixes. For organisations still relying on either platform, the remaining months represent the final opportunity to move before a temporary migration problem becomes a permanent security exposure.",https://media.licdn.com/dms/image/v2/D4E12AQGv9844NpSL0A/article-cover_image-shrink_720_1280/B4EZ.KelkIIAAQ-/0/1784734706700?e=2147483647&v=beta&t=Fs5znQCVvLsSUuiDdWrJX8_YvRPxY1LLrMYcYNrC8DU,N,,2026-07-22 17:10:59.550132
-ID44,Stolt Nielsen,2026-07-22 19:41:13+00:00,Yahoo Finance,STG A/S – Signs agreement to divest two fine-cut tobacco brands - Yahoo Finance UK,Scandinavian Tobacco Group A/S,,,,,https://uk.finance.yahoo.com/news/stg-signs-agreement-divest-two-152200602.html,"Company Announcement – Euronext Dublin No.
-03/2026 Copenhagen, 22 July 2026 STG A/S – Signs agreement to divest two fine-cut tobacco brands On 22 July 2026, Scandinavian Tobacco Group A/S signed an agreement to divest two fine-cut tobacco brands.
-The company announcement of Scandinavian Tobacco Group A/S relating to the divestment is available at: https://www.st-group.com/investor/.
-Attachment STG Group Ireland - Company Announcement no 3 2026 Recommended stories","Company Announcement – Euronext Dublin
-
-No. 03/2026
-
-Copenhagen, 22 July 2026
-
-STG A/S – Signs agreement to divest two fine-cut tobacco brands
-
-On 22 July 2026, Scandinavian Tobacco Group A/S signed an agreement to divest two fine-cut tobacco brands.
-
-The company announcement of Scandinavian Tobacco Group A/S relating to the divestment is available at: https://www.st-group.com/investor/.
-
-Attachment
-
-STG Group Ireland - Company Announcement no 3 2026
-
-Recommended stories",https://s.yimg.com/lo/mysterio/api/551DAE40D3DBA3FE1C3EA40E70894D71AD7839CFCB0E7E07A0A7B61A2C8B415C/subgraphmysterio/resizefill_w1200_h252;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fglobe_newswire_uk_374%2F2e0163acb748425feccafdbbd5fa167e,N,,2026-07-22 20:11:02.382749
-ID27,J&J,2026-07-22 19:34:17+00:00,CNBC,"J&J gets a big win on its new robotic surgical system — plus, a flood of earnings - CNBC","Jeff Marks, Morgan Chittum, www.facebook.com",,,,,https://www.cnbc.com/2026/07/22/jj-gets-a-big-win-on-its-new-robotic-surgical-system-plus-a-flood-of-earnings.html,"Every weekday, the CNBC Investing Club with Jim Cramer releases the Homestretch — an actionable afternoon update, just in time for the last hour of trading on Wall Street.
-Johnson & Johnson got a big regulatory win , with the FDA approving its Ottava Robotic surgical system for multiple general procedures.
-As a subscriber to the CNBC Investing Club with Jim Cramer, you will receive a trade alert before Jim makes a trade.
-THE ABOVE INVESTING CLUB INFORMATION IS SUBJECT TO OUR TERMS AND CONDITIONS AND PRIVACY POLICY , TOGETHER WITH OUR DISCLAIMER .
-NO FIDUCIARY OBLIGATION OR DUTY EXISTS, OR IS CREATED, BY VIRTUE OF YOUR RECEIPT OF ANY INFORMATION PROVIDED IN CONNECTION WITH THE INVESTING CLUB.","Every weekday, the CNBC Investing Club with Jim Cramer releases the Homestretch — an actionable afternoon update, just in time for the last hour of trading on Wall Street. Stocks were mixed on Wednesday . The S & P 500 was basically flat in late afternoon trading, while the Nasdaq was modestly weaker. Once again, it was one of those days, with a big split within technology. While many chip stocks rallied, including Nvidia 's roughly 3% gain, software stocks lagged, and the hyperscalers that are funding the AI infrastructure buildout also moved lower. The move in software may be tied to this shocking news that OpenAI models broke out of a sandboxed testing environment, accessed the internet, and exploited a vulnerability to hack into an open source developer's network to find the information needed to pass an internal evaluation. The cybersecurity stocks, including CrowdStrike and Palo Alto Networks, got swept up in this software selling, and we think that's the wrong read . The security incident underscores the critical role these companies play in protecting enterprises as AI models become more sophisticated. CrowdStrike and Palo Alto Networks have now given back all the gains tied to IBM 's explanation last week that clients are more focused on figuring out how much they need to invest in cybersecurity (as well as paying up for tech hardware) than buying traditional mainframe servers. The OpenAI security incident could serve as a catalyst for companies to deepen their engagement with cybersecurity providers, benefiting CrowdStrike and Palo Alto Networks. Johnson & Johnson got a big regulatory win , with the FDA approving its Ottava Robotic surgical system for multiple general procedures. If you've been following along with the J & J story, you would know this approval was coming up. In May, we wrote how a clinical study evaluating the safety and performance of the system paved the way to this approval. But the reason why the stock was up 2% is that this approval came months earlier than anticipated. Cowen analysts had been expecting approval in late 2026, according to a research note. Ottava's upcoming launch positions it to compete in the robotic surgery market, long dominated by Intuitive Surgical 's da Vinci systems. MedTech was the weaker part of J & J's recent quarterly results, but management is very bullish about this new product. The company called it ""one of the most significant MedTech innovations we will bring to market this decade."" In a note to clients Wednesday, analysts at Stifel wrote, ""This JNJ launch will almost certainly take a deliberate and phased approach, significant training (physicians and staff) will be required, and the indications for Ottava are still limited. But with this approval, JNJ is now 'in the game' and can iterate and improve on Ottava over time, potentially building towards a system that is closer to directly competing with Intuitive's broader offering."" Looking to get in early on the next big IPO before it comes public? Goldman Sachs has rolled out a new platform to help wealthy clients and family offices do just that. The group, dubbed the alternative investments platform, lets investors grab a stake in individual private companies rather than just gaining exposure to traditional private equity funds, CNBC's Hugh Son first reported on Tuesday. That way, investors would already be invested before any initial public offering. The announcement comes just a month after SpaceX 's historic IPO and ahead of potential monster offerings from OpenAI and Anthropic. It's a wise move on Goldman's part to capitalize on the trend. Its investment banking line already benefits immensely from the influx of deals. The new platform aims to boost Goldman's much-smaller asset and wealth management (AWM) division. Growth in AWM can mean more stable, recurring revenues and offset the more volatile investment banking and trading operations. The push shouldn't be all that surprising, given Goldman has been trying to expand the AWM division for years. The firm's assets under supervision hit a new record in the second quarter . ""Those are the businesses that didn't seem to matter, but they're so big now that they do seem to matter,"" Jim said after earnings earlier this month, referring to asset and wealth management. It's a big night of tech earnings with Alphabet , Tesla , ServiceNow , and Texas Instruments set to report. Alphabet's results could have broader implications for the Magnificent Seven and the broader AI infrastructure complex based on what management says about the pace of AI spending. We'll also hear more about IBM following last week's negative preannouncement. In the industrial sector, earnings are due from CSX and United Rentals . Before Thursday's open, we'll see earnings from Honeywell , RTX , and Dover . Thursday's economic calendar includes the weekly jobless claims report. Intel is out with quarterly results on Thursday evening. (See here for a full list of the stocks in Jim Cramer's Charitable Trust, including CRWD, PANW, JNJ, GS, GOOGL, HON, DOV, INTC.) As a subscriber to the CNBC Investing Club with Jim Cramer, you will receive a trade alert before Jim makes a trade. Jim waits 45 minutes after sending a trade alert before buying or selling a stock in his charitable trust's portfolio. If Jim has talked about a stock on CNBC TV, he waits 72 hours after issuing the trade alert before executing the trade. THE ABOVE INVESTING CLUB INFORMATION IS SUBJECT TO OUR TERMS AND CONDITIONS AND PRIVACY POLICY , TOGETHER WITH OUR DISCLAIMER . NO FIDUCIARY OBLIGATION OR DUTY EXISTS, OR IS CREATED, BY VIRTUE OF YOUR RECEIPT OF ANY INFORMATION PROVIDED IN CONNECTION WITH THE INVESTING CLUB. NO SPECIFIC OUTCOME OR PROFIT IS GUARANTEED.",https://image.cnbcfm.com/api/v1/image/108210811-1760124319181-gettyimages-2239744092-JJ_PROTAGONIST_THERAPEUTICS.jpeg?v=1760124445&w=1920&h=1080,N,,2026-07-22 16:15:14.346513
-ID32,Microsoft,2026-07-22 19:28:36+00:00,www.windowscentral.com,Free Copilot is turning into a demo as Microsoft shifts real features to paid tiers,Not Available,,,,,https://www.windowscentral.com/artificial-intelligence/microsoft-copilot/free-copilot-is-turning-into-a-demo-as-microsoft-shifts-real-features-to-paid-tiers,"Deep Research is the latest free Copilot feature to disappear, replaced by a Microsoft 365 Premium tool.",Not Available,,N,,2026-07-22 20:10:33.229837
