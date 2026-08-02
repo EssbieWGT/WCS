@@ -21,6 +21,195 @@ Fred Surgeon, with the support of his wife Anita, owns and operates Surgeon &amp
 Award-winning acquisition: Coldwell Banker Advantage team celebrates nationwide awards with new leadership
 
 Agents and leadership from Coldwell Banker Advantage and Coldwell Banker Sea Coast Advantage gathered to celebrate one of their own as she was recognized with two national achievements. A new C-Suite leader was also in attendance.",,N,0.0,2026-08-02 08:56:21.945707
+,,2026-08-02 10:37:24+00:00,North Central Insurance Agency,Veterans Medicare And TRICARE Benefits: Avoid Overlap | North Central Insurance Agency,North Central Insurance Blogging Team,,,,,https://northcentralinsurance.com/veterans-medicare-and-tricare-benefits/,"Quick Summary & Key Takeaways Veterans Medicare and TRICARE Benefits often overlap on outpatient prescription, inpatient care, and durable medical equipment; deliberate coordination reduces unexpected bills and claim denials.
+Veterans Medicare and TRICARE Benefits can create costly overlap if enrollment and payment hierarchies are not actively managed.
+Veterans Medicare and TRICARE Benefits must be matched against VA entitlements, private supplemental plans, and Minnesota-specific programs to avoid duplicated premiums and denied claims.
+Network Reconciliation Network Reconciliation harmonizes provider networks between the VA, Medicare Advantage plans, and TRICARE networks.
+Conclusion Managing Veterans Medicare and TRICARE Benefits requires a system-level approach: precise enrollment timing, claim-level payer sequencing, and robust documentation stop most overlap problems before they become patient liabilities.","Quick Summary & Key Takeaways
+
+Veterans Medicare and TRICARE Benefits often overlap on outpatient prescription, inpatient care, and durable medical equipment; deliberate coordination reduces unexpected bills and claim denials.
+
+Minnesota residents should consult both the Minnesota Department of Veterans Affairs and local Social Security offices to align enrollment timing and avoid premium penalties.
+
+Four practical frameworks—Primary/Secondary Claim Mapping, Financial A/R Control, Network Reconciliation, and Appeals Fast-Track—cut administrative waste by up to a projected 11.2x in modeled clinic throughput.
+
+Real-world coordination requires precise documentation: service-connected status, claims X12 837 loops, and VA community care authorizations must be reconciled within 90 days to limit recoupment risk.
+
+Veterans Medicare and TRICARE Benefits can create costly overlap if enrollment and payment hierarchies are not actively managed. Veterans Medicare and TRICARE Benefits must be matched against VA entitlements, private supplemental plans, and Minnesota-specific programs to avoid duplicated premiums and denied claims. For Minnesota residents the stakes are concrete: local clinics and county veteran service officers report recurring denial patterns when Medicare Part B start dates conflict with TRICARE eligibility.
+
+Veterans Medicare and TRICARE Benefits interplay affects auto, home, and business insurance risk exposures as well; an inattentive healthcare billing stack can cascade into credit-impacting collections and higher group plan rates. Data from the Minnesota Department of Veterans Affairs and Social Security interfaces (when reconciled) reduce that risk, but only if veterans, providers, and insurers follow specific claim-level rules and timelines described below.
+
+Advanced Insights & Strategy
+
+Summary: This section outlines four specific strategic frameworks—Primary/Secondary Claim Mapping, Financial A/R Control, Network Reconciliation, and Appeals Fast-Track—that organizations can apply to limit overlap between Veterans Medicare and TRICARE Benefits and reduce both cost and administrative friction.
+
+Primary/Secondary Claim Mapping
+
+Primary/Secondary Claim Mapping is a deterministic algorithmic approach to assign payer responsibility at the claim line level. Rules are based on coordination-of-benefits (COB) precedence: Medicare typically pays primary for Medicare-eligible veterans with employer coverage exceptions; TRICARE is primary for active duty family members. Mapping must reflect policy tiers and the veteran’s enrollment dates (Part A effective date, Part B effective date, and TRICARE enrollment start).
+
+Operationally, implementers should codify mapping as X12 837 claim modifiers and enforce through the billing engine. Evidence from a Minnesota VA community clinic pilot showed that installing claims-mapping filters reduced dual-billing events by a modeled 63.7% in the first quarter (internal pilot metrics; billing extract methodology used X12 transaction logs and crosswalks to EDI claim adjustment tables).
+
+Financial A/R Control
+
+Financial A/R Control treats potential overlap as receivable risk that must be triaged immediately. For each contested line item, flag accounts receivable entries with a COB hold code and restrict outbound collections until 90-day reconciliation passes. This prevents premature patient billing and reduces collection-related complaints to county veteran service officers in Hennepin and Ramsey counties.
+
+Applied metrics include Days Sales Outstanding (DSO) segmented by payer and denial reason codes. Best practice is to maintain DSO under a dataset-specific threshold—benchmarked at a 14.7-day median for TRICARE/MSP-related claims in a Minnesota-based pilot—to minimize write-offs and insurance premium impact for the veteran.
+
+Network Reconciliation
+
+Network Reconciliation harmonizes provider networks between the VA, Medicare Advantage plans, and TRICARE networks. Since Medicare Advantage and TRICARE use different network tiers, reconcile in three steps: roster crosswalking, credentialing verification, and payer-contract mapping. Use NPI-driven exports to match participating providers across payer directories and flag out-of-network services that risk balance billing.
+
+One practical tool is automatic directory sync using NPPES exports and TRICARE provider lists. A documented Minnesota clinic case required manual reconciliation when a provider’s credentialing lapsed with a Medicare Advantage plan, which exposed a $12,783 firm balance for a joint replacement; prompt reconciliation averted patient liability through retroactive enrollment corrections.
+
+Appeals Fast-Track
+
+Appeals Fast-Track creates a prioritization pipeline for COB and recoupment disputes. Establish a 15-business-day triage SLA for claims flagged with overlapping coverage, assemble supporting documentation (authors, service dates, VA authorization numbers), and escalate to the payer’s COB unit. Track appeal KPIs on a rolling 60-day window to identify systemic denial drivers.
+
+Implementation requires an appeals playbook with templated attachments: VA community care authorizations, Part B effective date letters, and employer-group health plan documentation. A Minnesota provider network that adopted Fast-Track saw appeal overturns improve by a measurable factor, cutting expected recoupments and stabilizing revenue.
+
+“The key is not whether a veteran has multiple coverages, but whether the system treats those coverages as distinct, actionable data points. Once you make them actionable, cost leakage stops.” – Dr. Helena M. Cho, Director of Payer Strategy, MedBridge Analytics
+
+Understanding Veterans Medicare and TRICARE Benefits in Minnesota
+
+Summary: This section clarifies Minnesota-specific regulations, enrollment touchpoints, and community resources that influence how Veterans Medicare and TRICARE Benefits interact for Minnesota residents, with links to state agencies and local service officer networks.
+
+Local Enrollment Touchpoints And County Veteran Service Officers
+
+Minnesota veterans should register with the Minnesota Department of Veterans Affairs (MDVA) and their county veteran service officer (CVSO) prior to initiating Medicare Part B, especially if TRICARE eligibility is active. CVSOs in Minnesota cities—Minneapolis, Saint Paul, Duluth—routinely handle paperwork that aligns VA community care authorizations with Medicare enrollment dates. MDVA maintains a directory and benefit checklists that help veterans avoid overlapping start dates that can trigger COB confusion; see the MDVA resource page at https://mn.gov/mdva/.
+
+Hard administrative boundaries exist: if Part B is retroactive to a date after TRICARE eligibility began, patient liability can emerge for services that TRICARE expected Medicare to cover. Minnesota clinics have reported recurring issues where retroactive Part B enrollments created months-long billing reconciliations; scheduling a CVSO consult reduces that risk.
+
+Minnesota Data Points And Trends
+
+Minnesota-specific trends indicate a demographic concentration of veterans in suburban Hennepin and Ramsey counties, with older-veteran populations showing higher dual-coverage incidence. The MDVA reported an uptick in veteran benefit counseling requests in the first half of 2026; local veterans’ health navigators flagged COB questions as the most common query. County offices report that proactively aligning Medicare Part B effective dates with TRICARE enrollment reduces claim disputes by a nontrivial margin.
+
+Behavioral patterns also matter: veterans who delay Part B to avoid premium payments often create administrative overlap later, triggering recoupment. For Minnesota-based provider groups, establishing pre-service verification protocols that check both VA and TRICARE eligibility portals reduces downstream denials.
+
+Minnesota Resources For Providers And Insurers
+
+Providers and insurers operating in Minnesota should integrate three data streams: VA community care portals, TRICARE regional contractor systems (e.g., Humana Military in the Midwest), and Medicare eligibility queries through the Social Security Administration portal (https://www.ssa.gov/benefits/medicare/). Local institutional relationships—such as partnerships between Minneapolis-based health systems and county CVSOs—accelerate verification and reduce patient disputes.
+
+Minnesota law does not supersede federal COB rules, but state-level consumer protections can affect collections practices. Providers should consult Minnesota Statutes and their legal counsel when sending billing notices for overlapping coverage matters to ensure compliance and preserve community trust.
+
+Comparing Veterans Medicare and TRICARE Benefits Coverage
+
+Summary: A side-by-side comparison clarifies which payer is primary under common scenarios, how durable medical equipment is handled, and where outpatient prescriptions are most likely to produce overlap.
+
+Coverage Area Medicare Typical Role TRICARE Typical Role Inpatient Hospital Care Primary if veteran is enrolled in Part A and not active duty Primary for active duty beneficiaries; secondary otherwise Outpatient Physician Visits Often primary for Part B-enrolled beneficiaries May be secondary; TRICARE Prime uses referrals Prescription Drugs (Part D) Primary for Part D enrollees; cost varies by plan TRICARE pharmacy may pay, then seek COB Durable Medical Equipment Medicare usually covers per LCDs and NCDs TRICARE coverage varies; prior auth common
+
+Who Pays First: Typical Rules
+
+Medicare is often primary for veterans who are enrolled in Part A or Part B and not active duty; TRICARE becomes primary in the context of active duty service members or where federal law specifies TRICARE responsibility. The general rule is to check the patient’s active-duty status and employer-based group health plan situation to determine primary payer.
+
+Where ambiguity exists—such as retiree veterans with employer coverage that might be primary—providers should request employer plan documentation and verify through the Coordination Of Benefits Contractor. Documenting that sequence on the claim reduces denials and prevents retroactive recoupments.
+
+Prescription Coverage And Pharmacy Access
+
+Prescription coverage is an area of high friction. If a veteran has Medicare Part D and is also TRICARE-eligible, pharmacy billing systems must decide which benefit pays first. TRICARE may cover after Medicare Part D pays; however, triggers include formulary differences and prior authorization requirements. Use NCPDP pharmacy messaging to pass payer sequences and avoid patient out-of-pocket confusion.
+
+Minnesota pharmacies that interact with both TRICARE and Medicare Part D should implement payer priority logic and train pharmacists on denial codes that indicate a COB issue. This reduces patient complaints and pharmacy write-offs; reported pharmacy denial rates fall when payer sequencing is automated.
+
+Durable Medical Equipment And Ancillary Services
+
+Durable medical equipment (DME) is often a contested area because Medicare has explicit local coverage decisions (LCDs) and national coverage determinations (NCDs). TRICARE may require separate prior authorization for DME or expect Medicare to cover it first. Providers should capture supporting documentation such as doctor’s orders, functional assessments, and LCD-based justification to submit with the claim.
+
+A Minnesota-based orthopedic supplier found that supplying LCD citations and service-date crosswalks with claims reduced claim-backs and recoupment demands by a measurable margin. Accurate documentation prevents the supplier from holding veterans financially responsible while payers sort COB responsibility.
+
+What Most Get Completely Wrong About Veterans Medicare and TRICARE Benefits
+
+Summary: This contrarian section challenges common beliefs about automatic coverage coordination and exposes operational missteps that create avoidable denials and patient liabilities.
+
+I have observed that many administrators assume payers will reconcile coverage automatically. They won’t. Billing systems and payer portals rarely exchange all the context needed—VA authorizations, Part B effective dates, and employer plan coordination—without explicit human or API-driven intervention.
+
+My rule for preventing overlap: treat each veteran as a multi-payer case study. Pull the veteran’s VA service-connected status, confirm TRICARE enrollment via regional contractor lookup (Humana Military details at https://www.humanamilitary.com/), and align those dates with Medicare Part A/B start dates using Social Security matching. That triple-check habit stops most downstream disputes before they start.
+
+Implementation Steps For Coordination Of Benefits
+
+Summary: A practical implementation guide for health systems and insurance administrators to operationalize the advanced frameworks: pre-service verification, EHR/payer integration, claim-line mapping, and appeals triage.
+
+Step 1: Pre-Service Verification
+
+Step 1: Before elective procedures, verify all active coverages. Query VA community care authorizations, TRICARE eligibility through the regional contractor, and Medicare Part A/B dates via SSA portals. Capture screenshots, authorization numbers, and save PDF confirmations to the patient’s chart to support future claims.
+
+When pre-service verification reveals dual coverage, apply the Primary/Secondary Claim Mapping algorithm and set the claim with correct payer sequence in the EHR/billing system. For Minnesota clinics, this step reduced same-episode re-billing by a nontrivial proportion in pilot runs.
+
+Step 2: EHR And Payer Integration
+
+Step 2: Integrate EHR with payer APIs and schedule nightly NPI/NPPES syncs. Map payer identifiers to internal encounter codes so that claims leave with accurate payer order. Use HL7 FHIR where available to exchange authorization metadata with the VA and Medicare Advantage plans.
+
+This reduces manual entry errors and speeds up claim adjudication. For Minnesota-based health systems, integrating FHIR-based eligibility queries cut verification times and improved frontline staff productivity.
+
+Step 3: Claim-Line Mapping And Submission
+
+Step 3: At submission, ensure each claim line contains correct modifiers, place of service codes, and COB indicators. If a line should be paid by Medicare first, include the appropriate coordination of benefits segments in the EDI transaction and attach VA authorization numbers where applicable to avoid denials for missing documentation.
+
+Claims without precise line-level coding are more likely to be denied; this is particularly true for DME and outpatient surgery. Use retroactive claim audits to identify patterns and reconfigure submission logic.
+
+Step 4: Appeals Triage And Retroactive Reconciliation
+
+Step 4: For denied or recouped claims, use the Appeals Fast-Track playbook. Collate the required attachments, send the administrative appeal within the payer’s SLA, and, if necessary, involve the Minnesota CVSO to supply veteran-specific documents such as service-connected determinations.
+
+Track appeal outcomes in a dashboard to measure overturn rates and identify denial code clusters for system fixes. A fast appeals pipeline reduces net write-offs and preserves the veteran’s credit standing.
+
+Coordination Operations And Industry Considerations
+
+Summary: Operational realities for payers, providers, and insurance brokers—covering timetables, billing codes, and the intersections with auto, home, and business insurance liability.
+
+Timetables And Retroactivity Windows
+
+Medicare enrollment retroactivity windows and TRICARE effective dates create exposure. Medicare Part B may be backdated up to six months in limited circumstances for delayed enrollment, which can create retroactive overlaps. For Minnesota-based administrators, establishing 90-day reconciliation windows captures most retroactive activity and reduces surprise balances to patients.
+
+Coordinate with Social Security offices for Part B effective date confirmations, especially if veterans elected delayed enrollment due to employer coverage or ongoing TRICARE eligibility. Capture and store proof to support appeals in case of recoupments.
+
+Billing Codes And Claim Modifiers
+
+Use accurate billing modifiers (for example CG for TRICARE, when applicable, and appropriate Medicare modifiers) and payer identifiers on X12 837s to signal coordination intent. Misapplied modifiers are a frequent cause of denials; run quality assurance on modifier fields monthly, and reconcile against ERA/835 remittance lines.
+
+Providers must also align POS codes and taxonomy codes to reflect where services were rendered—VA facilities vs. community providers—to avoid payer misrouting and unintended patient liability.
+
+Insurance Impacts Outside Healthcare
+
+Overlap can have ripple effects on auto, home, and business insurance underwriting when veteran medical claims feed into actuarial datasets. For example, unresolved health receivables can show up in public records and influence small-business group plan rates. Coordinated claims management protects veteran credit and mitigates rate increases in group policies for employers in Minnesota.
+
+Insurance brokers should request evidence of clean claims reconciliation before quoting group plan renewals for organizations with significant veteran employment, as outstanding receivables can create underwriting risk that affects premium calculations.
+
+Legal And Regulatory Compliance
+
+Summary: Relevant federal and Minnesota statutes regulate balance billing, recoupment procedures, and data sharing for veterans with concurrent Medicare and TRICARE coverage. This section outlines compliance guardrails and documentation best practices.
+
+Federal COB Regulations And Payer Obligations
+
+Federal COB rules determine primary payer in most scenarios. Providers must adhere to federal regulations around claims submission and cannot pursue beneficiaries for payments that are the legal responsibility of a primary payer. When disputes arise, recoupment procedures must follow payer-specific timelines and federal appeals processes.
+
+When in doubt, request written confirmation from the payer of their payment responsibility and retain it. Documentation protects clinicians and reduces the risk of improper billing practices that could trigger audits.
+
+Minnesota Consumer Protections And Collections
+
+Minnesota statutes contain consumer protections that affect collections activity, including restrictions on misrepresentative collections practices and timelines for sending final notices. Providers should coordinate with in-house counsel to ensure billing notices comply with Minnesota law before forwarding accounts to external collection agencies.
+
+Keeping the veteran’s county CVSO informed about ongoing collections can help mediate disputes and provide the veteran with additional assistance options through MDVA or local veteran organizations.
+
+Privacy, Data Exchange, And Interoperability
+
+HIPAA remains the governing privacy framework for data exchanges, but VA data sharing includes additional protections for certain datasets. When building integrations, ensure Business Associate Agreements are in place and that APIs exchange only the minimum necessary data. For Minnesota-based projects, incorporate state-level privacy counsel review for cross-agency data flows.
+
+Design data retention policies that preserve key documentation—VA authorizations, Part B effective notices, and EDI 835 remittance advices—for at least the duration specified by Medicare and VA record retention rules to support future audits and appeals.
+
+Conclusion
+
+Managing Veterans Medicare and TRICARE Benefits requires a system-level approach: precise enrollment timing, claim-level payer sequencing, and robust documentation stop most overlap problems before they become patient liabilities. For Minnesota residents, leveraging county CVSOs, MDVA resources, and targeted EHR-payer integrations materially reduces denials and protects veteran financial health.
+
+Why Challenging The Assumption Of Automated Coordination Matters
+
+Pushing back against the idea that payer systems will resolve overlap autonomously reveals systemic gaps in API maturity, authorization exchange, and claims-level metadata. Addressing those gaps directly saves time, preserves revenue, and prevents veterans from facing surprise balances.
+
+Real-World Example: Hennepin Health System Community Pilot
+
+Hennepin Health System executed a 2026 pilot that integrated TRICARE eligibility queries, SSA Part B confirmation, and VA authorization ingestion into its billing platform; the pilot reduced dual-billing incidents and cut appeals backlog by a demonstrable margin, illustrating the operational gains available when systems are aligned.
+
+Core Rule For Coordination
+
+Always treat each veteran’s case as a multi-payer reconciliation problem: capture authoritative documentation at the point of service, set payer sequence explicitly on every claim line, and maintain a 90-day reconciliation process to handle retroactive enrollments and recoupments.",https://northcentralinsurance.com/wp-content/uploads/2026/08/Veterans-Medicare-and-TRICARE-Benefits-1785601242.png,N,0.0,2026-08-02 16:56:11.490549
 ,,2026-08-02 10:26:06+00:00,www.reddit.com,Living with parents while husband is deployed - tricare? : r/MilitarySpouse - Reddit,Not Available,,,,,https://www.reddit.com/r/MilitarySpouse/comments/1vd6f2g/living_with_parents_while_husband_is_deployed/,"My husband gets deployed soon and I’m planning on moving in with my parents for the duration of the deployment so I don’t lose my mind.
 I have a 3 month old who both him and I are on Tricare select in Triwest.
 My parents live in a Tricare East state.
@@ -1144,96 +1333,3 @@ Vista Global Solutions* (HT003826DE013) – Bristol Bay Native Corporation (BBNC
 The Defense Health Agency reduced intelligence collection time by 95%, cut vulnerability reporting time to leadership by 50%, and automated manual workflows with Recorded Future, freeing analysts to focus on what matters most.
 Swipe to learn how they are using intelligence to stay ahead of evolving threats.
 #ThreatIntelligence #Cybersecurity","Threat intelligence is most valuable when it helps teams move faster. The Defense Health Agency reduced intelligence collection time by 95%, cut vulnerability reporting time to leadership by 50%, and automated manual workflows with Recorded Future, freeing analysts to focus on what matters most. Swipe to learn how they are using intelligence to stay ahead of evolving threats. #ThreatIntelligence #Cybersecurity",https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7,N,1.0,2026-07-30 19:56:16.500015
-,,2026-07-30 20:35:41+00:00,www.facebook.com,#Jimothy | Defense Health Agency - Facebook,Not Available,,,,,https://www.facebook.com/WRNMMC.DHA/posts/jimothy-defense-health-agency/1459530942879831/,"Breaking News: Scientists have confirmed Jimothy is approximately 92% potato and 8% determination.
-Guess which part gets him to the gym?
-You don't need the perfect workout clothes, the perfect routine, or the perfect day to start.
-You just need to show up, do your best, and keep moving toward your goals.
-So channel your inner Jimothy: embrace the chaos, celebrate the small wins, and remember, consistency beats perfection every time.","Breaking News: Scientists have confirmed Jimothy is approximately 92% potato and 8% determination.
-
-Guess which part gets him to the gym?
-
-You don't need the perfect workout clothes, the perfect routine, or the perfect day to start. You just need to show up, do your best, and keep moving toward your goals.
-
-Progress doesn't care what you look like. It cares that you came back.
-
-So channel your inner Jimothy: embrace the chaos, celebrate the small wins, and remember, consistency beats perfection every time.",https://scontent-iad3-1.xx.fbcdn.net/v/t39.99422-6/759002912_1371151678555315_5045391186187259661_n.png?stp=dst-jpg_tt6&cstp=mx1254x1254&ctp=s600x600&_nc_cat=110&ccb=1-7&_nc_sid=cae128&_nc_ohc=rxzI4XrLHioQ7kNvwEF8j1b&_nc_oc=AdojCQt1qHomGFilpSxuafFma57nHHYv6eRKlhobP2m6BZbU4T58fxuchRB5X6zJETI&_nc_zt=14&_nc_ht=scontent-iad3-1.xx&_nc_gid=QcJm4XqOrkw-2jDh3lUz6Q&_nc_ss=7b289&oh=00_AQH5TR70LF58sFYcilQ6TYkTell3ffQ5L9YbwvKMq4klJQ&oe=6A71A49F,N,0.0,2026-07-30 19:56:19.597871
-,,2026-07-30 19:46:10+00:00,www.facebook.com,Tricare ABA therapy re-authorization issues for 5-year-old child - Facebook,Not Available,,,,,https://www.facebook.com/groups/202243656776282/posts/2889781451355809/,Hey Guys. Is anyone else getting the run-around from their insurance for covering ABA therapy…more than the usual run-around? This is for a...,Not Available,https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/465288108_9534066806623237_265487971746002284_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1190&ctp=p600x600&_nc_cat=110&ccb=1-7&_nc_sid=0b1479&_nc_ohc=moAy8WFyuN4Q7kNvwEQuxNe&_nc_oc=AdpQLa1G1AZLlir269rwVH4U8gaPXKjRwArVIAhaffgnVQueVS176E9pk6PUW4ZcZek&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=YkttnpBc0tfVt-QJzncc5Q&_nc_ss=7b289&oh=00_AQE3NsfGYU_b5vBCD0aXKTvzTRa2tfAfVohdJIb-VbxSvw&oe=6A718594,N,-1.0,2026-07-30 16:56:14.349994
-,,2026-07-30 19:31:29+00:00,www.mauldininsurancegroup.com,TRICARE For Life + Medicare in South Carolina: What Military Retirees Must Do at 65,"Ben J. Mauldin, Jennifer Mauldin, Ben Mauldin",,,,,https://www.mauldininsurancegroup.com/blogs/tricare-for-life---medicare-in-south-carolina--what-military-retirees-must-do-at-65,"What happens to TRICARE at 65 When you become eligible for Medicare (usually at 65), your TRICARE doesn't disappear — it transforms into TRICARE For Life (TFL).
-To keep TRICARE after 65, you must enroll in Medicare Part B. TRICARE will not waive it.
-Always confirm your specific situation with TRICARE, Medicare (1-800-MEDICARE), or a licensed agent.
-To keep TRICARE (which becomes TRICARE For Life) after 65, most military retirees must enroll in Medicare Part B and pay the premium — $202.90 a month in 2026 for most people.
-TRICARE For Life applies to each person individually, so your spouse must enroll in Medicare Part B when they turn 65 to keep their own TRICARE For Life coverage.","If you're a military retiree, TRICARE has probably been the easiest part of your life for decades. Then you approach 65, the Medicare mail starts arriving, and suddenly there are deadlines, premiums, and a dozen companies telling you to buy things.
-
-Here's the honest version, from someone who helps South Carolina veterans through this every year. At 65, two things are true: there's one Medicare step you absolutely cannot skip — and there's a whole shelf of coverage you're being pitched that you probably don't need. Getting both of those right is the entire game.
-
-What happens to TRICARE at 65
-
-When you become eligible for Medicare (usually at 65), your TRICARE doesn't disappear — it transforms into TRICARE For Life (TFL). TFL is excellent coverage: it wraps around Original Medicare and pays as your secondary insurance. Medicare pays first, TFL picks up most of what's left. For most retirees, the combination leaves very little out of pocket.
-
-But TFL only works if you hold up your side of the deal — and that side is Medicare.
-
-The one step you cannot skip: Medicare Part B
-
-This is the part that costs veterans dearly when they miss it. To keep TRICARE after 65, you must enroll in Medicare Part B. TRICARE will not waive it.
-
-Three things to burn into memory:
-
-The premium. Part B costs $202.90 a month in 2026 for most people (higher earners pay more — see IRMAA below).
-
-The consequence of skipping it. If you don't enroll in Medicare when you're supposed to, your TRICARE benefits end — as early as the first day of the month you turn 65. This isn't a warning; it's the rule.
-
-The penalty for being late. Miss your enrollment window and Medicare adds a 10% penalty to your Part B premium for every 12 months you could have had it but didn't — and that penalty sticks for life.
-
-Your enrollment window is a 7-month Initial Enrollment Period: the 3 months before your 65th-birthday month, the birthday month itself, and the 3 months after. Don't wait until the end of it — enroll early so your coverage is active the day you need it.
-
-(Also make sure you're enrolled in Medicare Part A, which most retirees get premium-free based on their work record. There's no reason to skip it.)
-
-Now the good news: what you can SKIP
-
-Here's what almost no one tells veterans, and where I often save people money instead of selling them something. Because TRICARE For Life is so strong, you generally do not need the extra products aimed at other Medicare beneficiaries:
-
-You don't need a Medigap (Medicare Supplement) plan. TFL already does the job a Medigap does — it wraps around Original Medicare and covers most of the cost-sharing. Buying a Medigap on top is usually paying twice for the same protection.
-
-You don't need a Medicare Part D drug plan. The TRICARE pharmacy benefit is ""creditable"" prescription coverage — Medicare considers it at least as good as Part D. That means you're already covered and you're protected from the Part D late-enrollment penalty, so you can decline Part D with confidence.
-
-You generally don't need a Medicare Advantage plan. Enrolling in one can actually complicate how TFL coordinates. For most retirees, Original Medicare + TFL is the cleanest, strongest setup.
-
-So if someone is pushing you toward a supplement, a drug plan, or an Advantage plan ""because you're turning 65,"" pump the brakes. A good agent's job here is to confirm you're set — not to sell you a fourth layer you don't need.
-
-What to Do Two moves, in order: (1) Enroll in Medicare Part A and Part B during your 7-month window so TRICARE For Life switches on smoothly. (2) Skip the Medigap and Part D pitches — TFL already covers those roles. If you want a second set of eyes to confirm before your birthday, that's exactly what I'm here for, and it's free.
-
-Two things higher earners and couples should know
-
-IRMAA. If your income is above certain thresholds, Medicare adds an income-related surcharge (IRMAA) to your Part B premium — so your cost can be higher than $202.90. It's based on your tax return from a couple of years back, and it's worth planning for.
-
-Your spouse has their own deadline. TRICARE For Life follows each person individually. Your spouse must enroll in Medicare Part B when they turn 65 to keep their own TFL coverage. Don't let one birthday get handled and the other slip.
-
-A note on exceptions
-
-Most retirees must take Part B at 65 — full stop. But a few situations differ (for example, if you're still on active duty past 65, or covered as the family member of an active-duty service member). If that's you, confirm your timing directly with TRICARE before you make any decision. When in doubt, ask.
-
-South Carolina is full of people this affects
-
-South Carolina is home to hundreds of thousands of veterans and a heavy active-and-retired military presence — Shaw Air Force Base in Sumter, MCAS Beaufort in the Lowcountry, and Fort Jackson in Columbia, among others. That means a lot of neighbors are hitting this exact 65th-birthday decision every month, and a lot of them are getting bad or salesy advice.
-
-You don't have to navigate it alone, and you should never pay for help choosing Medicare coverage. Free, trustworthy help is available through 1-800-MEDICARE, the TRICARE line, South Carolina's SHIP counselors, and a local licensed agent like me. If you're closer to the Midlands, I go deeper on the base angle in Military Retirees Near Fort Jackson: TRICARE For Life and Medicare, and you can always reach local Medicare help in the Columbia area.
-
-Turning 65 with TRICARE? Let's Confirm You're Set — for Free.
-
-No-cost, no-pressure review for military retirees. I'll make sure your Part B timing is right so TRICARE For Life switches on cleanly — and I'll tell you honestly what you don't need to buy.
-
-📞 Call or Text Ben: 803-920-8827 🌐 MauldinInsuranceGroup.com 📍 100 Old Cherokee Rd STE F #167, Lexington, SC · Serving all of South Carolina · Thank you for your service.
-
-This article is general information, not enrollment advice. Always confirm your specific situation with TRICARE, Medicare (1-800-MEDICARE), or a licensed agent.
-
-Frequently Asked Questions
-
-Do military retirees have to enroll in Medicare Part B at 65? Yes. To keep TRICARE (which becomes TRICARE For Life) after 65, most military retirees must enroll in Medicare Part B and pay the premium — $202.90 a month in 2026 for most people. If you don't enroll when eligible, your TRICARE coverage can end.
-
-What happens if I skip Medicare Part B? Skipping Part B can end your TRICARE benefits as early as the first day of the month you turn 65, and Medicare adds a lifelong late-enrollment penalty of 10% of the Part B premium for every 12 months you delayed. It's a costly mistake to avoid.
-
-Do I need a Medigap plan if I have TRICARE For Life? Generally no. TRICARE For Life already wraps around Original Medicare and covers most cost-sharing, functioning much like a Medigap plan. Buying a separate Medicare Supplement is usually paying twice for the same protection.
-
-Do I need Medicare Part D if I have TRICARE For Life? No. The TRICARE pharmacy benefit is creditable prescription coverage — Medicare considers it at least as good as Part D — so you're already covered and protected from the Part D late penalty. You can add Part D later if you ever choose to, but most retirees don't need it.
-
-Does my spouse also have to enroll in Medicare Part B? Yes. TRICARE For Life applies to each person individually, so your spouse must enroll in Medicare Part B when they turn 65 to keep their own TRICARE For Life coverage.",https://storage.levitate.ai/images/aaf61ae8-82f9-4380-90a8-52beac4240da/362f03e0-176b-4f4e-b078-8dfe7c36ece3.jpg,N,0.0,2026-07-30 18:56:15.457594
