@@ -1,4 +1,136 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID23,IBM,2026-08-03 20:40:09+00:00,Chemical & Engineering News,IBM claims their quantum computers outperform classical ones - C&EN,Ananya Palivela,,,,,https://cen.acs.org/physical-chemistry/computational-chemistry/quantum-advantage-ibm-proof/104/web/2026/08,"Quantum computing researchers at IBM have announced three demonstrations that they say mark quantum advantage—evidence that quantum computers can outperform classical machines in certain tasks.
+Yet for all their promise, today’s quantum computers remain noisy, are error prone, and easily lose information, and classical computers still outperform them at modeling.
+Demo 1: Generating a pattern Quantum computers use qubits—their fundamental units—which are manipulated by quantum gates (also called operations), just as logic gates control bits in ordinary computers.
+With just five T gates, classical simulation was still possible, and the simulations on both quantum and classical computers matched.
+Filippov’s team ran the simulations on two different IBM quantum computers and also used two classical algorithms on a classical processor.","Quantum computing researchers at IBM have announced three demonstrations that they say mark quantum advantage—evidence that quantum computers can outperform classical machines in certain tasks. The world around us is quantum in nature. This makes quantum computers especially promising for modeling it. While a classical computer can approximate how a material would behave or how a certain compound would react with another, experts say that a quantum computer should be able to pinpoint it exactly.
+
+For example, classical computational chemistry methods like density functional theory (DFT) must translate complex quantum behavior into equations that classical hardware can understand. As systems grow more complex, this translation becomes harder, forcing trade-offs in accuracy, speed, or cost. Quantum advantage promises a way to model these processes without compromise.
+
+Quantum computers are expected not only to more accurately model systems than classical computers but also to simulate systems that are beyond the reach of classical computing. “The best examples are simulating quantum materials and breaking certain cryptographic systems,” says Dominik Hangleiter, a computer scientist at the Swiss Federal Institute of Technology (ETH), Zurich, who was not involved in the new IBM demonstrations.
+
+Yet for all their promise, today’s quantum computers remain noisy, are error prone, and easily lose information, and classical computers still outperform them at modeling. Demonstrating quantum computers’ superiority remains a central milestone for the field.
+
+Papers describing all three new demonstrations, which were performed on IBM's Quantum Heron R3 quantum processors, have been published as preprints, before peer review. On a call with journalists on July 28, researchers from IBM and their collaborators described their results, which show how quantum computers, highly assisted by classical processors, may beat fully classical systems in certain niche problems.
+
+Demo 1: Generating a pattern
+
+Quantum computers use qubits—their fundamental units—which are manipulated by quantum gates (also called operations), just as logic gates control bits in ordinary computers. And the set of available gates defines a quantum computer’s capabilities.
+
+Clifford gates are among the most common gates used in quantum computers. They are easy to simulate but limited in function, and models using only Clifford gates can be efficiently simulated by classical computers.
+
+Adding special gates alongside Clifford gates can make any computation by a quantum computer possible, resulting in what’s known as a universal quantum computer.
+
+Simulating a universal quantum computer on a classical system is believed to be intractable—it would take so long that the result becomes meaningless. Some calculations might require millions of years, or even longer than the age of the universe, even for the best supercomputers. This is where quantum computers are expected to excel.
+
+IBM, in collaboration with University of Chicago researchers, created samples consisting of patterns of zeros and ones using this universal quantum computer. According to the team, no classical computer can replicate the same distribution of patterns within a reasonable time frame (arXiv 2026, DOI: 10.48550/arXiv.2607.25941).
+
+“We mathematically prove that no classical computer can generate this pattern,” IBM scientist Ali Javadi-Abhari tells C&EN.
+
+Hangleiter explains that this mathematical proof shows that at least one set of samples from this quantum algorithm cannot be classically simulated. “It doesn’t mean every one of these samples is hard to simulate,” he says.
+
+The experiment can’t absolutely rule out classical reproduction of the samples that the researchers produced. There might be some unknown shortcut to match the output distribution. Hangleiter says, “All you need is someone with a smart idea.”
+
+But if the sample can’t be reproduced classically, how do researchers know the quantum computer is working correctly?
+
+To verify the results, the IBM and University of Chicago team tested circuits of varying difficulty.
+
+In their model, the researchers added special gates called T gates alongside Clifford gates. But adding T gates physically introduces errors: as more are applied, the computer grows more powerful, but the accumulated noise can render its output meaningless.
+
+With just five T gates, classical simulation was still possible, and the simulations on both quantum and classical computers matched.
+
+Increasing the number of T gates made classical simulation much harder and less accurate. And at the full 468 T gates, no known classical algorithm could simulate the model.
+
+Javadi-Abhari’s group switched approaches: running the quantum computer with no T gates so that a classical machine could predict the output.
+
+Comparing predictions with quantum results, the researchers estimated the circuit’s fidelity at 32%. And then they calculated how much the T gates could lower fidelity. Since the researchers placed them in a way to introduce as little noise as possible, the team found that the fidelity of the quantum computer could drop to, at most, 28.4%.
+
+“If this result were a photograph, fidelity is closer to how closely the entire image matches the original rather than what fraction of pixels are exactly correct,” Javadi-Abhari explains. “Even if the pixels are slightly off color or in the wrong places, they can contribute to a higher fidelity.”
+
+“This is actually a really high number,” Hangleiter says. It is 100 times as good as prior leading work. He thinks this demonstration is unique, and he would like to see more similar research.
+
+Demo 2: Kicking a quantum magnet
+
+Researchers at Qedma, a quantum computing start-up, harnessed an IBM quantum computer to simulate a quantum magnet—a material whose magnetic behavior is governed by quantum mechanics in ways classical physics can’t explain (arXiv 2026, DOI: 10.48550/arXiv.2607.24937).
+
+Each atom has its own magnetic moment—imagine a tiny compass needle. In a regular magnet, magnetism arises when many atoms align these moments in the same direction.
+
+In a quantum magnet, an atom’s magnetic moment can point in a mix of directions at once. This is called quantum superposition—the same strange idea behind Schrödinger’s cat being both alive and dead at the same time. The magnetic moments of neighboring atoms can also become entangled, linking their behavior.
+
+All these entangled, superposed—quantumed-up—magnetic moments can act together in strange ways, producing exotic states of matter. Cracking this behavior could help explain high-temperature superconductivity, potentially transforming energy transmission and electronics.
+
+At Qedma, Netanel Lindner’s team simulated a quantum magnet being kicked at regular intervals.
+
+A kick is a sudden jolt to the magnet’s state—like hitting it with a pulse of light. On the quantum computer, each kick was created by applying a series of gates to all the qubits.
+
+When a system is kicked repeatedly, it can’t immediately settle into thermal equilibrium. Instead, it lingers in an in-between phase called a prethermal state, where it stays structured before finally relaxing to equilibrium. Think of shaking a snow globe: for a while, the snow is suspended in a “prethermal state” before drifting back down.
+
+This prethermal window is when the magnet’s most intriguing quantum effects appear. Magnetization during this stretch is especially useful for understanding its behavior. Those same effects also make the magnet difficult for classical computers to simulate accurately.
+
+Lindner’s team simulated different sizes of quantum magnets being kicked and compared quantum results with those of classical simulations for the same sizes.
+
+For 28-atom magnets, the classical computer’s results matched both physical intuition and the quantum computer’s—showing that the quantum computer works as expected.
+
+But for 51- and 74-atom magnets, three classical models failed: they ran out of memory, lost accuracy as things got complicated, or became too slow to be practical. The quantum processor, however, kept going—showing magnetization values that matched theoretical predictions.
+
+This limitation of classical computers makes it hard to verify the quantum results for larger magnets—no one knows the exact magnetization values to check against. The researchers can’t compare the simulation with a real material because the magnets were a theoretical system tailored for the IBM processor. “It’s like choosing a problem that is really easy to simulate on a quantum computer instead of something you would find in nature,” Hangleiter says.
+
+However, Lindner’s group ran its simulation on several quantum processors, each with its own noise patterns and error mitigation systems, including one that ran on different hardware, to check for errors. The results matched.
+
+Getting the same magnetization behavior on such different machines makes it less likely the results are due to a hardware-specific glitch.
+
+Demo 3: Measuring a realistic system
+
+In the third demonstration, researchers at quantum software company Algorithmiq simulated a material on an IBM quantum computer. A material that, like Qedma’s magnet, exists only in theory (arXiv 2026, DOI: 10.48550/arXiv.2607.25998).
+
+To make it behave more like real matter, Sergei Filippov and his team deliberately introduced disorder and studied how information flowed through the system.
+
+“Catalysts, batteries, and all materials that will power the next generation of clean energy are messy, disordered, and irregular, and this messiness is what makes them hard to simulate,” Sabrina Maniscalco, cofounder and CEO of Algorithmiq, said during the press briefing. “We designed a model of real-world disorder in matter.”
+
+Just as you can infer how transparent or opaque a material is by shining light on one end and seeing how it comes through the other end, Filippov’s team disturbed one group of qubits—each representing an atom—and measured the effect on a group of qubits at the other end of the computer after the disturbance traveled through it.
+
+Because of the disorder in the system, information spread unevenly: some regions let it pass quickly, while others slowed it down.
+
+In classical physics, you can measure a system before and after a disturbance or process to see what changed. But in quantum mechanics, measurement itself alters the system. Checking a property like the position of an electron or a qubit’s state destroys the quantum state you need, making it impossible to measure the same system twice and directly compare results.
+
+Instead, the researchers used a clever workaround to measure how information flow changed the material: reversing the simulation. First, they applied a sequence of operations to simulate the material’s natural evolution in time. Then, they introduced a small disturbance and finally ran all the operations backward, reversing the flow of time in the material.
+
+Without a disturbance, reversing the simulation returns the qubits to their initial state. But the disturbance disrupts this perfect rewind. As the system ran backward, only the effects linked to the disturbance remained.
+
+Measuring these changes produces a value called the operator Loschmidt echo. Much as echoes in a cave can give information about the shape of the cave, this Loschmidt echo reveals key information about the material.
+
+Filippov’s team ran the simulations on two different IBM quantum computers and also used two classical algorithms on a classical processor.
+
+Across different levels of disorder, the two quantum computers produced similar echo signals, while the classical simulations disagreed with each other and with the quantum results. This suggests that the quantum simulations stayed accurate where classical methods faltered. Agreement between the quantum processors, each with different noise and error profiles, also makes it less likely the signal was caused by one machine’s quirks.
+
+However, both quantum processors share the same architecture, and there’s no external benchmark to check the results. The material was tailored for the IBM processor and doesn’t correspond to any real substance researchers can make in the laboratory.
+
+So verification remains internal: the IBM quantum computers check each other, while classical methods disagree. Because the simulated material was built for the hardware, it’s hard to say if matching results reflect real physics or just suit the machines they were designed for.
+
+“I don’t know the details enough to know if I trust it,” Hangleiter says. The researchers verify the outcome by characterizing the noise in the processor really well, he says. So they have good control over what’s happening, and they leverage that to have an idea of what the actual error of your computation would be. “That may be a reason to trust it.”
+
+Is this quantum advantage? What does that mean for chemistry?
+
+Whether these demonstrations achieved quantum advantage is unclear, according to Hangleiter. “It is unlikely that we will ever definitively prove quantum advantage,” he says.
+
+In all three demonstrations, a repeating concept is that it is difficult to verify the correctness of a quantum computer’s results. “The verification is better than what we’ve seen in other demonstrations so far, and they’re really making a good effort,” Hangleiter says. But there’s no way to 100% prove the researchers are correct.
+
+One way to verify a quantum computer’s results would be to simulate a real experiment and directly compare the results with nature.
+
+“This is our and everyone’s goal here,” said Director of Research and IBM fellow Jay Gambetta at the press briefing this week. Gambetta also said that the goal in publishing these three papers was to build trust in quantum computing.
+
+So even though these demonstrations are extremely niche applications that are not commercially usable in any way, Hangleiter says he thinks that these new results build that trust and sharpen the case for what quantum computing can do.
+
+Lindner says he views the new demonstrations as “a shift towards practical quantum computing that people can use today for scientific applications.”
+
+Lindner says that theoretical physicists today should be using quantum computers. In time, he expects this will hold true for chemistry and other scientific fields. “Chemistry is one of the most important long-term applications of quantum computing,” he says.","https://s7d1.scene7.com/is/image/CENODS/Quantum-Advantage-IBM---557303-1:Widescreen?$responsive$&qlt=90,0&resMode=sharp2&fmt=webp&op_sharpen=1",N,,2026-08-03 17:08:56.903486
+ID36,OpenAI,2026-08-03 19:54:25+00:00,www.theaustralian.com.au,"OpenAI AI model hack inspire new Microsoft, Nvidia-led alliance | The Australian",Not Available,,,,,https://www.theaustralian.com.au/business/technology/openai-model-hack-inspires-nvidia-microsoft-to-launch-new-alliance-to-secure-ai/news-story/699fffbc1bd450cdac553d6fb34add09,"The Australian Digital subscription costs $4 charged for a duration of 4 weeks, after which it automatically renews to $44 charged every 4 weeks.
+The Australian Digital 12 Month Plan costs $416 (min.
+cost) for the first 12 months, charged as $32 every 4 weeks.
+No cancellations during the first 12 months.
+Prices after the first 12 months may be varied as per full Terms and Conditions.","The Australian Digital subscription costs $4 charged for a duration of 4 weeks, after which it automatically renews to $44 charged every 4 weeks. Renewals occur unless cancelled as per full Terms and Conditions. Each payment, once made, is non-refundable, subject to law. Not in conjunction with any other offer. New customers only. Prices after any early discounted periods may be varied as per full Terms and Conditions. See www.theaustralian.com.au/subscriptionterms for full details.
+
+The Australian Digital 12 Month Plan costs $416 (min. cost) for the first 12 months, charged as $32 every 4 weeks. This automatically renews after the first 12 months to be charged as $32 (min. cost) every 4 weeks. Renewals occur unless cancelled as per full Terms and Conditions. No cancellations during the first 12 months. Each payment, once made, is non-refundable, subject to law. Not in conjunction with any other offer. Prices after the first 12 months may be varied as per full Terms and Conditions. See www.theaustralian.com.au/subscriptionterms for full details.",https://content.api.news/v3/images/bin/7d459d9ad3b1f92ad5f7e06c90ee9f40,N,,2026-08-03 17:09:27.853020
 ID32,Microsoft,2026-08-03 18:50:40+00:00,CNBC,Can Palantir pull off a Microsoft-style comeback? Here's what options say - CNBC,"Oliver Renick, www.facebook.com",,,,,https://www.cnbc.com/2026/08/03/can-palantir-pull-off-a-microsoft-style-comeback-heres-what-options-say.html,"Hopes are running high that high-profile software provider Palantir can shake off its nine-month bear market and rally after earnings Monday night.
 The options flows around Palantir also mirror Microsoft going into its report, where traders were scooping up calls and betting on a bigger-than-usual swing.
 More than twice as many Palantir calls traded than puts by volume Monday, with traders buying 56,000 calls and fewer than 25,000 puts, according to ThinkOrSwim data.
@@ -11682,8 +11814,8 @@ AI skills gaps haunt organizations overall; many workers simply do not know how 
 But broader organizational learning may not be possible without empowered managers, other studies have shown. And managers need skills beyond the technical, including communication and adaptability, to truly see success.
 
 Read on to see more stories on the status of AI skills and why manager upskilling is specifically needed in the AI era.",https://imgproxy.divecdn.com/uKmai20ubB0XO77eXY0DjN_S7GJ5YuiayEQ7m837as0/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjcxNDA0NjIwLmpwZw==.webp,N,,2026-07-28 13:31:45.478032
-ID29,Levi Strauss,2026-07-28 15:22:37+00:00,The Globe and Mail,How Levi Strauss Is Building a Faster-Growing DTC Lifestyle Brand - The Globe and Mail,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/LEVI/pressreleases/3502865/how-levi-strauss-is-building-a-faster-growing-dtc-lifestyle-brand/,Detailed price information for Levi Strauss & Company Cl A (LEVI-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=937,N,,2026-07-28 12:15:25.529702
 ID29,Levi Strauss,2026-07-28 15:22:37+00:00,The Globe and Mail,How LEVI Is Using Digital Growth and AI to Reshape Its Future Path - The Globe and Mail,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/LEVI/pressreleases/3502873/how-levi-is-using-digital-growth-and-ai-to-reshape-its-future-path/,Detailed price information for Levi Strauss & Company Cl A (LEVI-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=937,N,,2026-07-28 13:31:38.669300
+ID29,Levi Strauss,2026-07-28 15:22:37+00:00,The Globe and Mail,How Levi Strauss Is Building a Faster-Growing DTC Lifestyle Brand - The Globe and Mail,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/LEVI/pressreleases/3502865/how-levi-strauss-is-building-a-faster-growing-dtc-lifestyle-brand/,Detailed price information for Levi Strauss & Company Cl A (LEVI-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=937,N,,2026-07-28 12:15:25.529702
 ID36,OpenAI,2026-07-28 15:22:09+00:00,The Verge,Why China is giving away its best AI models - The Verge,Robert Hart,,,,,https://www.theverge.com/ai-artificial-intelligence/971444/how-chinese-open-weight-ai-models-impact-us-companies,"That raises an obvious question: Why would an AI company spend vast sums of money training an AI model, only to give away some of the most valuable parts?
 AI systems are more complicated, and very few are truly open in the traditional software sense.
 Together, this means open-weight AI cannot be re-created from the ground up in the way true open-source software can.
@@ -12918,127 +13050,3 @@ Companies have been hungry to return the focus to the June 2 executive order in 
 Shortly after the president signed the June order — but before it was implemented — the administration slapped export controls on Anthropic, citing safety concerns. The company disputed the administration’s assessment but ultimately removed its Fable and Mythos models from the market for two weeks while it negotiated a path to lifting the export controls.
 
 The administration also stepped in to request OpenAI amend the rollout of its ChatGPT-5.6 model to only government-approved partners, which Altman at the time said was not the company’s “preferred” way of releasing the model and ideally would be alleviated by implementing a more “sustainable” government process to guide companies.",https://www.politico.com/dims4/default/resize/1200/quality/90/format/jpg?url=https%3A%2F%2Fstatic.politico.com%2F07%2F72%2F47a07e6540a99aa35814109ee2e6%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F2194584986,N,,2026-07-27 18:13:00.245967
-ID10,Boston Scientific,2026-07-27 20:51:49+00:00,"Morningstar, Inc.",Boston Scientific to Cut Staff in Global Restructuring Program - Morningstar,Not Available,,,,,https://www.morningstar.com/news/dow-jones/202607279066/boston-scientific-to-cut-staff-in-global-restructuring-program,"By Elias Schisgall Boston Scientific will lay off staff as part of a new global restructuring plan.
-Between $275 million and $300 million of that total is expected to come from termination benefits, Boston Scientific said, adding that some employees will be laid off as part of the restructuring.
-Of the expected pre-tax charges, around $600 million to $700 million is expected to result in future cash outlays.
-The plan is expected to be set into motion this year and substantially completed by the end of 2029.
-Write to Elias Schisgall at elias.schisgall@wsj.com (END) Dow Jones Newswires July 27, 2026 16:39 ET (20:39 GMT) Copyright (c) 2026 Dow Jones & Company, Inc.","By Elias Schisgall
-
-Boston Scientific will lay off staff as part of a new global restructuring plan.
-
-The medical-technology company expects to incur pre-tax charges in a range of $700 million to $800 million as part of the restructuring, according to a Monday filing with the Securities and Exchange Commission.
-
-Between $275 million and $300 million of that total is expected to come from termination benefits, Boston Scientific said, adding that some employees will be laid off as part of the restructuring. It didn't specify how many employees would be affected.
-
-""While new jobs are created in areas of growth and resources are deployed to support the Company's portfolio and global market needs, the Company does expect some headcount reductions to result from these restructuring activities,"" the company said in its filing.
-
-The plan also covers optimizing supply chains by transferring some production lines among facilities, as well as evolving the company's organizational structure.
-
-Of the expected pre-tax charges, around $600 million to $700 million is expected to result in future cash outlays. The program is expected to reduce annual pre-tax expenses by around $500 million.
-
-The plan is expected to be set into motion this year and substantially completed by the end of 2029.
-
-Write to Elias Schisgall at elias.schisgall@wsj.com
-
-(END) Dow Jones Newswires
-
-July 27, 2026 16:39 ET (20:39 GMT)
-
-Copyright (c) 2026 Dow Jones & Company, Inc.",https://images.contentstack.io/v3/assets/blt4eb669caa7dc65b2/blta7dd42ebdd7b93b8/61899b34a3c7df383578294c/morningstar-og.png,N,,2026-07-27 17:10:21.080596
-ID32,Microsoft,2026-07-27 20:48:58+00:00,www.ft.com,"OpenAI hacking incident is 'warning shot' on cyber security, Microsoft's AI chief warns",Not Available,,,,,https://www.ft.com/content/f7fc5555-7b2a-4134-960e-5de7f15a06e8?syn-25a6b1a6=1,"Try unlimited access Only $1 for 4 weeks Then $75 per month.
-Complete digital access to quality FT journalism on any device.
-Check whether you already have access via your university or organisation.
-Terms & Conditions apply For individuals Discover all the plans currently available in your country For multiple readers Digital access for organisations.
-Includes exclusive features and content.","Try unlimited access
-
-Only $1 for 4 weeks
-
-Then $75 per month. Complete digital access to quality FT journalism on any device. Cancel anytime during your trial.
-
-Check whether you already have access via your university or organisation.
-
-Terms & Conditions apply
-
-For individuals
-
-Discover all the plans currently available in your country
-
-For multiple readers
-
-Digital access for organisations. Includes exclusive features and content.",https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fba89783e-6269-4436-b5e7-3adda9e1f8d4.jpg?source=next-barrier-page&fit=scale-down&quality=highest&width=700&dpr=1,N,,2026-07-27 18:12:50.141218
-ID35,Nvidia,2026-07-27 20:40:06+00:00,POLITICO,NVIDIA's Huang heads to Capitol Hill for AI talks - Live Updates - Politico,"Owen Dahlkamp, Kelsey Brugger, Jordain Carney, Chris Marquette, Cheyanne M. Daniels, Calen Razor, Riya Misra",,,,,https://www.politico.com/live-updates/2026/07/27/congress/nvidias-huang-heads-to-capitol-hill-for-ai-talks-01012902,"The House Ethics Committee said in a statement Monday it is investigating Rep. Lance Gooden, a four-term Texas Republican.",Not Available,https://www.politico.com/dims4/default/c58075d/2147483647/resize/1200x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F6d%2F2f%2F948dcd8e45adaf7b301affb07c9f%2Ftaiwan-nvidia-58576.jpg,N,,2026-07-27 18:12:53.292811
-ID35,Nvidia,2026-07-27 20:21:38+00:00,CNBC,Nvidia's potential $250B backstop for OpenAI is another strike against the AI trade - CNBC,"Zev Fima, www.facebook.com",,,,,https://www.cnbc.com/2026/07/27/nvidias-potential-250b-backstop-for-openai-is-another-strike-against-the-ai-trade.html,"This should, on paper, be considered good news for all the companies that supply the equipment and other components for AI data centers.
-For that reason, as we look to the back half of 2026, investors are likely to be rewarded by looking outside the AI trade.
-However, the focus cannot only be on the AI trade anymore — precisely why we paired our Intel purchase with a buy of Honeywell Aerospace .
-We're not giving up on Nvidia, or the AI trade more broadly.
-As a subscriber to the CNBC Investing Club with Jim Cramer, you will receive a trade alert before Jim makes a trade.","Nvidia may lend financial support to OpenAI to help the ChatGPT creator secure access to an enormous data center project being built in Ohio. The chipmaker's potential assistance shows exactly why our stock-picking approach has broadened out at this stage of the AI boom. Late Sunday, the Wall Street Journal reported that Nvidia is in discussions to offer a roughly $250 billion backstop for OpenAI as the Sam Altman-led startup looks to lease a proposed 10-gigawatt data center in southern Ohio. The massive compute facility is being developed by SB Energy , a subsidiary of Japanese conglomerate SoftBank. According to the Journal, Nvidia lending its backing to OpenAI would enable the developer to raise debt at more favorable terms because Nvidia's financial position is much better than that of unprofitable OpenAI. Nvidia shares fell more than 4% Monday, along with weakness across many semiconductor stocks and other artificial intelligence infrastructure winners. While additional forces could be impacting the group Monday, including AI advancements in China , the WSJ story is capturing a lot of attention. Why the cause for concern? Simply put, this is yet another example of circular deals within the AI buildout, as Nvidia has invested in a number of companies that buy its chips. That includes a $30 billion investment in OpenAI earlier this year. Nvidia also invested in Claude creator Anthropic last year, and it's backed multiple so-called neoclouds that rent out Nvidia chips to customers. Nvidia has said its investments are designed to support the development of the AI ecosystem and offer attractive potential returns so they're worthwhile uses of cash. To be sure, the potential $250 billion backstop for OpenAI would cover just the lease and debt to build the data center, not the AI server racks housed inside. However, the WSJ report also noted that Nvidia is in talks to finance OpenAI's chip purchase — in other words, something beyond the gigantic $250 billion figure. At this point, investors aren't really concerned about what the backing is for. They only care that the potential backing is massive and tied to a cash-burning company that isn't public and, with every commitment, will find it harder to raise money. No matter how you slice it, if Nvidia lends financial support to OpenAI on this SoftBank project, we will be left with two of the AI boom's most important companies tying themselves even closer together. This makes worries about a domino effect, should one party fail to meet its financial obligations, all the more understandable. On the positive side, this news can be considered another indicator of the insatiable demand for AI and the infrastructure needed to power it. OpenAI believes it needs more compute to serve its customers, and it's pursuing unconventional ways to get it. And if OpenAI is behaving that way, perhaps you can assume that the publicly traded hyperscalers — Meta , Alphabet , Amazon and Microsoft — will continue their own spending sprees, even if their stocks are being punished for it right now. This should, on paper, be considered good news for all the companies that supply the equipment and other components for AI data centers. Think Corning or Eaton , both Club names. Corning reports on Tuesday morning. Eaton's earnings are on Friday. The reality is that, in this current moment, seeing and chasing compute demand is no longer enough to satisfy the market, as Jim Cramer noted in his Sunday column . If the goal is a higher stock price, what investors want to hear and see from tech giants is that you are making more money. Period. End of story. Building to meet demand? Great. Now how much did that add to earnings this quarter? If you're a management team at a hyperscaler not addressing that question, while also talking about the need to spend more, expect to see your stock come under pressure. This was on display last week when Alphabet reported strong second-quarter results Wednesday night, but saw its stock fall on Thursday due to concerns about increased capital expenditures in 2026 and management's indication that there will be another big step up next year. Meta, Microsoft and Amazon report this week . Now layer in the market's negative action to Intel's superb results on Thursday night , and it's clear that the tech trade is in a new phase after powering the market higher to start 2026 and in recent years. The ""easy money"" in tech has been made, suggesting upside in certain stocks is limited in the near term. For that reason, as we look to the back half of 2026, investors are likely to be rewarded by looking outside the AI trade. To be sure, that's not to say give up on AI. When opportunities present themselves, we still want to take advantage, mindful that the longer-term setup remains highly attractive. That's why we added to our position in Intel this morning. However, the focus cannot only be on the AI trade anymore — precisely why we paired our Intel purchase with a buy of Honeywell Aerospace . The maker of engines, cockpit equipment and aircraft power systems benefits from growing air travel demand as the global middle class expands. It has next to nothing to do with data center buildout initiatives. Johnson & Johnson is another example of the ""other kind of tech"" to own in this market. While J & J remains a healthcare company at its core, it's driving growth via technology innovation with robotic surgery platforms like Monarch and the recently approved Ottava . Plus, on the pharmaceutical side of its business, J & J has a slew of innovative medicines on the market and in its pipeline. The upside isn't tied to building new data centers. Other stocks that can work in this current market are those that benefit from lower oil prices and lower interest rates — something Jim mentioned on Monday's Morning Meeting. Honeywell Aerospace and fellow Club name Boeing fall into this camp, as does Home Depot . The idea is that these stocks benefit from a calming of tensions in the Middle East, regardless of what happens with AI spending near term. We certainly like Honeywell Aerospace and Boeing more than we do Home Depot, which we mostly view as a way to play lower mortgage rates and a pickup in housing activity. That's proven to be more elusive than we thought, with plenty of false hope in recent years. So, if shares of Home Depot were to advance much further from here, we'd likely look to trim our position out of discipline. The bottom line? We're not giving up on Nvidia, or the AI trade more broadly. Nevertheless, the Nvidia-OpenAI story reinforces concerns about the AI capex levels that had already been building in recent weeks. Ultimately, all this AI spending needs to show a strong return to soothe investor concerns; we believe it eventually will. However, for now, there are plenty of money-making opportunities outside tech, and we're chasing them. (Jim Cramer's Charitable Trust is long NVDA, MSFT, META, AMZN, JNJ, HONA, HD, BA. See here for a full list of the stocks.) As a subscriber to the CNBC Investing Club with Jim Cramer, you will receive a trade alert before Jim makes a trade. Jim waits 45 minutes after sending a trade alert before buying or selling a stock in his charitable trust's portfolio. If Jim has talked about a stock on CNBC TV, he waits 72 hours after issuing the trade alert before executing the trade. THE ABOVE INVESTING CLUB INFORMATION IS SUBJECT TO OUR TERMS AND CONDITIONS AND PRIVACY POLICY , TOGETHER WITH OUR DISCLAIMER . NO FIDUCIARY OBLIGATION OR DUTY EXISTS, OR IS CREATED, BY VIRTUE OF YOUR RECEIPT OF ANY INFORMATION PROVIDED IN CONNECTION WITH THE INVESTING CLUB. NO SPECIFIC OUTCOME OR PROFIT IS GUARANTEED.",https://image.cnbcfm.com/api/v1/image/108335932-1784206425159-gettyimages-2285707811-JAPAN_NVIDIA.jpeg?v=1784206465&w=1920&h=1080,N,,2026-07-27 17:10:33.212575
-ID32,Microsoft,2026-07-27 20:16:48+00:00,Proactiveinvestors NA,Microsoft faces AI capex scrutiny as it prepares to report Q4 results | NASDAQ:MSFT,Emily Jarvie,,,,,https://www.proactiveinvestors.com/companies/news/1096100/microsoft-faces-ai-capex-scrutiny-as-it-prepares-to-report-q4-results-1096100.html,"Following recent conversations with Microsoft customers and partners, UBS wrote that Azure and Amazon Web Services demand ""appears to be very healthy.""
-It added that investors are increasingly focused on AI infrastructure spending after recent reactions to results from Oracle and Alphabet's Google.
-On the productivity software side, UBS became more constructive on Microsoft 365, pointing to Copilot improvements and pricing changes across the Microsoft 365 Commercial Cloud business.
-The firm increased its fiscal 2027 Microsoft 365 Commercial Cloud growth forecast by 70 basis points to 16.2%.
-UBS wrote that Microsoft shares have underperformed many peers this year, leaving investors cautious about rising AI investment, returns on AI spending and exposure to frontier AI models.","About this content
-
-About Emily Jarvie
-
-Emily began her career as a political journalist for Australian Community Media in Hobart, Tasmania. After she relocated to Toronto, Canada, she reported on business, legal, and scientific developments in the emerging psychedelics sector before joining Proactive in 2022. She brings a strong journalism background with her work featured in newspapers, magazines, and digital publications across Australia, Europe, and North America, including The Examiner, The Advocate, The Canberra Times, and... Read more
-
-About the publisher
-
-Proactive financial news and online broadcast teams provide fast, accessible, informative and actionable business and finance news content to a global investment audience. All our content is produced independently by our experienced and qualified teams of news journalists.
-
-Proactive news team spans the world’s key finance and investing hubs with bureaus and studios in London, New York, Toronto, Vancouver, Sydney and Perth.
-
-We are experts in medium and small-cap markets, we also keep our community up to date with blue-chip companies, commodities and broader investment stories. This is content that excites and engages motivated private investors.
-
-The team delivers news and unique insights across the market including but not confined to: biotech and pharma, mining and natural resources, battery metals, oil and gas, crypto and emerging digital and EV technologies.
-
-Use of technology
-
-Proactive has always been a forward looking and enthusiastic technology adopter.
-
-Our human content creators are equipped with many decades of valuable expertise and experience. The team also has access to and use technologies to assist and enhance workflows.
-
-Proactive will on occasion use automation and software tools, including generative AI. Nevertheless, all content published by Proactive is edited and authored by humans, in line with best practice in regard to content production and search engine optimisation.
-
-Microsoft Corp (NASDAQ:MSFT) is set to report fiscal fourth quarter results this week, with UBS maintaining its ‘Buy’ rating while taking a more balanced tactical stance ahead of the release, citing expectations for higher capital spending alongside steady cloud demand.
-
-Following recent conversations with Microsoft customers and partners, UBS wrote that Azure and Amazon Web Services demand ""appears to be very healthy."" However, the firm believes capacity constraints for external customers and early efforts to optimize AI token usage could limit the scope for meaningful upside to Azure guidance.
-
-UBS also noted that recent GitHub Copilot pricing changes should provide a modest boost to Azure growth.
-
-The firm raised its fiscal 2027 capital expenditure estimate to $261 billion from $234 billion, citing continued demand from model training workloads and memory cost inflation. It added that investors are increasingly focused on AI infrastructure spending after recent reactions to results from Oracle and Alphabet's Google.
-
-On the productivity software side, UBS became more constructive on Microsoft 365, pointing to Copilot improvements and pricing changes across the Microsoft 365 Commercial Cloud business. The firm increased its fiscal 2027 Microsoft 365 Commercial Cloud growth forecast by 70 basis points to 16.2%.
-
-UBS wrote that Microsoft shares have underperformed many peers this year, leaving investors cautious about rising AI investment, returns on AI spending and exposure to frontier AI models. It estimates investor expectations for fiscal 2027 capital expenditures are already in the $255 billion to $260 billion range.
-
-""In our view, this set-up mitigates the downside risk even if AI capex were to rise and the H2 Azure guide was reaffirmed (not raised),"" UBS wrote.
-
-While trimming its price target to $480 from $510 to reflect weaker sentiment toward AI infrastructure stocks, UBS said Microsoft remains reasonably valued based on its AI monetization potential and expectations for steady mid-teens earnings growth.
-
-Shares of Microsoft traded hands at $391 on Monday afternoon, down about 19% so far this year.",https://cdn.proactiveinvestors.com/eyJidWNrZXQiOiJwYS1jZG4iLCJrZXkiOiJ1cGxvYWRcL05ld3NcL0ltYWdlXC8yMDI2XzA3XC9zaHV0dGVyc3RvY2stMTM1NzQ5NjkwOV82YTY3YmExOTE0MThhLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MTIwMCwiaGVpZ2h0Ijo2MzAsImZpdCI6ImNvdmVyIn19fQ==,N,,2026-07-27 21:04:31.071262
-ID36,OpenAI,2026-07-27 20:13:19+00:00,Yahoo Finance,Nvidia Guarantees $250B for OpenAI So Everyone One Day Can Get Paid - Yahoo Finance,Mitchell Duran,,,,,https://finance.yahoo.com/technology/ai/articles/nvidia-guarantees-250b-openai-everyone-193929851.html,"Nvidia, OpenAI, SoftBank, and the US government are all about to be tangled up in the same $500 billion Ohio data center, each one propping up the next in line.
-WHAT HAPPENED The Wall Street Journal reported late Sunday that Nvidia (NVDA) is in talks to guarantee a $250 billion backstop so OpenAI, with help from SoftBank, can build its 10GW, $500 billion data center.
-Nvidia's $250 billion backstop remains speculative for now, but it wouldn't be unusual for this merry-go-round to start spinning within months.
-That covers OpenAI's long-term lease and the data center build-out itself.
-Given how tightly Nvidia and SoftBank's money is already wound around OpenAI, odds are good most of it ends up with Altman anyway.","Trading disclosure
-
-The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational.
-
-Learn more
-
-THE GIST
-
-Our analysts just identified a stock with the potential to be the next Nvidia. Tell us how you invest and we'll show you why it's our #1 pick. Tap here.
-
-Circular financing is back, and this time it's wearing a bigger costume than usual. Nvidia, OpenAI, SoftBank, and the US government are all about to be tangled up in the same $500 billion Ohio data center, each one propping up the next in line. Nobody's technically lying about any of it. Everybody's just hoping the music doesn't stop before the building's finished.
-
-WHAT HAPPENED
-
-The Wall Street Journal reported late Sunday that Nvidia (NVDA) is in talks to guarantee a $250 billion backstop so OpenAI, with help from SoftBank, can build its 10GW, $500 billion data center. To make the whole thing even more circular, SB Energy, a SoftBank subsidiary, is the one actually building it, on federal land in Ohio, with Commerce Secretary Howard Lutnick deciding who gets all that hungry, precious power.
-
-Nvidia's $250 billion backstop remains speculative for now, but it wouldn't be unusual for this merry-go-round to start spinning within months. CEO Jensen Huang has run this exact play before, with neo-cloud operators like CoreWeave and Nebius, and with Naver in South Korea, backstopping large-scale AI infrastructure to guarantee that whatever gets built runs on Nvidia's chips. This is the same game at a much bigger scale, layered on top of the $30 billion equity stake Nvidia took in OpenAI in February 2026, after that number got talked down from an initial $100 billion.
-
-With Nvidia's backstop in hand, SB Energy plans to raise even more debt from unnamed lenders to fund the project, debt those lenders likely wouldn't touch without Jensen's guarantee sitting underneath it. That covers OpenAI's long-term lease and the data center build-out itself. Not included: Nvidia's actual chips, which are reportedly part of a separate negotiation that could add another $350 billion on top. Wall Street wasn't sold on any of it Monday, sending NVDA down 4.45%. Whether Nvidia is actually financing OpenAI's chip purchases for this specific project is still unconfirmed.
-
-Then there's Lutnick and the Trump administration, reportedly deciding where all 10GW of that power actually goes. Given how tightly Nvidia and SoftBank's money is already wound around OpenAI, odds are good most of it ends up with Altman anyway. Anthropic, Microsoft, and Google have all expressed interest, but with Stargate fragmented, Washington wants an alternative on the board. Building on federal land 50 miles outside Columbus is meant to guarantee, as much as anything can, that the thing actually gets built. Japan matters here too, having agreed to put in $33 billion to help SB Energy follow through, in exchange for the tariff relief Washington dangled to get that money moving in the first place.",https://s.yimg.com/lo/mysterio/api/B5C32F699C9E1F1C019E9CCA8E98CD61DB0F50B837FA899BD1523F3537123D2C/subgraphmysterio/resizefill_w1200_h1490;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fmoby_896%2F641be8aeebed43965923e16a9e5881b1,N,,2026-07-27 23:03:04.590977
