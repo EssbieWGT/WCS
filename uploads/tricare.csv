@@ -1,4 +1,197 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2026-08-07 01:04:05+00:00,PubMed Central (PMC),Geographic variation in blood transfusion among TRICARE beneficiaries - PMC,"Avery A Thompson, Mahima Jain, Tanujit Dey, Alysa Pomer, Tracey P Koehlmoos, Andrew J Schoenfeld, Joel S Weissman, Nakul Raykar",,,,,https://pmc.ncbi.nlm.nih.gov/articles/PMC13350239/,"In adjusted models, rural trauma patients were significantly less likely to be transfused than urban trauma patients (aOR 0.18, 0.03–0.55).
+Models were then stratified by hospital urban/rural status to assess whether associations differed across settings.
+Geographic clustering of demographic groups that routinely decline blood transfusion may introduce some residual confounding into our model; however, these effects are likely small given the overall size of the dataset.
+The MDR also does not capture pre‐hospital blood transfusion, potentially introducing residual confounding.
+However, pre‐hospital blood transfusion is not uniformly implemented across the United States, with emerging data suggesting regional variation in practices.","Abstract
+
+Background
+
+Blood is a critical but inconsistently distributed resource. Within the United States, there are known state‐level variations in blood product distribution; however, little is known about geographic variations in transfusion practices on a national level. The US Military Health System offers an opportunity to study a nationally representative population through the TRICARE insurance claims database.
+
+Study design and methods
+
+Claims from beneficiaries with acute bleeding diagnoses (related to trauma, postpartum hemorrhage, or gastrointestinal bleeding) from 2017 to 2022 were analyzed. Multivariable logistic regressions were used to examine relationships between geographic characteristics (hospital region and rurality) and transfusion status.
+
+Results
+
+The study population consisted of 87,034 admissions. In adjusted models, rural trauma patients were significantly less likely to be transfused than urban trauma patients (aOR 0.18, 0.03–0.55). Conversely, rural postpartum hemorrhage and gastrointestinal bleeding patients were more likely to be transfused than their urban counterparts (aOR 1.63, 1.32–2.00 and aOR 1.24, 1.11–1.37, respectively). Hospital region was significantly associated with transfusion status among the postpartum hemorrhage and gastrointestinal bleeding cohorts, with patients in the Midwest less likely to receive a transfusion than patients in the Northeast (aOR 0.33, 0.24–0.45 and aOR 0.60, 0.52–0.70, respectively).
+
+Discussion
+
+In this sample, geographic factors including hospital region and rurality were independently associated with transfusion status among inpatients with acute bleeding diagnoses. These variations may reflect provider‐ or system‐level factors and can help identify areas of potential vulnerability.
+
+Keywords: gastrointestinal bleeding, military health, postpartum hemorrhage, regional variation, trauma
+
+1. INTRODUCTION
+
+Access to a safe and adequate blood supply is an integral part of a healthcare system's infrastructure, as blood is a critical medicine for patients across the lifespan, ranging from pediatric patients with infectious anemias to women hemorrhaging during childbirth, to surgical, trauma, and oncologic patients of all ages. 1 Globally, there are major differences in access to blood between high‐ and low‐income settings, 2 but less is known about differences in access across the United States. Previous work has suggested that on a state level, rural hospitals have less access to blood than urban hospitals, reflecting other rural/urban health and healthcare differences in the United States. 3 , 4 , 5 , 6
+
+In this context, we sought to explore the probability of blood transfusion for acute bleeding diagnoses using data from the US Military Health System (MHS), using transfusion status as a proxy measure for access to blood products. The MHS is a federal healthcare entity that serves 9.5 million beneficiaries, including active duty military personnel (<15% of the total number of beneficiaries), retirees, and civilian dependents through the TRICARE insurance product. 7 TRICARE beneficiaries are distributed across all 50 states, representing approximately 1–10% of each state's population. When states are grouped by Census region, TRICARE beneficiaries comprise approximately 1–4% of each region's population. 8 , 9 , 10 The Military Health System has a bifurcated structure: direct care and private sector care. Direct care provides services through government‐owned Military Treatment Facilities (MTFs), which include hospitals and clinics around the United States. 7 Private sector care allows for the provision of services through private sector hospitals and clinics where TRICARE is used as a healthcare insurance product. As of FY 2024, there are 4626 in‐network acute care hospitals within the United States. 11 The population covered by TRICARE has previously been shown to be representative of the US demographic under age 65 and includes a diverse population of individuals from different racial, ethnic, occupational, vocational, and educational backgrounds. 12 The closed nature of the Military Health System allows comprehensive longitudinal surveillance of covered beneficiaries, regardless of the environment of care and inter‐hospital transfers, without the churn associated with commercial insurance or the sociodemographic restrictions inherent to Medicare or Medicaid data.
+
+The objective of this study was to leverage the MHS database to identify geographic variation in transfusion rates and potential areas of vulnerability among TRICARE beneficiaries living within the continental United States. Using claims from 2017 to 2022 from beneficiaries with diagnosis codes for solid organ injuries, vascular injuries, pelvic fractures, postpartum hemorrhage, and gastrointestinal bleeding, we examined differences in transfusion practices by region, urban/rural status, and environment of care (direct vs. private sector care).
+
+2. MATERIALS AND METHODS
+
+2.1. Study population
+
+To obtain a sample of MHS beneficiaries who were likely to need an acute blood transfusion, we used ICD‐10‐CM diagnosis codes in the Military Health System Data Repository (MDR) to identify three patient cohorts with inpatient admissions between 2017 and 2022 with at least one of the following: trauma (solid organ injury and/or vascular injury and/or pelvic fracture), postpartum hemorrhage (PPH), or gastrointestinal bleeding (GIB). The list of ICD‐10‐CM diagnosis codes for solid organ injury (i.e., liver and splenic injuries), vascular injuries, and pelvic fractures was adapted from existing trauma literature which has used codes to identify injured patients within the National Trauma Data Bank (NTDB), National Inpatient Sample (NIS), and other large databases. 13 , 14 , 15 , 16 Codes for PPH and GIB were similarly adapted from previous work using the NIS and National Readmission Database (NRD). 17 , 18 , 19 A complete list of ICD‐10‐CM codes used for this study can be found in Table S1, Supporting Information. Beneficiaries under the age of 18 and those receiving care outside of the United States were excluded from analysis.
+
+2.2. Outcomes
+
+The primary outcome was transfusion status (yes/no) of whole blood, plasma, packed red blood cells, or platelets. A complete list of ICD‐10 procedure codes designating transfusion can be found in Table S2. Transfusion status was used as a proxy measure for access to blood products to identify areas of potential vulnerability, where patients may be at risk of not receiving a transfusion despite clinical need. Secondary outcomes consisted of in‐hospital mortality and transfer to another acute care facility.
+
+2.3. Covariates
+
+Covariates included age, sex, comorbidities, injury severity, self‐reported race and ethnicity, environment of care, rurality, and hospital region (Northeast/Midwest/South/West as defined by the US Census Bureau). 10 To quantify comorbidities, the Charlson Comorbidity Index (CCI) was calculated based on additional diagnoses (2–20) associated with the healthcare encounter. Similarly, among solid organ injury, vascular injury, and pelvic fracture patients, additional diagnoses were used to calculate Injury Severity Score (ISS) using previously validated International Classification of Diseases Programs for Injury Categorization in R (ICDPICR) code. 20
+
+Frequently missing race/ethnicity data is a known limitation of TRICARE data, with previous studies reporting up to 63% missingness within the MDR. 21 , 22 To account for potential bias given the 54.7% missing race/ethnicity data in our initial sample, observations were weighted using a reweighted estimating equation (RWEE), which has been shown to be the least biased approach for handling missing data in large databases, and has been identified as a best practice for studies using TRICARE data. 23 , 24 Sampling weights were defined as the inverse probability of selection among individuals with complete data on race and ethnicity.
+
+Rurality was defined using Rural–Urban Commuting Area (RUCA) codes based on 2020 census data to classify treatment facilities as rural or urban based on hospital zip code. Patients' home zip codes were also classified as rural or urban. There are 21 RUCA codes made up of 10 primary codes and four secondary codes which characterize an area's core population, size, and direction of primary commuting flow. 25
+
+2.4. Statistical analysis
+
+Baseline characteristics were compared among the trauma, PPH, and GIB cohorts using chi‐square tests for categorical variables and Kruskal–Wallis tests for continuous variables. Given significant baseline differences among characteristics of the three cohorts, further analysis was performed separately.
+
+Bivariate associations between variables of interest and transfusion status were examined using chi‐square tests and Fisher's exact tests as appropriate for categorical variables and Wilcoxon rank‐sum tests for continuous variables. Multivariable logistic regression models were constructed separately for each cohort to examine associations between transfusion and hospital rurality, adjusting for covariates including age, sex (for the trauma and GIB cohorts), race/ethnicity, environment of care, CCI, ISS (for the trauma cohort), and hospital region. Because patient rurality was not significantly associated with transfusion status among any cohort, it was not included in the final logistic regression models. Models were then stratified by hospital urban/rural status to assess whether associations differed across settings. Statistical analysis was performed using R (version 4.4.1). Statistical significance was set at α = 0.05. This study was found exempt by the Institutional Review Boards of the Uniformed Services University of the Health Sciences and Brigham and Women's Hospital.
+
+Mapping was performed using the geographic information system (GIS) software ArcGIS Online with the Light Gray basemap and Esri's USA States, Counties, and Zip Codes layers. 26 , 27 , 28 , 29 For the purposes of geospatial analysis, 5‐digit zip codes were linked to the corresponding county using the Housing and Urban Development (HUD) USPS ZIP Code Crosswalk File (Q4 2022). 30 For zip codes that mapped to two or more counties, the county with the highest ratio of business addresses was used. 31 Transfusion rates for counties where at least five patients were treated were mapped in Figure 1.
+
+3. RESULTS
+
+The final sample included a weighted total of 87,034 admissions. There were 4221 admissions with solid organ injuries, vascular injuries, and/or pelvic fractures (trauma cohort), 11,920 admissions with postpartum hemorrhage, and 70,893 admissions with gastrointestinal bleeding (Table 1).
+
+TABLE 1.
+
+Overall (N = 87,034) Trauma (N = 4221) Postpartum hemorrhage (N = 11,920) Gastrointestinal bleeding (N = 70,893) p‐value Age (years) 53 (36–62) 40 (25–59) 30 (25–34) 57 (45–63) <.001 Sex <.001 Female 52,526 (60.4) 1632 (38.7) – 38,976 (55.0) Male 34,508 (39.6) 2589 (61.3) – 31,917 (45.0) Race/ethnicity <.001 Non‐Hispanic White 51,445 (59.1) 2789 (66.1) 5643 (47.3) 43,013 (60.7) Non‐Hispanic Black 20,173 (23.2) 696 (16.5) 2678 (22.5) 16,799 (23.7) Hispanic 5980 (6.9) 388 (9.2) 1978 (16.6) 3614 (5.1) Other 9436 (10.8) 348 (8.3) 1621 (13.6) 7467 (10.5) Environment of care <.001 Direct care 27,130 (31.2) 807 (19.1) 5973 (50.1) 20,351 (28.7) Private care 59,904 (68.8) 3414 (80.9) 5947 (49.9) 50,542 (71.3) CCI 2 (0–6) 0 (0–1) 0 (0–0) 2 (1–7) <.001 ISS – 11 (5–25) – – – Patient home zip code .004 Urban 78,433 (90.1) 3700 (87.7) 10,814 (90.7) 63,920 (90.2) Rural 8601 (9.9) 521 (12.3) 1106 (9.3) 6973 (9.8) Hospital zip code <.001 Urban 82,965 (95.3) 4141 (98.1) 11,279 (94.6) 67,546 (95.3) Rural 4069 (4.7) 80 (1.9) 641 (5.4) 3347 (4.7) Hospital region <.001 Northeast 3202 (3.7) 145 (3.4) 529 (4.4) 2527 (3.6) Midwest 7045 (8.1) 283 (6.7) 1156 (9.7) 5606 (7.9) South 54,942 (63.1) 2477 (58.7) 6638 (55.7) 45,827 (64.6) West 21,845 (25.1) 1316 (31.2) 3597 (30.2) 16,933 (23.9) Disposition <.001 In‐hospital mortality 885 (1.0) 10 (0.2) 0 (0.0) 875 (1.2) Transferred to another acute facility 636 (0.7) 137 (3.2) 13 (0.1) 486 (0.7)
+
+Overall, patients in the PPH cohort were younger, less likely to be non‐Hispanic White, more likely to be covered by direct care, and had fewer comorbidities compared to the trauma and GIB cohorts. The GIB cohort was most likely to be treated in a rural hospital. There were few in‐hospital deaths and transfers to other acute facilities overall. Mortality was most common in the GIB cohort and transfer was most common in the trauma cohort. All characteristics differed significantly between the three cohorts (p < .01). Given reweighting, a sensitivity analysis was performed comparing the weighted sample to the unweighted sample (Table S3).
+
+A total of 12,833 patients (14.7%) received a transfusion. The most frequently transfused blood product was packed red blood cells (N = 12,455, 97.1% of transfused patients) followed by plasma (N = 1769, 13.8% of transfused patients) and platelets (N = 1471, 11.5% of transfused patients). The least commonly transfused product was whole blood (N = 44, 0.3% of transfused patients). Transfusion of whole blood did not differ by rurality, region, or environment of care (p = .340, p = .091, and p = .068, respectively). Transfusion status differed significantly by etiology of bleeding. 14.6% of trauma patients (N = 615), 19.5% of PPH patients (N = 2321), and 14.0% of GIB patients (N = 9897) were transfused (p < .001). Table 2 summarizes the bivariate associations between patient characteristics and transfusion status within each clinical cohort. Within the trauma cohort, those who received a transfusion had a higher Injury Severity Score (ISS) and were more likely to be treated in urban hospitals (both p < .01). While there were no regional differences in transfusion status within the trauma cohort, region was significantly associated with transfusion status within the PPH and GIB cohorts, as was environment of care and race (all p < .001).
+
+TABLE 2.
+
+Trauma Postpartum hemorrhage Gastrointestinal bleeding Transfused (N = 615) Not transfused (N = 3606) p‐value Transfused (N = 2321) Not transfused (N = 9599) p‐value Transfused (N = 9897) Not transfused (N = 60,996) p‐value Age (years) 38.6 (24–58) 40 (26–59) .420 30 (25–34.5) 29 (25–34) .324 61 (52–68) 56 (44–63) <.001 Male sex 398 (64.7) 2191 (60.8) .356 – – – 4482 (45.3) 27,435 (45.0) .786 Race/ethnicity .115 .001 <.001 Non‐Hispanic White 358 (58.1) 2431 (67.4) 962 (41.4) 4681 (48.8) 5417 (54.7) 37,597 (61.6) Non‐Hispanic Black 137 (22.3) 559 (15.5) 555 (23.9) 2122 (22.1) 2879 (29.1) 13,920 (22.8) Hispanic 64 (10.4) 324 (9.0) 443 (19.1) 1536 (16.0) 339 (3.4) 3274 (5.4) Other 56 (9.2) 292 (8.1) 361 (15.6) 1260 (13.1) 1262 (12.8) 6205 (10.2) Direct care 95 (15.5) 712 (19.7) .145 1572 (67.7) 4401 (45.8) <.001 3382 (34.2) 16,968 (27.8) <.001 CCI 0 (0–1) 0 (0–1) .286 0 (0–0) 0 (0–0) .262 4 (1–8) 2 (0–7) <.001 ISS 24 (11–34) 11 (3–22) <.001 – – – – – – Rural home zip code 68 (11.1) 452 (12.2) .666 193 (8.3) 913 (9.5) .308 920 (9.3) 6054 (9.9) .399 Rural hospital zip code 2 (0.4) 78 (2.2) .005 136 (5.9) 505 (5.3) .488 446 (4.5) 2901 (4.8) .632 Hospital region .135 <.001 <.001 Northeast 22 (3.6) 123 (3.4) 94 (4.0) 435 (4.5) 295 (3.0) 2232 (3.7) Midwest 31 (5.0) 253 (7.0) 96 (4.1) 1060 (11.0) 473 (4.8) 5133 (8.4) South 402 (65.4) 2075 (57.5) 1283 (55.3) 5355 (55.8) 6539 (66.1) 39,288 (64.4) West 160 (26.0) 1155 (32.0) 848 (36.6) 2749 (28.6) 2590 (26.2) 14,343 (23.5)
+
+Table 3 summarizes results of multivariable logistic regression models evaluating predictors of transfusion within each clinical cohort. Within the trauma cohort, hospital rurality was a significant predictor of transfusion status after controlling for covariates, with an adjusted odds ratio of 0.18 (95% confidence interval [CI] 0.03–0.55, p = .012) for rural hospitals compared to urban hospitals. The wide confidence interval reflects the limited sample size, with only 80 total trauma patients treated at rural hospitals. In terms of regional variation, trauma patients in the West had approximately half the odds of transfusion compared to trauma patients in the Northeast with an adjusted odds ratio of 0.56 (0.35–0.94, p = .023). Within the PPH cohort, patients treated in rural hospitals were more likely to be transfused than those treated in urban hospitals after controlling for covariates (aOR 1.63, 95% CI 1.32–2.00, p = .014). PPH patients treated in the Midwest and South were significantly less likely to be transfused than those treated in the Northeast (both p < .001). Within the GIB cohort, patients treated in rural hospitals were more likely to be transfused than those treated in urban hospitals after controlling for covariates (aOR 1.24, 95% CI 1.11–1.37, p < .001). Among GIB patients, hospital location in the Midwest was also a significant predictor of not receiving a transfusion (aOR 0.60, 95% CI 0.52–0.70, p < 0.001). Within the PPH and GIB cohorts, environment of care was also independently associated with transfusion status, with patients treated under private care significantly less likely to be transfused than those treated under direct care (p < .001 for both cohorts).
+
+TABLE 3.
+
+Trauma Postpartum hemorrhage Gastrointestinal bleeding Adjusted odds ratio (95% CI) p‐value Adjusted odds ratio (95% CI) p‐value Adjusted odds ratio (95% CI) p‐value Age 1.00 (1.00–1.01) .523 1.01 (1.01–1.02) .001 1.02 (1.02–1.02) <.001 Sex Female Ref – – Ref Male 1.11 (0.91–1.35) .312 – – 1.04 (1.00–1.09) .066 Race/ethnicity Non‐Hispanic White Ref Ref Ref Non‐Hispanic Black 1.62 (1.29–2.03) <.001 1.17 (1.04–1.32) .010 1.42 (1.35–1.49) <.001 Hispanic 1.31 (0.96–1.78) .084 1.26 (1.11–1.44) <.001 0.96 (0.85–1.08) .668 Other 1.68 (1.21–2.30) .002 1.24 (1.08–1.43) .002 1.26 (1.17–1.35) <.001 Environment of care Direct care Ref Ref Ref Private care 1.25 (0.98–1.61) .076 0.39 (0.35–0.44) <.001 0.72 (0.69–0.75) <.001 CCI 1.01 (0.97–1.06) .597 1.04 (0.93–1.16) .449 1.06 (1.05–1.06) <.001 ISS 1.04 (1.03–1.05) <.001 – – – – Hospital rurality Urban Ref Ref Ref Rural 0.18 (0.03–0.55) .012 1.63 (1.32–2.00) <.001 1.24 (1.11–1.37) <.001 Hospital region Northeast Ref Ref Ref Midwest 0.62 (0.34–1.15) .126 0.33 (0.24–0.45) <.001 0.60 (0.52–0.70) <.001 South 0.88 (0.55–1.45) .588 0.60 (0.47–0.80) <.001 0.98 (0.86–1.11) .736 West 0.56 (0.35–0.94) .023 0.87 (0.68–1.11) .249 1.08 (0.95–1.424) .234
+
+Given the hypothesized effect modification by hospital rurality, further analysis was stratified by hospital urban/rural status. Within the trauma cohort, multiple subgroups contained few observations that did not show variation in transfusion status. Within the PPH cohort, small subgroup sizes within the rural cohort led to wide confidence intervals. Forest plots for the PPH cohort are shown in Figure S1. Within the GIB cohort, the association between region and transfusion status varied by hospital rurality. Among urban hospitals, patients treated in the Midwest were less likely to be transfused than those in the Northeast (aOR 0.51, 0.44–0.61), while there were no differences in transfusion status among patients treated in the South or West compared to the Northeast (aOR 0.91, 0.80–1.04 and aOR 1.00, 0.88–1.15, respectively). However, among rural hospitals, patients treated in the Midwest, South, and West are more likely to be transfused than patients treated in the Northeast, as summarized in Figure 2. The effect of patient sex also varied by hospital rurality. Among patients treated in urban hospitals, males were slightly more likely to be transfused than females (aOR 1.08, 1.03–1.13); however, among patients treated in rural hospitals, males were less likely to be transfused than females (aOR 0.49, 0.39, 0.60).
+
+The secondary outcomes of in‐hospital mortality and transfer to another acute facility were rare in this study sample. Trauma patients were most likely to be transferred (N = 137, 3.2%) and GIB patients were most likely to die during the index admission (N = 875, 1.2%). Within the PPH cohort, there were 0 deaths and 13 transfers (0.1%). Within the trauma and GIB cohorts, transfusion was independently associated with transfer to another acute care facility (aOR 1.79, 1.16–2.70 and aOR 2.09, 1.71–2.55, respectively). Within the GIB cohort, transfusion was not independently associated with inpatient mortality (aOR 0.85, 0.70–1.03). Given the low number of deaths within the trauma cohort, a multivariable logistic regression was not performed. However, on bivariate analysis, rurality was not associated with mortality among trauma patients (p = .834).
+
+4. DISCUSSION
+
+As one of the largest integrated healthcare systems in the country, use of TRICARE data allowed us to survey a geographically diverse, nationally representative population treated across a variety of different healthcare settings. While the TRICARE insurance product covers only a subset of the US population, the TRICARE dataset has been shown to approximate the demographic, educational, and vocational diversity of the American population under 65, supporting its use for national analyses. 12 , 32 The resulting large sample size, especially in the GIB cohort, enabled a robust analysis. In our sample of patients with acute bleeding diagnoses, transfusion status was found to vary significantly by hospital region and rurality. In adjusted analyses, patients with PPH in the Midwest have one‐third the odds of being transfused compared to patients with PPH in the Northeast. GIB patients are also significantly less likely to be transfused in the Midwest than in the Northeast.
+
+Notably, rural patients in the PPH and GIB cohorts were more likely to receive a transfusion than their urban counterparts, while rural trauma patients were significantly less likely to receive a transfusion than their urban counterparts. The results for our PPH cohort are in line with prior research showing that peripartum women in rural hospitals are more likely to receive a transfusion than women delivering in urban hospitals. 33 To our knowledge, this is the first study comparing in‐hospital transfusion rates between rural and urban trauma and GIB patients. Within the GIB cohort, the relationship between region and transfusion status varied by hospital rurality. This effect modification suggests a complex interplay between various aspects of a hospital's setting. Another important aspect of a hospital's setting is whether it is a Military Treatment Facility (MTF) (where patients with direct care are treated) or a civilian hospital (where patients with private care are treated). PPH and GIB patients treated under private care were less likely to be transfused, suggesting potential differences in blood supply and/or transfusion practices in MTFs versus civilian hospitals.
+
+While we did not directly measure access to blood, variations in transfusion rates that persist after adjustment for demographics, injury severity, comorbidities, etc., are likely related to a variety of factors beyond simply clinical need. Patients with similar bleeding diagnoses and severity should have similar transfusion rates, regardless of geographic location. Deviations from the expected transfusion rate may indicate that some patients are not receiving indicated transfusions while others may be receiving unnecessary transfusions, reflecting either inconsistencies in clinical practice or differential access to blood products. Granular studies including both quantitative and qualitative methods are needed to further understand the complex interplay between clinical need, blood demand (what clinicians order), and met blood demand (fulfilled transfusion requests). At a minimum, our findings suggest the need for greater surveillance, policies to equalize supply if indicated, and the introduction of standardized management approaches or protocols for PPH and GIB.
+
+We acknowledge that our analysis was limited for certain sub‐groups, particularly trauma patients treated in rural hospitals. This may reflect both the concentration of trauma centers in urban areas and the expeditious transfer of patients who initially present to rural hospitals to higher‐resourced urban centers prior to the need for transfusion or intervention. It should be recognized, however, that such approaches to care management are not as systematized for patients with PPH or GIB. The presence or absence of active patient blood management programs may also influence the degree to which transfusion decision‐making and hemorrhage management are protocolized across institutions, although this information was not captured in our dataset.
+
+Other limitations include the retrospective nature of our study and use of administrative claims. Like other claims databases, the MDR may be subject to coding errors resulting in misclassification of diagnoses and procedures. Additionally, the MDR integrates data from both direct and private care, which are fundamentally different coding environments and may introduce bias due to variation in coding completeness or systematic differences in how diagnoses or procedures are captured. TRICARE data is specifically limited to some degree by missing race and ethnicity data, which is self‐reported by beneficiaries. This has been addressed through standard reweighting procedures. 24 Furthermore, relevant clinical details that inform the decision to transfuse, including labs like hemoglobin, vital signs, the presence of shock, and imaging results, are not available in this dataset. The true clinical appropriateness of transfusions that were received cannot be definitively determined. We also could not determine if the rate of transfusion refusal differed by region or rurality. Geographic clustering of demographic groups that routinely decline blood transfusion may introduce some residual confounding into our model; however, these effects are likely small given the overall size of the dataset.
+
+While the presence or absence of a transfusion can be identified in this database, neither the amount nor timing of the transfusion is available. Therefore, massive transfusion protocol is indistinguishable from transfusion of one unit each of RBCs, plasma, and platelets. The MDR also does not capture pre‐hospital blood transfusion, potentially introducing residual confounding. However, pre‐hospital blood transfusion is not uniformly implemented across the United States, with emerging data suggesting regional variation in practices. 34 Geographic vulnerabilities likely exist in both pre‐hospital and hospital‐level transfusion practices, with our study primarily reflecting the latter.
+
+Blood is a critical resource that is not evenly available across the United States. Future research should focus on a systems analysis to pinpoint underlying reasons for transfusion variability. For example, a multi‐center study in the Midwest and Northeast directly comparing transfusion protocols, blood bank inventory management practices, and clinician perspectives can shed light on the decision‐making processes that lead to observed differences in transfusion rates. In parallel, health systems and policymakers should consider strategies to improve regional coordination of blood resources. This includes supporting the development of standardized hospital‐ and regional‐level backup protocols that can be activated during periods of acute shortage. These efforts can help guide resource allocation, improve preparedness, and increase overall system resilience.
+
+CONFLICT OF INTEREST STATEMENT
+
+The authors have disclosed no conflicts of interest.
+
+Supporting information
+
+ACKNOWLEDGEMENTS
+
+This study was supported by a grant from the United States Defense, Defense Health Agency, Grant #HU0001‐23‐2‐0020. The funding agency played no role in the design, analysis, or interpretation of findings.
+
+DATA AVAILABILITY STATEMENT
+
+Research data are not shared. All data used in this study come from the Military Health System Data Repository (MDR), which is a proprietary database managed by the Defense Health Agency.
+
+REFERENCES
+
+1. Blood safety and availability. Available from: https://www.who.int/news-room/fact-sheets/detail/blood-safety-and-availability?utm_source. Accessed 20 Nov 2025
+
+2. Custer B, Zou S, Glynn SA, Makani J, Tayou Tagny C, el Ekiaby M, et al. Addressing gaps in international blood availability and transfusion safety in low‐ and middle‐income countries: a NHLBI workshop. Transfusion. 2018;58(5):1307–1317. [DOI] [PMC free article] [PubMed] [Google Scholar]
+
+3. Smedley WA, Mabry CD, Collins T, Tabor J, Bowman S, Porter A, et al. Access to immediately available balanced blood products in a rural state's trauma system. Am Surg. 2023;89(7):3157–3162. [DOI] [PubMed] [Google Scholar]
+
+4. Nuñez‐Argote L, Corns A, Moser R. Blood banking services in critical access hospitals in Kansas: a laboratory perspective. Am J Clin Pathol. 2025;163:670–677. [DOI] [PubMed] [Google Scholar]
+
+5. Cheek L, Schmicker RH, Crowe R, Goren E, West A, McMullan J, et al. Rurality and area deprivation and outcomes after out‐of‐hospital cardiac arrest. JAMA Netw Open. 2025;8(4):e253435. [DOI] [PMC free article] [PubMed] [Google Scholar]
+
+6. Kurani SS, McCoy RG, Lampman MA, Doubeni CA, Finney Rutten LJ, Inselman JW, et al. Association of neighborhood measures of social determinants of health with breast, cervical, and colorectal cancer screening rates in the US Midwest. JAMA Netw Open. 2020;3(3):e200618. [DOI] [PMC free article] [PubMed] [Google Scholar]
+
+7. Tanielian T, Farmer C. The US military health system: promoting readiness and providing health care. Health Aff (Millwood). 2019;38(8):1259–1267. [DOI] [PubMed] [Google Scholar]
+
+8. TRICARE by the numbers. DHA.mil—the official website of The Defense Health Agency. Available from: https://dha.mil/About-DHA/TRICARE-Numbers. Accessed 16 Mar 2026
+
+9. US Census Bureau . State population totals and components of change: 2020–2025. Available from: https://www.census.gov/data/tables/time-series/demo/popest/2020s-state-total.html. Published online 27 Jan 2026. Accessed 16 Mar 2026
+
+10. Census Regions and Divisions of the United States. Available from: https://www2.census.gov/geo/pdfs/maps‐data/maps/reference/us_regdiv.pdf. Accessed 20 Nov 2025
+
+11. Evaluation of the TRICARE program: fiscal year 2024 report. Available from: https://www.health.mil/Reference-Center/Reports/2024/09/23/Annual-Evaluation-of-the-TRICARE-Program-FY24. Accessed 20 Nov 2025
+
+12. Schoenfeld AJ, Jiang W, Harris MB, Cooper Z, Koehlmoos T, Learn PA, et al. Association between race and postoperative outcomes in a universally insured population versus patients in the state of California. Ann Surg. 2017;266(2):267–273. [DOI] [PubMed] [Google Scholar]
+
+13. Hurtuk M, Reed RL 2nd, Esposito TJ, Davis KA, Luchette FA. Trauma surgeons practice what they preach: the NTDB story on solid organ injury management. J Trauma. 2006;61(2):243–254; discussion 254–255. [DOI] [PubMed] [Google Scholar]
+
+14. Hafiz S, Desale S, Sava J. The impact of solid organ injury management on the US health care system. J Trauma Acute Care Surg. 2014;77:310–314. [DOI] [PubMed] [Google Scholar]
+
+15. Altoijry A, Al‐Omran M, Lindsay TF, Johnston KW, Melo M, Mamdani M. Validity of vascular trauma codes at major trauma centres. Can J Surg. 2013;56(6):405–408. [DOI] [PMC free article] [PubMed] [Google Scholar]
+
+16. Chu CH, Tennakoon L, Maggio PM, Weiser TG, Spain DA, Staudenmayer KL. Trends in the management of pelvic fractures, 2008‐2010. J Surg Res. 2016;202(2):335–340. [DOI] [PubMed] [Google Scholar]
+
+17. Corbetta‐Rastelli CM, Friedman AM, Sobhani NC, Arditi B, Goffman D, Wen T. Postpartum hemorrhage trends and outcomes in the United States, 2000–2019. Obstet Gynecol. 2023;141(1):152–161. [DOI] [PubMed] [Google Scholar]
+
+18. Acosta CJ, Goldberg D, Amin S. Evaluating the impact of frailty on periprocedural adverse events and mortality among patients with GI bleeding. Gastrointest Endosc. 2021;94(3):517–525.e11. [DOI] [PubMed] [Google Scholar]
+
+19. Manasrah N, Sattar Y, Patel N, Kambalapalli S, Duhan S, Pandya KK, et al. A propensity‐matched national analysis of transcatheter aortic valve implantation outcome in patients with gastrointestinal bleeding. Am J Cardiol. 2023;205:396–402. [DOI] [PubMed] [Google Scholar]
+
+20. Wan V, Reddy S, Thomas A, Issa N, Posluszny J, Schwulst S, et al. How does injury severity score derived from international classification of diseases programs for injury categorization using international classification of diseases, tenth revision, clinical modification codes perform compared with injury severity score derived from trauma quality improvement program? J Trauma Acute Care Surg. 2023;94(1):141–147. [DOI] [PMC free article] [PubMed] [Google Scholar]
+
+21. McAdam J, Richard SA, Olsen CH, Byrne C, Clausen S, Michel A, et al. Statistical accuracy of administratively recorded race/ethnicity in the military health system and race/ethnicity ascertained via questionnaire. J Racial Ethn Health Disparities. 2025;13(2):1513–1526. 10.1007/s40615-025-02351-7 [DOI] [PMC free article] [PubMed] [Google Scholar]
+
+22. Chaudhary MA, de Jager E, Bhulani N, Kwon NK, Haider AH, Goralnick E, et al. No racial disparities in surgical care quality observed after coronary artery bypass grafting in TRICARE patients. Health Aff (Millwood). 2019;38(8):1307–1312. [DOI] [PubMed] [Google Scholar]
+
+23. Zogg CK, Jiang W, Chaudhary MA, Scott JW, Shah AA, Lipsitz SR, et al. Racial disparities in emergency general surgery: Do differences in outcomes persist among universally insured military patients? J Trauma Acute Care Surg. 2016;80(5):764–775; discussion 775–777. [DOI] [PubMed] [Google Scholar]
+
+24. Henry AJ, Hevelone ND, Lipsitz S, Nguyen LL. Comparative methods for handling missing data in large databases. J Vasc Surg. 2013;58(5):1353–1359.e6. [DOI] [PubMed] [Google Scholar]
+
+25. Dobis EA, Sanders A. Rural‐urban commuting area codes—documentation. Available from: https://www.ers.usda.gov/data‐products/rural‐urban‐commuting‐area‐codes/documentation. Accessed 20 Nov 2025
+
+26. Light Gray Basemap. Available from: https://cdn.arcgis.com/sharing/rest/content/items/291da5eab3a0412593b66d384379f89f/resources/styles/root.json. Accessed 25 Oct 2025
+
+27. USA_States_Generalized_Boundaries (FeatureServer). Available from: https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_States_Generalized_Boundaries/FeatureServer. Accessed 25 Oct 2025
+
+28. USA_Counties_Generalized_Boundaries (FeatureServer). Available from: https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_Counties_Generalized_Boundaries/FeatureServer. Accessed 25 Oct 2025
+
+29. USA_Boundaries_2023 (FeatureServer). Available from: https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_Boundaries_2023/FeatureServer. Accessed 25 Oct 2025
+
+30. HUD USPS Zip code crosswalk files. Available from: https://www.huduser.gov/apps/public/uspscrosswalk/home. Accessed 20 Nov 2025
+
+31. Understanding and enhancing the U.S. Department of Housing and Urban Development's ZIP code crosswalk files. Available from: https://www.huduser.gov/portal/periodicals/cityscpe/vol20num2/ch16.pdf. Accessed 20 Nov 2025
+
+32. Schoenfeld AJ, Kaji AH, Haider AH. Practical guide to surgical data sets: military health system TRICARE encounter data. In: Livingston EH, Lewis RJ, editors. JAMA guide to statistics and methods. New York: McGraw‐Hill Education; 2019. [Google Scholar]
+
+33. Hartenbach EM, Kuo HHD, Greene MZ, Shrider EA, Antony KM, Ehrenthal DB. Peripartum blood transfusion among rural women in the United States. Obstet Gynecol. 2020;135(3):685–695. [DOI] [PMC free article] [PubMed] [Google Scholar]
+
+34. Rosen CL, Thomas SA, McCartin MP, O'Brien KL, Blumen IJ, Dunn K, et al. Characteristics, regional evaluation, and D‐antigen in transfusions by emergency medical services. JAMA Netw Open. 2025;8(7):e2524368. [DOI] [PMC free article] [PubMed] [Google Scholar]
+
+Associated Data
+
+This section collects any data citations, data availability statements, or supplementary materials included in this article.
+
+Supplementary Materials
+
+Data Availability Statement
+
+Research data are not shared. All data used in this study come from the Military Health System Data Repository (MDR), which is a proprietary database managed by the Defense Health Agency.",https://cdn.ncbi.nlm.nih.gov/pmc/cms/images/pmc-card-share.jpg?_=0,N,0.0,2026-08-07 00:56:11.420559
 ,,2026-08-07 00:31:55+00:00,www.globenewswire.com,MiNK Therapeutics Presents Early Observations from Ongoing - GlobeNewswire,Not Available,,,,,https://www.globenewswire.com/news-release/2026/08/06/3340551/0/en/MiNK-Therapeutics-Presents-Early-Observations-from-Ongoing-Phase-2-Trial-at-the-2026-Military-Health-System-Research-Symposium.html,"MiNK Therapeutics Presents Early Observations from Ongoing Phase 2 Trial at the 2026 Military Health System Research Symposium. August 06, 2026 12 ...",Not Available,,N,0.0,2026-08-06 20:56:15.431119
 ,,2026-08-07 00:08:04+00:00,www.reddit.com,"Dealing with chronic disease, Tricare and frequent moves? : r/MilitarySpouse - Reddit",Not Available,,,,,https://www.reddit.com/r/MilitarySpouse/comments/1vhjwg4/dealing_with_chronic_disease_tricare_and_frequent/,"This might be a long shot but I'm hoping that someone else has a little bit of experience in this and can put me at ease.
 To preface: Spouse is deployed, I moved back to my home state Currently with Triwest/Tricare Select Seeing a local (nonmilitary) PCP PCP has referred me to a specialist (one of the few out here that accepts Tricare) Now, presuming I get a diagnosis and start treatment in the next few months, I will be moving back with my spouse when their deployment ends.
