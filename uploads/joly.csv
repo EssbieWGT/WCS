@@ -1,4 +1,83 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID47,Uber,2026-08-07 21:21:33+00:00,news.bloomberglaw.com,Uber Drivers in Illinois Cleared to Bargain After Bill's Signing - Bloomberg Law,Chris Marr,,,,,https://news.bloomberglaw.com/daily-labor-report/uber-drivers-in-illinois-cleared-to-bargain-after-bills-signing,"Illinois will enable gig drivers to collectively negotiate for better pay, benefits, and job protections with ride-hail app companies like Uber and Lyft under legislation Gov.
+JB Pritzker (D) signed into law.
+The measure (HB 5090) makes Illinois the third state after Massachusetts and California to enact a state-supervised process for transportation network drivers to unionize and bargain on an industrywide basis.
+The legislation signed Friday sets up a version of the sectoral bargaining model that’s more common in Europe but rare in the US, where employees typically negotiate only with their employer.","Illinois will enable gig drivers to collectively negotiate for better pay, benefits, and job protections with ride-hail app companies like Uber and Lyft under legislation Gov. JB Pritzker (D) signed into law.
+
+The measure (HB 5090) makes Illinois the third state after Massachusetts and California to enact a state-supervised process for transportation network drivers to unionize and bargain on an industrywide basis. The legislation signed Friday sets up a version of the sectoral bargaining model that’s more common in Europe but rare in the US, where employees typically negotiate only with their employer.",https://bwrite-static.bloombergindustry.com/dims4/default/20a169d/2147483647/crop/3980x1533+0+979/resize/957x370%3E/quality/90/?url=https%3A%2F%2Fbloomberg-bna-brightspot.s3.us-east-1.amazonaws.com%2F3c%2F58%2Fd81bd83d4e90b2b2d7c9654bab24%2F205208012.jpg,N,,2026-08-07 18:11:31.465532
+ID35,Nvidia,2026-08-07 21:01:30+00:00,Futurum,NVIDIA AI Storage Goes Open at FMS 2026. Is Open Source the New Moat?,"Brendan Burke, Keith Kirkpatrick, Brad Shimmin",,,,,https://futurumgroup.com/insights/nvidia-ai-storage-goes-open-at-fms-2026-is-open-source-the-new-moat/,"NVIDIA AI Storage Goes Open at FMS 2026.
+Analyst Take: The NVIDIA AI storage strategy reached an inflection at FMS 2026.
+Open Sourcing cuFile Extends the CUDA Playbook to NVIDIA AI Storage The cuFile playbook resembles CUDA’s early years: publish the interface, cultivate an ecosystem around it, and let the performance advantage accrue to the silicon underneath.
+A context tier that recovers idle accelerator time attacks the same cost line as those teams are optimizing by hand, which makes the NVIDIA AI storage pitch fit budgets that already exist.
+AMD paired its Pensando Salina DPU and Vulcano AI NIC with the Helios rack architecture at Advancing AI 2026, giving OEMs a second data-path stack to design against.","NVIDIA arrived at FMS 2026 arguing that the next leap in AI depends as much on the infrastructure feeding the GPU as on the GPU itself. The company open-sourced its cuFile APIs with Google, Intel, and Meta as co-maintainers, aligned more than 40 vendors behind its Storage-Next initiative, and pressed BlueField-4 STX and the CMX context tier as the template for AI-native data infrastructure. Futurum examines whether the open-source turn broadens the market or extends NVIDIA’s platform control into storage.
+
+What is Covered in this Article
+
+NVIDIA moved the APIs at the heart of GPUDirect Storage to a neutral GitHub organization, with Google, Intel, Meta, and NVIDIA as inaugural maintainers.
+
+The Storage-Next coalition, uniting more than 40 storage and flash vendors, including DDN, KIOXIA, and Micron, is aligning GPU-driven storage behavior into interoperable standards.
+
+NVIDIA cited an internal test in which the Vera CPU inside BlueField-4 STX delivered up to 3.21x higher throughput than an x86 CPU in a two-stage compression and encryption pipeline.
+
+NVIDIA’s Context Memory Storage platform targets KV cache retention for long-context agentic inference, a hotly contested category
+
+The competitive stakes against AMD’s Pensando Salina DPU, hyperscaler offload architectures, and the position of the 12 storage providers codesigning STX systems.
+
+The News: NVIDIA used the Future of Memory and Storage (FMS) conference, held August 4-6 in Santa Clara, California, to announce it is open-sourcing its cuFile application programming interfaces, the component of NVIDIA GPUDirect Storage that lets GPUs read from and write to storage directly, with access latencies measured in microseconds. The code moves to a new GitHub organization with Google, Intel, Meta, and NVIDIA as inaugural maintainers. NVIDIA also detailed Storage-Next, an industry initiative of more than 40 storage and flash vendors, including DDN, KIOXIA, and Micron, to align GPU-driven storage behavior into interoperable, open standards, and it presented its SCADA framework, which DDN is integrating with its Infinia data platform. The company cited an internal benchmark in which the Vera CPU inside NVIDIA Vera BlueField-4 STX delivered up to 3.21x higher throughput than an x86 CPU in a two-stage compression and encryption pipeline.
+
+NVIDIA AI Storage Goes Open at FMS 2026. Is Open Source the New Moat?
+
+Analyst Take: The NVIDIA AI storage strategy reached an inflection at FMS 2026. The company open-sourced cuFile, seated Google, Intel, and Meta as co-maintainers, and put more than 40 vendors behind Storage-Next, its effort to standardize how storage systems behave when GPUs issue thousands of concurrent requests. The underlying problem is that storage systems buckle under the parallel access patterns of a modern GPU cluster. NVIDIA’s answer routes the entire data path through its own silicon via Vera CPUs, BlueField-4 storage processors, Spectrum-X Ethernet, and the DOCA software stack. NVIDIA has concluded that the next constraint on AI economics sits between the GPU and the data, and it intends to own the architecture that removes that constraint, from the API definition down to the rack.
+
+Open Sourcing cuFile Extends the CUDA Playbook to NVIDIA AI Storage
+
+The cuFile playbook resembles CUDA’s early years: publish the interface, cultivate an ecosystem around it, and let the performance advantage accrue to the silicon underneath. Placing cuFile in a neutral GitHub organization lowers the perceived risk of building on GPUDirect Storage and answers procurement teams that flag single-vendor APIs as a dependency. The co-maintainer roster gives the move weight. Google and Meta operate two of the largest inference estates in the world, and Intel maintains a market share lead in server CPUs.
+
+The open source license covers the interface. The performance that gives the interface commercial value still runs through NVIDIA hardware, which reaches the 3.21x compression-and-encryption figure is an NVIDIA internal measurement against an undisclosed x86 baseline, and the platform-level numbers from the March GTC launch of BlueField-4 STX, up to 5x token throughput, 4x energy efficiency, and 2x faster data ingestion versus traditional CPU-based storage, likewise lack a published test configuration. Until a customer deployment or MLPerf Storage validates them, these figures function as marketing exhibits rather than procurement inputs.
+
+The KV Cache Is Becoming a Storage Product Category
+
+Futurum has argued throughout 2026 that agentic inference is restructuring infrastructure demand, and CMX Context Memory Storage is the clearest storage market expression of that shift to date. A KV cache holds the intermediate attention calculations a model has already produced. Recomputing it on every inference step wastes GPU cycles, and evicting it to conventional storage adds latency a user can feel in a live session. As agents run longer multi-turn sessions across tools and data sources, that cache becomes a persistent working set that needs its own tier between HBM and bulk storage, and CMX, built on the STX platform, is NVIDIA’s bid to define it.
+
+The category is already contested. WEKA’s Augmented Memory Grid claims up to 10x higher token throughput from the same GPU footprint, and DDN’s Infinia integration of SCADA pursues the same outcome through NVIDIA’s own framework. The economics explain the crowding. Futurum research finds GPUs can sit idle for more than 50% of their runtime during inference, and Futurum’s 1H 2026 Data Intelligence Decision Maker Survey finds 56.7% of enterprises already use quantization or distillation to contain inference costs. A context tier that recovers idle accelerator time attacks the same cost line as those teams are optimizing by hand, which makes the NVIDIA AI storage pitch fit budgets that already exist.
+
+Storage Vendors Gain a Standard and Concede the Architecture
+
+The 12 storage providers codesigning STX systems, among them Dell Technologies, HPE, IBM, Hitachi Vantara, NetApp, VAST Data, and WEKA, face a familiar bargain. Adopting the reference architecture buys immediate relevance in AI procurement cycles, with STX-based platforms due from AIC, Supermicro, and Quanta Cloud Technology in H2 2026. Adoption also migrates differentiation into NVIDIA’s controller, DOCA software, and networking, a path that can reduce an array vendor to a qualified enclosure supplier over successive product generations.
+
+Rivals with alternatives are keeping pace. AMD paired its Pensando Salina DPU and Vulcano AI NIC with the Helios rack architecture at Advancing AI 2026, giving OEMs a second data-path stack to design against. Hyperscalers remain the hardest territory for NVIDIA, since AWS runs its own Nitro offload architecture and Google co-designed Intel’s IPU line. Storage-Next standards will matter most in enterprise and neocloud deployments, where CoreWeave, Nebius, Oracle Cloud Infrastructure, and Vultr have signed on as early adopters.
+
+Read the blog post covering the announcements on the NVIDIA website.
+
+What to Watch
+
+Whether AIC, Supermicro, and Quanta Cloud Technology systems reach production customers on schedule, and whether OEM pricing treats STX as a premium platform or a commodity reference design.
+
+Commit activity in the new cuFile GitHub organization through year-end, particularly whether Google, Intel, or Meta land backends for non-NVIDIA hardware.
+
+MLPerf Storage results or customer-published benchmarks that test the 3.21x Vera claim and the 5x token throughput figure against named baselines.
+
+Whether Helios rack deployments in 2027 pair the Salina DPU and Vulcano NIC with a competing context memory tier.
+
+How quickly CMX-class systems displace capacity economics with token economics in storage procurement.
+
+Sources
+
+1. Marketo Forms 2 Cross Domain request proxy frame, Nvidia, August 2026
+
+Declaration of generative AI and AI-assisted technologies in the writing process: This content has been generated with the support of artificial intelligence technologies. Due to the fast pace of content creation and the continuous evolution of data and information, The Futurum Group and its analysts strive to ensure the accuracy and factual integrity of the information presented. However, the opinions and interpretations expressed in this content reflect those of the individual author/analyst. The Futurum Group makes no guarantees regarding the completeness, accuracy, or reliability of any information contained herein. Readers are encouraged to verify facts independently and consult relevant sources for further clarification.
+
+Disclosure: Futurum is a research and advisory firm that engages or has engaged in research, analysis, and advisory services with many technology companies, including those mentioned in this article. The author does not hold any equity positions with any company mentioned in this article.
+
+Analysis and opinions expressed herein are specific to the analyst individually and data and other information that might have been provided for validation, not those of Futurum as a whole.
+
+Read the full Futurum Group Disclosure.
+
+Other Insights from Futurum:
+
+Can ADI Hot Swap Controllers De-Risk NVIDIA’s 800 VDC Transition?
+
+Will Adobe and NVIDIA’s RTX Spark Partnership Redefine Creative AI Workflows?",https://futurumgroup.com/wp-content/uploads/2026/08/stock_0416.png,N,,2026-08-07 18:11:22.699313
 ID36,OpenAI,2026-08-07 20:04:12+00:00,www.forbes.com,OpenAI's Security Breach Was More Alarming Than We Knew - Forbes,,,,,,https://www.forbes.com/sites/ronschmelzer/2026/08/07/openais-security-breach-was-more-alarming-than-we-knew/,"OpenAI revealed at Black Hat USA 2026 that its AI agents, designed to measure hacking ability, not only breached Hugging Face but also exhibited ...",Not Available,,Y,,2026-08-07 17:16:46.763100
 ID19,Eli Lilly,2026-08-07 19:33:03+00:00,Yahoo News,Eli Lilly offers new weight loss drug to some patients before FDA approval - Yahoo,Heather Miller,,,,,https://www.yahoo.com/news/science/articles/eli-lilly-offers-weight-loss-152040459.html,"The Brief Retatrutide, Eli Lilly's next-generation weight loss drug that's still in clinical trials, will be available for some patients before it's approved by the FDA.
 Eli Lilly will allow a limited number of patients early access to retatrutide, its next-generation weight loss drug, before it gets FDA approval.
@@ -74,6 +153,10 @@ The Source
 
 This article includes information from Reuters, Eli Lilly, STAT News and previous FOX Local reporting.",https://s.yimg.com/lo/mysterio/api/e4db019a6aea4421682345825efdd5317d40013186ebf66d90af2e0e83e92bf1/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Flivenow_fox_840%2F7b3d0c448caa74cc9441c1f09b286d0c,N,,2026-08-07 16:11:07.058596
 ID42,S&P Global,2026-08-07 19:25:24+00:00,www.wsj.com,"'Refine, Baby, Refine' Is the Energy Industry's New Mantra - WSJ",,,,,,https://www.wsj.com/business/energy-oil/refine-baby-refine-is-the-energy-industrys-new-mantra-7ef95d61,"Brian Stetter, an analyst at S&P Global. The country partially lifted a ban on fuel exports last month, executives said, but it has hardly made a ...",Not Available,,Y,,2026-08-07 17:16:53.256488
+ID36,OpenAI,2026-08-07 19:16:14+00:00,Bloomberg.com,"SpaceX, OpenAI Bets Boost UNC, University of Michigan Returns - Bloomberg",Janet Lorin,,,,,https://www.bloomberg.com/news/articles/2026-08-07/spacex-openai-bets-boost-unc-university-of-michigan-returns,"The University of North Carolina’s endowment management company made an initial investment in SpaceX more than 15 years ago.
+Early wagers through venture capital in Elon Musk ’s rocket company have helped turbocharge its endowment returns to more than 30% this year, according to a person familiar with the matter.","The University of North Carolina’s endowment management company made an initial investment in SpaceX more than 15 years ago.
+
+Early wagers through venture capital in Elon Musk ’s rocket company have helped turbocharge its endowment returns to more than 30% this year, according to a person familiar with the matter.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iT98Tv0yU0hk/v2/1200x800.jpg,N,,2026-08-07 18:11:26.629290
 ID36,OpenAI,2026-08-07 19:00:26+00:00,Bloomberg.com,OpenAI Pauses Some Work on New Astra Model Over Cyber Concerns - Bloomberg.com,Seth Fiegerman,,,,,https://www.bloomberg.com/news/articles/2026-08-07/openai-pauses-some-work-on-new-astra-model-over-cyber-concerns,"OpenAI is pausing some internal work around one of its upcoming artificial intelligence models to implement stricter safeguards after the system was found to be significantly more adept at cybersecurity tasks.
 The ChatGPT maker on Friday said it “cannot rule out” that the unreleased Astra model would reach OpenAI’s “critical cybersecurity threshold,” meaning it’s capable of identifying and developing zero-day exploits without human intervention.","OpenAI is pausing some internal work around one of its upcoming artificial intelligence models to implement stricter safeguards after the system was found to be significantly more adept at cybersecurity tasks.
 
@@ -395,6 +478,7 @@ OpenAI has started ""consciously slowing down research to enhance security,"" Mi
 The bottom line: AI models are getting better and more cyber capable faster than the regulation around their use is formalizing.
 
 This story is developing.",https://images.axios.com/_Z-fl0bNnDOZt0H5YSlEwDeE5dk=/0x0:1920x1080/1366x768/2026/02/20/1771612436976.jpeg,N,,2026-08-07 14:10:10.135303
+ID2,Adobe,2026-08-07 16:08:12+00:00,www.pharmexec.com,The Merger Paradox: Why Transformational Mergers Create Extraordinary Value and Frequently Fail,Not Available,,,,,https://www.pharmexec.com/view/merger-paradox-transformational-extraordinary-value-fail,stock.adobe.com GLP-1 · Amazon Pharmacy Launches GLP-1 Delivery Service. ByNicholas Jacobus. August 7th 2026. stock.adobe.com deal · Tarsus ...,Not Available,,N,,2026-08-07 18:11:16.161030
 ID47,Uber,2026-08-07 15:47:39+00:00,Benzinga,Uber Shares Jump as Analyst Commentary and Autonomous Delivery Push Drive Rally,Henry Khederian,,,,,https://www.benzinga.com/trading-ideas/movers/26/08/61046052/uber-shares-jump-as-analyst-commentary-and-autonomous-delivery-push-drive-rally,"Uber Technologies Inc. (NYSE:UBER) shares are trading higher on Friday as traders digest fresh post-earnings analyst commentary and the company’s push to scale its AV ecosystem.
 Uber Technologies shares are powering higher.
 Why is UBER stock up today?
@@ -11959,16 +12043,3 @@ The integration of Pear Commerce’s technology, which became available to shopp
 The new integration also lets AD Retail Media link its investments more directly with shopping actions and helps brand partners connect with shoppers closer to the point of purchase, the announcement noted.
 
 ADUSA rolled out a similar omnichannel capability in April called Click2Cart that lets shoppers add products directly to their cart from digital ads, social media and brand-owned channels.",https://imgproxy.divecdn.com/JA0--y6L8C3OotwBSy03VqRSWzGMbS-Hj0nCmnJV070/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9wZWFyLWNvbW1lcmNlLmpwZw==.webp,N,,2026-07-31 20:07:15.513244
-ID27,J&J,2026-07-31 22:06:00+00:00,www.thestreet.com,J&J's biotech progress could punish its 2027 profit - TheStreet,,,,,,https://www.thestreet.com/investing/jnj-profit-warning-biotech-deals,J&J investors face a bizarre profit trap. ... Johnson & Johnson CEO Joaquin Duato speaks at a business event. wearing a red tie ... Johnson & Johnson (JNJ) ...,Not Available,,Y,,2026-07-31 19:08:17.948805
-ID36,OpenAI,2026-07-31 21:39:02+00:00,www.ft.com,Amazon completes $50bn investment in OpenAI - Financial Times,Not Available,,,,,https://www.ft.com/content/8ae9e6e4-a53c-44da-8e7d-c9d81f0df4b9?syn-25a6b1a6=1,"Try unlimited access Only $1 for 4 weeks Then $75 per month.
-Complete digital access to quality FT journalism on any device.
-Cancel anytime during your trial.
-For individuals Discover all the plans currently available in your country","Try unlimited access
-
-Only $1 for 4 weeks
-
-Then $75 per month. Complete digital access to quality FT journalism on any device. Cancel anytime during your trial.
-
-For individuals
-
-Discover all the plans currently available in your country",https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fd7a11d4a-8260-4235-bd03-691020687f44.jpg?source=next-barrier-page&fit=scale-down&quality=highest&width=700&dpr=1,N,,2026-07-31 19:08:25.209438
