@@ -53,6 +53,459 @@ Market analysts have expressed skepticism regarding Turkey’s capacity to meet 
 
 Despite these hurdles, Turkish officials express confidence that the new organizational structure will strengthen the country’s ability to develop advanced aviation engines and support its broader defense and aerospace objectives.",https://pub-a51e4d676a044eb380faeff15def343e.r2.dev/9bc684951cb143c98104ff18f1fafe58.avif,N,,2026-08-08 11:57:08.830982
 ,,2026-08-08 11:33:52+00:00,www.startribune.com,"Ramstad: How Peter Carter, Delta's new president, sees the airline's next era - Star Tribune",Not Available,,,,,https://www.startribune.com/ramstad-how-peter-carter-deltas-new-president-sees-the-airlines-next-era/601870372,"When we met last month, Carter had flown in to represent Delta at an event marking the start of the blending of sustainable aviation fuel (SAF) at ...",We’re sorry. Something went wrong when we tried to deliver the page.,,N,,2026-08-08 08:56:39.354643
+,,2026-08-08 11:16:02+00:00,PubMed Central (PMC),Prospective life-cycle assessment of CORSIA sustainable aviation fuels under evolving ... - PMC,"Uisung Lee, Matteo Prussi, Alessandro Martulli, Michael Wang, Robert Malina",,,,,https://pmc.ncbi.nlm.nih.gov/articles/PMC13270706/,"The carbon intensities of electricity and hydrogen are expected to decline over time by the adoption of lower-carbon technologies, such as renewable electricity and renewable hydrogen.
+Various measures can be implemented to lower life-cycle GHG emissions, including the use of renewable hydrogen, renewable electricity, and waste heat recovery.
+From an LCA point of view, diversion of renewable electricity from existing uses toward hydrogen and electro-fuel production would require specific provisions to ensure renewable hydrogen production does not divert renewable electricity that is already used by other sectors.
+The DA introduces the principle of “additionality” for hydrogen: electrolyzers that produce hydrogen must be connected to new renewable electricity production [38].
+For the corn ATJ pathway, integrating renewable hydrogen, renewable electricity and waste heat could lead to emission reductions of up to 30%.","Abstract
+
+Most life-cycle assessments (LCAs) of alternative fuels evaluate electricity and hydrogen inputs using static or scenario-based carbon intensity assumptions. This study quantifies the impact of electricity and hydrogen on the life-cycle greenhouse gas (GHG) emissions of sustainable aviation fuels (SAFs). By coupling emission intensity projections for electricity grids and hydrogen production with Argonne National Laboratory’s R&D GREET model, and following the life-cycle assessment (LCA) method of the International Civil Aviation Organization, we estimate life-cycle GHG emissions effects for two SAF pathways with comparatively high technology readiness levels: hydroprocessed esters and fatty acids (HEFA) from waste fats (tallow) and alcohol-to-jet (ATJ) from corn grain ethanol. Under the assumed trajectories for electricity grid decarbonization and hydrogen production carbon intensities, life-cycle GHG emissions of tallow HEFA and corn grain ATJ are estimated to be 7.7–12.5 gCO2e/MJfuel lower in 2035 and 9.6–13.7 gCO2e/MJfuel lower in 2050 relative to 2022 values. Additional facility-level mitigation measures, including carbon capture and waste heat utilization, could further reduce emissions per unit SAF. The work provides a prospective assessment by replacing static pathway intensities with a prospective LCA that couples SAF pathways to time-evolving electricity/hydrogen CIs and facility-level mitigation, quantifying dynamic GHG reductions to 2050. These findings underscore the importance of incorporating prospective energy system changes into SAF LCAs to more accurately capture future mitigation potential and inform effective aviation climate strategies.
+
+Keywords: Prospective life-cycle assessment, Sustainable aviation fuel, CORSIA, Renewable energy
+
+Introduction
+
+Alternative, low-carbon liquid drop-in fuels are expected to play a crucial role in achieving the emission reductions of several key sectors, including international maritime and civil aviation, among others. These sectors, usually referred as the “hard-to-abate” sectors, face mounting pressure to reduce their emission footprints. To this extent, sustainable fuels have been identified as a significant enabler of expected transition to a low-carbon future for these sectors by both public and private stakeholders [1–4].
+
+With regard to international aviation, the International Civil Aviation Organization (ICAO) has quantified the potential of alternative fuels through its long-term aspirational goal (LTAG) feasibility study [5], which finds that sustainable aviation fuels (SAFs) produced from non-fossil sources as the most important lever for reaching net zero CO2 emissions in international aviation by 2050. In addition, the report also finds that lower carbon aviation fuels (LCAFs) produced from petroleum sources with emission reduction measures such as renewable hydrogen usage or CO2 capture at the refinery may also contribute to reduce emissions from the aviation sector.
+
+The LTAG report [6] outlines the crucial elements regarding the role of SAFs and LCAFs in reducing aviation-related greenhouse gas (GHG) emissions. The report considers SAFs, LCAFs, and non-drop-in energy carriers such as hydrogen and electricity for aviation applications. According to the study, in the mid-range aviation traffic scenario, SAFs and LCAFs are expected to represent 100% of international jet fuel demand by 2050, significantly reducing GHG emissions. The report highlights that while SAFs and LCAFs are viable options for GHG emission reductions, the transition requires substantial investments, particularly in terms of infrastructure and production technologies. As the projected costs for SAF development are significantly higher than those of conventional jet fuels, supporting policies have been put in place in several regions to reduce costs and meet long-term sustainability goals [7]. These findings emphasize the importance of transitioning to SAFs and LCAFs [8] while acknowledging the challenges associated with costs and infrastructure investments.
+
+ICAO has developed specific methodologies for calculating the life-cycle GHG emissions of SAF and LCAF via the method of life-cycle assessment (LCA) [9]. LCA is a systematic methodology that enables evaluating the environmental impacts of the supply chains of various energy systems, including SAF and fossil fuels. LCAs for SAF and LCAF, in particular, are used to quantify reductions in GHG emissions compared to conventional jet fuel. Robust LCAs provide transparent assessments enabling informed decisions about SAF and LCAF potential to advance the sustainability of aviation.
+
+Scenario analyses evaluating the GHG savings using the above-mentioned LCA framework typically lack prospective elements. The outlined scenarios for the aviation sector are usually based on time-invariant GHG savings associated with specific alternative fuel production pathways, while only varying volumes of the fuel production pathways. For example, the ICAO LTAG analysis [5] presents a small variation in life-cycle GHG emissions per unit SAF assumed over time. This variation is mainly led by changes in the feedstock portfolio of SAF toward feedstocks with lower farming or land-use change-associated emissions. Potential changes in life-cycle GHG emissions for specific SAF pathways are not accounted for in these analyses. The time-invariant approach, widely adopted in scientific literature on SAF as well, neglects the potential for continuous changes/improvements in the production processes of these fuels.
+
+In reality, the environmental performance offered by specific SAF pathways and those of other alternative fuels is highly dynamic over time and can be significantly influenced by adopting more sustainable technologies in the production pathways and other related sectors. In particular, electricity and hydrogen are critical in feedstock-to-fuel conversion processes: their life-cycle GHG emissions (often called carbon intensity [CI]) can significantly impact the GHG savings of the final fuel. For instance, when producing SAF via hydroprocessed esters and fatty acids (HEFA) process, the SAF CI can be reduced if renewable electricity and renewable hydrogen (produced via water electrolysis using renewable electricity) are used during key stages of the HEFA pathway. A previous sensitivity analysis carried out by the ICAO’s Fuel Task Group [9] highlighted that renewable hydrogen used for the HEFA conversion process could reduce the life-cycle GHG emissions of HEFA-based SAF by up to 8 gCO2e/MJ (grams of carbon dioxide equivalent per megajoule), accounting for potential reduction of approximately 10% of the GHG emissions associated with the reference fossil jet fuel of 89 gCO2e/MJ.
+
+As the economic value of each unit of GHGs saved increases in both policy and market-driven contexts [10, 11] improving the GHG performance of feedstock-to-fuel conversion processes is expected to incentivize industries to adopt renewable hydrogen, renewable electricity, and other mitigation measures. This shift is critical for aviation and many other industries seeking to minimize their carbon footprints.
+
+Notably, the electricity and hydrogen sectors are also progressing toward lowering emissions by global initiatives and robust government policies. The carbon intensities of electricity and hydrogen are expected to decline over time by the adoption of lower-carbon technologies, such as renewable electricity and renewable hydrogen. Considering that SAF production requires significant electricity and hydrogen inputs, ongoing efforts in these sectors will play a critical role in reducing the CIs of SAF over time.
+
+In addition to broader efforts at the societal level, facility-level mitigation strategies play a crucial role in reducing the CI of SAF production. Various measures can be implemented to lower life-cycle GHG emissions, including the use of renewable hydrogen, renewable electricity, and waste heat recovery. Furthermore, when process emissions are captured and sequestered, carbon capture and storage (CCS) can significantly reduce net GHG emissions. These strategies not only enhance process efficiency but also reduce reliance on fossil-based energy sources, ultimately improving the overall environmental performance of SAF.
+
+Existing literature does not capture this dynamic dimensions in LCA, especially when focusing on SAF. While prospective LCA is widely used to assess future changes in key sectors (e.g., cement [12], steel making [13], innovative materials [14, 15], food production [16], etc.), it is less diffused in transport analysis.
+
+A recent study of Brancaleoni et al. [17] presented a prospective LCA of emissions and total cost of ownership (TCO) for innovative transportation solutions in next-generation Italian urban mobility.
+
+For the road sector, besides the battery aspect (e.g., [18, 19]), it worth mentioning the work of Cabrera-Jiménez et al about the results of a prospective LCA of sustainable alternatives for road freight transport.
+
+For maritime sector, Ha et al [20] presents the application of prospective LCA for sustainable renewable marine fuels in international shipping, specifically for hydrogen-based e-fuels. In particular, the e-fuels sector requires prospective elements, as the use of current average grid electricity for hydrogen production does not result in significant GHG savings [21, 22].
+
+On air transport, besides the work focusing on materials and propulsion technologies (i.e., [23]), specifically in fuels we can report only a study of Lai et al, dated 2022, that investigated the potential SAF pathways in Sweden. However, the analysis is limited to the few addressed technologies and the specific country.
+
+This little emphasis on prospective elements for LCA in transport serves as background for this paper. While numerous LCA studies on SAF and LCAF explore alternative hydrogen production routes [24, 25], electricity sources, process configurations, and mitigation options, such as CCS, most of these assessments are conducted as static analyses. They typically compare pathways or sensitivities under fixed assumptions for electricity and hydrogen carbon intensities, rather than explicitly coupling SAF pathways to time-evolving decarbonization trajectories of the electricity and hydrogen sectors. As a result, they only partially reflect the expected decarbonization of electricity and hydrogen supply chains, nor do they systematically incorporate facility-level mitigation, such as renewable H2, renewable electricity, CCS, or waste-heat recovery. This limits the ability to estimate time-dependent GHG performance of specific SAF pathways.
+
+This paper presents the expected potential GHG reductions in aviation achievable by means of different SAFs production pathways, incorporating electricity and hydrogen with progressively lower CIs over time. The work is intended to highlight the significant impacts of shifting from fossil-based inputs (e.g., natural gas for hydrogen production) toward lower carbon alternatives on the life-cycle GHG emissions of these fuels.
+
+This prospective LCA also aims at capturing the expected emission changes from adopting low-carbon technologies in the electricity, CCS and hydrogen sectors related to SAF production, so to complement existing body of knowledge and support the creation of more accurate scenarios for international civil aviation. The contribution of this work lies in integrating electricity and hydrogen production CI trajectories within SAF LCA modeling and translating the resulting emission variation into CORSIA values. This approach enables a prospective assessment of SAF CI under evolving upstream energy generation systems and supports improvements in scenario design for climate policies for international aviation.
+
+Trend in electricity and hydrogen GHG emissions
+
+The CI of the electric grid is a crucial aspect to consider when modelling SAF conversion pathways considering its contribution to the SAF CIs. For example, in the HEFA production technology, the electricity consumption accounts for approximately 7% of the total process energy inputs [26]. In addition, the CI of the grid varies significantly both geographically and temporally, across world regions.
+
+International Energy Agency (IEA) presented the common expected GHG reduction trends for various regions, based on their economy development status [11]. For 2030, the average CI scenario results in developing economies are higher than the current results for developed economies, primarily due to the large share of coal used in fast-growing economies. This kind of divergent trends is clearly a challenge, when prospective elements are added to LCA.
+
+Considering the specific case of Europe (EU27), a significant increase in renewable energy production (primarily wind and solar) can be observed for the last decades. Even if this positive trend is expected to be confirmed, the IEA reports that the use of fossil fuels increased in 2022 [11]. This caused an increase in the CI of EU power generation (9% more GHG emissions per kWh in 2022 than in 2021), although it is still 24% lower than the previous decade. European Union commits to reducing net GHG emissions by 55% by 2030 (compared with those of 1990) and reaching carbon neutrality by 2050. According to the Fit-for-55 package and the overall EU Green Deal targets [27, 28], the CI of the EU electric grid is reported to be 265 gCO2e/kWh in 2020, 110–118 gCO2e/kWh in 2030, 22–30 gCO2e/kWh in 2040, and 0 gCO2e/kWh in 2050. Note that the 2040 values have been interpolated considering the 2020, 2030, and 2050 points.
+
+The United States aims to reduce emissions from the electric grid [29, 30]. Looking back at the historical evolution of the U.S. electric grid, it has significantly shifted over time transitioning from being predominantly coal-driven in the 1990 s (>50%) to less-carbon intensive sources, such as natural gas (43%), nuclear (18%), wind (10%), and solar (4%) in 2023 [31]. The U.S. Department of Energy (DOE) expects that the large-scale deployment of new power generation, transmission, distribution, and storage technologies will not only advance emission reduction goals but also have impacts on communities, jobs, supply chains, and ecosystems [30]. Such efforts are being undertaken across various levels, including state, local, and even individual facility levels.
+
+Many countries are committed to achieve net-zero economy, and electricity is a major piece. Countries with net-zero electric grid goals include but not limited to Canada by 2050 [32], China by 2060 [33]. Some countries, such as India (50% by 2030) and Australia (50% by 2030), set to include high share of non-fossil-based electricity generation.
+
+Hydrogen is today widely used in various sectors, including the energy sector, which is a crucial molecule for future economy. Depending on the role of hydrogen in the specific process, its energetic contribution may be relevant, as well as its impact on the carbon footprint of the final product. Being an energy carrier, the carbon footprint of hydrogen is defined by its production route, and hydrogen CIs vary depending on feedstocks for its production. Currently, more than 80% of global hydrogen is produced with fossil sources, such as natural gas and coal [34, 35]. According to IEA, the production based on unabated fossil fuels can result in GHG emissions of 27 kg CO2e/kg H2, with a global average hydrogen CI of about 12–13 kg CO2e/kg H2 in 2021 [36]. Argonne National Laboratory’s R&D GREET model reports the hydrogen CI values ranging from negative value of −21 kg CO2e/kg H2 for biomass gasification with CCS to 25 kg CO2e/kg H2 for electrolysis using current U.S. grid electricity [37].
+
+A shift in the production pathway and source can significantly reduce the emissions associated with hydrogen production. The electrolysis-based production pathway is widely recognized as a key technology in most future hydrogen development scenarios [36]. In these pathways, the CI of hydrogen is largely determined by the emissions from electricity generation and its consumption in the electrolysis process.
+
+From an LCA point of view, diversion of renewable electricity from existing uses toward hydrogen and electro-fuel production would require specific provisions to ensure renewable hydrogen production does not divert renewable electricity that is already used by other sectors. This is, for example, the case of the European Delegated Act (DA) 2023/1184, which sets the rules for the production of renewable liquid and gaseous transport fuels of non-biological origin [38]. The DA introduces the principle of “additionality” for hydrogen: electrolyzers that produce hydrogen must be connected to new renewable electricity production [38]. This principle ensures that renewable hydrogen generation incentivizes an increase in the volume of renewable energy available to the grid while avoiding pressure on the power generation system.
+
+Besides the electrolyzer-based technologies, many researchers are investigating the potential of alternative sources [37], such as biomass [39] and by-product hydrogen [40]. In addition, some studies present benefits of producing hydrogen with CO2 capture and storage, which can result in negative GHG emissions [36, 37].
+
+Many countries are committed to increasing the production capacity of renewable hydrogen, which can help reduce emissions from the hydrogen sector. For example, the U.S. DOE announced the clean hydrogen strategy and roadmap, which outlines a strategy for scaling up clean hydrogen production, reducing costs, and integrating hydrogen into the energy system [41]. The EU targets to reach annual renewable hydrogen production of 10 million tons by 2030 [38]. Through mitigation activities, the IEA Net Zero by 2050 Scenario reports the CI to be 6 7 kg CO2e/kg H2 by 2030 and below 1 kg CO2e/kg H2 by 2050, which is much lower than the current hydrogen CI of 12–13 kg CO2e/kg H2 [36].
+
+Emission reduction goals, while ambitious and necessary, may not always be fully achieved due to technical, economic, and political challenges [42]. Significant gaps often arise between stated goals and real-world conditions, such as slower-than-anticipated technology deployment, resistance from vested interests, or insufficient infrastructure investments [43]. However, even if full sustainability goals are not realized within the planned timelines, advancements in renewable energy technologies and increased investment in clean energy infrastructure can still lead to substantial emissions reductions in the electricity and hydrogen sectors. The projected trends in electricity and hydrogen carbon intensities used in this study are quantified and illustrated in Sect. 3.3.
+
+Materials and methods
+
+Pathway selection and system boundary
+
+ASTM International approval is required for SAF use in civil aviation for blending with conventional jet fuel, which aims to ensure safety, performance, and environmental standards. The approval is based on fuel production technologies (or conversion technologies). Currently, there are 11 ASTM-approved conversion technologies, with more under review [44]. Depending on the conversion technologies, types of applicable or preferred feedstocks are determined. In addition, maximum blending ratios are set for each conversion technology to ensure compatibility of the blended mix with the existing fuel infrastructure and jet engines.
+
+The types of feedstocks for SAF production are mainly biomass and waste streams, which consist of crops, residues, and waste feedstocks. Crop-based feedstocks, such as corn and soybean, are widely used as they offer several benefits: these crops are widely cultivated and provide high yields, which makes them a reliable and scalable source. In addition, existing agricultural and biofuel infrastructure could be leveraged (e.g., ethanol production using corn grain and soybean oil production through oil extraction), which can help reduce the need for new investment.
+
+On the other hand, residues or waste feedstocks, such as agricultural residues, forestry residues, animal fat (tallow), and used cooking oil, can offer different types of benefits: using these feedstocks usually results in lower life-cycle GHG emissions by avoiding emissions associated with feedstock production other than relatively minor impacts during feedstock collection. In addition, these waste feedstocks are often low-cost compared to other types of biomass feedstocks. These feedstocks, however, are geographically dispersed resources, which restrict scaling up for SAF production, since the feedstock availability is inherently constrained by the production of the main products.
+
+Among the ASTM approved SAF production pathways, the HEFA process is the most mature technology (technology readiness level [TRL] of 8–9) [45]. Multiple SAF projections estimate that HEFA is going to be dominant by 2030. SkyNRG projected that SAF produced via HEFA will be around 87% in 2030 [46]; and US DOE’s estimated SAF production in 2030 to be 66% from HEFA [45]. We, therefore, chose HEFA as our first conversion technology of interest in this study. With regard to alternative technologies, the alcohol-to-jet via ethanol (ATJ-ethanol) with TRL of 8 [45] is most advanced in the short-to-medium term, considering the existing ethanol production capacity and infrastructure. We, therefore, chose ATJ-ethanol as the second conversion pathway of interest.
+
+With regard to feedstocks, we chose corn grain for the ATJ pathway and tallow for the HEFA pathway. Corn grain is the most abundant biomass feedstock for biofuel production both in the United States and globally [47]. Ethanol from corn grain fermentation can be upgraded to SAF through dehydration, oligomerization, and hydrogenation. Tallow is widely used animal fat, a byproduct of beef production, representing a feedstock that does not involve upstream emission burdens.
+
+The system boundary covers GHG emissions along the supply chains of the SAF production pathways, including feedstock production, feedstock transportation, conversion to fuels, fuel transportation, and fuel combustion. Figure 1 presents the major life-cycle stages of the two selected SAF pathways with key inputs and outputs. For the corn ATJ–ethanol pathway, corn production requires fertilizer and energy inputs; corn is then used for ethanol production with inputs, such as chemicals, enzyme, and energy. The ethanol upgrading process mainly uses natural gas, hydrogen, and electricity. Then, produced SAF is transported and used.
+
+For the tallow HEFA pathway, the process begins with rendering animal fat to produce tallow using primarily natural gas and electricity as inputs. Since animal fat is considered a byproduct of meat production, it does not involve any upstream emissions such as feed for animal production and energy use for meat processing; these are all allocated to the main product, meat. Then, tallow goes through the HEFA process to produce SAF, which requires natural gas, hydrogen, and electricity. Once SAF is produced, it is transported and, finally burned in an aircraft engine.
+
+All emissions from the life-cycle stages and upstream emissions of all the inputs are accounted for. However, this study does not take into account the induced land use change (ILUC) impacts as the focus of the analysis is on measurable changes in SAF CIs. ILUC refers to GHG emissions resulting from shifts in land use to meet the feedstock demand for SAF production. Unlike those emissions covered in Fig. 1 (attributional LCA), estimating ILUC (consequential LCA) requires separate economic modeling to simulate potential market responses to SAF production [4, 9]. The market responses influence changes in land use in different regions, which can then be used to quantify resulted emissions based on the differences in carbon stock by different land types.
+
+This study applies a consistent fuel-cycle system boundary across all pathways and the petroleum jet reference. Accordingly, we include upstream energy supply-chain emissions but exclude infrastructure (embodied) emissions associated with construction and manufacturing of capital equipment (e.g., refineries, power plants, solar PV, wind turbines, and electrolyzers).
+
+Life-cycle GHG emission modelling
+
+To evaluate the life-cycle GHG emissions of SAF production pathways, we used Argonne National Laboratory’s research and development version (R&D) of Greenhouse gases, Regulated Emissions, and Energy use in Technologies (R&D GREET® 2023 Rev1) model [48]. The R&D GREET model is a comprehensive LCA tool used to evaluate the environmental impacts of various energy systems, including SAF, which was also used to determine the CI values of the SAF pathways for ICAO’s Carbon Offsetting and Reduction Scheme for International Aviation (CORSIA) program. The model includes detailed datasets for the SAF production life-cycle stages and the life cycle of the input energy and materials, which enables through assessment of GHG emissions across the entire value chain. The default R&D GREET parameters and options have been used to generate the LCA results, which represent typical U.S. conditions, with one except for co-product handling. When multiple co-products exist, emission burdens are allocated based on the energy content (i.e., energy allocation) at a process level. We do this to maintain consistency with the CORSIA method for life-cycle GHG emission calculations of SAF [9, 49].
+
+Using R&D GREET, this work first quantifies the regional variations in SAF CIs led by changes in the electricity grid in the various countries considered. SAF production in the U.S. based on 2022 conditions serves as the baseline for this study. In addition, electricity generation in 16 different world regions and countries are modeled using GREET+ [50], a global version of GREET, which includes regional data for major energy products developed in collaboration with IEA. Besides the U.S., these comprise Canada, Mexico, Brazil, Central/South America A (including Colombia and Chile) and B (including Peru, Bolivia, and Argentina), EU, China, India, Japan, Korea, Southeast Asia/Oceania, Middle East and North Africa (MENA), Central/South Africa, United Kingdom, and Norway. Table S1 in Supporting Material provides the electricity CI values in the 16 different regions and countries, which present significant regional variations.
+
+These countries and regions capture the vast majority of the projected SAF production by 2030 according to the ICAO SAF fuel production announcements [7]. The electricity grid mixes for these countries in 2022 are implemented in the R&D GREET model, and the impacts of regional electricity CIs contributing to the SAF CIs are then evaluated.
+
+Modelling of electricity and hydrogen-related emissions over time
+
+We quantify the expected SAF CI changes over time through changes in the electricity and hydrogen sectors. Due to the mitigation activities, the CIs of electricity and hydrogen are expected to decrease over time. The projected U.S. electricity CI values are based on the Annual Energy Outlook 2023 by the Energy Information Administration (EIA) [51]. The U.S. electricity grid mix CI of 122 gCO2e/MJ in 2022 is expected to decrease to 63 gCO2e/MJ in 2030 (48% reduction), which is further reduced to 47 gCO2e/MJ in 2050 (61% reduction) as presented in Fig. 2. The changes are driven by increased renewable electricity, such as solar and wind, with reductions in power plants relying on fossil fuels. The shaded area in Fig. 2 presents the regional variations in electricity CIs.
+
+This EIA projection for the U.S. is different from the electricity emission goal by the U.S. government [29, 30]. If the electricity sector follows this ambitious goal, electricity CI will become zero in 2035, which is much lower than EIA’s projection of 55.9 gCO2e/MJ. To capture these two different views, we use two separate scenarios, one following the EIA projection and a second one following the emission reduction goal. Beyond the projected data points within each scenario, we linearly interpolate and extrapolate electricity CI over time assuming a constant absolute annual change in CI between the nearest anchor years.
+
+Current hydrogen production is dominated by natural gas steam methane reforming (SMR) with a CI of 78 gCO2e/MJ [49]. Although the U.S. has released the clean hydrogen roadmap out to the year 2050 to explain the plans for scaling up, cost reduction, and its applications, the roadmap does not specify the projected share of hydrogen production technologies over time. To address this gap, an illustrative scenario (i.e., not a prediction) to represent a plausible transition in hydrogen supply given the lack of a single, widely accepted U.S.-specific projection suitable for direct implementation in this analysis. We assumed that natural gas auto thermal reforming (ATR) [52] with CCS is going to be prevalent for the near term (2030–2035), because it can offer cost advantages, particularly when combined with CCS. ATR integrates both partial oxidation and steam reforming, which allows high thermal efficiency while producing a more concentrated CO2 stream. Then, we assumed that renewable hydrogen (e.g., solar electricity-powered proton exchange membrane [PEM] electrolyzers) will take over for 2035–2050 due to advancements in renewable energy technologies, cost reduction, and expected market-driven demand, consistent with long-term decarbonization roadmaps. Consequently, the CIs of hydrogen in 2035 and 2050 are set to be 28 and 0 gCO2e/MJ [49], respectively, representing the CIs of hydrogen from ATR with CCS and renewable hydrogen. The values for the intervening years were determined through interpolation.
+
+Note that hydrogen itself has indirect global warming effect by enhancing methane warming effects in the air. Sand et al. [53] concluded that hydrogen indirect global warming potential (GWP) could be 11.6±2.8 with the 100-year time horizon. However, due to limited data on hydrogen leakage across the supply chain and uncertainty in key atmospheric chemistry parameters (e.g., soil uptake), this study excludes hydrogen’s GWP from its analysis.
+
+Modelling of additional mitigation measures
+
+We also evaluated the impacts of mitigation measures for SAF production at a facility level, which includes the use of renewable energy (renewable hydrogen, renewable electricity, and waste heat) and CCS.
+
+Renewable electricity sources such as wind and solar are modeled with zero CI in this study within the fuel-cycle system boundary, which excludes infrastructure/embodied emissions (e.g., material production and manufacturing of solar PV and wind turbines). This is consistent with the boundary applied across all pathways (see Discussion).. Grid electricity that includes various fossil sources such as coal and natural gas incurs significant GHG emissions (122 gCO2e/MJ electricity) [48] due to feedstock production, transportation, and combustion, even though electricity use itself does not directly produce emissions. In contrast, solar photovoltaic (PV) and wind turbines generate electricity without producing GHG emissions (0 gCO2e/MJ electricity) [48], which makes the switch to renewable electricity reduce the CI of SAF production.
+
+Similarly, renewable hydrogen produced via onsite water electrolysis using renewable electricity is modeled with zero CI within the consistent fuel-cycle system boundary. This assumption excludes infrastructure/embodied emissions associated with renewable electricity and electrolyzer manufacturing as well as hydrogen logistics, which can contribute non-zero emissions [48, 54–56]. Thus, replacing fossil natural gas-derived hydrogen (78 gCO2e/MJ) with renewable hydrogen can eliminate the GHG emissions associated with the hydrogen input in the SAF production pathway.
+
+Multiple mitigation measures such as waste heat, renewable natural gas, or electrification could be implemented to meet heat demand with lower emissions. In this analysis, we evaluated the impact of using waste heat with net-zero GHG emissions (0 gCO2e/MJ), which displaces fossil natural gas (68 gCO2e/MJ). In GREET, this case is implemented by setting the process-heat CI to zero for the substituted heat input, without changing product yields. Waste heat offers a valuable opportunity to reduce life-cycle GHG emissions and economic viability through integration. For example, ethanol production primarily requires low-to-medium-temperature process heat, typically supplied as steam for distillation and evaporation, which can be compatible with waste-heat integration, where suitable sources are available. On the other hand, electrification will be dependent on the CI of the input electricity. The CIs of renewable natural gas may become negative values if so-called “avoided emissions credits” are taken into account [57], although which may or may not be considered depending on the selected LCA system boundaries.
+
+For the corn grain ATJ–ethanol pathway, high-purity CO2 captured from ethanol production could be stored underground (CCS), which provides substantial emission reduction benefits. We assume that 0.75 kgCO2/liter ethanol can be captured with an electricity need of 200 kWh/t CO2 [58]. This yields a net emission benefit of 32 gCO2e/MJ ethanol,assuming CCS electricity is supplied by the baseline grid mix, of which 63% is attributed to ethanol used for SAF production (i.e., energy allocation), and 37% to distillers grains and solubles (DGS) as co-product of the pathway, based on the relative energy content of DGS and ethanol. The allocation of the CCS benefits to both ethanol and DGS is consistent with the approach taken for the allocation of emission burdens in the CORSIA LCA method, that are allocated among co-products according to the relative energy content [9].
+
+It should be noted that although EU additionality requirements link electrolysers to newly built renewable generation, the modeling framework applied in this study uses projected grid-average electricity carbon intensities to estimate hydrogen CI over time. Therefore, the hydrogen CI trajectories presented here reflect system-wide electricity decarbonization rather than a strictly additionality-compliant supply configuration. This assumption captures average power sector evolution but does not explicitly model dedicated renewable capacity coupled to electrolysis.
+
+We additionally note that alternative co-product allocation approaches (e.g., mass or market allocation) would result in different distributions of emissions between co-products and could, therefore, alter the calculated CI values.
+
+Results
+
+Figure 3 illustrates the CI variations for tallow HEFA and corn ATJ–ethanol production as a function of the electric grid CI in different countries. The baseline selected for comparison is the U.S. electricity grid mix, which results in CI values of 22.5 and 52.9 gCO2e/MJ for tallow HEFA and corn ATJ–ethanol, respectively. The baseline corn grain ATJ–ethanol CI consists of farming, ethanol production, and ethanol upgrading process emissions of 17.3, 16.4, and 16.9 gCO2e/MJ, respectively. The baseline CI of 22.5 gCO2e/MJ has 11.7 and 10.1 gCO2e/MJ for the rendering and HEFA process, respectively.
+
+Due to differences in grid mixes, the life-cycle GHG emissions for the tallow HEFA pathway range from 17.3 gCO2e/MJ in Norway to 28.7 gCO2e/MJ in India. Similarly, for the corn ATJ–ethanol pathway, life-cycle GHG emissions vary between 43.8 gCO2e/MJ in Norway and 63.6 gCO2e/MJ in India. For tallow HEFA, the potential CI variation relative to the baseline ranges from −5.2 gCO2e/MJ (Norway) to +6.2 gCO2e/MJ (India), representing a GHG change of −23% to +28% compared to the U.S. baseline. For corn ATJ–ethanol, the CI variation ranges from −9.0 gCO2e/MJ (Norway) to +10.7 gCO2e/MJ (India). These extremes reflect the differences in electricity grid composition. Norway, with its hydroelectricity accounting for approximately 88% of its grid mix, has the lowest electricity CI (6.3 gCO2e/kWh) [59]. In contrast, India’s grid relies heavily on high-carbon sources, such as coal and natural gas, which constitute 75% of its mix resulting in a grid electricity CI of 1000 gCO2e/kWh [60].
+
+Due to expected efforts in the electricity and hydrogen sectors, the CIs of the SAF pathways decrease over time (Fig. 4). The CIs for corn ATJ–ethanol and tallow HEFA are 52.9 and 22.5 gCO2e/MJ, respectively, in 2022. Led by emission reductions in electricity and hydrogen supply chains, the SAF CIs become 46.6 and 16.9 gCO2e/MJ in 2030, reducing the 2022 CI values by 6.3 and 5.6 gCO2e/MJ. In 2050, the expected SAF CI values are 43.3 and 11.5 gCO2e/MJ. The corn ATJ–ethanol and tallow HEFA pathways have 9.6 and 11.0 gCO2e/MJ lower emissions in 2050 than their 2022 CIs −18% and −49%, respectively. If the emission reduction scenario of the electricity sector is materialized, there will be additional emission reduction as presented long dashed lines in Fig. 4. In 2035, the SAF CI values become 40.4 and 12.2 gCO2e/MJ for corn ATJ–ethanol and tallow HEFA, respectively, which are 24% (12.5 gCO2e/MJ) and 46% (10.3 gCO2e/MJ) lower than the CIs in 2022.
+
+The prospective results shown in Fig. 4 are based on U.S. baseline conditions; however, the direction of change under alternative regional grid trajectories can be anticipated. In particular, a lower-carbon electricity pathway consistent with EU Green Deal targets would be expected to reduce the electricity-related portion of SAF CI relative to the U.S. trajectory, leading to lower overall SAF CI outcomes. However, a fully consistent comparison would require a dedicated regionalized supply-chain parameterization, which is beyond the scope of this study.
+
+It should be noted that the trajectories displayed in Fig. 4 are based on U.S.-related projections for electricity and hydrogen carbon intensity. In contrast, Fig. 3 shows the variation in CI across global locations under current conditions. Therefore, other regions may experience different CI trajectories depending on the pace of grid decarbonization and hydrogen production pathways. In particular, a lower-carbon electricity pathway consistent with EU Green Deal targets would be expected to reduce the electricity-related portion of SAF CI relative to the U.S. trajectory, leading to lower overall SAF CI outcomes. However, a fully consistent comparison would require a dedicated regionalized supply-chain parameterization, which is beyond the scope of this study.
+
+If mitigation measures are proactively applied to the life-cycle stages of the SAF production pathways, additional emission reduction benefits are achieved. Figure 5 presents potential CI reductions through various mitigation measures at the fuel production stage. The baseline corn grain ATJ–ethanol pathway has a CI of 52.9 gCO2e/MJ, which consists of the farming, ethanol production, and ethanol upgrading process contributions of 17.3, 16.4, and 16.9 gCO2e/MJ, respectively. Switching the current energy inputs to renewable hydrogen, renewable electricity, and waste heat during the ethanol upgrading process could reduce 3.1, 6.1, and 6.9 gCO2e/MJ, respectively. Furthermore, the corn grain fermentation process could also be additionally reduced using renewable electricity and waste heat, which provides additional emission reduction of 2.2 and 13.0 gCO2e/MJ, respectively. If fermentation CO2 is captured and sequestered, an emission credit of 20.1 gCO2e/MJ can be applied. Considering all these strategies, the CI value becomes near zero, 1.5 gCO2e/MJ. This aspect is crucial for emission reductions, where offsetting may be limited.
+
+Similarly, the tallow HEFA pathway can achieve substantial emission reduction by reducing emissions from the supply chains of the inputs to the HEFA and rendering processes. The baseline CI of 22.5 gCO2e/MJ has 52% and 45% emission contributions for the rendering and HEFA process, respectively. Using renewable hydrogen, renewable electricity, and waste heat during the HEFA process, the CI of tallow HEFA is reduced by 7.8, 1.1, and 1.2 gCO2e/MJ, respectively. Switching the US electricity mix to renewable and fossil natural gas to waste heat for the rendering process would bring additional 4.0 and 7.7 gCO2e/MJ emission reductions, respectively. When the impact from all mitigation measures is considered, the tallow HEFA CI becomes 0.8 gCO2e/MJ.
+
+Discussion
+
+The findings of this study highlight that the CI of SAF pathways can be further affected by considering the prospective elements, which can further reduce emissions from those considered in typical LCAs conducted based on time-invariant conditions. For example, ICAO’s LTAG outlines three aviation fuel composition scenarios (F1, F2, and F3) under different assumptions and their corresponding GHG emissions reductions [5]. In the mid-range scenario (F2), which assumes a complete transition to alternative fuels by 2050, the CI of bio-based SAF pathways is expected to decrease from the SAF baseline of 32.2 gCO2e/MJ in 2020 to 26.6 gCO2e/MJ in 2050, representing an 18% reduction. Under this scenario, the overall CI value of the fuel mix of the international aviation sector would decline by 56% by 2050 compared to the petroleum jet fuel baseline of 89 gCO2e/MJ. The reason that the CI of SAF pathways decrease over time is because of the changes in the portfolio (i.e., the shares of the combinations of feedstocks and conversion technologies) used for SAF production. The LTAG analysis assumed a fixed CI value for each SAF production pathway.
+
+In this study, however, we present that emission reductions could be significantly greater, reaching 26% and 58% for the corn ATJ and tallow HEFA, respectively, by 2050 led by the electricity and hydrogen inputs with lower emissions even without additional mitigation measures, such as waste heat utilization or CCS. If the SAF mix used for the LTAG analysis were to achieve the average reduction estimated in this study (42%), the CI of SAF mix could be reduced to 18.7 gCO2e/MJ from the 2020 baseline of 32.2 gCO2e/MJ in the LTAG scenario while maintaining the same fuel mix of 2020 as in LTAG. This represents a 60% reduction in the overall LCA fuel mix CI value in 2050 relative to the conventional jet fuel benchmark of 89 gCO2e/MJ. Furthermore, if both impacts, the changes in the SAF portfolio (LTAG assumption) and energy inputs with lower emissions are considered (this analysis), estimated CI in 2050 becomes 15.4 gCO2e/MJ resulting in overall emission reduction of 63% compared to the 89 gCO2e/MJ baseline. This is an additional 11.2 gCO2e/MJ reduction compared to the SAF CI without considering the energy inputs with lower emissions. This indicates the importance of the prospective elements in LCAs especially in the filed of substantial changes over time.
+
+This analysis does not model technological improvements in yields, reduced energy/material inputs, and improved heat integration. Such process efficiency improvements could provide additional CI reductions beyond those driven by electricity and hydrogen.
+
+Finally, it is important to note the varying levels of uncertainty associated with the parameters employed in this work. The CI values for the baseline are derived from historical data and are, therefore, characterized by relatively low uncertainty. In contrast, the projected 2030 electricity CI values are based on policy targets and modeled decarbonization pathways and they remain subject to policy implementation risks and can be characterized by medium uncertainty. The 2050 hydrogen CI assumptions are associated with relatively high uncertainty, as large-scale green hydrogen deployment and supporting infrastructure are still in early development stages, and their future deployment will likely depends on various factors, such as technological progress, cost reductions, and policy support.
+
+It has to be noted that although ILUC is excluded from this analysis, it is important context for crop-based pathways. ILUC estimates for corn-based fuels are highly model-dependent; for corn ATJ, CORSIA default ILUC values range 17–30 gCO2e/MJ depending on region/evaluation context [61]. In this study, ILUC would shift the absolute CI level rather than affect the trend driven by evolving electricity and hydrogen CIs.
+
+Although we included the missing time-dependent parameters, note that this work does not account for the impact of technological advancements over time, such as enhanced fuel yields and reductions in energy/material inputs. In addition, there could be potentially other emission reduction technologies associated with the farming stage, which are excluded in this study to maintain consistency with the current scope and focus of the analysis. Reductions in fertilizer inputs or farming energy use could significantly reduce the GHG emission contribution to SAF CIs. Additional innovative farming practices or potential inclusion of the impact of soil organic carbon (SOC) changes could also provide further emission reduction, which warrants future investigation. In addition, note that this analysis adopts an operational fuel-cycle system boundary that excludes capital infrastructure emissions for all energy supply options. Specifically, emissions associated with the construction and manufacturing of power plants (fossil or renewable), solar PV modules, wind turbines, electrolyzers, hydrogen production facilities, and CCS infrastructure are not included. Renewable electricity and renewable hydrogen are, therefore, treated consistently within this operational boundary framework, with zero emissions assigned at the point of generation when no fuel combustion occurs. However, it is important to note that at high penetration levels of renewable electricity and hydrogen, infrastructure-related emissions can become non-negligible when assessed under a full cradle-to-grave power system LCA framework [54]. These embodied emissions are relevant in scenarios that involve a rapid scale-up of solar PV, wind turbines, and electrolyzers to meet large hydrogen and electricity demands. Accounting for such infrastructure effects would increase the lifecycle CI of renewable energy sources relative to the operational values employed in this work.
+
+Furthermore, if both impacts, the changes in the SAF portfolio (LTAG assumption)and energy inputs with lower emissions are considered (this analysis), estimated CI in 2050 becomes 15.4 gCO2e/MJ resulting in overall emission reduction of 63% compared to the 89 gCO2e/MJ baseline. This is an additional 11.2 gCO2e/MJ reduction compared to the SAF CI without considering the energy inputs with lower emissions. This indicates the importance of the prospective elements in LCAs especially in the filed of substantial changes over time.
+
+Although this study focuses on commercially advanced SAF pathways (HEFA and ATJ), the implications of the prospective LCA framework are particularly relevant for power-to-liquid (PtL) SAF pathways. PtL fuels rely almost entirely on electricity-derived hydrogen and CO2 conversion processes, resulting in substantially higher electricity and hydrogen demand per unit fuel compared to HEFA or ATJ pathways. Consequently, the life-cycle GHG emissions of PtL SAF are expected to be even more sensitive to the carbon intensity of electricity and hydrogen supply chains. The results presented in this study, therefore, represent a lower-bound estimate of the potential impact of electricity and hydrogen decarbonization on SAF pathways. Applying the same prospective approach to PtL systems would likely yield significantly larger temporal variations in carbon intensity, reinforcing the importance of dynamic, time-dependent LCA frameworks for accurately assessing future SAF mitigation potential.
+
+The prospective scenarios evaluated in this study represent technical mitigation potential under assumed trajectories of electricity and hydrogen decarbonization. However, the availability of low-carbon electricity and hydrogen is subject to strong cross-sector competition. In addition to aviation fuels, renewable electricity and low-emission hydrogen are expected to play a central role in the decarbonization of steel, ammonia, chemicals, refining, and carbon capture and utilization or storage (CCUS).
+
+In addition, this study uses the industry average CI values for electricity and hydrogen production over time, without considering the impact of additionality requirements for renewable electricity. In practice, to ensure that increased SAF production is supplied with additional renewable energy, rather than diverting existing renewable electricity, could influence the overall GHG emissions. As other sectors such as transportation and industry also increase electrification, competition for renewable electricity will intensify. Future work should incorporate additionality constraints to assess the broader implications of electricity demand dynamics across sectors.
+
+The estimated emission reductions should be interpreted as conditional on the successful and timely scaling of clean electricity and hydrogen systems, rather than as guaranteed outcomes.
+
+Finally, the near-zero CI values achievable (Fig. 5) represent technical mitigation potential under the combined implementation of multiple measures (renewable electricity and hydrogen, waste-heat integration, and CCS). While process-level improvements, such as waste heat integration can be cost-effective due to energy savings, CCS and renewable hydrogen deployment can be significantly capital-intensive. Thus, achieving these values would require substantial capital investment, possibly higher operating costs, and policy support in addition to the large-scale availability of low-carbon electricity and renewable hydrogen to facilitate deployment.
+
+It is worth highlighting that under CORSIA, the carbon intensity (CI) of SAF can be accounted for either through ICAO default values or through project-specific actual values. Default values are not fixed and may be updated when new evidence is submitted to and assessed by the relevant CAEP technical group (i.e., WG5), meaning that the need for periodic revision is already embedded in the governance framework. Similarly, time-related improvements in CI can already be reflected immediately through actual values, allowing operators to benefit from technological and supply-chain improvements without waiting for default values updates. Lower SAF CI directly reduces airlines’ offsetting requirements under CORSIA, thereby strengthening the economic incentive for SAF uptake and creating competitive differentiation in the market. Consequently, declining CI values are likely to accelerate SAF deployment, while regular updates of default values remain important to ensure alignment between regulatory benchmarks and technological progress.
+
+Finally, the mitigation measures evaluated here are expected to have substantial cost implications for SAF production. These measures may require additional capital equipment and/or higher operating costs, and the magnitude of these impacts is site- and time-dependent, which is outside the scope of this study.
+
+Conclusions
+
+This study quantifies the potential for reducing GHG emissions in aviation through two representative SAF production pathways, tallow HEFA and corn ATJ–ethanol,under assumed trajectories of declining carbon intensities for electricity and hydrogen production over time. Low-emission scenarios for the aviation sector are typically based on fixed GHG savings for specific alternative fuel production pathways, with variations primarily occurring in fuel production volumes. On the other hand, using a prospective LCA approach, the study evaluates how the adoption of low-carbon technologies in the electricity and hydrogen sectors could improve the future environmental sustainability of SAF production. In addition, as the economic value of GHG reductions continues to grow, improving the emissions efficiency of feedstock-to-fuel conversion processes is expected to drive industries toward adopting renewable hydrogen, renewable electricity, and other carbon mitigation strategies.
+
+The findings highlight the significant impact of replacing conventional inputs, such as natural gas for hydrogen production and conventional electricity grids, with lower-carbon alternatives on the overall SAF CI values. For example, the CI variation of the tallow HEFA pathway due to different regional electricity grid mixes ranges from −23% to +28% compared to the baseline. In addition, when accounting for future grid and hydrogen productions, both the corn ATJ–ethanol and tallow HEFA pathways showed significant GHG emission reductions, reaching −18% and −49% by 2050, respectively. The magnitude of these reductions is thus dependent upon the scale and pace of clean electricity and low-emission hydrogen deployment and slower expansions of these technologies would proportionally limit the SAF CI reductions. Further emissions benefits could be realized if electricity emission reduction scenario is materialized.
+
+Beyond the substantial contributions of low-emission electricity grids and renewable hydrogen production, additional emission reduction benefits can be achieved by implementing mitigation measures along the various stages of the SAF production pathways. For the corn ATJ pathway, integrating renewable hydrogen, renewable electricity and waste heat could lead to emission reductions of up to 30%. Further reductions of 29% could be achieved by also applying renewable electricity and waste heat during the ethanol upgrading step, with potential emissions minimized to as low as 1.5 gCO2e/MJ through CCS. Similarly, for the tallow HEFA pathway, utilizing renewable hydrogen, renewable electricity, and waste heat during the HEFA conversion step can reduce emissions by 45%, while renewable electricity and waste heat use during the tallow rendering could minimize the carbon intensity to 0.8 gCO2e/MJ.
+
+The findings of this study highlight the importance of a prospective approach, where continuous advancements in electricity and hydrogen along with adoptions of mitigation practices, drive further improvements in sustainability. Future research should focus on refining the prospective LCA methodology to assess the combined benefits of advanced SAF production technologies, and broader mitigation strategies. SAF already offers significant GHG emission reductions, but integrating renewable energy and optimized fuel conversion processes can further enhance its impact, accelerating the aviation sector’s transition toward emission reduction.
+
+In addition, future work should extend this prospective LCA framework to PtL pathways, where the dominance of electricity and hydrogen inputs is expected to amplify the effects observed in this study.
+
+Additional file
+
+Acknowledgements
+
+The research effort at Argonne National Laboratory work was supported by the U.S. Federal Aviation Administration (FAA). We would like to thank Anna Oldani and Prem Lobo of FAA for their support. The views and opinions expressed in this publication are solely those of the authors and do not state or reflect those of the U.S. government or any agency thereof. Neither the U.S. government nor any agency thereof, nor any of their employees, makes any warranty, expressed or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. The research at Politecnico di Torino was supported by the European Aviation Safety Agency. We would like to thank, in particular, Daniel Brousse-Rivas for his contribution to the work of the Fuels Task Group. AM and RM acknowledge funding for part of this research by the U.S. Federal Aviation Administration through ASCENT, the FAA Center of Excellence for Alternative Jet Fuels and the Environment, project 01 through FAA Award Number 13C-AJFE-MIT under the supervision of Prem Lobo. Any opinions, findings, conclusions or recommendations expressed in this paper are those of the authors and do not necessarily reflect the views of the FAA.
+
+Abbreviations
+
+ATJ
+
+Alcohol-to-Jet
+
+CCS
+
+Carbon capture and storage
+
+CI
+
+Carbon intensity
+
+CO2e
+
+Carbon dioxide equivalent
+
+CORSIA
+
+Carbon Offsetting and Reduction Scheme for International Aviation
+
+DENERG
+
+Department of Energy (Politecnico di Torino)
+
+DGS
+
+Distillers grains and solubles
+
+FAA
+
+Federal Aviation Administration
+
+GHG
+
+Greenhouse gas
+
+GREET
+
+Greenhouse gases, regulated emissions, and energy use in technologies model
+
+HEFA
+
+Hydroprocessed esters and fatty acids
+
+IEA
+
+International Energy Agency
+
+ILUC
+
+Induced land use change
+
+IPCC
+
+Intergovernmental Panel on Climate Change
+
+LCAF
+
+Lower Carbon Aviation Fuel
+
+LCA
+
+Life-Cycle Assessment
+
+LTAG
+
+Long-Term Aspirational Goal
+
+MJ
+
+Megajoule
+
+MENA
+
+Middle East and North Africa
+
+PEM
+
+Proton exchange membrane (electrolyzer)
+
+PV
+
+Photovoltaic
+
+R&D
+
+Research & Development
+
+SAF
+
+Sustainable aviation fuel
+
+SMR
+
+Steam methane reforming
+
+TRL
+
+Technology readiness level
+
+Author contributions
+
+U.L. and A.M. performed the quantitative analysis. M.P. contributed to the formal analysis and the discussion section. R.M. and M.W. revised the whole paper. All authors reviewed the manuscript
+
+Funding
+
+This work has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N. 01036996 (TULIPS). .
+
+Data availability
+
+The authors declare that all data supporting the findings of this study are available within the paper and its Annexes.
+
+Declarations
+
+Competing interests
+
+The authors declare no competing interests.
+
+Footnotes
+
+Publisher's Note
+
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+Supplementary Information
+
+The online version contains supplementary material available at 10.1186/s13068-026-02763-5.
+
+References
+
+1.Air Transport Action Group: Aviation: Benefits Beyond Borders 2024. https://aviationbenefits.org/downloads/aviation-benefits-beyond-borders-2024/.
+
+2.International Air Transport Association (IATA): Net Zero CO2 Emissions Roadmap 2024. https://www.iata.org/en/programs/sustainability/roadmaps/.
+
+3.Malina R, Abate M, Schlumberger C, Pineda FN. The role of sustainable aviation fuels in decarbonizing air transport. World Bank Washington DC; 2022. 10.1596/38264. [Google Scholar]
+
+4.Prussi M, Lee U, Wang M, Malina R, Valin H, Taheripour F, et al. Corsia: the first internationally adopted approach to calculate life-cycle GHG emissions for aviation fuels. Renew Sustain Energy Rev. 2021;150:111398. [Google Scholar]
+
+5.International Civil Aviation Organization (ICAO): Long term global aspirational goal (LTAG) for international aviation 2024. https://www.icao.int/environmental-protection/Pages/LTAG.aspx.
+
+6.International Civil Aviation Organization (ICAO): report on the feasibility of a Long-Term Aspirational Goal (LTAG) for International Civil Aviation CO2 Emission Reductions: Appendix M5 Fuels Sub Group Report 2022. https://www.icao.int/environmental-protection/LTAG/Documents/ICAO_LTAG_Report_AppendixM5.pdf.
+
+7.International Civil Aviation Organization (ICAO): Sustainable Aviation Fuel (SAF) 2024. http://lookerstudio.google.com/reporting/0e8f623d-fcf9-4380-9141-519b75a2634e/page/Mx5TC.
+
+8.Chiaramonti D, et al. Can lower carbon aviation fuels (LCAF) really complement sustainable aviation fuel (SAF) towards EU aviation decarbonization? Energies. 2021;14:6430. 10.3390/en14206430. [Google Scholar]
+
+9.International Civil Aviation Organization (ICAO): CORSIA Supporting Document: CORSIA Eligible Fuels – Life Cycle Assessment Methodology 2022. https://www.icao.int/environmental-protection/CORSIA/Documents/CORSIA_Eligible_Fuels/CORSIA_Supporting_Document_CORSIA%20Eligible%20Fuels_LCA_Methodology_V5.pdf.
+
+10.World Bank Group: State and Trends of Carbon Pricing 2024: 2024. https://openknowledge.worldbank.org/server/api/core/bitstreams/253e6cdd-9631-4db2-8cc5-1d013956de15/content.
+
+11.International Energy Agency (IEA): CO2 emissions intensity of electricity generation in the Announced Pledges Scenario, 2023;2022-2030. https://www.iea.org/data-and-statistics/charts/co2-emissions-intensity-of-electricity-generation-in-the-announced-pledges-scenario-2022-2030.
+
+12.Maes B, Audenaert A, Craeye B, Buyle M. The future of cement: Technological innovation in representative concentration pathways. J Ind Ecol. 2025;29(4):1105–20. [Google Scholar]
+
+13.Nurdiawati A, Tahir F, Zaini IN, Al-Ghamdi SG. Prospective environmental and economic assessment of green steel production in the middle east. Resour Conserv Recycl. 2025;219:108277. [Google Scholar]
+
+14.Han Z, Teah HY, Hirasawa I, Kikuchi Y. Prospective life cycle assessment of emerging silver nanoparticle synthesis methods: one-pot polyethyleneimine chemical reduction and biological reductions. J Clean Prod. 2025;494:145012. [Google Scholar]
+
+15.McDowall SC, Lanphear E, Cucurachi S, Blanco CF. T-rex: Quantifying waste and material footprints in current and future life cycle assessment (LCA) databases. Resour Conserv Recycl. 2025;222:108464. [Google Scholar]
+
+16.Maynard R, Quinn JC. The future of sustainable food: Evaluating the effect of dynamic life cycle assessment methods on lettuce production ecoefficiency. J Clean Prod. 2025;522:146245. [Google Scholar]
+
+17.Brancaleoni PP, Ferretti AN, Damiani E. Corti, Ravaglioli V, Moro D.: Next-gen italian urban mobility: Emissions LCA and TCO prospective for innovative transportation solutions. Technical report, SAE Technical Paper 2025.
+
+18.Weber-Harmann S, Fischer K, Kononova N, Dilger N, Baars J, Zellmer S, et al. Enhancing transparency: Reporting data reliability in prospective assessments of emerging battery technologies. Procedia CIRP. 2025;135:1271–6. [Google Scholar]
+
+19.Ravi R, Iordan C, Jafarzadeh S, Kandepu R, Valøen LO. Life cycle assessment of batteries for maritime propulsion: a prospective perspective. Procedia CIRP. 2025. 10.1016/j.procir.2024.12.144. (32nd CIRP Conference on Life Cycle Engineering (LCE2025)). [Google Scholar]
+
+20.Ha S, Jang H, Park C, Jeong B. A prospective life cycle assessment framework for sustainable renewable fuels in international shipping: Hydrogen based e fuels. Renew Sustain Energy Rev. 2026;226:116219. [Google Scholar]
+
+21.Martín-Gamboa M, Mancini L, Eynard U, Arrigoni A, Valente A, Weidner E, Mathieux F. Social life cycle hotspot analysis of future hydrogen use in the EU. Int J Life Cycle Assess, 2024;1–18.
+
+22.Chavez DL, Azzaro-Pantel C, Montignac F, Ruby A. Integrating life cycle assessment in multi-objective optimization of green hydrogen systems: a review of literature and methodological challenges. Renew Sustain Energy Rev. 2025;217:115689. [Google Scholar]
+
+23.Thonemann N, Saavedra-Rubio K, Pierrat E, Dudka K, Bangoura M, Baumann N, Bentheimer C, Caliandro P, De Breuker R, De Ruiter C, et al. Prospective life cycle inventory datasets for conventional and hybrid-electric aircraft technologies. Elsevier, 2024.
+
+24.Jong S, Hoefnagels R, Stralen J, Slade R, Mawhood R, Junginger M. Life-cycle assessment of sustainable aviation fuels. Renew Sustain Energy Rev. 2017;76:135–57. [Google Scholar]
+
+25.Staples MD, Malina R, Suresh P, Hileman JI. Aviation co emissions reductions from the use of alternative jet fuels. Energy Policy. 2018;114:342–54. [Google Scholar]
+
+26.Xu H, Ou L, Li Y, Hawkins TR, Wang M. Life cycle greenhouse gas emissions of biodiesel and renewable diesel production in the united states. Environ Sci Technol. 2022;56(12):7512–21. 10.1021/acs.est.2c00289. [DOI] [PMC free article] [PubMed] [Google Scholar]
+
+27.European Council: Fit for 55 - The EU’s plan for a green transition 2024. https://www.consilium.europa.eu/en/policies/fit-for-55/.
+
+28.European Commission: The European Green Deal 2021. https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/european-green-deal_en.
+
+29.United States Department of State: The Long-Term Strategy of the United States: Pathways to Net-Zero Greenhouse Gas Emissions by 2021;2050. https://www.whitehouse.gov/wp-content/uploads/2021/10/US-Long-Term-Strategy.pdf.
+
+30.United States Department of Energy (DOE): On the Path to 100% Clean Electricity 2023. https://www.energy.gov/sites/default/files/2023-05/DOE%20-%20100%25%20Clean%20Electricity%20-%20Final.pdf.
+
+31.U.S. Energy Information Administration: electricity data. https://www.eia.gov/electricity/data.php. Accessed September 8, 2025, 2025.
+
+32.Government of Canada: Canada’s clean electricity future. Government of Canada, 2024. Accessed September 8, 2025.
+
+33.Fan J-L, et al. A net-zero emissions strategy for china’s power sector using carbon-capture utilization and storage. Nat Commun. 2023;14:5972. 10.1038/s41467-023-41647-4. [DOI] [PMC free article] [PubMed] [Google Scholar]
+
+34.International Renewable Energy Agency (IRENA): Hydrogen, 2024. https://www.irena.org/Energy-Transition/Technology/Hydrogen. Accessed September 8, 2025.
+
+35.International Energy Agency (IEA): Global hydrogen review 2024. Technical report, International Energy Agency (October 2024). Licence: CC BY 4.0; Accessed September 8, 2025. https://iea.blob.core.windows.net/assets/89c1e382-dc59-46ca-aa47-9f7d41531ab5/GlobalHydrogenReview2024.pdf.
+
+36.International Energy Agency (IEA): Towards hydrogen definitions based on their emissions intensity. Technical report, International Energy Agency (April 2023). Published April 2023; Accessed September 8, 2025; Licence: CC BY 4.0. https://iea.blob.core.windows.net/assets/acc7a642-e42b-4972-8893-2f03bf0bfa03/Towardshydrogendefinitionsbasedontheiremissionsintensity.pdf.
+
+37.Elgowainy A, et al. Environmental life-cycle analysis of hydrogen technology pathways in the united states. Front Energy Res. 2024. 10.3389/fenrg.2024.1399136. [Google Scholar]
+
+38.European Union: Commission Delegated Regulation (EU) 2023/1184 of 10 February 2023 Supplementing Directive (EU) 2018/2001 of the European Parliament and of the council by establishing a union methodology setting out detailed rules for the production of renewable liquid and gaseous transport fuels of non-biological origin. Official Journal of the European Union, L 157. Accessed September 8, 2025, 2023. https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1184.
+
+39.Buffi M, Prussi M, Scarlat N. Energy and environmental assessment of hydrogen from biomass sources: challenges and perspectives. Biomass Bioenerg. 2022;165:106556. 10.1016/j.biombioe.2022.106556. [Google Scholar]
+
+40.Lee D.-Y, Elgowainy A.A, Dai Q.: Life cycle greenhouse gas emissions of by-product hydrogen from chlor-alkali plants. Technical report, U.S. Department of Energy, Office of Scientific and Technical Information (OSTI) 2017. 10.2172/1418333 . Accessed September 8, 2025. https://www.osti.gov/biblio/1418333.
+
+41.U.S. Department of Energy: U.S. National clean hydrogen strategy and roadmap. Accessed September 8, 2023;2025. https://www.hydrogen.energy.gov/docs/hydrogenprogramlibraries/pdfs/us-national-clean-hydrogen-strategy-roadmap.pdf?sfvrsn=c425b44f_5.
+
+42.International Energy Agency (IEA): Net Zero by 2050: a roadmap for the global energy sector 2024. https://iea.blob.core.windows.net/assets/deebef5d-0c34-4539-9d0c-10b13d840027/NetZeroby2050-ARoadmapfortheGlobalEnergySector_CORR.pdf.
+
+43.Intergovernmental Panel on Climate Change (IPCC): Climate change 2022: Mitigation of climate change. working group iii contribution to the sixth assessment report of the intergovernmental panel on climate change. Technical report, Intergovernmental Panel on Climate Change 2022. Final Government Distribution version, finalized 4 April 2022; Accessed September 8, 2025. https://www.ipcc.ch/report/sixth-assessment-report-working-group-3/.
+
+44.International Civil Aviation Organization (ICAO): conversion processes, 2024. https://www.icao.int/environmental-protection/saf-conversion-processes. Accessed September 8, 2025.
+
+45.U.S. Department of Energy: Pathways to commercial liftoff: sustainable aviation fuel. Technical report, U.S. Department of Energy (November 2024). Accessed September 8, 2025. https://liftoff.energy.gov/wp-content/uploads/2024/11/Pathways-to-Commercial-Liftoff_Sustainable-Aviation-Fuel.pdf.
+
+46.SkyNRG: Sustainable Aviation Fuel Market Outlook 2024. https://skynrg.com/skynrg-releases-sustainable-aviation-fuel-market-outlook-2024/. Accessed September 8, 2025 (2024).
+
+47.Ramsey S, Williams B, Jarrell P, Hubbs T.: Global demand for fuel ethanol through 2030. Amber Waves: Economics of Food, Farming, Natural Resources, and Rural America 2023. Accessed September 8, 2025.
+
+48.Argonne National Laboratory: GREET Model (R&D Version 2023) [Computer software] 2023. https://greet.es.anl.gov/. Accessed September 8, 2025.
+
+49.International Civil Aviation Organization (ICAO): CORSIA methodology for calculating actual life cycle emissions values 2022. https://www.icao.int/environmental-protection/CORSIA/Documents/CORSIA_Eligible_Fuels/ICAO%20document%2007%20-%20Methodology%20for%20Actual%20Life%20Cycle%20Emissions%20-%20June%202022.pdf. Accessed September 8, 2025.
+
+50.Lu Z, Wang M.: Greet+ model 2024; 2024. 10.11578/GREET-PLUS-2024/DC.20241105.1 . Accessed September 8, 2025.
+
+51.U.S. Energy Information Administration: Annual Energy Outlook 2023. Release date: March 16, 2023; 2023. https://www.eia.gov/outlooks/aeo/. Accessed September 8, 2025.
+
+52.Zang G, Graham EJ, Mallapragada D. H production through natural gas reforming and carbon capture: a techno-economic and life cycle analysis comparison. Int J Hydrogen Energy. 2024;49:1288–303. 10.1016/j.ijhydene.2023.10.060. [Google Scholar]
+
+53.Sand M, Skeie RB, Sandstad M, Krishnan S, Myhre G, Bryant H, et al. A multi-model assessment of the global warming potential of hydrogen. Commun Earth Environ. 2023;4(1):203. [Google Scholar]
+
+54.Gan Y, Ng C, Elgowainy A, Marcinkoski J. Considering embodied greenhouse emissions of nuclear and renewable power plants for electrolytic hydrogen and its use for synthetic ammonia, methanol, fischer-tropsch fuel production. Environ Sci Technol. 2024;58(47):18654–62. 10.1021/acs.est.4c06405. [DOI] [PMC free article] [PubMed] [Google Scholar]
+
+55.Iyer RK, Prosser JH, Kelly JC, James BD, Elgowainy A. Life-cycle analysis of hydrogen production from water electrolyzers. Int J Hydrogen Energy. 2024;81:1467–78. [Google Scholar]
+
+56.Elgowainy A, Frank ED, Vyawahare P, Ng C, Bafana A, Burnham A, Wang M. Hydrogen life-cycle analysis in support of clean hydrogen production. Technical Report ANL/ESIA-22/2, Argonne National Laboratory, Argonne, IL 2022.
+
+57.Lee U, et al. Life cycle analysis of renewable natural gas and lactic acid production from waste feedstocks. J Clean Prod. 2021;311:127653. 10.1016/j.jclepro.2021.127653. [Google Scholar]
+
+58.Red Trail Energy: Red trail energy low carbon fuel standard (LCFS) design-based pathway application – carbon capture and storage integrated with ethanol production. Technical report, Red Trail Energy (2019). LCFS Pathway Application Document.
+
+59.International Energy Agency (IEA): Norway – Electricity 2024. https://www.iea.org/countries/norway/electricity. Accessed September 8, 2025.
+
+60.International Energy Agency (IEA): India – Electricity 2024. https://www.iea.org/countries/india/electricity. Accessed September 8, 2025.
+
+61.International Civil Aviation Organization (ICAO): Corsia default life cycle emissions values for corsia eligible fuels. Technical report, International Civil Aviation Organization, Montreal, Canada (November 2025). https://www.icao.int/sites/default/files/environmental-protection/CORSIA/Documents/CORSIA%20Eligible%20Fuels/ICAO-document-06-Default-Life-Cycle-Emissions-November-2025.pdf.
+
+Associated Data
+
+This section collects any data citations, data availability statements, or supplementary materials included in this article.
+
+Supplementary Materials
+
+Data Availability Statement
+
+The authors declare that all data supporting the findings of this study are available within the paper and its Annexes.",https://cdn.ncbi.nlm.nih.gov/pmc/cms/images/pmc-card-share.jpg?_=0,N,,2026-08-08 12:56:41.597117
 ,,2026-08-08 10:29:04+00:00,Seeking Alpha,Par Pacific Holdings: Recent Pullback Is A Textbook Buying Opportunity - Seeking Alpha,M&T Research Group,,,,,https://seekingalpha.com/article/4933634-par-pacific-holdings-recent-pullback-is-a-textbook-buying-opportunity,"I am not receiving compensation for it (other than from Seeking Alpha).
 I have no business relationship with any company whose stock is mentioned in this article.
 Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole.
@@ -398,6 +851,9 @@ The most affordable SAF remains fuel produced via the HEFA pathway, averaging $1
 Global SAF production totaled 1.9 mln tons in 2025, covering only 0.6% of worldwide jet fuel demand. This highlights a significant supply shortage as airlines continue to increase SAF consumption.
 
 BloombergNEF expects SAF prices to continue rising in the coming years as blending mandates expand, competition for feedstocks with the road transport sector intensifies, and production capacity grows more slowly than demand.",https://ukragroconsult.com/wp-content/uploads/2025/07/saf.jpg,N,,2026-08-08 08:56:51.620695
+,,2026-08-08 06:29:59+00:00,X (formerly Twitter),"Argus Media has introduced sustainable aviation fuel emissions reduction indexes, which ...",x.com,,,,,https://x.com/AINonline/status/2085810708936069347/photo/1,"Argus Media has introduced sustainable aviation fuel emissions reduction indexes, which enable aviation stakeholders to compare SAF economics with compliance and voluntary carbon market obligations.
+
+Read more ⬇️",Not Available,https://pbs.twimg.com/media/HPJJyXmWoAEH5NK.jpg:large,N,,2026-08-08 12:56:45.248671
 ,,2026-08-08 05:43:43+00:00,BioEnergy Times,Global SAF prices rise amid West Asia tension - BioEnergy Times,BioEnergyTimes,,,,,https://bioenergytimes.com/global-saf-prices-rise-amid-west-asia-tension/,"International Sustainable Aviation Fuel (SAF) prices have increased by 10% in 2026 compared to the previous year, reports UKRAgroConsult.
 According to BloombergNEF’s latest survey, the average SAF price reached $1,817/t, about five times higher than the price of conventional jet fuel.
 Analysts say the increase was driven by higher conventional jet fuel prices following shipping disruptions in the Strait of Hormuz, as well as stronger demand in markets with SAF blending mandates.
@@ -2177,17 +2633,6 @@ The land option agreement not only anchors the project in Teesside but gives us 
 Once operational, the facility will produce 180 million liters of SAF and 30 million liters of renewable naphtha per year from biomass feedstock. With CCS integration, LGF could contribute around 46% of the total UK SAF Mandate on a greenhouse gas emissions basis.
 
 Commenting on the land option agreement, Noaman Al Adhami, UK Country Director, said “This marks another major milestone for Lighthouse Green Fuels as we advance towards financial close. The land option agreement not only anchors the project in Teesside but gives us the platform to deliver one of the most advanced and ambitious sustainable aviation fuel facilities anywhere in the world.”",https://alfanarprojects.com/media/l0zpmwln/website-size-copycfs.jpg,N,,2026-08-07 10:56:26.511595
-,,2026-08-07 00:25:31+00:00,CleanTheSky,Electro Sustainable Aviation Fuel - Clean the Sky,Not Available,,,,,https://www.cleanthesky.com/innovation/electro-sustainable-aviation-fuel,"Electro sustainable aviation fuel is moving from pilot projects to commercial aviation through fuels that can be used with existing aircraft and airport infrastructure.
-In Texas, American Airlines and Infinium completed the first commercial passenger flight powered by eSAF delivered to a U.S. commercial airport.
-For businesses, the milestone highlights the growing commercial potential of drop-in sustainable fuels that minimize infrastructure upgrades while supporting emissions reduction goals.
-Airlines, fuel producers, airports, and industrial partners can leverage compatible fuel technologies to accelerate deployment and diversify energy sources.
-As production capacity expands, electro sustainable aviation fuel is likely to become an increasingly important component of lower-carbon aviation and long-term energy security.","Electro sustainable aviation fuel is moving from pilot projects to commercial aviation through fuels that can be used with existing aircraft and airport infrastructure. In Texas, American Airlines and Infinium completed the first commercial passenger flight powered by eSAF delivered to a U.S. commercial airport. Produced from waste CO₂ and renewable electricity, the fuel was blended with conventional jet fuel and certified for use without requiring changes to aircraft engines or fueling systems. This demonstrates how power-to-liquids technology can integrate into today's aviation supply chain while reducing lifecycle greenhouse gas emissions.
-
-For businesses, the milestone highlights the growing commercial potential of drop-in sustainable fuels that minimize infrastructure upgrades while supporting emissions reduction goals. Airlines, fuel producers, airports, and industrial partners can leverage compatible fuel technologies to accelerate deployment and diversify energy sources. As production capacity expands, electro sustainable aviation fuel is likely to become an increasingly important component of lower-carbon aviation and long-term energy security.
-
-Image Credit:
-
-Infinium",https://cdn.trendhunterstatic.com/thumbs/625/electro-sustainable-aviation-fuel.jpeg,N,,2026-08-07 00:56:34.542537
 ,,2026-08-07 00:25:31+00:00,CleanTheSky,Electro Sustainable Aviation Fuel - Trend Hunter,Not Available,,,,,https://www.trendhunter.com/trends/electro-sustainable-aviation-fuel,"Electro sustainable aviation fuel is moving from pilot projects to commercial aviation through fuels that can be used with existing aircraft and airport infrastructure.
 In Texas, American Airlines and Infinium completed the first commercial passenger flight powered by eSAF delivered to a U.S. commercial airport.
 For businesses, the milestone highlights the growing commercial potential of drop-in sustainable fuels that minimize infrastructure upgrades while supporting emissions reduction goals.
@@ -2199,6 +2644,17 @@ For businesses, the milestone highlights the growing commercial potential of dro
 Image Credit:
 
 Infinium",https://cdn.trendhunterstatic.com/thumbs/625/electro-sustainable-aviation-fuel.jpeg,N,,2026-08-06 23:57:04.712471
+,,2026-08-07 00:25:31+00:00,CleanTheSky,Electro Sustainable Aviation Fuel - Clean the Sky,Not Available,,,,,https://www.cleanthesky.com/innovation/electro-sustainable-aviation-fuel,"Electro sustainable aviation fuel is moving from pilot projects to commercial aviation through fuels that can be used with existing aircraft and airport infrastructure.
+In Texas, American Airlines and Infinium completed the first commercial passenger flight powered by eSAF delivered to a U.S. commercial airport.
+For businesses, the milestone highlights the growing commercial potential of drop-in sustainable fuels that minimize infrastructure upgrades while supporting emissions reduction goals.
+Airlines, fuel producers, airports, and industrial partners can leverage compatible fuel technologies to accelerate deployment and diversify energy sources.
+As production capacity expands, electro sustainable aviation fuel is likely to become an increasingly important component of lower-carbon aviation and long-term energy security.","Electro sustainable aviation fuel is moving from pilot projects to commercial aviation through fuels that can be used with existing aircraft and airport infrastructure. In Texas, American Airlines and Infinium completed the first commercial passenger flight powered by eSAF delivered to a U.S. commercial airport. Produced from waste CO₂ and renewable electricity, the fuel was blended with conventional jet fuel and certified for use without requiring changes to aircraft engines or fueling systems. This demonstrates how power-to-liquids technology can integrate into today's aviation supply chain while reducing lifecycle greenhouse gas emissions.
+
+For businesses, the milestone highlights the growing commercial potential of drop-in sustainable fuels that minimize infrastructure upgrades while supporting emissions reduction goals. Airlines, fuel producers, airports, and industrial partners can leverage compatible fuel technologies to accelerate deployment and diversify energy sources. As production capacity expands, electro sustainable aviation fuel is likely to become an increasingly important component of lower-carbon aviation and long-term energy security.
+
+Image Credit:
+
+Infinium",https://cdn.trendhunterstatic.com/thumbs/625/electro-sustainable-aviation-fuel.jpeg,N,,2026-08-07 00:56:34.542537
 ,,2026-08-07 00:05:56+00:00,ESG News,KLM Backs SkyNRG Dutch SAF Plant With $3.5B Deal - ESG News,"ESG News Editorial Team, www.facebook.com",,,,,https://esgnews.com/klm-backs-skynrg-dutch-saf-plant-with-3-5b-deal/,"KLM will purchase at least 75,000 tonnes of sustainable aviation fuel each year, equal to 75% of the plant’s output.
 The long-term agreement represents a sustainability commitment of nearly $3.5 billion and helped SkyNRG secure project financing.
 Long-term demand unlocks Dutch SAF production KLM and SkyNRG have started construction of the Netherlands’ first facility dedicated to sustainable aviation fuel production.
@@ -5571,126 +6027,3 @@ His family “moved to Florida, started from the ground up with one sugar mill, 
 Final Word
 
 “There's going to be somewhat of a delay between the opening of the Strait [of Hormuz], the filling of ships, and their arrival [in], say, the port of New Orleans. We think that between the opening of the strait and return to normal shipment volumes could be anywhere from four to six months. So we are in a place where there could be some challenges this fall for pre-plant in terms of the cost of production. It could lead to some changes in overall planting choices for next year's crop.” — USDA Chief Economist Justin Benavidez in his address at the American Sugar Alliance’s International Sweetener Symposium Tuesday.",https://www.agri-pulse.com/ext/resources/opinion/Untitled-design-(63).png?height=635&t=1772739396&width=1200,N,,2026-08-05 17:57:00.506318
-,,2026-08-05 16:56:20+00:00,Rediff,"Pawan Hans, Noemi Aerospace Partner for Electric Seaplanes - Rediff Money",Rediff Money Desk,,,,,https://money.rediff.com/news/market/pawan-hans-noemi-aerospace-partner-for-electric-seaplanes/51951920260805,Pawan Hans and Norway''s Noemi Aerospace (Elfly AS) sign an MoU to explore collaboration in next-generation electric seaplane technologies and sustainable aviation.,Not Available,https://im.rediff.com/money/2023/jul/03pawan-hans.jpg?fr=money,N,,2026-08-05 17:57:06.360683
-,,2026-08-05 16:21:45+00:00,CleanTechnica,Trump's Biomass Bug Is Coming Back To Bite Fossil Fuels - CleanTechnica,Tina Casey,,,,,https://cleantechnica.com/2026/08/05/saf-sustainable-aviation-fuel-delta-shell-us-biofuel-biomass-bioeconomy/,"Sustainable Aviation Fuel From Biomass Biomass has tried to crack the SAF code for years with little to show, though animal fats, used cooking oil and other waste oils have achieved some slim success.
-The firm lists tallow, distillers corn oil, canola oil, used cooking oil, and camelina oil among its overall inputs.
-“SAF can now be supplied, blended, and uplifted at MSP Airport in commercial volumes, enabling use of Minnesota’s nation-leading SAF tax credit and solving a critical infrastructure bottleneck,” explains the Minnesota SAF Hub.
-“The facility is a critical link in Minnesota’s SAF value chain because neat SAF must be blended, tested and certified before it can enter the airport fuel supply and be used in today’s aircraft,” the agency elaborates.
-The leading grid operator PJM, for example, barely registers any forthcoming activity in the biomass power generation field.","Support CleanTechnica's work through a Substack subscription, on Patreon, or on Stripe. Help us produce all of the high-quality, original content we publish week after week despite the challenges of content-scraping AI, antisocial media, inflation, and other hurdles.
-
-For whatever reason, U.S. President Donald Trump’s “American Energy Dominance” plan supports biomass alongside fossil fuels. That’s already coming back to bite his friends in the oil industry. Biomass has turned in a less-than-stellar performance as a power generation resource here in the US, but it has been edging petroleum out of the US automotive market in the form of corn ethanol, and now stakeholders are pushing into the SAF (sustainable aviation fuel) space, too.
-
-Sustainable Aviation Fuel From Biomass
-
-Biomass has tried to crack the SAF code for years with little to show, though animal fats, used cooking oil and other waste oils have achieved some slim success. Now activity is finally begin to stir in the area of plant-based inputs including winter camelina (pictured above).
-
-And, the Trump administration is here for it. The recently launched Montana Renewables biofuel facility in Great Falls, Montana, for example, is among the few Biden-era renewable energy projects to continue practically uninterrupted with financial backing from the Energy Department, even as Trump shredded his way through the agency’s $30 billion loan portfolio upon taking office last year.
-
-The Energy Department issued a $1.67 billion loan guarantee to Montana Renewables during the last days of the Biden administration in January of 2025, with the company anticipating an eventual SAF capcity of 300 million gallons per year. Trump initially canceled the loan only to restore it within a matter of weeks, around February 12, 2025.
-
-With the assist from the taxpaying public, Montana Renewables (a branch of Calumet) is pressing its way into the SAF field with both animal fats and plant-based biomass on the menu. The firm lists tallow, distillers corn oil, canola oil, used cooking oil, and camelina oil among its overall inputs.
-
-Last October, the company announced that its “MaxSAF™ Blended” 50/50 certified blend of SAF and conventional jet fuel was market-ready and available for drop-in use at aviation hubs in the region, including Washington and Oregon as well as Montana.
-
-Regional Production, Regional Distribution
-
-If you caught that thing about distribution to regional airports, that’s an important element of the SAF balance sheet. Transporting large quantities of biomass to a central refining facility layers on additional expenses, as does shipping the finished product out again. Concentrating on regional inputs and offtakes trims those expenditures down.
-
-With that in mind, the newly launched Minnesota SAF Hub aims to produce 1 billion gallons of SAF per year for use at the Minneapolis–Saint Paul International Airport, assisted in part by a $1.50-per-gallon state incentive.
-
-The project comes under the umbrella of the Greater MSP Partnership, which describes the new hub as a first-if-its-kind, multi-partner effort to center the “sustainable” in sustainable aviation fuel. Delta Airlines is among the anchor partners on the project.
-
-As with the Montana facility, part of the focus is on winter-grown camelina, an oilseed crop that has been explored for jet fuel use since the early 2000’s.
-
-On July 27, the Minnesota SAF Hub announced the completion of a new blending facility in Rosemont, Minnesota, with the capacity to accommodate up to 30 million gallons of neat (unblended) SAF annually. The Roseont facility is tasked with blending neat SAF provided by the Aviation branch of Shell with conventional jet fuel for delivery to MSP International Airport, using an existing pipeline.
-
-“SAF can now be supplied, blended, and uplifted at MSP Airport in commercial volumes, enabling use of Minnesota’s nation-leading SAF tax credit and solving a critical infrastructure bottleneck,” explains the Minnesota SAF Hub.
-
-“The facility is a critical link in Minnesota’s SAF value chain because neat SAF must be blended, tested and certified before it can enter the airport fuel supply and be used in today’s aircraft,” the agency elaborates.
-
-As for the use of food crops, that’s where things get complicated, though a recent report from the World Resources Institute indicates that the Midwest generates enough inedible corn residue to produce 3 billion gallons of SAF per year.
-
-What’s Shell Got To Do With This?
-
-The Minnesota hub not the only place where Shell Aviation is expanding its SAF footprint in the US. On July 15, Delta announced it is also partnering with Shell’s Aviation branch at Los Angeles International Airport in California, Portland International Airport in Oregon, John. F. Kennedy International Airport in New York City, and Logan International Airport in Boston.
-
-The five-year agreement aims to build consistency into the SAF supply chain, moving the needle from one-off “milestone” demonstrations to a routine feature in airport operations.
-
-Under the agreement, Shell will support the infrastructure and logistics involved in distributing both neat and blended fuel. “That infrastructure-first approach helps ensure SAF can scale with demand while maintaining operational reliability,” Delta emphasizes.
-
-“Delta and Shell will work together to evaluate and advance next generation SAF technologies — including alcohol to jet and power to liquid pathways — aimed at unlocking additional supply and further reducing lifecycle emissions over time,” Delta elaborated in a press statement.
-
-Here Comes Power-To-Liquid…And Electrification, Too
-
-The power-to-liquid reference is no surprise considering Shell’s interest in the e-fuels and green hydrogen field, with “green” meaning hydrogen pushed from water with an electrical current, ideally supplied by wind, solar, or other renewables (see more e-fuels background here).
-
-Activity in the e-SAF field all but sputtered out here in the US after Trump took office, though Shell has been pushing forward with e-fuels facilities in Europe.
-
-One firm that has cracked the US e-SAF code is Infinium. The company’s Project Pathfinder in Texas was up and running in 2024. Last year construction was also well under way on another facility in Texas, the Project Roadrunner e-fuels project. If all goes according to plan, Project Roadrunner will produce 7.6 million gallons per year of e-SAF and other e-fuels.
-
-For the record, electrification is also putting the squeeze on fossil fuels in the aviation field, with batteries and fuel cells both in play.
-
-Biomass For Power Generation…Not
-
-Digging further into the weeds of continued federal support for the biomass-t0-SAF pipeline, in June Department of Agriculture affirmed guidelines for calculating the value of SAF and other biofuels produced through regenerative agriculture, with regenerative referring to practices that center soil and water conservation. The biofuels advocacy organization Clean Fuels Alliance was among those supporting the rulemaking.
-
-In the meantime, Trump’s biomass policy is a glass half empty. Biomass continues to fall flat in the US power generation space despite the purported support of the Trump administration.
-
-The leading grid operator PJM, for example, barely registers any forthcoming activity in the biomass power generation field. PJM recently announced that it has selected 715 power plant applications for further consideration, totaling 201.5 gigawatts for a service territory covering 67 million people, with biomass slotted into a catch-all category covering just 1.1 of those gigawatts. That’s in accord with the “other energy sources” listed by the US Energy Information Agency, which foresees biomass power production declining slightly in the coming years.",https://cleantechnica.com/wp-content/uploads/2026/08/camelina-via-cargill.png,N,,2026-08-05 13:03:07.524404
-,,2026-08-05 16:20:51+00:00,Ground News,Too Little Sustainable Aviation Fuel - Federal Government Plans Penalties - Ground News,Not Available,,,,,https://ground.news/article/sustainability-airlines-should-pay-penalty-for-unsustainable-kerosene,"The Sustainable Aviation Fuel (SAF) has been gaining global relevance as one of the main alternatives to reduce carbon emissions in air transport.
-Exclusive material for su… 4 hours ago·Rio de Janeiro, Brazil Read Full Article Since 2025, airlines have had to attach sustainable fuel.
-10 hours ago·Hamburg, Germany Read Full Article Since 2025, airlines have had to contribute sustainable fuel.
-11 hours ago·Düsseldorf, Germany Read Full Article The Federal Ministry of Transport plans charges for airlines that do not comply with sustainable kerosene requirements.
-7 hours ago Read Full Article","The Sustainable Aviation Fuel (SAF) has been gaining global relevance as one of the main alternatives to reduce carbon emissions in air transport. In view of the international decarbonization targets and the growing demand for low carbon fuels, Brazil has favourable conditions to expand the production of this solution, especially due to the diversity of raw materials available and the accumulated experience in biofuels. Exclusive material for su…
-
-4 hours ago·Rio de Janeiro, Brazil
-
-Read Full Article
-
-Since 2025, airlines have had to attach sustainable fuel. A new law will soon ensure that this regulation can be enforced better. Airlines will then have to expect high penances.
-
-10 hours ago·Hamburg, Germany
-
-Read Full Article
-
-Since 2025, airlines have had to contribute sustainable fuel. How the federal government controls compliance and what penalties are to be applied in the event of violations.
-
-11 hours ago·Düsseldorf, Germany
-
-Read Full Article
-
-The Federal Ministry of Transport plans charges for airlines that do not comply with sustainable kerosene requirements. Around 1,300 euros per tonne could be due.
-
-11 hours ago·Germany
-
-Read Full Article
-
-For environmental reasons, airlines in Europe have to refuel their fuel for the most part just before departure. The federal government is now planning concrete penalties for violations.
-
-7 hours ago
-
-Read Full Article","data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22280%22 viewBox=%220 0 280 280%22><path transform=%22translate(97.3,0)%22 d=%22M44,140.1h42.8V272H54.9c0-0.1,0-103.8,0-103.8H44V140.1z M44,1c28.4,0,42.6,16.2,42.6,42.2v66.1H54.9V43.8 c0-7.2-3.1-11.7-10.6-11.7c-7,0-10.6,4.2-10.6,11.7c0,0,0,228.1,0,228.2H0.2c0-0.5,0-228.8,0-228.8C0.1,16.8,14.8,1,44,1L44,1z%22/><style>path { fill: %23262626 } @media (prefers-color-scheme: dark) { path { fill: %23EEEFE9 } }</style></svg>",N,,2026-08-05 16:57:21.722059
-,,2026-08-05 16:17:36+00:00,LinkedIn,American Airlines and Google sign record-breaking sustainable aviation fuel agreement,Dr Fari Mirhadizadeh,,,,,https://www.linkedin.com/posts/seyedmirhadizadeh_american-airlines-and-google-sign-record-breaking-activity-7490521416170098688-Hu7h,"SAF just hit 0.6% of global aviation fuel.
-This week alone: a $3 billion bet on a Brazilian palm tree to produce clean jet fuel.
-Google signing the largest corporate SAF deal in history with American Airlines.
-Our photocatalytic reactors convert biogas and methane into clean Syngas — the building block for #SAF — using light instead of combustion.
-We think the answer starts before the refinery — at the syngas production step where energy costs either kill or enable the whole equation.","SAF just hit 0.6% of global aviation fuel. That's not a failure — it's a starting gun. This week alone: a $3 billion bet on a Brazilian palm tree to produce clean jet fuel. Google signing the largest corporate SAF deal in history with American Airlines. A wave of July announcements showing commercial adoption accelerating through partnerships, mandates, and offtake agreements. The demand signal is unmistakable. The constraint is production at cost. That's the problem we're working on at Syzygy Plasmonics. Our photocatalytic reactors convert biogas and methane into clean Syngas — the building block for #SAF — using light instead of combustion. No furnace. No flames. A fundamentally different cost and emissions profile at the feedstock stage. Aviation will decarbonize. The question is which technologies make it economically real, not just technically possible. We think the answer starts before the refinery — at the syngas production step where energy costs either kill or enable the whole equation. We're talking to partners across America, Europe, and Asia who are asking the same questions. The market is moving. So are we. #SAF #SustainableAviation #CleanEnergy #Hydrogen #Plasmonics #Decarbonization",https://media.licdn.com/dms/image/sync/v2/D5627AQEikPYlBjDvSg/articleshare-shrink_800/B56Z6srqKPIAAg-/0/1781013586876?e=2147483647&v=beta&t=XvBXNOV1397RP4NNOFeX7_o_oDwFYJmNn3lS0jLgyeg,N,,2026-08-05 15:57:59.054118
-,,2026-08-05 16:04:36+00:00,Environment+Energy Leader,Nebraska Promotes Low-Carbon Ethanol in Asia Trade Mission,"Supply Chain + Procurement, Environment+Energy Leader",,,,,"https://environmentenergyleader.com/stories/nebraska-promotes-low-carbon-ethanol-in-asia-trade-mission,135715","The delegation included farmers, ranchers, and leaders from Nebraska's ethanol industry, and met with government officials, energy companies, agricultural importers, and food manufacturers across both stops.
-Japan alone purchased more than $500 million in Nebraska beef and pork in 2025, one of the state's leading overseas markets.
-Philippines Meeting Ties Ethanol to Energy Security One of the mission's highest-level meetings was with Philippines Department of Energy Secretary Sharon Garin, where Nebraska ethanol producers promoted the state's low-carbon fuel production and discussed supplying the country's growing transportation fuel market.
-DJ Eihusen of Chief Ethanol, who joined the delegation, said the carbon captured during production could feed future low-carbon fuel pathways.
-Japan and the Philippines Are Both Expanding Ethanol Demand The timing tracks changing fuel policy across Asia.","Governor Jim Pillen led a Nebraska trade delegation to Japan and the Philippines in late July, and while agricultural exports remained central to the trip, state leaders spent much of it promoting low-carbon fuels, carbon capture, and ethanol as part of Asia's energy transition. The delegation included farmers, ranchers, and leaders from Nebraska's ethanol industry, and met with government officials, energy companies, agricultural importers, and food manufacturers across both stops. Japan alone purchased more than $500 million in Nebraska beef and pork in 2025, one of the state's leading overseas markets. But the mission's energy framing marked a departure from prior trips focused mainly on commodity sales.
-
-Philippines Meeting Ties Ethanol to Energy Security
-
-One of the mission's highest-level meetings was with Philippines Department of Energy Secretary Sharon Garin, where Nebraska ethanol producers promoted the state's low-carbon fuel production and discussed supplying the country's growing transportation fuel market. The Philippines currently imports roughly half of its annual ethanol demand and grants tariff-free access to U.S. suppliers, and the country is working to expand its E10 blending mandate toward E20. DJ Eihusen of Chief Ethanol, who joined the delegation, said the carbon captured during production could feed future low-carbon fuel pathways. That's part of a broader move within the industry to compete on lifecycle emissions, not price alone.
-
-Japan and the Philippines Are Both Expanding Ethanol Demand
-
-The timing tracks changing fuel policy across Asia. Japan is rolling out a nationwide E10 initiative as part of its decarbonization strategy, while the Philippines already mandates ethanol blending and continues to see transportation fuel demand grow alongside a fast-expanding middle class. Those changes create an opening for exporters that can supply consistent volumes of lower-carbon fuel over the long term. Nebraska producers are leaning on reliability, carbon intensity, and production scale to make their case, the same positioning already playing out domestically as states like California expand higher-ethanol-blend fuel standards.
-
-Carbon Capture Adds a Second Export Argument
-
-Several Nebraska ethanol producers are investing in carbon capture projects aimed at lowering the lifecycle emissions of their fuel, which can improve competitiveness in markets that increasingly score transportation fuel on emissions across the full production process rather than at the tailpipe. Industry representatives on the trip pointed to captured carbon as a potential feedstock for future low-carbon fuels and industrial applications, the same logic driving feedstock investment elsewhere in the sustainable aviation fuel supply chain. According to the Nebraska Corn Board, more than a third of the corn grown in the state already goes into ethanol production, a share that could grow as byproducts and captured carbon open new revenue streams beyond the traditional commodity market.
-
-The Mission Reflects a Broader Push to Diversify Export Markets",https://alpha.creativecirclecdn.com/environment/original/20260802-082551-be4-Nebraska%20delegation%20meets%20with%20San%20Miguel%20Corporation.jpg,N,,2026-08-05 13:58:26.518164
