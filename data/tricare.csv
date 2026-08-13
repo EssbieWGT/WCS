@@ -1,4 +1,52 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2026-08-13 00:21:24+00:00,BIOENGINEER.ORG,Deep Learning Speeds Comprehensive Pathology Assessments Using - Bioengineer.org,Bioengineer,,,,,https://bioengineer.org/deep-learning-speeds-comprehensive-pathology-assessments-using-three-dimensional-tissue-data/,"A new artificial-intelligence system could help pathologists search through three-dimensional tissue specimens without forcing them to inspect every microscopic layer by hand.
+Three-dimensional pathology seeks to overcome that sampling limitation by imaging tissue throughout its depth without destroying it.
+Subject of Research: Deep-learning triage of three-dimensional pathology datasets for efficient detection and assessment of high-risk tissue regions.
+Article Title: Deep-learning triage of three-dimensional pathology datasets for comprehensive and efficient pathologist assessments.
+“Deep-learning triage of three-dimensional pathology datasets for comprehensive and efficient pathologist assessments.” Nature Biomedical Engineering (2026).","A new artificial-intelligence system could help pathologists search through three-dimensional tissue specimens without forcing them to inspect every microscopic layer by hand. The framework, called TRICARE, is designed to identify the most medically suspicious two-dimensional cross sections hidden inside large 3D pathology datasets. Its developers say the approach could make emerging volumetric imaging technologies more practical in hospitals, where the amount of data produced by a single specimen can rapidly exceed the time available for human review. Rather than replacing pathologists, TRICARE is intended to act as a sophisticated triage assistant, directing attention toward tissue levels that are most likely to contain cancer or precancerous changes while preserving expert clinicians as the final decision-makers.
+
+Conventional histopathology offers an extraordinarily detailed view of tissue, but it does so through a narrow window. A biopsy is typically sliced into thin sections, mounted on glass slides and stained so that cells and tissue architecture can be examined under a microscope. Although these images can reveal crucial diagnostic features, each section represents only a tiny fraction of the original specimen—often less than 1% of the total biopsy volume. A lesion may therefore be missed if it lies between sampled sections or if its most important features are not captured in the selected planes. This problem becomes especially significant when disease is spatially patchy, with abnormal regions distributed unevenly throughout a specimen.
+
+Three-dimensional pathology seeks to overcome that sampling limitation by imaging tissue throughout its depth without destroying it. One of the technologies enabling this shift is open-top light-sheet microscopy, which illuminates tissue with a thin sheet of light and captures fluorescence or other optical signals across broad areas. After suitable preparation, large clinical specimens can be scanned in three dimensions at high resolution, producing a volumetric map in which cells, glands and other structures can be examined across many consecutive depths. The result is more comprehensive than a conventional slide series, but it also creates a formidable data-management problem: a single tissue volume may contain hundreds or thousands of potential viewing levels, each resembling a digital pathology slide.
+
+TRICARE addresses this challenge by assigning a risk score to every two-dimensional level within a 3D tissue volume. The system is based on deep learning, a class of machine-learning methods that uses multiple layers of artificial neural networks to recognize patterns in complex data. In this case, the model does not evaluate each image as an isolated snapshot. Instead, it incorporates information from a selected group of neighbouring depth levels, allowing it to interpret local three-dimensional context. That distinction is technically important because many pathological structures extend across several planes. A suspicious gland, fragmented lesion or evolving tissue boundary may appear ambiguous in one section but become much clearer when adjacent levels are considered together.
+
+The researchers compared this context-aware strategy with models that make predictions from individual 2D levels alone. According to the study, TRICARE performed better than approaches that ignored neighbouring sections. The advantage reflects a basic property of biological tissue: disease is not distributed as a collection of unrelated flat images. Tumours and precancerous changes have continuity, shape and spatial relationships that unfold through depth. By examining a limited neighbourhood around each level, the model can use that continuity as evidence, potentially reducing errors caused by folds, artifacts, staining variation or anatomically misleading views. The system can then rank the full stack of sections, placing the most concerning levels at the front of a pathologist’s review queue.
+
+The team evaluated the framework in two clinically important settings. The first involved prostate cancer biopsies, where disease can be small, irregularly distributed and difficult to characterize from limited sampling. In that use case, TRICARE was used for risk stratification, separating tissue levels according to the likelihood that they contained high-risk pathological features. The second focused on endoscopic biopsies from patients with Barrett’s esophagus, a condition in which the lining of the esophagus changes and can progress to dysplasia or cancer. Detecting these changes is a central goal of surveillance, yet abnormal areas may be sparse and easily overlooked when tissue is assessed through conventional sampling. In both applications, the researchers report that AI-assisted review of 3D pathology showed potential to improve the identification of high-risk disease compared with standard slide-based workflows.
+
+The proposed workflow is deliberately conservative. TRICARE does not issue a final diagnosis or remove the pathologist from the process. Instead, it acts as a filter for an enormous image set, highlighting the levels that deserve priority and allowing clinicians to examine those areas first. A pathologist could then review the flagged sections, inspect surrounding tissue, and make a diagnosis using clinical information and professional judgment. This design may be especially important for the introduction of AI into pathology, a field in which false negatives can have serious consequences and unexplained automated decisions can be difficult to accept. By retaining a human expert at the end of the chain, the technology offers a lower-risk route toward using 3D datasets in routine assessment.
+
+The potential workload reduction is substantial. If a 3D scan contains hundreds of relevant levels, reviewing every one with equal attention could turn a single case into a lengthy, impractical task. A triage system can transform that problem into a ranked investigation, concentrating human effort on the most informative regions while still preserving access to the complete volume. This does not mean that unflagged areas would automatically be considered normal. Rather, the model could help clinicians decide where to begin and which parts of the specimen require especially careful evaluation. In a future clinical laboratory, such prioritization could make comprehensive imaging more compatible with the time pressures of diagnostic medicine.
+
+Important challenges remain before systems such as TRICARE can become routine clinical tools. Deep-learning models must be tested across different hospitals, scanners, staining protocols, tissue-preparation methods and patient populations. Their performance must also be measured not only by technical accuracy but by whether they genuinely improve diagnostic sensitivity, reduce missed lesions and fit safely into existing laboratory workflows. Three-dimensional pathology itself requires specialized imaging, data storage and computational infrastructure, while pathologists will need interfaces that make volumetric information intuitive rather than overwhelming. Even so, the study points toward a new model of pathology in which diagnosis is not restricted to a handful of thin slices. By combining comprehensive tissue imaging with spatially aware AI triage, TRICARE suggests that the future of biopsy analysis may involve seeing more of the specimen while asking humans to spend their time where it matters most.
+
+Subject of Research: Deep-learning triage of three-dimensional pathology datasets for efficient detection and assessment of high-risk tissue regions.
+
+Article Title: Deep-learning triage of three-dimensional pathology datasets for comprehensive and efficient pathologist assessments.
+
+Article References: Gao, G., Yan, R., Song, A.H. et al. “Deep-learning triage of three-dimensional pathology datasets for comprehensive and efficient pathologist assessments.” Nature Biomedical Engineering (2026). https://doi.org/10.1038/s41551-026-01760-1
+
+Image Credits: AI Generated
+
+DOI: https://doi.org/10.1038/s41551-026-01760-1
+
+Keywords: 3D pathology, artificial intelligence, deep learning, digital pathology, light-sheet microscopy, cancer detection, prostate cancer, Barrett’s esophagus, dysplasia, pathology triage
+
+Tags: 3D tissue imagingAI-assisted pathology triageAI-driven cancer diagnosticscancer detection in tissue specimenscomputational analysis of large pathology datasetsdeep learning in pathologydigital pathology and AI integrationhistopathology image analysis toolsmedical imaging data managementmicroscopy and histopathology advancementstissue specimen analysis automationvolumetric imaging technologies in medicine",https://bioengineer.org/wp-content/uploads/2026/08/Deep-Learning-Speeds-Comprehensive-Pathology-Assessments-Using-Three-Dimensional-Tissue-Data.jpg,N,0.0,2026-08-12 20:56:16.473140
+,,2026-08-12 23:21:17+00:00,DVIDS,TRICARE: More than a benefit—a trusted partner for military families - DVIDS,Not Available,,,,,https://www.dvidshub.net/news/572104/tricare-more-than-benefit-trusted-partner-military-families,"Courtesy Photo | TRICARE is more than a health plan – it’s peace of mind for military families...... read more read more Courtesy Photo | TRICARE is more than a health plan – it’s peace of mind for military families around the world.
+see less | View Image Page TRICARE is more than a health plan – it’s peace of mind for military families around the world.
+Watch this video to hear directly from TRICARE beneficiaries about what TRICARE means to them.
+They share how TRICARE has supported them through every stage of military life by offering reliability and continuity of care.
+From routine screenings to lifesaving care, TRICARE is more than a benefit for service members and their families.","Courtesy Photo | TRICARE is more than a health plan – it’s peace of mind for military families...... read more read more
+
+Courtesy Photo | TRICARE is more than a health plan – it’s peace of mind for military families around the world. see less | View Image Page
+
+TRICARE is more than a health plan – it’s peace of mind for military families around the world.
+
+Watch this video to hear directly from TRICARE beneficiaries about what TRICARE means to them. They share how TRICARE has supported them through every stage of military life by offering reliability and continuity of care.
+
+From routine screenings to lifesaving care, TRICARE is more than a benefit for service members and their families. It's a trusted partner in their family’s health.",https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2608/9862871/1000w_q95.jpg,N,1.0,2026-08-12 20:56:19.819174
 ,,2026-08-12 21:12:59+00:00,Representative Gabe Vasquez,"Rep. Vasquez Stands With Veterans in Socorro, Marking PACT Act Anniversary",Not Available,,,,,https://vasquez.house.gov/media/press-releases/rep-vasquez-stands-veterans-socorro-marking-pact-act-anniversary,"SOCORRO N.M. – To mark the fourth anniversary of the PACT Act, U.S. Representative Gabe Vasquez (NM-02) met with veterans in Socorro to discuss pressing issues including access to healthcare, affordable housing, and ensuring that veterans in rural areas continue to have access to the benefits they’ve earned.
 “Socorro veterans have come together to build a network of community and support, and I’m grateful to be able to sit down with them and talk shop about the federal issues that impact veterans and their care and benefits,” said Vasquez.
 Rep. Vasquez sat down with: Ravi Bhasker, Mayor of Socorro Manny Gonzales, CEO of Socorro Electric and Sergeant Major (Ret.)
@@ -42,6 +90,59 @@ Voted in support of the Fiscal Year 2027 Military Construction, Veterans Affairs
 ###",http://vasquez.house.gov/sites/evo-subsites/vasquez.house.gov/files/evo-media-image/services-commendations-greetings-andy-feliciotti-unsplash_0.jpg,N,1.0,2026-08-12 19:56:11.156245
 ,,2026-08-12 20:40:29+00:00,X (formerly Twitter),Lies: DOGE reported $1.76 billion in savings from terminating a Defense Health Agency ...,x.com,,,,,https://x.com/DanielPAldrich/status/2087515253265313851,"Lies: DOGE reported $1.76 billion in savings from terminating a Defense Health Agency information technology contract providing IT services to more than 700 military treatment facilities worldwide. It wasn't cut.
 https://t.co/IpvfAsxnzV",Not Available,https://pbs.twimg.com/card_img/2087141794740137984/VInCr048?format=jpg&name=orig,N,-1.0,2026-08-12 17:56:19.608836
+,,2026-08-12 19:43:21+00:00,Equilibrium Health LLC,TRICARE Psychiatrist Fitchburg MA - Equilibrium Health,Not Available,,,,,https://www.equilibriummentalhealth.com/tricare-psychiatrist-fitchburg-ma-equilibrium-health,"What Is Compassionate Mental Health Care Covered by TRICARE?
+If you’re searching for a TRICARE psychiatrist in Fitchburg, Massachusetts, Equilibrium Health proudly provides comprehensive psychiatric care for active-duty military members, veterans, retirees, and military families throughout Massachusetts.
+Our experienced Psychiatric Mental Health Nurse Practitioners (PMHNPs) provide personalized treatment through secure telepsychiatry, helping patients manage a wide range of mental health conditions.
+Active-duty military members, veterans, retirees, and military families living in Fitchburg and surrounding regions who are eligible TRICARE East beneficiaries looking for reliable outpatient psychiatry.
+Our practice relies exclusively on licensed Psychiatric Mental Health Nurse Practitioners (PMHNPs) certified in advanced mental health care.","What Is Compassionate Mental Health Care Covered by TRICARE?
+
+If you’re searching for a TRICARE psychiatrist in Fitchburg, Massachusetts, Equilibrium Health proudly provides comprehensive psychiatric care for active-duty military members, veterans, retirees, and military families throughout Massachusetts. Our experienced Psychiatric Mental Health Nurse Practitioners (PMHNPs) provide personalized treatment through secure telepsychiatry, helping patients manage a wide range of mental health conditions.
+
+Who Can Receive Specialized Care?
+
+Active-duty military members, veterans, retirees, and military families living in Fitchburg and surrounding regions who are eligible TRICARE East beneficiaries looking for reliable outpatient psychiatry.
+
+Where Do Virtual Consultations Take Place?
+
+Receive high-quality psychiatric care from the comfort of your home through Equilibrium Health’s secure telepsychiatry platform, serving patients across Fitchburg and the entire state of Massachusetts.
+
+When Can You Schedule Appointments?
+
+Many TRICARE beneficiaries are eligible for outpatient telehealth mental health services with flexible appointment scheduling. Referral requirements may vary depending on your specific TRICARE plan.
+
+How Our Evidence-Based Treatment Operates
+
+Whether you’re struggling with ADHD, anxiety, depression, PTSD, bipolar disorder, OCD, insomnia, or another mental health concern, we utilize HIPAA-compliant video visits and individualized medication management protocols to support your recovery.
+
+Frequently Asked Questions
+
+Are in-person office visits required for patients living in Fitchburg?
+
+No, all psychiatric evaluations and follow-up care for Fitchburg residents are delivered completely online via our secure telehealth platform.
+
+What credentials do your mental health practitioners hold?
+
+Our practice relies exclusively on licensed Psychiatric Mental Health Nurse Practitioners (PMHNPs) certified in advanced mental health care.
+
+Where can military dependents access virtual consultation rooms?
+
+Dependents can log into our HIPAA-compliant portal from any private home setting or secure location across Massachusetts.
+
+When are new patient consultation slots typically open?
+
+Intake slots open regularly throughout the week, allowing patients to get scheduled quickly without lengthy community waitlists.
+
+How does trauma-informed care support PTSD recovery?
+
+Trauma-informed care prioritizes safety, trust, and emotional regulation, tailoring medication strategies to minimize hypervigilance and sleep disturbances.
+
+What steps are involved in transferring past medical records?
+
+Patients can securely upload prior psychiatric evaluations and medication histories directly through our intake portal prior to their first visit.
+
+How do recurring prescription refills get coordinated?
+
+Refills are managed during routine virtual follow-up check-ins and sent electronically to your designated local or mail-order pharmacy.",https://www.equilibriummentalhealth.com/wp-content/uploads/2026/08/tricare-insurance-accepted.webp,N,1.0,2026-08-12 20:56:24.021929
 ,,2026-08-12 18:41:13+00:00,Joint Base San Antonio,TRICARE: More than a benefit — a trusted partner for military families - Joint Base San Antonio,Not Available,,,,,https://www.jbsa.mil/News/News/Article/4569967/tricare-more-than-a-benefit-a-trusted-partner-for-military-families/,"TRICARE is more than a health plan — it’s peace of mind for military families around the world.
 Watch this video to hear directly from TRICARE beneficiaries about what TRICARE means to them.
 They share how TRICARE has supported them through every stage of military life by offering reliability and continuity of care.
@@ -2090,60 +2191,3 @@ Meta
 Helping people achieve their best health
 
 Every day, we work together to apply our collective insight, talent, and creativity to improving people’s long-term health. And you can too.",https://assets.phenompeople.com/CareerConnectResources/prod/HUMHUMUS/social/1200x630-1730801227228.jpg,N,0.0,2026-08-10 10:56:23.276465
-,,2026-08-10 00:27:55+00:00,U.S. Medicine,Clinicians Question DoD's Testosterone Screening Mandate - U.S. Medicine,Annette Boyle,,,,,https://www.usmedicine.com/clinical-topics/urology/clinicians-question-dods-testosterone-screening-mandate/,"WASHINGTON — Beyond the political fight over the DoD’s new testosterone screening mandate remains a clinical question: Does population-level screening of a mostly asymptomatic, young military population offer significant benefit or simply raise risk?
-The memorandum directing the policy makes testosterone screening a mandatory element of the Periodic Health Assessment for active-duty and reserve personnel 30 and older, with screening optional for younger service members.
-“In the big trials, people at higher risk of suicide were excluded from the testosterone trials because of that fear,” Faust said.
-Beyond Debate While the effect of testosterone therapy on CVD and cancer may remain unresolved, its impact on fertility is uncontroversial.
-None of this forecloses testosterone therapy for troops who are appropriately diagnosed.","Does the Risk Outweigh the Benefit?
-
-WASHINGTON — Beyond the political fight over the DoD’s new testosterone screening mandate remains a clinical question: Does population-level screening of a mostly asymptomatic, young military population offer significant benefit or simply raise risk?
-
-The memorandum directing the policy makes testosterone screening a mandatory element of the Periodic Health Assessment for active-duty and reserve personnel 30 and older, with screening optional for younger service members.
-
-The memo’s clinical rationale leans heavily on “operator syndrome,” which refers to a constellation of issues tied in a 2020 study to the extreme physical and psychological demands characteristic of special operations careers, including chronic combat stress, repeated blast wave exposures, traumatic brain injuries, and chronic sleep deprivation.1
-
-While often associated with a sharp drop in testosterone, operator syndrome is a complex pattern of health concerns including traumatic brain injury (TBI), sleep issues, obstructive sleep apnea, orthopedic problems, vestibular and vision impairments, headaches, and sexual health issues. It also captures a pattern of mental and social health concerns such as cognitive impairment, memory and concentration difficulties, substance abuse, depression, suicide, anger, anxiety, hyper vigilance, stress reactivity, and difficulty with the transition to civilian life as well as marital, family, and community dysfunction.
-
-Given the range of symptoms and number of body systems affected, a holistic approach to affected individuals is recommended, starting with good nutrition, adequate sleep, treatment of diabetes and obesity, and stress management techniques. The original study on operator syndrome called for integrated neurological, medical, sleep, pain, psychiatric, genetic, microbiota, and metabolic assessment and treatment, and viewed low testosterone as a consequence of the rigors of SOF training and careers, not a cause of the syndrome itself.
-
-There also remains a question of efficacy. A study of 50 men that tested supplemental testosterone (200 mg/wk) in short-term energy deficit conditions found that the therapy increased lean body mass but did not reduce lower-body muscle performance decline or improve health-related biomarkers.2 In addition, a small study of special operations forces (SOF) members who had experienced mild to moderate TBI concluded that “these findings indicate testosterone use may not significantly affect symptoms of chronic pain, chronic headache, insomnia, PTSD, anxiety, and depression.” The only difference found between those treated with testosterone and those who were not was a higher pain score in individuals receiving hormone therapy.3
-
-An Ongoing Debate
-
-The debate over testosterone predates the operator syndrome discussion by decades, however, and has focused primarily on safety.
-
-Charles Huggins, MD, made his Nobel Prize-winning discovery that androgen deprivation shrank prostate cancer tumors in 1941.4 His seminal work included a conclusion based on one patient, that the converse was also true—testosterone supplementation stimulates prostate cancer.
-
-A meta-analysis of studies from 1941 to 2008 found that the connection between exogenous testosterone and prostate cancer was far from linear, and that above the near-castrate range, there was little connection.5 (Another analysis in 2024 extended the findings, concluding that there was insufficient evidence of risk for increasing the aggressiveness of prostate cancer in men managed with active surveillance.)6
-
-“Low-T” clinics rapidly multiplied, but new concerns emerged. Researchers prematurely discontinued a 2010 study in 209 older men because of elevated risk in a six-month period: 23 subjects in the testosterone group vs. five in the placebo group experienced cardiovascular-related adverse events. In 2013, a landmark VA study published in JAMA that enrolled 8,709 veterans, showed that hypogonadal men undergoing testosterone therapy had a 29% greater risk of death, heart attack, or stroke than those not on the hormone over an average follow-up period of 27.5 months.7 In both studies, the participants had a high rate of cardiovascular disease at initiation.
-
-The FDA required testosterone products to carry warnings of cardiovascular risk in 2015.
-
-In 2023, the industry-sponsored TRAVERSE trial in 5,246 men with hypogonadism and at risk for or with existing CVD challenged the findings from a decade earlier, showing no increase in cardiovascular death, nonfatal myocardial infarction, nonfatal stroke or coronary revascularization with 33 months of follow up.8 A companion analysis of the same trial found roughly a 50% relative increase in pulmonary embolism and a higher fracture incidence among men on testosterone.
-
-What the Guidelines Say
-
-With that mixed background and the DoD mandate in mind, The Endocrine Society restated its clinical practice guidelines in July. Notably, the society maintained a conservative posture, saying, “there is insufficient evidence to support a general recommendation to perform population-level screening for hypogonadism in asymptomatic men with measurement of blood testosterone level.”
-
-Diagnosing hypogonadism requires both symptoms of low testosterone and consistently low levels on accurately measured blood tests. Symptoms alone, the society notes, are also not diagnostic, as low energy, libido and mood have many causes in aging men, and reversible contributors such as obesity, corticosteroids, obstructive sleep apnea or opioid use need to be ruled out first.9
-
-Testing accuracy compounds the diagnostic problem, the Society adds. Not all testosterone assays are standardized, so the same blood sample can read as low or normal depending on the lab and method used. The CDC’s Hormone Standardization (HoST) program was created to close this gap by certifying qualifying assays as harmonized.
-
-Jason Goldman, MD, internal medicine physician and immediate past president of the American College of Physicians, put the frequent discordance between initial testing and diagnosis in concrete terms: up to 40% of men tested in one study had low readings, but fewer than 2% had any accompanying symptoms.10
-
-Weighing Benefit Against Risk
-
-The Endocrine Society considers the long-term prostate cancer risk unresolved, as it argues that trials have not followed patients long enough to detect it.11
-
-Goldman said the new policy increases known risks. “Testosterone therapy can increase heart attack risk, thicken the blood, cause blood clots, worsen sleep apnea, cause weight gain, cause infertility, make people more aggressive, [and] can make prostate cancer worse,” Goldman said. “Just giving testosterone is not going to optimize troops but could cause severe harm. This is not good, sound medical strategy.”
-
-Jeremy Samuel Faust, MD, emergency physician, Brigham and Women’s Hospital, assistant professor, Harvard Medical School, and editor-in-chief of MedPage raised another safety concern, with specific importance to a military population. “In the big trials, people at higher risk of suicide were excluded from the testosterone trials because of that fear,” Faust said. “I worry about that, and I think it’s really important that we keep our people safe.”12 He added that men with low testosterone but no symptoms “do not benefit from supplementation,” further weakening the case for screening asymptomatic servicemembers.
-
-Beyond Debate
-
-While the effect of testosterone therapy on CVD and cancer may remain unresolved, its impact on fertility is uncontroversial. Testosterone suppresses luteinizing hormone/follicle-stimulating hormone, which is absolutely critical for sperm development. Two World Health Organization studies found that testosterone supplementation for six months resulted in no measurable sperm in 65% to 98% of men.13 After discontinuation of testosterone therapy, about 65% of men recover to 20 million sperm/mL at six months and 100% at two years, though duration of treatment and age may make recovery more difficult.14 For young men at peak family formation age, impaired fertility represents a significant downside.
-
-A separate strand of research complicates the picture further. A meta-analysis of 12 studies including more than 102,000 men presented July 7 at the European Society of Human Reproduction and Embryology found that total and free testosterone, along with sex hormone-binding globulin, have dropped significantly worldwide since 1972, with the rate of decline nearly doubling after 2000.15 Total testosterone plummeted 54%. Shifting population ranges raise questions about what counts as a normal testosterone level and treatment becomes more complex when “rising rates of obesity and metabolic disorders, exposure to endocrine-disrupting chemicals like phthalates or microplastics, sedentary lifestyles, unhealthy dietary patterns, and chronic psychosocial stress have all been implicated”16 in the decline.
-
-None of this forecloses testosterone therapy for troops who are appropriately diagnosed. The Endocrine Society and the trial data agree that men with confirmed hypogonadism from a disease of the testes, pituitary or hypothalamus benefit from treatment at appropriate physiologic doses. The clinical debate now centers on whether mandating screening across a young, mostly asymptomatic population, using assays that are often not standardized, and without a clear protocol for what happens after a low reading, does more long-term harm than good.",https://www.usmedicine.com/wp-content/uploads/2026/08/Testosterone-image-source-is-footnote-5.jpg,N,0.0,2026-08-09 21:56:11.949698
