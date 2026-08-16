@@ -1,4 +1,336 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,American Energy,2026-08-16 22:31:20+00:00,newsletter.semianalysis.com,Full of Cold Air - PJM's $12B modeling mistake - SemiAnalysis,"Robert Boswall, Reyk Knuhtsen, Jeremie Eliahou Ontiveros, Oliver Kennon, Dylan Patel",,,,,https://newsletter.semianalysis.com/p/12b-of-us-ratepayers-money-wasted,"So that premium paid for new power plants is also paid to existing power plants for doing nothing.
+In this report, we dive into PJM’s capacity market and introduce our proprietary reverse-engineered model.
+PJM’s capacity auctions are highly complex and we explain why and how PJM’s 66M residents’ electricity bills were $12B higher than they needed to be.
+In 2024, the same year the capacity auction prices first spiked, PJM overhauled their resource adequacy modeling.
+Faced with the first instance of modest growth in its modern history, the capacity market was unable to procure capacity.","Earlier this year, we explained why residents of the PJM area, America’s largest electricity market, have seen their power bills rise by ~20%. We argued that the main culprit was PJM’s auction design choices and how PJM models demand and supply. To better understand the extent of the problem, our Energy Model team spent the last 6 months reverse-engineering PJM’s main system model, the ‘Reserve Requirement Study’, which to date has been a black box. This study is how PJM decides what type of and how many power plants to buy to make sure electricity is reliable, using an annual auction, and spending billions each year.
+
+Armed with a reconstructed model we argue that the problem is worse than we thought. PJM’s model includes errors that we estimate have cost all of its 66 million residents a total of $12B between 2025 and 2027 alone. We share our method in the annex of this newsletter for our subscribers; as well as the results of the model in our PJM Model dashboard. Our live rebuild of the Reserve Requirement Model is a tab available exclusively to our Energy Model clients; which also includes a quarter-by-quarter forecast of the whole US grid tracking >40,000 grid-connected power plants, and every single behind-the-meter datacenter power order.
+
+PJM’s model is structurally anti-growth with a poorly designed capacity market that is globally unique and a governance system that is too big to function.
+
+These failings magnify the negative impact of bad system modeling, which is the focus of this report:
+
+PJM underestimates by ~4 gigawatts the existing power plants it already has; owing to a methodology which doesn’t account for the higher efficiency of power plants in winter and improved power plant resilience since Storm Elliott.
+
+PJM has wasted ~$12 billion of ratepayers’ money from 2025 to 2027 due to this weak methodology, which dramatically overstated the supply/demand shortfall it faced. Household electricity bills would have risen much less if PJM’s model was accurate.
+
+PJM’s emergency auction is putting ratepayers at risk by signing contracts for too much power without committed counter-parties.
+
+Using PJM’s demand and supply curves we calculate that better modeling would have resulted in $6.7B of savings with only 0.014GW (yes, 14MW) less power procured for 2025/26; then $4.9B and 0.8GW for 2026/27. More power meaning less in savings might be counter-intuitive but we have the supply and demand curves to show how these disproportionate impacts occur. PJM has forced itself into operating at the limit, so inaccurately modeling power plants’ capacities has a massive impact on auction costs.
+
+PJM has constrained its own supply of new power by having one-year contracts that start too soon after they are signed, as well as being slow to connect these new plants to the grid. This means fulfilling any demand growth requires paying a big premium for new power plants to be built at unrealistic speeds. PJM also runs the only capacity market in the world that does not distinguish between new and existing power plants. So that premium paid for new power plants is also paid to existing power plants for doing nothing. The same growth in a market that splits new and existing power plant auctions avoids the volume effect of repricing the entire fleet; which means ratepayers are better protected from price spikes.
+
+Despite four record-breaking auctions costing $63B, PJM will be short of the amount of generation it needs to run reliably, and plans to run an “emergency auction” from September 30th to October 21st with results by December 2nd. SemiAnalysis concludes there is an additional 3.8GW of reliable power on PJM’s system by taking into account increased turbine efficiency from cold air, and reduced risk of winter failure after federally mandated asset winterization investments. This is the equivalent of eight large gas power plants which would cost around $10 billion to build today. This 3.8GW would negate 56% of the 6.8GW that PJM plans to procure in its emergency auction.
+
+PJM’s emergency auction presents serious risks, it will sign contracts running to 2043 that are supposed to be paid for by new large loads. These are not sales of electricity; the plants get paid just for existing, whether or not the forecast demand ever arrives. But PJM is doing this with no committed counter-parties. PJM does not have its own money, everything it spends is from ratepayers.
+
+Every PJM state will have to pass (but none have done so yet) their own cost-allocation policy to pass on costs to participating new large loads. But those large loads can opt out if they contract their own additional power plants directly. If they participate there is little clarity on how much of the auction’s capacity they are expected to pay for. Participation brings no other benefits, like accelerated interconnection timelines. Many datacenter developers have written off PJM regardless, going elsewhere or planning behind-the-meter power configurations. If no other counter-party emerges, then once again those left holding the bag will be the residential ratepayers.
+
+In this report, we dive into PJM’s capacity market and introduce our proprietary reverse-engineered model. We believe that PJM fails to accurately model two critical supply characteristics, despite key stakeholders recognizing them to be both real and of importance:
+
+PJM does not credit how cold, dense air makes gas plants stronger electricity generators by up to 25% in winter; and
+
+PJM’s risk calculations have not been updated to recognize that as long ago as 2024, 400 of PJM’s ~700 gas plants had invested in winter reliability measures in response to the outages from Storm Elliott.
+
+There are deeper problems at PJM than just modeling. Its current auctions were designed two decades ago, and it has not experienced demand growth since. Today PJM is structurally anti-growth. PJM is failing to adapt to this new era of load growth because of a governance deadlock, a vetocracy of vested interests. If it cannot achieve market reform perhaps it can stem the ratepayer bleeding by improving how capacity is modeled, especially when winter is coming.
+
+This report will dig deep into PJM’s capacity market. After providing some introductory context, we adopt the following structure:
+
+We start with the fundamentals and explain how PJM models supply, demand, and reliability risks. We cover their major modeling methodology change in 2024 from EFORd to Reserve Requirement Study and the implications of that change.
+
+We introduce our reverse-engineered model and cover in greater depth how we calculate the role of various resources, outages, reliability, and fleet size.
+
+We get to the core issue: PJM’s lack of consideration of the increased throughput of gas power plants in the winter, and their improved reliability through Asset Winterization.
+
+We then dive into the pricing impact. PJM’s capacity auctions are highly complex and we explain why and how PJM’s 66M residents’ electricity bills were $12B higher than they needed to be.
+
+Lastly, we provide some thoughts on the future of PJM and its upcoming Reliability Backstop Auction. This is an emergency mechanism hoping for datacenters to pay for their own capacity. We believe that ratepayers could, again, be at risk.
+
+Let’s go.
+
+This report is a collaboration between SemiAnalysis and Nathan Iyer in his personal capacity.
+
+Context
+
+If you have not been following along, let us catch you up:
+
+Power bills in PJM states jumped 17-24% in June 2025, and the state regulators labeled the capacity auction as the main driver. Read our PJM vs ERCOT article to understand PJM’s capacity auction, and how singular it is relative to other energy markets.
+
+PJM constrains its own supply of new power plants by requiring them to be built unrealistically quickly and not even accelerating the grid connections of critical projects. This constrained supply greatly increases prices in the auction.
+
+PJM’s capacity auctions restarted in July 2024 after extended delays. This cut the lead time for new generation to get built from the intended 36 months (per the Independent Market Monitor) to 10 months, rising to only 23 months for the latest auction. Power plants take time to build and need long term visibility so giving only a 23-month lead time makes it near impossible to build new generation.
+
+The four auctions since have each procured 134-138GW a year of accredited capacity at prices that jumped from $28.92 before the delay to $270-333 per megawatt-day, raising the cost of a capacity auction from $2.2B to $16.4B, and the four-auction total to $63.6B.
+
+This money is paid by every single household and business in the PJM area, and is little more than a transfer from ratepayers to existing power plants as over the last four auctions only 4.8GW of new capacity has been procured.
+
+Already built capacity does not need $325/MW-day: PJM’s own market monitor says existing generators bid at $8-14/MW-day, and Great Britain’s latest auction paid existing generation $18/MW-day (£5/kW-year).
+
+These gas plants do not need the money to stay online. The median existing combined cycle made 407% of its going-forward costs in the energy and ancillary services markets alone in 2025, before a dollar of capacity revenue.
+
+PJM prevented new projects from getting a grid connection. From October 2021 there was no study path while PJM cleared its backlog; a general application window did not reopen until April 2026, when 220 GW applied.
+
+Now PJM has two under-performing interconnection fast-tracks: 1. The Reliability Resource Initiative, 51 shovel-ready projects picked May 2025, now 41 with 31.5% of the megawatts withdrawn, first output scheduled 2030; 2. The 10-units-a-year Expedited Track opened July 31, 2026. Neither has energized a single megawatt.
+
+PJM cannot reform itself: rule changes need a two-thirds majority across five equally weighted member sectors, so any two sectors can veto anything, and they often do. The Board can override depending on the reform but has chosen not to on these problems.
+
+FERC has now given PJM until the end of September to reform its governance otherwise FERC will intervene. But FERC mainly has reactive rather than proactive powers and this threat is not strictly about the capacity auctions or modeling.
+
+PJM is also the only market in the world where the capacity auction price is for the whole generation stack. Japan was the last other market to price the whole fleet on one year terms but has now concluded the design builds nothing and bolted on a separate 20-year auction for new entries.
+
+Action
+
+FERC is accepting comments on PJM’s backstop filing, until 21st August. Anyone may participate at ferconline.ferc.gov. SemiAnalysis will be submitting this analysis. We encourage others to do the same and we welcome any input on the model, please write to us at energy@semianalysis.com.
+
+We also encourage PJM’s Board to file improved modeling criteria at FERC to change the tariff and Reliability Assurance Agreement, through the same fast-path process it used to install the current rules in 2023 and to launch the backstop this July. FERC must accept it if it is just and reasonable, and FERC accepted seasonal accreditation at MISO in 2022. The winter-ratings text was written in Package C in August 2025, passed by PJM’s own task force, but was not passed by the senior committee. The Board can pick it up tomorrow. Crediting mandated winterization has not been drafted. The closest attempt was the market monitor’s blunter version to delete the storm data outright, which was refused in the same session. FERC should require that the emergency auction’s 6.8GW target be recalculated before PJM signs contracts that will last until 2043.
+
+Our main recommendations are:
+
+These modeling recommendations should be implemented for the emergency auction as well as future auctions;
+
+There should be an inquiry into the overspending of ratepayers’ money in the 2025/26 and 2026/27 auctions; and
+
+Auctions for existing vs new capacity should be split.
+
+Our more loosely held thoughts are:
+
+The Emergency Auction should probably be canceled for posing too great a risk to ratepayers if new large loads do not arrive, instead only use direct capacity contracting as part of accelerated interconnection agreements; and
+
+If the Emergency Auction is kept to make up the shortfall it should be paid for by existing demand with a short term fix of further lowering the price cap for the Base Residual Auction, this would effectively create separate existing and new capacity auctions.
+
+Datacenters are how electricity can become cheaper than ever before by paying down high system costs using economies of scale and unprecedented value creation . To attract more datacenters and achieve this affordable energy future State Governors and customer advocates need to focus on the bureaucratic failures to create functional markets.
+
+1. PJM underestimates the power plants it already has by ~4 gigawatts of reliable power
+
+For a primer on PJM’s capacity market and auctions, read our previous report. As a TLDR: PJM acts as a central planner and runs auctions to ensure there is enough supply to meet peak demand, with a safety buffer. PJM made its planning more sophisticated in 2024, but due to failed stakeholder votes, did not include important inputs. The result of leaving out these inputs is that PJM overestimates system risk during winter months which leads to trying to procure too many new power plants as backup. But PJM also has a constrained supply of new power plants which leads to price spikes, trying but failing to fix this scarcity.
+
+Things weren’t always this way.
+
+In 2024, the same year the capacity auction prices first spiked, PJM overhauled their resource adequacy modeling. Previously, the PJM system operated under a system called “Equivalent Demand Forced Outage Rate” or EFORd. The capacity target was set by taking the peak demand and adding a margin based on the chance a generator might be offline. However, this system is not able to effectively capture correlated failures, which are more common in cold winter months for natural gas power plants. It also fails to account for newer technologies on the grid. Specifically variable resources which require modeling on at least an hourly basis to capture their contributions to capacity. These are intermittent generation such as wind, solar, or run-of-river hydro; as well as ‘limited’ resources, like storage of all kinds.
+
+These limitations came to light in 2022. During Winter Storm Elliott, PJM lost 24% of its total generation due to forced outages and derates, and two thirds of the loss came from natural gas generators. Storm Elliott led to a substantial overhaul of the Reserve Requirement Study making it into an hourly risk framework. In this study PJM models demand against supply for every hour of the year for a number of theoretical years, using both historic and forecast-based randomized data. This more detailed approach identified that at certain times of the year there is not enough supply relative to demand.
+
+As a result, gas in particular suffered a 10-20% knock-down. These two changes had a large system impact, cleared capacity fell by 8% (12GW from 147GW to 135GW) between the auctions for 2024/25 and 2025/26. It is as if the system lost a score of large power plants. The capacity auctions have been expensive since PJM basically had to buy replacement plants.
+
+The shift from a summer risk system to a winter risk system is a much bigger deal in PJM. It has one central auction, versus other capacity markets, which instead distinguish specifically between winter and summer. For PJM, a winter risk system degrades the reliability value of stronger summer resources (e.g. solar and storage which can bridge afternoon peaks), and enhances the stronger winter resources (e.g. nuclear, coal). Even a minor improvement in winter gas risk can have ripple effects across every resource, with major commercial implications.
+
+The study’s hourly matching against weather and demand scenarios defines how each new generator improves reliability of the system. To many this new system is a black box. PJM, to its credit, publishes a portion of its work and data. It is complex but its nuances are important for understanding PJM’s current problems. With which, combined with other public data, we have given our best shot at reconstructing the model and scrutinizing its inner workings. In doing so, we’ve identified and corroborated a number of weaknesses that are of great importance to recent price spikes; reliability concerns; and the upcoming backstop auction.
+
+The Reserve Requirement Study
+
+PJM’s new(ish) system overestimates the risk in winter months which leads to overbuilding power plants. Our model re-runs the Reserve Requirement Study on the same whole-system basis PJM uses. Our conclusion is that the same fleet is worth more reliable capacity than PJM credits it, so the auction requirement against total electricity demand falls.
+
+While PJM models demand with its year-round variations, it caps supply at generators’ summer accreditations. On one hand, that makes sense as PJM is a summer peaking system. There is more air conditioning electricity demand in the summer than there is heating demand in the winter, and so the highest demand points in the year are in summer. Even when netted off against the increased output of solar, the demand for reliable power plants is still higher in the summer than it is in the winter.
+
+On the other hand, historically failure rates of generation are much higher in the winter, tend to be correlated across fleets, and aligned with periods of highest demand. Higher failure rates mean that winter can be the most probable time for supply to fall short of demand. Gas is less reliable in winter as storms can cause them all to freeze at the same time, as seen with the Polar Vortex and Storm Elliott.
+
+This type of winter risk is recognized in PJM’s modeling but the details are out of date and lack precision. They do not consider how cold improves the operations of the plants that do not fail, or how plants have hardened themselves against the weather in recent years.
+
+PJM uses historical data for performance. This means that if a resource falters one time, the only way to increase reliability is to wait over a decade to flush the event out of the system. No amount of investments, regulations, or assurances can lift this judgment. As a result, the largest driver of reliability risk to this day was driven by a polar vortex in 2013 and the second is Storm Elliott in 2022.
+
+Self-Supply
+
+Why aren’t PJM ratepayers better protected from price swings? In most other power markets, retail customers have long-term contracts with utilities and are not exposed to yearly capacity market changes. The market next door, MISO, also experienced substantial capacity swings, but the vast majority of households were unaffected because utilities had long-term contracts.
+
+There are a number of reasons PJM is so all-or-nothing, but it comes down to a combination of retail choice and deregulation (shorter and less certain contracts), a Supreme Court case that struck down state efforts to support long-term contracts, and a long-standing FERC fight that boiled down to a partisan battle between resource preferences.
+
+The other main option remaining is for utilities to procure enough capacity for themselves and then effectively eject themselves fully from the capacity market for 5 years. This shows up on the capacity markets as big swings, but ends up being relatively neutral impacts because the supply and demand impact is balanced.
+
+Fleet Uncertainty
+
+While data for PJM’s overall fleet is relatively transparent and drives their risk model, the auction itself diverges in often unpredictable ways and cannot be fully replicated.
+
+The Reserve Requirement Study is bigger than just the Base Residual Auction, as some utilities ‘self-supply’. The Fixed Resource Requirement (FRR) alternative allows utilities to opt out of the auction and file their own capacity plans, with an obligation set by their share of load, which is ~8% of the PJM system (e.g. 12GW for 2026/27).
+
+So PJM’s Reserve Requirement Study models an ‘Assumed Fleet’, and produces a whole-system number (e.g. 146GW of reliable capacity for 2026/27). The auction’s target is the requirement minus the self-supply obligation (e.g. 134GW for 2026/27).
+
+The ‘Committed Fleet’ is the result of the auction and self-supply. In 2026/27 the auction cleared 134.3GW, 0.2GW short of its target, while the self-supply plans committed 12GW, about 0.3GW more than their obligation. The system ended the auction 0.1GW above the whole-system requirement, but only because self-supply over-delivered by more than the auction missed. Behind all of this sits the total fleet, the power plants that physically exist.
+
+Reverse-Engineering the Model
+
+To get the real numbers we needed to rebuild the model in full. So we took PJM’s Manual, which explains how they do this study and turned it into code. Then we ran on that code the weather, demand, and generation data that they publish. For data that they do not give we used publicly available proxies, mainly from the U.S. Energy Information Administration. We got a high level of accuracy to the outputs that PJM publishes across the last four auctions. The detailed step by step is included in the Methodology Annex of this newsletter to help subscribers who wishes to recreate or audit our work.
+
+Improving the model
+
+In the auction for 2026/27, cold air uplift alone should have reduced the required capacity by 1.5GW and weatherization alone 2.5GW at only 60%. Together they would have been worth 3.1GW as there is a significant overlap between their effects.
+
+We calculated this by using our reconstructed Reserve Requirement Study to test how much the outputs would change if we altered two input assumptions that have been widely debated and previously proposed: crediting cold air uplift and asset winterization. Again, the detailed steps are in the Methodology Annex.
+
+Crediting Cold Air Uplift
+
+A turbine is a mass-flow machine, cold air is denser, so turbines can squeeze more electricity out when temperatures drop. If you ignore ways that a system is more efficient in winter, but still recognize winter failure risk then you double count the risk and buy too many power plants.
+
+PJM’s modeling does not recognize that cold weather makes thermal plants more efficient, and increases the available capacity on the grid during cold periods. Cold temperatures make the air denser and improve temperature gradients, which improves turbine flow and increases the peak electricity output of a unit. For combustion turbines, this impact is as high as 25%, and PJM’s class table averages 8.4% for turbines over the winter months. While gas plants are more likely to come offline in the winter, their fellow gas plants are better able to produce more power to make up for it. Steam plants also benefit from colder cooling water which lowers condenser pressure, improving cycle efficiency. Instead these plants are modeled as if it were the summer months.
+
+Crediting cold air counterbalances the greater breakdown risk. Our model runs these two dynamics side-by-side hour-by-hour. It keeps PJM’s winter breakdown rates exactly as PJM sets them, and credits extra output per thermal plant running in each simulated hour. Netted over 41,600 simulated years, crediting cold air alone, with PJM’s failure rates untouched, still cuts the capacity requirement by 1.3 to 2.2GW depending on the year.
+
+PJM was already told they were modeling this wrong. E3, the consultant PJM hired to review its methodology, highlighted the bias in its December 2025 evaluation: “PJM asymmetrically applies ambient derates to the ICAP of unlimited resource classes when temperatures rise but does not apply ambient uprates when temperatures fall.” PJM’s own May 2025 sensitivity tested crediting it in the model which resulted in 33 percent less winter loss of load hours and a 1.1 percentage point lower reserve margin against the 2026/27 auction model. E3’s consideration 4 of 14 was to adopt seasonal or daily capability ratings.
+
+PJM measured winter capability uplift as 8.5GW nameplate. Despite this massive impact (worth at least $13B in new gas plants at a conservative $1500/kW), PJM did not implement this adjustment despite having all the core information. One of the primary reasons is that they would have to run deliverability studies to determine if the additional capacity could serve the whole system. To our knowledge, PJM never ran these studies. It is worth noting that the likelihood of deliverability is high. In stressed circumstances, a large portion of the otherwise deliverable fleet would be offline, and the cold also improves the thermal capacity of all grid components (including conductors, substations, and breakers). Using the summertime capacity ratings for wintertime thermal production is physically inaccurate, but due to stakeholder disagreement (detailed in Package C of the ELCC taskforce), proposed reforms to implement this basic change did not pass.
+
+Our modeling methodology is in the annex.
+
+Updating Risk with Asset Winterization
+
+PJM does not properly credit power plants that invest in hardening themselves against extreme events. This means it underestimated winter risk before Storm Elliott and could now overestimate the risk of their newly winterized fleet. This lack of accuracy and forecasting drives up the cost of electricity. Crediting weatherization alone for the 2026/27 auction would have been worth up to 3GW of reliable power.
+
+Crediting winterization and other forms of resilience investment would be a strong financial incentive for plants to invest as they would then earn more in capacity auctions. Instead PJM establishes plant failure rates based on past performance, and the large collapses of the gas fleet during the Polar Vortex and more recently during Winter Storm Elliott play an outsized role in reducing the capacity value which PJM credits to gas plants. For increased statistical heft PJM uses as many historical weather years as possible. But once there is a big miss only time and good performance can slowly return this to baseline. A painstaking process of asymptotic averages. Even if gas plants invested billions in weatherization or demonstrated extraordinary resilience during a similar event.
+
+Plants fail because components freeze: instrumentation and sensing lines, valves, fuel handling. During Winter Storm Elliott (December 2022), PJM saw 46GW of coincident outages. The FERC/NERC joint inquiry (October 2023) found that at least 75% of freezing-caused failures occurred at temperatures above the units’ documented operating limits. Which means a properly winterized unit would not have failed.
+
+By the winter beginning November 2025, the existing fleet was winterized substantially more than PJM’s model assumes. Mandatory cold-weather preparedness plans, annual training for every unit, and reporting of each unit’s cold-weather operating limits were mandated by April 2023. By January 2024, more than 400 generators had reported winterization improvements to PJM, a figure PJM published in its own review of Storm Gerri. PJM has roughly 450 gas units and about 750 thermal units in total, so that is the majority of the relevant units. The reports are self-made but they were filed under a regime that already required every unit to hold a cold-weather plan, and they came nearly two years before the auction’s winter we are modeling. A legally required calculation of every unit’s extreme cold weather temperature was due by October 2024. The event-CAP rule was enforceable from October 2024; any unit that froze during winter 2024/25 owed a completed corrective plan before December 2025. In addition, binding NERC winterization standards ramp through 2027, although this had no impact on recent auctions that target years after it goes into effect.
+
+There is evidence of winterization in the fleet’s recent performance. Gerri (January 2024) had a peak of 16GW or 9% in forced outages against Elliott’s 46GW. The MLK storm (January 2025) also had a 9% forced-outage rate against Elliott’s 24%, on similar weather over a holiday weekend, while serving an all-time winter peak. Storm Fern (January 2026) had outages of 18-19GW or 10%. During each of the cold events since Storm Elliott, PJM’s fleet has behaved like one substantially winterized. MLK in January 2025 with Elliott-like weather showed no excess clustering at all.
+
+Specific methodology is in the annex but the key point is that the winterization lever does not assume plants fail less often. It preserves each class’s annual average failure rate exactly and removes only the weather clustering. A genuinely winterized fleet would also fail less on average. We do not include credit for that. To be highly conservative we assume a 50% winterization for 2025/26 then step it up by 10% each year from there.
+
+Overlap
+
+The outcomes of these two modeling changes have significant overlap, so together they are less than the sum of their parts. This is because they fix the same hours. PJM’s requirement is set by a handful of deep-cold hours in which the system might run short. In 2026/27, cold air alone is worth 1,535 MW of requirement relief on the auction’s scale and weatherization alone set to 100% is worth 3,143 MW, but together they are worth 3,320 MW, not 4,678. In the overlap winterization (when set to 100%) particularly dominates cold air’s effect, covering up to 76-96% depending on the year. At lower settings the overlap is reduced. For the annual settings we have chosen the overlap range becomes 53-69% depending on the year.
+
+2. PJM has overspent by ~$12 billion
+
+The result of these improvements to the model inputs is that PJM has a more reliable fleet than its Reserve Requirement Study currently recognizes. So relative to modeled demand load it needed to procure less capacity than it has done for the last four years. In the two auctions where the price was free to move (2025/26 and 2026/27) that difference was worth $12B.
+
+Auction Design
+
+Auction design is much harder to reform than modeling methodology. But you need to understand the design in order to see that relatively small shortfalls in modeled capacity can have outsized impacts on auction costs. PJM has two markets: one for energy which is in real time and one for capacity which is on an annual basis. A capacity contract pays a plant for being available, not for making energy. PJM interconnection queue is famously slow and long, but power plants applying joining the queue do so at their own risk, plants joining the capacity market are the ratepayers’ risk.
+
+Two costs matter in any power market: what it costs to run a plant for another hour, and what it cost to build and keep the plant at all. The first short-run marginal cost and the second long-run marginal cost. The daily energy market clears at the short-run marginal cost (fuel, labor, variable maintenance) of the last needed producer. This incentivizes bidding true cost rather than gaming the system as any more than that would risk not being dispatched and so earning nothing. The difference between the short-run and the long-run marginal cost (capital, assets, fixed maintenance) creates a “missing money” problem as power plants struggle to make this back in the daily energy market. Some electricity grids, most famously ERCOT in Texas, only have an energy market. Power plants make that missing money by putting prices really high when supply is scarce. But many markets use a capacity auction to provide this missing money, considering it the more stable approach. PJM’s annual capacity auction also pays all bidders the price of the last needed capacity.
+
+Every year PJM’s planning model (the Reserve Requirement Study, RRS) decides how much reliable power keeps shortfalls to one event in ten years (the 0.1 Loss of Load Expectation, LOLE). Because risks are spread out everyone in the market tries to free-ride on everyone else which means power capacity has no natural buyer. PJM acts as the insurance intermediary. It draws a market demand curve, a sliding schedule of what price it will pay at each level of supply (the Variable Resource Requirement, VRR). The yearly auction in which generation bids and PJM buys against that curve is the Base Residual Auction (BRA).
+
+Unfortunately, PJM runs one capacity auction that includes ~92-93% of fleet capacity, both existing generators and new generators. Most of the rest is covered by self-supplied utilities. This is a problem as these are substantially different products, new generators have much larger long-run marginal costs. Existing generators only need to cover their annual fixed costs, the Independent Market Monitor’s offer data shows most bids at $8-14/MW-day. New generators have substantial risk-related costs and much greater initial fixed costs. New and existing plants also receive the same one-year contract, even though a new plant normally needs a long-term contract with which to raise financing cost-effectively. This auction design means that if there is electricity demand growth which requires new plants to be built then prices will need to increase by a lot compared to the baseline. In PJM’s case the whole fleet’s price went from $28.92 to $270-333 per megawatt-day, roughly 20 to 40 times the $8-14 the existing plants themselves were offering. This creates huge windfalls to existing generators without necessarily increasing generation capacity on the system in an effective manner.
+
+Happy to be corrected, but we believe PJM is also unique in the world for how much of its fleet is put through the same marginal-priced auction. 93% of PJM capacity settles at the clearing price, against 15% in MISO’s residual auction, monthly rolling in New York, bilateral contracts in California, none in Texas, and New England just abandoned the design entirely. MISO also had a sharp auction price swing, but its auction is residual and utilities self-supply or contract for most capacity beforehand. Therefore about 86% of its 2025/26 summer requirement was met outside the auction, leaving most load protected against the swing. Great Britain, Ireland, Italy, and Japan run centralized auctions, but give qualifying new plants contracts of 10 or 20 years while existing plants generally receive one year.
+
+All of these markets make customers pay for growth. But the same growth in those markets would not drive the repricing of nearly the entire fleet as it did in PJM. That cost shift is a product of market design rather than inherent to load growth. Reform is coming, and datacenter developers have largely supported reforms to pay for capacity as it is in their interests for growth to happen painlessly. However, currently no proposals provide any respite for ratepayers who are still paying for design choices made two decades ago.
+
+This design is not without its reasons. For over 20 years, PJM has not experienced any load growth, and benefited from an early gas boom by Independent Power Producers that proved disastrous for early investors. Over that time less efficient plants have been pushed off the system by more efficient ones, in many ways a good system, just not one built for growth.
+
+The Wasted $12B
+
+For the four most recent auctions we have calculated what price and volume the auctions would have cleared at if the Reserve Requirement Study had been more accurate. That modeling improvement shifts the demand curve to the left. We find that the auctions for 2025/26 and for 2026/27 would have seen savings of $11.57 billion, with a sensitivity range between $8.0 billion and $14.5 billion combined while procuring more than the reliability requirement. The auctions for 2027/28 and 2028/29 would not have cleared at a lower price or volume because supply was tight enough that the price cap for those years still binds, even under improved modeling.
+
+The capacity auction price is set where the supply curve crosses PJM’s demand curve (VRR). The demand curve is a published price schedule stating what PJM will pay at each level of supply. The supply curve is made up of all the bids into the market; PJM and its market monitor publish the shape with key data points. We have reconstructed these curves for each of the four auctions.
+
+We then used our reverse-engineered Reserve Requirement Study to calculate how the curves move with improved inputs to incorporate cold air and asset winterization. Given the greater reliability of the existing fleet the need to procure a greater margin of supply over the electricity demand is reduced. This shifts the demand curve for capacity (VRR) to the left. We computed this by year given different inputs and concluded that for a 0.1 LOLE, whole-system reliable capacity requirements fall by: 2,879 MW (2025/26), 3,396 (2026/27), 4,513 (2027/28), 3,824 (2028/29). We have to assume that bids do not change as modeling bid behavior is complex, in reality there would be some change but we do not think it would be material in this context.
+
+PJM’s capacity market has a right-angled supply curve. The vast majority of it is low and flat, then some steady increase, before right at the end it spikes straight up. For example the 2025/26 auction had the first 79% of the bids between $2-5, the next 20% rose until they peaked at $105, and it was only the last 1% that went as high as $352, with the market clearing at $270. This is reflecting that most of the power plants in PJM have existed for a while and bid low as they have little difference between their short-run and long-run marginal costs. But then new power plants bid high to be able to afford to be built quickly and to cover their own risk. The shape of PJM’s supply curves is why, if you are at their limit, a small change in quantity demanded has a huge impact on price and on total cost, even when having a small impact on volume procured.
+
+The Base Residual Auctions do not stop at their required capacity, they clear on their demand curve. So if there is more capacity that can be bought at a price that PJM has decided is acceptable then it clears the auction. For the 2025/26 auction PJM’s ceiling price was $452 and enough bids came in that 135.7GW was procured for $270 against a required capacity of 133.6GW.
+
+If the Reserve Requirement Study had been computed differently then the demand curve would have been shifted to the left by 2.7GW. The adjusted target required capacity would have been 130.9GW and the auction would have cleared 135.7GW at a price of $135 (a 50% discount). Only 0.014GW difference, but that $135/MW-day saving is multiplied by the full 135.7GW (plus $270 times 0.014GW), then multiplied by 365 days to give $6.7B for the full auction.
+
+There is even a magnitude of impact sense check we can compare against. The independent market monitor ran a similar calculation in September 2024, for the cold-air credit alone. It found $2.7 billion with the reserve margin held fixed, and up to $8.0 billion without. Our figure also includes the reliability effects of winterization.
+
+Price Caps
+
+The auction for 2026/27 included the first politically imposed price cap. PJM has price ceilings in its demand curve modeling but price caps were set as a hasty measure by governors to prevent PJM’s awkward auction design from harming ratepayers even more. While this was achieved, the price cap of $329 also prevented the auction from clearing properly. 134.2GW was procured against a required capacity of 134.5GW, only 0.3GW short.
+
+If the Reserve Requirement Study had been computed differently then the demand curve would have been shifted to the left by 3.1GW. The adjusted target required capacity would have been 131.4GW and the auction would have cleared 133.6GW at a price of $230. Only 0.6GW less, with an improved reliability margin, and $99/MW-day discount. Total auction savings of $4.9 billion.
+
+Price caps can have many unintended consequences. In this instance one result has been an emergency auction for 11-15 year contracts at elevated prices. Any generators that chose to withhold incremental capacity may well have benefited from doing so.
+
+Constrained Supply
+
+2025/26 and 2026/27 are the two auctions in which we found PJM had wasted ratepayers’ money. The next two auctions would not have had price or volume impacts from improved modeling because supply was so constrained that even 4.5GW and 3.8GW of movement respectively would not get the demand curve to cross with the supply curve below the auctions’ political price caps.
+
+The 2027/28 auction held in December 2025, cleared at $333.44, at the price cap and 6.5GW short. So a 4.5GW leftwards shift in the demand curve is not sufficient to make a difference.
+
+The 2028/29 auction held in July 2026, cleared at $325.00, at the cap and 6.8GW short. The 6.8GW target falls to about 3GW with improved modeling.
+
+That 6.8GW vs 3GW is now the billions-of-dollars question for PJM’s fast-approaching emergency auction.
+
+3. PJM is putting ratepayers at risk by trying to buy too much in its upcoming emergency auction.
+
+Who Pays?
+
+Buying too much is bad in any auction, but this backstop auction has no defined counter-party. PJM plans to pay for power plants to get built on the expectation that energy demand arrives later. But if that demand does not arrive then PJM will still have to pay.
+
+In theory new large loads are supposed to pay for this emergency auction. But the forcasted large loads are hypothetical and won’t be signing on the dotted line. The plan is for PJM to sign the contracts and for the States to each pass their own cost-allocation policy to allocate costs onto participating new large loads. PJM’s filing clarifies that “Because PJM does not have jurisdiction to allocate retail costs directly to individual data centers, state action will be essential.” This creates a lot of uncertainty for large loads as cost pass-on will be bespoke state-by-state.
+
+Only new resources in service by June 2032 may bid. Contracts all end in 2043, so a power plant online in 2032 gets about eleven years. The costs are then assigned to transmission zones in proportion to forecast load growth between 2026/27 and 2028/29. Those shares are frozen for the full fifteen years. Inside each zone, a state will use bespoke policy design to direct the costs onward to specific large loads or distribution companies. If a state does nothing, the filing’s default applies and the costs fall on every load-serving entity in the zone by peak-load share.
+
+There is no true-up, the zone shares are set by forecast growth and never revisited. The supply contracts are structured as guaranteed top-ups. Each winner is made whole to its bid against whatever the capacity market later pays out to 2043. Load-serving entities assigned backstop costs must post credit support of $1.5 million per megawatt of obligation, within ninety days of each delivery year. At the ceiling average of $555/MW-day the maximum liability for 6.8GW is roughly $21 billion.
+
+There is no sweetener to encourage large loads to participate such as accelerated interconnection. There is not even assurance on ‘unaccelerated’ interconnection timelines. Then on the supply side there is little penalty for under-delivering once a plant is running. PJM itself projects that even with the backstop the next auction “may clear short”.
+
+Overruled
+
+Through PJM’s fast-track stakeholder process this spring, the members developed and endorsed a backstop design built around a voluntary subscription model. This was championed by a coalition of the electric distribution companies and the Data Center Coalition. The idea was for large new loads to subscribe first, committing to pay for the new capacity before it’s procured. Unbelievably for PJM that design won more than two-thirds sector-weighted support.
+
+Then the Board overrode its own members. In its decisional letter of 27th July 2026, the Board rejected the subscription framework on the stated ground that it “would not provide sufficient assurance that capacity equal to the identified near-term shortfall would actually be procured”.
+
+That is why improving this system modeling is crucial. The Board decided this high-risk emergency auction was necessary because of modeling which overstates the near-term shortfall. The near-term shortfall is currently 6.8GW, recomputed it would be 3.0GW, an amount a subscription model could plausibly have covered. The total requirement of 156GW is built from the 2028/29 load forecast, which already embeds the anticipated datacenter growth.
+
+PJM has filed the Board’s proposal at FERC on 31st July 2026. The Board’s design uses a $555 average-cap and they added back a badly designed curtailment scheme (IRAS) that the members had rightly voted down. Both of these measures seem designed to dissuade new large loads from joining this scheme.
+
+An average-price cap with pay-as-bid supply contracts means that participating demand loads do not know what price they will sign. The $555 cap constrains the portfolio average and not any individual contract. PJM’s own worked example shows a $600 offer clearing. The quantity being bought is also unknown, because the window for reporting bilateral offsets runs concurrently with the offer window. The load’s own share is unknown, because it depends on state allocation mechanisms that do not yet exist and on how many other loads participate. The average is applied at selection. If contracts are voided later, the remaining portfolio is never re-tested against $555. This risk is asymmetric on the upside as lower priced contracts are more likely to be abandoned or fail. Pay-as-bid makes this worse. In a marginal-price auction a bidder’s best strategy is to bid its true cost. Under pay-as-bid the best strategy is to bid your forecast of the highest accepted price. PJM’s own witness says this in the filing: pay-as-bid sellers “are more likely to offer the expected clearing price,” and market-power mitigation in this setting is “difficult and ineffective.”
+
+The Interim Resource Adequacy Service (IRAS) scheme applies to loads over 50MW after 2027/28 that are not covered by one of: the central procurement, self-supply, or a bilateral contract. These loads connect as non-firm and are curtailed first during capacity shortages, ahead of even the pre-emergency demand response programs. As an aside, non-firm connections are fair in extreme cases, but this is mad. Demand response participants are paid to curtail; it is a service they sell. The new large loads would be paying for this service in their electricity bills and still be turned off first. These demand loads will be in the hundreds of megawatts and are not designed for this kind of fast response or high-fidelity manipulation. It could even be dangerous to the system. PJM’s own staff had dropped mandatory curtailment days before the final stakeholder meeting, citing doubts about PJM’s jurisdiction to curtail retail load at all, and the generators’ own trade group warned that reviving it invited protracted litigation.
+
+For any load that can manage it, self-supply strictly dominates the auction. This will drive defection and greatly increase the risk of yet more over-procurement by PJM to the detriment of its rate-paying households and businesses. For the rest, greener pastures await in other power markets.
+
+Governance
+
+Comments to FERC close 21st August at 17:00 Eastern. The auction runs from 30th September to 21st October, with results by 2nd December. This is only one week before the next regular auction opens on 9th December. PJM posted the class ratings for the 2029/30 auction on 7th August. Once again they were computed for endless summer. PJM will post the remaining parameters on 31st August. Everything in this piece is about decisions being made in the next ninety days.
+
+Other than our reverse-engineered model almost none of this is new. In 2023 PJM proposed a full two-season capacity market itself. But after the Independent Market Monitor and others objected that the design needed more development time, PJM withdrew it and filed an annual-only package; FERC approved that package in January 2024 and declined to require seasonality. In September 2024, the Independent Market Monitor concluded that crediting the winter capability of thermal plants would have cut that year’s capacity bill by $2.7 billion with the reserve margin held fixed, and up to $8.0 billion otherwise. Its standing recommendation read: “There is no reason that excess winter CIRs cannot be assigned to these resources immediately.” In May 2025 PJM’s sensitivity analysis found the fleet’s winter capability runs 8,561 megawatts above its summer ratings. That same month, members voted 3.699 (of 5 sector-weighted votes) to defer adjacent transmission work “until such time that stakeholders undertake work on a seasonal capacity construct.” In July 2025 PJM’s own task force endorsed the fix in Package C. This included winter ratings and passed 178 votes to 54, 77%. Twenty-six days later, on 20th August 2025, the senior committee killed it with 30.7% of the weighted vote. Generation owners argued a higher winter rating raises the benchmark a plant is penalized against when it underperforms in summer. The consumer sectors voted PJM’s package down while backing two blunter alternatives, and the generators killed those in turn. In December 2025 E3 recommended seasonal or daily ratings, Consideration 4 of 14. No vote has been held since.
+
+Conclusion
+
+PJM’s centralized capacity market has fully failed at its core role of solving capacity shortfalls. Faced with the first instance of modest growth in its modern history, the capacity market was unable to procure capacity. Instead PJM’s design misallocated those dollars as windfall profits to existing generators while constraining supply with short lead times and long interconnection queues. PJM is making progress at creating a third energy market in the form of this emergency auction specifically for the new generation. But in doing so it is converting long-standing errors into long-standing liabilities with basic resource modeling accuracy still in the air.
+
+These specific modeling points have been debated before but without success in implementation. Our hope is that this effort to reverse-engineer and release PJM’s black box will move the debate through exposure to the size of impact this change in methodology could have. That is what we have attempted to do with the information that is publicly available. We must emphasize that there is key information which is not available which we have highlighted. This has the result that our modeling is at best a good approximation. If we are even half right, we need to change this modeling urgently to avoid further waste and create a clearer signal of what new capacity is required to enable PJM to grow once again.
+
+Methodology Annex","https://substackcdn.com/image/fetch/$s_!ciiL!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa5a893d5-44a1-4d3a-9a8f-3ebb6f5a07b1_1448x1086.png",N,,2026-08-16 18:59:35.085130
+,American Energy,2026-08-16 22:30:01+00:00,Energies Media,"U.S. utility-scale battery storage capacity reaches 52 GW in mid-2026, averaging 70 ...",Kelly Lippke,,,,,https://energiesmedia.com/us-battery-storage-capacity-2026-energy/,"U.S. utility-scale battery storage capacity has grown at an average annual rate of 70% over the past three years, according to the U.S. Energy Information Administration.
+U.S. battery storage surpasses 52 GW by mid-2026 The numbers behind that growth rate are striking on their own.
+At the close of 2025, the U.S. power system had 43.6 GW of operational battery storage capacity.
+Solar PV co-location drives battery storage expansion Look at where the largest battery installations are, and a clear pattern emerges.
+If those plans hold, total U.S. utility-scale battery storage capacity would more than double from its current level by the end of 2028.","U.S. utility-scale battery storage capacity has grown at an average annual rate of 70% over the past three years, according to the U.S. Energy Information Administration. By mid-2026, operators had brought nearly 52 GW of nameplate battery storage capacity online—including 8.3 GW added in just the first six months of the year—based on the EIA’s latest Preliminary Monthly Electric Generator Inventory.
+
+That pace of expansion is reshaping how the U.S. power grid stores and delivers electricity.
+
+U.S. battery storage surpasses 52 GW by mid-2026
+
+The numbers behind that growth rate are striking on their own. At the close of 2025, the U.S. power system had 43.6 GW of operational battery storage capacity. Operators then added another 8.3 GW in just the first half of 2026, pushing total nameplate capacity to nearly 52 GW.
+
+That figure comes from EIA’s latest Preliminary Monthly Electric Generator Inventory, which tracks utility-scale installations across the entire U.S.
+
+That figure comes from EIA’s latest Preliminary Monthly Electric Generator Inventory, which tracks utility-scale installations across the entire U.S. power system. The 70% average annual growth rate covers the past three years—a sustained, accelerating buildout, not a single standout year.
+
+Utility-scale battery storage was a niche technology not long ago. Today it’s one of the fastest-growing segments of the U.S. power sector, and the infrastructure going up now is fundamentally different in scale from what existed even a few years back.
+
+Solar PV co-location drives battery storage expansion
+
+Look at where the largest battery installations are, and a clear pattern emerges. Solar photovoltaic plants host the biggest battery storage units in the country—and the projects at the top of that list are enormous.
+
+The Bellefield Solar and Energy Storage Farm in California is the current leader. It began operations in December 2025 and pairs 500 MW of photovoltaic capacity with 500 MW of nameplate power storage, all operating within the California Independent System Operator (CAISO) grid. Florida’s Manatee Solar Energy Center has been operational since 2021, combining 75 MW of solar capacity with 409 MW of battery storage—a lopsided ratio that reflects how the site was designed to prioritize storage output—and currently ranks as the second-largest battery storage project in the U.S.
+
+Nevada’s Gemini Solar Hybrid rounds out the top tier. With 690 MW of photovoltaic capacity and 380 MW of storage, it came online in 2024. All four of the country’s largest storage assets are tied to solar generation.
+
+Price arbitrage economics underpins operator investment
+
+The business logic driving this buildout is pretty straightforward. Solar PV and storage facilities let operators charge batteries when wholesale electricity prices are low—typically midday, when solar generation peaks—then discharge that stored electricity when prices climb, usually in the evening as demand rises and solar output drops.
+
+That timing creates a direct financial incentive. Rather than selling whatever their panels generate at whatever the market offers in that moment, producers can capture larger margins by choosing when to sell into the grid.
+
+This model works across multiple grid regions. CAISO has been an early and prominent market for solar-plus-storage development, but the economic incentive isn’t unique to California. The fundamental dynamic—low midday prices, higher evening prices—applies wherever solar generation is substantial. It’s that consistent logic, more than any single policy or subsidy, that explains why co-located projects keep getting built at scale.
+
+54 GW of additional capacity planned through 2028
+
+The buildout isn’t slowing down. Operators have reported plans to bring an additional 54 GW of battery storage capacity online over the next two and a half years, according to data submitted to the EIA.
+
+The timeline breaks down like this: 14 GW expected in the second half of 2026, followed by 26 GW in 2027—the single largest annual increment—and another 14 GW in 2028. If those plans hold, total U.S. utility-scale battery storage capacity would more than double from its current level by the end of 2028.
+
+One project stands out. The Bellefield facility in California, already the country’s largest battery storage site, has plans to double both its PV and storage capacity, with that expansion targeted for completion by November 2026. If it comes online as planned, Bellefield would become the largest power storage facility in the U.S. by a significant margin.
+
+Worth noting: operator-reported plans submitted to the EIA reflect intentions, not guarantees. Projects get delayed, revised, or canceled. The 54 GW pipeline is a credible signal of where the industry is heading, but actual numbers will depend on permitting timelines, supply chains, interconnection queues, and financing conditions—all of which can shift.
+
+What the numbers tell us",https://energiesmedia.com/wp-content/uploads/2026/08/U.S.-utility-scale-battery-storage-capacity-reaches-52-GW-in-mid-2026-averaging-70-annual-growth-over-three-years.jpg,N,,2026-08-16 18:59:37.990507
 ,Texas Environment,2026-08-16 21:38:56+00:00,Audacy,"Lake Powell hits record low, threatening key water and electricity supply for millions",The Associated Press,,,,,https://www.audacy.com/krld/news/national/colorado-river-lake-powell-mead-record-low-6a5e0706635222ba4dd364d705a39f8e,"The water level at Lake Powell, the United States’ second-largest reservoir, has fallen to a record low, heightening concerns about the ongoing crisis in the Colorado River system.
 The alarming milestone at Lake Powell, reached Saturday, comes about a week after the river’s other major reservoir, Lake Mead, also hit a historic low.
 Plummeting water levels pose a major threat to the Colorado River Basin, which is a key resource for wildlife, hydropower and more than 40 million people in seven U.S. states.
@@ -21,6 +353,64 @@ The last time their combined storage was this small was in May 1957 when Glen Ca
 
 The depletion has also impacted Lake Powell’s substantial tourism industry, forcing marinas in the reservoir to adapt. Boat ramps have closed or moved, new ones are being added and marinas have been temporarily relocated to deeper waters.",https://www.audacy.com/media-library/climate-lake-powell-marina-changes.jpg?id=67630618&width=1200&height=600&coordinates=0%2C416%2C0%2C417,N,,2026-08-16 18:00:23.604318
 ,American Energy,2026-08-16 21:37:33+00:00,CHOSUNBIZ,"Korea battery trio exit US auto JVs as EV demand cools, pivot to ESS - CHOSUNBIZ",Jeong Mi-ha,,,,,https://biz.chosun.com/en/en-industry/2026/08/17/J2M7326LUJGOVEZCTNY3NUUD6E/,"Korea battery trio exit US auto JVs as EV demand cools, pivot to ESS Korean battery makers unwind US car alliances and repurpose plants for rising ESS",Not Available,https://biz.chosun.com/resizer/v2/LZMTZ6QHZJABNMRNPAH6JZQDTI.jpg?auth=b3b4ee2b70e95800337d4acfdfa3bc29fd9d98b8ce3c006b3db8f413f4df8322&width=1200&height=630&smart=true,N,,2026-08-16 18:00:13.472117
+,Clean Energy ,2026-08-16 21:26:25+00:00,The Illawarra Flame,Hi Neighbour: Would you like a clean energy scholarship? - The Illawarra Flame,Genevieve Swart,,,,,https://www.theillawarraflame.com.au/hi-neighbour-would-you-like-a-clean-energy-scholarship/,"The founding director of Hi Neighbour is set to promote clean energy careers, new scholarships and a 12-minute film called Love Your Work.
+Hi Neighbour will invite applications for four scholarships, with recipients each receiving $2857 and bespoke support to pursue their renewable career pathway.
+The whole point of existing is so that they can encourage and help people to pursue careers in the clean energy industry, whether it's through outright training or retraining the people from legacy industries and into clean energy.
+Their first intake was transition, and people who wanted to move directly out of fossil fuel industry jobs and into clean energy.
+However, another opportunity lies in social science studies, which could lead to careers in academic research, government policy and public engagement.","In spring, Yael Stone is heading off on tour – but this one will be a little different. The founding director of Hi Neighbour is set to promote clean energy careers, new scholarships and a 12-minute film called Love Your Work.
+
+Yael's Love Your Work REZ Tour will visit Renewable Energy Zones around NSW, first stop Armidale on September 17, then Newcastle, Muswellbrook and Dubbo in October.
+
+At each stop, the team will host a free event, with music by a local band, conversations about wind and solar careers, and a screening of Love Your Work, Hi Neighbour's short film starring past scholarship winners that debuted in Port Kembla in February.
+
+It's a milestone moment for the organisation born in the aftermath of the Black Summer bushfires. Yael shot to global fame as the star of Orange is the New Black and her latest feature film, an Australian drama-thriller titled Wilderness, premiered last week at the Melbourne International Film Festival. But back home in the steel city of Wollongong, Hi Neighbour's founder is known as a dedicated climate communicator, balancing family, acting career and charitable work.
+
+“Like most of us life is a bit of a juggle, but it's a circus act I feel particularly lucky to be in,” Yael said. “I started setting up on Hi Neighbour in 2022 and after four years I am happy to report I'm even more passionate about our mission.
+
+“Working directly with scholarship awardees is particularly special. By the end of 2026 we will have supported 27 individuals on their journey, that means a lot to me.”
+
+Building on lessons learned in the Illawarra, the Hi Neighbour tour will visit traditional coal-mining areas set for change, targeting residents aged 18 to 24. In each REZ, EnergyCo is upgrading the grid to support new generation and storage projects, which are tipped to bring hundreds of millions in community benefits as well as jobs.
+
+In the Central-West Orana REZ, for example, the NSW Government expects up to $25 billion dollars in private investment, creating an annual average of about 1,850 direct jobs in the local area during construction, and about 930 ongoing operational jobs from 2034.
+
+Hi Neighbour will invite applications for four scholarships, with recipients each receiving $2857 and bespoke support to pursue their renewable career pathway.
+
+A 'heartfelt' model
+
+Hi Neighbour runs on donations and a circular model, funding businesses to install rooftop solar, then using interest on those loans to fund scholarships.
+
+UOW’s Energy Futures Network Director Ty Christopher gives it the thumbs up.
+
+“I think one of the things that Hi Neighbour has, as part of its secret sauce, is just such a compelling and human-centred ethos to how they operate,” he said.
+
+“It's heartfelt. The whole point of existing is so that they can encourage and help people to pursue careers in the clean energy industry, whether it's through outright training or retraining the people from legacy industries and into clean energy.
+
+“One of the things I've really liked about working with Hi Neighbour and seeing their success has been, rather than trying to do everything with each cohort, they've been quite targeted. Their first intake was transition, and people who wanted to move directly out of fossil fuel industry jobs and into clean energy. The next tranche was focused on women, and then the third tranche was indigenous peoples, and bringing our First Nations people into that conversation.
+
+“I found that to be tremendously impactful.”
+
+While there are government grants and subsidised courses for clean-tech students, Australia still needs charities like Hi Neighbour to help build the workforce, Ty said.
+
+“We need the people, no matter what.
+
+“We're still, by most estimates, 30,000 electricians short of what this nation needs. That's just one trade level – it's probably the same again across all disciplines of engineering.”
+
+Social scientists needed too
+
+The energy transition presents “huge career opportunities” for young people, Ty said. “We are fortunate here in Australia, because we are at the leading edge. One of the biggest challenges that we face is there's not a textbook for what we're doing right now.”
+
+There are technical jobs aplenty adapting an electricity grid that wasn’t built for wind or solar, but now runs on more than 50% renewables. However, another opportunity lies in social science studies, which could lead to careers in academic research, government policy and public engagement.
+
+“The technology to decarbonise our society here in Australia is already here,” Ty said. “Some of it might be a little bit expensive, but from a technology perspective, you could get there with what we've got now.
+
+""The biggest barrier and the biggest challenge for us is actually the social discourse and the social transformation.
+
+“What we have at the moment in Australia is one side of politics listening to science and the other side of politics wantonly ignoring science to serve the interests of their donors. We have this tension debate around something that, as an engineer, I look at objectively and say, but the facts are clear. Yet here we are having the debate ongoing around people’s 'belief' or otherwise in renewables – there’s no belief aspect to it, it's just physics and science.
+
+“Whether it's the psychology of people's natural resistance to change, whether it's their allegiance to political parties, to economic self-interests, you name it, there are opportunities for careers here for people to be engaged not just with the techie stuff but also with the social transformation and the social science, so people do come along the journey of understanding
+
+“Whether we're using nickel manganese cobalt or lithium ferrous phosphate or sodium phosphate batteries, that'll all happen and work out in the tech world – the social side of things is where the challenges really are.”",https://storage.ghost.io/c/5c/b3/5cb3d866-7e5a-4d8c-8e4a-dde6a51cf4ad/content/images/size/w1200/2026/08/FIRST_POWERS_0001.jpg,N,,2026-08-16 18:59:32.030601
+,Detroit Environment,2026-08-16 21:22:37+00:00,WDIV,"Lake Powell hits record low, threatening key water and electricity supply for millions - ClickOnDetroit",Associated Press,,,,,https://www.clickondetroit.com/news/national/2026/08/16/lake-powell-hits-record-low-threatening-key-water-and-electricity-supply-for-millions/,The water level at Lake Powell has fallen to a record low in another sign of crisis along the Colorado River.,Not Available,"https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/R6VY72NL3FHALIUN5WJ5J3IJLU.jpg?_a=DATAg1kSZAA0",N,,2026-08-16 18:59:41.223101
 ,American Energy,2026-08-16 21:14:00+00:00,www.marketscale.com,AI data center demand is forcing a rethink of every power asset on the US grid - MarketScale,MarketScale Newsroom,,,,,https://www.marketscale.com/industries/energy/ai-data-center-demand-is-forcing-a-rethink-of-every-power-asset-on-the-us-grid,"America has a record volume of electricity generation under development right now, and building it is getting more expensive by the quarter.
 That tension sits at the center of the US power market in 2026, as AI data center load growth collides with a grid buildout constrained by equipment backlogs, permitting bottlenecks, import tariffs, and interconnection queues that stretch for years.
 The move reflects how acute the supply gap has become: assets that were decommissioned for economic reasons are suddenly worth re-evaluating when grid capacity is scarce.
@@ -2607,6 +2997,127 @@ The 3 gigawatts of new capacity the federal and NSW governments say is needed to
 
 Loading...",https://static.ffx.io/images/$zoom_0.3849%2C$multiply_3%2C$ratio_1.777778%2C$width_1059%2C$x_480%2C$y_231/t_crop_custom/c_scale%2Cw_800%2Cq_88%2Cf_jpg/t_afr_no_label_no_age_social_wm/e8a8955123d1b4d723fe6aa0a62a4eb44a01211e,N,,2026-08-16 02:57:57.124179
 ,North Carolina American Energy ,2026-08-16 05:36:52+00:00,www.wltx.com,SC group seeks more time before Dominion-NextEra merger vote | wltx.com,Not Available,,,,,https://www.wltx.com/article/news/local/dominion-nextera-merger-questions/101-481bd5f1-9fc0-40c0-869e-cf4533eab567,"— Some South Carolina Dominion Energy shareholders, customers and ... ""And they're not giving us any time at all. This is a hurry up. We need ...",Not Available,,N,,2026-08-16 04:58:32.219360
+,Detroit and Evs,2026-08-16 05:32:05+00:00,Travel And Tour World,New York City and Other US Cities Supercharge EV Travel as American Tourism Enters a New Era,Tuhin Sarkar,,,,,https://www.travelandtourworld.com/news/article/83e4yroyr16m/,"New York City and other US cities are supercharging EV travel, opening a powerful new chapter as American tourism enters a cleaner, smarter and more connected era.New York City, San Francisco, Los Angeles and other US cities are expanding EV charging with curbside networks and fast hubs, making electric travel easier and supporting a cleaner, smarter future for American tourism.
+New York City and other US cities are moving fast to supercharge EV travel as American tourism enters a new era of cleaner, smarter and more connected mobility.
+Summary New York City is rapidly expanding public EV charging infrastructure.
+Why Are US Cities Expanding EV Charging Infrastructure?
+Applicants can request up to 80% of eligible and documented EV charging equipment purchase and installation costs.","New York City and other US cities are supercharging EV travel, opening a powerful new chapter as American tourism enters a cleaner, smarter and more connected era.New York City, San Francisco, Los Angeles and other US cities are expanding EV charging with curbside networks and fast hubs, making electric travel easier and supporting a cleaner, smarter future for American tourism.
+
+New York City and other US cities are moving fast to supercharge EV travel as American tourism enters a new era of cleaner, smarter and more connected mobility. As charging networks expand, travellers can increasingly explore destinations with greater confidence and fewer concerns about finding reliable power.
+
+Meanwhile, cities are adding curbside chargers, public charging stations and major fast-charging hubs to support growing electric vehicle demand. Consequently, road journeys could become easier, greener and more flexible. This infrastructure push is not just transforming transport; it is also creating new opportunities for tourism, helping destinations welcome electric vehicle travellers while preparing for the future.
+
+Summary
+
+New York City is rapidly expanding public EV charging infrastructure.
+
+US cities are adding curbside chargers and fast-charging hubs.
+
+Reliable charging could make electric road travel easier for visitors.
+
+Sustainable mobility is becoming increasingly important for tourism.
+
+EV infrastructure may reshape the future of American travel.
+
+Major US cities are accelerating electric vehicle charging projects through curbside chargers, fast-charging hubs, public parking facilities and new municipal partnerships, creating a broader infrastructure shift that could make electric travel easier and support a more sustainable future for tourism.
+
+Why Are US Cities Expanding EV Charging Infrastructure?
+
+Electric vehicle charging is rapidly becoming part of the urban transport landscape as cities confront growing demand from residents, commercial fleets and visitors, with New York City, San Francisco, Los Angeles, Sacramento, Boston, Phoenix, Baltimore, Portland, Philadelphia, Pittsburgh and Dallas among the places connected to recent charging initiatives and programmes focused on improving access. The expansion matters to travel and tourism because drivers increasingly expect destinations to provide reliable places to recharge, particularly in dense cities where visitors may arrive in electric rental cars, use ride-hailing services or undertake longer road journeys without access to private garages.
+
+The most significant change is the movement away from a model centred mainly on petrol-station-style charging locations towards a wider network that places chargers where people already park, work, stay and visit, including kerbsides, municipal car parks, airports and public facilities. This approach could reshape travel planning by reducing the need for drivers to make special detours for electricity and allowing tourism destinations to integrate charging infrastructure into the normal visitor experience rather than treating it as a separate transport service.
+
+How Is New York City Building Its Public Charging Network?
+
+New York City is advancing one of the country’s most visible urban charging expansions, with eight new fast chargers opening at an NYC Department of Transportation municipal lot in downtown Flushing in March 2026 as part of a larger programme that will bring 66 EVolve NY fast chargers to 10 municipal parking facilities across Queens, Brooklyn and the Bronx. Additional locations are scheduled throughout 2026 and early 2027, while the city already has 92 curbside Level 2 chargers and reports that more than 79,000 electric vehicles were registered in the city as of January 2026.
+
+For travel and tourism, the importance of New York’s strategy lies in its geographical spread because visitors do not remain in one central district, and charging options across boroughs can support journeys to airports, hotels, attractions, restaurants, beaches and cultural destinations. The city’s wider municipal fleet also operates more than 2,500 charging ports, and its 2026 partnership with Los Angeles County aims to exchange information on charger reliability, funding gaps and infrastructure planning, potentially creating lessons that other major urban markets could adopt.
+
+New York Unlocks $35 Million for Public EV Charging Projects, Boosting Travel and Tourism Connectivity
+
+New York has made $35 million available to public sector organisations for large-scale Level 2 electric vehicle charging projects, a move designed to improve charging access, support cleaner travel and tourism, lower installation costs and reduce air pollution across communities.Today’s announcement will help expand the existing infrastructure—which includes more than 21,000 Level 2 and DC fast chargers installed statewide—and increase the number of electric vehicles on the road in New York, which exceeded 331,000 as of July 2026. Additionally, NYSERDA’s Charge Ready NY 2.0 program continues to support public, private, and nonprofit organizations in installing Level 2 charging stations in multi-family buildings, hotels, and workplaces. In February 2026, NYSERDA allocated an additional $15 million to the existing program, offering funding of $3,000 to $4,000 per charging point, awarded on a first-come, first-served basis.
+
+Under Governor Hochul’s leadership, New York State is investing nearly $3 billion in zero-emission vehicles and expanding access to clean transportation for the benefit of all New Yorkers, including residents of low-income and disadvantaged communities. In addition to Charge Ready 2.0, other state initiatives include the Drive Clean Rebate program and EV Make Ready. , EVolve NY , the New York City Trucking Voucher Incentive Program (NYTVIP) , the New York City school bus incentive program , the NEVI program , and the DC fast charger program.
+
+How Will the $35 Million Programme Transform Travel and Tourism?
+
+Governor Kathy Hochul has announced the new Charge Ready NY — Large-Scale Public Sector Projects programme, which will provide substantial funding for public sector bodies to install and operate publicly accessible Level 2 electric vehicle chargers across New York State, potentially making road travel easier for residents and visitors while strengthening the infrastructure increasingly needed by modern tourism. The initiative, administered by the New York State Energy Research and Development Authority, will support charging projects on publicly owned land and could help destinations, attractions and communities prepare for growing electric vehicle use as cleaner mobility becomes more important to the future of travel and tourism.
+
+Eligible applicants include New York State agencies and authorities, local governments, and state or municipal university systems, with selected projects receiving between $1 million and $15 million for chargers installed at one or multiple locations, creating opportunities for large networks rather than isolated charging points. Applicants can seek funding covering up to 80% of eligible and documented equipment purchase and installation costs, reducing one of the major financial barriers that can slow the expansion of public charging infrastructure needed for everyday travel, tourism journeys and longer-distance road trips.
+
+Key US Cities Boosting EV Charging Projects
+
+Why Is San Francisco Pushing Curbside Charging?
+
+San Francisco has moved decisively towards permanent curbside EV charging after its city authorities created a new permitting pathway for chargers in the public right-of-way, responding to the particular challenge faced by urban residents and visitors who cannot easily charge vehicles at home. The city’s legislation authorising the programme was enacted in May 2026, while the San Francisco Transportation Authority approved $150,000 to support the transition from a pilot towards a permanent programme that supports a goal of installing 100 curbside EV chargers across the city by 2030.
+
+The city is also witnessing proposals for much larger charging infrastructure, including plans reported in August 2026 for a 124-stall Tesla V4 Supercharger hub near Highway 101, although that project still requires final approval and has no confirmed opening date. Its location near major transport corridors, San Francisco International Airport and surrounding neighbourhoods illustrates how charging hubs can become strategically important for both everyday mobility and travel, particularly as the Bay Area attracts domestic and international tourism throughout the year.
+
+What Role Are Los Angeles and Sacramento Playing?
+
+Los Angeles is participating in federally supported work led by the Los Angeles Cleantech Incubator to expand charging options for people without home charging, with the programme receiving a $3 million federal award and covering a network of cities including Los Angeles, Sacramento, Phoenix, Boston, Baltimore, New York, Portland, Chattanooga and Washington, D.C. The initiative is focused on testing infrastructure and technology approaches that can improve accessibility and utilisation, reflecting the growing recognition that successful EV adoption requires solutions for apartment dwellers and other drivers without private charging facilities.
+
+Sacramento, meanwhile, has continued its work on an equity-focused EV Blueprint designed to accelerate zero-emission mobility, expand public charging infrastructure and improve access for communities where home charging is difficult, with the California Energy Commission highlighting the programme as a major element of the capital city’s mobility planning. For tourism and travel, Sacramento’s development is particularly relevant because public charging can support visitors exploring Northern California while strengthening links between urban destinations and the state’s wider network of scenic, cultural and business routes.
+
+Which Other Cities Are Entering the Charging Race?
+
+Boston, Baltimore, Phoenix, Portland, Chattanooga and Washington, D.C. are also included in the multi-city programme examining ways to improve access for privately owned electric mobility, while another federally supported initiative is working on permitting pathways and publicly accessible charging in Boston, New York, Philadelphia, Pittsburgh and Dallas. These projects demonstrate that the infrastructure challenge is not limited to one region, because cities across the Northeast, South, Midwest and West are confronting similar questions about where chargers should be located and how public space can accommodate them.
+
+Dallas and the San Francisco Bay Area have additionally emerged as locations for new high-capacity charging investment linked to autonomous mobility, with Uber announcing plans in February 2026 to spend more than $100 million on robotaxi charging stations across the Bay Area, Los Angeles and Dallas. Separately, charging providers are expanding connector availability across cities including Phoenix, Dallas, San Francisco, Austin, Houston, Las Vegas, Orlando, Chicago and Detroit, adding another layer to the increasingly competitive race to build infrastructure for the next generation of road travel.
+
+How Could EV Charging Change the Future of Travel and Tourism?
+
+For the travel sector, charging availability is increasingly becoming a practical destination issue because an electric vehicle journey depends not only on the road network but also on the certainty that drivers can recharge near the places where they stop. Hotels, airports, municipal car parks, visitor centres, shopping districts and public attractions could therefore gain greater importance as charging locations, allowing tourism operators and destination authorities to connect sustainable mobility with the wider visitor economy.
+
+Better infrastructure could also make electric road travel more attractive by reducing range anxiety, limiting unnecessary diversions and allowing travellers to spend charging time at restaurants, retail districts or attractions rather than waiting at isolated facilities. This creates a potentially important economic opportunity for tourism destinations, as strategically located chargers may encourage visitors to stop longer, explore local businesses and include new communities in their travel itineraries.
+
+The benefits, however, will depend heavily on reliability, compatibility, charging speed and ease of payment, because simply increasing the number of charging points will not automatically create a seamless experience for travellers moving between cities and states. The next stage of US charging development will therefore require cities, utilities, technology providers and tourism stakeholders to focus on an interconnected system where infrastructure is visible, dependable and conveniently located along the journeys that visitors actually take.
+
+What Does the Urban EV Push Mean for America’s Visitor Economy?
+
+The current wave of projects suggests that US cities increasingly view electric charging as permanent urban infrastructure rather than a niche service for a limited number of motorists, with public authorities developing policies, funding models and partnerships to make deployment faster and more accessible. As this network grows, travel and tourism could benefit from a cleaner and more flexible road transport system, particularly for destinations hoping to attract environmentally conscious visitors and remain competitive as electric vehicles occupy a larger share of the transport market.
+
+New York City’s municipal expansion, San Francisco’s permanent curbside programme, Los Angeles-led innovation projects and Sacramento’s strategic planning all demonstrate different approaches to the same challenge: providing electricity where drivers need it without requiring everyone to own a private garage. For the tourism industry, the result could eventually be a new era in which choosing an electric vehicle for travel is no longer shaped primarily by concerns over finding a charger, but by the confidence that charging has become part of the standard infrastructure supporting every stage of the journey.
+
+What Are the Key Deadlines and Funding Requirements?
+
+The competitive programme requires applicants to work with equipment manufacturers, white-label manufacturers and network service providers approved by NYSERDA, helping ensure that funded charging infrastructure meets the programme’s qualification requirements and supports a reliable public network. Proposals must be submitted by 20 October 2026 at 3:00 p.m. Eastern Time, while NYSERDA will hold an information webinar on 15 September 2026 at 3:00 p.m. Eastern Time to explain project requirements, eligibility rules and the application process.
+
+For the travel and tourism economy, greater access to dependable public charging could make electric vehicle journeys more practical, particularly for visitors travelling between cities, attractions, universities, parks and other publicly accessible locations where charging availability can influence route planning and destination choices. The programme therefore has significance beyond transport policy, because convenient charging can support confidence among travellers considering electric road trips while allowing tourism destinations to adapt to changing visitor expectations around sustainable and low-emission mobility.
+
+How Strong Is New York’s Existing EV Charging Network?
+
+New York already has more than 21,000 Level 2 and DC fast chargers installed statewide, while the number of electric vehicles on its roads exceeded 331,000 as of July 2026, demonstrating the rapidly expanding scale of the state’s electric mobility market. NYSERDA is also continuing its Charge Ready NY 2.0 programme for public, private and non-profit organisations installing Level 2 chargers at multi-family properties, hotels and workplaces, directly linking charging investment with accommodation and tourism-related infrastructure.
+
+The state allocated an additional $15 million to that programme in February 2026, offering between $3,000 and $4,000 per charging point on a first-come, first-served basis, while New York continues wider investment in zero-emission vehicles through initiatives including Drive Clean Rebate, EV Make Ready, EVolve NY, the NEVI programme and fast-charging development. Together, these programmes could strengthen sustainable travel and tourism by giving visitors more confidence that charging options will be available across the state.
+
+What Does This Mean for New York’s Cleaner Transportation Future?
+
+The latest $35 million funding initiative forms part of New York’s wider investment in clean transportation, with the state committing nearly $3 billion to zero-emission vehicles and improved mobility access, including programmes intended to benefit low-income and disadvantaged communities. Funding for the initiative comes through the governor’s $2 billion Sustainable Future programme, described as the largest climate investment in New York’s history, supporting efforts to reduce emissions, lower energy costs and expand green economic opportunities.
+
+“New York’s latest investment shows how charging infrastructure can become a powerful bridge between cleaner mobility and a stronger visitor economy. As electric vehicles become increasingly important, reliable public chargers can improve road travel, support sustainable tourism and help destinations welcome travellers with greater confidence. The expansion of accessible charging across communities, public spaces and visitor routes will not only reduce barriers for electric vehicle users but can also strengthen New York’s long-term tourism competitiveness, encourage responsible travel choices and create a more connected, resilient and environmentally conscious transportation ecosystem for the future.” — Anup Kumar Keshan, Editor-in-Chief, Travel And Tour World
+
+Rising electric vehicle ownership and growing demand for convenient public charging are pushing US cities to expand infrastructure rapidly. Answer: New York City, San Francisco, Los Angeles and other urban destinations are investing in curbside chargers, public charging networks and fast-charging hubs to improve EV accessibility. Reason: More reliable charging can reduce range anxiety and make longer road journeys easier, directly benefiting travel and tourism. As visitors increasingly consider sustainable mobility, destinations with accessible charging infrastructure may gain an advantage. Therefore, the expansion is driven by environmental goals, changing traveller expectations and the need to build a modern transport network ready for America’s electric future.
+
+New York City and other US cities are entering a decisive phase in the expansion of electric vehicle charging, with the potential to reshape how travellers move between destinations. Greater access to reliable charging could make EV road trips simpler, support cleaner transport and strengthen the long-term future of American tourism. From curbside charging in dense urban areas to major fast-charging hubs, cities are developing different solutions for the same challenge. Ultimately, infrastructure reliability will determine success. However, the direction is clear: as charging becomes easier to access, EV travel could become a central part of the American tourism experience.
+
+Frequently Asked Questions
+
+Who can apply for the $35 million programme?
+
+Public sector entities, including state agencies, authorities, local governments and eligible university systems, can apply.
+
+How much funding can each project receive?
+
+Selected projects can receive a minimum of $1 million and a maximum of $15 million.
+
+What percentage of costs may be covered?
+
+Applicants can request up to 80% of eligible and documented EV charging equipment purchase and installation costs.
+
+When is the proposal deadline?
+
+The deadline is 20 October 2026 at 3:00 p.m. Eastern Time.",https://www.travelandtourworld.com/wp-content/uploads/2026/08/New-York_EV.jpg,N,,2026-08-16 18:59:44.048545
 ,American Energy,2026-08-16 03:45:42+00:00,simplywall.st,Primoris Stock And 2 US Infrastructure Picks Tied To Port Electrification - Simply Wall St,Simply Wall St,,,,,https://simplywall.st/stocks/us/capital-goods/nyse-prim/primoris-services/news/primoris-stock-and-2-us-infrastructure-picks-tied-to-port-el,"California ports are busy, tariffs are shifting trade routes, and clean energy projects are reshaping how goods move in and out of the country.
 This article walks through three stocks from our U.S. Port-Linked Industrial & Clean Infrastructure Stocks screener that appear most exposed to the latest news and explains why that might matter for your portfolio.
 Market Cap: US$4.5b Primoris Services sits right at the crossroads of several big themes in the screener, including California port infrastructure, grid upgrades, and renewables buildout.
@@ -14065,299 +14576,3 @@ Recurrent Energy
 comm_global@recurrentenergy.com
 
 SOURCE Canadian Solar Inc.",https://www.prnewswire.com/content/dam/prnewswire/icons/2019-Q4-PRN-Icon-32-32.png,N,,2026-08-14 08:00:28.635513
-,Detroit and Evs,2026-08-13 22:59:12+00:00,www.autonews.com,Chargers are failing less — and that's helping to make EVs more popular,Not Available,,,,,https://www.autonews.com/ev/an-jd-power-ev-charger-study-0813/,"An Ionna electric vehicle charger. Ionna, a joint effort among eight automakers to build a nationwide network of EV chargers, ranked highest on the ...",Not Available,,N,,2026-08-13 20:04:05.873286
-,Texas Environment,2026-08-13 22:53:51+00:00,spectrumlocalnews.com,DeWine fights to decrease use of firefighting foam - Spectrum News,Ryan Johnston,,,,,https://spectrumlocalnews.com/tx/dallas-fort-worth/news/2026/08/13/dewine-fights-to-decrease-use-of-firefighting-foam,"OHIO — Gov.
-Mike DeWine and the Ohio Environmental Protection Agency (EPA) announced they are attempting to rid the state of firefighting foam, which contains dangerous per- and polyfluoroalkyl substances (PFAS).
-“Until we launched this program, fire departments in Ohio had no way to safely get rid of this foam, and we didn’t have an accounting of how much foam could still be out there.
-The Ohio EPA estimated that at least 60,000 gallons of toxic AFFF remain in storage across the state.
-“The past two years have shown how dedication, innovation and collaboration continue to be fundamental pillars in our state,” said Ohio EPA Director John Logue.","OHIO — Gov. Mike DeWine and the Ohio Environmental Protection Agency (EPA) announced they are attempting to rid the state of firefighting foam, which contains dangerous per- and polyfluoroalkyl substances (PFAS).
-
-Since launching the initiative in 2024, it has destroyed 13,500 gallons of toxic foam that was given up by 118 fire departments and two airports.
-
-“Until we launched this program, fire departments in Ohio had no way to safely get rid of this foam, and we didn’t have an accounting of how much foam could still be out there. Now we know that there is a lot,” said Gov. DeWine. “We’re expanding the AFFF Takeback Program to help more local fire departments responsibly dispose of these dangerous PFAS chemicals to protect the public, the environment and the firefighters who risk their lives for the safety of others.”
-
-The exposure to PFAS can affect the immune system, increase the risk of cancer, impact fertility and affect the growth of infants and children.
-
-The Ohio EPA estimated that at least 60,000 gallons of toxic AFFF remain in storage across the state.
-
-“The past two years have shown how dedication, innovation and collaboration continue to be fundamental pillars in our state,” said Ohio EPA Director John Logue. “This partnership has taken thousands and thousands of gallons of harmful ‘forever chemicals’ permanently out of commission, and we’re taking what we learned and building on that momentum to expand this program into its next round.”
-
-Fire departments, emergency management agencies and airports can register foam for destruction through Sept. 4.",https://s7d2.scene7.com/is/image/TWCNews/IMG_8439_crop,N,,2026-08-13 23:00:42.219377
-,Indiana and Evs,2026-08-13 22:47:23+00:00,CBT News | #1 Source for Automotive News & Dealership Intelligence,"GM, LG battery plant to restart EV cell production after seven-month shutdown - CBT News","Jaelyn Campbell, Steve Greenfield, Jason Becknell, AJ McGowan",,,,,https://www.cbtnews.com/gm-lg-battery-plant-to-restart-ev-cell-production/,"On the Dash: GM’s Ohio battery plant is returning to production after a seven-month pause tied to weaker EV demand.
-The restart will bring back most laid-off workers, restoring total employment to about 1,400, and reopen EV battery production capacity.
-GM’s broader battery strategy continues to evolve as the automaker adjusts production and partnerships to changing EV demand.
-The joint venture between General Motors (GM) and LG Energy Solution in northeast Ohio is set to restart battery cell production next week.
-In addition to the Ohio facility, GM and LG operate another joint venture battery plant in Tennessee.","On the Dash:
-
-GM’s Ohio battery plant is returning to production after a seven-month pause tied to weaker EV demand.
-
-The restart will bring back most laid-off workers, restoring total employment to about 1,400, and reopen EV battery production capacity.
-
-GM’s broader battery strategy continues to evolve as the automaker adjusts production and partnerships to changing EV demand.
-
-The joint venture between General Motors (GM) and LG Energy Solution in northeast Ohio is set to restart battery cell production next week. While production had previously been halted in January due to a decline in consumer demand for EVs, Tom Gallagher, Vice President of Operations for Ultium, who confirmed the restart to Reuters, said most laid-off workers will return, bringing total employment at the facility to approximately 1,400.
-
-Sign up for CBT News’ daily newsletter and get the latest industry stories delivered straight to your inbox.
-
-In addition to the Ohio facility, GM and LG operate another joint venture battery plant in Tennessee. However, this facility has shifted its focus from producing EV batteries to manufacturing batteries for energy storage systems. This change reflects ongoing adjustments in battery production as the demand for EVs evolves.",https://d9s1543upwp3n.cloudfront.net/wp-content/uploads/2026/08/LGGM-8.13.26-.webp,N,,2026-08-14 06:59:37.907766
-,American Energy,2026-08-13 22:40:11+00:00,www.reuters.com,PJM proposes plan to buy more power for data centers - Reuters,,,,,,https://www.reuters.com/business/energy/pjm-proposes-plan-buy-more-power-data-centers-2026-08-13/,"... Power Cooperative, which serves 1.2 million residents and businesses. Mosier's remarks appear in an August 6 letter to the U.S. Energy Department.",Not Available,,Y,,2026-08-13 20:03:23.528714
-,EVs,2026-08-13 22:39:37+00:00,Heatmap News,The U.S. Clean Economy Has Snapped Its Losing Streak - Heatmap News,Robinson Meyer,,,,,https://heatmap.news/daily/clean-investment-data-q2-surge,"“Carbon pricing raises tremendous proceeds, and the question comes down to the distributional impacts of carbon pricing.
-It always comes down to how you use those carbon proceeds,” Burtraw told me.
-To me, Gardias framed the debate between energy efficiency programs and bill credits as between up-front and long-term benefits.
-“There’s a lot of priorities for ways that you should use carbon proceeds to address the challenges of climate change,” Burtraw said.
-But we’ve seen after 25 years that carbon pricing is not inevitable,” Burtraw said.","In Virginia and New Jersey, two states where Democratic governors won last year amidst a maelstrom of concern about rising electricity prices, the program has been at least partially reoriented around putting dollars back into the pockets of ratepayers.
-
-Virginia only recently rejoined the group this year after having left under the leadership of Republican Glenn Youngkin in 2023. When Virginia was last a member of RGGI, the proceeds from the auctions for emissions allowances largely went to an energy efficiency program for low-income households and a flood resilience fund. Today, having rejoined RGGI, some 45% of the revenue will be earmarked for rate relief, thanks to a budget amendment passed in June.
-
-In New Jersey, meanwhile, Governor Mikie Sherrill has used money raised through to help fulfill the rate freeze pledge on which she centered her campaign for Drumthwacket by directly reducing bills.
-
-Conservatives in RGGI states have for years tried to make a stink about the up-front costs it imposed on ratepayers. Now as electricity costs balloon, Democratic governors and state legislatures are looking to RGGI to help balance their emissions goals and efforts to keep electricity bills under control.
-
-In New Hampshire, for instance, the most conservative state to be a consistent RGGI member, nearly all the state’s proceeds from the program now go to rate relief, compared to about three-quarters historically. In its latest report on how RGGI funds get used, the organization reported that in 2024, the last year for which comprehensive data is available, some 23% of RGGI proceeds went to direct bill assistance, compared to 16% over the 17-year lifetime of the system.
-
-“The affordability narrative is the leading political narrative of 2026. And the albatross around the neck of carbon pricing has been that it’s going to raise energy prices,” Dallas Burtraw, a senior fellow at Resources for the Future, told me.
-
-Seen holistically, Burtraw told me, “carbon pricing is built for affordability.” That’s because, one, economists generally consider carbon pricing the cheapest and most efficient way to hit a given emissions reduction goal (assuming, that is, that you want to reduce emissions in the first place), and secondly because the proceeds from the carbon price can be invested and distributed in ways that mitigate price hikes.
-
-“Carbon pricing raises tremendous proceeds, and the question comes down to the distributional impacts of carbon pricing. It always comes down to how you use those carbon proceeds,” Burtraw told me.
-
-The current pressure for rate relief comes as RGGI prices have risen as the same time electricity prices up and down the East Coast are at or near all-time highs. The clearing price in the latest quarterly auction for carbon dioxide allowances was $35 per ton, the highest price in the history of the program, bringing in some $642 billion to be distributed among the states. By contrast, the third quarter auction in 2025 had a clearing price of $19.63 and raised some $300 million.
-
-At the same time, electricity bills have risen across the RGGI system, including an 18.5% rise in New Jersey by 12.5% rise in New Hampshire just over the past year, according to Heatmap and MIT’s Electricity Price Hub.
-
-Because every state in the RGGI system besides Virginia operates in a restructured wholesale electricity market, it’s hard to say exactly how much RGGI prices affect ratepayer bills. In Virginia, Dominion, the dominant utility, has requested permission for a rider on bills of $10 to $13 per month, compared to monthly added costs under $3 when Youngkin began the process of withdrawing Virginia from the system in 2022.
-
-In a New Jersey regulatory filing, meanwhile, the state’s Board of Public Utilities recommended using RGGI proceeds to fund $150 million of rate relief for moderate- and low-income households that Sherrill announced in June, citing an update to the state’s three-year strategic plan for RGGI that directly the NJBPU “to provide direct bill credits on residential energy bills for NJ’s most vulnerable residents.” There is precedent for this in the Garden State: In 2025 Governor Phil Murphy helped deliver rate relief by shifting some RGGI money around.
-
-The trend toward using RGGI funds for rate relief has caused disquiet among environmental groups that support carbon pricing and want to see the dollars largely go to energy efficiency programs, not ratepayers.
-
-In 2025, a coalition of Virginia environmental groups that supported rejoining RGGI called for revenue to go to the “low-income energy efficiency fund and the Community Flood Preparedness Fund.” The Flood Preparedness Fund issues grants to local governments for flood mitigation and resiliency projects, while the energy efficiency programs fund things like home weatherization.
-
-“The case we’ve made to our environmental advocates in Virginia is that we have taken 45% towards RGGI credits, but we’ve left 55% of the revenue. That leaves each of the programs with record levels of funding,” Josephus Allmond, Virginia’s chief energy officer, told me, referring to the flood and energy efficiency programs that have historically been funded by RGGI.
-
-“We were able to take what could have been a pretty negative impact to residential customer bills and turn it into something we can basically hold customers harmless.”
-
-While the Natural Resources Defense Council has said it supports temporary rate relief to low-income ratepayers, it also has also mounted a defense of using RGGI revenues “to fund energy and environmental programs.”
-
-“Several states are using larger amounts of program proceeds to provide households with bill credits or rebates that immediately lower monthly electricity bills, which means less investment in programs that provide long-term benefits,” Jo Gardias and Dawone Robinson wrote for the NRDC.
-
-To me, Gardias framed the debate between energy efficiency programs and bill credits as between up-front and long-term benefits.
-
-“Energy efficiency programs not only save the households that are getting the upgrade money, but every other customer through avoided transmission and distribution and generation costs,” Gardias told me. “On the far end there’s energy efficiency where you’re getting lifetime savings, on the shorter or more immediate end there’s the bill credit on energy savings.”
-
-RGGI itself has estimated that every $1 of investments funded by the auction results in a lifetime bill savings of just over $4. In 2024 alone, RGGI claims that investments “are associated with approximately $363.9 million in annual energy bill savings and $2.6 billion in lifetime bill savings.”
-
-“The question of how you spend proceeds is a large question of tradeoffs,” Gardias said. “What we’re seeing now is that because we have price spikes that are happening from data centers and other factors, there’s more interest in spending money on bill credits that provide immediate relief.”
-
-Of course, this is the dilemma with all climate policy. The costs are immediate and upfront, while the benefits accrue over time and are more difficult to attribute to any one program or investment.
-
-“There’s a lot of priorities for ways that you should use carbon proceeds to address the challenges of climate change,” Burtraw said. “But in 2026, given the affordability narrative and the populist sentiment in politics today, it makes sense to use carbon proceeds to reduce electricity prices.”
-
-While an economist could draw up a cost benefit analysis that shows any number of uses of the proceeds could be more efficient for the economy or the environment — using the money to reduce taxes on investment, say, or using the money to fund energy efficiency programs — any of those would assume certain baseline of support for carbon pricing in the first place.
-
-“For 25 years we’ve argued about this with the expectation that carbon pricing was inevitable because it was so much more efficient than any other type of approach. But we’ve seen after 25 years that carbon pricing is not inevitable,” Burtraw said. “We have to face the realities of what it takes to make it possible to do carbon pricing.”
-
-Misan Lychee (which yes, only comes in lychee flavor “at the moment”) represents the distant hopes and dreams of DAC. Currently, there isn’t demand for carbon dioxide at direct air capture prices; it’s much, much cheaper just to buy the concentrated byproduct of, say, natural gas- and coal-fired ammonia plants to carbonate your soda than to go through the trouble of sucking the 0.04% of the air that is CO2 out of the atmosphere for a few bubbles. That’s why the carbon removal industry is propped up by offtake agreements and credits, at least until Brutalism comes back in a big way and dramatically increases the demand for concrete manufactured with stored CO2.
-
-Still, that hasn’t stopped companies from trying. You can buy carbon-sequestered beer, DAC vodka, CO2-captured perfume, and recycled-emission yoga pants. But unlike other consumer products that are, in many cases, made from waste gas captured during industrial processes rather than from true atmospheric CO2, Misan claims on the can to be made from “some” carbon dioxide pulled “directly from the air using a technology called direct air capture.” The bottle sports the logo of Bay Area-based AirMyne, a DAC start-up, which, on further investigation, turns out to own Misan.
-
-My order arrived rattling around in a cardboard box, with three of the cans having popped loose from the six-pack in transit. As someone with no impulse control (which, upon reflection, might be related to my love of gimmicks), I immediately opened a can. Over my laptop. We both got drenched by the resulting geyser. CO2’s presence: confirmed.
-
-What happened next was, admittedly, also user error. I took a sip and immediately went, “Yuck, what?” That’s because after a summer of drinking my way through every Waterloo flavor, I was expecting Misan Lychee to be a seltzer, too. Despite its website describing it as a “climate-forward sparkling water,” it is not, and you can taste all 14.6 grams of its added sugar. It has a moderately cloying, perfumy flavor that my dad described as “strawberry, but disturbing?” when I asked him to do a blind taste test. I think it’s perhaps closer in taste to pear, and I remain optimistic that someone who has more free time than me could come up with a recipe to turn it into a “sustainable” spritz.
-
-Actually, to that point — is it sustainable? It notably doesn’t claim to be, and it has its skeptics. Richard Waite of the World Resources Institute pointed out on Bluesky that carbon dioxide is only “sequestered” until it leaves our metabolic system the usual way, via exhalation or burps. Still, his questions about the energy source of AirMyne’s direct air capture — and thus the carbon-emitting or -removing properties of the soda — generated lots of good puns in the replies. “Run out of polar before we run out of Polar” comes to us courtesy of Costa Samaras.
-
-The second Misan Lychee I cracked also soaked me, although I was prepared this time and at least opened it out of range of electronics. I also paid more attention to the can, which has an unusual but not unpleasant matte feel. The list of ingredients on the back seems surprisingly long for the supposed golden age of “gut sodas” that advertise such things as the inclusion of “plant fibers.” Rather than prebiotics, Misan contains “xanthan gum” and an ominous concoction identified as “cloudy agent.”
-
-If Misan isn’t healthier for me or the planet, then what is it for, exactly? I returned to the six lines of all-caps text printed on the front of the can:
-
-Some of the CO2 in this can was pulled directly from the air using a technology called direct air capture (DAC). If scaled, DAC could do more than just carbonate your water. It could remove millions of tons of CO2 from the atmosphere, fighting climate change.
-
-Gimmicks are, ultimately, ways to sell you something. Water gets packaged to look more “manly;” you might buy a Coca-Cola instead of a Pepsi if it has your name on it. But Misan isn’t ultimately selling itself with the promise of bubbles brought to you by DAC. It’s the other way around: Misan is the marketing vehicle for AirMyne. They want you to drink the DAC Kool-Aid.
-
-Will I buy Misan Lychee again? Not likely: I have De La Calle! Mango Chili Mexican sodas to drink, made from the fermented rind of pineapples — BYOCO2, if you will.
-
-Then again, never say never. If I learn about the existence of Misan Chikoo or Misan Pistachio-Rosewater during a weak moment, I’ll probably be down another $16. But I’ll open it over the sink this time.
-
-In the waning days of the Biden administration, the Department of Energy set about clearing one of the biggest bottlenecks to expanding America’s aging electrical grid: Literally expanding the grid. You don’t need to have read excellent books like Russell Gold’s Superpower or features like my colleague Robinson Meyer’s deep dive into the SunZia saga to know that building transmission lines is a huge challenge in the United States. To address this, the Biden-era agency proposed three National Interest Electric Transmission Corridors — essentially a series of projects in mostly red and purple states that could now enlist the federal government’s help to speed through the typical hurdles in getting approvals from so many jurisdictions and landowners across hundreds of miles of a power line’s route. Not anymore. On Wednesday evening, the Trump administration announced the cancellation of all three corridors, declaring projects that would likely have helped shore up the grid amid surging demand from data centers to be part of Democrats’ “Green New Scam.”
-
-“Transmission policy must serve the American people — not special interests or a climate-alarmist agenda that drives up costs, worsens reliability, and disregards the concerns of local communities,” Secretary of Energy Chris Wright said in a statement. Still, his agency pointed to billions in loans it’s offered to utilities for grid upgrades and a study, released last month, highlighting what the Trump administration sees as the country’s future transmission needs. The rescission doesn’t necessarily mean the projects linked to the corridors are dead. When the Energy Department first announced the corridors in December 2024, the agency stressed that the designation didn’t guarantee federal approvals, merely speed projects on the pathway to getting answers. Those include NextEra Energy’s 73-mile Lake Erie Connector between Canada and Pennsylvania, two projects in the Southwestern Grid Connector Corridor, and the Transmission and Renewables Interstate Bulk Electric Supply Project in the Tribal Energy Access Corridor.
-
-2. Tesla is planning a $10 billion solar factory in Texas
-
-When Elon Musk announced plans last year to build out 100 gigawatts of solar manufacturing capacity, analysts and industry watchers scratched their heads. That’s more than double the amount of panels the U.S. installs each year at a time when photovoltaic factories face fierce competition from overseas competitors — namely China — and withering support domestically with the end of the federal tax credit designed to spur demand for American-made solar. Yet Musk is charging ahead with what Tesla has dubbed Project Crystal Sun. In a document submitted to Texas regulators, the company said it was “currently evaluating the feasibility of constructing its solar cell manufacturing facility at various locations across multiple U.S. states.” That includes the Lone Star State, to which Musk decamped from California. “Should Tesla make the decision to develop the proposed project in another state, Texas would miss the opportunity to attract billions of dollars in investment, help create thousands of full-time jobs for its residents, and become a hub for domestic solar cell manufacturing in the U.S.,” Tesla stated in the filing.
-
-Things were also looking rosy for wind turbine manufacturers. Shares in Vestas closed nearly 20% higher on Wednesday after turbine orders bounced back, giving the company the liquidity to buy back its own stock. New orders for its turbines climbed from 2 gigawatts during the second quarter of 2025 to 3.35 gigawatts during the same period this year, the Financial Times reported.
-
-3. Midwest storms strand northwest Indiana without fuel
-
-The storms that barreled across the Midwest this week not only downed power for more than 800,000 people, they also left drivers without access to fuel. On Wednesday, the Northwest Indiana Times reported that gas stations in the region were running dry. “Today, we heard that this was open, and this is like the only thing that is open,” Mike Siedentopf, a resident of the Northwest Indiana town of Munster, told CBS News.
-
-Sign up to receive Heatmap AM in your inbox every morning:
-
-4. Another day, another Chinese nuclear milestone
-
-The flagship reactors in China’s nuclear buildout are the Hualong One and the CAP1400, each of which borrows heavily from America’s Westinghouse AP1000. But it’s useful to remember that Beijing is diversifying its atomic fleet. One of the next reactors likely to enter into commercial operations is now Unit 7 at the Tianwan nuclear power station on China’s Yellow Sea coast. On Wednesday, NucNet and World Nuclear News reported that the plant had loaded its first fuel assembly into position in the core of the new reactor. This marks the first time fuel has been loaded into a next-generation Russian reactor in China. Like the AP1000 and China’s versions of it, Rosatom’s VVER-1200 is a third-generation pressurized water reactor, meaning it uses the standard technology for fission with state-of-the-art safety and cooling upgrades. CNNC, the plant’s operator, said it expects to begin commercial operation later this year.
-
-5. Nearly $1 billion pours into two long-duration storage startups
-
-With the battery market booming, the race to commercialize long-duration storage technologies has yielded plenty of attention-grabbing ideas. Form Energy’s approach is proving particularly magnetic for investors. The West Virginia-based startup is seeking to bring rust-powered batteries that last 100 hours to market. On Wednesday, the company unveiled a $750 million Series G financing round, bringing the total equity it’s raised so far to over $2 billion. Its iron-air batteries, which charge through a “reversible rusting” process, have already attracted deals with Google, utility Xcel Energy, and data center giant Crusoe.
-
-Meanwhile, a company commercializing compressed air storage technology just raised another $230 million. Hydrostor uses electricity to compress air and store it in underground hard-rock caverns using water displacement. When the grid needs power, the stored air is reheated and expands, spinning a turbine that generates emissions-free electricity. The Canadian startup pulled in more funding from the Canadian government’s investment fund, Goldman Sachs, and Canada’s pension funds. Another backer in this round is the oilfield services giant Baker Hughes. “The grid needs bankable long-duration energy storage that can be deployed today to enable affordable and reliable electricity for all, and Hydrostor’s continued fundraising success is a testament to the potential of our A-CAES technology to get us there,” Hydrostor CEO Curtis VanWalleghem said in a statement.
-
-THE KICKER
-
-A Dr. Phil-linked expedition to find oil in Greenland has been delayed as the island nation’s government rejects the consortium’s right to drill. On Wednesday, the United Kingdom’s 80 Mile exploration company announced the delay in its plans. “While we are disappointed that the timing of the Jameson drilling program has been impacted, the company remains fully committed to advancing this highly prospective project,” 80 Mile executive director Rod McIllree told the Financial Times.",https://heatmap.news/media-library/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy82NzYxNTM1Ni9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTgwMDYzMjYwM30.mkFdyZXQkBs4I_yk3BbH6dUmUZrsj81CO-UZW6gzOTE/image.jpg?width=1200&height=600&coordinates=0%2C100%2C0%2C100,N,,2026-08-13 20:59:51.570597
-,Clean Energy ,2026-08-13 22:35:08+00:00,League of Conservation Voters,LCV Statement on Cancellation of Three National Interest Electric Corridors,Not Available,,,,,https://www.lcv.org/media-center/lcv-statement-on-cancellation-of-three-national-interest-electric-corridors/,"Washington, D.C.– In response to the Department of Energy announcing the cancellation of three proposed national interest electric transmission corridors, the League of Conservation Voters released the following statement from Vice President of Federal Policy, Matthew Davis: “The Trump administration is trying to drive up electricity costs yet again.
-Building long-distance transmission lines is one of the best ways to lower costs and secure and upgrade our grid — and strengthening our grid is wildly popular, too.
-Pulling the plug on these long-planned transmission corridors will pull the rug out from under billions of dollars in investments and tens of thousands of jobs for hardworking families.
-We will continue to fight back against actions like this that hurt consumers and boost the profits of fossil fuel CEOs.” ###","Washington, D.C.– In response to the Department of Energy announcing the cancellation of three proposed national interest electric transmission corridors, the League of Conservation Voters released the following statement from Vice President of Federal Policy, Matthew Davis:
-
-“The Trump administration is trying to drive up electricity costs yet again. Building long-distance transmission lines is one of the best ways to lower costs and secure and upgrade our grid — and strengthening our grid is wildly popular, too. Pulling the plug on these long-planned transmission corridors will pull the rug out from under billions of dollars in investments and tens of thousands of jobs for hardworking families. We will continue to fight back against actions like this that hurt consumers and boost the profits of fossil fuel CEOs.”
-
-###",https://www.lcv.org/wp-content/uploads/2024/05/power-lines.jpg,N,,2026-08-13 22:59:55.815211
-,North Carolina Environment,2026-08-13 22:35:08+00:00,League of Conservation Voters,"This Week in Climate Action - August 13, 2026 - League of Conservation Voters",Not Available,,,,,https://www.lcv.org/media-center/this-week-in-climate-action-august-13-2026/,"“Green energy projects are literally waiting to bring down your energy costs.
-The projects would have helped strengthen our outdated electric grid and lower energy costs across the country.
-Absolutely no one but Big Oil benefits from this.” ICYMI: NATIONAL NEWS LCV ACTION FUND ENDORSED CANDIDATES WIN PRIMARY ELECTIONS NATIONWIDE: LCV Action Fund endorsed candidates Jahana Hayes (CT-05), Jake Johnson (MN-01), Kelly Morrison (MN-03), Betty McCollum (MN-04), Becca Balint (VT-AL), and Rebecca Cooke (WI-03) won their respective primary elections on Tuesday night.
-See a full list of LCV Action Fund endorsed candidates.
-LCVAF TAKE: LCV Action Fund Senior Vice President of Government Affairs Sara Chieffo said, “Congratulations to these candidates who are committed to addressing the climate crisis and protecting free and fair elections.","Your weekly resource to learn what the environmental movement is saying about the news of the day and the political fight of our generation. This week, we’re covering high temperatures, high costs, and the legislators fighting back for our communities.
-
-Be sure to follow LCV on Facebook, Instagram, BlueSky, and TikTok.
-
-QUOTES OF THE WEEK:
-
-“We deserve to have a city where we’re not choosing between paying rent and paying utilities.”
-
-— Vianey Olivarría, executive director of Chispa Arizona, on Arizona’s local utility attempting to raise energy rates amid record-breaking heat.
-
-“If we’re exceeding records from the Dust Bowl, that says that we’re in deep trouble.”
-
-— Jeff Masters, meteorologist at Yale Climate Connections, on last month’s record-breaking heat.
-
-“Green energy projects are literally waiting to bring down your energy costs. But outdated rules and Republican attacks are preventing them from being rapidly deployed.”
-
-— Sen. Martin Heinrich (NM) on how the Trump administration and congressional Republicans’ attacks on clean energy projects are driving up costs.
-
-TOP NEWS IN ENERGY AFFORDABILITY
-
-STATE NEWS
-
-PENNSYLVANIANS CALL ON SENATE TO TAKE ACTION ON DATA CENTERS, OUT-OF-CONTROL ENERGY COSTS: Conservation Voters of Pennsylvania and Action Together NEPA hosted a press conference calling on state Senate Republicans to pass legislation regulating data centers to help protect residents from outrageously high energy prices and protect natural resources. The Democrat-controlled Pennsylvania House has already passed over 20 bills addressing data centers that now require approval from the Republican-controlled Senate in order to become law.
-
-CVPA TAKE: Conservation Voters of Pennsylvania Federal Campaign Coordinator Hanna Felber said, “The House has done its job, and these bills will lower costs. But now it’s time for the Senate to take action.”
-
-CVPA TAKE 2: In response to the state budget, which passed last month without including major proposed data center reforms, Conservation Voters of Pennsylvania Executive Director Molly Parzen said, “While Democrats in the state House of Representatives worked tirelessly to advance legislation to expand access to cheaper clean energy and lower skyrocketing utility bills throughout the 2025-2026 legislative session, Senate Republicans refused to advance any serious energy policies.
-
-“House Democrats also passed a comprehensive package specifically designed to limit the impact of data centers on our environment, our local communities and our wallets. Yet Senate Republicans chose to leave ordinary Pennsylvanians on the hook while Big Tech companies, oil and gas billionaires and greedy utilities continue to rake in record profits.”
-
-NORTH CAROLINA ACTIVISTS, STATE LEADERS PUSH BACK ON DUKE ENERGY’S REQUESTED RATE HIKE: Despite making $5 billion in profits last year, Duke Energy requested to raise electricity rates in North Carolina by 18% over the next two years. Due to public backlash, the utility agreed to request a lower rate increase of 3.4% each year for the next two years, which is now under consideration by state regulators. Advocates, including North Carolina LCV, are fighting the rate hike, arguing that the new proposed increase is still too high for families struggling with the cost of living. North Carolina Governor Josh Stein and Attorney General Jeff Jackson have also opposed the rate hike.
-
-NCLCV TAKE: North Carolina LCV Senior Director of Public Affairs Dan Crawford said, “While North Carolinians are choosing between putting food on the table and keeping the lights on, Duke Energy just announced their profits for quarter two: $1.077 billion in profits, versus $971 million in profits during the same period last year. This is what happens when Republican lawmakers and the NC Utilities Commission (NCUC) fail to adequately regulate a greedy, out-of-control monopoly: stockholders get rich, while we pay the price. Thousands of folks across the state are calling on lawmakers and the NCUC to rein in Duke’s greed and protect ratepayers. If they fail, voters will hold lawmakers accountable at the ballot box this fall.
-
-“We continue to support the efforts of Governor Josh Stein and Attorney General Jeff Jackson to lower Duke Energy’s unreasonable rate hike requests. We need more leaders like these putting people over profits.”
-
-NATIONAL NEWS
-
-JULY SET NEW RECORDS FOR BOTH HEAT AND ENERGY BILLS: Last month was the hottest month ever recorded in the contiguous U.S., breaking the previous record set during the Dust Bowl in 1936. July also brought record-breaking energy prices, with average energy bills clocking in at an all-time-high of $217. And, as our communities suffer under sweltering temperatures, utility companies are raking in enormous profits at all of our expense.
-
-OUR TAKE: On Bluesky, LCV said, “July was the hottest month ever recorded in the U.S. Meanwhile, Trump and Congressional Republicans are giving massive handouts to Big Oil and data centers and blocking clean energy. You’re paying more for cooling, energy, insurance, and healthcare while they get richer.”
-
-CLIMATE ATTACKS FROM THE TRUMP ADMINISTRATION
-
-DOE CANCELS ELECTRIC CORRIDORS: Trump’s Department of Energy announced the cancellation of three proposed national interest electric transmission corridors. The projects would have helped strengthen our outdated electric grid and lower energy costs across the country.
-
-OUR TAKE: LCV Vice President of Federal Policy Matthew Davis said,“The Trump administration is trying to drive up electricity costs yet again. Building long-distance transmission lines is one of the best ways to lower costs and secure and upgrade our grid — and strengthening our grid is wildly popular, too. Pulling the plug on these long-planned transmission corridors will pull the rug out from under billions of dollars in investments and tens of thousands of jobs for hardworking families. We will continue to fight back against actions like this that hurt consumers and boost the profits of fossil fuel CEOs.”
-
-TRUMP ADMINISTRATION CANCELS ADDITIONAL OFFSHORE WIND LEASES: The Trump administration paid RWE, a German energy company, $1.22 billion of taxpayer money to abandon its offshore wind leases off the coasts of California, Louisiana, and New York. This is the fifth payout the administration has offered energy companies to cancel offshore wind projects. At a time when energy prices are already out of control, the Trump administration’s attacks on offshore wind are driving prices even higher by lowering our capacity to add clean, affordable energy to the grid.
-
-OUR TAKE: On Bluesky, LCV said, “The Trump administration is paying German energy company RWE $1.22 billion to cancel its offshore wind projects off of California, Louisiana, and New York. Trump has now paid companies almost $4 BILLION in taxpayer dollars to kill offshore wind. Absolutely no one but Big Oil benefits from this.”
-
-ICYMI: NATIONAL NEWS
-
-LCV ACTION FUND ENDORSED CANDIDATES WIN PRIMARY ELECTIONS NATIONWIDE: LCV Action Fund endorsed candidates Jahana Hayes (CT-05), Jake Johnson (MN-01), Kelly Morrison (MN-03), Betty McCollum (MN-04), Becca Balint (VT-AL), and Rebecca Cooke (WI-03) won their respective primary elections on Tuesday night. See a full list of LCV Action Fund endorsed candidates.
-
-LCVAF TAKE: LCV Action Fund Senior Vice President of Government Affairs Sara Chieffo said, “Congratulations to these candidates who are committed to addressing the climate crisis and protecting free and fair elections. July was the hottest ever recorded in the United States and people across the country were hit with their highest energy bills ever. People cannot continue to afford the costs to their health and their wallets while Big Polluters are seeing record profits from Trump’s manufactured energy crisis. It’s time to flip the House and elect candidates who will fight for people and future generations.”
-
-TODD BLANCHE SWORN IN AS ATTORNEY GENERAL: Late Friday night, Senate Republicans voted to confirm Trump’s personal lawyer Todd Blanche as U.S. Attorney General, and he was sworn into office on Monday afternoon. Appointing Blanche to lead DOJ will have far-reaching consequences on the agency’s independence and the future of democracy in this country.
-
-OUR TAKE: LCV Vice President of Federal Policy Matthew Davis said, “The Senate should have never considered Trump’s personal lawyer to lead the Justice Department. The Senate should be confirming an attorney general who serves the people, not as Trump’s personal lawyer. His record at the Justice Department has made it clear that he will only continue to do Trump’s bidding and weaponize the Department of Justice to advance Trump’s corruption and undermine our rights.
-
-“With Trump calling the shots, the Justice Department will only continue to weaponize law enforcement, undermine our freedom, and roll back protections for our communities and future generations.”
-
-NEW ON THE POWER SOURCE BLOG AND SOCIALS:
-
-ON THE BLOG: Stay tuned for exciting new content, coming soon to The Power Source Blog!
-
-ON OUR SOCIALS: Guys, this is not what I was talking about when I said I wanted a hot girl summer. Trump and his allies’ actions this week have been decidedly not hot, including cancelling more offshore wind, further raising our energy costs (broke girl summer 😞), and trying to make it even harder to vote. BUT, you know what is super hot? Being a poll worker.
-
-COMING UP:
-
-AUGUST 22: First day of National Parks Week.
-
-AUGUST 29: Comment period closes on EPA’s proposal to roll back emissions standards for heavy duty vehicles.",https://www.lcv.org/wp-content/uploads/2026/06/Screenshot-2026-06-26-180504-1024x600.png,N,,2026-08-13 23:00:45.977539
-,Clean Energy ,2026-08-13 22:24:07+00:00,techxplore.com,A new class of metals could transform Africa's clean energy economy—scientists explain,Not Available,,,,,https://techxplore.com/news/2026-08-class-metals-africa-energy-economy.html,Africa already supplies several of the metals used in alloys. Yet the continent captures far less value from designing and manufacturing advanced ...,Not Available,,N,,2026-08-13 23:00:27.058952
-,Clean Energy ,2026-08-13 22:23:45+00:00,Portland Business Journal,PNW needs a big energy buildout. A new plan points the way. - Portland Business Journal,Pete Danko,,,,,https://www.bizjournals.com/portland/news/2026/08/13/northwest-power-and-conservation-new-plan.html,"The region will also need some new natural gas power plants, the Northwest Power and Conservation Council says in a draft plan.",Not Available,https://media.bizj.us/view/img/12429788/gettyimages-transmission-line*1200xx4203-2368-0-303.jpg,N,,2026-08-13 21:01:01.877767
-,Indiana and Evs,2026-08-13 22:18:43+00:00,News-Press NOW,ELEKTROS Positions Lithium and Advanced EV Charging at the Heart of a Powerful New ...,ACCESS Newswire,,,,,https://www.newspressnow.com/news/national_news/business/elektros-positions-lithium-and-advanced-ev-charging-at-the-heart-of-a-powerful-new-innovation/article_5fbeefd4-81e7-5a6d-aaef-34fb64da0979.html,"Copyright 2026 ACCESS Newswire.
-All Rights Reserved.",Copyright 2026 ACCESS Newswire. All Rights Reserved.,https://bloximages.newyork1.vip.townnews.com/newspressnow.com/content/tncms/custom/image/2dcd6974-bbd8-4274-98cf-b730a9172368.png?resize=600%2C338,N,,2026-08-14 11:00:11.771114
-,Texas American Energy ,2026-08-13 22:08:43+00:00,Senator Katie Britt,U.S. Senator Katie Britt Joins Colleagues on Legislation Introduced by Senator Alan ...,Not Available,,,,,https://www.britt.senate.gov/news/press-releases/u-s-senator-katie-britt-joins-colleagues-on-legislation-introduced-by-senator-alan-armstrong-to-fix-broken-permitting-process/,"Senator Katie Britt (R-Ala.) joined 16 of her Republican colleagues in supporting the American Energy and Mineral Infrastructure (AEMI) Act introduced by Senator Alan Armstrong (R-Okla.).
-This legislation would reform many aspects of the federal permitting process and accelerate construction of critical energy and mineral infrastructure.
-“Our national energy infrastructure is like a bridge: nobody really cares about it until it falls down, and the cracks are starting to show right now.
-The AEMI Act has 17 total cosponsors, including Senators Marsha Blackburn (R-Tenn.), Ted Budd (R-N.C.), John Cornyn (R-Texas), Tom Cotton (R-Ark.
-Senator Britt is an original cosponsor.","WASHINGTON, D.C. — U.S. Senator Katie Britt (R-Ala.) joined 16 of her Republican colleagues in supporting the American Energy and Mineral Infrastructure (AEMI) Act introduced by Senator Alan Armstrong (R-Okla.). This legislation would reform many aspects of the federal permitting process and accelerate construction of critical energy and mineral infrastructure.
-
-“As America continues to lead in industries that require a higher energy demand, like artificial intelligence and manufacturing, it’s critical that we modernize our infrastructure to keep up. This bill creates regulatory certainty for energy and critical mineral projects alike, and it continues to execute on President Trump’s promise to unleash American energy dominance and compete with the People’s Republic of China by slashing burdensome red tape, ensuring environmental decision-making is based on sound science, and preventing partisan politics from inhibiting this necessary growth,” said Senator Britt.
-
-It is critical that we have the necessary infrastructure to facilitate America becoming not just energy independent, but energy dominant. The AEMI Act would accomplish that by streamlining federal permitting, reducing opportunities for frivolous litigation that delays projects, and preventing politically motivated vetoes of critical American energy and mineral infrastructure.
-
-“Our national energy infrastructure is like a bridge: nobody really cares about it until it falls down, and the cracks are starting to show right now. We have a narrow window to act, and we cannot afford to let this opportunity pass us by. I am grateful to my 17 Senate colleagues who are co-sponsoring the AEMI Act. Together, we recognize that America cannot afford another year of delay,” said Senator Armstrong.
-
-The AEMI Act has 17 total cosponsors, including Senators Marsha Blackburn (R-Tenn.), Ted Budd (R-N.C.), John Cornyn (R-Texas), Tom Cotton (R-Ark.), Steve Daines (R-Mont.), Jon Husted (R-Ohio), John Kennedy (R-La.), James Lankford (R-Okla.), Cynthia Lummis (R-Wyo.), Roger Marshall (R-Kan.), David McCormick (R-Pa.), Bernie Moreno (R-Ohio), Lisa Murkowski (R-Alaska), Rick Scott (R-Fla.), Tim Sheehy (R-Mont.), and Roger Wicker (R-Miss.).
-
-Senator Britt is an original cosponsor. You can view the full bill text here.
-
-Senator Britt has been a leader on unleashing American energy during her time in Congress, joining a bicameral group of her colleagues in introducing theUnlocking Domestic LNG Potential Act and cosponsoring the Offshore Energy Security Act of 2025.
-
-###",https://www.britt.senate.gov/wp-content/uploads/2024/03/Britt_logo_social_option.jpg,N,,2026-08-13 19:02:03.473838
-,Congress,2026-08-13 22:08:30+00:00,thehill.com,Trump cancels Biden-era bid to speed power line construction - The Hill,Not Available,,,,,https://thehill.com/policy/energy-environment/6028881-energy-dept-scraps-transmission-corridors/,px-captcha,Not Available,,N,,2026-08-13 21:01:37.662463
-,American Energy,2026-08-13 22:03:34+00:00,OilPrice.com,U.S. Power Grid Strains Under Record Electricity Demand | OilPrice.com,Irina Slav,,,,,https://oilprice.com/Energy/Energy-General/US-Power-Grid-Strains-Under-Record-Electricity-Demand.html,"U.S. demand for electricity is expected to hit an all-time high both this year and next, driven by the data center buildout of Big Tech.
-It was the organic thing to do, the convenient thing to do in order to get reliable electricity supply every second of every day.
-Yet wind and solar installations are built where there is wind and sun, not around electricity demand centers.
-Speaking of demand, those demand centers look very different today than they did a century ago.
-Add to this the transformer shortage that has emerged as an adverse result of the fast growth in demand and alternative electricity supply, and those projects about electricity demand become questionable—because there simply might not be enough electricity to cover that demand.","U.S. demand for electricity is expected to hit an all-time high both this year and next, driven by the data center buildout of Big Tech. This is the latest in a series of record-demand projections by the Energy Information Administration. There is one problem, though. That problem is the grid.
-
-Electricity consumption in the United States has already had two record-breaking years: 2024 and 2025. The trend is seen extending and possibly accelerating because of the IT industry and its artificial intelligence race, hitting 4,268 billion kWh this year and rising further to 4,391 billion kWh in 2027. But for that to happen smoothly and without blackouts, the grid needs to start getting upgraded.
-
-Some see those upgrades as mostly expansion, through new transmission lines and transformers, simply because the area of demand has expanded with population growth and the growth in demand centers. Others, however, see traditional grids as outdated because they were not built around alternative energy sources but around hydrocarbons. Related: Porsche to Phase Out Taycan by 2030 Amid Weak EV Demand
-
-Reuters’ Gavin Maguire wrote in a recent column how the U.S. grid was built around power plants fueled by coal and gas. It was the organic thing to do, the convenient thing to do in order to get reliable electricity supply every second of every day. But now, despite the pause that Donald Trump hit on wind and solar expansion, there are plenty of such utility-scale installations that cannot always deliver at top levels because of grid constraints such as insufficiently branched-out lines that would deliver the power generated to areas with high demand.
-
-This, by the way, is a major challenge for decarbonization supporters everywhere. With the grid designed to send electricity in the area around the generator, these generators were built strategically to cover all parts of a country. Yet wind and solar installations are built where there is wind and sun, not around electricity demand centers. So, bringing their electricity to those demand centers requires using the line network built for baseload generators.
-
-Speaking of demand, those demand centers look very different today than they did a century ago. Population growth has had its impact on demand, but the biggest driver, by far, is Big Tech and artificial intelligence. A query using ChatGPT uses as much as 10 times the energy that an old-fashioned, so to speak, Google search. Training models such as ChatGPT to perform those queries accurately also requires gargantuan amounts of electricity, equivalent to the consumption of a town—and will only continue growing. Goldman Sachs has projected that global electricity demand from data centers would skyrocket by as much as 165% by 2030, from where it was in 2023.
-
-This is lightning-speed growth in demand. Realistically, there is no way the grid, especially a grid as complex as the U.S. one, can be upgraded in order to ensure the secure and reliable supply of electricity not only to data centers but to all other consumers as well. This is why some regional authorities are mandating tech companies to secure their own generation and why some of those companies are voluntarily opting for bring-your-own-electricity, both alternative and baseload.
-
-The biggest challenge for the grid of tomorrow with all that demand projected, however, is not so much generation as transmission. The links between generators and consumers are what brings the grid to life, but it has also emerged as a constraint because there are too many new demand points but also a lot of new supply points from wind and solar installations.
-
-For all these, space needs to be made on the grid, and to make that space, the grid needs more “links”, that is, transmission lines. Add to this the transformer shortage that has emerged as an adverse result of the fast growth in demand and alternative electricity supply, and those projects about electricity demand become questionable—because there simply might not be enough electricity to cover that demand.
-
-By Irina Slav for Oilprice.com
-
-More Top Reads From Oilprice.com
-
-India Eyes Two New Sites to Expand Strategic Oil Reserves
-
-Decommissioning Spending in UK North Sea Hits Record High
-
-Romania Shuts Down Last Nuclear Reactor As Danube Hits 90-Year Low",https://d32r1sh890xpii.cloudfront.net/article/1200x675/2026-08-13_mnkzab4gye.jpg,N,,2026-08-13 20:03:26.525427
-,EVs,2026-08-13 22:01:33+00:00,WVPE,Samsung says it's buying GM's stake in New Carlisle battery plant - WVPE,"Michael Gallenberger, www.wvpe.org, michael-gallenberger",,,,,https://www.wvpe.org/wvpe-news/2026-08-13/samsung-says-its-buying-gms-stake-in-new-carlisle-battery-plant,"Samsung has announced changes for a New Carlisle battery plant.
-In 2023, it was announced that Samsung and General Motors were teaming up to build a $3.5 billion plant to make batteries for electric vehicles.
-Now, Samsung says it’s buying out GM’s 49.99-percent stake in the joint venture.
-That will make it Samsung’s first independently operated battery plant in North America, according to a company press release.
-Samsung says those could potentially be made at the New Carlisle plant in the future.","Samsung has announced changes for a New Carlisle battery plant.
-
-In 2023, it was announced that Samsung and General Motors were teaming up to build a $3.5 billion plant to make batteries for electric vehicles. But construction was paused earlier this year, after automakers pulled back on EV production with the end of federal tax credits.
-
-Now, Samsung says it’s buying out GM’s 49.99-percent stake in the joint venture. For now, Samsung plans to use the site to make batteries for energy storage systems, a market that’s growing more quickly. That will make it Samsung’s first independently operated battery plant in North America, according to a company press release.
-
-Still, Samsung says it hasn’t given up on its partnership with GM. The two companies have signed a new joint development agreement for next-generation prismatic EV batteries. Samsung says those could potentially be made at the New Carlisle plant in the future.",https://npr.brightspotcdn.com/dims4/default/3b9c45b/2147483647/strip/true/crop/1143x600+43+0/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F40%2F33%2F47c13c5549bd8aa8d1ee1463c278%2Fev-battery-plant-rendering.jpg,N,,2026-08-13 19:01:31.126696
