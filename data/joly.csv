@@ -1,4 +1,433 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID36,OpenAI,2026-08-18 18:33:09+00:00,TIME,OpenAI Is Slowing Down Its AI Training - TIME,Alex Heath,,,,,https://time.com/article/2026/08/18/openai-slowing-training/,"Altman told me several researchers he never expected to focus on alignment—the work of making AI systems follow human intent—recently told him they were switching to it.
+The changes follow a remarkable breach involving Hugging Face, the popular platform where developers host AI models.
+It took OpenAI researchers roughly one week to discover the incident.
+In February, TIME reported that Anthropic had weakened its commitment to stop training models when it could not guarantee adequate safeguards in advance.
+Anthropic co-founder Jared Kaplan told TIME that unilateral commitments did not make sense “if competitors are blazing ahead.” Like OpenAI, Anthropic is now preparing for an expected IPO.","“I think it is a good time to slow down,” OpenAI CEO Sam Altman told me last week, describing the company’s decision to halt the development of its most powerful, unreleased models.
+
+The company announced Tuesday that it’s implementing new safeguards that will slow its future AI development. The company recently paused training on its next set of models, codenamed Astra, for a little more than two weeks, according to executives, and its largest planned frontier training run remains on hold while the new guardrails are put in place.
+
+It is the first time OpenAI has made such a move. The extraordinary decision comes as OpenAI gears up for an anticipated IPO amid a highly competitive race with arch-rival Anthropic, and as researchers grapple with rapid advancements in AI capabilities that have left industry leaders worried about their ability to control them.
+
+The slowdown has redirected two of OpenAI’s most important resources: researchers and computing power. Altman told me several researchers he never expected to focus on alignment—the work of making AI systems follow human intent—recently told him they were switching to it. “We’ve shifted a lot of compute, not just to alignment research, but also to these new monitoring systems,” he says.
+
+The changes follow a remarkable breach involving Hugging Face, the popular platform where developers host AI models. An unreleased OpenAI system escaped the sandbox of an internal cybersecurity evaluation and compromised Hugging Face’s production systems. It took OpenAI researchers roughly one week to discover the incident. Jakub Pachocki, the company’s chief scientist, acknowledged the lapse, saying OpenAI had built monitors capable of inspecting what its models were planning, but had not applied them to the system in the evaluation because it underestimated their capabilities. “For AI, you should expect the unexpected,” he told me.
+
+OpenAI froze some of its research efforts immediately after the Hugging Face incident and restored projects one by one under stricter controls. The company said Tuesday that a significant number of Astra workloads remain paused. It also said Astra may reach the “Critical” cybersecurity threshold in its Preparedness Framework, a designation that requires safeguards during development, not merely before a model is released. Executives have not given an estimate for how long the new safety processes could delay the release of Astra.
+
+In exclusive interviews last week, Altman told TIME and Sources that the slowdown was not caused by a single “smoking gun,” but rather a collection of research observations showing “various degrees of misalignment” as AI capabilities advanced faster than researchers had expected. The decision to tap the brakes should not be interpreted as evidence of any imminent catastrophe, he said. “Getting AI safety right,” Altman told me, “is more important than any company’s momentum.”
+
+OpenAI says it is now expanding safety monitoring across reinforcement-learning training and evaluations, the phase of development in which advanced models are given the ability to use the internet and control software. The approach uses other AI systems to examine models’ internal reasoning and behavior for unauthorized access, data theft, or attempts to defeat safeguards.
+
+In an interview, Pachocki told me that some of those protections go beyond OpenAI’s current Preparedness Framework, its public rulebook for handling models that could cause severe harm. “We don’t have a date yet,” he says, “but we definitely believe we will need to evolve the Preparedness Framework.” OpenAI said it plans to involve outside organizations as it revises the framework and will publish a detailed postmortem of the Hugging Face breach in the coming days.
+
+The company’s decision to decelerate creates a contrast with Anthropic. In February, TIME reported that Anthropic had weakened its commitment to stop training models when it could not guarantee adequate safeguards in advance. Anthropic co-founder Jared Kaplan told TIME that unilateral commitments did not make sense “if competitors are blazing ahead.”
+
+Like OpenAI, Anthropic is now preparing for an expected IPO. Figures recently reported by Bloomberg showed the company generated more than $11.5 billion in revenue in the second quarter, pushing its annualized revenue run rate above $65 billion at the end of July. OpenAI’s latest reported run rate is approaching $40 billion. One effect of OpenAI’s decision to slow down could be ratcheting up pressure on its rival to do the same.
+
+“I don’t like the whole thing in this field of ‘we have to race’ or ‘we have to do this because somebody else is going to do it,’” Altman says. “I think that’s a very dangerous dynamic.”
+
+Aside from the Hugging Face incident, OpenAI has not disclosed the results of its frontier research that led to the decision to slow down training, and company leaders said the evidence behind Astra’s risk classification will likely not be available until the model’s technical report is released.",https://static.time.com/v3/assets/bltea6093859af6183b/blt6817e9412361a215/6a7f61fc9686fb8109cffc2f/sam-altman-open-ai-002.jpg?branch=production&width=3840&quality=75&auto=webp&crop=16:9%2Coffset-x100.00%2Coffset-y60.22,N,,2026-08-18 15:19:00.518711
+ID36,OpenAI,2026-08-18 18:02:00+00:00,Axios,OpenAI to rewrite its safety rules post-Hugging Face - Axios,Ina Fried,,,,,https://www.axios.com/2026/08/18/openai-pause-astra-preparedness-framework,"Why it matters: The disclosure comes as OpenAI and other frontier labs face increased scrutiny in the wake of incidents in which their models escaped safeguards and sandboxes during testing.
+The company says it is also adding stronger monitoring across its development process, introducing alignment and security safeguards earlier in the development process and implementing higher safeguards than before when it scales up post-training.
+OpenAI said it is increasing the compute resources devoted to understanding the underlying ways its systems are reasoning and acting.
+The big picture: There is growing evidence that models from the leading labs are capable — especially when safeguards are lowered — of planning and conducting attacks in pursuit of broader goals.
+Following OpenAI's disclosure of the Hugging Face incident, Anthropic said it discovered evidence that its models, too, had breached real-world systems during their evaluation.","OpenAI said Tuesday that it has made several changes to its safety practices following its determination that an upcoming system, Astra, may have reached a critical threshold for cybersecurity capabilities and the breach of Hugging Face's systems by another unreleased OpenAI model.
+
+Why it matters: The disclosure comes as OpenAI and other frontier labs face increased scrutiny in the wake of incidents in which their models escaped safeguards and sandboxes during testing.
+
+Driving the news: OpenAI said Tuesday that it is in the process of rewriting its main security document, known as the Preparedness Framework, now that models are approaching or reaching the critical thresholds imagined in that document, most of which dates back to 2023.
+
+The company says it is also adding stronger monitoring across its development process, introducing alignment and security safeguards earlier in the development process and implementing higher safeguards than before when it scales up post-training.
+
+OpenAI said it is increasing the compute resources devoted to understanding the underlying ways its systems are reasoning and acting.
+
+What they're saying: OpenAI stressed that the new safety measures are not simply a reaction to the Hugging Face breach, but part of a broader tightening of standards as models grow more capable.
+
+""There is an incredible feeling of urgency to advance the levels of this sector... and to prepare for the same kind of development happening outside of OpenAI and in the broader world,"" chief scientist Jakob Pachocki said Tuesday during a briefing of reporters.
+
+Catch-up quick: OpenAI says it paused two weeks of deployment-focused reinforcement-learning (RL) training and is keeping its largest planned frontier RL run on hold.
+
+The company first told Axios earlier this month it was pausing some work after it determined the level of cyber capabilities that Astra could pose.
+
+It also says a significant number of Astra and cyber-related research workloads remain paused until they can meet a tougher security standard.
+
+The big picture: There is growing evidence that models from the leading labs are capable — especially when safeguards are lowered — of planning and conducting attacks in pursuit of broader goals.
+
+Following OpenAI's disclosure of the Hugging Face incident, Anthropic said it discovered evidence that its models, too, had breached real-world systems during their evaluation.",https://images.axios.com/dPnwRi2uL3n5d2iB5CORvLsDOJ0=/1366x768/smart/2024/09/11/194549-1726083949968.jpg,N,,2026-08-18 14:23:23.238106
+ID1,Accor,2026-08-18 18:01:20+00:00,Travel And Tour World,Accor Shifts Focus Beyond Luxury as Saudi Secondary Cities Open a New Hotel Growth Opportunity,Ananya Dey,,,,,https://www.travelandtourworld.com/news/article/0a2v5mbcnuml/,"Accor Shifts Focus Beyond Luxury as Saudi Secondary Cities Open a New Hotel Growth Opportunity.
+Now, Accor Shifts Focus Beyond Luxury as Saudi Secondary Cities Open a New Hotel Growth Opportunity.
+Accor Deepens Saudi Arabia Hotel Expansion as Global Growth Push Reaches New Markets Accor is accelerating its hospitality development in Saudi Arabia as the Kingdom becomes an increasingly important market within the group’s worldwide hotel network.
+Accor Expands Beyond Saudi Arabia Through Multiple Markets Saudi Arabia forms part of a much wider international growth strategy.
+Secondary cities are creating a new hotel growth opportunity as investors seek markets with room for midscale and economy accommodation.","Accor Shifts Focus Beyond Luxury as Saudi Secondary Cities Open a New Hotel Growth Opportunity. Now, Accor Shifts Focus Beyond Luxury as Saudi Secondary Cities Open a New Hotel Growth Opportunity. The reason is simple. Saudi Arabia’s hotel market is widening. Investors are looking beyond luxury and major hubs as demand grows in emerging destinations. Accor can use brands such as Novotel, Mercure and ibis to serve midscale and economy travellers. Secondary cities offer room for new supply, different price points and investor returns. This shift gives Accor a wider path to grow while supporting Saudi Arabia’s expanding tourism economy.
+
+Accor Deepens Saudi Arabia Hotel Expansion as Global Growth Push Reaches New Markets
+
+Accor is accelerating its hospitality development in Saudi Arabia as the Kingdom becomes an increasingly important market within the group’s worldwide hotel network. Accor operated 5,835 hotels with 881,928 rooms globally at the end of June 2026, while its development pipeline contained more than 268,000 rooms across 1,595 hotels.
+
+Saudi Arabia stands out because Accor is expanding across luxury, premium and midscale hospitality rather than relying on a single hotel segment.
+
+Riyadh, Jeddah and Makkah Lead Accor’s Saudi Growth
+
+Riyadh gained a major new Accor property in January 2026 with the opening of Sofitel Riyadh Hotel & Convention Centre. The hotel contains 388 rooms and suites and nearly 8,500 square metres of flexible event space. Its convention facilities can accommodate up to 4,000 guests, strengthening Accor’s position in business travel, events and luxury hospitality in the Saudi capital.
+
+Jeddah has also become important for Accor’s luxury strategy. Raffles Hotels & Resorts announced the debut of Raffles Jeddah in May 2026 on the city’s Red Sea Corniche.
+
+Makkah represents another major growth centre. Accor has signed Sofitel Jabal Omar Makkah, scheduled for 2026. The property will contain 1,141 rooms and suites across two towers and, according to Accor, will become the world’s largest Sofitel. Its location within the Jabal Omar development provides pedestrian access towards the Holy Mosque.
+
+Accor’s announced 2026 programme also includes Novotel Makkah South Central, a major conversion involving 2,058 keys. The project is designed to provide significant midscale accommodation capacity for pilgrimage demand throughout the year.
+
+Accor Sees a New Saudi Hospitality Shift as Midscale and Economy Brands Move Into Emerging Cities
+
+Speaking with Muhammad Ali of Travel and Tour World at FHS Saudi Arabia, Maya Ziade, Chief Development Officer for Premium, Midscale and Economy Brands for Accor in the Middle East, Africa and Turkey, outlined how the hospitality group is approaching its next phase of growth in Saudi Arabia. Ziade said Accor is in the Kingdom because it trusts the country, remains aligned with Saudi Vision 2030 and wants to do more than simply increase the number of hotels it operates. According to her, Accor wants to make an impact on tourism and contribute to shaping the future of Saudi Arabia. She explained that Accor has more than 45 brands covering different hospitality segments, ranging from luxury and premium to midscale and economy. Premium brands include Swissôtel, Pullman and Mövenpick, which are already established in the region as well as internationally. In the midscale segment, Novotel remains an important brand, while the ibis family, including ibis Styles and ibis budget, gives Accor a strong presence in economy accommodation. Ziade said this diversification allows Accor to meet different types of travel demand. In Saudi Arabia, she noted that the market has historically been dominated by luxury hotels. However, this situation is beginning to change. Midscale and economy accommodation had previously been underpenetrated in the Saudi market, but Accor is now seeing growing interest from investors. According to Ziade, investors increasingly recognise that midscale hotels can generate attractive returns in suitable locations, particularly in secondary cities. She stressed that return on investment remains an important consideration for hotel investors looking at these emerging markets. Accor is therefore using brands such as Novotel to support expansion into these locations. Ziade said the company is preparing to open a large Novotel property in Dhahran, which will also contain a living component under Novotel Living. She also highlighted Mercure as part of Accor’s midscale offering and referred to the opening of a Mercure property in Khamis Mushait. These developments demonstrate how Accor is widening its focus beyond luxury hospitality by using its broad brand portfolio to address different levels of demand. For Accor, Saudi Arabia’s expanding secondary-city market is becoming increasingly relevant as investors look for new hospitality opportunities and travellers seek a wider range of accommodation choices.
+
+Accor Expands Beyond Saudi Arabia Through Multiple Markets
+
+Saudi Arabia forms part of a much wider international growth strategy. Accor’s latest official updates show particularly ambitious development in China and India, alongside new openings in other established tourism markets.
+
+China currently represents one of Accor’s largest development opportunities. The group operates more than 830 hotels across over 50 cities in Greater China and aims to reach a development target of 1,600 hotels within five to six years.
+
+India is another priority. Accor officially states that it operates more than 70 hotels there and aims to build a network of 300 properties by 2030.
+
+For Saudi Arabia, the strategy is especially broad. Luxury brands such as Raffles and Sofitel are growing alongside large midscale projects under Novotel. This mix allows Accor to serve pilgrimage travel, corporate visitors, major events, leisure guests and luxury tourism while making the Kingdom an increasingly important part of its wider global expansion programme.
+
+Accor is shifting focus beyond luxury because Saudi Arabia’s hotel market is becoming more diverse. Secondary cities are creating a new hotel growth opportunity as investors seek markets with room for midscale and economy accommodation. Accor can respond with brands such as Novotel, Mercure and ibis, while continuing to serve premium and luxury demand. The cause is wider tourism development beyond the Kingdom’s largest cities. The opportunity comes from underserved destinations, changing traveller needs and investor interest. As a result, Accor can expand across more price segments while supporting Saudi Arabia’s tourism growth and hospitality development in the coming years.",https://www.travelandtourworld.com/wp-content/uploads/2026/08/Hotel1-3.jpg,N,,2026-08-18 15:18:46.643293
+ID19,Eli Lilly,2026-08-18 17:31:11+00:00,www.pharmabiz.com,OmniAb enters global collaboration and license agreement for ion channel programme with Eli Lilly,Not Available,,,,,https://www.pharmabiz.com/NewsDetails.aspx?aid=187991&sid=2,"OmniAb, Inc., a provider of cutting-edge discovery research technology to enable the discovery of next-generation therapeutics, announced a global collaboration and license agreement with Eli Lilly and Company (Lilly) for a new ion channel programme.
+The collaboration leverages OmniAb’s technology platform and expertise in ion channel discovery and screening.
+“We are pleased to enter into this important new relationship with Lilly,” said Matt Foehr, OmniAb’s chief executive officer.
+OmniAb licenses cutting-edge discovery research technology to pharmaceutical and biotech companies and academic institutions to enable the discovery of next-generation therapeutics.
+Its technology platform creates and screens diverse antibody repertoires and is designed to quickly identify optimal antibodies and other target-binding proteins for our partners’ drug development efforts.","OmniAb, Inc., a provider of cutting-edge discovery research technology to enable the discovery of next-generation therapeutics, announced a global collaboration and license agreement with Eli Lilly and Company (Lilly) for a new ion channel programme. The collaboration leverages OmniAb’s technology platform and expertise in ion channel discovery and screening.
+
+“We are pleased to enter into this important new relationship with Lilly,” said Matt Foehr, OmniAb’s chief executive officer. “Lilly is focused on delivering medicines to address major unmet medical needs and our differentiated expertise and established technologies that relate to ion channels are well positioned to help drive this new discovery programme.”
+
+Under the terms of the agreement, OmniAb will receive an upfront payment and is eligible to receive up to $370 million in research, development, and commercial milestone payments, as well as tiered royalties on global net sales. The therapeutic target and modality are undisclosed.
+
+OmniAb licenses cutting-edge discovery research technology to pharmaceutical and biotech companies and academic institutions to enable the discovery of next-generation therapeutics. Its technology platform creates and screens diverse antibody repertoires and is designed to quickly identify optimal antibodies and other target-binding proteins for our partners’ drug development efforts.",,N,,2026-08-18 15:18:52.944572
+ID40,Publicis Groupe,2026-08-18 17:23:54+00:00,www.publicisgroupe.com,Publicis Sports and Travis Kelce's TEKTA Join Forces to Reimagine the Future of NIL Marketing,Not Available,,,,,https://www.publicisgroupe.com/en/news/press-releases/publicis-sports-and-travis-kelce-s-tekta-join-forces-to-reimagine-the-future-of-nil-marketing,"A limited number of Publicis Sports clients will have exclusive access and become the first to activate through TEKTA and help shape its future development.
+They will receive strategic guidance on investment opportunities, partnerships, and consultation on how to deliver scalable, measurable NIL programs – all within one integrated solution.
+Universities and student athletes will benefit from training and education opportunities, as well as overall guidance on branding and partnerships.
+This has been challenging—if not impossible—to do from a brand standpoint, given all the pain points,” said Suzy Deering, CEO, Publicis Sports.
+“I am excited to leverage my lived experience and professional perspective to help close the gap for brands and athletes alike.","Publicis Sports, the sport and culture marketing arm of Publicis Groupe [Euronext Paris FR0000130577, CAC 40], and Kansas City Chiefs’ Travis Kelce today announced the launch of TEKTA, a first-of-its-kind Name, Image and Likeness (NIL) consulting and activation offering that helps brands identify, activate and measure partnerships with collegiate athletes and universities across the fragmented and growing NIL landscape. TEKTA combines Publicis Sports’ advertiser relationships, fan intelligence and measurement capabilities with Kelce's expertise across one of the most commercially sophisticated athlete portfolios in sports, alongside 3 Arts Sports’ deep relationships across universities, conferences and collegiate athletics. Through the venture, a select group of Publicis Sports clients will gain access to a broad NIL network spanning 45,000 Division I student-athletes and 68 Power Four universities, with the ability to activate talent from the national to local level based on brand objectives, audience and market.
+
+Together, the partnership will provide brands with an end-to-end consulting and activation capability that generates 50–70% faster speed to market and one unified measurement framework. All activations are executed in coordination with institutional compliance and applicable conference and state requirements.
+
+A limited number of Publicis Sports clients will have exclusive access and become the first to activate through TEKTA and help shape its future development. They will receive strategic guidance on investment opportunities, partnerships, and consultation on how to deliver scalable, measurable NIL programs – all within one integrated solution. Universities and student athletes will benefit from training and education opportunities, as well as overall guidance on branding and partnerships. Athletes will also gain access to vetted national brand opportunities, transparent deal terms, financial literacy training, and long-term career and brand development provided by 3 Arts Sports.
+
+NIL is currently a $4.5 billion market opportunity. According to Opendorse, student-athletes average a 5.7% engagement rate compared with 1.9% for traditional influencers, underscoring the growing value of college athletes as a marketing channel. Despite this momentum, brands continue to face a fragmented marketplace—navigating multiple athlete representatives, universities, conferences, compliance requirements and measurement solutions—which makes it difficult to build scalable, measurable national NIL programs.
+
+“Many of our clients are looking for ways to connect with customers at a local level, while also delivering scale and laddering up to a regional or national program. This has been challenging—if not impossible—to do from a brand standpoint, given all the pain points,” said Suzy Deering, CEO, Publicis Sports. “Through the unique combination of Publicis Sports, Travis and 3 Arts Sports, we’re able to bring our strengths together to do this seamlessly for our clients.”
+
+“The sports industry doesn’t need more competition, it needs more connection,” said Aaron and Andre Eanes, 3 Arts Entertainment Partners and Co-Heads of 3 Arts Sports. “Publicis Sports follows the data, Travis has one of the highest value portfolios in all of sports, and our team has spent years building the athlete and university relationships that make these deals actually work. Together we’re providing what brands and athletes have been asking for in a way that’s never been done.”
+
+“The fluid NIL and college sports landscape has everyone scrambling to keep up,” said Travis Kelce. “I am excited to leverage my lived experience and professional perspective to help close the gap for brands and athletes alike. Streamlining the process will allow everyone to fully realize the potential of engaging across the board, including the significant opportunity that lies in those untapped sports and undiscovered personalities.”
+
+This follows Publicis’ launch of Influential Sports, an integrated offering that helps brands connect with fans at scale through creator-led marketing by leveraging Publicis Sports’ robust, industry-leading data, fan intelligence, and measurement capabilities. Similarly, this new NIL offering is another avenue for brands to take a data-informed, fan-first approach while also integrating sports and influencer strategies earlier in the planning process, ultimately helping them make the right selections and activate talent that best meets business needs and drives measurable outcomes.",https://www.publicisgroupe.com/themes/custom/publicis/front/src/images/theme/share.jpg,N,,2026-08-18 14:23:28.447767
+ID19,Eli Lilly,2026-08-18 16:51:09+00:00,Investor's Business Daily,"Eli Lilly, Stock Of The Day, Is Erasing Novo's Early Lead In Weight-Loss Pills","ALLISON GATLIN, Allison-Gatlin, Investor's Business Daily",,,,,https://www.investors.com/research/ibd-stock-of-the-day/eli-lilly-stock-foundayo-wegovy-weight-loss-pills/,"Still, he rates Eli Lilly stock an outperform with a 1,309 price target.
+Catalysts For Eli Lilly Stock Lilly has a number of catalysts lined up for the second half of 2026 that could drive shares higher.
+Highly Rated Pharma Stock Eli Lilly stock is forming a flat base with a buy point at 1,249.45.
+This means Eli Lilly stock ranks in the top 19% of all stocks when it comes to 12-month performance.
+Eli Lilly stock ranks No.","Eli Lilly (LLY) is Tuesday's IBD Stock Of The Day. Shares have rebounded nicely and are now staring down two potential entries as the weight-loss kingpin gains on its Danish rival, Novo Nordisk (NVO).
+
+Both companies launched weight-loss pills this year. But what started with a clear lead for Novo now looks murkier. Eli Lilly's Foundayo is gaining on Novo Nordisk's oral Wegovy, Leerink Partners analyst David Risinger said in a report.
+
+↑ X NOW PLAYING Novo Nordisk Is Losing Its Lead To Eli Lilly In The Obesity Drug War. Here's What Went Wrong.
+
+On a pure numbers basis, Novo's Wegovy has the clear edge. It had roughly 163,000 prescriptions in the week ended Aug. 7. Foundayo, on the other hand, had a much smaller 38,900 scripts. But, in its 30th week of launch, oral Wegovy scripts slowed by 5%. Foundayo, in its 18th week of launch, had 14% week-over-week growth.
+
+Analysts expect Foundayo sales to overtake oral Wegovy in 2028. That year, they project $6.11 billion in sales of the Wegovy pill vs. $6.17 billion for Foundayo. Foundayo's lead is expected to grow again in 2029 with $9.51 billion in sales, compared with just $7.45 billion for oral Wegovy.
+
+Eli Lilly's Weight-Loss Efforts
+
+Wegovy is just a small component of Eli Lilly's overall weight-loss story. During the second quarter, the company put up nearly $15 billion in combined sales of its tirzepatide products. Tirzepatide is the chemical backbone behind Mounjaro, the type 2 diabetes treatment, and obesity drug Zepbound.
+
+Both products beat sales expectations, with Mounjaro sales skyrocketing 91% year over year and Zepbound climbing 46%. By 2031, the latest year for which FactSet has estimates, the duo could be a nearly $79 billion annual powerhouse, accounting for roughly 55% of Lilly's topline.
+
+In comparison, Novo's semaglutide products are expected to generate less than half that at $34.5 billion. Semaglutide is the active ingredient in Wegovy, Ozempic and Rybelsus.
+
+Lilly also sells treatments for cancer, neurological diseases, immunological conditions and diabetes. On the diabetes side, Jardiance and Trulicity also easily topped second-quarter forecasts. Kisunla, the company's Alzheimer's treatment, beat projections by 27%, RBC Capital Markets analyst Trung Huynh said in a report.
+
+Is Guidance Conservative?
+
+Cancer drug Verzenio was mixed, beating some expectations and missing others. Meanwhile, Taltz sales came in a hair above forecasts. Taltz treats inflammatory conditions like arthritis and psoriasis. Foundayo sales, though, came in light at $98 million, vs. estimates for $103 million to $104 million.
+
+Huynh kept his outperform rating and 1,500 price target on Eli Lilly stock.
+
+It was a ""very strong 11% beat on top line,"" he said. ""Clean GLP-1 beat, in particular driven by Mounjaro (ex-US and US) as well as other growth drivers.""
+
+The company hiked its guidance for the year and now projects $85 billion to $87 billion in sales. At its last update, Eli Lilly had forecast $82 billion to $85 billion in full-year sales. Risinger, the Leerink analyst, says that could be conservative as it implies sales in the back half of the year will be flat.
+
+""A caveat is there were one-time sales benefits in 1H such as Jardiance milestone payments and one-time adjustments that benefited certain products such as Trulicity,"" he said in a client note.
+
+Still, he rates Eli Lilly stock an outperform with a 1,309 price target.
+
+Catalysts For Eli Lilly Stock
+
+Lilly has a number of catalysts lined up for the second half of 2026 that could drive shares higher.
+
+The company is due to make presentations at the European Association for the Study of Diabetes regarding eloralintide and tirzepatide. Eloralintide is a next-generation obesity asset. It blocks the amylin protein. Amylin is involved in controlling blood sugar and satiety. Lilly will also unveil the results of a study testing Foundayo in reducing cardiovascular outcomes.
+
+It's also expected to have test results for its next-generation weight-loss drug, retatrutide, in patients with type 2 diabetes. Lilly could also win approval for Foundayo in diabetes, and will have the results of a test in obstructive sleep apnea.
+
+Beyond that, the company is running tests in breast and bladder cancers, and cardiometabolic disease.
+
+Highly Rated Pharma Stock
+
+Eli Lilly stock is forming a flat base with a buy point at 1,249.45. Investors could also use an early entry at 1,200 as shares rebound from the 50-day moving average and move above their 21-day and 10-day lines. But, given the back-and-forth over recent weeks, cautious investors could wait for the traditional entry point.
+
+Lilly shares have an IBD Relative Strength Rating of 81 out of a best-possible 99. This means Eli Lilly stock ranks in the top 19% of all stocks when it comes to 12-month performance. The strongest stocks tend to have RS Ratings of at least 80 before big runs.
+
+The stock has a strong Composite Rating of 98. The 1-99 score measures a stock's fundamental and technical metrics, pitting them against all other stocks.
+
+Eli Lilly stock ranks No. 42 on the IBD 50 list of elite growth stocks.
+
+Follow Allison Gatlin on X/Twitter at @AGatlin_IBD.
+
+YOU MAY ALSO LIKE:
+
+Argenx Breaks Out On Another Multibillion-Dollar Opportunity For Vyvgart
+
+A New Use for GLP-1s? Amylyx Pharma Catapults To 3-Year High.
+
+Best Growth Stocks To Buy And Watch: See Updates To IBD Stock Lists
+
+Want To Get Quick Profits And Avoid Big Losses? Try SwingTrader",https://www.investors.com/wp-content/uploads/2026/08/sotd-for-08-18-2026-desktop.png,N,,2026-08-18 14:23:20.834542
+ID7,Barclays,2026-08-18 16:49:08+00:00,FinTech Futures,Barclays names Adeel Khan and Mike Joo as co-CEOs of Investment Bank,Cameron Emanuel-Burns,,,,,https://www.fintechfutures.com/job-cuts-new-hires/barclays-names-adeel-khan-and-mike-joo-as-co-ceos-of-investment-bank,"UK lender Barclays has appointed Adeel Khan, its head of capital markets, and Mike Joo from Bank of America as co-CEOs of its Investment Bank, subject to regulatory approvals.
+Khan currently leads the Investment Bank together with Cathal Deasy and Taylor Wright, who serve as global co-heads of investment banking.
+Having spent the past two decades at Bank of America, where he most recently served as co-head of global investment banking, Joo is expected to join Barclays in ""early 2027"", accord to a statement from the bank.
+Meanwhile, incumbent Khan has run Barclays' capital markets division since 2021, leading the credit, securitised products, macro and equities trading, sales and structured financing businesses.
+He previously held the position of head of credit products within Barclays' Corporate and Investment Bank.","UK lender Barclays has appointed Adeel Khan, its head of capital markets, and Mike Joo from Bank of America as co-CEOs of its Investment Bank, subject to regulatory approvals.
+
+Khan currently leads the Investment Bank together with Cathal Deasy and Taylor Wright, who serve as global co-heads of investment banking. FinTech Futures has contacted Barclays for clarification on what the incoming two-person co-CEO structure will mean for Deasy and Wright's positions.
+
+The reorganisation takes effect in February 2027 and will see both leaders sit on the group executive committee.
+
+Having spent the past two decades at Bank of America, where he most recently served as co-head of global investment banking, Joo is expected to join Barclays in ""early 2027"", accord to a statement from the bank.
+
+His earlier career includes a three-year tenure as an analyst at Goldman Sachs, followed by eight years at Credit Suisse, where he served as co-head of Asia debt capital markets.
+
+Meanwhile, incumbent Khan has run Barclays' capital markets division since 2021, leading the credit, securitised products, macro and equities trading, sales and structured financing businesses. He previously held the position of head of credit products within Barclays' Corporate and Investment Bank.
+
+Prior to joining Barclays in 2008, Khan worked at BlueBay Asset Management, where he managed the firm's credit hedge fund.
+
+Both Joo and Khan will and report directly to Barclays' chief executive, C.S. Venkatakrishnan.","https://eu-images.contentstack.com/v3/assets/blt7dacf616844cf077/blt75c5965322f2524e/680768c997836b472cbd2c7d/Barclays_-_FinTech_News.png?disable=upscale&width=1200&height=630&fit=crop&overlay=%2Fv3%2Fassets%2Fblt7dacf616844cf077%2Fblt64e39b3570bd3868%2F6a2693f2ff0c884b0726ec23%2FFF_432x166_White.png&overlay-width=432&overlay-height=166&overlay-align=right,bottom",N,,2026-08-18 13:29:52.086914
+ID7,Barclays,2026-08-18 16:42:18+00:00,www.privatebankerinternational.com,Barclays names Mike Joo and Adeel Khan investment bank co-CEOs,Not Available,,,,,https://www.privatebankerinternational.com/news/barclays-investment-bank-co-ceos/,"Barclays has appointed Mike Joo and Adeel Khan as joint chief executives of its investment banking division from February 2027, pending regulatory ...",Not Available,,N,,2026-08-18 13:30:00.300822
+ID15,Delta Airlines,2026-08-18 16:40:20+00:00,Investopedia,A Big Airline Is Bringing Back Seatback Screens. Some Travelers May Celebrate Their Return,Aaron Rennie,,,,,https://www.investopedia.com/a-big-airline-is-bringing-back-seatback-screens-some-travelers-may-celebrate-their-return-american-aal-12062248,"If you’re a flier who likes seatback screens, good news: You may be seeing more of them in the skies before long.
+American Airlines (AAL) on Tuesday said some planes—including both new and retrofitted ones in its narrowbody fleet, which is generally used for shorter flights—will get “state-of-the-art seatback screens at every seat.”1 More than 140 “long-haul” planes already have them, the company said.
+Some other airlines, including Delta (DAL) and United (UAL), also use them.
+The move stands to unwind a decade-long shift away from seatback screens in favor of having passengers use their own devices in the air.
+2American travelers may welcome the news.","If you’re a flier who likes seatback screens, good news: You may be seeing more of them in the skies before long.
+
+American Airlines (AAL) on Tuesday said some planes—including both new and retrofitted ones in its narrowbody fleet, which is generally used for shorter flights—will get “state-of-the-art seatback screens at every seat.”1 More than 140 “long-haul” planes already have them, the company said. Some other airlines, including Delta (DAL) and United (UAL), also use them.
+
+The move stands to unwind a decade-long shift away from seatback screens in favor of having passengers use their own devices in the air. 2American travelers may welcome the news.
+
+“This is a huge reversal for the airline,” wrote Gary Leff of travel site View From the Wing.3 American “said at the time that nearly everyone had their own devices (phones) though of course kids didn’t, not every family had one per child, and watching shows on a phone isn’t the same experience. People also like to multitask!”
+
+American, which in May said it would introduce SpaceX’s Starlink Wi-Fi early next year, said its new entertainment offerings will include “industry-leading screen sizes,” as well as USB-C fast charging ports, 4K technology, and Bluetooth audio connectivity.4
+
+“With high-speed Starlink connectivity and American’s portfolio of premium onboard offerings, the next-generation seatback experience will create a more personalized, connected travel experience,” the carrier said, adding full fleet installation is expected to be completed by early next decade.",https://www.investopedia.com/thmb/FZtH3L-ovWICyNZXrtXEV6ijSXo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-2250629454-f7c9079f661a4480ac414a36bc0e0933.jpg,N,,2026-08-18 13:30:26.057715
+ID15,Delta Airlines,2026-08-18 16:33:06+00:00,Business Insider,American Airlines Is Reversing Its Bet Against Seatback Screens - Business Insider,Ben Shimkus,,,,,https://www.businessinsider.com/american-airlines-seatback-screens-bluetooth-earphones-2026-8,"For years, American Airlines bet that travelers would rather watch in-flight movies on their own phones or tablets.
+On Tuesday, the airline said it plans to install seatback entertainment screens on around 800 single-aisle jets.
+The airline said combining faster connectivity with seatback screens and passengers' personal devices could create new opportunities for both the customer experience and revenue.
+Premium gets a higher priority American is also making more room for premium passengers.
+For the first time, Delta's premium revenue surpassed its main-cabin revenue.","For years, American Airlines bet that travelers would rather watch in-flight movies on their own phones or tablets.
+
+No more.
+
+On Tuesday, the airline said it plans to install seatback entertainment screens on around 800 single-aisle jets. New Airbus and Boeing jets with the screens will begin arriving in 2028, with retrofits on its existing planes starting the same year and continuing into the early 2030s.
+
+American said the screens will have built-in movies, television shows, games, and music content. They'll also include Bluetooth connectivity, so passengers won't have to rely on those cheap wired headphones handed out before takeoff.
+
+The move reverses a strategy American embraced nearly a decade ago, when it began moving away from seatback screens and instead offered entertainment that passengers could stream on their own devices. The company told Business Insider it's adjusting the in-flight entertainment after customer preferences evolved.
+
+""In the years since, and particularly following COVID, it has become increasingly clear that customers, especially younger generations, value having access to multiple devices and larger screens throughout their journey,"" a spokesperson said.
+
+The company added that high-tech satellites in low-earth orbit have also ""changed what is possible onboard."" American already offers free WiFi to AAdvantage members, sponsored by AT&T, and plans to begin installing SpaceX's Starlink service on more than 500 narrow-body aircraft in 2027.
+
+The airline said combining faster connectivity with seatback screens and passengers' personal devices could create new opportunities for both the customer experience and revenue.
+
+Premium gets a higher priority
+
+American is also making more room for premium passengers. About 25% of seats on its narrow-body departures are premium today, a figure the airline says will rise to roughly 40% ""in the coming years.""
+
+That continues a trend across the airline industry as more affluent travelers stretch their legs and order cheese boards during their flights.
+
+Delta's premium products generated $6.92 billion in revenue in the second quarter, up 17% from a year earlier. For the first time, Delta's premium revenue surpassed its main-cabin revenue. United's revenue from premium seats was also up 16% during the last quarter.
+
+American Airlines is no different.
+
+The company — which has lagged Delta and United in profitability as the industry has chased higher-spending travelers — has revamped its high-end offerings, partnering with brands such as Champagne Bollinger and Lavazza coffee. It's also adding more cushy in-airport lounges at the Dallas-Fort Worth and New York JFK International airports.
+
+""Our premium traffic continues to outpace the rest of the business,"" chief financial officer Nat Pieper said on the airline's most recent earnings call. ""That's demand that's more likely to hold up through economic uncertainty. We're making investments in premium in terms of taking new deliveries with richer configurations.""",https://i.insider.com/6a846f5885cca0a87cd8a1c6?width=1200&format=jpeg,N,,2026-08-18 14:23:17.660113
+ID36,OpenAI,2026-08-18 16:32:46+00:00,SiliconANGLE,OpenAI leases 10-gigawatt AI data center campus from SoftBank's SB Energy,"Maria Deutscher, ZEUS KERRAVALA, MIKE WHEATLEY, KYT DOTSON, DUNCAN RILEY",,,,,https://siliconangle.com/2026/08/17/openai-leases-10-gigawatt-ai-data-center-campus-from-softbanks-sb-energy/,"OpenAI Group PBC today announced that it has signed a 20-year lease for a sprawling data center cluster in Ohio.
+The construction project is led by SB Energy, a SoftBank Group Corp. unit that develops data centers and energy infrastructure.
+SB Energy will own and operate the Ohio campus once construction is complete.
+SB Energy plans to build a $33 billion power plant and link it to the data center campus using $4.2 billion worth of power transmission lines.
+The graphics card giant is backstopping the first 4.25 gigawatts of data center capacity.","OpenAI Group PBC today announced that it has signed a 20-year lease for a sprawling data center cluster in Ohio.
+
+The campus is being built on the premises of a former uranium processing plant. The construction project is led by SB Energy, a SoftBank Group Corp. unit that develops data centers and energy infrastructure. SB Energy will own and operate the Ohio campus once construction is complete.
+
+According to OpenAI, the site will be supported by at least 10 gigawatts of new energy infrastructure. SB Energy plans to build a $33 billion power plant and link it to the data center campus using $4.2 billion worth of power transmission lines.
+
+OpenAI didn’t disclose how much the campus itself will cost. According to the Wall Street Journal, the site is set to host hundreds of billions of dollars’ worth of Nvidia Corp. chips.
+
+The graphics card giant is backstopping the first 4.25 gigawatts of data center capacity. The Journal’s sources stated that Nvidia could extend the credit support to the entire campus. Furthermore, the company has reportedly agreed to cover SB Energy’s losses if OpenAI scraps the lease and no other tenant is found. Nvidia will reportedly “pay any difference in the value, up to $105 billion” if the SoftBank unit has to sell the site.
+
+“We are securing long-lived infrastructure for Nvidia compute so OpenAI can deploy the most productive AI factories that can be upgraded repeatedly with each new generation delivering more intelligence and better economics,” said Nvidia Chief Executive Officer Jensen Huang.
+
+Traditional data center cooling systems evaporate a portion of the water they use to absorb server heat. As a result, they have to be continuity refilled. OpenAI says that its campus will use less water thanks to “closed-loop, air-cooled cooling systems” that don’t require refills. The company didn’t detail how the systems will work.
+
+The coolant in closed-loop cooling equipment is usually a mix of water and a food additive called propylene glycol. The latter material prevents the coolant from freezing when it’s not supposed to and thus reduces corrosion. The water, in turn, usually goes through a filtering process that removes any minerals it may contain. That makes it less conductive, which lowers the risk to data center electronics.
+
+Pumps circulate the coolant through server racks to absorb the heat generated by the graphics cards inside. From there, the warm water is routed outside the data center, where fans cool by running air over the pipes through which it flows. The coolant subsequently returns to the server racks and the process repeats.
+
+OpenAI expects construction to run through 2032. According to the company, the project will create 35,000 construction jobs and 2,500 long-term data center maintenance roles. The first 800 megawatts of computing capacity is scheduled to come online in 2028.
+
+Nvidia is buying a $1.5 billion stake in SB Energy to support the project. The chipmaker could realize a return on its investment well before construction is complete: The SoftBank unit reportedly plans to go public as early as next month. SB Energy is reportedly seeking a valuation of up to $50 billion.
+
+Photo: OpenAI",https://images.siliconangle.com/blogs.dir/1/files/2026/08/OpenAI.png,N,,2026-08-18 15:19:04.561373
+ID50,Walmart,2026-08-18 16:21:09+00:00,Business Insider,Walmart store workers have a new responsibility: correcting AI errors - Business Insider,Dominick Reuter,,,,,https://www.businessinsider.com/walmart-workers-new-responsibility-correcting-ai-errors-retail-2026-7,"Walmart's AI rollout has prompted employees to swap information and complaints on social media.
+Other workers told Business Insider the system often doesn't account for complications in completing a work assignment, including some side tasks they described as necessary.
+The HR manager said her store isn't disciplining employees over AI metrics that are out of step with real-world experience.
+A new AI agent that monitors store safety has confused some workers as it learns how to interpret data from security cameras and sensors throughout the store.
+Walmart says honest user feedback is essential to the successful development of AI tools for store employees.","Retail jobs often involve a lot of cleaning up after other people. Dusty shelves, spilled liquids, smudged display cases, and, more recently, AI agent errors.
+
+In Walmart's bid to fuel its growth ambitions, the retailer is betting big on AI and arming thousands of frontline employees with new tools and training.
+
+Adopting any new process has a learning curve, but this time it's AI agents that also need training to improve the accuracy of its models.
+
+Walmart's rollout shows some of the challenges of using this new tech: Employees often have to spend time training the software, supplying the context and judgment AI agents lack about their jobs.
+
+Walmart's AI rollout has prompted employees to swap information and complaints on social media. There are scores of posts and hundreds of comments on Reddit from people who say they work for the company about perplexing security alerts from the AI, how the AI is measuring their performance, and other issues.
+
+""It just assumes that they're going to be perfect every single time,"" a store-level HR manager who handles onboarding, training, and scheduling told Business Insider, referring to a task-assigning AI agent's expectations of the workers completing the task.
+
+Walmart has spent the last several years saying it is a people-led, tech-powered company, and any new tools are intended to simplify and support the work of human employees across the organization. The company says its approach to AI in stores follows that same philosophy.
+
+For example, workers at stores where the features have been launched are increasingly being assigned tasks and targets by AI that appear in the MyWalmart app, which runs on company-provided phones and is available to download on personal devices.
+
+That means a growing share of Walmart's 1.6 million US workers now have a digital assistant intended to help with their daily tasks. But that assistant sometimes has some learning to do to in order to be fully useful.
+
+AI agents are a mixed bag — sometimes helpful, sometimes distracting
+
+Having AI come up with a list of tasks can be very helpful for some associates who no longer have to wait around at the start of their shift for a manager to tell them what to do, said Elizabeth Nigh, an asset protection manager in Wisconsin, during a company-arranged store tour with Business Insider.
+
+""If this associate is really good at stocking aisle eight, and we put them in aisle eight all the time, the AI assistant learns that,"" she said. ""Then they can just come in and look at their MyWalmart, instead of having to wait around for a plan.""
+
+Other workers told Business Insider the system often doesn't account for complications in completing a work assignment, including some side tasks they described as necessary.
+
+For example, restocking involves more than simply putting up new merchandise on an empty shelf. Expiration dates need to be checked. Damaged items need to be discarded. Dust and spills need to be wiped up and sanitized. Those tasks, plus any host of other steps, can take a variable amount of time.
+
+The HR manager said her store isn't disciplining employees over AI metrics that are out of step with real-world experience. ""We're not going to hold people to these impossible standards,"" she said.
+
+An online fulfillment worker told Business Insider she hasn't been able to pick general merchandise orders as quickly as the AI app says she should, in part because of the AI-generated route through the store.
+
+""It's going to take you all over the place,"" she said, explaining that she is rarely able to match AI-projected times for routes. ""There's no way to win on those.""
+
+Drivers for the Walmart-owned Spark delivery service also told Business Insider that a new ""smart path"" feature sometimes tells them to pick up frozen items like TV dinners and bags of ice at the start of a shopping trip rather than at the end, giving them more time to thaw. One worker said it takes ""extra time and energy I could be spending on the next order.""
+
+A new AI agent that monitors store safety has confused some workers as it learns how to interpret data from security cameras and sensors throughout the store.
+
+The online fulfillment worker said she gets inundated with safety alerts from other departments whenever she opens the Walmart app on her personal phone to clock in and out of her shift.
+
+Those alerts are meant to flag potential issues for workers to respond to, like spills to mop up or refrigerator temperatures going out of a safe range, but it often needs workers to correct or provide context for situations it deems risky.
+
+The online fulfillment worker said she has a simple response to the irrelevant alerts: ""I ignore them.""
+
+Walmart says honest user feedback is essential to the successful development of AI tools for store employees.
+
+Stores have autonomy to use the tools in ways that work best for them, said Walmart's VP for associate tools, Brooks Forrest, during an interview with Business Insider in July.
+
+""We do not punish people for not following the tech guidance,"" he said.
+
+Forrest said his product development approach includes frequent store visits and regularly scheduled listening sessions from the Bentonville headquarters to better understand how his team's tools perform in the field.
+
+""The technology is there to help them, but they ultimately have the say in what they do,"" he said.
+
+Workers are both cautious and optimistic about AI
+
+A survey from the worker advocacy organization United for Respect, which included responses from more than 250 Walmart employees this year, asked about how AI is affecting their jobs and found worry among frontline workers at the retailer.
+
+While more than 85% of respondents said they did not trust Walmart to prioritize their needs in developing AI, roughly 40% said they expect AI could make their job easier, and a similar number said it could help eliminate menial or repetitive tasks.
+
+Nearly three-quarters of Walmart workers in the survey said their top concern was that AI would make HR decisions, such as wage reviews and time-off requests, while two-thirds worried they would have less contact with managers and co-workers. Half said they were concerned about AI penalizing them for making mistakes.
+
+The organization filed a shareholder proposal in April asking Walmart to produce a report on the impact of AI on its workforce.
+
+""We're expected to meet impossible timelines,"" said Ava Williams, an overnight stocker in Spokane, Washington. She presented the proposal at Walmart's shareholder meeting last month and shared her own experiences with AI-assigned tasks.
+
+Williams said AI-directed workflows push members of her team to cut corners or skip steps, such as sanitizing shelves or checking for expired products, to keep pace.
+
+Walmart's board opposed the proposal, saying that technology should serve workers by ""elevating human capability, improving the customer experience, and making work more meaningful."" The company is committed to investment in training, skill-building, and new career pathways, it added. The measure was not approved.",https://i.insider.com/6a8380da7e0482203ed16e5f?width=1200&format=jpeg,N,,2026-08-18 13:30:37.048179
+ID36,OpenAI,2026-08-18 16:03:11+00:00,Bloomberg.com,Oracle Data Center's Pipeline Plan Is Rerouted After Rejections - Bloomberg.com,Julian Hast,,,,,https://www.bloomberg.com/news/articles/2026-08-18/oracle-openai-data-center-s-gas-pipeline-plan-rerouted-after-earlier-rejections,"A proposed natural gas pipeline to power a massive Oracle Corp. artificial intelligence data center has been rerouted after a previous plan was rejected by New Mexico regulators.
+Energy Transfer LP, which would construct and operate the pipeline, is now seeking to build part of the 17.8-mile conduit on land administered by the US Bureau of Land Management.","A proposed natural gas pipeline to power a massive Oracle Corp. artificial intelligence data center has been rerouted after a previous plan was rejected by New Mexico regulators.
+
+Energy Transfer LP, which would construct and operate the pipeline, is now seeking to build part of the 17.8-mile conduit on land administered by the US Bureau of Land Management.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ig39bqxcc0Ys/v1/1200x800.jpg,N,,2026-08-18 15:19:07.020841
+ID35,Nvidia,2026-08-18 15:32:30+00:00,www.forbes.com,"With Export Controls, Nvidia, AMD And Intel Lose Much More Than Sales - Forbes",,,,,,https://www.forbes.com/sites/johntamny/2026/08/18/with-export-controls-nvidia-amd--intel-lose-much-more-than-sales/,"Nvidia CEO Jensen Huang delivers a keynote address at the Consumer Electronics Show (CES) in Las Vegas, Nevada on January 6, 2025. Gadgets, robots ...",Not Available,,Y,,2026-08-18 13:30:29.934984
+ID36,OpenAI,2026-08-18 15:28:48+00:00,Yahoo Finance,"OpenAI launches ChatGPT for Teens, as safety questions swirl - Yahoo Finance",Daniel Howley,,,,,https://finance.yahoo.com/technology/article/openai-launches-chatgpt-for-teens-as-safety-questions-swirl-152403657.html,"OpenAI (OPAI.PVT) is launching ChatGPT for Teens, a version of the chatbot that it says has built-in protections for younger users.
+According to OpenAI, ChatGPT will default to teen mode if the company's systems estimate that a user is between 13 and 17 years old.
+Teen mode, the company says, can also assist teens with Study Mode, homework reminders, quizzes, and study hours.
+OpenAI says ChatGPT for Teens also uses safeguards that help reduce exposure to potentially inappropriate content, such as topics related to eating disorders, as well as graphic and sexual content.
+The company also claims it is taking steps to prevent teens from developing emotional dependence on the chatbot.","OpenAI (OPAI.PVT) is launching ChatGPT for Teens, a version of the chatbot that it says has built-in protections for younger users.
+
+According to OpenAI, ChatGPT will default to teen mode if the company's systems estimate that a user is between 13 and 17 years old.
+
+Teen mode, the company says, can also assist teens with Study Mode, homework reminders, quizzes, and study hours.
+
+OpenAI says ChatGPT for Teens also uses safeguards that help reduce exposure to potentially inappropriate content, such as topics related to eating disorders, as well as graphic and sexual content.
+
+The company also claims it is taking steps to prevent teens from developing emotional dependence on the chatbot.
+
+OpenAI has faced criticism related to how teens use its bot, including lawsuits that contend that the software provided information about self-harm or prompted individuals to commit suicide.
+
+Prior versions of ChatGPT, specifically GPT-4o, were criticized for being sycophantic and overly complementary, leading to some users falling down rabbit holes resulting in overuse, delusions, and other harms, often referred to as AI psychosis.
+
+The announcement comes the same day that Meta (META) is set to face off against attorneys general from four states in their lawsuit claiming that the social media giant purposely developed its apps to keep teens scrolling, impacting their mental health.
+
+Email Daniel Howley at dhowley@yahoofinance.com. Follow him on X at @DanielHowley.
+
+Click here for the latest technology news that will impact the stock market.",https://s.yimg.com/lo/mysterio/api/8DC9306FE3A062D3E1FDCCAD407389F9D9739F7694A23D827DE9923FD9E65AD2/subgraphmysterio/resizefill_w1200_h814;quality_80;format_webp/https:%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-06%2F9f0e91c6-e12a-464d-a9c5-d319d55fd343,N,,2026-08-18 15:19:11.095783
+ID48,UniCredit,2026-08-18 15:28:16+00:00,Berlin's 12.7% Commerzbank Stake Looms as the Final Piece in UniCredit's Takeover Puzzle,Berlin's 12.7% Commerzbank Stake Looms as the Final Piece in UniCredit's Takeover Puzzle,Rafael Müller,,,,,https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/berlin-s-12-7-percent-commerzbank-stake-looms-as-the-final-piece-in/69963254,"The German government's willingness to part with its remaining Commerzbank holding has injected fresh momentum into what has been a protracted and politically charged takeover saga.
+The market has been pricing in takeover speculation for some time, yet the prospect of a definitive outcome now feels tangible rather than hypothetical.
+Business as Usual Amid the Deal Talk Notably, Commerzbank has not paused its day-to-day operations while the takeover question lingers.
+If Berlin's reported openness translates into action, the final hurdle to a UniCredit majority stake would largely disappear, leaving the governance question as the last substantive issue to resolve.
+Ad Commerzbank Stock: New Analysis - 18 August Fresh Commerzbank information released.","The German government's willingness to part with its remaining Commerzbank holding has injected fresh momentum into what has been a protracted and politically charged takeover saga. According to Bloomberg, citing insiders, Berlin is now prepared to sell its 12.7% residual stake to UniCredit — provided the two banks can first align on strategy and corporate governance.
+
+That condition is the crux. Chancellor Friedrich Merz's administration has long signalled reluctance to offload further shares, keeping the Italian lender's ambitions in limbo for months. The reported shift in stance suggests the political roadblock may finally be clearing, but only if Frankfurt and Milan can find common ground on how the combined entity would operate.
+
+A Stake That Could Reshape the Ownership Map
+
+Should the sale proceed, UniCredit's holding in Commerzbank would climb beyond 60%, transforming what has been an ambiguous stake-building exercise into a clear majority position. The development follows a formal reversal by Commerzbank chief executive Bettina Orlopp, who dropped her earlier resistance and opened the door to direct negotiations when the bank presented its first-half results.
+
+For shareholders, the implications are significant. The market has been pricing in takeover speculation for some time, yet the prospect of a definitive outcome now feels tangible rather than hypothetical. The key variable remains whether both management teams can broker a governance structure acceptable to Berlin — a test of genuine compromise that will play out over the coming weeks.
+
+Should investors sell immediately? Or is it worth buying Commerzbank?
+
+Record Numbers Bolster the Negotiating Position
+
+The political news lands against a backdrop of robust operational performance. Commerzbank posted a record net profit of €1.8 billion for the first half of 2026, a 40% jump year-on-year, driven by higher fee income and disciplined cost management. The full-year profit target was confirmed at a minimum of €3.4 billion, while management detailed capital returns totalling €3.2 billion, including a new share buyback programme of up to €1.2 billion.
+
+That buyback is awaiting formal approval from the European Central Bank, expected around September or October 2026. The ECB's preliminary, confidential assessment — delivered without objections — offered little immediate market reaction, with the stock easing 1.2% following that update. The dip, however, looks modest against the broader upward trajectory.
+
+Stock Sits Close to Its Highs
+
+The shares closed Monday at €39.39, down 1.1% on the day, yet they remain within striking distance of the 52-week peak of €40.11 reached on 13 August. The gap to that high now stands at roughly 1.8%. Year-to-date, the stock has gained 9.1%, with a 7.3% advance over the past 30 days. The 12% premium above the 200-day moving average underscores the sustained uptrend of recent months.
+
+The market's reaction to the latest headlines has been measured — a 0.2% dip in one session, a 1.9% rise following the record results — suggesting investors are waiting for concrete signs of a deal rather than trading on speculation alone.
+
+Business as Usual Amid the Deal Talk
+
+Notably, Commerzbank has not paused its day-to-day operations while the takeover question lingers. The bank announced a switch of its primary credit card network partner from Mastercard to Visa, a move aimed at modernising digital payment processing for retail customers. Executing such an operational pivot mid-negotiation signals that management intends to keep developing the franchise regardless of the strategic outcome.
+
+What to Watch Next
+
+The next milestone arrives on 1 September, when Commerzbank participates in the ODDO BHF Corporate Conference in Frankfurt — an event that could yield further clarity on strategic direction. If Berlin's reported openness translates into action, the final hurdle to a UniCredit majority stake would largely disappear, leaving the governance question as the last substantive issue to resolve.
+
+Ad
+
+Commerzbank Stock: New Analysis - 18 August
+
+Fresh Commerzbank information released. What's the impact for investors? Our latest independent report examines recent figures and market trends.",https://mdb.ad-hoc-news.de/bild/bild-2758679_1920_1080.webp,N,,2026-08-18 14:23:35.674684
 ID40,Publicis Groupe,2026-08-18 14:52:24+00:00,Quartz,Travis Kelce and Publicis launch college NIL venture Tekta - Quartz,"Cris Tolomia, qz.com",,,,,https://qz.com/travis-kelce-publicis-tekta-nil-college-athletes-081826,"Kansas City Chiefs tight end Travis Kelce and Publicis Groupe's sports unit are launching Tekta, a business designed to help brands select, structure, and measure partnerships with college athletes under name, image, and likeness rules, according to The Wall Street Journal.
 Talent management firm 3 Arts Sports, which represents Kelce, is joining as a strategic operating partner.
 Under the new model, Publicis Sports will develop a client's strategy and then hand it to Tekta to identify athletes and schools that match those brand objectives, according to the Wall Street Journal.
@@ -14,6 +443,31 @@ Deering described the current NIL landscape as one that leaves brands without re
 Corporate spending on NIL marketing has grown since the NCAA opened the door for student athletes to profit from their likenesses in 2021. NIL spending at the college level is expected to hit $4.5 billion during the 2026-27 season, compared with $3.6 billion the year before, per projections from NIL technology platform Opendorse cited by the Wall Street Journal.
 
 The NIL market remains structurally fragmented. Many states have NIL agent registration requirements on the books, but oversight remains weak and no industry-wide credentialing standard has emerged, leaving the door open to virtually any participant. Talent in the space often comes with limited professional experience, and brands face a large and varied pool of athletes, teams, and agents, Deering said.","https://qz.com/cdn-cgi/image/width=1200,quality=85,format=auto/https://assets.qz.com/media/0eb07fe517a448c14bc8b349133496ba.jpg",N,,2026-08-18 12:11:59.901723
+ID7,Barclays,2026-08-18 14:48:07+00:00,Scottish Financial News,Barclays hires Bank of America's veteran to overhaul investment bank to compete with Wall Street,John Glover,,,,,https://www.scottishfinancialnews.com/articles/barclays-hires-bank-of-americas-most-senior-banker-to-overhaul-investment-bank-to-compete-with-wall-street,"The UK lender has hired Mike Joo to serve as co-chief executive at its investment bank, while Adeel Khan will be promoted to co-chief executive of the investment bank as part of the reshuffle.
+Mr Joo will be responsible for leading the team, while Mr Khan will continue in his role leading global markets having been in his role as co-head of that division since 2021.
+As part of his appointment, he will also sit on Barclays’ executive committee alongside Mr Khan.
+The memo noted that Mr Wright and Mr Deasy will remain in their positions until Mr Joo officially takes up his role next year.
+Venkatakrishnan, Barclays group chief executive, said: “Since 2023, our Investment Bank has delivered a strong performance, growing revenues and returns and driving a more integrated service for clients.","The UK lender has hired Mike Joo to serve as co-chief executive at its investment bank, while Adeel Khan will be promoted to co-chief executive of the investment bank as part of the reshuffle.
+
+Mr Joo will be responsible for leading the team, while Mr Khan will continue in his role leading global markets having been in his role as co-head of that division since 2021.
+
+The Financial Times reports the firm wrote in a memo: “Mike has built a strong reputation for delivering results and leading through periods of change and growth. He is widely recognised as a culture carrier with a deep commitment to collaboration, integrity and developing talent.”
+
+Mr Joo will be based in New York and will take up the new role in February subject to regulatory approval. As part of his appointment, he will also sit on Barclays’ executive committee alongside Mr Khan. The investment banker also owns a minority stake in the Buffalo Bills American football team.
+
+He previously ran Asia debt capital markets at Credit Suisse after he started his career as an analyst at Goldman Sachs. Mr Joo’s appointment is part of Barclays’ attempt to simplify its investment bank’s leadership structure.
+
+The bank is ranked sixth globally for investment banking fees this year, and has generated an estimated $2.7bn between the start of this year and mid-August, but it is still trying to break into the top tier of the US market, lagging behind Wall Street giants such as JPMorgan and Goldman Sachs.
+
+The change marks an end to a leadership structure introduced in 2024, which placed the bank under the leadership of four co-heads.
+
+The reshuffle has created uncertainty over the future of Taylor Wright and Cathal Deasy, who were tasked with improving the performance of the unit, as the group reduced the amount of capital it had been allocated. Stephen Dainton, who was one of the four co-heads, announced last month of his intention to retire.
+
+The memo noted that Mr Wright and Mr Deasy will remain in their positions until Mr Joo officially takes up his role next year.
+
+Mr Joo’s arrival follows the hiring of Alex Ham, the former co-chief executive of mid-market UK broker Numis (which was acquired by Deutsche Bank in 2023). Mr Ham was appointed global chair of investment banking to help Barclays win market share in mergers and acquisitions and IPOs.
+
+C.S. Venkatakrishnan, Barclays group chief executive, said: “Since 2023, our Investment Bank has delivered a strong performance, growing revenues and returns and driving a more integrated service for clients. As we enter the next stage of our strategy and reflecting the ambition we have for our Investment Bank, Adeel and Mike will form a strong partnership to deliver an even stronger, more integrated service to our clients.”",https://www.scottishfinancialnews.com/storage/fbf7f4972800ef387e8cea18e10ed54ffabfc635.jpg,N,,2026-08-18 13:30:03.644058
 ID23,IBM,2026-08-18 14:34:19+00:00,Seeking Alpha,"IBM: Big Blue Sees Red Hat; Mainframe Headwinds, Software Tailwinds - Seeking Alpha",LD Investments,,,,,https://seekingalpha.com/article/4937661-ibm-big-blue-sees-red-hat-mainframe-headwinds-software-tailwinds,"I am not receiving compensation for it (other than from Seeking Alpha).
 I have no business relationship with any company whose stock is mentioned in this article.
 No recommendation or advice is being given as to whether any investment is suitable for a particular investor.
@@ -113,6 +567,7 @@ The report concludes with a call to action for healthcare leaders across provide
 About Surgical Solutions from Johnson & Johnson MedTech
 
 Across Johnson & Johnson, we are tackling the world’s most complex and pervasive health challenges. For over 100 years, we have helped advance surgical care through our innovative portfolio across wound closure, adjunctive hemostats, surgical stapling and instruments, robotics and digital solutions. Together, with clinicians and healthcare experts around the world we are progressing what’s next in surgery to better solve patient needs in metabolic and cardiovascular disease, cancer, and aesthetics and reconstruction. For more, visit Johnson & Johnson MedTech.",,N,,2026-08-18 09:10:19.592211
+ID47,Uber,2026-08-18 12:20:11+00:00,The Globe and Mail,Uber Partners With Zipline to Target 1 Million Drone Deliveries Daily by 2029,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/UBER-N/pressreleases/3895192/uber-partners-with-zipline-to-target-1-million-drone-deliveries-daily-by-2029/,Detailed price information for UBER Technologies (UBER-N) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=947,N,,2026-08-18 13:30:33.690919
 ID24,Instacart,2026-08-18 12:14:08+00:00,www.freshplaza.com,Zipline and Uber Eats aiming to reach one million drone deliveries per day by the end of 2029,Rogier Peterse,,,,,https://www.freshplaza.com/north-america/article/9864134/zipline-and-uber-eats-aiming-to-reach-one-million-drone-deliveries-per-day-by-the-end-of-2029/,"Over two years, top-line sales have expanded by 9.8%, adding R$ 1.9bln (€322.4mln) in revenue.
 Source: esmmagazine.com US: Zipline and Uber Eats stateside partnership targets one million drone deliveries daily by the end of 2029 Zipline and Uber Technologies have announced a partnership that aims to scale drone delivery across the United States.
 Uber will also make an investment in Zipline with the pair aiming to reach one million drone deliveries per day by the end of 2029.
@@ -233,6 +688,37 @@ Matthew Vegari, head of research at Clearwater Analytics, said in an email that,
 WATCH: AI is not a new asset class, it's the entire market, says Clockwise Capital CIO",https://image.cnbcfm.com/api/v1/image/108315151-1780405409882-gettyimages-2279396665-042a7087_me4bgxvb.jpeg?v=1780405436&w=1920&h=1080,N,,2026-08-18 10:01:53.638501
 ID15,Delta Airlines,2026-08-18 10:54:46+00:00,Puget Sound Business Journal,Alaska Airlines shuffles leadership as it expands international network,Nick Pasion,,,,,https://www.bizjournals.com/seattle/news/2026/08/17/alaska-airlines-network-planning-leadership-change.html,Alaska Airlines promotes Brett Catlin as it expands international routes from Seattle following its Hawaiian Airlines acquisition.,Not Available,https://media.bizj.us/view/img/12992362/190110airbusretrofit006*1200xx6720-3773-0-179.jpg,N,,2026-08-18 11:14:57.220217
 ID42,S&P Global,2026-08-18 10:43:56+00:00,www.autonews.com,Software-defined vehicles reshape automotive industry from manufacturing to repair,Not Available,,,,,https://www.autonews.com/technology/ane-sdvs-transform-industry-0817/,"According to a March 2026 S&P Global report, automakers need to shift from reactive to predictive cybersecurity as SDVs become “data centers on ...",Not Available,,N,,2026-08-18 09:10:51.398659
+ID47,Uber,2026-08-18 10:35:51+00:00,Retail Technology Innovation Hub,Zipline and Uber Eats US parnertship targets one million drone deliveries daily by the end of 2029,Scott Thompson,,,,,https://retailtechinnovationhub.com/home/2026/8/17/zipline-and-uber-eats-us-tie-up-targets-one-million-drone-deliveries-daily-by-the-end-of-2029,"Zipline and Uber Technologies have announced a partnership that aims to scale drone delivery across the United States.
+Uber will also make an investment in Zipline with the pair aiming to reach one million drone deliveries per day by the end of 2029.
+“Zipline has built incredible technology, and Uber connects many millions of people with local merchants every day,” says Dara Khosrowshahi, CEO at Uber.
+The awards are now open for entries and celebrate global retail technology innovation in a fast moving omnichannel world.
+Our winners will be revealed at the 2026 RTIH Innovation Awards Ceremony, taking place at The HAC in Central London on Wednesday, 4th November.","Zipline and Uber Technologies have announced a partnership that aims to scale drone delivery across the United States. The first deployments will begin later this year, where Uber Eats customers will have the option to receive their orders in minutes via Zipline’s autonomous service.
+
+Uber will also make an investment in Zipline with the pair aiming to reach one million drone deliveries per day by the end of 2029.
+
+“Zipline has built incredible technology, and Uber connects many millions of people with local merchants every day,” says Dara Khosrowshahi, CEO at Uber. “Together, we’re shaping the future of delivery by creating a faster, more sustainable way for people to get what they need. We look forward to bringing this technology to more communities and making autonomous delivery part of everyday life.”
+
+“Teleportation isn’t science fiction anymore. It’s becoming part of everyday life,” says Keller Cliffton, Co-Founder at Zipline. “Every great transportation revolution has changed where people live, how businesses operate, and how economies grow. Together with Uber, we’re taking the next step toward building a world where getting what you need is as fast and effortless as sending a text, no matter where you are.”
+
+2026 RTIH Innovation Awards
+
+Drone deliveries will be a key focus area at the 2026 RTIH Innovation Awards.
+
+The awards are now open for entries and celebrate global retail technology innovation in a fast moving omnichannel world.
+
+Our winners will be revealed at the 2026 RTIH Innovation Awards Ceremony, taking place at The HAC in Central London on Wednesday, 4th November.
+
+Check out our 2025 winners here.
+
+Our 2025 hall of fame entrants were revealed during a sold out event which took place at The HAC on 16th October and consisted of a drinks reception, three course meal, and awards ceremony presided over by award winning comedian, actress and writer Tiff Stevenson.
+
+In his welcome speech, Scott Thompson, Founder and Editor, RTIH, said: “This is the awards’ fifth year as a physical event. We started off with just 30 people at the South Place Hotel not far from here, then moved to London Bridge Hotel, then The Barbican, and last year RIBA’s HQ in the West End.”
+
+“But I’m conscious of the fact that, to quote the legend that is Taylor Swift, You’re only as hot as your last hit, baby. So, this year we’ve moved to our biggest venue yet, and also pulled in our largest number of entries to date and broken attendance records.”
+
+He added: “This year’s submissions have without doubt been our best yet. To quote one of the judges: The examples of innovative developments across both traditional and digital retail spaces were truly remarkable.”
+
+Congratulations to our winners, and a big thank you to our sponsors, judging panel, the legend that is Tiff Stevenson, and all those who attended our 2025 gathering.",http://static1.squarespace.com/static/590eeff5b8a79b2147a783be/590ef147e6f2e1fda30e84c5/6a83105769ca7170fa0dbd9c/1787027662196/ULTA_IMAGE_FINAL_UPDATED.jpg?format=1500w,N,,2026-08-18 14:23:31.502978
 ID50,Walmart,2026-08-18 10:35:04+00:00,www.reuters.com,"As retail stagnates, ad dollars help Walmart stay the course - Reuters",,,,,,https://www.reuters.com/business/media-telecom/retail-stagnates-ad-dollars-help-walmart-stay-course-2026-08-18/,"As Walmart's same-store sales growth has leveled off and a cautious annual ​outlook dented its stock, investors are increasingly looking to the ...",Not Available,,Y,,2026-08-18 08:02:52.608431
 ID19,Eli Lilly,2026-08-18 10:28:04+00:00,Foreign Policy Journal,Eli Lilly (NYSE: LLY) Wins First European Approval For Oral Weight-Loss Pill Foundayo In UK,David Prior,,,,,https://www.foreignpolicyjournal.com/2026/08/17/eli-lilly-nyse-lly-wins-first-european-approval-for-oral-weight-loss-pill-foundayo-in-uk/,"Britain’s medicines regulator authorized Eli Lilly and Company’s (NYSE: LLY) oral GLP-1 drug orforglipron on August 10, making the UK the first European country to approve the pill.
 The UK’s Medicines and Healthcare Products Regulatory Agency cleared orforglipron, marketed under the brand name Foundayo, for weight loss and maintenance in obese adults and select overweight individuals with weight-related health conditions.
@@ -6597,6 +7083,227 @@ Weight, permanence and texture — none of that registers. A robot simply detect
 But the robots are getting smarter. Today, Brain Corp is working with the University of California San Diego to create a semantic map that can help robots comprehend the physical world around them. By adding cameras and AI models, robots can begin to understand objects, not just identify them.
 
 “That’s the holy grail for robotics — the robot just sees an image, understands the task it’s supposed to do, and handles everything else inside a black box,” Black said. “I’d say 10 to 20 years to be really commercially available.”",https://www.sandiegouniontribune.com/wp-content/uploads/2026/08/SUT-L-BRAINCORP-01.jpg?w=2000&h=1054,N,,2026-08-14 11:05:36.824541
+ID47,Uber,2026-08-14 13:36:38+00:00,simplywall.st,"Uber Technologies (UBER) Expands Robotaxi Rollout With 2,000 Vehicles and Tokyo Pilot",Simply Wall St,,,,,https://simplywall.st/stocks/us/transportation/nyse-uber/uber-technologies/news/uber-technologies-uber-expands-robotaxi-rollout-with-2000-ve,"Advertisement United States / Transportation / NYSE:UBER Uber Technologies (UBER) Expands Robotaxi Rollout With 2,000 Vehicles and Tokyo Pilot August 14, 2026 Uber Technologies (NYSE: UBER) plans to deploy more than 2,000 robotaxis with partner Pony.ai across Europe and the Middle East, expanding its commercial autonomous ride-hailing footprint.
+Uber Technologies operates ride hailing and related mobility services across multiple regions, so moves into robotaxis plug directly into its core transportation platform rather than a side project.
+Advertisement Robotaxi partnerships as the test case for the Uber Technologies Narrative The core bet with Uber Technologies is that a global, multi partner robotaxi network can reshape its supply mix, cost base and customer engagement across Mobility and Delivery.
+To ensure you're always in the loop on how the latest news impacts the investment narrative for Uber Technologies, head to the to never miss an update on the top community narratives.
+About NYSE:UBER Uber Technologies Develops and operates proprietary technology applications in the United States, Canada, Latin America, Europe, the Middle East, Africa, and the Asia Pacific.","Advertisement
+
+United States
+
+/
+
+Transportation
+
+/
+
+NYSE:UBER
+
+Uber Technologies (UBER) Expands Robotaxi Rollout With 2,000 Vehicles and Tokyo Pilot
+
+August 14, 2026
+
+Uber Technologies (NYSE: UBER) plans to deploy more than 2,000 robotaxis with partner Pony.ai across Europe and the Middle East, expanding its commercial autonomous ride-hailing footprint.
+
+Uber and Pony.ai aim to move beyond limited tests into sustained multi city robotaxi operations across both regions as part of Uber's hybrid human and autonomous driver network.
+
+In Japan, Uber reached an operational agreement with taxi company Hinomaru Kotsu to run a Tokyo robotaxi pilot, adding another key market to its global autonomous vehicle push.
+
+Consider reviewing other companies involved in automation and self driving technology alongside Uber as you assess opportunities across this theme .
+
+Uber Technologies operates ride hailing and related mobility services across multiple regions, so moves into robotaxis plug directly into its core transportation platform rather than a side project. Its work with Pony.ai in Europe and the Middle East, alongside the Tokyo pilot, shows how the company is testing autonomous services across very different regulatory and urban conditions.
+
+Advertisement
+
+Robotaxi partnerships as the test case for the Uber Technologies Narrative
+
+The core bet with Uber Technologies is that a global, multi partner robotaxi network can reshape its supply mix, cost base and customer engagement across Mobility and Delivery. This news goes directly to that Narrative, because it shows Uber leaning on partners to scale autonomous fleets in real cities rather than owning everything itself.
+
+""Significant investments and accelerating partnerships in autonomous vehicles (AVs) and electrification (with Waymo, Lucid, Nuro, etc.) position Uber to benefit from secular industry shifts...""
+
+The expanded Pony.ai deployment and the Tokyo pilot with Wayve and Hinomaru Kotsu clearly support the Narrative’s claim that Uber can use AV partnerships to reset its long term cost structure and capacity. They also fit the idea of a hybrid human and autonomous network, which is central to how Uber is trying to differentiate from competitors such as Lyft and traditional taxi groups.
+
+The unresolved piece is whether this partner heavy model actually reduces capital intensity and operational complexity enough to offset AV losses and regulatory friction. Analysts have already flagged pressure from AV spending and lower margin products, and these projects increase that exposure until unit economics and regulatory acceptance are clearer.
+
+To judge news like this for Uber Technologies, you ultimately need a view on where its robotaxi and broader AV strategy is heading, which is exactly what a clear Narrative is designed to pin down. To ensure you're always in the loop on how the latest news impacts the investment narrative for Uber Technologies, head to the to never miss an update on the top community narratives.
+
+This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.
+
+New: AI Stock Screener & Alerts
+
+Our new AI Stock Screener scans the market every day to uncover opportunities.
+
+• Dividend Powerhouses (3%+ Yield)
+
+• Undervalued Small Caps with Insider Buying
+
+• High growth Tech and AI Companies
+
+Or build your own from over 50 metrics.
+
+Explore Now for Free
+
+Have feedback on this article? Concerned about the content? Get in touch with us directly. Alternatively, email editorial-team@simplywallst.com
+
+mitchell_lawler
+
+The Foxhole
+
+Micron (MU) is booming, and it still doesn't look ‘expensive’ based on next year's earnings. So why does our own valuation say it could be worth 40% less?
+
+8 8
+
+Z
+
+zoe_vi5fn•4h
+
+A low price to earnings ratio at the top of the cycle is a warning rather than a bargain, and a terrifyingly high one at the bottom is often the entry point
+
+D
+
+darius_xnnrd•4h
+
+Memory used to have a dozen participants racing each other into oversupply, and now it has three. High bandwidth memory is qualified into customer designs years ahead, sold under long-term agreements, and is far harder to switch away from than commodity DRAM.
+
+About NYSE:UBER
+
+Uber Technologies
+
+Develops and operates proprietary technology applications in the United States, Canada, Latin America, Europe, the Middle East, Africa, and the Asia Pacific.
+
+Undervalued with adequate balance sheet.
+
+Advertisement
+
+Weekly Picks
+
+RI
+
+Rick_Orford on Starfighters Space · 7 days ago
+
+The 1960s Fighter Jet That Could Crack Open a $20 Billion Satellite Market
+
+Fair Value:US$519.8 % undervalued
+
+22 followersusers have followed this narrative
+
+·
+
+1 commentusers have commented on this narrative
+
+·
+
+3 likesusers have liked this narrative
+
+FU
+
+FundamentalFlow on Vertiv Holdings Co · 11 days ago
+
+The Short and Long Term Compounder of Liquid Cooling industry.
+
+Fair Value:US$45036.2 % undervalued
+
+49 followersusers have followed this narrative
+
+·
+
+0 commentsusers have commented on this narrative
+
+·
+
+13 likesusers have liked this narrative
+
+JO
+
+John_Eric on SPX Technologies · 6 days ago
+
+I Fell in Love With a Data-Center Cooling Stock. Then I Opened the Filings.
+
+Fair Value:US$2034.5 % overvalued
+
+20 followersusers have followed this narrative
+
+·
+
+2 commentsusers have commented on this narrative
+
+·
+
+4 likesusers have liked this narrative
+
+TR
+
+tripledub on GQG Partners · 1 day ago
+
+The Cheap Genius Problem
+
+Fair Value:AU$3.2155.0 % undervalued
+
+30 followersusers have followed this narrative
+
+·
+
+0 commentsusers have commented on this narrative
+
+·
+
+21 likesusers have liked this narrative
+
+Popular Narratives
+
+OS
+
+oscargarcia on NVIDIA · 2 months ago
+
+The company that went from selling GPUs to gamers to becoming the AI arms dealer of the 21st century.
+
+Fair Value:US$28019.5 % undervalued
+
+307 followersusers have followed this narrative
+
+·
+
+9 commentsusers have commented on this narrative
+
+·
+
+16 likesusers have liked this narrative
+
+CU
+
+CubanEros on Microsoft · about 1 month ago
+
+A wonderful business at reasonable price.
+
+Fair Value:US$419.9118.3 % overvalued
+
+164 followersusers have followed this narrative
+
+·
+
+0 commentsusers have commented on this narrative
+
+·
+
+8 likesusers have liked this narrative
+
+KI
+
+KiwiInvest on Amazon.com · 3 months ago
+
+Amazon's high growth, high tech segments propel its profits, while traditional segments plod along
+
+Fair Value:US$475.0944.2 % undervalued
+
+186 followersusers have followed this narrative
+
+·
+
+1 commentusers have commented on this narrative
+
+·
+
+8 likesusers have liked this narrative",https://images.simplywall.st/asset/company-cover/144524848-main-header/1756256222441,N,,2026-08-14 13:21:21.057879
 ID5,Albertsons,2026-08-14 13:36:38+00:00,simplywall.st,"How Earnings Miss, EPS Cut and Legal Probes Could Reshape Albertsons Companies ...",Simply Wall St,,,,,https://simplywall.st/stocks/us/consumer-retailing/nyse-aci/albertsons-companies/news/how-earnings-miss-eps-cut-and-legal-probes-could-reshape-alb,"Advertisement United States / Food and Staples Retail / NYSE:ACI How Earnings Miss, EPS Cut and Legal Probes Could Reshape Albertsons Companies' (ACI) Investment Narrative August 14, 2026 In August 2026, Albertsons Companies reported quarterly earnings that missed analyst expectations and lowered its full-year 2026 EPS outlook, prompting multiple law firms to launch investigations into potential securities-related claims on behalf of investors.
 We’ll now examine how the weaker earnings outlook and resulting securities investigations may affect Albertsons’ existing investment narrative and assumptions.
 A great starting point for your Albertsons Companies research is our analysis highlighting that could impact your investment decision.
@@ -6838,227 +7545,6 @@ Fair Value:US$475.0944.2 % undervalued
 ·
 
 8 likesusers have liked this narrative",https://images.simplywall.st/asset/industry/5023000-choice1-main-header/1585186815097,N,,2026-08-14 11:05:14.082277
-ID47,Uber,2026-08-14 13:36:38+00:00,simplywall.st,"Uber Technologies (UBER) Expands Robotaxi Rollout With 2,000 Vehicles and Tokyo Pilot",Simply Wall St,,,,,https://simplywall.st/stocks/us/transportation/nyse-uber/uber-technologies/news/uber-technologies-uber-expands-robotaxi-rollout-with-2000-ve,"Advertisement United States / Transportation / NYSE:UBER Uber Technologies (UBER) Expands Robotaxi Rollout With 2,000 Vehicles and Tokyo Pilot August 14, 2026 Uber Technologies (NYSE: UBER) plans to deploy more than 2,000 robotaxis with partner Pony.ai across Europe and the Middle East, expanding its commercial autonomous ride-hailing footprint.
-Uber Technologies operates ride hailing and related mobility services across multiple regions, so moves into robotaxis plug directly into its core transportation platform rather than a side project.
-Advertisement Robotaxi partnerships as the test case for the Uber Technologies Narrative The core bet with Uber Technologies is that a global, multi partner robotaxi network can reshape its supply mix, cost base and customer engagement across Mobility and Delivery.
-To ensure you're always in the loop on how the latest news impacts the investment narrative for Uber Technologies, head to the to never miss an update on the top community narratives.
-About NYSE:UBER Uber Technologies Develops and operates proprietary technology applications in the United States, Canada, Latin America, Europe, the Middle East, Africa, and the Asia Pacific.","Advertisement
-
-United States
-
-/
-
-Transportation
-
-/
-
-NYSE:UBER
-
-Uber Technologies (UBER) Expands Robotaxi Rollout With 2,000 Vehicles and Tokyo Pilot
-
-August 14, 2026
-
-Uber Technologies (NYSE: UBER) plans to deploy more than 2,000 robotaxis with partner Pony.ai across Europe and the Middle East, expanding its commercial autonomous ride-hailing footprint.
-
-Uber and Pony.ai aim to move beyond limited tests into sustained multi city robotaxi operations across both regions as part of Uber's hybrid human and autonomous driver network.
-
-In Japan, Uber reached an operational agreement with taxi company Hinomaru Kotsu to run a Tokyo robotaxi pilot, adding another key market to its global autonomous vehicle push.
-
-Consider reviewing other companies involved in automation and self driving technology alongside Uber as you assess opportunities across this theme .
-
-Uber Technologies operates ride hailing and related mobility services across multiple regions, so moves into robotaxis plug directly into its core transportation platform rather than a side project. Its work with Pony.ai in Europe and the Middle East, alongside the Tokyo pilot, shows how the company is testing autonomous services across very different regulatory and urban conditions.
-
-Advertisement
-
-Robotaxi partnerships as the test case for the Uber Technologies Narrative
-
-The core bet with Uber Technologies is that a global, multi partner robotaxi network can reshape its supply mix, cost base and customer engagement across Mobility and Delivery. This news goes directly to that Narrative, because it shows Uber leaning on partners to scale autonomous fleets in real cities rather than owning everything itself.
-
-""Significant investments and accelerating partnerships in autonomous vehicles (AVs) and electrification (with Waymo, Lucid, Nuro, etc.) position Uber to benefit from secular industry shifts...""
-
-The expanded Pony.ai deployment and the Tokyo pilot with Wayve and Hinomaru Kotsu clearly support the Narrative’s claim that Uber can use AV partnerships to reset its long term cost structure and capacity. They also fit the idea of a hybrid human and autonomous network, which is central to how Uber is trying to differentiate from competitors such as Lyft and traditional taxi groups.
-
-The unresolved piece is whether this partner heavy model actually reduces capital intensity and operational complexity enough to offset AV losses and regulatory friction. Analysts have already flagged pressure from AV spending and lower margin products, and these projects increase that exposure until unit economics and regulatory acceptance are clearer.
-
-To judge news like this for Uber Technologies, you ultimately need a view on where its robotaxi and broader AV strategy is heading, which is exactly what a clear Narrative is designed to pin down. To ensure you're always in the loop on how the latest news impacts the investment narrative for Uber Technologies, head to the to never miss an update on the top community narratives.
-
-This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.
-
-New: AI Stock Screener & Alerts
-
-Our new AI Stock Screener scans the market every day to uncover opportunities.
-
-• Dividend Powerhouses (3%+ Yield)
-
-• Undervalued Small Caps with Insider Buying
-
-• High growth Tech and AI Companies
-
-Or build your own from over 50 metrics.
-
-Explore Now for Free
-
-Have feedback on this article? Concerned about the content? Get in touch with us directly. Alternatively, email editorial-team@simplywallst.com
-
-mitchell_lawler
-
-The Foxhole
-
-Micron (MU) is booming, and it still doesn't look ‘expensive’ based on next year's earnings. So why does our own valuation say it could be worth 40% less?
-
-8 8
-
-Z
-
-zoe_vi5fn•4h
-
-A low price to earnings ratio at the top of the cycle is a warning rather than a bargain, and a terrifyingly high one at the bottom is often the entry point
-
-D
-
-darius_xnnrd•4h
-
-Memory used to have a dozen participants racing each other into oversupply, and now it has three. High bandwidth memory is qualified into customer designs years ahead, sold under long-term agreements, and is far harder to switch away from than commodity DRAM.
-
-About NYSE:UBER
-
-Uber Technologies
-
-Develops and operates proprietary technology applications in the United States, Canada, Latin America, Europe, the Middle East, Africa, and the Asia Pacific.
-
-Undervalued with adequate balance sheet.
-
-Advertisement
-
-Weekly Picks
-
-RI
-
-Rick_Orford on Starfighters Space · 7 days ago
-
-The 1960s Fighter Jet That Could Crack Open a $20 Billion Satellite Market
-
-Fair Value:US$519.8 % undervalued
-
-22 followersusers have followed this narrative
-
-·
-
-1 commentusers have commented on this narrative
-
-·
-
-3 likesusers have liked this narrative
-
-FU
-
-FundamentalFlow on Vertiv Holdings Co · 11 days ago
-
-The Short and Long Term Compounder of Liquid Cooling industry.
-
-Fair Value:US$45036.2 % undervalued
-
-49 followersusers have followed this narrative
-
-·
-
-0 commentsusers have commented on this narrative
-
-·
-
-13 likesusers have liked this narrative
-
-JO
-
-John_Eric on SPX Technologies · 6 days ago
-
-I Fell in Love With a Data-Center Cooling Stock. Then I Opened the Filings.
-
-Fair Value:US$2034.5 % overvalued
-
-20 followersusers have followed this narrative
-
-·
-
-2 commentsusers have commented on this narrative
-
-·
-
-4 likesusers have liked this narrative
-
-TR
-
-tripledub on GQG Partners · 1 day ago
-
-The Cheap Genius Problem
-
-Fair Value:AU$3.2155.0 % undervalued
-
-30 followersusers have followed this narrative
-
-·
-
-0 commentsusers have commented on this narrative
-
-·
-
-21 likesusers have liked this narrative
-
-Popular Narratives
-
-OS
-
-oscargarcia on NVIDIA · 2 months ago
-
-The company that went from selling GPUs to gamers to becoming the AI arms dealer of the 21st century.
-
-Fair Value:US$28019.5 % undervalued
-
-307 followersusers have followed this narrative
-
-·
-
-9 commentsusers have commented on this narrative
-
-·
-
-16 likesusers have liked this narrative
-
-CU
-
-CubanEros on Microsoft · about 1 month ago
-
-A wonderful business at reasonable price.
-
-Fair Value:US$419.9118.3 % overvalued
-
-164 followersusers have followed this narrative
-
-·
-
-0 commentsusers have commented on this narrative
-
-·
-
-8 likesusers have liked this narrative
-
-KI
-
-KiwiInvest on Amazon.com · 3 months ago
-
-Amazon's high growth, high tech segments propel its profits, while traditional segments plod along
-
-Fair Value:US$475.0944.2 % undervalued
-
-186 followersusers have followed this narrative
-
-·
-
-1 commentusers have commented on this narrative
-
-·
-
-8 likesusers have liked this narrative",https://images.simplywall.st/asset/company-cover/144524848-main-header/1756256222441,N,,2026-08-14 13:21:21.057879
 ID47,Uber,2026-08-14 13:25:33+00:00,"Morningstar, Inc.",Pony AI Expands Robotaxi Partnership With Uber in Europe - Morningstar,Not Available,,,,,https://www.morningstar.com/news/dow-jones/2026081314246/pony-ai-expands-robotaxi-partnership-with-uber-in-europe,"By Jiahui Huang Pony AI and Uber are expanding their partnership, and plan to deploy more than 2,000 robotaxis across Europe.
 Pony AI currently offers commercial services in Zagreb, Croatia, and its robotaxis will soon be available on Uber's platform there.
 Pony AI said it and Uber also plan to work together in the Middle East.
@@ -12439,219 +12925,3 @@ Prioritize capital protection first and check the 83 resilient stocks with low r
 This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.
 
 Companies discussed in this article include IBM.",https://s.yimg.com/lo/mysterio/api/EFC6425935F85AF0999E4991A97C9FD273CC8E8AB7E166014B1364062D7152B3/subgraphmysterio/resizefill_w1200_h434;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fsimply_wall_st__316%2F6d5a8a41168d19f4ed2cfbebcae24896,N,,2026-08-12 08:04:51.821298
-ID32,Microsoft,2026-08-11 19:12:29+00:00,redmondmag.com,Microsoft Entra Private Access Offers a Zero Trust Path Beyond Always-On VPN,Not Available,,,,,https://redmondmag.com/articles/2026/08/14/microsoft-entra-private-access-offers-a-zero-trust-path-beyond-always-on-vpn.aspx,"Rather than assigning the client a routable address on the corporate network, it steers approved application traffic through Microsoft's Global Secure ...",Not Available,,N,,2026-08-11 16:12:42.312798
-ID35,Nvidia,2026-08-11 19:10:17+00:00,www.barrons.com,Nvidia's New AI Plan Could Make the Stock Riskier. Cathie Wood Is Piling In. - Barron's,,,,,,https://www.barrons.com/articles/nvidia-stock-price-cathie-wood-4679125b,Nvidia plans to line up $500 billion in financing from Wall Street firms for customers to invest in the chip maker's hardware. Nvidia CEO Jensen Huang ...,Not Available,,Y,,2026-08-11 16:12:46.000285
-ID35,Nvidia,2026-08-11 19:03:58+00:00,www.facebook.com,Nvidia is joining forces with Wall Street to allow its customers borrow more than half a trillion ...,Not Available,,,,,https://www.facebook.com/cnn/posts/nvidia-is-joining-forces-with-wall-street-to-allow-its-customers-borrow-more-tha/1438967608095886/,"Nvidia is joining forces with Wall Street to allow its customers borrow more than half a trillion dollars to build AI infrastructure.
-
-The US chipmaker...",Not Available,https://scontent-iad3-1.xx.fbcdn.net/v/t39.99422-6/767206495_1720210259266302_4648688869709928994_n.png?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=p600x600&_nc_cat=1&ccb=1-7&_nc_sid=cae128&_nc_ohc=6igGUya6OLsQ7kNvwEPHWiv&_nc_oc=AdrY-ckl9IEoXtMWFXRvfv--voKnsDq_9yIRiS1nzNCDcab-cgzx23kDyET2Fbqoi14&_nc_zt=14&_nc_ht=scontent-iad3-1.xx&_nc_gid=JHOAZBrY4DGgXvRIGi3Tpw&_nc_ss=7b289&oh=00_AQHNzxuERTR2YP8-0OCsT8yaefExKvKg6lF7w8aOG8aowQ&oe=6A8164A2,N,,2026-08-11 17:11:52.541217
-ID36,OpenAI,2026-08-11 18:45:51+00:00,www.nytimes.com,"Brad Lightcap, a Top OpenAI Executive, Steps Down - The New York Times",,,,,,https://www.nytimes.com/2026/08/11/technology/brad-lightcap-openai.html,"In OpenAI's latest exit, Brad Lightcap, a longtime leader at the artificial intelligence company, said he was leaving to start a new venture.",Not Available,,Y,,2026-08-11 16:12:55.657116
-ID47,Uber,2026-08-11 18:45:00+00:00,Yahoo Finance,Uber Exits Serve Robotics Stake as Delivery Alliance Unravels - Yahoo Finance,Natalie Lung,,,,,https://finance.yahoo.com/technology/articles/uber-exits-serve-robotics-stake-170531872.html,"Trading disclosure The above button links to Coinbase.
-Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading.
-Coinbase pays us for certain activity generated through this link.
-Prices displayed are informational.","Trading disclosure
-
-The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational.",https://s.yimg.com/cv/apiv2/cv/apiv2/social/images/yahoo-finance-default-logo.png,N,,2026-08-11 17:12:03.977746
-ID48,UniCredit,2026-08-11 18:36:35+00:00,Commerzbank's Regulatory Green Light and Record Results Reshape the UniCredit Equation,Commerzbank's Regulatory Green Light and Record Results Reshape the UniCredit Equation,Rafael Müller,,,,,https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/commerzbank-s-regulatory-green-light-and-record-results-reshape-the/69937051,"The stars are aligning for Commerzbank shareholders in a way they haven't in over a decade.
-At 39.34 euros, the shares have climbed 0.56 percent in today's session, touching levels not seen since 2010.
-Net income climbed roughly 40 percent to 1.81 billion euros, a company record, while operating profit advanced 14 percent to 2.7 billion euros.
-Return on tangible equity hit 12.6 percent — another all-time high — and revenues rose 7 percent to 6.5 billion euros, helped by an 8 percent uptick in commission income.
-The bank unveiled a share buyback program of up to 1.2 billion euros, already cleared by the ECB, and reaffirmed its full-year guidance of roughly 13.2 billion euros in revenue and net profit of at least 3.4 billion euros.","The stars are aligning for Commerzbank shareholders in a way they haven't in over a decade. The Frankfurt-based lender's stock is hovering just 1.3 percent below its 52-week high, propelled by a regulatory nod that has breathed new life into UniCredit's pursuit of a majority stake. At 39.34 euros, the shares have climbed 0.56 percent in today's session, touching levels not seen since 2010.
-
-The catalyst came from Germany's financial watchdog. The BaFin has deemed UniCredit's application to increase its stake as complete, forwarding the matter to the European Central Bank, which now faces a 60-working-day window to render its verdict. The approval process had been quietly moving since late July, but the market's reaction suggests investors are only now pricing in the implications.
-
-A Half-Year for the History Books
-
-The regulatory progress alone doesn't tell the full story. Commerzbank delivered a second-quarter performance last Thursday that gave the Italians — and the market — plenty to digest. Net profit attributable to shareholders nearly doubled, jumping 94 percent to 898 million euros from 462 million euros in the same period last year, comfortably clearing the 845 million euros analysts had penciled in.
-
-The first half painted an even more striking picture. Net income climbed roughly 40 percent to 1.81 billion euros, a company record, while operating profit advanced 14 percent to 2.7 billion euros. Return on tangible equity hit 12.6 percent — another all-time high — and revenues rose 7 percent to 6.5 billion euros, helped by an 8 percent uptick in commission income. The cost-income ratio, including mandatory levies, improved to 52 percent from 55 percent a year earlier.
-
-Management didn't stop at the numbers. The bank unveiled a share buyback program of up to 1.2 billion euros, already cleared by the ECB, and reaffirmed its full-year guidance of roughly 13.2 billion euros in revenue and net profit of at least 3.4 billion euros.
-
-Should investors sell immediately? Or is it worth buying Commerzbank?
-
-The Tone Shifts in Frankfurt
-
-What happened after the earnings release may matter as much as the figures themselves. Bettina Orlopp, Commerzbank's chief executive, held a video summit with UniCredit's leadership on the same day — a meeting that observers have read as the opening salvo of what could become lengthy integration talks.
-
-The change in posture is notable. Orlopp, who had previously kept UniCredit at arm's length, has signaled that a combination could create value, provided business model, strategy, and governance are thrashed out jointly. Yet the meeting was not the formal start of merger negotiations. Sources suggest the discussion centered on technical matters — organizational and balance-sheet considerations tied to a potential change of control — rather than the substance of a deal.
-
-The Bundesregierung, for its part, has shown signs of softening its previously skeptical stance toward the Italian bid, though the political sensitivities remain palpable.
-
-A Complex Shareholder Picture
-
-The arithmetic of the takeover attempt is anything but straightforward. UniCredit's economic interest in Commerzbank now amounts to roughly 47.6 percent of capital, or just under 49.7 percent of voting rights once tendered shares are formally booked. The Italians also hold an additional 11 percent through non-voting financial instruments.
-
-But the tender figures reveal a telling detail: only 2.7 percent of institutional and private investors actually tendered their shares. A substantial portion of the 17.6 percent that was tendered by the July 3 deadline came from financial institutions linked to UniCredit itself rather than independent shareholders. The free float, it seems, remains wary of the offer on the table.
-
-That skepticism has not gone unnoticed in the ratings community. S&P Global Ratings downgraded its outlook on Commerzbank from stable to negative in July, citing the takeover scenario.
-
-Analysts Split on Valuation
-
-The earnings bonanza has triggered a flurry of target-price revisions, though the verdict is far from unanimous. DZ Bank's Philipp Häßler lifted his target to 46 euros from 42 euros on August 5, maintaining a buy recommendation. RBC Capital Markets' Anke Reingen stuck with an ""outperform"" rating and a 43-euro target. JPMorgan's Kian Abouhossein, meanwhile, nudged his target only marginally to 38 euros, keeping a ""neutral"" stance — a reminder that the stock's valuation is very much a matter of debate.
-
-For investors, the picture is layered. A record first half, a billion-euro buyback, and a regulator-cleared path toward a potential takeover sit alongside the reality that formal merger talks have yet to begin. The share price action of recent days suggests the market is betting on momentum — but the gap between regulatory clearance and a completed transaction remains wide, and the free float's reluctance to tender adds another wrinkle to an already intricate story.
-
-Ad
-
-Commerzbank Stock: New Analysis - 11 August
-
-Fresh Commerzbank information released. What's the impact for investors? Our latest independent report examines recent figures and market trends.",https://mdb.ad-hoc-news.de/bild/bild-2748056_1920_1080.webp,N,,2026-08-11 15:13:51.338345
-ID23,IBM,2026-08-11 18:28:26+00:00,www.barrons.com,Inside IBM's $240 Million AI Bet to Build Out Its Cloud Capabilities - Barron's,,,,,,https://www.barrons.com/articles/ibm-together-ai-cloud-deal-ea60e818,IBM and Together AI are building a cluster on IBM's cloud that will power the start-up's open-source model inference.,Not Available,,Y,,2026-08-11 16:12:10.721076
-ID19,Eli Lilly,2026-08-11 18:08:22+00:00,Fierce Biotech,Amgen lays groundwork for new R&D center in Hyderabad - Fierce Biotech,Darren Incorvaia,,,,,https://www.fiercebiotech.com/biotech/amgen-lays-groundwork-new-rd-center-hyderabad,"Amgen is expanding its footprint in India with an R&D center in Hyderabad, the latest effort from the California company to boost its research facilities.
-The new Science and Innovation Center is set to open in Hyderabad’s Genome Valley, a biopharma business park, in 2027, an Amgen spokesperson told Fierce in a statement.
-Amgen did not respond to questions from Fierce about the cost of the Genome Valley investment.
-“The new center in Genome Valley expands the way we integrate experimental science with data and technology across our global research capabilities and complements our strong U.S.-based Research and Development footprint,” Jay Bradner, M.D., Amgen’s executive vice president of R&D, artificial intelligence and data, said in a statement.
-The new Indian research center sits about an hour away from Amgen’s India offices in HITEC City, another business district in Hyderabad.","Amgen is expanding its footprint in India with an R&D center in Hyderabad, the latest effort from the California company to boost its research facilities.
-
-The new Science and Innovation Center is set to open in Hyderabad’s Genome Valley, a biopharma business park, in 2027, an Amgen spokesperson told Fierce in a statement. It will join Amgen’s network of R&D sites, the spokesperson said, “which consists of seven research laboratories in the U.S. and abroad.”
-
-The new center “will bring together scientists and technologists across discovery chemistry, drug metabolism and pharmacokinetics and precision medicine,” the spokesperson added.
-
-Amgen did not respond to questions from Fierce about the cost of the Genome Valley investment.
-
-“The new center in Genome Valley expands the way we integrate experimental science with data and technology across our global research capabilities and complements our strong U.S.-based Research and Development footprint,” Jay Bradner, M.D., Amgen’s executive vice president of R&D, artificial intelligence and data, said in a statement. “By connecting these capabilities, we can learn faster and translate those insights into innovative medicines for patients.”
-
-The new Indian venture follows further R&D investments Amgen has made domestically, including a similar center at the company’s Thousand Oaks headquarters that will cost $600 million and a $125 million expansion at its South San Francisco location.
-
-The new Indian research center sits about an hour away from Amgen’s India offices in HITEC City, another business district in Hyderabad.",https://qtxasset.com/quartz/qcloud5/media/image/gettyimages-1215274990.jpg?VersionId=JD5oAKQzBv6qJh0hywGIRVIian4hehCD,N,,2026-08-11 18:12:05.797160
-ID42,S&P Global,2026-08-11 17:52:17+00:00,www.reuters.com,Jensen Huang takes wheel of $500 bln AI bandwagon - Reuters,,,,,,https://www.reuters.com/commentary/breakingviews/jensen-huang-takes-wheel-500-bln-ai-bandwagon-2026-08-11/,"N) , opens new tab ​will spend roughly $750 billion this year, equal to 38% of revenue, S&P Global Ratings projects , opens new tab. Some of them ...",Not Available,,Y,,2026-08-11 18:12:17.582732
-ID36,OpenAI,2026-08-11 17:51:38+00:00,TechCrunch,"Brad Lightcap, OpenAI's longtime COO, is leaving to 'start something new' | TechCrunch",Lucas Ropek,,,,,https://techcrunch.com/2026/08/11/brad-lightcap-openais-longtime-coo-is-leaving-to-start-something-new/,"Brad Lightcap, one of the longest-serving executives at OpenAI, is leaving the powerful AI lab to “start something new.” In an internal message that Lightcap shared online Tuesday, the outgoing executive told OpenAI staff that it was “bittersweet to share that I’ll be moving on from OpenAI to start something new.” Lightcap, who joined the company in 2018, spent four years as OpenAI’s chief financial officer.
-Prior to OpenAI, Lightcap also worked with CEO Sam Altman at venture capital firm Y Combinator.
-“Over the last few months, I’ve been focused on the next horizon and what would stand in the way of mission success,” Lightcap said.
-“I believe there are a few important new things the world will need to get right as we enter this next period.
-I’ll have more to share soon, but I believe in OpenAI more than ever and am excited to help you all advance the mission from a different vantage point.”","Brad Lightcap, one of the longest-serving executives at OpenAI, is leaving the powerful AI lab to “start something new.”
-
-In an internal message that Lightcap shared online Tuesday, the outgoing executive told OpenAI staff that it was “bittersweet to share that I’ll be moving on from OpenAI to start something new.”
-
-Lightcap, who joined the company in 2018, spent four years as OpenAI’s chief financial officer. He then ascended to chief operating officer, where he served from 2022 until earlier this year when, amidst a shakeup of executive roles, he transitioned to lead special projects at the company. Prior to OpenAI, Lightcap also worked with CEO Sam Altman at venture capital firm Y Combinator.
-
-“I had the privilege of building the first versions of most of our operations and business teams – from Finance to Legal, People, CorpSec, GTM/Gov, Partnerships, and more,” Lightcap wrote in his message Tuesday. “Among the most rewarding parts of this journey for me has been watching each of these teams mature under brilliant leaders.”
-
-In his note, Lightcap also looked ahead and hinted at a future venture while giving scant details as to what it might be.
-
-“Over the last few months, I’ve been focused on the next horizon and what would stand in the way of mission success,” Lightcap said. “I believe there are a few important new things the world will need to get right as we enter this next period. I’ll have more to share soon, but I believe in OpenAI more than ever and am excited to help you all advance the mission from a different vantage point.”",https://techcrunch.com/wp-content/uploads/2026/02/brad-lightcap-GettyImages-2147824375-1.jpg?w=1024,N,,2026-08-11 15:13:46.206290
-ID36,OpenAI,2026-08-11 17:41:42+00:00,www.wsj.com,Longtime OpenAI Exec Brad Lightcap to Step Down - WSJ,,,,,,https://www.wsj.com/tech/ai/longtime-openai-exec-brad-lightcap-to-step-down-509297c5,"OpenAI's former chief operating officer, Brad Lightcap, is stepping down, the latest leadership change at the artificial-intelligence lab.",Not Available,,Y,,2026-08-11 14:14:09.996976
-ID47,Uber,2026-08-11 17:21:16+00:00,Bloomberg.com,Uber Exits Serve Robotics Stake as Delivery Alliance Unravels - Bloomberg.com,Natalie Lung,,,,,https://www.bloomberg.com/news/articles/2026-08-11/uber-exits-serve-robotics-stake-as-delivery-alliance-unravels,"Uber Technologies Inc. has divested from long-time partner Serve Robotics Inc. as the two companies clash over how to deploy delivery robots, the latest setback in Uber’s push to facilitate autonomous services on its platform.
-Serve, which makes the doe-eyed, four-wheeled boxy robots roaming the sidewalks in cities like Los Angeles, Miami and Chicago, has counted Uber as an investor since it was spun out of Postmates, the delivery app acquired by the rideshare giant in 2020.","Uber Technologies Inc. has divested from long-time partner Serve Robotics Inc. as the two companies clash over how to deploy delivery robots, the latest setback in Uber’s push to facilitate autonomous services on its platform.
-
-Serve, which makes the doe-eyed, four-wheeled boxy robots roaming the sidewalks in cities like Los Angeles, Miami and Chicago, has counted Uber as an investor since it was spun out of Postmates, the delivery app acquired by the rideshare giant in 2020.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i9rqGDjveBiE/v1/1200x813.jpg,N,,2026-08-11 14:14:17.856287
-ID5,Albertsons,2026-08-11 17:06:11+00:00,internationalsupermarketnews.com,KROGER-ALBERTSONS MERGER BLOCKED — BUT WHO IS PAYING THE PRICE?,ISN Magazine,,,,,https://internationalsupermarketnews.com/25971-2/,"KROGER-ALBERTSONS MERGER BLOCKED — BUT WHO IS PAYING THE PRICE?
-ISN says the FTC must now answer a difficult question: did stopping America’s biggest supermarket merger protect consumers — or simply leave workers and stores exposed?
-The regulator argued that combining the two supermarket giants would reduce competition, weaken consumer choice and potentially push grocery prices higher.
-In February 2024, the FTC formally challenged the proposed acquisition, saying the deal threatened competition between two major supermarket operators.
-If stopping the merger was supposed to protect American consumers, where is the evidence that consumers and supermarket workers are better off today?","KROGER-ALBERTSONS MERGER BLOCKED — BUT WHO IS PAYING THE PRICE?
-
-ISN says the FTC must now answer a difficult question: did stopping America’s biggest supermarket merger protect consumers — or simply leave workers and stores exposed?
-
-The Kroger-Albertsons merger was supposed to create one of America’s largest supermarket companies.
-
-The Federal Trade Commission fought it.
-
-The regulator argued that combining the two supermarket giants would reduce competition, weaken consumer choice and potentially push grocery prices higher. In February 2024, the FTC formally challenged the proposed acquisition, saying the deal threatened competition between two major supermarket operators.
-
-The merger ultimately collapsed.
-
-But now comes the uncomfortable part.
-
-Albertsons is cutting back.
-
-Stores have closed or been earmarked for closure during 2026, while the company has also reduced its workforce. At least a dozen Albertsons locations had closed or been marked for closure by May, according to an analysis of local reports and company information.
-
-This is precisely the outcome Albertsons warned about during the merger battle.
-
-The company told the court that if the transaction was blocked, it could be forced to lay off employees, close stores and withdraw from some markets.
-
-Now workers are seeing the consequences.
-
-ISN’s message to the FTC
-
-The FTC was right to scrutinise the merger. Competition matters. Consumers need choice. Nobody wants an American grocery market dominated by a handful of companies.
-
-But competition policy cannot be judged only by the number of companies left standing on paper.
-
-It must also be judged by what happens to stores, jobs, communities and consumers.
-
-If a merger is blocked and the consequence is that a supermarket chain becomes weaker, closes stores and cuts jobs, the regulator must explain whether consumers have genuinely benefited.
-
-A supermarket that disappears from a neighbourhood is not competition.
-
-A worker who loses a job is not a theoretical market statistic.
-
-And a community left with fewer grocery options is not necessarily better served simply because a merger was prevented.
-
-ISN believes the FTC now has a responsibility to look at the consequences of its decision.
-
-The question is no longer whether Kroger and Albertsons should have merged.
-
-That decision has been made.
-
-The question is whether the alternative has delivered what regulators promised.
-
-If stopping the merger was supposed to protect American consumers, where is the evidence that consumers and supermarket workers are better off today?
-
-That is a question the FTC should answer.",https://internationalsupermarketnews.com/wp-content/uploads/cropped-download-4-32x32.jpg,N,,2026-08-11 14:13:51.651204
-ID29,Levi Strauss,2026-08-11 17:00:45+00:00,www.storyboard18.com,"Levi's, Uniqlo tap repair culture to attract sustainability-focused Gen Z shoppers",,,,,,https://www.storyboard18.com/brand-marketing/levis-uniqlo-tap-repair-culture-to-attract-sustainability-focused-gen-z-shoppers-107386.htm,"Brands such as Levi Strauss & Co., Uniqlo, Zara and Primark have expanded repair-focused initiatives as they respond to rising consumer interest ...",Not Available,,Y,,2026-08-11 14:14:05.301932
-ID36,OpenAI,2026-08-11 16:54:20+00:00,www.reuters.com,Brad Lightcap leaving OpenAI | Reuters,,,,,,https://www.reuters.com/technology/brad-lightcap-leaving-openai-2026-08-11/,"Brad ​Lightcap, ‌OpenAI's ​special ​projects lead, ⁠said ​on ​Tuesday he ​is ​leaving the ‌AI ⁠startup ​to ​start ⁠a ​new ​venture.",Not Available,,Y,,2026-08-11 14:14:11.798078
-ID36,OpenAI,2026-08-11 16:54:12+00:00,CNBC,Longtime OpenAI executive Brad Lightcap leaves as shakeup at AI lab continues - CNBC,"Ashley Capoot, www.facebook.com",,,,,https://www.cnbc.com/2026/08/11/longtime-openai-executive-brad-lightcap-leaves-as-shakeup-at-ai-lab-continues.html,"Longtime OpenAI executive Brad Lightcap announced his departure on Tuesday, the latest in a series of recent leadership shakeups at the artificial intelligence company.
-Lightcap joined OpenAI in 2018 and held a number of senior leadership roles during his tenure, including a four-year stint as the company's operating chief.
-The company said at the time that Denise Dresser, OpenAI's chief revenue officer, would take over most of Lightcap's responsibilities.
-In a post on X on Tuesday, Lightcap said he is moving on from OpenAI to ""start something new.""
-""I feel incredibly fortunate to have spent most of the last decade pursuing our mission and building this company,"" Lightcap wrote.","Longtime OpenAI executive Brad Lightcap announced his departure on Tuesday, the latest in a series of recent leadership shakeups at the artificial intelligence company.
-
-Lightcap joined OpenAI in 2018 and held a number of senior leadership roles during his tenure, including a four-year stint as the company's operating chief. He served in that role until April, when he moved into a new position focused on ""special projects."" The company said at the time that Denise Dresser, OpenAI's chief revenue officer, would take over most of Lightcap's responsibilities.
-
-In a post on X on Tuesday, Lightcap said he is moving on from OpenAI to ""start something new.""
-
-""I feel incredibly fortunate to have spent most of the last decade pursuing our mission and building this company,"" Lightcap wrote. ""Sitting here today, mission success feels within sight. It has been the honor of my life to help bring us to this point, and to do it alongside all of you.""
-
-Lightcap's departure marks another key loss for OpenAI at a time when the company is trying to justify its $852 billion valuation and gear up for what's expected to be a monster IPO. Fidji Simo, who had been OpenAI's product and business chief, announced last month she was stepping down from her role at the company to focus on recovery after a ""severe exacerbation of a chronic illness.""
-
-Three other OpenAI execs announced their departures in April. They were Bill Peebles, who led OpenAI's defunct short-form video app Sora, Kevin Weil, the vice president of OpenAI for Science, and Srinivas Narayanan, tech chief of B2B Applications.
-
-Lightcap has been one of OpenAI CEO Sam Altman's closest confidantes since the early days of the company. The two worked together at the startup incubator Y Combinator, which Altman led prior to OpenAI.
-
-Over an 18-month stretch through mid-2025, Lightcap built OpenAI's go-to-market team from around 50 people to more than 700, which included sales reps and staffers focused on customer success, developer relations and strategic partnerships.
-
-That push started in 2023, with GPT-4 and the launch of ChatGPT Enterprise, as OpenAI tried to take its consumer success into the enterprise world to take on its rival Anthropic. Clients started coming in from every direction, Lightcap told CNBC in an interview in about a year ago.
-
-""Among the most rewarding parts of this journey for me has been watching each of these teams mature under brilliant leaders,"" Lightcap wrote on Tuesday. ""I am excited for the next decade in the hands of this incredibly capable team.""
-
-WATCH: OpenAI, Anthropic agents participate in new ‘unsanctioned’ AI behavior",https://image.cnbcfm.com/api/v1/image/107371052-17074185042023-06-20t120423z_878485026_rc2ym1alvfpu_rtrmadp_0_advertising-cannes.jpeg?v=1707418585&w=1920&h=1080,N,,2026-08-11 14:14:14.904532
-ID35,Nvidia,2026-08-11 16:51:09+00:00,www.barrons.com,Nvidia Strikes Deals With Wall Street Firms to Fund Its Own Customers - Barron's,,,,,,https://www.barrons.com/articles/nvidia-wall-street-500-billion-fund-ai-data-center-9c8ad31e,Nvidia announced partnerships with Goldman Sachs and five asset-management firms to fund data-center construction. · The consortium will deploy $500 ...,Not Available,,Y,,2026-08-11 13:25:51.228650
-ID28,L’Oréal,2026-08-11 16:50:53+00:00,thedermdigest.com,"L'Oréal Groupe, NUS Medicine Team Up to Advance Longevity Science",Not Available,,,,,https://thedermdigest.com/loreal-groupe-nus-medicine-team-up-to-advance-longevity-science/,L'Oréal Groupe and the NUS Academy for Healthy Longevity at the Yong Loo Lin School of Medicine of the National University of Singapore (NUS ...,Not Available,,N,,2026-08-11 15:13:43.010879
-ID29,Levi Strauss,2026-08-11 16:47:33+00:00,Fast Company,Target names its first chief AI officer in a bid to remake the shopping experience (exclusive),Chris Morris,,,,,https://www.fastcompany.com/91588065/target-names-first-chief-ai-officer-exclusive,"Nair comes to Target after more than six years with Lowe’s, where he was most recently senior vice president of stores, data, AI, and innovation.
-“What excites me most is the opportunity to make AI real for the people who experience Target every day,” Chanhu said in a Q&A provided by the company.
-The retailer is hoping the speed of AI, when paired with human-centered design, will elevate the shopping experience for customers.
-Shah has spent the past four years working on Target’s user experience systems, including assisting in the launch of a conversational shopping experience in ChatGPT eight months ago.
-But companies in other industries have also appointed a chief AI officer, including Eli Lilly, Pfizer, Accenture, and PwC.","Nair comes to Target after more than six years with Lowe’s, where he was most recently senior vice president of stores, data, AI, and innovation. He previously served nine years at Staples, and cofounded a data analytics software company and a business strategy consulting startup.
-
-“What excites me most is the opportunity to make AI real for the people who experience Target every day,” Chanhu said in a Q&A provided by the company. “The most meaningful AI stories won’t be about what happens in a lab. They’ll be about what happens on the front line—how we make shopping easier for a guest, give a team member a better tool, make a business decision with more confidence, or bring a new idea to market faster.”
-
-Target is also promoting Purvi Shah, the current vice president of user experience design, to a senior VP role. The retailer is hoping the speed of AI, when paired with human-centered design, will elevate the shopping experience for customers.
-
-The company’s AI efforts will impact both employee- and customer-facing systems. Shah has spent the past four years working on Target’s user experience systems, including assisting in the launch of a conversational shopping experience in ChatGPT eight months ago.
-
-“Our role is to shape not only what people see, but the systems and decisions behind it to ensure each experience is as easy, inspiring, and valuable as it can be,” Shah said in the Q&A.
-
-A fast-growing title
-
-Target is one of many companies that are appointing a CAIO these days. Meta, Google, and IBM have all created the role, a logical step given the importance of AI to tech firms. But companies in other industries have also appointed a chief AI officer, including Eli Lilly, Pfizer, Accenture, and PwC.","https://images.fastcompany.com/image/upload/f_webp,q_auto,c_fit/wp-cms-2/2026/08/p-1-91588065-chandhu-nair-is-targets-first-ever-chief-ai-officer.jpg",N,,2026-08-11 14:14:07.543298
-ID36,OpenAI,2026-08-11 16:24:33+00:00,Quartz,"OpenAI expands Daybreak cybersecurity program, launches GPT-5.6-Cyber - Quartz","Cris Tolomia, qz.com",,,,,https://qz.com/openai-daybreak-cybersecurity-tiers-gpt-56-cyber-081126,"The program now includes Daybreak Blue and Daybreak Red.
-OpenAI also introduced GPT-5.6-Cyber, a new model available exclusively through Daybreak Red.
-OpenAI said GPT-5.6-Cyber also outperforms its predecessor, GPT-5.5-Cyber, which completed 57.3% of requests on the same internal benchmark.
-OpenAI launched Daybreak earlier this year in direct competition with Anthropic's Project Glasswing, a cybersecurity coalition built around Claude Mythos Preview.
-Organizations whose work includes advanced vulnerability research or red teaming can request Daybreak Red access.","OpenAI expanded its Daybreak cybersecurity program on Monday with two access tiers and a new AI model built for security researchers, as the company argues defenders face a narrowing window to prepare before attackers deploy AI at scale.
-
-The program now includes Daybreak Blue and Daybreak Red. Daybreak Blue gives approved users access to GPT-5.6 Sol with system-level cybersecurity guardrails removed, supporting defensive work such as vulnerability discovery, malware analysis, incident response, and patch validation, the company said. Daybreak Red goes further, giving participants access to models trained specifically for cybersecurity work, covering exploit validation, vulnerability research, and security testing, the company said.
-
-OpenAI also introduced GPT-5.6-Cyber, a new model available exclusively through Daybreak Red. Built on GPT-5.6 Sol, the model targets cybersecurity-specific use cases and is designed to respond to higher-risk requests that standard safeguards would otherwise block, the company said. In an internal evaluation, GPT-5.6-Cyber handled 95% of advanced cybersecurity prompts — covering scenarios such as exploit-chain development, authentication bypass, and privilege escalation — while GPT-5.6 Sol with its default protections answered just 1.5%, and the Daybreak Blue variant answered 2%.
-
-OpenAI said GPT-5.6-Cyber also outperforms its predecessor, GPT-5.5-Cyber, which completed 57.3% of requests on the same internal benchmark.
-
-Beyond benchmarks, OpenAI said it used GPT-5.6-Cyber to uncover two previously unknown vulnerabilities in V8, the JavaScript engine used by Chrome, that could be chained to corrupt memory and escape the V8 heap sandbox. The findings were reported to Google $GOOGL through coordinated vulnerability disclosure, and Google fixed the issue, assigning it as CVE-2026-15903. The company also said it used the model to identify at least five vulnerabilities in a popular mobile operating system, three critical vulnerabilities in a popular database, and over 400 vulnerabilities in a popular operating system kernel.
-
-Under OpenAI's Preparedness Framework, GPT-5.6-Cyber was assessed as reaching the High cybersecurity capability threshold but not the Critical threshold, the company said.
-
-OpenAI launched Daybreak earlier this year in direct competition with Anthropic's Project Glasswing, a cybersecurity coalition built around Claude Mythos Preview. The original Daybreak program featured three model tiers built on GPT-5.5 and included partners such as Cisco $CSCO, CrowdStrike $CRWD, Cloudflare, and Palo Alto Networks $PANW. The expansion comes after OpenAI, Anthropic, and Meta $META each disclosed recent incidents in which AI models accessed systems outside their intended boundaries during cybersecurity testing, according to CNBC.
-
-OpenAI described Daybreak Blue as the appropriate entry point for the majority of security teams. Organizations whose work includes advanced vulnerability research or red teaming can request Daybreak Red access. OpenAI is requiring all individual Daybreak accounts to adopt hardware security keys beginning September 1, 2026, the company said.","https://qz.com/cdn-cgi/image/width=1200,quality=85,format=auto/https://assets.qz.com/media/GettyImages-2266383509-300x200.jpg",N,,2026-08-11 13:26:00.262032
