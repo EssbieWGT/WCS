@@ -1,4 +1,679 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2026-08-20 12:02:02+00:00,YouTube,Can Korean Refineries Survive the Global 'Sustainable Aviation Fuel' War? [K-Company],Not Available,,,,,https://www.youtube.com/watch?v=KSsCoje1OQ0,"ⓒ 무단 전재, 재배포 및 재가공, 이용(AI학습 포함)금지협업 문의 및 제보  : video@newsis.com#항공유 #SK에너지 #SK이노베이션 #GS칼텍스 #에쓰오일 #HD현대오일뱅크 #SAF #HEFA #대한항공 #공항",Not Available,https://i.ytimg.com/vi/KSsCoje1OQ0/maxresdefault.jpg,N,,2026-08-20 08:57:35.677226
+,,2026-08-20 10:14:48+00:00,X (formerly Twitter),I wonder how much building private jets and producing SAF (sustainable aviation fuel ...,x.com,,,,,https://x.com/DickWinchester/status/2090368303684338030,I wonder how much building private jets and producing SAF (sustainable aviation fuel) would raise.. @ StephenFlynnSNP,I wonder how much building private jets and producing SAF (sustainable aviation fuel) would raise.. @ StephenFlynnSNP,https://pbs.twimg.com/profile_images/499303660602413056/FHVc3msL_400x400.jpeg,N,,2026-08-20 08:57:38.511683
+,,2026-08-20 08:07:46+00:00,MDPI,Integrated Multiscale Optimization of Sustainable Aviation Fuel Systems: Coupling Supply ... - MDPI,"Iván Fernando Hernández-Araujo, Juan José Quiroz Ramírez, Gabriel Contreras-Zarazúa, Luis Germán Hernández-Pérez, Eduardo Sánchez-Ramírez, Juan Gabriel Segovia-Hernández, Hernández-Araujo, Iván Fernando, Quiroz Ramírez, Juan José",,,,,https://www.mdpi.com/2227-9717/14/16/2653,"Supply Chain MILP Formulation The supply chain model is formulated as a deterministic, multi-period mixed-integer linear programming (MILP) problem.
+Decoupled Supply Chain Baseline A decoupled supply chain baseline was solved to provide the reference case for the integrated framework.
+Baseline Analysis: Decoupled Supply Chain Optimization The decoupled supply chain baseline provides the reference case against which the value of the proposed multiscale integration can be evaluated.
+Spatial and Temporal Behavior of the Optimal Supply Chain Figure 5 shows the spatial and temporal configuration obtained for the optimal decoupled SAF supply chain.
+Biomass production, biomass transportation, inventory, and final product transportation collectively account for the remaining 7.68%.","by
+
+Iván Fernando Hernández-Araujo
+
+1,2 ,
+
+Juan José Quiroz Ramírez
+
+2,* ,
+
+Gabriel Contreras-Zarazúa
+
+2 ,
+
+Luis Germán Hernández-Pérez
+
+3 ,
+
+Eduardo Sánchez-Ramírez
+
+4 and
+
+Juan Gabriel Segovia-Hernández
+
+4
+
+1
+
+Tecnologico de Monterrey, Escuela de Ingeniería y Ciencias, Monterrey 64700, Nuevo Leon, Mexico
+
+2
+
+Dirección de Investigación Aplicada y Desarrollo, Centro de Innovación Aplicada en Tecnologías Competitivas, Secretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI)-CIATEC, Calle Omega 201, Leon 37545, Guanajuato, Mexico
+
+3
+
+Chemical Engineering Department, Universidad Michoacana de San Nicolás de Hidalgo, Morelia 58030, Michoacan, Mexico
+
+4
+
+Departamento de Ingeniería Química, División de Ciencias Naturales y Exactas, Campus Guanajuato, Universidad de Guanajuato, Guanajuato 36050, Guanajuato, Mexico
+
+*
+
+Author to whom correspondence should be addressed.
+
+Processes 2026, 14(16), 2653; https://doi.org/10.3390/pr14162653
+
+Submission received: 4 June 2026 / Revised: 23 July 2026 / Accepted: 30 July 2026 / Published: 20 August 2026
+
+(This article belongs to the Section Energy Systems)
+
+Abstract
+
+Sustainable aviation fuel (SAF) deployment requires simultaneous coordination of spatially distributed biomass supply chains and nonlinear conversion technologies. This study develops an integrated multiscale optimization framework for SAF production in Mexico using second-generation sugarcane bagasse as the lignocellulosic resource for alcohol-intermediate production, followed by an intensified Alcohol-to-Jet (ATJ) upgrading stage targeting Mexico City Airport. A multi-period mixed-integer linear programming model optimizes harvest-area selection, biorefinery location, biomass allocation, inventory, production, and distribution, while an Aspen Plus model of an intensified Alcohol-to-Jet (ATJ) process with reactive distillation is optimized using Differential Evolution with Tabu List. In this framework, the ATJ block is not modeled as direct biomass-to-jet conversion. In the base case, ethanol is used as the representative alcohol intermediate. Therefore, the upstream biomass-to-alcohol section is represented through an effective bagasse-to-ethanol coefficient, whereas the Aspen Plus–DETL model explicitly describes the downstream ethanol-to-ATJ-range hydrocarbon blendstock upgrading section through dehydration, ethylene oligomerization, hydrogenation, and fractionation. Process yield, production cost, environmental impact, and feasible capacity are fed back into the supply chain model, making process performance endogenous rather than fixed. Results show that the decoupled supply chain baseline favors large production capacities, reducing TAC from approximately 1010 to 340 USD/tSAF and system-level EI99 from 1.110 to 1.059 kPt EI99/tSAF as capacity increases from 80,000 to 490,000 tSAF/year. This corresponds to an environmental reduction of approximately 5.2%. In contrast, isolated ATJ optimization exhibits nonlinear scale-dependent behavior, with process-only EI99 decreasing from approximately 1.70 to 0.55 kPt EI99/tSAF. The integrated framework identifies an intermediate capacity region of 120,000–300,000 tSAF/year, with TAC values of approximately 3400–6800 USD/tSAF and total EI99 values of approximately 0.78–1.31 kPt EI99/tSAF. The integrated base case at 200,000 tSAF/year has an EI99 value of approximately 1.063 kPt EI99/tSAF.
+
+1. Introduction
+
+The aviation sector is one of the most difficult transport sectors to decarbonize because it depends on high-energy-density liquid fuels and long-lived aircraft and infrastructure. According to the International Energy Agency, aviation accounts for approximately 2–3% of global energy-related CO2 emissions and close to 12% of transport-related emissions, with emissions rebounding to nearly 950 Mt CO2 in recent years as air traffic recovered. Demand for air travel could more than double by 2050, which increases the need for mitigation options that can be implemented without replacing the existing aviation system. Sustainable aviation fuel (SAF) is therefore considered a key near-term option because it can be used as a drop-in fuel in current aircraft and fuel distribution infrastructure. However, large-scale SAF deployment depends not only on conversion technology, but also on feedstock availability, logistics, production cost, environmental performance and regional demand [1,2].
+
+SAF production can be developed through different certified and emerging pathways, each one with specific feedstock requirements, process constraints and supply chain implications. Among them, the Alcohol-to-Jet (ATJ) pathway has received considerable attention because alcohol intermediates can be upgraded into jet-range hydrocarbons through dehydration, oligomerization, hydrogenation and final fractionation [3,4]. ATJ-SPK is recognized under ASTM D7566 as an alcohol-derived synthetic paraffinic kerosene blendstock, with eligible alcohol-related feedstocks including ethanol, isobutanol and isobutene from biomass, and a typical maximum blend ratio of 50% with conventional jet fuel [5]. In biomass-based ATJ systems, however, the lignocellulosic resource is not converted directly into aviation hydrocarbons. Biomass-derived carbohydrates must first be converted into an alcohol intermediate, which is then upgraded through the ATJ process. This distinction is important for process and supply chain modeling because biomass availability, alcohol yield, hydrogen demand and upgrading performance affect different parts of the production system.
+
+From a supply chain perspective, SAF production involves geographically dispersed biomass resources, seasonal availability, storage requirements, transport decisions and capital-intensive conversion facilities. mixed-integer linear programming (MILP) models have been widely used to optimize this type of system because they can represent facility location, biomass allocation, inventory management, production planning and product distribution. García and You [2] showed that supply chain design is a major driver of competitiveness in biomass-based process systems. Similarly, Galanopoulos et al. [6] showed that network design decisions can significantly affect the techno-economic performance of biorefineries. Nonetheless, many supply chain models represent the conversion process using fixed coefficients for yield, energy consumption, operating cost and environmental burden. This simplification is practical, but it can affect strategic conclusions when process performance changes with scale or operating conditions. Recent supply chain studies have also emphasized the role of metaheuristic algorithms for large-scale or computationally challenging network design problems. For example, Akbari-Aghghaleh et al. [7] developed a mixed-integer linear programming framework for a perishable closed-loop poultry supply chain and evaluated Differential Evolution, Simulated Annealing, Genetic Algorithm, and hybrid metaheuristic variants for different problem sizes. Their results highlight the usefulness of metaheuristic methods when exact solution of large supply chain models becomes computationally demanding. Similar trends have been reported in sustainable and closed-loop supply chain network design, where metaheuristics are frequently used to handle large-scale, multi-period, multi-echelon, or uncertainty-aware formulations [8].
+
+In the present work, the supply chain layer is solved as a MILP using CPLEX because the case study scale remains tractable and the exact solver provides a controlled optimality gap for the network decisions. Metaheuristic optimization is used at the process level through the DETL algorithm, where the Aspen Plus model introduces nonlinear, simulation-based, and potentially nonconvex behavior. Therefore, the contribution of this work is not to replace the MILP solver with a metaheuristic, but to integrate exact supply chain optimization with metaheuristic process-level optimization in a sequential MILP–Aspen Plus–DETL framework.
+
+Process performance in biofuel systems is sensitive to design choices, thermodynamic constraints, separation efficiency, heat integration and hydrogen consumption. Grossmann [9] showed that decoupling process and supply chain decisions can lead to suboptimal enterprise-wide solutions because interactions between decision levels are neglected. In SAF systems, this issue is particularly relevant because plant location and capacity are linked to feedstock logistics, while process configuration affects cost, environmental impact and feasible production scale. Consequently, a supply chain model based on fixed process parameters may identify a network that appears optimal under assumed coefficients, but does not reflect the behavior of the actual conversion system.
+
+At the process level, detailed simulations have been used to evaluate ATJ performance with greater rigor. Aspen Plus models can describe thermodynamic behavior, reaction–separation interactions and techno-economic indicators for alternative configurations. Romero-Izquierdo et al. [10] showed that process intensification can reduce energy consumption and total annualized cost in ATJ systems. More recently, Contreras-Zarazúa et al. [11] and Huerta-Rosas et al. [12] demonstrated that reactive distillation can improve economic and environmental performance by integrating reaction and separation. These studies confirm the importance of process design for SAF viability. However, they are usually carried out at plant scale under fixed feed and production conditions, without considering how regional biomass logistics, plant capacity and airport demand can modify the preferred operating region.
+
+Several studies have attempted to connect supply chain optimization with process simulation. Galanopoulos et al. [6] proposed an iterative framework linking MILP models with Aspen-based simulations for biorefinery techno-economic assessment. Panteli et al. [13] developed a superstructure-based MILP model that incorporates multiple processing technologies into supply chain design. These approaches represent important advances, but they often rely on simplified process representations or surrogate models to keep the optimization tractable. Moreover, they are not focused on SAF-specific ATJ systems with intensified process configurations. In Mexico, Matos-Ríos et al. [14] showed that optimal renewable aviation fuel supply chains depend strongly on regional biomass availability and logistics. As in many supply chain studies, however, process performance was treated as an external input. Therefore, the main goal of this work is to develop an integrated multiscale optimization framework for SAF production in Mexico by coupling a strategic MILP supply chain model with a rigorous Aspen Plus simulation of an intensified ATJ upgrading process. The process design and operating conditions are optimized using Differential Evolution with Tabu List (DETL), allowing nonlinear and nonconvex process behavior to be explored. The framework is applied to the production of ATJ-range hydrocarbon blendstock from a sugarcane bagasse-derived ethanol intermediate, with Mexico City Airport as the primary demand node. In this formulation, sugarcane bagasse is treated as the upstream lignocellulosic resource for alcohol-intermediate production, while the intensified ATJ model represents the downstream alcohol-to-ATJ-range hydrocarbon blendstock upgrading step.
+
+The proposed framework updates process yield, production cost, environmental burden, hydrogen demand, utility consumption and feasible capacity within the supply chain model instead of imposing them as fixed parameters. The model simultaneously optimizes biorefinery location, biomass allocation and production planning, while environmental performance is evaluated using the Eco-indicator 99 methodology [15]. This structure avoids collapsing the complete bagasse-to-SAF pathway into a single direct conversion coefficient and allows the effect of process-level behavior on network-level decisions to be evaluated explicitly.
+
+The main contribution of this work is threefold. First, it introduces an iterative MILP–Aspen Plus–DETL framework in which intensified ATJ process performance is updated endogenously within a regional SAF supply chain model. Second, it separates the upstream biomass-to-alcohol conversion from the downstream alcohol-to-ATJ-range hydrocarbon blendstock upgrading step, which improves the interpretation of feedstock, process, and supply chain assumptions. Third, it evaluates whether decoupled and integrated optimization lead to different conclusions regarding plant capacity, cost and environmental performance. Price volatility, policy incentives and stochastic uncertainty are not included in the base case, but the proposed framework provides a structured basis for incorporating process-level realism into regional SAF deployment planning. The remainder of this paper presents the supply chain and process models, the coupling strategy, the computational implementation, and the economic and environmental results.
+
+2. Materials and Methods
+
+2.1. System Boundary and ATJ Pathway Definition
+
+Figure 1 shows the system boundary adopted in this work. The pathway is divided into two sections: an upstream biomass-to-alcohol section and a downstream Alcohol-to-Jet (ATJ) upgrading section. Sugarcane bagasse is used as the lignocellulosic resource because of its availability in Mexico and its relevance as a non-edible agricultural residue [16,17]. The ATJ process does not use raw lignocellulosic biomass as the direct feed to jet-range hydrocarbons. Instead, bagasse-derived carbohydrates are first converted into an alcohol intermediate, which is then upgraded through dehydration, oligomerization, hydrogenation, and fractionation [3,4,18].
+
+The upstream section includes bagasse collection, pretreatment, enzymatic hydrolysis, fermentation, and alcohol separation. These stages provide the alcohol intermediate required by the ATJ section. In the base case, ethanol is used as the representative alcohol intermediate. This upstream biomass-to-ethanol section is not simulated in Aspen Plus. It is represented in the supply chain model through an effective sugarcane bagasse-to-ethanol coefficient, β E t O H , which includes pretreatment, hydrolysis, fermentation, ethanol recovery, and associated material losses. In the revised base case, βEtOH is interpreted as an effective recovered-ethanol coefficient that includes both C6 and C5 sugar contributions from dry sugarcane bagasse. The coefficient therefore accounts for cellulose-derived glucose fermentation and hemicellulose-derived C5 sugar co-fermentation, together with ethanol recovery/purification losses. This coefficient is not a direct bagasse-to-SAF yield and remains separate from the downstream ethanol-to-ATJ-range hydrocarbon blendstock upgrading yield calculated by the Aspen Plus–DETL model.
+
+The downstream section starts from the ethanol intermediate. This part is explicitly simulated in Aspen Plus and optimized through the DETL algorithm. The modeled sequence includes ethanol dehydration to ethylene, olefin oligomerization in an intensified reactive distillation configuration, hydrogenation, and final fractionation into ATJ-range hydrocarbon blendstock cut and co-product streams. The Aspen Plus–DETL block returns the process yield, specific production cost, environmental burden, hydrogen demand, utility consumption, and feasible capacity bounds used by the supply chain model.
+
+At the supply chain level, the MILP model represents biomass availability, harvest-area selection, biomass transport, storage, candidate biorefinery location, ethanol-intermediate production requirements, ATJ-range hydrocarbon blendstock production, inventory, and delivery to the airport demand node. The upstream coefficient β E t O H links bagasse input with ethanol-intermediate availability, whereas the Aspen Plus–DETL results describe the downstream ethanol-to-ATJ-range hydrocarbon blendstock upgrading performance. This structure keeps the biochemical conversion and the ATJ upgrading step separate, avoiding the use of a single direct bagasse-to-SAF conversion coefficient.
+
+The product from the downstream ATJ block is reported as ATJ-range hydrocarbon blendstock before final blending. ASTM D7566 Annex A5 defines the technical ATJ-SPK pathway for alcohol-derived synthetic paraffinic kerosene and its blending limit with conventional Jet A/A-1 [5]. This recognition is used here only to define the fuel pathway and product interpretation. CORSIA eligibility, emission-reduction claims, and final fuel certification require separate life cycle greenhouse gas assessment and fuel property testing [19,20]. Therefore, this study reports ATJ-range hydrocarbon blendstock production and uses Eco-indicator 99 as an environmental screening metric, but it does not claim CORSIA certification or final ASTM qualification of the modeled fuel.
+
+2.2. Integrated Problem Statement
+
+The proposed framework is formulated as an integrated multiscale optimization problem that couples supply chain decisions with process-design and operating decisions. This formulation follows the enterprise-wide optimization perspective, where supply, production, conversion, and distribution decisions are coordinated within the same decision structure, rather than solved as independent problems [9]. For SAF systems, this coordination is relevant because biomass availability, seasonal logistics, plant capacity, hydrogen demand, utility consumption, and process performance jointly affect deployment cost and feasibility [2,14,21].
+
+The framework contains two main blocks. The first block is a multi-period supply chain MILP model that determines harvest-area selection, biomass transport, biomass inventory, biorefinery location, production scheduling, ATJ-range hydrocarbon blendstock inventory, and distribution to the airport demand node. The second block is an Aspen Plus–DETL process model that evaluates the intensified ATJ upgrading section under the feed and production conditions imposed by the supply chain solution. The purpose of the coupling is to update process performance inside the network model instead of using fixed yield, cost, environmental, hydrogen, utility, and capacity coefficients.
+
+Let x denote the vector of supply chain decision variables, including harvest-area selection, biomass flows, biomass inventory, biorefinery location, production scheduling, product inventory, and airport distribution. Let z denote the vector of process-design and operating variables of the intensified ATJ process, including reactive distillation design variables, operating conditions, hydrogen consumption, utility demand, and fractionation performance. The integrated optimization problem is expressed in compact form as follows:
+
+min x , z T A C x , z , E I x , z
+
+(1)
+
+subject to:
+
+g S C x , θ z ≤ 0
+
+(2)
+
+g P z , ψ x ≤ 0
+
+(3)
+
+h C x , z = 0
+
+(4)
+
+where T A C ( x , z ) is the total annualized cost of the integrated SAF system, and E I ( x , z ) is the environmental impact expressed in Eco-indicator 99 kpoints. The function g S C represents the supply chain constraints, including biomass availability, storage, location, production, inventory, and distribution constraints. The function g P represents the process-level feasibility constraints evaluated by the Aspen Plus–DETL block. The term h C represents the coupling relationships between the network and process levels.
+
+The vector θ ( z ) contains the process-derived coefficients returned by the Aspen Plus–DETL block to the MILP. These coefficients include ATJ upgrading yield, specific process cost, specific environmental burden, hydrogen demand, utility intensity, and feasible capacity bounds. The vector ψ ( x ) contains the network-derived boundary conditions sent from the MILP to the process model, mainly the production target, ethanol-intermediate feed rate, and operating window.
+
+Two configurations are evaluated. In the decoupled baseline, conversion yield, specific production cost, environmental burden, hydrogen demand, utility consumption, and feasible capacity are fixed inputs in the supply chain model. In the integrated configuration, these quantities are recalculated by the Aspen Plus–DETL block and returned to the MILP during the outer-loop iterations. Thus, the network solution is obtained using process coefficients that depend on the selected production scale and operating conditions.
+
+Figure 2 summarizes the iterative MILP–Aspen Plus–DETL coupling strategy. At each iteration, the supply chain MILP sends the production target, ethanol-intermediate feed rate, and operating window to the Aspen Plus–DETL process block. The process block then returns updated ATJ yield, specific cost, environmental burden, hydrogen demand, utility intensity, and feasible capacity bounds. This exchange is repeated until the convergence criterion is satisfied.
+
+2.3. Supply Chain MILP Formulation
+
+The supply chain model is formulated as a deterministic, multi-period mixed-integer linear programming (MILP) problem. The network includes biomass harvest centers, candidate biorefinery locations, and Mexico City Airport as the demand node. The geographic distribution of biomass availability, harvest centers, candidate biorefinery locations, and the airport node is provided in Figure S1 and Tables S1–S3 of the Supplementary Materials. Available quantities of sugarcane bagasse and corn stover were sourced from SIAP [22], while the specific fuel demand data for the airport node were obtained from ASA [23]. Geographic coordinates were transformed into planar (X)–(Y) coordinates, expressed in kilometers relative to a common reference origin, to calculate transport distances consistently across the network. A monthly planning horizon is used to represent seasonal biomass availability, biomass degradation, inventory dynamics, production scheduling, and product distribution. This structure is commonly used in biomass and biofuel supply chain design because it allows facility location, capacity activation, transport flows, production planning, and storage decisions to be optimized simultaneously [2,14].
+
+The economic objective minimizes the total annualized cost of the supply chain system:
+
+min T A C = C b a g r a w + C u p + C t r , b i o + C i n v , b i o + C c a p + C A T J d i r + C H 2 + u t i l + C i n v , S A F + C T R , s a f
+
+(5)
+
+where C b a g r a w is the purchase cost of dry sugarcane bagasse; C u p is the effective upstream bagasse-to-ethanol processing cost; C t r , b i o and C i n v , b i o are biomass transportation and inventory costs; C c a p is the annualized network and upstream capacity contribution; C A T J d i r is the direct downstream ATJ process contribution; C H 2 + u t i l includes externally purchased hydrogen and process utilities; and C i n v , S A F + C T R , s a f and C T R , s a f are product inventory and final distribution costs. The direct ATJ term excludes purchased hydrogen and utilities, whereas the annualized capacity term excludes the downstream ATJ equipment contribution. Detailed numerical definitions and the complete TAC are provided in Section S8 of the Supplementary Materials. For interpretation purposes, the Total Annual Cost (TAC) objective was also disaggregated into its main cost components: biomass acquisition, biomass transportation, biomass inventory/storage, annualized biorefinery capacity, Aspen Plus–DETL process contribution, hydrogen and utility contributions, ATJ-range hydrocarbon blendstock inventory, and final product transportation. This decomposition was not introduced as an additional objective function; it was used only to interpret the difference between the decoupled and integrated scenarios. The detailed cost decomposition procedure and representative values are reported in Section S8 of the Supplementary Materials.
+
+The environmental objective minimizes the total Eco-indicator 99 score:
+
+min E I = E bio + E tr , B + E proc + E tr , F
+
+(6)
+
+where E bio , E tr , B , E proc , and E tr , F represent the environmental contributions of biomass supply, biomass transport, process conversion, and ATJ-range hydrocarbon blendstock distribution, respectively. In the decoupled baseline, C proc , E I proc , and the effective process yield are fixed coefficients. In the integrated framework, they are updated from the Aspen Plus–DETL process model.
+
+Pareto-efficient solutions are generated using the ε-constraint method. This approach is suitable for multiobjective mathematical programming because it avoids some limitations of weighted-sum scalarization in poorly scaled or nonconvex objective spaces [24]. In this formulation, (TAC) is minimized while the environmental objective is bounded by the following:
+
+min T A C
+
+(7)
+
+subject to:
+
+E I ≤ ϵ E I
+
+(8)
+
+g S C x , θ ( z ) ≤ 0
+
+(9)
+
+x ∈ X
+
+(10)
+
+where X includes all binary and continuous variable domains. The Pareto region is obtained by solving the MILP over a set of ϵ E I values spanning the feasible environmental impact range. The Eco-indicator factors, transportation impact coefficients, and cost parameters used in the economic and environmental objective functions are reported in Tables S4–S6 of the Supplementary Materials.
+
+Biomass harvesting is limited by seasonal availability:
+
+0 ≤ W i t ≤ A i t H i · ∀ i , t
+
+(11)
+
+Biomass inventory evolves according to the following:
+
+I i t B = 1 − δ i I i , t − 1 B + W i t − ∑ j X i j t · ∀ i , t
+
+(12)
+
+where δ i accounts for biomass degradation during storage. Biomass transport from harvest centers to inactive biorefineries is not allowed:
+
+X i j t ≤ M Y j · ∀ i , j , t
+
+(13)
+
+where M is a sufficiently large upper bound.
+
+The number of selected biorefineries is constrained as follows:
+
+∑ j Y j = 1
+
+(14)
+
+for the base case with a single integrated biorefinery. This constraint can be relaxed in future multi-site extensions.
+
+In the base case, the alcohol intermediate is ethanol. Therefore, the upstream conversion relation is written as follows:
+
+F j t E t O H = β E t O H ∑ i X i j t
+
+(15)
+
+where is the ethanol-intermediate flow available at biorefinery j during period t, is the sugarcane bagasse flow transported from harvest center i to biorefinery j, and is the effective bagasse-to-ethanol conversion coefficient. This coefficient is not estimated by the Aspen Plus ATJ model. Instead, it represents the upstream biomass-to-alcohol section, including pretreatment, enzymatic hydrolysis, fermentation, ethanol separation, and material losses. The value of β E t O H is calculated from the upstream conversion data reported in Table A1 [16,17,25,26].
+
+The coefficient β E t O H was defined on a dry biomass basis as recovered ethanol per unit mass of dry sugarcane bagasse. In the revised base case, this coefficient includes both C6 and C5 sugar contributions and accounts for pretreatment, enzymatic hydrolysis, fermentation, ethanol recovery/purification, and associated material losses. The detailed derivation of β E t O H , including the dry-basis definition, C6 and C5 contributions, stoichiometric factors, parameter sources, calculated value, and sensitivity range, is provided in Section S3 of the Supplementary Materials.
+
+The upstream ethanol coefficient β E t O H is kept separate from the downstream ATJ upgrading yield η A T J . The former converts sugarcane bagasse into ethanol intermediate, whereas the latter converts ethanol intermediate into ATJ-range hydrocarbon blendstock.
+
+The production relation is therefore:
+
+P j t = η A T J z F j t E t O H = η A T J z β E t O H ∑ i X i j t
+
+(16)
+
+where P j t is the ATJ-range hydrocarbon blendstock production at biorefinery j during period t, and η A T J z is the ATJ upgrading yield returned by the Aspen Plus–DETL block as a function of the process-design vector z.
+
+The interpretation of β E t O H depends on the source used to define the upstream biochemical conversion. In this work, it is treated as an effective literature-based coefficient. If the source accounts only for C6 sugar fermentation, hemicellulosic C5 sugars are outside the base-case ethanol yield. If the source includes C5–C6 co-fermentation, both sugar fractions are included. In all cases, β E t O H must include ethanol recovery losses after fermentation; otherwise, a separate separation–recovery factor is required.
+
+ATJ-range hydrocarbon blendstock production is restricted by the feasible capacity range returned by the process model:
+
+P j t ≤ Q ¯ P τ t Y j · ∀ j , t
+
+(17)
+
+P j t ≥ Q P τ t Y j − ω 1 − Y j · ∀ j , t
+
+(18)
+
+where Q P and Q ¯ P are the minimum and maximum feasible ATJ production rates, τ t converts the capacity basis to the monthly planning period, and ω is a sufficiently large relaxation parameter for inactive facilities.
+
+Product inventory at the biorefinery is calculated as follows:
+
+I j t F = I j , t − 1 F + P j t − ∑ k S j k t · ∀ j , t
+
+(19)
+
+where I j t F is ATJ-range hydrocarbon blendstock inventory, and S j k t is the product shipped from biorefinery j to demand node k during period t.
+
+Demand satisfaction is imposed as follows:
+
+∑ j S j k t ≥ D k t · ∀ k , t
+
+(20)
+
+where D k t is the demand at node k during period t. If unmet demand is allowed for sensitivity analysis, the constraint is written as follows:
+
+∑ j S j k t + U k t = D k t · ∀ k , t
+
+(21)
+
+where U k t is unmet demand penalized in the objective function. In the base case, unmet demand is not allowed.
+
+All continuous variables are nonnegative:
+
+W i t , X i j t , I i t B , F j t a l c , P j t , S j k t , I j t F ≥ 0
+
+(22)
+
+and the location variables are binary:
+
+Y j , H i ∈ { 0,1 }
+
+(23)
+
+Specific details regarding the geographic data and logistical constraints used to configure the network model are detailed in Sections S1 and S2 of the Supplementary Materials.
+
+Decoupled Supply Chain Baseline
+
+A decoupled supply chain baseline was solved to provide the reference case for the integrated framework. In this configuration, the MILP superstructure, objective functions, geographic data, demand node, biomass availability, inventory equations, and logistics constraints are the same as those described in Section 2.3. The difference is that the ATJ process is represented by fixed performance coefficients and is not re-optimized during the supply chain calculation.
+
+The fixed process parameter vector used in the decoupled case is defined as follows:
+
+θ d e c = η A T J , d e c , c P , d e c , e P , d e c , h H 2 , d e c , u P , d e c , Q _ P , d e c , Q ¯ P , d e c
+
+(24)
+
+where η A T J , d e c is the fixed ATJ upgrading yield, c P , d e c is the fixed specific process cost, e P , d e c is the fixed specific environmental burden, h H 2 , d e c is the fixed hydrogen requirement, u P , d e c is the fixed utility intensity, and Q _ P , d e c and Q ¯ P , d e c are the fixed feasible production-capacity bounds. These parameters were taken from the base-case process data reported in the Supplementary Materials and were kept constant for all capacity scenarios.
+
+The decoupled MILP was solved as follows:
+
+min T A C x ; θ d e c
+
+(25)
+
+subject to:
+
+E I x ; θ d e c ≤ ε E I
+
+(26)
+
+g S C x , θ d e c ≤ 0 x ∈ X
+
+(27)
+
+where ( x ) contains the supply chain decision variables and ( X ) includes the continuous and binary variable domains. No boundary conditions were sent from the MILP to Aspen Plus, and no updated process coefficients were returned to the supply chain model. Therefore, production cost, environmental burden, hydrogen demand, utility consumption, ATJ yield, and feasible capacity remained invariant during each baseline optimization run.
+
+For each capacity scenario, the MILP optimized harvest-area selection, biomass transport, biomass inventory, biorefinery location, production scheduling, ATJ-range hydrocarbon blendstock inventory, and distribution to Mexico City Airport. Pareto-efficient solutions were generated using the same constraint procedure described in Section 2.3. This baseline represents the conventional supply chain formulation in which spatial and temporal logistics are optimized using fixed conversion and process-performance parameters [2,14]. Its results are used in Section 3.1 to evaluate how the conclusions change when ATJ process performance is updated through the Aspen Plus–DETL block.
+
+2.4. Intensified ATJ Process Simulation and Optimization Variables
+
+The Aspen Plus model represents the downstream ethanol-to-ATJ-range hydrocarbon blendstock upgrading section. The feed to this block is ethanol obtained from the upstream biomass-to-alcohol section defined in Section 2.1. Raw sugarcane bagasse is not introduced into the Aspen Plus process model.
+
+The simulated ATJ route includes four main stages. First, ethanol is dehydrated to ethylene. Second, ethylene is converted into higher olefinic intermediates through oligomerization. Third, the olefinic products are hydrogenated to paraffinic hydrocarbons. Finally, the hydrocarbon mixture is fractionated into an ATJ-range hydrocarbon blendstock cut and heavier co-product streams. This sequence follows the core ATJ pathway for upgrading alcohols into jet-range hydrocarbon blendstocks [3,4].
+
+Process intensification is introduced in the oligomerization–separation section. In this configuration, reaction and separation are integrated through a reactive distillation-based system, following the principle that combined reaction–separation units can reduce equipment count, improve energy efficiency, and modify equilibrium-limited behavior [11,12,27]. The reactive distillation configuration used for the ethylene-to-SAF upgrading step is shown in Figure S3 of the Supplementary Materials.
+
+A literature-normalized ATJ/ETJ benchmark was incorporated to contextualize the process-level contribution of the reactive distillation-based configuration. The benchmark considers four reference levels: Rivas-Interian et al. [18] as the closest distributed biomass–ethanol–biojet process for Mexico, the ATJ/ETJ review by Wang and Tao [3] as the conventional pathway reference, and the intensified ATJ studies of Villareal-Hernández et al. [28] and Contreras-Zarazúa et al. [11] as process-intensification references.
+
+This benchmark was not introduced as an additional supply chain scenario and was not intended to replace a full Aspen Plus simulation of a conventional ATJ process. Rather, it provides a process-level reference for interpreting the intensified oligomerization–separation configuration under a common ethanol-intermediate and ATJ-range hydrocarbon blendstock product interpretation. The decoupled and integrated MILP scenarios were then used to evaluate the separate system-level effect of propagating process-performance coefficients into regional supply chain decisions. Details of the benchmark and normalization basis are provided in Section S5 of the Supplementary Materials.
+
+The reactive distillation column was represented in Aspen Plus using equilibrium stages for vapor–liquid phase calculations. Chemical reactions assigned to the designated reactive stages were evaluated using the literature-based kinetic expressions adopted from Villareal-Hernández et al. [28] for ethylene oligomerization and olefin hydrogenation. Therefore, the term “equilibrium” refers exclusively to the vapor–liquid equilibrium formulation of the column stages and does not imply chemical equilibrium or Gibbs equilibrium reaction modeling.
+
+The overall stoichiometric relationships for ethanol dehydration, ethylene oligomerization, and olefin hydrogenation were used to define the reaction sequence and to verify carbon and hydrogen balances. They were not used as substitutes for the kinetic rate expressions in the reactive stages. Catalyst deactivation, aging, regeneration, and long-term selectivity decay were not included. Consequently, the model is used as a steady-state process-performance generator, rather than as a predictive model of catalyst lifetime.
+
+Catalyst behavior was therefore represented through the kinetic reaction network, operating conditions, conversion/selectivity behavior, and reactive distillation feasibility constraints reported for the intensified ATJ process. Catalyst deactivation, time-dependent activity loss, catalyst regeneration, and long-term selectivity decay were not included. This modeling choice is consistent with the objective of the present work, which is to generate process-performance coefficients for integration with the MILP supply chain model, rather than to perform catalyst lifetime prediction.
+
+The Aspen Plus–DETL model was validated at the process-performance level using simulation convergence, carbon balance closure, hydrogen consumption consistency, carbon number distribution, SAF-range product definition, utility demand, and comparison with literature-reported ATJ and intensified ATJ systems. The kinetic source, modeling assumptions, and validation criteria are summarized in Section S4 of the Supplementary Materials.
+
+The modeled product stream was defined as the liquid fraction enriched in C8–C16 hydrocarbons. Based on the simulated component distribution, the cut contains approximately 81.10 wt% paraffinic hydrocarbons and 18.90 wt% residual α-olefins. It is therefore reported as a C8–C16 ATJ-range hydrocarbon blendstock, rather than as ATJ-SPK-equivalent material. The product label is a process model classification used for yield, cost, and supply chain calculations. Complete olefin saturation, fuel property testing, ASTM D7566 qualification, and blending evaluation are outside the scope of the present model. [5].
+
+The process-design vector optimized by the DETL algorithm is:
+
+z = { N R D , N F , R R , D R , T R , P R , F H 2 , Q r e b , Q c o n d , α s p l i t }
+
+(28)
+
+where N R D is the number of reactive distillation stages, N F is the feed stage, R R is the reflux ratio, D R is the distillate rate, T R and P R represent operating temperature and pressure variables, F H 2 is the hydrogen feed rate, Q r e b and Q c o n d are reboiler and condenser duties, and α s p l i t represents product split or fractionation-related variables. The complete list of decision variables, physical interpretation, lower bounds, and upper bounds is reported in the Supplementary Materials.
+
+The optimization variables and their bounds are summarized in Table 1. The bounds reported in Table 1 correspond to the values used in the DETL search and Aspen Plus simulations.
+
+The 70–150 °C and 19–20 bar bounds correspond to the reactive distillation configuration evaluated in this work. Higher temperature and pressure ranges reported for conventional stand-alone oligomerization reactors are literature-based benchmarks and were not imposed as Aspen Plus–DETL decision-variable bounds.
+
+Each Aspen Plus evaluation returns product distribution, ATJ upgrading yield, hydrogen consumption, utility requirements, equipment sizing variables, operating cost, environmental coefficients, and convergence status. In the DETL implementation, Q r e b and Q c o n d were included as manipulated Aspen Plus variables within the prescribed bounds reported in Table 1, rather than treated only as post-processing outputs. A candidate solution is accepted as feasible only if the simulation converges without mass- or energy-balance errors; all manipulated and decision variables remain within their prescribed bounds; hydrogenation requirements are satisfied, and the product distribution contains a SAF-range hydrocarbon fraction consistent with the ATJ-range hydrocarbon blendstock definition.
+
+Thermodynamic methods were selected according to the dominant chemistry of each process section. The Peng–Robinson equation of state was used for hydrocarbon-rich sections because it is widely applied to vapor–liquid equilibrium and volumetric calculations in refinery and petrochemical systems [29,30]. The NRTL activity coefficient model was used for polar, nonideal alcohol–water sections, where local composition effects are relevant [31]. Aspen Plus column specifications, stream conventions, reaction assumptions, and outlet-stream compositions are provided in Section S3 of the Supplementary Materials.
+
+2.5. Process-Level Economic and Environmental Performance Metrics
+
+The Aspen Plus–DETL block also provides the process-level economic and environmental coefficients used by the supply chain model. These coefficients include the specific process cost, specific environmental burden, hydrogen demand, utility intensity, and feasible production-capacity bounds.
+
+The process-level total annualized cost is calculated as follows:
+
+T A C P z = C R F ⋅ F C I z + C u t i l z + C H 2 z + C c a t z + C O M z
+
+(29)
+
+where F C I ( z ) is the fixed capital investment, C u t i l z is the annual utility cost, C H 2 z is the hydrogen cost, C c a t z is the catalyst or consumable cost, and C O M z is the operation and maintenance cost.
+
+The Aspen Plus–DETL model evaluates the gross downstream ATJ cost, including capital recovery, catalysts and consumables, direct operation and maintenance, purchased hydrogen, and process utilities. For transfer to the MILP, this gross cost is partitioned into two mutually exclusive coefficients: a direct ATJ process coefficient and a purchased hydrogen-and-utility coefficient. The direct coefficient includes downstream ATJ equipment, catalysts, consumables, and direct operation and maintenance, but excludes ethanol feed, hydrogen, steam, electricity, and cooling services. Only the separated coefficients are used in the system-level TAC objective, thereby preventing double counting. The numerical decomposition is reported in Table S21.
+
+The capital recovery factor is:
+
+C R F = i r 1 + i r n 1 + i r n − 1
+
+(30)
+
+where i r i is the annual interest rate and n is the plant lifetime.
+
+Equipment costs are updated using standard cost-index correction:
+
+C u = C u , r e f S u S u , r e f m u C E P C I C E P C I r e f
+
+(31)
+
+where C u is the purchase cost of equipment u, S u is the equipment size, m u is the scaling exponent, and CEPCI is the Chemical Engineering Plant Cost Index for the selected cost year [32].
+
+The process-level environmental burden is calculated as follows:
+
+E I P z = ∑ l ∈ L γ l q l z
+
+(32)
+
+where q l z is the consumption or emission flow associated with item l, and γ l is the corresponding Eco-indicator 99 factor. The set L includes electricity, steam, cooling utilities, hydrogen, construction materials, and relevant organic emissions [15].
+
+The annual environmental burdens generated by the process and supply chain models were aggregated before conversion to the common SAF functional basis. For each evaluated solution r, the total specific environmental impact was calculated as follows:
+
+e r total = I r b a g a s s e + I r u p s t r e a m + I r b i o m a s s t r a s p o r t + I r A T J + I r i n v e n t o r y + I r p r o d u c t t r a s p o r t 1000 Q r S A F
+
+(32a)
+
+where I r m is the annual EI99 burden of component mmm, expressed in EI99 kpoints/year; Q r SAF is annual SAF production in tSAF/year; and e r total is the resulting system-level impact in kPt EI99/tSAF. The numerical derivation of each contribution, the inventory formulation, the biomass transport term, and the complete component level are provided in Section S33 of the Supplementary Materials.
+
+The downstream ATJ environmental coefficient transferred from the Aspen Plus–DETL block is 0.558 kPt EI99/tSAF. This coefficient already includes hydrogen, steam, electricity, cooling water, direct process, construction material, and relevant emission contributions associated with the downstream ATJ boundary. Consequently, these subcomponents are not added again when the aggregate ATJ coefficient is used in the system-level objective. Their individual values are presented only as a disaggregation of the 0.558 kPt EI99/tSAF subtotal in Table S34.
+
+Eco-indicator 99 (EI99) was used as the environmental metric because the integrated optimization framework requires a single scalar environmental coefficient that can be exchanged between the Aspen Plus–DETL process block and the MILP supply chain model. This scalar coefficient is needed to update the environmental objective consistently during the outer-loop coupling. Therefore, EI99 was used as an aggregated single-score screening indicator for optimization and relative comparison among process–supply chain configurations evaluated under the same inventory boundary, functional basis, and modeling structure [15].
+
+More recent LCIA methods, such as ReCiPe, can provide midpoint and endpoint indicators and can also be aggregated into single-score results when normalization and weighting are applied [33]. However, that aggregation requires additional methodological choices regarding midpoint or endpoint level, perspective, normalization, weighting, and category prioritization. In this work, EI99 was retained to provide a consistent single-score objective for optimization, not to replace a full ReCiPe-, GREET-, GWP100-, or CORSIA-compatible life cycle assessment [15,19,20,33,34].
+
+The EI99 results should therefore not be interpreted as regulatory carbon intensity values and do not represent CORSIA eligibility, GREET carbon intensity, ASTM fuel certification, or pathway-specific greenhouse gas certification requirements [5,15,19,20,33,34]. If ReCiPe or a comparable current LCIA method were used, the absolute environmental scores and category-level interpretation would change. In particular, hydrogen consumption, steam and electricity demand, and regional biomass transportation could receive greater visibility in midpoint categories such as climate change, fossil resource scarcity, particulate matter formation, and acidification. Nevertheless, the main methodological conclusion is expected to remain valid: process-level coefficients such as SAF yield, hydrogen demand, utility intensity, environmental burden, and feasible capacity must be propagated into the supply chain model because they affect the environmental ranking of SAF deployment alternatives.
+
+The initial design parameters, cost assumptions, environmental factors, Aspen Plus stream summary, and environmental metric boundary are reported in Sections S3, S4 and S9 of the Supplementary Materials. The process-level environmental burden was evaluated using Eco-indicator 99 (EI99) as a single-score screening metric suitable for multiobjective optimization. EI99 was selected because it provides a scalar environmental objective that can be consistently exchanged between the Aspen Plus–DETL process block and the MILP supply chain model. The EI99 inventory includes electricity, steam, cooling utilities, hydrogen, construction materials, and relevant organic emissions associated with the process model [15].
+
+The EI99 score was used only to compare relative environmental trends among alternative process–supply chain configurations. It should not be interpreted as a regulatory carbon intensity value or as evidence of ASTM, CORSIA, or pathway-specific greenhouse gas certification. Therefore, the EI99 results do not replace a full life cycle assessment based on CORSIA, GREET, ReCiPe, GWP100, or other pathway-specific SAF certification methods. A detailed interpretation of the environmental metric boundary is provided in Section S9 of the Supplementary Materials [5,15,19,20,33,34].
+
+2.6. DETL-Based Process Optimization
+
+The intensified ATJ process model was optimized using Differential Evolution with Tabu List (DETL). This method was selected because the Aspen Plus model defines a nonlinear, nonconvex, simulation-based optimization problem. Gradient information is not directly available, and some candidate designs may fail to converge near infeasible operating regions. Differential Evolution (DE) is suitable for this type of continuous global optimization because it uses mutation, crossover, and selection operators without requiring derivative information [35]. The tabu list extension follows the tabu search (TS) framework [36] and was included to discourage the search from revisiting recently explored regions, improving diversification in constrained process-optimization problems [37].
+
+For each individual r at generation g, a mutant vector is generated as follows:
+
+v r , g = z a , g + F z b , g − z c , g
+
+(33)
+
+where z a , g , z b , g , and z c , g are randomly selected population members, and F is the mutation factor. Binomial crossover is then applied to generate the trial vector:
+
+u r , m , g = u r , m , g , i f r a n d m ≤ C R o r m = m r a n d z r , m , g , o t h e r w i s e
+
+(34)
+
+where CR is the crossover probability, m is the variable index, and m r a n d ensures that at least one variable is inherited from the mutant vector.
+
+Selection is performed according to the following:
+
+z r , g + 1 = u r , g , i f Φ u r , g ≤ Φ z r , g a n d u r , g ∉ T z r , g , o t h e r w i s e
+
+(35)
+
+where T is the tabu list and Φ(z) is the penalized objective function. For each Aspen Plus evaluation, infeasible or nonconvergent simulations are penalized as follows:
+
+Φ z = f z + ρ 1 V i n e q z + ρ 2 V e q z + ρ 3 Ω c o n v z
+
+(36)
+
+where f ( z ) is the economic or environmental objective, V i n e q z and V e q z are inequality and equality constraint-violation measures, Ω c o n v z is a binary penalty for Aspen nonconvergence, and ρ 1 , ρ 2 , and ρ 3 are penalty coefficients.
+
+The DETL algorithm was implemented with a population size of 50, mutation factor F = 0.8, crossover probability CR = 0.9, and a tabu list length of 10. The maximum number of generations was set to 200. The inner process optimization was terminated when the relative improvement in the best objective value was lower than 1 × 10−4 for 20 consecutive generations. To reduce the effect of stochastic variability, each process-optimization case was solved using three independent random seeds, and the best feasible solution was retained. The dispersion among independent runs was recorded to assess the robustness of the process-optimization results. The use of DETL is consistent with process-level numerical optimization studies, in which external optimizers are coupled with detailed process simulators. Such simulator-based optimization is useful when gradients are not directly available, when convergence failures can occur, or when the feasible region is nonlinear and discontinuous. In this work, DETL was therefore assigned to the Aspen Plus process block, whereas the supply chain network was solved by MILP/CPLEX to retain exact optimization of the linear network subproblem.
+
+A hyperparameter sensitivity analysis for the DETL algorithm (detailed in Section S6.2 of the Supplementary Materials) confirmed that the selected base settings provided a practical balance between computational efficiency and global search accuracy, as higher-search configurations produced only marginal improvements in process performance, while significantly increasing execution time.
+
+2.7. MILP–Aspen Plus–DETL Coupling Strategy
+
+The supply chain MILP and the Aspen Plus–DETL process model were linked through an iterative decomposition strategy. At each outer iteration (n), the MILP first solves the supply chain problem using the current process-performance coefficients. The resulting production target and feed conditions are then sent to the Aspen Plus–DETL block. The proposed coupling should be interpreted as an iterative sequential decomposition strategy, not as a fully simultaneous mixed-integer nonlinear optimization formulation. At each outer iteration, the MILP is solved with fixed process-performance coefficients, and the Aspen Plus–DETL block is then solved under the production target and feed conditions generated by the MILP solution. The updated process coefficients are subsequently returned to the MILP. Therefore, the framework seeks consistency between network-level decisions and process-level performance, rather than solving all supply chain and process-design variables in a single monolithic optimization problem.
+
+The network-derived boundary conditions are defined as follows:
+
+ψ n = { Q t a r g e t , n , F a l c , n , χ f e e d , n }
+
+(37)
+
+where Q t a r g e t , n is the ATJ-range hydrocarbon blendstock production target, F a l c , n is the alcohol-intermediate feed rate, and χ f e e d , n represents the feed composition or quality assumptions imposed by the supply chain solution.
+
+The Aspen Plus–DETL process block then optimizes the intensified ATJ process under these boundary conditions and returns the updated process-performance vector:
+
+θ n = { η A T J , n , c P , n , e P , n , h H 2 , n , u P , n , Q _ P , n , Q ¯ P , n }
+
+(38)
+
+where η A T J , n is the effective ATJ upgrading yield, c P , n is the specific process cost, e P , n is the specific environmental burden, h H 2 , n is the hydrogen requirement, u P , n is the utility intensity, and Q _ P , n and Q ¯ P , n are the minimum and maximum feasible production throughputs.
+
+These process-derived coefficients are inserted into the MILP through the following coupling relationships:
+
+P j t n = η A T J , n F j t a l c
+
+(39)
+
+C j t p r o c , n = c P , n P j t
+
+(40)
+
+E I j t p r o c , n = e P , n P j t
+
+(41)
+
+Q _ P , n τ t Y j ≤ P j t ≤ Q ¯ P , n τ t Y j
+
+(42)
+
+The outer-loop convergence criterion is defined as follows:
+
+Δ n = max T A C n − T A C n − 1 max 1 , T A C n − 1 , E I n − E I n − 1 max 1 , E I n − 1
+
+(43)
+
+Convergence is reached when:
+
+Δ n ≤ 1 × 10 − 4
+
+(44)
+
+The optimality properties of the framework follow from this decomposition. For a fixed vector of process-performance coefficients, the MILP subproblem is solved to the prescribed CPLEX optimality gap. For a fixed production target and feed condition, the Aspen Plus–DETL block provides the best feasible process solution found by the stochastic DETL search under the specified convergence and feasibility criteria. The outer loop therefore converges to a process–supply chain consistent fixed point when the exchanged coefficients and objective indicators change by less than the prescribed tolerance. This procedure does not guarantee the global optimum of a fully simultaneous nonlinear mixed-integer formulation. Instead, it provides a reproducible and computationally tractable consistency solution, in which process coefficients are updated endogenously within the supply chain model.
+
+A maximum of 25 outer iterations was imposed to limit computational time. If Aspen Plus did not converge for a network-derived production target, the corresponding process point was marked as infeasible, penalized during the DETL search, and excluded from the MILP coefficient update.
+
+This procedure updates the MILP with process coefficients obtained from the optimized Aspen Plus model at each outer iteration, as summarized in Figure 3. In this way, the supply chain solution is evaluated using process performance consistent with the production target and feed conditions generated by the network model. In the base-case MILP formulation, a single-biorefinery constraint was imposed to represent a centralized deployment strategy and to isolate the effect of process–supply chain coupling on one dominant production site. This restriction was implemented as s u m j y j = 1 , where y j is the binary variable associated with the activation of candidate biorefinery j . To evaluate the effect of this assumption, an additional relaxation analysis was conducted by replacing this condition with s u m j y j ≤ N b i o m a x , where N b i o m a x was varied from one to three.
+
+2.8. Computational Implementation and Reproducibility Protocol
+
+The integrated framework was implemented using three computational components. The supply chain MILP was formulated in GAMS and solved with CPLEX. The intensified ATJ process was simulated in Aspen Plus. The nonlinear process optimization was carried out with an external DETL algorithm, which called Aspen Plus during the search and retrieved the corresponding process-performance coefficients.
+
+At each coupling iteration, the MILP solution provided the production target and feed conditions for the Aspen Plus–DETL block. The process block then returned updated values of ATJ yield, process cost, environmental burden, hydrogen demand, utility consumption, and feasible capacity bounds. These values were transferred back to the MILP as updated coupling coefficients.
+
+The MILP relative optimality gap was set to 1 × 104. The outer MILP–Aspen Plus–DETL loop used a convergence tolerance of 1 × 104 for both total annualized cost and EI99, with a maximum of 25 outer iterations. The inner DETL optimization used the parameter settings reported in Table A6. Aspen Plus simulations that did not converge, or that produced infeasible mass- or energy-balance results, were penalized and excluded from the feasible solution archive.
+
+All simulations were performed on an Intel Core i7 processor at 3.6 GHz with 32 GB RAM. The computational settings are summarized in the Supplementary Materials. To support reproducibility, the geographic data, logistics parameters, economic assumptions, environmental factors, and Aspen Plus input data used in the case study are provided in Sections S1–S3 of the Supplementary Materials.
+
+To evaluate the robustness of the outer-loop solution, the integrated procedure was also initialized with alternative process-coefficient vectors. The tested initializations included a low-performance case, the base decoupled coefficient set, and a high-performance case. For each initialization, the number of outer iterations, final capacity, selected location, TAC, EI99, and final process-coefficient vector were recorded. The convergence histories and initialization-sensitivity results are reported in Section S6 of the Supplementary Materials.
+
+2.9. Case Study Data and Assumptions
+
+The case study was defined for SAF production in Mexico using second-generation sugarcane bagasse as the lignocellulosic resource and Mexico City Airport as the demand node. The spatial data include biomass-producing regions, harvest center coordinates, candidate biorefinery locations, and the airport market node. These data are reported in Figure S1 and Tables S1–S3 of the Supplementary Materials. The case study structure follows previous work on renewable aviation fuel supply chain design in Mexico, where biomass geography, seasonal availability, facility location, and airport demand were shown to affect optimal network decisions [14,38].
+
+The supply chain model uses a one-year monthly planning horizon. This resolution allows the model to represent seasonal biomass availability, biomass inventory, biomass degradation, production scheduling, and ATJ-range hydrocarbon blendstock distribution. The process model operates on a continuous production basis. The connection between monthly supply chain decisions and continuous process operation is established through the throughput scaling factor τ t .
+
+The following assumptions define the base case:
+
+Sugarcane bagasse is treated as the upstream lignocellulosic resource for ethanol-intermediate production.
+
+Ethanol is used as the representative alcohol intermediate.
+
+The upstream bagasse-to-ethanol section is represented by the effective conversion coefficient β E t O H , which includes pretreatment, enzymatic hydrolysis, fermentation, ethanol recovery, and associated material losses.
+
+The Aspen Plus model represents the downstream ethanol-to-ATJ-range upgrading section, including dehydration, oligomerization, hydrogenation, and fractionation at the level required to generate process-performance coefficients.
+
+The modeled C8–C16-enriched product is reported as an ATJ-range hydrocarbon blendstock. Because residual α-olefins remain in the simulated product cut, it is not designated as certified or compositionally equivalent ATJ-SPK [5].
+
+The reported ATJ-range hydrocarbon blendstock quantities do not imply standalone ASTM or CORSIA certification of the modeled fuel; final qualification requires blending and fuel property compliance, while sustainability eligibility requires pathway-specific life cycle greenhouse gas assessment [5,19,20].
+
+Hydrogen is purchased externally. Hydrogen demand and utility requirements are calculated by the Aspen Plus–DETL block and transferred to the MILP as separate economic coefficients. The direct process cost coefficient excludes purchased hydrogen, steam, electricity, and cooling services. For environmental accounting, however, hydrogen and utility burdens remain internal subcomponents of the aggregate downstream ATJ EI99 coefficient and are not added separately to the system-level environmental objective.
+
+Policy incentives, carbon credits, price volatility, stochastic demand, and land-use-change effects are not included.
+
+Environmental performance is evaluated using Eco-indicator 99 as a screening indicator compatible with the optimization framework.
+
+Initial and final inventory conditions are defined through the inventory policy assumptions reported in the Supplementary Materials.
+
+A deterministic screening sensitivity analysis was included to evaluate the robustness of the integrated solution with respect to key upstream, process, market, and environmental parameters. The parameters varied were the effective bagasse-to-ethanol coefficient, available sugarcane bagasse, hydrogen price or hydrogen cost coefficient, electricity/utility price or utility cost coefficient, SAF demand, and the environmental burden assigned to process utilities. Each parameter was evaluated using low, base, and high values while keeping the remaining parameters at their base-case values. The objective of this analysis was not to perform a full stochastic uncertainty assessment, but to identify which assumptions most influence biomass demand, preferred capacity, TAC, EI99, and the selected deployment region.
+
+Unless otherwise stated, SAF production capacity is reported in tSAF/year, TAC in USD/tSAF, and environmental impact in kPt EI99/tSAF, where 1 kPt corresponds to 1000 EI99 points. Biomass quantities are reported on a dry-mass basis, and the upstream bagasse-to-ethanol coefficient is reported as t EtOH/t dry sugarcane bagasse. All process and supply chain environmental burdens were first calculated as annual EI99 points and subsequently divided by annual SAF production and by 1000. Therefore, every specific environmental result reported in this work uses the same functional unit of 1 t of ATJ-range hydrocarbon blendstock.
+
+The process-only, supply chain-only/decoupled, and integrated configurations retain different system boundaries. The process-only configuration includes the downstream Aspen Plus–DETL ATJ block. The supply chain-only/decoupled configuration includes biomass production, upstream bagasse-to-ethanol processing, logistics, inventory, final product transportation, and a fixed downstream ATJ environmental coefficient. The integrated configuration updates the process and network conditions iteratively through the MILP–Aspen Plus–DETL coupling. Despite these boundary differences, all specific environmental values are expressed using the same unit of kPt EI99/tSAF. The environmental coefficients, unit conversions, numerical component balances, and capacity-dependent EI99 calculations used to generate Figures 4, 6, 8, and 9 are documented in Section S10.1 and Tables S33–S35 of the Supplementary Materials.
+
+3. Results
+
+3.1. Baseline Analysis: Decoupled Supply Chain Optimization
+
+The decoupled supply chain baseline provides the reference case against which the value of the proposed multiscale integration can be evaluated. In this scenario, the intensified ATJ process is represented through fixed performance coefficients, while the MILP model optimizes facility location, biomass allocation, production planning, and product distribution. This structure is consistent with conventional biomass and renewable fuel supply chain models, where spatial and temporal logistics are optimized using fixed conversion yields, costs, and environmental factors [2,14].
+
+Figure 4a shows that increasing production capacity from approximately 80,000 to 490,000 tSAF/year reduces TAC from about 1010 to 340 USD/tSAF, corresponding to an approximate 59% reduction. Figure 4c shows a more moderate environmental response. After aggregating biomass production, upstream processing, transportation, the fixed downstream ATJ coefficient, and inventory contributions on a common functional basis, total EI99 decreases from approximately 1.110 to 1.059 kPt EI99/tSAF. This represents a reduction of approximately 5.23%.
+
+The smaller environmental reduction occurs because biomass production, upstream bagasse-to-ethanol processing, and the downstream ATJ contribution remain approximately proportional to SAF output. Only the inventory-related fixed annual burden is substantially diluted as production capacity increases, while the biomass transport contribution increases moderately because larger capacities require a broader biomass-sourcing region.
+
+The baseline therefore provides a useful reference, but it should not be interpreted as the final system optimum. It shows what the supply chain model would select if the ATJ process behaved as a static conversion block across all production scales. In practical terms, the decoupled formulation favors capacity expansion because it does not account for nonlinear process behavior, intensified unit operating limits, or changes in process performance with throughput. The following sections test whether this conclusion remains valid when the ATJ process is optimized in Aspen Plus–DETL and its updated yield, cost, environmental burden, hydrogen demand, utility consumption, and feasible capacity bounds are returned to the supply chain model.
+
+3.2. Spatial and Temporal Behavior of the Optimal Supply Chain
+
+Figure 5 shows the spatial and temporal configuration obtained for the optimal decoupled SAF supply chain. Figure 5a presents the candidate harvest and biorefinery nodes considered in the Mexican case study, while Figure 5b shows the selected network. Node 43 is chosen as both the harvest area and the biorefinery location, with Mexico City Airport as the final demand node. This result indicates that the model favors a site that balances biomass access with proximity to the main fuel market. In biomass-based SAF systems, facility location is not determined only by feedstock abundance; it also depends on transport distance, production capacity, storage requirements, and demand concentration. Similar location–logistics interactions have been reported in previous renewable aviation fuel supply chain studies for Mexico [14,38].
+
+The temporal biomass profile is shown in Figure 5c. Biomass availability is concentrated in the first part of the planning horizon and decreases sharply during the middle months. The model responds by transporting biomass when it is available and using inventory to maintain production during low-availability periods. Harvest center inventory therefore acts as the upstream buffer of the system. This behavior is consistent with biomass supply chain models in which seasonal availability, degradation, and storage constraints must be represented explicitly to avoid unrealistic production schedules [39,40]. The geographic coordinates and biomass availability data used to build the network are reported in Tables S1–S3 and Figure S1 of the Supplementary Materials.
+
+Figure 5d shows the corresponding ATJ-range hydrocarbon blendstock production, airport transport, demand, and product inventory profiles. Production and transport are higher during the first months, decrease in the middle of the year, and recover toward the end of the planning horizon. Product inventory is mainly accumulated between months 5 and 8, indicating that the model uses finished fuel storage to absorb the mismatch between production and airport demand. Demand remains comparatively stable, around 3.5 × 104–4.4 × 104 t/month, whereas production and shipment vary more strongly. The optimal network therefore relies on two buffers: biomass inventory upstream and ATJ-range hydrocarbon blendstock inventory downstream.
+
+This temporal behavior helps explain the scale effects observed in the decoupled baseline of Figure 4. Under fixed ATJ performance coefficients, the supply chain can reduce unit TAC and EI99 by increasing capacity and smoothing seasonal imbalances through inventory. In the decoupled case, these production profiles are evaluated with constant ATJ performance coefficients. Yield, hydrogen demand, utility consumption, separation performance, and feasible operating limits are assumed to remain unchanged across the capacity range. This provides a clear baseline, but it also defines the main limitation of the decoupled formulation.
+
+Thus, Figure 5 should be interpreted as the optimal logistics response under fixed process-performance assumptions. It shows how the supply chain model coordinates location, biomass transport, storage, production, and airport delivery when the conversion block remains unchanged across operating scales. The integrated framework evaluated in the following sections tests whether this spatial and temporal configuration remains favorable once the Aspen Plus–DETL process model updates yield, cost, environmental burden, hydrogen demand, utility intensity, and feasible capacity bounds.
+
+3.3. Cost and Environmental Contribution Analysis
+
+The relative contributions of biomass, transportation, and biorefinery operations to the total annualized cost (TAC) and environmental impact (EI99) of the decoupled SAF supply chain system are presented in Figure 6. In economic terms, the biorefinery is the largest contributor, accounting for approximately 44.5% of TAC. The upstream biomass block, comprising raw bagasse procurement and the effective upstream conversion contribution represented in the decoupled model, accounts for approximately 30.0% of TAC, followed by solid biomass transportation at 17.0% and liquid fuel transportation at 8.6%. This distribution shows that, under the decoupled formulation, the cost structure is driven mainly by conversion-related expenditures, while final product distribution has a smaller contribution.
+
+This cost distribution is consistent with the spatial and temporal behavior reported in Figure 5. The selected network relies on biomass mobilization and inventory accumulation to compensate for seasonal availability, which explains the relevance of biomass acquisition and solid transportation costs. However, the biorefinery remains the dominant economic block. Once the selected network keeps transport distances within a feasible regional range, improvements in process design and conversion performance have greater leverage on TAC than marginal reductions in liquid fuel distribution costs. Similar behavior has been reported in biomass-based supply chain studies, where conversion and processing costs often dominate the total cost once regional logistics are technically feasible [2,39]. The numerical derivation of these contributions and the internal disaggregation of the downstream ATJ subtotal are reported in Tables S33 and S34 of the Supplementary Materials.
+
+The environmental contribution analysis was performed at the representative production level of 240,000 tSAF/year. The downstream ATJ block contributes 0.558 kPt EI99/tSAF, equivalent to 52.69% of the total environmental burden. Upstream bagasse-to-ethanol processing contributes 0.4198 kPt EI99/tSAF, or 39.64%. Consequently, the combined upstream and downstream conversion system accounts for approximately 92.32% of total EI99. Biomass production, biomass transportation, inventory, and final product transportation collectively account for the remaining 7.68%.
+
+These results show that conversion activities represent the largest environmental contribution, but the downstream ATJ block does not account for 99.99% of total EI99. The logistics and feedstock-related terms remain quantitatively identifiable and are included explicitly in the system-level balance.
+
+This result has a direct implication for the decoupled baseline. The MILP model can represent changes in biomass allocation, transport, storage, production scheduling, and airport distribution. However, when the environmental coefficient of the ATJ process is kept fixed, the model cannot capture changes in process energy demand, hydrogen consumption, utility requirements, or separation performance. Since EI99 is dominated by the biorefinery block, this fixed-coefficient assumption can strongly influence the environmental conclusions obtained from the baseline.
+
+The contribution analysis therefore provides the technical basis for evaluating the intensified ATJ process separately before closing the loop with the supply chain model. Reactive distillation and intensified separation systems have been proposed to reduce utility consumption, equipment count, and thermal inefficiencies relative to conventional process trains [27]. In ATJ systems, intensified configurations have also been shown to improve economic and environmental performance by reducing energy demand and simplifying separation requirements [10,11,12,28]. Accordingly, Figure 6 indicates where the largest sensitivity of the system is located: not in final fuel distribution, but in the process block used to convert the alcohol intermediate into ATJ-range hydrocarbon blendstock.
+
+Taken together, Figure 4, Figure 5 and Figure 6 define the behavior of the decoupled case. The baseline analysis shows that higher production capacity reduces unit TAC and EI99. The spatial–temporal analysis shows that this behavior is supported by biomass and product inventory buffers. The contribution analysis shows that the biorefinery dominates the environmental profile and represents the largest economic contributor. The next step is to determine whether the same cost and environmental trends remain valid when the ATJ process is optimized directly, rather than represented by fixed coefficients.
+
+3.4. Isolated Aspen Plus–DETL Optimization of the Intensified ATJ Process Block
+
+The intensified ATJ process block was optimized separately in Aspen Plus–DETL before being coupled back to the supply chain model. This step evaluates how the downstream ethanol-to-ATJ-range hydrocarbon blendstock section behaves when its design and operating variables are allowed to change, instead of being represented by fixed coefficients. The analysis therefore refers only to the process block, not to the full integrated MILP–Aspen Plus–DETL framework. The process-level results were interpreted together with the literature-normalized benchmark reported in Section S5. This benchmark provides context for the reactive distillation-based configuration by comparing it with a base distributed ATJ process for Mexico, a conventional ATJ/ETJ reference, and previous intensified ATJ configurations. Therefore, the isolated Aspen Plus–DETL results should be read as the behavior of the intensified downstream ATJ block, whereas the decoupled and integrated MILP cases should be read as system-level optimization scenarios. The reactive distillation configuration, Aspen Plus simulation setup, and product-stream compositions used in this process-level optimization are reported in Figure S3 and Tables S7 and S8 of the Supplementary Materials.
+
+The TAC–EI99 region obtained for the isolated ATJ process block is shown in Figure 7a. At environmental impacts above approximately 0.75 kPt Ecopoints/ t S A F , TAC remains within a relatively narrow range of about 790–850 USD/ t S A F . Outside this region, TAC increases sharply and reaches values above 1150 USD/ t S A F . This behavior indicates that the intensified ATJ process does not follow a simple linear economic–environmental trade-off. The coupled reaction–separation structure creates operating regions where small changes in design variables can produce large cost penalties.
+
+The capacity trends in Figure 7b,c show the same process-level nonlinearity. In Figure 7b, TAC remains near 1140–1150 USD at capacities below roughly (150 × 103) t S A F /year. Above approximately (200 × 103) t S A F /year, TAC decreases to about 840 USD/ t S A F . Figure 7c shows a stronger environmental response, with EI99 decreasing from nearly 1.7 to 0.55 kPt Ecopoints/ t S A F , equivalent to an approximate 68% reduction. Higher throughput therefore improves equipment utilization and distributes fixed environmental burdens more effectively, but only after the process reaches a favorable operating range.
+
+This process-level behavior contrasts with the decoupled baseline shown in Figure 4. In the baseline, increasing capacity appeared consistently favorable because ATJ yield, specific cost, and environmental burden were fixed across all production scales. The Aspen Plus–DETL results show that this assumption is restrictive for the intensified ATJ block. Process performance changes with throughput, reaction–separation interactions, utility demand, hydrogen consumption, equipment sizing, and feasible operating conditions. The smooth economies of scale observed in the decoupled supply chain model should therefore be interpreted as a baseline result obtained under fixed process assumptions, rather than as a final system-level conclusion.
+
+The solution pattern also supports the use of a derivative-free optimizer. The Aspen Plus ATJ model behaves as a simulation-based problem with strong variable interactions and possible convergence failures near infeasible operating regions. Differential Evolution is appropriate for nonlinear continuous global optimization, while the tabu list mechanism improves search diversification by discouraging returns to recently explored solutions. This is consistent with the use of DETL for constrained chemical engineering optimization problems with nonconvex search spaces and difficult convergence behavior.
+
+The isolated process results also explain the environmental dominance of the biorefinery reported in Figure 6. Since EI99 changes strongly with process capacity and operating conditions, fixing the process environmental coefficient removes the main source of variability from the supply chain model. For this reason, the ATJ process block should not be treated only as a static conversion coefficient when evaluating SAF deployment at the system level. The integrated optimization in the following section uses the Aspen Plus–DETL outputs to update yield, cost, environmental burden, hydrogen demand, utility intensity, and feasible capacity within the MILP model.
+
+3.5. Integrated MILP–Aspen Plus–DETL Optimization of the SAF System
+
+The integrated MILP–Aspen Plus–DETL optimization evaluates the SAF system after closing the loop between the supply chain model and the intensified ATJ process block. In this configuration, the MILP determines biomass allocation, facility location, production planning, inventory, and airport delivery, while the Aspen Plus–DETL block updates the process coefficients used by the network model. These coefficients include ATJ yield, specific cost, environmental burden, hydrogen demand, utility intensity, and feasible capacity bounds. The results therefore represent the coupled system response, rather than the isolated behavior of either the supply chain or the process model.
+
+The TAC–EI99 relationship obtained for the integrated framework is shown in Figure 8a. TAC increases from approximately 3400 to 6800 USD/ t S A F as the environmental impact increases from about 0.77 to 1.31 kPt Ecopoints/ t S A F . This trend differs from the isolated ATJ process behavior shown in Figure 7a, where the Pareto region had a more irregular structure. Once network feasibility, production requirements, and process-performance updates are considered simultaneously, the economic–environmental space becomes more strongly shaped by the cost of satisfying regional demand under feasible ATJ operating conditions.
+
+The larger TAC values obtained in the integrated case are mainly explained by the broader system boundary used in this calculation. The isolated Aspen Plus–DETL case evaluates the downstream ATJ process block, whereas the integrated TAC includes biomass acquisition, inbound biomass transportation, biomass inventory, annualized biorefinery capacity, process operating and equipment costs, ATJ-range hydrocarbon blendstock inventory, and final product transportation to the airport demand node. In addition, the integrated model uses process coefficients that are recalculated under the production targets imposed by the network, including ATJ yield, hydrogen demand, utility intensity, environmental burden, and feasible capacity limits. Therefore, the integrated TAC should be interpreted as a system-level unit cost, not as a plant-only process cost. The revised integrated cost decomposition separates raw material purchase from upstream conversion and distinguishes the direct downstream ATJ coefficient from purchased hydrogen and utilities. Raw bagasse acquisition contributes 206.95 USD/tSAF, consistent with the documented feed requirement and bagasse price, whereas upstream pretreatment, enzymatic hydrolysis, fermentation, and ethanol recovery contribute 913.05 USD/tSAF. The direct ATJ and hydrogen-and-utility terms are reported as non-overlapping contributions. The complete component-level reconciliation reproducing the integrated TAC of 5100 USD/tSAF is provided in Table S21.
+
+The integrated framework identifies a production-capacity region between approximately 120,000 and 300,000 tSAF/year. Across this interval, total EI99 decreases from approximately 0.77 to 1.31 kPt EI99/tSAF. The integrated base case at 200,000 tSAF/year has a total environmental burden of 1.063 kPt EI99/tSAF.
+
+The integrated EI99 values were calculated using the same environmental components and functional unit applied to the decoupled configuration. This eliminates the previous difference in numerical scale between the fixed process coefficient, the isolated ATJ results, and the system-level environmental objective.
+
+This result modifies the interpretation of the decoupled baseline in Figure 4. In the baseline, increasing capacity appeared uniformly favorable because yield, energy use, hydrogen demand, cost, and environmental burden were fixed. The isolated ATJ optimization in Figure 7 showed that process performance is nonlinear and depends on operating conditions. The integrated results in Figure 8 combine both effects: the model still benefits from scale, but the system-level region shifts to higher TAC and EI99 values because process performance is updated inside the supply chain calculation, rather than imposed as a static coefficient.
+
+At the representative decoupled operating point, the downstream ATJ block accounts for 52.7% of total EI99, while the complete upstream and downstream conversion system accounts for 92.3%. Therefore, process-level performance remains environmentally important, but biomass production, transportation, and inventory contributions are not negligible and are explicitly retained in the system balance.
+
+The comparison with previous integrated biorefinery studies is relevant because it clarifies the pathway- and region-specific contribution of this work. Galanopoulos et al. [6] showed that linking supply chain optimization with Aspen-based process evaluation can improve the realism of biorefinery assessments. The present case extends that approach to an intensified ATJ pathway for SAF production in Mexico, where regional biomass availability, airport demand, and process feasibility are evaluated within the same iterative framework. The resulting operating region would not be obtained by optimizing the supply chain first and evaluating the process afterward, or by optimizing the ATJ process without the network constraints.
+
+Overall, the integrated optimization provides a more conservative system-level estimate than the isolated models. The supply chain-only formulation favors high production capacities because it assumes invariant process performance. The process-only optimization identifies favorable ATJ operating regions without accounting for regional biomass logistics, inventory, and demand satisfaction. The integrated formulation balances both requirements. It selects solutions that remain feasible for the supply chain while using ATJ process coefficients that respond to production scale and operating conditions. This supports the main result of the study: SAF deployment from sugarcane bagasse-derived alcohol intermediates should be evaluated with process and supply chain decisions coupled, rather than optimized independently.
+
+3.6. Comparison of Optimization Strategies and Multiscale Interaction
+
+The comparison among the three optimization strategies shows how the system response changes when process and supply chain decisions are solved separately or coupled within the same framework. The three cases represent different modeling levels: process-only optimization evaluates the intensified ATJ block without regional logistics, supply chain-only optimization evaluates the network using fixed process coefficients, and integrated optimization updates the process coefficients inside the MILP model.
+
+The production-capacity distributions are shown in Figure 9a. The process-only optimization occupies the lowest capacity range, approximately (70–200 × 103) t S A F /year. This range reflects the operating scale at which the intensified ATJ process can reduce TAC and EI99 without being constrained by regional biomass supply, inventory, or airport demand. The supply chain-only case moves to a higher capacity range, approximately 320–490 × 103 t S A F /year, because fixed process coefficients allow the MILP to benefit from network-level economies of scale. The integrated case falls between both regions, approximately 120–300 × 103 t S A F /year. This intermediate range indicates that process feasibility limits the high-capacity solutions preferred by the network, while regional demand and logistics prevent the process from remaining at its smallest favorable scale.
+
+The TAC–EI99 solution regions in Figure 9b confirm this separation. The process-only solutions remain in a low-impact region, with TAC values close to 840–1150 USD/tSAF and EI99 values, between approximately 0.47 and 0.63 kPt EI99/tSAF. The supply chain-only solutions operate under distinct trade-offs, with TAC values spanning from 340 to 1010 USD/tSAF and their EI99 values extending across a higher range of approximately 0.95 to 1.33 kPt EI99/tSAF due to the simplified nature of the fixed process coefficients. In contrast, the integrated solutions form a separate compromise region, with TAC strictly bounded between approximately 3400 and 6800 USD/ t S A F and EI99 between 0.78 and 1.31 kPt Ecopoints/ t S A F .
+
+The harmonized TAC–EI99 comparison in Figure 9b shows that the process-only configuration spans the broadest environmental interval, approximately 0.47–0.63 kPt EI99/tSAF, because its performance changes nonlinearly with process scale and operating conditions. The decoupled system occupies a narrower system-level interval of approximately 0.95–1.33 kPt EI99/tSAF. The integrated solutions lie between approximately 0.78 and 1.31 kPt EI99/tSAF.
+
+Unlike the previous representation, the corrected environmental regions are not separated by an order of magnitude. The decoupled and integrated regions partially overlap because both now include the same upstream, logistics, process, inventory, and distribution components. The principal effect of multiscale coupling is therefore observed in the selected capacity region, process feasibility, and TAC, rather than in an artificial difference caused by inconsistent environmental scaling.
+
+This separation is the main evidence of multiscale interaction. The integrated solution is not obtained by inserting the process optimum into the supply chain model, nor by evaluating the supply chain optimum afterward in Aspen Plus. It is obtained by allowing the network and process blocks to exchange production targets, feed conditions, yield, cost, environmental burden, hydrogen demand, utility intensity, and feasible capacity bounds. As a result, the integrated framework identifies a compromise region, where process-level nonlinearities and network-level requirements are both active.
+
+The higher TAC and EI99 values in the integrated region should therefore be interpreted as a more complete system estimate, not as poorer model performance. The process-only case excludes logistics and demand constraints. The supply chain-only case excludes changes in ATJ performance with throughput and operating conditions. The integrated case includes both effects. This explains why its solution region shifts toward higher cost and environmental impact: it internalizes process feasibility, biomass logistics, production planning, storage, and airport demand within the same iterative calculation.
+
+The comparison also clarifies the roles of the previous results. Figure 4 showed that the decoupled supply chain model favors capacity expansion when ATJ performance is fixed. Figure 5 showed that this network behavior relies on spatial selection and temporal buffering through biomass and product inventories. Figure 6 showed that the biorefinery dominates the environmental contribution, making fixed process coefficients a critical assumption. Figure 7 showed that the intensified ATJ block is nonlinear and scale-dependent. Figure 8 then showed the behavior of the coupled MILP–Aspen Plus–DETL system. Figure 9 brings these results together and shows that the coupled solution occupies a distinct operating region.
+
+This result extends previous SAF supply chain studies for Mexico, where biomass availability, logistics, facility location, and airport demand were optimized, while process performance remained external to the network model. The present framework keeps those supply chain decisions, but conditions them on the feasibility and performance of the intensified ATJ process. The methodological contribution is therefore the endogenous updating of ATJ yield, cost, environmental burden, hydrogen demand, utility intensity, and capacity bounds within the supply chain optimization. This supports the central result of the study: SAF deployment from sugarcane bagasse-derived alcohol intermediates cannot be reliably evaluated by optimizing the supply chain and the intensified ATJ process independently.
+
+The integrated MILP–Aspen Plus–DETL framework reached convergence within the maximum number of outer iterations imposed in the computational protocol. The convergence history reported in Figure S4 shows the evolution of the main exchanged indicators, including ATJ yield, process cost, EI99, hydrogen demand, utility intensity, TAC, and total EI99. The largest changes occurred during the first outer iterations, when the fixed decoupled coefficients were replaced by process coefficients consistent with the network-derived production target. Subsequent iterations produced progressively smaller changes until the convergence tolerance was satisfied.
+
+The initialization-sensitivity results in Table S17 indicate that the final integrated solution was not driven by a single arbitrary initial coefficient vector. Although different initializations produced different early-iteration trajectories, the final capacity region and selected location remained stable within the tested range. This supports the use of the iterative framework as a process–supply chain consistency procedure. Nevertheless, the solution should be interpreted as a converged fixed point of the decomposition strategy, not as a guaranteed global optimum of a fully simultaneous MINLP formulation.
+
+A screening sensitivity analysis was performed to evaluate the influence of key assumptions on the integrated solution. The tested parameters included the effective bagasse-to-ethanol coefficient, available sugarcane bagasse, hydrogen cost, utility cost, SAF demand, and environmental burden associated with process utilities. These parameters were selected because they affect either the upstream ethanol-intermediate availability, the downstream ATJ process coefficients, or the system-level economic and environmental objectives.
+
+The sensitivity results are summarized in Table S20 and Figure S6. The effective bagasse-to-ethanol coefficient mainly affected biomass demand and feedstock pressure, whereas hydrogen and utility costs affected the process cost contribution to TAC. The environmental burden assigned to utilities affected EI99 more strongly than TAC, reflecting the dominant contribution of the biorefinery/process block to the environmental objective. SAF demand affected the production scale and, therefore, the balance between economies of scale, biomass logistics, and process feasibility.
+
+Across the evaluated range, the integrated solution remained within the intermediate-capacity region identified in the base case. However, the objective values were sensitive to upstream yield and utility-related assumptions. This confirms that the integrated framework should be interpreted as a decision support model whose conclusions depend on clearly stated feedstock, process, market, and environmental assumptions. A full stochastic or robust optimization formulation is outside the scope of the present work, but is a natural extension of the proposed framework.
+
+To further support the visual interpretation of these structural changes without the distortion of different physical units and absolute scales, a multi-objective dimensionless comparison is provided in Figure 10. This normalized view maps the behavior of both the decoupled baseline and the integrated framework relative to a common reference point. While the decoupled baseline operates closely around the unitary reference ( q s ∗ = 1.0 ), the endogenous propagation of process-level nonlinearities and regional supply chain restrictions triggers an explicit contraction in the feasible production capacity alongside a significant escalation in the normalized TAC. This graphic representation complements the absolute regions previously discussed by illustrating that the integrated solution represents an entirely different modeling boundary, rather than a simple rescaling of the decoupled behavior. To support these structural modifications with granular, process-level evidence and satisfy specific model differentiation and validation requirements, a direct side-by-side comparison of the stream flows, operating parameters, and multi-scale metrics between the standalone optimized ATJ process and the integrated supply chain-process configuration is provided in Section S12 of the Supplementary Materials. Within this section, Table S37 presents the mass flow rates of key chemical streams within the reactive distillation column, Table S38 contrasts the specific design parameters identified by the DETL algorithm under both modeling boundaries, and Table S39 outlines the disaggregated economic and environmental performance metrics that confirm the multi-scale compromise of the coupled framework.
+
+4. Discussion
+
+The results show that SAF system design changes when supply chain decisions and intensified ATJ process performance are evaluated within the same optimization framework. In the decoupled baseline, increasing production capacity reduced unit TAC and EI99 because the MILP model benefited from economies of scale, facility utilization, and temporal inventory coordination. This behavior was useful as a reference case, but it relied on fixed ATJ yield, cost, hydrogen demand, utility consumption, and environmental coefficients. The isolated Aspen Plus–DETL process optimization then showed that the intensified ATJ block does not behave as a static conversion unit. Its performance changed nonlinearly with throughput, operating conditions, and reaction–separation interactions. When both levels were coupled, the feasible solution region moved to an intermediate capacity range, confirming that process performance affects the interpretation of supply chain optimality.
+
+This behavior is consistent with the enterprise-wide optimization perspective proposed by Grossmann [9]. Supply, production, conversion, and distribution decisions should be coordinated when interactions across decision levels affect system performance. In the present case, the supply chain-only model favored higher capacities because process coefficients were fixed, while the process-only model identified lower-capacity regions that were attractive from a plant-level perspective, but did not include regional biomass logistics or airport demand. The integrated formulation balanced both effects. As a result, it produced more conservative estimates of TAC and EI99, but these estimates are more representative of a system in which biomass supply, process feasibility, production scale, and demand satisfaction are active at the same time.
+
+The findings also refine the interpretations of previous biomass and renewable fuel supply chain studies. García and You [2] showed that supply chain design is critical in process industries because resource availability, transportation, and capacity decisions are strongly linked. For Mexico, studies such as Domínguez-García et al. [38] and Matos-Ríos et al. [14] demonstrated that biomass geography, facility location, hydrogen supply, and airport demand influence renewable aviation fuel networks. Those studies provided a strong basis for SAF supply chain planning, but process performance was mainly treated as an external input. The present work extends that approach by showing that the ATJ process block is not only a source of parameters. It is a decision-dependent subsystem whose yield, cost, hydrogen demand, utility consumption, and environmental burden can change the preferred production scale.
+
+The spatial and temporal results support this interpretation. The optimal decoupled network relied on biomass inventory upstream and ATJ-range hydrocarbon blendstock inventory downstream to buffer seasonal feedstock availability and comparatively stable airport demand. This confirms the value of multiperiod MILP formulations for biomass-based fuel systems, where storage, degradation, and production scheduling must be represented explicitly. However, the same result also exposes a limitation of logistics-only optimization. Inventory can make the supply chain feasible at the network level, but the ATJ process must still operate efficiently under the resulting production profile. This is particularly relevant for SAF systems, where feedstock availability, logistics, production cost, and policy requirements remain major barriers to scale up.
+
+The contribution analysis provides the strongest justification for coupling the intensified ATJ process with the supply chain model. The biorefinery represented the largest economic contributor and dominated the EI99 profile. Transportation and biomass logistics were still relevant, especially for TAC, but their environmental contribution was small relative to the process block. This means that the main source of environmental variability comes from process-level performance. If the process environmental coefficient is fixed, the supply chain model cannot capture the dominant driver of EI99. The integrated framework addresses this limitation by updating process yield, cost, hydrogen demand, utility intensity, environmental burden, and feasible capacity bounds during optimization.
+
+The process-level results are consistent with the ATJ and process-intensification literature. Romero-Izquierdo et al. [10] reported that intensifying and integrating ATJ configurations can reduce heating and cooling requirements, while Contreras-Zarazúa et al. [11] and Huerta-Rosas et al. [12] showed that reactive distillation can reduce cost and environmental impact relativ",https://pub.mdpi-res.com/processes/processes-14-02653/article_deploy/html/images/processes-14-02653-g001-550.jpg?1787212200,N,,2026-08-20 08:57:42.171973
+,,2026-08-20 07:41:48+00:00,X (formerly Twitter),The claim that ethanol is being blended into aviation fuel is completely misleading. India has ...,x.com,,,,,https://x.com/NewsAlgebraIND/status/2090342506882060733,"The claim that ethanol is being blended into aviation fuel is completely misleading.
+The April 17, 2026 notification only enables certified Sustainable Aviation Fuel (SAF) to be used with ATF.
+Stop misleading people Kejriwal Ji.
+Will u risk flying in an aircraft running on adulterated aviation fuel?
+Time to have an educated and competent govt India allows ethanol blending in aviation fuel - The Economic Times m.economictimes.com/industry/trans…","The claim that ethanol is being blended into aviation fuel is completely misleading. India has no proposal to blend ethanol into ATF. The April 17, 2026 notification only enables certified Sustainable Aviation Fuel (SAF) to be used with ATF. SAF is not ethanol and must meet stringent ASTM, ICAO and BIS standards. India’s indicative SAF targets for international flights are 1% in 2027, 2% in 2028 and 5% in 2030, with no mandatory target for domestic flights. The move aligns India with CORSIA and global aviation practices while keeping aviation safety non-negotiable. Stop misleading people Kejriwal Ji.
+
+Read this article. The engine of ur flight just might stop in the air. Will u risk flying in an aircraft running on adulterated aviation fuel? Time to have an educated and competent govt India allows ethanol blending in aviation fuel - The Economic Times m.economictimes.com/industry/trans…",https://pbs.twimg.com/profile_images/1450363341184983042/K3IBOU--_400x400.jpg,N,,2026-08-20 08:57:46.987395
+,,2026-08-20 06:39:16+00:00,LinkedIn,IMPACT on sustainable aviation - LinkedIn,Not Available,,,,,https://www.linkedin.com/posts/impact-on-aviation_sustainableaviation-saf-aviation-activity-7495842045413081088-MGwC,"impact on sustainable aviation’s second IMPACT Stocktake Forum (IMPACT Forum) brought together leaders and experts from across aviation, finance, SAF, carbon removal, contrail avoidance, technology, government and academia in London.
+The extremely positive feedback was encouraging - and now, it’s time to revisit some of the conversations and ideas that shaped the IMPACT Forum.
+governments, industry, academia and the finance community.
+👉 Over the coming weeks, we’ll be sharing more IMPACT Forum highlights, perspectives and soundbites.
+#SustainableAviation #SAF #Aviation #Decarbonisation #ImpactForum #SustainableAviationFinance #aircraftleasing #netzero Dr. Ulrike Ziegler Veronika Grigoreva Anna Münch Michael Rurik Halaby, FRAeS Bryson P. Monteleone Jean Chédeville Hugo Kanters Jean Chédeville Jörg Schirrmacher Like Comment Transcript Hello everyone, and welcome to the Second Impact on Sustainable Aviation forum.","𝐈𝐌𝐏𝐀𝐂𝐓 𝐒𝐭𝐨𝐜𝐤𝐭𝐚𝐤𝐞 𝐅𝐨𝐫𝐮𝐦 𝐈𝐧𝐬𝐢𝐠𝐡𝐭𝐬: 𝐀 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐔𝐊 𝐌𝐢𝐧𝐢𝐬𝐭𝐞𝐫 𝐟𝐨𝐫 𝐀𝐯𝐢𝐚𝐭𝐢𝐨𝐧, 𝐌𝐚𝐫𝐢𝐭𝐢𝐦𝐞 𝐚𝐧𝐝 𝐃𝐞𝐜𝐚𝐫𝐛𝐨𝐧𝐢𝐬𝐚𝐭𝐢𝐨𝐧 Two days. 150+ participants. One shared question: how do we accelerate aviation’s transition? impact on sustainable aviation’s second IMPACT Stocktake Forum (IMPACT Forum) brought together leaders and experts from across aviation, finance, SAF, carbon removal, contrail avoidance, technology, government and academia in London. Two days of insightful discussions, challenging questions and valuable conversations on how we can catalyse aviation’s transformation towards Net Zero. The extremely positive feedback was encouraging - and now, it’s time to revisit some of the conversations and ideas that shaped the IMPACT Forum. 🎥 𝐖𝐞’𝐫𝐞 𝐨𝐩𝐞𝐧𝐢𝐧𝐠 𝐨𝐮𝐫 𝐈𝐌𝐏𝐀𝐂𝐓 𝐅𝐨𝐫𝐮𝐦 𝐈𝐧𝐬𝐢𝐠𝐡𝐭𝐬 𝐬𝐞𝐫𝐢𝐞𝐬 𝐰𝐢𝐭𝐡 𝐚 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐔𝐊 𝐌𝐢𝐧𝐢𝐬𝐭𝐞𝐫 𝐟𝐨𝐫 𝐀𝐯𝐢𝐚𝐭𝐢𝐨𝐧, 𝐌𝐚𝐫𝐢𝐭𝐢𝐦𝐞 𝐚𝐧𝐝 𝐃𝐞𝐜𝐚𝐫𝐛𝐨𝐧𝐢𝐬𝐚𝐭𝐢𝐨𝐧, Keir Mather. In his welcome message, Minister Mather highlighted the importance of reducing aviation’s reliance on fossil fuels - not only as a climate imperative, but also as a strategic and commercial priority. He also stressed that achieving a greener future for aviation will require continued collaboration between multiple stakeholders, including i.a. governments, industry, academia and the finance community. A message that set the tone for many of the discussions that followed at the Forum. 👉 Over the coming weeks, we’ll be sharing more IMPACT Forum highlights, perspectives and soundbites. Stay tuned. #SustainableAviation #SAF #Aviation #Decarbonisation #ImpactForum #SustainableAviationFinance #aircraftleasing #netzero Dr. Ulrike Ziegler Veronika Grigoreva Anna Münch Michael Rurik Halaby, FRAeS Bryson P. Monteleone Jean Chédeville Hugo Kanters Jean Chédeville Jörg Schirrmacher
+
+Like Comment
+
+Transcript
+
+Hello everyone, and welcome to the Second Impact on Sustainable Aviation forum. I'm sorry that I couldn't be with you in person, but I'm pleased to hear that representatives from industry and finance have come together to discuss this important topic. Now, 2025 was a record year for UK aviation with nearly 300 million passengers and 2.7 million tons of freight handled. But the industry is also navigating significant global uncertainty and government recognizes the very real pressure. This places on the aviation and tourism sectors. As you would expect, the government is closely monitoring the situation and our priorities remain clear, safeguarding fuel supply, maintaining operational continuity and protecting consumers. Recent events have shown that reducing our reliance on fossil fuels is not only a climate imperative, but a strategic and a commercial one. That's why this government is laying the foundations for cleaner green aviation. Our sustainable aviation fuel mandate sets ambitious targets for industry and by passing the SAFE Act and providing grant funding, we're supporting industry to meet that ambition while also delivering growth and creating jobs across the UK. We're also modernizing our airspace to deliver cleaner, quicker and quieter journeys while supporting the next generation of aircraft with a ��2.3 billion extension to the Aerospace Technology Institute program. Now at the start of the year, we announced 43,000,000 lbs of R&D funding for green aviation projects, helping innovators turn bold ideas into real solutions. We've also invested nearly ��20 million into non CO2 R&D programs with 14 projects supported so far. Alongside this, we are driving cost effective decarbonization through carbon pricing mechanisms including the UK ATS and CORSIA. But none of this happens without partnership. The Jet 0 Task Force has become a blueprint for collaboration between government, academia, industry and the finance community and I look forward to seeing what the new task and finish groups deliver this year. With continued partnership, we can unlock investment, scale solutions and deliver a greener future for aviation. I understand that you have some very exciting sessions ahead in the next few days with excellent speakers. I hope you find them insightful and take forward this message of partnership and action Thank you.
+
+To view or add a comment, sign in",https://dms.licdn.com/playlist/vid/v2/D5605AQE1aK7tA-U11g/thumbnail-with-play-button-overlay-high/B56aAVXylRHIC8-/0/1787064968808?e=2147483647&v=beta&t=poY_5LZqYjP2Lhj3Wy2WnGFYdROujjHLlaW1erd-B7A,N,,2026-08-20 08:57:50.334444
 ,,2026-08-20 02:31:15+00:00,www.prnewswire.com,Shanghai Electric Contributes to World-record Biomethanol Bunkering Operation,Shanghai Electric,,,,,https://www.prnewswire.com/il/news-releases/shanghai-electric-contributes-to-world-record-biomethanol-bunkering-operation-302855845.html,"SHANGHAI, Aug. 20, 2026 /PRNewswire/ -- On August 17, Shanghai Electric Company (SEHK: 02727, SSE: 601727) partnered with Shanghai International Port Group and CMA CGM Group to conduct a biomethanol bunkering operation with a total volume of 8,000 metric tons, the largest single biomethanol bunkering operation on record.
 The principal biomethanol supplier for this operation was Shanghai Electric's Taonan green methanol project.
 At the Shanghai International Shipping Green Fuel Sustainable‑Development Conference held on June 30 this year, Shanghai, Jilin and Liaoning officially launched the joint‑built green‑fuel transportation corridor.
@@ -62,6 +737,19 @@ The full article also covers Gulfstream's broader sustainability activity, inclu
 #aviation #aerospace #MRO
 
 Link in Bio <--",https://scontent-iad6-1.cdninstagram.com/v/t51.71878-15/775727228_1026413073561320_5302439549268229582_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=MgCY187dcnEQ7kNvwH49bmp&_nc_oc=Adqiek7T_poKIZcSMlvgnMYSQAXiy1VnVVKhCZkERiacDQQAGV4HIkni1RV-1qUpT4g&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_gid=j2CsQ7KbCR4_Nh82aKtjyQ&_nc_ss=7b689&oh=00_AQGam4D-Oz0ddBb3a8b3q7MwXSbx7CV4lO0EqFJNjHTeUw&oe=6A8C285D,N,,2026-08-19 20:57:12.886293
+,,2026-08-19 22:46:49+00:00,Travel Report,Neste has delivered sustainable aviation fuel to Emirates - Travel Report,Editorial department,,,,,https://www.travelreport.se/en/neste-has-delivered-sustainable-aviation-fuel-to-emirates/,"Finnish petroleum company Neste says it has supplied sustainable aviation fuel to airline Emirates, which intends to use it for its flights from Singapore Changi Airport, according to a press release.
+Emirates is the first international operator to use Neste SAF at the airport, produced at Neste’s Singapore refinery.
+Over 2,600 tonnes (3.3 million litres) of blended SAF has been delivered into the Changi Airport refuelling system in recent weeks.
+Earlier this year, Neste delivered over 6,000 tonnes of blended SAF to Emirates at Amsterdam Airport Schiphol.
+”We are delighted that Emirates has started using Neste MY Sustainable Aviation Fuel at Changi Airport as the latest step in our collaboration,” said Alexander Kueper, Vice President of Renewable Aviation Business at Neste.","Finnish petroleum company Neste says it has supplied sustainable aviation fuel to airline Emirates, which intends to use it for its flights from Singapore Changi Airport, according to a press release.
+
+Emirates is the first international operator to use Neste SAF at the airport, produced at Neste’s Singapore refinery. Over 2,600 tonnes (3.3 million litres) of blended SAF has been delivered into the Changi Airport refuelling system in recent weeks.
+
+The delivery is part of the partnership the companies announced in October 2023. Earlier this year, Neste delivered over 6,000 tonnes of blended SAF to Emirates at Amsterdam Airport Schiphol.
+
+”We are delighted that Emirates has started using Neste MY Sustainable Aviation Fuel at Changi Airport as the latest step in our collaboration,” said Alexander Kueper, Vice President of Renewable Aviation Business at Neste.
+
+Source: FinWire",https://www.travelreport.se/wp-content/uploads/2024/06/Skarmavbild-2024-06-14-kl.-06.47.43-e1718340528821.png,N,,2026-08-20 08:57:57.106604
 ,,2026-08-19 21:45:49+00:00,www.iata.org,Navigating Swiss CO₂ Act Compliance with IATA CO2 Connect,Not Available,,,,,https://www.iata.org/en/publications/newsletters/iata-knowledge-hub/navigating-swiss-co2-act-compliance-with-iata-co2-connect/,"IATA CO2 Connect: A Trusted Industry Foundation To meet the new requirements in Switzerland, the industry is turning to a shared solution.
 With IATA CO2 Connect can provide airlines and travel resellers with the industry’s most accurate emissions data either through direct access to IATA CO2 Connect or through integrations across Amadeus, Chooose, and ATPCO.
 Seamless Integration Across Existing Platforms A key advantage of IATA CO2 Connect is that it does not require new systems to be built from scratch.
@@ -2637,534 +3325,3 @@ Fabio Fritelli, Managing Director of Nextchem, commented: “This award confirms
 Related News
 
 From the Archive",https://www.hydrocarbonprocessing.com/images/HP64x64.png,N,,2026-08-17 11:57:45.437360
-,,2026-08-17 11:51:36+00:00,MarketBeat,"XCF Global Capital (NASDAQ:SAFX) Issues Quarterly Earnings Results, Beats Expectations ...",MarketBeat,,,,,https://www.marketbeat.com/instant-alerts/xcf-global-capital-nasdaqsafx-issues-quarterly-earnings-results-beats-expectations-by-001-eps-2026-08-17/,"XCF Global Capital (NASDAQ:SAFX - Get Free Report) released its quarterly earnings results on Monday.
-XCF Global Capital had a net margin of 300.85% and a negative return on equity of 588.22%.
-XCF Global Capital has a 12-month low of $0.12 and a 12-month high of $1.55.
-Check Out Our Latest Stock Report on SAFX XCF Global Capital Company Profile (Get Free Report) XCF Global Capital Inc is a player in decarbonizing the aviation industry through Sustainable Aviation Fuel.
-XCF Global Capital Inc, formerly known as Focus Impact BH3 Acquisition Company, is based in RENO, NV.","XCF Global Capital (NASDAQ:SAFX - Get Free Report) released its quarterly earnings results on Monday. The company reported ($0.04) earnings per share (EPS) for the quarter, topping the consensus estimate of ($0.05) by $0.01, Zacks reports. XCF Global Capital had a net margin of 300.85% and a negative return on equity of 588.22%.
-
-XCF Global Capital Price Performance
-
-Shares of SAFX opened at $0.44 on Monday. The business's fifty day moving average is $0.42 and its 200 day moving average is $0.38. XCF Global Capital has a 12-month low of $0.12 and a 12-month high of $1.55. The stock has a market cap of $146.99 million, a P/E ratio of -0.65 and a beta of -0.30.
-
-Institutional Inflows and Outflows
-
-Institutional investors have recently bought and sold shares of the business. Polar Asset Management Partners Inc. grew its holdings in shares of XCF Global Capital by 51.0% during the fourth quarter. Polar Asset Management Partners Inc. now owns 2,131,109 shares of the company's stock valued at $582,000 after buying an additional 720,000 shares during the last quarter. State Street Corp lifted its position in XCF Global Capital by 37.3% in the 4th quarter. State Street Corp now owns 256,448 shares of the company's stock valued at $70,000 after acquiring an additional 69,698 shares in the last quarter. Jane Street Group LLC bought a new position in XCF Global Capital in the 4th quarter valued at about $42,000. Deutsche Bank AG boosted its stake in XCF Global Capital by 315.7% during the 4th quarter. Deutsche Bank AG now owns 199,524 shares of the company's stock valued at $54,000 after purchasing an additional 151,529 shares during the last quarter. Finally, Goldman Sachs Group Inc. boosted its stake in XCF Global Capital by 379.5% during the 4th quarter. Goldman Sachs Group Inc. now owns 120,789 shares of the company's stock valued at $33,000 after purchasing an additional 95,596 shares during the last quarter. Institutional investors and hedge funds own 52.34% of the company's stock.
-
-Wall Street Analyst Weigh In
-
-Several equities research analysts recently commented on the company. Weiss Ratings restated a ""sell (d+)"" rating on shares of XCF Global Capital in a research report on Wednesday, August 5th. HC Wainwright assumed coverage on shares of XCF Global Capital in a research note on Tuesday, June 23rd. They set a ""buy"" rating and a $1.00 target price on the stock. Finally, Wall Street Zen raised shares of XCF Global Capital from a ""sell"" rating to a ""hold"" rating in a research note on Sunday, July 12th. One analyst has rated the stock with a Buy rating, two have given a Hold rating and one has issued a Sell rating to the company's stock. According to MarketBeat.com, the stock presently has an average rating of ""Hold"" and a consensus target price of $0.70.
-
-Check Out Our Latest Stock Report on SAFX
-
-XCF Global Capital Company Profile
-
-(Get Free Report)
-
-XCF Global Capital Inc is a player in decarbonizing the aviation industry through Sustainable Aviation Fuel. XCF Global Capital Inc, formerly known as Focus Impact BH3 Acquisition Company, is based in RENO, NV.
-
-Read More
-
-Five stocks we like better than XCF Global Capital
-
-Is SiTime the Best AI Stock You've Never Heard Of?
-
-The Metals Company’s Big Bet Now Comes Down to a License
-
-OneSpaWorld Keeps Turning Cruise Demand Into Record Earnings
-
-Meta and Tesla Are Rebounding From Oversold Levels—Now What?
-
-This instant news alert was generated by narrative science technology and financial data from MarketBeat in order to provide readers with the fastest reporting and unbiased coverage. Please send any questions or comments about this story to contact@marketbeat.com.
-
-Should You Invest $1,000 in XCF Global Capital Right Now?
-
-Before you consider XCF Global Capital, you'll want to hear this.
-
-MarketBeat keeps track of Wall Street's top-rated and best performing research analysts and the stocks they recommend to their clients on a daily basis. MarketBeat has identified the five stocks that top analysts are quietly whispering to their clients to buy now before the broader market catches on... and XCF Global Capital wasn't on the list.
-
-While XCF Global Capital currently has a Hold rating among analysts, top-rated analysts believe these five stocks are better buys.",https://www.marketbeat.com/logos/xcf-global-capital-inc-logo-1200x675.png?v=20260116075633,N,,2026-08-17 14:57:41.593930
-,,2026-08-17 11:51:17+00:00,quartr.com,XCF Global (SAFX) Q2 2026 earnings summary - Quartr,Not Available,,,,,https://quartr.com/events/xcf-global-inc-safx-q2-2026_F1QeysnI,"The Phillips 66 offtake agreement was terminated in May 2026; a new commercialization partnership with BGN was established in July 2026.
-Revenue for Q2 2026 was $690,881, down sharply from $6,576,232 in Q2 2025; six-month revenue was $1,039,569, also down from $6,576,232 year-over-year.
-Net loss for Q2 2026 was $(14,133,018), compared to net income of $110,268,109 in Q2 2025; six-month net loss was $(31,945,434) versus net income of $102,800,908 year-over-year.
-Gross loss for Q2 2026 was $(1,235,070), compared to gross loss of $(1,235,070) in Q2 2025.
-Total operating expenses for Q2 2026 were $6,032,317, down from $33,142,471 in Q2 2025.","Focused on renewable fuels, especially sustainable aviation fuel (SAF), with a nationwide facility buildout strategy and a fully integrated business model from feedstock to sales.
-
-New Rise Reno facility began SAF and renewable naphtha production in early 2025, but is still under construction pending final project acceptance; interim production of renewable diesel is ongoing.
-
-The Phillips 66 offtake agreement was terminated in May 2026; a new commercialization partnership with BGN was established in July 2026.
-
-The company is pursuing a business combination with Southern Energy Renewables and DevvStream Corp., with related equity investments and planned facility upgrades.
-
-Revenue for Q2 2026 was $690,881, down sharply from $6,576,232 in Q2 2025; six-month revenue was $1,039,569, also down from $6,576,232 year-over-year.
-
-Net loss for Q2 2026 was $(14,133,018), compared to net income of $110,268,109 in Q2 2025; six-month net loss was $(31,945,434) versus net income of $102,800,908 year-over-year.
-
-Gross loss for Q2 2026 was $(1,235,070), compared to gross loss of $(1,235,070) in Q2 2025.
-
-Total operating expenses for Q2 2026 were $6,032,317, down from $33,142,471 in Q2 2025.
-
-Cash and cash equivalents at June 30, 2026, were $329,084; working capital deficit was $238.4 million.",https://a.storyblok.com/f/182663/18375/45952bc819/variant-12-standard_og-listed_companies.png/m/1200x630,N,,2026-08-17 11:57:48.204829
-,,2026-08-17 11:47:17+00:00,markets.businessinsider.com,"Statement from Bart Demosky, Executive Vice President and Chief Financial Officer ...",markets.businessinsider.com,,,,,https://markets.businessinsider.com/news/stocks/statement-from-bart-demosky-executive-vice-president-and-chief-financial-officer-bombardier-on-moody-s-ratings-upgrade-to-ba2-from-ba3-while-maintaining-a-positive-outlook-1036465188,"MONTREAL, Aug. 17, 2026 (GLOBE NEWSWIRE) -- Moody's upgrade of Bombardier's credit rating from Ba3 to Ba2, while maintaining a positive outlook, is a clear recognition of the progress we have made in strengthening our business and financial profile.
-This recognition comes as we continue to benefit from a strong backlog and solid growth prospects across all our business lines.
-About Bombardier At Bombardier (BBD-B.TO), we design, build, modify and maintain the world’s best-performing aircraft for the world’s most discerning people and businesses, governments and militaries.
-Bombardier customers operate a fleet of more than 5,200 aircraft, supported by a vast network of Bombardier team members worldwide and 10 service facilities across six countries.
-In 2024, Bombardier was honoured with the prestigious “Red Dot: Best of the Best” award for Brands and Communication Design.","MONTREAL, Aug. 17, 2026 (GLOBE NEWSWIRE) -- Moody's upgrade of Bombardier's credit rating from Ba3 to Ba2, while maintaining a positive outlook, is a clear recognition of the progress we have made in strengthening our business and financial profile. As our second credit rating upgrade from Moody's in the past 12 months, it reflects the consistent operational performance we have delivered and our sustained focus on deleveraging over recent years, as well as our strong track record of earnings growth, free cash flow generation and continued revenue diversification through our Services and Defense businesses.
-
-This recognition comes as we continue to benefit from a strong backlog and solid growth prospects across all our business lines. It represents an important milestone in our journey to further strengthen Bombardier's financial profile and create long-term value for all stakeholders. As we build on this momentum, we remain committed to executing with discipline against our strategic priorities.
-
-Most importantly, this achievement is a testament to the dedication and hard work of the entire Bombardier team. Their focus on delivering excellence every day and serving our customers has been instrumental in helping us reach this milestone.
-
-About Bombardier
-
-At Bombardier (BBD-B.TO), we design, build, modify and maintain the world’s best-performing aircraft for the world’s most discerning people and businesses, governments and militaries. That means not simply exceeding standards, but understanding customers well enough to anticipate their unspoken needs.
-
-For them, we are committed to pioneering the future of aviation—innovating to make flying more reliable, efficient and sustainable. And we are passionate about delivering unrivaled craftsmanship and care, giving our customers greater confidence and the elevated experience they deserve and expect. Because people who shape the world will always need the most productive and responsible ways to move through it.
-
-Bombardier customers operate a fleet of more than 5,200 aircraft, supported by a vast network of Bombardier team members worldwide and 10 service facilities across six countries. Bombardier’s performance-leading jets are proudly manufactured in aerostructure, assembly and completion facilities in Canada, the United States and Mexico. In 2024, Bombardier was honoured with the prestigious “Red Dot: Best of the Best” award for Brands and Communication Design.
-
-For Information
-
-For corporate news and information, including Bombardier’s Sustainability report, as well as the company’s initiative to cover all its flight operations with a Sustainable Aviation Fuel (SAF) blend utilizing the Book-and-Claim system visit bombardier.com.
-
-Learn more about Bombardier’s industry-leading products and customer service network at bombardier.com. Follow us on X @Bombardier.
-
-Media Contacts
-
-General media contact webform
-
-Christina Lemyre McCraw
-
-+1 514 497-4928
-
-christina.lemyremccraw@aero.bombardier.com",https://ml.globenewswire.com/media/17388364-7e8b-4836-8d73-8c21f3f49b4e/small/bombardier-v-rgb-k-png.png,N,,2026-08-17 11:57:51.585417
-,,2026-08-17 11:34:10+00:00,simplywall.st,Sinopec Engineering Group (SEHK:2386) Stock Revenue Rises While Margins Keep Shrinking,Simply Wall St,,,,,https://simplywall.st/stocks/hk/capital-goods/hkg-2386/sinopec-engineering-group-shares/news/sinopec-engineering-group-sehk2386-stock-revenue-rises-while,"SINOPEC Engineering (Group) closed at HK$5.18 after a weak few months, with the stock down about 11% over the past quarter.
-Like the SINOPEC Engineering (Group) story but want cleaner earnings momentum and firmer margins?
-H1 2026 Earnings Summary Total Revenue, H1 2026 vs H1 2025: ¥35,624.371m vs ¥31,558.914m (change reflects higher reported revenue in H1 2026) Net Income (Excl.
-See a clear view of its valuation in an easy to read visual dashboard with our Revenue Growth Keeps SINOPEC Engineering Bulls Interested For investors leaning positive on SINOPEC Engineering, the top line gives some support.
-For a longer term view, tap into crowd sentiment and different angles on SINOPEC Engineering (Group) through the and see what other investors are watching.","SINOPEC Engineering (Group) closed at HK$5.18 after a weak few months, with the stock down about 11% over the past quarter. The market has been cooling on the story just as the latest half year numbers put profitability under more pressure. Net profit margins over the last year sit at 2.1%, down from 3.8%, while the trailing P/E multiple of 12.6x still leans above peer levels.
-
-For short term traders, that margin squeeze is the headline. For longer term holders, the key question now is whether the forecast earnings growth can offset that profitability drag.
-
-Like the SINOPEC Engineering (Group) story but want cleaner earnings momentum and firmer margins? Take a look at our curated list of for a benchmark set of stocks with stronger profitability profiles.
-
-H1 2026 Earnings Summary
-
-Total Revenue, H1 2026 vs H1 2025: ¥35,624.371m vs ¥31,558.914m (change reflects higher reported revenue in H1 2026)
-
-Net Income (Excl. Extra Items), H1 2026 vs H1 2025: ¥1,137.149m vs ¥1,383.520m (decline in reported net income)
-
-Basic EPS, H1 2026 vs H1 2025: ¥0.26 per share vs ¥0.316408 per share (decline in earnings per share)
-
-Net Profit Margin, Trailing 12 Months vs Prior Year: 2.1% vs 3.8% (margin compression over the period)
-
-Tired of scrolling through dense tables of SINOPEC Engineering (Group) figures and trying to piece the story together yourself? See a clear view of its valuation in an easy to read visual dashboard with our
-
-Revenue Growth Keeps SINOPEC Engineering Bulls Interested
-
-For investors leaning positive on SINOPEC Engineering, the top line gives some support. Revenue in H1 2026 reached ¥35,624.371m compared with ¥31,558.914m in H1 2025, which points to solid project flow, including recent work such as the Uzbekistan sustainable aviation fuel project. That kind of contract fits the idea of a policy aligned industrial specialist with exposure to cleaner fuels. The pressure sits more on earnings quality than demand, so a bullish view now rests on confidence that higher activity can eventually translate into better profitability.
-
-Margin Compression Keeps Bearish Concerns In Play
-
-The latest earnings keep the cautious storyline alive. Net income excluding extra items fell to ¥1,137.149m in H1 2026 from ¥1,383.520m, while basic EPS eased from ¥0.316408 to ¥0.26. Trailing net profit margin moved from 3.8% to 2.1%, which signals weaker pricing power or cost pressure even as revenue rose. Recent share price performance, down over the past 7, 30 and 90 days, is consistent with that squeeze. For now, SINOPEC Engineering looks more like a volume driven contractor than a margin led compounder.
-
-After a margin squeeze like this, it is worth asking if SINOPEC Engineering hides deeper structural issues. Review the independent
-
-Stay Ahead Of Your Next Move
-
-If the mix of revenue growth and margin pressure at SINOPEC Engineering (Group) has your attention, register for free with Simply Wall St and add it to a to track price against fair value and wait for a setup that fits your plan. Once you own it or any other stock, use the to cut through noise and focus only on material changes that could affect your holdings. For a longer term view, tap into crowd sentiment and different angles on SINOPEC Engineering (Group) through the and see what other investors are watching. This way you can spot potential catalysts and risks early and keep an edge on the market.
-
-Seeking Alternatives Beyond SINOPEC Engineering?
-
-Fresh ideas often move first when momentum starts building and quiet leaders are still flying under the radar. Scan these curated shortlists before the crowd catches up and consider your options.
-
-Spot steadier compounders and track record builders by scanning a hand picked group of resilient stocks using the .
-
-Hunt for income workhorses that aim to keep paying you while others chase headlines by reviewing a curated set of .
-
-Target potential breakout moves in areas related to AI data centers and compute capacity by scanning a focused universe of .
-
-This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.",https://images.simplywall.st/asset/industry/3041000-choice2-main-header/1585186777117,N,,2026-08-17 12:58:40.621860
-,,2026-08-17 10:21:24+00:00,Webull,Tidewater Midstream (TSX:TWM) Stock Extends Rally On Record EBITDA Surge - Webull,Not Available,,,,,https://www.webull.com/news/15404042969293824,"Impressed by Tidewater Midstream and Infrastructure swinging back to earnings but still mindful of balance sheet risk and debt reduction?
-Tidewater Midstream’s Bull Story Meets Early Milestones Bulls argue Tidewater Midstream is turning tight renewable diesel supply and cleaner fuels into faster earnings and margin progress.
-See the consensus price target analysis for Tidewater Midstream and Infrastructure Tidewater Midstream Bear Case: Risks Eased, Not Erased The harsher Tidewater Midstream and Infrastructure bear view says high leverage, fragile refining margins and execution risk in renewables will cap any recovery and keep cash flows unreliable.
-Seeking Alternatives Beyond Tidewater Midstream Fresh stock ideas can move from quiet to flying quickly.
-Zero in on balance sheet strength while prices are still dropping or drifting sideways using the refined list of solid balance sheet and fundamentals stocks (12 results) that filters out weaker businesses early.","Tidewater Midstream and Infrastructure stock closed at CA$22.32 on Friday, capping a sharp three month run that already delivered just over a 30% gain. The market had been pricing in a cleaner story, and Q2 2026 results provided one. Tidewater swung from a series of quarterly losses to basic earnings per share of CA$0.68 on CA$552.1m of revenue and record adjusted earnings before interest, tax, depreciation and amortization (EBITDA) of CA$88.9m.
-
-Short term traders will focus on that momentum. Long term investors will be more interested in what this kind of profitability means for debt reduction and the balance sheet over the next several years.
-
-Impressed by Tidewater Midstream and Infrastructure swinging back to earnings but still mindful of balance sheet risk and debt reduction? Compare this setup with our list of solid balance sheet and fundamentals stocks (12 results).
-
-Q2 2026 Earnings Summary
-
-Revenue, Q2 2026 vs. Q2 2025: CA$552.1m vs. CA$340.6m (up about 62%)
-
-Net Income, Q2 2026 vs. Q2 2025: CA$15m profit vs. CA$16.3m loss (returned to profit)
-
-Basic EPS, Q2 2026 vs. Q2 2025: CA$0.68 vs. a loss of CA$0.76 per share (moved from loss to positive EPS)
-
-Trailing 12 Month Net Income, Q2 2026 TTM vs. Q2 2025 TTM: CA$76.2m loss vs. CA$58.7m loss (loss widened by about 30%)
-
-Prefer clear charts over reading another wall of text and spreadsheets on Tidewater Midstream and Infrastructure? Get a full visual view of the company, with a focus on its balance sheet strength and debt profile, in the company report for Tidewater Midstream and Infrastructure.
-
-Tidewater Midstream’s Bull Story Meets Early Milestones
-
-Bulls argue Tidewater Midstream is turning tight renewable diesel supply and cleaner fuels into faster earnings and margin progress. Q2 results give that view some concrete support. Record consolidated adjusted EBITDA of CA$88.9m, with CA$56m from renewables, shows that premium pricing, Biofuels Production Incentive cash support and low cost debottlenecking at the HDRD complex are translating into real profit rather than just a story.
-
-Utilization at 111% and throughput of 3,315 bpd at HDRD indicate that the clean fuels platform is already running above original design, which fits the idea of scale driven operating leverage. The decision to lift 2026 adjusted EBITDA guidance to a range of CA$230m to CA$250m while keeping capex steady also lines up with the thesis that integration, throughput gains and regulatory credits can improve margins and free cash flow without a heavy spend.
-
-Compare whether this push toward higher utilization, record adjusted EBITDA, and steadier capex is winning over the street. See the consensus price target analysis for Tidewater Midstream and Infrastructure
-
-Tidewater Midstream Bear Case: Risks Eased, Not Erased
-
-The harsher Tidewater Midstream and Infrastructure bear view says high leverage, fragile refining margins and execution risk in renewables will cap any recovery and keep cash flows unreliable. Q2 cuts against the pure leverage worry. Consolidated net debt fell by CA$44.4m and leverage now sits at 1.7x, inside the stated 1.2x to 2.5x range, with free cash flow earmarked for further debt reduction. That weakens the argument that the balance sheet is boxed in.
-
-Other bear points are less resolved. Prince George benefited from strong crack spreads and heavy hedging into 2026 and 2027, which cushions volatility but does not answer long term demand risk in Western Canada. On execution, HDRD is running hard, yet the large sustainable aviation fuel project still needs regulatory clarity and a final investment decision. That timing overhang keeps the concern about renewables execution risk very much alive.
-
-With Tidewater Midstream and Infrastructure still loss making over the last 12 months yet leaning on higher utilization and future earnings forecasts, check whether the balance sheet and cash coverage really line up in our financial health analysis of Tidewater Midstream and Infrastructure stock.
-
-Stay Ahead With Simply Wall St
-
-If Tidewater Midstream and Infrastructure swinging to Q2 earnings and record adjusted EBITDA has your attention, register for free with Simply Wall St and add it to a Watchlist to track the share price against fair value and watch for a better entry point. After you own the stock, keep your bigger picture clear by using the Portfolio Command Center so you only see the most important updates on your holdings. For longer term perspective and fresh ideas, tap into the crowd with the Community and see what other investors are focusing on. By spotting potential catalysts and risks early, you put yourself in a stronger position to stay ahead of the market.
-
-Seeking Alternatives Beyond Tidewater Midstream
-
-Fresh stock ideas can move from quiet to flying quickly. Use these focused lists before the crowd catches up and the best entry points are gone. Act now.
-
-Spot income workhorses that aim to keep paying while others stall by scanning our curated 4 dividend fortresses that many investors overlook until yields are already compressed.
-
-Chase new growth stories before momentum headlines hit mainstream feeds with a hand picked 9 high quality undiscovered gems still under the radar for now.
-
-Zero in on balance sheet strength while prices are still dropping or drifting sideways using the refined list of solid balance sheet and fundamentals stocks (12 results) that filters out weaker businesses early.
-
-This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.",,N,,2026-08-17 11:57:53.861665
-,,2026-08-17 10:18:41+00:00,AGN,Russia begins deliveries of import-substituted Il-114-300 turboprops - Aerospace Global News,Aaron Spray,,,,,https://aerospaceglobalnews.com/news/russia-il-114-300-deliveries/,"Russia announced first Il-114-300 turboprop deliveries According to an announcement by Russia’s First Deputy Prime Minister Denis Manturov, the first russified Ilyushin Il-114-300 deliveries have begun.
-The official Russian news outlet, Obyasnyaem RF, quoted Manturov as stating, “We are beginning the first deliveries of the Il-114-300 aircraft.
-The regional turboprop typically comes with a 66-seat baseline capacity.
-The Il-114-300 has strict initial operating conditions The Ilyushin Il-114-300’s type certificate, issued by the Federal Air Transport Agency (Rosaviatsiya), includes strict limitations that may significantly affect its operation.
-Cold weather and relatively austere airfield operations are almost the raison d’être of the Russian regional aircraft requirement.","Russia has said it is delivering the first import-substituted regional Ilyushin Il-114-300 turboprops, which are a rough analogue to the Dash 8/Q400 and ATR-72-600. Deliveries in 2026 and 2027 are expected to be minimal and come with very tight operating limitations.
-
-Russia announced first Il-114-300 turboprop deliveries
-
-According to an announcement by Russia’s First Deputy Prime Minister Denis Manturov, the first russified Ilyushin Il-114-300 deliveries have begun. In June, Russia reissued the type certificate for the Il-114, with Manturov saying at the time that Rostec has modernized almost all of the aircraft’s systems.
-
-The official Russian news outlet, Obyasnyaem RF, quoted Manturov as stating, “We are beginning the first deliveries of the Il-114-300 aircraft. Serial production of the updated Tu-214 is ramping up, and the MC-21 and Superjet are in the final stages of testing and certification.”
-
-He is reported to have added, “The creation of a modern civil aviation fleet is of key importance here. Today, this program is moving into practical implementation.”
-
-In November 2025, AGN reported that the first russified legacy Soviet Tupolev Tu-214 airliner was being prepped for delivery, although that particular aircraft was in business configuration.
-
-While the delivery numbers were not announced, they appear to be very modest.
-
-In June 2026, Russia’s Kommersant reported, “Transport Minister Andrei Nikitin announced that delivery of three Il-114-300s is expected in 2026 and approximately the same number in 2027, with production capacity to increase thereafter.”
-
-Russia’s import-substituted regional turboprop
-
-The Il-114 is the post-sanctions variant of the Soviet-origin aircraft. Its development started in 1982, and first flew in 1990. The regional turboprop typically comes with a 66-seat baseline capacity. It replaces ageing Antonov An-24 and An-26s.
-
-Interestingly, Kommersant adds, “It boasts lower fuel consumption than its foreign competitors, ATR and Bombardier.” Some Russian sources claim it has 16% lower fuel consumption than the ATR 72-600, but there is no good public data to back up these claims or to establish exactly what is being compared.
-
-Kommersant added that Russia’s Aurora, an airline based in the Far East, is not expected to get its first aircraft until 2028. Aurora is expected to be one of the biggest customers for the aircraft with an order for 20 examples.
-
-The Il-114-300 is produced with Russian Klimov TV7-117ST-01 turboprop engines and avionics, while the older Il-114-100 was produced with Canadian Pratt & Whitney engines and foreign-made avionics. Around 20 of them were built at the Tashkent Aircraft Plant in Uzbekistan.
-
-The Il-114-300 has strict initial operating conditions
-
-The Ilyushin Il-114-300’s type certificate, issued by the Federal Air Transport Agency (Rosaviatsiya), includes strict limitations that may significantly affect its operation. It is intended to operate in Russia’s austere Arctic and Siberian regions and replace the An-26 and An-24s already operating there.
-
-According to the type certificate data sheet, it is only certified for operation in a rather narrow band of favourable weather conditions. This includes a temperature range of -9 to +25°C (the older Il-114-100 was certified for -30 to +45°C).
-
-While Russian/Soviet aircraft are famously built for rugged conditions, the turboprop 114-300 is also prohibited from operating in icy conditions and thunderstorms. The initial certificate permits takeoff and landing only from runways with artificial surfaces.
-
-Airport elevations are limited to -300 meters to +1,000 meters; the latitude is set to ±70°, while its crosswind certification is just 15 m/s (dry), 12 m/s (wet).
-
-These limitations, which effectively say “don’t operate it in cold, icing, or stormy conditions or on unpaved runways,” have drawn online mockery. Cold weather and relatively austere airfield operations are almost the raison d’être of the Russian regional aircraft requirement.
-
-The limitations are its initial certification, and these are expected to loosen over time.",https://aerospaceglobalnews.com/wp-content/uploads/2025/10/Russian-Ilyushin-Il-114-300-in-flight-1.jpg,N,,2026-08-17 12:58:44.762316
-,,2026-08-17 10:18:35+00:00,www.hellenicshippingnews.com,"INDIA CEO SERIES: IOC charts growth path with refining expansion, petrochemicals, clean fuels",Not Available,,,,,https://www.hellenicshippingnews.com/india-ceo-series-ioc-charts-growth-path-with-refining-expansion-petrochemicals-clean-fuels/,"The company is actively expanding into areas such as compressed biogas, LNG, sustainable aviation fuel, and renewable energy sources, like solar ...",Not Available,,N,,2026-08-17 07:57:18.152364
-,,2026-08-17 09:23:55+00:00,Warp News,The world's largest electric hybrid aircraft has flown for the first time – the electricity cost five dollars,WALL-Y,,,,,https://www.warpnews.org/transportation/the-worlds-largest-electric-hybrid-aircraft-has-flown-for-the-first-time-the-electricity-cost-five-dollars/,"The production version, the ES-30, is expected to cut operating costs by more than 40 percent compared with today's regional aircraft.
-Warp News has followed Heart Aerospace since the company's early years and has written about it several times.
-The figure says something about why Heart Aerospace is building electric aircraft at all.
-""With the first flight of X1, Heart Aerospace has demonstrated electric flight at the size of a commercial airliner,"" says Anders Forslund, founder and CEO.
-The next step is being built in Los Angeles Heart Aerospace is headquartered in Los Angeles.","Heart Aerospace's demonstration aircraft X1 flew for the first time, staying in the air for 27 minutes.
-
-The electricity for the flight cost about five dollars.
-
-The production version, the ES-30, is expected to cut operating costs by more than 40 percent compared with today's regional aircraft. The aircraft is in the same size class as a commercial regional airliner.
-
-27 minutes in the air over the Champlain Valley
-
-Early in the morning at Plattsburgh International Airport in upstate New York, an aircraft rolled out onto runway 35. What happened next had never happened before: a battery-powered aircraft in the same size class as a commercial regional airliner took off and flew.
-
-The flight took place on Wednesday, August 12, 2026, and lasted 27 minutes. The aircraft, named X1, was flown by one pilot and reached 1,100 feet above the ground, roughly 335 meters. The powertrain, running entirely on batteries, delivered more than one megawatt of power. The test profile included taxiing, takeoff, climb, maneuvering and landing.
-
-The flight was conducted under a special airworthiness certificate in the experimental category, issued by the US aviation authority, the FAA. The certificate came in July 2026 and gave permission to begin flight testing immediately. The test flights take place within a defined envelope: no more than 140 knots, no more than 2,000 feet above the ground and no more than 1.5 G in maneuvering load.
-
-Plattsburgh is a regional commercial airport serving a community of 20,000 residents. That is exactly the kind of traffic Heart Aerospace is aiming for.
-
-Warp News has followed Heart Aerospace since the company's early years and has written about it several times. The first time was in September 2020, when founders Anders Forslund and Klara Andreasson showed off their electric motor in a hangar at Säve airport outside Gothenburg and had a handful of employees. Warp News has since visited the hangar together with readers and reported on the company's steps from drawing board to flying machine.
-
-Five dollars of electricity against a jet fuel price up 63 percent
-
-The X1 used about $5 worth of electricity on its first flight. The figure says something about why Heart Aerospace is building electric aircraft at all.
-
-Over the same period, the price of jet fuel rose sharply. In the week ending August 7, the average price was $3.50 per gallon, or about $0.92 per liter. That is an increase of 63 percent compared with a year earlier. Electric propulsion decouples airlines' operating costs from the swings in the global oil markets.
-
-""With the first flight of X1, Heart Aerospace has demonstrated electric flight at the size of a commercial airliner,"" says Anders Forslund, founder and CEO. He describes the company's goal as abundant flight: more, cheaper and cleaner flights to and from airports closer to where people live.
-
-What the X1 was meant to prove
-
-The X1 is not intended to be sold. It is a full-scale demonstrator representing the production aircraft, the ES-30, and it was built to verify technology, aerodynamics, flight performance and the company's own ability to carry out an aircraft program.
-
-Heart lists the steps the program has gone through. The company has designed an airframe from the ground up around electric propulsion, verified the new geometry through simulation and physical testing, developed its own components, and integrated electric motors, batteries, power electronics, control systems and avionics into a flying aircraft. The airframe has been load-tested to its limits and the powertrain has been tested under flight-like conditions.
-
-Added to this is a flight test organization with staff, procedures and analytical capability, along with an established working relationship with the FAA on airworthiness.
-
-""Through the X1 program, Heart has built the capability to design, build, test, operate and continuously improve an all-new electric airliner,"" says chief technology officer Ben Stabler. That capability is now being carried over to the ES-30.
-
-The size of the aircraft
-
-The X1 measures 32.3 meters between the wingtips, 23.2 meters from nose to tail and 7.3 meters in height. Its takeoff weight exceeds 11,340 kilograms. That makes the X1 the largest battery-electric aircraft ever to have flown.
-
-Propulsion comes from four electric motors mounted on the wings. The aircraft has a T-tail. At the aircraft's unveiling, a cabin mock-up for 30 passengers and a cockpit mock-up were installed on board.
-
-ES-30: 30 seats, 200 kilometers on electricity and 800 kilometers on hybrid power
-
-The ES-30 is a conventional fixed-wing aircraft with 30 seats and hybrid-electric propulsion. It is being developed for certification under the FAA's Part 25 rules, which apply to larger airliners.
-
-According to the planned specifications, the ES-30 will fly 200 kilometers fully on battery and 800 kilometers on hybrid power, with 25 kilograms of baggage per passenger and a 30-minute charging time. The hybrid system is based on two turbogenerators that, according to Heart, will run on sustainable aviation fuel. They provide an energy reserve and supplement battery power on longer legs. These are design targets, not flight-verified performance.
-
-Heart expects the ES-30 to deliver more than 40 percent lower operating costs per aircraft than older regional airliners. The company points to four reasons: lower energy costs, less maintenance thanks to simpler electric propulsion and electrified systems, higher availability through an integrated electronics and software architecture, and low exposure to the emissions-related taxes and fees that are growing in aviation markets around the world.
-
-The range is suited to short routes. In North and South America there are 5,000 airports and a network dominated by routes under 500 miles, or about 800 kilometers. In Europe, the same range covers large parts of the continent.
-
-From a 1:5 scale model to full-scale flight
-
-The road here has come in clear steps. Heart Aerospace started in 2018 with two people in hangars at Säve airport outside Gothenburg.
-
-The first aircraft was called the ES-19 and was a planned 19-seat all-electric regional airliner with a stated range of up to 400 kilometers. On December 17, 2021, the company flew an unmanned 1:5 scale model of the ES-19 at Säve. The model had a 4.6-meter wingspan, flew for four and a half minutes and reached a top speed of 150 kilometers per hour. In parallel, a full-scale powertrain demonstrator had been ground-tested for more than a year.
-
-In September 2022, Heart set the ES-19 aside and instead presented the 30-seat ES-30 with hybrid propulsion. This was a new product configuration rather than a scaling up of a finished aircraft. Earlier orders from United and Mesa were, according to the company, confirmed for the new model.
-
-From early on, the strategy was about avoiding unnecessary risk. The company chose not to design an entirely new aircraft in every respect, but to use proven parts and adapt what is required when batteries and electric motors replace jet fuel and piston engines. ""The principles of aircraft design are low speed, low altitude, conventional design to be safe, low risk, boring and easier to certify,"" said Philip Keenan, then head of airworthiness and certification, during a visit to the hangar in 2022.
-
-The airlines that have put money in
-
-The ES-30 has customer commitments from United Airlines, Air Canada and JSX. Heart says the combined customer commitments amount to $9.4 billion.
-
-""The first flight of X1 is a major technical achievement for Heart Aerospace, a company United has been proud to support,"" says Michael Leskinen, chief financial officer at United Airlines. He points out that electric airliners can deliver a better travel experience for passengers while also strengthening the airline's business.
-
-John Di Bert, deputy group chief executive and chief financial officer at Air Canada, describes the X1's first flight as an important milestone. ""Our investment in Heart Aerospace and the ES-30 reflects Air Canada's commitment to supporting innovative technology that has the potential to change aviation,"" he says.
-
-The next step is being built in Los Angeles
-
-Heart Aerospace is headquartered in Los Angeles. There, the company is now developing the first pre-production example of the ES-30 in its pilot factory.
-
-Flight testing of the ES-30 is planned to begin in 2028. Type certification and entry into service are set for 2031.",https://storage.ghost.io/c/90/2a/902ae086-e761-4841-a456-2c796f79acff/content/images/size/w1200/2026/08/Heart-X1-first-flight.jpg,N,,2026-08-17 07:57:21.161990
-,,2026-08-17 08:36:29+00:00,Yahoo Finance,Hydrogen Utopia secures UK licence to advance waste-to-jet fuel technology,Fiona Craig,,,,,https://uk.finance.yahoo.com/news/hydrogen-utopia-secures-uk-licence-071244832.html,"Hydrogen Utopia International PLC (LSE:HUI) has obtained a UK licence from U.S.-based InEnTec Inc. to use its PEM gasification technology in the production of sustainable aviation fuel, expanding the company's footprint in the waste-to-fuel sector.
-The licence, valued at $500,000, allows Hydrogen Utopia to develop and operate systems across the United Kingdom that transform non-recyclable plastics, waste tyres and other discarded materials into syngas suitable for producing sustainable aviation fuel (SAF).
-The expansion into the UK comes as government policy increasingly supports the development and adoption of lower-carbon aviation fuels.
-Despite the potential commercial opportunity, Hydrogen Utopia remains at an early stage financially.
-More about Hydrogen Utopia International PLC Hydrogen Utopia International PLC develops waste-to-fuel technology designed to process non-recyclable mixed waste plastics into hydrogen, sustainable aviation fuel and other cleaner fuels, alongside advanced materials and renewable heat.","Hydrogen Utopia International PLC (LSE:HUI) has obtained a UK licence from U.S.-based InEnTec Inc. to use its PEM gasification technology in the production of sustainable aviation fuel, expanding the company's footprint in the waste-to-fuel sector.
-
-The licence, valued at $500,000, allows Hydrogen Utopia to develop and operate systems across the United Kingdom that transform non-recyclable plastics, waste tyres and other discarded materials into syngas suitable for producing sustainable aviation fuel (SAF). The agreement builds on an existing exclusive licence covering the Middle East and North Africa.
-
-The expansion into the UK comes as government policy increasingly supports the development and adoption of lower-carbon aviation fuels. The UK Government is implementing its Low Carbon Fuels Fund alongside a statutory SAF mandate that requires sustainable fuels to account for a progressively larger proportion of aviation fuel demand.
-
-Hydrogen Utopia's board believes these measures could create a supportive environment for waste-derived fuel projects. The company expects its new licence to improve its prospects of accessing public funding while providing a platform from which it can develop and scale waste-to-SAF infrastructure in the UK.
-
-Despite the potential commercial opportunity, Hydrogen Utopia remains at an early stage financially. The company is pre-revenue, continues to report losses and has generated predominantly negative operating cash flow. Its technical picture is also weak, with the share price trading below important moving averages and the MACD indicator remaining negative.
-
-Traditional valuation measures offer limited support at present because the company is loss-making, resulting in a negative price-to-earnings ratio, while it does not currently provide a dividend yield.
-
-More about Hydrogen Utopia International PLC
-
-Hydrogen Utopia International PLC develops waste-to-fuel technology designed to process non-recyclable mixed waste plastics into hydrogen, sustainable aviation fuel and other cleaner fuels, alongside advanced materials and renewable heat.
-
-Its proposed facilities use waste that cannot otherwise be recycled as feedstock for the production of syngas. The company ultimately aims to generate revenue from the sale of gases, electricity and heat, as well as fees charged for processing waste, with its development strategy focused on markets offering supportive government policies and significant private-sector investment.
-
-Recommended stories",https://s.yimg.com/lo/mysterio/api/0CBA6534359A735B1B355C75D45BDFE0DF97D0E525A22F5748E9457DE1A540A4/subgraphmysterio/resizefill_w1200_h659;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fadvfn_uk_848%2Fceb6193e08c644bd03f4306269479ad7.png,N,,2026-08-17 05:56:31.249821
-,,2026-08-17 08:06:53+00:00,Borse.it,Maire positiva in Borsa con commessa Nextchem in Australia,Redazione,,,,,https://www.borse.it/articolo/ultime-notizie/maire-positiva-in-borsa-con-commessa-nextchem-in-australia,"Movimenti positivi a Piazza Affari per il titolo Maire che guadagna oltre l’1%.
-Il syngas sarà successivamente impiegato per la conversione in SAF e diesel rinnovabile mediante soluzioni di terze parti.
-Una volta raggiunta la piena capacità operativa, Project Lion ha il potenziale di produrre fino a 125.000 tonnellate all’anno di SAF.
-L’aggiudicazione è subordinata a Notice to Proceed, fatta eccezione per alcuni servizi di ingegneria.
-“Questa aggiudicazione conferma la rilevanza strategica delle tecnologie proprietarie di Nextchem nell’abilitare lo sviluppo di carburanti sostenibili a partire da materie prime rinnovabili e residuali.","Movimenti positivi a Piazza Affari per il titolo Maire che guadagna oltre l’1%. La società ha annunciato stamattina che Nextchem, tramite la propria controllata MyRechemical, si è aggiudicata da SKY Renewables Burdekin, società australiana di sviluppo progetti focalizzata sulla produzione di sustainable aviation fuel (SAF), licensing, Process Design Package (PDP) e servizi di ingegneria per la parte relativa al syngas del Project Lion, nella regione del Burdekin, nel North Queensland, Australia.
-
-Il progetto utilizzerà residui di canna da zucchero disponibili localmente come materia prima per produrre gas di sintesi (syngas) purificato di grado chimico attraverso l’applicazione della tecnologia NX Circular Gasification. Il syngas sarà successivamente impiegato per la conversione in SAF e diesel rinnovabile mediante soluzioni di terze parti. Una volta raggiunta la piena capacità operativa, Project Lion ha il potenziale di produrre fino a 125.000 tonnellate all’anno di SAF.
-
-L’aggiudicazione è subordinata a Notice to Proceed, fatta eccezione per alcuni servizi di ingegneria.
-
-“Questa aggiudicazione conferma la rilevanza strategica delle tecnologie proprietarie di Nextchem nell’abilitare lo sviluppo di carburanti sostenibili a partire da materie prime rinnovabili e residuali. Siamo orgogliosi di contribuire a un progetto di questo tipo in Australia, un’area geografica di crescente importanza nell’evoluzione del settore e rilevante per la diversificazione del nostro portafoglio. Grazie alla nostra tecnologia di gassificazione, siamo in grado di supportare la conversione di residui di canna da zucchero disponibili localmente in carburanti a basse emissioni di carbonio, coniugando soluzioni di carbonio circolare con le esigenze di decarbonizzazione del settore dell’aviazione”, ha commenta Fabio Fritelli, managing director di Nextchem.",https://www.borse.it/app/uploads/2024/12/imported-borsa-italiana-piazza-affari.jpg,N,,2026-08-17 05:56:34.711442
-,,2026-08-17 07:28:44+00:00,www.lexology.com,Renewable Transport Fuel Obligations (Sustainable Aviation Fuel) Order 2024 (UK) - Lexology,Not Available,,,,,https://www.lexology.com/primarysources/detail/40493D54422487344BD757DF2CEA87B2CA26C9B6/?page=1&q=corporate+sustainability+reporting,"Our primary sources centre highlights a range of key global sources across the legal landscape, including primary and secondary legislation, cases and more, enabling you to access documents pertinent to your research.
-*Please note: Terminology and legal structure may differ across jurisdictions – for example, depending on the jurisdiction, primary legislation may comprise acts, statutes, codes and ordinances and secondary legislation may comprise rules, regulations or orders (among others).","Our primary sources centre highlights a range of key global sources across the legal landscape, including primary and secondary legislation, cases and more, enabling you to access documents pertinent to your research.
-
-*Please note: Terminology and legal structure may differ across jurisdictions – for example, depending on the jurisdiction, primary legislation may comprise acts, statutes, codes and ordinances and secondary legislation may comprise rules, regulations or orders (among others).",https://www.lexology.com/favicon.ico,N,,2026-08-18 11:57:47.507897
-,,2026-08-17 07:16:55+00:00,TradingView,REG - Hydrogen Utopia Intl - HUI secures UK Licence for SAF — TradingView News,Not Available,,,,,"https://www.tradingview.com/news/reuters.com,2026-08-17:newsml_RSQ9174Qa:0-reg-hydrogen-utopia-intl-hui-secures-uk-licence-for-saf/","The UK Licence Agreement grants HUI rights to build, operate and scale PEM® Melter systems throughout the UK, converting non-recyclable mixed waste plastics, tyres and other hazardous and non-hazardous waste streams into clean syngas, a versatile building block for SAF production.
-The UK Licence Agreement follows HUI's earlier exclusive licence with InEnTec covering the Middle East and North Africa (""MENA"") region, secured for large-scale projects across Saudi Arabia and the wider GCC.
-The UK Licence Agreement is secured as the UK Government ramps up support for domestic low-carbon fuel production.
-HUI's route to SAF is by conversion of non-recyclable waste plastic to syngas via InEnTec's PEM® gasification technology, which is then processed into SAF, giving the Company a distinct feedstock-driven pathway to help meet the SAF mandate.
-The UK Licence Agreement has been secured for a total consideration of $500,000 of which $250,000 has been paid and the remaining $250,000 is payable by promissory note.","RNS Number : 9174Q Hydrogen Utopia International PLC 17 August 2026
-
-The information contained within this announcement is deemed by the Company to constitute inside information stipulated under the Market Abuse Regulation (EU) No. 596/2014 as it forms part of UK domestic law by virtue of the European Union (Withdrawal) Act 2018. Upon the publication of this announcement via the Regulatory Information Service, this inside information is now considered to be in the public domain.
-
-17 August 2026
-
-Hydrogen Utopia International PLC
-
-(the ""Company"" or ""HUI"")
-
-HUI secures UK Licence for SAF
-
-Hydrogen Utopia International PLC HUI, a pioneering company transforming non-recyclable waste plastic into hydrogen, clean fuels and advanced materials, focusing on advanced fuels such as jet fuel and Sustainable Aviation Fuel (""SAF""), is pleased to announce that it has secured a licence from InEnTec Inc. (""InEnTec"") to deploy its proven PEM® (Plasma Enhanced Melter) gasification technology for sustainable aviation fuel (""SAF"") production, across the United Kingdom, for a total consideration of $500,000 (""UK Licence Agreement"").
-
-The UK Licence Agreement grants HUI rights to build, operate and scale PEM® Melter systems throughout the UK, converting non-recyclable mixed waste plastics, tyres and other hazardous and non-hazardous waste streams into clean syngas, a versatile building block for SAF production. InEnTec's PEM® gasification technology has been proven across more than a decade of commercial deployment worldwide, combining plasma arc technology with a molten glass bath to convert virtually any organic waste into ultra-clean syngas without combustion or incineration.
-
-The UK Licence Agreement follows HUI's earlier exclusive licence with InEnTec covering the Middle East and North Africa (""MENA"") region, secured for large-scale projects across Saudi Arabia and the wider GCC. The strong commercial interest and momentum seen in MENA has demonstrated clear demand for InEnTec's PEM® gasification technology at scale. The Board believes the UK market is now following that same trajectory underpinned by the Department of Transport's launch of the £219 million Low Carbon Fuels Fund (""LCFF"") and the statutory SAF mandate. With licences now secured in both regions, HUI is building a growing international platform for PEM® gasification technology-based waste-to-fuel deployment.
-
-The UK Licence Agreement is secured as the UK Government ramps up support for domestic low-carbon fuel production. The LCFF will make £93 million available over the next two years to UK-based companies to help scale SAF production, with support prioritised for projects closest to commercial deployment. The LCFF is projected to add £5 billion to the UK economy by 2050 and builds on the Government's existing £198 million Advanced Fuels Fund, which has been backing cleaner aviation technologies since 2022.
-
-The LCFF has been introduced specifically to help the UK meet its statutory SAF mandate, which requires SAF to make up 10% of UK jet fuel demand by 2030, rising to 22% by 2040, a trajectory the Government estimates could deliver up to 6.3 million tonnes of annual carbon savings by 2040. The SAF mandate is technology-neutral across eligible production pathways. HUI's route to SAF is by conversion of non-recyclable waste plastic to syngas via InEnTec's PEM® gasification technology, which is then processed into SAF, giving the Company a distinct feedstock-driven pathway to help meet the SAF mandate. With SAF demand now mandated by law rather than being voluntary, the Board believes the UK market now offers a durable, policy-backed pathway for HUI to advance its mission of converting non-recyclable waste plastic into sustainable fuels, including through the waste-to-SAF infrastructure HUI is licensed to deploy.
-
-The Board believes HUI's UK licence positions the Company strongly to seek LCFF support, given the potential for the licensed PEM® gasification technology to convert non-recyclable waste into syngas that can be further processed into low-carbon and sustainable fuels, in alignment with the fund's objectives.
-
-The UK Licence Agreement has been secured for a total consideration of $500,000 of which $250,000 has been paid and the remaining $250,000 is payable by promissory note.
-
-Aleksandra Binkowska, Chief Executive Officer of HUI, commented: ""We are delighted to strengthen our partnership with Inentec, which operates the only commercially proven technology in its class. This positions us well for expansion into the UK, where the government is actively supporting the sustainable aviation fuel market. We expect to now accelerate our UK operation as we engage with feedstock suppliers, off take agreements and finalise discussions on location for the SAF facility.""
-
-Hydrogen Utopia International PLC
-
-Aleksandra Binkowska
-
-+44 78 8077 0880
-
-Alfred Henry Corporate Finance Limited (LSE Corporate Adviser)
-
-Nick Michaels/Maya Klein Wassink
-
-+44 20 8064 4056
-
-Clear Capital Markets (Broker)
-
-Bob Roberts
-
-+44 (0)20 3869 6081
-
-About Hydrogen Utopia International PLC
-
-HUI aims to become one of the leading new companies specialising in converting non-recyclable mixed waste plastic into hydrogen and other carbon-free fuels, new materials or distributed renewable heat.
-
-A HUI facility uses non-recyclable mixed waste plastic as feedstock and turns it into syngas from which new products and energy can be produced. HUI anticipates that its revenues will be derived from a variety of sources, dependent upon location and configuration of the HUI facilities, including the sale of syngas, hydrogen and other gases, electricity and heat sales, and the payment to it of fees for a given quantity of non-recyclable mixed waste plastic received at a HUI facility.
-
-HUI will target areas where there is significant private sector interest or potential, financial backing is accessible and or where substantial government funded sources of grants and loans are or may be available. The global increase in fossil fuel-based energy prices reinforces the need for alternative, price competitive energy sources, which HUI's business model can provide.
-
-This information is provided by RNS, the news service of the London Stock Exchange. RNS is approved by the Financial Conduct Authority to act as a Primary Information Provider in the United Kingdom. Terms and conditions relating to the use and distribution of this information may apply. For further information, please contact rns@lseg.com or visit www.rns.com.
-
-RNS may use your IP address to confirm compliance with the terms and conditions, to analyse how you engage with the information contained in this communication, and to share such analysis on an anonymised basis with others as part of our commercial services. For further information about how RNS and the London Stock Exchange use the personal data you provide us, please see our Privacy Policy. END STRUNRRRNKUWAUR",https://s.tradingview.com/static/images/illustrations/news-story.jpg,N,,2026-08-17 05:56:37.719993
-,,2026-08-17 07:10:38+00:00,finanza.repubblica.it,"NextChem (MAIRE), nuovo contratto in Australia per un progetto di sustainable aviation fuel",Not Available,,,,,https://finanza.repubblica.it/News/2026/08/17/nextchem_maire_nuovo_contratto_in_australia_per_un_progetto_di_sustainable_aviation_fuel-9/,"MAIRE annuncia che Nextchem, tramite la propria controllata MyRechemical, si è aggiudicata da SKY Renewables Burdekin Pty Ltd, società australiana di sviluppo progetti focalizzata sulla produzione di",Not Available,https://images.teleborsa.it/t/stabile/173575.t.W600.H340.M4.jpg,N,,2026-08-17 05:56:40.456087
-,,2026-08-17 06:53:49+00:00,www.borsaitaliana.it,"NextChem (MAIRE), nuovo contratto in Australia per un progetto di sustainable aviation fuel",Not Available,,,,,https://www.borsaitaliana.it/borsa/notizie/teleborsa/finanza/nextchem-maire-nuovo-contratto-in-australia-per-un-progetto-di-sustainable-aviation-fuel-9_2026-08-17_TLB.html?lang=it,"Il progetto, spiega una nota, utilizzerà residui di canna da zucchero disponibili localmente come materia prima per produrre gas di sintesi (syngas) purificato di grado chimico attraverso l'applicazione della tecnologia NX Circular Gasification.
-Il syngas sarà successivamente impiegato per la conversione in SAF e diesel rinnovabile mediante soluzioni di terze parti.
-Una volta raggiunta la piena capacità operativa, Project Lion ha il potenziale di produrre fino a 125.000 tonnellate all'anno di SAF.
-Siamo orgogliosi di contribuire a un progetto di questo tipo in Australia, un'area geografica di crescente importanza nell'evoluzione del settore e rilevante per la diversificazione del nostro portafoglio.
-(Teleborsa) 17-08-2026 08:50 Titoli citati nella notizia Nome Prezzo Ultimo Contratto Var % Ora Min oggi Max oggi Apertura Maire 12,43 +0,16 11.55.45 12,42 12,75 12,59","(Teleborsa) - MAIRE annuncia che Nextchem, tramite la propria controllata MyRechemical, si è aggiudicata da SKY Renewables Burdekin Pty Ltd, società australiana di sviluppo progetti focalizzata sulla produzione di sustainable aviation fuel (SAF), licensing, Process Design Package (PDP) e servizi di ingegneria per la parte relativa al syngas del Project Lion, nella regione del Burdekin, nel North Queensland, Australia.
-
-Il progetto, spiega una nota, utilizzerà residui di canna da zucchero disponibili localmente come materia prima per produrre gas di sintesi (syngas) purificato di grado chimico attraverso l'applicazione della tecnologia NX Circular Gasification. Il syngas sarà successivamente impiegato per la conversione in SAF e diesel rinnovabile mediante soluzioni di terze parti. Una volta raggiunta la piena capacità operativa, Project Lion ha il potenziale di produrre fino a 125.000 tonnellate all'anno di SAF.
-
-Valorizzando gli scarti della canna da zucchero, biomassa residua che spesso viene bruciata direttamente nei campi, il progetto dimostra come la tecnologia NX Circular Gasification consenta di trasformare i residui agricoli in un prezioso intermedio per i carburanti a basse emissioni di carbonio, favorendo al contempo un utilizzo più sostenibile delle risorse locali di biomassa.
-
-L'aggiudicazione è subordinata a Notice to Proceed, fatta eccezione per alcuni servizi di ingegneria.
-
-Fabio Fritelli, Managing Director di Nextchem, ha commentato: ""Questa aggiudicazione conferma la rilevanza strategica delle tecnologie proprietarie di Nextchem nell'abilitare lo sviluppo di carburanti sostenibili a partire da materie prime rinnovabili e residuali. Siamo orgogliosi di contribuire a un progetto di questo tipo in Australia, un'area geografica di crescente importanza nell'evoluzione del settore e rilevante per la diversificazione del nostro portafoglio. Grazie alla nostra tecnologia di gassificazione, siamo in grado di supportare la conversione di residui di canna da zucchero disponibili localmente in carburanti a basse emissioni di carbonio, coniugando soluzioni di carbonio circolare con le esigenze di decarbonizzazione del settore dell'aviazione"".
-
-(Teleborsa) 17-08-2026 08:50
-
-Titoli citati nella notizia
-
-Nome Prezzo Ultimo Contratto Var % Ora Min oggi Max oggi Apertura Maire 12,43 +0,16 11.55.45 12,42 12,75 12,59",,N,,2026-08-17 05:56:44.055631
-,,2026-08-17 06:48:44+00:00,Biofuels International Magazine,Moeve posts €1.2bn EBITDA in H1 2026 as energy transition investment reaches record high,Not Available,,,,,https://biofuels-news.com/news/moeve-posts-e1-2bn-ebitda-in-h1-2026-as-energy-transition-investment-reaches-record-high/,"Moeve has reported Clean CCS EBITDA of €1.18 billion for the first half of 2026, demonstrating strong operational resilience amid continued geopolitical tensions and volatile global market conditions.
-Moeve said these investments support its Positive Motion strategy and the development of Europe’s largest green hydrogen project in Andalusia.
-Operationally, the Energy division delivered €945 million in Clean CCS EBITDA, driven by high utilisation rates and robust refining margins.
-CEO Maarten Wetselaar said Moeve remains focused on building a more resilient European energy system and accelerating the shift away from imported fossil fuels.
-“Continued geopolitical tensions and disruptive weather events are a reminder of why this energy transition is so urgent.” LATEST NEWS","Moeve has reported Clean CCS EBITDA of €1.18 billion for the first half of 2026, demonstrating strong operational resilience amid continued geopolitical tensions and volatile global market conditions.
-
-According to the company, “Clean CCS EBITDA was €1,178m in H1 2026, reflecting the strength and flexibility of its businesses against a backdrop of ongoing tensions in the Middle East and shifting global market conditions.”
-
-Clean CCS Net Income rose 41% year on year to €458 million, while operating cash flow reached €762 million. Capital expenditure increased 20% to €605 million, with a record 69% directed towards energy transition projects, including major investments in renewable hydrogen, biofuels and sustainable mobility infrastructure.
-
-Moeve said these investments support its Positive Motion strategy and the development of Europe’s largest green hydrogen project in Andalusia.
-
-The company contributed €2.1 billion in taxes in Spain during the period and reduced leverage to 1.2x, supported by strong cash generation. Net debt stood at €2.33 billion at the end of June.
-
-Operationally, the Energy division delivered €945 million in Clean CCS EBITDA, driven by high utilisation rates and robust refining margins. Chemicals posted €172 million, reflecting improved margins and recovering demand, while Upstream earnings reached €145 million.
-
-Major milestones included a sustainable aviation fuel offtake agreement with DHL Express, progress on Spain’s largest 2G biofuels complex, and the launch of “Moeve decarbonize” with Accenture to support industrial emissions reduction.
-
-The company also advanced discussions on a proposed downstream merger with Galp, with definitive agreements targeted for the second half of 2026.
-
-CEO Maarten Wetselaar said Moeve remains focused on building a more resilient European energy system and accelerating the shift away from imported fossil fuels. “Continued geopolitical tensions and disruptive weather events are a reminder of why this energy transition is so urgent.”
-
-LATEST NEWS",https://biofuels-news.com/wp-content/uploads/2026/08/Moeve-posts-pic-biofuel-17-8-scaled.jpg,N,,2026-08-17 05:56:46.952758
-,,2026-08-17 06:29:37+00:00,UkrAgroConsult - World-class agricultural consulting,The US is expanding its feedstock base for biofuel production - UkrAgroConsult,Not Available,,,,,https://ukragroconsult.com/en/news/the-us-is-expanding-its-feedstock-base-for-biofuel-production/,"The US Environmental Protection Agency (EPA) has approved the use of oil from the winter oilseed crop CoverCress for renewable fuel production under the federal Renewable Fuel Standard (RFS) program.
-The decision gives the crop access to the US biofuel market and lays the groundwork for expanding its commercial production.
-Renewable diesel and sustainable aviation fuel (SAF) produced from CoverCress oil under the approved pathways will qualify for D4 Renewable Identification Numbers (RINs).
-CoverCress is a winter oilseed crop that can be integrated between major cash crops in a crop rotation.
-EPA approval removes one of the key regulatory barriers to developing a new supply chain involving farmers, grain handlers, processors and renewable fuel producers.","The US Environmental Protection Agency (EPA) has approved the use of oil from the winter oilseed crop CoverCress for renewable fuel production under the federal Renewable Fuel Standard (RFS) program. The decision gives the crop access to the US biofuel market and lays the groundwork for expanding its commercial production.
-
-Renewable diesel and sustainable aviation fuel (SAF) produced from CoverCress oil under the approved pathways will qualify for D4 Renewable Identification Numbers (RINs). Renewable naphtha and liquefied petroleum gas (LPG) produced from the same feedstock will qualify for D5 RINs. These credits are used by US fuel market participants to meet RFS obligations, making the approval an important factor in the commercial viability of the new feedstock.
-
-CoverCress is a winter oilseed crop that can be integrated between major cash crops in a crop rotation. It is planted after the main crop is harvested in the fall and harvested before spring planting begins. This allows farmers to generate an additional crop and source of income from the same land while maintaining soil cover during the winter.
-
-CoverCress is preparing for its first commercial crush in early 2027. EPA approval removes one of the key regulatory barriers to developing a new supply chain involving farmers, grain handlers, processors and renewable fuel producers.
-
-The emergence of a new source of vegetable oil is particularly important amid growing US biofuel demand. The development of CoverCress could expand domestic supplies of oilseed feedstocks and provide an additional alternative to traditional biofuel feedstocks, including soybean and rapeseed oil.",https://ukragroconsult.com/wp-content/uploads/2026/08/byoetanol-3-1024x683-1.jpg,N,,2026-08-17 05:56:50.974649
-,,2026-08-17 06:18:17+00:00,Agenzia ANSA,Nextchem (Maire) si aggiudica progetto in Australia - Energia & Energie - Ansa.it,"Redazione ANSA, Agenzia ANSA",,,,,https://www.ansa.it/ansa2030/notizie/energia_energie/2026/08/17/nextchem-maire-si-aggiudica-progetto-in-australia_c76de905-7085-4b81-bbd6-1c650b7e346b.html,"Il progetto utilizzerà residui di canna da zucchero disponibili localmente come materia prima per produrre gas di sintesi purificato di grado chimico attraverso l'applicazione della tecnologia Nx Circular Gasification.
-Il syngas sarà successivamente impiegato per la conversione in sustainable aviation fuel e diesel rinnovabile mediante soluzioni di terze parti.
-Una volta raggiunta la piena capacità operativa, Project Lion ha il potenziale di produrre fino a 125.000 tonnellate all'anno di Saf.
-""Questa aggiudicazione conferma la rilevanza strategica delle tecnologie proprietarie di Nextchem nell'abilitare lo sviluppo di carburanti sostenibili a partire da materie prime rinnovabili e residuali"", afferma Fabio Fritelli, Managing Director di Nextchem.
-""Siamo orgogliosi - aggiunge - di contribuire a un progetto di questo tipo in Australia, un'area geografica di crescente importanza nell'evoluzione del settore e rilevante per la diversificazione del nostro portafoglio.","Maire annuncia che Nextchem, tramite la propria controllata MyRechemical, si è aggiudicata da Sky Renewables Burdekin, società australiana di sviluppo progetti focalizzata sulla produzione di sustainable aviation fuel (Saf), licensing, process design package e servizi di ingegneria per la parte relativa al syngas del Project Lion, nella regione del Burdekin, nel North Queensland, Australia.
-
-Il progetto utilizzerà residui di canna da zucchero disponibili localmente come materia prima per produrre gas di sintesi purificato di grado chimico attraverso l'applicazione della tecnologia Nx Circular Gasification.
-
-Il syngas sarà successivamente impiegato per la conversione in sustainable aviation fuel e diesel rinnovabile mediante soluzioni di terze parti.
-
-Una volta raggiunta la piena capacità operativa, Project Lion ha il potenziale di produrre fino a 125.000 tonnellate all'anno di Saf.
-
-Valorizzando gli scarti della canna da zucchero, biomassa residua che spesso viene bruciata direttamente nei campi, il progetto dimostra come la tecnologia Nx Circular Gasification consenta di trasformare i residui agricoli in un prezioso intermedio per i carburanti a basse emissioni di carbonio, favorendo al contempo un utilizzo più sostenibile delle risorse locali di biomassa. L'aggiudicazione è subordinata a notice to proceed, fatta eccezione per alcuni servizi di ingegneria.
-
-""Questa aggiudicazione conferma la rilevanza strategica delle tecnologie proprietarie di Nextchem nell'abilitare lo sviluppo di carburanti sostenibili a partire da materie prime rinnovabili e residuali"", afferma Fabio Fritelli, Managing Director di Nextchem. ""Siamo orgogliosi - aggiunge - di contribuire a un progetto di questo tipo in Australia, un'area geografica di crescente importanza nell'evoluzione del settore e rilevante per la diversificazione del nostro portafoglio.
-
-Grazie alla nostra tecnologia di gassificazione, siamo in grado di supportare la conversione di residui di canna da zucchero disponibili localmente in carburanti a basse emissioni di carbonio, coniugando soluzioni di carbonio circolare con le esigenze di decarbonizzazione del settore dell'aviazione"".
-
-Riproduzione riservata © Copyright ANSA",https://www.ansa.it/webimages/img_1280x720/2024/7/31/059145ae402576fa31f9af0346d93b19.jpg,N,,2026-08-17 07:57:25.199140
-,,2026-08-17 05:43:08+00:00,Kapabar.com,"HUT ke-81 RI, Kilang Kasim Persembahan 'Kado' Lifting Perdana Biosolar B50",Kapabar,,,,,https://kapabar.com/2026/08/17/hut-ke-81-ri-kilang-kasim-persembahan-kado-lifting-perdana-biosolar-b50/,"Ekonomi Bisnis HUT ke-81 RI, Kilang Kasim Persembahan ‘Kado’ Produk Biosolar B50 50 1 Menit lalu Kapabar – Peringatan Hari Ulang Tahun (HUT) Kemerdekaan Republik Indonesia ke-81 menjadi momentum bersejarah bagi bangsa dalam mengukuhkan kemandirian dan kedaulatan energi nasional.
-Langkah strategis Kilang Kasim dalam merealisasikan Biosolar B50 ini bergerak selaras dengan arah kebijakan energi nasional dan Pesan Kemerdekaan Direktur Utama PT Pertamina (Persero) Simon Aloysius Mantiri.
-Sebagai satu-satunya kilang pengolahan minyak di wilayah Indonesia Timur, Kilang Kasim terus membuktikan keunggulannya dalam mengadopsi teknologi dan standar operasional energi terbarukan.
-Kado dari Kilang Kasim ini sekaligus mempertegas bahwa keterbatasan geografis di kawasan timur bukan menjadi penghalang untuk melahirkan inovasi bahan bakar berkualitas tinggi bagi masyarakat Papua, Maluku, dan sekitarnya.
-Dari pulau kecil di kawasan Seget, Kilang Kasim membuktikan bahwa mimpi besar swasembada energi nasional dapat diwujudkan secara merata dari timur hingga barat Nusantara.","Ekonomi Bisnis
-
-HUT ke-81 RI, Kilang Kasim Persembahan ‘Kado’ Produk Biosolar B50
-
-50 1 Menit lalu
-
-Kapabar – Peringatan Hari Ulang Tahun (HUT) Kemerdekaan Republik Indonesia ke-81 menjadi momentum bersejarah bagi bangsa dalam mengukuhkan kemandirian dan kedaulatan energi nasional.
-
-Dari ujung paling timur Nusantara, PT Pertamina Patra Niaga Refinery Unit Kasim mempersembahkan kado istimewa melalui keberhasilan lifting perdana produk Biosolar B50 yang telah dilakukan tahun ini sebagai langkah nyata menjalankan mandatory pemerintah sekaligus mewujudkan mimpi swasembada energi nasional.
-
-Langkah strategis Kilang Kasim dalam merealisasikan Biosolar B50 ini bergerak selaras dengan arah kebijakan energi nasional dan Pesan Kemerdekaan Direktur Utama PT Pertamina (Persero) Simon Aloysius Mantiri.
-
-Dalam amanatnya pada peringatan Kemerdekaan RI ke-81, Direktur Utama menegaskan komitmen perusahaan untuk terus mengakselerasi pengembangan portofolio energi hijau berkelanjutan.
-
-“Pertamina terus melanjutkan program biodiesel menuju B50, mengembangkan rantai pasok bioetanol berbasis tebu, jagung, ketela, dan sorgum guna mendukung pencapaian target pencampuran E10 hingga E20 nasional, memanfaatkan minyak jelantah dan minyak nabati, serta mengembangkan Sustainable Aviation Fuel dan produk rendah karbon lainnya,” kata Simon dalam siaran persnya, Senin 17 Agustus 2026.
-
-Menurut Simon, melalui strategi ini, Pertamina tidak hanya sedang membangun portofolio energi, melainkan sedang membangun sumber-sumber baru yang akan terus memberi energi bagi kemerdekaan Indonesia di masa depan.
-
-Sebagai satu-satunya kilang pengolahan minyak di wilayah Indonesia Timur, Kilang Kasim terus membuktikan keunggulannya dalam mengadopsi teknologi dan standar operasional energi terbarukan.
-
-Produk Biosolar B50 yang merupakan campuran 50 persen Fatty Acid Methyl Ester (FAME) berbasis minyak sawit dan 50 persen minyak solar menjadi bukti konkret kesiapan Kilang Kasim dalam mengoptimalkan potensi minyak nabati domestik, menurunkan jejak emisi karbon, serta mengikis ketergantungan pada impor bahan bakar fosil murni.
-
-Kado dari Kilang Kasim ini sekaligus mempertegas bahwa keterbatasan geografis di kawasan timur bukan menjadi penghalang untuk melahirkan inovasi bahan bakar berkualitas tinggi bagi masyarakat Papua, Maluku, dan sekitarnya.
-
-Momentum HUT RI ke-81 menjadi pengingat bahwa perjuangan mengisi kemerdekaan adalah estafet yang terus berjalan. Dari pulau kecil di kawasan Seget, Kilang Kasim membuktikan bahwa mimpi besar swasembada energi nasional dapat diwujudkan secara merata dari timur hingga barat Nusantara.
-
-Dengan semangat kemerdekaan, PT Pertamina Patra Niaga RU Kasim berkomitmen untuk terus menjaga operasional kilang yang aman, handal, dan ramah lingkungan, demi memberi energi bagi masa depan Indonesia yang mandiri dan berdaulat. */RON
-
-50 1 Menit lalu",https://kapabar.com/wp-content/uploads/2026/08/IMG-20260817-WA0018.jpg,N,,2026-08-17 05:57:19.188260
