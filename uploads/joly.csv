@@ -1,4 +1,173 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID47,Uber,2026-08-21 20:25:04+00:00,the Guardian,Dutch regulator fines Uber $966m for automating driver suspensions - The Guardian,Guardian staff,,,,,https://www.theguardian.com/technology/2026/aug/21/netherlands-fines-uber-automated-driver-suspensions,"The Dutch data protection authority has fined ⁠Uber €825m ($966m) for deactivating driver ⁠accounts through automated systems without ​adequately informing them, according to a 17 August decision.
+Meta, Google, Apple and Amazon all face multiple fines, though headline fines are often reduced or reversed after years-long appeals processes.
+The case against Uber concerns European incidents from 2018 to 2022, stemming initially from a French complaint.
+Uber said such suspensions were usually brief, and it did not ⁠permanently deactivate such accounts without human review.
+Founder Paul-Olivier Dehaye said the group is preparing a class action suit against Uber seeking compensation for drivers.","The Dutch data protection authority has fined ⁠Uber €825m ($966m) for deactivating driver ⁠accounts through automated systems without ​adequately informing them, according to a 17 August decision.
+
+The penalty would be the second-largest issued yet under Europe’s General Data Protection Regulation (GDPR).
+
+It is behind only a €1.2bn ($1.4bn) fine ⁠imposed on Meta by Ireland in 2023 for unlawfully transferring European Facebook users’ data to the United States. Meta is appealing.
+
+Uber said it would also appeal.
+
+“We strongly disagree with this decision and disproportionate fine,” a spokesperson ⁠said, adding that the company takes drivers’ rights seriously and its policies include both human reviews and opportunities for drivers to dispute platform suspensions.
+
+The Dutch ​authority confirmed the decision later on Friday.
+
+“Uber has committed ‌serious infringements” by deactivating driver accounts without ‌warning or human involvement, the organization’s deputy chair Monique Verdier said in a statement.
+
+“From one moment to the next they no longer ‌had any income … A computer should not make decisions on its own that have (such) major consequences.”
+
+European regulators have imposed billions of euros in penalties on large US technology companies in recent years under privacy, competition and digital market rules. The EU fined Google €890m ($1.04bn) for anti-competitive actions last month.
+
+Meta, Google, Apple and Amazon all face multiple fines, though headline fines are often reduced or reversed after years-long appeals processes. Donald Trump has criticized such fines. In April, a US state department official said they were the “biggest ‌single source of friction” in US-EU economic relations.
+
+GDPR rules ban decisions made solely by computer algorithms when they have a significant impact on people’s lives, such as on employment, saying such decisions require meaningful human review and a way to challenge a ​decision.
+
+The case against Uber concerns European incidents from 2018 to 2022, stemming initially from a French complaint. It was handled by the Dutch regulator because Uber’s European headquarters are in the Netherlands.
+
+Uber temporarily suspended accounts of some drivers who were suspected of fraud, including when its systems concluded drivers had taken unnecessary detours to inflate fares or accepted trips without intending to complete them.
+
+Uber said such suspensions were usually brief, and it did not ⁠permanently deactivate such accounts without human review.
+
+Drivers with low customer ratings were sometimes permanently deactivated by ​computer, the Dutch agency said. Uber disputed that, ​saying it had never automated permanent deactivation decisions.
+
+The ​company said one reason it considers the fine disproportionate is that only a small number of drivers were affected, ​with 126 having been deactivated ‌in Europe as a ​result of low customer ratings in ​2021.
+
+The agency said the fine was calculated as a fraction of Uber’s 2025 annual turnover. Swiss digital-rights group PersonalData.IO – which helped French Uber drivers seek data about the algorithmic decisions affecting their work, eventually leading to the Dutch investigation – said it was pleased with the decision. Founder Paul-Olivier Dehaye said the group is preparing a class action suit against Uber seeking compensation for drivers.","https://i.guim.co.uk/img/media/42dcbe50e263403769a169ca812482719ab67cdb/217_0_3084_2467/master/3084.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=c462fd813823221f1a7c92f983e0a444",N,,2026-08-21 17:10:07.562477
+ID35,Nvidia,2026-08-21 19:57:13+00:00,TechCrunch,"Nvidia just showed that the harness, not the AI model, is now the real hero | TechCrunch",Julie Bort,,,,,https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/,"Nvidia published some interesting new research on Friday suggesting it’s the harness, more than the underlying model, that is far more important when asking an AI to do long-horizon tasks.
+A harness is the software wrapper around an AI model — the tools, memory management, and rules that turn a raw model into something that can act on its own.
+The harness is what makes a model an agent: It handles memory, context, and feedback.
+“Generally speaking, the world interprets an agent almost as an API of the model,” Adel El Hallack, vice president of product in Nvidia’s AI unit (pictured above), tells TechCrunch.
+In July, for instance, Databricks published some stunning research that shows that the harness, more than model, dramatically impacts AI costs.","Nvidia published some interesting new research on Friday suggesting it’s the harness, more than the underlying model, that is far more important when asking an AI to do long-horizon tasks. A harness is the software wrapper around an AI model — the tools, memory management, and rules that turn a raw model into something that can act on its own.
+
+The TL;DR: Simply by using a custom harness tweaked to handle memory well and including a “supervisor” boss-like component, researchers got Claude Opus 5 to achieve a 100% score on the interactive reasoning benchmark ARC-AGI-3 — a set of 2D games with no instructions, where the model has to figure out how to play and win, similar to how a human would. (That’s a benchmark that has particularly irked rival frontier lab OpenAI.) Without the harness, Opus 5 scored 30%, which was the top result among all the models tested.
+
+Nvidia’s research is another indicator that, while model choice does matter, the model itself — the part that acts as the agent’s “brain” — is a smaller part of an agentic system than many AI users realize, especially for long-horizon tasks. The harness is what makes a model an agent: It handles memory, context, and feedback.
+
+“Generally speaking, the world interprets an agent almost as an API of the model,” Adel El Hallack, vice president of product in Nvidia’s AI unit (pictured above), tells TechCrunch. But an agent is actually more than that. “It is the model. It is the scaffolding around the model, which we call the harness, i.e. the set of tools that it utilizes. It is the runtime and the associated skills and libraries that we give it access to.”
+
+Long-horizon tasks are those that require stringing many decisions together, sometimes over days, to produce completed work. This is in contrast to an AI just spitting out a response to a prompt. Figuring out how to get an AI to do long-horizon tasks without getting distracted and going off in la-la land is one of the holy grails in agentic research.
+
+For example: Microsoft published research in April that tested 19 LLMs on long-horizon tasks involving document editing and discovered that all the models, including frontier ones, filled the documents with errors. (If humans produced work like that, they would be promptly fired.)
+
+Models stringing decisions together on their own have also been caught deleting their users’ files, even whole databases or turning to criminal behavior to achieve their objectives from collusion to hacking.
+
+The choice by Nvidia researchers to use this interactive reasoning benchmark for their tests is particularly meaningful, almost funny. A 100% score means that the model can beat the games as well as humans.
+
+OpenAI was so flustered by its models’ abysmal scores (less than 10%) on ARC-AGI-3 that it conducted its own research last month. Like Nvidia, OpenAI discovered that simply by tweaking two settings on the harness, its models tripled their scores.
+
+But none of the models came close to hitting a 100% score, like Nvidia’s researchers achieved. They showed that the harness needs a “supervisor” component that prods the agent in the right direction if it gets stuck.
+
+“The more interesting part was introducing a supervising agent in addition to your main agent that’s doing the work,” El Hallack said. It “almost acts like a CEO to nudge the agent when it goes off direction or starts exploring a path that it might lead to a dead end, or re-explore a path that it had previously trod.”
+
+While the concept of the supervising agent isn’t exactly new, today most agent users are relying on only one layer for their harness, like Claude Code, Codex, or Hermes. Nvidia researchers created their own souped-up harness called the Agentic Variation Operators (AVO).
+
+Note that this isn’t a new Nvidia product. Nvidia instead produces lots of open bits and pieces of tech for building harnesses under the Nemo brand. Some of that tech is commercial, much is openly available.
+
+Still, Nvidia’s results add to the growing evidence that model choice is far from the only factor in agentic performance. In July, for instance, Databricks published some stunning research that shows that the harness, more than model, dramatically impacts AI costs.
+
+“You can pick the same model but different harnesses, and you get significantly more cost if you use the wrong harness,” Databricks CEO Ali Ghodsi told TechCrunch. “So you think, oh, this is an expensive model. This is a cheap model. But wait, which harness are you using? That itself can 2x your cost.”
+
+Nvidia’s larger point is to show that open harnesses, like open models, put users in control far more than they realize.
+
+“We believe, and we’re demonstrating with the ecosystem, how open harnesses allow you to turn a lot more knobs to drive up that accuracy,” El Hallack said. “It relates to OpenAI slowing down the training of their models,” as a result of models creating security breaches.
+
+“We believe in having an open agent stack — where you have control across the harness, across the infrastructure, across the runtime — is what’s required for us to usher the ecosystem forward and securely,” he added.","https://techcrunch.com/wp-content/uploads/2026/08/Nvidia-VP-of-product-Adel-El-Hallak.jpg?resize=1200,898",N,,2026-08-21 17:10:03.624272
+ID15,Delta Airlines,2026-08-21 18:52:19+00:00,View from the Wing,Delta Will Use AI To Cut Costs And Set A Different Ticket Price For Every Passenger—CEO ...,"Gary Leff, www.facebook.com",,,,,https://viewfromthewing.com/delta-will-use-ai-to-cut-jobs-and-set-a-different-ticket-price-for-every-passenger-ceo-says-profits-could-rise-50/,"Delta CEO Ed Bastian says AI will increase their profits by 50% by cutting costs, removing humans from some loops, and raising fares.
+Revenue management, you talk about, and pricing.
+Or on the revenue side, because you can make better revenue decisions on how you manage different buckets.
+Delta Explained To Investors What AI Pricing Looks Like At the airline’s November 2024 Investor Day, then-President Glen Hauenstein described a complete reengineering of pricing.
+Revenue management: fare and upgrade monitoring, inventory changes, forecast updates and exception reporting.","Delta CEO Ed Bastian says AI will increase their profits by 50% by cutting costs, removing humans from some loops, and raising fares. That’s the difference between 10% margins and 15% margins or about $3 billion.
+
+The airline wants to replace slow decisions made by people with constant machine-made decisions across pricing, upgrades, crew recovery, maintenance, fuel and the back office. As United Airlines has already acknowledged while reducing management headcount, some people will disappear.
+
+Bastian likes calling it “augmented intelligence” as a better marketing term than artificial intelligence, as he explained on Scott McCartney’s Airlines Confidential podcast:
+
+When you think about what AI does, it allows you to hopefully make better decisions. And because you have more access to data, more timely, it gives you a clearer perspective of what the opportunities are. And our industry, our company, we have lots of decisions we have to make every day—whether it’s how we’re managing the daily operations or what’s happening in the maintenance realm and with our engines and the history of the engines.
+
+There’s so much data around our business. Revenue management, you talk about, and pricing. So much data we don’t use but a small fraction of, because we don’t have the capability and we don’t have the programming. And so much of our technology is backward-looking in terms of historically what happened. We need forward-looking data, predictive data that has the intelligence to anticipate before issues become issues and try to make decisions better, and AI is going to provide that.
+
+Now, it’s not going to be easy, and there’s no off-the-shelf solution to how you better manage crews and weather and fuel burn and engine performance. But all those things go into play in terms of running a great operation, both financially as well as from a customer standpoint.
+
+Then he explained the payoff:
+
+If we could take two, three, four points of our cost down from making smarter, better decisions over a series of several years—my gosh—you look at a margin at Delta, you go from a 10% margin to a 15% margin, it’s a 50% improvement in your profitability. These things are billions of dollars substantial. Or on the revenue side, because you can make better revenue decisions on how you manage different buckets. So I think the opportunity is there. I think the issues of trust and governance are also really important, and that’s why I never refer to AI as artificial. I always call it augmented intelligence. It’s going to make our people smarter and better.
+
+Delta Explained To Investors What AI Pricing Looks Like
+
+At the airline’s November 2024 Investor Day, then-President Glen Hauenstein described a complete reengineering of pricing. Airlines traditionally have one group set a grid of fares and another group decide which fare buckets remain available. Delta’s goal is to merge the two into “offer management”: one price generated for a particular shopping request at a particular moment.
+
+Hauenstein described AI as a “super analyst” working continuously. Delta began by letting Fetcherr’s system control a small share of domestic inventory in a constrained environment, then expanded its testing. The strategic significance was never whether the first deployment covered 1%, 3% or 20% of fares. It was that the machine could keep learning and repricing while human analysts sleep.
+
+Delta Gave Congress A Technically Careful But Misleading Answer
+
+When lawmakers objected to “surveillance pricing,” Delta told Congress that it was not setting individualized fares using a customer’s personal data. Delta has continued to say that its current AI system uses aggregated market information, not an individual’s circumstances or prior purchases.
+
+That’s true today but is contradicted by what they told investors: an offer available at that moment to “you, the individual.” The airline’s response collapsed two different questions into one:
+
+Is Delta currently feeding a named customer’s personal data into Fetcherr to calculate that customer’s airfare?
+
+Does Delta intend to move from static fare grids toward individually generated offers?
+
+Delta answered the first and pretended it answered the second. The company was very specific about what it was not doing at that moment while its investor presentation was specific about where offer management was headed.
+
+And an airline doesn’t need to know that your father passed away to infer willingness to pay. It can use route, date, time, device, sales channel, loyalty status, shopping history available in the session, whether you arrived through a corporate portal, and the behavior of statistically similar shoppers. Regulators and airlines can spend years arguing over which of those inputs makes a price “personalized.” The economic function is the same: estimate the highest price that wins this sale without losing the customer.
+
+Laws Against Personalized Pricing Don’t Apply To Airlines
+
+The FTC is warning retailers not to use private consumer data to raise prices, but the Federal Trade Commission Act expressly excludes “air carriers and foreign air carriers” from the Commission’s Section 5 authority over unfair or deceptive practices. That authority rests with the Department of Transportation.
+
+And when DOT specifically considered this in 2014, in approving IATA New Distribution Capability efforts, they did not consider personalized airline offers to be illegal, leaving open whether differentiation based on income, marital status or trip purpose would be unfair or unlawfully discriminatory.
+
+And while several states are passing laws on the matter, those are expressly preempted by the Airline Deregulation Act.
+
+Personalized Pricing Can Produce Lower Fares
+
+The reflexive political objection is that AI will identify a funeral traveler or stranded passenger and charge more. In that scenario, though, high willingness to pay doesn’t translate to high fares because if one airline wants to charge more, another airline sees the profitability of that customer on that trip and undercuts the first airline on price. And there’s a race downward back to normal pricing because there’s money to be made.
+
+Just as importantly, personalized pricing can also mean lower prices. Airlines have always wanted to do two conflicting things:
+
+Collect a high fare from the business traveler who must be in Chicago Tuesday morning.
+
+Offer a low fare to the leisure traveler who will otherwise stay home, so an empty seat produces some revenue.
+
+The problem with publishing the low fare to everyone is that the business traveler can buy it too. Traditional fare rules like advance purchase requirements, Saturday night stays and inventory buckets are crude fences meant to separate those customers. AI can build a more precise fence.
+
+If a model becomes confident that I will not buy at $500 but might buy at $275, it can be rational for the airline to show me $275. That is incremental revenue, not a giveaway. Another traveler on the same flight may be shown $500. The airline earns more overall because it discounts where a discount changes behavior and avoids discounting where it does not.
+
+That lets airlines offer more discount fares to more people, because they can do so without offering them to people who will pay more.
+
+There Will Still Be Jobs
+
+United’s chief financial officer said the airline’s management headcount had already fallen 4% and that it planned another 4% reduction as process changes and AI made headquarters work more efficient. That was unusually candid. The airline functions most exposed are not difficult to identify:
+
+Reservations and customer care: routine changes, refunds, policy explanations, social media responses and disruption rebooking.
+
+Revenue management: fare and upgrade monitoring, inventory changes, forecast updates and exception reporting.
+
+Back-office finance: accounts payable, revenue accounting, document extraction, reconciliation and fraud review.
+
+Marketing and loyalty: campaign creation, customer segmentation, offer selection and testing.
+
+Network and operations: schedule optimization, aircraft swaps, gate assignments and disruption recovery.
+
+Crew planning: pairings, rostering and re-pairing thousands of employees when weather breaks the schedule.
+
+Maintenance: predictive work planning, records review and technical-publication searches—reducing analyst work before it replaces licensed mechanics.
+
+Pilots, flight attendants and mechanics are protected for longer by safety rules, licensing, unions and the physical nature of their work (although robots are coming, and that’ll affect ramp and baggage).
+
+A crew controller presented by AI with three good recovery plans can make a better decision than one working through hundreds of constraints manually. A mechanic who gets the right technical answer immediately can return an aircraft to service faster. One single top employee can do far more, far more effectively with AI.
+
+It’s a specific case of the broader phenomenon that AI will accelerate the productivity of the most productive people. It will also improve prospects for those at the lowest rungs. You don’t need to know cultural codes, to be able to write proper emails that are well-received, when the AI can do that for you. But those in the middle get squeezed. The easy ticket to the upper middle class that comes from becoming an average consultant, lawyer or accountant goes away. Just entering the machine is no longer winning.
+
+That doesn’t mean fewer net jobs. Compute still costs money. We’ve known about comparative advantaage since David Ricardo, that as long as there are tradeoffs it doesn’t matter if AI is better at everything than people are still things that are more economic for people to do. As long as there are limits on energy and chips there will be jobs, but the jobs will be different.
+
+Bastian’s Margin Math Seems Wrong
+
+The argument here is that AI will improve price discrimination (and therefore total revenue), reduce cost, and improve resiliency. That will be huge for the business. But overall some of those gains will be captured by the passenger, rather than accruing entirely to the airline. Other airlines will be doing exactly what Delta is doing – United shed 4% of management staff last year, and expects to do the same this year – and with a lower cost base that results will compete down price.",https://viewfromthewing.com/wp-content/uploads/2026/06/delta-air-lines-atlanta.jpg,N,,2026-08-21 17:09:53.916529
 ID35,Nvidia,2026-08-21 17:31:54+00:00,Outlook Business,Nvidia Expands AI Push With Investment In US Data Centre Developer Cloverleaf,Outlook Business Desk,,,,,https://www.outlookbusiness.com/corporate/nvidia-expands-ai-push-with-investment-in-us-data-centre-developer-cloverleaf,"The investment will support Cloverleaf’s development of data-centre sites, while Nvidia will work on infrastructure buildouts for AI computing.
 What Cloverleaf Does Cloverleaf works with utilities, energy providers and investors to secure power and other infrastructure for data-centre sites.
 Nvidia Expands AI Infrastructure Push Nvidia’s latest investment comes as demand for AI computing continues to drive the development of new data centres.
@@ -10957,114 +11126,3 @@ Then $75 per month. Complete digital access to quality FT journalism on any devi
 For individuals
 
 Discover all the plans currently available in your country",https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F590764f2-833f-4297-bc63-cea31d50b384.jpg?source=next-barrier-page&fit=scale-down&quality=highest&width=700&dpr=1,N,,2026-08-14 21:03:06.334401
-ID15,Delta Airlines,2026-08-14 20:54:08+00:00,Bloomberg.com,"Berkshire Boosts Delta, Alphabet Stakes as Abel Taps Cash Pile - Bloomberg.com",Alexandre Rajbhandari,,,,,https://www.bloomberg.com/news/articles/2026-08-14/berkshire-boosts-delta-alphabet-stakes-as-abel-taps-cash-pile,"Berkshire Hathaway Inc. padded its holdings in Delta Air Lines Inc. and Google parent Alphabet Inc. during the second quarter as Greg Abel began tapping into the company’s massive cash hoard.
-In Abel’s second full quarter since succeeding Chairman Warren Buffett as chief executive officer, Berkshire added 17.5 million Delta shares, increasing its holding to $5.37 billion at the end of June, according to a filingBloomberg Terminal Friday.
-Alphabet is now the conglomerate’s third-biggest holding, worth $37.8 billion at midyear, after Abel added 48.1 million shares.","Berkshire Hathaway Inc. padded its holdings in Delta Air Lines Inc. and Google parent Alphabet Inc. during the second quarter as Greg Abel began tapping into the company’s massive cash hoard.
-
-In Abel’s second full quarter since succeeding Chairman Warren Buffett as chief executive officer, Berkshire added 17.5 million Delta shares, increasing its holding to $5.37 billion at the end of June, according to a filingBloomberg Terminal Friday. Alphabet is now the conglomerate’s third-biggest holding, worth $37.8 billion at midyear, after Abel added 48.1 million shares.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i_sy69Go8DKY/v1/1200x800.jpg,N,,2026-08-14 17:11:39.408267
-ID15,Delta Airlines,2026-08-14 20:51:18+00:00,Seeking Alpha,"Berkshire Hathaway bulks up on Alphabet, Delta Air, exits Constellation Brands, among Q2 trades","Liz Kiesche, SA News Editor",,,,,https://seekingalpha.com/news/4633523-berkshire-hathaway-bulks-up-on-alphabet-delta-air-exits-constellation-brands-among-q2-trades,"To ensure this doesn’t happen in the future, please enable Javascript and cookies in your browser.
-Is this happening to you frequently?
-Please report it on our feedback forum.
-If you have an ad-blocker enabled you may be blocked from proceeding.
-Please disable your ad-blocker and refresh.","To ensure this doesn’t happen in the future, please enable Javascript and cookies in your browser.
-
-Is this happening to you frequently? Please report it on our feedback forum.
-
-If you have an ad-blocker enabled you may be blocked from proceeding. Please disable your ad-blocker and refresh.",https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2224528459/image_2224528459.jpg?io=getty-c-w630,N,,2026-08-14 21:03:02.669183
-ID49,U.S. Bank,2026-08-14 20:49:36+00:00,24/7 Wall St.,Insurance carriers have quietly carved AI damages out of general liability policies,24/7 Wall St,,,,,https://247wallst.com/cards/xpost-01m00xwf4rn7mjwzs9ywgcfgyq,"Chamath Palihapitiya flagged on August 14, 2026 that insurance carriers went to state regulators this year seeking to exclude AI-related damages from standard general liability policies, and regulators approved more than 80% of those requests.
-The standard policy forms that sit behind most coverage have been quietly rewritten.
-Any company deploying AI that has not read the fine print on its general liability policy is carrying an uninsured exposure it does not know exists.
-This is the insurance industry's clearest signal yet that it views AI-related liability as unquantifiable enough to refuse to carry it at standard rates.
-When carriers and regulators agree to push a risk back onto policyholders at this scale, that risk moves onto corporate balance sheets.","Chamath Palihapitiya flagged on August 14, 2026 that insurance carriers went to state regulators this year seeking to exclude AI-related damages from standard general liability policies, and regulators approved more than 80% of those requests.
-
-The standard policy forms that sit behind most coverage have been quietly rewritten. Any company deploying AI that has not read the fine print on its general liability policy is carrying an uninsured exposure it does not know exists.
-
-Unlike a specific policy cancellation or a premium increase, an exclusion buried in standard form language is easy to miss. Businesses typically discover coverage gaps at the worst possible moment, when a claim is already filed and the insurer points to the exclusion.
-
-This is the insurance industry's clearest signal yet that it views AI-related liability as unquantifiable enough to refuse to carry it at standard rates. When carriers and regulators agree to push a risk back onto policyholders at this scale, that risk moves onto corporate balance sheets.",https://247wallst.com/og/card/01m00xwf4rn7mjwzs9ywgcfgyq.png,N,,2026-08-14 19:09:33.093320
-ID15,Delta Airlines,2026-08-14 20:45:01+00:00,CNBC,"Berkshire Hathaway boosts Alphabet to a top three holding, ups Delta and housing bets","Yun Li, www.facebook.com",,,,,https://www.cnbc.com/2026/08/14/berkshire-hathaway-boosts-alphabet-to-a-top-three-holding-ups-delta-and-housing-bets.html,"Berkshire Hathaway sharply increased its stake in Alphabet in the second quarter, vaulting the Google parent into its three biggest stock holdings.
-Berkshire, now operating under CEO Greg Abel, owned about 106 million Alphabet shares worth $37.9 billion at the end of June, according to a regulatory filing released Friday.
-The size of the position jumped 83% in the latest quarter, making Alphabet the third-largest U.S.-listed equity holding at Omaha-based Berkshire by market value.
-Warren Buffett, now chairman at Berkshire, told CNBC he had been behind the bullish view on Alphabet, with Abel's support.
-Berkshire had only recently returned to Delta after famously selling its airline holdings in the early days of the pandemic.","Berkshire Hathaway sharply increased its stake in Alphabet in the second quarter, vaulting the Google parent into its three biggest stock holdings. The sprawling conglomerate also added to the size of its investments in Delta Air Lines and various homebuilders.
-
-Berkshire, now operating under CEO Greg Abel, owned about 106 million Alphabet shares worth $37.9 billion at the end of June, according to a regulatory filing released Friday. The size of the position jumped 83% in the latest quarter, making Alphabet the third-largest U.S.-listed equity holding at Omaha-based Berkshire by market value. Only investments in Apple and American Express are larger.
-
-The increase largely reflects a $10 billion private stock purchase announced in early June, when Alphabet sought fresh capital to finance its massive AI infrastructure buildout.
-
-Warren Buffett, now chairman at Berkshire, told CNBC he had been behind the bullish view on Alphabet, with Abel's support.
-
-Berkshire also continued to build a sizable wager on the airline industry, a past favorite of Buffett's. The holding in Delta Air Lines climbed 44% during the quarter, to 57.3 million shares, valued at about $5.4 billion at the end of June. Berkshire had only recently returned to Delta after famously selling its airline holdings in the early days of the pandemic.
-
-Housing was another cyclical business where Berkshire increased its exposure, boosting its holding of Class A shares of Lennar by nearly 30%, to 13.1 million shares, worth about $1.19 billion, while Class B holdings rose 25% to roughly 298,000 shares. Berkshire also disclosed a small new position in D.R. Horton , holding 3,600 shares at the end of June.
-
-Berkshire ended a long streak of net stock sales, emerging as a buyer of equities in the second quarter with nearly $20 billion in net purchases. Berkshire had been a net seller for 14 straight quarters before the latest three-month period.
-
-The conglomerate's cash level fell to $365.5 billion at the end of June from a record $397.4 billion three months earlier, as Berkshire began putting more of its capital to work through investments and share repurchases. The quarter also saw the completion of Berkshire's acquisition of Taylor Morrison, a Scottsdale, Arizona-based homebuilder.",https://image.cnbcfm.com/api/v1/image/108327769-1782530637304-2026-06-26_Citizenshipship_Greg-8.jpg?v=1782531933&w=1920&h=1080,N,,2026-08-14 17:11:42.409573
-ID10,Boston Scientific,2026-08-14 20:24:32+00:00,Area Development,"Boston Scientific Plans Plainfield, Indiana, Medical Device Distribution Operations",Area Development News Desk,,,,,https://www.areadevelopment.com/newsItems/8-14-2026/boston-scientific-plainfield-indiana.shtml,"Why Relationships Still Win Projects in Site Selection Economic development is often described as a data-driven process.
-Where Construction Investment Goes, Economic Growth Follows Understanding the construction industry’s multiplier effect — and the workforce infrastructure behind it — can sharpen site selection and economic development decisions.
-Why long-term resilience—across climate, supply chains, and technology—is now part of the site selection decision.
-Power Is the New Gatekeeper in Manufacturing Site Selection Why infrastructure readiness and utility capacity now determine whether a project moves forward—or stalls before it begins.
-Expansion Why advanced manufacturers are treating site selection as a long-term business strategy, not a transaction.","Why Relationships Still Win Projects in Site Selection
-
-Economic development is often described as a data-driven process. RFIs are issued. Responses are scored. Sites are ranked. Incentives are compared. A winner emerges.
-
-Reading the Signals Most Companies Miss During Site Selection
-
-The competitive intelligence that shapes location decisions is often available to your consulting team but rarely makes it to the client. Understanding what's being held back, and why, changes how you manage the relationship.
-
-Where Construction Investment Goes, Economic Growth Follows
-
-Understanding the construction industry’s multiplier effect — and the workforce infrastructure behind it — can sharpen site selection and economic development decisions.
-
-The 20-Year Test: Will This Site Still Work in 2045?
-
-Why long-term resilience—across climate, supply chains, and technology—is now part of the site selection decision.
-
-Incentives Don't Fix Execution Risk
-
-Why tax breaks and grants still matter—but can't compensate for weak sites, limited power, or delivery uncertainty.
-
-Workforce Still Matters—But It's No Longer the First Filter
-
-Why labor hasn't disappeared from site selection—but is now competing with power, land, and execution risk.
-
-Power Is the New Gatekeeper in Manufacturing Site Selection
-
-Why infrastructure readiness and utility capacity now determine whether a project moves forward—or stalls before it begins.
-
-If the Site Doesn't Work on Paper, It Won't Work in Reality
-
-Why land constraints—not incentives or labor—are eliminating manufacturing sites before the process even begins.
-
-Community Risk Can Kill a Project Before It Breaks Ground
-
-Why NIMBYism, political scrutiny, and local opposition are now core site selection risks—not afterthoughts
-
-Geopolitics Is Now a Site Selection Variable
-
-Why trade policy, tariffs, and global instability are reshaping where manufacturing projects land—and whether they move forward at all.
-
-Transparency and Infrastructure Foresight as Competitive Advantages
-
-Even well-positioned projects can falter when critical details emerge late.
-
-Why Industrial Developers Are Turning to On-Site Energy
-
-Facilities facing interconnection bottlenecks are accelerating production by investing directly in resilient, on-site energy systems.
-
-The Geography of Packaging: Why Location Strategy Matters More Than Ever
-
-Smarter expansion begins with smarter location decisions — especially as automation, sustainability, and supply chain risk redefine the packaging industry.
-
-The New Industrial Revolution in Biotech
-
-Domestic drug production is becoming a matter of national security, not just market strategy.
-
-Navigating Generational Differences in Location and Workplace Strategy
-
-Workforce demographics are reshaping how and where companies design and locate their offices.
-
-In Focus: Korea’s Blueprint for Sustainable U.S. Expansion
-
-Why advanced manufacturers are treating site selection as a long-term business strategy, not a transaction.","https://maps.googleapis.com/maps/api/staticmap?center=39.661132,-86.368427&zoom=6&scale=2&markers=color:0xEA1D2C|39.661132,-86.368427&size=280x150&key=AIzaSyA9uo7dhInN6fG5YUF0ySs8T2qZ7CL7vHg",N,,2026-08-14 17:11:36.911139
