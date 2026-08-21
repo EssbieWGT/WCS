@@ -1,4 +1,342 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2026-08-21 17:52:20+00:00,TankTerminals,How the Middle East can become a hub for sustainable aviation fuels | TankTerminals,Not Available,,,,,https://tankterminals.com/news/how-the-middle-east-can-become-a-hub-for-sustainable-aviation-fuels/,08.21.2026 By TankTerminals.com News - NEWS,08.21.2026 By TankTerminals.com News - NEWS,https://tankterminals.com/wp-content/themes/tankterminals/src/img/favicon/favicon-32x32.png,N,,2026-08-21 14:56:58.667072
+,,2026-08-21 17:52:01+00:00,NASA,TB 26-04 Updates and Modernization of NASA's Chemical Equilibrium with Applications (CEA) Code,Daniel Hoffpauir,,,,,https://www.nasa.gov/centers-and-facilities/nesc/tb-26-04-updates-and-modernization-of-nasas-chemical-equilibrium-with-applications-cea-code/,"However, the original procedural Fortran implementation became increasingly difficult to maintain, extend, and integrate into modern engineering workflows due to the lack of a subroutine interface.
+Technical Improvements Modern Software Architecture CEA v3 is implemented in Fortran 2008 using object-oriented data structures, stricter typing, and a thread-safe equilibrium solver architecture.
+In one benchmark, a sweep of 108,500 cases completed in approximately 1.11 seconds with CEA v3, compared with approximately 15 minutes using CEA2.
+Use the classic command-line interface when continuity with legacy CEA workflows or input files is required.
+References NASA/TM–20260007987 CEA documentation: https://nasa.github.io/cea CEA repository: https://github.com/nasa/cea","For more information, contact Mark K. Leader, Glenn Research Center, mark.leader@nasa.gov
+
+Download the PDF version
+
+NASA’s Chemical Equilibrium with Applications (CEA) code is a foundational tool for propulsion system analysis. It provides equilibrium chemistry, rocket performance, shock, and detonation calculations used across NASA and the broader aerospace community. NASA Engineering and Safety Center (NESC) Activity TI-22-01730 modernized the legacy CEA2 Fortran code into CEA v3, a Fortran 2008, object-oriented software package with expanded interface support, updated thermochemical data, improved maintainability, and substantially improved workflow integration. The modernized code preserves backward compatibility with legacy CEA input workflows while enabling direct use from modern analysis environments, including Python, C, MATLAB, and automated design studies.
+
+Background
+
+CEA2 was released in 2002 and has remained widely used for propulsion and thermochemistry analysis. However, the original procedural Fortran implementation became increasingly difficult to maintain, extend, and integrate into modern engineering workflows due to the lack of a subroutine interface. Current propulsion analysis increasingly requires automated parametric sweeps, integration with other modeling tools and engineering workflows, and support for emerging propellants and fuels, including green propellants and sustainable aviation fuels. These needs motivated a comprehensive modernization effort to preserve CEA’s validated technical basis while improving its maintainability, usability, and integration with modern engineering software.
+
+Technical Improvements
+
+Modern Software Architecture
+
+CEA v3 is implemented in Fortran 2008 using object-oriented data structures, stricter typing, and a thread-safe equilibrium solver architecture. The software supports Fortran, C, Python, MATLAB, and Excel interfaces. These interfaces allow CEA to be used directly in automated analysis pipelines, multidisciplinary design frameworks, and high-volume designof- experiments studies. Backward compatibility is supported through a legacy command-line interface, allowing existing CEA input files and workflows to be carried forward with minimal disruption.
+
+Expanded Species and Thermodynamic Data
+
+The thermodynamic database has been expanded to support additional propellants and fuels relevant to current NASA applications, including green propellant constituents such as ADN, HAN, and LMP-103S, and sustainable aviation fuel candidates such as n-Butanol. This expanded species coverage improves the applicability of CEA for next-generation propulsion, green propellant, and sustainable aviation fuel studies.
+
+New Modeling Capabilities
+
+CEA v3 adds or improves support for several modeling capabilities,
+
+including:
+
+Subroutine interface enabling direct integration and high-volume calculations
+
+Negative reactant amounts
+
+Inert hydrocarbon fuel representations, including RP-1, Jet-A, and JP-series fuels
+
+Analytic total derivatives for coupling with optimization and sensitivity analysis workflows
+
+Performance Improvements
+
+For standalone use, individual equilibrium calculations in CEA v3 are moderately slower than comparable CEA2 calculations because the modernized architecture and added robustness introduce additional computational overhead. In representative testing, a single calculation was approximately 40 percent slower, but the absolute difference was only about 0.004 seconds per case. However, the modernized architecture provides substantial performance advantages for multi-case workflows, which are common in design-of-experiments studies, parametric sweeps, optimization, and uncertainty analyses. In one benchmark, a sweep of 108,500 cases completed in approximately 1.11 seconds with CEA v3, compared with approximately 15 minutes using CEA2. This corresponds to an approximately 800-times reduction in runtime for that workflow. These improvements make large-scale propulsion trade studies and automated design-space exploration significantly more practical.
+
+Guidance for Engineering Use
+
+NASA engineering users should consider the following guidance:
+
+Use CEA v3 for new propulsion and thermochemistry analyses when possible to take advantage of the modernized interfaces, expanded database, and improved workflow integration.
+
+Use the Python, MATLAB, or C interfaces for automated workflows, including parametric sweeps, optimization studies, and iterative design analyses.
+
+Use the updated species database for green propellant and sustainable aviation fuel studies when the relevant species are included and validated for the intended application.
+
+Use the classic command-line interface when continuity with legacy CEA workflows or input files is required.
+
+Retain appropriate engineering review and validation when transitioning established CEA2 workflows to CEA v3, particularly for mission-critical analyses or cases that depend on legacy assumptions.
+
+References
+
+NASA/TM–20260007987
+
+CEA documentation: https://nasa.github.io/cea
+
+CEA repository: https://github.com/nasa/cea",https://www.nasa.gov/wp-content/uploads/2023/10/nhq202211160203.jpg,N,,2026-08-21 14:57:01.581835
+,,2026-08-21 17:41:39+00:00,BNamericas.com,The VMOS project's monobuoys crossed the Strait of Hormuz and are heading toward Punta ...,BNamericas,,,,,https://www.bnamericas.com/en/news/the-vmos-projects-monobuoys-crossed-the-strait-of-hormuz-and-are-heading-toward-punta-colorada,"Our website uses cookies We use cookies and similar technologies to measure and improve the performance of our website, enhance your experience, and support advertising and analytics.","Our website uses cookies
+
+We use cookies and similar technologies to measure and improve the performance of our website, enhance your experience, and support advertising and analytics.",https://www.bnamericas.com/assets/img/opengraphbna.jpg,N,,2026-08-21 14:57:05.110722
+,,2026-08-21 17:40:47+00:00,GreenAir News,Syzygy signs agreement with World Bank arm IFC to advance Latin American SAF production,Not Available,,,,,https://www.greenairnews.com/?p=9462,"Syzygy Plasmonics has entered into a framework agreement with the International Finance Corporation (IFC), the private sector arm of The World Bank Group, to support the development of a pipeline of SAF projects across Latin America.
+By combining its proprietary light-driven technology with Latin America’s abundant renewable energy resources, Syzygy says it is aiming to accelerate the commercialisation of SAF in emerging markets.
+The first project supported under the agreement is NovaSAF-1, a planned commercial-scale SAF facility in Durazno, Uruguay.
+Trafigura has signed a binding offtake agreement covering the full production of NovaSAF-1 as well as a capacity reservation agreement for future SAF production from its future planned facilities.
+Syzygy has set a target of up to one million tonnes of annual SAF production capacity in Brazil by 2035.","Syzygy Plasmonics has entered into a framework agreement with the International Finance Corporation (IFC), the private sector arm of The World Bank Group, to support the development of a pipeline of SAF projects across Latin America. IFC will provide technical and advisory services as Syzygy advances individual projects and the framework establishes a pathway for further collaboration as the US-based SAF developer scales its SAF platform across the region. By combining its proprietary light-driven technology with Latin America’s abundant renewable energy resources, Syzygy says it is aiming to accelerate the commercialisation of SAF in emerging markets. The first project supported under the agreement is NovaSAF-1, a planned commercial-scale SAF facility in Durazno, Uruguay.
+
+Rather than relying on conventional fossil-fuel heat, Syzygy’s technology, called NovaSAF, uses renewable electricity to power light-driven reactors that convert biogas into SAF, a process the company claims can reduce lifecycle greenhouse gas emissions by up to 90% compared with conventional jet fuel. NovaSAF-1 would be the first commercial deployment of the technology.
+
+The project completed FEED in December 2025, with detailed engineering now underway and is “FID-ready”, reports the company. First production of SAF is targeted for Q2 2028, with ambitions for facilities located globally. Trafigura has signed a binding offtake agreement covering the full production of NovaSAF-1 as well as a capacity reservation agreement for future SAF production from its future planned facilities. In June, Syzygy entered into a similar agreement with jet fuel supplier World Fuel Services.
+
+The company has also secured feedstock agreements with a number of partners, including Estancias del Lago in Uruguay and Geo Bio Gas & Carbon, a large sugarcane and ethanol waste to biogas developer and operator in Brazil. Syzygy has set a target of up to one million tonnes of annual SAF production capacity in Brazil by 2035.
+
+“The transition to lower-carbon aviation will depend on technologies that are not only innovative, but commercially viable and scalable,” said Raphaël Eskinazi, IFC Regional Investment Manager for Manufacturing and Forests in Latin America and the Caribbean, commenting on the framework agreement with Syzygy.
+
+“IFC’s role is to help bridge that transition: supporting pioneering projects that can mobilise private capital, demonstrate new business models and create pathways for broader market adoption across emerging economies.”
+
+Responded Trevor Best, co-founder and CEO of Syzygy Plasmonics: “IFC’s involvement is a strong signal that Syzygy is poised to disrupt the market; we have the technology, the project pipeline and the commercial agreements that underpin it. IFC’s role in helping innovative technologies become commercially viable and replicable across emerging markets matches the ambition of our NovaSAF build-out.”
+
+Photo: The Estancias Del Lago powdered milk plant in Uruguay which will provide the biogas for Syzygy’s NovaSAF-1 facility",https://www.greenairnews.com/wp-content/uploads/2026/08/Syzygy-facility-cropped-1.jpg,N,,2026-08-21 14:57:10.593716
+,,2026-08-21 17:02:09+00:00,www.facebook.com,American Airlines has completed a milestone flight using electro sustainable aviation fuel ...,Not Available,,,,,https://www.facebook.com/AviationReviewMaterials/posts/american-airlines-has-completed-a-milestone-flight-using-electro-sustainable-avi/1095164629710649/,"American Airlines has completed a milestone flight using electro sustainable aviation fuel (eSAF), marking a major step toward lower-carbon air travel.
+The fuel is produced using captured carbon dioxide and renewable electricity, rather than traditional biobased feedstocks.
+American said the flight marked the first delivery of SAF made without biobased feedstocks to a commercial airport in the United States.
+High-quality eSAF can potentially deliver more than 90% lower lifecycle carbon emissions compared with conventional jet fuel.
+The milestone comes as airlines look for ways to reduce aviation's carbon footprint, although cost remains a major challenge.","American Airlines has completed a milestone flight using electro sustainable aviation fuel (eSAF), marking a major step toward lower-carbon air travel.
+
+The flight, operated within Texas from Corpus Christi to Dallas, used eSAF supplied by Infinium. The fuel is produced using captured carbon dioxide and renewable electricity, rather than traditional biobased feedstocks.
+
+American said the flight marked the first delivery of SAF made without biobased feedstocks to a commercial airport in the United States. High-quality eSAF can potentially deliver more than 90% lower lifecycle carbon emissions compared with conventional jet fuel.
+
+The milestone comes as airlines look for ways to reduce aviation's carbon footprint, although cost remains a major challenge. eSAF was averaging about $5,015 per metric ton for 2026–2028 deliveries, around seven times the price of conventional jet fuel, according to BloombergNEF data cited by ESG Dive.",https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/782641090_2476189129458843_6039886360459183181_n.png?stp=dst-jpg_tt6&cstp=mx940x788&ctp=p600x600&_nc_cat=100&ccb=1-7&_nc_sid=cae128&_nc_ohc=CLF9g9NMwPwQ7kNvwEoOIUJ&_nc_oc=Adr1W0o4Q72EGt42G-9dv0PmZCDrL787pVVuqXdCKaLDcF62t9i3ivHFeeuk53gKjfo&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=Ti6sierZTSupzSf9sSF8wg&_nc_ss=7b289&oh=00_AQG8wpJ1R_6b2vIA5FUKFscTGj95gzzOqGD7_h-TGonLSA&oe=6A8E8A93,N,,2026-08-21 14:57:13.584936
+,,2026-08-21 16:43:51+00:00,LinkedIn,Sustainable Aviation Fuel / Carburant d'aviation durable | Wendy Avis - LinkedIn,Not Available,,,,,https://www.linkedin.com/posts/wendy-avis-77696839_sustainable-aviation-fuel-carburant-daviation-activity-7496229693424140289-zO_o,"YVR has launched a new tool for passengers to be part of the transition to a lower-carbon aviation future.
+Our online calculator allows travellers to estimate their flight's greenhouse gas (GHG) emissions and contribute to the use of Sustainable Aviation Fuel (SAF).
+Contributions made through YVR’s new online calculator will be applied to environmental attributes associated with SAF and will enable airlines’ further use of SAF, starting with Air Canada.
+Grâce à notre outil en ligne, les voyageurs peuvent estimer les émissions de gaz à effet de serre (GES) associées à leur vol et contribuer à l’utilisation du carburant d’aviation durable (CAD).
+En savoir plus : https://lnkd.in/g9-JVapG Canadian Council for Sustainable Aviation Fuels/Conseil canadien des carburants d'aviation durables","YVR has launched a new tool for passengers to be part of the transition to a lower-carbon aviation future. Our online calculator allows travellers to estimate their flight's greenhouse gas (GHG) emissions and contribute to the use of Sustainable Aviation Fuel (SAF). Contributions made through YVR’s new online calculator will be applied to environmental attributes associated with SAF and will enable airlines’ further use of SAF, starting with Air Canada. Learn more: https://lnkd.in/g59ePHHs . . YVR a lancé un nouvel outil permettant aux passagers de contribuer à l’avenir de l’aviation à faibles émissions de carbone. Grâce à notre outil en ligne, les voyageurs peuvent estimer les émissions de gaz à effet de serre (GES) associées à leur vol et contribuer à l’utilisation du carburant d’aviation durable (CAD). Les contributions effectuées par l'entremise du nouveau calculateur en ligne de YVR seront appliquées aux attributs environnementaux associés au CAD et permettront aux transporteurs aériens d'accroître leur utilisation de ce carburant, à commencer par Air Canada. En savoir plus : https://lnkd.in/g9-JVapG Canadian Council for Sustainable Aviation Fuels/Conseil canadien des carburants d'aviation durables",https://dms.licdn.com/playlist/vid/v2/D5605AQHAv9YS2VmtPg/thumbnail-with-play-button-overlay-high/B56aAbxijgIcC8-/0/1787172372848?e=2147483647&v=beta&t=YWJhwf-mB3bas7Ovpe0vuauMS0tZVUxq3maixtnY9R0,N,,2026-08-21 14:57:22.553302
+,,2026-08-21 15:50:40+00:00,www.facebook.com,KLM flight enters Germany using e-SAF synthetic fuel from CO2 and renewable electricity (June,Not Available,,,,,https://www.facebook.com/groups/849994733672039/posts/1456633536341486/,"A commercial flight full of passengers just crossed the border into Germany running on kerosene made from nothing but carbon dioxide, water, and...",Not Available,https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/782148081_122131681431344773_2861024456576895393_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=p600x600&_nc_cat=107&ccb=1-7&_nc_sid=6376bf&_nc_ohc=KkTr5TUAKksQ7kNvwEamsGu&_nc_oc=Adp1QyV2at5puWKgS_OxRz0eQaAbEn4WcV7GRfq7QB2vjBoOerXGGlbFSdRXBGp_0i0&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=kiHNtXcp2b7ec6Mk_UBnUQ&_nc_ss=7b289&oh=00_AQFVrbjyM3QejJ0uFuV-GagCnKPAAEYxQsPKJhanbHKC2A&oe=6A8E571D,N,,2026-08-21 12:57:01.796569
+,,2026-08-21 15:40:24+00:00,Morning Ag Clips,New Resource to Navigate Economics of Biorenewable Feedstocks - Morning Ag Clips,Kyle,,,,,https://www.morningagclips.com/new-resource-to-navigate-economics-of-biorenewable-feedstocks/,"AMES, Iowa — As global demand for bio-based products continues to rise, Iowa State University Extension and Outreach’s Ag Decision Maker has released a new resource to help Iowa producers evaluate their role in this emerging market.
+The publication, “The Cost of Producing Herbaceous Feedstocks for Biomass and Biorenewable Products,” along with its accompanying digital decision tool, provides a detailed economic framework for the production and delivery of biomass.
+To help farmers navigate these opportunities, the new resource focuses on three primary feedstocks: corn stover, winter cereal rye (ryelage) and prairie plantings.
+The full resource and decision tool are available through Iowa State’s Ag Decision Maker website.
+— Iowa State University Extension and Outreach","AMES, Iowa — As global demand for bio-based products continues to rise, Iowa State University Extension and Outreach’s Ag Decision Maker has released a new resource to help Iowa producers evaluate their role in this emerging market. The publication, “The Cost of Producing Herbaceous Feedstocks for Biomass and Biorenewable Products,” along with its accompanying digital decision tool, provides a detailed economic framework for the production and delivery of biomass.
+
+While materials such as corn stover have traditional uses in livestock bedding, new markets are focusing on advanced applications, including anaerobic digestion for renewable natural gas, pyrolysis for bio-oil and biochar and fermentation for sustainable aviation fuel. To help farmers navigate these opportunities, the new resource focuses on three primary feedstocks: corn stover, winter cereal rye (ryelage) and prairie plantings.
+
+“Experts from agronomic, engineering and natural resources fields across the university collaborated to develop this tool. It provides a way for farmers, project developers and researchers to consider and compare the various elements of cost associated with herbaceous feedstocks,” said Jim Jordahl, regenerative agriculture project analyst with the Bioeconomy Institute at Iowa State. “We assessed corn stover for which cost information is well established, and the more novel herbaceous biomass sources of cereal rye and prairie plantings.”
+
+Decision support tool
+
+Also available is a customizable spreadsheet that allows users to estimate costs specific to their own operations. The tool divides expenses into two critical categories:
+
+Farm-Level Production Costs: including seed, fertilizer and the cost of nutrient removal from the soil.
+
+Harvest and Aggregation Costs: covering mowing, baling and the transport of material to a bioprocessing facility.
+
+Producers can use “Suggested Values” or enter their own data to calculate a total cost per dry ton. The tool also provides estimated energy content for each feedstock if processed in an anaerobic digester, allowing for a direct comparison of their potential value in energy markets.
+
+Strategic land use and sustainability
+
+The publication also highlights the environmental benefits of these crops. For example, strategically placing prairie plantings on consistently low-yielding areas of a field can significantly reduce erosion and nutrient transport while providing wildlife habitat. The tool helps farmers see the financial side of converting marginal land into a productive source of biomass.
+
+The full resource and decision tool are available through Iowa State’s Ag Decision Maker website.
+
+For more information, contact Jim Jordahl at jjordahl@iastate.edu or Mark Licht at lichtma@iastate.edu.
+
+— Iowa State University Extension and Outreach",https://www.morningagclips.com/wp-content/uploads/2026/08/da604c44-4b96-44f5-e2ed-01827e4db0cc.jpg,N,,2026-08-21 13:57:18.665610
+,,2026-08-21 15:36:34+00:00,Carbon Credits,CORSIA and SAF: The Complete Guide to Aviation's Net-Zero Future - CarbonCredits.com,Jennifer L,,,,,https://carboncredits.com/corsia-saf-aviation-net-zero-guide/,"It creates a framework for managing specific international aviation emissions through approved emissions units.
+How CORSIA Calculates Airline Offset Requirements CORSIA does not require airlines to offset all of their international aviation emissions.
+Airlines with a CORSIA offsetting requirement must cancel approved CORSIA Eligible Emissions Units (carbon credits) to cover it.
+Sustainable aviation fuel is aviation fuel made from renewable or waste-based materials.
+Conclusion: CORSIA and SAF Have Different Jobs CORSIA and SAF are becoming important parts of aviation’s climate strategy, but they serve different purposes.","Aviation is entering a new phase in its efforts to cut carbon emissions. As air travel grows, airlines face pressure to reduce emissions while meeting the demands of long-distance flight. Carbon Offsetting and Reduction Scheme for International Aviation (CORSIA) and sustainable aviation fuel (SAF) are becoming key tools, creating new policies, markets, and investment opportunities across the aviation industry.
+
+This guide explains how CORSIA works, how SAF fits into aviation’s decarbonization strategy, and where the market is headed. It covers CORSIA rules and timelines, eligible carbon credits and fuels, SAF production pathways, market trends, costs, policy drivers, and the supply gap the industry must close to reach net zero.
+
+CORSIA and SAF: Why Aviation Needs a New Decarbonization Strategy
+
+Aviation is one of the harder sectors to decarbonize. Aircraft need energy-dense fuels that can support long flights without adding excessive weight. Unlike cars, most commercial aircraft cannot yet switch to large battery systems at scale.
+
+Aviation produces about 2.5% of global human-caused CO₂ emissions, according to the International Air Transport Association (IATA). Its wider climate impact also includes non-CO₂ effects such as contrails and nitrogen oxide emissions.
+
+This makes aviation’s transition more complex than simply replacing fossil fuels with electricity. More efficient aircraft, improved flight operations and new propulsion systems can all reduce emissions. However, sustainable aviation fuel could play a major role in the near term.
+
+SAF can be produced from feedstocks such as used cooking oil, agricultural waste and other renewable materials. It can also be used in existing aircraft as a drop-in fuel, allowing airlines to reduce lifecycle emissions without replacing their fleets. IATA estimates SAF could provide about 65% of the emissions reductions needed for aviation to reach net-zero CO₂ emissions by 2050.
+
+SAF is not the only solution. CORSIA, ICAO’s global market-based measure for international aviation, addresses emissions that remain after other reduction measures. Together, SAF and CORSIA form two important parts of aviation’s broader path toward net zero.
+
+What Is CORSIA?
+
+CORSIA is a global system created by the International Civil Aviation Organization (ICAO) to address the growth of CO₂ emissions from international aviation. It works alongside cleaner fuels, aircraft efficiency, and improved flight operations.
+
+CORSIA’s offsetting requirements apply to eligible international flights between participating states. Domestic aviation is outside the scheme’s offsetting system. Airlines covered by CORSIA must also monitor, report, and verify their emissions under the program’s MRV requirements.
+
+For 2024–2035, CORSIA uses a baseline equal to 85% of 2019 emissions. When an airline has an offsetting requirement, it must cancel eligible emissions units to cover the required amount.
+
+CORSIA is therefore different from a conventional carbon tax. It creates a framework for managing specific international aviation emissions through approved emissions units.
+
+The scheme also recognizes the emissions benefits of CORSIA Eligible Fuels, including qualifying SAF. This creates an important link between aviation fuel markets and carbon markets.
+
+In simple terms, SAF helps reduce aviation’s emissions, while CORSIA provides a framework for addressing some emissions that remain.
+
+CORSIA Timeline: From Pilot Phase to Full Implementation
+
+CORSIA was adopted by ICAO in 2016 and is being introduced in stages. This phased approach gives airlines, governments, and carbon-market participants time to build the systems needed for monitoring emissions and meeting offsetting requirements.
+
+The Pilot Phase ran from 2021 to 2023. During this period, participation was voluntary, allowing countries and airlines to gain experience with CORSIA’s monitoring, reporting, and verification requirements.
+
+The First Phase covers 2024 to 2026, with states participating voluntarily. However, airlines operating on routes between participating states can still be subject to CORSIA offsetting requirements. This is the phase CORSIA is currently in.
+
+The Second Phase will run from 2027 to 2035. Participation becomes broader, although ICAO provides exemptions for certain states based on factors such as their level of international aviation activity and development status.
+
+As of 2026, 130 states participate voluntarily in CORSIA. ICAO lists 134 participating states from 2027, when the Second Phase begins. Together, these phases are designed to expand the system while giving countries time to establish the necessary regulatory and reporting frameworks.
+
+Beyond 2035, CORSIA will continue to operate as part of ICAO’s wider strategy for achieving net-zero carbon emissions from international aviation by 2050.
+
+How CORSIA Calculates Airline Offset Requirements
+
+CORSIA does not require airlines to offset all of their international aviation emissions. Instead, it focuses on emissions above a set baseline.
+
+From 2024 to 2032, the system mainly uses the growth of international aviation as a whole (100%). This is called the sectoral approach. It means an airline’s offset requirement is linked to the industry’s overall emissions growth, rather than only its own growth.
+
+From 2033 to 2035, the calculation will use both industry-wide and airline-specific emissions growth. The sectoral share will be 85%, while the airline-specific share will be 15%.
+
+Airlines can also reduce their CORSIA obligation by using CORSIA Eligible Fuels, including qualifying SAF. They must provide records showing the amount of fuel used and its emissions savings.
+
+This gives airlines two main ways to lower their CORSIA costs:
+
+reduce emissions, and
+
+use eligible lower-carbon fuels.
+
+CORSIA Carbon Credits: What Can Airlines Use?
+
+Airlines with a CORSIA offsetting requirement must cancel approved CORSIA Eligible Emissions Units (carbon credits) to cover it. These are not the same as any carbon credits sold in the voluntary carbon market. ICAO has a specific approval process for carbon credit programs that want to supply units for CORSIA.
+
+The organization checks programs against rules covering areas such as additionality, monitoring, verification, and double counting. These rules are designed to make sure the claimed emissions reductions are real and properly tracked.
+
+ICAO updates its list of eligible programs and units over time. As of April 2026, the framework includes programs such as the American Carbon Registry, Climate Action Reserve, Gold Standard, Isometric, and Verra’s Verified Carbon Standard, subject to specific eligibility conditions.
+
+Importantly, being part of an approved program does not mean every credit from that program can be used under CORSIA. Eligibility can depend on factors such as the credit type, vintage, compliance period, and additional authorization requirements.
+
+This has created a potential supply problem…
+
+A July 2026 analysis from Sylvera estimates that CORSIA could create demand for about 163 million eligible emissions units (EEUs) during its first compliance phase, rising to 198 million credits under full implementation. Yet only about 38 million credits currently qualify, covering just 23% of expected first-phase demand. This creates a potential 125 million-credit supply gap.
+
+The problem is not a lack of issued credits. About 300 million credits have been issued. However, many can’t qualify for CORSIA. They lack the necessary host-country Letters of Authorization or Corresponding Adjustments under Article 6 of the Paris Agreement.
+
+By January 2028, the eligible supply might hit 640 million credits. However, Sylvera estimates that only about 104 million could be eligible due to authorization risks. Just 48 million are fully confirmed.
+
+Airline purchases also remain limited. Only around 400,000 tonnes of CORSIA credits had been retired, equal to about 0.2% of expected first-phase demand. Delayed buying could create a rush for eligible credits as compliance deadlines approach.
+
+That shortage could push prices higher. Sylvera’s modeling puts first-phase credit prices at about $15 per tonne in a low case, $33 in a base case, and $53 in a high case by January 2028.
+
+The long-term cost could be much larger. An MSCI Carbon Markets analysis shows that if supply tightens, CORSIA compliance costs might hit $127 billion from 2024 to 2035. By 2035, eligible credit prices could reach nearly $100 per tonne. Estimated exposure includes about $8 billion for Emirates, $6 billion for Qatar Airways, and $5 billion for United Airlines.
+
+These figures show why CORSIA is becoming a distinct carbon market. The challenge is not simply finding credits, but securing enough high-quality, authorized units that meet CORSIA’s eligibility rules.
+
+SEE MORE: Airlines Face a $127 Billion Carbon Credit Bill as CORSIA Supply Tightens
+
+What Is Sustainable Aviation Fuel (SAF)?
+
+Sustainable aviation fuel is aviation fuel made from renewable or waste-based materials. It is designed to replace part of the fossil jet fuel used by aircraft while producing lower emissions over its full lifecycle.
+
+SAF can be made from feedstocks such as used cooking oil, animal fats, crop residues, forestry waste, and other biomass. Newer pathways can also use renewable electricity, hydrogen, and captured carbon to make synthetic fuels.
+
+One of SAF’s main advantages is that it can work with today’s aircraft and fuel systems. Airlines can use approved SAF by blending it with conventional jet fuel, without replacing their existing fleets.
+
+However, SAF is not automatically low-carbon. Its climate benefits depend on the feedstock, production method, energy source, and land-use impacts. CORSIA therefore uses lifecycle emissions to measure the climate performance of eligible fuels.
+
+SAF also remains a very small part of the global fuel market. IATA expects global SAF production to reach about 2.4 million tonnes in 2026, equal to only 0.8% of total jet fuel use. But it must increase tremendously to 449 million tonnes by 2050 for net-zero aviation.
+
+This large gap between current supply and future demand is one of the biggest challenges facing aviation’s net-zero plans.
+
+SAF Feedstocks and Production Technologies: How SAF is Made
+
+SAF can be made from many different materials. The choice of feedstock affects the fuel’s cost, emissions, and ability to scale.
+
+Today, some of the main feedstocks include used cooking oil, animal fats, agricultural residues, forestry waste, and other forms of biomass. Waste and residue feedstocks are attractive because they can avoid some of the land and food concerns linked to conventional crops. ICAO groups SAF feedstocks into categories such as primary products, by-products, wastes and residues.
+
+Several technologies can turn these materials into jet fuel. One of the most widely used is HEFA, which processes oils and fats with hydrogen. Other pathways include Fischer-Tropsch (FT), which can turn biomass or other carbon sources into fuel, and alcohol-to-jet (ATJ), which converts alcohols such as ethanol into aviation fuel.
+
+Another emerging option is e-SAF, also called power-to-liquid fuel. It uses renewable electricity, hydrogen, and captured carbon to produce synthetic aviation fuel. This could greatly expand SAF supply because it is less dependent on biomass.
+
+However, each pathway faces challenges. Waste feedstocks are limited, while newer technologies are still expensive and need more production capacity.
+
+This creates a key issue for the SAF market: the aviation industry needs much more fuel, but sustainable feedstocks and production capacity remain limited.
+
+What Makes SAF Eligible Under CORSIA?
+
+Not all SAF automatically qualifies under CORSIA. To receive CORSIA benefits, the fuel must meet ICAO sustainability rules and come from a producer certified under an ICAO-approved sustainability certification scheme.
+
+One key requirement is emissions performance. CORSIA SAF produced from 2024 onward must achieve at least a 10% reduction in lifecycle greenhouse gas emissions compared with the baseline aviation fuel.
+
+ICAO also considers factors such as land use, carbon stocks and the sustainability of the feedstock. This helps prevent fuels with poor environmental performance from receiving CORSIA benefits.
+
+The system measures emissions across the fuel’s full lifecycle. This can include feedstock production, processing, transport, fuel production and aircraft use. It can also account for emissions linked to land-use change.
+
+For airlines, this matters because qualifying SAF can lower their CORSIA offsetting requirement. The fuel must be properly certified, and its emissions savings must be supported by the required records. This creates a strong link between SAF production, sustainability certification, and the aviation carbon market.
+
+ICAO’s CORSIA Eligible Fuels page was updated in June 2026. It now lists the Fourth Edition of the CORSIA Approved Sustainability Certification Schemes, and on June 22, 2026, ICAO approved Bonsucro as a new CORSIA-approved sustainability certification scheme.
+
+The SAF Supply Gap: From 2.4M Tonnes to 500M
+
+The biggest question for SAF is whether production can grow fast enough to meet future demand. As mentioned, IATA expects global SAF production to reach only 2.4 million tonnes in 2026. Yet, its net-zero pathway points to millions of tonnes of SAF per year by 2050.
+
+That means production must increase by more than 200 times from today’s level.
+
+The challenge is not only building more SAF plants. The industry also needs enough sustainable feedstock, hydrogen, renewable power, refining capacity, and transport infrastructure.
+
+Waste oils and fats are useful today, but their supply is limited. Other options, such as agricultural and forestry waste, could provide more fuel but require large collection and processing networks.
+
+E-SAF could eventually reduce some feedstock limits by using renewable electricity, hydrogen and captured carbon. But the technology remains expensive and needs much more clean power.
+
+The 2030s will therefore be critical. Governments will need stronger policies, while airlines and fuel producers will need to commit more capital.
+
+If production grows slowly, SAF could remain a scarce and expensive fuel. If investment and technology scale quickly, it could become a much larger part of the global aviation fuel market.
+
+RELEVANT: SAF Crisis Deepens: IATA Says Aviation’s Net Zero Goal Is at Risk, but Brazil Offers New Hope
+
+What Could Slow CORSIA and SAF Growth?
+
+CORSIA and SAF face different challenges, but they are connected by the same goal: reducing aviation’s climate impact.
+
+For CORSIA, one challenge is coverage. The system applies to international aviation, while domestic flights are outside its offsetting system. Its impact also depends on how many states participate and how effectively airlines follow the rules.
+
+SAF faces a larger physical challenge. There is simply not enough low-carbon fuel available today. Production must grow much faster, while sustainable feedstocks remain limited.
+
+Cost is another major barrier. Airlines operate in a price-sensitive industry, so buying large amounts of expensive SAF can be difficult without policy support or customer demand.
+
+There is also a need for clear sustainability rules. SAF should deliver real emissions cuts without causing major damage through land-use change or other environmental impacts.
+
+These challenges do not mean SAF or CORSIA will fail. They show why aviation needs a mix of solutions rather than relying on one technology or policy.
+
+Conclusion: CORSIA and SAF Have Different Jobs
+
+CORSIA and SAF are becoming important parts of aviation’s climate strategy, but they serve different purposes.
+
+SAF tackles emissions at the fuel level. CORSIA helps address emissions that remain from international aviation. Together, they support a wider strategy that also includes better aircraft, more efficient operations and new technologies.
+
+Closing the huge SAF production gap will require more than airline demand. Governments will need effective policies, producers will need major investment, and the industry will need new technologies and sustainable feedstocks.
+
+CORSIA will also continue to evolve as its Second Phase begins in 2027. ICAO’s current framework already includes rules for eligible carbon units and fuels, giving the aviation industry a common system for managing international emissions.
+
+The long-term outcome will depend on how quickly these systems can scale. For now, one point is clear: aviation’s path to net zero will depend heavily on making cleaner fuels available at much greater scale while strengthening the global rules that support emissions reductions.",https://carboncredits.com/wp-content/uploads/2026/08/ChatGPT-Image-Aug-20-2026-11_56_08-AM.png,N,,2026-08-21 11:57:33.636301
+,,2026-08-21 15:29:26+00:00,eplaneai,Integrated CNS System for Low-Altitude Aircraft - ePlaneAI,ePlane AI,,,,,https://www.eplaneai.com/news/integrated-cns-system-for-low-altitude-aircraft,"Integrated CNS System Set to Transform Low-Altitude Aircraft Operations The ANTENNAE project is at the forefront of developing an integrated Communication, Navigation, and Surveillance (CNS) system specifically designed for aircraft operating at low altitudes.
+Limitations of Legacy CNS Systems Conventional CNS systems were originally engineered for manned aircraft flying at higher altitudes and depend on a combination of dedicated hardware such as ADS-B, VDL/ACARS, transponders, and SATCOM.
+ANTENNAE’s Integrated CNS Solution In response to these challenges, ANTENNAE is developing a 3GPP-compliant CNS system that integrates communication, navigation, and surveillance functions into a single, energy-efficient platform.
+Emerging Challenges and Industry Impact The transition to integrated CNS systems introduces new complexities, foremost among them cybersecurity.
+Protecting the wireless networks that underpin CNS operations from evolving threats is essential to maintaining system integrity and safety.","Integrated CNS System Set to Transform Low-Altitude Aircraft Operations
+
+The ANTENNAE project is at the forefront of developing an integrated Communication, Navigation, and Surveillance (CNS) system specifically designed for aircraft operating at low altitudes. Utilizing 3GPP 5G standards alongside next-generation hybrid terrestrial and non-terrestrial networks, ANTENNAE seeks to provide reliable and cost-effective CNS services for both piloted and unmanned aircraft. This includes applications within Innovative Air Mobility (IAM) and U-space operations, which are rapidly expanding sectors in urban airspace management.
+
+Limitations of Legacy CNS Systems
+
+Conventional CNS systems were originally engineered for manned aircraft flying at higher altitudes and depend on a combination of dedicated hardware such as ADS-B, VDL/ACARS, transponders, and SATCOM. Each component serves a distinct function, optimized primarily for airport environments and high-altitude flight corridors. However, these systems exhibit significant coverage gaps at lower altitudes due to ground obstructions and terrain interference. Extending legacy CNS infrastructure to adequately cover low-altitude airspace would entail substantial capital investment and ongoing operational expenses.
+
+Small unmanned aircraft face additional challenges with legacy CNS solutions. Their limited size and power capacity make it impractical to equip them with multiple, energy-intensive CNS devices. Even if these constraints were addressed, the existing systems lack the bandwidth necessary to accommodate the expected surge in low-altitude air traffic, such as the simultaneous operation of large fleets of delivery drones in urban settings.
+
+ANTENNAE’s Integrated CNS Solution
+
+In response to these challenges, ANTENNAE is developing a 3GPP-compliant CNS system that integrates communication, navigation, and surveillance functions into a single, energy-efficient platform. This consolidation reduces the need for extensive onboard hardware, lowers energy consumption, and enhances spectrum efficiency—factors critical to supporting the dense traffic anticipated in future urban air mobility scenarios.
+
+For instance, during peak delivery periods, swarms of drones will require real-time coordination to maintain safe separation and adhere strictly to designated flight paths. ANTENNAE’s integrated CNS infrastructure is designed to support such complex operations, enabling scalable and robust traffic management as well as effective airspace boundary protection.
+
+Emerging Challenges and Industry Impact
+
+The transition to integrated CNS systems introduces new complexities, foremost among them cybersecurity. Protecting the wireless networks that underpin CNS operations from evolving threats is essential to maintaining system integrity and safety. Furthermore, seamless integration with existing air traffic management frameworks is necessary to ensure operational continuity and efficiency. Regulatory compliance across multiple jurisdictions also presents a significant challenge, necessitating harmonization of standards and protocols on an international scale.
+
+The advancement of CNS technology is already influencing the broader aerospace and defense markets. Increased investment in air mobility infrastructure is anticipated as urban drone operations expand. Leading defense and aerospace firms, including Leonardo DRS and Lockheed Martin, are expected to enhance their air defense and counter-unmanned aircraft system capabilities in response to these developments.
+
+The U.S. Army’s ongoing efforts to acquire surface-to-air missile systems capable of neutralizing small drones highlight the growing demand for advanced detection and interception technologies. This need is likely to accelerate innovation in CNS solutions, as both civilian and military sectors seek more effective methods to manage and secure increasingly congested low-altitude airspace.
+
+As the ANTENNAE project progresses, its integrated CNS system has the potential to become a foundational element in the safe, efficient, and scalable operation of low-altitude aviation, shaping the future landscape of urban air mobility worldwide.",https://pub-a51e4d676a044eb380faeff15def343e.r2.dev/db50298cbffb446987e493eb6e8a9727.avif,N,,2026-08-21 13:57:21.251069
 ,,2026-08-21 14:27:38+00:00,Il Sole 24 ORE,"Clear skies, smart flight paths: sustainability for aircraft also relies on AI - Il Sole 24 ORE",Mara Monti,,,,,https://en.ilsole24ore.com/art/clear-skies-smart-flight-paths-sustainability-aircraft-also-fly-through-the-ia-AJXwzPr,"From contrails to artificial intelligence, the aviation sector is exploring new ways to reduce its environmental impact.
 A British trial being conducted on both sides of the Atlantic aims to assess the extent to which simple changes in altitude can help reduce the environmental impact of air travel.
 Changing the type of aircraft, fuel or engine is not always necessary to make a flight more sustainable.
@@ -89,6 +427,9 @@ August 19, 2026
 U.S. fuel ethanol production fell by nearly 3% the week ending Aug. 14, according to data released by the U.S. Energy Information Administration on Aug. 19. Stocks of fuel ethanol expanded by more than 1% and exports were up 18%.
 
 Read More",https://bbi-strapi.s3.us-east-2.amazonaws.com/Sino_Jet_49c0f0251e.jpg,N,,2026-08-21 10:58:17.847443
+,,2026-08-21 14:02:36+00:00,Elkhorn Media Group,Sustainable Aviation Fuel Airport Infrastructure Account Archives - Elkhorn Media Group,Not Available,,,,,https://elkhornmediagroup.com/tag/sustainable-aviation-fuel-airport-infrastructure-account/,Washington to raise aviation fuel tax and registration fees under House Bill 2711 OLYMPIA — Aircraft operators in Washington state face upcoming tax and fee increases following the …Read More,"Washington to raise aviation fuel tax and registration fees under House Bill 2711
+
+OLYMPIA — Aircraft operators in Washington state face upcoming tax and fee increases following the …Read More",https://elkhornmediagroup.com/wp-content/themes/elkhorn/images/favicon.svg,N,,2026-08-21 12:57:05.158358
 ,,2026-08-21 14:01:41+00:00,www.world-grain.com,Australian government seeks low-carbon fuels feedback - World Grain,John Reidy,,,,,https://www.world-grain.com/articles/23131-australian-government-seeks-low-carbon-fuels-feedback,"CANBERRA, AUSTRALIA — The Australian government is seeking feedback for establishing a demand-side framework for low-carbon liquid fuels through the publication of its Securing Australia’s Cleaner Fuels Industry Consultation Paper, a move welcomed by sustainable fuels partners GrainCorp, Ampol and IFM Investors.
 These measures are considered critical to strengthening Australia’s fuel security, supporting sovereign fuel capability and manufacturing opportunities, and capturing greater value from Australia’s agricultural feedstocks.
 “Australia has the feedstocks, infrastructure and agricultural capability to become a global leader in low-carbon liquid fuels,” said Robert Spurway, managing director and chief executive officer of GrainCorp.
@@ -106,6 +447,7 @@ Using Australian-grown feedstocks like canola, alongside used cooking oil and ta
 The companies said they look forward to contributing to the consultation and continuing to work with the Australian government to establish the policy settings needed to unlock long-term investment in Australia’s renewable fuels sector and strengthen energy security.
 
 “GrainCorp is well placed to supply the sustainable feedstocks needed to support this emerging industry, and we look forward to working constructively with government and industry throughout the consultation,” Spurway said.",https://www.world-grain.com/ext/resources/2024/07/31/biofuels_renewable_SCHARFSINN86---STOCK.ADOBE.COM_e.jpg?height=635&t=1722431321&width=1200,N,,2026-08-21 10:58:20.619611
+,,2026-08-21 13:52:23+00:00,YouTube,how microalgae biofuel reactors produce clean aviation fuel from industrial exhaust gases,Not Available,,,,,https://www.youtube.com/shorts/B_eNDbGm5Nk,"Discover how innovative microalgae biofuel reactors are revolutionizing the aviation industry by turning industrial exhaust gases into clean, sustainable avi...",Not Available,https://i.ytimg.com/vi/B_eNDbGm5Nk/hq720_2.jpg?sqp=-oaymwEoCJUDENAFSFryq4qpAxoIARUAAIhC0AEB2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLAbFArwyT1TEJWJrAb9kB_ylEEDag,N,,2026-08-21 12:57:09.590371
 ,,2026-08-21 13:51:30+00:00,Innovation News Network,An integrated CNS solution for low-altitude aircraft - Innovation News Network,Harriet Clough,,,,,https://www.innovationnewsnetwork.com/an-integrated-cns-solution-for-low-altitude-aircraft/73127/,"The ANTENNAE project is developing an innovative integrated CNS solution for aircraft operating at low altitude The ANTENNAE project explores the applicability of 3GPP 5G and next-generation hybrid terrestrial and non-terrestrial networks for providing Communication, Navigation, and Surveillance (CNS) services to aircraft operating at low altitude.
 The ANTENNAE project is exploring a 3GPP-compliant integrated CNS solution for Innovative Air Mobility (IAM), including piloted and U-space operations at low altitude.
 You may think: can we use the same hardware and technologies used for manned aircraft to support CNS services for unmanned aircraft?
@@ -209,6 +551,13 @@ Seifried also reported a largely disease-free crop this year, with zero fields s
 “When you look at the USDA numbers for both corn and soybeans being below expectations, being below last year, yes, that means there’s less potential out there,” Seifried said. “But the better finish on the potential that is out there could keep it from being a really sharp drop from last year.”
 
 WATCH the full conversation with Ted Seifried from Zaner Ag Hedge below:",https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/2470/2024/10/15124907/AdobeStock_294754052-1-scaled-1-960x563.jpeg,N,,2026-08-21 10:58:33.963293
+,,2026-08-21 13:16:35+00:00,www.insideflyer.com,Google AI to reroute transatlantic flights avoiding contrails - InsideFlyer,InsideFlyer,,,,,https://www.insideflyer.com/posts/google-ai-to-reroute-transatlantic-flights-avoiding-contrails/,"Operation Blue Skies will test altitude adjustments of up to 2,000 feet for 1%-5% of flights in Shanwick Oceanic airspace during 20-40 low-traffic days each winter.
+NATS, Imperial College, and Cambridge will monitor outcomes across roughly 10,000 annual flights.
+Google contributes £1.4 million; the UK government adds £2.65 million toward the 30-month pilot.
+The initiative tests whether coordinated air traffic control can safely reduce contrail warming without raising overall fuel use.
+Unlike sustainable aviation fuel subsidies, this approach requires no new infrastructure or costly feedstocks, relying instead on real-time atmospheric modeling and existing flight paths.","Operation Blue Skies will test altitude adjustments of up to 2,000 feet for 1%-5% of flights in Shanwick Oceanic airspace during 20-40 low-traffic days each winter. NATS, Imperial College, and Cambridge will monitor outcomes across roughly 10,000 annual flights. Google contributes £1.4 million; the UK government adds £2.65 million toward the 30-month pilot.
+
+The initiative tests whether coordinated air traffic control can safely reduce contrail warming without raising overall fuel use. If successful, it could scale globally, potentially cutting aviation’s total climate impact by one-sixth. Unlike sustainable aviation fuel subsidies, this approach requires no new infrastructure or costly feedstocks, relying instead on real-time atmospheric modeling and existing flight paths.",https://viewfromthewing.com/wp-content/uploads/2026/08/contrails-inflight.jpg,N,,2026-08-21 12:57:12.778222
 ,,2026-08-21 13:09:28+00:00,gasworld,"Shanghai Electric to expand hydrogen-based biomethanol plant to 200,000 tonnes","gasworld, Connor Jack, www.gasworld.com, connor-jack",,,,,https://www.gasworld.com/story/shanghai-electric-to-expand-hydrogen-based-biomethanol-plant-to-200000-tonnes/2257829.article/,"Chinese power conglomerate Shanghai Electric has launched phase two of its Taonan wind-powered green hydrogen-based biomethanol plant in Jilin, targeting scale-up to 200,000 tonnes per year.
 The new phase will build on the facility’s current operational capacity of 50,000 tonnes per year, while also adding 10,000 tonnes of sustainable aviation fuel.
 Shanghai Electric did not specify whether the new phase would build any additional renewable power assets.
@@ -323,7 +672,22 @@ Delta’s 2022 “eco-conscious” amenities announcement promoted bamboo cutler
 Contrail mitigation, by contrast, leaves no visible evidence behind. But there’s a lot of science left to do to verify forecast accuracy that guides changes; a reroute must not create another contrail or impose a larger cost on surrounding traffic; results from lower-traffic winter periods over the North Atlantic may not generalize to busy continental airspace or other climates. But that’s exactly what’s being worked on.
 
 And if it works, passengers won’t not need to change behavior, airlines won’t need new aircraft, and and governments and airlines won’t need to ‘extend and pretend’ that biofuels are the answer.",https://viewfromthewing.com/wp-content/uploads/2026/08/contrails-inflight.jpg,N,,2026-08-21 10:58:41.268149
+,,2026-08-21 12:00:22+00:00,GSGA - Gaia Silva Gaede Advogados,Decree regulates ProBioQAV and structures the SAF certificate market - GSGA,Not Available,,,,,https://gsga.com.br/en/newsletter/decree-regulates-probioqav-and-structures-the-saf-certificate-market,"13,094/2026 was published, regulating the National Sustainable Aviation Fuel Program (“ProBioQAV”), established by Law No.
+The National Agency of Petroleum, Natural Gas and Biofuels (“ANP”) will establish the National SAF Certification Program, which may follow its own criteria or CORSIA criteria (mandatory requirement for imported product).
+The core of the regulation is the creation of the Sustainable Aviation Fuel Sustainability Certificate (“CS-SAF”), which is book-entry in nature and valid for 18 months.
+The registry entities must maintain secure and interoperable electronic platforms for certificate management, ensuring traceability and the disclosure of aggregated market information.
+It is recommended to monitor ANP’s supplementary rules and to structure strategies for the acquisition and retirement of certificates by air operators in order to meet their targets.","On August 12, 2026, Decree No. 13,094/2026 was published, regulating the National Sustainable Aviation Fuel Program (“ProBioQAV”), established by Law No. 14,993/2024. The regulation is part of the aviation sector’s decarbonization agenda and sets the foundations for the production, certification, commercialization and use of sustainable aviation fuel (“SAF”) in Brazil, with the aim of enabling compliance with the emissions reduction targets applicable to air operators.
+
+The National Agency of Petroleum, Natural Gas and Biofuels (“ANP”) will establish the National SAF Certification Program, which may follow its own criteria or CORSIA criteria (mandatory requirement for imported product). Carbon intensity will be determined through life-cycle analysis (“well-to-wake”), and the issuance of Decarbonization Credits (“CBIOs”) under RenovaBio for SAF production is expressly prohibited, in order to avoid double counting of environmental assets.
+
+The core of the regulation is the creation of the Sustainable Aviation Fuel Sustainability Certificate (“CS-SAF”), which is book-entry in nature and valid for 18 months. Adopting the Book&Claim model, the certificate separates the environmental attribute from the physical fuel. All SAF sold in Brazil must be linked to a CS-SAF, issued by the blending agent and registered with an authorized entity, and may be traded with air operators for subsequent ""retirement"" and proof of compliance with targets before the National Civil Aviation Agency (“Anac”).
+
+The registry entities must maintain secure and interoperable electronic platforms for certificate management, ensuring traceability and the disclosure of aggregated market information. The Decree also provides for coordination of ProBioQAV with the Brazilian Emissions Trading System (“SBCE”) and RenovaBio, ensuring environmental integrity and preventing double counting.
+
+With the creation of the legal infrastructure for the Brazilian SAF market, companies in the biofuels, aviation and carbon market chains should assess investment opportunities and the new governance requirements. It is recommended to monitor ANP’s supplementary rules and to structure strategies for the acquisition and retirement of certificates by air operators in order to meet their targets.",https://s3gsga.s3.sa-east-1.amazonaws.com/0--banner-geral-site-6e3fca15a6394bd1a22c6535d346eb64.jpg,N,,2026-08-21 13:57:26.384487
+,,2026-08-21 11:13:58+00:00,Investing.com,HydrogenPro Q2 2026 slides: cost cuts advance amid market headwinds - Investing.com,Not Available,,,,,https://www.investing.com/news/company-news/hydrogenpro-q2-2026-slides-cost-cuts-advance-amid-market-headwinds-93CH-4871076,HydrogenPro Q2 2026 slides: cost cuts advance amid market headwinds,Not Available,https://i-invdn-com.investing.com/redesign/images/seo/investing_300X300.png,N,,2026-08-21 13:57:30.754722
 ,,2026-08-21 11:10:17+00:00,www.ecoceres.com,EcoCeres to Showcase SAF and HVO solutions at China TransPo 2026 in Beijing,Not Available,,,,,https://www.ecoceres.com/en/news/EcoCeres_will_participate_in_China_TransPo_2026_taking_place_in_Beijing_from_2628_August_2026_to_showcase_its_SAF_and_HVO_solutions_for_the_transport_sector,"... sustainable aviation fuel (SAF) and hydrotreated vegetable oil (HVO) solutions for the transport sector. At the exhibition, EcoCeres will ...",Not Available,,N,,2026-08-21 09:57:20.292659
+,,2026-08-21 09:48:18+00:00,sjvwater.org,Some farmers are 'preaching the gospel of agave' as state's groundwater law reduces supplies,Not Available,,,,,https://sjvwater.org/some-farmers-are-preaching-the-gospel-of-agave-as-states-groundwater-law-reduces-supplies/,This will only take a few seconds...,This will only take a few seconds...,"data:;base64,=",N,,2026-08-21 13:57:33.364476
 ,,2026-08-21 09:02:58+00:00,Travel Report,Twice as many travelers pay for sustainable aviation fuel,Editorial department,,,,,https://www.travelreport.se/en/twice-as-many-travelers-pay-for-sustainable-aviation-fuel/,"– The sales curve for SAF (Sustainable Aviation Fuel) i.e.
 Perhaps this increased interest in flying more sustainably and taking an active role in the transition, says Maria Hagelberg.
 Currently, SAF is the fuel alternative available to reduce the climate impact of aviation.
@@ -4275,540 +4639,3 @@ According to Kadlecek, the approval of methanol as a feedstock to produce synthe
 Click on our bio link for more.
 
 #aviation #fuels #hydrocarbons",https://scontent-iad3-1.cdninstagram.com/v/t51.71878-15/780486646_1103012476004717_1947745427828320547_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=JXUmwZa3yNAQ7kNvwGMSxmD&_nc_oc=AdpA9oyU8cD8prWJKBG6b3wGdE_sFOb6l_B4AkRZzDbTyAQN5PN5xLTtdAWtV-WA0iI&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=8tZD4GWU3NqA2eCnJ-jaeg&_nc_ss=7b689&oh=00_AQHr-5fZcqOH73Gjj_h_sznV9HASNwEzOr0Zlnj8HkerSw&oe=6A8A7AAD,N,,2026-08-18 15:57:07.082438
-,,2026-08-18 17:19:25+00:00,ESG Today,Lotus Infrastructure Raises $1.8 Billion to Invest Across Clean Energy Value Chain,Kenny Fisher,,,,,https://www.esgtoday.com/lotus-infrastructure-raises-1-8-billion-to-invest-across-clean-energy-value-chain/,"Lotus Infrastructure Partners announced that it has raised approximately $1.8 billion at the final closings across Lotus Infrastructure Fund IV investments, future co-investments and a single-asset continuation vehicle, marking the clean energy infrastructure-focused private equity firm’s largest capital raise to date.
-Greenwhich, Connecticut-based Lotus specializes in infrastructure investments along the value chain of energy and related sectors as well as other industries that benefit from sustainability and energy transition trends.
-The company said that Fund IV received support from existing and new institutional investors and will pursue opportunities across energy and related sectors, including power generation and transmission, battery storage, biofuels, and other fuels such as ammonia and methanol.
-Himanshu Saxena, Chairman and Chief Executive Officer of Lotus Infrastructure Partners, said: “We are grateful for the continued support of our investors and pleased to have completed this capital raise which is the largest in our firm’s history.
-We are at a pivotal moment in the energy markets with demand for new energy infrastructure at unprecedented levels, driven by AI and rising industrial consumption.”","Lotus Infrastructure Partners announced that it has raised approximately $1.8 billion at the final closings across Lotus Infrastructure Fund IV investments, future co-investments and a single-asset continuation vehicle, marking the clean energy infrastructure-focused private equity firm’s largest capital raise to date.
-
-Greenwhich, Connecticut-based Lotus specializes in infrastructure investments along the value chain of energy and related sectors as well as other industries that benefit from sustainability and energy transition trends. The firm’s main focus areas include assets that produce and move electrons such as renewable power generation, battery storage, electric transmission, and thermal power with paths to decarbonizing, and molecules such ammonia, hydrogen, renewable diesel, renewable natural gas, sustainable aviation fuel, carbon capture and sequestration, and related midstream and downstream assets.
-
-The company said that Fund IV received support from existing and new institutional investors and will pursue opportunities across energy and related sectors, including power generation and transmission, battery storage, biofuels, and other fuels such as ammonia and methanol.
-
-Himanshu Saxena, Chairman and Chief Executive Officer of Lotus Infrastructure Partners, said:
-
-“We are grateful for the continued support of our investors and pleased to have completed this capital raise which is the largest in our firm’s history. We are at a pivotal moment in the energy markets with demand for new energy infrastructure at unprecedented levels, driven by AI and rising industrial consumption.”",https://www.esgtoday.com/wp-content/uploads/2026/08/Wind-Enel-texas.jpg,N,,2026-08-18 13:56:57.215948
-,,2026-08-18 17:18:18+00:00,Legis1,Airbus Ends Lobbying Relationship With Invariant LLC - Legis1,"Legis1, Edited",,,,,https://legis1.com/news/airbus-lobbying-termination-ends-relationship,"Why It Matters Airbus Americas Inc. terminated its lobbying engagement with Invariant LLC on August 13, according to a termination filing submitted to Congress.
-Invariant LLC also supported sustainable aviation fuel efforts and worked to educate policymakers on Airbus's U.S. presence.
-By the fourth quarter of 2025, Invariant LLC was monitoring S.1071 alongside continued work on acquisition policy.
-119-60, which fell within the period Invariant LLC was actively representing Airbus on defense and appropriations issues.
-Both were listed as principals at Invariant LLC on the Airbus engagement.","Why It Matters
-
-Airbus Americas Inc. terminated its lobbying engagement with Invariant LLC on August 13, according to a termination filing submitted to Congress.
-
-By The Numbers
-
-Airbus had been a consistent client for Invariant LLC, paying the firm $60,000 per quarter for lobbying services in recent years, though the company charged $40,000 in the first quarter of 2021 when the engagement began. The termination filing for the third quarter of 2026 reported $20,000 in fees covering the wind-down period through July 1.
-
-Broader Context
-
-In June 2021, the US and EU agreed to a five-year mutual tariff truce covering $11.5 billion in goods related to the Boeing-Airbus subsidy dispute, providing a backdrop for much of Invariant LLC's work on Airbus's behalf.
-
-The firm tracked tariff developments, monitored the FAA Reauthorization Act implementation, and discussed Coast Guard and Customs and Border Protection aviation needs. Invariant LLC also supported sustainable aviation fuel efforts and worked to educate policymakers on Airbus's U.S. presence.
-
-In the second quarter of 2025, Invariant LLC monitored H.R. 1, and in the third quarter of 2025, the firm tracked H.R. 3838 and monitored acquisition policy. By the fourth quarter of 2025, Invariant LLC was monitoring S.1071 alongside continued work on acquisition policy. The National Defense Authorization Act for fiscal year 2026 was signed by President Trump on December 18, 2025, as P.L. 119-60, which fell within the period Invariant LLC was actively representing Airbus on defense and appropriations issues.
-
-The firm's lobbying activities for Airbus covered aerospace, trade, homeland security, budget and appropriations, aviation and aircraft, and defense matters.
-
-The Bottom Line
-
-The loss of the Airbus account removes from Invariant LLC a client that had maintained a consistent presence in the firm's portfolio since 2021.
-
-Kenny Roberts and Dena Baron served as the primary Invariant LLC lobbyists on the Airbus account through the first quarter of 2026. Roberts brings prior congressional experience through Sen. John D. Rockefeller (D-WV). Baron brings House Appropriations Committee experience to the firm's work. Both were listed as principals at Invariant LLC on the Airbus engagement.
-
-Spot something wrong? Report an issue with this article",https://newsgen-prod.reframedata.com/api/v1/public/articles/id/cb574122-3bbd-42d6-b445-de448abc298b/image,N,,2026-08-18 13:57:01.599228
-,,2026-08-18 17:10:08+00:00,theregister,UK puts Google AI on the flight path to fewer contrails - The Register,Carly Page,,,,,https://www.theregister.com/public-sector/2026/08/18/uk-puts-google-ai-on-the-flight-path-to-fewer-contrails/5288516,"The UK government is backing a trial to predict where persistent contrails will form over the North Atlantic and help participating aircraft avoid those areas by adjusting their routes or altitude.
-Persistent contrails are therefore one of aviation's non-CO2 contributions to climate change – and potentially one that can be tackled without waiting for airlines to replace their fleets or invent a jet engine that runs on good intentions.
-""By testing small tweaks to flight paths over the Atlantic, we can cut the vapour trails left behind by planes.""
-The trial will therefore need to establish whether the climate benefit of dodging persistent trails outweighs any extra fuel burned getting out of their way.
-The government and Google are betting that sometimes a greener flight path is only a few thousand feet away.","Britain is putting Google AI in the flight-planning loop to see whether airliners can dodge the patches of sky where their vapor trails are most likely to stick around and warm the planet.
-
-The UK government is backing a trial to predict where persistent contrails will form over the North Atlantic and help participating aircraft avoid those areas by adjusting their routes or altitude.
-
-The Department for Transport is putting £2.6 million into the 30-month project, which will combine Met Office weather forecasts with Google's artificial intelligence to suggest alternative flight paths.
-
-REG AD
-
-Flight tests are scheduled for the winters of 2026-27 and 2027-28. Any route or altitude changes will go through normal air traffic control procedures and require the usual safety checks.
-
-REG AD
-
-Those white streaks behind aircraft aren't just an opportunity for conspiracy theorists to get excited. Contrails form when water vapor from jet exhaust freezes into ice crystals in cold, humid air. Many disappear quickly, but under the right atmospheric conditions they can hang around, spread out and develop into clouds that trap heat.
-
-Persistent contrails are therefore one of aviation's non-CO2 contributions to climate change – and potentially one that can be tackled without waiting for airlines to replace their fleets or invent a jet engine that runs on good intentions.
-
-The trial rests on the fact that contrail-friendly conditions occur only in particular regions and layers of the atmosphere. If forecasts can identify them accurately enough, aircraft could fly above, below, or around them.
-
-""We're partnering with Google to back British experts and innovators to find practical ways to make flying cleaner,"" said aviation minister Keir Mather. ""By testing small tweaks to flight paths over the Atlantic, we can cut the vapour trails left behind by planes.""
-
-There is, naturally, a trade-off. Changing an aircraft's route or altitude can burn additional fuel, potentially increasing its CO2 emissions even as it avoids a contrail. The trial will therefore need to establish whether the climate benefit of dodging persistent trails outweighs any extra fuel burned getting out of their way.
-
-The project joins a much larger pile of taxpayer cash being pointed at greener aviation. The government announced £219 million for sustainable aviation fuel production in June and is spending another £43 million on technologies including electric and hydrogen-powered aircraft.
-
-This experiment, though, does not require anyone to reinvent the airplane. The government and Google are betting that sometimes a greener flight path is only a few thousand feet away. ®",https://image.theregister.com/5288528.jpg?imageId=5288528&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683,N,,2026-08-18 13:57:04.562802
-,,2026-08-18 17:02:42+00:00,sustainabilityonline.net,The Sustainability Brief – 18 August 2026 - SustainabilityOnline,Not Available,,,,,https://sustainabilityonline.net/news/sustainabilityonline-the-sustainability-brief-18-august-2026/,This will only take a few seconds...,This will only take a few seconds...,"data:;base64,=",N,,2026-08-18 13:57:07.084973
-,,2026-08-18 16:35:15+00:00,fuelcellsworks.com,Clean Hydrogen Production at San Bernardino Airport - Fuel Cells Works,fuelcellsworks.com,,,,,https://fuelcellsworks.com/2026/08/18/fuel-cells/san-bernardino-international-airport-and-total-hydrogen-development-to-produce-clean-low-cost-hydrogen-in-the-inland-empire,"San Bernardino International Airport and Total Hydrogen Development to produce low-cost, clean hydrogen for Southern California fleets and transit agencies starting 2027.",Not Available,https://s3.us-east-1.amazonaws.com/s3.ai.fuelcellsworks.com/san-bernardino-international-airport-and-total-hydrogen-development-to-produce-clean-low-cost-hydrogen-in-the-inland-empire-2026-08-18T10%3A29%3A15-05%3A00-image.webp,N,,2026-08-18 13:57:10.465675
-,,2026-08-18 16:07:46+00:00,Imperial College London,World's first trial to test if flightpath changes could cut aviation's climate impact,"Eleanor Barrand, Meg Orpwood-Russell, Sigourney Luz, Simon Levey",,,,,https://www.imperial.ac.uk/news/articles/natural-sciences/physics/2026/worlds-first-trial-to-test-if-flightpath-changes-could-cut-aviations-climate-impact-/,"Imperial researchers will help evaluate a major North Atlantic trial investigating whether small, AI-guided flightpath adjustments can reduce global warming from aeroplane contrails.
-The white wispy trails that sometimes form behind planes, known as contrails, are an increasingly important focus for climate researchers.
-A unique trial starting in late 2026 supported by the UK government will test if it’s possible to reduce or totally eliminate contrails.
-Atmospheric modelling suggests that Shanwick airspace accounts for approximately five per cent of global contrail warming.
-If successful, the trial could provide the strongest evidence yet that routine flight path adjustments can help reduce aviation's climate impact without requiring new aircraft technology or fuels.","Imperial researchers will help evaluate a major North Atlantic trial investigating whether small, AI-guided flightpath adjustments can reduce global warming from aeroplane contrails.
-
-The white wispy trails that sometimes form behind planes, known as contrails, are an increasingly important focus for climate researchers. While they may look harmless, they are thought to have a substantial near-term warming effect, making them an important target in the effort to reduce aviation's climate impact.
-
-A unique trial starting in late 2026 supported by the UK government will test if it’s possible to reduce or totally eliminate contrails. Imperial experts in atmospheric science and aerospace engineering will test the theory that altering the altitude at which planes fly can reduce warming from aircraft contrails across the North Atlantic.
-
-Operation Blue Skies, a project led by global tech company Google and involving the UK Department for Transport, the Met Office, NATS, Contrails.org, the University of Cambridge and Imperial College London, will use AI models to identify when and where small altitude adjustments could reduce warming from contrails, specifically focusing on the NATS-controlled Shanwick Oceanic airspace to the north west of Ireland.
-
-(Photo credit: Google)
-
-In the winters of 2026 and 2027, when contrails are most prevalent, airlines flying in this area will alter their flight paths in line with the trial and scientists at Imperial and Cambridge will measure the impact.
-
-This is the world’s first government-backed effort to evaluate contrail avoidance at an oceanic airspace scale. The team hopes to establish whether altering flightpaths at a global scale would have a benefit for fighting climate change.
-
-What are contrails?
-
-Contrails form when aircraft exhaust mixes with cold, moist air at high altitude. While many disappear quickly, some persist and spread into thin cloud layers that trap heat in the atmosphere, contributing to global warming.
-
-Atmospheric modelling suggests that Shanwick airspace accounts for approximately five per cent of global contrail warming. Much of this occurs during a relatively small number of evening hours between November and February, making the region an ideal place to test the approach.
-
-Over 30 months, the programme will conduct two operational trials across Shanwick airspace, using small altitude adjustments within normal flight operations to assess both the practicality and environmental benefits of contrail avoidance.
-
-Example of moving from different altitudes to avoid contrails (photo credit: Google)
-
-Can Imperial’s theory take flight?
-
-The trial builds on research led by Imperial scientists, which demonstrated in 2020 that changing the altitude of fewer than two per cent of flights could reduce contrail-related climate warming by 59 per cent.
-
-Operation Blue Skies provides the first opportunity to test this concept across a major transatlantic airspace region under real-world operating conditions.
-
-Imperial’s contribution to the project is led by Professor Marc Stettler from the Department of Civil and Environmental Engineering, alongside Dr Sebastian Eastham from the Department of Aeronautics and Dr Edward Gryspeerdt from the Department of Physics.
-
-Professor Marc Stettler, Professor of Transport and Environment, said ""In 2020, our study found that small changes to flight paths could reduce the climate impact of contrails. Operation Blue Skies is a chance to test that idea in the real world and on a scale we've never seen before.
-
-“At Imperial, our role is to independently assess what happens, from the effects on airline operations to the benefits for the climate, and provide the evidence needed to decide whether this approach could become part of everyday aviation. It's exciting to see Imperial’s research helping to shape practical solutions to one of aviation's biggest climate challenges.""
-
-This project is an opportunity to advance both understanding and capability in aviation sustainability. Navigational contrail avoidance has been receiving growing attention, but we need empirical proof that the tools we have available to us are up to the challenge. Dr Sebastian Eastham Associate Professor in Sustainable Aviation
-
-Dr Sebastian Eastham, Associate Professor in Sustainable Aviation, said: ""This project is an opportunity to advance both understanding and capability in aviation sustainability. Navigational contrail avoidance has been receiving growing attention, but we need empirical proof that the tools we have available to us are up to the challenge.
-
-""One big question in this regard is whether model-based predictions of contrail formation are accurate enough, far enough in advance, that we can then successfully navigate to avoid contrail-forming regions. Operation Blue Skies brings together the pieces needed to do just that, using satellite imagery to monitor whether the predicted benefits actually materialise when we perform small flight plan adjustments based on contrail formation predictions.""
-
-Dr Ed Gryspeerdt, Associate Professor in Atmospheric Physics, added “Both the weather and global aviation are hugely complex systems, making contrail avoidance a challenging task. This trial is an important step forward, testing how these systems can work together at a large scale.
-
-“It is very exciting to see how scientific research on aviation, clouds and satellite remote sensing can be used to address climate change and build a more sustainable future.”
-
-Collectively, the team’s research is helping advance understanding and mitigation of aerosols and aviation contrails, one of the most promising opportunities for reducing aviation’s climate impact.
-
-For Operation Blue Skies, they will play a key role in evaluating trial outcomes and independently verifying the programme’s climate impact alongside colleagues at the University of Cambridge.
-
-Operation Blue Skies forms part of Imperial's wider research into sustainable aviation, bringing together expertise in aviation emissions, atmospheric science and transport systems. Researchers from across the university are developing technologies and evidence to support aviation's transition to net zero, from sustainable aviation fuels and aircraft technologies to approaches that reduce the climate impact of contrails.
-
-Alongside its work on contrail mitigation, Imperial researchers have contributed to major initiatives such as the Virgin Atlantic-led Flight100 project, which delivered the world’s first transatlantic flight powered entirely by sustainable aviation fuel.
-
-Looking ahead
-
-The first operational trial is expected to take place during the winter of 2026-27, with a second following in winter 2027-28. Changes to flight paths will be incremental and barely noticeable to passengers, requiring only small adjustments to aircraft altitude.
-
-Operation Blue Skies programme is co-funded by its industry partners and the Department for Transport (DfT) through the ATI Programme, a partnership between the Aerospace Technology Institute (ATI), the Department for Business, Innovation, Science and Trade (BIST) and Innovate UK.
-
-If successful, the trial could provide the strongest evidence yet that routine flight path adjustments can help reduce aviation's climate impact without requiring new aircraft technology or fuels.",https://www.imperial.ac.uk/news/media/news-images/3000x2000-main-article-images/Contrails-resized.jpg,N,,2026-08-18 15:57:35.833738
-,,2026-08-18 16:04:33+00:00,North Dakota Monitor,"Higher ethanol blends would benefit consumers, corn industry, panel says","Jeff Beach, Cami Koons, Mary Steurer",,,,,https://northdakotamonitor.com/2026/08/18/higher-ethanol-blends-would-benefit-consumers-corn-industry-panel-says/,"Dave Ripplinger, a bio energy economist and associate professor with North Dakota State University, said he understands that hesitation with thin profit margins in the retail world.
-In the 20 years since ethanol production has taken off, North Dakota has gone from less than a half-million acres of corn to 4.5 million acres of corn.
-Ripplinger said the possibility of carbon capture at ethanol plants has the potential to boost North Dakota oil production, further advancing the importance of ethanol production.
-Brenda Elmer, executive director of the North Dakota Corn Growers Association, noted that Brazil, a key U.S. competitor in the corn and ethanol industries, as of Aug. 1 is mandating at least 32% ethanol in gasoline.
-Reach North Dakota Monitor deputy editor Jeff Beach at jbeach@northdakotamonitor.com","FARGO – Consumers would have more opportunity to save money on gasoline with higher levels of ethanol if Congress can remove a long-standing restriction, members of an ethanol industry roundtable said Monday.
-
-The U.S. House has passed a bill to allow year-round sales of gasoline with 15% ethanol, known as E15. Current rules do not allow E15 sales during the summer, though the federal Environmental Protection Agency granted a waiver this year.
-
-Year-round ethanol blend bill passed by US House faces uncertain Senate path
-
-The roundtable, hosted by Rep. Julie Fedorchak, R-N.D., mostly consisted of members connected to agriculture, which would benefit from easier access to corn-based ethanol.
-
-Dave Olson, bulk petroleum manager of West Fargo-based fuel retailer Petro Serve said E15 is about selling at a 15 cent discount to regular unleaded in the Fargo area.
-
-“They’re looking for a bargain,” Olson said of consumers.
-
-While his company is committed to offering E15, he said others are not interested in selling a fuel they can only offer for part of the year.
-
-Dave Ripplinger, a bio energy economist and associate professor with North Dakota State University, said he understands that hesitation with thin profit margins in the retail world.
-
-“They can’t afford to make mistakes,” Ripplinger said. Knowing E15 could be sold year-round, “changes the economics” for those businesses, he said.
-
-In the 20 years since ethanol production has taken off, North Dakota has gone from less than a half-million acres of corn to 4.5 million acres of corn.
-
-North Dakota’s five ethanol plants process 80% of the corn, with livestock feed one of the main byproducts of fuel production.
-
-Ripplinger said the possibility of carbon capture at ethanol plants has the potential to boost North Dakota oil production, further advancing the importance of ethanol production.
-
-“That provides this whole additional list of benefits that will support state economic activity,” Ripplinger said.
-
-Corn-based sustainable aviation fuel, ethanol use in maritime shipping and tractors that could burn ethanol instead of diesel are other potential areas where the ethanol market could expand, roundtable members said.
-
-The Gevo ethanol plant near Richardton is expanding with sustainable aviation fuel in mind.
-
-The U.S. House was able to pass a year-round E15 bill in May, something Fedorchak called a “small miracle,” in part because some key House leaders voted against it.
-
-The bill still needs to clear the Senate. Fedorchak said she expects the Senate to make some changes to the bill, meaning if it passes the Senate, the House would have to take it up again.
-
-The restriction on higher ethanol use exists because of past studies showing possible detrimental effects of burning E15 in the summer months.
-
-Fedorchak called that “old science” that has been refuted.
-
-Panel members pointed out that some other countries allow much higher ethanol blends.
-
-Brenda Elmer, executive director of the North Dakota Corn Growers Association, noted that Brazil, a key U.S. competitor in the corn and ethanol industries, as of Aug. 1 is mandating at least 32% ethanol in gasoline.
-
-“We’re just asking for the option to sell E15,” Elmer said.
-
-Reach North Dakota Monitor deputy editor Jeff Beach at jbeach@northdakotamonitor.com",https://northdakotamonitor.com/wp-content/uploads/2024/05/Tharaldson-Truck-scaled.jpg,N,,2026-08-18 13:57:13.462197
-,,2026-08-18 16:04:08+00:00,Lancaster Farming,"Considering Corn for Maritime, Aviation Fuels and Biobased Products - Lancaster Farming","Rebecca Schweitzer-Benner, rschweitzer@lancasterfarming.com",,,,,https://www.lancasterfarming.com/farming-news/field-crops/considering-corn-for-maritime-aviation-fuels-and-biobased-products/article_52b48914-f25e-4026-a08a-acded83bc020.html,"The National Corn Growers Association answered questions about their efforts exploring alternative markets for corn, including as a maritime fuel, sustainable aviation fuel, and in biobased products and manufacturing.",Not Available,https://bloximages.newyork1.vip.townnews.com/lancasterfarming.com/content/tncms/assets/v3/editorial/b/94/b9481447-e609-47e8-ac60-b1b936ce2c25/6a6b5799be23b.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize,N,,2026-08-18 13:57:17.271795
-,,2026-08-18 15:54:27+00:00,gasworld,Column: How methanol-to-jet can help scale sustainable aviation fuel | SAF - gasworld,"gasworld, Rajesh Gattupalli, www.gasworld.com, rajesh-gattupalli",,,,,https://www.gasworld.com/story/column-how-methanol-to-jet-can-help-scale-sustainable-aviation-fuel/2257464.article/,"Rajesh Gattupalli, President, Honeywell Technologies UOP, considers how methanol-to-jet broadens the feedstock base as the market strives for scalability Sustainable aviation fuel (SAF) has moved from aspiration to near-term priority.
-That methanol is then upgraded through MTJ technology into a fuel that can be blended into the aviation fuel supply.
-In practice, MTJ can link renewable power, hydrogen production, captured carbon and methanol logistics to a high-value aviation fuel market.
-Why ASTM approval matters ASTM approval is a critical milestone because aviation fuel must meet rigorous standards before it can enter the commercial fuel supply chain.
-Supporting commercial deployment To contribute meaningfully to SAF supply, MTJ must be supported by proven technology, reliable project delivery and the ability to scale across markets.","Rajesh Gattupalli, President, Honeywell Technologies UOP, considers how methanol-to-jet broadens the feedstock base as the market strives for scalability
-
-Sustainable aviation fuel (SAF) has moved from aspiration to near-term priority. Airlines, refiners, project developers and energy companies are all looking for practical ways to increase supply, but the market still faces a basic constraint: SAF cannot scale fast enough if it depends on a narrow set of feedstocks and production routes.
-
-The recent ASTM International approval of the methanol-to-jet (MTJ) pathway is a meaningful development because it gives the market another approved route to convert renewable methanol into SAF and electro-sustainable aviation fuel (eSAF), helping move MTJ from technical promise toward commercial deployment.
-
-This development is meaningful for business leaders looking for new investment opportunities, energy companies seeking markets for hydrogen and captured carbon, and aviation stakeholders working to expand lower-carbon fuel supply.
-
-At its core, MTJ converts methanol into jet fuel through an approved production route. First, methanol is produced from inputs such as captured CO₂ and renewable hydrogen, or from biomass-derived gas. That methanol is then upgraded through MTJ technology into a fuel that can be blended into the aviation fuel supply.
-
-In practice, MTJ can link renewable power, hydrogen production, captured carbon and methanol logistics to a high-value aviation fuel market.
-
-Expanding feedstock options
-
-Having a broad variety of feedstock options is critical because many SAF pathways today depend on vegetable oils, waste oils and animal fats. These resources will remain part of the SAF mix, but they are limited and supply is not consistent across geographies. The aviation industry will need additional feedstock options if supply is going to grow at the pace customers and policymakers expect.
-
-MTJ broadens the feedstock base by using methanol as a building block. Because methanol can be produced from different carbon and hydrogen sources, developers have more ways to design projects around local resources instead of depending on the same limited inputs.
-
-This is especially important as the next phase of SAF growth will depend on project economics, infrastructure access and regional resource availability. Methanol can be produced where renewable power, hydrogen, CO₂ or biomass resources are available and then transported to SAF production sites, giving developers more flexibility in where and how they build.
-
-Read more: When will SAF start to impact the CO₂ market?
-
-Why ASTM approval matters
-
-ASTM approval is a critical milestone because aviation fuel must meet rigorous standards before it can enter the commercial fuel supply chain. Approval gives refiners, airlines, investors and project developers a clearer framework to evaluate MTJ projects and reduces uncertainty as projects move from concept to implementation.
-
-This pathway is also an exciting development for the hydrogen economy because it creates a potential fuel market for projects that combine renewable hydrogen and captured CO₂, which can strengthen the business case for integrated hydrogen and carbon capture projects by connecting them to an aviation sector that will continue to need liquid fuels.
-
-Supporting commercial deployment
-
-To contribute meaningfully to SAF supply, MTJ must be supported by proven technology, reliable project delivery and the ability to scale across markets. The commercial test now facing the industry is not whether more pathways are needed, but how quickly approved pathways can become operational projects.
-
-Honeywell Technologies UOP’s eFining process is designed to upgrade methanol into SAF or eSAF, drawing on UOP’s decades of experience in methanol processing and fuel technology. Already announced projects show how developers are beginning to translate MTJ approval into commercial plans.
-
-The recent addition of Johnson Matthey Catalyst Technologies business to Honeywell Technologies strengthens this end-to-end approach. Together with eFining, these capabilities can help developers move more efficiently from lower-carbon hydrogen and captured carbon to eSAF by simplifying project design – supporting faster implementation.
-
-We are seeing commercial applications in various markets. Verso Energy announced plans to deploy eFining across seven production sites in Europe and the United States, underscoring the potential for standardised MTJ designs to support a broader set of planned eSAF projects. Power2X announced plans to use eFining at its Port of Rotterdam facility, where renewable methanol will be converted into low-carbon jet fuel as part of a large-scale production and storage hub.
-
-Building a more flexible SAF ecosystem
-
-No single pathway will meet all future SAF demand. Scaling the market will require multiple technologies, feedstocks and project models that can be matched to different regions, resources and customer needs.
-
-MTJ approval expands the set of practical routes available at a moment when the aviation industry needs scalable liquid fuel options and project activity is accelerating. The takeaway for business, energy and aviation leaders is clear: SAF growth will depend on execution, and MTJ gives the market another credible pathway to move from ambition to supply.","https://www.gasworld.com/cdn-cgi/image/width=1200,height=900,fit=contain,quality=75,metadata=none,format=auto,gravity=auto/https://www.gasworld.com/wp-content/files/2024/02/shutterstock_2307717919.jpg",N,,2026-08-18 13:57:20.558392
-,,2026-08-18 15:54:24+00:00,WDIO.com,Governor Walz issues executive order to stop permitting work on certain copper nickel projects,Renee Passal,,,,,https://www.wdio.com/mining-news/governor-walz-issues-executive-order-to-stop-permitting-work-on-certain-copper-nickel-projects/,"On Tuesday, Governor Tim Walz signed an executive order about Minnesota’s Boundary Water Canoe Area Wilderness and nonferrous mineral mining.
-“The Boundary Waters is a national treasure and home to some of Minnesota’s most pristine waters and wilderness,” said Governor Walz.
-Decline to participate as a cooperating agency in any federal environmental review of a proposed nonferrous mineral mining project in the RRHW.
-Offer no new state nonferrous mineral leases or surface leases for nonferrous mining operations in the watershed.
-Draft legislative language to permanently prohibit nonferrous mineral mining in the RRHW for consideration in the agency’s budget and policy proposals.","On Tuesday, Governor Tim Walz signed an executive order about Minnesota’s Boundary Water Canoe Area Wilderness and nonferrous mineral mining.
-
-The Governor’s order directs the Minnesota Department of Natural Resources and the Minnesota Pollution Control Agency to stop all permitting and environmental review work on nonferrous mineral mining projects in the Rainy River Headwaters Watershed.
-
-There is one project that’s been the center of much of the controversy. It’s Twin Metals Minnesota, which is planning an underground copper nickel project near Ely.
-
-This order also directs DNR to not issue any new leases or permits for nonferrous mineral mining projects in the RRHW and to immediately review all existing nonferrous mineral leases in the RRHW to ensure that the BWCAW is protected for generations to come.
-
-“The Boundary Waters is a national treasure and home to some of Minnesota’s most pristine waters and wilderness,” said Governor Walz. “This place is deeply personal to me, to Minnesotans, and to people across the country who have paddled these waters. I am using my full executive authority to protect the waters and wildlife of the Boundary Waters and to ensure the outfitters, small businesses, and communities that depend on it continue to thrive for generations to come. It’s our duty as Minnesotans to ensure the sacred place remains wild, pristine, and unharmed.”
-
-This action follows Congress’s vote to overturn a 20-year federal shield against mining in the BWCAW, opening the door to renewed nonferrous mineral mining proposals, including copper and nickel. Those proposals threaten the region’s wilderness, water, and nearly $1 billion outdoor recreation economy.
-
-Under Executive Order 26-10, the DNR will:
-
-Together with MPCA, halt all new environmental review and permitting work on proposals for nonferrous mineral mining in the RRHW until the Northeastern Minnesotans for Wilderness v. DNR litigation is fully resolved.
-
-Decline to participate as a cooperating agency in any federal environmental review of a proposed nonferrous mineral mining project in the RRHW.
-
-Offer no new state nonferrous mineral leases or surface leases for nonferrous mining operations in the watershed.
-
-Review every existing state nonferrous mineral lease within the RRHW and strictly enforce compliance with lease terms.
-
-Draft legislative language to permanently prohibit nonferrous mineral mining in the RRHW for consideration in the agency’s budget and policy proposals.
-
-“The Boundary Waters Canoe Area Wilderness is a Minnesota treasure, and we have a responsibility as Minnesotans to ensure its long-term protection,” DNR Commissioner Sarah Strommen said. “Today’s Executive Order and the work that follows strengthen those protections.”
-
-“The significant advancements to protect human health and the environment by reducing greenhouse gas emissions, increasing the amount of recycling, composting and diversion from landfills, and creating climate-change-resilient communities in the last eight years create a safer, more sustainable state for future generations,” said Katrina Kessler, P.E., commissioner of the Minnesota Pollution Control Agency. “At a time when the federal government is stepping back on its commitment to protecting the environment and the people who live here, the state of Minnesota under Governor Walz’s leadership is stepping up.”
-
-“The science is clear: copper mining and the Boundary Waters cannot safely coexist. This action helps safeguard the clean water, world-class wilderness, and outdoor economy that generations of Minnesotans cherish,” said Becky Rom, Save the Boundary Waters National Chair. “The Boundary Waters is simply too important to gamble with, and Governor Walz’s executive order is a major step toward ensuring this irreplaceable wilderness remains protected for future generations.”
-
-This action is part of nearly eight years of work to protect Minnesota’s environment, advance clean energy, and preserve the state’s lands and Tribal regions. During the Walz-Flanagan administration, greenhouse gas emissions have fallen by more than 16 percent, 60,000 clean energy jobs have been created, and sustainable aviation fuel innovation has advanced through nation-leading tax credits. The administration has also banned PFAS “forever chemicals,” made Minnesota a leader in EV adoption, saved state agencies more than $100 million in energy costs, and helped drive nearly a 20 percent increase in visits to the state’s nationally ranked parks.
-
-Senator Grant Hauschild, who is a Democrat, sent a statement:
-
-“I strongly disagree with Governor Walz’s decision to ban non-ferrous mining in the Rainy River Watershed. A decision this significant to the people of the Northland should not be made through executive order by a Governor who leaves office in a matter of months.
-
-My constituents are sick of executive overreach by people who no longer feel accountable to the voters or the legislative process, whether that’s in St. Paul or in Washington. In my four years in the Senate, a mining ban never moved through the legislative process or was considered.”
-
-Senator Rob Farnsworth, a Republican from Hibbing, added, ““Minnesotans deserve facts, not fear- and that’s exactly what this Executive Order is. Mining in Minnesota requires compliance to some of the strictest water quality, financial assurance, and reclamation requirements in the country. Rather than let Minnesota lead, Governor Walz is shutting down economic opportunity for communities that have supported mining for generations.
-
-While other states and countries are in a race to develop copper, nickel, cobalt, and platinum-group metals, Governor Walz is locking up Minnesota’s resources while exporting those jobs and those minerals out of state and overseas. That is not environmental stewardship, it is economic suicide.”
-
-Rep. Roger Skraba, a Republican from Ely, shared, ““Today’s decision by a lame-duck governor with one foot out the door is a devastating blow to the Iron Range and the entire Northland,” said Skraba. “Minnesota already has some of the strongest environmental protections and toughest permitting standards in the world. Instead of letting that process work, Gov. Walz is putting his thumb on the scale and shutting the door on responsible mining here at home. All that does is send these jobs and critical mineral production somewhere else, including countries with weaker environmental standards, weaker labor protections, and in some cases, countries that are openly hostile to the United States.”
-
-Congressman Pete Stauber’s office sent out this: “In the twilight of his failed Administration, it is disappointing, yet unsurprising to learn that Governor Walz has launched a spiteful and harmful attack against the hardworking people of the Iron Range. His radical, job killing executive order puts thousands of family-supporting union jobs at risk and ignores the will of those who actually live and work in Northern Minnesota. In addition, it jeopardizes the crucial school funding that benefits every district across the state. Next time a Democrat politician claims to support permitting reform, remember what they really mean: eliminating the process altogether, just as Governor Walz has now done. Years of rigorous review, environmental study, and massive private investment have been erased in seconds by a deeply unpopular Governor, who has once again shown that he places far-left ideology above Minnesotans’ jobs and economic future. “Simply put, the Governor’s executive order is an outright war on Northern Minnesota and our way of life. I encourage every member of the press to reach out to Senator Amy Klobuchar to see where she stands on this issue. The Iron Range, and every Minnesotan, is watching at this critical moment, and they deserve a clear answer.”
-
-MiningMinnesota also sent a statement: “Governor Walz’s executive order is a political decision dressed up as an environmental one, and Minnesotans deserve to know the difference. The Governor’s own Department of Natural Resources concluded a six-year legal review that considered more than 4,000 public comments and the most current science available, and ruled definitively that Minnesota’s nonferrous mining regulations are strong enough to protect the Boundary Waters and its watershed. With this action today, the Governor is bowing to the demands of special interests, ignoring the findings of his own government and causing even greater delays for workers who need jobs, to the detriment of the Minnesotans he serves. Even though the order itself lacks legal standing and precedence, the negative impact on Minnesotans remains the same.”
-
-Grand Portage Band of Lake Superior Chippewa: Chairman Robert Deschampe today welcomed Governor Tim Walz’s Executive Order limiting non-ferrous sulfide-ore mining in the Boundary Waters watershed, calling it a significant win for treaty-protected resources and for every Minnesotan who depends on clean water. “What good is our right to fish if we can’t eat the fish?” said Chairman Deschampe. “That’s the question we have been asking the State of Minnesota for a very long time. Today, for this watershed, we have an answer. The Boundary Waters is the last pristine source of clean water in the state where Minnesotans can still stop the damage instead of sacrificing our way of life to live with it. This is a good day.”",https://www.wdio.com/wp-content/uploads/2026/03/Gov-Walz.png,N,,2026-08-18 13:57:24.052283
-,,2026-08-18 15:54:15+00:00,acrofan,China's First SAF Compliance Service for Foreign-Registered Business Jets Successfully ...,Not Available,,,,,https://us.acrofan.com/detail.php?number=1018675,"Sino Jet and China Aviation Fuel Pioneer a New Green Service Model for Business Aviation HONG KONG, Aug. 18, 2026 /PRNewswire/ -- Recently, China's first SAF (Sustainable Aviation Fuel) compliance service for foreign-registered business jets was successfully implemented at Beijing Capital International Airport in China.
-It operates and manages many foreign-registered business jets and provides comprehensive, end-to-end operational support services in China for numerous international business jet clients.
-Leveraging China Aviation Fuel's mature, comprehensive and replicable SAF service system, Sino Jet has pioneered a green compliance service tailored to the operational characteristics of foreign-registered business jets.
-The breakthrough demonstrates that China Aviation Fuel's green aviation fuel supply system has successfully expanded from mainstream commercial aviation to business aviation, further enriching and strengthening its comprehensive portfolio of green aviation fuel services.
-This milestone partnership further enhances China's green service system for foreign-registered business jets.","Sino Jet and China Aviation Fuel Pioneer a New Green Service Model for Business Aviation
-
-HONG KONG, Aug. 18, 2026 /PRNewswire/ -- Recently, China's first SAF (Sustainable Aviation Fuel) compliance service for foreign-registered business jets was successfully implemented at Beijing Capital International Airport in China. Sino Jet, in partnership with China National Aviation Fuel Co., Ltd. (""China Aviation Fuel""), successfully implemented an innovative and industry-leading SAF service model, making Sino Jet the first business aviation service provider in China to adopt this model and achieving a historic breakthrough in providing green services for foreign-registered business jets operating in China. The partnership fills a gap in the industry for the compliant use of SAF by international business jets in China and sets a new benchmark for the low-carbon transformation of high-end business aviation.
-
-Sino Jet is a leading business aviation operations and services provider in the Asia-Pacific region, with operational bases in more than 20 cities worldwide. It operates and manages many foreign-registered business jets and provides comprehensive, end-to-end operational support services in China for numerous international business jet clients. Sino Jet has long been committed to advancing the civil aviation industry's carbon peaking and carbon neutrality goals (""Dual Carbon"" goals). It has already achieved carbon neutrality across its own operations and has established a long-term target of achieving carbon neutrality across its entire fleet by 2035. The company has deeply integrated ESG and green development principles throughout its operational support and customer service processes, while continuously exploring new ways for low-carbon development in business aviation.
-
-Until now, the SAF services in China have focused primarily on commercial passenger and cargo aviation transportation. For international business jets, which operate with greater flexibility and under more specialized circumstances, a dedicated and standardized compliance service system had yet to be established. The innovative service model implemented through this partnership overcomes the limitations of airports' physical supply infrastructure. It requires no modifications to existing airport operations or refueling procedures, while ensuring the full attribution and flexible transfer of SAF emissions reduction benefits. Leveraging China Aviation Fuel's mature, comprehensive and replicable SAF service system, Sino Jet has pioneered a green compliance service tailored to the operational characteristics of foreign-registered business jets. This effectively lowers the barriers to green transformation, simplifies SAF application procedures, and provides a standardized, practical China solution for the large-scale adoption of sustainable fuels in business aviation.
-
-This implementation marks the first application of China Aviation Fuel's mature innovative SAF service model in international business aviation. It also represents another important milestone in its development of green civil aviation, following the establishment of routine SAF services for conventional passenger and cargo aviation. The breakthrough demonstrates that China Aviation Fuel's green aviation fuel supply system has successfully expanded from mainstream commercial aviation to business aviation, further enriching and strengthening its comprehensive portfolio of green aviation fuel services.
-
-At the launch ceremony, Du Chao, Deputy Secretary of the Party Committee and President of China Aviation Fuel, said that the implementation of this innovative service model is a vivid demonstration of China Aviation Fuel's commitment to ""driving the development of green civil aviation through service model innovation."" He emphasized that the initiative would play an important exemplary and guiding role in the low-carbon transformation of the business aviation industry. He highly recognized the results of the strategic cooperation with Sino Jet and noted that China Aviation Fuel will continue to optimize long-term operating mechanisms and further expand the scope of green services for business aviation.
-
-Chris Wu, President of Sino Jet, expressed gratitude for China Aviation Fuel's strong support and deep collaboration. She said that the successful implementation of this first project has made Sino Jet the first business aviation service provider in China to implement this innovative SAF service model, successfully establishing a dedicated channel for the compliant application of SAF by foreign-registered business jets in China and effectively addressing a longstanding challenge in the industry's provision of green services. Going forward, Sino Jet will continue to expand the diverse application scenarios for SAF, deepen refined green business aviation services, and leverage its global platform and service capabilities. The company will further strengthen comprehensive strategic cooperation with China Aviation Fuel, complete the green flight service cycle, support the overall low-carbon transformation of the business aviation industry, and continue contributing to the implementation of the civil aviation industry's ""Dual Carbon"" strategy.
-
-This milestone partnership further enhances China's green service system for foreign-registered business jets. In the future, the two parties will continue to deepen strategic collaboration, enrich carbon-neutral flight service offerings, promote the large-scale and standardized application of SAF for foreign-registered business jets, and work together to support the high-quality, sustainable and low-carbon development of the aviation industry.
-
-For queries please contact:
-
-Sino Jet Marketing Department
-
-Telephone: (+852) 2588 7007 / (+86 10) 8416 2637
-
-Email: marketing@sinojet.org / marketing@sinojet.org.cn
-
-Website: https://www.sinojet.org/
-
-Copyright © acrofan All Right Reserved",https://mmx.prnasia.com/media/MS1836554/Sino-Jet-New-Logo.jpg?id=OA2888938&p=medium600?v=2,N,,2026-08-18 13:57:28.068489
-,,2026-08-18 15:46:28+00:00,LinkedIn,Syzygy Plasmonics and IFC Partner to Advance Sustainable Aviation Fuel Projects ... - LinkedIn,Trevor Best,,,,,https://www.linkedin.com/posts/trevorwbest_syzygy-plasmonics-and-ifc-partner-to-advance-activity-7495483021664456704-clsz,"When we started Syzygy Plasmonics, our goal was to prove that industrial chemical production can be decarbonized affordably and at global scale.
-We’ve entered into a strategic framework agreement with the IFC - International Finance Corporation to help scale our biogas-to-SAF facilities across Latin America.
-Airlines today need scalable, cost-competitive fuel that meets strict mandates.
-By pairing our light-driven reactor tech with Latin America’s abundant biogas and renewable power, we can convert waste into high-value fuel right where it’s needed most.
-With key commercial partners in our corner, we’re building a repeatable blueprint for scalable SAF production across emerging markets.","When we started Syzygy Plasmonics, our goal was to prove that industrial chemical production can be decarbonized affordably and at global scale. Today marks a milestone toward that vision. We’ve entered into a strategic framework agreement with the IFC - International Finance Corporation to help scale our biogas-to-SAF facilities across Latin America. Having the private sector arm of the World Bank Group step in to provide advisory support is a validation of our technology, our project pipeline, and our commercial model. Airlines today need scalable, cost-competitive fuel that meets strict mandates. By pairing our light-driven reactor tech with Latin America’s abundant biogas and renewable power, we can convert waste into high-value fuel right where it’s needed most. NovaSAF-1 in Durazno, Uruguay is just the beginning. With key commercial partners in our corner, we’re building a repeatable blueprint for scalable SAF production across emerging markets. Huge thanks to our incredible team and partners who are turning our vision into reality. Read the full announcement here: https://lnkd.in/gMt5W5kf",https://media.licdn.com/dms/image/sync/v2/D5627AQFs3OPuYpg0Ow/articleshare-shrink_800/B56aAU9z7XHUAY-/0/1787058143775?e=2147483647&v=beta&t=q1sejxO6C856RWKEgut9KVh5Pf1NJNgd0vxpC60-ZA8,N,,2026-08-18 14:57:26.638931
-,,2026-08-18 15:30:39+00:00,Airport Industry-News,UK Consortium Launches North Atlantic Trial of AI-Driven Contrail Avoidance,Tiana May,,,,,https://airportindustry-news.com/uk-consortium-launches-north-atlantic-trial-of-ai-driven-contrail-avoidance/,"The programme will conduct two operational trials in NATS-controlled Shanwick oceanic airspace, which covers the eastern part of the North Atlantic corridor.
-The adjustments will be coordinated through existing air traffic control procedures.
-NATS will manage the operational aspects of the trials, including airspace operations, air traffic control coordination, safety assessments and controller training.
-Operation Blue Skies intends to provide operational evidence on whether contrail avoidance can be implemented safely and consistently within the existing air traffic management system.
-This trial will allow us to test how contrail avoidance could work within the complex, highly coordinated environment of air traffic management.","A UK-led consortium has launched a 30-month programme to test whether artificial intelligence can help commercial aircraft avoid atmospheric conditions that contribute to persistent warming contrails.
-
-Operation Blue Skies is backed by 2.65 million GBP in funding from the UK Department for Transport through the Aerospace Technology Institute (ATI) Programme. The overall programme is valued at 5 million GBP and brings together Google UK, the Department for Transport, the Met Office, NATS, Contrails.org, Imperial College London and the University of Cambridge.
-
-The programme will conduct two operational trials in NATS-controlled Shanwick oceanic airspace, which covers the eastern part of the North Atlantic corridor. Testing is scheduled to take place during the winters of 2026-27 and 2027-28, with around 20 to 40 test days planned during each winter.
-
-The trials will assess whether small changes to aircraft altitude can reduce the formation of persistent contrails without disrupting normal air traffic operations. The adjustments will be coordinated through existing air traffic control procedures.
-
-Contrails form when water vapour in aircraft exhaust freezes around particles in cold, humid air at cruising altitude. Some persistent contrails can spread and form ice-crystal clouds that have a warming effect on the climate.
-
-According to the programme partners, modelling indicates that Shanwick airspace accounts for approximately 5% of global contrail warming, with a significant proportion occurring between November and February. Operation Blue Skies will therefore concentrate its testing during the winter period, when the potential climate impact is considered highest.
-
-AI models will be used to identify atmospheric conditions where changes to flight altitude could reduce the likelihood of persistent warming contrails. Satellite imagery and other data will then be used to assess the results of the interventions.
-
-Google UK will contribute 1.4 million GBP of in-kind support to the programme, including AI research, engineering expertise and access to high-performance computing infrastructure. The company is participating on a pro-bono basis.
-
-NATS will manage the operational aspects of the trials, including airspace operations, air traffic control coordination, safety assessments and controller training. The Met Office will develop a UK contrail forecasting capability to support the testing.
-
-Contrails.org will assess and integrate forecasts, help establish the trial parameters and contribute to data analysis. Researchers at Imperial College London and the University of Cambridge will independently evaluate the results and assess the climate impact of the trials.
-
-Keir Mather, UK Minister for Aviation, Maritime and Freight, said:
-
-We’re partnering with Google to back British experts and innovators to find practical ways to make flying cleaner. This is a world-first, and it’s British ingenuity leading the way. By testing small tweaks to flight paths over the Atlantic, we can cut the vapour trails left behind by planes.
-
-From £219 million for home-grown sustainable fuel to zero-emission aircraft, we’re backing innovation to make UK aviation cleaner, support thousands of skilled jobs, and drive growth in the sector.
-
-The government has also committed 219 million GBP to projects intended to increase UK production of sustainable aviation fuel, alongside investment in other aviation technologies.
-
-Operation Blue Skies intends to provide operational evidence on whether contrail avoidance can be implemented safely and consistently within the existing air traffic management system.
-
-NATS Director of Sustainability Ian Jopson said:
-
-Decarbonising aviation will take a range of solutions, and understanding the role of contrails is an important part of that journey. This trial will allow us to test how contrail avoidance could work within the complex, highly coordinated environment of air traffic management.
-
-By bringing together world-leading science and operational expertise, we can start to build the real-world evidence needed to understand whether this could make a meaningful contribution to reducing aviation’s overall climate impact.
-
-The trials will be conducted during periods of lower air traffic, allowing the consortium to assess the technology and operational procedures before considering how the approach could be applied more widely.
-
-Tags",https://airportindustry-news.com/wp-content/uploads/sites/2/2026/08/Shanwick-Oceanic-Diagram.png,N,,2026-08-18 13:57:32.074549
-,,2026-08-18 15:27:52+00:00,UNITED24 Media,Ukrainian Refinery Strikes Push Russia to Consider Lower Aviation Fuel Standards,Dariia Mykhailenko,,,,,https://united24media.com/world/ukrainian-refinery-strikes-push-russia-to-consider-lower-aviation-fuel-standards-21787,"Russia is considering easing aviation fuel standards in an effort to increase production following Ukrainian strikes on the country’s oil refineries, Ukraine’s Foreign Intelligence Service (SZRU) reported.
-Under such conditions, fuel can begin to crystallize, potentially creating particles capable of obstructing the fuel system and disrupting the flow of fuel to aircraft engines.
-The proposals also include permitting Russian-made anti-wear additives, using heavier crude oil, and increasing the proportion of synthetic components in aviation fuel.
-Russian authorities are also considering allowing small and medium-sized businesses to enter aviation fuel production.
-In February, the country tested sustainable aviation fuel containing recycled cooking oil as part of an initiative aimed at reducing aviation-related carbon emissions.","Russia is considering easing aviation fuel standards in an effort to increase production following Ukrainian strikes on the country’s oil refineries, Ukraine’s Foreign Intelligence Service (SZRU) reported.
-
-According to the agency, Russia’s Transport Ministry has proposed allowing aviation fuel with a freezing point of up to minus 50 degrees Celsius, compared with the current requirement of minus 60 degrees Celsius. Under such conditions, fuel can begin to crystallize, potentially creating particles capable of obstructing the fuel system and disrupting the flow of fuel to aircraft engines.
-
-The proposals also include permitting Russian-made anti-wear additives, using heavier crude oil, and increasing the proportion of synthetic components in aviation fuel.
-
-Russian authorities are also considering allowing small and medium-sized businesses to enter aviation fuel production. Officials estimate that the measures could increase annual output by as much as 1.8 million tonnes.
-
-The agency also said that new additives and components would require testing and could accelerate wear on aircraft parts. With Russia’s aviation sector already operating under sanctions, additional wear could increase maintenance costs and further complicate access to spare parts and aircraft repairs.
-
-The proposed changes come as Russia seeks to maintain fuel supplies following Ukrainian attacks on its refining industry.
-
-According to the SZRU, Moscow has previously responded to fuel-related pressures by relaxing quality requirements for gasoline. Russia allowed the production of Euro-2-standard fuel, a standard that had been prohibited in the country since 2013.
-
-The agency said the move has created problems for owners of Chinese-made vehicles, including models produced by Haval, Chery, Geely, Changan, Exeed, Omoda, and Jetour, whose engines and fuel systems are designed for Euro-5 fuel. Sulfur levels permitted under the relaxed gasoline standard can be up to 50 times higher than those allowed under Euro-5 requirements, according to the intelligence service.
-
-Russian vehicle repair shops have subsequently reported an increase in fuel-system-related complaints from one or two cases per week to between seven and 10, the SZRU said. Reported problems include loss of engine power and warning lights, while repairs to damaged fuel systems can impose substantial costs on vehicle owners.
-
-Menawhile, Russia is also exploring alternative aviation fuels. In February, the country tested sustainable aviation fuel containing recycled cooking oil as part of an initiative aimed at reducing aviation-related carbon emissions.
-
-The fuel, produced using complex esters and fatty acids, incorporated used cooking oil collected from the Russian restaurant chain “Vkusno—i tochka.” It was tested in a jet engine under conditions simulating several phases of flight, including takeoff, cruising, and landing.
-
-Discuss this article:",https://storage.united24media.com/og/b/d2/4c1b3029ef8d3b0f5e585f736e193d2b.jpg,N,,2026-08-18 13:57:35.810519
-,,2026-08-18 15:07:03+00:00,Aviation International News,Partners Trial Electric Air Services in Norway and Sweden | Aviation International News,Charles Alcock,,,,,https://www.ainonline.com/aviation-news/futureflight/2026-08-18/partners-trial-electric-air-services-norway-and-sweden,Green Flyways initiative is considering the potential for MD Aircraft's eViator commuter,Green Flyways initiative is considering the potential for MD Aircraft's eViator commuter,"https://www.ainonline.com/cdn-cgi/image/width=1200,format=webp,quality=85/https://backend.ainonline.com/sites/default/files/styles/original/public/2026-08/0005_white.png?itok=pr8tUqWs",N,,2026-08-18 15:57:45.845067
-,,2026-08-18 15:03:56+00:00,SolarPACES,Synhelion marks two years of synthetic aviation fuel demo - SolarPACES,Susan Kraemer,,,,,https://www.solarpaces.org/synhelion-marks-two-years-of-synthetic-aviation-fuel-demo/,"Two years of plant DAWN: proving synthetic fuel production at industrial scale Source: Synhelion – Published in 2026 In 2024, we switched on plant DAWN for the first time.
-Looking back at what we have achieved, plant DAWN offers invaluable insights into the realities of operating a first-of-a-kind synthetic fuel plant and lays the groundwork for Synhelion’s commercial full-size plants.
-What plant DAWN has proven Synhelion built DAWN on time, on budget, and fully functional as designed.
-Synhelion’s technology has been validated and is ready to scale DAWN integrates Synhelion’s core innovations on an industrial scale.
-It demonstrates the whole process chain from feedstock to liquid synthetic fuel in an operational environment.","Two years of plant DAWN: proving synthetic fuel production at industrial scale
-
-Source: Synhelion – Published in 2026
-
-In 2024, we switched on plant DAWN for the first time. Since starting production in late summer that year, we have gained invaluable operational experience, de-risked our technology, and built an expert team that masters the challenges of a first-of-a-kind plant like this.
-
-As the name indicates, DAWN marks the beginning of a new era for transportation. It lays the foundation for the next generation of renewable fuels: scalable, affordable, and synthetic. It wasn’t built to produce as much fuel as possible. It was built to prove that Synhelion’s technology works at industrial scale. Based on the past two years, we can now say with conviction – and based on real data – that it does.
-
-Many renewable fuel projects are being developed as the importance of independent, sustainable energy supply rises on the global agenda. However, only few approaches can scale and reduce costs to the level required. And even fewer of those technologies have moved beyond the lab or pilot stage into real-world industrial operation. DAWN is one of them.
-
-Looking back at what we have achieved, plant DAWN offers invaluable insights into the realities of operating a first-of-a-kind synthetic fuel plant and lays the groundwork for Synhelion’s commercial full-size plants.
-
-What plant DAWN has proven
-
-Synhelion built DAWN on time, on budget, and fully functional as designed. The goal of realizing DAWN was to prove that our technology works at industrial scale and to gain the experience needed for the next scale-up steps – from project execution, team organization and operational experience to proving how our fuels can be integrated into existing value chains. The past two years confirm that we have achieved our objectives.
-
-Synhelion’s technology has been validated and is ready to scale
-
-DAWN integrates Synhelion’s core innovations on an industrial scale. It demonstrates the whole process chain from feedstock to liquid synthetic fuel in an operational environment. DNV, a leading independent assessment and certification organization, has validated that we have reached Technology Readiness Level (TRL) 7 at plant DAWN, which means major technology risks have been eliminated.
-
-Why is TRL 7 an important milestone?
-
-TRLs are a measurement system originally developed by NASA to assess the maturity level of a technology, reaching from 1 for fundamental research to 9 for fully mature implementation. By reaching TRL 7 at plant DAWN, Synhelion has crossed the critical threshold of stress-testing its technology under the real-world conditions it was designed for. In an industry where most technologies stall at the lab or pilot stage, this is a defining achievement.
-
-The plant performs as expected
-
-DAWN’s core is Synhelion’s technology platform to produce synthetic gas, or syngas, which is then liquefied into synthetic crude oil using commercially available gas-to-liquid processes. It consists of three elements: the electric gas heater, the thermal energy storage, and the reformer. The syngas production has reached the plant’s full nameplate capacity, meaning that DAWN is operating as designed.
-
-Highlight numbers of our three core components include:
-
-o The electric gas heater reaches outlet temperatures of more than 1’150°C. As our entire system is designed to work with high-temperature heat, this achievement is critical.
-
-o The reformer achieves an energy efficiency of close to 80%. This is a remarkable result for a unit of this size, since small reformers suffer from proportionally higher heat losses. In our next plants, the reformer will achieve an efficiency of more than 95%.
-
-o The thermal energy storage (TES) achieves a roundtrip efficiency of over 85%. Again, the result is impressive for the small size of the TES, since heat losses scale with the surface-to-volume ratio of energy storage systems. The efficiency of our TES will rise to over 95% for larger units in future plants.
-
-These results show that Synhelion’s core technology performs as required today and will become even more efficient at larger scale.
-
-Engineering terms explained
-
-– Nameplate capacity: This is a standard in the design of almost every physical technology. It refers to the maximum potential output that a technology can achieve under nominal operating conditions.
-
-– Reformer efficiency: The share of supplied thermal energy converted into chemical energy in the syngas.
-
-– Roundtrip efficiency: The share of supplied thermal energy that can be recovered and used to drive the reformer after storage.
-
-Synhelion’s production costs are moving into the range of fossil fuels
-
-The data points we measure and collect at plant DAWN provide Synhelion with a solid basis to project how production costs will develop as we scale. They are the basis for the techno-economic assessment that we recently refined to reliably project our long-term production costs. As the leading independent assessment and certification organization DNV confirmed, Synhelion can produce renewable synthetic fuels for less than EUR 1’000 per ton at scale. This figure represents the most competitive production cost of all sustainable fuel pathways and pushes into the realm of refined fossil fuels.
-
-In the synthetic fuel industry, cost projections are often based on lab experiments or small pilot projects and tend to underestimate CAPEX and OPEX, due to undervalued industrial complexity and non-conservative cost assumptions for feedstocks and power. Synhelion, on the other hand, now has a track record from DAWN’s industrial-scale operation to substantiate its cost estimates. DNV independently validated and benchmarked them against alternative renewable fuel production pathways under the same conditions, based on publicly available market information as well as their vast industrial experience and insights.
-
-Our fuels meet high quality standards
-
-The syngas that plant DAWN produces is liquefied through a Fischer-Tropsch synthesis unit. The resulting syncrude is then upgraded into synthetic jet fuel, diesel, and gasoline. Our fuel products are fully compatible with existing infrastructure and engines, as we could show with several real-world applications thanks to DAWN.
-
-We delivered syncrude to a refinery in Northern Germany, where it was co-processed with fossil crude oil into certified Jet-A-1 aviation fuel for Swiss International Air Lines. Our synthetic diesel and gasoline are also fully compliant with national and international standards and have been delivered to customers, including AMAG Group, Zurich Airport, Lake Lucerne Navigation Company, and Eberhard Unternehmungen.
-
-Insights from the field
-
-Since plant DAWN first came online in 2024, our team has professionalized commissioning, production, operations, and maintenance processes across the board. As a result, DAWN operations are consistent, our core components perform at the availability we require, and the syngas and syncrude we produce meet the quality standards for commercial fuel production.
-
-Since starting fuel production, we have continued to operate the plant in multiple campaigns throughout the year, each dedicated to the testing and technical validation of specific aspects of our technology. A new production facility like DAWN can’t run at 100% capacity right away but needs to be ramped up steadily. For example, we have increased the operating temperatures of the electric gas heater over multiple campaigns up to nominal conditions to detect potential issues early on. In the same vein, we adjusted the composition of our syngas to fine-tune it for the Fischer-Tropsch synthesis and have achieved continuous 24/7 production of syngas and syncrude over several weeks.
-
-Our thermal energy storage (TES) is key to making our operations more flexible. It stores heat when renewable electricity is abundant and inexpensive, then releases it later to keep the reformer running. The TES has performed according to its design, enabling continuous operation while allowing us to shift electricity consumption to periods of abundant renewable power. This supports a grid-friendly operation and reduces power costs.
-
-Furthermore, we increased the automation of our process control system by improving, implementing, and testing new control loops and AI. This greatly reduced the need for human intervention and made plant operations more efficient. Moreover, we developed preventive maintenance plans and improved our spare parts management in collaboration with suppliers to increase reliability and plant uptime. However, working with a first-of-a-kind plant also inevitably means that there are challenges.
-
-For example, the operating temperature of the high-temperature fan was limited at the beginning due to an overheating issue of the bearings. This required a thorough thermal analysis of the situation and a redesign of the shaft and bearing section. Thanks to improved cooling and instrumentation, we managed to increase the operating temperature to nominal conditions quickly with the new design, demonstrating the importance of extended operation under real plant conditions.
-
-DAWN successfully produces syngas, but at its heart, the plant is a facility to identify opportunities to further improve the design, performance, reliability, and maintainability of our technology. It allows us to detect potential design or material issues that we can correct before further scaling. All technical issues at DAWN that are typical for a first-of-a-kind plant have now been solved. Since the next plants will have a similar operational complexity as DAWN, every improvement will be directly implemented.
-
-The road ahead
-
-No lab condition or simulation would have shown us what it truly takes to run an industrial facility, strengthen organizational structures, and build value chains like DAWN has. Synhelion now has a highly trained engineering, operation and maintenance teams that are prepared to design, commission and run larger-scale production facilities.
-
-For our next plant, we are scaling our core technology – the electric gas heater, the thermochemical reformer and the thermal energy storage – by a factor of ten. It will serve as the blueprint for our first full-scale plant. Based on our achievement of TRL 7 at DAWN, the planned scale-up factors, and design modifications, DNV confirmed that Synhelion’s technology will reach TRL 8 after few months of successful operation of our next plant and then TRL 9 with the first full-scale plant. Achieving these target TRLs is therefore a matter of execution, not uncertainty. Reaching full maturity opens the door to licensing our technology to energy companies and deploying it globally at an accelerated pace.
-
-Two years ago, DAWN was a promise. Today, it is proof. The plant shows that the remaining challenge is no longer technological. With a highly trained operation and maintenance team, real plant data, and independently validated technology, Synhelion is now well prepared for the next phase: making renewable synthetic fuels affordable and available at large-scale.",https://www.solarpaces.org/wp-content/uploads/2026/08/DAWN-Synhelion-synthetic-aviation-fuel.png,N,,2026-08-18 13:57:43.311723
-,,2026-08-18 15:03:53+00:00,www.tmcnet.com,Syzygy Plasmonics and IFC Partner to Advance Sustainable Aviation Fuel Projects Across ...,Not Available,,,,,https://www.tmcnet.com/usubmit/-syzygy-plasmonics-ifc-partner-advance-sustainable-aviation-fuel-/2026/08/18/10431888.htm,"Framework agreement supports the development of Syzygy's SAF project pipeline in Latin America, beginning with its first planned commercial-scale facility in Uruguay.
-HOUSTON, Aug. 18, 2026 /PRNewswire/ -- Syzygy Plasmonics, a leader in light-driven Sustainable Aviation Fuel (SAF) technology, today announced a framework agreement with the International Finance Corporation (IFC), the private sector arm of the World Bank Group, to support the development of a pipeline of SAF projects across Latin America.
-Unlike conventional industrial processes that rely on fossil-fuel heat, Syzygy's proprietary technology uses renewable electricity to power light-driven reactors that convert biogas into sustainable aviation fuel.
-About Syzygy Plasmonics Founded in 2017, Houston-based Syzygy Plasmonics develops the world's first light-driven photocatalytic reactors for industrial chemical production.
-View original content to download multimedia:https://www.prnewswire.com/news-releases/syzygy-plasmonics-and-ifc-partner-to-advance-sustainable-aviation-fuel-projects-across-latin-america-302853391.html SOURCE Syzygy Plasmonics","Framework agreement supports the development of Syzygy's SAF project pipeline in Latin America, beginning with its first planned commercial-scale facility in Uruguay.
-
-HOUSTON, Aug. 18, 2026 /PRNewswire/ -- Syzygy Plasmonics, a leader in light-driven Sustainable Aviation Fuel (SAF) technology, today announced a framework agreement with the International Finance Corporation (IFC), the private sector arm of the World Bank Group, to support the development of a pipeline of SAF projects across Latin America.
-
-Under the agreement, IFC will provide technical and commercial advisory services as Syzygy advances individual projects. The framework establishes a pathway for further collaboration as Syzygy scales its SAF platform across the region.
-
-The first project supported under the framework is NovaSAF-1, a planned commercial-scale SAF facility in Durazno, Uruguay. As the first commercial deployment of Syzygy's technology, the project is expected to demonstrate a new approach to producing sustainable aviation fuel using renewable electricity and biogas, while serving as a model for potential future facilities across Latin America.
-
-The collaboration comes at a pivotal moment for the aviation industry, as airlines seek scalable, lower-carbon alternatives to conventional jet fuel. By combining Syzygy'sproprietary light-driven technology with Latin America's abundant renewable energy resources and biogas feedstocks, Syzygy aims to accelerate the commercialization of SAF in emerging markets.
-
-Unlike conventional industrial processes that rely on fossil-fuel heat, Syzygy's proprietary technology uses renewable electricity to power light-driven reactors that convert biogas into sustainable aviation fuel. The company estimates the process can reduce lifecycle greenhouse gas emissions by up to 90 percent compared with conventional jet fuel.
-
-""The transition to lower-carbon aviation will depend on technologies that are not only innovative, but commercially viable and scalable,"" said Raphaël Eskinazi, IFC Regional Investment Manager for Manufacturing and Forests in Latin America and the Caribbean. ""IFC's role is to help bridge that transition: supporting pioneering projects that can mobilize private capital, demonstrate new business models and create pathways for broader market adoption across emerging economies.""
-
-""IFC's involvement is a strong signal that Syzygy is poised to disrupt the market; we have the technology, the project pipeline, and the commercial agreements that underpin it,"" said Trevor Best, Co-Founder and CEO of Syzygy Plasmonics. ""IFC's role in helping innovative technologies become commercially viable and replicable across emerging markets matches the ambition of our NovaSAF™ build-out.""
-
-Syzygy's regional expansion is already supported by key commercial agreements. Trafigura has signed a binding offtake agreement covering the full production of NovaSAF-1, while Trafigura and World Fuel Services have entered into capacity reservation agreements for future facilities across the region. Syzygy has also secured feedstock agreements with multiple partners, including Estancias del Lago and Geo Bio Gas & Carbon. Together, these agreements support the company's long-term growth strategy, including a target of up to one million metric tons of annual SAF production capacity in Brazil by 2035.
-
-About Syzygy Plasmonics
-
-Founded in 2017, Houston-based Syzygy Plasmonics develops the world's first light-driven photocatalytic reactors for industrial chemical production. Its platform, based on technology licensed from Rice University, uses renewable electricity to replace fossil-fuel combustion, enabling cleaner, lower-cost production of hydrogen, SAF, and other chemicals. Syzygy's NovaSAF™ portfolio of biogas-to-SAF facilities targets commercial-scale operations beginning in 2028. Visit www.plasmonics.tech.
-
-This press release contains forward-looking statements. IFC's expression of financing interest is subject to project appraisal, board approval, and satisfaction of IFC's standard investment criteria and environmental and social standards. Individual project investments have not yet been approved.
-
-View original content to download multimedia:https://www.prnewswire.com/news-releases/syzygy-plasmonics-and-ifc-partner-to-advance-sustainable-aviation-fuel-projects-across-latin-america-302853391.html
-
-SOURCE Syzygy Plasmonics",https://mmx.prnewswire.com/media/MS1305591/Sygygy-Logo.jpg?id=OA2890865,N,,2026-08-18 13:57:47.780797
-,,2026-08-18 15:02:45+00:00,biofuelsdigest.com,Brazil publishes regulations for SAF mandate program : The Daily Digest,Juan Pedro Tomas,,,,,https://biofuelsdigest.com/brazil-publishes-regulations-for-saf-mandate-program/,"Brazil publishes regulations for SAF mandate program In North Dakota, Biomass Magazine reported that the government of Brazil on August 12 published a decree that establishes rules and regulations for the country’s sustainable aviation fuel mandate, formally referred to as the National Sustainable Aviation Fuel Program (ProBioQAV).
-ProBioQAV was established by Brazil’s Fuel of the Future Law in October 2024.
-The program requires domestic airline operators to reduce greenhouse gas (GHG) emissions starting with a 1% reduction in 2027 and scaling up to a 10% reduction in 2037.
-Under the newly announced regulations, the carbon intensity (CI) of SAF can be determined during the REnovaBio carbon intensity calculation tool or the ICAO CORISA methodology, it added.
-According to the decree, Brazil’s National Agency of Petroleum, Natural Gas and Biofuels (ANP) and the National Civil Aviation Agency (ANAC) are to issue complementary regulations necessary to implement the SAF mandate by December 18, 2026.","Brazil publishes regulations for SAF mandate program
-
-In North Dakota, Biomass Magazine reported that the government of Brazil on August 12 published a decree that establishes rules and regulations for the country’s sustainable aviation fuel mandate, formally referred to as the National Sustainable Aviation Fuel Program (ProBioQAV).
-
-ProBioQAV was established by Brazil’s Fuel of the Future Law in October 2024. The program requires domestic airline operators to reduce greenhouse gas (GHG) emissions starting with a 1% reduction in 2027 and scaling up to a 10% reduction in 2037. The program includes a book-and-claim chain-of-custody model that allows the physical product and its environmental attributes to be traded by different commercial operations and purchasers, according to the report.
-
-Under the newly announced regulations, the carbon intensity (CI) of SAF can be determined during the REnovaBio carbon intensity calculation tool or the ICAO CORISA methodology, it added.
-
-According to the decree, Brazil’s National Agency of Petroleum, Natural Gas and Biofuels (ANP) and the National Civil Aviation Agency (ANAC) are to issue complementary regulations necessary to implement the SAF mandate by December 18, 2026.
-
-More on the story.",,N,,2026-08-18 13:57:56.224100
-,,2026-08-18 15:02:43+00:00,biofuelsdigest.com,"Global SAF market to reach $31.4 billion by 2031, research finds - Biofuels Digest",Juan Pedro Tomas,,,,,https://biofuelsdigest.com/global-saf-market-to-reach-31-4-billion-by-2031-research-finds/,"Global SAF market to reach $31.4 billion by 2031, research finds In Ireland, Research and Markets reported that the global sustainable aviation fuel market is projected to grow from $4.86 billion in 2026 to $31.45 billion by 2031, registering a compound annual growth rate of 45.3% during the forecast period.
-The report noted that North America captured the largest share of the sustainable aviation fuel market in 2025.
-“Regional leadership was supported by strong government backing for renewable aviation fuel adoption, increasing SAF procurement by airlines and aviation companies, and sustained efforts to reduce emissions from flight operations.” “The presence of major fuel producers and the development of long-term supply agreements are also supporting market growth across North American commercial aviation.
-Continued investment in renewable fuel production facilities, feedstock processing, refinery upgrades, and distribution infrastructure is expected to reinforce the region’s position in the global SAF market,” the report added.
-More on the story.","Global SAF market to reach $31.4 billion by 2031, research finds
-
-In Ireland, Research and Markets reported that the global sustainable aviation fuel market is projected to grow from $4.86 billion in 2026 to $31.45 billion by 2031, registering a compound annual growth rate of 45.3% during the forecast period.
-
-The report noted that North America captured the largest share of the sustainable aviation fuel market in 2025. “Regional leadership was supported by strong government backing for renewable aviation fuel adoption, increasing SAF procurement by airlines and aviation companies, and sustained efforts to reduce emissions from flight operations.”
-
-“The presence of major fuel producers and the development of long-term supply agreements are also supporting market growth across North American commercial aviation. Continued investment in renewable fuel production facilities, feedstock processing, refinery upgrades, and distribution infrastructure is expected to reinforce the region’s position in the global SAF market,” the report added.
-
-More on the story.",,N,,2026-08-18 13:58:05.383669
