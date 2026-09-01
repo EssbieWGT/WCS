@@ -1,4 +1,5 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID18,Eli Lilly,2026-09-01 04:58:52+00:00,insidehealthpolicy.com,FDA Approves Eli Lilly's Mounjaro To Reduce Cardiovascular Risk In Adults With Type 2 Diabetes,Not Available,,,,,https://insidehealthpolicy.com/fda-approves-eli-lillys-mounjaro-reduce-cardiovascular-risk-adults-type-2-diabetes,Inside Health Policy is a subscription-fee-based daily digital news service from Inside Washington Publishers. SITE LICENSES. Economical site license ...,Not Available,,N,,2026-09-01 02:02:18.780264
 ID6,AXA,2026-09-01 03:45:06+00:00,Insurance Business,AXA appoints former French labour minister as group HR chief - Insurance Business,"Josh Recamara, www.insurancebusinessmag.com, josh-recamara",,,,,https://www.insurancebusinessmag.com/uk/news/breaking-news/axa-appoints-former-french-labour-minister-as-group-hr-chief-588061.aspx,"She will be responsible for all HR activities led at group level, including talent management, compensation, social relations, HR operations, culture and diversity, learning and development, and HR for AXA's headquarters, reporting to Karima Silvent, deputy general secretary.
 The appointment is notable for the breadth of Panosyan-Bouvet's career, which spans corporate insurance, retail real estate, and, most recently, French national politics.
 She left the French National Assembly in August 2026, just weeks before joining AXA, having served as Minister for Labour and Employment from 2024 to 2025 under the Barnier and Bayrou governments.
@@ -40,6 +41,89 @@ Related Stories
 AXA to sell Gulf businesses
 
 AXA veteran makes the switch to Aviva",https://cdn-res.keymedia.com/cms/images/us/018/0382_639238297290815214.png,N,,2026-09-01 01:03:54.030014
+ID30,Microsoft,2026-09-01 03:41:36+00:00,Temenos,Scaling AI-Powered Banking on Microsoft Azure - Temenos,alexandra.salazar@temenos.com,,,,,https://www.temenos.com/blog/scaling-ai-powered-banking-on-microsoft-azure/,"It is no longer simply about how many transactions a core banking platform can process.
+The benchmark combined multiple services and deployment models across Microsoft Azure, including Azure Kubernetes Service, Azure Container Apps, Azure SQL Database and Azure Database for PostgreSQL.
+AI services interact with data, consume compute and create demand alongside core banking, payments and other services.
+That means preparing for transactions, enquiries, payments, modular services and AI-powered interactions to coexist and scale together.
+Microsoft Azure provides the cloud foundation across infrastructure, containers, databases and testing, while Temenos continues to optimise its banking capabilities for increasingly diverse workloads.","It is no longer simply about how many transactions a core banking platform can process. Banks increasingly need to support transactions, real-time enquiries, payments, APIs, modular services and AI-powered interactions — often simultaneously.
+
+The 2026 Temenos Highwater Benchmark on Microsoft Azure explored what this means at scale.
+
+The benchmark tested Lending, Deposits Modularity, Temenos Payments Hub, Holdings and Party microservices and, for the first time within the benchmark transaction mix, Copilot for Core.
+
+Testing was conducted against large-scale datasets, including 50 million customers and up to 125 million accounts. Overall throughput reached 16,385 transactions per second, including 12,241 TPS across Holdings enquiries, 2,109 TPS for Deposits, 1,539 TPS for Lending and 252 TPS for Copilot for Core. Temenos Payments Hub also processed 244 payment orders per second.
+
+But the real story is not simply the headline number.
+
+Three takeaways stand out.
+
+1. Scale Is Now a Multi-Workload Challenge
+
+The 2026 benchmark used a workload mix of 76.2% enquiries and 23.8% transactions, reflecting the increasingly diverse demands placed on modern banking platforms.
+
+Customers check balances and transaction histories, digital channels continuously access APIs, employees retrieve information and payment services operate in real time — all while core transactions continue to be processed.
+
+In the benchmark, balance enquiries reached 4,845 TPS with an average response time of 5 milliseconds, while transaction-list enquiries achieved 2,988 TPS at 6 milliseconds.
+
+For banks, this changes the scalability question.
+
+It is no longer simply:
+
+“How fast is the core?”
+
+It is increasingly:
+
+“Can the entire banking architecture continue to perform predictably as the workload mix evolves?”
+
+This means looking beyond transaction volumes to consider throughput, latency and resource utilisation across the wider banking platform.
+
+2. Modularity Is Proving Its Value at Scale
+
+A second important takeaway is the role of modular architecture.
+
+The benchmark combined multiple services and deployment models across Microsoft Azure, including Azure Kubernetes Service, Azure Container Apps, Azure SQL Database and Azure Database for PostgreSQL. It also incorporated Arm-based Azure infrastructure, including Microsoft Cobalt technology, as part of the platform environment.
+
+Deposits Modularity achieved 2,109 TPS, with the benchmark demonstrating near-linear scalability across vertical and horizontal scaling scenarios while meeting defined response-time requirements.
+
+There were also notable year-on-year improvements within the microservices architecture.
+
+Moving the Customer Enquiry API from Transact to the Party microservice resulted in an 82% improvement in response time, while database resource utilisation for Holdings was reduced by 57% during the mixed workload run.
+
+For financial institutions, the significance goes beyond performance.
+
+Modularity allows individual banking capabilities to evolve and scale according to their own workload requirements. This can support a more progressive approach to modernisation, enabling banks to evolve specific capabilities while remaining part of a coherent banking platform.
+
+3. AI Is Becoming Part of the Banking Workload
+
+Perhaps the most significant development in this year’s benchmark was the inclusion of Copilot for Core within the transaction mix for the first time.
+
+Copilot for Core is an AI-powered assistant embedded in Temenos Core, designed to help bank users retrieve information through natural-language interactions and accelerate everyday operations.
+
+During the benchmark, Copilot-related workloads achieved 252 TPS alongside traditional banking services.
+
+This signals an important shift.
+
+Much of the industry’s AI conversation has focused on use cases and productivity. But as AI becomes embedded into everyday banking operations, it also becomes an infrastructure and performance consideration.
+
+AI services interact with data, consume compute and create demand alongside core banking, payments and other services.
+
+For banks, this means AI increasingly needs to be considered not simply as an additional feature, but as part of the operational workload of the banking platform.
+
+Building for What’s Next
+
+The 2026 Highwater Benchmark points towards banking architectures that are becoming more modular, more distributed and more intelligent.
+
+The broader takeaway for technology leaders is therefore more important than any individual TPS figure:
+
+Design for the workload mix you expect tomorrow, not simply the transactions you process today.
+
+That means preparing for transactions, enquiries, payments, modular services and AI-powered interactions to coexist and scale together.
+
+Microsoft Azure provides the cloud foundation across infrastructure, containers, databases and testing, while Temenos continues to optimise its banking capabilities for increasingly diverse workloads.
+
+As banking evolves, cloud-native architecture, modularity and AI will increasingly become interconnected parts of the same transformation journey.
+
+Together, Temenos and Microsoft are helping build and test the foundations for the next generation of banking at scale.",https://www.temenos.com/wp-content/uploads/2026/07/IntelligentCoreArticleThumb.webp,N,,2026-09-01 02:02:25.641037
 ID2,Adobe,2026-09-01 02:02:19+00:00,Yahoo Finance,Adobe Just Put $4 Billion Behind a Saudi AI Push - Yahoo Finance,Faizan Farooque,,,,,https://au.finance.yahoo.com/news/adobe-just-put-4-billion-020025069.html,"Software firm Adobe Inc. (ADBE, Financials) is investing more than $4 billion in artificial intelligence projects in Saudi Arabia.Adobe claimed that over 27 million eligible citizens and residents would enjoy 12 months of free access to its Firefly Standard subscription tier and Adobe Express Premium capabilities.The program is part of a wider collaboration with Saudi Arabia's Ministry of Communications and Information Technology and government-backed AI firm HUMAIN.
 Adobe is sacrificing immediate subscription revenue to get its AI offerings into a wide market and create user habits before it charges customers later.
 The move comes as Adobe faces growing competition from smaller, AI-native design platforms.
@@ -523,6 +607,9 @@ The firm ultimately collected $1 billion, according to people familiar with the 
 ID35,Parker-Hannifin,2026-08-31 21:06:04+00:00,Dealroom.co,Dibyava Ghosh named CEO of Robertshaw to drive growth in advanced flow control solutions,Not Available,,,,,https://app.dealroom.co/news/feed/dibyava-ghosh-named-ceo-of-robertshaw-to-drive-growth-in-advanced-flow-control-solutions,"All answers are AI generated.
 They may be incomplete or incorrect.",All answers are AI generated. They may be incomplete or incorrect.,https://webshotter.dealroom.co/?width=1600&height=800&wait_until=networkidle0&url=https%3A%2F%2Fapp.dealroom.co%2Fnews%2Ffeed%2Fdibyava-ghosh-named-ceo-of-robertshaw-to-drive-growth-in-advanced-flow-control-solutions%3Fscreenshot%3Dtrue,N,,2026-08-31 18:09:53.198606
 ID4,Air Liquide,2026-08-31 21:03:48+00:00,www.reuters.com,"Activist investor Elliott has stake in Air Liquide, pushes for changes, sources say - Reuters",,,,,,https://www.reuters.com/business/activist-investor-elliott-has-stake-air-liquide-pushes-changes-sources-say-2026-08-31/,Activist investor ​Elliott Investment Management has built a stake ‌in Air Liquide and is urging the French multinational company to improve its ...,Not Available,,Y,,2026-08-31 18:09:28.210090
+ID18,Eli Lilly,2026-08-31 20:49:23+00:00,www.facebook.com,Lilly to buy Merida Biosciences for up to $2.88 billion in autoimmune drug push Click the link ...,Not Available,,,,,https://www.facebook.com/Reuters/posts/lilly-to-buy-merida-biosciences-for-up-to-288-billion-in-autoimmune-drug-pushcli/1657319452925447/,Lilly to buy Merida Biosciences for up to $2.88 billion in autoimmune drug push Click the link in the comments below.,"Lilly to buy Merida Biosciences for up to $2.88 billion in autoimmune drug push
+
+Click the link in the comments below.",https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/789617593_1457469893097638_7124725725312290211_n.png?stp=dst-jpg_tt6&cstp=mx1200x628&ctp=p600x600&_nc_cat=106&ccb=1-7&_nc_sid=cae128&_nc_ohc=67lZRNgR0YgQ7kNvwF5THZW&_nc_oc=AdrvC2GROioUeLY0xCgdqQz75GxuCKP-Ely6WFrr4pc6DNWkmYz6zzyYPo9yGSR-nnI&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=34CKfrSULgyeIVZ10LGC_w&_nc_ss=7b289&oh=00_AQLejsFDXNPz_LBL5USR07BKuVkt3Glt5XCCCO2MPh7S2g&oe=6A9C2C45,N,,2026-09-01 02:02:22.054675
 ID21,HP Inc,2026-08-31 20:45:15+00:00,Seeking Alpha,Hewlett Packard Enterprise Q3: Margins Matter More Than AI Orders - Seeking Alpha,Deep Value Investing,,,,,https://seekingalpha.com/article/4941682-hewlett-packard-enterprise-q3-margins-matter-more-than-ai-orders,"Hewlett Packard Enterprise Q3: Margins Matter More Than AI Orders Aug 31, 2026, 7:36 AM ETHewlett Packard Enterprise Company (HPE) StockDELL Deep Value Investing 14.46K Followers Summary Similar to Dell, I'm concerned the focus with Hewlett Packard Enterprise may be on margins, since the Street largely anticipated a beat and raise.
 HPE booked $1.8B of new AI orders in Q2 alone.
 HPE is guiding to at least $2B of cumulative AI-networking orders in FY26.
@@ -11928,91 +12015,3 @@ Train station to rocket propellants, a Nagpur firm’s INR21k-cr journey
 2
 
 3","https://img.etimg.com/thumb/msid-133500148,width-1200,height-630,imgsize-115552,overlay-economictimes/articleshow.jpg",N,,2026-08-25 12:14:33.621413
-ID34,OpenAI,2026-08-25 06:01:58+00:00,michaelparekh.substack.com,"AI: OpenAI Consolidates under Brockman, pre-IPO. AI-RTZ #1189 - Michael Parekh",Michael Parekh,,,,,https://michaelparekh.substack.com/p/ai-openai-consolidates-under-brockman,"Today, the other half of the mega-IPO cadence in this AI Tech Wave: OpenAI, and who is actually running it on the road to its own public offering targeted for 2027.
-The key items to build on: the exits, the consolidation, and what it says about the 2027 IPO strategy.
-The people churn is an ongoing OpenAI topic discussed here for months, and the Verge assembles the full casualty list.
-On CNBC he waved off the red flags: “I’m a constant, Sam [Altman] is a constant”, pointing to eras of different leaders as a strength.
-Two mega-IPOs, two opposite playbooks: Anthropic selling premium discipline, OpenAI selling reach and reinvention this AI Tech Wave through their mega-AI IPOs.","So many flows and cross-flows at OpenAI, in so many directions.
-
-Yesterday we looked at Anthropic’s bankers pitching the largest IPO in history. Today, the other half of the mega-IPO cadence in this AI Tech Wave: OpenAI, and who is actually running it on the road to its own public offering targeted for 2027.
-
-The Verge lays it out in “It’s Greg Brockman’s OpenAI now”:
-
-Sam Altman remains CEO, but in day-to-day operations, the president and co-founder has quietly become the big boss, his purview expanding with every departure in a year that included the Elon Musk jury trial we covered from opening arguments, an Apple trade-secrets suit, and a steady exodus of the company’s biggest names. The key items to build on: the exits, the consolidation, and what it says about the 2027 IPO strategy.
-
-The people churn is an ongoing OpenAI topic discussed here for months, and the Verge assembles the full casualty list. April alone saw the Sora chief, the science VP, and the B2B applications CTO exit, with the CMO and Fidji Simo, OpenAI’s CEO of AGI deployment we profiled when she arrived, went to work, and got the close-up treatment, both departing on medical leaves; Simo officially stepped down in July, weeks after the IPO filing. This month, chief revenue officer Denise Dresser left after just eight months, and longtime COO Brad Lightcap, latterly on ‘special projects’, announced he is leaving to start something new, the churn we mapped as OpenAI pre-markets its IPO.
-
-Each wave expanded Brockman’s authority. When Simo went on leave, he took product, including the super app effort. The revenue-focused reorg then handed him the entire ‘scaling’ arm, virtually every part of the commercial operation. When Dresser departed, the press release quote came from Brockman, not Altman. The engineering workhorse of the founding team, the man who resigned in solidarity within hours of Altman’s 2023 ouster, now answers only to Altman himself. On CNBC he waved off the red flags: “I’m a constant, Sam [Altman] is a constant”, pointing to eras of different leaders as a strength.
-
-Consolidation collapses decision layers and trims some of the most expensive salary lines ahead of a listing. Standard pre-IPO housekeeping, though the clustering in so short a window is unusual.
-
-It fits the repositioning tracked all summer. CFO Sarah Friar telling investors enterprise is now bigger than consumer for the ChatGPT company. The kitchen-sink costs thrown in ahead of the mega-IPO.
-
-The rolling internal Code Reds that preceded this consolidation. And the pricing lead OpenAI keeps pressing, having led the industry into the price wars and a la carte, metered pricing for long-running agents, the volume play against Anthropic’s premium-priced enterprise machine.
-
-The directional results landed this weekend in the FT’s “Anthropic’s best AI model struggles to attract users as cheaper tools thrive”: GPT 5.6, priced significantly below Anthropic’s Fable 5, has jolted OpenAI’s annualized revenue up 35% this quarter to date, to over $40 billion, after a sluggish start to the year.
-
-The same Ramp spending data across 70,000 companies shows Anthropic’s priciest model plateauing at about 11% of customer outlay on its tools, with its smaller, cheaper Opus 5 passing it in business spending: the Tokenmaxxing-to-Tokenbudgeting shift among business buyers we cover in Monday’s mega-IPO piece. The gap to Anthropic’s $65 billion run rate is still wide, but for the first time this year it is closing from OpenAI’s side.
-
-My take: executive churn at this scale is usually read as a warning sign, and the experts quoted duly wave the flag.
-
-But the pattern here reads more like a deliberate re-planting of responsibilities and assignments.
-
-OpenAI is reorganizing itself from a research lab with celebrity executives into an operating company with one operator, pointed at revenue, an initial enterprise/AI Coding focus, then consumer products and hardware, and beyond.
-
-The places it can differentiate to take back the Coke seat Anthropic now occupies. That is what you do when the IPO window is 2027 and the company ahead of you is pitching $2 trillion valuations this fall.
-
-The risk is the one the analysts land on: key-person concentration, squared.
-
-The 2023 board crisis was about one indispensable man; the 2026 org chart now runs through two. For public investors, the safety poses and the growth math will matter, but the institution question remains.
-
-Can OpenAI operate without depending so heavily on Sam and Greg, is the one the 2027 prospectus will have to answer. Two mega-IPOs, two opposite playbooks: Anthropic selling premium discipline, OpenAI selling reach and reinvention this AI Tech Wave through their mega-AI IPOs.
-
-The public markets get to see the result of flows and cross-flows at OpenAI soon enough. Stay tuned.
-
-(NOTE: The discussions here are for information purposes only, and not meant as investment advice at any time. Thanks for joining us here.)","https://substackcdn.com/image/fetch/$s_!19ib!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F37194297-7ea3-4595-b2a8-4f9254b9591d_637x358.gif",N,,2026-08-25 03:07:02.496720
-ID22,Instacart,2026-08-25 05:29:56+00:00,Retail Technology Innovation Hub,Kroger teams with Instacart so customers can shop for groceries and prescriptions in a single order,Scott Thompson,,,,,https://retailtechinnovationhub.com/home/2026/8/24/kroger-connects-with-instacart-so-customers-can-shop-for-groceries-and-prescriptions-in-a-single-order,"The Instacart powered capability connects customers to more than 2,200 Kroger pharmacy locations.
-Eligible prescriptions are filled and verified by Kroger pharmacy teams before being delivered from the store by an Instacart shopper.
-Customers have groceries and eligible prescriptions delivered together, knowing their prescriptions are filled and verified by the trusted Kroger pharmacy teams who serve their communities every day.""
-2026 RTIH Innovation Awards On demand delivery will be a key focus area at the 2026 RTIH Innovation Awards.
-Our winners will be revealed at the 2026 RTIH Innovation Awards Ceremony, taking place at The HAC in Central London on Wednesday, 4th November.","Grocery and prescription delivery is now available across nearly all Kroger banners in the US, including Fred Meyer, Ralphs and Harris Teeter. The Instacart powered capability connects customers to more than 2,200 Kroger pharmacy locations.
-
-Eligible prescriptions are filled and verified by Kroger pharmacy teams before being delivered from the store by an Instacart shopper.
-
-""We're committed to making it easier for our customers to take care of their health and their families,"" says Colleen Lindholz, President at Kroger Health. ""This new service combines the convenience of grocery delivery with the personalised care provided by our pharmacy teams. Customers have groceries and eligible prescriptions delivered together, knowing their prescriptions are filled and verified by the trusted Kroger pharmacy teams who serve their communities every day.""
-
-""Grocery delivery has always been about removing friction from people's lives, and picking up a prescription is one of the most important errands customers manage,"" says Ryan Hamburger, Chief Commercial Officer at Instacart. ""Together with Kroger, we're making it easier for customers to access groceries and pharmacy services in one order, bringing greater convenience to everyday life while preserving the trusted pharmacy experience customers depend on.""
-
-2026 RTIH Innovation Awards
-
-On demand delivery will be a key focus area at the 2026 RTIH Innovation Awards.
-
-The awards are now open for entries and celebrate global retail technology innovation in a fast moving omnichannel world.
-
-Our winners will be revealed at the 2026 RTIH Innovation Awards Ceremony, taking place at The HAC in Central London on Wednesday, 4th November.
-
-Check out our 2025 winners here.
-
-Our 2025 hall of fame entrants were revealed during a sold out event which took place at The HAC on 16th October and consisted of a drinks reception, three course meal, and awards ceremony presided over by award winning comedian, actress and writer Tiff Stevenson.
-
-In his welcome speech, Scott Thompson, Founder and Editor, RTIH, said: “This is the awards’ fifth year as a physical event. We started off with just 30 people at the South Place Hotel not far from here, then moved to London Bridge Hotel, then The Barbican, and last year RIBA’s HQ in the West End.”
-
-“But I’m conscious of the fact that, to quote the legend that is Taylor Swift, You’re only as hot as your last hit, baby. So, this year we’ve moved to our biggest venue yet, and also pulled in our largest number of entries to date and broken attendance records.”
-
-He added: “This year’s submissions have without doubt been our best yet. To quote one of the judges: The examples of innovative developments across both traditional and digital retail spaces were truly remarkable.”
-
-Congratulations to our winners, and a big thank you to our sponsors, judging panel, the legend that is Tiff Stevenson, and all those who attended our 2025 gathering.",http://static1.squarespace.com/static/590eeff5b8a79b2147a783be/590ef147e6f2e1fda30e84c5/6a8c959c3eab4001c7490d21/1787635488709/Kroger.jpg?format=1500w,N,,2026-08-25 03:06:53.604200
-ID7,Barclays,2026-08-25 05:21:56+00:00,Yahoo Finance,Barclays (LSE:BARC) Could Be 12% Undervalued After Investment Bank CEO Shake Up,Simply Wall St,,,,,https://finance.yahoo.com/markets/stocks/articles/barclays-lse-barc-could-12-050534535.html,"Target income first and check out companies offering dependable yields through the 6 dividend fortresses.
-Hunt for quality at a sensible price by scanning the 9 high quality undervalued stocks.
-Prioritise resilience and sleep better at night by focusing on the 7 resilient stocks with low risk scores.
-This article by Simply Wall St is general in nature.
-Simply Wall St has no position in any stocks mentioned.","Target income first and check out companies offering dependable yields through the 6 dividend fortresses.
-
-Hunt for quality at a sensible price by scanning the 9 high quality undervalued stocks.
-
-Prioritise resilience and sleep better at night by focusing on the 7 resilient stocks with low risk scores.
-
-This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.
-
-Companies discussed in this article include BARC.L.",https://s.yimg.com/lo/mysterio/api/818DDAC427EF6382B7B08CFA3D0561A15BE737EEF03C0DDAB7C46C7143C5572E/subgraphmysterio/resizefill_w1200_h434;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fsimply_wall_st__316%2F064d0b7911046f8efd85160776a9b33b.jpg,N,,2026-08-25 04:02:27.442751
-ID33,Nvidia,2026-08-25 05:10:23+00:00,www.facebook.com,Forbes - Nvidia and Wall Street want to finance $500 billion in AI infrastructure. Here's what ...,Not Available,,,,,https://www.facebook.com/forbes/photos/nvidia-and-wall-street-want-to-finance-500-billion-in-ai-infrastructure-heres-wh/1441114631211856/,Nvidia and Wall Street want to finance $500 billion in AI infrastructure. Here’s what AI compute actually is—and why the value of aging GPUs matters so...,Not Available,https://scontent-iad3-1.xx.fbcdn.net/v/t39.99422-6/778972732_1678906580317151_3836919203102747510_n.png?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=p240x240&_nc_cat=1&ccb=1-7&_nc_sid=27488d&_nc_ohc=xY1io7gDCu4Q7kNvwFX_USu&_nc_oc=AdpFg8aUtcNd8z0PluHZqmhcXbEMWszhrkuLxEMvO-IfcfPrRBQn-rbHZc3Xcce_EAg&_nc_zt=14&_nc_ht=scontent-iad3-1.xx&_nc_gid=SEBFh9G6twClQI4NJlBOrw&_nc_ss=7b289&oh=00_AQHHdZjhF8X_Jd4BalTPQZ3c2onAZdR2HE0aa_r1-K09rQ&oe=6A931B0D,N,,2026-08-25 03:07:00.037519
