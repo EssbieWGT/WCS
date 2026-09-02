@@ -1,4 +1,269 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,EVs,2026-09-02 07:33:38+00:00,www.techbriefs.com,Megawatt Charging Is Ready to Scale - Tech Briefs,SAE Media Group,,,,,https://www.techbriefs.com/component/content/article/55777-megawatt-charging-is-ready-to-scale,"We've got lots of scientists and application 00:00:40 applied scientists, and that's kind of the area I work in.
+>> Do you see robots and and robotic technology being one of the keys to unlocking megawatt charging at scale?
+It doesn't say megawatt charging plug.
+>> When you're looking at the future and you're seeing what's coming down the pipe, what is the future of Megawatt charging?
+Megawatt charging is ready to scale.","Megawatt charging is moving from concept to deployment, with the standards and hardware needed to electrify heavy-duty trucks, mining equipment, marine vessels and eventually aircraft. Argonne National Laboratory’s Ted Bohn explains how the Megawatt Charging System (MCS), robotics, solid-state transformers and interoperability standards could unlock charging at powers ranging from hundreds of kilowatts to multiple megawatts. The bigger challenge may be knowing when that much power is actually worth the cost.
+
+Transcript
+
+00:00:02 Hello, I'm your host Grayson Brulte. Welcome to another episode of SAE Tomorrow Today, a show about emerging technology leaders, innovators who make it all happen. On today's episode, we're absolutely honored to welcome Ted Bone, principal engineer, Center for Transportation Research, Argonne National Laboratory. On today's episode, we'll discuss why megawatt charging may
+
+00:00:20 be the missing link for electrification and the role standards will play in making it all scalable. We hope you enjoy this episode. Ted, the national labs are cool. That's the kid in me coming out. So, welcome to SAE Tomorrow Today. I'm excited for this conversation.
+
+>> Yeah, thanks for having me. We've got lots of scientists and application
+
+00:00:40 applied scientists, and that's kind of the area I work in.
+
+>> And we're going to focus on megawatt high charging. I played golf with my buddy Richie, so I got a good download over the weekend about this. Let's kick it off. What is the role that standards play in the megawatt high volt charging industry?
+
+>> As most people know, the the the the
+
+00:01:01 joke standards, we get hundreds of them. And and so, what people want to have is one standard when you go above 500 kW. Can we just all sit in one space? And so, below 500 kW, there are lots of, you know, Chinese standards, Asian standards, German standards, US standards. They they are they are somewhat interoperable with adapters, which is good. But, wouldn't it be great
+
+00:01:19 if we could all just take one step back and say, let's just have one. And that's what happened with the the MCS, the megawatt charging system, and CharIN and and SAE and IEC working together to say, let's not have the Asian version and the US version, the Chademo and and ChaoJi. Let's just have one. And that's where we're at today. And then, you know, we were talking before about scale up
+
+00:01:40 in the mining industry, they want to have multi-megawatt. So, they want to go up to 60 MW with the same type of things, but more contacts. And so, that's the other you know, it's a big part of what all this is say, if they can keep the controls the same and scale the power from hundreds of kilowatts to single megawatts to tens of megawatts,
+
+00:01:58 that really becomes globally powerful. And the same with marine and aviation to say the the the functions are identical. The form factor, especially on the ceiling and the and the and the environmental part, um is the is the variation. Just to be clear, mining and marine need something more robust than something we use on the road.
+
+>> It's fascinating. How do you
+
+00:02:19 scale up? You said, let's use mining for example. You said 60 MW. That that's a lot of lot of energy and I and I'm going to go back to the kid in me. I'm afraid of the kablooey situation. How do you scale it up?
+
+>> Those cases would would infer that if you have an autonomous vehicle, you have an autonomous charger, right? So so the the vehicle that doesn't have a driver
+
+00:02:38 is charged by a technician that is a robot. Um and then the same these higher powers are, just to be fair, much higher voltage. And so the 1,500 V and the 1,250 V in the MCS standard have something called the defibrillation limit. So if there are stray capacitance charges up one of the wires and you touch one of the wires, there's a limit at how much energy your body will
+
+00:02:58 survive once you touch that wire. That's where the 1,250 V for humans without gloves go. So in mining, you're always wearing gloves and then above that, you're not going to have a human. You're going to basically have robotic vision. It's going to open the door, plug it in, unplug it and and again, none of this is energized under power. So it's always
+
+00:03:15 energized and de-energized um when when your hand is not on it.
+
+>> Do you see robots and and robotic technology being one of the keys to unlocking megawatt charging at scale?
+
+>> It's an accessory. So if you have to do uh uh and again, an expense to say if I have a robot per plug, that gets to be a lot. And and and and so there there is there
+
+00:03:37 are are are companies who have a robot on a track where the robot actually drives down and it it it can see the plug, unhook the plug, put it into the truck and then it pulls his arm back and goes down to the next row. So much like a valet that can go down a row of vehicles. But again, that track, all that overhead is it it adds up. So, then again, one one robot per plug is
+
+00:03:56 important, but if that plug is serving a 20 million-dollar vehicle that is running 24/7 like on the autonomous mining trucks, it it's justified.
+
+>> Where does SAE J3271 play in this ecosystem?
+
+>> So, as the chair of that, one of my monitors in the beginning was Rolls flies or floats. So, in the beginning
+
+00:04:17 everyone thinks of J1772 as a connector standard. 3271 is a system standard. It says megawatt charging system. It doesn't say megawatt charging plug. Um and so, this one goes from the point of interconnection where the electricity leaves the sub sub subtransmission, goes through all the power conversion to the connector, through the connector
+
+00:04:34 into the battery terminals. That's what 3271 covers. In other standards, there's a whole forest of There's one for the inlet, there's one for the plug, there's one for the communication, there's one for the cybersecurity, and on and on. This is a one-stop shop that has sections in it. So, it's almost like Encyclopedia Britannica. It has many volumes inside of one document, and that
+
+00:04:53 makes it cohesive where I don't have to be compatible with other standards. It is the standard itself, and then of course they are interoperable and harmonized with other global standards.
+
+>> Well, I'm going to say this in simple terms. Is it fair to say that 3271 is is very broad and can go across multiple use cases as you said earlier with with maritime?
+
+00:05:10
+
+>> That was the point of 3271 is that it covers the Rolls flies and floats aspect, not just the connector, but all the different ways it's it's done. So, you talked about the autonomous charging. Another part is aircraft. Aircraft you have to have an extremely short cable for an extremely long distance with wings. And you say, ""Well, how do I make
+
+00:05:27 the cable not 100 ft long?"" Cuz 100 ft at 5,000 amps or 3,000 amps is a lot of copper, right? And so, one thing people want to do is have a pit. So, the the aircraft either lands over the pit or rolls over the pit, you open the door, and you pull the connector out, and you shove it straight from the ground up to the wing. That's the shortest distance. That has to be written in the standard.
+
+00:05:45 In the in the um 61851-23-3 and again that just say that char in reference document, we specify where in the vehicle the inlet is so that the cord can be as short as possible because as most people drive light duty vehicles so it can be in the bumper, it can be in the tail, it can be on the side, it can
+
+00:06:02 be on that side. And again especially on buses and trucks it can be on the not driver side and that's a problem. Right? So you have to drive the opposite way to get close enough to get to the plug. So that's where standards come in. They said we have mandated that the inlet on these vehicles shall always be in this location and get away with a 2-m cord versus a 10-m cord or 30-m cord. So
+
+00:06:21 that's that's that's a really big part of why the use cases on the standard are important.
+
+>> I'm curious about this. What makes SAE J3271 different from the IEC and the ISO standards already associated with megawatt charging?
+
+>> Those are the subsections I talked about. So each one so 61851-23-3
+
+00:06:38 is just the EVSE side. 5474-3 is just the inlet on the truck. Right? The TS 63379 is just the mechanical specifications for the connector. 5118-20 edition 2, you know, is just the protocol. And so and and again same with the dash 10 on the on the automotive ethernet and you can just see how you have to buy 20
+
+00:07:01 standards to get it all in there versus the SE document has everything in one and it references the other standards. So it just has a different philosophy of clean sheet versus uh an extension of a previous standard. So that's where that 61851-23 is DC, dash 3 is MCS DC. You're like, oh, so this is the you know, the wings on a on a building. It's like this one
+
+00:07:23 plus this annex plus this annex plus annex. That's how they're designed that they are backward compatible but they also have a whole bunch of of boilerplate and you know, heft. So this one again you want to have, you know, a very user-friendly one and then there are variations just to kind of you You ask but I'm just going to say, there are
+
+00:07:43 specific standards for other applications. So, for instance, in aircraft, there's a AR 7357 is just aircraft because, for instance, aircraft um charging areas or whatever you want to call it, the air area around it, the shouldn't color lights mean different things. So, if you put blue lights on the side of your charger, someone could
+
+00:08:00 be using that as a guideway light, for instance. It would be the wrong color for that application. So, you have to have a standard saying you may not use this color lights on your charging equipment because it means something else for instance. So, that's why they are they are based upon that. So, so again, 7357
+
+00:08:17 3071 covers everything. 7357 just covers when it's an aircraft, what does it have to do? And it ignores all the stuff for ships and all things. So, you can kind of see how you can have a recipe that is tuned for a specific use case versus the three 3071 is is all use cases.
+
+>> So, with this clean sheet approach, does that unlock scale?
+
+00:08:41
+
+>> It again, because it covers more than just the connector. A lot of people think that when you're holding a connector in your hand, you know, for instance, this one or this one, they just think about the contacts. They say, this is the standard. It's like, no, this is the middle of standard. Everything that fed, you know, just like milk doesn't come
+
+00:08:58 from the fridge, comes from the cow. Right? And it also comes from grass and it comes from the sun. It's like, oh, that's kind of what this standard does is that that interconnection power, you have to describe how the power got to the power electronics. And of course, when you have an array of 50 chargers at one facility, how do you manage the facility? So, there there are
+
+00:09:16 I I triple E P2030.13 is a functional specification for how you do that. How does that overlap with the others? That's where the interoperability comes in. And again, just to be what do you call it, full disclosure, I'm the chair of those other things. So, when you say, do you agree with those other authors? I am those other authors. Um so, um the way
+
+00:09:34 we wrote the other standards were pointed towards this one and the way these are written are pointing towards the other one. So, they were they were um proactive. That the reason we used these words were to make sure they they they are intended to use with these other things. But anyway, that's supply supply side dynamics of integrated
+
+00:09:50 charging, integrated photovoltaics, and now with solid state transformers, all these things are uh unknown territory before, but are definitely necessary for scaling. As most people know, the lead time on your interconnection permit can be years. And so, there are some people who have short-term things to say, well, I can
+
+00:10:09 work off-grid until dot dot dot, or I can maybe make this an off-grid focus one where the grid is the backup. To say, if the sun doesn't come out for a couple days, we can run at 20% capacity um if there's no sun.
+
+>> Then I mean, you raised the interconnection one aspect of it. I just think just from a facility, let's just use if you want
+
+00:10:28 to use a trucking facility, electrification for trucks class eight. Where's the energy going to come from? What infrastructure has to go in the ground? And what type of backlogs are there? I mean, obviously you have the permit backlogs, but are there equipment backlogs? What what goes into that?
+
+>> So, the the norm today is to have things that are fed by 480 volts AC, and then
+
+00:10:49 you have a distribution panel, and then you have single or multiple transformers and multiple power converters and and uh and and that's what the limit is. You usually have 2 and 1/2 megawatt MDA transformers, right? So, 5 MDA is kind of what you're going to top out on. And so, if you want to go higher, then the facility has to own the transformers and
+
+00:11:08 the switch gear and all the other things. So, that's where solid state transformers come in. That's where I'll just name drop Watt EV has their product now that runs at 1.2 megawatt, and they have clusters for data centers that are running at 24 megawatt. And you're like, well, what why would you what what does that mean for data centers? Like, well,
+
+00:11:25 luckily data centers run at 800 volts DC, much like trucks. You said, but 24 megawatt, that's 30,000 amps. That's the output. So, you can kind of see how this stuff takes space and having solid-state transformers instead of conventional low-frequency transformers is kind of the future. And that's where the lead time on on some low-frequency
+
+00:11:44 transformers can be many months to years versus the solid-state transformers. There are well, about 20 companies who are getting ready to deploy for data centers that can be leveraged into the EV charging world when necessary. And of course, there are some patents that Tesla wants to collocate what they call them megapond. And so, they want to have AI
+
+00:12:03 compute centers next to where they have power. And that's an interesting thing. It's like move to the you know, like Sam Kinison, don't live in the desert, move to the food. So, they put the AI compute next to where the power is. And so, that that's an interesting philosophy.
+
+>> And we saw, I mean, it was confirmed the Financial Times over the weekend that Tesla bought an energy company out of
+
+00:12:24 Jacksonville. We know that Tesla has the energy business that's that's growing with the Megapacks. And they've got the the semi, which I'll use the term is is ramping up. And from a class eight perspective, is Tesla the big driver of this since they have the SpaceX data centers, they have the battery infrastructure, they have the charging infrastructure.
+
+00:12:45 And they have the truck in limited quantities. I want to for the audience, limited quantities today. Is that the big driver today for this adoption?
+
+>> Well, luckily in this case, it wasn't the Apple thing of the me, but the we. So, Tesla knew that in order to support this many trucks in in, you know,
+
+00:13:05 internationally, globally, nationally, has to use the same plug. You can't have things that are good here and not good there. So, back in 2017, they were one of the leaders that pulled people together and pulled people and said, ""Hey, let's work as a group to have this one standard."" So, when you say, ""Are they a leader?"" Yes, they are. Are they the biggest financial force? Well, they
+
+00:13:22 have the deepest pockets. Are they going to own the market? Absolutely not, right? They're going to own a lot of the market. and you know, as we're talking before this, there's going to be international competitors who are going to say we have things that look like yours, but have a different label on it. So, Windrows just kind of melted, but they were definitely an
+
+00:13:38 example of somebody who is really close and looked a lot like the Tesla product without infringing or allegedly not infringing. But, the point was the me too part is definitely not, you know, much like laptops and all stuff, it's not going to you're not going to own 100% of the market. You might own a lot of it, but not 100%.
+
+00:13:55
+
+>> But, that vertically integrated part that they have the the
+
+>> Megapacks and Sunrun and, you know, as a season data centers and stuff like that, that's going to be a big boost compared to everyone else who's doing things um with their partners.
+
+>> I'm I'm I'm super curious and let's just say at scale megawatts deployed, what type of heat
+
+00:14:15 does the megawatt charger give off?
+
+>> That's the good part about the conversion efficiency. So, usually when you when you have big power, you want to keep your losses down so your cooling is is down and of course, you know, just your net efficiency. So, so most of the big systems are running around 98% and and so, if you just say 2% then that's, you know, 20 kW of heat, which again is
+
+00:14:33 very manageable when you have a a big systems, big fans. And the same with the cables. Cables are generally short, you know, we we we talked about the size of the of the contacts and then the area on the back of this with the cooling system that they're having the cables short. So, there can be up to 10 kW of losses on the cable when you pushing, you know, 2,000 amps. But, that's pushed
+
+00:14:53 out of a radiator. So, it's not where you're standing. It's some place remote. Just like your car that doesn't push the engine heat into the cabin, it pushes out the the back of the sides of the car.
+
+>> I'm I'm I'm curious on that perspective, are there environments where either because it's too cold, it's too hot, it's historically too rainy, flooding
+
+00:15:12 issues, where it is not safe to deploy megawatt charging today?
+
+>> Not not really. Everything is sealed. So, I'll just kind of hold up some of the stuff that we um um stuff that you can see there's there's there's a locking motor in the top that makes sure that that it's safe that it's latched. You can see lots of O-rings and and and different sealing
+
+00:15:28 things between the bulkhead. This is the inlet to the thing. It's got temperature sensors, and so it always knows exactly what the limit is. And so that's really what happens on the two hot part. It will derate when it gets above its limit, and that's the key. And then the same thing goes with all each of the pockets are are sealed and they have drains. So just the the quality of the
+
+00:15:45 of the connector says anywhere anytime with isolation monitoring things of that. So there's there's pretty much no environment that is either too cold or too hot.
+
+>> So, I I know you you answered it, but now I'm curious. Let's just say you're megawatt charging in Death Valley in the middle
+
+00:15:59 of August. It's over 110°. Does the charging slow down? Or does it continue at the same speed?
+
+>> The The vehicles have their cooling system, and the charger has its cooling system. And so as long as the cooling system is adequately sized for that location, it will it will still maintain, you know, 1,500 amps or whatever it's sized for.
+
+00:16:15
+
+>> Wow. And so how from an engineering perspective, how is that Does that possible? Is that all the inner connects or all the cooling? How is that possible?
+
+>> Just Just big radiators. Everything there are liquid. I don't have uh Anyway, I have them. They're just not here at the table cuz they're too big to pick up. But basically, you can imagine
+
+00:16:30 that the copper cross-section, and then there's liquid tubes that are next to it that force coolant down the center of it. And so much like, you know, cyborgs. It's just lots of tubes and wires and blue liquids going back and forth. Um but uh yeah. So and and that's just thermodynamics 101. You need a big radiator and a big fan or you need a
+
+00:16:46 compressor um to move the heat from A to B, but that's that's to matter of balance the system. We didn't talk about controls and interfaces, but but the the smarts from from each of the um sides also needs to measure those temperature sensors, and and of course in some cases needs to be multilingual where it have both a uh
+
+00:17:05 a CCS inlet on a truck and an MCS inlet. And so this controller is meant to speak three different languages. Much like, you know, some people are multilingual. And then we didn't really talk about adapters and reducers, but the point is that if you have um infrastructure that is waiting for one thing, the other thing has to exist and and so there are adapters that go
+
+00:17:24 between the 8-mm pins and the 10-mm pins that are analogous to the NACs CCS. There are prototypes of MCS to um CCS. And so those are also in that temperature um limitations to say that if you have a CCS charger, it will not produce as much power as an MCS vehicle can take. So it's the smaller smaller hose into a bigger hose. Bigger hose
+
+00:17:48 smaller hose, you got problem. Now you're going to be rate limited. But the other way going from a smaller to a bigger, that's why I use the word reducer. It's basically like a 3/4-in hose to a the 3/8-in hose. It works, it just runs slow. Right? But it'll get you there. And that's that's where I think this interoperability and compatibility and
+
+00:18:03 that's what I work on is mechanical interoperability of measuring that things fit, measure the force, uh measure the change in impedance. So again, data. So Argonne National Lab, that's what we do. We don't make decisions. We make data. And the data is used to make decisions and of course to validate standards.
+
+>> Is that data that you develop in Argonne
+
+00:18:21 with your colleagues, is that shared with industry? Do they come together with you either in a standards format in a research format to really, if you want to say, push the technology and see what's possible? Is that your role of of pushing it to extremes?
+
+>> Yeah, it is the validation stuff. So the papers, as you know, but publish or perish, that's what I do. And and so um
+
+00:18:41 at at ITEC this year, I published a paper about mechanical interoperability and the overlap of solid-state transformers and you know, um uh EV truck and mining applications. So that's where we publish and then of course in the weekly meetings is where we share and put it into the into the SAE folders and that's why people often join. Just to be fair, people don't join the
+
+00:19:00 committee to help write. They join the committee to get access [laughter] to see what's going on and to see how to do their homework. It's almost like, you know, looking at sample problems in homework to say how would we get it implemented. And that's that that is the win-win on if you can describe it enough to implement it, you've done a good enough job writing the standard.
+
+00:19:17
+
+>> Are there facilities with either at Argon or you work with third parties where let's say company A, your company Acme, will bring their product and you will and you will push it to the limits to see if it's possible, does it meet that standard?
+
+>> This is where I hand-wave a lot and I say there used to be. Something happened January of last year, I don't know what
+
+00:19:36 it is, but somehow all those facilities were closed. Um and uh and I've had to recycle and scrap a lot of stuff, but they do exist. They're just not accessible anymore for something that happened last year. Um but we do have testables and so we have events where people bring uh let's say a potluck, you bring chargers, you bring vehicles, you bring
+
+00:19:55 controllers and you test them against each other. Those are sponsored by CharIn in, you know, East Coast, West Coast um and and central in Ypsilanti at uh There is Charge Yard in in the Sacramento area. There is uh American Center for Mobility in uh Ypsilanti. And so these facilities have a fee that they charge per hour to get access to things.
+
+00:20:16 So when you say what do they do is like it's kind of like renting a roller rink or whatever it is. You get to do or a racetrack, right? You get to do what you want for this many dollars per this many hours, right? And uh Anyway, that's how it's done.
+
+>> Is is that basically like an adult version of the Homebrew Computer Club where everybody bring all their parts
+
+00:20:36 together and you build stuff?
+
+>> It is it is the round robin pass to the left, right? So you take and that's what we used to have the the what are called plug fests where you take your connector and that's in fact why all I have just to kind of hold up a bunch of different things. So we got the stuff from TE, from Staubli, from others. Everybody sent me theirs and they said
+
+00:20:53 pass to left. I take the the Staubli plug and I plug it into the TE one and we just go round robin. That's really [laughter] what these tests are about. So is you you you circulate, it's almost like the speed dating. You you test in this one and then every half hour you switch to the next doll and you test with the next vehicle.
+
+00:21:12
+
+>> I think that's I think that's fun and that that raises a question as Megawatt charging scales. How do you, your colleagues, and your friends in the home brew clubs ensure interoperability?
+
+>> That's it. So we we had uh uh controller like the controllers I just showed you. Those those events are being hosted in Europe because it's easier to bring a controller there. The
+
+00:21:31 full-size truck stuff is is also happening in Europe because again those companies have not for whatever happened in 2025, I don't know what it is, um have not curtailed all their uh manufacturing development. But here everybody else has pretty much hit the pause button and therefore we have no testing events. Um we are ready to argue on lab. I'm I'm
+
+00:21:51 like I said, I had big fixtures all set up and and for some reason someone told me to throw a blanket over until 2028.
+
+>> When you're looking at the future and you're seeing what's coming down the pipe, what is the future of Megawatt charging? And and I'm curious and if you can't answer this for reasons, feel free to say it is that do you see certain
+
+00:22:11 regions of the world that will adopt this before others and why? And basically what is the future of Megawatt charging?
+
+>> Not regions but test cases or or the the the use cases. So we talked about the mining stuff is 100% going this way. So there is no other, right? There there there is the automated stuff of J3105 which has which basically is really huge
+
+00:22:30 pan, I mean like size of fire hose, right? So those are those are those exist already for 15 years. People are going to keep using that. They will use multiple sets of MCS. They will have not one but like three of those on a robot arm. So that's absolutely happening. So Cat, Cummins, Komatsu, everybody's headed that way and there there are coalitions of people working together.
+
+00:22:49 The same with the marine. The marine will have a port and a starboard side uh drive system and so you have a a you know, just like a on the on a satellite tanks on a truck, you're going to plug in and you're You're to come in and there'll to one for the left side of the vessel, one for the right side of the vessel, and they'll run independently. Those are absolutely
+
+00:23:05 happening now. So, lots in Norway, some in the US. Um, and uh tugboats, things like that. So, there's there's a whole bunch of vessels that greatly benefit on being electrified. Those that's a natural. So, uh uh there are I think a dozen um connector inlet and cord manufacturers. There are at least 30 EVC manufacturers. And then, of course, of the vessels and the other uh systems
+
+00:23:27 there there are plenty. So, the just the the takeaway message from this one is if you want it, you can go buy it. Um, and again, having fleets um like I said, Wärtsilä has [clears throat] nine locations with MCS stations. They have 30 they're on the books. Um, Tesla said by 2027 they will have 65 locations uh set on their road map. So, everyone's set to go. And again, it's
+
+00:23:48 going to be a when not an if.
+
+>> It's It's clear, Michael, what charging's coming. And as we look to wrap up this insightful conversation, what would you like our listeners and viewers to take away with them today?
+
+>> Uh scalability. So, so that when you see one or two, that's okay. But then, moving up to other thing. The other thing is on this charge handle. And I'll
+
+00:24:06 just point out the one one unique feature on this one is a small cable. You say, ""Why is the cable so small on this one?"" And it's because you don't have to have a 3,000 amp pin that pushes 300 amps. You can set this up for 300 amp cables. And so, you can um the the fast slow thing to say everyone thinks they want Formula 1 pit stops. But you say, ""What if I work as a normal garage
+
+00:24:27 mechanic?"" So, the whole idea of how about if I wait 3 hours to charge my vehicle? How much less expensive and less complicated can it be when I charge at you know, at 300 kW versus at 3 MW? And it's like, ""Well, why do I always need 3 MW?"" You Everyone thinks they want it until they see the bill. And it's like, ""Oh man, even the demand charge is going to be huge."" So, scaling
+
+00:24:45 MCS for aircraft, for other things, you can start at 300 you know, the Tesla's selling a 125 kW system for $40,000, right? And so, that that base system is what you would have as your base. The thing that you need to charge overnight, that's ready to go. If you go to a full 1.2 megawatt charging station, right? It's X amount more money, but it'll get you out. So, the whole
+
+00:25:06 idea like with bandwidth on your phone, you got, you know, the old 3G stuff is like, man, it works. It wasn't so great. But then, you know, 5G, 6G is like, wow, that's super fast. But I don't need 5G everywhere. I'll take whatever I can get to get the job done. That's one of the takeaway messages that it scales. It scales both on speed and it scales on on size. And then, of
+
+00:25:25 course, with multiple inlets on vehicles, you don't say, well, 4.5 megawatt is not enough. You say, yeah, but you can actually put multiple 4.5 megawatt. It's like, oh, well, then that'll probably get it done.
+
+>> I'll summarize it this way. Megawatt charging is ready to scale. Today is tomorrow, tomorrow is today, the future is megawatt charging.
+
+00:25:42
+
+>> That's a good Thank you so much for the show. You should You should You should patent that.
+
+>> I like that. Thank you so much for coming on SAE Tomorrow Today.
+
+>> SAE International makes no representations as to the accuracy of the information presented in this podcast. The information and opinions are for general information
+
+00:25:59 only. SAE International does not endorse, approve, recommend, or certify any information, product, process, service, or organization presented or mentioned in this podcast.","http://res.cloudinary.com/tbmg/ar_16:9,c_thumb,g_auto:subject,f_auto,q_auto/c_limit,w_400/v1788202781/sites/tb/econa-16x9/55777/1000/ev-scalability.jpeg",N,,2026-09-02 05:00:11.499880
 ,EPA,2026-09-02 07:31:03+00:00,www.arkansasonline.com,EPA eyes adjustment of biofuel exemptions | The Arkansas Democrat-Gazette,Jarrett Renshaw and Siddharth Cavale,,,,,https://www.arkansasonline.com/news/2026/sep/02/epa-eyes-adjustment-of-biofuel-exemptions/,"When plants receive exemptions, the EPA can force other refiners to make up the production difference so that the overall quota of biofuel produced is met for the year.
 On Monday, the EPA said it has granted full exemptions to 18 out of 34 refineries that had sought exemptions from their Renewable Fuel Standard obligations for the 2025 compliance year.
 The EPA statement said it granted 50% exemptions to 11 refineries, denied three petitions and determined two petitions to be ineligible.
@@ -42,8 +307,30 @@ API also opposed shifting the exempted obligations to larger refiners in future 
 ""Both actions would inject uncertainty into the fuels marketplace,"" Sommers wrote, adding that ""new compliance surprises"" would move ""in the wrong direction at precisely the wrong moment.""
 
 Farm-state lawmakers have warned that broad exemptions could depress demand for crops and undermine the biofuel industry, while refiners argue that the mandates can impose steep costs when compliance credits are expensive.",https://wehco.media.clients.ellingtoncms.com/imports/adg/photos/213566219_2DBiofuel0902_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4,N,,2026-09-02 04:00:25.195813
+,EVs,2026-09-02 07:09:40+00:00,openPR.com,United States Secondary Battery Materials for Lithium-Ion - openPR.com,DataM intelligence 4 Market Research LLP,,,,,https://www.openpr.com/news/4619456/united-states-secondary-battery-materials-for-lithium-ion,"Press release - DataM intelligence 4 Market Research LLP - United States Secondary Battery Materials for Lithium-Ion Batteries Market 2035 | Growth Drivers, Trends & Market Forecast, Competitive Landscape & Investment Opportunities - published on openPR.com",Not Available,https://cdn.open-pr.com/L/9/L902300803_g.jpg,N,,2026-09-02 05:00:16.448096
 ,North Carolina American Energy ,2026-09-02 05:40:09+00:00,YouTube,"Chinese President Xi starts state visit to Egypt with energy, AI on agenda - YouTube",Not Available,,,,,https://www.youtube.com/watch?v=lS5dIw0fl5Y,"Chinese President Xi starts state visit to Egypt with energy, AI on agendaThe leaders are expected to sign agreements on artificial intelligence, transport, ...",Not Available,https://i.ytimg.com/vi/lS5dIw0fl5Y/hqdefault.jpg,N,,2026-09-02 04:00:34.289471
 ,North Carolina American Energy ,2026-09-02 05:20:10+00:00,YouTube,LIVE: Billionaires and financial leaders meet at G20 in North Carolina - YouTube,Not Available,,,,,https://www.youtube.com/watch?v=U1yupD_XSak,"Elon Musk, OpenAI CEO Sam Altman, and Nvidia CEO Jensen Huang attend at the G20 Innovation Ministerial hosted by Commerce Secretary Howard Lutnick in Chapel ...",Not Available,https://i.ytimg.com/vi/U1yupD_XSak/maxresdefault.jpg,N,,2026-09-02 04:00:37.846353
+,EVs,2026-09-02 05:14:15+00:00,The New Indian Express,Study reveals positive job impact from India's electric vehicle transition,Jitendra Choubey,,,,,https://www.newindianexpress.com/amp/story/india/2026/Sep/02/study-reveals-positive-job-impact-from-indias-electric-vehicle-transition,"NEW DELHI: A study by IIM Bangalore and the International Council on Clean Transportation (ICCT) reveals that India's transition to electric vehicles could support 7.2 million direct manufacturing jobs by 2040, if the country builds its own battery cells.
+It says the net job impact is positive beyond a certain level of battery localisation.
+An estimate suggests that India will lose around 60% of ICE-related manufacturing jobs during the transition, particularly in engine and transmission production.
+This is less than 3% of the batteries India is expected to need by 2032.
+Battery manufacturing in India is the most important part of the EV industry if India wants to create more jobs and retain more economic value within the country.","NEW DELHI: A study by IIM Bangalore and the International Council on Clean Transportation (ICCT) reveals that India's transition to electric vehicles could support 7.2 million direct manufacturing jobs by 2040, if the country builds its own battery cells.
+
+According to the study ‘Employment implications of vehicle electrification under alternative fuel efficiency pathways in India’, which examined different transition scenarios, recommended that India can generate more jobs than it lost during the transition from ICE to EV batteries if the target is aligned with Viksit Bharat.
+
+It says the net job impact is positive beyond a certain level of battery localisation. It also adds that if India achieves at least 30% battery localisation by 2032 and 50% by 2040, it would create an opportunity to create 7.2 million direct manufacturing jobs.
+
+An estimate suggests that India will lose around 60% of ICE-related manufacturing jobs during the transition, particularly in engine and transmission production.
+
+At that level, India could produce at least 30% of the batteries it needs domestically by 2032, regardless of which of the three EV growth scenarios in the study actually takes place.
+
+Right now, India can produce only about 1.4 GWh (gigawatt-hours) of battery cells. This is less than 3% of the batteries India is expected to need by 2032.
+
+Meanwhile, India has many new battery factories planned or under development. These include projects supported by the government's PLI scheme for Advanced Chemistry Cell (ACC) batteries.
+
+If all these planned projects are completed, India's battery-cell production capacity could rise to around 128 GWh.
+
+Battery manufacturing in India is the most important part of the EV industry if India wants to create more jobs and retain more economic value within the country.",https://cf-images.assettype.com/newindianexpress%2F2024-08-13%2Fi09qvbgr%2FTesla%201.webp?rect=0%2C159%2C1440%2C756&w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100,N,,2026-09-02 05:00:18.809426
 ,Clean Energy ,2026-09-02 05:08:22+00:00,Earthjustice,"Moving Beyond Harmful Bioenergy, Together - Earthjustice","Peter Lehner, Carrie Apfel, Amy Yoon",,,,,https://earthjustice.org/experts/peter-lehner/moving-beyond-harmful-bioenergy-together,"Today, advocates for truly clean renewable energy, forest protections, and clean communities are fighting these industries in their own separate silos.
 The bioenergy industries benefit from government subsidies and mandates, but the costs fall on everyone else.
 In addition to the erosion and water pollution from timber harvesting, wood pellet production is severely polluting, harming communities, and largely unregulated.
@@ -95,6 +382,83 @@ The farmland, woodland, and feedlot interests don’t coordinate with each other
 Here’s what breaks the cycle: Recognizing it’s one fight, not three. With a unified voice, we can call for the government to strip mandates and subsidies. Let these industries operate on their real merits — or lack thereof. Without that government guarantee, the industry pressure driving all three will reveal that this never had much to do with clean energy, but everything to do with land values and income.",https://earthjustice.org/wp-content/uploads/2024/08/biogas_lifecycle_c-scaled.jpg,N,,2026-09-02 02:00:09.628352
 ,Texas American Energy ,2026-09-02 05:05:04+00:00,www.review-energy.com,PJM falls behind on renewables and battery storage as ERCOT accelerates deployment in Texas,Not Available,,,,,https://www.review-energy.com/otras-fuentes/pjm-falls-behind-on-renewables-and-battery-storage-as-ercot-accelerates-deployment-in-texas,IEEFA highlights the contrast between ERCOT and PJM: the deployment of renewables and battery storage enabled Texas to meet record electricity demand while keep...,Not Available,https://www.review-energy.com/fileuploads/news/review-energy-noticias-417882628621.png,N,,2026-09-02 04:00:30.209610
 ,Clean Energy ,2026-09-02 04:53:07+00:00,YouTube,Nature inspires renewable energy storage - YouTube,Not Available,,,,,https://www.youtube.com/watch?v=qONsPJML4wQ,A butterfly’s wings could help researchers unlock the potential to store more energy. CTV’s Spencer Turcotte reports.Subscribe to CTV News to watch more vide...,Not Available,https://i.ytimg.com/vi/qONsPJML4wQ/maxresdefault.jpg,N,,2026-09-02 02:00:13.802410
+,American Energy,2026-09-02 04:46:23+00:00,WLUK,Proposed energy centers in Calumet County could power 2M homes - Fox 11,"David Go, FOX 11 News, David Go",,,,,https://fox11online.com/news/local/calumet-county-power-plant-proposed-energy-centers-town-of-brillion-power-megawatts-gigawatts-we-energies-invenergy-town-of-woodville-forest-junction-union-depot,"TOWN OF BRILLION (WLUK) -- Chicago-based power producer Invenergy is proposing to build two natural gas-powered energy centers in the Town of Brillion in Calumet County, which could power nearly 2 million homes.
+Proposed energy centers in Calumet County.
+(WLUK) The bigger of the two energy centers would be the second-largest natural gas producer in Wisconsin.
+The two projects, called the Forest Junction Energy Center and the Union Depot Energy Center, would be located along Highway 57 to the east, just north of Highway 10 near the Brillion Town Hall.
+Documents say the company hopes to begin construction in Quarter 4 of 2027 and open the energy centers in Quarter 4 of 2031.","TOWN OF BRILLION (WLUK) -- Chicago-based power producer Invenergy is proposing to build two natural gas-powered energy centers in the Town of Brillion in Calumet County, which could power nearly 2 million homes.
+
+Proposed energy centers in Calumet County. (WLUK)
+
+The bigger of the two energy centers would be the second-largest natural gas producer in Wisconsin. The two projects, called the Forest Junction Energy Center and the Union Depot Energy Center, would be located along Highway 57 to the east, just north of Highway 10 near the Brillion Town Hall.
+
+Forest Junction would generate up to 1,203 megawatts (MW) and Union Depot would generate up to 750 MW. About 1,200 MW are required to power 1 million homes in the U.S., according to the U.S. Energy Information Administration.
+
+Wisconsin's energy demand expected to grow significantly by 2032; Invenergy, We Energies declined to say whether data centers directly spurring project
+
+The center comes as Wisconsin's energy demand is expected to grow by more than 40% over the next six years, according to the Wisconsin Public Service Commission. Coal production is expected to drop from 31% of energy production to 3% during that period, according to the same study.
+
+Both Invenergy and We Energies declined to say whether data center demands play a role, which require large amounts of electricity. The electricity would connect to the grid, so it would add to the general supply and not to a specific project or use, according to Invenergy.
+
+When asked whether We Energies would buy the energy when the plant would open in 2031, spokesman Brendan Conway responded by saying, ""As Wisconsin’s economy continues to grow, we’re planning to meet our customers’ needs with safe, reliable energy. We will have more information available about the Forest Junction project in regulatory filings in the coming months.""
+
+Center would provide tax revenue, about 20 jobs
+
+The project would contribute up to $4.1 million in local and county tax revenue each year, according to Invenergy.
+
+""Getting the utility credits or tax that we'll get will be a benefit to the town,"" said Town of Brillion Chairman Kevin Fischer. ""I don't see it being any harm to the community, because it's out in the rural community.""
+
+Invenergy will have to be issued environmental permits, which address:
+
+Air pollution
+
+Stormwater
+
+Wetland fill
+
+Endangered resources
+
+Water use
+
+“We’re in the early stages of permitting a state-of-the-art natural gas project that will power homes, businesses, and critical infrastructure while contributing to a more reliable, affordable, cleaner electricity mix,"" said Invenergy developer Daniel Birmingham. ""We look forward to working with Calumet County and the neighboring communities to ensure local businesses, workers, and public services benefit from this investment for years to come.”
+
+More details of the plants:
+
+6 turbines
+
+550 gallons of water used per minute at its peak
+
+Union Depot (smaller center) would run continually; Forest Junction would run during when the need demands
+
+For reference, the major energy plant off I-41 in Kaukauna is also a natural gas energy center, but it only produces up to 550 MW.
+
+All is decided by the state, not the county or towns
+
+The entire project works through the Wisconsin Public Service Commission (PSC) and Department of Natural Resources (DNR), not the Town of Brillion or Calumet County.
+
+""We're aware of the permitting process and all of those things involved in the project,"" said Calumet County Administrator Todd Romenesko. ""Even though the county doesn't have control or any authority over the permitting process, we will stay connected to it as best we can.""
+
+Fischer said the best thing the Town of Brillion can do is work with Invenergy as best it can and said he felt better about the project after visiting a major Invenergy project in Minnesota.
+
+""They seem very willing to work with us as far as making sure there's no damage to any of our roads, and if there is that they would fix them,"" said Fischer.
+
+He added that they've also shown willingness about coming to an agreement for the process of decommissioning the plant eventually.
+
+How residents can voice concern
+
+The plant is in a rural area, but Fischer said a few residents have voiced concern over the noise and size of the project. Because the planning goes through the Wisconsin PSC, feedback should go to them.
+
+To sign up for updates from Wisconsin PSC, click this link and enter ""5-CE-162"" -- 5 in Docket ID Part 1, CE in Docket ID Part 2 and 162 in Docket ID Part 3, followed by your email address. You'll then receive a code to your inbox, which you'll enter into the ""One-time Code"" box
+
+To file a complaint or feedback with the Wisconsin PSC, click this link
+
+Invenergy also will hold public information sessions, which are likely to be this fall, according to Fischer.
+
+Timeline
+
+Invenergy needs several state and federal permits before beginning construction. It plans to begin applying this October.
+
+Documents say the company hopes to begin construction in Quarter 4 of 2027 and open the energy centers in Quarter 4 of 2031.",https://fox11online.com/resources/media2/16x9/1260/1320/0x119/90/73d08783-4b28-46d3-9ac9-3e0b8f813506-TownofBrillionpowerplantsite.jpg,N,,2026-09-02 05:00:28.616815
 ,Clean Energy ,2026-09-02 04:35:01+00:00,Times-Standard,California AG to sue Trump admin over Humboldt County's lost offshore deal,Robert Schaulis,,,,,https://www.times-standard.com/2026/09/01/california-ag-to-sue-trump-admin-over-humboldt-countys-lost-offshore-deal/,"“Today, we’re putting the Trump Administration on notice that we intend to sue.
 Offshore wind investments create jobs, bolster our economy, and deliver reliable clean energy to Californians.
 The AG’s office said that the Trump administration and RWE’s agreement violated several provisions of the OCSLA.
@@ -411,6 +775,75 @@ Sibi Arasu can be followed on X at @sibi123. Reach him at sarasu@ap.org.
 ___
 
 Source:",https://dailyjournal.net/wp-content/uploads/2026/09/preview-248.jpg,N,,2026-09-02 00:00:51.276535
+,Indiana American Energy ,2026-09-02 02:34:07+00:00,The Daily Reporter - Greenfield Indiana,"India's power demand is surging, but some solar energy is going to waste - Greenfield Indiana",The Associated Press,,,,,https://www.greenfieldreporter.com/2026/09/01/indias-power-demand-is-surging-but-some-solar-energy-is-going-to-waste/,"That solar power went unused even as extreme heat and poor monsoon rains drove up demand for power in India for cooling and pumping groundwater for agriculture.
+Clean power gets switched off despite record demand India has more than 300 gigawatts of clean power capacity, more than half its total installed electricity capacity.
+Trying to make thermal power plants flexible and adapt to increasing supply from clean energy sources “is like asking an elephant to dance,” said Vinay Pabba, CEO of Hyderabad-based renewable energy company Vibrant Energy.
+The western states of Gujarat and Rajasthan account for nearly 50% of India’s solar power capacity.
+Also, Indian policymakers expect nearly 70% of India’s installed power capacity to come from nonfossil sources by 2036.","BENGALURU, India (AP) — When India’s power demand surged at the height of summer, the country struggled to meet evening needs as air conditioners ran longer amid hotter nights. Despite this demand, some renewable energy providers were told to limit their output because the country had more clean electricity available than its grid could safely handle.
+
+In the last 15 months, India curtailed nearly 11 terawatt-hours of solar generation — enough electricity to power about 10 million homes, according to government data and research by energy think tank Ember. That solar power went unused even as extreme heat and poor monsoon rains drove up demand for power in India for cooling and pumping groundwater for agriculture.
+
+India, the world’s most populous country and one of the largest emitters of climate-polluting gases, is rapidly adding clean energy, especially solar, to its power mix. However, it can’t use all the clean power it could generate because of insufficient transmission and storage capacity and the technical difficulty of shifting between fossil power and renewables.
+
+Energy experts say that contradiction points to the next big challenge for India’s energy transition. Building solar and wind farms is no longer enough. India also needs more transmission lines to move electricity across the country, batteries to store renewable power until it is needed and a more flexible power system that can quickly adjust as wind and solar output rises or falls.
+
+“We’re in a stage where some of the biggest hurdles in renewables are starting to hit us,” said Neshwin Rodrigues, an energy analyst at Ember.
+
+Clean power gets switched off despite record demand
+
+India has more than 300 gigawatts of clean power capacity, more than half its total installed electricity capacity. But coal still produces most of the country’s electricity.
+
+Experts said the main reason for this is curtailment — when a wind or solar plant could produce electricity but is ordered to reduce or stop generation as the grid cannot take the power.
+
+Rodrigues said that when solar generation surges in the afternoon, it’s difficult for coal units to reduce their output because they are relatively inflexible and cannot ramp down quickly without compromising efficiency, increasing costs or risking operational problems.
+
+Trying to make thermal power plants flexible and adapt to increasing supply from clean energy sources “is like asking an elephant to dance,” said Vinay Pabba, CEO of Hyderabad-based renewable energy company Vibrant Energy.
+
+Pabba said curtailment results in losses for clean power developers. “We get paid only for what we put on the grid,” he said.
+
+The high concentration of renewable generation in western India has also meant that transmission lines in that part of the country get congested quickly. The western states of Gujarat and Rajasthan account for nearly 50% of India’s solar power capacity.
+
+“When solar peaks, usually in the afternoon, there is a limited pipe to evacuate it,” said Pabba.
+
+Another risk of not building storage quickly is that dirty fuels get used more. “Without enough storage, India risks keeping coal plants running even when cheap renewable power is available,” said Vibhuti Garg, South Asia director at the Institute for Energy Economics and Financial Analysis.
+
+While a solar or wind farm can sometimes be completed within two years, building new power lines can take a minimum of three years, according to energy experts.
+
+India has achieved only about 80% of its annual transmission construction targets over the past five years, research by Ember has found.
+
+Spreading more renewable development across other parts of the country, while adding more wind and smaller local solar projects, could reduce pressure on crowded transmission corridors and make the electricity supply more balanced throughout the day, said Disha Agarwal, an energy analyst at the New Delhi-based Council on Energy, Environment and Water.
+
+Agarwal said the challenge is likely to become more difficult as renewable capacity keeps rising.
+
+India is aiming for 500 gigawatts of clean electricity capacity by 2030. Also, Indian policymakers expect nearly 70% of India’s installed power capacity to come from nonfossil sources by 2036.
+
+Batteries could help save power for when it is needed
+
+A study released earlier this month by the India Energy and Climate Center at the University of California, Berkeley, found that renewable power backed by batteries can provide electricity with reliability approaching that of conventional power plants at a price researchers said is lower than the price of power from new coal-fired plants.
+
+Batteries make it possible to store solar electricity when it is abundant in the afternoon and discharge it after sunset, when demand remains high.
+
+But India’s storage sector remains far smaller than what planners said will eventually be required.
+
+“If we try to increase the solar installations without solving for energy storage, it is only going to lead to curtailment,” said Ankit Mittal, CEO of battery storage company Ingro Energy.
+
+Mittal said India is trying to transform several parts of its electricity system simultaneously as power demand rises. “Things that were supposed to happen over decades” are now happening at once, he said.
+
+The government said in July that it had about 3 gigawatts of battery storage and 7.4 gigawatts of operational pumped-storage capacity. It expects India’s storage needs to reach about 74 gigawatts by 2032.
+
+“If high quality energy storage projects are not built, we could be adding an additional layer of risk to grid operations while also decelerating our nation’s ability to achieve our energy transition targets,” said Avinash Rao, CEO of Mahindra Susten, a leading renewable energy company in India.
+
+Rodrigues, the energy analyst, said batteries can be built much more quickly than major transmission infrastructure, making them one of the fastest options for easing some immediate constraints.
+
+Industry stakeholders said that few, if any, foresaw the incredible increase in demand happening as the country’s transportation and other major sectors electrify and data centers are built.
+
+“None of us saw it coming. If we had seen it coming, we would have probably planned our way around it,” said Pabba of Vibrant Energy.
+
+___
+
+Sibi Arasu can be followed on X at @sibi123. Reach him at sarasu@ap.org.
+
+___",https://www.greenfieldreporter.com/wp-content/uploads/2026/09/preview-196.jpg,N,,2026-09-02 05:00:37.643575
 ,North Carolina Environment,2026-09-02 02:31:05+00:00,ESG Dive,Republican AGs press Big 4 firms over climate-related financial reporting | ESG Dive,Lamar Johnson,,,,,https://www.esgdive.com/news/republican-ags-press-big-4-firms-climate-related-financial-reporting-ey-kpmg-pwc-deloitte-letter/829261/,"Dive Brief: A coalition of 16 Republican state attorneys general sent letters to KPMG, Ernst & Young, PricewaterhouseCoopers and Deloitte last week alleging the firms have violated their duties of independence by supporting climate-related financial disclosures.
 The letter opens a new front on the narrative war and Republican AGs’ push to use antitrust laws to pressure the financial sector to eschew climate-related disclosures and climate-risk analysis.
 The same four state AG offices led an April letter to credit rating agencies Moody’s, Fitch and S&P and their alleged incorporation of ESG risk factors.
@@ -444,6 +877,7 @@ The AGs letter asks for the firms to explain the impact of their affiliations �
 NZFSPA disbanded in January, while TCFD was absorbed into the ISSB in 2021 and disbanded after its final progress report in 2023.
 
 State attorneys general for Alabama, Arkansas, Idaho, Iowa, Mississippi, Montana, North Dakota, Ohio, Oklahoma, South Carolina, South Dakota and West Virginia also signed the letter.",https://imgproxy.divecdn.com/jKy8kUZxCR36F-T0DawQ4Ns52fL_AFO9o5uhickPlqk/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzMwMjM0NTk1X2ZmQlpaOFcuanBn.webp,N,,2026-09-02 01:00:59.771758
+,EPA,2026-09-02 02:18:07+00:00,www.facebook.com,"At a rally in Michigan, Transportation Secretary Sean Duffy tells a crowd he hates stop-start ...",Not Available,,,,,https://www.facebook.com/MorningJoe/posts/at-a-rally-in-michigan-transportation-secretary-sean-duffy-tells-a-crowd-he-hate/1479832454180706/,"At a rally in Michigan, Transportation Secretary Sean Duffy tells a crowd he hates stop-start technology in cars and praises Environmental Protection...",Not Available,https://scontent-iad6-1.xx.fbcdn.net/v/t51.82787-15/790969587_18622645417048860_3182056553180781397_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a27664&_nc_ohc=WbqSLLEi5YoQ7kNvwGe_7m-&_nc_oc=Adq9xdkTgp-GjR239Q58dF6Tgn8_C0e0_jRlO-1r7UkANvXTsJD5nayrHh2ad4huFik&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=6RruWkDXJoKwzJmLTGublw&_nc_ss=7b289&oh=00_AQI6AcZA5IegXUbAbaFts1DivPVa056qSg8ItoB7JFMFzg&oe=6A9DD44B,N,,2026-09-02 05:00:33.536968
 ,Texas American Energy ,2026-09-02 01:56:38+00:00,Bloomberg.com,SoftBank's Data Center and Power Firm SB Energy Files for IPO - Bloomberg,Monique Mulima,,,,,https://www.bloomberg.com/news/articles/2026-09-01/softbank-backed-sb-energy-files-for-ipo-to-tap-ai-power-thirst,"SB Energy Inc., a data center firm backed by SoftBank Group Corp., filed for a US initial public offering to fund its ambitions providing infrastructure for artificial intelligence.
 The company combines data centers and solar power and battery energy storage, with 8.8 gigawatts of data center capacity contracted or under construction across its campuses in Texas and Ohio, according to a filing Tuesday with the US Securities and Exchange Commission.
 It also has 5.5 gigawatts (AC) of power projects contracted, under construction or operating.","SB Energy Inc., a data center firm backed by SoftBank Group Corp., filed for a US initial public offering to fund its ambitions providing infrastructure for artificial intelligence.
@@ -613,6 +1047,95 @@ Currently under construction and expected to be operational by the end of 2026, 
 As an independent power producer (IPP), Avantus plans to operate and maintain a controlling stake in Aratina 2, the second phase of the Aratina Solar Center. Together with Aratina 1, the projects will total 350 MW of solar and 952 MWh of battery storage, helping California meet growing energy demand with clean, dispatchable power. In July, Aratina 1 achieved commercial operations.
 
 Avantus is on track to bring 788 MW of solar and storage online by the end of 2026, with an additional 800 MW under construction. Its development pipeline totals more than 24 gigawatts of solar and storage capacity.",https://www.renewableenergymagazine.com/ficheroenergias/fotos/agenda/ampliada/a/avantus.jpg,N,,2026-09-01 22:02:01.311574
+,EVs,2026-09-02 00:22:35+00:00,kalkinemedia.com,How Is General Motors (NYSE:GM) Balancing Electric Ambitions With Hybrids?,Not Available,,,,,https://kalkinemedia.com/us/stocks/automobile/how-is-general-motors-nysegm-balancing-electric-ambitions-with-hybrids,"Highlights General Motors drew attention as a recalibrated electric strategy gained traction.
+General Motors drew attention as a recalibrated electric strategy blending battery-electric trucks with hybrids advanced, backed by major factory and battery commitments that kept the automaker central to the sector transition.
+The franchises that generate the bulk of the business must be defended even as capital flows toward electric platforms and battery supply.
+Electric vehicles have been described as remaining a guiding aim even as the path toward them grows more pragmatic.
+Adoption of battery-electric vehicles has progressed unevenly, shaped by pricing, charging access and the readiness of supporting infrastructure.","Highlights
+
+General Motors drew attention as a recalibrated electric strategy gained traction.
+
+Major commitments to domestic plants and battery capacity underpinned the story.
+
+A blend of battery-electric trucks and hybrids framed a more balanced approach.
+
+General Motors drew attention as a recalibrated electric strategy blending battery-electric trucks with hybrids advanced, backed by major factory and battery commitments that kept the automaker central to the sector transition.
+
+General Motors (NYSE:GM) Consumer Cyclical General Motors Company (NYSE:GM) 85.63 USD -0.690 ↓ 0.799% stayed firmly in view as the automaker advanced a recalibrated electric strategy that blends battery-electric trucks and sport-utility vehicles with a renewed emphasis on hybrids, underpinned by sizeable commitments to domestic factories and battery capacity. The evolving approach positioned the long-established manufacturer at the center of a wider industry conversation about how to pace the transition to electrification while sustaining the truck and utility franchises that anchor the business today.
+
+Sector backdrop for the transition
+
+The moves came against a backdrop in which automakers are rethinking how quickly to shift toward battery-electric transport, tempering earlier ambitions with a more measured cadence that leans on hybrids as a bridge. Coverage of that recalibration has tracked how heritage manufacturers adjust product plans and factory footprints, and readers following the theme can explore related developments on this automobile stocks hub, where the shift across established and emerging players continues to take shape.
+
+For a company with deep roots in trucks and utility vehicles, the transition demands careful sequencing. The franchises that generate the bulk of the business must be defended even as capital flows toward electric platforms and battery supply. Striking that balance, funding the shift without undermining the products that sustain it, has become the defining task, and the recalibrated strategy reflects an attempt to navigate it with greater flexibility.
+
+A recalibrated electric strategy
+
+At the heart of the story lies a pivot toward a more balanced mix, pairing continued commitment to battery-electric vehicles with an expanded role for hybrids, trucks and utility vehicles. Rather than racing toward an all-electric lineup on an aggressive timeline, the company has signaled a willingness to meet demand as it actually materializes, offering electrified choices across a spectrum of powertrains. Electric vehicles have been described as remaining a guiding aim even as the path toward them grows more pragmatic.
+
+A balanced approach acknowledges that adoption of battery-electric vehicles has not advanced in a straight line, with demand ebbing and flowing across segments and regions. By broadening the menu to include hybrids, the maker aims to serve buyers seeking improved efficiency without a full plug-in commitment, while continuing to build electric capability. The strategy trades the clarity of a single technology path for the resilience of a diversified lineup, a stance many peers have adopted.
+
+Major factory commitments
+
+Reinforcing the strategy, the company unveiled a substantial commitment to its domestic production facilities, including funds earmarked to convert an existing plant for the manufacture of electric versions of its flagship pickups. Directing significant capital toward electrifying the truck lineup signals intent to carry heritage strength in pickups into the battery-electric era, a segment where brand recognition and customer loyalty run deep. The scale of the commitment underscored the seriousness of the effort.
+
+Converting established plants for electric production is a demanding endeavor, requiring retooling, workforce training and coordination across a complex supply base. Yet anchoring electric truck manufacturing within existing domestic sites leverages infrastructure and expertise built over decades. The commitment framed the electrified pickup as a cornerstone of the strategy, aligning the transition with the products that most define the company identity in the market.
+
+Battery capacity and materials
+
+Complementing the vehicle plans, the company advanced commitments to battery manufacturing, including support for an additional cell plant, alongside moves to secure the raw materials that batteries require. A finalized government-backed loan tied to a domestic lithium project, pursued through a joint venture, reflected an effort to build a more secure and localized supply of a critical mineral. Controlling more of the battery chain has become central to the economics of electrification.
+
+Batteries account for a large share of an electric vehicle cost and performance, so securing capacity and materials is a strategic priority rather than a peripheral concern. By investing in cell production and upstream mineral supply, the maker seeks to insulate itself from shortages and price swings while improving control over quality and cost. That vertical reach into the battery chain strengthens the foundation on which the electrified lineup rests.
+
+Supply chain resilience
+
+The company also moved to shore up its supply base, signing a sizeable arrangement described as guarding against parts constraints. Recent years have taught the industry hard lessons about the fragility of global supply chains, as shortages of components rippled through production and disrupted output. Securing supply through longer arrangements represents an effort to build resilience and reduce the vulnerability that intermittent shortages can impose on a complex manufacturing operation.
+
+A more resilient supply chain supports steadier production, which in turn underpins the ability to deliver both established and electrified vehicles reliably. For a maker managing a transition, dependable access to components is essential, since disruptions can stall the ramp of new electric products just as much as they hamper existing lines. The arrangement fit within a broader emphasis on stabilizing the operational base amid an uncertain environment.
+
+Trucks and utility franchises
+
+Underpinning the whole strategy are the truck and utility franchises that have long defined the company. These vehicles command strong customer loyalty and generate the resources that help fund the transition, making their health central to the broader plan. Carrying that strength into electrified and hybrid forms, rather than treating electrification as a departure from heritage, has emerged as a guiding principle behind the recalibrated approach.
+
+Electrifying pickups and utility vehicles seeks to blend the appeal of established nameplates with the efficiency and technology of new powertrains. If executed well, that path could preserve the loyalty attached to the brands while extending it into a lower-emission era. The emphasis on trucks throughout the factory and battery commitments underscored how central these franchises remain to the company sense of its own direction.
+
+Autonomy and software adjacency
+
+Beyond hardware, the company has maintained involvement in efforts around automated driving and connected-vehicle software, threading it into the wider automation theme reshaping the sector. As value migrates toward software and services, engagement with driver-assistance and autonomy keeps the maker relevant to a dimension of competition that increasingly complements the traditional work of designing and building vehicles. That adjacency broadens the story beyond metal and batteries.
+
+Software-defined features and automated capabilities are becoming differentiators as much as horsepower or range, and staying engaged with those frontiers helps a heritage maker avoid ceding ground to technology-focused entrants. The company activity in this space complements its hardware strengths, positioning it to compete on the services and experience layer that is coming to define the modern vehicle.
+
+Competitive landscape
+
+The company contends with traditional rivals, electric-focused newcomers and global manufacturers pushing into battery-electric segments. In trucks and utility vehicles, its heritage offers a strong base, yet the electrified versions of those segments are drawing determined entrants. Prevailing depends on converting scale, brand loyalty and manufacturing depth into electric products that resonate on price, capability and dependability across an increasingly crowded field.
+
+A recalibrated strategy that leans on hybrids as a bridge distinguishes the company approach from makers pursuing faster all-electric timelines. Whether that measured cadence proves advantageous will depend on how demand evolves and how effectively the electrified truck and utility offerings land with buyers. The competitive stakes keep pressure on execution across every element of the plan, from factories to batteries to software.
+
+Market environment and index context
+
+The developments unfolded amid a broad market animated by technology and automation themes alongside caution over trade and demand. As a long-standing member of major benchmarks, the automaker sits within the S&P 500, and shifts in its fortunes feed into how the wider gauge of large domestic companies is read. That membership ties the name to the broader movement of market sentiment across sectors.
+
+Within a tape shaped by cross-currents, a heritage automaker recalibrating its electric plans tends to trade on the balance between confidence in its measured strategy and questions about the pace of the transition. That interplay was visible across the period, as commitments to factories and batteries vied with broader uncertainty over demand and trade for influence over how the shares were perceived.
+
+Business positioning
+
+Taken together, the strands present the company as a heritage manufacturer steering a pragmatic course through electrification, blending battery-electric trucks and utilities with hybrids while committing heavily to domestic factories, battery capacity and supply resilience. The recalibrated strategy embodies an effort to match the pace of the transition to real demand, protecting core franchises while building toward a more electrified lineup over time.
+
+For a market weighing established automakers against nimble entrants, the story turns on execution, on whether scale, brand loyalty and manufacturing depth can be translated into electrified products delivered profitably. The steady attention on the shares reflected a market prepared to credit the measured approach while remaining alert to the considerable work involved in carrying it through.
+
+Operational focus and execution
+
+Underlying the strategy is the demanding daily discipline of operating an expansive manufacturing enterprise, where assembly plants, supplier networks and dealer relationships must work in unison to keep vehicles reaching customers. That operational rigor frequently shapes how the forward-looking commitments are judged, since a credible electrified roadmap rests on a demonstrated ability to build and deliver reliably at scale. Managing the cost of the transition, while preserving the quality and dependability that customers associate with the brand, forms the practical bedrock beneath the announcements about new plants and batteries.
+
+The company also draws strength from a vast installed base of vehicles already on the road, supported by extensive service and parts operations that sustain a lasting connection to customers. That footprint provides steady activity and a familiar audience to which new electric and hybrid products can be introduced. Carrying those relationships into an electrified era, where servicing needs and ownership habits evolve, represents both a test and an advantage, giving the maker a broad platform from which to stage its transition over time.
+
+Industry developments shaping the theme
+
+The wider automobile industry has been passing through a stretch of rapid transformation, as electrification, software and shifting supply dynamics reshape how vehicles are conceived, manufactured and sold. Heritage makers have been adjusting product plans, retooling factories and forming new supply arrangements to keep pace. Within that current, the company recalibrated strategy has been read as one template for managing the transition, its measured blend of battery-electric and hybrid offerings watched as a signal of how the established side of the industry is adapting to conditions that remain unsettled.
+
+Adoption of battery-electric vehicles has progressed unevenly, shaped by pricing, charging access and the readiness of supporting infrastructure. Those practical realities have led many makers to hedge across powertrains rather than commit fully to a single path, and the company measured cadence reflects exactly that caution. By leaning on hybrids as a bridge while continuing to build electric capability, the maker positions itself to meet demand as it actually emerges, mirroring a pragmatism that has spread across the sector in recent times.
+
+The economics of batteries and critical minerals have moved to the center of that industry conversation, since the cost and availability of cells shape how affordably electric vehicles can be built. The company commitments to battery capacity and localized mineral supply speak directly to that reality, aligning it with a broader push across the sector to secure the foundations of electrified manufacturing rather than leaving them exposed to distant and volatile supply chains.",https://kalkinemedia.com/storage/uploads/original/1603558318_5f945bae434b4_car_retail.jpg,N,,2026-09-02 05:00:22.586007
 ,Texas Environment,2026-09-02 00:16:03+00:00,The Conversation,Data center projects in Pennsylvania face stronger local scrutiny after Shapiro's executive order,Michael Helbing,,,,,https://theconversation.com/data-center-projects-in-pennsylvania-face-stronger-local-scrutiny-after-shapiros-executive-order-290136,"Governors across the country are relying on their executive powers to address the increasing public backlash against data center proposals.
 Josh Shapiro signed executive order 2026-05 on Aug. 18, 2026, placing restrictions on the state’s review of permits related to data centers.
 What the executive order does Shapiro’s executive order does not completely stop data center permitting activities.
@@ -1340,8 +1863,8 @@ Originally engaged to carry out an estimate review for the facility’s developm
 
 ""The outstanding partnership we have with Turner & Townsend will play a key role in our success on this multibillion-dollar project.”",,N,,2026-09-01 22:59:23.524790
 ,American Energy,2026-09-01 21:17:20+00:00,www.atlanticcouncil.org,What the US executive order on bulk-power systems gets right—and what's missing,Not Available,,,,,https://www.atlanticcouncil.org/blogs/energysource/what-the-us-executive-order-on-bulk-power-systems-gets-right-and-whats-missing/,"The order covers dozens of categories of electricity system equipment, including generation technologies, transmission equipment, energy storage ...",Not Available,,N,,2026-09-01 22:02:44.177184
-,EPA,2026-09-01 21:13:26+00:00,www.spglobal.com,Air permits for data centers heated topic ahead of EPA rule revision - S&P Global,Not Available,,,,,https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/083126-air-permits-for-data-centers-heated-topic-ahead-of-epa-rule-revision,"... Environmental Protection Agency. ""The proposed rule would allow Ohio EPA to continue its current public participation process but also provide the ...",Not Available,,N,,2026-09-01 20:03:27.350220
 ,Clean Energy ,2026-09-01 21:13:26+00:00,www.spglobal.com,"JERA, JERA Cross launch decarbonization project for rice packaging in Japan - S&P Global",Not Available,,,,,https://www.spglobal.com/energy/en/news-research/latest-news/energy-transition/090126-jera-jera-cross-launch-decarbonization-project-for-rice-packaging-in-japan,"Renewable power supply begins at Japan Pack Rice Oga. Aims to decarbonize packaged rice production process. To expand renewable energy use, ...",Not Available,,N,,2026-09-01 20:03:06.785843
+,EPA,2026-09-01 21:13:26+00:00,www.spglobal.com,Air permits for data centers heated topic ahead of EPA rule revision - S&P Global,Not Available,,,,,https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/083126-air-permits-for-data-centers-heated-topic-ahead-of-epa-rule-revision,"... Environmental Protection Agency. ""The proposed rule would allow Ohio EPA to continue its current public participation process but also provide the ...",Not Available,,N,,2026-09-01 20:03:27.350220
 ,Clean Energy ,2026-09-01 21:04:01+00:00,techxplore.com,Nature-inspired 3D printing could improve large-scale renewable energy storage,Not Available,,,,,https://techxplore.com/news/2026-09-nature-3d-large-scale-renewable.html,"""With 3D printing, we can design the internal structure of an electrode in ways that are difficult to achieve using conventional manufacturing,"" said ...",Not Available,,N,,2026-09-01 18:04:00.154248
 ,EPA,2026-09-01 21:00:08+00:00,American Farm Bureau Federation,Small Refinery Exemptions Offer a Mixed Bag for Farmers | Newsline,"Brian Glenn, Chad Smith",,,,,https://www.fb.org/newsline/small-refinery-exemptions-offer-a-mixed-bag-for-farmers,"The Environmental Protection Agency’s announcement of several small refinery exemptions offered mixed news for U.S. farmers.
 Chad Smith reports.",The Environmental Protection Agency’s announcement of several small refinery exemptions offered mixed news for U.S. farmers. Chad Smith reports.,https://www.fb.org/imgz/Issues/Energy/_socialwFacebook/AFBF_IA_SGarrett_fuelpump-2.jpg,N,,2026-09-01 22:02:52.250190
@@ -21288,47 +21811,3 @@ Currently, there is insufficient validation that the proposed SMR designs are sa
 ,EVs,2026-08-30 09:03:06+00:00,ETAuto.com,Expect demand for electric CV to remain strong: Tata Motors MD & CEO - ET Auto,"ET Auto, www.ETAuto.com",,,,,https://auto.economictimes.indiatimes.com/amp/news/commercial-vehicle/expect-demand-for-electric-cv-to-remain-strong-tata-motors-md-ceo/133625998,"Join the community of 2M+ industry professionals Subscribe to our Daily, Weekly, and Evening NewsLetter, Take a look","Join the community of 2M+ industry professionals
 
 Subscribe to our Daily, Weekly, and Evening NewsLetter, Take a look","https://etimg.etb2bimg.com/thumb/msid-133625998,imgsize-56374,width-1200,height=627,overlay-etauto,resizemode-75/commercial-vehicle/expect-demand-for-electric-cv-to-remain-strong-tata-motors-md-ceo.jpg",N,,2026-08-30 07:58:24.447345
-,EVs,2026-08-30 09:00:12+00:00,www.vietnam.vn,"South Africa bets on electric vehicles, aiming to master the battery value chain. - Vietnam.vn",,,,,,https://www.vietnam.vn/en/nam-phi-dat-cuoc-vao-xe-dien-huong-toi-lam-chu-chuoi-gia-tri-pin,Tag: South African automotive industrystrategic mineralstrambattery manufacturingSouth Africaenergy conversionElectric vehicle value chain. Comment ...,Not Available,,Y,,2026-08-30 07:58:28.131155
-,EPA,2026-08-30 08:57:09+00:00,www.facebook.com,EPA Administrator Lee Zeldin and Vice President JD Vance demand an independent probe ...,Not Available,,,,,https://www.facebook.com/wtol11/posts/epa-administrator-lee-zeldin-and-vice-president-jd-vance-demand-an-independent-p/1546319690871216/,"So, East Palestine mayor Trent Conway ""republican"" tells Biden, no need to visit.
-Biden visits a couple days later.
-Then calls Dewine ""republican"" governor and says anything you need.
-Tested air,water and soil.
-The ash in the soil, that is around the area is now being tested again.","So, East Palestine mayor Trent Conway ""republican"" tells Biden, no need to visit. Biden visits a couple days later. Then calls Dewine ""republican"" governor and says anything you need. Dewine says he'll call but he's not seeing a problem. Not mentioned that the EPA went to the site. Tested air,water and soil. Then stated the contamination was below the threshold and posed no health risk. The ash in the soil, that is around the area is now being tested again. Vance and Brown put forward a Safety Railroad bill. That would have regulations on railway transport of hazardous material. Which still hasn't passed. But this is all Biden's fault?",https://external-iad3-1.xx.fbcdn.net/emg1/v/t13/9159423190488882936?url=https%3a%2f%2fmedia.wtol.com%2fassets%2fWKYC%2fimages%2ffa04c1f7-3a6a-455e-a961-619797682d40%2f20260829T021432%2ffa04c1f7-3a6a-455e-a961-619797682d40_1920x1080.jpg&fb_obo=1&utld=wtol.com&dfr=1&stp=dst-jpg_p600x600_tt6&_nc_gid=MDoZWAU3By1XJGFiI33KHQ&_nc_oc=Adpk080_CvBUrhgmJ_NfbB014hhpyzqoNMwPdiTl3yDKpmmFPc3Y3F1mSlzrhvljygg&ccb=13-1&oh=06_Q3_CAX7GK3i34_YAoMn1JiwxZez1ninGWGzYkCJlcMr9tChv&oe=6A9634A1&_nc_sid=867500,N,,2026-08-30 12:05:44.886952
-,Clean Energy ,2026-08-30 08:08:18+00:00,OilPrice.com,Mexico's Green Energy Push Is Finally Gaining Momentum | OilPrice.com,Felicity Bradstock,,,,,https://oilprice.com/Energy/Energy-General/Mexicos-Green-Energy-Push-Is-Finally-Gaining-Momentum.html,"President Claudia Sheinbaum has launched an energy reform that opens Mexico’s energy sector to greater private investment and focuses on expanding the country’s renewable energy sector.
-We are working on the energy transition: moving toward greater participation of renewable energy sources in the electricity we consume.
-The government aims to increase the share of renewable energy in the electricity mix from 24 per cent to 38 per cent by 2030.
-This decision was widely criticised for deterring investment in the energy sector and delaying Mexico’s green transition.
-After a stalled start, the Mexican government is supporting the accelerated rollout of renewable energy projects to help achieve its green transition aims.","After a delayed start under the previous government, Mexico is now well on its way to undergoing a green transition. President Claudia Sheinbaum has launched an energy reform that opens Mexico’s energy sector to greater private investment and focuses on expanding the country’s renewable energy sector. Meanwhile, the approval of several solar and wind projects demonstrates the government’s commitment to the accelerated deployment of clean energy.
-
-In February, Sheinbaum launched Mexico’s strategic energy transition roadmap, which includes achieving oil production of 1.8 million bpd and deploying a $43.6 billion investment package. The government aims to add more than 32 GW of new electrical generation capacity by 2030, at least 70 per cent of which should come from renewable sources.
-
-During the announcement, Sheinbaum stated, “Mexico not only has oil: it has sun and wind, clean energies that allow for fewer environmental impacts. We are working on the energy transition: moving toward greater participation of renewable energy sources in the electricity we consume. And that is the most important objective between now and 2030.”
-
-The roadmap includes renewable energy-specific targets, including increasing photovoltaic generation by 140 per cent, geothermal by 90 per cent, wind energy by 70 per cent, and hydroelectric energy – through the maintenance of existing plants – by 18 per cent. The government aims to increase the share of renewable energy in the electricity mix from 24 per cent to 38 per cent by 2030.
-
-Achieving these goals will require a significant acceleration in the deployment of clean energy sources, particularly compared with previous years, when foreign investment in renewables was highly restricted. Between 2018 and 2024, former Mexican President Andrés Manuel López Obrador (AMLO) pushed for greater nationalisation, citing greedy international energy companies and sectoral corruption as reasons for the move. This decision was widely criticised for deterring investment in the energy sector and delaying Mexico’s green transition.
-
-However, AMLO’s successor, President Sheinbaum, has gone in a different direction. During her electoral campaign, Sheinbaum stated that she planned to spend at least $13.6 billion on renewables. Once in power, Sheinbaum announced that private companies would be permitted to add up to 9.6 GW of renewable capacity by 2030 via a new framework that allows 46 per cent of electricity generation to come from private investments – with the rest being operated by the state-owned electricity company CFE – marking a shift away from AMLO’s strict energy nationalisation strategy.
-
-Mexico is now welcoming investment in renewable energy projects, particularly in solar power. The country’s installed photovoltaic capacity is projected to more than triple by 2035, to 37.8 GW, growing at a compound annual growth rate of roughly 10.7 per cent between 2024 and 2035. A 2025 report from the thinktank Ember Energy suggests that Mexico has favourable climatic conditions for solar energy, which could supply close to 90 per cent of national electricity demand if exploited. However, solar power contributed just 6.6 per cent of Mexico’s electricity generation in 2023.
-
-To date, Mexico’s largest solar farm is located in the city of Puerto Peñasco in the northern state of Sonora. Phase one of four was completed in April 2023 and provides 120 MW of clean energy, while phase two, launched in September 2024, added 300 MW. The development of phase three is currently underway. Puerto Peñasco is expected to have 1 GW of installed capacity and 246 MW of battery storage once complete, making it the largest solar power plant in the Americas and the fifth-largest worldwide.
-
-In August, the Danish energy infrastructure investor Copenhagen Infrastructure Partners (CIP) announced it had reached a final investment decision for the 420 MW solar-plus-storage La Esperanza Solar project, the company’s first investment in Mexico to reach financial close, representing the firm’s growing renewables portfolio in Latin America.
-
-Construction is currently underway on La Esperanza in the southeastern Mexican state of Campeche, on the Yucatán Peninsula. The project is expected to come online in 2028 and will incorporate 150 MW of battery storage. Project funding comprises approximately $510 million in debt facilities provided by a consortium, with BNP Paribas, JPMorgan Chase Bank, Natixis CIB, Santander, and Scotiabank.
-
-Mexico is also home to 76 wind farms across 16 states, with an installed capacity of 8,131 MW and over 3,300 wind turbines. The sector provides power for as many as 12.1 million households and supports over 10,000 jobs. Mexico is expected to attract between $4 billion and $5 billion of investment in wind energy by 2030, with 2,159 MW of new installed capacity, according to estimates from the National Energy Control Centre, the National Energy Commission, and the Mexican Wind Energy Association.
-
-After a stalled start, the Mexican government is supporting the accelerated rollout of renewable energy projects to help achieve its green transition aims. This is being supported by the establishment of favourable policies and energy reforms, and greater openness to private investment, which has led to the launch of several new green energy projects in recent years.
-
-By Felicity Bradstock for Oilprice.com
-
-More Top Reads From Oilprice.com
-
-Aramco Finds a New Way to Keep Saudi Crude Flowing to China
-
-MIT Uses AI to Challenge a Century-Old Process for Mass Ammonia Production
-
-Qatar and Kuwait Restore 70% of Pre-War Oil Exports Through Hormuz",https://d32r1sh890xpii.cloudfront.net/article/1200x675/2026-08-28_0ruhimlolx.jpg,N,,2026-08-30 07:58:36.907173
-,Clean Energy ,2026-08-30 08:07:01+00:00,marbleheadcurrent.org,"SUSTAINABLE MARBLEHEAD: Electric vehicles: Clean, affordable, fun",Not Available,,,,,https://marbleheadcurrent.org/2026/08/30/sustainable-marblehead-electric-vehicles-clean-affordable-fun/,This will only take a few seconds...,This will only take a few seconds...,"data:;base64,=",N,,2026-08-30 07:00:27.967252
