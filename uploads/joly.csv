@@ -1,4 +1,63 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID33,Nvidia,2026-09-07 16:52:54+00:00,24/7 Wall St.,Nvidia Is No Longer Just a Chip Company. It's the Infrastructure Platform for All of AI,Rich Duprey,,,,,https://247wallst.com/investing/2026/09/07/nvidia-is-no-longer-just-a-chip-company-its-the-infrastructure-platform-for-all-of-ai/,"Q4 AI semiconductor guidance is $21.7 billion, and management framed a fiscal 2027 AI outlook of approximately $115 billion and fiscal 2028 AI outlook of $230 billion.
+First, it co-designs custom AI accelerators, called XPUs, with a handful of hyperscale customers who want silicon tuned to their own workloads instead of a general-purpose GPU.
+Risk: valuation is stretched at 180x earnings, HBM memory supply is tight, and US export controls on AI accelerators remain a live constraint.
+Xeon server CPUs remain the host processors that pair with AI accelerators, and Xeon 6 was selected as the host CPU for NVIDIA’s DGX Rubin NVL8.
+What This Layer Says About the Rest of the Stack The silicon layer is where the AI buildout starts and where it currently stops.","Every AI story eventually collapses back to one question: who makes the silicon? This is the layer that sits at the physical floor of the AI stack, and it is where supply sets the pace. On its August earnings call, NVIDIA told investors that fiscal 2028 revenue should grow approximately 70% and explicitly described that outlook as “supply-constrained”, with CEO Jensen Huang adding that “our entire supply chain is challenged. And everybody is really running flat out.” The chip designers below have the orders. Getting the wafers, memory, substrates, and power to fill them is the fight.
+
+NVIDIA: From GPU Vendor to Full Stack AI Factory
+
+NVIDIA (NASDAQ:NVDA | NVDA Price Prediction) reported Q2 FY2027 revenue of $96.221 billion, up 105.85% year over year, with Data Center revenue of $89.023 billion and non-GAAP EPS of $2.22 against a $2.0887 consensus. Guidance for Q3 FY2027 is $108.0 billion, plus or minus 2%. Shares closed at $230.36 on September 4, up 23.67% year to date and 34.37% over the past year.
+
+What is actually being sold has changed. Management described NVIDIA as offering “a full-stack AI factory platform” spanning the Vera CPU, Rubin GPU, NVLink and InfiniBand, Ethernet networking, systems, algorithms, and CUDA software. In plain language, NVIDIA now ships the compute, the plumbing that connects it, the racks it goes into, and the software layer developers write against. Revenue opportunity per gigawatt of AI infrastructure has expanded from roughly $18 billion per gigawatt with Hopper to $25 billion per gigawatt with Blackwell to $40 billion per gigawatt with Vera Rubin. NVIDIA also disclosed partnerships with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, and KKR to mobilize over $500 billion in third-party capital for AI infrastructure, plus a SoftBank Energy campus in Ohio hosting NVIDIA compute for OpenAI under 20-year leases.
+
+Bull case in plain language: NVIDIA now captures more dollars per gigawatt every generation, and CUDA keeps the developer base locked in. Management said “NVIDIA Compute is fully utilized across every cloud we serve”, and hyperscalers are sitting on cloud backlogs greater than $2 trillion. Adoption trends support the runway: US firm-level AI adoption has grown from approximately 4% in January 2024 to over 20% by late 2026, currently at 22.4% as of September 2026.
+
+Risk: $279B in supply obligations, no assumed China Data Center compute revenue in the outlook, and concentrated exposure to a handful of hyperscale and frontier-lab customers. The stock trades at 46x trailing earnings.
+
+Broadcom: Custom Accelerators and the Rest of the Network
+
+Broadcom (NASDAQ:AVGO) posted Q3 FY2026 revenue of $29.59 billion, up 85.5% year over year, with AI semiconductor revenue of $16.70 billion, up 221%. Q4 AI semiconductor guidance is $21.7 billion, and management framed a fiscal 2027 AI outlook of approximately $115 billion and fiscal 2028 AI outlook of $230 billion.
+
+Broadcom does two things at this layer. First, it co-designs custom AI accelerators, called XPUs, with a handful of hyperscale customers who want silicon tuned to their own workloads instead of a general-purpose GPU. Second, it supplies the Ethernet switch chips and optical DSPs that move data between those accelerators. XPUs represented 73% of AI revenue during the quarter, and CEO Hock Tan said custom accelerators can run frontier models at “half the cost of a GPU.” Named deployments include Google TPU v8i in high volume, one gigawatt of Ironwood for Anthropic in 2026, and Jalapeno, OpenAI’s first-generation custom accelerator.
+
+Bull case: Broadcom is the largest structural alternative to selling everything to NVIDIA, and its Tomahawk 6 switch silicon is deployed by “pretty much all of the AI hyperscalers”, including customers not using Broadcom XPUs. Shares are up 17.78% over the past year at $357.90, though the stock is down 14.44% over the past month after its post-earnings pullback.
+
+Risk: Broadcom’s AI business rests on six XPU customers. Any slippage in Anthropic, OpenAI, Google, or Meta buildouts flows straight through the model. The company also carries significant indebtedness.
+
+AMD: EPYC, Instinct, and the Helios Rack
+
+Advanced Micro Devices (NASDAQ:AMD) reported Q2 2026 revenue of $11.536 billion, up 50.11% year over year, with Data Center revenue of $6.718 billion, up 107%. Non-GAAP EPS was $1.66. Q3 guidance is approximately $13 billion, plus or minus $300 million.
+
+AMD sells two things at this layer. EPYC server CPUs, which are the general-purpose processors that manage AI systems and run the rest of the data center, and Instinct GPU accelerators, which compete directly with NVIDIA on training and inference. Helios, AMD’s rack-scale platform, bundles EPYC Venice CPUs, MI450 series GPUs, Pensando networking, and Rackham software into a single pre-integrated rack. CEO Lisa Su said “customer pull for Helios is very strong and tracking ahead of our initial forecasts.” Anthropic committed to deploy up to 2 gigawatts of MI450 Series GPUs in Helios racks, and Meta plans up to 6 gigawatts of Instinct capacity. AMD now expects the data-center AI accelerator market to grow more than 45% annually to approximately $1.4 trillion by 2030, per its own management framework disclosed on the Q2 call.
+
+Bull case: AMD is the only credible second-source GPU vendor at scale, and shares reflect that view, up 195.18% over the past year and 123% year to date at $477.57. EPYC continues to take x86 server share.
+
+Risk: valuation is stretched at 180x earnings, HBM memory supply is tight, and US export controls on AI accelerators remain a live constraint.
+
+Marvell: The Custom Silicon and Interconnect Specialist
+
+Marvell Technology (NASDAQ:MRVL) delivered Q2 FY2027 revenue of $2.739 billion, up 36.5% year over year, with Data Center revenue of $2.1715 billion, up 46% and representing 79% of total revenue. Non-GAAP EPS was $0.94. Q3 guidance is $3.150 billion, plus or minus 5%.
+
+Marvell operates in two adjacent parts of the silicon layer. It designs custom XPU chips and XPU-attached silicon (inference accelerators, storage controllers, network interface controllers, memory interface controllers, CXL products) for hyperscalers, and it makes the high-speed optical DSPs and Ethernet scale-out switch silicon that connect AI clusters together. In plain language, Marvell builds the specialized chips that let hyperscalers move data between racks, between rows, and increasingly between data centers, at 800G and 1.6T speeds. Marvell also disclosed an expanded custom silicon partnership with Google that includes a warrant allowing Google to acquire up to 7% of Marvell shares tied to revenue milestones. Management said the custom business will “more than double year over year in fiscal 2028” and accelerate significantly in fiscal 2029.
+
+Bull case: Marvell’s optical DSPs, 51.2T switch silicon, and scale-up optics are on trajectory toward $1 billion annualized revenue run rate each, and CEO Matt Murphy said “the magnitude of our scale-up optics opportunity next year is much larger than we thought just a quarter ago.” Shares are up 249.5% over the past year at $223.55, with an Investor Day on October 6, 2026.
+
+Risk: heavy customer concentration in a small number of hyperscalers, plus the ongoing risk that those same customers vertically integrate more of the design work in-house. $4.96B long-term debt on the balance sheet.
+
+Intel: Xeon, Foundry, and a Live Turnaround
+
+Intel (NASDAQ:INTC) reported Q2 2026 revenue of $16.13 billion, up 25.42% year over year, its strongest revenue growth in more than fifteen years. Data Center and AI revenue was $6.26 billion, up 59%. Non-GAAP EPS was $0.42 against a $0.2175 consensus. Intel Foundry still posted a $2.1 billion quarterly operating loss. Q3 guidance is $15.8 billion to $16.8 billion.
+
+Intel plays two roles here. Xeon server CPUs remain the host processors that pair with AI accelerators, and Xeon 6 was selected as the host CPU for NVIDIA’s DGX Rubin NVL8. Intel Foundry is the second bet: Intel 18A is now in volume production, Intel 18AP is in risk production, and the company is positioning itself as an alternative US-based wafer supplier for advanced logic. CEO Lip-Bu Tan said “AI is driving unprecedented demand for compute” and that server CPU demand “continues to far outpace available supply.” Purpose-built silicon revenue nearly tripled year over year, and CFO David Zinsner said the ASIC business is approaching a $2 billion run rate, with a target of $4 billion.
+
+Bull case: Xeon demand is the strongest on record, 18A is ramping ahead of internal targets, and the US government now holds an equity stake, alongside a $5.0 billion NVIDIA equity investment. Shares are up 289.27% over the past year and 159.62% year to date at $95.80.
+
+Risk: Intel Foundry remains deeply unprofitable, capital intensity is enormous, and management has said Intel 14A depends on securing sufficient external customer demand. The turnaround is real, but so is the execution burden.
+
+What This Layer Says About the Rest of the Stack
+
+The silicon layer is where the AI buildout starts and where it currently stops. NVIDIA has moved past the chip vendor label and now sells the platform that hyperscalers, sovereigns, and frontier labs build on, with revenue per gigawatt rising every generation. Broadcom, AMD, Marvell, and Intel each attack a different piece of the same problem: custom accelerators, second-source GPUs, custom interconnect, host CPUs, and domestic wafer capacity. All five are blue-chip mega-caps with real revenue attached to named hyperscaler deployments, and all five are supply-constrained heading into 2027. Every one of those gigawatts also has to be powered, cooled, and networked by somebody else, which is the angle we took in a free report on seven AI infrastructure suppliers that aren’t chipmakers.",https://247wallst.com/wp-content/uploads/2026/08/shutterstock_2752789185.jpg,N,,2026-09-07 14:06:41.406948
 ID29,Michelin,2026-09-07 15:47:57+00:00,GlobeNewswire News Room,Michelin launches a new global employee share ownership plan “BIB'Action 2026” - GlobeNewswire,Michelin,,,,,https://www.globenewswire.com/news-release/2026/09/07/3357186/0/en/michelin-commitment-and-value-sharing-michelin-launches-a-new-global-employee-share-ownership-plan-bib-action-2026.html,"Clermont-Ferrand, September 7, 2026 COMPAGNIE GÉNÉRALE DES ÉTABLISSEMENTS MICHELIN Commitment and value sharing: Michelin launches a new global employee share ownership plan “BIB’Action 2026” Compagnie Générale des Établissements Michelin (hereinafter the “Company”) today announced the launch of its new employee share ownership plan, open to around 114 000 eligible active employees in 44 countries1.
 Florent Menegaux, Chief Executive Officer of the Michelin Group, stated: ' Today, nearly 65% of our employees are shareholders.
 This press release does not constitute an offer to sell or a solicitation to subscribe to Michelin shares.
@@ -11034,6 +11093,35 @@ S&P is in the early stages of exploring options for the unit, which could includ
 In a spinoff scenario, the unit could fetch a valuation in the high single-digit billions of dollars, said the people, who asked not to be named discussing private plans.","S&P Global Inc. is considering spinning out its flagship data and research platform Capital IQ Pro, in a move that could create a standalone firm worth billions of dollars.
 
 S&P is in the early stages of exploring options for the unit, which could include creating a publicly listed entity, according to people familiar with the matter. In a spinoff scenario, the unit could fetch a valuation in the high single-digit billions of dollars, said the people, who asked not to be named discussing private plans.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/igvSUCf1ycgs/v1/1200x800.jpg,N,,2026-09-01 17:09:53.863754
+ID33,Nvidia,2026-09-01 17:23:33+00:00,24/7 Wall St.,Is Nvidia's $35 Billion Anthropic Pact the Ultimate Circular Financing Play? - 24/7 Wall St.,Rich Duprey,,,,,https://247wallst.com/investing/2026/09/01/is-nvidias-35-billion-anthropic-pact-the-ultimate-circular-financing-play/,"$35 Billion at a Glance $35 billion.
+That is the size of the cloud compute deal Anthropic just signed, backed by NVIDIA (NASDAQ:NVDA | NVDA Price Prediction), according to a Wall Street Journal report.
+Under the arrangement, Anthropic will rent GPU compute from Lambda, an Nvidia backed cloud provider.
+The Anthropic deal follows a separate $45 billion agreement Anthropic signed earlier in August with EnCore, another Nvidia backed cloud provider.
+Whether $35 billion of Anthropic compute becomes recurring cash or a footnote on a guarantee schedule depends on one thing: how many tokens Claude sells.","$35 Billion at a Glance
+
+$35 billion. That is the size of the cloud compute deal Anthropic just signed, backed by NVIDIA (NASDAQ:NVDA | NVDA Price Prediction), according to a Wall Street Journal report. Under the arrangement, Anthropic will rent GPU compute from Lambda, an Nvidia backed cloud provider. NVIDIA supplies the chips and holds the lease on the underlying data center, a 700 megawatt campus in Nueces County, Texas being developed by Hut 8. The figure represents a contracted commitment across a multi year term, distinct from reported revenue.
+
+What the Anchor Role Really Buys
+
+NVIDIA is playing three roles in one transaction: chip supplier, equity backer of the intermediate cloud (Lambda), and lease anchor on the physical site. NVIDIA had signed its own agreement with Hut 8 weeks earlier to secure that capacity, with Lambda now plugging in to provide compute to Anthropic. The 700 megawatt campus is a reminder that the chips are only part of the buildout: the power, cooling, and networking suppliers behind sites like this are the subject of a free report we put together here. The Anthropic deal follows a separate $45 billion agreement Anthropic signed earlier in August with EnCore, another Nvidia backed cloud provider.
+
+The mechanics compound existing balance sheet commitments. NVIDIA closed Q2 FY27 with $279.00 billion in supply obligations and $108.5 billion in guarantee obligations for AI cloud and data center partners. CFO Colette Kress told analysts NVIDIA has “invested nearly 50 billion in the Frontier AI Labs” and expects AI lab demand supported by its balance sheet to represent “roughly a quarter of our business next year.”
+
+Market Reaction Since the Filing
+
+NVDA is up 5.9% over the past week and 18.52% year to date through August 31, 2026. Shares traded at $219.37 intraday on September 1, 2026, off 0.64% from the prior close of $220.78. Market cap sits at $5.33 trillion.
+
+Bear Case: Balance Sheet as a Service
+
+The Anthropic pact is a cleaner example of the circular financing critique than any equity investment NVIDIA has disclosed. NVIDIA underwrites the facility, backs the cloud tenant, and supplies the silicon that generates the rental revenue flowing back through the chain. Kress acknowledged the framing on the Q2 FY27 call: “We recognize the scale of this support, and we know some will call this circular financing. We see it differently.” Her defense rested on fungibility: “The NVIDIA Compute platform is fungible and durable and can be redeployed to support other customers.”
+
+The risk map is denser than a single deal. Days sales outstanding stretched to 60 days from 45 days on extended payment terms for large investment-grade customers. Inventory reached $32 billion ahead of the Vera Rubin ramp. Gross margin is guided to 74.0% in Q3, and management said it will “bottom in Q4 in the 71% to 72% range” as memory costs climb. Analyst Vivek Arya of Bank of America pressed the tension directly: “A lot of these investments are designed to help the frontier labs, especially OpenAI and Anthropic, but both of them are designing their own custom chips.”
+
+The deal ties NVIDIA’s reported growth to counterparties whose “balance sheets and credit profiles” cannot yet independently finance the compute they consume. That is the same loop skeptics flagged when NVIDIA lined up Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, and KKR to raise “over $500 billion of third-party capital” for the same customer set.
+
+Bottom Line for Long Term Holders
+
+The Anthropic pact is a stress test of NVIDIA’s ecosystem thesis. The company delivered Q2 FY27 revenue of $96.22 billion, up 105.85% year over year, and guided Q3 to $108.0 billion. The next scheduled catalyst for shareholders is the $0.25 quarterly dividend, with a record date of September 10, 2026 and payment on October 1, 2026. Whether $35 billion of Anthropic compute becomes recurring cash or a footnote on a guarantee schedule depends on one thing: how many tokens Claude sells.",https://247wallst.com/wp-content/uploads/2026/08/Bank-of-Nvidia.jpg,N,,2026-09-01 15:08:54.811229
 ID18,Eli Lilly,2026-09-01 17:23:33+00:00,24/7 Wall St.,Insurers Are Pulling Back From GLP-1 Drugs. The FDA Just Handed Eli Lilly Its Best Weapon Yet,Omor Ibne Ehsan,,,,,https://247wallst.com/investing/2026/09/01/insurers-are-pulling-back-from-glp-1-drugs-the-fda-just-handed-eli-lilly-its-best-weapon-yet/,"Against that retreat, Eli Lilly (NYSE:LLY | LLY Price Prediction) just received something it can actually use in a payer meeting.
 On August 28, 2026, the FDA expanded Mounjaro’s label to reduce the risk of cardiovascular death, heart attack, and stroke in adults with type 2 diabetes at high cardiovascular risk.
 This is a diabetes label rather than a Zepbound obesity label, and the distinction matters for how much of the coverage rollback it can actually blunt.
@@ -11065,35 +11153,6 @@ The label likely protects diabetes reimbursement more than it reopens obesity co
 But it does give Lilly medical-necessity language for the diabetes patients most likely to be cut in a cost review, and, combined with the Medicare Bridge Program covering 20 million eligible Americans at $50 per month, it meaningfully narrows the exposure.
 
 Shares trade at $1,174.61 and 32x forward earnings, with an analyst target of $1,315.04. The stock is down 6.44% in the past week, so the market has not yet priced the cardiovascular claim as a coverage shield. If Lilly can turn the label into contract language rather than press releases, that gap closes.",https://247wallst.com/wp-content/uploads/2025/07/Wegovy.jpg,N,,2026-09-01 14:11:49.627839
-ID33,Nvidia,2026-09-01 17:23:33+00:00,24/7 Wall St.,Is Nvidia's $35 Billion Anthropic Pact the Ultimate Circular Financing Play? - 24/7 Wall St.,Rich Duprey,,,,,https://247wallst.com/investing/2026/09/01/is-nvidias-35-billion-anthropic-pact-the-ultimate-circular-financing-play/,"$35 Billion at a Glance $35 billion.
-That is the size of the cloud compute deal Anthropic just signed, backed by NVIDIA (NASDAQ:NVDA | NVDA Price Prediction), according to a Wall Street Journal report.
-Under the arrangement, Anthropic will rent GPU compute from Lambda, an Nvidia backed cloud provider.
-The Anthropic deal follows a separate $45 billion agreement Anthropic signed earlier in August with EnCore, another Nvidia backed cloud provider.
-Whether $35 billion of Anthropic compute becomes recurring cash or a footnote on a guarantee schedule depends on one thing: how many tokens Claude sells.","$35 Billion at a Glance
-
-$35 billion. That is the size of the cloud compute deal Anthropic just signed, backed by NVIDIA (NASDAQ:NVDA | NVDA Price Prediction), according to a Wall Street Journal report. Under the arrangement, Anthropic will rent GPU compute from Lambda, an Nvidia backed cloud provider. NVIDIA supplies the chips and holds the lease on the underlying data center, a 700 megawatt campus in Nueces County, Texas being developed by Hut 8. The figure represents a contracted commitment across a multi year term, distinct from reported revenue.
-
-What the Anchor Role Really Buys
-
-NVIDIA is playing three roles in one transaction: chip supplier, equity backer of the intermediate cloud (Lambda), and lease anchor on the physical site. NVIDIA had signed its own agreement with Hut 8 weeks earlier to secure that capacity, with Lambda now plugging in to provide compute to Anthropic. The 700 megawatt campus is a reminder that the chips are only part of the buildout: the power, cooling, and networking suppliers behind sites like this are the subject of a free report we put together here. The Anthropic deal follows a separate $45 billion agreement Anthropic signed earlier in August with EnCore, another Nvidia backed cloud provider.
-
-The mechanics compound existing balance sheet commitments. NVIDIA closed Q2 FY27 with $279.00 billion in supply obligations and $108.5 billion in guarantee obligations for AI cloud and data center partners. CFO Colette Kress told analysts NVIDIA has “invested nearly 50 billion in the Frontier AI Labs” and expects AI lab demand supported by its balance sheet to represent “roughly a quarter of our business next year.”
-
-Market Reaction Since the Filing
-
-NVDA is up 5.9% over the past week and 18.52% year to date through August 31, 2026. Shares traded at $219.37 intraday on September 1, 2026, off 0.64% from the prior close of $220.78. Market cap sits at $5.33 trillion.
-
-Bear Case: Balance Sheet as a Service
-
-The Anthropic pact is a cleaner example of the circular financing critique than any equity investment NVIDIA has disclosed. NVIDIA underwrites the facility, backs the cloud tenant, and supplies the silicon that generates the rental revenue flowing back through the chain. Kress acknowledged the framing on the Q2 FY27 call: “We recognize the scale of this support, and we know some will call this circular financing. We see it differently.” Her defense rested on fungibility: “The NVIDIA Compute platform is fungible and durable and can be redeployed to support other customers.”
-
-The risk map is denser than a single deal. Days sales outstanding stretched to 60 days from 45 days on extended payment terms for large investment-grade customers. Inventory reached $32 billion ahead of the Vera Rubin ramp. Gross margin is guided to 74.0% in Q3, and management said it will “bottom in Q4 in the 71% to 72% range” as memory costs climb. Analyst Vivek Arya of Bank of America pressed the tension directly: “A lot of these investments are designed to help the frontier labs, especially OpenAI and Anthropic, but both of them are designing their own custom chips.”
-
-The deal ties NVIDIA’s reported growth to counterparties whose “balance sheets and credit profiles” cannot yet independently finance the compute they consume. That is the same loop skeptics flagged when NVIDIA lined up Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, and KKR to raise “over $500 billion of third-party capital” for the same customer set.
-
-Bottom Line for Long Term Holders
-
-The Anthropic pact is a stress test of NVIDIA’s ecosystem thesis. The company delivered Q2 FY27 revenue of $96.22 billion, up 105.85% year over year, and guided Q3 to $108.0 billion. The next scheduled catalyst for shareholders is the $0.25 quarterly dividend, with a record date of September 10, 2026 and payment on October 1, 2026. Whether $35 billion of Anthropic compute becomes recurring cash or a footnote on a guarantee schedule depends on one thing: how many tokens Claude sells.",https://247wallst.com/wp-content/uploads/2026/08/Bank-of-Nvidia.jpg,N,,2026-09-01 15:08:54.811229
 ID33,Nvidia,2026-09-01 17:19:00+00:00,Quartz,Anthropic signs $35 billion cloud deal with Nvidia-backed Lambda - Quartz,"Cris Tolomia, qz.com",,,,,https://qz.com/anthropic-lambda-nvidia-cloud-deal-35-billion-090126,"Anthropic signed a $35 billion cloud-computing deal with Lambda, a cloud provider backed by Nvidia $NVDA, for a Texas data center being developed by Hut 8 in Nueces County, according to Reuters.
 Nvidia will hold the lease on the data center, according to the Journal.
 The data center covers roughly 350 megawatts of capacity, according to Bloomberg.
@@ -13382,32 +13441,3 @@ We do know that at least some high-level reflection on safety procedures has tak
 
 In its report, OpenAI spends a great deal of time reflecting on the failures in alignment between the AI models the company trains and tests and the humans who run them. But even bigger alignment problems may exist in the disconnect between company culture and the public interest. And as tough as technical AI research might be, fixing those problems could prove far harder.","https://wp.technologyreview.com/wp-content/uploads/2026/08/openai-human4a.jpg?resize=1200,600",N,,2026-08-31 16:10:06.952522
 ID34,OpenAI,2026-08-31 18:11:53+00:00,www.forbes.com,OpenAI Hits $1 Billion Run Rate With ChatGPT Ads In Just 200 Days - Forbes,,,,,,https://www.forbes.com/sites/gabrielalinzainescu/2026/08/31/openais-chatgpt-ads-hit-1-billion-run-rate-in-just-200-days/,"OpenAI targets $2.5 billion in ad revenue this year, positioning itself as a significant challenger to the digital advertising duopoly and contrasting ...",Not Available,,Y,,2026-08-31 16:10:09.681549
-ID33,Nvidia,2026-08-31 18:03:39+00:00,www.bloomberg.com,Bloomberg Intelligence: Nvidia to Invest $3.5 Billion in Chipmaker MediaTek,Bloomberg,,,,,https://www.bloomberg.com/news/audio/2026-08-31/bloomberg-intelligence-nvidia-to-invest-in-mediatek-podcast,"Bloomberg Intelligence hosted by Paul Sweeney and Scarlet Fu -Mandeep Singh, Global Head of Tech Research for Bloomberg Intelligence, discusses Nvidia investing $3.5 billion in MediaTek to deepen collaboration with the Taiwanese chipmaker.
--Bailey Lipschultz, Bloomberg News Senior Equities Reporter, discusses Anthropic’s future IPO.
-Some firms are finding it hard to get the attention of investors with the prospect of an Anthropic IPO imminent, and companies may decide to list before or after Anthropic to avoid competition.
-- Matthew Palazola, Bloomberg Intelligence, Senior Analyst, P&C Insurance, discusses KKR being set to reap a $3.3 billion windfall from its deal to sell USI Insurance Services to Aon Plc for $17 billion.
-The transaction will generate about $2 billion of adjusted net income for the private equity giant, according to a statement.","Watch Paul and Scarlet LIVE every day on YouTube: http://bit.ly/3vTiACF. Bloomberg Intelligence hosted by Paul Sweeney and Scarlet Fu -Mandeep Singh, Global Head of Tech Research for Bloomberg Intelligence, discusses Nvidia investing $3.5 billion in MediaTek to deepen collaboration with the Taiwanese chipmaker. The investment will see MediaTek using Nvidia's NVLink Fusion and NVHBM technology to help components communicate more seamlessly in data centers. The agreement is part of Nvidia's effort to ensure the future of artificial intelligence is built around its hardware platform and standards. -Bailey Lipschultz, Bloomberg News Senior Equities Reporter, discusses Anthropic’s future IPO. Anthropic PBC’s IPO is expected to raise as much as SpaceX’s record $86.2 billion debut and is casting a long shadow over companies’ US listing plans. Some firms are finding it hard to get the attention of investors with the prospect of an Anthropic IPO imminent, and companies may decide to list before or after Anthropic to avoid competition. -Michelle Cortez, Bloomberg Senior Editor for Global Business, discusses Eli Lilly plans to buy Merida Biosciences for as much as $2.88 billion in cash to expand in autoimmune and allergic diseases. Merida is developing products that target auto-antibodies tied to diseases, including MER511, which is in early testing for Graves’ disease and thyroid eye disease. The deal is part of Lilly’s strategy to invest in technologies that can transform the treatment of diseases beyond obesity, with the company having announced more than $20 billion in deals so far in 2026. - Matthew Palazola, Bloomberg Intelligence, Senior Analyst, P&C Insurance, discusses KKR being set to reap a $3.3 billion windfall from its deal to sell USI Insurance Services to Aon Plc for $17 billion. The transaction will generate about $2 billion of adjusted net income for the private equity giant, according to a statement. The sale is expected to generate a 3.4 times return on KKR’s balance-sheet capital invested, and will help expand Aon’s middle-market business.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iGmsjz2jkxz8/v0/500x500.png,N,,2026-08-31 16:10:04.408071
-ID18,Eli Lilly,2026-08-31 18:03:34+00:00,Yahoo Finance,Eli Lilly CEO Says $25B Deal Spree Is About Building Growth Beyond Obesity Into 2030s,Arnab Paul,,,,,https://finance.yahoo.com/healthcare/articles/eli-lilly-ceo-says-25b-175538441.html,"Also read: SpaceX Is Coming For A $10B Market, Says Jefferies – But How Soon Can It Deliver?
-For updates and corrections, email newsroom[at]stocktwits[dot]com.
-Arnab Paul has no position in any of the stocks mentioned in this article.
-StockTwits' news team content is for informational purposes only and is not intended as investment advice.
-This article was originally published on StockTwits.","Also read: SpaceX Is Coming For A $10B Market, Says Jefferies – But How Soon Can It Deliver?
-
-For updates and corrections, email newsroom[at]stocktwits[dot]com.
-
-Arnab Paul has no position in any of the stocks mentioned in this article. StockTwits' news team content is for informational purposes only and is not intended as investment advice. For more, see our editorial policy. This article was originally published on StockTwits.
-
-Related:",https://s.yimg.com/lo/mysterio/api/e4456b3dc94b6560453d26da868d40d25a05881fcbef564f442d38859c6518a3/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fstocktwits_383%2F55249492856caa8ce3f68fd8508d74a3,N,,2026-08-31 15:07:37.313232
-ID11,Capgemini,2026-08-31 17:31:53+00:00,www.ft.com,Consultants head for a showdown — with their own clients - Financial Times,Not Available,,,,,https://www.ft.com/content/709d7e2d-0c2f-45bc-b559-e7328372cf9e?syn-25a6b1a6=1,"Try unlimited access Only $1 for 4 weeks Then $75 per month.
-Complete digital access to quality FT journalism on any device.
-Cancel anytime during your trial.
-Check whether you already have access via your university or organisation.
-Terms & Conditions apply","Try unlimited access
-
-Only $1 for 4 weeks
-
-Then $75 per month. Complete digital access to quality FT journalism on any device. Cancel anytime during your trial.
-
-Check whether you already have access via your university or organisation.
-
-Terms & Conditions apply",https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8d76e8e4-6744-4d9d-b996-b9d228678006.jpg?source=next-barrier-page&fit=scale-down&quality=highest&width=700&dpr=1,N,,2026-08-31 15:07:31.217417
