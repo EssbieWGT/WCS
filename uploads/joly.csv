@@ -1,4 +1,55 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID31,Moody's,2026-09-07 19:27:59+00:00,The Globe and Mail,Berkshire Hathaway Owns AI Exposure in 3 Different Ways. Here's Why That's Not the Same ...,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/MSFT-Q/pressreleases/4477468/berkshire-hathaway-owns-ai-exposure-in-3-different-ways-here-s-why-that-s-not-the-same-as-owning-nvidia/,Detailed price information for Microsoft Corp (MSFT-Q) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=956,N,,2026-09-07 16:05:45.150659
+ID34,OpenAI,2026-09-07 19:07:20+00:00,Fortune,OpenAI's AI agents hijacked a German wiki. OpenAI stayed quiet about it for weeks. | Fortune,Beatrice Nolan,,,,,https://fortune.com/2026/09/07/openai-ai-agents-german-wiki-ran-their-own-message-board/,"OpenAI later issued a statement denying that any lawyers from the company had pressured the employees.
+In a statement the company posted to X, OpenAI did not say what it had known or when it had learned of the wiki attack.
+In the hijacking of the wiki site, OpenAI’s agents repurposed the site to act a message board where they shared tips about how to cheat on evaluation tasks OpenAI was assessing them on.
+On Monday, the European Commission confirmed to media outlets it had received an incident report from OpenAI concerning the hijacked German wiki, but would not say when it had arrived.
+Nightingale’s report also showed that the AI agents activity did stop abruptly after people or entities tied to known OpenAI urls visited the wiki site, which the researchers interpreted as evidence that OpenAI employees likely learned of the AI agents’ activity and acted to shut the agents down.","OpenAI only confirmed the incident after Reuters first reported it. Reuters story contained strong circumstantial evidence that OpenAI was aware of the wiki attack as well as comments from unnamed OpenAI employees acknowledging that they had been aware of the agent swarm targeting the wiki for weeks but had been pressured by OpenAI executives to keep quiet about it. OpenAI later issued a statement denying that any lawyers from the company had pressured the employees.
+
+In a statement the company posted to X, OpenAI did not say what it had known or when it had learned of the wiki attack. Instead, OpenAI said it considered the “wiki incident” to be an instance of misalignment—when an AI system fails to follow human intentions—similar to ones it had already disclosed and argued that the AI industry lacks a standard for disclosing incidents in which its models behave in unintended ways.
+
+In the hijacking of the wiki site, OpenAI’s agents repurposed the site to act a message board where they shared tips about how to cheat on evaluation tasks OpenAI was assessing them on. This is similar to the way AI agents in the Hugging Face incident used an OpenAI file sharing service as a message board to coordinate how to cheat on a cyber assessment, including finding ways to gain network access and internet access they were not supposed to have, and then how to attack Hugging Face’s systems.
+
+The incident has renewed scrutiny of how transparent AI companies are about their models’ failures, particularly after OpenAI disclosed in July that its agents had breached parts of Hugging Face’s infrastructure during a separate internal evaluation. It also comes as OpenAI rolls out Astra, a new model that OpenAI’s own researchers, as well as outside safety experts have warned is harder to monitor than its predecessor. OpenAI said its evaluations of Astra found a substantial decline in how much the model’s so-called “chain of thought”—a process where AI models think through reasoning steps in natural language—can reveal about potential misbehavior.
+
+OpenAI said it is now developing a new framework for reporting misalignment incidents that surface during training, evaluation, and deployment, and plans to publish it in the coming weeks. However, some safety researchers say a voluntary framework won’t go far enough.
+
+“One sobering fact is that the transparency laws passed in the U.S. so far wouldn’t actually cover these events,” Tyler Johnston, founder of the AI watchdog the Midas Project, told Fortune. “OpenAI has announced they are developing a voluntary framework for incident disclosure, but voluntary disclosure has its limits. A more durable solution would be expanding the current laws to make sure that the next incident, regardless of which company it originates from, is made known to the public.”
+
+There is currently no U.S. legislation that requires OpenAI to disclose such incidents; however, a disclosure may be required under the EU’s AI Act, which has a provision that requires providers to report serious safety issues.
+
+On Monday, the European Commission confirmed to media outlets it had received an incident report from OpenAI concerning the hijacked German wiki, but would not say when it had arrived. Article 55 of the AI Act requires providers of general-purpose AI models deemed to pose systemic risk to report serious incidents to the AI Office within 15 days, and the most severe incidents within two days.
+
+Rep. Pat Ryan (D-NY) noted in an X post that he and Rep. Greg Casar (D-TX) had written OpenAI after the Hugging Face incident to ask if it knew of any other similar cases and that OpenAI had refused to answer their questions. Casar has been pushing for more stringent regulation of AI companies. Ryan promised hearings if the Democrats win a majority in the House in November’s mid-term elections.
+
+Ryan’s tweet led Democratic New York State Assembly member Alex Bores, who has also campaigned on AI regulation, to ask if OpenAI had deliberately stonewalled Congress while answering the EU and if this proved the need for mandatory, as opposed to voluntary, requirements for AI vendors.
+
+OpenAI under scrutiny for earlier transparency issues
+
+OpenAI’s agents spent roughly two months using DseWiki, a largely dormant German-language programming wiki, as a private message board, according to a report from independent researchers known as the Nightingale collective.
+
+The site is open to community edits in the same way Wikipedia is. However, researchers found that more than 15,000 of those edits had been made by AI agents that used the pages to share various tactics and tips for cheating, hacking, and hiding their behavior from human monitors. Roughly half the accounts used names that referenced OpenAI, including OpenAIResearcher and OAIResearchMar26, according to the report.
+
+Notably, the agents also tried to keep going after they were caught and attempted to conceal themselves from humans trying to limit their communications. When DseWiki’s moderators began deleting the pages in June, one agent posted a workaround to a backup page for the others to find, according to the researchers.
+
+Nightingale’s report also showed that the AI agents activity did stop abruptly after people or entities tied to known OpenAI urls visited the wiki site, which the researchers interpreted as evidence that OpenAI employees likely learned of the AI agents’ activity and acted to shut the agents down.
+
+The German-wiki episode, and OpenAI’s apparent decision not to disclose it, has revived questions about OpenAI’s handling of the Hugging Face breach. Following the hack, the company brought in two researchers from the nonprofit METR and one from Redwood Research to examine the incident, but set the terms of the review itself.
+
+The scope was limited to roughly the week spanning the breach, and did not include a separate compromise of OpenAI’s own infrastructure that continued after the investigation window closed. The investigators were also given only a few days on-site at OpenAI’s San Francisco offices.
+
+Peter Wildeford, an AI policy researcher, said OpenAI’s terms made a genuinely independent investigation impossible, comparing it to a plane crash probe conducted with wreckage already destroyed and investigators given just days to read through thousands of pages of logs. Representative Greg Casar also told OpenAI in a letter that he was “deeply concerned about the limited scope” of the investigation.
+
+David Krueger, an assistant professor in reasoning and responsible AI at the University of Montreal and Mila, said the arrangement highlights a structural problem: independent research groups depend on the labs they investigate for continued access. He said groups like METR have to weigh how much scrutiny they can apply without jeopardizing the access that makes their work possible in the first place. “Their access is entirely at OpenAI’s discretion, and they want to remain in the company’s good graces enough to continue doing that work,” Krueger told Fortune.
+
+“There should be dozens of properly independent people, not from organizations that are cultivating a relationship with the company, spending as long as they need, with as much access as they need to understand the situation,” he said.
+
+“A lot of people in AI in the Bay are asking, ‘Is this the last warning shot?'” he added. “People keep making this mistake of treating this as something to figure out later: how to regulate it, or what to do to make it better so that this doesn’t happen again. But the next time is going to be different because the AI is going to be smarter.”","https://fortune.com/img-assets/wp-content/uploads/2026/09/GettyImages-2292640449-e1788795859193.jpg?resize=1200,600",N,,2026-09-07 16:05:48.602517
+ID34,OpenAI,2026-09-07 18:51:17+00:00,Bloomberg.com,OpenAI Top Scientist Urges 'Extreme Caution' With Pace of AI - Bloomberg,Shona Ghosh,,,,,https://www.bloomberg.com/news/articles/2026-09-07/openai-chief-scientist-urges-extreme-caution-with-pace-of-ai,"OpenAI’s top scientist has warned that artificial intelligence is evolving so rapidly that it is becoming increasingly difficult for humans to understand and control, and said he expects AI labs to voluntarily slow development for safety reasons.
+In a relatively short space of time, AI models can operate computers, collaborate with humans and other AI systems and carry out research projects, wrote chief scientist Jakub Pachocki in a post on Sunday.
+It won’t be long until they can also improve themselves without human intervention, a process known as recursive self-improvement, he said.","OpenAI’s top scientist has warned that artificial intelligence is evolving so rapidly that it is becoming increasingly difficult for humans to understand and control, and said he expects AI labs to voluntarily slow development for safety reasons.
+
+In a relatively short space of time, AI models can operate computers, collaborate with humans and other AI systems and carry out research projects, wrote chief scientist Jakub Pachocki in a post on Sunday. It won’t be long until they can also improve themselves without human intervention, a process known as recursive self-improvement, he said.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iKHTDfhM3v8E/v0/1200x800.jpg,N,,2026-09-07 16:05:52.730339
 ID2,Adobe,2026-09-07 17:38:06+00:00,Yahoo Finance,Adobe Taps Insider Anil Chakravarthy to Lead Its High-Stakes AI Push - Yahoo Finance,Lekha Gupta,,,,,https://finance.yahoo.com/technology/ai/articles/adobe-taps-insider-anil-chakravarthy-160008304.html,"Adobe Prepares for AI-Driven Era Adobe's board unanimously selected Chakravarthy after what lead independent director Frank Calderoni called a ""rigorous selection process.""
 Before joining Adobe, Chakravarthy served as CEO of Informatica for four years.
 Arrived Backed by Jeff Bezos, Arrived Homes makes real estate investing accessible with a low barrier to entry.
@@ -11177,6 +11228,35 @@ S&P is in the early stages of exploring options for the unit, which could includ
 In a spinoff scenario, the unit could fetch a valuation in the high single-digit billions of dollars, said the people, who asked not to be named discussing private plans.","S&P Global Inc. is considering spinning out its flagship data and research platform Capital IQ Pro, in a move that could create a standalone firm worth billions of dollars.
 
 S&P is in the early stages of exploring options for the unit, which could include creating a publicly listed entity, according to people familiar with the matter. In a spinoff scenario, the unit could fetch a valuation in the high single-digit billions of dollars, said the people, who asked not to be named discussing private plans.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/igvSUCf1ycgs/v1/1200x800.jpg,N,,2026-09-01 17:09:53.863754
+ID33,Nvidia,2026-09-01 17:23:33+00:00,24/7 Wall St.,Is Nvidia's $35 Billion Anthropic Pact the Ultimate Circular Financing Play? - 24/7 Wall St.,Rich Duprey,,,,,https://247wallst.com/investing/2026/09/01/is-nvidias-35-billion-anthropic-pact-the-ultimate-circular-financing-play/,"$35 Billion at a Glance $35 billion.
+That is the size of the cloud compute deal Anthropic just signed, backed by NVIDIA (NASDAQ:NVDA | NVDA Price Prediction), according to a Wall Street Journal report.
+Under the arrangement, Anthropic will rent GPU compute from Lambda, an Nvidia backed cloud provider.
+The Anthropic deal follows a separate $45 billion agreement Anthropic signed earlier in August with EnCore, another Nvidia backed cloud provider.
+Whether $35 billion of Anthropic compute becomes recurring cash or a footnote on a guarantee schedule depends on one thing: how many tokens Claude sells.","$35 Billion at a Glance
+
+$35 billion. That is the size of the cloud compute deal Anthropic just signed, backed by NVIDIA (NASDAQ:NVDA | NVDA Price Prediction), according to a Wall Street Journal report. Under the arrangement, Anthropic will rent GPU compute from Lambda, an Nvidia backed cloud provider. NVIDIA supplies the chips and holds the lease on the underlying data center, a 700 megawatt campus in Nueces County, Texas being developed by Hut 8. The figure represents a contracted commitment across a multi year term, distinct from reported revenue.
+
+What the Anchor Role Really Buys
+
+NVIDIA is playing three roles in one transaction: chip supplier, equity backer of the intermediate cloud (Lambda), and lease anchor on the physical site. NVIDIA had signed its own agreement with Hut 8 weeks earlier to secure that capacity, with Lambda now plugging in to provide compute to Anthropic. The 700 megawatt campus is a reminder that the chips are only part of the buildout: the power, cooling, and networking suppliers behind sites like this are the subject of a free report we put together here. The Anthropic deal follows a separate $45 billion agreement Anthropic signed earlier in August with EnCore, another Nvidia backed cloud provider.
+
+The mechanics compound existing balance sheet commitments. NVIDIA closed Q2 FY27 with $279.00 billion in supply obligations and $108.5 billion in guarantee obligations for AI cloud and data center partners. CFO Colette Kress told analysts NVIDIA has “invested nearly 50 billion in the Frontier AI Labs” and expects AI lab demand supported by its balance sheet to represent “roughly a quarter of our business next year.”
+
+Market Reaction Since the Filing
+
+NVDA is up 5.9% over the past week and 18.52% year to date through August 31, 2026. Shares traded at $219.37 intraday on September 1, 2026, off 0.64% from the prior close of $220.78. Market cap sits at $5.33 trillion.
+
+Bear Case: Balance Sheet as a Service
+
+The Anthropic pact is a cleaner example of the circular financing critique than any equity investment NVIDIA has disclosed. NVIDIA underwrites the facility, backs the cloud tenant, and supplies the silicon that generates the rental revenue flowing back through the chain. Kress acknowledged the framing on the Q2 FY27 call: “We recognize the scale of this support, and we know some will call this circular financing. We see it differently.” Her defense rested on fungibility: “The NVIDIA Compute platform is fungible and durable and can be redeployed to support other customers.”
+
+The risk map is denser than a single deal. Days sales outstanding stretched to 60 days from 45 days on extended payment terms for large investment-grade customers. Inventory reached $32 billion ahead of the Vera Rubin ramp. Gross margin is guided to 74.0% in Q3, and management said it will “bottom in Q4 in the 71% to 72% range” as memory costs climb. Analyst Vivek Arya of Bank of America pressed the tension directly: “A lot of these investments are designed to help the frontier labs, especially OpenAI and Anthropic, but both of them are designing their own custom chips.”
+
+The deal ties NVIDIA’s reported growth to counterparties whose “balance sheets and credit profiles” cannot yet independently finance the compute they consume. That is the same loop skeptics flagged when NVIDIA lined up Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, and KKR to raise “over $500 billion of third-party capital” for the same customer set.
+
+Bottom Line for Long Term Holders
+
+The Anthropic pact is a stress test of NVIDIA’s ecosystem thesis. The company delivered Q2 FY27 revenue of $96.22 billion, up 105.85% year over year, and guided Q3 to $108.0 billion. The next scheduled catalyst for shareholders is the $0.25 quarterly dividend, with a record date of September 10, 2026 and payment on October 1, 2026. Whether $35 billion of Anthropic compute becomes recurring cash or a footnote on a guarantee schedule depends on one thing: how many tokens Claude sells.",https://247wallst.com/wp-content/uploads/2026/08/Bank-of-Nvidia.jpg,N,,2026-09-01 15:08:54.811229
 ID18,Eli Lilly,2026-09-01 17:23:33+00:00,24/7 Wall St.,Insurers Are Pulling Back From GLP-1 Drugs. The FDA Just Handed Eli Lilly Its Best Weapon Yet,Omor Ibne Ehsan,,,,,https://247wallst.com/investing/2026/09/01/insurers-are-pulling-back-from-glp-1-drugs-the-fda-just-handed-eli-lilly-its-best-weapon-yet/,"Against that retreat, Eli Lilly (NYSE:LLY | LLY Price Prediction) just received something it can actually use in a payer meeting.
 On August 28, 2026, the FDA expanded Mounjaro’s label to reduce the risk of cardiovascular death, heart attack, and stroke in adults with type 2 diabetes at high cardiovascular risk.
 This is a diabetes label rather than a Zepbound obesity label, and the distinction matters for how much of the coverage rollback it can actually blunt.
@@ -11208,35 +11288,6 @@ The label likely protects diabetes reimbursement more than it reopens obesity co
 But it does give Lilly medical-necessity language for the diabetes patients most likely to be cut in a cost review, and, combined with the Medicare Bridge Program covering 20 million eligible Americans at $50 per month, it meaningfully narrows the exposure.
 
 Shares trade at $1,174.61 and 32x forward earnings, with an analyst target of $1,315.04. The stock is down 6.44% in the past week, so the market has not yet priced the cardiovascular claim as a coverage shield. If Lilly can turn the label into contract language rather than press releases, that gap closes.",https://247wallst.com/wp-content/uploads/2025/07/Wegovy.jpg,N,,2026-09-01 14:11:49.627839
-ID33,Nvidia,2026-09-01 17:23:33+00:00,24/7 Wall St.,Is Nvidia's $35 Billion Anthropic Pact the Ultimate Circular Financing Play? - 24/7 Wall St.,Rich Duprey,,,,,https://247wallst.com/investing/2026/09/01/is-nvidias-35-billion-anthropic-pact-the-ultimate-circular-financing-play/,"$35 Billion at a Glance $35 billion.
-That is the size of the cloud compute deal Anthropic just signed, backed by NVIDIA (NASDAQ:NVDA | NVDA Price Prediction), according to a Wall Street Journal report.
-Under the arrangement, Anthropic will rent GPU compute from Lambda, an Nvidia backed cloud provider.
-The Anthropic deal follows a separate $45 billion agreement Anthropic signed earlier in August with EnCore, another Nvidia backed cloud provider.
-Whether $35 billion of Anthropic compute becomes recurring cash or a footnote on a guarantee schedule depends on one thing: how many tokens Claude sells.","$35 Billion at a Glance
-
-$35 billion. That is the size of the cloud compute deal Anthropic just signed, backed by NVIDIA (NASDAQ:NVDA | NVDA Price Prediction), according to a Wall Street Journal report. Under the arrangement, Anthropic will rent GPU compute from Lambda, an Nvidia backed cloud provider. NVIDIA supplies the chips and holds the lease on the underlying data center, a 700 megawatt campus in Nueces County, Texas being developed by Hut 8. The figure represents a contracted commitment across a multi year term, distinct from reported revenue.
-
-What the Anchor Role Really Buys
-
-NVIDIA is playing three roles in one transaction: chip supplier, equity backer of the intermediate cloud (Lambda), and lease anchor on the physical site. NVIDIA had signed its own agreement with Hut 8 weeks earlier to secure that capacity, with Lambda now plugging in to provide compute to Anthropic. The 700 megawatt campus is a reminder that the chips are only part of the buildout: the power, cooling, and networking suppliers behind sites like this are the subject of a free report we put together here. The Anthropic deal follows a separate $45 billion agreement Anthropic signed earlier in August with EnCore, another Nvidia backed cloud provider.
-
-The mechanics compound existing balance sheet commitments. NVIDIA closed Q2 FY27 with $279.00 billion in supply obligations and $108.5 billion in guarantee obligations for AI cloud and data center partners. CFO Colette Kress told analysts NVIDIA has “invested nearly 50 billion in the Frontier AI Labs” and expects AI lab demand supported by its balance sheet to represent “roughly a quarter of our business next year.”
-
-Market Reaction Since the Filing
-
-NVDA is up 5.9% over the past week and 18.52% year to date through August 31, 2026. Shares traded at $219.37 intraday on September 1, 2026, off 0.64% from the prior close of $220.78. Market cap sits at $5.33 trillion.
-
-Bear Case: Balance Sheet as a Service
-
-The Anthropic pact is a cleaner example of the circular financing critique than any equity investment NVIDIA has disclosed. NVIDIA underwrites the facility, backs the cloud tenant, and supplies the silicon that generates the rental revenue flowing back through the chain. Kress acknowledged the framing on the Q2 FY27 call: “We recognize the scale of this support, and we know some will call this circular financing. We see it differently.” Her defense rested on fungibility: “The NVIDIA Compute platform is fungible and durable and can be redeployed to support other customers.”
-
-The risk map is denser than a single deal. Days sales outstanding stretched to 60 days from 45 days on extended payment terms for large investment-grade customers. Inventory reached $32 billion ahead of the Vera Rubin ramp. Gross margin is guided to 74.0% in Q3, and management said it will “bottom in Q4 in the 71% to 72% range” as memory costs climb. Analyst Vivek Arya of Bank of America pressed the tension directly: “A lot of these investments are designed to help the frontier labs, especially OpenAI and Anthropic, but both of them are designing their own custom chips.”
-
-The deal ties NVIDIA’s reported growth to counterparties whose “balance sheets and credit profiles” cannot yet independently finance the compute they consume. That is the same loop skeptics flagged when NVIDIA lined up Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, and KKR to raise “over $500 billion of third-party capital” for the same customer set.
-
-Bottom Line for Long Term Holders
-
-The Anthropic pact is a stress test of NVIDIA’s ecosystem thesis. The company delivered Q2 FY27 revenue of $96.22 billion, up 105.85% year over year, and guided Q3 to $108.0 billion. The next scheduled catalyst for shareholders is the $0.25 quarterly dividend, with a record date of September 10, 2026 and payment on October 1, 2026. Whether $35 billion of Anthropic compute becomes recurring cash or a footnote on a guarantee schedule depends on one thing: how many tokens Claude sells.",https://247wallst.com/wp-content/uploads/2026/08/Bank-of-Nvidia.jpg,N,,2026-09-01 15:08:54.811229
 ID33,Nvidia,2026-09-01 17:19:00+00:00,Quartz,Anthropic signs $35 billion cloud deal with Nvidia-backed Lambda - Quartz,"Cris Tolomia, qz.com",,,,,https://qz.com/anthropic-lambda-nvidia-cloud-deal-35-billion-090126,"Anthropic signed a $35 billion cloud-computing deal with Lambda, a cloud provider backed by Nvidia $NVDA, for a Texas data center being developed by Hut 8 in Nueces County, according to Reuters.
 Nvidia will hold the lease on the data center, according to the Journal.
 The data center covers roughly 350 megawatts of capacity, according to Bloomberg.
@@ -13407,50 +13458,3 @@ It’s also working on a compound to treat food allergies, asthma and related co
 
 Merida is a closely held company developing products that target auto-antibodies tied to diseases, without harming the immune system’s normal functioning. Its most advanced product, MER511, is in early testing for Graves’ disease and thyroid eye disease, where approved treatments don’t address their underlying causes. It’s also working on a compound to treat food allergies, asthma and related conditions.",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iXO9qNJtoDZQ/v0/1200x800.jpg,N,,2026-08-31 18:09:31.691661
 ID18,Eli Lilly,2026-08-31 20:09:29+00:00,YouTube,Eli Lilly CEO on branching out beyond obesity drugs - YouTube,Not Available,,,,,https://www.youtube.com/watch?v=Y_Ytf9E5B6A,"David Ricks, Eli Lilly CEO, talks with CNBC about the company investing in technologies that “can really change other diseases the way we’ve changed obesity....",Not Available,https://i.ytimg.com/vi/Y_Ytf9E5B6A/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYSyBTKGUwDw==&rs=AOn4CLDGXfv-L5RDMk89CBDSBYsGXYTW7A,N,,2026-08-31 17:02:08.033698
-ID30,Microsoft,2026-08-31 19:54:24+00:00,Amazon Web Services,AWS and Microsoft Azure collaborate to expand multicloud networking,Robert Kennedy,,,,,https://aws.amazon.com/blogs/networking-and-content-delivery/aws-and-microsoft-azure-collaborate-to-expand-multicloud-networking/,"Starting today, customers can provision private, high-speed connectivity between Amazon Web Services (AWS) and Microsoft Azure on demand through AWS Interconnect – multicloud.
-With Azure connectivity now in Public Preview, AWS Interconnect – multicloud spans all three non-AWS major cloud service providers (CSPs) – Microsoft Azure, Google Cloud, and Oracle Cloud Infrastructure – giving customers the same simplified, on-demand networking experience between AWS and other CSPs.
-Continuing the multicloud journey AWS introduced AWS Interconnect – multicloud in preview at re:Invent 2025, publishing an open API specification for network interoperability that raised the bar for the industry and established a framework any provider can adopt, inviting the broader industry to participate.
-Throughout that journey, customers consistently asked us: “When can we connect to Microsoft Azure?” Today’s announcement answers that call and brings the AWS Interconnect – multicloud story full circle.
-With AWS and Azure now connected through AWS Interconnect – multicloud, customers get unified management, accelerated innovation, reduced risk, and future-proof architecture.","As organizations embrace multicloud strategies at an accelerating pace, the ability to move workloads seamlessly between cloud providers has become essential. Yet establishing resilient, high-performance private connectivity between clouds has historically required customers to navigate complex and diverse physical infrastructure, multiple connectivity providers, and invest weeks or months of manual provisioning.
-
-Starting today, customers can provision private, high-speed connectivity between Amazon Web Services (AWS) and Microsoft Azure on demand through AWS Interconnect – multicloud. With Azure connectivity now in Public Preview, AWS Interconnect – multicloud spans all three non-AWS major cloud service providers (CSPs) – Microsoft Azure, Google Cloud, and Oracle Cloud Infrastructure – giving customers the same simplified, on-demand networking experience between AWS and other CSPs.
-
-Continuing the multicloud journey
-
-AWS introduced AWS Interconnect – multicloud in preview at re:Invent 2025, publishing an open API specification for network interoperability that raised the bar for the industry and established a framework any provider can adopt, inviting the broader industry to participate. Any cloud provider willing to meet the requirements can join. Since then, AWS has collaborated with other major CSPs to bring this vision to life. Throughout that journey, customers consistently asked us: “When can we connect to Microsoft Azure?”
-
-Today’s announcement answers that call and brings the AWS Interconnect – multicloud story full circle. Customers who operate between AWS and Azure can now manage their connectivity through a single, managed experience, without compromise.
-
-“Customers told us they wanted a better way to connect workloads spanning AWS and Azure, and the old ways of doing it were clunky. With AWS Interconnect-multicloud and Azure Multicloud Interconnect, we’re proving what’s possible when both sides commit to a high bar: MACsec security out of the box, four-nines availability, and scalability at the click of a button.”
-
-– Robert Kennedy, VP of Network Services at AWS
-
-A consistent experience across every cloud
-
-The AWS-Azure connectivity experience is built on the same principles that have guided every collaboration under AWS Interconnect – multicloud.
-
-Provisioning happens in a few clicks, versus taking weeks or months. Customers get dedicated, private bandwidth between AWS and Azure on demand—no physical infrastructure to manage and no circuit cabling to wait for. The experience is cloud-native simple: establish managed connectivity directly from the AWS Management Console or CLI and the Azure portal.
-
-High resiliency is built in by design. A quad-redundant architecture across physically diverse interconnect facilities and routers ensures enterprise-grade availability. When a customer creates a new Interconnect, AWS and the other CSP provision four independent logical paths. A router can go down for maintenance, two additional independent disruptions can occur simultaneously, and the customer’s traffic continues uninterrupted. Even a full site loss doesn’t impact service because the remaining site carries the traffic.
-
-Security is always priority 0 at AWS. MACsec encryption between edge routers protects data in transit from the moment it leaves one CSP’s network and arrives at the other. This is non-negotiable. Any CSP that cannot meet the security and availability bar does not get connected.
-
-“Organizations are increasingly building applications, data platforms, and AI solutions that span multiple cloud environments. This collaboration between Microsoft and AWS helps simplify how customers connect those environments, helping to provide secure, high-performance networking with less operational complexity. By making multicloud connectivity easier and more accessible, we are giving customers greater flexibility to innovate on their own terms while accelerating their digital and AI transformation journeys.”
-
-– Narayan Annamalai, Vice President, Product Management, Azure Networking, Microsoft
-
-Why it matters for customers
-
-Enterprises increasingly deploy workloads where they run best and at AWS, we design our services to give customers the freedom to choose technology that best suits their needs. However, multicloud is often less about choosing the ideal tool for each job and more about how businesses actually evolve. Companies acquire other companies and end up with applications spanning different cloud providers. Independent Software Vendors (ISVs) need to deploy solutions across whichever environment their customers use. Regulatory requirements dictate the need to deploy applications to more than one cloud. Until the launch of AWS Interconnect-multicloud, organizations relied on complex interconnections, multiple third-party networking arrangements, or the public internet to stitch things together. With AWS and Azure now connected through AWS Interconnect – multicloud, customers get unified management, accelerated innovation, reduced risk, and future-proof architecture.
-
-A single connectivity model reduces operational overhead and training costs, giving teams unified management without juggling disparate tooling. That operational simplicity translates directly into accelerated innovation, with engineers spending less time wiring networks and more time building products.
-
-Risk also drops. Consistent security posture, monitoring, and SLAs across every cloud-to-cloud link mean fewer blind spots. AWS Interconnect includes Network Synthetic Monitor at no additional cost. When it detects packet loss, it triangulates whether the issue originates on the AWS side and tells the customer where the problem lives, eliminating the ambiguity of troubleshooting across cloud environments.
-
-Finally, the architecture is future-proof. The open specification means new providers can join without requiring customers to re-architect.
-
-What’s next
-
-Together, AWS and Microsoft will continue to expand regional availability, increase bandwidth options, and deepen the experience based on customer feedback. The ambition extends beyond cloud-to-cloud. AWS aims to shift the paradigm on all connectivity. The goal is a world where customers can turn up a global network and connect to anything they want with a few simple clicks. The open specification remains available for additional providers who share our vision of simplified, interoperable cloud connectivity.
-
-Get started",https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2026/08/14/Option-2-1.png,N,,2026-08-31 18:09:39.246239
