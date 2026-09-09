@@ -1,4 +1,120 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID33,Nvidia,2026-09-09 22:07:05+00:00,NVIDIA Blog,"NVIDIA Brings Real-Time AI to Broadcast, Sports and Global Streaming at IBC",NVIDIA Writers,,,,,https://blogs.nvidia.com/blog/ibc-news-2026/,"VFG also supports frame-rate conversion and frame boosting for generative AI video workflows.
+NVIDIA Video Super Resolution (VSR) uses AI to upscale video while reducing noise, blur and compression artifacts.
+VSR is available through the NVIDIA Video Effects SDK and a NIM microservice for use in streaming, broadcast, conferencing, video playback and content-creation applications.
+NDI is using NVIDIA AI for Media, including the NVIDIA LipSync NIM microservice, to enable real-time translation, lip-synced dubbing and regional language adaptation within existing broadcast workflows.
+NVIDIA Brings Multilingual Content Localization to Live Broadcast 🔗 Reaching global audiences with live programming requires more than translating words.","At the IBC conference, running Sept. 11-14 in Amsterdam, the creative, technology and business communities are coming together to turn ideas into action and discuss innovations across the media and entertainment industries. More than 44,000 attendees from 170+ countries are gathering to explore 1,300+ exhibitions in 14+ halls and outdoor spaces, with over 600 speakers delivering insights.
+
+Read on to learn more about what NVIDIA’s highlighting at the show.
+
+NVIDIA AI for Media Brings Real-Time Intelligence to Broadcast, Sports and Production Workflows 🔗
+
+Media companies are increasingly integrating AI into live production, sports, news and streaming workflows to unlock richer performance insights, verify video authenticity, and enhance and localize content — all without disrupting trusted broadcast environments.
+
+At IBC 2026 in Amsterdam, NVIDIA announced a major expansion to NVIDIA AI for Media — a collection of GPU-accelerated software development kits (SDKs), NVIDIA NIM microservices, playbooks, and blueprints that enhance audio, video and augmented-reality effects for media and entertainment workflows — to unlock new ways to understand motion, verify and enhance video, localize programming and build AI-powered media applications.
+
+The NVIDIA Synthetic Video Detector (SVD) NIM microservice, announced earlier this year at SIGGRAPH, helps organizations assess the probability of whether footage is authentic or AI-generated, giving editorial, content-authentication, digital-forensics and media-integrity teams another point of analysis in their review process.
+
+Since its initial release, SVD’s accuracy has reached 99.3% for text-to-video content and 97.7% for image-to-video content, with especially large gains on difficult image-to-video cases.
+
+Dalet is integrating SVD into a secure, cloud-hosted verification workflow for news organizations. This allows editorial teams to submit footage through SVD, inspect and review the resulting scores and metadata within a Dalet interface.
+
+TwelveLabs announced the general availability of Compliance by TwelveLabs, its first application built on the company’s video intelligence platform, helping media and broadcast teams rapidly screen content against regional and custom compliance standards. The solution integrates SVD to add frame-level authenticity signals and confidence scores, enabling media teams to identify potentially synthetic media within the same compliance workflow.
+
+Wowza, whose Wowza Streaming Engine media server technology powers more than 35,000 video deployments across over 170 countries, will distribute SVD through the Wowza Video Intelligence Framework. The solution, powered by NVIDIA-accelerated infrastructure, will enable broadcasters, streaming providers and other organizations to analyze live video feeds and extract data around detected objects, scenes and signs of AI generation in real time. It can be deployed and run on premises, at the edge, in the cloud, across hybrid deployments or fully air-gapped, giving organizations greater control over critical media workflows.
+
+NVIDIA 3D Body Pose estimates 2D and 3D human joint locations and angles from video captured by a single camera, helping turn motion into structured data without marker-based capture systems.
+
+For sports organizations, that data can support player and athlete movement tracking, biomechanics and performance analysis, replay enhancement, officiating and adjudication workflows, player-safety applications, and virtual interaction and immersive experiences.
+
+The technology can also provide structured human-motion data for content-creation workflows. When mapped to a compatible character rig, joint and motion data can serve as input for animation blocking, digital doubles, character retargeting and virtual-production experiences.
+
+Vizrt is using Body Pose technology in live virtual-studio environments, with tracked body movement driving real-time 3D lighting effects such as reflections, shadows and environmental rendering.
+
+Video Frame Generation (VFG) makes video motion appear smoother by using generative AI to create new frames between the original frames of a video. It can increase frame rates by 2x or 4x while preserving visual quality and temporal consistency, enabling more fluid sports, slow-motion replays, live media and other high-motion video experiences. VFG also supports frame-rate conversion and frame boosting for generative AI video workflows.
+
+Ross Video is integrating VFG into its Rio Replay platform to create AI-assisted slow-motion video for sports production.
+
+The work supports 6x slow-motion generation for sports replay. Development is underway toward 8x interpolation, meaning generated intermediate frames can give replay teams smoother motion without requiring every frame to be captured by an ultrahigh-frame-rate source camera.
+
+NVIDIA Video Super Resolution (VSR) uses AI to upscale video while reducing noise, blur and compression artifacts. New streaming modes let developers choose between real-time performance and higher image quality, while adjustable controls help achieve the desired level of enhancement. VSR also adds 10-bit video support and improves overall performance and quality. VSR is available through the NVIDIA Video Effects SDK and a NIM microservice for use in streaming, broadcast, conferencing, video playback and content-creation applications.
+
+The technology can support video players, conferencing applications, creator tools, streaming services, transcoders and broadcast systems through a common interface.
+
+NVIDIA TrueHDR converts standard-dynamic-range video into high-dynamic-range output in real time, reaching up to approximately 2,000 nits while preserving local contrast and adapting brightness to the content.
+
+VSR, VFG and TrueHDR can be combined within a single video-effects pipeline — helping media companies enhance existing content libraries for streaming, transcoding, gaming and creator workflows.
+
+The NVIDIA LipSync and Active Speaker Detection NIM microservices help developers build localization systems for interviews, news, sports, entertainment and other programming where multiple people may appear on screen.
+
+LipSync transforms mouth movement in an input video to match a target audio track while preserving natural head pose, blinking and body movement. The new release improves facial occlusion handling and better preserves teeth, lip and facial textures.
+
+The new Active Speaker Detection NIM microservice no longer requires speaker diarization for multiple audio tracks, adds voice activity detection and expands NIM microservice deployment support through a gRPC interface and broader GPU compatibility.
+
+NDI is using NVIDIA AI for Media, including the NVIDIA LipSync NIM microservice, to enable real-time translation, lip-synced dubbing and regional language adaptation within existing broadcast workflows. By generating multiple language experiences from a common media stream, the approach can help broadcasters reach global audiences while reducing the bandwidth, infrastructure and production complexity traditionally required for multilingual distribution.
+
+Studio Voice includes new Microphone Profiles built on NVIDIA Studio Voice NIM microservices, giving users more control over the tonal character of enhanced speech.
+
+The capability is designed to suppress background noise, reduce room reverberation and improve speech clarity, then shape the enhanced output into a selected microphone profile for more polished live communications, streaming, podcasting and content creation.
+
+Try NVIDIA AI for Media NIM microservices. See the latest NVIDIA and partner workflows at IBC 2026.
+
+NVIDIA Holoscan for Media Provides Open Media Exchange Layer to Build and Connect Live Media Applications 🔗
+
+As broadcasters, streaming services and sports organizations adopt software and AI, the infrastructure behind live content is becoming more flexible, more connected and increasingly built on shared accelerated computing.
+
+The integration of Media Exchange Layer (MXL) with NVIDIA Holoscan for Media accelerates that transition — providing the common exchange layer that helps media applications connect and operate together.
+
+Holoscan for Media is an open reference architecture and developer toolkit for building AI-powered media functions and applications for software-defined live production. MXL adds an open way for those software-based media functions to exchange live video, audio and data across a distributed environment.
+
+As production functions move into software, developers can build applications that share accelerated infrastructure, connect dynamically and evolve independently. That can help media companies use infrastructure more efficiently, introduce new capabilities faster and reduce the amount of custom integration required between applications.
+
+The integration also creates a stronger foundation for AI in live media. AI processing, video applications and traditional media functions can increasingly operate on the same accelerated infrastructure and in the same software-defined environment.
+
+For technology vendors, this expands the opportunity to build applications that can work across broader, multi-vendor ecosystems. For media companies, it creates a path toward infrastructure that can adapt as formats, applications and AI capabilities change.
+
+See the demo at IBC in EBU Stand 10.D21. ​Learn more about Holoscan for Media.
+
+NVIDIA Sports Intelligence Playbooks Chart a Path to Multimodal AI for Sports 🔗
+
+Sports is becoming a proving ground for a broader shift in AI: from general-purpose models toward fine-tuned open models built on proprietary data.
+
+NVIDIA Sports Intelligence Playbooks are designed to accelerate that transition. They give leagues, media companies and technology providers structured frameworks to fine-tune NVIDIA open models on their own sports footage and annotations, creating multimodal AI that can understand the rules, players, scoring, strategy and context unique to a sport.
+
+Sports organizations hold large volumes of proprietary video, metadata and performance information that are difficult for competitors to replicate. The playbooks provide a practical blueprint for converting those assets into AI capabilities that can underpin new analytics products, media experiences, automation tools and revenue streams.
+
+The playbooks span the AI lifecycle, including data preparation, fine-tuning, inference, evaluation, optimization and deployment, and bring together NVIDIA technologies including Nemotron, NeMo AutoModel, Megatron Bridge, NIM microservices and NVIDIA accelerated computing.
+
+By providing an integrated path from model customization to production, Sports Intelligence Playbooks can reduce the cost and complexity of building specialized sports AI while increasing demand across its compute, software and inference stack.
+
+Early testing demonstrates the potential of domain specialization. When evaluated on previously unseen footage using question formats similar to those used in training, multiple-choice accuracy increased from approximately 53% to 94% and open-ended evaluation from approximately 5.7% to 66%.
+
+Machina Sports is integrating Sports Intelligence Playbooks with its sports-native data, evaluation and agent infrastructure, enabling rights holders to turn proprietary media and expertise into private, deployable intelligence for live production, content and fan experiences.
+
+The opportunity also expands as agentic AI becomes increasingly adopted. With the NVIDIA AI-Q Blueprint, organizations can use their domain-specific sports models as expert intelligence within agents that reason across video, enterprise data and software systems, extending the playbook from sports understanding into decision-making and automation.
+
+Wowza is integrating vision language models, including NVIDIA Cosmos 3 and Nemotron, into the Wowza Video Intelligence Framework, fine-tuned through NVIDIA Sports Intelligence Playbooks to detect sports-specific moments in live streams and reduce time to action.
+
+Explore NVIDIA Sports Intelligence Playbooks.
+
+NVIDIA Brings Multilingual Content Localization to Live Broadcast 🔗
+
+Reaching global audiences with live programming requires more than translating words. Language nuances, voice, timing, facial movement, captions and onscreen graphics must work together in real time, while preserving the editorial intent and production quality of the original program.
+
+To help broadcasters, sports leagues, rights holders and streaming services bring these elements into a unified, software-defined, real-time localization workflow, NVIDIA is bringing its Content Localization technologies to the NVIDIA Holoscan for Media developer toolkit. Designed for broadcast and streaming developers, the reference workflow enables captions, translated audio, dubbing, synchronized video and localized graphics.
+
+Content Localization with Holoscan for Media provides a reference for how localization technologies can work together in software-defined broadcast applications. Developers can select the capabilities needed for each program, market or distribution channel rather than deploying separate infrastructure for every localized version.
+
+Content Localization with Holoscan for Media incorporates the latest advancements from NVIDIA AI for Media, including improved LipSync when faces are partially obscured and enhanced Active Speaker Detection to help applications identify who’s speaking in multi-person scenes.
+
+Expanding the Reach of Live Programming
+
+Localization can transform the reach and economics of live programming. A shared, composable workflow can help media companies introduce regional coverage faster, serve more audiences and tailor experiences for individual markets — while preserving the timing, visual context and editorial control required for live production.
+
+Technologies from AI-Media, CAMB.AI, Chyron and Panjaya each address a specific part of content localization with Holoscan for Media, from adapting voice and onscreen delivery to creating multilingual captions and translated audio, localizing graphics, and preserving expression and identity across live and on-demand content.
+
+The Content Localization technologies also support file-based, streaming and post-production applications. Developers can use application programming interfaces for on-demand workflows and the Holoscan for Media reference workflow when localization must run as part of a live media environment. Together, they provide a consistent foundation for building multilingual media services across production and distribution.",https://blogs.nvidia.com/wp-content/uploads/2026/09/me-ai-for-media-kv-1920x1080-5262591.jpeg,N,,2026-09-09 19:09:53.259116
+ID2,Adobe,2026-09-09 21:59:11+00:00,The Globe and Mail,Adobe names Anil Chakravarthy as new CEO - The Globe and Mail,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/ADBE-Q/pressreleases/4523293/adobe-names-anil-chakravarthy-as-new-ceo/,Detailed price information for Adobe Systems Inc (ADBE-Q) from The Globe and Mail including charting and trades.,Not Available,https://www.theglobeandmail.com/pf/resources/assets/meta/favicon-32x32.png?d=956,N,,2026-09-09 19:09:48.499899
 ID5,Albertsons,2026-09-09 21:04:29+00:00,www.thestreet.com,"Kroger and Albertsons make key moves to take on Amazon, Walmart - TheStreet",,,,,,https://www.thestreet.com/retail/kroger-and-albertsons-make-key-moves-to-take-on-amazon-walmart,"Kroger and Albertsons are adapting to a grocery market increasingly shaped by Amazon, Walmart, Instacart, Uber Eats, and digital convenience.",Not Available,,Y,,2026-09-09 18:11:41.513575
 ID2,Adobe,2026-09-09 20:59:55+00:00,www.theinformation.com,"OpenAI Cuts Off Adobe, Others From Advertising Some Competing AI Products in ChatGPT",Not Available,,,,,https://www.theinformation.com/articles/openai-cuts-adobe-others-advertising-competing-ai-products-chatgpt,"OpenAI bans ads for competing AI image and audio products in ChatGPT. New policy surprises advertisers like Adobe, potentially limiting ad revenue.",Not Available,,N,,2026-09-09 18:11:39.227848
 ID30,Microsoft,2026-09-09 20:09:52+00:00,Fortune,Microsoft's move in the AI school debate: controls over how student data gets used | Fortune,Catherina Gioino,,,,,https://fortune.com/2026/09/09/microsoft-school-district-ai-standard-enforceable-safety/,"The “National AI Safety & Privacy Standard” will be legally enforceable once written into a district’s Microsoft agreement.
@@ -533,7 +649,6 @@ Outside of the business world, Whitman served as United States Ambassador to Ken
 Whitman's appointment comes at a trying time for Albertsons. The company reported negative comparable-store sales growth and flat overall sales during its most recent quarter, and it has lowered expectations for its financial performance for the rest of fiscal 2026. In response to these lackluster results, Albertsons announced in July a new regional operating model that consolidates 11 divisions into four regions and unveiled plans to centralize its center store merchandising. At the time, Albertsons also announced that President and CFO Sharon McCollam plans to retire later this year and then serve in an advisory role with the grocer until its fiscal year ends in February.
 
 Recommended Reading",https://s.yimg.com/lo/mysterio/api/8ae987c1a923bdce4865c5a5a379c1fe6132ed3ea4ecd94bc0841c38fb4e9a5c/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fgrocery_dive_266%2F470d1d0256055aab19017ab5c1f50391,N,,2026-09-09 12:28:49.013682
-ID38,S&P Global,2026-09-09 15:03:44+00:00,www.spglobal.com,Fund Finance Trends: Secondaries In The Spotlight | S&P Global Ratings,Not Available,,,,,https://www.spglobal.com/ratings/en/regulatory/article/fund-finance-trends-secondaries-in-the-spotlight-s101699578,This article examines the risks and rewards of GP- and LP-led transactions and outlines S&P Global Ratings' analytical approach to these structures.,Not Available,https://disclosure-assets-mfe.cdnex.use1.prod.ratings.spglobal.com/assets/images/spg_favicon.png,N,,2026-09-09 15:19:13.857271
 ID1,Accor,2026-09-09 15:03:44+00:00,Accor,Supporting Women at Every Career Stage: How Accor Fosters Growth and Leadership,Not Available,,,,,https://careers.accor.com/global/en/blogs/2026-9/supporting-women-at-every-career-stage,"Discover how Accor supports women in building successful hospitality careers, developing new skills and progressing into leadership positions.
 At Accor, supporting women means creating an inclusive workplace where people can grow at every stage of their careers.
 Through learning, mentoring, career mobility and leadership development, Accor aims to help its talent build careers with room to grow.
@@ -633,6 +748,7 @@ Ready to take the next step in your hospitality career?
 Women are shaping the future of hospitality every day as Heartists®, managers, specialists and leaders across Accor.
 
 With opportunities to learn, develop and explore different career paths, hospitality can be a place to build a career that evolves alongside your ambitions.",https://careers.accor.com/global/en/img/ETB5AdxQgELrYgjfBJzsgg/women&#x2B;support.jpeg?v=85b69c3cd90c1cba3e02eb4f6b48abb0,N,,2026-09-09 13:12:23.516119
+ID38,S&P Global,2026-09-09 15:03:44+00:00,www.spglobal.com,Fund Finance Trends: Secondaries In The Spotlight | S&P Global Ratings,Not Available,,,,,https://www.spglobal.com/ratings/en/regulatory/article/fund-finance-trends-secondaries-in-the-spotlight-s101699578,This article examines the risks and rewards of GP- and LP-led transactions and outlines S&P Global Ratings' analytical approach to these structures.,Not Available,https://disclosure-assets-mfe.cdnex.use1.prod.ratings.spglobal.com/assets/images/spg_favicon.png,N,,2026-09-09 15:19:13.857271
 ID42,U.S. Bank,2026-09-09 15:02:35+00:00,Yahoo Finance,Stablecoins Are Coming For Payments: US Bank Tests Cross-Border Transfers As Marqeta ...,Anushka Basu,,,,,https://finance.yahoo.com/markets/crypto/articles/stablecoins-coming-payments-us-bank-145215110.html,"Marqeta Chief Strategy Officer Anthony Peculic said stablecoins are ""becoming a durable complementary layer in global money movement,"" and that the partnership lets customers issue cards that work anywhere.""
 He added that these are cards that are accepted without requiring merchants to change how they accept payments.
 The Mastercard Link Runs Twice The companies said that the partnership connects Marqeta to two parts of Mastercard's (MA) network at the same time.
@@ -11334,159 +11450,3 @@ In a social media post Tuesday, DOJ said Associate Attorney General Stanley Wood
 3 official, sent letters last month seeking the price data from Amazon, Costco, Walmart, Albertsons Cos., Kroger Co., the US unit of Koninklijke Ahold Delhaize NV, Publix Super Markets Inc. and Aldi Inc.","The US Justice Department expanded its antitrust inquiry of the meatpacking industry by demanding information on surging beef prices from eight major food retailers, including Amazon.com Inc., Costco Wholesale Corp. and Walmart Inc.
 
 In a social media post Tuesday, DOJ said Associate Attorney General Stanley Woodward, the department’s No. 3 official, sent letters last month seeking the price data from Amazon, Costco, Walmart, Albertsons Cos., Kroger Co., the US unit of Koninklijke Ahold Delhaize NV, Publix Super Markets Inc. and Aldi Inc.",https://news-cdn.bindg.com/indg/assets/news/images/Fallback-image.webp,N,,2026-09-02 21:06:17.303326
-ID38,S&P Global,2026-09-02 22:46:09+00:00,www.spglobal.com,"Eni, Chevron sign major upstream oil field development deals with PDVSA | S&P Global",Not Available,,,,,https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/090226-eni-chevron-sign-major-upstream-oil-field-development-deals-with-pdvsa,"Italy's Eni signed a ""strategic"" contract with Venezuela's state-owned PDVSA for operatorship of what it termed the ""super-giant"" Junin 5 oil ...",Not Available,,N,,2026-09-02 22:07:12.651641
-ID34,OpenAI,2026-09-02 22:37:26+00:00,US News & World Report,US Government Backs OpenAI in New York Times Copyright Case,Not Available,,,,,https://www.usnews.com/news/top-news/articles/2026-09-02/us-government-backs-openai-in-new-york-times-copyright-case,"A New York Times spokesperson said in ​a statement on Wednesday that the administration was ""siding with a handful of trillion-dollar AI companies at the expense ⁠of the ⁠countless American creators whose work ⁠they stole.""
-""Both AI and ​creators can thrive – AI companies simply need to pay fairly for the content that makes their products possible, ​as copyright law requires,"" the spokesperson ⁠said.
-The Times' lawsuit, first filed in 2023, accuses OpenAI and its largest financial backer, Microsoft, of using millions of newspaper articles without permission to train OpenAI's popular chatbot.
-The case is one of dozens brought by copyright holders against tech companies such as OpenAI, Anthropic and Meta Platforms for what they say is misuse of their material to train AI systems.
-The government agreed on Tuesday with tech companies that AI training is ""extraordinarily"" transformative.","By Blake Brittain
-
-Sept 2 (Reuters) - The Trump administration has filed a brief ⁠supporting ⁠OpenAI in its dispute with the ⁠New York Times and other newspapers over the company's use of their work to train ​the large language models behind ChatGPT, saying AI training generally makes fair use of copyrighted material.
-
-The brief, filed in Manhattan federal court on ‌Tuesday, appears to be the first time ‌the U.S. government has weighed in on a wave of cases brought by copyright owners including authors, publishers, music labels ⁠and news outlets ⁠over AI training. A brief has advisory rather than legal weight but could bolster ​tech companies as they fight the claims.
-
-""The United States has a strong interest in this court rejecting any argument that training LLMs on copyrighted texts violates copyright law"" based on concerns including scientific advancement and national security, the brief said.
-
-A New York Times spokesperson said in ​a statement on Wednesday that the administration was ""siding with a handful of trillion-dollar AI companies at the expense ⁠of the ⁠countless American creators whose work ⁠they stole.""
-
-""Both AI and ​creators can thrive – AI companies simply need to pay fairly for the content that makes their products possible, ​as copyright law requires,"" the spokesperson ⁠said.
-
-Spokespeople for OpenAI did not immediately respond to a request for comment on the filing on Wednesday.
-
-""AI dominance is critical to promote national security, prosperity, and economic mobility for all Americans,"" U.S. Associate Attorney General Stanley Woodward said in a statement posted to the social media platform X. ""This Administration will never let our Nation be at a disadvantage relative to our foreign adversaries based on a ⁠plainly incorrect understanding of copyright law.""
-
-U.S. Commerce Secretary Howard Lutnick separately told G20 officials at a meeting ⁠in North Carolina on Wednesday that their countries should embrace fair use and allow AI companies to train their models on creators' work while finding a way to ""protect artists.""
-
-The Times' lawsuit, first filed in 2023, accuses OpenAI and its largest financial backer, Microsoft, of using millions of newspaper articles without permission to train OpenAI's popular chatbot. The case is one of dozens brought by copyright holders against tech companies such as OpenAI, Anthropic and Meta Platforms for what they say is misuse of their material to train AI systems.
-
-The pending cases will likely revolve around whether AI systems make fair use of copyrighted material by using it to create new, ⁠transformative content. The first two judges to consider the issue issued diverging rulings last year.
-
-The government agreed on Tuesday with tech companies that AI training is ""extraordinarily"" transformative.
-
-""Beyond the subject matter of this litigation, LLMs are already helping researchers across fields achieve major breakthroughs,"" the brief said. ""Constraining LLM development under a misunderstanding of fair use doctrine would thwart such ​creative and scientific progress while hindering American prosperity and economic mobility.""
-
-(Reporting by Blake Brittain in ​Washington; Editing by Rod Nickel, Philippa Fletcher and Sanjeev Miglani)",https://www.usnews.com/dims4/USNEWS/b4484e8/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F88%2F1b55a5deb05fb72b56ed2d666dfddf%2Ftag%3Areuters.com%2C2026%3Anewsml_LYNXMPEM811GR%3A32026-09-02T145758Z_3_LYNXMPEM811GR_RTROPTP_3_OPENAI-SAFETY.JPG,N,,2026-09-02 20:10:08.447895
-ID33,Nvidia,2026-09-02 22:36:13+00:00,Venturebeat,Enterprises put non-Nvidia chips 14 points ahead of Nvidia's next-gen GPUs on their evaluation lists,Rob Strechay,,,,,https://venturebeat.com/data/enterprises-put-non-nvidia-chips-14-points-ahead-of-nvidias-next-gen-gpus-on-their-evaluation-lists,"The share expecting a change within zero to three months declined by 9.5 percentage points.
-The share expecting a change within three to six months rose by 4.1 points, while the six-to-12-month window rose by 5.3 points.
-Neoclouds are specialized cloud providers focused heavily on AI infrastructure, particularly access to accelerators and supporting services.
-At the same time, the share expecting to do less with neoclouds fell from 9.7% to 5.4%.
-Enterprises are running more AI infrastructure while deliberately keeping multiple paths open on chips, clouds and the layer that connects models to their own data.","When enterprise buyers build out their next AI accelerator evaluation list this cycle, they're more likely to put a non-Nvidia chip on it than Nvidia's own next-generation GPU. According to VentureBeat's July VB Pulse survey of 170 AI infrastructure respondents, 39.4% said they're likely to evaluate non-Nvidia accelerators — AWS Trainium, Google TPU, AMD Instinct, Intel Gaudi or in-house ASICs — over the next 12 months, compared with 25.3% for Nvidia Blackwell (GB300) or other next-generation Nvidia GPUs, a 14-point gap.
-
-Nvidia remains the default in most production environments. But organizations are building real optionality into their accelerator strategy rather than treating Nvidia as the only evaluation worth doing.
-
-The finding sits inside a broader pattern: enterprises are expanding and optimizing the AI infrastructure they already operate before making another major platform change. Greater infrastructure activity did not produce greater urgency to switch platforms. The share of respondents expecting a platform change within three months fell from 38.3% in June to 28.8% in July, even as production adoption, accelerator utilization, and exploration of neoclouds and open-source infrastructure all rose.
-
-Where is enterprise AI infrastructure actually growing?
-
-The July data shows organizations operating AI infrastructure more intensively and putting more provider platforms into production.
-
-Microsoft Azure posted the largest production adoption growth among the major platforms measured, with the share of respondents reporting Azure in production increasing from 29% in June to 47.1% in July, an 18.1 percentage-point increase. Some of that jump reflects who was surveyed: July's respondent base skewed more up-market than June's (57% at organizations above 1,000 employees, versus 37% in June), and Azure adoption rises with company size in both waves. Google's Gemini was the most-used platform in both waves, with the share of respondents reporting it in production rising from 41.1% in June to 47.6% in July, narrowly ahead of Azure.
-
-The share of respondents reporting OpenAI in production rose from 40.2% to 49.4%. Anthropic production adoption increased from 12.1% to 24.7%.
-
-Among enterprises that operate their own GPUs, the share running at half capacity or less fell from 83% in June (100 respondents) to 69% in July (155 respondents), with the share above 50% utilization rising from 13% to 23%.
-
-The definition of infrastructure effectiveness is also becoming more operational. The share of respondents who selected uptime and reliability as important effectiveness measures increased from 42.1% to 51.2%. The share selecting throughput rose from 21.5% to 24.7%.
-
-Ease of implementation improved from an average rating of 3.84 to 4.04 on a five-point scale. Overall satisfaction moved only slightly, from 4.07 to 4.14, while perceived value was essentially unchanged at approximately 3.9.
-
-That combination is telling. Enterprises are not reporting a dramatic improvement in value simply because they are deploying more infrastructure. They are becoming more capable operators with better architectures, but they are also setting a higher bar for what that infrastructure must deliver, with reliability leading the way.
-
-Why is platform-change urgency shifting outward?
-
-The strongest counter-signal in the July findings is the declining share of respondents who plan to make an immediate platform change.
-
-The share expecting a change within zero to three months declined by 9.5 percentage points. The share expecting a change within three to six months rose by 4.1 points, while the six-to-12-month window rose by 5.3 points. The share with no planned change remained effectively flat at approximately 40%.
-
-Urgency is shifting outward, with the open-weight-model and open-source-harness debate playing a role in which pieces get enhanced versus fully replaced.
-
-The selection criteria support that interpretation. Integration with existing cloud and data stack was the top factor in both waves, holding steady at 41.1% in June and 40.0% in July. The share of respondents prioritizing performance increased from 24.3% to 35.3%. The share prioritizing cost per million tokens increased from 7.5% to 15.9%, while the share prioritizing access to GPUs rose from 18.7% to 23.5%.
-
-By contrast, the share selecting broad total cost of ownership as a leading factor fell from 34.6% to 21.8%.
-
-The market appears to be moving from general infrastructure planning toward workload-level scrutiny. Buyers increasingly want to know how a platform performs under production inference, how reliably it operates and what each unit of useful work costs.
-
-Interest in Nvidia alternatives is concentrated at the top
-
-That 39.4% figure was 31.8% in June, already climbing before this wave. The alternatives enterprises are weighing include AWS Trainium, Google TPU, AMD Instinct, Intel Gaudi and other in-house ASICs.
-
-Interest was even stronger among respondents with strategic purchasing authority, though the C-suite sample is small: the share of C-suite respondents likely to evaluate non-Nvidia accelerators rose from 42.9% (6 of 14) in June to 57.1% (12 of 21) in July. Among final decision-makers, the same interest rose from 35.4% to 50%.
-
-This was especially true for organizations in the small and medium-size business tiers. Among organizations with 251 to 1,000 employees, the share increased from 41.4% to 53.2%. Among organizations with 101 to 250 employees, it rose from 33.3% to 57.7%.
-
-These findings show organizations building optionality into their accelerator strategy.
-
-The increased attention from C-suite respondents and final decision-makers suggests that accelerator diversity is becoming a strategic infrastructure question, not just a technical one for engineering teams.
-
-Enterprises want to own the harness
-
-The infrastructure findings align with a separate VB Pulse survey of agentic context layers. That survey included 101 substantive respondents in June and 101 respondents in July.
-
-The AI harness is the operational layer connecting models to enterprise data, tools, orchestration, evaluation, identity, security, observability and business processes. It determines what an agent can access, which actions it can take and how the organization evaluates its output.
-
-In July, 36.6% of context-layer respondents said they planned to retain best-of-breed standalone tools alongside their models. Another 36.6% expected to mix provider-native runtimes with standalone tools, while only 5.9% intended to build and own the context layer in-house.
-
-Combined, 79.2% of July respondents favored an approach that maintained at least some architectural control outside a single model provider, compared with approximately 65.3% in June. Only 11.9% of July respondents favored consolidating onto a single model provider’s native context stack, down from 20.8% in June.
-
-Most want to preserve provider choice, independent governance or control over critical components around the model.
-
-The need for that control is becoming clearer. In July, 62.4% of context-layer respondents reported that a governed semantic or context layer was either in production or being built. Production adoption alone increased from 24.8% to 31.7%.
-
-At the same time, 68.3% of July respondents reported experiencing at least one confident-but-wrong agent answer caused by missing or incorrect context, compared with 57.4% of June respondents.
-
-The share expecting to use multiple retrieval architectures by use case increased from 12.9% to 28.7%. The share expecting to mix provider-native and standalone context tools increased from 20.8% to 36.6%.
-
-The emerging architecture is a controlled combination of models, infrastructure, retrieval approaches, context systems and operational tooling selected by workload.
-
-Are neoclouds gaining enterprise traction?
-
-Neoclouds are specialized cloud providers focused heavily on AI infrastructure, particularly access to accelerators and supporting services. The July results suggest that these providers are becoming a more credible part of enterprise multi-provider strategies.
-
-The share of respondents expecting to do more with neoclouds increased from 33% in June to 38% in July. At the same time, the share expecting to do less with neoclouds fell from 9.7% to 5.4%.
-
-The movement was especially pronounced among respondents in the technology and software vertical. The share of that July segment expecting to do more with neoclouds reached 57.6%, compared with 44.4% in June.
-
-Current production adoption remains much smaller than broad expansion intent. Across the named providers measured consistently in both waves, such as CoreWeave, Lambda, Crusoe and Nebius, production use increased from 1.9% of June respondents to 5.9% of July respondents.
-
-The difference between 38% expansion intent and 5.9% current named-provider production use may point to a sizable evaluation and adoption pipeline.
-
-The neocloud demand pipeline is not theoretical. CoreWeave reported around $104 billion in revenue backlog at the end of June, excluding more than $25 billion in additional customer commitments secured during early Q3. Nebius does not disclose a directly comparable backlog metric, but said it could sell its entire 2027 capacity under current terms and reported four second-quarter AI cloud agreements, each averaging more than $1 billion in total contract value.
-
-The larger implication is that neoclouds are becoming a viable source of strategic leverage. They give organizations additional options for accelerator availability, software stacks, workload placement and ammunition for negotiations with hyperscale providers.
-
-Neoclouds will still have to demonstrate enterprise-grade reliability, security, support, networking, and data management capabilities. Specialized compute access may open the door, but durable enterprise adoption will depend on the surrounding operational stack.
-
-Is open-source AI infrastructure usage growing?
-
-The most accurate answer is that open-source production usage is growing, while broad platform consideration remains relatively flat.
-
-The share of respondents reporting a custom, self-managed open-source production stack increased from 3.7% in June to 12.9% in July. The stack definition included technologies such as PyTorch, Triton, vLLM, Ray and Kubernetes.
-
-The movement was visible across several segments with July bases above 20 respondents:
-
-Among individual contributors, 23.9% reported production use in July.
-
-Among recommenders and influencers, 13.7% reported production use in July.
-
-Among organizations with 251 to 1,000 employees, 12.8% reported production use in July.
-
-The share of respondents using open-source key-value cache tooling, including LMCache and vLLM prefix caching, increased from 6.5% to 11.8%. Among technology and software respondents, usage increased from effectively 0% to 13.3%.
-
-Open-source platform consideration ticked up slightly but remained essentially unchanged, moving from 5.6% to 6.5%.
-
-This combination suggests that growth is concentrated among organizations moving into implementation rather than across a dramatically larger population of evaluators. Open source appears to be deepening inside an active portion of the market.
-
-Organizations may be turning to open-source components for greater portability, model choice and control over inference optimization. But ownership also transfers responsibility. Teams adopting self-managed stacks must operate upgrades, security, observability, integration and production support themselves.
-
-That combination of more activity, less urgency and more optionality is the throughline across all of it. Enterprises are running more AI infrastructure while deliberately keeping multiple paths open on chips, clouds and the layer that connects models to their own data. The next platform change, when it comes, will be a choice made from a stronger position.
-
-Notes on methodology
-
-For this article, I compared two independent, cross-sectional infrastructure survey waves: 107 respondents in June 2026 and 170 respondents in July 2026. These waves are not a longitudinal panel, so the findings describe changes between respondent populations rather than changes made by the same organizations. Platform-change timing shares add to slightly more than 100% because a small number of respondents selected more than one window (5 in June, 9 in July).
-
-Sample composition changed between the waves. Respondents selecting the 1–100 employee organization-size category were excluded before calculating results. The remaining wave composition still differed, including a larger July share from organizations with more than 10,000 employees. Month-to-month movements should therefore be treated as directional signals rather than proof of causation. No statistical-significance testing was applied to the comparisons reported here.",https://images.ctfassets.net/jdtwqhzvc2n1/1HXFYAGa3qj3mEpurDrqHt/62c38134436a845b9774c740b8b91149/Gemini_Generated_Image_rktndfrktndfrktn.jpeg?w=800&q=75,N,,2026-09-02 19:27:27.059920
-ID33,Nvidia,2026-09-02 22:30:51+00:00,asia.nikkei.com,Nvidia underpins expected $50bn IPO valuation for SoftBank's SB Energy - Nikkei Asia,Staff,,,,,https://asia.nikkei.com/business/markets/ipo/nvidia-underpins-expected-50bn-ipo-valuation-for-softbank-s-sb-energy,"Nikkei Asia is experiencing an unexpected problem.
-We are hard at work to be back online soon.
-Thanks for your patience.","Nikkei Asia is experiencing an unexpected problem.
-
-We are hard at work to be back online soon. Thanks for your patience.",,N,,2026-09-02 20:10:00.588503
