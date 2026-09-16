@@ -61,6 +61,487 @@ Opportunities for Mexico's Clean Energy Leadership
 In an MBN Expert Contributor piece, Leonardo Beltrán, Non-Resident Fellow, Institute of the Americas, notes that clean power functions as a strategic lever for regional energy security, industrial competitiveness, and geopolitical resilience. Beltrán considers that Mexico has competitive wind and solar resources, integrated supply chains, and preferential North American market access, positioning the country to transition from a clean technology adopter to a regional energy hub. Addressing exchange rate volatility and financial risks is essential to support this transition, as major public energy entities like PEMEX and CFE faced substantial foreign exchange losses in early 2025. He considers that deploying innovative financial mechanisms, such as the proposed Clean Energy Exchange Rate Coverage Facility (ERCF) developed by researchers at Columbia University, the World Bank, and the World Economic Forum, could protect clean energy investments from currency depreciation without distorting market incentives.
 
 Furthermore, Beltrán emphasizes three core levers to maximize regional clean energy integration: regulatory harmonization, certification systems, and cross-border grid interconnections. Aligning technical standards can replicate historical industrial gains, such as the growth in refrigerator manufacturing under NAFTA. Participation in CertHiLAC, a regional green hydrogen certification system supported by GIZ, OLADE, and the IDB, provides the transparent emissions tracking required to access European and Asian markets. “Mexico has the natural resources, industrial base, and market access to lead. What is needed now is an intentional strategy: aligning our diplomacy, finance, and domestic policy to drive investment, create jobs, and enhance energy security,” Beltrán concludes.",https://mexicobusiness.news/sites/default/files/styles/crop_16_9/public/2026-09/jas-min-sRJEcdEhyZw-unsplash.jpg?h=b5955f22&itok=OIRmSUU_,N,,2026-09-15 17:57:23.390911
+,Original Search,2026-09-15 15:39:59+00:00,MDPI,Environmental and Regulatory Assessment of Methanol Propulsion for a Livestock Carrier ... - MDPI,"Mamdouh Elmallah, Hamid Reza Soltani Motlagh, Ernesto Madariaga, José Agustín González Almeida, Seyed Behbood Issa-Zadehd, Nourhan I. Ghoneim, Ana Pacheco Jiménez, Mohamed Shouman",,,,,https://www.mdpi.com/2076-3298/13/9/510,"The long-term objective is to achieve net-zero greenhouse gas emissions from international shipping by or around 2050.
+Recently, attention has increased on assessing Greenhouse Gas Fuel Intensity (GFI) as a key indicator of the environmental performance of marine fuels.
+The attained greenhouse gas fuel intensity of each fuel corresponds to its Well-to-Wake (WtW) lifecycle greenhouse gas intensity.
+However, the IMO Net-Zero Framework fundamentally changes this assessment by assigning financial value to lifecycle greenhouse gas emissions.
+Reducing methane emissions on livestock ships in order to mitigate greenhouse gas emissions and promote future maritime sustainability.","Abstract
+
+Livestock carriers contribute to greenhouse gas emissions through the continued use of conventional fossil fuels. This study presents a theoretical, steady-state case study of replacing the Wärtsilä W7X35 diesel engine of the livestock carrier Motor Vessel MV Ganado Express with a Wärtsilä 46F methanol-fueled engine (7500 kW, operated at 81.2% load to deliver the required 6090 kW), using published specific fuel consumption values and emission factors. Fuel consumption and exhaust emissions were estimated with a bottom-up method over a 24 h sailing period, and the annual well-to-wake (WtW) greenhouse gas fuel intensity (GFI) and compliance costs were assessed for 2028–2035 against the two-tier targets of the IMO Net-Zero Framework approved at MEPC 83. Because methanol is a carbon-bearing fuel, tank-to-wake carbon dioxide emissions are nearly unchanged, declining by only 5.4%, whereas nitrogen oxide emissions fall by 73.2% and sulfur oxide emissions are eliminated. The decarbonization benefit arises instead on a well-to-wake basis: with renewable e-methanol, annual lifecycle emissions fall from 29,897 to 2291 tCO2eq. Diesel operation exceeds both targets from 2028, at a compliance cost rising from USD 0.91 to 3.85 million per year, while e-methanol remains in direct compliance throughout the period. E-methanol nevertheless remains the more expensive option, the annual cost gap narrowing from USD 15.1 to 12.2 million by 2035.
+
+1. Introduction
+
+Climate change has become one of the most critical global challenges of the twenty-first century. Increasing atmospheric concentrations of greenhouse gases from fossil fuel combustion have accelerated global warming and contributed to severe environmental consequences, including rising sea levels, extreme weather events, and deteriorating air quality [1]. Maritime transportation plays a crucial role in international trade, carrying over 80% of the volume of world merchandise trade and serving as the backbone of the world economy [2,3]. However, the shipping sector remains a significant contributor to atmospheric emissions [4].
+
+Total shipping emitted 1056 million tonnes of CO2 in 2018, about 2.89% of global anthropogenic CO2 emissions [5], along with substantial amounts of nitrogen oxides (NOx), sulfur oxides (SOx), and particulate matter. These pollutants negatively impact both environmental sustainability and human health [6,7]. Previous studies show that maritime transport accounts for about 15% of global NOx emissions and 11% of global SOx emissions, highlighting the urgent need for cleaner propulsion technologies [8].
+
+To address these environmental concerns, the International Maritime Organization (IMO) has introduced increasingly stringent regulations to reduce greenhouse gas emissions from ships [9,10]. According to the 2023 IMO Strategy on Reduction of Greenhouse Gas Emissions from Ships, IMO aims to reduce the carbon intensity of international shipping by at least 40% by 2030 relative to 2008 levels. In addition, total annual greenhouse gas emissions are targeted to decrease by at least 20% by 2030 and by at least 70% by 2040, with targets of 30% and 80%, respectively.
+
+The long-term objective is to achieve net-zero greenhouse gas emissions from international shipping by or around 2050. Achieving these ambitious goals requires adopting alternative fuels and innovative propulsion technologies to reduce the environmental footprint of maritime operations [11,12]. Recently, attention has increased on assessing Greenhouse Gas Fuel Intensity (GFI) as a key indicator of the environmental performance of marine fuels. Unlike conventional emission metrics that consider only onboard combustion emissions, GFI adopts a life-cycle perspective by accounting for both Well-to-Tank and Tank-to-Wake greenhouse gas emissions.
+
+This approach provides a more comprehensive evaluation of the carbon intensity associated with different fuels and supports the transition toward low- and zero-carbon energy sources. In line with the International Maritime Organization’s strategy to achieve net-zero greenhouse gas emissions from international shipping by or around 2050, GFI assessment has become an essential component of comparing alternative fuels and determining their potential contribution to maritime decarbonization. Beyond its environmental significance, Greenhouse GFI has important economic implications under the International Maritime Organization’s Net-Zero Framework.
+
+To support the transition toward net-zero emissions, the International Maritime Organization (IMO) approved at MEPC 83 in April 2025 a two-tier Greenhouse GFI compliance framework, the IMO Net-Zero Framework, as a new chapter 5 of MARPOL Annex VI, circulated for adoption as part of a draft revised consolidated Annex VI [13]. The second extraordinary session of the Marine Environment Protection Committee adjourned its adoption in October 2025 [14], and the resumed session is scheduled for December 2026 [15].
+
+This analysis therefore uses the target values and pricing in the approved draft text; the 2028 start of the first reporting period and the 2031–2035 trajectory depend on the outcome of that session. The framework is based on a 2008 reference value of 93.3 gCO2eq/MJ. Beginning in 2028, ships will be assessed against two annual reduction targets: a Base Target and a more stringent Direct Compliance Target (Regulation 35). For 2028, these targets correspond to reductions of 4% and 17%, resulting in GFI limits of 89.57 and 77.44 gCO2eq/MJ, respectively, rising to 30% and 43% by 2035 (65.31 and 53.18 gCO2eq/MJ). Ships achieving a GFI value equal to or below the Direct Compliance Target are considered in direct compliance and receive Surplus Units (SUs), which can be banked or transferred.
+
+Vessels with attained GFI values between the Direct Compliance Target and the Base Target accrue a Tier 1 GFI compliance deficit, which is balanced through remedial units priced at USD 100 per tonne of CO2eq. Ships exceeding the Base Target accrue both a Tier 1 deficit, for the emissions between the Base and Direct Compliance targets, and a Tier 2 deficit, for the emissions above the Base Target, balanced through surplus units or remedial units priced at USD 380 per tonne of CO2eq (Regulations 36.4 to 36.9); these prices apply to the reporting periods 2028 to 2030, and the pricing mechanism for 2031 onwards is to be determined by the Committee by 1 January 2028 (Regulation 36.10). Consequently, reducing the GFI of marine fuels now affects environmental objectives, future compliance costs, and the economic competitiveness of shipping operations alike [16].
+
+To reduce NOx emissions from ships, IMO introduced MARPOL Annex VI, Regulation 13, which is specifically designed to control NOx release from marine diesel engines. This regulation is applicable to engines with a power output greater than 130 kW and is mandatory for vessels constructed on or after 1 January 2000. NOx emission control is structured into three progressive standards: Tier I, Tier II, and Tier III, applicable to ships constructed from 2000, 2011, and 2016, respectively; the last only within NOx emission control areas. These tiers define emission limits as a function of engine rotational speed (n), as illustrated in Figure 1.
+
+Figure 1. NOx emission limits of Regulation 13 of MARPOL Annex VI as a function of rated engine speed, with the Tier II and Tier III values at the rated speeds of the two engines compared in this study.
+
+For a ship constructed in 2013, Tier II applies. The replacement of an engine by a non-identical marine diesel engine is, however, a major conversion to which the standards in force at the time of replacement apply (Regulation 13.2.2): a replacement engine installed today must meet Tier III when operating in a NOx Tier III emission control area, and only where it is not possible for such an engine to meet Tier III does Tier II apply, taking into account the guidelines developed by the Organization [17], the Administration having to notify the Organization whenever a Tier II rather than a Tier III replacement engine has been installed on or after 1 August 2025 [13].
+
+Among the available alternatives, e-methanol has emerged as one of the most promising marine fuels [18]. Unlike conventional marine diesel oil, methanol contains virtually no sulfur, resulting in negligible SOx emissions during combustion. Additionally, methanol combustion can significantly reduce NOx emissions while offering simpler storage and handling requirements compared with hydrogen-based systems. Methanol can be stored as a liquid under ambient conditions, eliminating the need for cryogenic storage systems and reducing retrofitting complexity.
+
+Livestock vessels are an important segment of the maritime transportation sector, supporting the global supply chain of animal products that meet the increasing demand for meat and protein. As the world’s population continues to grow and living standards improve, the demand for livestock-derived foods is expected to rise considerably. Komarek et al. [19] projected that global demand for livestock-derived foods in 2050 would be approximately 38% higher than in 2020, primarily due to population growth and rising incomes.
+
+Consequently, the role of livestock carriers in ensuring food security and supplying animal products is expected to become increasingly important. Given the anticipated expansion of this sector, improving the environmental performance of livestock vessels and reducing greenhouse gas emissions are essential for achieving sustainable maritime transportation [20].
+
+Methanol propulsion systems offer a more straightforward transition pathway because they can be integrated into existing marine engine platforms with relatively minor modifications [21]. Furthermore, methanol is already available as a commodity at more than 100 ports worldwide, although far fewer ports have established bunkering procedures [22].
+
+The present study evaluates the environmental and regulatory performance of replacing the conventional Wärtsilä W7X35 diesel engine installed onboard MV Ganado Express with a Wärtsilä 46F methanol engine. The analysis focuses on fuel consumption, carbon dioxide, NOx, and SOx emissions over a 24 h sailing period while maintaining the vessel’s original propulsion power requirement, as well as well-to-wake greenhouse gas fuel intensity and compliance costs under the IMO Net-Zero Framework.
+
+Previous diesel–methanol engine comparisons have addressed container ships, ferries and fishing vessels [21,23] and, for livestock carriers, methane emissions from the cargo and hydrogen fuel cells [20,24]. To the authors’ knowledge, no study has assessed methanol propulsion for a livestock carrier, nor quantified the Tier 1 and Tier 2 compliance deficits of the IMO Net-Zero Framework for this ship type.
+
+The contribution of this work is threefold: (i) a consistent, fully documented steady-state comparison of diesel and methanol operation for a real livestock carrier at the same delivered power; (ii) an explicit separation between tank-to-wake exhaust emissions and well-to-wake GHG intensity, which locates the decarbonization benefit of methanol in the latter; and (iii) a year-by-year compliance-cost assessment for 2028–2035 following the definitions of the draft revised MARPOL Annex VI, including a sensitivity analysis on the e-methanol GHG intensity.
+
+2. Materials and Methods
+
+The livestock carrier MV Ganado Express was selected as the case study vessel, following a previous study by the group on alternative fuels for an existing vessel [25]. Cosco Guangdong Shipyard in China built the vessel in 2013, and it is currently used for international livestock transport. The ship is designed to transport cattle, sheep, horses, goats, and other livestock while complying with international animal welfare standards. The vessel has five livestock decks totaling approximately 4511 m2 of livestock area and can accommodate approximately 4000 cattle. With a gross tonnage of 10,421, the vessel falls within the scope of chapter 5 of the draft revised MARPOL Annex VI, which applies to ships of 5000 GT and above (Regulation 30) [13].
+
+The original propulsion system consists of a Wärtsilä W7X35 diesel engine (Wärtsilä Corporation, Helsinki, Finland) with a maximum continuous rating of 6090 kW. In this study, we replace the original engine with a Wärtsilä 46F methanol-fueled engine (Wärtsilä Corporation, Helsinki, Finland) in theory, while maintaining the same propulsion power requirement. Table 1 shows the Characteristics of MV Ganado Express.
+
+Table 1. Characteristics of MV Ganado Express.
+
+The original propulsion engine onboard MV Ganado Express is a Wärtsilä W7X35 low-speed (Wärtsilä Corporation, Helsinki, Finland), two-stroke marine diesel engine, directly coupled to the propeller at 167 rpm. Table 2 presents the engine specifications [26].
+
+Table 2. Diesel engine specifications [26].
+
+This study considers the Wärtsilä 46F Methanol Engine (Wärtsilä Corporation, Helsinki, Finland), a four-stroke, non-reversible, medium-speed engine delivering 1250 kW per cylinder at 600 rpm in methanol mode [27]. The selected six-cylinder in-line engine has a rated output of 7500 kW. Because the vessel requires only 6090 kW, the engine is assumed to operate at 81.2% of its rated capacity. The Wärtsilä 46F was selected because it is a commercially available methanol-capable engine in the required power range and belongs to a platform with a long operational record, offering a practical decarbonization pathway without requiring major modifications to ship operational practices [27,28]. Table 3 shows the specifications of the Wärtsilä 46F Methanol Engine [27,29].
+
+Table 3. Specifications of the Wärtsilä 6L46F Methanol engine [27,29].
+
+The two engines differ in kind. The W7X35 is a two-stroke, low-speed, reversible engine coupled directly to a fixed-pitch propeller at 167 rpm, whereas the 46F is a four-stroke, non-reversible, medium-speed engine rated at 600 rpm. Delivering 6090 kW to the same propeller therefore requires a reduction gearbox with a ratio of approximately 3.6:1 and, because the 46F is non-reversible, either a controllable-pitch propeller or a reversing gear. The engine-room arrangement would need to accommodate the gearbox and thrust bearing, a new foundation and shaft line, the methanol fuel supply system with double-walled piping, ventilation and inerting of tank and fuel-preparation spaces, and fire detection and extinguishing arrangements suitable for a low-flashpoint fuel, in accordance with the IMO interim guidelines for ships using methyl/ethyl alcohol as fuel [30]. Because methanol has roughly half the lower calorific value of diesel (19.9 versus 42.7 MJ/kg) and a lower density (792 versus up to 890 kg/m3 at 15 °C for grade DMA under ISO 8217), its volumetric energy density is 15.8 against 38.0 MJ/L, so the same endurance requires about 2.4 times the tank volume, and the cofferdam separation required for methanol tanks further reduces the usable volume.
+
+The 6L46F has a dry mass of 97 t and overall dimensions of 8620 × 2905 × 3500 mm (length × width × height, rigidly mounted, without flywheel) [29], which must be compared with the space released by removing the W7X35 and with the additional volume required by the gearbox, the methanol fuel supply system and the tank arrangement. A detailed retrofit assessment covering stability, structural integration, tank arrangement, class approval and cost is outside the scope of this study, which is confined to the environmental and regulatory comparison of the two engines at the same operating point.
+
+The methanol specific fuel consumption of 375 g/kWh corresponds to 174.8 g/kWh of diesel-equivalent fuel (375 × 19.9/42.7). This is within 1.2% of the guaranteed consumption of the diesel version of the same engine at the closest tabulated operating point, 176.8 g/kWh on light fuel oil at 85% load for the main-engine controllable-pitch variable-speed configuration under ISO conditions [29], which supports the assumed value on an energy-equivalent basis. The Product Guide reports consumption of 176.8, 181.1, and 183.1 g/kWh at 85%, 75%, and 50% load, respectively, so specific consumption varies by less than 4% over that range, and a constant value is a reasonable assumption for a steady-state comparison at a single operating point.
+
+No manufacturer consumption curve has been published for methanol mode: the manufacturer states that engine conversion technology for the 46F is not yet available and is still in development [22], so no in-service consumption data exist for this engine on methanol. The value used here is therefore an assumption of the study, and the sensitivity of the results to it is limited to the fuel-cost term, since the emission results depend on the fuel consumed rather than on the engine that consumes it.
+
+Emission factors quantify pollutant emissions produced during engine operation. Table 4 presents the fuel properties, tank-to-wake emission factors, and well-to-wake GHG intensity for both engine types: the conventional diesel engine and the methanol engine. The lower calorific value (LCV) and the carbon conversion factors (Cf) of marine gas oil are taken from Appendix 2 of the 2024 IMO LCA Guidelines [31] and those of methanol from Annex II of Regulation (EU) 2023/1805 [32]; the tank-to-wake CO2 emission factor of each fuel is derived from its specific fuel consumption and its Cf, which makes Table 4 and Table 5 consistent by construction.
+
+Table 4. Fuel properties, tank-to-wake emission factors and well-to-wake GHG intensity.
+
+Table 5. Fuel consumption and tank-to-wake emissions of diesel and methanol engines.
+
+The NOx factors are study assumptions rather than certified values: engine manufacturers publish compliance with a NOx tier rather than a certified emission value, and the methanol version of the 46F is not yet in service, so no measured figure is available for either engine. The 11.2 g/kWh assumed for the W7X35 lies below the Tier II limit of 13.56 g/kWh applicable at its rated speed, as is required of an engine certified in 2013, and the 3.0 g/kWh assumed for the 46F is consistent with the manufacturer’s statement that Tier III compliance of that engine is achieved with a selective catalytic reduction system [27], which places its engine-out emission above the Tier III limit of 2.50 g/kWh and well below the Tier II limit of 10.10 g/kWh at 600 rpm.
+
+The SOx factor is derived from the sulfur balance of the fuel: complete oxidation of the fuel sulfur gives 2 g of SO2 per gram of sulfur burned, so that for marine gas oil meeting the 0.10% m/m limit applicable in sulfur oxide emission control areas under Regulation 14 of MARPOL Annex VI [13], the emission factor is 2 × 0.001 × 170 = 0.34 g/kWh. Methanol contains no sulfur, so no SOx emission factor is required for it.
+
+The well-to-wake GFI values of Table 4 are lifecycle indicators; they are not exhaust emissions and are used only for the Net-Zero Framework assessment. For marine gas oil the WtW intensity is built on the IMO basis: the well-to-tank default of 17.7 gCO2eq/MJ given in Appendix 2 of the LCA Guidelines, plus the tank-to-wake term computed with the Guidelines’ own formula from the Cf factors of the same table, the LCV of 0.0427 MJ/g and the AR5 GWP100 values (28 for CH4 and 265 for N2O), which gives 76.2 gCO2eq/MJ and a total of 93.9 gCO2eq/MJ [31]. For comparison, the FuelEU Maritime default for the same fuel is 90.77 gCO2eq/MJ (WtT 14.4 plus TtW 76.37 with AR4 GWP values) [32]; the difference arises from the upstream term and from the GWP set.
+
+The e-methanol value of 7 gCO2eq/MJ corresponds to methanol synthesized from hydrogen produced by electrolysis with renewable electricity and CO2 obtained by direct air capture or industrial carbon capture, on a well-to-wake boundary in which the combustion CO2 is counted in the tank-to-wake term and offset by the emission credit for the captured CO2 used as carbon stock (term e_ccu with SF_ccu = 1, the “TtW value 2” of paragraph 5.3 of the Guidelines) [31]. This pathway is listed in Appendix 1 of the Guidelines as MeOH_rCO2_rH2_MS_gm (no. 96) but has no default emission factor in Appendix 2, so we bound the value from external sources. Du et al. [33] optimized this production route at seven EU ports and report lifecycle GHG emission savings of 95.96% for the configurations supplied entirely by offshore wind, which corresponds to 3.8 gCO2eq/MJ against the fossil comparator of 94 gCO2eq/MJ; the European methodology for renewable fuels of non-biological origin requires a minimum saving of 70%, equivalent to 28.2 gCO2eq/MJ [34]. These two values are computed under the European methodology, whose system boundary, comparator, and global warming potentials differ from those of the IMO LCA Guidelines, so they are not IMO GFI values and are used here only as indicative bounds on the lifecycle intensity that renewable e-methanol can plausibly attain. The assumed value of 7 gCO2eq/MJ lies within them, and the assessment is repeated at both bounds to test how far the result depends on this assumption.
+
+The 46F burns methanol with a pilot fuel for ignition, since methanol does not autoignite reliably under compression; the pilot is a distillate fuel and supplies about 5% of the energy released. The calculations reported below assume methanol alone, and the effect of the pilot is quantified here. Holding the delivered power and the engine efficiency constant, a 5% pilot share corresponds to 1277 kg/day of marine gas oil together with 52,070 kg/day of methanol, in place of 54,810 kg/day of methanol. Tank-to-wake CO2 rises from 75.4 to 75.7 t/day, a difference of 0.4%, because at the exhaust the two fuels carry almost the same carbon per unit of energy, 69.1 against 75.1 gCO2/MJ.
+
+On a well-to-wake basis, the intensity of the blend is the energy-weighted mean of the two fuels, which gives 11.34 gCO2eq/MJ for the base case and 8.30 and 31.48 gCO2eq/MJ at the two bounds above. All three remain below the Direct Compliance Target throughout 2028–2035, with the least favorable at 21.7 gCO2eq/MJ in 2035, so the pilot fuel does not alter the compliance result. Sulfur oxide emissions are not nil in that case, since the pilot is a distillate fuel: at the same sulfur limit, they amount to 2.6 kg/day, compared with 49.7 kg/day for diesel operation, so the reduction is 95% rather than complete elimination. The tables and figures report the methanol-only case, and the pilot fuel is treated as a sensitivity.
+
+We used a bottom-up methodology to estimate fuel consumption and pollutant emissions. This methodology has been widely used in maritime emission studies because it incorporates both vessel operating characteristics and fuel consumption parameters [7,21,35].
+
+The calculations were conducted for a 24 h sailing period under full operational power demand of 6090 kW.
+
+The Lower Heating Value directly affects the specific fuel consumption (SFC). For a given engine efficiency ( η ), the SFC can be estimated as
+
+S F C = 3.6 η × L H V
+
+(1)
+
+where SFC is the specific fuel consumption (kg/kWh); η is the brake thermal efficiency of the engine (dimensionless); and LHV is the lower heating value of the fuel (MJ/kg), representing the net thermal energy released during the complete combustion of one kilogram of fuel, excluding the latent heat of vaporization of the water produced during combustion. The Lower Heating Value (LHV) varies with each fuel’s chemical composition and directly influences the amount of fuel required to produce a given engine power.
+
+Conventional marine diesel fuels typically have an LHV of 42–43 MJ/kg, whereas methanol has a considerably lower LHV, generally 19–20 MJ/kg. Consequently, methanol contains approximately half the usable energy per unit mass of diesel fuel, resulting in higher specific fuel consumption under identical operating conditions.
+
+The main engine fuel consumption was determined using engine power, specific fuel consumption, and operating time. Total fuel consumption is expressed as
+
+F t r i p = S F C M E × P × t
+
+(2)
+
+where Ftrip is the fuel consumption of the trip, SFCME is the specific fuel consumption of the main engine (g/kWh), P is the power of the main engine in kW, and t is the trip duration in hours.
+
+Carbon dioxide emissions (ECO2) were calculated from fuel consumption and the carbon conversion factor (Cf) of each fuel, making them consistent with specific fuel consumption. The total tank-to-wake carbon dioxide emissions are given by
+
+ECO2 = Ftrip × CfCO2
+
+(3)
+
+where Ftrip is the fuel consumption of the trip, and CfCO2 is the CO2 conversion factor of the fuel (g CO2/g fuel) given in Table 4.
+
+Nitrogen oxide emissions (ENOx) were calculated using the engine power, operating time, and the NOx emission factor according to
+
+ENOx = P × EFNOx × t
+
+(4)
+
+where EFNOx is the NOx emission factor. IMO regulates NOx emissions from marine diesel engines using a tier-based system. The limits are expressed in terms of engine speed n (revolutions per minute, rpm) and are defined in grams of NOx per kilowatt-hour (g/kWh). Equation (5) gives the IMO regulatory limits for 130 ≤ n < 2000 rpm under Tier II and Tier III, which are compared here with the emissions of the two engines at 167 rpm and at 600 rpm, respectively.
+
+NOx = 44⋅n − 0.23 (Tier II); NOx = 9⋅n − 0.20 (Tier III)
+
+(5)
+
+Similarly, sulfur oxide emissions were calculated using the sulfur oxide emission factor as
+
+ESOx = P × EFSOx × t
+
+(6)
+
+where EFSOx is the emission factor of SOx.
+
+Under the Net-Zero Framework, the attained GFI is defined per unit of energy used on board, i.e., per MJ of fuel on a lower calorific value basis (Regulations 2.3.8 and 33.2 of the draft revised Annex VI), not per unit of shaft work [13]. The annual energy used on board is therefore calculated as
+
+E a n n u a l = F a n n u a l × L C V × 10 3
+
+(7)
+
+where Eannual is the annual energy used on board (MJ/year), Fannual is the annual fuel consumption (t/year), given by Equation (8), and LCV is the lower calorific value of the fuel (MJ/kg). The implied brake thermal efficiencies of the two engines at the operating point, 3.6/(SFC × LCV), are 49.6% (diesel) and 48.2% (methanol), which serve as a consistency check of the input data.
+
+Annual GFI analyses were conducted assuming 300 operating days per year under the same conditions. The annual fuel consumption is determined using
+
+F a n n u a l = F d a y × D
+
+(8)
+
+where F a n n u a l is the annual fuel consumption (t/year), F d a y is the daily fuel consumption (t/day), and D is the annual number of operating days, assumed to be 300 in the present study.
+
+The annual fuel cost is calculated as
+
+F C = F a n n u a l × F P
+
+(9)
+
+where F C is the annual fuel cost (USD/year), F a n n u a l is the annual fuel consumption (t/year), and F P is the fuel price (USD/t).
+
+According to the IMO Net-Zero Framework, the reference greenhouse gas fuel intensity is defined as
+
+G F I 2008 = 93.3 g C O 2 e q / M J
+
+(10)
+
+The annual target greenhouse gas fuel intensity is calculated using
+
+G F I T a r g e t = G F I 2008 1 R 100
+
+(11)
+
+where GFITarget is the target greenhouse gas fuel intensity (gCO2eq/MJ), GFI2008 is the IMO reference greenhouse gas fuel intensity based on the 2008 baseline (93.3 gCO2eq/MJ), and R is the applicable annual greenhouse gas reduction target (%). The attained greenhouse gas fuel intensity of each fuel corresponds to its Well-to-Wake (WtW) lifecycle greenhouse gas intensity. The reduction targets are those of Table 4 of Regulation 35 of the draft revised Annex VI [13].
+
+To evaluate compliance with the IMO Net-Zero Framework, the annual Well-to-Wake greenhouse gas emissions are calculated as
+
+C O 2 e q = G F I F u e l × E a n n u a l 10 6
+
+(12)
+
+where C O 2 e q is the annual lifecycle greenhouse gas emissions (tCO2eq/year), G F I F u e l is the attained greenhouse gas fuel intensity of the evaluated fuel (gCO2eq/MJ), and E a n n u a l is the annual propulsion energy demand (MJ/year). The denominator 10 6 converts grams of carbon dioxide equivalent into metric tonnes.
+
+The annual greenhouse gas emissions corresponding to the IMO Base Target are calculated using
+
+C O 2 e q B a s e = G F I B a s e × E a n n u a l 10 6
+
+(13)
+
+where C O 2 e q B a s e is the allowable annual lifecycle greenhouse gas emissions associated with the IMO Base Target (tCO2eq/year), and G F I B a s e is the greenhouse gas fuel intensity specified by the IMO Base Target (gCO2eq/MJ).
+
+Similarly, the annual greenhouse gas emissions corresponding to the Direct Compliance Target are determined as
+
+C O 2 e q D i r e c t = G F I D i r e c t × E a n n u a l 10 6
+
+(14)
+
+where C O 2 e q D i r e c t is the allowable annual lifecycle greenhouse gas emissions corresponding to the IMO Direct Compliance Target (tCO2eq/year), and G F I D i r e c t is the greenhouse gas fuel intensity specified by the Direct Compliance Target (gCO2eq/MJ).
+
+The GFI compliance deficits are determined in accordance with Regulation 36.4 of the draft revised Annex VI [13]. If the attained greenhouse gas fuel intensity exceeds the IMO Base Target, the Tier 1 GFI compliance deficit is determined using
+
+D T 1 = C O 2 e q B a s e − C O 2 e q D i r e c t
+
+(15)
+
+where DT1 is the Tier 1 GFI compliance deficit (tCO2eq/year), CO2eqBase is the allowable annual lifecycle greenhouse gas emissions under the IMO Base Target (tCO2eq/year), and CO2eqDirect is the allowable annual lifecycle greenhouse gas emissions under the IMO Direct Compliance Target (tCO2eq/year). If the attained intensity is equal to or below the Base Target but above the Direct Compliance Target, the Tier 1 deficit is instead CO2eqFuel − CO2eqDirect and no Tier 2 deficit arises; if it is equal to or below the Direct Compliance Target, the ship is in direct compliance and receives surplus units equal to CO2eqDirect − CO2eqFuel. The term remedial unit is reserved for the unit acquired from the IMO Net-Zero Fund to balance a deficit (Regulation 2.3.11).
+
+For a ship above the Base Target, the Tier 2 GFI compliance deficit is calculated as
+
+D T 2 = C O 2 e q F u e l − C O 2 e q B a s e
+
+(16)
+
+where DT2 is the Tier 2 GFI compliance deficit (tCO2eq/year), CO2eqFuel is the annual lifecycle greenhouse gas emissions of the evaluated fuel (tCO2eq/year), and CO2eqBase is the allowable annual lifecycle greenhouse gas emissions under the IMO Base Target (tCO2eq/year).
+
+The annual Tier 1 compliance cost is determined by
+
+P e n a l t y T 1 = D T 1 × 100
+
+(17)
+
+where PenaltyT1 is the annual Tier 1 greenhouse gas compliance cost (USD/year), DT1 is the Tier 1 GFI compliance deficit (tCO2eq/year), and 100 represents the IMO Tier 1 remedial unit price (USD/tCO2eq) for the reporting periods 2028 to 2030 (Regulation 36.8).
+
+The annual Tier 2 compliance cost is calculated as
+
+P e n a l t y T 2 = D T 2 × 380
+
+(18)
+
+where PenaltyT2 is the annual Tier 2 greenhouse gas compliance cost (USD/year), DT2 is the Tier 2 GFI compliance deficit (tCO2eq/year), and 380 represents the IMO Tier 2 remedial unit price (USD/tCO2eq) for the reporting periods 2028 to 2030 (Regulation 36.9). Since the draft text leaves the prices for 2031 onwards to be determined by the Committee (Regulation 36.10), they are assumed constant over 2031–2035; this is an explicit assumption of the study.
+
+Finally, the total annual greenhouse gas compliance penalty is obtained from
+
+P e n a l t y T o t a l = P e n a l t y T 1 + P e n a l t y T 2
+
+(19)
+
+where P e n a l t y T o t a l is the total annual greenhouse gas compliance cost (USD/year), representing the sum of the Tier 1 and Tier 2 remedial payments required under the IMO Net-Zero Framework. This total penalty is subsequently incorporated into the annual operating cost assessment of each propulsion alternative.
+
+3. Results
+
+The present investigation highlights the growing need to transition to low- and zero-carbon propulsion systems in the maritime sector, particularly in vessel categories closely linked to global food supply chains, such as livestock carriers. Beyond directly reducing harmful atmospheric pollutants, the study underscores the broader importance of adopting alternative fuels in response to increasingly stringent international regulatory frameworks governing greenhouse gas emissions [36]. In this context, methanol emerges as a particularly promising solution due to its liquid-state handling characteristics, compatibility with modern engine designs, and ability to significantly improve fuel-related emissions performance.
+
+Overall, the results support the view that methanol-fueled engines constitute a practical transitional technology that can bridge the gap between current fossil-based marine propulsion and future sustainable shipping solutions, particularly in sectors where operational demand is expected to grow steadily in the coming decades.
+
+Recent studies show that time-dependent optimization and load-dependent engine models can more realistically represent vessel operation by accounting for varying power demand and off-design performance. However, such approaches generally require detailed operational profiles, engine performance maps, and optimization algorithms. Therefore, this study uses a simplified, steady-state comparative assessment under identical operating conditions to evaluate the environmental and regulatory performance of diesel and e-methanol propulsion systems, maintaining methodological consistency [23,37].
+
+The fuel consumption of both propulsion systems was calculated using Equation (2) based on the engine power requirement of 6090 kW and an operating period of 24 h. The diesel engine consumes approximately 24.85 t of fuel per day, while the methanol engine requires approximately 54.81 t of fuel per day, a ratio of 2.2 that follows directly from the ratio of lower calorific values.
+
+Figure 2 shows the fuel consumption over a 24 h period for each engine, and Table 5 shows the fuel consumption and tank-to-wake emissions of both engines. Using Equation (3), the diesel engine emits approximately 79.7 t of CO2 per day and the methanol engine approximately 75.4 t of CO2 per day, a reduction of only 5.4%: the lower carbon content of methanol per unit mass (37.5% against approximately 87% for diesel) is almost entirely offset by the larger mass of fuel burned, so that the exhaust CO2 of the two engines is of the same order. Figure 3 shows the CO2 emissions comparison.
+
+Figure 2. Daily fuel consumption comparison.
+
+Figure 3. Daily CO2 emissions comparison.
+
+Nitrogen oxide emissions were calculated using Equation (4). The conventional engine emits approximately 1.64 t of NOx per day. The methanol engine emits approximately 0.44 t of NOx per day, a 73.21% reduction; this figure follows from the assumed emission factors in Table 4 and reflects the difference between a Tier II two-stroke and a methanol four-stroke rather than a measured result. Figure 4 illustrates a comparative assessment of NOx emissions for diesel and methanol operation. The applicable IMO limits, recalculated with Equation (5) at the rated speed of each engine, are 13.56 g/kWh (Tier II) and 3.23 g/kWh (Tier III) at 167 rpm, and 10.10 g/kWh (Tier II) and 2.50 g/kWh (Tier III) at 600 rpm. The diesel-fueled engine emits 11.2 g/kWh of NOx, leaving a margin of 2.4 g/kWh below its Tier II limit.
+
+Figure 4. Daily NOx emissions.
+
+In contrast, operation on methanol results in substantially lower NOx emissions (3 g/kWh), well below the Tier II limit at 600 rpm. This value, however, exceeds the Tier III limit at that speed by 0.5 g/kWh. Since a non-identical replacement engine must meet Tier III in NOx emission control areas where this is possible (Regulation 13.2.2), methanol operation alone does not guarantee Tier III compliance; this is confirmed by the manufacturer, which states that Tier III compliance of the 46F is ensured by a selective catalytic reduction system in both diesel and methanol modes [27]. An SCR unit would therefore be required for trading in NOx emission control areas, with the corresponding space, weight, and reagent-consumption implications for the retrofit. Outside emission control areas, both engines comply with Tier II, the methanol engine with a substantially larger margin.
+
+Sulfur oxide emissions (Equation (6)) fall from 49.7 kg/day for diesel, computed from the 0.10% m/m sulfur limit of Regulation 14, to zero for methanol, which contains no sulfur. The reduction is complete for any fuel sulfur content: at the 0.50% m/m global limit, the diesel figure would be 248.5 kg/day, and the elimination would be correspondingly larger in absolute terms.
+
+The introduction of the IMO Net-Zero Framework represents one of the most significant regulatory changes in maritime decarbonization because it shifts compliance from measuring onboard emissions alone to evaluating the complete lifecycle greenhouse gas intensity of marine fuels.
+
+Unlike previous regulations that primarily targeted exhaust emissions, the Greenhouse GFI framework includes both Well-to-Tank (WtT) and Tank-to-Wake (TtW) emissions, requiring shipowners to consider the environmental impacts of fuel production, transportation, distribution, and onboard combustion. Consequently, the selection of future marine fuels will likely depend more on lifecycle carbon intensity than on engine efficiency or fuel price alone.
+
+The GFI values discussed in the following paragraphs are well-to-wake lifecycle indicators; they are not the exhaust emissions reported above. The present study indicates that e-methanol provides a substantial compliance advantage over conventional marine diesel under the IMO GFI framework. Although methanol has a significantly higher specific fuel consumption because of its lower heating value, its lifecycle greenhouse gas intensity remains considerably lower than that of diesel.
+
+The conventional Wärtsilä W7X35 diesel engine attains a lifecycle greenhouse gas intensity of 93.9 gCO2eq/MJ, above the 2008 reference value, exceeding both annual compliance thresholds from the first year of implementation. The Tier 1 deficit is constant at 3861 tCO2eq/year because it equals the difference between the two targets, which is fixed at 13% of the reference value throughout 2028–2035 (Equation (15)); the Tier 2 deficit grows from 1388 to 9110 tCO2eq/year as the Base Target tightens. Although the excess above the Base Target is relatively small during the initial years, the progressive tightening of the IMO reduction pathway rapidly increases the compliance gap.
+
+This finding illustrates a fundamental characteristic of the GFI framework: a fuel that is only marginally non-compliant today becomes increasingly uneconomical as regulatory targets tighten. Therefore, evaluate compliance not only for the current year but also across the vessel’s entire operational lifetime.
+
+Table 6 shows the annual IMO GFI compliance targets (2028–2035) and the corresponding allowable annual emissions for the diesel case, computed with the energy basis of Equation (7). Figure 5 shows a comparison of the well-to-wake (WTW) CO2-equivalent (CO2eq) emissions of diesel and methanol-fueled engines relative to the annual IMO Greenhouse GFI targets. E-methanol at 7 gCO2eq/MJ attains 2291 tCO2eq/year and remains below the Direct Compliance Target throughout the period; the same holds at both bounds of the plausible range, 3.8 and 28.2 gCO2eq/MJ. At the upper bound, the attained intensity is still 25.0 gCO2eq/MJ below the 2035 Direct Compliance Target of 53.18 gCO2eq/MJ, a margin wide enough that the result is not sensitive to the assumed value, nor to the difference between the European and IMO accounting methodologies from which the bounds are derived.
+
+Table 6. Annual IMO GFI compliance (2028–2035).
+
+Figure 5. WTW CO2eq emissions relative to annual IMO GFI targets.
+
+One of the most significant findings of this study is the rapid escalation of compliance costs associated with diesel operation. Because the attained diesel GFI remains constant while the allowable GFI decreases annually, the Tier 2 GFI compliance deficit increases every year, while the Tier 1 deficit remains constant. Consequently, annual compliance costs rise from USD 0.91 million in 2028 to USD 3.85 million in 2035, with the Tier 1 component at USD 0.39 million per year, resulting in cumulative compliance costs of USD 17.7 million over the analyzed period.
+
+This trend indicates that regulatory costs are likely to become a significant component of vessel operating expenditure. Table 7 and Table 8 present the annual lifecycle greenhouse gas emissions and IMO compliance costs for diesel and for e-methanol (2028–2035). In the base case, the methanol-fueled vessel would additionally receive between 15,111 and 23,049 tCO2eq of surplus units per year, which are transferable to other ships or bankable under Regulation 36.12 and represent a potential revenue not quantified here.
+
+Table 7. Annual lifecycle greenhouse gas emissions and IMO compliance penalties for diesel (2028–2035).
+
+Table 8. Annual lifecycle greenhouse gas emissions and IMO compliance penalties for methanol (2028–2035).
+
+Table 9 shows the annual fuel consumption and cost for each engine. Marine gas oil is priced at USD 650/t, the reference value of Saadeldin et al. [38]. For e-methanol, the levelized cost of production reported by Du et al. [33] is used, taken from the same configuration that underpins the lower emission bound so that cost and lifecycle intensity refer to one production route: 1123.70 EUR/t for production supplied entirely by offshore wind with direct air capture, equivalent to USD 1271/t at the 2025 average exchange rate of 1.1308 USD/EUR.
+
+Table 9. Annual fuel consumption and cost for each engine.
+
+The same source reports lower costs, 907.63–1008.35 EUR/t (USD 1026–1140/t), for configurations that draw part of their electricity from the grid or use industrially captured CO2; these reduce cost at the price of lower lifecycle savings, so cost and emission intensity cannot be minimized simultaneously. A levelized production cost excludes distribution and supplier margin and is therefore a lower bound on a delivered bunker price, which makes the cost gap reported below a conservative estimate; it is used because no established e-methanol bunker market exists, and it avoids attributing the conventional product’s price to renewable methanol [39,40]. Table 10 shows the economic IMO compliance assessment for diesel and methanol (2028–2035).
+
+Table 10. Economic IMO compliance assessment for diesel and methanol (2028–2035).
+
+Table 10 presents the annual engineering and economic assessment of the diesel and methanol propulsion systems under the IMO Net-Zero Framework. The comparison includes annual fuel consumption, fuel cost, Tier 1 and Tier 2 greenhouse gas compliance penalties, and the resulting total annual cost for the period 2028–2035.
+
+However, the annual greenhouse gas compliance costs for diesel increase progressively from 2028 to 2035 due to the tightening IMO Greenhouse GFI targets. Consequently, the total annual operating cost of diesel increases from USD 5.76 million in 2028 to USD 8.69 million in 2035, while e-methanol costs USD 20.90 million per year throughout. Methanol remains below both the Base Target and the Direct Compliance Target during the entire assessment period, resulting in zero greenhouse gas compliance costs. The cost gap therefore narrows from USD 15.1 million to USD 12.2 million per year but does not close within the assessed period at the assumed prices; closure depends on the post-2035 trajectory, for which the draft text fixes only a Base Target reduction of 65% in 2040 (Regulation 35.3), on the RU prices for 2031 onwards, which are left to the Committee, and on the evolution of e-methanol prices.
+
+4. Discussion
+
+The economic comparison also demonstrates that fuel price alone is no longer an appropriate indicator for evaluating alternative marine fuels. Conventional diesel has historically maintained an economic advantage because of its relatively low purchase cost and established global supply infrastructure. However, the IMO Net-Zero Framework fundamentally changes this assessment by assigning financial value to lifecycle greenhouse gas emissions.
+
+Consequently, fuels with lower lifecycle carbon intensity, despite higher purchase prices, become progressively more attractive as targets tighten because they avoid greenhouse gas compliance costs. This transition shifts from minimizing fuel expenditure to minimizing total lifecycle operating costs.
+
+The results indicate that methanol consumption is more than twice that of diesel because methanol possesses approximately half the lower heating value of conventional marine fuels. Nevertheless, this increase in fuel consumption does not translate into higher lifecycle greenhouse gas emissions because the carbon intensity of renewable e-methanol is substantially lower, although, as shown above, it does not reduce CO2 emitted at the stack. Consequently, although producing the same propulsion power requires more fuel mass, overall lifecycle greenhouse gas emissions remain significantly below those of diesel.
+
+Another important implication concerns long-term investment decisions for shipowners. Marine propulsion systems typically remain in operation for more than two decades, meaning that engines installed today will continue operating throughout multiple phases of the IMO decarbonization roadmap. Under these conditions, selecting propulsion systems solely based on present-day fuel costs may expose operators to considerable regulatory and financial risks in future years. The analysis indicates that methanol-compatible propulsion systems provide substantially greater resilience to progressively tightening greenhouse gas regulations while reducing uncertainty about future compliance costs.
+
+The environmental benefits observed in this study extend beyond greenhouse gas reduction. The methanol engine reduced nitrogen oxide emissions by more than 73% and eliminated sulfur oxide emissions, while leaving tank-to-wake carbon dioxide emissions almost unchanged. The NOx emissions of the methanol engine remain below the Tier II limit at 600 rpm by a wide margin but above the Tier III limit at that speed, so that an after-treatment system would be required in NOx emission control areas. In comparison, the diesel engine operates 2.4 g/kWh below its Tier II limit. Therefore, methanol contributes simultaneously to climate-change mitigation, on a well-to-wake basis, and improved local air quality.
+
+The findings of the present investigation are consistent with recent studies identifying renewable methanol as one of the most promising transition fuels for international shipping. Du et al. [33] report lifecycle greenhouse gas emission savings of 95.96% for e-methanol produced from offshore wind electricity and captured carbon dioxide, and project that its production cost could reach parity with conventional marine fuels between 2030 and 2035 under the European regulatory framework.
+
+5. Conclusions
+
+This study compared the conventional Wärtsilä W7X35 diesel engine on board the livestock carrier MV Ganado Express with a Wärtsilä 46F methanol-fueled engine at the same propulsion power in a steady-state, 24 h scenario, and assessed compliance with the IMO Net-Zero Framework for 2028–2035 using the target values and definitions of the draft revised MARPOL Annex VI. The main objective was to quantify the environmental and regulatory implications of the replacement while maintaining the vessel’s required propulsion power.
+
+At the exhaust, the methanol engine reduced NOX emissions from 1637 kg/day to 438.5 kg/day, a 73.21% reduction based on the assumed emission factors, and fully removed SOX emissions, which fell from 49.7 kg/day to zero because methanol contains no sulfur. Daily tank-to-wake carbon dioxide emissions, however, decreased only from 79.7 t to 75.4 t, a reduction of 5.4%, because methanol is a carbon-bearing fuel; with the assumed emission factor, the methanol engine also exceeds the Tier III NOx limit at 600 rpm, so an after-treatment system would be required in NOx emission control areas.
+
+The Greenhouse GFI analysis showed that the decarbonization benefit is a well-to-wake effect. Although the diesel engine consumes less fuel, its attained GFI exceeds both the IMO Base Target and the Direct Compliance Target from 2028 onward. As a result, the vessel would face Tier 1 and Tier 2 compliance deficits costing USD 0.91 to 3.85 million per year (USD 17.7 million cumulatively). In contrast, renewable e-methanol reduces annual lifecycle emissions from 29,897 to 2291 tCO2eq and remains below the Direct Compliance Target throughout the 2028–2035 period across the plausible range of e-methanol intensities, from 3.8 to 28.2 gCO2eq/MJ, and therefore avoids greenhouse gas compliance costs.
+
+This shows that lifecycle emissions can be more important than fuel consumption alone when evaluating the long-term economic performance of marine fuels. E-methanol nevertheless remains more expensive in absolute terms at the assumed prices; the annual cost gap narrows from USD 15.1 million to USD 12.2 million by 2035, and its closure depends on post-2035 targets, remedial-unit prices not yet set, and fuel price evolution. The study is also relevant to the livestock shipping sector, where future demand is expected to increase. However, the analysis is limited by its steady-state approach and constant operating assumptions. Future studies should include realistic voyage profiles and changing engine loads.
+
+However, this study is limited to a single livestock carrier and a steady-state, 24 h operating scenario with constant propulsion demand. The analysis relies on published emission factors, fuel prices, and lifecycle GFI values, without modeling transient engine loads, retrofit engineering (gearbox, tank volume, safety systems), methanol storage, bunkering availability, safety implications, operational variability, or the outcome of the pending adoption of the Framework.
+
+Future research should incorporate voyage-specific load profiles, transient engine performance, sensitivity and uncertainty analyses, and full techno-economic lifecycle assessment. Further studies should examine retrofit feasibility, fuel-tank integration, safety and crew requirements, methanol availability, price volatility, renewable-production pathways, and comparisons with ammonia, hydrogen and hybrid propulsion across different livestock-vessel classes.
+
+Author Contributions
+
+M.E.: conceptualization, formal analysis, methodology, investigation, data curation, software, visualization, validation, writing—original draft. H.R.S.M.: methodology, formal analysis, writing—review and editing, validation. E.M.: resources, writing—review and editing, supervision, validation. J.A.G.A.: investigation, resources, writing—review and editing. S.B.I.-Z.: investigation, data curation, writing—review and editing. N.I.G.: Software, data curation, writing—review and editing, visualization. A.P.J.: investigation, formal analysis, writing—review and editing. M.S.: conceptualization, methodology, resources, project administration, validation, writing—review and editing, supervision. All authors have read and agreed to the published version of the manuscript.
+
+Funding
+
+This research received no external funding.
+
+Data Availability Statement
+
+All data supporting the reported results are contained within the article. The calculation model used to generate the tables and figures, together with the regulatory values it draws on, is available from the corresponding author on request.
+
+Conflicts of Interest
+
+The authors declare no conflicts of interest.
+
+References
+
+IPCC. Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change; IPCC: Geneva, Switzerland, 2023. [Google Scholar] [CrossRef] [Scilit]
+
+UNCTAD. Review of Maritime Transport 2025: Staying the Course in Turbulent Waters; United Nations Publications: Geneva, Switzerland, 2025. [Google Scholar]
+
+Bilgili, L. An assessment of the impacts of the Emission Control Area declaration and alternative marine fuel utilization on shipping emissions in the Turkish Straits. J. ETA Marit. Sci. 2022, 10, 202–209. [Google Scholar] [CrossRef] [Scilit]
+
+Goldsworthy, L.; Goldsworthy, B. Modelling of ship engine exhaust emissions in ports and extensive coastal waters based on terrestrial AIS data—An Australian case study. Environ. Model. Softw. 2015, 63, 45–60. [Google Scholar] [CrossRef] [Scilit]
+
+IMO. Fourth IMO Greenhouse Gas Study 2020; International Maritime Organization: London, UK, 2021. [Google Scholar]
+
+European Environment Agency. Emissions of Air Pollutants from Transport; EEA: Copenhagen, Denmark, 2021; Available online: https://www.eea.europa.eu/data-and-maps/indicators/transport-emissions-of-air-pollutants-8/transport-emissions-of-air-pollutants-8 (accessed on 2 September 2026).
+
+Özkaya, E.; Kaya, A.Y.; Tonoğlu, F.; Uğurlu, Ö.; Wang, J. Effect of exhaust emissions produced by fishing vessels on air pollution: A case study of purse seine vessels operating in the Black Sea. J. ETA Marit. Sci. 2024, 12, 156–168. [Google Scholar] [CrossRef] [Scilit]
+
+Papadopoulos, C.; Kourtelesis, M.; Moschovi, A.M.; Sakkas, K.M.; Yakoumis, I. Selected techniques for cutting SOx emissions in maritime industry. Technologies 2022, 10, 99. [Google Scholar] [CrossRef] [Scilit]
+
+Joung, T.-H.; Kang, S.-G.; Lee, J.-K.; Ahn, J. The IMO initial strategy for reducing greenhouse gas (GHG) emissions, and its follow-up actions towards 2050. J. Int. Marit. Saf. Environ. Aff. Shipp. 2020, 4, 1–7. [Google Scholar] [CrossRef] [Scilit]
+
+Sangaiah, A.K.; Tirkolaee, E.B.; Goli, A.; Dehnavi-Arani, S. Robust optimization and mixed-integer linear programming model for LNG supply chain planning problem. Soft Comput. 2020, 24, 7885–7905. [Google Scholar] [CrossRef] [Scilit]
+
+Rehmatulla, N.; Calleya, J.; Smith, T. The implementation of technical energy efficiency and CO2 emission reduction measures in shipping. Ocean Eng. 2017, 139, 184–197. [Google Scholar] [CrossRef] [Scilit]
+
+Tu, H.; Fan, H.J.; Lei, W.; Zhou, G.Q. Options and evaluations on propulsion systems of LNG carriers. In Propulsion Systems; IntechOpen: London, UK, 2019. [Google Scholar] [CrossRef] [Scilit]
+
+IMO. Circular Letter No.5005: Draft Revised MARPOL Annex VI; International Maritime Organization: London, UK, 2025. [Google Scholar]
+
+IMO. IMO Net-Zero Shipping Talks to Resume in 2026; Press briefing, 17 October 2025; International Maritime Organization: London, UK, 2025; Available online: https://www.imo.org/en/mediacentre/pressbriefings/pages/imo-net-zero-shipping-talks-to-resume-in-2026.aspx (accessed on 2 September 2026).
+
+IMO. Marine Environment Protection Committee (MEPC), 84th Session, 27 April–1 May 2026: Meeting Summary; International Maritime Organization: London, UK, 2026; Available online: https://www.imo.org/en/mediacentre/meetingsummaries/pages/temporary-mepc-84th-session.aspx (accessed on 2 September 2026).
+
+IMO. The IMO Net-Zero Framework—Frequently Asked Questions; International Maritime Organization: London, UK, 2025; Available online: https://www.imo.org/en/mediacentre/hottopics/pages/faqs-the-imo-net-zero-framework.aspx (accessed on 2 September 2026).
+
+IMO. 2024 Guidelines as Required by Regulation 13.2.2 of MARPOL Annex VI in Respect of Non-Identical Replacement Engines Not Required to Meet the Tier III Limit; Resolution MEPC.386(81); International Maritime Organization: London, UK, 2024. [Google Scholar]
+
+Al-Enazi, A.; Okonkwo, E.C.; Bicer, Y.; Al-Ansari, T. A review of cleaner alternative fuels for maritime transportation. Energy Rep. 2021, 7, 1962–1985. [Google Scholar] [CrossRef] [Scilit]
+
+Komarek, A.M.; Dunston, S.; Enahoro, D.; Godfray, H.C.J.; Herrero, M.; Mason-D’Croz, D.; Rich, K.M.; Scarborough, P.; Springmann, M.; Sulser, T.B.; et al. Income, consumer preferences, and the future of livestock-derived food demand. Glob. Environ. Change 2021, 70, 102343. [Google Scholar] [CrossRef] [Scilit]
+
+Elmallah, M.; Shouman, M.; Elgohary, M.M. Reducing methane emissions on livestock ships in order to mitigate greenhouse gas emissions and promote future maritime sustainability. TransNav Int. J. Mar. Navig. Saf. Sea Transp. 2024, 18, 797–804. [Google Scholar] [CrossRef] [Scilit]
+
+Elkafas, A.G.; Elgohary, M.M.; Shouman, M.R. Numerical analysis of economic and environmental benefits of marine fuel conversion from diesel oil to natural gas for container ships. Environ. Sci. Pollut. Res. 2021, 28, 15210–15222. [Google Scholar] [CrossRef] [Scilit]
+
+Wärtsilä. Adopting Methanol as Marine Fuel for New and Existing Vessels; Wärtsilä Corporation: Helsinki, Finland; Available online: https://www.wartsila.com/marine/decarbonisation/adopting-methanol-as-marine-fuel (accessed on 2 September 2026).
+
+Sjerić, M.; Koričan, M.; Vladimir, N. Environmental footprint of hydrogen- and methanol-powered fishing vessel under steady and transient engine operation. Ocean Eng. 2026, 345, 123864. [Google Scholar] [CrossRef] [Scilit]
+
+Shouman, M.; Elmallah, M.; Madariaga-Domínguez, E.; González-Almeida, J.A. The Feasibility of Utilizing Hydrogen Fuel Cells in Livestock Ships to Mitigate Greenhouse Gas Emissions. Nativa 2025, 13, 138–143. [Google Scholar] [CrossRef] [Scilit]
+
+Elmallah, M.; Madariaga, E.; González-Almeida, J.A.; Alghaffari, S.; Saadeldin, M.A.; Ghoneim, N.I.; Shouman, M. Decarbonization potential of alternative fuels in container shipping: A case study of the EVER ALOT vessel. Environments 2025, 12, 306. [Google Scholar] [CrossRef] [Scilit]
+
+WinGD. X35-B Low-Speed Marine Engine; Winterthur Gas & Diesel Ltd.: Winterthur, Switzerland, 2023; Available online: https://wingd.com/products-solutions/engines/x35-b (accessed on 4 September 2026).
+
+Wärtsilä. Wärtsilä 46F Marine Engines; Wärtsilä Corporation: Helsinki, Finland, 2023; Available online: https://www.wartsila.com/marine/products/engines-and-generating-sets/wartsila-46f (accessed on 2 September 2026).
+
+Mersin, K.; Bayirhan, İ.; Gazioglu, C. Review of CO2 emission and reducing methods in maritime transportation. Therm. Sci. 2019, 23, S2073–S2079. [Google Scholar] [CrossRef] [Scilit]
+
+Wärtsilä. Wärtsilä 46F Product Guide, Issue 1/2020; Wärtsilä Marine Solutions: Vaasa, Finland, 2020; Available online: https://brandhub.wartsila.com/m/39438d6bb2d10bd3/original/Wartsila-46F-Product-guide.pdf (accessed on 2 September 2026).
+
+IMO. Interim Guidelines for the Safety of Ships Using Methyl/Ethyl Alcohol as Fuel; MSC.1/Circ.1621; International Maritime Organization: London, UK, 2020. [Google Scholar]
+
+IMO. Resolution MEPC.391(81): 2024 Guidelines on Life Cycle GHG Intensity of Marine Fuels (2024 LCA Guidelines), Adopted on 22 March 2024; International Maritime Organization: London, UK, 2024. [Google Scholar]
+
+European Parliament and Council. Regulation (EU) 2023/1805 on the use of renewable and low-carbon fuels in maritime transport (FuelEU Maritime). Off. J. Eur. Union 2023, L 234, 48–100. [Google Scholar]
+
+Du, Y.; Shen, X.; Kammen, D.M.; Ding, X. Cost-competitive offshore wind-powered green methanol production for maritime transport decarbonization. Nat. Commun. 2025, 16, 5453. [Google Scholar] [CrossRef] [Scilit]
+
+European Commission. Commission Delegated Regulation (EU) 2023/1185 of 10 February 2023 supplementing Directive (EU) 2018/2001 by establishing a minimum threshold for greenhouse gas emissions savings of recycled carbon fuels and by specifying a methodology for assessing greenhouse gas emissions savings from renewable liquid and gaseous transport fuels of non-biological origin and from recycled carbon fuels. Off. J. Eur. Union 2023, L 157, 20–25. [Google Scholar]
+
+Ammar, N.R.; Seddiek, I.S. Enhancing energy efficiency for new generations of containerized shipping. Ocean Eng. 2020, 215, 107887. [Google Scholar] [CrossRef] [Scilit]
+
+Parker, R.W.R.; Blanchard, J.L.; Gardner, C.; Green, B.S.; Hartmann, K.; Tyedmers, P.H.; Watson, R.A. Fuel use and greenhouse gas emissions of world fisheries. Nat. Clim. Change 2018, 8, 333–337. [Google Scholar] [CrossRef] [Scilit]
+
+Fan, A.; Yang, J.; Yang, L.; Wu, D.; Vladimir, N. A review of ship fuel consumption models. Ocean Eng. 2022, 264, 112405. [Google Scholar] [CrossRef] [Scilit]
+
+Saadeldin, M.; Vasylyev, A.; Rivarolo, M.; Sorce, A. Feasibility analysis of hydrogen fuel cell-powered passenger vessels: A multi-criteria and MILP-based analysis for sustainable inland navigation. Ocean Eng. 2026, 349, 124186. [Google Scholar] [CrossRef] [Scilit]
+
+Motlagh, H.R.S.; Zadeh, S.B.I.; Garay-Rondero, C.L. Towards International Maritime Organization carbon targets: A multi-criteria decision-making analysis for sustainable container shipping. Sustainability 2023, 15, 16834. (In English) [Google Scholar] [CrossRef] [Scilit]
+
+Issa-Zadeh, S.B. Green Pilots, Blue Harbors: Sustainable Development of Seaports with Eco-Pilotage. GMSARN Int. J. 2025, 19, 687–694. Available online: https://www.researchgate.net/publication/390399341 (accessed on 2 September 2026).
+
+Figure 1. NOx emission limits of Regulation 13 of MARPOL Annex VI as a function of rated engine speed, with the Tier II and Tier III values at the rated speeds of the two engines compared in this study.
+
+Figure 2. Daily fuel consumption comparison.
+
+Figure 3. Daily CO2 emissions comparison.
+
+Figure 4. Daily NOx emissions.
+
+Figure 5. WTW CO2eq emissions relative to annual IMO GFI targets.
+
+Table 1. Characteristics of MV Ganado Express.
+
+ParameterValueYear Built2013BuilderCosco Guangdong, ChinaFlagPortugalIMO Number9621209Length Overall134.8 mBeam19.6 mDepth14.8 mSummer Draft6.8 mGross Tonnage10,421 tNet Tonnage3126 tDeadweight5225 tNumber of Livestock Decks5Livestock Area4511 m2Main Engine Power Requirement6090 kWService Speed16.75 knots
+
+Table 2. Diesel engine specifications [26].
+
+ParameterValueEngine TypeWärtsilä W7X35Number of Cylinders7Rated Power6090 kWSpeed167 rpmCylinder Bore350 mmStroke1550 mmSpecific Fuel Consumption170 g/kWh
+
+Table 3. Specifications of the Wärtsilä 6L46F Methanol engine [27,29].
+
+ParameterValueEngine TypeWärtsilä 46F MethanolConfiguration6 Cylinders in lineCycleFour-stroke, non-reversibleRated Power7500 kW (1250 kW/cyl)Operating Power6090 kWOperating Load81.2%Rated Speed600 rpmCylinder Bore/Stroke460 mm/580 mmEngine Dry Mass97 tOverall Dimensions (L × W × H)8620 × 2905 × 3500 mmFuel TypeMethanolSpecific Fuel Consumption375 g/kWh, assumed (see Section 2)Sulfur ContentNegligible
+
+Table 4. Fuel properties, tank-to-wake emission factors and well-to-wake GHG intensity.
+
+QuantityDieselMethanolSourceLCV (MJ/kg)42.719.9[31,32]Cf CO2 (g CO2/g fuel)3.2061.375[31,32]CO2 (tank-to-wake)545.0 g/kWh515.6 g/kWhCalculated, Equation (3)NOx11.2 g/kWh3 g/kWhAssumed; Section 2Sulfur content (% m/m)0.10Negligible[13,14]SOx (tank-to-wake)0.34 g/kWh~0 g/kWhCalculated, Equation (6)GFI WtW93.9 gCO2eq/MJ7 gCO2eq/MJ (3.8–28.2)[31,33,34]
+
+Table 5. Fuel consumption and tank-to-wake emissions of diesel and methanol engines.
+
+ParameterDiesel EngineMethanol EnginePower (kW)60906090Specific fuel consumption (g/kWh)170375Operating time (h)2424Daily fuel consumption (kg)24,847.254,810Daily fuel consumption (t)24.8554.81Tank-to-wake CO2 (kg/day)79,66075,364NOx (kg/day)1637.0438.5SOx (kg/day)49.70
+
+Table 6. Annual IMO GFI compliance (2028–2035).
+
+YearAnnual Energy (MJ)Base GFI Target (gCO2eq/MJ)Direct GFI Target (gCO2eq/MJ)Base Target CO2eq (t)Direct Target CO2eq (t)2028318,292,63289.5777.4428,508.8324,648.262029318,292,63287.7075.5727,914.9024,054.332030318,292,63285.8473.7127,320.9723,460.402031318,292,63281.7369.6026,014.3122,153.742032318,292,63277.6365.5024,707.6620,847.092033318,292,63273.5261.3923,401.0019,540.432034318,292,63269.4257.2922,094.3518,233.782035318,292,63265.3153.1820,787.6916,927.12
+
+Table 7. Annual lifecycle greenhouse gas emissions and IMO compliance penalties for diesel (2028–2035).
+
+YearDiesel CO2eq (tCO2eq/Year)Diesel Tier 1 (M-USD)Diesel Tier 2 (M-USD)Total Diesel Compliance Cost (M-USD)202829,897.230.3860.5280.914202929,897.230.3860.7531.139203029,897.230.3860.9791.365203129,897.230.3861.4761.862203229,897.230.3861.9722.358203329,897.230.3862.4692.855203429,897.230.3862.9653.351203529,897.230.3863.4623.848
+
+Table 8. Annual lifecycle greenhouse gas emissions and IMO compliance penalties for methanol (2028–2035).
+
+YearMethanol CO2eq (tCO2eq/Year)Methanol Tier 1 (M USD)Methanol Tier 2 (M USD)Methanol Total Compliance Cost (M USD)20282290.510.0000.0000.00020292290.510.0000.0000.00020302290.510.0000.0000.00020312290.510.0000.0000.00020322290.510.0000.0000.00020332290.510.0000.0000.00020342290.510.0000.0000.00020352290.510.0000.0000.000
+
+Table 9. Annual fuel consumption and cost for each engine.
+
+CriterionUnitDieselMethanolFuel price USD/t650 [38]1271 [33]Annual fuel consumptiont/year7454.216,443.0Annual fuel costM USD/year4.8520.90
+
+Table 10. Economic IMO compliance assessment for diesel and methanol (2028–2035).
+
+YearFuelFuel Consumption
+
+(t/Year)Fuel Cost (Million USD/Year)Tier1 Cost (Million USD)Tier2 Cost (Million USD)Total Cost (Fuel + Compliance) (Million USD/Year)2028Diesel7454.24.850.3860.5285.76Methanol16,443.020.900.0000.00020.902029Diesel7454.24.850.3860.7535.98Methanol16,443.020.900.0000.00020.902030Diesel7454.24.850.3860.9796.21Methanol16,443.020.900.0000.00020.902031Diesel7454.24.850.3861.4766.71Methanol16,443.020.900.0000.00020.902032Diesel7454.24.850.3861.9727.20Methanol16,443.020.900.0000.00020.902033Diesel7454.24.850.3862.4697.70Methanol16,443.020.900.0000.00020.902034Diesel7454.24.850.3862.9658.20Methanol16,443.020.900.0000.00020.902035Diesel7454.24.850.3863.4628.69Methanol16,443.020.900.0000.00020.90
+
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
+
+© 2026 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license.",https://mdpi-res.com/img/journals/environments-logo-social.png?6348372e78517c66,N,,2026-09-16 00:56:36.845526
 ,Maritime Transport,2026-09-15 15:39:55+00:00,Oman Observer,Advancing sustainable fuels for aviation and maritime industry - Oman Observer,Dominic Emery,,,,,https://www.omanobserver.om/article/1196242/opinion/advancing-sustainable-fuels-for-aviation-and-maritime-industry,"Global sustainable aviation fuel (SAF) production is expected to reach roughly 2.4 million tonnes this year - less than one percent of all aviation fuel consumed.
 The maritime industry, meanwhile, is pursuing wind-assist technologies, efficiency improvements, and dual-fuel vessels, but its transition to sustainable fuels remains problematic.
 Behind the crunch lie two linked constraints: limited availability of sustainable feedstocks and biocrudes suitable for refining, and insufficient biorefinery capacity.
