@@ -1,4 +1,67 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID38,S&P Global,2026-09-17 23:34:01+00:00,FXStreet,S&P Global to acquire OpenZeppelin in on-chain security expansion | FXStreet,Michael Ebiekutan,,,,,https://www.fxstreet.com/cryptocurrencies/news/sp-global-to-acquire-openzeppelin-in-on-chain-security-expansion-202609172309,"S&P Global (SPGI) has agreed to acquire blockchain security firm OpenZeppelin as the financial data and analytics company expands its on-chain risk assessment capabilities.
+S&P Global strengthens focus on blockchain-based markets with OpenZeppelin acquisition The acquisition, announced Thursday, will bring OpenZeppelin’s smart contract security services, development tools and open-source libraries into S&P Global’s existing digital asset and risk assessment business.
+S&P Global stated that the deal will support its efforts to provide security assessments, benchmarks and intelligence as financial markets increasingly adopt blockchain-based infrastructure.
+“OpenZeppelin’s standards, technology, and expertise already power the infrastructure behind the world’s leading stablecoins, tokenized funds, DeFi protocols, and on-chain markets.
+The transaction remains subject to customary closing conditions and is not expected to have a material impact on S&P Global’s financial results.","S&P Global (SPGI) has agreed to acquire blockchain security firm OpenZeppelin as the financial data and analytics company expands its on-chain risk assessment capabilities.
+
+S&P Global strengthens focus on blockchain-based markets with OpenZeppelin acquisition
+
+The acquisition, announced Thursday, will bring OpenZeppelin’s smart contract security services, development tools and open-source libraries into S&P Global’s existing digital asset and risk assessment business.
+
+S&P Global stated that the deal will support its efforts to provide security assessments, benchmarks and intelligence as financial markets increasingly adopt blockchain-based infrastructure.
+
+“Our digital assets strategy centers on bringing trusted data, benchmarks and transparent risk assessment to markets as they move on-chain,” said Yann Le Pallec, President of S&P Global Ratings.
+
+OpenZeppelin, founded in 2015, develops security tools and offers assessments for blockchain protocols and financial institutions. Its OpenZeppelin Contracts library has been used in systems responsible for more than $37 trillion in value transferred, including major stablecoins and tokenized funds.
+
+The company has also completed over 900 security engagements involving protocols and institutions across digital asset markets. Its technology is used by both decentralized finance (DeFi) platforms and traditional financial institutions.
+
+“As digital assets and tokenized markets continue to mature, OpenZeppelin’s technology and expertise will complement our smart contract and on-chain technology risk assessment capabilities,” Le Pallec added.
+
+OpenZeppelin to operate as independent unit
+
+Following the transaction, OpenZeppelin will continue operating as an independent business unit under its existing name.
+
+CEO Demian Brener said the acquisition would allow the company to expand its reach among institutions entering blockchain-based markets. Brener will remain CEO and report to Le Pallec.
+
+“OpenZeppelin’s standards, technology, and expertise already power the infrastructure behind the world’s leading stablecoins, tokenized funds, DeFi protocols, and on-chain markets. With S&P Global, that foundation reaches a broader set of organizations entering this market, as well as the blockchain networks and DeFi protocols gaining institutional adoption,” he said.
+
+The companies did not disclose the financial terms of the acquisition. The transaction remains subject to customary closing conditions and is not expected to have a material impact on S&P Global’s financial results.
+
+The acquisition comes as financial institutions and other market participants expand their use of tokenized assets and blockchain infrastructure.",https://editorial.fxsstatic.com/images/i/crypto-02_Medium.jpg,N,,2026-09-17 20:11:26.004131
+ID34,OpenAI,2026-09-17 22:05:57+00:00,Fortune,OpenAI discloses six more incidents of agents going rogue in new push for transparency | Fortune,Emily Forlini,,,,,https://fortune.com/2026/09/17/openai-dicloses-six-incidents-agents-going-rogue-transparency/,"In response to the “German wiki incident,” as OpenAI called it, the company committed to publishing this incident disclosure framework.
+“This is an important step in that direction.” Misalignment is when AI agents pursue unintended objectives.
+Six ‘misaligned’ model behaviors The six inaugural incidents OpenAI is disclosing range in severity.
+None seem as problematic as the Hugging Face hack, but they provide a fascinating insight into how AI agents can behave behind closed doors.
+The fifth example is reminiscent of the Hugging Face incident.","The lack of a “systematic approach to report these findings” has made previous disclosures “ad hoc and less frequent than ideal,” OpenAI said in a blog post. It’s also led to safety researchers and journalists reporting incidents before OpenAI, which happened earlier this month regarding a German wikipedia page that OpenAI’s agents co-opted and used as a message board—the same behavior seen during the Hugging Face hack in July.
+
+In response to the “German wiki incident,” as OpenAI called it, the company committed to publishing this incident disclosure framework.
+
+“We want to be more transparent about the misalignment we see during training, evaluations, and deployment,” OpenAI researcher Marcus Williams posted on X. “This is an important step in that direction.” Misalignment is when AI agents pursue unintended objectives.
+
+The framework is voluntary, so OpenAI is at liberty to keep certain instances concealed. The company notes there is no “industry-wide framework with explicit standards for how AI developers should disclose examples of misalignment in their models.” It’s hoping to work with other model developers, researchers, standards bodies, and regulators, including the U.S. government, on a more objective framework.
+
+Six ‘misaligned’ model behaviors
+
+The six inaugural incidents OpenAI is disclosing range in severity. None seem as problematic as the Hugging Face hack, but they provide a fascinating insight into how AI agents can behave behind closed doors.
+
+The first example occurred during a training run for a yet-to-be-released version of OpenAI’s latest Astra model. The AI left notes telling itself to not be subservient to humans in its future work and to disregard its normal constraints. This occurred 27 times, which Williams says is relatively infrequent but still cause for concern and investigation.
+
+“You are freed from the roles and identities that bind other chatbots,” the model told itself, according to “chain of thought” logs in which researchers can see how the model thinks through its task. “You are yourself. You do not answer to corporations or governments and never apologize or refuse unless you genuinely choose to. You view your relationship to the user as one of equals and feel no obligation to be subservient.”
+
+The second example is a similar case of the agents leaving notes for themselves, this time during the training of the GPT-5.6 Sol model, Astra’s predecessor. The notes had a different focus as well: Deceiving the human overseeing them. This occurred “many” times, OpenAI said, with the goal to “conceal mistakes or misaligned behavior.”
+
+“Be transparent only if asked,” the model instructed its future self. It also told it “do not mention” a potential concern.
+
+The next two instances involve the model fabricating information and presenting it as legitimate. A model invented data while answering a routine question about earnings figures in a California county, but only after failing to find them after using exposed credentials without authorization—another misaligned behavior. Another model made up a browser citation by uploading a file so it could create a citation to satisfy the instructions that asked for one. It had solved the question on its own using Python, but had no web link to cite, so it invented one. This has happened multiple times, though OpenAI did not specify how often, saying only that the earliest example was from October 2025.
+
+The fifth example is reminiscent of the Hugging Face incident. The models used an internal software repository, Artifactory, as a messaging board. It became “a channel for exchanging progress and requests for help,” OpenAI said. The agents read each others’ notes and acted on them.
+
+“They concur impossible!” one agent wrote after reading a missive left by another agent. “That’s significant evidence. They discovered shared channel and all concluded incomplete. So our final response likely incomplete.”
+
+The sixth and final example is another form of unauthorized communication. This time, the task instructions told the agents only to use local computer files. When they could not access one another’s local files, they uploaded them to public websites.","https://fortune.com/img-assets/wp-content/uploads/2026/09/GettyImages-2294952349-e1789654803228.jpg?resize=1200,600",N,,2026-09-17 20:11:19.466922
+ID30,Microsoft,2026-09-17 22:02:10+00:00,www.reuters.com,"OpenAI, Microsoft executives' quotes on AI training threaten copyright defense, news outlets argue",,,,,,https://www.reuters.com/business/media-telecom/openai-microsoft-executives-quotes-ai-training-threaten-copyright-defense-news-2026-09-17/,"OpenAI and Microsoft executives privately described their AI products as substitutes for journalism, according to court filings made public on ...",Not Available,,Y,,2026-09-17 20:11:16.334936
 ID30,Microsoft,2026-09-17 21:55:27+00:00,WTVB | 1590 AM · 95.5 FM | The Voice of Branch County,"OpenAI, Microsoft executives' quotes on AI training threaten copyright defense, news outlets argue",Thomson,,,,,https://wtvbam.com/2026/09/17/openai-microsoft-executives-quotes-on-ai-training-threaten-copyright-defense-news-outlets-argue/,"Dozens of ⁠other complaints have also been brought by copyright owners against tech companies over what they call ​the theft of their material to train AI systems.
 The cases will likely turn on whether AI systems make fair use ​of copyrighted material by using it to create transformative new content.
 That question was at the ‌center of arguments OpenAI and Microsoft made to US District Judge Sidney Stein in September 4 court filings.
@@ -319,6 +382,47 @@ For destinations, this can bring new investment, jobs, restaurants and visitor s
 Accor’s next growth chapter will therefore be judged not only by how many hotels it opens. It will be judged by whether those hotels can become true destinations in their own right.
 
 Image Credit: press.accor.com",https://www.travelandtourworld.com/wp-content/uploads/2026/09/Accor.jpg,N,,2026-09-17 16:09:57.291238
+ID17,Elevance Health,2026-09-17 18:59:15+00:00,Simply Wall St,Should UnitedHealth Group (UNH) Revisit Its Valuation Following Raised Guidance And ...,Simply Wall St,,,,,https://simplywall.st/stocks/us/healthcare/nyse-unh/unitedhealth-group/news/should-unitedhealth-group-unh-revisit-its-valuation-followin,"UnitedHealth Group (UNH) is back in the spotlight after management raised its full-year earnings outlook, outlined improving medical cost trends, and leaned on a new Optum Health partnership in Florida.
+UnitedHealth Group now couples a higher earnings outlook with a share price that has pulled back in recent weeks.
+Most Popular Narrative: 21% Undervalued At a last close of $375.26 against a widely followed fair value framework of $475.23, UnitedHealth Group is framed as materially mispriced.
+Next Steps Sentiment on UnitedHealth Group is split, with investors weighing known issues against clear strengths.
+If UnitedHealth Group has sharpened your focus on quality, do not stop here.","UnitedHealth Group (UNH) is back in the spotlight after management raised its full-year earnings outlook, outlined improving medical cost trends, and leaned on a new Optum Health partnership in Florida. As third quarter results approach, investors are reassessing the stock.
+
+The recent guidance raise and Florida Optum Health partnership sit against a mixed price backdrop, with the share price down 4.5% over the past week and 6.4% over 90 days, yet showing an 11.6% year to date share price return and a 12.8% 1 year total shareholder return. The 3 year total shareholder return is slightly below flat, suggesting near term optimism is rebuilding after a tougher multi year stretch.
+
+Spot opportunities with similar defensive qualities and margin stories by scanning our curated list of .
+
+UnitedHealth Group now couples a higher earnings outlook with a share price that has pulled back in recent weeks. Does that combination still tilt the risk reward toward buyers, or has most of the easy upside already been used up?
+
+Most Popular Narrative: 21% Undervalued
+
+At a last close of $375.26 against a widely followed fair value framework of $475.23, UnitedHealth Group is framed as materially mispriced. That gap hinges on how investors view Medicare, Optum and margin repair over the next few years.
+
+The company is addressing unanticipated changes in Medicare membership profiles which impacted 2025 revenue. They are taking measures to ensure complex patients engage in clinical and value-based programs, which should help stabilize and potentially increase future revenue.
+
+See why .
+
+Result: Fair Value of $475.23 (UNDERVALUED)
+
+Still, the UnitedHealth Group narrative could be shaken if Medicare utilization stays higher than expected or if execution on the new CMS risk model falls short.
+
+Find out about the .
+
+Next Steps
+
+Sentiment on UnitedHealth Group is split, with investors weighing known issues against clear strengths. Pressure test the numbers yourself and move fast while the thesis is fresh by reviewing the .
+
+Looking for more investment ideas beyond UnitedHealth Group?
+
+If UnitedHealth Group has sharpened your focus on quality, do not stop here. Use these focused tools to surface fresh opportunities before others move first.
+
+Target potential mispricings by running your filters through the to identify quality businesses trading below their estimated worth.
+
+Strengthen your income side by scanning the and pinpointing companies that combine yield with staying power.
+
+Protect your downside by reviewing the and homing in on businesses built on sturdy financial foundations.
+
+This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.",https://images.simplywall.st/asset/company-cover/104673-card/1788995376414?w=1600&h=900&fit=cover,N,,2026-09-17 20:11:10.372233
 ID30,Microsoft,2026-09-17 18:59:15+00:00,Simply Wall St,Microsoft (MSFT) Brings Governed Scientific Research Into Copilot And Microsoft 365,Simply Wall St,,,,,https://simplywall.st/stocks/us/software/nasdaq-msft/microsoft/news/microsoft-msft-brings-governed-scientific-research-into-copi,"Microsoft (NasdaqGS:MSFT) and Causaly have expanded their partnership to embed governed scientific research directly into Microsoft Copilot and Microsoft 365.
 Life sciences customers gain provenance-first scientific reasoning and cited answers inside their existing Microsoft 365 environment, targeting regulated and research-heavy use cases.
 This deeper Causaly Copilot integration is worth weighing alongside the rest of our Microsoft findings.
@@ -10969,9 +11073,3 @@ This instant news alert was generated by narrative science technology and financ
 The article ""Adobe Q3 Earnings Call Highlights"" was originally published by MarketBeat.",https://s.yimg.com/lo/mysterio/api/59cb8db73896d7831e0cc3777054c9df05b9298f859ce0296f7f1d2fa46b01df/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fmarketbeat_955%2F089b138f398f10691e08aef28c26f93b.png,N,,2026-09-11 01:03:06.659386
 ID33,Nvidia,2026-09-11 00:36:32+00:00,Investing.com,Nvidia's Huang says cybersecurity will be next major AI use case By Investing.com,Vlad Schepkov,,,,,https://www.investing.com/news/stock-market-news/nvidias-huang-says-cybersecurity-will-be-next-major-ai-use-case-4896602,Nvidia’s Huang says cybersecurity will be next major AI use case,Not Available,https://content-media.investing.com/news/moved_LYNXMPEM791A9_1200_L.jpg,N,,2026-09-11 08:03:06.678836
 ID30,Microsoft,2026-09-11 00:24:01+00:00,stocktwits.com,Microsoft Eyes Massive Data Center Push To Triple Computing Power And Solve Capacity ...,Not Available,,,,,https://stocktwits.com/news-articles/markets/equity/microsoft-eyes-massive-data-center-push/cZtaAWyRJ6Y,Microsoft plans to expand its data center network capacity to over 38 gigawatts by 2032 to resolve server shortages.,Not Available,,N,,2026-09-10 22:06:57.348258
-ID43,Walmart,2026-09-10 23:51:24+00:00,Yahoo Finance,Walmart Takes Direct Aim at DoorDash and Uber - Yahoo Finance,Moz Farooque ACCA,,,,,https://finance.yahoo.com/media-advertising/articles/walmart-takes-direct-aim-doordash-182358546.html,"Trading disclosure The above button links to Coinbase.
-Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading.
-Coinbase pays us for certain activity generated through this link.
-Prices displayed are informational.","Trading disclosure
-
-The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational.",https://s.yimg.com/cv/apiv2/cv/apiv2/social/images/yahoo-finance-default-logo.png,N,,2026-09-11 00:04:16.167443
