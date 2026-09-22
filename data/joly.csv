@@ -1,4 +1,6 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID37,Ralph Lauren,2026-09-22 13:08:15+00:00,www.wsj.com,Gap Is Getting Into the Boy-Band Business - WSJ,,,,,,https://www.wsj.com/business/retail/gap-is-getting-into-the-boy-band-business-4ab0ac16,"There are Bvlgari hotels, Ralph Lauren coffee shops and Tommy Bahama restaurants. Louis Vuitton has added chocolate shops inside some stores. RH, the ...",Not Available,,Y,,2026-09-22 10:06:21.940442
+ID27,Levi Strauss,2026-09-22 13:04:54+00:00,www.investing.com,Levi Strauss and M&S launch fashion supply chain renewable energy program,Not Available,,,,,https://www.investing.com/news/company-news/levi-strauss-and-ms-launch-fashion-supply-chain-renewable-energy-program-93CH-4910728,Levi Strauss & Co. reported 2025 net revenues of $6.3 billion. The collaborative is inviting additional fashion brands to join as sponsors and members ...,Not Available,,N,,2026-09-22 10:05:40.474510
 ID27,Levi Strauss,2026-09-22 12:22:19+00:00,Yahoo Finance,Levi Strauss & Co. and Marks & Spencer launch the Fashion Renewable Collaborative to ...,Schneider Electric,,,,,https://finance.yahoo.com/energy/articles/levi-strauss-co-marks-spencer-120000309.html,"By modeling a shared approach to supplier engagement, the collaborative aims to facilitate renewable electricity adoption across global fashion supply chains and help manufacturers understand, access and implement renewable electricity solutions at scale.
 The launch comes as fashion brands seek new ways to translate their individual climate commitments into measurable, durable emissions reductions across complex global supply chains.
 Katharine Beacham, Head of Sustainability and Materials in Fashion, Home & Beauty at M&S, said: ""At M&S, we know that real change happens when we collaborate.
@@ -75,6 +77,87 @@ The Fashion Renewable Collaborative is similar to a program Levi’s launched it
 Levi’s soon learned that British retailer Marks & Spencer was doing something similar through a program called Re: Spark. That sparked a realization for Jennifer DuBuisson, Levi’s senior director of sustainability.
 
 “We can each continue to keep doing this on our own, but at the end of the day, we have shared supply chains,” she says. “Suppliers are already facing such fragmentation from different brands.”","https://images.fastcompany.com/image/upload/f_webp,q_auto,c_fit,w_1024/wp-cms-2/2026/09/p-1-91610566-fashion-renewable-collection.jpg",N,,2026-09-22 09:11:14.554455
+ID30,Microsoft,2026-09-22 12:13:19+00:00,The Quantum Insider,"Microsoft Quantum, QOLAB Propose Higher Bar For 'Scalable' Logical Qubits","Matt Swayne, Mohib Ur Rehman",,,,,https://thequantuminsider.com/2026/09/22/microsoft-quantum-qolab-propose-higher-bar-for-scalable-logical-qubits/,"Insider Brief Microsoft Quantum and QOLAB proposed a framework for assessing whether logical qubits can scale into fault-tolerant systems capable of useful quantum computations.
+A framework from Microsoft Quantum and QOLAB proposes that quantum computing’s next progress reports should be judged by more than a rising count of logical qubits.
+Quantum error correction is designed to address that problem by encoding the information of one logical qubit across many physical qubits.
+It must support a universal set of fault-tolerant operations, including operations that allow a program to respond to measurement outcomes.
+Allocating a fixed supply of physical qubits across more logical qubits may increase system capacity but deliver less error suppression per logical qubit.","Insider Brief
+
+Microsoft Quantum and QOLAB proposed a framework for assessing whether logical qubits can scale into fault-tolerant systems capable of useful quantum computations.
+
+The paper says scalable logical qubits should be evaluated across reliability, scale, capability and performance, rather than through qubit counts or isolated error-rate results.
+
+The framework calls for repeated error correction, universal fault-tolerant operations, low-latency feedback and a credible route to operating hundreds or thousands of logical qubits.
+
+A framework from Microsoft Quantum and QOLAB proposes that quantum computing’s next progress reports should be judged by more than a rising count of logical qubits.
+
+The paper, posted on arXiv by Microsoft Quantum researchers Matthias Troyer and Chetan Nayak and QOLAB’s John Martinis, introduces the term “scalable logical qubit” for an error-corrected qubit that can support long computations, execute a full set of fault-tolerant operations and be replicated into systems containing hundreds or thousands of logical qubits.
+
+The proposal is ultimately aimed at a more demanding common standard for evaluating an increasingly crowded field of quantum error-correction demonstrations.
+
+The industry’s use of the term, “logical qubit,” has broadened a bit over the past few years. Companies and research groups have shown that encoding information across multiple physical qubits can improve memory, suppress certain errors or outperform an individual physical qubit under defined conditions. According to the researchers, the problem is that, while those are meaningful steps, they may not necessarily demonstrate a system that can run a long and useful quantum program.
+
+In light of this trend, the paper argues that a logical qubit should be assessed across four connected measures — reliability, scale, capability and performance. A result that is strong on one measure, such as an improved error rate in a small system, may still face major obstacles in operating many logical qubits, carrying out universal operations or correcting errors rapidly enough during a computation.
+
+For an industry that often communicates progress through individual figures such as physical-qubit counts, logical error rates or code distances, the team suggests that this approach could offer a more complete test of whether a machine has a credible route to practical fault-tolerant quantum computing.
+
+Beyond a Protected Quantum Memory
+
+Quantum computers use qubits, which are fragile units of information that can be disturbed by environmental noise, imperfect control and measurement errors. Quantum error correction is designed to address that problem by encoding the information of one logical qubit across many physical qubits.
+
+Rather than directly measuring an unknown quantum state, which would disrupt it, error-correction systems repeatedly measure auxiliary qubits for clues about errors. Classical computers then process those measurements, known as error syndromes, and determine what correction or adjustment is needed.
+
+The researchers report that this repeated correction process is central to the definition of a scalable logical qubit. A system cannot rely only on one-time error detection, post-selection or after-the-fact data processing if it is intended to support deep calculations.
+
+Post-selection, for example, can discard experimental runs in which an error is detected. That can improve the quality of the retained results, but it becomes inefficient as a calculation grows longer because the likelihood of an entirely error-free run falls quickly. Error-mitigation techniques can also improve estimates from noisy hardware, the researchers write, but they generally require extra sampling and become difficult to extend indefinitely.
+
+Those tools may remain useful alongside error correction. But the paper suggests they cannot replace repeated quantum error correction for calculations requiring very low failure rates across billions of operations.
+
+The team estimates that the lower end of useful quantum computing could require more than 100 high-quality logical qubits and error rates around one failure in 10 billion operations. More demanding applications, such as large-scale chemistry calculations and cryptanalysis, could require more than 1,000 logical qubits and error rates of one in 1 quadrillion operations or better.
+
+Those estimates offer some idea why small demonstrations of protected quantum memory should not be confused with a system capable of running full-scale algorithms.
+
+Four Measures of Progress
+
+Under the proposed definition, a scalable logical qubit must satisfy four conditions:
+
+It must be sustained during computation through repeated quantum error correction.
+
+It must support a universal set of fault-tolerant operations, including operations that allow a program to respond to measurement outcomes.
+
+It must belong to a code family and hardware architecture in which adding physical qubits predictably reduces the logical error rate.
+
+It must have a credible route to replication at the scale required for applications.
+
+The latter point addresses how a hardware platform may demonstrate a promising error-correction result with a small group of qubits, but operating hundreds or thousands of such logical qubits requires control electronics, calibration, interconnects, decoding systems and physical hardware that must also grow without undermining performance. This is considered a persistent challenge in quantum computing.
+
+The researchers group these challenges into four dimensions — reliability, scale, capability and performance.
+
+Reliability concerns whether logical error rates are better than the error rates of the underlying physical qubits and whether they can be reduced further by increasing the resources devoted to the code. The paper points toward logical error rates in the range of one in 1 trillion to one in 1 quadrillion as a target for utility-scale systems, depending on the workload.
+
+Scale concerns the ability to operate hundreds or thousands of logical qubits at once without losing fidelity, creating major correlated errors or slowing operations to an impractical degree.
+
+Capability refers to what the logical qubits can actually do. Breaking down capability, the paper outlines a progression from preparing and measuring logical states to storing them, performing a full set of Clifford operations, adding non-Clifford operations needed for universal quantum computing and allowing measurement-conditioned control flow.
+
+That final capability is particularly important. Some quantum algorithms require the machine to measure part of a calculation, interpret the result and rapidly decide what operation to perform next. That depends on a classical decoder that can process error-syndrome data in real time and feed instructions back to the quantum hardware with low enough delay.
+
+Performance covers the speed and eventual cost of fault-tolerant operations. A system may achieve a low error rate, but it could still be too slow or too resource-intensive to be useful for a commercial or scientific workload.
+
+Trade-offs and Limits
+
+The researchers conclude in the paper that no single measure entirely captures fault-tolerant progress.
+
+Allocating a fixed supply of physical qubits across more logical qubits may increase system capacity but deliver less error suppression per logical qubit. Choosing an error-correction code that uses fewer physical qubits may increase the time required to perform logical gates. A more accurate decoder may require more classical computing resources and introduce delays that reduce the benefit of better correction.
+
+Compilation creates another trade-off. More sophisticated software can reduce the number of gates, routing steps or special resource states required for an algorithm. But that optimization can increase offline compilation work or create tighter timing requirements if decisions must be made during execution.
+
+The researchers say that these choices should be evaluated according to the target application rather than treated as a race for a single record. A quantum computer intended for a particular chemistry problem may have different requirements from one designed for cryptanalysis or quantum simulation.
+
+The framework also places cost more explicitly in the discussion. The researchers bring up the Defense Advanced Research Projects Agency’s view of utility-scale quantum computing as the point at which the value of a computation exceeds its cost. Under that approach, the relevant question becomes how much reliable computation a machine can produce per unit of hardware and time.
+
+As for limits, the paper offers definitions, questions and an evaluation framework, but it does not ultimately establish a new universal benchmark, report an experimental result or settle which error-correction code or hardware platform will prevail. That will likely be the goal of future research.
+
+Future work will also need to develop a proposed standard that can be applied uniformly. Hardware approaches differ substantially in qubit type, connectivity, measurement speed, control requirements and error characteristics. Some platforms may make progress on fast feedback before they can show large-scale replication, while others may demonstrate favorable scaling properties before they offer a complete set of fault-tolerant operations.",https://thequantuminsider.com/wp-content/uploads/2026/09/Screenshot-2026-09-22-at-4.15.56-AM.png,N,,2026-09-22 10:06:19.339338
 ID27,Levi Strauss,2026-09-22 12:05:14+00:00,WWD,"Levi's, M&S Join Forces on Supplier Renewable Energy - WWD",Alexandra Harrell,,,,,https://wwd.com/sourcing-journal/industry-news/levis-ms-fashion-renewable-collaborative-1239244825/,"Unveiled Tuesday during Climate Week NYC, the Fashion Renewable Collaborative, or FRC, will offer participating suppliers digital education, market guidance and support in assessing and procuring renewable electricity.
 The founding companies are inviting other fashion brands to join as sponsors or members.
 Its menu includes power purchase agreements, energy attribute certificates, on-site and distributed renewable generation and energy storage.
@@ -110,6 +193,7 @@ Katharine Beacham, M&S’s head of sustainability and materials in fashion, home
 Participating suppliers will use Schneider Electric’s Resource Advisor+ for Supply Chain platform for onboarding, education, readiness assessments and progress tracking. The consultancy said it manages more than 20 active supply-chain decarbonization initiatives involving upward of 3,100 supplier companies, including 16 renewable-energy cohorts involving multiple buyers.
 
 The technology is meant to create a common experience for brands and manufacturers while guiding suppliers from education to procurement. The program’s impact, however, will ultimately depend on how many suppliers move beyond registration and reviews to secure renewable power.",https://wwd.com/wp-content/uploads/2026/09/LevisMSclimateWeek.jpg?w=1000&h=563&crop=1,N,,2026-09-22 09:11:17.678072
+ID27,Levi Strauss,2026-09-22 12:01:15+00:00,www.levistrauss.com,Powering Fashion's Renewable Energy Future - Levi Strauss & Co,Not Available,,,,,https://www.levistrauss.com/2026/09/22/climate-renewable-collaborative/,"Learn more the new Fashion Renewable Collaborative program, which helps apparel suppliers switch to renewable energy.",Not Available,,N,,2026-09-22 10:06:11.882414
 ID8,Best Buy,2026-09-22 11:13:09+00:00,Best Buy Corporate News and Information,"Best Buy to debut on TikTok Shop, introducing new way for customers to discover and shop",Best Buy,,,,,https://corporate.bestbuy.com/2026/best-buy-to-debut-on-tiktok-shop/,"Best Buy is launching on TikTok Shop, giving customers a new way to discover and shop for technology, right from their feed to their front door.
 “Launching on TikTok Shop lets us meet customers at that exact moment of discovery and make it easy to shop.” A new way to shop Best Buy With the launch of TikTok Shop, customers will have another way to shop with Best Buy just in time for the holiday season.
 App users can expect to see products through shoppable creator videos, the Best Buy shop page, the TikTok Shop tab and product pages in the app.
@@ -9404,202 +9488,3 @@ Investors appeared sanguine about the setback, sending Contineum’s share price
 
 PIPE-791, a potential rival to Bristol Myers Squibb’s admilparant, is in phase 2 development. The next key catalyst for Contineum's shares is readthrough from phase 3 data on admilparant, which BMS is expected to share early in the fourth quarter, the analysts said.",https://qtxasset.com/quartz/qcloud5/media/image/GettyImages-2004771500.jpg?VersionId=MuwW1.GnHKP0a1Z1uD4jsvBmHhaeUrnR,N,,2026-09-15 11:07:35.713948
 ID9,BNY Mellon,2026-09-15 14:07:31+00:00,www.forbes.com,"The 242-Year-Old Bank Building AI For People, At Scale - Forbes",,,,,,https://www.forbes.com/sites/keithferrazzi/2026/09/15/the-242-year-old-bank-building-ai-for-people-at-scale/,"BNY Mellon has implemented an enterprise-wide AI strategy, deploying over 300 solutions to enhance human decision-making, expand capacity, and ...",Not Available,,Y,,2026-09-15 11:07:31.514795
-ID6,AXA,2026-09-15 14:03:59+00:00,www.ifre.com,Allocs out for AXA LEM €300m 6yr green | IFR,Julian Baker,,,,,https://www.ifre.com/bonds/2485408/allocs-out-for-axa-lem-300m-6yr-green,"Our Privacy Statement & Cookie Policy All websites use cookies to improve your online experience.
-They were placed on your computer when you launched this website.
-You can change your cookie settings through your browser.","Our Privacy Statement & Cookie Policy
-
-All websites use cookies to improve your online experience. They were placed on your computer when you launched this website. You can change your cookie settings through your browser.",https://assets.ifre.com/prod/assets/favicon-96x96.2101d450.png,N,,2026-09-15 15:11:37.682710
-ID36,Pearson,2026-09-15 14:02:52+00:00,kalkinemedia.com,What Does Pearson's (LSE:PSON) Interim Dividend Say About Its Shift Beyond Textbooks?,Not Available,,,,,https://kalkinemedia.com/uk/stocks/communication/what-does-pearsons-lsepson-interim-dividend-say-about-its-shift-beyond-textbooks,"Dividend Tax Considerations For UK Investors Dividend income received outside a tax-efficient wrapper is generally subject to UK dividend tax once it exceeds an annual tax-free allowance, with the rate charged depending on which income tax band the dividend falls into.
-Tracking Pearson's Dividend Calendar Company announcements, known as RNS releases in the UK, are the primary source for dividend declarations, confirming the amount, the ex-dividend date, the record date and the payment date for each distribution.
-How Dividend Dates Work: Declaration, Ex-Dividend And Payment Every dividend moves through a predictable sequence of dates.
-The record date confirms which shareholders are on the register to receive payment, and the payment date is when the cash actually lands in accounts.
-Investors interested in qualifying for Pearson's interim dividend need to own the shares before the ex-dividend date, not simply before the payment date, a distinction that catches out some newer income investors.","Highlights
-
-An interim dividend is scheduled for payment on 14 September 2026
-
-Pearson has been shifting its business mix toward digital learning and professional certification
-
-Traditional print textbook revenue has declined as a share of the group's overall earnings
-
-Pearson has spent recent years shifting its business mix away from traditional print textbooks toward digital learning platforms, professional certification and workforce skills products. That transition has changed the underlying growth and margin drivers behind the group's earnings, and by extension its dividend capacity.
-
-The interim payment reflects earnings generated across this evolving mix, with digital and services revenue increasingly central to the investment case relative to the group's legacy print publishing business.
-
-How Pearson Fits The Sector
-
-Within communication stocks, Pearson is grouped with other UK-listed information and publishing names, though its focus on education and professional certification distinguishes it from broader business information peers.
-
-Professional Certification As A Growth Area
-
-Growth in professional testing and certification services has been highlighted by management as a key area of focus, offering a different demand profile from the more cyclical education publishing markets Pearson has traditionally served.
-
-Placing This In The Wider Communication Stocks Picture
-
-Pearson (LSE:PSON) Communication Services Pearson PLC (LSE:PSON) 1187.00 GBX -4.500 ↓ 0.378% sits within the communication stocks segment of the London market, and investors following Communication Stocks often track its digital transition as an example of how information and publishing businesses are adapting business models across the sector.
-
-What Investors Should Watch From Here
-
-Digital revenue growth, professional certification volumes and further declines in legacy FTSE 100 print publishing are the main factors likely to shape future dividend decisions.
-
-The September payment continues Pearson's established approach to shareholder returns through its ongoing business transition.
-
-Dividend Tax Considerations For UK Investors
-
-Dividend income received outside a tax-efficient wrapper is generally subject to UK dividend tax once it exceeds an annual tax-free allowance, with the rate charged depending on which income tax band the dividend falls into. These allowances and rates are reviewed periodically by HMRC, so investors should check current thresholds rather than rely on prior-year figures when estimating their own liability.
-
-Holding shares like Pearson within an ISA or a SIPP shelters dividend income from this tax entirely, which is one reason many UK income investors prioritise using their tax-efficient allowances before holding dividend payers in a general investment account. This is general information rather than personal tax advice, and investors with specific questions about their own position should speak to a qualified adviser.
-
-Currency And Overseas Earnings Exposure
-
-Companies that generate a significant share of revenue or profit outside the UK can see their dividend capacity, and the sterling value of any payment, affected by currency movements even when the underlying business performance is stable. A stronger pound relative to the currencies a company earns in can reduce the sterling-equivalent value of profits and dividends, while a weaker pound can boost it.
-
-This dynamic is relevant for Pearson to the extent its earnings are generated outside the UK, and investors following communication stocks more broadly often keep an eye on relevant exchange rates alongside underlying operational performance when assessing future dividend prospects.
-
-Understanding Dividend Cover And Payout Sustainability
-
-Dividend cover, calculated by dividing a company's earnings per share by its dividend per share, is one of the simplest ways investors assess whether a payout looks sustainable. A cover ratio comfortably above one suggests a business is generating more profit than it distributes, leaving room to absorb a difficult year without cutting the dividend. A ratio close to or below one, by contrast, can signal that a payout is being funded from reserves or borrowing rather than current earnings, which tends to draw closer scrutiny from income-focused shareholders.
-
-For Pearson, as with any communication stocks constituent, dividend cover is best read alongside free cash flow generation and balance sheet strength rather than in isolation, since accounting profit and cash profit can diverge meaningfully depending on the business model. Investors tracking the interim dividend typically watch subsequent results releases for management commentary on cover and cash generation, since that context often shapes expectations for future payments.
-
-Tracking Pearson's Dividend Calendar
-
-Company announcements, known as RNS releases in the UK, are the primary source for dividend declarations, confirming the amount, the ex-dividend date, the record date and the payment date for each distribution. Most brokers also maintain a dividend calendar tool that aggregates this information across an investor's holdings.
-
-For those following Pearson specifically, the company's own investor relations page typically lists historical and upcoming dividend dates, alongside results announcements that often accompany or precede a new declaration.
-
-How Dividend Dates Work: Declaration, Ex-Dividend And Payment
-
-Every dividend moves through a predictable sequence of dates. The declaration date is when the board formally announces the payout and its amount. The ex-dividend date follows, marking the cut-off after which new buyers of the shares are no longer entitled to that specific payment; the shares typically trade lower by roughly the dividend amount on that day, all else being equal. The record date confirms which shareholders are on the register to receive payment, and the payment date is when the cash actually lands in accounts.
-
-Investors interested in qualifying for Pearson's interim dividend need to own the shares before the ex-dividend date, not simply before the payment date, a distinction that catches out some newer income investors. Brokers and the London Stock Exchange's own announcements are the most reliable places to confirm the exact dates for any individual payment.",https://kalkinemedia.com/storage/uploads/original/telec_09_15_2026_10_39_00_298226.jpg,N,,2026-09-15 11:07:56.328682
-ID34,OpenAI,2026-09-15 14:02:34+00:00,Yahoo Finance,OpenAI acquires Glass Imaging camera startup for $300 million - Yahoo Finance,Cris Tolomia,,,,,https://finance.yahoo.com/technology/ai/articles/openai-acquires-glass-imaging-camera-134907735.html,"OpenAI acquired Glass Imaging, a startup developing AI-powered smartphone camera technology, in a deal valued at over $300 million, according to The Wall Street Journal.
-The purchase price represents a significant jump from the roughly $100 million valuation Glass Imaging carried in a funding round last year.
-Glass Imaging was founded in 2019 by Ziv Attar and Tom Bishop, two former Apple engineers who worked on the company's Portrait Mode feature.
-The company's goal is to produce image quality comparable to a DSLR camera from a smartphone.
-OpenAI's plans for Glass Imaging are unclear.","OpenAI acquired Glass Imaging, a startup developing AI-powered smartphone camera technology, in a deal valued at over $300 million, according to The Wall Street Journal. The purchase price represents a significant jump from the roughly $100 million valuation Glass Imaging carried in a funding round last year.
-
-Glass Imaging was founded in 2019 by Ziv Attar and Tom Bishop, two former Apple engineers who worked on the company's Portrait Mode feature. The Los Altos, California-based company had raised about $30 million from investors including GV, Alphabet's venture arm, and Insight Partners before the acquisition.
-
-Glass Imaging's approach differs from conventional AI photo editing: instead of processing images after the fact, the company teaches neural networks the specific optical properties of each camera system so that picture quality is improved as the shot is taken, according to The Wall Street Journal. The company's goal is to produce image quality comparable to a DSLR camera from a smartphone. Its zoom-imaging technology was featured in a line of phones from Chinese smartphone brand Honor.
-
-OpenAI's plans for Glass Imaging are unclear. The company is also developing a device with Jony Ive, the former Apple designer behind the iPhone. OpenAI brought on Ive in 2025 through its $6.5 billion purchase of io Products, and his responsibilities span hardware development alongside broader efforts to define how AI products will look and function.",https://s.yimg.com/lo/mysterio/api/03921cc60d514eefb31dcf7fa77b113ef406a5363ed00b215c7242d3db05934c/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fquartz_855%2Fbffd9552a035c6999fb84dfeb17311f7.jpg,N,,2026-09-15 12:21:48.461873
-ID17,Elevance Health,2026-09-15 13:51:30+00:00,www.zacks.com,"Here's How CVS' Health Services Arm Is Positioned for Long-Term Growth - September 15, 2026",Not Available,,,,,https://www.zacks.com/stock/news/2989925/heres-how-cvs-health-services-arm-is-positioned-for-long-term-growth,"Please stand by We're getting everything ready for you.
-The page is loading, and you'll be on your way in just a few moments.
-Thanks for your patience!","Please stand by
-
-We're getting everything ready for you. The page is loading, and you'll be on your way in just a few moments.
-
-Thanks for your patience!",,N,,2026-09-15 12:21:38.497406
-ID33,Nvidia,2026-09-15 13:49:43+00:00,www.barrons.com,What Nvidia CEO Huang Told Trump About the AI Doom Debate - Barron's,,,,,,https://www.barrons.com/articles/nvidia-stock-price-huang-trump-ai-slowdown-97db392a,Nvidia stock was steadying after President Donald Trump had a public phone call with CEO Jensen Huang pushing back against an AI slowdown.,Not Available,,Y,,2026-09-15 10:10:56.449720
-ID41,UniCredit,2026-09-15 13:43:54+00:00,MarketScreener,"UniCredit wants Commerzbank CEO and chair to leave, sources say - MarketScreener",Not Available,,,,,https://www.marketscreener.com/news/unicredit-wants-commerzbank-ceo-and-chair-to-leave-sources-say-ce785bdddc8af52d,"FRANKFURT/MILAN, Sept 15 (Reuters) - UniCredit CEO Andrea Orcel does not want Bettina Orlopp to remain as Commerzbank CEO and is opposed to Berlin keeping two supervisory board seats, three people with knowledge of the matter said, as he moves towards taking over the German bank.
-UniCredit also wants Commerzbank Chairman Jens Weidmann to leave, two of the people said.
-Germany's finance ministry declined to comment further, after saying on Monday it wants to keep two board seats.
-UniCredit is in a position to call an extraordinary shareholder meeting and appoint new shareholder representatives at Commerzbank, he said.
-A combination of UniCredit and Commerzbank would create a bank with more than EUR1.3 trillion in assets across two of the euro zone's largest economies.","FRANKFURT/MILAN, Sept 15 (Reuters) - UniCredit CEO Andrea Orcel does not want Bettina Orlopp to remain as Commerzbank CEO and is opposed to Berlin keeping two supervisory board seats, three people with knowledge of the matter said, as he moves towards taking over the German bank.
-
-UniCredit also wants Commerzbank Chairman Jens Weidmann to leave, two of the people said.
-
-German Finance Minister Lars Klingbeil and Orcel met on Monday on the Italian bank's takeover plans, a turning point in the two-year battle for control of one of Germany's biggest banks after Berlin failed in its attempt to stymie a takeover. Both called the meeting ""constructive.""
-
-UniCredit did not respond to a request for comment.
-
-A spokesperson for Commerzbank dismissed any changes in management, saying ""The board of Commerzbank AG has running contracts, the supervisory board is elected by the general assembly, and there's full alignment on strategy.""
-
-Germany's finance ministry declined to comment further, after saying on Monday it wants to keep two board seats.
-
-It was unclear if the leadership roles or UniCredit's opposition to the German government maintaining two board seats were discussed at Monday's meeting in Berlin.
-
-""We are currently represented on Commerzbank's supervisory board and will continue to be,"" Klingbeil told reporters on Tuesday, adding: ""And, naturally, if and when the time comes, we also expect to be represented on UniCredit's board"".
-
-NEW SHAREHOLDER REPRESENTATIVES
-
-Orlopp said last month she was not feeling pressure to give up her role after the months-long ownership battle over Germany's second-largest bank, which both the Commerzbank CEO and Weidmann have said should remain independent.
-
-Orcel repeatedly said over the summer he wanted to engage with Commerzbank employee representatives, local authorities and central government, leaving out Orlopp and Weidmann. UniCredit is in a position to call an extraordinary shareholder meeting and appoint new shareholder representatives at Commerzbank, he said.
-
-Germany won the right to appoint two board members when it rescued Commerzbank in 2009 during the global financial crisis.
-
-It retains a stake of 13.3% and it is not clear how UniCredit could block Berlin retaining two members while it remains a shareholder.
-
-In addition to the board seats, Berlin has set out a number of other demands relating to a UniCredit takeover, including Commerzbank remaining listed on the stock exchange, keeping its base in Frankfurt and continuing to finance German medium-sized companies at home and abroad.
-
-After months of resistance, German government officials and Commerzbank executives softened their stance on a potential deal after UniCredit amassed a stake of nearly 50%.
-
-Now German officials are hoping to protect jobs as well as the brand of a bank that plays a critical role in financing the medium-sized companies in Europe's largest economy, whose government is in the throes of a political crisis.
-
-A combination of UniCredit and Commerzbank would create a bank with more than EUR1.3 trillion in assets across two of the euro zone's largest economies.
-
-(Reporting by Tom Sims and Valentina Za; additional reporting by Maria Martinez and Christian Kraemer; editing by Friederike Heine and Alexander Smith)
-
-By Tom Sims and Valentina Za",https://cdn.zonebourse.com/static/resize/0/0//images/reuters/2026-05/2026-05-20T104027Z_1_LYNXMPEM4J0WM_RTROPTP_4_COMMERZBANK-M-A-UNICREDIT-AGM.JPG,N,,2026-09-15 14:09:15.493097
-ID33,Nvidia,2026-09-15 13:41:18+00:00,The Jerusalem Post | JPost.com,Nvidia announces project with Palantir to develop AI supply chain management,TOBIAS HOLCMAN,,,,,https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-908286,"Nvidia and Palantir announced on Thursday that they will incorporate an artificial intelligence model into the control of their critical supply chains, giving the automated system decision-making power.
-""Nvidia has arguably the most valuable, intricate, and complex supply chain in the world.
-The deployment, according to the companies, will allow for ""unprecedented supply chain visibility, identify constraints, continuously codify operational expertise and guide decisions at machine speed.""
-NVIDIA and Palantir are transforming this vast operational graph into sovereign intelligence.""
-Additionally, the Nvidia explained that the model was only going to train according to insights provided by the workers, with no changes made during production while managing a supply chain.","Nvidia and Palantir announced on Thursday that they will incorporate an artificial intelligence model into the control of their critical supply chains, giving the automated system decision-making power.
-
-""Nvidia has arguably the most valuable, intricate, and complex supply chain in the world. Our sovereign stack, powered by Nemotron models and Ontology, is delivering capabilities that exceed the frontier while providing alpha protection qualities unavailable otherwise,” said Alex Karp, cofounder and CEO of Palantir Technologies.
-
-The deployment, according to the companies, will allow for ""unprecedented supply chain visibility, identify constraints, continuously codify operational expertise and guide decisions at machine speed.""
-
-The system will be first implemented in Nvidia's supply chain, which spans millions of parts, thousands of suppliers, and a global network of manufacturing partners, with the objective of unifying every team worldwide into one operating system that improves their efficiency.
-
-""Supply chains are the operating system of the physical economy, and AI factories are among the most complex systems ever built,” said Jensen Huang, founder and CEO of Nvidia. “From wafers and components to manufacturing, systems and customer delivery, hundreds of companies and trillions of dollars of global economic activity come together to deliver AI infrastructure. NVIDIA and Palantir are transforming this vast operational graph into sovereign intelligence.""
-
-The human side is still key for the system
-
-Even if Nvidia reported that planners improved their numbers when using the new model, it also said human employees still provided key insights that weren't possible to get using only an AI system.
-
-According to the company, emails exchanged with partners that week, severe weather in the forecast for a key region, an ongoing geopolitical event, or understanding the transcript from the last supplier debrief call were factors the AI struggled to incorporate when working across the entire supply chain.
-
-The company explained that those inputs were better implemented by human instinct created by years of work rather than by the mathematical algorithm that guided the system, while the AI had an important role in working around the repetitive and predictable tasks.
-
-The company concluded that the best implementation would help workers spend less time reconstructing routine decisions so they could focus on unpredictable situations.
-
-Additionally, the Nvidia explained that the model was only going to train according to insights provided by the workers, with no changes made during production while managing a supply chain.","https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/696464",N,,2026-09-15 11:07:44.241341
-ID34,OpenAI,2026-09-15 13:37:53+00:00,Business Insider,OpenAI has tapped a startup to make its AI work for lawyers - Business Insider,Melia Robinson,,,,,https://www.businessinsider.com/telon-openai-select-partner-legal-tech-lewis-bretts-2026-9,"OpenAI has been signaling for months that it wants a bigger foothold in the legal industry.
-Telon, a London startup, is one of the companies giving it boots on the ground.
-Rather than sell software, Telon hires and trains ""legal engineers"" — mostly former lawyers who embed inside law firms and corporate legal teams to help them get more out of the tech they already buy.
-The startup isn't six months old yet, and it already has the attention of a tech goliath.
-Telon said Tuesday that OpenAI named it a ""select partner,"" a role that will have the startup working with shared customers to configure models, write prompts, build agents, and train lawyers.","OpenAI has been signaling for months that it wants a bigger foothold in the legal industry. A new partnership offers a clue as to how it plans to get there: not just by selling models and software, but by sending people to help customers actually use them.
-
-Telon, a London startup, is one of the companies giving it boots on the ground.
-
-Rather than sell software, Telon hires and trains ""legal engineers"" — mostly former lawyers who embed inside law firms and corporate legal teams to help them get more out of the tech they already buy. The model is a bit like forward-deployed engineering-as-a-service.
-
-The startup isn't six months old yet, and it already has the attention of a tech goliath. Telon said Tuesday that OpenAI named it a ""select partner,"" a role that will have the startup working with shared customers to configure models, write prompts, build agents, and train lawyers.
-
-The ChatGPT maker launched the OpenAI Partner Network in June to make it easier for consultants and other partners to bring its models and software into companies around the world. OpenAI said it aims to certify 300,000 consultants by the end of 2026.
-
-Lewis Bretts, a former trial attorney, built up PwC's legal practice before founding Telon in June. He said the hardest part about selling artificial intelligence to law firms isn't closing the deal. It's getting lawyers to actually use it.
-
-That pain point has created a growing line of business for professional services firms, which have long helped companies adopt enterprise software. Bretts said he started Telon after noticing a change in how that work gets done.
-
-Enterprises once hired firms like McKinsey or Deloitte to roll out a Salesforce database or another large tech system — a project that might take months or years, but eventually ended.
-
-AI is different. Labs ship new models all the time. Each release expands what the apps built on top can do. A company can buy licenses and run a successful pilot, Bretts said, only to find months later that employees are using a fraction of what the technology can do.
-
-Telon is betting there is room for a legal specialist to close that gap. Since June, the company has grown to 30 team members and raised capital from Zach Posner's LegalTech Fund. Bretts declined to name customers or disclose the financial terms of its OpenAI agreement.
-
-The partnership gives Telon a stamp of credibility.
-
-It may help OpenAI answer a harder question, too.
-
-The company is pushing deeper into legal work, but its pitch runs up against a familiar refrain: Why should a law firm buy directly from a model provider when specialized app companies build around the way lawyers actually work?
-
-Telon might give OpenAI a way to borrow some of that niche.",https://i.insider.com/6aa81f729b8974787b1cbcad?width=1200&format=jpeg,N,,2026-09-15 11:07:47.936753
-ID41,UniCredit,2026-09-15 13:19:16+00:00,www.theedgemarkets.com,UniCredit wants Commerzbank CEO and chair to leave their roles — Reuters,,,,,,http://www.theedgemarkets.com/node/818253,UniCredit CEO Andrea Orcel wants Bettina Orlopp to leave her job as the CEO of Commerzbank and is opposed to the German government's demand to ...,Not Available,http://www.theedgemarkets.com/favicon-32x32.png,Y,,2026-09-15 13:20:13.065581
-ID20,H&M,2026-09-15 13:18:25+00:00,AppleValleyNewsNow.com,CFDA boss on leave after acting 'inappropriately' against protesters at New York Fashion Week show,Oscar Holland,,,,,https://www.applevalleynewsnow.com/lifestyle/cfda-boss-on-leave-after-acting-inappropriately-against-protesters-at-new-york-fashion-week-show/article_95d18373-c642-54ce-9219-e607865d0e53.html,(CNN) — The head of American fashion’s leading trade association has taken a professional leave of absence after reacting “inappropriately” during an altercation with animal rights protesters at a runway,Not Available,https://bloximages.newyork1.vip.townnews.com/applevalleynewsnow.com/content/tncms/assets/v3/editorial/a/9f/a9f55908-5876-5cea-92a8-3189df91a3fc/6aa9430dbf391.image.jpg?crop=1176%2C617%2C0%2C572,N,,2026-09-15 12:21:42.124033
-ID4,Air Liquide,2026-09-15 13:18:09+00:00,Hydrogen Europe,Industry leaders scale full value chain for hydrogen mobility across Europe,Francesca Maddii,,,,,https://hydrogeneurope.eu/industry-leaders-scale-full-value-chain-for-hydrogen-mobility-across-europe/,"Today at IAA Transportation, Daimler Truck, Volvo Group, Toyota Motor Corporation, Bosch, Air Liquide, TotalEnergies, TEAL Mobility, and MB Energy unveiled their plans to accelerate the rollout of hydrogen-powered vehicles across Europe.
-For the first time in Europe, the German ecosystem has put in place all the conditions for a scalable deployment of Hydrogen trucks by 2030, driven by the German authorities and European industrial leaders along the value chain.
-Building on the German deployment model as a blueprint, scaling these solutions across the continent calls for aligned support from national governments and the European Commission to ensure long-term energy resilience and competitiveness.
-Rooted in the shared conviction that hydrogen is an important complement to battery-electric vehicles in achieving the EU’s decarbonization targets, industry leaders are joining forces to overcome historical bottlenecks, particularly for truck operations requiring long range, high payload capacity, rapid refueling and operational flexibility.
-Image copyright: Daimler Truck AG","Today at IAA Transportation, Daimler Truck, Volvo Group, Toyota Motor Corporation, Bosch, Air Liquide, TotalEnergies, TEAL Mobility, and MB Energy unveiled their plans to accelerate the rollout of hydrogen-powered vehicles across Europe.
-
-For the first time in Europe, the German ecosystem has put in place all the conditions for a scalable deployment of Hydrogen trucks by 2030, driven by the German authorities and European industrial leaders along the value chain.
-
-Building on the German deployment model as a blueprint, scaling these solutions across the continent calls for aligned support from national governments and the European Commission to ensure long-term energy resilience and competitiveness.
-
-Rooted in the shared conviction that hydrogen is an important complement to battery-electric vehicles in achieving the EU’s decarbonization targets, industry leaders are joining forces to overcome historical bottlenecks, particularly for truck operations requiring long range, high payload capacity, rapid refueling and operational flexibility.
-
-Image copyright: Daimler Truck AG",https://hydrogeneurope.eu/wp-content/uploads/2026/09/daimler-small-.jpg,N,,2026-09-15 10:10:48.522831
