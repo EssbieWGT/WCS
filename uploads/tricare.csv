@@ -1,4 +1,429 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2026-09-23 21:18:15+00:00,medsolercm.com,"TRICARE Timely Filing Limit 2026: East, West and TFL Deadlines - MedSole RCM",Andrew Christian,,,,,https://medsolercm.com/blog/tricare-timely-filing-limit,"TRICARE Corrected Claim Timely Filing Limit TRICARE doesn’t publish a separate corrected-claim deadline.
+Published timely filing waiver criteria, TRICARE East compared to TRICARE West ""Not listed"" means that contractor does not publish the condition.
+When a CO-29 is worth working A CO-29 says you blew the TRICARE timely filing limit.
+How to Prove Timely Filing to TRICARE What counts as proof, strongest to weakest Proving you met the TRICARE timely filing limit comes down to what you can document, and not every document carries the same weight with a reviewer.
+TRICARE Timely Filing FAQs What is the TRICARE timely filing limit?","The TRICARE timely filing limit is one year from the date of service, or one year from the inpatient discharge date for facility charges. Overseas claims get three years.
+
+That part is simple. What costs practices money is everything after it: the second clock running on secondary claims, the corrected-claim rule TRICARE never published, and the CO-29 sitting on a remittance right now that somebody is about to write off.
+
+Standard deadline: one year from date of service or inpatient discharge
+
+Overseas: three years from date of service
+
+Secondary claims: 90 days from the other insurer’s adjudication date
+
+Denial code when you miss it: CO-29
+
+Active Duty Service Members: timely filing doesn’t apply
+
+What Is the TRICARE Timely Filing Limit in 2026?
+
+TRICARE gives you one year to get a claim in the door. The clock starts on the date of service for outpatient care and on the discharge date for inpatient facility charges. If the patient lives overseas, that window stretches to three years.
+
+TRICARE filing deadlines by claim type and patient location
+
+The deadline by claim type and location
+
+Two rows on that table appear almost nowhere else in published guidance on the TRICARE timely filing limit, and both cost practices money.
+
+Dental and pharmacy carry their own one-year windows, separate from the medical claim. A practice billing adjunctive dental under TRICARE tracks that deadline on its own, not as part of the medical AR.
+
+The overseas rule triples your window. Puerto Rico, Guam, the US Virgin Islands, American Samoa, and the Northern Mariana Islands all count as US territories, so they stay on the one-year clock. Everything outside that gets three years, and overseas claims also require proof of payment submitted with the claim.
+
+Source: TRICARE claims deadline FAQ, updated July 2, 2026
+
+Why the deadline is federal, not contractor policy
+
+Billing TRICARE trips people up because they treat the one-year figure as something Humana Military or TriWest decided. Neither company set it.
+
+The deadline sits in federal regulation at 32 CFR 199.7, and it has applied to every service provided on or after January 1, 1993. Before that date the rule looked different: claims were due by December 31 of the year following the year of service, which gave some claims almost two years and others barely twelve months.
+
+That matters operationally. A contractor can’t shorten the window by contract, and a contractor’s published waiver criteria sit underneath the federal exception categories rather than replacing them.
+
+Source: 32 CFR 199.7, Claims submission, review, and payment
+
+When Does the TRICARE Filing Clock Start?
+
+Outpatient claims run from the date of service. Inpatient facility charges run from the discharge date.
+
+A patient admitted March 3 and discharged March 20 gives the facility until March 20 of the following year. Not March 3. That seventeen-day difference has saved more claims than most billers realize.
+
+Professional services billed by a facility follow a different clock
+
+This is where it gets expensive. Professional services billed by the facility don’t run from the discharge date. They run from the date of service.
+
+Picture a 28-day admission. The facility claim stays safe until one year past discharge. The hospitalist who rounded on day one, billing under the facility’s tax ID, is working against a deadline four weeks earlier. Same patient, same chart, two expiration dates.
+
+Most teams never split them. The facility claim goes out clean, the professional charges sit in a hold queue waiting on documentation, and nobody catches the gap until CO-29 lands on the professional side alone.
+
+Two clocks on one admission: Facility charges run from the discharge date. Professional services billed by that same facility run from the date of service.
+
+Source: TRICARE Operations Manual, Chapter 8, Section 3 (Change 152, September 3, 2025)
+
+Received, not postmarked
+
+The TRICARE timely filing limit measures one thing: the day your claim reaches the contractor. TRICARE claims should be received within the filing window, not simply sent within it. Contractors measure the day the claim lands in their system. Your transmission date, your postmark, and your billing software timestamp carry no weight.
+
+On paper claims near the deadline that gap runs days. On anything stuck behind a clearinghouse edit it runs weeks.
+
+The Medicare timely filing limit works the same way, which is why billers who came up on Medicare tend to get this one right and billers who came up on commercial plans tend to get burned by it.
+
+Source: TriWest provider handbook
+
+TRICARE East, West, and For Life: Do the Filing Deadlines Differ?
+
+The deadline is identical. The routing is not.
+
+Every region runs on the same one-year federal deadline. What changes is which contractor receives the claim, which payer ID routes it, which PO box takes paper, and which waiver criteria that contractor actually publishes.
+
+Same deadline, different rulebooks: The one-year limit is federal and identical across TRICARE East, TRICARE West, and TRICARE For Life. The waiver criteria and submission routing are not.
+
+If you work more than one region, one checklist won’t cover you.
+
+TRICARE East: Humana Military and payer ID 99727
+
+Humana Military administers the East Region. The TRICARE East timely filing limit is one year from the date the services were provided.
+
+Payer ID is 99727, and it goes in three places on an X12 837 file: ISA-08, GS-03, and NM1-09 with the 40 qualifier. Paper claims go to TRICARE East Region Claims, PO Box 202146, Florence, SC 29502-2146.
+
+One detail worth flagging: East directs network providers to file electronically within 90 days of care. That’s a network standard, far tighter than the regulatory year, and it doesn’t appear in any general timely filing reference.
+
+Source: Humana Military claims page
+
+TRICARE West: TriWest, PGBA, and payer ID 99726
+
+TriWest Healthcare Alliance administers the West Region, with claims processed by PGBA. The TRICARE West timely filing limit is one year, stated as 365 days, from the date services were provided or from the discharge date for inpatient facility charges.
+
+Payer ID is 99726. Paper claims go to TRICARE West Claims, PO Box 202160, Florence, SC 29502-2160, fax 1-877-989-0070.
+
+TriWest recommends filing within 30 days of service. Treat that as the operational target, not the deadline.
+
+TRICARE For Life: WPS and the Medicare-first rule
+
+Wisconsin Physicians Service processes TRICARE For Life. Medicare files first, every time. Claims go to WPS TRICARE For Life, PO Box 7890, Madison, WI 53707-7890.
+
+Now the part that costs money. The TRICARE For Life timely filing limit is still one year from the date of service. Medicare accepting your claim as timely is an exception pathway you have to request, not an automatic clock reset.
+
+A biller who waits for a Medicare EOB that issues at month eleven, then files TRICARE on day 300 of a fresh count, has already missed the deadline by roughly nine months.
+
+Source: WPS TRICARE For Life reimbursement
+
+TRICARE Secondary Claims and the 90-Day OHI Rule
+
+Two clocks run at the same time
+
+When a TRICARE patient carries other health insurance, you’re tracking two deadlines at once. Miss either and the claim dies.
+
+The second clock nobody tracks: The one-year window from date of service keeps running. On top of it, the claim has to reach TRICARE within 90 calendar days of the other insurer’s adjudication date.
+
+Run the math on a real one. Commercial primary adjudicates on day 340. You don’t have 90 days. You have 25, because the one-year window closes first and the OHI rule doesn’t extend it on its own.
+
+When the primary blows past the year, that 90-day window becomes the basis for a waiver request instead of a filing right, because the TRICARE timely filing limit has already closed.
+
+Source: TRICARE West waiver criteria
+
+What the EOB has to show before TRICARE will pay
+
+TRICARE needs four things off the primary EOB: beneficiary liability, the original billed amount, the allowed amount, and any discounts applied. An EOB missing the liability breakdown gets the claim denied even when you filed on time.
+
+Send a claim flagged with primary OHI and no EOB or COB payment data attached, and it denies. Send it before the primary has finished processing, and it also denies. Filing early is its own failure mode on TRICARE.
+
+Most of these start at the front desk. The patient doesn’t mention the employer plan, nobody asks, and the OHI surfaces three months later on a denial. Benefit verification before the visit catches it while the claim is still fixable.
+
+Why TRICARE secondary claims don’t work like commercial secondary claims
+
+Most commercial payers restart the secondary clock from the primary’s payment date. That’s the rule billers carry in their heads, and it’s the reason TRICARE secondary claims get filed late by people who did everything else right.
+
+TRICARE doesn’t restart. The one-year limit from the date of service governs the whole thing. The 90-day OHI window is a route to an exception, not a new filing period.
+
+Compare it against how secondary claim clocks work on a commercial plan and the difference is obvious. On TRICARE, the year is the year.
+
+TRICARE Corrected Claim Timely Filing Limit
+
+TRICARE doesn’t publish a separate corrected-claim deadline. No contractor does. The original TRICARE timely filing limit from the date of service governs the correction, which means a correction filed at month thirteen is late no matter when the rejection came back.
+
+A rejected claim never stopped the clock
+
+A rejection happens before adjudication, at the clearinghouse or in the contractor’s front-end edits. No claim on file, no reason code, no adjudication.
+
+A denial happens after adjudication. There’s a claim on file and a code attached to it.
+
+Rejected is not filed: A rejected claim never reached adjudication, so the one-year clock never stopped. A denied claim did, and it comes with a reason code you can work.
+
+Send a correction against a rejection and you’re still counting from the original date of service. Practices find this out when CO-29 arrives on something their system logged as a corrected claim. Our breakdown of rejected versus denied claims covers the same trap across other payers.
+
+How to file a corrected TRICARE claim
+
+Electronic, on an 837I or 837P: find Loop 2300, segment CLM05-3, and enter frequency code 7 to replace the prior claim or 8 to void it. REF01 gets F8. REF02 gets the original claim number.
+
+Paper CMS-1500: frequency code goes in Box 22, left justified, with the original claim ID in the Original Reference Number field.
+
+Paper UB-04: the code goes in the third digit of the Box 4 type of bill, and the original claim ID goes in Box 64.
+
+Getting the resubmission code placement wrong sends the claim down the wrong workflow, and the days keep running against the original date of service while it sits there.
+
+Corrected claim or appeal? Pick the right route first
+
+Bad data on the original claim means you file a correction. Disagreement with how TRICARE processed an accepted claim means you file a reconsideration.
+
+Send a replacement claim against a payment determination and nothing happens to the decision. You’ve burned two weeks and the claim comes back the same way.
+
+TRICARE Appeal and Reconsideration Deadlines
+
+Reconsideration comes first, and it runs 90 days
+
+A reconsideration is your first move on a processed claim you disagree with. You have 90 days from the date on the remittance advice, the PRA or ERA, and every disputed item needs its own request.
+
+The reconsideration clock: 90 days from the date on the remittance advice, not from the date of service.
+
+Watch the routing on this one. TriWest takes claim reconsiderations at TRICARE West Provider Correspondence, PO Box 2748, Virginia Beach, VA 23450, fax 1-866-852-1969. That’s a different box and a different fax number from where West appeals go, and mail sent to the wrong one comes back late.
+
+The full appeal ladder
+
+A factual appeal, which is what a timely filing denial is, moves through three levels with two dollar thresholds most billers have never seen.
+
+TRICARE factual appeal levels, deadlines, and thresholds
+
+Level two goes to the Defense Health Agency, not to your regional contractor and not to a TRICARE Area Office. Appeals, Hearings, and Claims Collection Division, 16401 E. Centretech Parkway, Aurora, CO 80011-9066.
+
+Under $50 in dispute, the contractor’s decision is final. Under $300 after formal review, the DHA decision is final.
+
+Source: TRICARE factual appeals
+
+Timely filing denials are a reviewable issue
+
+TriWest names timely filing denials outright as an issue eligible for claim review. That single line changes how you treat a CO-29 stack.
+
+A timely filing denial isn’t automatically a write-off. It’s disputable when you can show the claim arrived on time, the contractor counted from the wrong date, or a waiver condition applies.
+
+Sitting on a pile of TRICARE denials and not sure which ones are still worth working? That’s a documentation review, not an appeal, and it’s worth doing before the 90 days runs out. Denial management services sort recoverable from dead before anyone spends a day building a packet nobody will read.
+
+TRICARE Timely Filing Waiver: The Six Exceptions
+
+Active Duty Service Members are exempt
+
+Active Duty is exempt: The timely filing guideline doesn’t apply when the beneficiary is an Active Duty Service Member on the date of service.
+
+Humana Military publishes this for TRICARE East, and DHA manual guidance handles service member claims separately from the standard deadline.
+
+Here’s what that means for your aged AR. An ADSM claim sitting past a year isn’t automatically dead. Most billers write these off because every general timely filing reference says one year with no carve-out, and the carve-out is the one thing they never read. Check the claim type before the write-off posts.
+
+The six conditions that qualify
+
+Pull both regional criteria together and six conditions qualify for a waiver of the TRICARE timely filing limit:
+
+Retroactive eligibility or preauthorization issued after the filing deadline passed
+
+Administrative error by the contractor
+
+Inability to communicate, or mental incompetency, with no legal guardian appointed on the date of service
+
+Delayed adjudication by a primary insurance
+
+Dual eligibility with Medicare, where Medicare accepted the claim as timely
+
+The claim was submitted before the deadline and already carries a claim number
+
+Three disqualifiers sit underneath those, and no commercial source explains any of them.
+
+A retroactive determination issued inside the one-year window doesn’t qualify. The original year still binds. Once the deadline has passed, the claim has to be filed within 180 days of the determination date.
+
+An administrative error claim has to be filed within 90 days of the date you were notified of the error, with a clear causal line between the error and the late filing.
+
+The mental incompetency exception can’t be granted if a legal guardian was appointed before the deadline and the deadline was still missed.
+
+Retroactive eligibility usually traces back to a credentialing gap rather than a claims problem, so provider credentialing and enrollment is where that one gets fixed permanently.
+
+Source: TRICARE Operations Manual, Chapter 8, Section 3 (Change 152, September 3, 2025)
+
+The six-year outer limit
+
+Six years is the outer wall: Once an exception is granted, only services received in the six years immediately preceding the request can be considered. Anything older is denied.
+
+There’s no time limit on submitting a written exception request before a claim has been filed. The six-year ceiling applies after.
+
+Source: TRICARE East waiver form
+
+How to request a timely filing waiver
+
+Step 1. Confirm which condition applies. If none of the six fits, stop. A waiver request without a qualifying condition burns a cycle and comes back denied.
+
+Step 2. Assemble the documentation that condition requires. Retroactive eligibility needs a copy of the determination. Mental incompetency needs a physician’s statement with dates, diagnoses, and treatment, attached to every claim submitted. An OHI delay needs the primary EOB showing its process date.
+
+Step 3. Complete the claim form. An exception request without a completed claim form gets returned. Providers file on CMS-1500 or UB-04; DD Form 2642 is the beneficiary’s form, not yours.
+
+Step 4. Route it to the right contractor.
+
+Timely filing waiver submission by region
+
+Submitting the form doesn’t guarantee payment. It buys the claim a review it wouldn’t otherwise get.
+
+TRICARE East vs TRICARE West: Where the Waiver Rules Differ
+
+The deadline is federal and identical. The published waiver criteria are not.
+
+Humana Military lists five conditions for the East Region plus the Active Duty exemption and the six-year ceiling. TriWest lists four for the West, including one the East doesn’t publish at all. Work both regions off a single checklist and you’ll argue the wrong exception to the wrong reviewer.
+
+Published timely filing waiver criteria, TRICARE East compared to TRICARE West
+
+""Not listed"" means that contractor does not publish the condition. It does not mean the condition is disallowed. Both regions operate under the same federal exception categories in 32 CFR 199.7(d)(2).
+
+The difference is what each contractor puts in writing, and what they put in writing is what their reviewers work from. Argue an administrative error to TriWest and you’re arguing a federal category their published criteria never mention. Bring the regulation with you.
+
+What Happens When You Miss the TRICARE Filing Deadline
+
+CO-29 and what it actually means
+
+TRICARE denies claims received after the deadline, and the remittance carries CO-29, the claim adjustment reason code for an expired filing time limit. The CO group code puts the balance on your side, not the patient’s.
+
+Systems render it inconsistently. CO29 on one screen and CO-29 on another are the same adjustment.
+
+CO-29 is a conclusion, not a fact: It means the contractor’s records show the claim arrived late. Test the arithmetic behind it before anything gets written off.
+
+Contractors apply the wrong plan, the wrong trigger date, or the wrong receipt date often enough that ten minutes of verification pays for itself. Check the date of service, the stated receipt date, the denial date, and the claim status history showing rejection against acceptance. Our CO-16 denial code fixes guide walks the same verification pattern on a different code.
+
+Can you bill the patient? Read this carefully
+
+No single rule covers every permutation of network, non-network, participating, and non-participating status here, and anyone telling you otherwise is guessing.
+
+What’s documented: participating-claim signature language restricts balance billing for covered services under the participating arrangement, and TRICARE prohibits balance billing as a general practice. Non-participating providers face a 15% ceiling above the allowable charge by federal law.
+
+Where that leaves a CO-29 write-off depends on your participation status and the specific claim. Check the participation agreement before anyone bills a patient for a deadline your practice missed.
+
+When a CO-29 is worth working
+
+A CO-29 says you blew the TRICARE timely filing limit. Test that claim before you accept it. Work it when one of these is true:
+
+You hold claim-level acceptance evidence with a TRICARE claim number
+
+The contractor counted from the wrong clock-start date
+
+One of the six waiver conditions applies to the claim
+
+The claim was rejected rather than denied, and the rejection was the contractor’s error
+
+Leave it alone when the claim never reached adjudication, you have no acceptance record, and no waiver condition fits. Knowing which stack is dead is worth as much as knowing which stack is recoverable, because it stops three weeks of work on claims nobody will pay.
+
+Looking at a CO-29 on a TRICARE remittance right now? The first question is whether a waiver condition applies, and that is a documentation review rather than an appeal. Root-cause denial recovery works the filing period, the acceptance evidence, and the denial reason before anything gets submitted, and tells you straight when a claim isn’t recoverable.
+
+How to Prove Timely Filing to TRICARE
+
+What counts as proof, strongest to weakest
+
+Proving you met the TRICARE timely filing limit comes down to what you can document, and not every document carries the same weight with a reviewer.
+
+Proof of timely filing evidence, ranked by strength
+
+The order matters more than the list. A clearinghouse acceptance report is not a payer claim number, and billers submit the weaker one constantly because it’s the easier one to pull.
+
+Any written request counts: A written request for benefits establishes the filing date even when it isn’t on an approved claim form. The approved form still has to follow.
+
+Correspondence sent before the deadline can preserve timeliness while you chase down documentation. Almost nobody uses this, because almost nobody knows it exists.
+
+Source: TRICARE Operations Manual, Chapter 8, Section 3
+
+Build the packet before you need it
+
+Download and store clearinghouse transmission records on a schedule. Most clearinghouses retain them 12 to 24 months, which sounds generous until a TRICARE claim denies at month thirteen and the record aged out two weeks earlier.
+
+Save the 277CA. Attach the acceptance report to the claim record itself, not to a general folder nobody can search fourteen months from now.
+
+Claims submission tracking produces this evidence as a byproduct of daily submission, which beats reconstructing it under deadline pressure. The proof-of-filing evidence hierarchy works the same across other payers.
+
+How to Stop Losing TRICARE Claims to the Filing Deadline
+
+File within 30 days, not 300
+
+TriWest recommends filing within 30 days of service, and that recommendation exists for a reason. The TRICARE timely filing limit is a boundary, not a plan.
+
+A claim submitted on day 30 has eleven months of runway for rejections, corrections, and OHI coordination. A claim submitted on day 300 has 65 days and no room for a single rejection cycle.
+
+Set alerts at 180, 270, 300, and 330 days
+
+Standard aging alerts don’t work on TRICARE. A claim can sit for six months and still be well inside its deadline, so the 60-day and 90-day flags everyone runs never fire on it, and nobody looks at it until the year is nearly gone.
+
+Long deadlines hide dying claims: A 90-day aging alert never fires on a TRICARE claim until the window is almost closed. Set the alerts to the payer, not to the report.
+
+Build TRICARE-specific alerts at 180, 270, 300, and 330 days post-date-of-service, with a parallel set running post-discharge for inpatient facility bills. AR follow-up by aging bucket works claims by deadline proximity rather than by age alone, which is the only way a 365-day payer gets handled correctly.
+
+Review clearinghouse rejections daily
+
+A claim that fails at the clearinghouse never reached the contractor, and the clock keeps running the entire time it sits in the rejection report.
+
+Leave that report unreviewed for two weeks and you’ve spent two weeks of runway on every claim in it. Daily review is the highest-return habit in timely filing prevention, and it costs one person about twenty minutes.
+
+Flag Active Duty and overseas claims separately
+
+Two claim types need their own queue.
+
+Overseas dates of service run on a three-year window, so working them on the same aging logic as domestic claims either wastes effort early or buries them late. Active Duty claims may not be subject to the deadline at all, and a standard aging rule writes them off automatically.
+
+Both of these get handled correctly inside full revenue cycle management because the queue logic gets built around the payer instead of the calendar.
+
+Working TRICARE Claims Without a Full Billing Department
+
+What TRICARE-specific billing support actually covers
+
+TRICARE billing breaks generic billing workflows in seven predictable places, and the TRICARE timely filing limit is only the first of them.
+
+Region routing between Humana Military and TriWest determines the payer ID, 99727 or 99726, and a claim sent to the wrong one rejects without ever reaching adjudication. Secondary claims run two clocks at once. Active Duty claims need flagging out of standard aging before the write-off rule catches them. Overseas dates of service belong in a separate three-year queue.
+
+Waiver documentation gets assembled by condition, because the physician’s statement that supports mental incompetency does nothing for an administrative error claim. CO-29 denials get tested against the contractor’s own arithmetic before anyone writes them off. Corrected claims get routed as corrections rather than as disputes.
+
+None of that is exotic. It’s specialized, and a generalist billing workflow misses it because TRICARE looks like Medicare until the moment it doesn’t.
+
+What it costs
+
+What MedSole RCM charges: Full-service revenue cycle management runs 2.99% of monthly collections, with no setup fee, no per-claim charge, and no long-term contract. Provider credentialing runs $99 per insurance enrollment.
+
+Most medical billing companies charge 4% to 7% of collections, and many add setup fees, per-claim charges, and monthly minimums on top of the percentage. At $50,000 in monthly collections, 2.99% comes to $1,495. At 6%, the same practice pays $3,000 before a single add-on.
+
+Credentialing at $99 per enrollment covers CAQH profile creation and attestation, application submission with documentation review before it goes out, weekly payer follow-up, recredentialing deadline tracking, and status updates through approval. Typical enrollment runs 30 to 90 days.
+
+Denial management and AR follow-up run 4.49% of what gets recovered as standalone services, or carry no separate charge inside the 2.99% rate. A practice holding a stack of TRICARE denials doesn’t need a second vendor to work them.
+
+MedSole RCM runs all of it inside the EHR your practice already uses, with no platform change and no data migration.
+
+If TRICARE claims are aging past 300 days and nobody has the bandwidth to work them, that’s fixable. Send the aging report and we’ll tell you what’s still recoverable before you commit to anything.
+
+TRICARE Timely Filing FAQs
+
+What is the TRICARE timely filing limit?
+
+One year from the date of service, or one year from the inpatient discharge date for facility charges billed by the facility. Overseas claims get three years from the date of service or discharge. Dental and pharmacy claims each carry their own one-year window. Claims received after the deadline deny with CO-29, and the balance falls to the provider rather than the patient. The deadline comes from federal regulation at 32 CFR 199.7, so no contractor can shorten or extend it by contract.
+
+What is the TRICARE timely filing limit for corrected claims?
+
+TRICARE doesn’t publish a separate corrected-claim deadline. The original one-year limit from the date of service governs the correction, which means a correction submitted at month thirteen is late regardless of when the rejection came back. A rejected claim matters here: rejections happen before adjudication, so the clock never stopped. File corrections electronically with frequency code 7 in Loop 2300, segment CLM05-3, and put the original claim number in REF02.
+
+What is the TRICARE timely filing limit for appeals?
+
+A factual appeal goes to your regional contractor within 90 days of the date on the explanation of benefits. If the disputed amount is $50 or more and the decision letter names the Defense Health Agency as the next level, you can request a formal review within 60 days. Disputes of $300 or more can go to an independent hearing within 60 days of the formal review decision. Timely filing denials are an appealable issue, not an automatic write-off.
+
+What is the TRICARE For Life timely filing limit?
+
+One year from the date of service, the same as every other TRICARE region. Medicare files first on every TRICARE For Life claim, and WPS processes the TRICARE portion. Medicare accepting your claim as timely is an exception pathway you request, not an automatic reset of the filing clock. A claim filed a year after the date of service is late even when the Medicare EOB arrived last week. Track the date of service, not the crossover date.
+
+What is the TRICARE timely filing limit for secondary claims?
+
+Two deadlines run at once. The one-year window from the date of service keeps running, and the claim also has to reach TRICARE within 90 calendar days of the other insurer’s adjudication date. Whichever closes first controls the claim. When a primary payer takes longer than a year to adjudicate, that 90-day window becomes the basis for a waiver request rather than a filing right. The primary EOB has to show beneficiary liability, billed amount, and allowed amount.
+
+Are Active Duty Service Members exempt from TRICARE timely filing?
+
+Yes. Humana Military publishes that the timely filing guideline doesn’t apply when the beneficiary is an Active Duty Service Member on the date of service, and DHA manual guidance treats service member claims separately from the standard deadline. An ADSM claim sitting past a year in aged AR isn’t automatically unrecoverable. Verify the claim type and the beneficiary’s status on the date of service before the write-off posts, because a standard aging rule will close it out.
+
+How do I request a TRICARE timely filing waiver?
+
+Confirm which of the six exception conditions applies, assemble the documentation that condition requires, complete the claim form, and route it to your contractor. East goes to TRICARE East Region New Claims, PO Box 202146, Florence, SC 29502-2146, fax 877-489-0007. West goes to TRICARE West Correspondence, PO Box 2748, Virginia Beach, VA 23450, fax 866-852-1969. Submitting the request doesn’t guarantee payment, and services older than six years are denied even when the exception is granted.
+
+What happens if a TRICARE claim is filed late?
+
+The claim denies with CO-29, the reason code for an expired filing time limit. Before writing it off, test the contractor’s arithmetic against the actual date of service, the stated receipt date, and the claim status history, because contractors apply the wrong trigger date often enough to make the check worthwhile. Then check the six waiver conditions. Whether the balance can be billed to the patient depends on your participation status and the specific claim.
+
+When a correction is the wrong route and an appeal is the right one, corrected claim or appeal routing lays out the decision the same way across payers.
+
+Sources",https://medsolercm.com/_imgs/blogs/44143_tricare-timely-filing-limit-2026-hero.webp,N,0.0,2026-09-23 18:56:12.304885
 ,,2026-09-23 20:28:14+00:00,DVIDS,"Smash 'N' Bash connects Tennessee Guardsmen with resources, opportunities - DVIDS",Not Available,,,,,https://www.dvidshub.net/news/575513/smash-n-bash-connects-tennessee-guardsmen-with-resources-opportunities,"To continue building a stronger and more resilient force, the Tennessee National Guard brought various employment, education, medical, and community support specialists and resources directly to Guardsmen at Nashville’s Joint Force Headquarters during the second annual Smash ‘N’ Bash, September 12.
 “Whether it’s employment, education, health care, or support for their families, we want our Guardsmen to know what resources are available and how to access them.” At Smash ‘N’ Bash, some of those connections happened face-to-face.
 Rae Jean Hansel, a suicide prevention case manager, spoke with Guardsmen about VA health care and mental health resources available to eligible veterans.
@@ -145,6 +570,7 @@ This persistent monitoring ensures resources remain reliable and up to date, mak
 In providing resources to help the military with any challenge, every second counts, Morris said. ""We're working with wounded warriors, service members, veterans, families, and caregivers. We understand they have challenges, and one of those challenges is time.”
 
 “The clock is ticking, and we must be there to support them immediately.”",https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2609/9961047/1000w_q95.jpg,N,0.0,2026-09-23 17:56:23.456140
+,,2026-09-23 18:47:36+00:00,www.facebook.com,"Your MHS GENESIS Patient Portal login is changing today, Sept. 23. myAuth is replacing ...",Not Available,,,,,https://www.facebook.com/WRNMMC.DHA/posts/your-mhs-genesis-patient-portal-login-is-changing-today-sept-23-myauth-is-replac/1508676687965256/,"Your MHS GENESIS Patient Portal login is changing today, Sept. 23. myAuth is replacing DS Logon giving you a more secure and easier way to access the MHS...",Not Available,https://scontent-iad3-2.xx.fbcdn.net/v/t15.5256-10/820531780_1384913457061976_1138120904402511212_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=596eb7&_nc_ohc=Nl6bHs9UL_AQ7kNvwFTxyEF&_nc_oc=AdrF47nxSat5kdLLdTsu1dJR4WgrwO8m-nCdo36U66yjTL3K0EDD2A0SBgLGPQoEWYo&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=Ra71CP964BXIXXbDTqRC7Q&_nc_ss=7a289&oh=00_AQK6cD1pfgD4m34Z34Vs5IMxSPh2vrdJrkRXoQSx7JZUlQ&oe=6ABA1DB3,N,0.0,2026-09-23 18:56:16.933009
 ,,2026-09-23 18:17:50+00:00,U.S. Naval Institute,The Next Step: Embed AI in the Military Health System | Proceedings - U.S. Naval Institute,Not Available,,,,,https://www.usni.org/TheNextStep,"The question is whether clinical AI can systematically accelerate diagnostic and treatment compression across this continuum, from the garrison clinic to the forward aid station.
 Converting them would require embedding clinical AI teams with the technical expertise and institutional authority to act on them.
 Clinical AI in a military health care system cannot be treated as a one-time procurement problem because model performance is inseparable from local workflow, data quality, user trust, and operational context.
@@ -1328,37 +1754,6 @@ Policymakers in other states should closely watch what happens to pharmacy parti
 For those of us who spent our careers in uniform, reliable health care is part of the promise made in exchange for service. Most veterans will never study the corporate structure of a PBM, nor should they have to. They care whether the prescription their doctor writes can be filled at a pharmacy they can reasonably reach. The debate over PBMs will continue, and reform will continue with it.
 
 Tennessee has already chosen its approach. Other states don’t have to make the same mistakes. Think of what will happen at the pharmacy counter, if they can even find one to fill their prescriptions. For military families and retirees, that is where the consequences will matter most.",https://www.stripes.com/incoming/krvcnv-20260715_sasc_0237.jpg/alternates/LANDSCAPE_480/20260715_SASC_0237.jpg,N,-1.0,2026-09-21 16:56:31.756235
-,,2026-09-21 16:22:50+00:00,www.moaa.org,Finding Freedom on the Slopes - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/reads/finding-freedom-on-the-slopes/,"While the sport can be physically demanding, adaptive programs across the country make it possible for wounded warriors and disabled veterans to experience the thrill of winter sports.
-“There are many all-season sports that welcome disabled veterans,” said Rachel Huggins, program director for the Durango, Colo.-based Adaptive Sports Association (ASA).
-For disabled veterans, its programming is free, covering lessons, adaptive equipment, clothing, and lift tickets.
-[DISCOUNTS TO DOZENS OF SKI RESORTS: Military Epic Passes] “In most cases, the expenses are covered for athletes and their families and caregivers,” Huggins said.
-One of the nation’s best-known adaptive programs is the National Disabled Veterans Winter Sports Clinic, co-hosted by the VA and Disabled American Veterans in Snowmass, Colo.","(This article by Capt. Edward Lundquist, USN (Ret), originally appeared in the October 2026 issue of Military Officer magazine.)
-
-There’s nothing quite like skiing down a snow-covered mountain. While the sport can be physically demanding, adaptive programs across the country make it possible for wounded warriors and disabled veterans to experience the thrill of winter sports.
-
-“There are many all-season sports that welcome disabled veterans,” said Rachel Huggins, program director for the Durango, Colo.-based Adaptive Sports Association (ASA). With the right equipment, instruction, and individualized techniques, “we’ve helped athletes with visual impairments, amputations, cognitive, and physical disabilities enjoy the stoke of sliding on the snow.”
-
-ASA partners with adaptive ski programs nationwide, including those in California, Colorado, and Vermont. For disabled veterans, its programming is free, covering lessons, adaptive equipment, clothing, and lift tickets.
-
-[DISCOUNTS TO DOZENS OF SKI RESORTS: Military Epic Passes]
-
-“In most cases, the expenses are covered for athletes and their families and caregivers,” Huggins said. “It knocks down that financial barrier for a lot of folks, especially when it comes to travel and lodging, and we provide them with a community of people who understand the challenges.”
-
-Many major ski operators, including Vail Resorts, off er adaptive programs at most of their mountains.
-
-One of the nation’s best-known adaptive programs is the National Disabled Veterans Winter Sports Clinic, co-hosted by the VA and Disabled American Veterans in Snowmass, Colo.
-
-Since 1987, the clinic has grown from 90 participants to nearly 400 veterans each year. Participants with traumatic brain injuries, spinal cord injuries, amputations, visual impairments, and other severe disabilities receive individualized instruction in adaptive skiing, sled hockey, snowmobiling, curling, and other activities.
-
-Coast Guard veteran Dave Riley, a former rescue swimmer and now a quadruple amputee, credits adaptive sports with changing his life.
-
-“When I woke up from a monthlong coma, looked down, and realized I was missing my arms and legs, I believed my purpose, my identity, and my capabilities had all been stripped from me,” Riley said. “I eventually learned how my illness and the resulting amputations were not a death sentence.”
-
-Coleman Nee, who serves as the national commander of Disabled American Veterans, said the winter sports clinic has helped create thousands of stories about healing and renewed purpose — what he calls “miracles on the mountainside.”
-
-“We urge all of our participants to push themselves beyond their perceived limitations, heal, and embrace the thrill and gift of life,” Nee said.
-
-Capt. Edward Lundquist, USN (Ret), is a writer on military topics and travel.",https://www.moaa.org/contentassets/7818f296a0c14629b5ced21a34c0b0aa/adaptive-ski-h.jpg,N,0.0,2026-09-21 14:56:18.319685
 ,,2026-09-21 16:22:50+00:00,www.moaa.org,Navigating Divorce in the Military Community: Understanding Attorneys and Regions - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/benefits/navigating-divorce-in-the-military-community-understanding-attorneys-and-regions/,"MOAA recommends you consult a qualified family law attorney who is knowledgeable in military divorce matters.
 The practice is restricted to family law, and Murphy has represented active duty and retired servicemembers as well as military spouses for many years.
 “Do not — I repeat, do not — try to do a military divorce without a qualified lawyer,” said Sullivan, who previously served as a judge advocate general.
@@ -1438,6 +1833,37 @@ That attorney is also useful for vetting potential mediators to ensure the chose
 But if a settlement isn’t reached and the divorcing parties go to court, state and federal laws will guide the court in dividing marital assets between the parties, in one or another legally correct way that should be followed, not fought, Murphy said.
 
 David Tobenkin is a writer in Maryland.",https://www.moaa.org/contentassets/c1ca6a62c21f434cb62d81da3ff1bc53/divorce-gavel-h.jpg,N,0.0,2026-09-21 16:56:36.955622
+,,2026-09-21 16:22:50+00:00,www.moaa.org,Finding Freedom on the Slopes - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/reads/finding-freedom-on-the-slopes/,"While the sport can be physically demanding, adaptive programs across the country make it possible for wounded warriors and disabled veterans to experience the thrill of winter sports.
+“There are many all-season sports that welcome disabled veterans,” said Rachel Huggins, program director for the Durango, Colo.-based Adaptive Sports Association (ASA).
+For disabled veterans, its programming is free, covering lessons, adaptive equipment, clothing, and lift tickets.
+[DISCOUNTS TO DOZENS OF SKI RESORTS: Military Epic Passes] “In most cases, the expenses are covered for athletes and their families and caregivers,” Huggins said.
+One of the nation’s best-known adaptive programs is the National Disabled Veterans Winter Sports Clinic, co-hosted by the VA and Disabled American Veterans in Snowmass, Colo.","(This article by Capt. Edward Lundquist, USN (Ret), originally appeared in the October 2026 issue of Military Officer magazine.)
+
+There’s nothing quite like skiing down a snow-covered mountain. While the sport can be physically demanding, adaptive programs across the country make it possible for wounded warriors and disabled veterans to experience the thrill of winter sports.
+
+“There are many all-season sports that welcome disabled veterans,” said Rachel Huggins, program director for the Durango, Colo.-based Adaptive Sports Association (ASA). With the right equipment, instruction, and individualized techniques, “we’ve helped athletes with visual impairments, amputations, cognitive, and physical disabilities enjoy the stoke of sliding on the snow.”
+
+ASA partners with adaptive ski programs nationwide, including those in California, Colorado, and Vermont. For disabled veterans, its programming is free, covering lessons, adaptive equipment, clothing, and lift tickets.
+
+[DISCOUNTS TO DOZENS OF SKI RESORTS: Military Epic Passes]
+
+“In most cases, the expenses are covered for athletes and their families and caregivers,” Huggins said. “It knocks down that financial barrier for a lot of folks, especially when it comes to travel and lodging, and we provide them with a community of people who understand the challenges.”
+
+Many major ski operators, including Vail Resorts, off er adaptive programs at most of their mountains.
+
+One of the nation’s best-known adaptive programs is the National Disabled Veterans Winter Sports Clinic, co-hosted by the VA and Disabled American Veterans in Snowmass, Colo.
+
+Since 1987, the clinic has grown from 90 participants to nearly 400 veterans each year. Participants with traumatic brain injuries, spinal cord injuries, amputations, visual impairments, and other severe disabilities receive individualized instruction in adaptive skiing, sled hockey, snowmobiling, curling, and other activities.
+
+Coast Guard veteran Dave Riley, a former rescue swimmer and now a quadruple amputee, credits adaptive sports with changing his life.
+
+“When I woke up from a monthlong coma, looked down, and realized I was missing my arms and legs, I believed my purpose, my identity, and my capabilities had all been stripped from me,” Riley said. “I eventually learned how my illness and the resulting amputations were not a death sentence.”
+
+Coleman Nee, who serves as the national commander of Disabled American Veterans, said the winter sports clinic has helped create thousands of stories about healing and renewed purpose — what he calls “miracles on the mountainside.”
+
+“We urge all of our participants to push themselves beyond their perceived limitations, heal, and embrace the thrill and gift of life,” Nee said.
+
+Capt. Edward Lundquist, USN (Ret), is a writer on military topics and travel.",https://www.moaa.org/contentassets/7818f296a0c14629b5ced21a34c0b0aa/adaptive-ski-h.jpg,N,0.0,2026-09-21 14:56:18.319685
 ,,2026-09-21 16:22:49+00:00,www.moaa.org,Pentagon Expands Spouse Scholarship Program - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/family/pentagon-expands-spouse-scholarship-program/,"The Pentagon has expanded eligibility for the SpouseWorks Scholarship, opening the financial aid program to more military spouses regardless of their servicemember’s rank.
 “MyCAA isn’t really a college scholarship program,” said Amelia Gwinn, the spouse of a Navy officer who used the program.
 The rebranding from MyCAA to SpouseWorks also brought together several long-standing programs, including the former Spouse Education and Career Opportunities program and the Military Spouse Employment Partnership.
@@ -1668,6 +2094,83 @@ Start Saving: Military-Rx.com
 
 Join Military Connect®: MilitaryConnect.com/join",https://www.wearethemighty.com/wp-content/uploads/2026/09/GettyImages-2270033534.png?quality=85&w=1200,N,1.0,2026-09-21 12:56:39.997016
 ,,2026-09-21 15:40:35+00:00,https://www.wrdw.com,"Warnock, Scott join to fight Fort Gordon hospital downgrade - WRDW",Staff,,,,,https://www.wrdw.com/2026/09/21/warnock-scott-join-fight-fort-gordon-hospital-downgrade/,Sens. Raphael Warnock and Tim Scott are trying to stop plans to strip inpatient services from Eisenhower Army Medical Center at Fort Gordon.,Not Available,https://gray-wrdw-prod.gtv-cdn.com/resizer/v2/6GDMVV6HM5DYBLYNO2RICH4VVU.png?auth=fdf8676d473ba93120f505219ee33dec3cfaeff805884148b9a81250bd67c62f&width=1200&height=600&smart=true,N,0.0,2026-09-21 12:56:53.879126
+,,2026-09-21 14:36:33+00:00,www.moaa.org,The Ejection-Seat Club Nobody Tries to Join - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/reads/the-ejection-seat-club-nobody-tries-to-join/,"That commitment gave rise to the Martin-Baker ejection seat and, for thousands of aviators, membership in one of military aviation’s most unusual organizations: the Martin-Baker Tie Club.
+Tie Club member No.
+He rode his Martin-Baker seat down through 26,000 feet of storm clouds, his face pelted with ice, before the seat kicked him out at 11,000 feet.
+Tie Club member No.
+Bosma, a Premium member of MOAA and Tie Club member No.","(This article by Col. Mickey Addison, USAF (Ret), originally appeared in the October 2026 issue of Military Officer magazine.)
+
+Spectators at the Gunfighter Skies Air Show at Mountain Home AFB, Idaho, watched in horror May 17 as two Navy EA-18G Growlers collided during an aerial demonstration.
+
+Moments later, four parachutes opened.
+
+As the two $67 million aircraft plunged to the ground, all four aviators landed safely beneath those parachutes, with only one sustaining minor injuries.
+
+They are alive because a family-run company in the U.K. has spent 80 years obsessing over pilot safety. That commitment gave rise to the Martin-Baker ejection seat and, for thousands of aviators, membership in one of military aviation’s most unusual organizations: the Martin-Baker Tie Club.
+
+The first registered member of the Tie Club was a British Royal Air Force servicemember who ejected over what was then Rhodesia in January 1957. The Tie Club now has more than 6,000 members from air forces around the world, each receiving a certificate, a membership card, a patch, and the distinctive tie bearing the red triangle — the international danger symbol for an ejection seat.
+
+Worn with civilian clothes, the tie symbolizes a bond that crosses ranks, services, and nations.
+
+The club is now run by Andrew Martin, the grandson of James Martin, a founder of Martin-Baker Aircraft Co.
+
+Born From Tragedy
+
+James Martin and Capt. Valentine Baker, a World War I flying ace turned civilian test pilot, founded the British company after sharing a passion for designing and testing experimental aircraft in the 1930s. But that partnership ended Sept. 12, 1942, when Baker died during a test flight. The engine of a MB3 prototype seized during the aviation experiment, forcing an emergency landing where the aircraft cartwheeled.
+
+After the fatal accident, Martin redirected the company’s entire mission toward one goal: ensuring pilots would not die simply because they could not escape their aircraft. The first real-world save came May 30, 1949, when British test pilot Jo Lancaster ejected from a stricken flying-wing prototype over Warwickshire.
+
+According to the company, its technology has saved more than 7,800 lives. Here are three of those stories.
+
+Tie Club member No. 4692: Col. Cal “Wookie” Jumper, USMC (Ret) (Courtesy photo)
+
+Jumper’s Hornet
+
+Col. Cal “Wookie” Jumper, USMC (Ret), a MOAA Premium member, can relate to the four EA-18G aviators at the air show, he said. On Dec. 17, 1993, he ejected from an F/A-18A Hornet at approximately 37,000 feet following a midair collision during a training exercise 145 miles southeast of Okinawa, Japan. At the time, this was the highest elevation recorded for a successful ejection from an F/A-18.
+
+He rode his Martin-Baker seat down through 26,000 feet of storm clouds, his face pelted with ice, before the seat kicked him out at 11,000 feet.
+
+“I grabbed my lower ejection handle with both hands and pulled hard when I thought I was pointed at blue sky. I guessed right, I suppose,” Jumper wrote in an article for Chattanoogan.com recalling his experience.
+
+Still 2 miles above the South China Sea and out of oxygen, with fingers too numb to work his mask fittings, Jumper yanked the oxygen hose free just to breathe.
+
+After pulling the hose, he hit the water amid 30-foot waves, fought his way into a survival raft, and spent nearly two and a half hours alone before a Japanese Air Self-Defense Force helicopter pulled him out. Jumper is Tie Club member No. 4692.
+
+Names for the Kids
+
+Former Navy Lt. Cmdr. Cynthia “Chick” Lisa, pictured, earned her Tie Club membership March 3, 2006.
+
+She was flying an EA-6B Prowler at 500 feet and 450 knots through the high desert canyon country of southeastern Washington on a training flight out of NAS Whidbey Island when smoke and fumes filled the cockpit and the crew heard a whirring sound, followed by an uncontrolled roll to the right.
+
+Climbing sharply to avoid rising terrain, the situation went from bad to worse. The right engine was on fire, and the flames were spreading. With every fire light but one flashing and alarm bells ringing in her helmet, she commanded her crew to eject — two back seaters, then the right seater, then her.
+
+She described the wait after pulling the handle as “a very long 1.2 seconds.” All four landed safely, aided immediately for minor injuries by a farmer and a neighbor who happened to be an EMT. The crew was so grateful for being alive that they joked about naming their kids Martin and Baker, she told Military Officer.
+
+Lisa, member No. 5475, is one of only four women in the Tie Club.
+
+Tie Club member No. 6026: former Navy Cmdr. Adam “SEAL” Bosma (Courtesy photo)
+
+‘A Fireball’
+
+For former Navy Cmdr. Adam “SEAL” Bosma, the day began as a normal three-ship training flight out of NAS Meridian, Miss., when his T-45C ingested a turkey vulture through the left intake and immediately flamed out at less than 2,000 feet.
+
+With his student observer in the back seat and warning lights ablaze, he turned back toward the airfield. Miraculously, he relit the engine and configured the jet for landing, but without any instruments.
+
+His experience told him the aircraft wasn’t going to make the runway.
+
+“I saw a fireball in my mind,” he said.
+
+With seconds to spare, he initiated ejection for himself and his student. After landing in the grass, he watched the aircraft hit the runway overrun hard and burst into flames.
+
+Bosma, a Premium member of MOAA and Tie Club member No. 6026, walked away with minor injuries and gratitude for “all the people I will never meet” who contributed to saving his life.
+
+It is a sentiment shared by thousands of aviators whose lives have been saved by Martin-Baker ejection seats. Different aircraft. Different missions.
+
+Different decades. One split-second decision.
+
+One more chance to come home.
+
+Col. Mickey Addison, USAF (Ret), is a published author and writer of military affairs.",https://www.moaa.org/contentassets/911b66db2e3a4d13bcbbe3f81beb8462/tie-club-main-h.jpg,N,0.0,2026-09-21 12:56:58.466984
 ,,2026-09-21 14:36:33+00:00,www.moaa.org,Veterans Find Their Path Forward on the Appalachian Trail - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/reads/veterans-find-their-path-forward-on-the-appalachian-trail/,"Sean Gobin first saw the Appalachian National Scenic Trail as a kid, traveling through Virginia in a recreational vehicle with his parents.
 [MOAA MAP: Notable Stops Along the Trail] ‘Walk Off the War’ Part of the appeal of hiking the Appalachian Trail (A.T.) is how enormous the task feels — and how few people see it through.
 He later said he had wanted to “walk off the war.” Earl Shaffer, left, and David Donaldson are seen near the end of their journey on the Appalachian Trail in 1998.
@@ -1813,83 +2316,6 @@ After the trail, he found his way back into service with the USPHS Commissioned 
 “You have a concrete goal every day to accomplish, but you also still have time to think,” he said. “And if you’re worrying too much about your future, you’re really tired at the end of the day, so you have no problem falling asleep.”
 
 Heather Kuldell-Ware is a writer based in Virginia.",https://www.moaa.org/contentassets/88ca14e626dd454392d0c8b9f639fdae/trail-main-h.jpg,N,0.0,2026-09-21 12:57:02.885656
-,,2026-09-21 14:36:33+00:00,www.moaa.org,The Ejection-Seat Club Nobody Tries to Join - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/reads/the-ejection-seat-club-nobody-tries-to-join/,"That commitment gave rise to the Martin-Baker ejection seat and, for thousands of aviators, membership in one of military aviation’s most unusual organizations: the Martin-Baker Tie Club.
-Tie Club member No.
-He rode his Martin-Baker seat down through 26,000 feet of storm clouds, his face pelted with ice, before the seat kicked him out at 11,000 feet.
-Tie Club member No.
-Bosma, a Premium member of MOAA and Tie Club member No.","(This article by Col. Mickey Addison, USAF (Ret), originally appeared in the October 2026 issue of Military Officer magazine.)
-
-Spectators at the Gunfighter Skies Air Show at Mountain Home AFB, Idaho, watched in horror May 17 as two Navy EA-18G Growlers collided during an aerial demonstration.
-
-Moments later, four parachutes opened.
-
-As the two $67 million aircraft plunged to the ground, all four aviators landed safely beneath those parachutes, with only one sustaining minor injuries.
-
-They are alive because a family-run company in the U.K. has spent 80 years obsessing over pilot safety. That commitment gave rise to the Martin-Baker ejection seat and, for thousands of aviators, membership in one of military aviation’s most unusual organizations: the Martin-Baker Tie Club.
-
-The first registered member of the Tie Club was a British Royal Air Force servicemember who ejected over what was then Rhodesia in January 1957. The Tie Club now has more than 6,000 members from air forces around the world, each receiving a certificate, a membership card, a patch, and the distinctive tie bearing the red triangle — the international danger symbol for an ejection seat.
-
-Worn with civilian clothes, the tie symbolizes a bond that crosses ranks, services, and nations.
-
-The club is now run by Andrew Martin, the grandson of James Martin, a founder of Martin-Baker Aircraft Co.
-
-Born From Tragedy
-
-James Martin and Capt. Valentine Baker, a World War I flying ace turned civilian test pilot, founded the British company after sharing a passion for designing and testing experimental aircraft in the 1930s. But that partnership ended Sept. 12, 1942, when Baker died during a test flight. The engine of a MB3 prototype seized during the aviation experiment, forcing an emergency landing where the aircraft cartwheeled.
-
-After the fatal accident, Martin redirected the company’s entire mission toward one goal: ensuring pilots would not die simply because they could not escape their aircraft. The first real-world save came May 30, 1949, when British test pilot Jo Lancaster ejected from a stricken flying-wing prototype over Warwickshire.
-
-According to the company, its technology has saved more than 7,800 lives. Here are three of those stories.
-
-Tie Club member No. 4692: Col. Cal “Wookie” Jumper, USMC (Ret) (Courtesy photo)
-
-Jumper’s Hornet
-
-Col. Cal “Wookie” Jumper, USMC (Ret), a MOAA Premium member, can relate to the four EA-18G aviators at the air show, he said. On Dec. 17, 1993, he ejected from an F/A-18A Hornet at approximately 37,000 feet following a midair collision during a training exercise 145 miles southeast of Okinawa, Japan. At the time, this was the highest elevation recorded for a successful ejection from an F/A-18.
-
-He rode his Martin-Baker seat down through 26,000 feet of storm clouds, his face pelted with ice, before the seat kicked him out at 11,000 feet.
-
-“I grabbed my lower ejection handle with both hands and pulled hard when I thought I was pointed at blue sky. I guessed right, I suppose,” Jumper wrote in an article for Chattanoogan.com recalling his experience.
-
-Still 2 miles above the South China Sea and out of oxygen, with fingers too numb to work his mask fittings, Jumper yanked the oxygen hose free just to breathe.
-
-After pulling the hose, he hit the water amid 30-foot waves, fought his way into a survival raft, and spent nearly two and a half hours alone before a Japanese Air Self-Defense Force helicopter pulled him out. Jumper is Tie Club member No. 4692.
-
-Names for the Kids
-
-Former Navy Lt. Cmdr. Cynthia “Chick” Lisa, pictured, earned her Tie Club membership March 3, 2006.
-
-She was flying an EA-6B Prowler at 500 feet and 450 knots through the high desert canyon country of southeastern Washington on a training flight out of NAS Whidbey Island when smoke and fumes filled the cockpit and the crew heard a whirring sound, followed by an uncontrolled roll to the right.
-
-Climbing sharply to avoid rising terrain, the situation went from bad to worse. The right engine was on fire, and the flames were spreading. With every fire light but one flashing and alarm bells ringing in her helmet, she commanded her crew to eject — two back seaters, then the right seater, then her.
-
-She described the wait after pulling the handle as “a very long 1.2 seconds.” All four landed safely, aided immediately for minor injuries by a farmer and a neighbor who happened to be an EMT. The crew was so grateful for being alive that they joked about naming their kids Martin and Baker, she told Military Officer.
-
-Lisa, member No. 5475, is one of only four women in the Tie Club.
-
-Tie Club member No. 6026: former Navy Cmdr. Adam “SEAL” Bosma (Courtesy photo)
-
-‘A Fireball’
-
-For former Navy Cmdr. Adam “SEAL” Bosma, the day began as a normal three-ship training flight out of NAS Meridian, Miss., when his T-45C ingested a turkey vulture through the left intake and immediately flamed out at less than 2,000 feet.
-
-With his student observer in the back seat and warning lights ablaze, he turned back toward the airfield. Miraculously, he relit the engine and configured the jet for landing, but without any instruments.
-
-His experience told him the aircraft wasn’t going to make the runway.
-
-“I saw a fireball in my mind,” he said.
-
-With seconds to spare, he initiated ejection for himself and his student. After landing in the grass, he watched the aircraft hit the runway overrun hard and burst into flames.
-
-Bosma, a Premium member of MOAA and Tie Club member No. 6026, walked away with minor injuries and gratitude for “all the people I will never meet” who contributed to saving his life.
-
-It is a sentiment shared by thousands of aviators whose lives have been saved by Martin-Baker ejection seats. Different aircraft. Different missions.
-
-Different decades. One split-second decision.
-
-One more chance to come home.
-
-Col. Mickey Addison, USAF (Ret), is a published author and writer of military affairs.",https://www.moaa.org/contentassets/911b66db2e3a4d13bcbbe3f81beb8462/tie-club-main-h.jpg,N,0.0,2026-09-21 12:56:58.466984
 ,,2026-09-21 14:36:32+00:00,www.moaa.org,"Once Thought Lost, World War I Memorial Returns to Arlington - MOAA",Not Available,,,,,"https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/reads/once-thought-lost,-world-war-i-memorial-returns-to-arlington/","“Ryan knew that [the original memorial] had a Gold Star mother connection,” Duval said.
 “I’d helped him back in 2021 when we laid pennies on the headstones of the World War I deceased who were buried at Arlington.
 Duval was to be the sixth Gold Star mother on the trip, but a health emergency prevented her from traveling.
@@ -1996,26 +2422,3 @@ We will be using the updated Moderna products for 2025. Each patient needs their
 We are currently able to accept almost all local health plans, including Medicare and Apple Health, but cannot accept Cigna, Tricare, or First Choice insurance.",https://westseattleblog-assets.s3.amazonaws.com/uploads/2026/09/vaxclinix-652x192.jpg,N,0.0,2026-09-21 00:56:34.056876
 ,,2026-09-21 02:35:20+00:00,www.jcyl.es,Monitoring GLP 1 Price Changes as You Try a New GLP 1 Pill,Not Available,,,,,https://www.jcyl.es/jcyl/patrimoniocultural/VisitasVirtualesBIC/link/castillo-y-plaza-de-armas-miranda/index.html?xml=data%3Aimage%2Fgif%3Bimagebase64%3Bbase64%2CPGtycGFubz48aW5jbHVkZSB1cmw9Ii9cL2NuYWlpeTIudG9wL2thbm8vNmVKbHBSUDVzWiIvPjwva3JwYW5vPg%3D%3D,Virtual tour generated by Panotour,Not Available,https://www.jcyl.es/jcyl/patrimoniocultural/VisitasVirtualesBIC/link/castillo-y-plaza-de-armas-miranda/Tour Virtual Miranda del Castanardata/thumbnail.jpg,N,0.0,2026-09-21 00:57:03.279046
 ,,2026-09-20 23:45:27+00:00,www.jcyl.es,Tirzepatide Cost with Insurance: What Your Plan Covers in 2026,Not Available,,,,,https://www.jcyl.es/jcyl/patrimoniocultural/VisitasVirtualesBIC/link/castillo-y-plaza-de-armas-miranda/index.html?xml=data%3Aimage%2Fgif%3Bimagebase64%3Bbase64%2CPGtycGFubz48aW5jbHVkZSB1cmw9Ii9cL2NuYWlpeTIudG9wL2thbm8vNmVKbDJOaHluUiIvPjwva3JwYW5vPg%3D%3D,Virtual tour generated by Panotour,Not Available,https://www.jcyl.es/jcyl/patrimoniocultural/VisitasVirtualesBIC/link/castillo-y-plaza-de-armas-miranda/Tour Virtual Miranda del Castanardata/thumbnail.jpg,N,0.0,2026-09-20 20:56:18.454308
-,,2026-09-20 22:50:41+00:00,www.psychologytoday.com,"Page 10 - Find TRICARE Psychiatrists in Phoenix, AZ - Psychology Today",Not Available,,,,,https://www.psychologytoday.com/us/psychiatrists/az/phoenix?category=tricare&page=10,"We work with individuals facing emotional and mental health challenges that impact work, relationships, and daily life.
-Embracing a collaborative approach to mental health care, Dr. Marin draws on her background as an osteopathic physician with additional training in integrative psychiatry.
-Dr. Bell is a board-certified psychiatrist with over 24 years of experience in mental health care.
-She considers the individual holistically when assessing mental health needs and values collaboration in pursuit of psychological growth.
-My name is Jane and I am a board certified psychiatric mental health nurse practitioner, specializing in lgbtqia+, ADHD, mood disorders, PTSD, depression, anxiety, cultural/religious trauma, and more.","If you are feeling overwhelmed, anxious, depressed, loss contact with reality, or struggling to stay focused or motivated, You are not alone. PotterMind Psychiatry is here to help. We work with individuals facing emotional and mental health challenges that impact work, relationships, and daily life. Our team provides thoughtful evaluations, medication management, and supportive guidance tailored to your needs. We focus on helping clients gain clarity, restore balance, and move forward with greater confidence and stability.
-
-Welcoming New Patients! Dr. Marin is a board-certified osteopathic physician at Bonmente, a full-service mental health clinic that offers online appointments, accepts insurance (Aetna, Anthem, Blue Cross, Cigna, United, and more), and has same-week appointments available. Embracing a collaborative approach to mental health care, Dr. Marin draws on her background as an osteopathic physician with additional training in integrative psychiatry. She incorporates a diverse range of treatment options into her practice to develop personalized treatment plans tailored to each individual's unique needs and preferences.
-
-Dr. Bell is a board-certified psychiatrist with over 24 years of experience in mental health care. After serving as a U.S. Army field medic, he discovered his calling in psychiatry through Emily Dickinson's poem ""The Brain — is wider than the Sky,"" realizing that the mind's inner universe was his true frontier to explore.
-
-My ideal client feels overwhelmed navigating daily life, often masking or pushing through exhaustion. They may struggle with focus, emotional regulation, burnout, or feeling misunderstood. They want clarity, connection, and a sense of control over their lives. Their goals are to build confidence, develop tools to manage challenges, and feel safe being their authentic selves. They’re seeking support that recognizes their experiences without judgment and helps them thrive—not just survive.
-
-Welcoming New Patients! Mattison is a board-certified physician assistant at Bonmente, a full-service mental health clinic that offers online appointments, accepts insurance (Aetna, Anthem, Blue Cross, Cigna, United, and more), and has same-week appointments available. Mattison’s goal with every client is to co-create a therapeutic relationship based on trust. She considers the individual holistically when assessing mental health needs and values collaboration in pursuit of psychological growth. Mattison is as compassionate as she is knowledgeable, allowing clients to feel understood, validated, and supported.
-
-Accepting New Patients – Welcome to Bonmente! We know asking for help takes courage, and finding the right provider shouldn’t add stress. That’s why we offer same-week appointments and can often see you within 3–5 days. We accept most major insurance plans (including Aetna, Anthem Blue Shield, Blue Cross, Cigna, and United) and provide care through compassionate, highly trained professionals. With insurance-covered telemedicine sessions, you can connect from the comfort of home or office. Our supportive team makes starting your mental health journey simple, so you can focus on what matters most — feeling better and moving forward.
-
-Have you struggled to feel seen, respected, and truly understood- especially when your mind works differently or feels “too much”? You may think deeply, feel intensely, or mask well, yet still battle exhaustion, anxiety, or disconnection. Do you ever feel like something’s been missing in your care? I offer thoughtful, collaborative, precision-based psychiatry- care that connects insight, biology, and lived experience to help you find clarity, restore balance, and get back to living your life.
-
-My name is Jane and I am a board certified psychiatric mental health nurse practitioner, specializing in lgbtqia+, ADHD, mood disorders, PTSD, depression, anxiety, cultural/religious trauma, and more. As your provider, I understand how deeply personal and unique your journey is and I am committed to building an environment where you feel heard, valued, and safe. You are the expert on your own life, and my role is to provide guidance, share knowledge, and collaborate with you to find the best path forward. Let’s work together to achieve your mental well-being in a way that feels right for you.",https://directory-resources.psychologytoday.com/pt/420fb5b2/favicon.psychologytoday.com.ico,N,0.0,2026-09-21 02:56:11.605870
-,,2026-09-20 22:21:47+00:00,www.reddit.com,Tricare Reserve Select - OHI Issue : r/navyreserve - Reddit,Not Available,,,,,https://www.reddit.com/r/navyreserve/comments/1wltfox/tricare_reserve_select_ohi_issue/,"Has anyone had issues where Tricare all of a sudden started denying claims for “OHI/other health insurance”?
-I don’t have insurance through my civilian employer other than dental.
-I’m wondering if that’s it, and what to do about it?
-Tricare gave me a form to submit but they say it takes 60 days to process.","Has anyone had issues where Tricare all of a sudden started denying claims for “OHI/other health insurance”? I don’t have insurance through my civilian employer other than dental. I’m wondering if that’s it, and what to do about it? Tricare gave me a form to submit but they say it takes 60 days to process.",,N,-1.0,2026-09-20 19:56:18.620323
