@@ -1,4 +1,95 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,,2026-09-23 18:17:50+00:00,U.S. Naval Institute,The Next Step: Embed AI in the Military Health System | Proceedings - U.S. Naval Institute,Not Available,,,,,https://www.usni.org/TheNextStep,"The question is whether clinical AI can systematically accelerate diagnostic and treatment compression across this continuum, from the garrison clinic to the forward aid station.
+Converting them would require embedding clinical AI teams with the technical expertise and institutional authority to act on them.
+Clinical AI in a military health care system cannot be treated as a one-time procurement problem because model performance is inseparable from local workflow, data quality, user trust, and operational context.
+In that sense, the case for embedded clinical AI capability is not a case for technological experimentation.
+Clinical AI, operationalized through embedded teams at the facility level, is how the Military Health System should deliver on it.","The Defense Health Agency is a combat support agency. Its statutory purpose is to “support the medical readiness of the armed forces and the readiness of medical personnel.”1 Everything the Military Health System does, from a routine mammogram at a stateside medical center to a damage-control resuscitation on board a hospital ship, feeds a single operational question: Can this force deploy, fight, and be sustained? As retired Navy Captain and Acting Assistant Secretary of Defense for Health Affairs Dr. Stephen L. Ferrara stated in April 2025, readiness is not one priority among several; it is the strategic imperative that justifies the entire enterprise, because the MHS is “the only U.S. health care system that goes to war.”2
+
+The Cost of Delay
+
+The cost of medical delays to that enterprise is substantial, quantifiable, and operational. Non-deployable personnel (approximately 80 percent of whom are medically categorized) cost the Army alone an estimated $3 billion annually.3 Meanwhile, musculoskeletal injuries account for more than 60 percent of limited-duty days and 48 percent of a deployed brigade combat team’s medical evacuations. Return-to-duty timelines after traditional spine surgery range from 3 to 17 months.4 Every day compressed in the diagnostic and treatment pipeline is a day returned to the operating force. In large-scale combat operations, those days compound: Of 4,596 combat fatalities during Operations Iraqi Freedom and Enduring Freedom, 87 percent died before reaching a medical treatment facility, and hemorrhage accounted for more than 90 percent of potentially survivable deaths.5
+
+Army Futures Command projected the next major conflict will demand a health system that clears casualties far forward. In contested environments where rapid evacuation cannot be assumed, prolonged field care doctrine includes real-time diagnostics as a core capability, and point-of-care ultrasound (POCUS) is the only imaging modality portable enough to operate at the point of injury. AI-augmented POCUS has demonstrated the ability to extend diagnostic accuracy to non-physician providers in austere settings, but fielding these tools at scale would require models trained on the population they will serve.6
+
+The MHS generates this data across 9.5 million beneficiaries, encompassing blast injury patterns, operational musculoskeletal pathology, and deployment-related exposures no civilian dataset captures. Yet that data remains largely untapped for model development. The question is whether clinical AI can systematically accelerate diagnostic and treatment compression across this continuum, from the garrison clinic to the forward aid station.
+
+The Case for Small Teams
+
+Randomized and observational studies conducted over the past several years indicate it can. In a randomized trial of more than 105,000 women, AI-augmented mammography detected 29 percent more cancers while reducing radiologist workload by 44 percent.7 A deep-learning sepsis model reduced in-hospital mortality by 17 percent in a prospective deployment at UC San Diego, and a separate sepsis algorithm was associated with a 39.5 percent reduction across nine hospitals. AI-driven stroke triage shortened key workflow intervals by roughly 40 to 90 minutes in single- and multi-center studies, including a 166-facility analysis.8 Generative AI improved radiology report efficiency by 15.5 percent across 11 hospitals, and ambient AI documentation reduced physician burnout from 51.9 to 38.8 percent within 30 days.9 These results share a precondition: Each was achieved within an institution that had invested in its organizational infrastructure to integrate, govern, and sustain clinical AI at scale.
+
+That kind of organizational investment is not foreign to the Department of Defense. Walter Reed’s Yellow Fever Commission traced the vector of a disease that had crippled the Army in Cuba, and the wartime Committee on Medical Research accelerated mass penicillin production and effectively seeded the National Institutes of Health. The U.S. Army Institute of Surgical Research developed damage-control resuscitation and tactical combat casualty care—which drove combat fatality rates from 19.1 percent in World War II to 9.4 percent in Operations Iraqi Freedom and Enduring Freedom. Post-9/11, breakthroughs such as REBOA (resuscitative endovascular balloon occlusion of the aorta) were developed by the military before being adopted by civilian providers. Both the Yellow Fever Commission and REBOA originated from small teams of clinician-researchers at the intersection of operational need and clinical capability.10
+
+The civilian academic centers now scaling clinical AI have followed the same ground-up pattern, investing in small, dedicated, multidisciplinary teams responsible for algorithm governance, clinical workflow integration, and continuous performance monitoring. At institutions such as Mayo Clinic, UC San Francisco, and Mount Sinai, the enterprise-level AI research staffs number in the hundreds. However, the operational teams that deploy and govern models at the bedside are substantially smaller, often consisting only of a handful of clinician-informaticists and engineers.11 The lesson is not about staffing levels; it is about institutional commitment. In every case, innovation emerged from small groups within clinical operations, not from enterprise procurement of vendor algorithms. Absent that ground-up investment, technology adoption becomes a pilot program that expires when its champion rotates out.
+
+A Force Design for Medicine
+
+The success of this structure extends beyond medicine. The Marine Corps’ Force Design 2030 restructured the entire service around a principle directly applicable to this challenge: small, distributed, networked teams whose combat power derives from the capability and expertise of each operator, augmented by the technology embedded within the formation.12 Marine littoral regiments are lean formations equipped with precision strike, organic drones at every echelon, and networked sensor architecture that multiplies the combat effectiveness of each element far beyond its personnel count. The logic is force multiplication through talent and technology integrated at the tactical edge.
+
+The same model applies to clinical AI. A team of three to five at a military treatment facility (an informaticist, a data scientist, a clinical champion, and a systems administrator), connected to centralized compute resources (such as those the Naval Postgraduate School AI Task Force now operates under its 2024 NVIDIA cooperative agreement), and governed under Defense Health Agency policy, can generate diagnostic and operational capability far exceeding what its headcount alone would suggest.
+
+The MHS already has declared its strategic intent to integrate AI across clinical operations. Health Affairs catalogued more than 120 active AI projects in January 2024, the January 2026 AI Strategy directs the department to become an “AI-first warfighting force,” and programs such as MERIT, Team MEDAL, and OpMed have delivered measurable results.13 MERIT alone is projected to compress disability processing timelines by 180 days per case.14 What the MHS has not yet built is the institutional connective tissue that would make these individual efforts sustainable and scalable. As of 2025, no widely documented MTF-level model exists for a durable embedded clinical AI operations team. No standardized pipeline moves algorithms from validation to bedside deployment. Rotation cycles of two to three years erode institutional knowledge, and department-wide adoption remains nascent. A 2025 analysis in Military Medicine found the MHS trailing its civilian counterparts; at WEST 2026, Chief of Naval Operations Admiral Daryl Caudle stated he was not satisfied with where the Navy stands.15
+
+Meanwhile, projected 36 percent vacancy rates in Navy family medicine billets compound a nationwide radiology workforce shortage in which approximately half of radiologist recruitment searches go unfilled, illustrating the workforce strain that ambient AI documentation could directly mitigate. In a system losing medical corps officers to civilian practice, tools that measurably reduce administrative burden would have a quantifiable effect on retention and readiness.16
+
+Latent Capacity, Untapped
+
+The irony is that the MHS already possesses structural advantages most civilian systems cannot replicate. MHS GENESIS provides a single, unified electronic health record across more than 700 facilities and more than 200,000 users, eliminating the fragmentation civilian systems face. DHA’s single governance authority enables enterprise-wide policy decisions that civilian hospital boards must negotiate across competing interests. And a captive beneficiary population of 9.5 million generates longitudinal clinical data, encompassing blast and ballistic trauma, operational musculoskeletal injury, and deployment-related pathology that constitutes the most operationally relevant dataset for training military clinical AI models. These advantages are real, but they represent latent capacity, not operational capability. Converting them would require embedding clinical AI teams with the technical expertise and institutional authority to act on them.
+
+Embedded teams are not simply engines of innovation. They are mechanisms of control. Clinical AI in a military health care system cannot be treated as a one-time procurement problem because model performance is inseparable from local workflow, data quality, user trust, and operational context. A centrally purchased algorithm may clear an acquisition milestone, but without a facility-level team to validate performance, monitor drift, adjudicate failures, and align the tool with command priorities, it remains a technical artifact rather than a reliable clinical capability. This is especially true in the MHS, where austere care environments, beneficiary populations, and mission requirements differ materially from civilian practice. Embedded teams therefore do more than accelerate adoption: They create accountability at the point of care. They connect enterprise governance and bedside care, ensuring models are not only accurate, but usable, monitored, and trusted. In that sense, the case for embedded clinical AI capability is not a case for technological experimentation. It is a case for disciplined operational integration.
+
+From Latent to Operational
+
+Emerging institutional partnerships have begun to address specific issues. The Naval Postgraduate School announced a next-generation NVIDIA computing system in 2025 and commissioned it in July 2026, providing the centralized compute infrastructure the MTF-level teams would require. The American College of Radiology’s ARCH-AI program has enrolled 965 facilities under a standardized governance framework, and the Joint Commission launched its AI certification in June 2026.17
+
+In medical education, Uniformed Services University of the Health Sciences and Walter Reed National Military Medical Center announced the first AI curriculum in military graduate medical education in March 2026, directly addressing a gap a 2024 Military Medicine analysis identified.18 USUHS is uniquely positioned to develop the workforce this enterprise requires: Its students are military officers whose service obligations ensure careers within the MHS, many drawn from prior enlisted and operational backgrounds with direct knowledge of the clinical and logistical deficits AI could address. USUHS already has formalized cross-sector research pathways, including the MIT Lincoln Laboratory Military Biomedical Research Fellowship, which embeds medical students in federally funded research and development center laboratories working on AI, biosensing, and trauma technology. Scaling these models from elective opportunities to integrated curriculum would equip a generation of physician-innovators with the skills to build, govern, and sustain clinical AI programs from the start of their careers.
+
+Three actions, each accomplishable within existing authorities, would convert these assets from latent capacity to operational capability.
+
+Establish protected clinical informatics and data science billets at MTFs. Teams of three to five would transform a facility’s capacity to deploy, govern, and monitor clinical AI, and protected billets that survive rotation cycles would build the institutional memory that makes programs durable.
+
+Formalize a DHA-NPS clinical AI research partnership, extending the existing USUHS memorandum to include model development on MHS clinical data, with NPS providing compute and AI engineering while MTFs provide clinical environments, domain expertise, and validation cohorts.
+
+Enroll military radiology departments in ACR ARCH-AI immediately, establishing the governance scaffolding the first two recommendations require and positioning the MHS ahead of the accreditation cycle rather than behind it.
+
+The Department of Defense has transformed medicine before, from damage-control resuscitation to tactical combat casualty care to the evacuation architecture that made the golden hour survivable. Each advance began with clinician-researchers at the point of need, supported by institutional commitment to turn local innovation into systemwide capability. Clinical AI is the next operational iteration of that cycle. The advantages, the evidence, and the frameworks all exist. What does not yet exist is the organizational commitment to build the teams that convert them into operational capability. Every month that commitment is deferred is a month in which the treatment pipeline remains slower than it needs to be, providers burn out at rates the force cannot sustain, and the gap between the MHS and the civilian health systems it must match in wartime widens further.
+
+The Navy Medical Department’s wartime motto captures the enduring charge: To keep as many men at as many guns as many days as possible. Clinical AI, operationalized through embedded teams at the facility level, is how the Military Health System should deliver on it.
+
+The views expressed are those of the author and do not reflect the official policy or position of the Department of the Navy, the Defense Health Agency, the Department of War, or the U.S. Government.",https://www.usni.org/sites/default/files/styles/open_graph/public/Hewins-PRO-9-26-Hero.jpg?itok=awOiIo_b,N,0.0,2026-09-23 15:56:26.074976
+,,2026-09-23 18:09:10+00:00,Maryland Matters,Military releases details on testosterone screening for men - Maryland Matters,"Federal News Network, Ariana Figueroa, Bryan P. Sears",,,,,https://marylandmatters.org/2026/09/23/military-releases-details-on-testosterone-screening-for-men/,"By Rachel S. Cohen The Defense Health Agency last week rolled out the clinical guidelines military medical providers will use to begin screening men for low testosterone each year.
+If their answers raise red flags, medical providers can move on to blood tests and possible diagnosis and hormone therapy.
+Air Force plans to rehire after cutting below ‘established requirements’ Medical teams will add the testosterone screening into service members’ periodic health assessments, which determine their fitness to serve, or their annual physical.
+“A service member who is stable on testosterone therapy should be deployable without requiring a waiver, depending on the formulation,” the DHA guidance says.
+But some also question why the Pentagon is encouraging certain service members to explore hormone therapy while deeming hormone treatment for transgender troops incompatible with military service.","By Rachel S. Cohen
+
+The Defense Health Agency last week rolled out the clinical guidelines military medical providers will use to begin screening men for low testosterone each year.
+
+The guidance directs medical professionals to ask male troops over age 30, as well as new recruits, about symptoms and risk factors that could be linked to testosterone deficiency. If their answers raise red flags, medical providers can move on to blood tests and possible diagnosis and hormone therapy.
+
+It offers the first concrete details of how the new policy would work, two months after Defense Secretary Pete Hegseth announced it in July in a brief video titled “The High T Department of War” that raised eyebrows inside the military and beyond.
+
+“By proactively identifying and treating suboptimal hormone levels, the department continues to invest in the health of its warfighters, strengthen their performance and maximize force readiness,” Pentagon spokesman Sean Parnell said in a release Thursday.
+
+To diagnose someone with low testosterone, a medical provider will first note whether the patient is experiencing erectile dysfunction, reduced libido, impaired memory, depression and a host of other symptoms that could point to a hormone imbalance, DHA said. Risk factors like obesity, diabetes, a prior traumatic brain injury or bone injury, or sleep apnea could also increase the likelihood that testosterone is out of whack.
+
+Air Force plans to rehire after cutting below ‘established requirements’
+
+Medical teams will add the testosterone screening into service members’ periodic health assessments, which determine their fitness to serve, or their annual physical. Brand-new troops will also encounter the questions upon entering the military. Men under 30 can request a screening.
+
+Troops with testosterone prescriptions can still deploy with the right planning beforehand, DHA said. Their treatment supply must last as long as their deployment, plus 90 days — a requirement that could become tricky if their time overseas is extended. Where a person is headed can also complicate matters, if there aren’t temperature-controlled facilities around to store injectable testosterone or if troops aren’t allowed to use topical medications instead.
+
+“A service member who is stable on testosterone therapy should be deployable without requiring a waiver, depending on the formulation,” the DHA guidance says. “Neither a diagnosis of testosterone deficiency nor stable maintenance therapy is, of itself, a basis for a duty limitation or a change in deployment status.”
+
+But those who work in aeromedical, dive, submarine and nuclear fields may be disqualified for duty if diagnosed with testosterone deficiency, the guidance warns. Service officials make the final call on whether the condition may interfere with those critical missions.
+
+Men who may want children can pick treatments that raise testosterone without stopping sperm production, or could pursue cryopreservation to keep their options open later, DHA noted.
+
+The Pentagon has couched the initiative as one piece of a broader push to improve troops’ health, including those who have experienced “operator syndrome,” or a stress-induced drop in testosterone that appears more common in the special operations community. But some also question why the Pentagon is encouraging certain service members to explore hormone therapy while deeming hormone treatment for transgender troops incompatible with military service.
+
+“This initiative … is not about artificial enhancement; it’s about restoring and optimizing your natural capabilities, protecting your longevity and ensuring you have the biological foundation required to sustain the fight,” Hegseth said in a release.
+
+Defense officials are reviewing companion guidance on hormone screening and treatment for female troops, which could formalize a path to relief for women looking to manage the symptoms of perimenopause and menopause. The Pentagon did not say when that directive might be released.",https://marylandmatters.org/wp-content/uploads/2026/05/petehegsethmarch22026_1.jpg,N,1.0,2026-09-23 15:56:29.558193
+,,2026-09-23 17:23:14+00:00,Military News,MHS GENESIS Patient Portal transitioning to myAuth login Sept. 23 | Navy Medicine,TRICARE Communications,,,,,https://www.militarynews.com/norfolk-navy-flagship/news/navy_medicine/mhs-genesis-patient-portal-transitioning-to-myauth-login-sept-23/article_d7a3da06-bff7-4939-85e0-47f4e8a1f3f4.html,"FALLS CHURCH, Va. — Throughout 2026, the online platforms that support your TRICARE benefit are switching from DS Logon to myAuth. myAuth is a simpler, more streamlined login authentication application.",Not Available,https://bloximages.chicago2.vip.townnews.com/militarynews.com/content/tncms/assets/v3/editorial/5/82/582e471a-6840-4848-a39d-a75cb1f92869/6ab4088937726.image.jpg?crop=1500%2C788%2C0%2C106&resize=1200%2C630&order=crop%2Cresize,N,0.0,2026-09-23 15:56:32.325853
 ,,2026-09-23 17:01:29+00:00,NBC News,We want to hear about your experience with Tricare medical coverage - NBC News,"Elizabeth Chuck, Jason Kane, Erin McLaughlin",,,,,https://www.nbcnews.com/news/us-news/tricare-military-medical-coverage-share-experience-rcna598314,"Tricare promises to provide health benefits to millions of active-duty service members, veterans and their families.
 But in recent months, NBC News has uncovered a slew of complaints about the U.S. military’s healthcare program as part of our “Cost of Denial” series, which examines coverage refusals and other insurance-related problems.
 Many people who receive healthcare through Tricare say their issues began when the military switched the companies that administer the program at the start of 2025.
@@ -34,6 +125,72 @@ Additionally, a 410 Gone error was encountered while trying to use an ErrorDocum
 The requested resource is no longer available on this server and there is no forwarding address. Please remove all references to this resource.
 
 Additionally, a 410 Gone error was encountered while trying to use an ErrorDocument to handle the request.",,N,0.0,2026-09-23 13:56:50.084960
+,,2026-09-23 16:24:36+00:00,www.moaa.org,Summer Advocacy in Action: How MOAA's Advocates Made August Count,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/advocacy/summer-advocacy-in-action-how-moaas-advocates-made-august-count/,"While Congress was home for the August recess, MOAA’s grassroots advocate network took action.
+[GET INVOLVED: Register at MOAA’s Legislative Action Center] Despite the access to lawmakers, August recess isn’t an easy time for advocacy.
+However, that effort would mean little without the backing of a wider swathe of MOAA’s members and volunteers at large.
+MOAA advocates sent more than 18,000 messages to Capitol Hill this summer, thousands in support of each topic.
+Their work illustrates to lawmakers that MOAA’s local leaders speak for a real community of uniformed servicemembers, veterans, retirees, and families in their districts willing to take action.","While Congress was home for the August recess, MOAA’s grassroots advocate network took action.
+
+With lawmakers back in their districts, MOAA’s Summer Advocacy in Action campaign put three legislative priorities directly in front of them and their staffs thanks to member participation at the state and local level:
+
+The Major Richard Star Act would let combat-injured retirees keep both their full military retired pay and their full VA disability compensation, ending a decades-old offset that forces many to forfeit part of one to receive the other.
+
+GLP-1 coverage restoration would return weight-management and metabolic medications to the TRICARE For Life formulary for beneficiaries who lost access last year.
+
+Work Opportunity Tax Credit reauthorization and expansion would give employers real incentive to hire military spouses – a workforce that faces elevated unemployment every time a move resets a career – and reestablish a proven program to help veterans succeed after service.
+
+[GET INVOLVED: Register at MOAA’s Legislative Action Center]
+
+Despite the access to lawmakers, August recess isn’t an easy time for advocacy. With Congress on the campaign trail, lawmakers’ schedules are stretched between town halls, fundraisers, and district events. Staff members often face a crush of competing asks.
+
+Getting a window of attention in a month built for reelection messaging is no easy task. Despite this, MOAA council and chapter leaders around the country leveraged their networks and expertise to secure meetings with dozens of offices this summer.
+
+However, that effort would mean little without the backing of a wider swathe of MOAA’s members and volunteers at large. MOAA advocates sent more than 18,000 messages to Capitol Hill this summer, thousands in support of each topic. Their work illustrates to lawmakers that MOAA’s local leaders speak for a real community of uniformed servicemembers, veterans, retirees, and families in their districts willing to take action.",https://www.moaa.org/uploadedfiles/aia-summer-2023-h.png,N,0.0,2026-09-23 15:56:35.803669
+,,2026-09-23 16:24:23+00:00,www.moaa.org,"TRICARE Changes, Housing Fixes, and More: 10 MOAA Priorities as the NDAA Takes Shape",Not Available,,,,,"https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/benefits/tricare-changes,-housing-fixes,-and-more-10-moaa-priorities-as-the-ndaa-takes-shape/","Much-needed improvements to the military health system lead a list of MOAA priorities for the FY 2027 National Defense Authorization Act (NDAA), must-pass legislation that will take shape in the closing weeks of the 119th Congress.
+The NDAA provision builds on the MOAA-backed Military Care, Access, Reporting, and Evaluation (Military CARE) Act and is a top priority for several military and veterans service organizations.
+[TAKE ACTION: Ask Your Lawmakers to Address Military Care Access Problems] Expand on continued congressional oversight of services offered by military treatment facilities (MTFs), to include reversing planned cuts to 41 hospitals and clinics.
+Require a study on the future of the military health care system – a necessary step to ensure the program remains viable for all beneficiaries.
+Prohibit landlords in privatized military housing from asking tenants to sign nondisclosure agreements, which may limit the options for military families facing housing problems.","Much-needed improvements to the military health system lead a list of MOAA priorities for the FY 2027 National Defense Authorization Act (NDAA), must-pass legislation that will take shape in the closing weeks of the 119th Congress.
+
+A letter from MOAA to the chairmen and ranking members of the House and Senate Armed Services committees sent Sept. 23 outlines these key provisions and recommends modifications to ensure the best possible outcomes for servicemembers, retirees, their families and survivors.
+
+[READ THE LETTER]
+
+The list includes proposals that will:
+
+Establish a digital system so TRICARE beneficiaries can report access to care concerns in a way that will ensure their issues are resolved and systemic problems can be addressed. The NDAA provision builds on the MOAA-backed Military Care, Access, Reporting, and Evaluation (Military CARE) Act and is a top priority for several military and veterans service organizations.
+
+[TAKE ACTION: Ask Your Lawmakers to Address Military Care Access Problems]
+
+Expand on continued congressional oversight of services offered by military treatment facilities (MTFs), to include reversing planned cuts to 41 hospitals and clinics.
+
+Require a study on the future of the military health care system – a necessary step to ensure the program remains viable for all beneficiaries.
+
+Address the administration’s plans to split Defense Health Program funding into two appropriations: One for combat and operational medicine, another for private sector care. MOAA raised concerns in the letter that the move “could lead to challenges with adequately funding purchased care and diminished access for beneficiaries.”
+
+Create a no-premium dental plan for junior enlisted members of the Selected Reserve, a program designed to increase readiness of the overall force.
+
+Other Key Proposals
+
+Along with health care issues, MOAA also endorsed proposals found in either the House or Senate NDAA versions that would:
+
+Expand in-home child care options for military families, to include improved access to au pairs.
+
+Prevent Pentagon officials from funding any changes under the Supply Chain Transformation Initiative – moves which could affect the commissary benefit – until six months after a report required in the FY 2026 NDAA is filed to Congress.
+
+Prohibit landlords in privatized military housing from asking tenants to sign nondisclosure agreements, which may limit the options for military families facing housing problems.
+
+Improve landlord accountability for mold and other housing hazards by establishing testing requirements and remediation timelines – measures included in the MOAA-backed MOLD Act.
+
+Protect the retirement pay of commissioned-officer retirees from the U.S. Public Health Service and NOAA during funding lapses by processing those payments via the Military Retirement Fund, a protection offered to Coast Guard retirees via the FY 2021 NDAA.
+
+[TAKE ACTION: Urge Lawmakers to Support the Pensions for Retired Uniformed Servicemembers Act]
+
+Other Priorities
+
+MOAA’s letter to committee leadership expressed disappointment at the exclusion of the Major Richard Star Act from the NDAA but noted “alternative avenues” of progress for the legislation, which would end an unjust pay offset faced by tens of thousands combat-injured retirees who lose a dollar of military retirement pay for every dollar of VA disability compensation they collect.
+
+The letter also endorsed NDAA plans to raise military pay at the same or higher rate as the Employment Cost Index, but noted concerns with an administration proposal to uncouple the pay of USPHS and NOAA officers from others in uniform. There is “no justification” for such a move, according to the letter, which notes these officers “serve alongside their armed forces counterparts, deploy in support of national emergencies, and undertake hazardous assignments” that merit comparable compensation.",https://www.moaa.org/contentassets/3039184cdfbe4912beedfad1e143b7f5/capitol-bright-stock-h.jpg,N,0.0,2026-09-23 15:56:39.223419
 ,,2026-09-23 15:44:35+00:00,www.reddit.com,NBC News wants to hear about your experience with Tricare medical coverage - Reddit,Not Available,,,,,https://www.reddit.com/r/nationalguard/comments/1wo8vhb/nbc_news_wants_to_hear_about_your_experience_with/,"nbcnews.com If you receive healthcare through the military benefits program, or if you are a Tricare employee or contractor, share your story.","nbcnews.com
 
 If you receive healthcare through the military benefits program, or if you are a Tricare employee or contractor, share your story.",,N,0.0,2026-09-23 12:56:33.736512
@@ -251,6 +408,7 @@ This summer, Breen returned to the Pentagon as a volunteer docent at its 9/11 me
 Twenty-five years later, the story — and the people who lived it with him — still brings Breen back to that monumental day in our nation’s history.
 
 Kristin Davis is a writer in Virginia.",https://www.moaa.org/contentassets/1d7dc86511064dd4a6802cfcbb53dd7a/911-press-office-h.jpg,N,0.0,2026-09-23 13:57:07.884393
+,,2026-09-22 23:45:45+00:00,www.facebook.com,Defense - Need mental health care or a different provider? TRICARE can help. 1️⃣ Find a ...,,,,,,https://www.facebook.com/DefenseHealthAgency/photos/need-mental-health-care-or-a-different-provider-tricare-can-help1️⃣-find-a-netwo/1502207228623515/,... TRICARE coverage: https://dha.mil/News/2026/09/11/11/43/TRICAREs-mental ... https://www.linkedin.com/showcase/defense-health- agency-senior ...,Not Available,,Y,0.0,2026-09-23 15:56:41.907895
 ,,2026-09-22 23:14:12+00:00,X (formerly Twitter),Military Health System - X,x.com,,,,,https://x.com/MilitaryHealth/status/2102397783042822410/photo/1,"On Sept. 23, @TRICARE is switching from DS Logon to myAuth. 
 
 This means you'll use myAuth to log in to the MHS GENESIS Patient Portal to access health records from care at military hospitals and clinics.
@@ -1024,37 +1182,6 @@ Policymakers in other states should closely watch what happens to pharmacy parti
 For those of us who spent our careers in uniform, reliable health care is part of the promise made in exchange for service. Most veterans will never study the corporate structure of a PBM, nor should they have to. They care whether the prescription their doctor writes can be filled at a pharmacy they can reasonably reach. The debate over PBMs will continue, and reform will continue with it.
 
 Tennessee has already chosen its approach. Other states don’t have to make the same mistakes. Think of what will happen at the pharmacy counter, if they can even find one to fill their prescriptions. For military families and retirees, that is where the consequences will matter most.",https://www.stripes.com/incoming/krvcnv-20260715_sasc_0237.jpg/alternates/LANDSCAPE_480/20260715_SASC_0237.jpg,N,-1.0,2026-09-21 16:56:31.756235
-,,2026-09-21 16:22:50+00:00,www.moaa.org,Finding Freedom on the Slopes - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/reads/finding-freedom-on-the-slopes/,"While the sport can be physically demanding, adaptive programs across the country make it possible for wounded warriors and disabled veterans to experience the thrill of winter sports.
-“There are many all-season sports that welcome disabled veterans,” said Rachel Huggins, program director for the Durango, Colo.-based Adaptive Sports Association (ASA).
-For disabled veterans, its programming is free, covering lessons, adaptive equipment, clothing, and lift tickets.
-[DISCOUNTS TO DOZENS OF SKI RESORTS: Military Epic Passes] “In most cases, the expenses are covered for athletes and their families and caregivers,” Huggins said.
-One of the nation’s best-known adaptive programs is the National Disabled Veterans Winter Sports Clinic, co-hosted by the VA and Disabled American Veterans in Snowmass, Colo.","(This article by Capt. Edward Lundquist, USN (Ret), originally appeared in the October 2026 issue of Military Officer magazine.)
-
-There’s nothing quite like skiing down a snow-covered mountain. While the sport can be physically demanding, adaptive programs across the country make it possible for wounded warriors and disabled veterans to experience the thrill of winter sports.
-
-“There are many all-season sports that welcome disabled veterans,” said Rachel Huggins, program director for the Durango, Colo.-based Adaptive Sports Association (ASA). With the right equipment, instruction, and individualized techniques, “we’ve helped athletes with visual impairments, amputations, cognitive, and physical disabilities enjoy the stoke of sliding on the snow.”
-
-ASA partners with adaptive ski programs nationwide, including those in California, Colorado, and Vermont. For disabled veterans, its programming is free, covering lessons, adaptive equipment, clothing, and lift tickets.
-
-[DISCOUNTS TO DOZENS OF SKI RESORTS: Military Epic Passes]
-
-“In most cases, the expenses are covered for athletes and their families and caregivers,” Huggins said. “It knocks down that financial barrier for a lot of folks, especially when it comes to travel and lodging, and we provide them with a community of people who understand the challenges.”
-
-Many major ski operators, including Vail Resorts, off er adaptive programs at most of their mountains.
-
-One of the nation’s best-known adaptive programs is the National Disabled Veterans Winter Sports Clinic, co-hosted by the VA and Disabled American Veterans in Snowmass, Colo.
-
-Since 1987, the clinic has grown from 90 participants to nearly 400 veterans each year. Participants with traumatic brain injuries, spinal cord injuries, amputations, visual impairments, and other severe disabilities receive individualized instruction in adaptive skiing, sled hockey, snowmobiling, curling, and other activities.
-
-Coast Guard veteran Dave Riley, a former rescue swimmer and now a quadruple amputee, credits adaptive sports with changing his life.
-
-“When I woke up from a monthlong coma, looked down, and realized I was missing my arms and legs, I believed my purpose, my identity, and my capabilities had all been stripped from me,” Riley said. “I eventually learned how my illness and the resulting amputations were not a death sentence.”
-
-Coleman Nee, who serves as the national commander of Disabled American Veterans, said the winter sports clinic has helped create thousands of stories about healing and renewed purpose — what he calls “miracles on the mountainside.”
-
-“We urge all of our participants to push themselves beyond their perceived limitations, heal, and embrace the thrill and gift of life,” Nee said.
-
-Capt. Edward Lundquist, USN (Ret), is a writer on military topics and travel.",https://www.moaa.org/contentassets/7818f296a0c14629b5ced21a34c0b0aa/adaptive-ski-h.jpg,N,0.0,2026-09-21 14:56:18.319685
 ,,2026-09-21 16:22:50+00:00,www.moaa.org,Navigating Divorce in the Military Community: Understanding Attorneys and Regions - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/benefits/navigating-divorce-in-the-military-community-understanding-attorneys-and-regions/,"MOAA recommends you consult a qualified family law attorney who is knowledgeable in military divorce matters.
 The practice is restricted to family law, and Murphy has represented active duty and retired servicemembers as well as military spouses for many years.
 “Do not — I repeat, do not — try to do a military divorce without a qualified lawyer,” said Sullivan, who previously served as a judge advocate general.
@@ -1134,6 +1261,37 @@ That attorney is also useful for vetting potential mediators to ensure the chose
 But if a settlement isn’t reached and the divorcing parties go to court, state and federal laws will guide the court in dividing marital assets between the parties, in one or another legally correct way that should be followed, not fought, Murphy said.
 
 David Tobenkin is a writer in Maryland.",https://www.moaa.org/contentassets/c1ca6a62c21f434cb62d81da3ff1bc53/divorce-gavel-h.jpg,N,0.0,2026-09-21 16:56:36.955622
+,,2026-09-21 16:22:50+00:00,www.moaa.org,Finding Freedom on the Slopes - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/reads/finding-freedom-on-the-slopes/,"While the sport can be physically demanding, adaptive programs across the country make it possible for wounded warriors and disabled veterans to experience the thrill of winter sports.
+“There are many all-season sports that welcome disabled veterans,” said Rachel Huggins, program director for the Durango, Colo.-based Adaptive Sports Association (ASA).
+For disabled veterans, its programming is free, covering lessons, adaptive equipment, clothing, and lift tickets.
+[DISCOUNTS TO DOZENS OF SKI RESORTS: Military Epic Passes] “In most cases, the expenses are covered for athletes and their families and caregivers,” Huggins said.
+One of the nation’s best-known adaptive programs is the National Disabled Veterans Winter Sports Clinic, co-hosted by the VA and Disabled American Veterans in Snowmass, Colo.","(This article by Capt. Edward Lundquist, USN (Ret), originally appeared in the October 2026 issue of Military Officer magazine.)
+
+There’s nothing quite like skiing down a snow-covered mountain. While the sport can be physically demanding, adaptive programs across the country make it possible for wounded warriors and disabled veterans to experience the thrill of winter sports.
+
+“There are many all-season sports that welcome disabled veterans,” said Rachel Huggins, program director for the Durango, Colo.-based Adaptive Sports Association (ASA). With the right equipment, instruction, and individualized techniques, “we’ve helped athletes with visual impairments, amputations, cognitive, and physical disabilities enjoy the stoke of sliding on the snow.”
+
+ASA partners with adaptive ski programs nationwide, including those in California, Colorado, and Vermont. For disabled veterans, its programming is free, covering lessons, adaptive equipment, clothing, and lift tickets.
+
+[DISCOUNTS TO DOZENS OF SKI RESORTS: Military Epic Passes]
+
+“In most cases, the expenses are covered for athletes and their families and caregivers,” Huggins said. “It knocks down that financial barrier for a lot of folks, especially when it comes to travel and lodging, and we provide them with a community of people who understand the challenges.”
+
+Many major ski operators, including Vail Resorts, off er adaptive programs at most of their mountains.
+
+One of the nation’s best-known adaptive programs is the National Disabled Veterans Winter Sports Clinic, co-hosted by the VA and Disabled American Veterans in Snowmass, Colo.
+
+Since 1987, the clinic has grown from 90 participants to nearly 400 veterans each year. Participants with traumatic brain injuries, spinal cord injuries, amputations, visual impairments, and other severe disabilities receive individualized instruction in adaptive skiing, sled hockey, snowmobiling, curling, and other activities.
+
+Coast Guard veteran Dave Riley, a former rescue swimmer and now a quadruple amputee, credits adaptive sports with changing his life.
+
+“When I woke up from a monthlong coma, looked down, and realized I was missing my arms and legs, I believed my purpose, my identity, and my capabilities had all been stripped from me,” Riley said. “I eventually learned how my illness and the resulting amputations were not a death sentence.”
+
+Coleman Nee, who serves as the national commander of Disabled American Veterans, said the winter sports clinic has helped create thousands of stories about healing and renewed purpose — what he calls “miracles on the mountainside.”
+
+“We urge all of our participants to push themselves beyond their perceived limitations, heal, and embrace the thrill and gift of life,” Nee said.
+
+Capt. Edward Lundquist, USN (Ret), is a writer on military topics and travel.",https://www.moaa.org/contentassets/7818f296a0c14629b5ced21a34c0b0aa/adaptive-ski-h.jpg,N,0.0,2026-09-21 14:56:18.319685
 ,,2026-09-21 16:22:49+00:00,www.moaa.org,Pentagon Expands Spouse Scholarship Program - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/family/pentagon-expands-spouse-scholarship-program/,"The Pentagon has expanded eligibility for the SpouseWorks Scholarship, opening the financial aid program to more military spouses regardless of their servicemember’s rank.
 “MyCAA isn’t really a college scholarship program,” said Amelia Gwinn, the spouse of a Navy officer who used the program.
 The rebranding from MyCAA to SpouseWorks also brought together several long-standing programs, including the former Spouse Education and Career Opportunities program and the Military Spouse Employment Partnership.
@@ -1183,6 +1341,29 @@ Beets said the fellowship evolved from the Military Spouse Career Accelerator Pi
 “We know that if a spouse is employed, it provides for a better transition for the servicemember,” Beets said. “It makes that landing a little bit softer.”
 
 Natalie Oliverio is a military journalist and Navy veteran.",https://www.moaa.org/contentassets/e1c44cb1dbd14038b3c2e07ef536b32e/spouseworks-h.jpg,N,0.0,2026-09-21 16:56:40.500162
+,,2026-09-21 16:22:48+00:00,www.moaa.org,Make Your Voice Heard This November - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/advocacy/make-your-voice-heard-this-november/,"(This article originally appeared in the October 2026 issue of Military Officer magazine.)
+Military-connected voters bring firsthand experience with issues such as deployments, military health care, veterans benefits, and the transition to civilian life.
+About 17% of the 119th Congress has military experience, down from more than 70% in the 1970s.
+As fewer lawmakers arrive in Washington with firsthand military experience, fewer have lived the realities of deployments, PCS, navigating TRICARE and VA benefits, or transitioning from military to civilian life.
+One of the most meaningful ways to ensure the military community’s perspective is heard is to cast your ballot.","(This article originally appeared in the October 2026 issue of Military Officer magazine.)
+
+The general election is Nov. 3, and for servicemembers, veterans, military families, and survivors, voting is one of the most direct ways to shape the policies that affect your community.
+
+Military-connected voters bring firsthand experience with issues such as deployments, military health care, veterans benefits, and the transition to civilian life. Casting a ballot helps ensure those perspectives are represented in the decisions that shape the nation’s future.
+
+About 17% of the 119th Congress has military experience, down from more than 70% in the 1970s. As fewer lawmakers arrive in Washington with firsthand military experience, fewer have lived the realities of deployments, PCS, navigating TRICARE and VA benefits, or transitioning from military to civilian life. That makes the voices of those who have served more important than ever.
+
+What to Know Before Nov. 3
+
+Register or update your registration. If you’ve moved, changed voting jurisdictions, or are unsure your registration is current, check before Election Day.
+
+Know your state’s deadlines. Registration, absentee ballot requests, and ballot return deadlines vary. Visit Vote.gov for your state’s requirements.
+
+Are you voting from overseas or away from home? Active duty servicemembers and eligible family members should use the Federal Voting Assistance Program to submit a Federal Post Card Application, which must be completed each calendar year and following every move.
+
+Did you not receive your ballot? Your installation voting assistance officer can help you obtain a federal write-in absentee ballot, which is accepted for federal elections in every state.
+
+MOAA is a nonpartisan organization and does not support or oppose candidates or political parties. We encourage every eligible servicemember, veteran, family member, and survivor to participate in the electoral process. One of the most meaningful ways to ensure the military community’s perspective is heard is to cast your ballot.",https://www.moaa.org/contentassets/0cceba97b2e4439ababf14519a4411d9/voting-booths-2026-h.jpg,N,0.0,2026-09-21 16:56:44.346978
 ,,2026-09-21 16:22:48+00:00,www.moaa.org,Memorializing America's Longest War - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/reads/memorializing-americas-longest-war/,"“For the Global War on Terrorism Memorial to achieve its goals, it must be deliberately designed with a capacity to enable shared reflection, honor multiple perspectives and stories, and acknowledge new insights over time,” Craig wrote.
 The first law, passed in 1986, prohibits the creation of war memorials until at least 10 years after the conflict has ended.
 When the foundation was formed in late 2015, the war was still ongoing and would continue for six more years.
@@ -1288,29 +1469,6 @@ When he spoke to Military Officer in June, he said the foundation had already re
 “I really want [Global War on Terrorism] veterans to feel valued,” he said. “I want the nation to see them, and I want them to understand the cost. … I want them to see that because we don’t have a place to gather in our nation’s capital; there’s nowhere for us.”
 
 Hope Hodge Seck is a writer based in Massachusetts.",https://www.moaa.org/contentassets/952234f8af9b44d6a2785ecc2066386c/gwot-memorial-main-h.jpg,N,0.0,2026-09-21 14:56:23.359054
-,,2026-09-21 16:22:48+00:00,www.moaa.org,Make Your Voice Heard This November - MOAA,Not Available,,,,,https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/advocacy/make-your-voice-heard-this-november/,"(This article originally appeared in the October 2026 issue of Military Officer magazine.)
-Military-connected voters bring firsthand experience with issues such as deployments, military health care, veterans benefits, and the transition to civilian life.
-About 17% of the 119th Congress has military experience, down from more than 70% in the 1970s.
-As fewer lawmakers arrive in Washington with firsthand military experience, fewer have lived the realities of deployments, PCS, navigating TRICARE and VA benefits, or transitioning from military to civilian life.
-One of the most meaningful ways to ensure the military community’s perspective is heard is to cast your ballot.","(This article originally appeared in the October 2026 issue of Military Officer magazine.)
-
-The general election is Nov. 3, and for servicemembers, veterans, military families, and survivors, voting is one of the most direct ways to shape the policies that affect your community.
-
-Military-connected voters bring firsthand experience with issues such as deployments, military health care, veterans benefits, and the transition to civilian life. Casting a ballot helps ensure those perspectives are represented in the decisions that shape the nation’s future.
-
-About 17% of the 119th Congress has military experience, down from more than 70% in the 1970s. As fewer lawmakers arrive in Washington with firsthand military experience, fewer have lived the realities of deployments, PCS, navigating TRICARE and VA benefits, or transitioning from military to civilian life. That makes the voices of those who have served more important than ever.
-
-What to Know Before Nov. 3
-
-Register or update your registration. If you’ve moved, changed voting jurisdictions, or are unsure your registration is current, check before Election Day.
-
-Know your state’s deadlines. Registration, absentee ballot requests, and ballot return deadlines vary. Visit Vote.gov for your state’s requirements.
-
-Are you voting from overseas or away from home? Active duty servicemembers and eligible family members should use the Federal Voting Assistance Program to submit a Federal Post Card Application, which must be completed each calendar year and following every move.
-
-Did you not receive your ballot? Your installation voting assistance officer can help you obtain a federal write-in absentee ballot, which is accepted for federal elections in every state.
-
-MOAA is a nonpartisan organization and does not support or oppose candidates or political parties. We encourage every eligible servicemember, veteran, family member, and survivor to participate in the electoral process. One of the most meaningful ways to ensure the military community’s perspective is heard is to cast your ballot.",https://www.moaa.org/contentassets/0cceba97b2e4439ababf14519a4411d9/voting-booths-2026-h.jpg,N,0.0,2026-09-21 16:56:44.346978
 ,,2026-09-21 16:12:11+00:00,www.facebook.com,"**Important update from Tricare for MHS GENESIS Users** On Sept. 23, the MHS ... - Facebook",Not Available,,,,,https://www.facebook.com/MilSpouseAdvNet/posts/important-update-from-tricare-for-mhs-genesis-userson-sept-23-the-mhs-genesis-pa/1512190057612377/,"**Important update from Tricare for MHS GENESIS Users**
 
 On Sept. 23, the MHS GENESIS Patient Portal will be switching from DS Logon to myAuth. Read the...",Not Available,https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/817719520_1062919356617224_3004084314407324250_n.png?stp=dst-jpg_tt6&cstp=mx940x788&ctp=p600x600&_nc_cat=102&ccb=1-7&_nc_sid=cae128&_nc_ohc=bKfpd9Olfh8Q7kNvwHw2P8H&_nc_oc=AdpPcpQbmLqSIl283r2ckHtxyl9vWKOzUJroTieE3RJtGYKEp4gF15tzOFWqyVzKk2o&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=vEaVWkirqr_Netr1554opg&_nc_ss=7b289&oh=00_AQJGwws54o73Fop3anL-DzPhfAf15vO1U9cgAu_CWi1YnA&oe=6AB79A3F,N,0.0,2026-09-21 18:56:17.438746
@@ -1715,8 +1873,3 @@ My name is Jane and I am a board certified psychiatric mental health nurse pract
 I don’t have insurance through my civilian employer other than dental.
 I’m wondering if that’s it, and what to do about it?
 Tricare gave me a form to submit but they say it takes 60 days to process.","Has anyone had issues where Tricare all of a sudden started denying claims for “OHI/other health insurance”? I don’t have insurance through my civilian employer other than dental. I’m wondering if that’s it, and what to do about it? Tricare gave me a form to submit but they say it takes 60 days to process.",,N,-1.0,2026-09-20 19:56:18.620323
-,,2026-09-20 19:26:58+00:00,www.theladders.com,"Physician (Neurology) - Defense Health Agency - El Paso, TX | Ladders",,,,,,https://www.theladders.com/job/physician-neurology-defense-health-agency-el-paso-tx_88954965,"Defense Health Agency is hiring a Physician (Neurology), with an estimated salary of $165000 - $350000. This job in Hospitals & Medical Centers is ...",Not Available,,Y,0.0,2026-09-20 17:56:10.365263
-,,2026-09-20 18:21:33+00:00,Defense Logistics Agency,"Inaugural military medical supply chain, industry meeting reinforces warfighter readiness ...",Not Available,,,,,https://www.dla.mil/About-DLA/Images/igphoto/2003963492/,"An official form of the United States government.
-Provided by Touchpoints OMB Approval #0704-0670 · Expiration Date 09/30/2026","An official form of the United States government. Provided by Touchpoints
-
-OMB Approval #0704-0670 · Expiration Date 09/30/2026",https://media.defense.gov/2026/Jul/21/2003963492/1088/820/0/260714-D-LM182-2235.JPG,N,0.0,2026-09-20 23:56:12.186515
