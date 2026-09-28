@@ -1,4 +1,5 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,North Carolina American Energy ,2026-09-28 09:03:47+00:00,washingtonmonthly.com,Why Won't the Clean Energy Industry Play Dirty? | Washington Monthly,Not Available,,,,,https://washingtonmonthly.com/2026/09/28/why-wont-the-clean-energy-industry-play-dirty/,This will only take a few seconds...,This will only take a few seconds...,"data:;base64,=",N,,2026-09-28 05:59:04.159807
 ,North Carolina American Energy ,2026-09-28 08:07:45+00:00,Canary Media,The Senate wants to pass a permitting reform bill. So what's the holdup? - Canary Media,Not Available,,,,,https://www.canarymedia.com/articles/electrification/senate-permitting-reform-holdup,"A bipartisan group of senators says it has come closer than ever before to reaching a long-desired permitting reform bill, which would make it easier to build new energy projects.
 “If you phrase permitting reform as serving data centers, the polling results get way worse,” Lundry said.
 The potential bill represents one of the few points of agreement for Republicans and Democrats in Washington, which is that energy permitting is broken.
@@ -106,6 +107,63 @@ Without these standards, in 2035, cars could produce 22,111 more tons of carbon 
 Mileage standards, known as the corporate average fuel economy, or CAFE, have been implemented since the 1970s energy crisis, and over time, automakers have gradually improved their vehicles’ average efficiency.
 
 Copyright 2026 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.",https://www.usnews.com/dims4/USNEWS/7368976/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2Fd6%2F267fbdcbcea811f59080d9b707e782%2F66e77fdd89784b80a7d1cbabeb0f497eTrump_Gas_Mileage_26567.jpg,N,,2026-09-28 03:59:23.755176
+,Texas Environment,2026-09-28 07:14:43+00:00,UT San Antonio Today,"UT San Antonio researcher builds self-powered, smart warning system to catch local floods",Valerie Bustamante Johnson,,,,,https://news.utsa.edu/2026/09/ut-san-antonio-researcher-builds-self-powered-smart-warning-system-to-catch-local-floods/,"From coastal bends facing storm surges to low-water crossings in San Antonio, flood risks often spike block by block long before regional alerts sound.
+Researchers at The University of Texas at San Antonio have developed a self-sustaining, artificial intelligence-powered flood warning system designed to spot dangerous water accumulation at the street level.
+The challenge of hyper-local flooding in Texas Texas holds a well-earned reputation for extreme flood events.
+Off-grid power and long-range wireless communication To keep operating through heavy storms and overcast days, the sensing node relies on a self-sustaining solar power system.
+“The user doesn’t need to decipher raw data,” Pan said.","When sudden rainstorms roll across Texas, flooding can erupt in a matter of minutes. From coastal bends facing storm surges to low-water crossings in San Antonio, flood risks often spike block by block long before regional alerts sound. That means some people could have ankle-deep water in their yard by the time a flash flood warning notification sounds on their phone.
+
+But a better monitoring system could get the word out more swiftly — and also more accurately. Researchers at The University of Texas at San Antonio have developed a self-sustaining, artificial intelligence-powered flood warning system designed to spot dangerous water accumulation at the street level.
+
+Led by Chen Pan, PhD, assistant professor of electrical engineering in the Margie and Bill Klesse College of Engineering and Integrated Design, the team engineered a field-ready prototype that combines solar energy harvesting, multi-sensor environmental tracking, long-range wireless radios and on-device machine learning.
+
+“In many rural areas or coastal communities, power infrastructure can fail right when severe weather strikes,” said Pan, who directs the RISE Lab at UT San Antonio. “Our system is an off-grid solution. It generates its own power, evaluates flood risk locally right on the device and sends timely warnings without needing external electricity or expensive network lines.”
+
+The team includes Mimi Xie, assistant professor of computer science in the UT San Antonio College of AI, Cyber and Computing, as well as Texas A&M University-Corpus Christi collaborators Hua Zhang, professor of engineering, and Wenlu Wang, assistant professor of computer science.
+
+The challenge of hyper-local flooding in Texas
+
+Texas holds a well-earned reputation for extreme flood events. While regional weather models and satellite imaging offer essential big-picture forecasts, they can miss hyper-local flash floods. A drainage channel behind a neighborhood, an isolated rural dip or a campus access road might submerge rapidly while surrounding areas remain dry.
+
+Existing commercial flood-monitoring stations also come with drawbacks, from prohibitively high costs to reliance on grid power or frequent battery replacements, which leaves them vulnerable during multi-day storms or power outages.
+
+Pan’s team set out to engineer an inexpensive, all-in-one alternative. The resulting prototype combines temperature, humidity, light and precipitation sensing, as well as four optical water-level sensors mounted at varying heights.
+
+By analyzing multiple environmental factors simultaneously — an approach known as multi-modal sensing — the system achieves far greater reliability than traditional single-metric gauges.
+
+Putting artificial intelligence directly on tiny computer chips
+
+One of the system’s standout features is its exceptional computing power. Traditional Internet of Things (IoT) sensors simply collect raw data and transmit them to distant cloud servers for processing. If cell towers fail or internet connections drop during a storm, warning alerts stall.
+
+Pan’s system sidesteps this roadblock by using TinyML — a branch of computer science that compresses machine learning algorithms so they can run directly on small, low-power microcontrollers. This on-device AI evaluates current and recent sensor data to predict localized, imminent flood risk without relying on a central server.
+
+So far, the AI has performed well, achieving 98.82% validation accuracy in initial assessments post-training.
+
+Off-grid power and long-range wireless communication
+
+To keep operating through heavy storms and overcast days, the sensing node relies on a self-sustaining solar power system. An onboard power chip collects ambient light to charge a built-in battery and backup energy storage units, allowing the device to run indefinitely on a fraction of the energy used by a smartphone.
+
+When the station detects rising water risks, it sends lightweight radio signals using LoRa (Long Range) wireless technology. These low-power signals can travel more than a half-mile through city streets and up to five miles in open areas without needing cell towers or power lines. The data arrives instantly at a local central hub, where emergency teams can monitor conditions from miles away.
+
+Mapping flood paths for fast decision making
+
+At the central monitoring site, custom server software aggregates data from multiple deployed nodes across a town or watershed. A second, larger AI model analyzes spatial and temporal patterns across the network to generate an interactive web dashboard with predictive maps.
+
+“The user doesn’t need to decipher raw data,” Pan said. “The dashboard assesses risk levels and shows how flooding could spread across monitored locations, highlighting higher-risk zones so local officials can act quickly.”
+
+This flood-path visualization supports emergency responders as they make crucial decisions, such as dispatching crews, closing dangerous roads or issuing targeted neighborhood warnings long before floodwaters peak.
+
+From prototype to product
+
+To keep the system affordable, Pan used commercially available, low-cost components. The total cost of parts for one prototype sensing station ranges from roughly $150 to $220.
+
+Pan is currently pursuing patent protection for the hardware architecture. The team aims to refine the design into a sleeker, weatherized commercial product suitable for deployment by small coastal municipalities, homeowners’ associations, agricultural operations and industrial sites.
+
+“Our ultimate goal is to get this technology deployed where it’s needed most,” Pan said. “Whether along the Gulf Coast, across rural Texas counties or in urban drainage basins, smart self-powered sensing can give communities the early awareness they need to stay safe.”
+
+This project was funded in part by a Texas Coastal Management Program grant approved by the Texas Land Commissioner, providing financial assistance under the Coastal Zone Management Act of 1972, as amended, awarded by the National Oceanic and Atmospheric Administration (NOAA), Office for Coastal Management, pursuant to NOAA Award No. NA23NOS4190249.
+
+The views expressed herein are those of the author(s) and do not necessarily reflect the views of NOAA, the U.S. Department of Commerce, or any of their subagencies.",https://news.utsa.edu/wp-content/uploads/2026/09/flood-street-in-houston.jpg,N,,2026-09-28 05:58:55.468256
 ,Texas American Energy ,2026-09-28 07:14:29+00:00,IIR Energy,U.S. Boosts T&D Overhauls with SPARK Investments - Industrial Info Resources,"William Ploch, IIR Energy",,,,,https://www.industrialinfo.com/iirenergy/industry-news/article/us-boosts-td-overhauls-with-spark-investments--362967,"Want More IIR News Intelligence?
 Make us a Preferred Source on Google to see more of us when you search.
 Add Us On Google Ask Us Have a question for our staff?
@@ -721,8 +779,8 @@ Some companies, however, are continuing to introduce new EVs. Ford signalled it 
 Ultimately, the outlook is read as an assessment of whether the U.S. EV market can continue to grow despite policy rollbacks. The researchers judged that while reduced tax benefits and eased regulations do slow adoption, improved price competitiveness and charging convenience could still expand EVs to about one-third of the new-car market in 2030.",https://cdn.digitaltoday.co.kr/news/photo/202609/703151_650867_138.jpg,N,,2026-09-27 23:58:29.476649
 ,Indiana Environment,2026-09-28 03:07:52+00:00,Fort Wayne Journal Gazette,Northeast Indiana team places in top 15 at international environmental competition | Schools,"Ashley Sloboda, The Journal Gazette",,,,,https://www.journalgazette.net/local/schools/education-notebook-northeast-indiana-team-places-in-top-15-at-international-environmental-competition/article_c9a94f5f-ab54-45f7-a002-7bc13fe022a8.html,The northeast Indiana high schoolers who represented the state at an international environmental education competition placed 14th of about 40 teams.,Not Available,https://bloximages.chicago2.vip.townnews.com/journalgazette.net/content/tncms/assets/v3/editorial/0/f0/0f0f0308-0b60-4a4c-afb9-0699992fe55d/6ab5584581e33.image.jpg?crop=1228%2C645%2C19%2C622&resize=1200%2C630&order=crop%2Cresize,N,,2026-09-28 01:00:03.815453
 ,Indiana Environment,2026-09-28 02:37:28+00:00,The Killeen Daily Herald,"GOP, Democratic voters are aligned on the environment in Colorado's battleground district ...",Not Available,,,,,https://kdhnews.com/news/politics/gop-democratic-voters-are-aligned-on-the-environment-in-colorado-s-battleground-district-poll-shows/article_39d33ed4-c2fc-56c1-8c2b-5bf963d05713.html,DENVER — Solid majorities of voters on both sides of the political aisle in Colorado’s tightly split 8th Congressional District favor stricter government regulations and tax incentives to combat environmental,Not Available,https://bloximages.newyork1.vip.townnews.com/kdhnews.com/content/tncms/custom/image/d24d118c-8888-11e9-94c1-a36b64682479.jpg?resize=600%2C315,N,,2026-09-28 01:00:07.917219
-,Clean Energy ,2026-09-28 02:20:43+00:00,nz.seek.com,"Renewable Energy Jobs in Burnham Canterbury, Job Vacancies - Sep 2026 | SEEK",Not Available,,,,,https://nz.seek.com/renewable-energy-jobs/in-Burnham-Canterbury,Find your ideal job at SEEK with 79 Renewable Energy jobs found in Burnham Canterbury. View all our Renewable Energy vacancies now with new jobs ...,Not Available,,N,,2026-09-28 05:00:15.296650
 ,Clean Energy ,2026-09-28 02:20:43+00:00,nz.seek.com,"Renewable Energy Jobs in Linton Manawatu, Job Vacancies - Sep 2026 | SEEK",Not Available,,,,,https://nz.seek.com/renewable-energy-jobs/in-Linton-Manawatu,Find your ideal job at SEEK with 25 Renewable Energy jobs found in Linton Manawatu. View all our Renewable Energy vacancies now with new jobs ...,Not Available,,N,,2026-09-27 23:59:02.007384
+,Clean Energy ,2026-09-28 02:20:43+00:00,nz.seek.com,"Renewable Energy Jobs in Burnham Canterbury, Job Vacancies - Sep 2026 | SEEK",Not Available,,,,,https://nz.seek.com/renewable-energy-jobs/in-Burnham-Canterbury,Find your ideal job at SEEK with 79 Renewable Energy jobs found in Burnham Canterbury. View all our Renewable Energy vacancies now with new jobs ...,Not Available,,N,,2026-09-28 05:00:15.296650
 ,North Carolina and Evs,2026-09-28 01:58:39+00:00,www.wnylabortoday.com,GM & Ford 'Launch New Apprenticeship Initiatives To Tackle Mechanic Shortage',Not Available,,,,,https://www.wnylabortoday.com/news/2026/09/27/apprenticeship-and-training-news/gm-ford-launch-new-apprenticeship-initiatives-to-tackle-mechanic-shortage/,"The U.S. Auto Repair Sector is experiencing a persistent annual shortage of 20,000 to 70,000 technicians.
 This gap affects the industry's ability to meet repair demand and maintain service capacity across both franchised dealerships and independent shops.
 Farley’s comments highlight the severity of the labor gap in Blue-Collar professions.
@@ -7279,6 +7337,43 @@ CLICK HERE TO DOWNLOAD THE FOX NEWS APP
 
 ""It really is important that we start ringing the alarm bells now before these things actually come to pass and American families have to foot the bill for it,"" he said.",https://static.foxnews.com/foxnews.com/content/uploads/2026/06/north-dakota-energy.png,N,,2026-09-26 09:59:30.139278
 ,American Energy,2026-09-26 11:16:41+00:00,www.adirondackexplorer.org,New York state energy experts give overview on data centers in rural areas,Not Available,,,,,https://www.adirondackexplorer.org/environment/energy/new-york-state-energy-experts-give-overview-on-data-centers-in-rural-areas/,This will only take a few seconds...,This will only take a few seconds...,"data:;base64,=",N,,2026-09-26 18:05:20.126730
+,North Carolina Environment,2026-09-26 11:16:14+00:00,Raleigh News & Observer,"Amazon, Duke won permits for hundreds of generators. Opponents aren't done yet.",Lily Carey,,,,,https://www.newsobserver.com/news/business/article317387054.html,"A planned Amazon data center is facing a challenge to its intention to use nearly 650 diesel generators as temporary and backup power.
+Amazon plans to build the data center right next to Duke Energy’s natural gas power plant in Richmond County.
+Amazon recently secured an air quality permit to operate 588 diesel generators as backup power, which would be used in case of a power outage.
+The petitions argue that state officials made a mistake when they issued the air quality permits, and asks the state to revoke the permits.
+If put together, the total air pollutants from all 645 diesel generators would subject them to stricter requirements, Cress argued.","A planned Amazon data center is facing a challenge to its intention to use nearly 650 diesel generators as temporary and backup power.
+
+The Southern Environmental Law Center, on behalf of a local activist group in Richmond County, has asked state officials to host another hearing about two air quality permits that were recently awarded to Amazon and Duke Energy for the diesel generators.
+
+Amazon plans to build the data center right next to Duke Energy’s natural gas power plant in Richmond County. Amazon recently secured an air quality permit to operate 588 diesel generators as backup power, which would be used in case of a power outage.
+
+Duke Energy got a separate air quality permit to operate another 57 diesel generators, which it will use to temporarily power the data center for its first several months of operation before it’s fully connected to Duke’s electric grid.
+
+Richmond County residents have criticized the project, saying the diesel generators will increase air pollution in a community that’s already facing poor air quality and above-average rates of respiratory health problems.
+
+In two petitions filed to the North Carolina Office of Administrative Hearings on Friday, the SELC said that, by splitting the 600-plus diesel generators into two separate air quality permits, Duke and Amazon are “illegally evading requirements of the Clean Air Act,” and downplaying the level of pollutants that the entire project will emit.
+
+The petitions argue that state officials made a mistake when they issued the air quality permits, and asks the state to revoke the permits.
+
+“In our community already exposed to multiple air pollution sources and struggling for access to healthcare, what happens to people when one of the world’s wealthiest companies spews even more harmful pollution from 649 diesel-fired generators for its data center?” said Shaun Ingram, co-founder of the Richmond County Coalition for Justice and Black Empowerment, in a Friday news release.
+
+State officials have said that Duke and Amazon’s air quality permits should be reviewed separately because Duke’s diesel generators will not be running at the same time as Amazon’s. The 57 diesel generators sought by Duke will only power the data center until it’s fully connected to the electric grid, and the 588 diesel generators sought by Amazon will serve as backup power after the project connects to the grid.
+
+When issuing the air quality permits last month, officials also said the two companies’ permits should be separate because they “are not under the control of the same company and the two permits serve different purposes on different time horizons.”
+
+However, the SELC reviewed a contract between Duke and Amazon that would give Amazon some control over when Duke’s diesel generators operate, according to their petition. Attorney Caroline Cress argued that that contract means they should be considered as part of the same project.
+
+Officials from the N.C. Department of Environmental Quality told Cress they had not reviewed the contract between Duke and Amazon, according to the petition.
+
+If put together, the total air pollutants from all 645 diesel generators would subject them to stricter requirements, Cress argued. Amazon would have to collect data on existing air quality in Richmond County, and submit detailed information on how it plans to limit pollution, among other things.
+
+However, state officials said last month that the diesel generators are under stricter air pollution limits because they’re being reviewed separately.
+
+Amazon’s hyperscale data center has been celebrated by state and local officials. The $10 billion project, hailed as the biggest capital investment in state history, would bring an estimated 500 jobs to the county.
+
+Under an incentive agreement Amazon entered with the county, the company is only required to spend $1 billion and hire 50 full-time workers at the site by the end of 2030 in order to receive tax breaks, The N&O reported when the project was announced last year. Amazon can receive 50% property tax and 65% personal property tax relief from Richmond County over a 20-year grant.
+
+The challenge from environmental groups also comes a week after state regulators rejected Duke Energy’s plan to expand the natural gas plant that’s next to the future data center. Duke has said it needs to build more power plants to fuel estimated demand from data centers, but regulators said they can’t yet confirm if Duke’s estimates are accurate.",https://www.newsobserver.com/public/latest-news/vd2f51/picture316727757/alternates/LANDSCAPE_1200/Amazon%20Data%20Center%202.jpg,N,,2026-09-26 10:59:58.436005
 ,North Carolina Environment,2026-09-26 11:16:14+00:00,Raleigh News & Observer,"Amazon, Duke won permits for hundreds of generators. Opponents aren't done yet.",Lily Carey,,,,,https://amp.newsobserver.com/news/business/article317387054.html,"A planned Amazon data center is facing a challenge to its intention to use nearly 650 diesel generators as temporary and backup power.
 Amazon plans to build the data center right next to Duke Energy’s natural gas power plant in Richmond County.
 The petitions argue that state officials made a mistake when they issued the air quality permits, and asks the state to revoke the permits.
@@ -7322,43 +7417,6 @@ The challenge from environmental groups also comes a week after state regulators
 This story is available free to all readers thanks to financial support from the Hartfield Foundation and Green South Foundation, in partnership with Journalism Funding Partners, as part of an independent journalism fellowship program. The N&O maintains full editorial control of the work. If you would like to help support local journalism, please consider a digital subscription, which you can get here.
 
 This story was originally published September 26, 2026 7:00 AM.",https://www.newsobserver.com/public/latest-news/vd2f51/picture316727757/alternates/LANDSCAPE_1200/Amazon%20Data%20Center%202.jpg,N,,2026-09-26 15:05:10.373872
-,North Carolina Environment,2026-09-26 11:16:14+00:00,Raleigh News & Observer,"Amazon, Duke won permits for hundreds of generators. Opponents aren't done yet.",Lily Carey,,,,,https://www.newsobserver.com/news/business/article317387054.html,"A planned Amazon data center is facing a challenge to its intention to use nearly 650 diesel generators as temporary and backup power.
-Amazon plans to build the data center right next to Duke Energy’s natural gas power plant in Richmond County.
-Amazon recently secured an air quality permit to operate 588 diesel generators as backup power, which would be used in case of a power outage.
-The petitions argue that state officials made a mistake when they issued the air quality permits, and asks the state to revoke the permits.
-If put together, the total air pollutants from all 645 diesel generators would subject them to stricter requirements, Cress argued.","A planned Amazon data center is facing a challenge to its intention to use nearly 650 diesel generators as temporary and backup power.
-
-The Southern Environmental Law Center, on behalf of a local activist group in Richmond County, has asked state officials to host another hearing about two air quality permits that were recently awarded to Amazon and Duke Energy for the diesel generators.
-
-Amazon plans to build the data center right next to Duke Energy’s natural gas power plant in Richmond County. Amazon recently secured an air quality permit to operate 588 diesel generators as backup power, which would be used in case of a power outage.
-
-Duke Energy got a separate air quality permit to operate another 57 diesel generators, which it will use to temporarily power the data center for its first several months of operation before it’s fully connected to Duke’s electric grid.
-
-Richmond County residents have criticized the project, saying the diesel generators will increase air pollution in a community that’s already facing poor air quality and above-average rates of respiratory health problems.
-
-In two petitions filed to the North Carolina Office of Administrative Hearings on Friday, the SELC said that, by splitting the 600-plus diesel generators into two separate air quality permits, Duke and Amazon are “illegally evading requirements of the Clean Air Act,” and downplaying the level of pollutants that the entire project will emit.
-
-The petitions argue that state officials made a mistake when they issued the air quality permits, and asks the state to revoke the permits.
-
-“In our community already exposed to multiple air pollution sources and struggling for access to healthcare, what happens to people when one of the world’s wealthiest companies spews even more harmful pollution from 649 diesel-fired generators for its data center?” said Shaun Ingram, co-founder of the Richmond County Coalition for Justice and Black Empowerment, in a Friday news release.
-
-State officials have said that Duke and Amazon’s air quality permits should be reviewed separately because Duke’s diesel generators will not be running at the same time as Amazon’s. The 57 diesel generators sought by Duke will only power the data center until it’s fully connected to the electric grid, and the 588 diesel generators sought by Amazon will serve as backup power after the project connects to the grid.
-
-When issuing the air quality permits last month, officials also said the two companies’ permits should be separate because they “are not under the control of the same company and the two permits serve different purposes on different time horizons.”
-
-However, the SELC reviewed a contract between Duke and Amazon that would give Amazon some control over when Duke’s diesel generators operate, according to their petition. Attorney Caroline Cress argued that that contract means they should be considered as part of the same project.
-
-Officials from the N.C. Department of Environmental Quality told Cress they had not reviewed the contract between Duke and Amazon, according to the petition.
-
-If put together, the total air pollutants from all 645 diesel generators would subject them to stricter requirements, Cress argued. Amazon would have to collect data on existing air quality in Richmond County, and submit detailed information on how it plans to limit pollution, among other things.
-
-However, state officials said last month that the diesel generators are under stricter air pollution limits because they’re being reviewed separately.
-
-Amazon’s hyperscale data center has been celebrated by state and local officials. The $10 billion project, hailed as the biggest capital investment in state history, would bring an estimated 500 jobs to the county.
-
-Under an incentive agreement Amazon entered with the county, the company is only required to spend $1 billion and hire 50 full-time workers at the site by the end of 2030 in order to receive tax breaks, The N&O reported when the project was announced last year. Amazon can receive 50% property tax and 65% personal property tax relief from Richmond County over a 20-year grant.
-
-The challenge from environmental groups also comes a week after state regulators rejected Duke Energy’s plan to expand the natural gas plant that’s next to the future data center. Duke has said it needs to build more power plants to fuel estimated demand from data centers, but regulators said they can’t yet confirm if Duke’s estimates are accurate.",https://www.newsobserver.com/public/latest-news/vd2f51/picture316727757/alternates/LANDSCAPE_1200/Amazon%20Data%20Center%202.jpg,N,,2026-09-26 10:59:58.436005
 ,EVs,2026-09-26 11:04:13+00:00,Electric Cars Report,GM Completes Closed-Loop EV Battery Recycling Pilot - Electric Cars Report,"www.facebook.com, Blagojce Krivevski",,,,,https://electriccarsreport.com/2026/09/gm-completes-closed-loop-ev-battery-recycling-pilot-with-100-recycled-metals/,"General Motors has completed a major closed-loop EV battery recycling pilot that demonstrates how materials recovered from end-of-life electric vehicle batteries can be used to build new EV batteries.
 The recycled materials came from end-of-life GM EV battery packs, marking an important step toward a more circular domestic battery supply chain.
 How GM’s closed-loop battery recycling works The process began with 80 end-of-life GM EV batteries collected for the pilot.
@@ -9465,19 +9523,6 @@ On the demand side, sales taxes on EVs and duties on lithium-ion cell imports ha
 Innovation Policy
 
 R&D funding has primarily been allocated to battery testing or recycling and swapping rather than to advanced chemistries. The MEITy, the ministry responsible for most battery innovation, has sought to facilitate research and commercialization through Centres of Excellence (CoEs) administered in cooperation with private partners. They transfer their research to industry partners and also offer pilot",https://assets.carnegieendowment.org/_/eyJrZXkiOiJpbWFnZXMvQ09NUC1pc3RvY2twaG90by0xODAyMzMyNTU1LTEwMjR4MTAyNC5qcGcifQ==,N,,2026-09-26 14:00:40.407908
-,Congress,2026-09-25 22:50:22+00:00,League of Conservation Voters,Senate Vote on Ratepayer Protection Act Can't be 'Mission Accomplished',Not Available,,,,,https://www.lcv.org/media-center/senate-vote-on-ratepayer-protection-act-cant-be-mission-accomplished/,"“Under pressure from Big Tech, states could easily ignore this bill entirely.
-Senators who are serious about lowering energy bills and protecting communities should stop pretending this bill is enough, and instead support solutions that provide real accountability, like Senator Heinrich’s GRID Savings Act— a bill Republican Senators blocked from passing last week.
-They also shouldn’t have voted for tax breaks for data centers in their Big Ugly Bill in the first place.
-“As we said before the House voted on this bill, the job isn’t done until we have binding protections for public health and the environment, real input and benefits for communities hosting these facilities, and financial responsibility squarely where it belongs: on the industry, not ratepayers.
-To pass this and declare ‘mission accomplished’ would be an insult to a public who understands that their very real concerns about data centers cannot be addressed with such a weak promise and no follow-through.” ###","Washington, D.C. — With the Senate next week potentially voting on the Ratepayer Protection Act, introduced by Republican Senator Jon Husted, the League of Conservation Voters (LCV) issued the following statement from Vice President of Federal Policy, Matthew Davis:
-
-“Let’s be clear, a bill that simply asks states to ‘consider’ making standards for passing along energy costs from data centers does not fix what families are facing, and it does not address the real threats posed by unchecked data center growth.
-
-“Under pressure from Big Tech, states could easily ignore this bill entirely. Senators who are serious about lowering energy bills and protecting communities should stop pretending this bill is enough, and instead support solutions that provide real accountability, like Senator Heinrich’s GRID Savings Act— a bill Republican Senators blocked from passing last week. They also shouldn’t have voted for tax breaks for data centers in their Big Ugly Bill in the first place.
-
-“As we said before the House voted on this bill, the job isn’t done until we have binding protections for public health and the environment, real input and benefits for communities hosting these facilities, and financial responsibility squarely where it belongs: on the industry, not ratepayers. To pass this and declare ‘mission accomplished’ would be an insult to a public who understands that their very real concerns about data centers cannot be addressed with such a weak promise and no follow-through.”
-
-###",https://www.lcv.org/wp-content/uploads/2023/03/LCV-Social-Share.png,N,,2026-09-25 21:00:32.366216
 ,Congress,2026-09-25 22:50:22+00:00,League of Conservation Voters,"THIS WEEK IN CLIMATE ACTION - SEPTEMBER 25, 2026 - League of Conservation Voters",Not Available,,,,,https://www.lcv.org/media-center/this-week-in-climate-action-september-25-2026/,"The order establishes a Data Center Task Force and a Data Center Dashboard to make project information accessible to the public, including power demand and water use.
 MDLCV TAKE: Maryland LCV said, “Maryland LCV applauds Governor Moore for his Executive Order on Responsible Data Center Development.
 Meanwhile, Americans have paid the price of higher energy costs and increasing climate-related damage as Trump attacks renewables and props up dirty energy.
@@ -9591,6 +9636,19 @@ OCTOBER 12: Indigenous People’s Day.
 OCTOBER 24: National Vote Early Day.
 
 NOVEMBER 2: Comment period closes on EPA’s proposal to not limit any climate pollution.",https://www.lcv.org/wp-content/uploads/2026/02/LCV-Congress.jpg,N,,2026-09-25 23:00:21.532112
+,Congress,2026-09-25 22:50:22+00:00,League of Conservation Voters,Senate Vote on Ratepayer Protection Act Can't be 'Mission Accomplished',Not Available,,,,,https://www.lcv.org/media-center/senate-vote-on-ratepayer-protection-act-cant-be-mission-accomplished/,"“Under pressure from Big Tech, states could easily ignore this bill entirely.
+Senators who are serious about lowering energy bills and protecting communities should stop pretending this bill is enough, and instead support solutions that provide real accountability, like Senator Heinrich’s GRID Savings Act— a bill Republican Senators blocked from passing last week.
+They also shouldn’t have voted for tax breaks for data centers in their Big Ugly Bill in the first place.
+“As we said before the House voted on this bill, the job isn’t done until we have binding protections for public health and the environment, real input and benefits for communities hosting these facilities, and financial responsibility squarely where it belongs: on the industry, not ratepayers.
+To pass this and declare ‘mission accomplished’ would be an insult to a public who understands that their very real concerns about data centers cannot be addressed with such a weak promise and no follow-through.” ###","Washington, D.C. — With the Senate next week potentially voting on the Ratepayer Protection Act, introduced by Republican Senator Jon Husted, the League of Conservation Voters (LCV) issued the following statement from Vice President of Federal Policy, Matthew Davis:
+
+“Let’s be clear, a bill that simply asks states to ‘consider’ making standards for passing along energy costs from data centers does not fix what families are facing, and it does not address the real threats posed by unchecked data center growth.
+
+“Under pressure from Big Tech, states could easily ignore this bill entirely. Senators who are serious about lowering energy bills and protecting communities should stop pretending this bill is enough, and instead support solutions that provide real accountability, like Senator Heinrich’s GRID Savings Act— a bill Republican Senators blocked from passing last week. They also shouldn’t have voted for tax breaks for data centers in their Big Ugly Bill in the first place.
+
+“As we said before the House voted on this bill, the job isn’t done until we have binding protections for public health and the environment, real input and benefits for communities hosting these facilities, and financial responsibility squarely where it belongs: on the industry, not ratepayers. To pass this and declare ‘mission accomplished’ would be an insult to a public who understands that their very real concerns about data centers cannot be addressed with such a weak promise and no follow-through.”
+
+###",https://www.lcv.org/wp-content/uploads/2023/03/LCV-Social-Share.png,N,,2026-09-25 21:00:32.366216
 ,Clean Energy ,2026-09-25 22:48:40+00:00,biomassmagazine.com,Clean Energy closes $30.7 million tax credit sale from its RNG portfolio | Biomass Magazine,Not Available,,,,,https://biomassmagazine.com/articles/clean-energy-closes-307-million-tax-credit-sale-from-its-rng-portfolio,"Clean Energy Fuels Corp. announced that it has completed the sale of $30.7 million in federal tax credits generated by seven of its renewable natural gas (RNG) production facilities.
 The sale marks Clean Energy's fourth successful transaction monetizing credits from its RNG projects.
 The largest credit in the transaction is the $26 million investment tax credit (ITC) tied to South Fork Dairy, Clean Energy's RNG facility in Dimmit, Texas, which began producing RNG in 2025.
@@ -14128,335 +14186,3 @@ Meanwhile, 81% of voters in the district want the government to require that new
 
 Late last year, the Trump administration proposed substantially weakening fuel efficiency standards for new vehicles from the levels the Biden administration established.",https://www.timescall.com/wp-content/uploads/2023/05/TDP-L-Greeley-Oil-RJS-24967-1.jpg?w=2000&h=1274,N,,2026-09-25 10:00:36.589184
 ,EPA,2026-09-25 10:00:54+00:00,www.facebook.com,The Trump administration has begun shutting down an EPA lab in Houston without a clear ...,Not Available,,,,,https://www.facebook.com/houstonchronicle/posts/the-trump-administration-has-begun-shutting-down-an-epa-lab-in-houston-without-a/1533618122115654/,The Trump administration has begun shutting down an EPA lab in Houston without a clear plan on how to manage testing for air and water pollution from the...,Not Available,https://external-iad3-1.xx.fbcdn.net/emg1/v/t13/1319040078984085118?url=https%3A%2F%2Fimage.trueanthem.com%2Foeb4voEe-rnau-MdnjmjQmWL23qYS0c6Z4uVo5DJFCc%2Fwidth%3A1200%2Fheight%3A0%2Fmb%3A8000000%2Fext%3Ajpg%2FaHR0cHM6Ly9zLmhkbnV4LmNvbS9waG90b3MvMDEvNjcvMjAvNDUvMzEyNjMwNDgvNS9yYXdJbWFnZS5qcGc.jpg&fb_obo=1&utld=trueanthem.com&dfr=1&_nc_sid=867500&_nc_ht=external-iad3-1.xx.fbcdn.net&stp=dst-jpg_p600x600_tt6&ccb=18-1&_nc_gid=QaRxKUaN7V4f5IIq48q1Rw&_nc_zt=3&oh=06_Q3_DAd6f6e-O6WIxq8UD8KfD3ZZsGF46AP4-m3DDdEm_LHFT&oe=6AB84C26,N,,2026-09-25 07:00:55.139399
-,Indiana Environment,2026-09-25 09:56:31+00:00,evanstonnow.com,Environment panel wants alders to consider data center moratorium - Evanston Now,Not Available,,,,,https://evanstonnow.com/environment-panel-wants-alders-to-consider-data-center-moratorium/,This will only take a few seconds...,This will only take a few seconds...,"data:;base64,=",N,,2026-09-25 07:02:00.866962
-,North Carolina and Evs,2026-09-25 09:53:09+00:00,paenvironmentdaily.blogspot.com,Lancaster County Solar Expert Opens His Net-Zero Home For The ASES 2026 National ...,"David E. Hess, View my complete profile",,,,,http://paenvironmentdaily.blogspot.com/2026/09/lancaster-county-solar-expert-opens-his.html,"The free, open-house-style event is part of the annual National Solar Tour hosted by the American Solar Energy Society October 2-4.
-The all-electric home has no propane or natural gas connection and produces enough renewable energy to offset its energy consumption.
-Founded in 1954, the American Solar Energy Society is a nonprofit organization that advocates for sustainable living and 100% renewable energy.
-Each year, ASES hosts the National Solar Tour to promote renewable energy and increase the adoption of solar energy.
-Visit the National Solar Tour website for more information on tours.","The free, open-house-style event is part of the annual National Solar Tour hosted by the American Solar Energy Society October 2-4.
-
-Visitors will have the opportunity to tour a net-zero home, speak directly to an experienced solar installer, and learn how solar power and other renewable energy technologies can work together in a home.
-
-The home features rooftop, pergola, and awning solar, battery backup, electric vehicle charging, three heat pumps, interior daylight features, and air-quality monitoring.
-
-The all-electric home has no propane or natural gas connection and produces enough renewable energy to offset its energy consumption.
-
-Founded in 1954, the American Solar Energy Society is a nonprofit organization that advocates for sustainable living and 100% renewable energy.
-
-Each year, ASES hosts the National Solar Tour to promote renewable energy and increase the adoption of solar energy.
-
-Running from October 2-4 this year in-person and virtual with stops across the country, the National Solar Tour is the largest grassroots solar and sustainable-living event in the nation.
-
-Participants will be able to see solar systems firsthand and talk about installers, financing, regulations, EVs, and more throughout the tour.
-
-For Zook, the tour is an opportunity to build more relationships with those interested in solar and renewable energy in his community.
-
-“We hope visitors leave with a better understanding of what goes into a net-zero home and how all the different systems and technologies work together,” Zook said. “More than anything, we want people to feel comfortable asking questions and exploring what may be possible for their own homes.”
-
-The tour comes as Belmont Solar celebrates its 25th anniversary. Zook founded the company in 2001 after combining solar panels with batteries to create an off-grid power supply.
-
-Since then, Belmont Solar has grown from its off-grid roots to provide grid-tied solar, battery storage, electric vehicle charging, agricultural solar, and other renewable-energy solutions throughout the Mid-Atlantic.
-
-“When we started, there was still so much about solar that we had to learn,” Zook said. “Over the past 25 years, it has been exciting to see our team grow, take on new technologies, and help more people understand what solar can do. Education and personal connections have always been an important part of that work, which is why events like the National Solar Tour are so valuable.”
-
-Visitors can stop by during the open-house hours to explore the home’s energy systems and ask Zook questions about solar power, battery storage, net-zero living, and the considerations involved in bringing renewable energy into their own homes.
-
-Click Here to take a video tour of the home.
-
-To learn more about the event, including location and attendance information, visit Belmont Solar’s website.
-
-Visit the National Solar Tour website for more information on tours. Click Here to find tour locations near you.
-
-Related Articles This Week:
-
--- PUC: Fewer, But Bigger Power Outages Impacted Nearly 2.9 Million Electric Customers In 2025, The Same As In 2024; But More Than Double The Number Of Customers Were Impacted By Major Outage Events [PaEN]
-
--- Centre County Recycling & Refuse Authority Unveils New Interactive Solar Energy Display To Bring Renewable Energy To Life; Recycling Mini-Grant Applications Due Dec. 31 [PaEN]
-
-NewsClips:
-
--- Post-Gazette: Home Heating Oil Prices In Western PA Have Ballooned, Diesel Prices Are Highest In 48 Years
-
--- TribLive: $6 Per Gallon: Heating Oil Prices Spike As Global Supply Chokes
-
--- Utility Dive: North Carolina Utility Regulator Denies Duke Energy Natural Gas Power Plant Over ‘Staggering’ Cost, Uncertain Need
-
--- TribLive Guest Essay: West Virginia Lawsuit Over Free Markets For PA Alternative Energy Credits Is An Attack On Coal-Refuse Power Plants - By Shawn Steffee, Boilermakers Union
-
--- Utility Dive: Federal Judge Restores $7 Billion Solar For All Programs, Says EPA Illegally Axed It [Pennsylvania Awarded $156 Million Thru The Program ]",https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsghb75qsvmi09tp2_MQtNKq_3XCb8eV_t6_P8epH7p8dtiB8Wu1YK0kz21rTH9HiQxUzF6juYRrPMe6MbbgJoJovaOVGtQr1ilIfvlaLQg4Ta9-7YranwbU3GzBbwwRIYRQGCUasy11c0chtLRd3lfT-SPRkVlgUzdoSndklOvHLh_jErp4dTrl5aXJNn/w1200-h630-p-k-no-nu/ZookSolarhome.jpg,N,,2026-09-25 11:05:25.139381
-,American Energy,2026-09-25 09:02:32+00:00,Inside Climate News,Indian Point Energy Center's Uncertain Future - Inside Climate News,"Derek Harrison, Leana Carbonez, Martha Pskowski",,,,,https://insideclimatenews.org/news/25092026/new-york-indian-point-nuclear-future/,"Her cabin lay just half a mile from Indian Point Energy Center, a nuclear power plant on the river’s eastern bank.
-Indian Point, she later learned, had possibly been considered as a target by the 9/11 hijackers.
-Nuclear energy sits firmly under Lawler’s “all-of-the-above” energy strategy to improve grid reliability and lower utility costs.
-It was then that she became involved, first in the pipeline fight, then in the battle over Indian Point.
-However, despite Hochul’s broader support for expanding nuclear energy, she has remained opposed to reopening Indian Point, and any future nuclear use of the site would require state approval.","NY-17: Second in a series on the environmental stakes of one of the nation’s most fiercely contested congressional races.
-
-Nancy Vann’s resolve has become the subject of a local jingle. Its chorus goes: “If she can do it, so can we.”
-
-Vann, 78, moved to Peekskill, 40 miles north of New York City, after September 11, 2001. Brown & Wood, the law firm at which she worked, occupied five floors of the World Trade Center. She watched both towers fall before her 10:30 a.m. call-in.
-
-Over the next 10 years, her dawn and sunset hours were spent on the Metro-North, a commuter railroad, the Hudson River unspooled alongside.
-
-Vann was no stranger to the Hudson Valley; since the late ‘90s, she had owned a summer cabin in a co-op community in neighbouring Buchanan. Her cabin lay just half a mile from Indian Point Energy Center, a nuclear power plant on the river’s eastern bank. Indian Point, she later learned, had possibly been considered as a target by the 9/11 hijackers.
-
-The nuclear plant, formerly owned by Louisiana-based Entergy, and since acquired by Holtec International, is presently being decommissioned, the years-long process of permanently retiring a facility. How that process is going and what, exactly, it might lead to are points of contention as the Trump administration aggressively pushes a rebirth for America’s nuclear industry.
-
-That debate has become particularly fraught in New York’s 17th Congressional District, where the plant’s future could become an issue in one of the most closely contested House races this November.
-
-Susan Shapiro, an environmental attorney and resident of the district, called Indian Point “the elephant in the room in our region.”
-
-Candidates have opposing views on what should become of the site. Cait Conley, the Democratic challenger, wishes to see the decommissioning progress, while incumbent Republican Mike Lawler, a veteran party official in New York, has advocated for Indian Point’s reopening, and recently took Department of Energy Secretary Chris Wright to the site.
-
-“The fact is, there’s no better-positioned site for energy generation in the Hudson Valley than Indian Point,” he told the New York Post in a recent interview.
-
-Nuclear energy sits firmly under Lawler’s “all-of-the-above” energy strategy to improve grid reliability and lower utility costs. Conley, meanwhile, is not decidedly anti-nuclear, but calls the site “broken and decrepit” on her campaign website, which lists “Stopping Mike Lawler’s drive to reopen Indian Point” as a policy priority. A decorated combat veteran and national security official in the Biden administration, she has not publicly taken a position on the plant’s decommissioning.
-
-“I really wanted the Democrats to weigh in on this, but they seemed to be avoiding it,” said Erik Lindberg, a resident of Peekskill.
-
-With Republicans controlling the House by a narrow 218-213 margin, Democrats’ chances for retaking the chamber are considered good—and this district, in the affluent suburbs of New York City, is considered one of their best chances for picking up a Republican-held seat. Whether nuclear power becomes a decisive issue may depend on how voters weigh its potential benefits for energy costs against concerns about public health.
-
-Vann had never paid close attention to Indian Point, or the nuclear issue, until 2014, when she read that Enbridge, a major Calgary-based pipeline company, planned to build a 42-inch gas pipeline beneath her property. It was also within roughly 100 feet of the nuclear plant’s emergency backup generators and switchyard. It was then that she became involved, first in the pipeline fight, then in the battle over Indian Point.
-
-Today, she sits in on six to seven weekly calls about nuclear sites in various stages of transition. There are plants undergoing decommissioning, like Indian Point and San Onofre, in California; others, once slated for closure, that remain in operation, like California’s Diablo Canyon; and “zombie nukes,” like Michigan’s Palisades and Pennsylvania’s Three Mile Island, that are today being brought back online following permanent shutdown. In New York, Gov. Kathy Hochul ordered the construction of an “advanced nuclear power plant,” the first in decades.
-
-Indian Point occupies one of the most densely populated nuclear sites in the United States, with roughly 20 million people within a 50-mile radius. The reactors sit near the Ramapo Fault, a minor seismic zone. They used the Hudson River for cooling water and the controlled release of wastewater.
-
-The strong activist base in the community has long made for an activist versus industry dynamic. In turn, they have been blamed for the plant’s closure.
-
-Ultimately, Indian Point’s unsustainable operating costs led to its shutdown in 2021. Entergy also faced years of litigation over the plant’s license renewal, including lawsuits brought by New York State and environmental groups like Riverkeeper.
-
-Over the years, the plant leaked radioactive waste into groundwater, vented an estimated 600,000 gallons of radioactive steam into the atmosphere, spilled some 3,000 gallons of dielectric fluid and 100 gallons of oil into the river and on occasion raised nearby water temperatures by 15 degrees, killing fish and triggering environmental concerns.
-
-A recent study led by Harvard University’s T.H. Chan School of Public Health found higher cancer mortality rates in counties near operating nuclear plants.
-
-Seven years after moving to Peekskill, Vann was diagnosed with duodenal cancer, a rare and aggressive disease; doctors discovered a grapefruit-sized tumor in her small intestine. She has also had seven cats die, each from cancer.
-
-“It doesn’t prove anything,” Vann said. “But it leaves a bad feeling.”
-
-Then-Gov. Andrew Cuomo pushed to shutdown Indian Point despite the plant providing high-paying, unionized jobs, 400 of which were lost when it closed. Unions today form a key part of Lawler’s political base, in a district where a third of residents live in a union household.
-
-A fund intended to cushion communities from the loss of Indian Point’s tax revenue—$32 million for local municipalities and school districts—is financed by ratepayers. Lawler has seized on this, and made Indian Point’s closure a campaign issue, accusing Conley of bowing down to climate activists and having no energy plan.
-
-“Reopening the Indian Point Energy Center would restore reliable, affordable, carbon-free energy while reducing our reliance on fossil fuels and lowering emissions,” he wrote in a recent Facebook post, citing a recent report from the New York Public Service Commission.
-
-Indeed, following the closure of Indian Point, New York increased its consumption of readily available gas to make up the shortfall, and electricity-sector emissions rose 22 percent from 2019 to 2022.
-
-The Future of Nuclear Power
-
-The Trump administration has pledged to “reestablish the United States as the global leader in nuclear energy,” with the goal of expanding U.S. nuclear generating capacity from roughly 100 gigawatts in 2024 to 400 GW by 2050.
-
-President Donald Trump’s executive order, “Ordering the Reform of the Nuclear Regulatory Commission,” calls for extending the licenses of the existing nuclear fleet and encouraging the “reactivation of prematurely shuttered or partially completed nuclear facilities,” arguing that a stronger domestic nuclear industry is necessary for U.S. competitiveness, particularly with China.
-
-In response to Trump’s executive orders, the Department of Energy revised its process to expedite the review, approval and construction of advanced reactors. The new standard allows applicants and the DOE to “negotiate” requirements to achieve safe and secure design, construction and operation as efficiently as possible, “using the minimum requirements necessary” to meet that goal.
-
-The administration’s approach has drawn criticism from former regulators. Gregory Jaczko, who chaired the NRC under President Obama, said the executive order looked “like someone asked an AI chatbot, ‘How do we make the nuclear industry worse in this country?'”
-
-Despite a 2026 report by the Government Accountability Office that recommends the NRC address its shortcomings in considering the risk increase from climate change as part of its license renewal process, the NRC voted 3-2 against adopting recommendations to more comprehensively evaluate these risks.
-
-“The NRC is driving the licensing process through the rearview mirror,” said Paul Gunter, a nuclear reactor specialist and director of Beyond Nuclear, a nonprofit which advocates ending the use of nuclear power.
-
-For opponents of Indian Point’s closure, the administration’s pro-nuclear power policies have renewed speculation about the future of the site. Wright has called the plant’s closure “a foolish political decision,” raising questions over whether Indian Point could be considered one of the “prematurely shuttered” facilities eligible for revival. Doing so, however, would require approval from five parties—the Village of Buchanan, the Hendrick Hudson School District, New York State, Westchester County, and the Town of Cortlandt—the latter three of which have stated their opposition.
-
-Even as concerns over costs, safety and decommissioning remain, investment in nuclear energy is accelerating. Meta, Microsoft and Google are among the companies looking to nuclear power to meet the energy demands of artificial intelligence, despite the industry’s long construction timelines and high costs.
-
-“Nuclear power of any size, small or large, is going to face the same problems of the inability to reliably control the cost and control the time in which they can project to finish. And these are two key factors that are antithetical to addressing climate change,” said Gunter.
-
-Holtec’s Decommissioning of Indian Point
-
-Vann’s voice has a slight waver. Speaking on the future of Indian Point, it doesn’t falter.
-
-“There are two signed contracts,” she said, referring to agreements with Entergy and Holtec that require unanimous consent before the site could be revived for nuclear generation. “For Mike Lawler to stand there, at Indian Point, and call for its reopening, he is saying they will ignore the law. He cannot do that. And we will take them to court if they try.”
-
-At most hurdles, Vann’s recourse is the law. She is not shy about taking matters to court. This resolve is steeped in her steadfast belief that law, the Constitution, will, and has, delivered American progress.
-
-Vann is now involved in the oversight of the plant’s decommissioning by Holtec, a company specializing in spent-fuel storage, small modular reactors and, more recently, nuclear plant decommissioning. Holtec acquired the plant from Entergy in 2021 despite Attorney General Letitia James filing to intervene, stating Holtec did not “possess the financial qualifications necessary to complete such a risk-intensive project.”
-
-Decommissioning involves removing nuclear fuel, cleaning up radioactive contamination, dismantling structures and releasing the land for other public or industrial uses. Holtec has overseen this work, and the $2.3 billion-plus trust fund financed by utility customers that pays for it, with some opacity.
-
-Residents and activists say they feel left out of decision-making, unsure how their money is being spent. A decommissioning oversight board exists to monitor the process, but critics question whether it has provided sufficient scrutiny. Former Gov. Cuomo directed the New York State Department of Public Service to establish the board to protect the financial, environmental and physical interests of local communities affected by the plant’s closure.
-
-“It’s like a shotgun marriage. Some things, they are very forthcoming on, others, like the trust fund, they are not,” said New York State Sen. Peter Harckham, a Democrat, who represents the area and serves as chairman of the state Senate Committee on Environmental Conservation.
-
-“We see the balances have gone down significantly. What was that spent on? Is that a typical expenditure for this point in the process? It’s hard to get clarity,” he added.
-
-Since 2021, the fund has declined by approximately 32 percent. Holtec’s estimated completion date stretches into 2062.
-
-What Comes Next?
-
-The federal government’s increasingly pro-nuclear stance has already affected Indian Point’s decommissioning, state officials say.
-
-“After the federal election two years ago, it’s a whole new NRC crew, and they are much less committal than the last group,” said Harckham.
-
-“I don’t know whether that’s going to be a process of just establishing mutual trust or if it reflects the political focus of the new administration: pro-nuclear, and communities be damned,” he added.
-
-However, despite Hochul’s broader support for expanding nuclear energy, she has remained opposed to reopening Indian Point, and any future nuclear use of the site would require state approval.
-
-Shapiro notes communities’ reliance on the NRC’s proactive environmental protection standards.
-
-“With the NRC basically abdicating all responsibilities, the state has to provide the oversight,” she said. “In every state, I think nuclear power will become a state’s rights issue.”
-
-Holtec has never completed a nuclear power plant decommissioning project. That worries critics who question whether decommissioning has become a pathway to acquiring reactors as assets rather than dismantling them. Holtec recently filed to go public, in a deal that could raise up to $900 million, and its S-1 filing expresses interest in eventually redeveloping Indian Point as a data center, warehouse or for residential use.
-
-Holtec told Inside Climate News that it is not looking to restart the plant, nor is it in discussions with any developers. “We are evaluating all options … with the focus remaining on the safe, efficient decommissioning of the facility,” a spokesperson wrote.
-
-While most involved in overseeing Indian Point’s decommissioning are unconvinced it could be slated for a restart, the community’s greatest fear is what happens if Holtec burns through the fund before the cleanup is complete.
-
-“That leaves us with a Superfund site that technically is the government’s responsibility, so it becomes our responsibility,” said Lindberg, the Peekskill resident.
-
-Oversight mechanisms are also limited. The local oversight board has neither subpoena power nor any legally binding authority. Holtec is not even required to attend its meetings. Technically, under decommissioning law, the trust fund belongs to Holtec, and while the company must report fund balances, it is not required to disclose transactions.
-
-Those concerns intensified when Holtec announced plans to discharge approximately 45,000 gallons of treated radioactive wastewater into the Hudson River. New York’s Save the Hudson Act, passed in 2023, prohibited the discharge. However, a federal judge later overturned the law, giving Holtec permission to proceed. The decision has since been appealed, but the Trump administration’s weakening of federal Clean Water Act protections has raised additional questions about the appeal’s outcome.
-
-Transparency has also become a point of contention. “After we passed the Save the Hudson Bill, communication with Holtec kind of shut off,” said Harckham.
-
-Vann put it plainly: “They have not been transparent at all,” she said.
-
-On the House race, Vann, an elected member of the Peekskill Democratic Committee, expressed excitement about Cait Conley speaking out on the issue. She was largely impressed with all of the Democratic primary candidates.
-
-“We’re all getting behind Cait because even if she didn’t come out against Indian Point reopening, even if it was still up in the air, Mike Lawler has said he wants to reopen it. It’s a no-brainer.”
-
-Vann has long been a leader in the district’s fight for environmental justice. Her resolve has become the subject of the local jingle—“if she can do it, so can we!”—performed live in bars at fundraisers or during protests over environmental issues.
-
-Robert May, author of the song, describes her as a kind of a “mother hen.”
-
-He remembers her home, the meeting place for organizers of the anti-pipeline campaign, as “command central.” Activists participating in direct action would commute from the city and crash in sleeping bags in her living room.
-
-The movement, she emphasizes, is not about her, or any other individual. Still, that movement has become a voting bloc, challenging those who see a return to nuclear power as the answer to the bipartisan challenge of energy affordability.",https://insideclimatenews.org/wp-content/uploads/2026/09/GettyImages-1232610162-1024x687.jpg,N,,2026-09-25 10:02:08.281904
-,Indiana and Evs,2026-09-25 09:02:19+00:00,American Machinist,Report Sites New Hybrid Plant in Ohio | Honda Motor - American Machinist,AM Staff,,,,,https://www.americanmachinist.com/news/news/55407736/report-sites-new-hybrid-plant-in-ohio-honda-motor,"Honda Motor Co. plans to build a new hybrid vehicle assembly plant in Ohio, according to reports in Japan but not confirmed by the automaker.
-Hybrid vehicles are taking a prominent role in Honda’s future plans, as it shifts away from battery-electric vehicles.
-Earlier this year Honda issued a new “roadmap” for its automotive portfolio, committing to reallocating development and manufacturing resources toward hybrid vehicles due to strong near-term demand.
-It said it plans to launch 15 hybrid models globally by FY2030, with North America as the primary market.
-Honda Motor has seven vehicle assembly plants in North America, two in Ohio, and others in Alabama, Indiana, two in Ontario, and one in Mexico.","Honda Motor Co. plans to build a new hybrid vehicle assembly plant in Ohio, according to reports in Japan but not confirmed by the automaker. A U.S.-based representative for Honda reiterated that ""No decisions have been made at ⁠this stage regarding a new plant in the U.S.""
-
-The reported Ohio project would have a budget of $1.9 to $2.53 billion, and target a start-up date in 2030, the original report noted.
-
-Recently Honda made it known that a reaffirmation of the U.S. Mexico Canada Agreement on free trade would be a significant factor in determining its capital investment plans.
-
-Hybrid vehicles are taking a prominent role in Honda’s future plans, as it shifts away from battery-electric vehicles. The automaker is actively developing a new generation of hybrid-electric vehicle (HEV) powertrain and vehicle platform, which will be available in new models from 2027 forward.
-
-Earlier this year Honda issued a new “roadmap” for its automotive portfolio, committing to reallocating development and manufacturing resources toward hybrid vehicles due to strong near-term demand. It said it plans to launch 15 hybrid models globally by FY2030, with North America as the primary market.
-
-Currently Honda offers hybrid versions of its Accord, Civic, CR-V, and Prelude models. And a new hybrid system is expected to be introduced in 2027.
-
-In that same statement, Honda explained it will reallocate all excess capacity at its two Ohio assembly to production of gasoline and hybrid vehicles, while make all of its North American assembly plants capable of producing hybrid models.
-
-Honda Motor has seven vehicle assembly plants in North America, two in Ohio, and others in Alabama, Indiana, two in Ontario, and one in Mexico. It also has numerous plants manufacturing engines and engine components, powertrains, and transmissions.","https://img.americanmachinist.com/files/base/ebm/americanmachinist/image/2026/09/6ab5c9a764fb220efbb6b81d-dreamstime114039900promo.png?auto=format,compress&fit=fill&fill=blur&w=1200&h=630",N,,2026-09-25 07:02:19.144946
-,EVs,2026-09-25 09:02:01+00:00,Benefits and Pensions Monitor,EV battery delays test Ottawa's pitch for pension capital,"Rod Bolivar, www.benefitsandpensionsmonitor.com, rod-bolivar",,,,,https://www.benefitsandpensionsmonitor.com/news/industry-news/ev-battery-delays-test-ottawas-pitch-for-pension-capital/394204,"The country's largest planned electric vehicle (EV) battery plant has now pushed its start date back two years.
-PowerCo Canada Inc., Volkswagen AG's battery subsidiary, said Sept. 24 that its St. Thomas, Ont., plant will begin operating in 2029 instead of 2027.
-A pattern of paused projects Honda postponed its $15 billion Ontario EV and battery project by about two years in May 2025, citing a slowdown in the EV market.
-In Quebec, the province ended support for Northvolt's planned battery plant in September 2025 after losing $270 million on its investment in the Swedish parent.
-In April, Volkswagen stopped producing its electric ID.4 in Tennessee, one of the main vehicles St. Thomas was meant to support.","Ottawa is pressing Canada's pension funds to put more capital into domestic industry, including advanced manufacturing. The country's largest planned electric vehicle (EV) battery plant has now pushed its start date back two years.
-
-PowerCo Canada Inc., Volkswagen AG's battery subsidiary, said Sept. 24 that its St. Thomas, Ont., plant will begin operating in 2029 instead of 2027. The company cited evolving market demand, technological advancements and Volkswagen Group's long-term strategy.
-
-""What we really need to understand is this: Is Volkswagen legitimately deferring actual production, or are they deferring a decision on the ultimate utility and necessity of that plant?"" said Greig Mordue, associate professor at McMaster University's Booth School of Engineering Practice and Technology in Hamilton.
-
-Billions tied to output
-
-Ottawa agreed in 2023 to provide up to $13.2 billion in production subsidies to Volkswagen over a decade. The Parliamentary Budget Officer later estimated the total federal commitment at about $16.3 billion.
-
-Mordue said the delay could save taxpayers billions because many incentives were tied to production targets and were set to scale back in 2030 before disappearing by 2032. With output starting later and below planned levels, he said, those incentives, ""that are measured in the billions of dollars, will not occur.""
-
-A pattern of paused projects
-
-Honda postponed its $15 billion Ontario EV and battery project by about two years in May 2025, citing a slowdown in the EV market. Ottawa had planned about $2.5 billion in tax credits for the project, with Ontario committing up to $2.5 billion.
-
-In Quebec, the province ended support for Northvolt's planned battery plant in September 2025 after losing $270 million on its investment in the Swedish parent.
-
-OMERS booked a loss on its $325 million investment, the Caisse de dépôt et placement du Québec wrote its $150 million stake down to zero, and IMCO marked down its $400 million investment.
-
-Stellantis's idled Brampton Assembly Plant faces possible closure and sale, which Unifor said this month threatens the wages, pensions and benefits of its members.
-
-Capacity ahead of demand
-
-Mordue said the St. Thomas delay should not surprise anyone following Volkswagen or the North American EV market, adding that a lot can happen in three years and the plant's future is far from resolved.
-
-Earlier this month, Volkswagen said it was looking to cut up to 100,000 jobs worldwide in response to competitive pressures, including weaker sales in China, where Chinese automakers have taken market share.
-
-PowerCo has said the plant could produce up to one million batteries a year. Conrad Layson, a senior analyst at AutoForecast Solutions LLC, said demand and that scale are ""well out of line with the vehicles that Volkswagen is looking to produce in North America.""
-
-In April, Volkswagen stopped producing its electric ID.4 in Tennessee, one of the main vehicles St. Thomas was meant to support.
-
-Layson said conditions such as the elimination of US EV incentives mean full capacity is likely years away.
-
-Higher gas prices from the war in Iran have renewed buyer interest, and EV sales now account for 5% to 6% of all car sales, below the 8% recorded before 2024.
-
-The cost case for Canadian cells
-
-Layson called the delay puzzling since Canadian cells would cost less than Chinese imports despite US tariffs, though still ""hideously expensive.""
-
-""However, the cost of importing a Chinese cell versus a Canadian cell is different, and the Canadian cell is lower,"" he said.
-
-He added the delay spares Volkswagen billions of dollars on a facility that will not approach capacity for years.
-
-Shovels still in the ground
-
-Construction continues under general contractor EllisDon, with the on-site workforce expected to peak at 1,300. Since groundbreaking in 2025, work has moved into core infrastructure and structural phases.
-
-""This is about getting the pacing right – not stepping back – to protect our long-term investment, support regional jobs and position Canada, Ontario and St. Thomas to benefit in a dynamic and evolving market,"" he said.",https://cdn-res.keymedia.com/cms/images/bpm/jean_639259234657472769.png,N,,2026-09-25 10:00:42.613134
-,North Carolina American Energy ,2026-09-25 09:01:52+00:00,Northern Public Radio: WNIJ and WNIU,Diesel has never been more expensive. That's squeezing farmers as harvest begins,"Abigail Bottar, www.kcur.org, abigail-bottar",,,,,https://www.northernpublicradio.org/2026-09-25/record-high-diesel-costs-squeezing-farmers-harvest-season,"But now he and farmers across the U.S. heading into harvest season are forced to contend with record-high fuel prices during an already economically tumultuous year.
-Across most of the central U.S., diesel prices are averaging $6.68 per gallon.
-Diesel prices had already been on the rise the past few years due to the ongoing war between Russia and Ukraine.
-“You might bring it to a more local elevator then bring it further away because added fuel costs,” he said.
-Ultimately, he said he doesn’t think diesel prices will come down until the Strait of Hormuz is fully reopened.","Bart Bittner has been adapting to diesel prices all year. The central Illinois farmer relied on fuel he had stored on his farm to run his equipment for as long as he could this spring while diesel prices skyrocketed. When prices fell slightly this summer, he refilled his reserve.
-
-But now he and farmers across the U.S. heading into harvest season are forced to contend with record-high fuel prices during an already economically tumultuous year.
-
-“Of course it’s the worst timing ever, cause this is when we use the most diesel fuel with all the equipment in the field along with the trucks that we have on the road to haul the grain to market,” Bittner said.
-
-A gallon of diesel topped $6 for the first time in mid-September, according to the U.S. Energy Information Administration. And the price has only gone up since. Across most of the central U.S., diesel prices are averaging $6.68 per gallon. In Texas and other states along the Gulf Coast, the average is $6.17.
-
-Diesel prices had already been on the rise the past few years due to the ongoing war between Russia and Ukraine. But prices jumped after the U.S. and Israel attacked Iran in February, blocking the Strait of Hormuz. A quarter of the world’s seaborne oil trade goes through the strait, according to the International Energy Agency.
-
-Steep fuel prices are hitting farmers in a year where they’re already contending with other high input costs, said Michael Langemeier, a professor of agricultural economics at Purdue University. Prices for farm equipment and fertilizer have also shot up this year amid the Trump administration’s tariffs and the closure of the Strait of Hormuz.
-
-The only silver lining, many farmers say, is that they’re expecting higher corn and soybean prices this season.
-
-“This would be a huge crisis if we hadn’t seen the increase in crop prices we’ve seen recently,” Langemeier said. “That’s helping. It’s not curing the high input cost problem.”
-
-Some farmers, like Iowa Corn Growers Association President Steve Kuiper, are lamenting that the cost of diesel means these higher prices won’t turn the tide against rising input costs.
-
-“This would have gotten us into a point where we could have been decently making a few bucks,” he said. “And it’s hurting that aspect of it right now.”
-
-Farmers like Bittner in central Illinois are also dealing with the outcome of late summer storms. Bittner said strong wind and heavy rain in August downed about 1,000 acres of corn on his farm.
-
-“That downed corn is gonna require us to actually probably spend more time in the field, which unfortunately translates to probably more fuel to try to get this crop in and do the best we can to harvest as many ears as we possibly can and not lose any more than we have to,” he said.
-
-Transportation costs rise
-
-Tory Meyr is a fourth generation farmer growing corn and soybeans in southeast Missouri. The diesel he purchased to run his farm equipment this year was 60% more expensive than last year, he said, and that doesn’t include the diesel he’ll still need to buy to transport the harvested grain.
-
-“That’s tremendously higher,” he said. “I have three semis that we run, and each one costs about $1,500 to fill up.”
-
-Low levels on the Mississippi River, an important export corridor for corn and soybeans, are also pushing up transportation costs.
-
-“More and more people are vying for that freight, which drives the cost up,” Meyr said, “and then they’re also raising the cost of the freight just because of diesel fuel, which is what the tugboats run on.”
-
-These increased costs are heavily influencing where, how and when farmers transport their harvest, said Kuiper with the Iowa Corn Growers Association. He said many producers are reconsidering grain storage plans this year.
-
-“You might bring it to a more local elevator then bring it further away because added fuel costs,” he said. “You don’t gain that much of a price difference if you’re having to drive further.”
-
-For Meyr, that means holding off on transporting his harvested crop — at least until the Mississippi River is higher. He’s planning to keep his grain in storage on his farm and haul it later in the winter.
-
-In the meantime, Meyr said he is trying to cut down on diesel use any way that he can.
-
-“It’s 97 degrees today, so when they’re waiting to get filled by the grain cart, normally we’d just let them run, so the guys can sit in the air conditioning,” he said. “But we’re turning them off, so they’re not running all day long while they’re waiting to be filled each time.”
-
-Planning for next season
-
-There’s not much farmers can do at this point in the season to avoid high diesel prices, but many are considering ways they can use less fuel after harvest.
-
-Ben Brown, a senior research associate and extension agricultural economist at the University of Missouri, thinks a lot of farmers will take the approach of doing less field work in the fall and spring to bring down diesel use.
-
-“I also think we’ll see fewer chemical applications,” he said. “So instead of maybe a two-pass crop protection in the growing season, maybe just a single-pass and doing a higher rate.”
-
-But that might not be a good option for farmers who have never tried using less chemical applications or reducing tillage, said Ryan Mackenthun. He’s president of the Minnesota Soybean Growers Association and grows soybeans and corn on his farm in central Minnesota.
-
-“It’s really hard to do new things unless you’ve experimented with them before and know their end result,” he said.
-
-Bittner in Illinois said he is planning to reduce the amount of tillage he does this fall. He’s also rethinking how much storage he has on his property for fuel.
-
-“Today we were just making an adjustment and trying to figure out how to maybe get some more storage on the farm so that we have a little more leverage with where we buy it and how we buy it,” he said. “So when we get those opportunities, maybe we can book a little more.”
-
-Langemeier said farmers who have the storage might consider buying some of their fuel now, in case prices continue to rise. Ultimately, he said he doesn’t think diesel prices will come down until the Strait of Hormuz is fully reopened.
-
-“If we can move more through [the strait], the price wouldn’t continue to increase,” he said. “But really if we want to get back to where we were early this year, the conflict in the Middle East at least needs to be resolved.”",https://npr.brightspotcdn.com/dims4/default/f5fba6f/2147483647/strip/true/crop/799x419+0+77/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fa5%2F7a%2Fb12d3fc6423db23796daa4b29290%2F49023237277-304aaa1a8a-c.jpg,N,,2026-09-25 13:14:01.019927
