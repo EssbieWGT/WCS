@@ -1,0 +1,74 @@
+{
+  "client": "saf",
+  "status": "draft_not_sent",
+  "model": "facebook/bart-large-mnli",
+  "model_revision": "d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+  "script_sha256": "fc16a09bb61006dc1b7337da2ce645a0ef6cc26f46454789920dcd64aeed0589",
+  "input": "C:\\Users\\wesle\\Desktop\\Coding Projects\\wcs\\masterdata\\saf.csv",
+  "since": "2026-09-29T12:00:00+00:00",
+  "until": "2026-09-30T12:00:00+00:00",
+  "source_timezone": "America/New_York",
+  "edition": "AM",
+  "sent_csvs": [],
+  "thresholds": {
+    "include_threshold": 0.75,
+    "exclude_threshold": 0.3,
+    "category_threshold": 0.55,
+    "min_margin": 0.1
+  },
+  "category_order": [
+    "US Policy",
+    "International Policy",
+    "US Business",
+    "International Business",
+    "Research",
+    "Criticism",
+    "Commentary",
+    "Events",
+    "Social",
+    "Other"
+  ],
+  "article_order": "publication descending, title, URL; within category",
+  "category_definitions": {
+    "Policy": "government rules, legislation, mandates, tax credits or subsidies affecting sustainable aviation fuel or aviation emissions",
+    "Business": "commercial sustainable aviation fuel production, facilities, investment, airline procurement or supply agreements",
+    "Research": "scientific research, studies or technical assessments of aviation emissions or sustainable aviation fuels",
+    "Events": "an upcoming conference, meeting or public event about sustainable aviation fuels",
+    "Criticism": "criticism of sustainable aviation fuels, greenwashing allegations or opposition to their environmental claims",
+    "Commentary": "an opinion column or editorial arguing a position on aviation decarbonization",
+    "Other": "other substantive aviation decarbonization news, including contrails or alternative propulsion"
+  },
+  "relevance_definition": "substantive news about sustainable aviation fuel, aviation decarbonization, or aviation emissions policy",
+  "exclusion_definition": "unrelated news, job advertisements, stock tips, or generic promotional material with no substantive aviation decarbonization development",
+  "counts": {
+    "outside_window": 34239,
+    "missing_or_invalid_firstEyes": 34,
+    "candidates": 56
+  },
+  "decisions": {
+    "review": 43,
+    "include": 12,
+    "duplicate": 1
+  },
+  "evaluation": {
+    "note": "Positive-only comparison for URL-matched candidates in this window. Not precision, full end-to-end recall, or report-order accuracy. Harvest date is not a report cutoff.",
+    "matched_harvested_candidates": 0,
+    "selected": 0,
+    "needs_review": 0,
+    "excluded": 0,
+    "duplicates_suppressed": 0,
+    "category_labeled": 0,
+    "category_matches": 0,
+    "market_labeled": 0,
+    "market_exact_matches": 0,
+    "unsupported_historical_categories": {}
+  },
+  "elapsed_seconds": 18.605,
+  "limitations": [
+    "Uncalibrated baseline; manual review required before sending.",
+    "Market uses explicit headline/description geography; no entity disambiguation.",
+    "Only exact normalized URL/headline duplicates are suppressed.",
+    "Candidate availability follows firstEyes, not publication date.",
+    "Collected text is not versioned; historical replays may contain later text edits."
+  ]
+}

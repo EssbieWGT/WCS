@@ -1,0 +1,70 @@
+{
+  "client": "shipping",
+  "status": "draft_not_sent",
+  "model": "facebook/bart-large-mnli",
+  "model_revision": "d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+  "script_sha256": "27e4540743861d1a3178f43937d9c1af8a3ed554455d70b9206e019942360cea",
+  "input": "C:\\Users\\wesle\\Desktop\\Coding Projects\\wcs\\masterdata\\shipping.csv",
+  "since": "2026-09-29T12:00:00+00:00",
+  "until": "2026-09-30T12:00:00+00:00",
+  "source_timezone": "America/New_York",
+  "edition": "AM",
+  "sent_csvs": [],
+  "thresholds": {
+    "include_threshold": 0.75,
+    "exclude_threshold": 0.3,
+    "category_threshold": 0.55,
+    "min_margin": 0.1
+  },
+  "category_order": [
+    "Policy",
+    "Policy - Opposition",
+    "Industry",
+    "Infrastructure",
+    "Technology",
+    "Research",
+    "Commentary",
+    "Events",
+    "Other"
+  ],
+  "article_order": "publication descending, title, URL; within category",
+  "category_definitions": {
+    "Policy": "government or International Maritime Organization rules, negotiations or decisions on maritime emissions and clean shipping",
+    "Policy - Opposition": "opposition, political resistance or lobbying against maritime emissions regulations or carbon pricing",
+    "Industry": "shipping company strategy, commercial commitments, fleet investment or industry-wide clean shipping adoption",
+    "Infrastructure": "ports, bunkering facilities, fuel supply infrastructure, green corridors or production capacity for sustainable marine fuels",
+    "Technology": "ship propulsion, engines, retrofits or alternative marine fuel technology and demonstrations",
+    "Research": "research studies, lifecycle emissions analysis or scientific assessments of shipping decarbonization",
+    "Commentary": "an opinion column or editorial arguing a position on clean shipping",
+    "Events": "an upcoming maritime decarbonization conference, forum or public event",
+    "Other": "other substantive news about environmental impacts of maritime shipping"
+  },
+  "relevance_definition": "substantive news about maritime shipping emissions policy, decarbonization, sustainable marine fuels or clean shipping deployment",
+  "exclusion_definition": "unrelated news, shipping stock tips, job advertisements or generic logistics and freight reports without maritime decarbonization relevance",
+  "counts": {
+    "outside_window": 6899,
+    "candidates": 0
+  },
+  "decisions": {},
+  "evaluation": {
+    "note": "Positive-only comparison for URL-matched candidates in this window. Not precision, full end-to-end recall, or report-order accuracy. Harvest date is not a report cutoff.",
+    "matched_harvested_candidates": 0,
+    "selected": 0,
+    "needs_review": 0,
+    "excluded": 0,
+    "duplicates_suppressed": 0,
+    "category_labeled": 0,
+    "category_matches": 0,
+    "market_labeled": 0,
+    "market_exact_matches": 0,
+    "unsupported_historical_categories": {}
+  },
+  "elapsed_seconds": 0.322,
+  "limitations": [
+    "Uncalibrated baseline; manual review required before sending.",
+    "Market uses explicit headline/description geography; no entity disambiguation.",
+    "Only exact normalized URL/headline duplicates are suppressed.",
+    "Candidate availability follows firstEyes, not publication date.",
+    "Collected text is not versioned; historical replays may contain later text edits."
+  ]
+}
