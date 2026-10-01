@@ -1,5 +1,333 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID30,Microsoft,2026-10-01 17:12:11+00:00,InfoWorld,Microsoft doubles down on Rust - InfoWorld,"Simon Bisson, Simon Bisson Contributing",,,,,https://www.infoworld.com/article/4227839/microsoft-doubles-down-on-rust.html,"A recent post on the Rust Foundation website details how Microsoft is working to integrate Rust with the existing Microsoft Visual C++ (MSVC) platform.
+This allows Rust tooling to take advantage of the decades of work Microsoft has put into both its compilers and build tooling.
+Microsoft describes it as “production ready”, and it’s used by more than a hundred Microsoft Rust projects—an interesting pointer to the scale of Rust adoption by Redmond.
+In discussions on the Rust compiler forums, Microsoft has indicated that it will first upstream its test and back-end infrastructure work into the wider Rust project.
+Get started with Rust in VS Code For now, Microsoft offers Rust tooling that integrates with Visual Studio Code and guidance for developing on Windows with Rust.","After many years of watching how Microsoft develops platforms and rolls out technologies to external users, one thing is clear: anything that is important to Microsoft internally quickly becomes important to anyone building on top of Windows or Azure.
+
+The transition from internal to external tooling invariably takes the form of new features in Visual Studio and Visual Studio Code. Often these capabilities have been in use inside Microsoft for years, and they’re ready for you to use immediately in your own software. We’ve seen it happen many times before, such as with the development of C# and TypeScript.
+
+Microsoft’s Tier-1 programming languages
+
+C# and TypeScript, like C++ before them, are what Microsoft internally calls its Tier-1 languages. This status rests on being backed by a complete tool chain, from editors to compilers; integration with Windows and Azure through native SDKs and optimized libraries; and compliance with Microsoft’s internal software development life-cycle requirements. When you’re shipping software for a billion users, these trappings aren’t optional extras, they’re essential.
+
+Now there’s a new member of the Tier-1 club: the Rust language. That shouldn’t be a surprise, as Azure CTO Mark Russinovich has talked about his organization’s commitment to Rust and how Rust’s memory safety features are a key component in Microsoft’s security strategy. In addition, Microsoft was a founding member of the Rust Foundation, and has made significant investments in Rust’s Windows tooling and in Rust compilers that work as part of Microsoft’s build platform. Now Rust enjoys first-class development tooling and workflows inside Microsoft.
+
+A recent post on the Rust Foundation website details how Microsoft is working to integrate Rust with the existing Microsoft Visual C++ (MSVC) platform. This approach will allow Microsoft to ensure what the blog post calls “seamless interoperability” between the languages, with Rust inheriting Visual C++ features as they’re delivered. Using Visual C++ with Rust will allow Rust to be used to build low-level Windows services, from drivers to the kernel itself.
+
+We’ve already seen that in the Windows release of Coreutils, which are a Rust re-implementation of core UNIX commands. Coreutils allow you to use certain UNIX commands inside the Windows terminal, making it easy to switch between Windows and WSL (Windows Subsystem for Linux)-hosted Linux distributions. Now that Rust has crossed the Tier-1 threshold, we can expect to see more Rust-based Windows developer tooling, where we get access to low-level functionality while avoiding memory leaks.
+
+The secret sauce: a new Rust code generator
+
+One key to delivering production-grade Windows software with Rust is a new code generation tool for Rust’s compiler, rustc. rustc is designed to use different code-generation back ends, beyond the default LLVM. There are already variants that work with GCC and with Cranelift. If you’ve not come across Cranelift, it’s the code generator of the Bytecode Alliance, used as part of the wasmtime framework. Adding a new code generator is a matter of building a tool that connects to the Rust compiler’s APIs, takes its bytecode output, generates native code, and passes it on to your choice of build pipeline.
+
+This is the role of Microsoft’s rustc_codegen_utc tooling. It’s designed to work with the existing MSVC stack, giving Rust access to a mature, well-tested, proven part of the Windows development platform without needing any changes to your code (compatibility is baked in). This links it directly to the back end of the Visual C++ compiler, a set of tools marshaled by Microsoft’s build system to work with complex projects that mix code and libraries.
+
+Microsoft calls this back end the UTC, for Universal Tuple Compiler. You won’t see that name anywhere, though; the actual code is a DLL, C2.DLL. Code is generated and delivered as .OBJ files where it can then be passed to the MSVC linker and delivered as a binary executable. This allows Rust tooling to take advantage of the decades of work Microsoft has put into both its compilers and build tooling. There’s no need for Microsoft to duplicate that work, ensuring that existing security and resilience features carry forward to the Rust compiler chain. And the resulting code is compatible with C and C++ code that has been passed through the same back end.
+
+Managing only a single compiler back end will also make it cheaper to support Rust, with no need to run two separate compiler teams that are likely to be out-of-sync with each other and with Windows SDK and kernel development. Reducing the economic impact of Rust will speed up any transition, as well as supporting what is likely to be a long-term hybrid delivery of combined Rust and C++ applications.
+
+This approach also puts Microsoft’s Rust development on a par with platforms that use GCC and LLVM compilers, which can already use the GCC and Clang back ends with Rust, leveraging the investments into Linux and macOS application development. Code developed in Rust will get the same interoperability capabilities no matter which platform you end up targeting.
+
+Unfortunately for the rest of us, rustc_codegen_utc is currently only available internally, unlike the other Rust compiler codegen tools, which are all open-source projects. Microsoft describes it as “production ready”, and it’s used by more than a hundred Microsoft Rust projects—an interesting pointer to the scale of Rust adoption by Redmond. It’s not the only Rust tool currently hidden away, as Microsoft’s complete Rust tool chain also includes its own builds of the core rustc compiler, standard libraries.
+
+That doesn’t mean that rustc_codegen_utc is not going to arrive for the rest of us. Past experience suggests that it and undoubtedly other Rust tools will come with a major update to Visual Studio or Visual Studio Code. However, the timing is always hard to predict. Even when tooling that works inside Microsoft is highly suitable for external developers, there needs to be more for it to reach the rest of the world, with language servers and IntelliSense support, as well as full integration with the Visual Studio debugger platform. There’s also more to building code outside Microsoft’s offices, where we don’t have access to their custom build tools.
+
+In discussions on the Rust compiler forums, Microsoft has indicated that it will first upstream its test and back-end infrastructure work into the wider Rust project. That implies that it may be some time before there is a public release, but also that open sourcing the project is clearly on Microsoft’s radar. Getting rustc_codegen_utc out in public is important—adoption of Rust to build third-party device drivers should help make PCs, servers, and cloud VMs more stable and reduce security risks.
+
+Get started with Rust in VS Code
+
+For now, Microsoft offers Rust tooling that integrates with Visual Studio Code and guidance for developing on Windows with Rust. To use Microsoft’s Rust language extension for VS Code, rust-analyzer, you’ll still need the MSVC C++ Build Tools to compile and build your code, along with a Microsoft-developed Windows crate that gives you direct access to Windows APIs. An automated process collects metadata from Windows APIs, ensuring that they are always up-to-date. Microsoft also provides documentation on how Windows API calls and structures are projected into Rust.
+
+It’s worth getting started now with the existing Rust tools to become familiar with Windows development in a new language. That way you can start to take advantage of Rust’s memory safety features, understanding how the language works and what changes you need to make to your programming style. Then when Microsoft starts shipping its new internal tooling for the rest of us, you can start using it to build low-level code, like drivers or libraries, that need to interoperate with Microsoft’s own C++.",https://www.infoworld.com/wp-content/uploads/2026/10/4227839-0-28801000-1790874160-shutterstock_2163713035.jpg?quality=50&strip=all&w=1024,N,,2026-10-01 13:45:15.507221
+ID18,Eli Lilly,2026-10-01 17:09:30+00:00,www.barrons.com,"Foghorn Stock Craters as Lilly Scraps Cancer Deal, Forcing 40% Layoffs - Barron's",,,,,,https://www.barrons.com/articles/foghorn-therapeutics-stock-lilly-cancer-job-cuts-d43e6a0f,Foghorn Therapeutics and Eli Lilly don't plan any future collaborations following the dissolution of a cancer-drug partnership.,Not Available,,Y,,2026-10-01 14:23:31.081856
+ID30,Microsoft,2026-10-01 16:49:55+00:00,CNBC,"Former LinkedIn chief Roslansky to leave Microsoft, following other exec departures - CNBC","Jordan Novet, www.facebook.com",,,,,https://www.cnbc.com/2026/10/01/linkedin-chief-roslansky-microsoft-exit.html,"Microsoft executive Ryan Roslansky, who led the software company's LinkedIn subsidiary for six years, will leave at the end of 2026.
+Satya Nadella, Microsoft's CEO, announced the departure in a Thursday memo.
+Roslansky joined LinkedIn as product chief in 2009, when it was still private.
+In 2020, Roslansky replaced Jeff Weiner as LinkedIn CEO.
+Weeks earlier, Reid Hoffman, a LinkedIn co-founder, announced plans to leave Microsoft's board, which he joined in 2017.","Microsoft executive Ryan Roslansky, who led the software company's LinkedIn subsidiary for six years, will leave at the end of 2026. Satya Nadella, Microsoft's CEO, announced the departure in a Thursday memo.
+
+""Ryan leaves the organization in a strong position,"" Nadella wrote in his message to employees.
+
+Alongside other technology heavyweights, Redmond, Washington-based Microsoft has been trying to evolve and take advantage of the rise of generative artificial intelligence. Gaming head Phil Spencer and Office leader Rajesh Jha both left this year, and Charlie Bell, the company's head of security, became an individual contributor.
+
+Roslansky joined LinkedIn as product chief in 2009, when it was still private. Previously, he had held management roles at Yahoo and Glam Media. Microsoft acquired LinkedIn for $27 billion in 2016. In 2020, Roslansky replaced Jeff Weiner as LinkedIn CEO. During Roslansky's tenure, LinkedIn's membership expanded from 700 million to 1.3 billion.
+
+In 2025, Roslansky took on additional responsibility in Microsoft's Office productivity software group. Earlier this year, Nadella named Roslansky and two other executives as leaders of the Microsoft 365 applications and the Copilot artificial intelligence platform, and Dan Shapero, LinkedIn's chief operating officer, became the professional social network's CEO.
+
+Nadella noted Roslansky's contributions to the unified Copilot app, which Microsoft announced last week.
+
+""With Copilot, we are executing rapidly against our vision to build a new OS for work that spans every model, every form factor, and every task, with Office fully embedded in Copilot and vice versa! Over the past year, Ryan's team has done critical work bringing together the product, engineering, and design foundations that have made this next phase possible.""
+
+In July, Microsoft disclosed that LinkedIn revenue growth for the June fiscal year sped up to 11% from less than 9% a year earlier. Weeks earlier, Reid Hoffman, a LinkedIn co-founder, announced plans to leave Microsoft's board, which he joined in 2017.
+
+Roslansky told workers in a memo that he was Weiner's first hire at LinkedIn, and he's been inspired by the progress in Office around AI.
+
+""I know what it would take for me to lead the next phase of this work well: being in Redmond full time, every day,"" Roslansky wrote. ""But my life and my family's life are here in the Bay Area.""
+
+WATCH: Linkedin CEO on return to the office",https://image.cnbcfm.com/api/v1/image/108371129-1790869715076-gettyimages-2179776912-SINGAPORE_LINKEDIN.jpeg?v=1790871083&w=1920&h=1080,N,,2026-10-01 13:45:19.400632
+ID23,JDE Peet’s,2026-10-01 16:39:53+00:00,Reuters,Keurig Dr Pepper names Kimberly Clark executive as new CEO of coffee unit - Reuters,Not Available,,,,,https://www.reuters.com/business/keurig-dr-pepper-names-kimberly-clark-executive-new-ceo-coffee-unit-2026-10-01/,"Keurig Dr Pepper on Thursday named Kimberly-Clark executive Russ Torres as CEO of ​the coffee business, which will operate as ‌a publicly traded company early next year.",Not Available,https://www.reuters.com/resizer/v2/466BJJQ7PVGY5O53NZ3KL65MHM.png?auth=b9c3bf166c40a6778eb5672993fde7c30a15f48329026674eff92afd8da1d0ca&height=1005&width=1920&quality=80&smart=true,N,,2026-10-01 13:44:25.987757
+ID18,Eli Lilly,2026-10-01 16:36:27+00:00,Yahoo Finance,"Eli Lilly's Obesity Data Support Broader Portfolio Beyond Tirzepatide, UBS Says",MT Newswires,,,,,https://finance.yahoo.com/healthcare/articles/eli-lilly-apos-obesity-data-162922214.html,"Explore stocks on Coinbase Trading disclosure The above button links to Coinbase.
+Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading.
+Coinbase pays us for certain activity generated through this link.
+Learn more Eli Lilly's (LLY) new obesity data support a broader drug portfolio beyond tirzepatide, or TZP, UBS Upgrade to read this MT Newswires article and get so much more.
+A Silver or Gold subscription plan is required to access premium news articles.","Explore stocks on Coinbase
+
+Trading disclosure
+
+The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for certain activity generated through this link. Prices displayed are informational.
+
+Learn more
+
+Eli Lilly's (LLY) new obesity data support a broader drug portfolio beyond tirzepatide, or TZP, UBS
+
+Upgrade to read this MT Newswires article and get so much more.
+
+A Silver or Gold subscription plan is required to access premium news articles.
+
+Recommended Stories",https://s.yimg.com/cv/apiv2/cv/apiv2/social/images/yahoo-finance-default-logo.png,N,,2026-10-01 14:23:35.068397
+ID28,Medtronic,2026-10-01 16:36:10+00:00,Medtronic's Cardiac Unit Gets Triple Regulatory Boost While MiniMed Separation Enters Final Stretch,Medtronic's Cardiac Unit Gets Triple Regulatory Boost While MiniMed Separation Enters Final Stretch,Rafael Müller,,,,,https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/medtronic-s-cardiac-unit-gets-triple-regulatory-boost-while-minimed/70211687,"The company intends to run a global randomized approval study called IN.PACT BTK DELTA, enrolling roughly 400 patients.
+A delay in enrolling the roughly 400 DELTA patients would tie up research funding for years without near-term returns.
+The strategic reorganization compounds this: the spinoff of the diabetes unit MiniMed, initiated about two weeks ago, absorbs management bandwidth.
+Investors should watch for reports on the first commercial deployments of the Prism-2 software and the ProxBox adapter.
+Ad Medtronic Stock: New Analysis - 1 October Fresh Medtronic information released.","Medtronic has secured a trio of regulatory wins across its cardiovascular portfolio, a cluster of approvals that arrives at a moment when the medical device maker is under pressure to demonstrate the innovative muscle of its remaining operations. The FDA granted Breakthrough Device designation to the company's IN.PACT drug-coated balloon for treating blockages below the knee in patients with chronic limb-threatening ischemia, while simultaneously clearing the Affera Prism-2 mapping software for U.S. use. European regulators added their own stamp, awarding CE marking to both the Prism-2 platform and the PulseSelect ProxBox adapter with a spacing indicator.
+
+The announcements landed yesterday, and the stock responded with a modest 0.2% gain to EUR 76.30 in today's session. Over the past 30 days, however, the shares have shed 4.0%, reflecting a market that has grown cautious amid the company's broader restructuring.
+
+What the Approvals Actually Deliver
+
+The Breakthrough Device tag for IN.PACT BTK accelerates Medtronic's dialogue with the FDA but does not substitute for hard clinical evidence. The company intends to run a global randomized approval study called IN.PACT BTK DELTA, enrolling roughly 400 patients. Until that catheter for below-knee vascular occlusions can generate dependable revenue, recruitment and data analysis will consume considerable time.
+
+Shorter-term momentum must therefore come from the electrophysiology software and hardware extensions. By securing both CE marking and FDA clearance for Prism-2, along with the CE certificate for the ProxBox adapter, Medtronic is targeting cardiac centers directly. These products complement existing ablation systems and can be folded into clinical workflows without lengthy study phases. The decisive variable for the share price remains hospital conversion rates: if the sales force can migrate the installed base to the new software generations quickly, margins in the segment should stabilize.
+
+The Bull Case: Differentiation and a Raised Outlook
+
+Should commercialization proceed swiftly, Medtronic stands to reinforce its competitive position in cardiac interventions. The pairing of pulsed field ablation with refined mapping software addresses a growing demand from clinics for integrated solutions that shorten procedure times and reduce complication rates. The recent Affera and PulseSelect clearances strengthen precisely that intersection.
+
+Should investors sell immediately? Or is it worth buying Medtronic?
+
+Meanwhile, the upcoming DELTA trial for the IN.PACT BTK balloon opens a path into an underserved market for peripheral vascular disease. If the 400-patient recruitment stays on schedule and therapeutic benefits hold up, the company locks in long-term earnings potential in its vascular division.
+
+TD Cowen reinforced this view yesterday, reiterating its Buy rating with a $110.00 price target, citing the company's operational momentum and management's conservative guidance posture. That guidance, raised roughly three weeks ago for fiscal 2027, projects organic revenue growth of 7.25% to 7.75% and adjusted earnings per share of $5.94 to $6.00. Hitting the upper end of that corridor through the new products would likely narrow the valuation discount the stock has carried relative to its historical range.
+
+The Bear Case: Quality Questions and Execution Risk
+
+Countering the optimism are tangible downside risks. The medical technology sector tolerates no lapses in quality assurance. A Class I FDA recall roughly two weeks ago underscored the portfolio's vulnerability to regulatory intervention. Should unexpected integration problems surface with the newly cleared components, or should the European rollout stall, meaningful revenue shortfalls could follow.
+
+Large approval studies carry their own financial and operational uncertainties. A delay in enrolling the roughly 400 DELTA patients would tie up research funding for years without near-term returns. The strategic reorganization compounds this: the spinoff of the diabetes unit MiniMed, initiated about two weeks ago, absorbs management bandwidth. If the core business loses growth momentum during this transformation, the current market capitalization of EUR 100.79 billion could come under swift pressure.
+
+MiniMed Timeline and Near-Term Catalysts
+
+The next concrete milestone is the MiniMed Group separation itself. The final exchange ratio will be determined using volume-weighted average prices from October 5 to 7, 2026, before the offer expires on October 9, 2026. That date will reveal how many legacy shareholders participate and how the adjusted ownership structure takes shape.
+
+For the share price, the near-term direction hinges on whether support levels can absorb recent selling pressure. As long as the stock holds the area around yesterday's close of EUR 76.18, the prospect of stabilization remains intact. A sustained break below would signal that the market is assigning less weight to product progress than to the lingering quality and separation risks. Investors should watch for reports on the first commercial deployments of the Prism-2 software and the ProxBox adapter. The formal start of patient enrollment in the DELTA trial stands as the next major pipeline milestone. Swift progress there could help Medtronic gradually rebuild the confidence of cautious market participants.
+
+Ad
+
+Medtronic Stock: New Analysis - 1 October
+
+Fresh Medtronic information released. What's the impact for investors? Our latest independent report examines recent figures and market trends.",https://mdb.ad-hoc-news.de/bild/bild-2703865_1920_1080.webp,N,,2026-10-01 13:45:10.258582
+ID23,JDE Peet’s,2026-10-01 16:36:05+00:00,www.wsj.com,Keurig Dr Pepper Hires Kimberly-Clark President Torres to Helm Coffee Spinoff - WSJ,,,,,,https://www.wsj.com/business/keurig-dr-pepper-hires-kimberly-clark-president-torres-to-helm-coffee-spinoff-9c192bd5,"The company then said JDE Peet's boss Rafael Oliveira would lead the spinoff, but Oliveira left to take the reins at Dutch brewer Heineken.",Not Available,,Y,,2026-10-01 13:44:28.129027
+ID34,OpenAI,2026-10-01 16:24:27+00:00,www.wsj.com,OpenAI Parts Ways With Researchers Who Allegedly Shared Confidential Information - WSJ,,,,,,https://www.wsj.com/tech/ai/openai-parts-ways-with-researchers-who-allegedly-shared-confidential-information-aebac528,"OpenAI has parted ways with three researchers for allegedly sharing confidential company information with a third-party AI-safety organization, ...",Not Available,,Y,,2026-10-01 13:45:21.804826
+ID18,Eli Lilly,2026-10-01 16:14:32+00:00,HBR Store,Eli Lilly: Weighing Even More Options in the Obesity Drug Market - HBR Store,Not Available,,,,,https://store.hbr.org/product/eli-lilly-weighing-even-more-options-in-the-obesity-drug-market/527014?sku=527014-PDF-ENG,"By the summer of 2026, pharmaceutical company Eli Lilly (Lilly) had gained an edge in the lucrative obesity drug market over its rival, Novo Nordisk (Novo).
+Even as Lilly had reduced prices for its blockbuster GLP-1 drug, Zepbound, it had increased revenue overall by growing the GLP-1 market in the U.S. and abroad.
+While many U.S. employers balked at the cost of covering weight-loss drugs for their employees, Medicare had agreed to cover them for seniors, albeit in a limited pilot.
+Other companies were racing to enter the obesity drug market, while generic versions were beginning to enter some markets.
+Lilly had to find ways to maintain its edge and continue to make the case for the value of its medications.","By the summer of 2026, pharmaceutical company Eli Lilly (Lilly) had gained an edge in the lucrative obesity drug market over its rival, Novo Nordisk (Novo). Even as Lilly had reduced prices for its blockbuster GLP-1 drug, Zepbound, it had increased revenue overall by growing the GLP-1 market in the U.S. and abroad. Both companies were expanding their offerings: Lilly had launched a new weight-loss pill and was preparing to seek approval for a promising next-generation drug with even greater efficacy, while Novos newly launched Wegovy pill was gaining traction and a new higher-dose injectable offered greater efficacy than prior doses. While many U.S. employers balked at the cost of covering weight-loss drugs for their employees, Medicare had agreed to cover them for seniors, albeit in a limited pilot. Other companies were racing to enter the obesity drug market, while generic versions were beginning to enter some markets. Lilly had to find ways to maintain its edge and continue to make the case for the value of its medications.",https://cdn11.bigcommerce.com/s-yneuaokjib/products/96668/images/347425/generic-case-study__06833.1790866128.386.513.png?c=2,N,,2026-10-01 13:44:23.129385
+ID17,Elevance Health,2026-10-01 16:03:44+00:00,www.modernhealthcare.com,Why home health expansions are a power play in value-based care - Modern Healthcare,Not Available,,,,,https://www.modernhealthcare.com/post-acute-care/mh-bayada-addus-homecare-value-based-care/,"Home health providers eager to expand value ... Humana and Aetna are scaling back, while UnitedHealthcare and Elevance Health are expanding.",Not Available,,N,,2026-10-01 14:23:27.539314
+ID17,Elevance Health,2026-10-01 16:02:20+00:00,Yahoo Finance,Elevance Health (ELV): Conviction Pays Off as Underwriting Disciplines Stabilize Margins,Soumya Eswaran,,,,,https://finance.yahoo.com/healthcare/articles/elevance-health-elv-conviction-pays-154309517.html,"In its second-quarter 2026 investor letter, Cambiar Opportunity Fund highlighted Elevance Health, Inc. (NYSE:ELV) as a notable contributor.
+Elevance Health, Inc. (NYSE:ELV) is a US-based health benefits company.
+Individual outperformers in Industrials and Healthcare included Delta Air Lines, Centene, and Elevance Health, Inc. (NYSE:ELV).
+Elevance Health, Inc. (NYSE:ELV) is not on our list of the 40 Most Popular Stocks Among Hedge Funds.
+In another article, we discussed Elevance Health, Inc. (NYSE:ELV) and shared First Eagle Global Fund's views on the company.","Cambiar Opportunity Fund, managed by Cambiar Investors, published its Q2 2026 investor letter. The letter can be downloaded here. U.S. equity markets experienced a significant rebound in Q2, with the S&P 500 rising 15.2% and the Russell 2000 up 21.5%. Growth stocks outperformed value, although value retained a year-to-date lead. The market's rise was fueled by technology and AI stocks, which now dominate the S&P 500, accounting for nearly 50%. Notably, the demand for advanced AI chips has become a structural opportunity in the semiconductor sector, surpassing previous cycles. Despite strong profit margins, caution is warranted due to extreme valuation metrics. The Cambiar Opportunity Fund gained 11.58% (CAMOX) but lagged behind the Russell 1000 Value Index's 13.87% gain, reflecting an underweight in tech. The market remains speculative, illustrated by the recent SpaceX IPO and the rapid rise in memory chip stock prices. Overall, while market leadership was driven by a few tech stocks, future uncertainties including geopolitical conflicts and AI disruption may challenge economic growth and specific company earnings. Portfolio construction focuses on broad ownership across diverse sectors. Additionally, reviewing the Fund's top five holdings could help identify its best picks for 2026.
+
+In its second-quarter 2026 investor letter, Cambiar Opportunity Fund highlighted Elevance Health, Inc. (NYSE:ELV) as a notable contributor. Elevance Health, Inc. (NYSE:ELV) is a US-based health benefits company. On September 30, 2026, Elevance Health, Inc. closed at $388.82 per share. Over the past month, Elevance Health, Inc. declined 8.32%, but its shares are up 11.77% over the past year. Elevance Health, Inc. has a market capitalization of $84.32 billion, and its stock has traded within a 52-week range of $274.84 to $436.24.
+
+Cambiar Opportunity Fund stated the following regarding Elevance Health, Inc. (NYSE:ELV) in its Q2 2026 investor letter:
+
+""Notable 2Q return drivers for the Opportunity Fund included an underweight allocation to Energy as well as positive stock selection in Industrials and Healthcare. After rallying in the first quarter, energy stocks reversed course in response to settlement talks in the Mideast and the decline in oil prices. Individual outperformers in Industrials and Healthcare included Delta Air Lines, Centene, and Elevance Health, Inc. (NYSE:ELV). After a trying 2025 for Centene and Elevance, our conviction to stay the course with both positions has begun to pay dividends for the portfolio. Health insurers experienced a difficult period in recent years, as elevated utilization rates weighed on earnings. The industry responded with a combination of pricing and underwriting actions that have helped to stabilize profits. Notwithstanding the recent recovery in their stock prices (resulting in higher P/Es), our analysis shows that current year earnings for Centene and Elevance are still 30-50% below what may be achieved in a normalized environment.""
+
+Elevance Health, Inc. (NYSE:ELV) is not on our list of the 40 Most Popular Stocks Among Hedge Funds. As per our database, 84 hedge fund portfolios held Elevance Health, Inc. (NYSE:ELV) at the end of the second quarter, which was 87 in the previous quarter. While we acknowledge the potential of Elevance Health, Inc. (NYSE:ELV) as an investment, we believe certain AI stocks offer greater upside potential and carry less downside risk. If you're looking for an extremely undervalued AI stock that also stands to benefit significantly from Trump-era tariffs and the onshoring trend, see our free report on the best short-term AI stock.
+
+In another article, we discussed Elevance Health, Inc. (NYSE:ELV) and shared First Eagle Global Fund's views on the company. In addition, please check out our hedge fund investor letters Q2 2026 page for more investor letters from hedge funds and other leading investors.
+
+READ NEXT: 33 Stocks That Should Double in 3 Years and 15 Stocks That Will Make You Rich in 10 Years.
+
+This article is originally published at Insider Monkey.",https://s.yimg.com/lo/mysterio/api/ebbbf41095036ab6df73a26ed135bf20b3f7ee8ec3fbedd6cd1275b3899e04ee/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Finsidermonkey.com%2Fa7c1a5f21b4e9e905a9c3115375db4b8.jpg,N,,2026-10-01 12:26:55.571303
+ID6,AXA,2026-10-01 15:46:42+00:00,news.cgtn.com,INTERNATIONAL CRIMINAL COURT CUTS TIES WITH AXA OVER US SANCTIONS - FT,CGTN,,,,,https://news.cgtn.com/news/2026-10-01/news-1QTqu0nJ0fm/share_amp.html,INTERNATIONAL CRIMINAL COURT CUTS TIES WITH AXA OVER US SANCTIONS - FT. Updated 2026.10.01 21:25 GMT+8. CGTN. Copyright ©.,Not Available,,N,,2026-10-01 14:22:55.716129
+ID6,AXA,2026-10-01 15:44:52+00:00,Yahoo Finance,AXA XL launches dedicated E&S insurance company - Yahoo Finance,Shubhendu Vimal,,,,,https://finance.yahoo.com/healthcare/articles/axa-xl-launches-dedicated-e-145531435.html,"AXA XL has launched the AXA XL Excess & Surplus Lines Insurance Company (AXA XL E&S) dedicated to serving wholesale brokers.
+The entity will operate alongside AXA XL's existing companies and participate in the same AXA XL pool as the Indian Harbor Insurance Company.
+AXA XL Americas CEO Lucy Pilko said: ""The creation of AXA XL E&S is a significant milestone in our strategic plan to strengthen our presence in the E&S market.
+AXA XL E&S will begin underwriting new E&S casualty business in early 2027.
+""AXA XL launches dedicated E&S insurance company "" was originally created and published by Life Insurance International, a GlobalData owned brand.","AXA XL has launched the AXA XL Excess & Surplus Lines Insurance Company (AXA XL E&S) dedicated to serving wholesale brokers.
+
+The entity will operate alongside AXA XL's existing companies and participate in the same AXA XL pool as the Indian Harbor Insurance Company.
+
+It will serve as a dedicated carrier for wholesale broker relationships and issue policies developed by AXA XL with wholesale brokers across the US.
+
+AXA XL Americas CEO Lucy Pilko said: ""The creation of AXA XL E&S is a significant milestone in our strategic plan to strengthen our presence in the E&S market.
+
+""This dedicated entity enables us to leverage our industry-leading risk expertise, tailored solutions and global reach to better serve brokers and their clients.""
+
+The launch is set to coincide with the introduction of Guidewire, AXA XL's digital platform, which will become the policy administration system for E&S from 2027.
+
+AXA XL E&S will begin underwriting new E&S casualty business in early 2027.
+
+Existing policies are expected to move to the entity in mid-2027, while E&S property business will follow later in the year.
+
+Products and rates will remain unchanged during the transition, the group said.
+
+AXA XL E&S Wholesale Solutions head Tim Whisler added: ""By strengthening our organisational focus on the E&S market, we are better positioned to innovate, increase scale in key regions and provide the proactive, tailored support that our brokers expect.""
+
+AXA XL is French insurer AXA's property and casualty (P&C) and specialty risk division, providing insurance and risk management solutions to mid-sized companies, multinationals and individuals worldwide.
+
+The launch follows AXA's partnership last month with US technology company Publicis Sapient to support the next phase of its AI transformation.
+
+AXA said the arrangement is focused on continuing to develop its Global AI Hub, which was designed to scale AI agents across the group's operations.
+
+""AXA XL launches dedicated E&S insurance company "" was originally created and published by Life Insurance International, a GlobalData owned brand.
+
+Recommended Stories",https://s.yimg.com/lo/mysterio/api/85c659b7b9af844506e9d5240dcd05fc307940317b2b7a7fc82725b7234bdc87/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Flife_insurance_international_186%2Fad5e3d9fd490863af8315fa9ed55aa6b.jpg,N,,2026-10-01 13:44:17.244358
+ID23,JDE Peet’s,2026-10-01 15:40:39+00:00,World Coffee Portal,Keurig Dr Pepper appoints new CEO for Global Coffee Co spinoff,the Allegra Intelligence Team,,,,,https://www.worldcoffeeportal.com/news/keurig-dr-pepper-appoints-new-ceo-for-global-coffee-co-spinoff/,"Former JDE Peet’s CEO Rafael Oliveira had previously agreed to take on the role, but joined Dutch beer giant Heineken in July 2026 US beverage group Keurig Dr Pepper (KDP) has named new leadership for its Global Coffee Co spinoff, three months after its first choice for the role left the business.","Former JDE Peet’s CEO Rafael Oliveira had previously agreed to take on the role, but joined Dutch beer giant Heineken in July 2026
+
+US beverage group Keurig Dr Pepper (KDP) has named new leadership for its Global Coffee Co spinoff, three months after its first choice for the role left the business.",https://storage.ghost.io/c/f7/2c/f72c3701-6a2d-4fef-ba1f-262a5397fe3f/content/images/size/w1200/2026/10/Russ-Torres-Headshot.jpg,N,,2026-10-01 13:44:32.868029
+ID7,Barclays,2026-10-01 15:37:34+00:00,FF News,Barclays Completes Acquisition of GoHenry to Scale Youth Financial Education in the UK,Lauren Towner,,,,,https://ffnews.com/news/barclays-press-release-completion-of-the-acquisition-of-gohenry-a-money-manageme-ba0717a0,"Further to our June announcement, Barclays has just completed its acquisition of GoHenry, the UK money management and financial education platform for children and families.
+The acquisition brings together GoHenry’s youth proposition with Barclays’ banking expertise and reach, supporting Barclays’ strategy to build deeper relationships with customers across more of life’s key moments.
+Barclays PLC (“Barclays”) today announces that, further to the announcement on 12 June 2026, Barclays Bank UK PLC (“Barclays UK”) has successfully completed the acquisition of GoHenry, operating through GoHenry Limited (“GoHenry”) (the “Transaction”) from Acorns Grow Incorporated (“Acorns”).
+The Transaction brings together a renowned youth proposition and Barclays’ expertise in banking, enabling Barclays to serve customers of all ages.
+Vim Maru, CEO of Barclays UK, commented: “Today marks an exciting milestone as GoHenry officially joins Barclays.","Further to our June announcement, Barclays has just completed its acquisition of GoHenry, the UK money management and financial education platform for children and families.
+
+The acquisition brings together GoHenry’s youth proposition with Barclays’ banking expertise and reach, supporting Barclays’ strategy to build deeper relationships with customers across more of life’s key moments.
+
+Barclays PLC (“Barclays”) today announces that, further to the announcement on 12 June 2026, Barclays Bank UK PLC (“Barclays UK”) has successfully completed the acquisition of GoHenry, operating through GoHenry Limited (“GoHenry”) (the “Transaction”) from Acorns Grow Incorporated (“Acorns”).
+
+The Transaction accelerates Barclays’ strategy to build deeper relationships with customers across more of life’s key moments. Barclays intends to retain the GoHenry brand with its standalone app. The Transaction brings together a renowned youth proposition and Barclays’ expertise in banking, enabling Barclays to serve customers of all ages.
+
+The transaction is expected to marginally reduce the Group’s CET1 ratio.
+
+Vim Maru, CEO of Barclays UK, commented:
+
+“Today marks an exciting milestone as GoHenry officially joins Barclays. GoHenry has built a market-leading brand, helping young people develop confidence with money through its innovative all-in-one app. Together, we will combine GoHenry’s experience with Barclays’ scale to strengthen support for families across the UK.”
+
+Louise Hill, Founder of GoHenry, commented:
+
+“Fourteen years ago, we started with a mission to make every kid smart with money. Since then, we’ve helped millions of young people do exactly that, and along the way we’ve built a deep understanding of children, parents and their money management needs. This next chapter with Barclays will enable us to reach many millions more and support families across the UK with the products and services they need as children grow into adulthood. Together with Barclays, we can do even more for our members – and more for financial literacy in the UK.”
+
+Noah Kerner, CEO & Chairman of Acorns, commented:
+
+“Acquiring GoHenry in 2023 accelerated our vision of bringing financial wellness to the whole family, establishing Acorns Early as a US leader in the kids space with over 1.4 million customers. With that chapter complete, we're doubling down on building the leading financial wellness app for American families. Barclays has the scale and reach to bring GoHenry's important mission to many more kids across the UK, and we're excited to see what they'll build together.”
+
+Acorns will retain the GoHenry US business, which now operates under the Acorns Early brand, as well as Pixpay in Europe.",https://img.ffnews.com/2026/10/barclays-press-release-completion-of-the-acquisition-of-gohenry-a-money-manageme-ba0717a0-1790865613432.webp,N,,2026-10-01 12:26:48.568934
+ID39,Societe Generale,2026-10-01 15:25:29+00:00,YouTube,Societe Generale Group agrees to sell a majority stake to Attijariwafa Bank - YouTube,Not Available,,,,,https://www.youtube.com/watch?v=hVPTKmuODhs,SG-Bank Takeover: Societe Generale Group agrees to sell a majority stake to Attijariwafa Bank | Market Place (1-10-26)#TheMarketPlace #JoyNews https://www.my...,Not Available,https://i.ytimg.com/vi/hVPTKmuODhs/hqdefault.jpg,N,,2026-10-01 12:27:08.550901
+ID18,Eli Lilly,2026-10-01 15:24:38+00:00,www.wsj.com,"The Next Frontier for Obesity Drugs Isn't How Much Weight You Lose, but What Kind - WSJ",,,,,,https://www.wsj.com/health/pharma/the-next-frontier-for-obesity-drugs-isnt-how-much-weight-you-lose-but-what-kind-9fbd87fe,"... Eli Lilly, and who has worked with other companies. “I want you to be able to bend down and tie your shoe without difficulty.” Regeneron reported ...",Not Available,,Y,,2026-10-01 12:26:58.916023
+ID18,Eli Lilly,2026-10-01 15:16:55+00:00,Reuters,Foghorn to cut 40% of workforce after scrapping Lilly-partnered cancer drug | Reuters,Not Available,,,,,https://www.reuters.com/legal/litigation/foghorn-cut-40-workforce-after-scrapping-lilly-partnered-cancer-drug-2026-10-01/,Foghorn Therapeutics said on Thursday it has discontinued development of an experimental cancer drug partnered with ​Eli Lilly after it failed to show ‌enough benefit in an early-stage trial.,Not Available,https://www.reuters.com/resizer/v2/466BJJQ7PVGY5O53NZ3KL65MHM.png?auth=b9c3bf166c40a6778eb5672993fde7c30a15f48329026674eff92afd8da1d0ca&height=1005&width=1920&quality=80&smart=true,N,,2026-10-01 12:27:02.085232
+ID18,Eli Lilly,2026-10-01 15:09:08+00:00,www.facebook.com,The race for oral obesity drugs is heating up as pharma giants Novo Nordisk and Eli Lilly ...,Not Available,,,,,https://www.facebook.com/BusinessToday/videos/the-race-for-oral-obesity-drugs-is-heating-up-as-pharma-giants-novo-nordisk-and-/1909757486870840/,The race for oral obesity drugs is heating up as pharma giants Novo Nordisk and Eli Lilly prepare to bring GLP-1 pills to markets including India....,Not Available,https://scontent-iad3-2.xx.fbcdn.net/v/t15.5256-10/832927400_1909758856870703_6677552420879703793_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=596eb7&_nc_ohc=R3NBSWTu9I8Q7kNvwGHkOMt&_nc_oc=AdqaEUaVeL-3aplWP9qcdRfjCCQcXgRJTlwnuEK-jfQgiN5OvkqKl6Fn92o0xCIou6Y&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=1mRktiILnTsm-s8K90B2Wg&_nc_ss=7b289&oh=00_AQOJI3GDYsKJUl_6cCatRv9lBcSGFsxfxaISOpWCmH_Keg&oe=6AC47C63,N,,2026-10-01 14:23:39.273959
+ID38,S&P Global,2026-10-01 14:55:19+00:00,CNBC,"Billionaire family offices bet on geothermal energy, brain implants in September - CNBC","Hayley Cuccinello, www.facebook.com",,,,,https://www.cnbc.com/2026/10/01/billionaire-family-offices-back-geothermal-energy-in-september.html,"In September, family offices made 42 direct investments in companies, down from 52 the month prior, according to data provided exclusively to CNBC by Fintrx, a private wealth intelligence platform.
+However, while family offices are writing fewer checks, they are still making bold bets with startup mega-rounds.
+Family offices' interest in clean energy startups continues, representing five of the month's transactions.
+John Arnold's Centaurus Capital and John Doerr's namesake family office led a $135 million Series B for Mazama Energy, a geothermal energy startup.
+""When you talk about family offices or even any other investor, what they look for is a demonstrated track record.","A version of this article appeared in CNBC's Inside Wealth newsletter, a weekly guide to the high-net-worth investor and consumer. Sign up to receive future editions, straight to your inbox.
+
+Fall is off to a slow start for investment firms of ultra-wealthy families. In September, family offices made 42 direct investments in companies, down from 52 the month prior, according to data provided exclusively to CNBC by Fintrx, a private wealth intelligence platform.
+
+However, while family offices are writing fewer checks, they are still making bold bets with startup mega-rounds. In September, Hillspire, the personal investment firm of former Google CEO Eric Schmidt, participated in a three billion euros (about $3.4 billion) Series D for Mistral. The three-year-old French startup builds a wide range of artificial intelligence models such as chatbots and coding assistants, including freely available open-weight models.
+
+That same month, hedge fund titan Stanley Druckenmiller's Duquesne Family Office participated in a $500 million Series A for Fab2 and a $250 million Series D for Precision Neuroscience. Fab2 manufactures small semiconductor factories, and Precision Neuroscience develops brain implants that record neural signals to let users control digital devices.
+
+Family offices' interest in clean energy startups continues, representing five of the month's transactions. John Arnold's Centaurus Capital and John Doerr's namesake family office led a $135 million Series B for Mazama Energy, a geothermal energy startup. Bill Gates' private venture capital firm also participated in the round.
+
+Both Arnold and Doerr, who made their billionaire fortunes in hedge funds and venture capital, respectively, have backed multiple clean energy startups this year.
+
+Mazama Energy drills into extremely hot rock then circulates water through engineered cracks to bring heat back to the surface to generate carbon-free electricity. This technology enables Mazama to generate more energy from fewer wells, reducing the cost of power, according to the three-year-old company.
+
+In 2025, Mazama drilled into rock at its Oregon pilot site that reached 629°F — what the company says is the hottest engineered geothermal system on record.
+
+Mazama CEO Sriram Vasantharajan said this proof of concept showed a clear path to commercialization and was key to attracting top investors.
+
+""When you talk about family offices or even any other investor, what they look for is a demonstrated track record. It's one thing to create the tech platform, but what Mazama has done is actually applied it,"" Vasantharajan said.
+
+Investing in cutting-edge technology often comes with long investment horizons. Vasantharajan said this isn't the case with geothermal energy. The Oregon site is already capable of producing 10 gigawatts of energy.
+
+""The heat beneath our feet exists. Its temperature is proven,"" he said. ""It is not a scientific problem that we're tackling. It is an engineering challenge.""",https://image.cnbcfm.com/api/v1/image/108330181-1783018848998-gettyimages-2117524826-cera2024wednesday2.jpeg?v=1783377535&w=1920&h=1080,N,,2026-10-01 14:23:45.991535
+ID26,L’Oréal,2026-10-01 14:45:59+00:00,WWD,L'Oréal-owned Dr.G Expands in the U.S. Through TikTok Shop - WWD,Kaleigh Werner,,,,,https://wwd.com/beauty-industry-news/skin-care/loreal-k-beauty-dr-g-tiktok-shop-1239296443/,"Acquired by L’Oréal a little over a year ago, the dermatologist-founded line is launching on TikTok Shop, signaling its next phase of growth in the U.S. after its initial entry through Amazon.
+TikTok Shop is a discovery channel,” said Fair.
+“We see that the people who we feel are going to be the consumers for Dr.G are already on TikTok Shop, and they’re there for discovery and education.” Dr.G was founded by Seoul-based dermatologist Gun-Young Ahn, who opened his clinic in 1998 and launched the brand in 2003.
+Skin care was the second largest category within beauty on TikTok Shop from January to June 2026, according to data by Circana.
+“Dr.G is used by Koreans, and is the number-one brand in Korea.","Dr.G, the number-one skin care brand in Korea, is doubling down on the U.S. with an innovative distribution strategy that looks to capitalize on where younger consumers are discovering skin care.
+
+Acquired by L’Oréal a little over a year ago, the dermatologist-founded line is launching on TikTok Shop, signaling its next phase of growth in the U.S. after its initial entry through Amazon.
+
+“We’re taking ownership of the brand in the U.S. with plans to accelerate, starting with TikTok Shop,” said Christina Fair, president of the consumer products division of L’Oréal North America. “We have built a 360-degree campaign, creating awareness affiliates. We’re going to lean in even more with Amazon as well, and then look to see what the next phase is in terms of brick-and-mortar, too.”
+
+This marks the first time that L’Oréal is launching a brand on TikTok Shop. “We’re entering this space at just the right time. TikTok Shop is a discovery channel,” said Fair. “We see that the people who we feel are going to be the consumers for Dr.G are already on TikTok Shop, and they’re there for discovery and education.”
+
+Dr.G was founded by Seoul-based dermatologist Gun-Young Ahn, who opened his clinic in 1998 and launched the brand in 2003. Today, the line comprises serums, sunscreens, patches, cleansers and creams, with prices starting at $6.95 for R.E.D. Blemish Oil Control Paper and rising to $50 for R.E.D. Blemish Cool Soothing Trouble Gel Mask. Bestsellers include Black Snail Cream, $27, and an R.E.D. Blemish Clear Soothing Cream, $22.
+
+L’Oréal’s timing is apropos. Skin care was the second largest category within beauty on TikTok Shop from January to June 2026, according to data by Circana. Medicube, Anua, Dr.Melaxin, CosRx, Skin1004, Jiyu and Sungboon led the K-Beauty sector, totaling more than $245 million in sales.
+
+Fair said that Dr.G’s success in South Korea should help it break through the pack here. “Dr.G is used by Koreans, and is the number-one brand in Korea. To have a brand that’s so popular and big in Korea here is exciting for everybody,” she said, noting it’s also unusual to have a founder who is still very involved. “Also, the fact that Dr. Ahn is involved in the history of the brand, in creating the formulas, planning the clinicals and bringing that efficacy is unique from other brands that you’re seeing [on TikTok Shop].”
+
+Looking ahead to the fourth quarter of 2026 and into 2027, L’Oréal’s priority is to build brand awareness within the U.S. market, with TikTok Shop a top priority. “We’re expanding this brand from a very low base of awareness,” said Fair. “We want to ensure the right products are in the spotlight, and the education is there. We also want to disrupt and come into this Korean beauty trend and ensure that we are targeting the right consumers.”",https://wwd.com/wp-content/uploads/2026/09/MixCollage-30-Sep-2026-12-50-PM-4517.jpg?w=1000&h=563&crop=1,N,,2026-10-01 13:44:54.483692
+ID23,JDE Peet’s,2026-10-01 14:35:26+00:00,www.minichart.com.sg,Keurig Dr Pepper Names Russ Torres CEO of Future Global Coffee Co - Minichart,Not Available,,,,,https://www.minichart.com.sg/2026/10/01/keurig-dr-pepper-names-russ-torres-ceo-of-future-global-coffee-co/,"Keurig Dr Pepper Names Russ Torres CEO of Future Global Coffee Co. Keurig Dr Pepper Inc. (NASDAQ: KDP) announced that its Board of Directors has named Russ Torres as Chief Executive Officer of the future Global Coffee Co., the pure-play coffee business it plans to separate from its beverage operations.
+Torres joins KDP on November 3, 2026, and will serve as CEO of the Company’s coffee operating unit before the separation.
+Torres will also join the future Global Coffee Co. board upon the planned separation, which is targeted for early 2027.
+Scale of the Business Being Led The filing discloses that upon separation, Global Coffee Co. will generate approximately $16 billion in annual revenue, employ more than 25,000 people, and serve consumers in more than 100 markets.
+Torres will also serve as a member of the future Global Coffee Co. Board of Directors upon completion of the planned separation.","Keurig Dr Pepper Names Russ Torres CEO of Future Global Coffee Co.
+
+Keurig Dr Pepper Inc. (NASDAQ: KDP) announced that its Board of Directors has named Russ Torres as Chief Executive Officer of the future Global Coffee Co., the pure-play coffee business it plans to separate from its beverage operations.
+
+Torres joins KDP on November 3, 2026, and will serve as CEO of the Company’s coffee operating unit before the separation. In that role he will lead the integration of KDP’s and JDE Peet’s coffee operations, reporting to current KDP CEO Tim Cofer, who will become CEO of Beverage Co. after separation. Torres will also join the future Global Coffee Co. board upon the planned separation, which is targeted for early 2027.
+
+Scale of the Business Being Led
+
+The filing discloses that upon separation, Global Coffee Co. will generate approximately $16 billion in annual revenue, employ more than 25,000 people, and serve consumers in more than 100 markets. Its portfolio will span single-serve systems, roast and ground, whole bean, soluble, ready-to-drink and away-from-home formats under brands including Keurig, Jacobs, Peet’s, L’OR and Green Mountain Coffee Roasters.
+
+Why It Matters to Shareholders
+
+The appointment puts a named leader in place for the company’s largest strategic event — the separation of its beverage and coffee businesses. Torres arrives from Kimberly-Clark Corporation (NYSE: KMB), where he is President and Chief Operating Officer, overseeing operations in more than 30 countries. He previously served as Kimberly-Clark’s Group President of North America and held senior roles at Newell Brands, Bain & Company and Mondelēz International.
+
+KDP management framed the hire as supporting the separation and integration agenda. CEO Tim Cofer said the base business is healthy, integration and deleveraging work is on plan, and Torres joins with “meaningful runway” to drive synergy realization and shape strategy ahead of separation.
+
+Key Details and Risks
+
+Timing: Start date of November 3, 2026; separation targeted for early 2027.
+
+Reporting line: Torres reports to Tim Cofer until separation, after which Cofer leads Beverage Co.
+
+Risks cited: The filing notes risks related to completing the separation in the anticipated timeframe or at all, the ability to retain key executives to lead the beverage and coffee portfolios, debt incurred to fund the JDE Peet’s acquisition, integration difficulties, potential credit rating downgrades and potential litigation.
+
+Torres will also serve as a member of the future Global Coffee Co. Board of Directors upon completion of the planned separation.
+
+This article is for informational purposes only and does not constitute investment advice.
+
+View Keurig Dr Pepper Inc. Historical chart here",https://www.minichart.com.sg/wp-content/uploads/2024/01/cropped-highres_317337105-32x32.jpeg,N,,2026-10-01 13:44:42.797883
+ID26,L’Oréal,2026-10-01 14:22:15+00:00,LinkedIn,"L'Oréal sees India entering its top 10 markets before 2030, crossing €1 billion in sales - CNBC TV18",CNBC-TV18,,,,,https://www.linkedin.com/posts/cnbc-tv18_exclusive-loréal-sees-india-entering-its-activity-7511411116112121856-Z8Bs,"🚨 EXCLUSIVE | L'Oréal CEO Nicolas HIERONIMUS tells CNBC-TV18 that India could enter the company’s top 10 global markets before 2030, with sales potentially crossing €1 billion.
+📈 India is already L’Oréal’s seventh-largest contributor to global growth, with its local business growing around 18%.
+✍️ Shereen Bhan speaks exclusively with Nicolas Hieronimus on India’s growth story, e-commerce, local brands and L’Oréal’s expanding India strategy.
+https://lnkd.in/dk7WfSTv #LOreal #India #Exclusive #Business","🚨 EXCLUSIVE | L'Oréal CEO Nicolas HIERONIMUS tells CNBC-TV18 that India could enter the company’s top 10 global markets before 2030, with sales potentially crossing €1 billion. 📈 India is already L’Oréal’s seventh-largest contributor to global growth, with its local business growing around 18%. ✍️ Shereen Bhan speaks exclusively with Nicolas Hieronimus on India’s growth story, e-commerce, local brands and L’Oréal’s expanding India strategy. https://lnkd.in/dk7WfSTv #LOreal #India #Exclusive #Business",https://media.licdn.com/dms/image/sync/v2/D4D27AQFRatSqBhl09g/articleshare-shrink_800/B4DaD3khYmIoAY-/0/1790859941763?e=2147483647&v=beta&t=po5TGx7HCUBbSAQ2N2CYoGyy1GJXnOnZMgd35kLbofY,N,,2026-10-01 13:45:00.293152
 ID34,OpenAI,2026-10-01 14:16:34+00:00,YouTube,"OpenAI-Hugging Face incident became a 'turning point' in AI safety discussion, says Walter Isaacson",Not Available,,,,,https://www.youtube.com/watch?v=uUDWRS_LnRI,"Walter Isaacson, ‘Elon Musk’ author, Perella Weinberg advisory partner, and Tulane University professor, joins ‘Squawk Box’ to discuss the reality of AI self...",Not Available,https://i.ytimg.com/vi/uUDWRS_LnRI/maxresdefault.jpg,N,,2026-10-01 11:13:27.280435
+ID27,Levi Strauss,2026-10-01 14:15:51+00:00,www.modaes.com,Levi Strauss Hires Skechers CFO as Denim Giant Rethinks Strategy | Modaes Global,"Modaes, Triana Alonso, Irene Juárez, CEO of LVMH, CEO of Kering, CEO of Inditex, CEO of Richemont, CEO of GAP, CEO of Nike",,,,,https://www.modaes.com/global/companies/levi-strauss-hires-skechers-cfo-amid-a-major-course-correction,"U.S. denim giant Levi Strauss has just appointed John Vandemore as its new chief financial officer after nine years leading Skechers’ finance department.
+The executive, who will take office on November 1st, joins Levi Strauss’s senior management team as the company undergoes a transformation toward a more direct-to-consumer model.
+Vandemore will replace Harmit Singh, executive vice president and chief financial and growth officer at Levi Strauss, who announced in April his intention to step down from the company after thirteen years with the firm.
+Levi Strauss closed the first six months of the fiscal year with sales of $3,304 million, up 11%, while net income reached $263 million, up 30%.
+In total, Levi Strauss employs about 19,000 people worldwide.","U.S. denim giant Levi Strauss has just appointed John Vandemore as its new chief financial officer after nine years leading Skechers’ finance department. The executive, who will take office on November 1st, joins Levi Strauss’s senior management team as the company undergoes a transformation toward a more direct-to-consumer model.
+
+The U.S. company is moving toward a business model more focused on direct-to-consumer distribution and on expanding Levi’s as a lifestyle brand beyond denim. The group also has an ambitious goal: to reach $10 billion in revenue.
+
+Vandemore will replace Harmit Singh, executive vice president and chief financial and growth officer at Levi Strauss, who announced in April his intention to step down from the company after thirteen years with the firm. Singh will remain as a special advisor through the end of November to facilitate the transition.
+
+Vandemore has led Skechers’ finance department for nine years, during which time the company’s revenue nearly tripled
+
+The new CFO comes from the footwear company, where he achieved milestones such as tripling revenue to over $9 billion and expanding the company’s international presence to more than 180 countries and over 5,000 stores. In addition, Skechers was acquired in 2025 by 3G Capital for approximately $9.4 billion, a transaction that resulted in the company’s delisting from the stock exchange.
+
+The hiring comes as the San Francisco-based company continues to deepen the strategy spearheaded by Michelle Gass, who has served as president and CEO since 2023. The group is reducing its reliance on wholesale distribution and increasing the share of its own retail channels, while seeking to transform Levi’s into a lifestyle brand that extends beyond jeans.
+
+The move is part of the evolution of a group that closed out 2025 with revenue of $6.3 billion, up 4% from the previous year and up 7% on an organic basis. Net income from continuing operations reached $502 million, compared to $210 million in 2024.
+
+In the first half of 2026, the company maintained its positive trajectory. Levi Strauss closed the first six months of the fiscal year with sales of $3,304 million, up 11%, while net income reached $263 million, up 30%. Following these results, the group raised its full-year guidance.
+
+The company currently operates in about 120 countries and has approximately 3,300 company-owned stores and retail spaces. In total, Levi Strauss employs about 19,000 people worldwide.",https://www.modaes.com/global/thumb/eyJ0IjoiZCIsInciOjEyMDAsImgiOjY3NSwibSI6MSwibG0iOjE3OTA4NTE0MTh9/files/2026/15-redaccion-empresas/levi-strauss/levi-straus-skechers-nombramiento-director-financiero-john-vandemore-denim-vaqueros-tienda-logo-levis-1200.jpg,N,,2026-10-01 14:23:42.540144
+ID38,S&P Global,2026-10-01 13:56:36+00:00,BNN Bloomberg,Nvidia's bet that its chips can finance the AI boom gets a Wall Street reality check,Staff,,,,,https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/10/01/nvidias-bet-that-its-chips-can-finance-the-ai-boom-gets-a-wall-street-reality-check/,Nvidia’s mammoth financing plan has opened a debate on Wall Street about how much its advanced chips and the infrastructure around them are worth. The answer for banks and investors seems to be: Not as much as Nvidia thinks.,Not Available,https://www.bnnbloomberg.ca/resizer/v2/BLIU46IV6G76Q6AH2XG2V53KSE.jpg?smart=true&auth=afdad70afe5a8845c64083fb2bf5ce170cc81213f63d314dd4123c170404b3b0&width=1200&height=630,N,,2026-10-01 13:45:25.352133
 ID30,Microsoft,2026-10-01 13:56:04+00:00,Seeking Alpha,Microsoft: A Multi-Year Compounder With Seat Growth And Azure Acceleration,Gary Alexander,,,,,https://seekingalpha.com/article/4951344-microsoft-a-multi-year-compounder-with-seat-growth-and-azure-acceleration,"Analyst’s Disclosure: I/we have a beneficial long position in the shares of MSFT either through stock ownership, options, or other derivatives.
 I am not receiving compensation for it (other than from Seeking Alpha).
 Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole.
@@ -7,6 +335,33 @@ Seeking Alpha is not a licensed securities dealer, broker or US investment advis
 Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.","Analyst’s Disclosure: I/we have a beneficial long position in the shares of MSFT either through stock ownership, options, or other derivatives. I wrote this article myself, and it expresses my own opinions. I am not receiving compensation for it (other than from Seeking Alpha). I have no business relationship with any company whose stock is mentioned in this article.
 
 Seeking Alpha's Disclosure: Past performance is no guarantee of future results. No recommendation or advice is being given as to whether any investment is suitable for a particular investor. Any views or opinions expressed above may not reflect those of Seeking Alpha as a whole. Seeking Alpha is not a licensed securities dealer, broker or US investment adviser or investment bank. Our analysts are third party authors that include both professional investors and individual investors who may not be licensed or certified by any institute or regulatory body.",https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1729779122/image_1729779122.jpg?io=getty-c-w1536,N,,2026-10-01 10:11:18.829269
+ID23,JDE Peet’s,2026-10-01 13:49:26+00:00,ESM Magazine,Keurig Dr Pepper Names Kimberly Clark Executive As New CEO Of Coffee Unit,Not Available,,,,,https://www.esmmagazine.com/a-brands/keurig-dr-pepper-names-kimberly-clark-executive-as-new-ceo-of-coffee-unit-322844,"Keurig Dr Pepper has named Kimberly-Clark executive Russ Torres as CEO of the coffee business, which will operate as a publicly traded company early next year.
+Torres will join on 3 November and will initially serve as CEO of Keurig's coffee unit called Global Coffee Co, during which time he will lead the integration of Keurig's and JDE Peet's coffee operations.
+Keurig earlier this year closed its roughly $18 billion (€15.9 billion) acquisition of JDE Peet's, creating a global coffee giant.
+Russ Torres Torres, currently Kimberly-Clark's president and COO, brings three decades of consumer goods experience leading global brands and large-scale business transformations.
+In April, Keurig had named Oliveira as the planned CEO of the future coffee company, currently called Global Coffee Co.","Keurig Dr Pepper has named Kimberly-Clark executive Russ Torres as CEO of the coffee business, which will operate as a publicly traded company early next year.
+
+The move comes months after former head Rafael Oliveira left the firm to join Heineken.
+
+Torres will join on 3 November and will initially serve as CEO of Keurig's coffee unit called Global Coffee Co, during which time he will lead the integration of Keurig's and JDE Peet's coffee operations.
+
+Keurig earlier this year closed its roughly $18 billion (€15.9 billion) acquisition of JDE Peet's, creating a global coffee giant.
+
+Russ Torres
+
+Torres, currently Kimberly-Clark's president and COO, brings three decades of consumer goods experience leading global brands and large-scale business transformations.
+
+He will report to Keurig's chief executive Tim Cofer, who will lead the beverage unit, following separation of the coffee and beverage operations into two US-listed public companies.
+
+In April, Keurig had named Oliveira as the planned CEO of the future coffee company, currently called Global Coffee Co.
+
+In August, the company reaffirmed its annual forecasts after beating analysts' estimates for second-quarter sales and profit.
+
+Cofer said in a statement, ""Russ brings the right combination of commercial drive, brand-building pedigree, and operational discipline needed to stand up Global Coffee Co. for long-term growth,
+
+""Our base business is healthy, integration and deleveraging work is on plan, and Russ joins with meaningful runway to engage our teams, drive synergy realisation, and shape strategy well ahead of separation. He has spent his career accelerating growth across major global portfolios while executing large-scale transformations, and I am thrilled to welcome him to the organisation.""
+
+News by Reuters, additional reporting by ESM.",https://img.resized.co/esmmagazine/eyJkYXRhIjoie1widXJsXCI6XCJodHRwczpcXFwvXFxcL21lZGlhLm1hZGlzb25wdWJsaWNhdGlvbnMuZXVcXFwvZXNtbWFnYXppbmUtcHJvZFxcXC91cGxvYWRzXFxcLzIwMjZcXFwvMTBcXFwvMDExNDA5MzZcXFwvUnVzcy1Ub3JyZXMtSGVhZHNob3Qtc2NhbGVkLmpwZ1wiLFwid2lkdGhcIjoxMjAwLFwiaGVpZ2h0XCI6NjI3LFwiZGVmYXVsdFwiOlwiaHR0cHM6XFxcL1xcXC9pbWcucmVzaXplZC5jb1xcXC9uby1pbWFnZS5wbmdcIixcIm9wdGlvbnNcIjpbXX0iLCJoYXNoIjoiYjBjYmRkOWVmMTdiZGIyMDllMWNhYWU3ZmU3NGIzMGE1ZTE3NjBkMSJ9/keurig-dr-pepper-names-new-ceo-of-coffee-unit.jpg,N,,2026-10-01 13:44:45.393178
 ID6,AXA,2026-10-01 13:45:21+00:00,Reuters,"ICC cuts ties with AXA over US sanctions, FT reports - Reuters",Not Available,,,,,https://www.reuters.com/world/icc-cuts-ties-with-axa-over-us-sanctions-ft-reports-2026-10-01/,"The International Criminal Court has ended its contract with French life and health insurer ​Axa starting October 1 and will now be using a new health ‌insurance provider, a spokesperson for the Hague-based court said.",Not Available,https://www.reuters.com/resizer/v2/RAY2C7PJQJNR7DTWJY3CPA4IPE.jpg?auth=72fe076d987aefb9e80a6b0952ea7bb8cc977090907ecda4cbee75493e91a0ba&height=1005&width=1920&quality=80&smart=true,N,,2026-10-01 11:12:51.520960
 ID6,AXA,2026-10-01 13:43:56+00:00,www.ft.com,International Criminal Court cuts ties with Axa over US sanctions - Financial Times,Not Available,,,,,https://www.ft.com/content/e071ee77-2028-4f40-b7bf-fff19e51c47c?syn-25a6b1a6=1,"Check whether you already have free access via your university or organisation.
 Terms & Conditions apply *Hand delivery availability confirmed when you enter your address.","Check whether you already have free access via your university or organisation.
@@ -25,6 +380,15 @@ A spokesperson for the ICC told the paper Axa and the court had ""decided by mut
 Axa was quoted in the FT as saying: ""It is a complex and sensitive case given the risks arising from the extraterritorial application of US sanctions. Situations of this kind, which are extremely difficult for the individuals affected, are relatively new and reflect an international environment that has become increasingly tense and complex for businesses.""
 
 (Reporting by Kanjyik Ghosh in Barcelona; Editing by Alison Williams)",https://cdn.zonebourse.com/static/resize/0/0//images/reuters/2025-12/2025-12-01T115700Z_1_LYNXMPELB0155_RTROPTP_4_USA-TRUMP-ICC-SANCTIONS.JPG,N,,2026-10-01 11:13:00.081913
+ID23,JDE Peet’s,2026-10-01 13:37:07+00:00,Seeking Alpha,Keurig Dr Pepper names a CEO for the coffee business ahead of the business split,"Clark Schultz, SA News Editor",,,,,https://seekingalpha.com/news/4649018-keurig-dr-pepper-names-a-ceo-for-the-coffee-business-ahead-of-business-split,"To ensure this doesn’t happen in the future, please enable Javascript and cookies in your browser.
+Is this happening to you frequently?
+Please report it on our feedback forum.
+If you have an ad-blocker enabled you may be blocked from proceeding.
+Please disable your ad-blocker and refresh.","To ensure this doesn’t happen in the future, please enable Javascript and cookies in your browser.
+
+Is this happening to you frequently? Please report it on our feedback forum.
+
+If you have an ad-blocker enabled you may be blocked from proceeding. Please disable your ad-blocker and refresh.",https://static.seekingalpha.com/cdn/s3/uploads/getty_images/185209236/image_185209236.jpg?io=getty-c-w630,N,,2026-10-01 13:44:48.191853
 ID17,Elevance Health,2026-10-01 13:27:42+00:00,www.beckerspayer.com,"Medicare Advantage looks stable for 2027. Underneath, it's shifting - Becker's Payer Issues",,,,,,https://www.beckerspayer.com/payer/medicare-advantage/medicare-advantage-looks-stable-for-2027-underneath-its-shifting/,"... health systems, including Providence, Memorial Hermann, Christus Health and Sharp HealthCare. ... Elevance Health. Elevance will offer 308 MA plans in ...",Not Available,,Y,,2026-10-01 11:13:13.400632
 ID27,Levi Strauss,2026-10-01 12:51:12+00:00,Fortune,HPE's $1.2 billion order from Vultr puts its AI networking strategy to the test | Fortune,Sheryl Estrada,,,,,https://fortune.com/2026/10/01/hpe-1-2-billion-vultr-order-puts-ai-networking-strategy-test-cfo/,"The order, announced Wednesday as HPE’s Networking Investor Day took place, is the company’s first for the AMD Helios platform and includes HPE Networking scale-up switching and software.
 For the Vultr order, HPE has not disclosed the $1.2 billion split among networking, compute, software, services and other components.
@@ -135,6 +499,57 @@ Guest: Michael Weinstein, Executive Director, Moody’s Ratings
 Related Research:
 
 • Stable outlook reflects moderate earnings growth and reduced US policy risks, 1 June 2026 (https://www.moodys.com/research/Pharm...)",https://www.moodys.com/web/en/us/dm/images/podcast-video-thumbnails/credit-currents-pharma.jpg,N,,2026-10-01 11:13:23.617998
+ID26,L’Oréal,2026-10-01 12:47:05+00:00,CNBCTV18,"Exclusive | L'Oréal sees India entering its top 10 markets before 2030, crossing €1 billion in sales",Shereen Bhan,,,,,https://www.cnbctv18.com/business/exclusive-loreal-sees-india-entering-its-top-10-markets-before-2030-crossing-eur-1-billion-in-sales-20003227.htm/amp,"Exclusive | L'Oréal sees India entering its top 10 markets before 2030, crossing €1 billion in sales Speaking to CNBC-TV18, L'Oréal CEO Nicolas Hieronimus stated that the Indian market has already broken into the company's top tier of expansion, ranking as its seventh-largest contributor to global growth as of August 2026.
+L'Oréal's business in India is growing at roughly 18% compared to the overall domestic market growth rate of around 10%, gaining market share in one of the group's fastest-growing geographies.
+To capture digital-first consumers, L’Oréal recently signed an agreement to acquire a majority stake in Indian beauty company Innovist, the parent behind direct-to-consumer (D2C) brands Bare Anatomy and Chemist at Play.
+Beyond serving as an expanding consumer market, India has emerged as a primary global innovation, product development, and manufacturing base for the group.
+Also Read: Gland Pharma to invest $21 million in US drugmaker, take 60% stake Advertisement (Edited by : Ajay Vaishnav) HomeBusiness NewsExclusive | L'Oréal sees India entering its top 10 markets before 2030, crossing €1 billion in sales","Exclusive | L'Oréal sees India entering its top 10 markets before 2030, crossing €1 billion in sales
+
+Speaking to CNBC-TV18, L'Oréal CEO Nicolas Hieronimus stated that the Indian market has already broken into the company's top tier of expansion, ranking as its seventh-largest contributor to global growth as of August 2026.
+
+Advertisement
+
+By Shereen Bhan
+
+French beauty giant L’Oréal expects India to break into its top 10 global markets before 2030, a milestone that will see its domestic business surpass €1 billion in revenue, as the country rapidly becomes one of its most critical growth engines.
+
+Speaking to CNBC-TV18, L'Oréal CEO Nicolas Hieronimus stated that the Indian market has already broken into the company's top tier of expansion, ranking as its seventh-largest contributor to global growth as of August 2026.
+
+The ambition comes as India's beauty and personal care market becomes strategically vital for global consumer goods companies. L'Oréal's business in India is growing at roughly 18% compared to the overall domestic market growth rate of around 10%, gaining market share in one of the group's fastest-growing geographies.
+
+""India is indeed a very important and will be more and more important growth engine for the group. At the end of August, it's already made it to the top 10 of our growth contributors, which never happened before. It's number seven country in terms of growth contribution, which shows that the acceleration is really taking place,"" Hieronimus said.
+
+Setting the timeline and scale target, Hieronimus added: ""Before 2030, India can make it potentially to the top 10 countries of L'Oréal, which means being above €1 billion basically.""
+
+L'Oréal's performance in India is being propelled across mass-market segments and its professional salon division, alongside double-digit expansion in luxury and rapid uptake in active cosmetics such as CeraVe and La Roche-Posay. E-commerce has emerged as a dominant pillar, currently accounting for 30% of L’Oréal’s total sales in the country.
+
+To capture digital-first consumers, L’Oréal recently signed an agreement to acquire a majority stake in Indian beauty company Innovist, the parent behind direct-to-consumer (D2C) brands Bare Anatomy and Chemist at Play. The move marks L’Oréal's first acquisition of a homegrown Indian digital-first D2C platform.
+
+Advertisement
+
+Also Read: Coforge to expand Poland workforce to 660 as AI, cloud demand grows
+
+""In every country, we always try to have a mix of international brand that we bring to the country, always adapting... but also, we have local brands because beauty is very cultural,"" Hieronimus said. ""When we saw the rise of this very beautiful, very well crafted, actually group of brands, because Innovist is a platform, and you have Bare Anatomy and Chemist at Play, which are great brands, they are very complementary of what we have, both in terms of categories, more into body or anti-dandruff, in terms of price points, and of course in terms of ways of engaging with the Indian consumer.""
+
+L'Oréal is also backing emerging domestic startups through BOLD (Business Opportunities for L'Oréal Development), its venture capital fund, which operates in strategic partnership with beauty platform Nykaa.
+
+Beyond serving as an expanding consumer market, India has emerged as a primary global innovation, product development, and manufacturing base for the group.
+
+L’Oréal's Indian laboratories have developed key proprietary formulations that the company has patented and rolled out across international markets. These include Melasyl, an anti-dark-spot and de-tanning molecule developed locally and deployed across global brands like La Roche-Posay and Vichy, as well as a cost-efficient co-emulsion haircare technology that has set records across the group's worldwide haircare business.
+
+""India, because it's a very challenging market in terms of climate, in terms of consumers' expectation, is not only forcing us to create products specifically for India, but also allows us to create technologies that are really great for the rest of the world,"" Hieronimus said. ""My first message to my teams is be relevant for India... if you are relevant for India, both in terms of the formula quality, but also in the terms of the way you speak to the Indian consumers, then you will create products that have the potential to travel the world.""
+
+On the manufacturing front, L’Oréal produces roughly 95% of what it sells in India locally across its two domestic factories, while exporting approximately 20% of its Indian production volume to regional international markets. Hieronimus indicated the company will prioritise brownfield capacity expansions at its existing manufacturing facilities rather than greenfield construction to meet surging volume demands.
+
+Supporting its global technology infrastructure, L’Oréal also inaugurated a tech centre in Hyderabad earlier this year, planned to scale to more than 2,000 personnel to provide shared services, technology, and content creation for operations worldwide.
+
+Also Read: Gland Pharma to invest $21 million in US drugmaker, take 60% stake
+
+Advertisement
+
+(Edited by : Ajay Vaishnav)
+
+HomeBusiness NewsExclusive | L'Oréal sees India entering its top 10 markets before 2030, crossing €1 billion in sales","https://images.cnbctv18.com/uploads/2026/10/loral-2026-10-de47ea0c9d334f2bb9ef8f2873823c0f.jpg?im=FitAndFill,width=1200,height=675",N,,2026-10-01 13:45:04.932727
 ID28,Medtronic,2026-10-01 12:40:50+00:00,Medtronic Lands FDA Breakthrough Tag and Dual Cardiac Clearances as MiniMed Exchange Offer Looms,Medtronic Lands FDA Breakthrough Tag and Dual Cardiac Clearances as MiniMed ...,Rafael Müller,,,,,https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/medtronic-lands-fda-breakthrough-tag-and-dual-cardiac-clearances-as/70210431,"Breakthrough status won't substitute for clinical proof, but it does open a faster channel of communication with the agency.
 Medtronic intends to run the IN.PACT BTK DELTA pivotal trial, enrolling roughly 400 patients, to establish the case for broad adoption.
 Together they aim to raise the precision and safety of cardiac ablation procedures—a segment where Medtronic faces direct competition for supremacy in modern ablation techniques.
@@ -172,6 +587,27 @@ Ad
 Medtronic Stock: New Analysis - 1 October
 
 Fresh Medtronic information released. What's the impact for investors? Our latest independent report examines recent figures and market trends.",https://mdb.ad-hoc-news.de/bild/bild-2703856_1920_1080.webp,N,,2026-10-01 11:13:17.595681
+ID23,JDE Peet’s,2026-10-01 12:03:17+00:00,Global Banking & Finance Review,Keurig Dr Pepper names Kimberly Clark executive as new CEO of coffee unit,"Barnali Pal Sinha, Global Banking & Finance Review",,,,,https://www.globalbankingandfinance.com/keurig-dr-pepper-names-kimberly-clark-executive-new-ceo/,"Global Banking & Finance Review® is an online platform providing news, analysis, interviews, opinions, press releases, market information and other content relating to banking, finance, insurance, investment, wealth management, fintech, financial markets, technology, regulation and related industries worldwide.
+All information published on Global Banking & Finance Review® is provided solely for general informational, educational and learning purposes.
+Global Banking & Finance Review® does not guarantee that any investment, company, financial product, market, strategy or asset discussed on the website will achieve any particular result.
+The publication or inclusion of any company, organization, individual, product, financial instrument, service, advertisement, sponsored article, press release or third-party link does not constitute an endorsement, recommendation or approval by Global Banking & Finance Review®.
+Any decision made on the basis of information appearing on Global Banking & Finance Review® is made at the reader’s own discretion and risk.","Global Banking & Finance Review® is an online platform providing news, analysis, interviews, opinions, press releases, market information and other content relating to banking, finance, insurance, investment, wealth management, fintech, financial markets, technology, regulation and related industries worldwide. The website publishes editorial content, news, press releases, contributed articles, sponsored content, advertorials, advertisements and other material supplied, commissioned, promoted or paid for by companies, organizations, PR agencies, advertisers, affiliates, contributors and other third parties. For transparency, all articles, content, advertisements and links appearing on this website should be considered commercial in nature or as commercial content placements, and Global Banking & Finance Review® may receive compensation in connection with the publication, display, promotion, referral or use of certain content, products, services, advertisements or third-party links, without any additional charge to the reader.
+
+All information published on Global Banking & Finance Review® is provided solely for general informational, educational and learning purposes. Nothing published on this website constitutes financial, investment, trading, legal, tax, accounting or other professional advice, and content is not prepared with regard to the individual objectives, financial circumstances, knowledge, experience or requirements of any particular person. Nothing on this website should be interpreted or relied upon as a recommendation, endorsement, solicitation, offer, price target, trading signal or instruction to buy, sell, hold, subscribe to, invest in or otherwise transact in any financial product, security, cryptocurrency, commodity, currency, investment, company or service.
+
+Global Banking & Finance Review® may track, report and discuss financial markets, market movements, prices, trends, performance, companies, securities, stocks, bonds, currencies, cryptocurrencies, commodities, indices, economic developments and other financial products or asset classes, and may also publish charts, market data, historical performance, forecasts, analyst opinions, price targets, projections, technical observations and commentary concerning past, current or potential future market movements. All such information is provided exclusively for informational, educational and learning purposes and must not be considered financial or investment advice or a recommendation to buy, sell or hold any asset or financial product. References to a market rising or falling, potential opportunities, risks, price movements, forecasts, targets, trends or possible future performance represent information, commentary or third-party views only and should not be interpreted as an indication that Global Banking & Finance Review® recommends or advises any particular investment or trading decision.
+
+Market prices and information may change rapidly, and data displayed on the website may be delayed, incomplete, supplied by third parties or different from prices available through an exchange, broker or other market data provider. Readers are solely responsible for making their own independent assessments and decisions and should always conduct their own research and due diligence, independently verify information, understand the risks involved and consider their own financial circumstances before making any financial, investment or trading decision. Where appropriate, readers should seek independent advice from a suitably qualified financial, investment, legal, tax or other professional adviser.
+
+Financial products, securities and investments can involve significant risk, the value of investments can rise or fall, and investors may lose some or all of the money invested. Past performance is not a guarantee or reliable indication of future results, and forecasts, projections, estimates, price targets and forward-looking statements are inherently uncertain and actual outcomes may differ materially from those discussed or anticipated. Global Banking & Finance Review® does not guarantee that any investment, company, financial product, market, strategy or asset discussed on the website will achieve any particular result.
+
+The website may contain information, opinions, statements, forecasts, research, data and other material supplied by companies, contributors, advertisers, PR agencies, analysts and other third parties, and opinions expressed by contributors or third parties are their own and do not necessarily represent the views of Global Banking & Finance Review®. The publication or inclusion of any company, organization, individual, product, financial instrument, service, advertisement, sponsored article, press release or third-party link does not constitute an endorsement, recommendation or approval by Global Banking & Finance Review®. We may link to third-party websites, affiliate networks, advertisers and other external services, and Global Banking & Finance Review® does not control such third-party websites and is not responsible for their content, accuracy, products, services, availability, security, privacy practices or other activities.
+
+While Global Banking & Finance Review® seeks to publish information that it considers useful and reliable, we do not guarantee the accuracy, completeness, reliability, suitability, availability or timeliness of any information published on the website, and information may contain errors, omissions or inaccuracies or may become outdated without notice. Readers should independently verify information before relying upon it or making any decision based upon it.
+
+To the fullest extent permitted by applicable law, Global Banking & Finance Review®, its owners, companies, officers, employees, contributors and partners shall not be responsible or liable for any loss, damage, cost or other consequence arising directly or indirectly from the use of, reliance upon or inability to use information, content, market data, advertisements, links, products or services appearing on this website. Any decision made on the basis of information appearing on Global Banking & Finance Review® is made at the reader’s own discretion and risk.
+
+By using this website, you acknowledge that its content is provided for informational and educational purposes only, that content and links should be regarded as commercial in nature, and that you are responsible for conducting your own research and obtaining appropriate professional advice before making financial, investment, trading or other decisions.",https://cdn.sanity.io/images/v0gkry1w/production/3e418d87364e16e519f3cb54b938aa6f77f28a00-640x430.webp?w=1200&h=630&q=80&fm=webp&fit=crop&auto=format,N,,2026-10-01 13:44:51.099580
 ID36,Pearson,2026-10-01 11:43:37+00:00,kalkinemedia.com,Keurig Dr Pepper Appoints Russ Torres as CEO of Coffee Unit Ahead of Spin-Off,Not Available,,,,,https://kalkinemedia.com/us/news/announcements/keurig-dr-pepper-appoints-russ-torres-as-ceo-of-coffee-unit-ahead-of-spin-off,"Kalkine Media is neither licensed nor qualified to provide investment advice through this platform.
 The views expressed in the Content by the guests, if any, are their own and do not necessarily represent the views or opinions of Kalkine Media.
 Some of the images/music that may be used on this website are copyright to their respective owner(s).
@@ -180,6 +616,11 @@ The images/music that may be used on this website are taken from various sources
 
 The content, including but not limited to any articles, news, quotes, information, data, text, reports, ratings, opinions, images, photos, graphics, graphs, charts, animations and video (Content) is a service of Kalkine Media LLC (Kalkine Media, we or us) and is available for personal and non-commercial use only. The principal purpose of the Content is to educate and inform. The Content does not contain or imply any recommendation or opinion intended to influence your financial decisions and must not be relied upon by you as such. Some of the Content on this website may be sponsored/non-sponsored, as applicable, but is NOT a solicitation or recommendation to buy, sell or hold the stocks of the company(s) or engage in any investment activity under discussion. Kalkine Media is neither licensed nor qualified to provide investment advice through this platform. Users should make their own enquiries about any investments and Kalkine Media strongly suggests the users to seek advice from a financial adviser, stockbroker or other professional (including taxation and legal advice), as necessary. Kalkine Media hereby disclaims any and all the liabilities to any user for any direct, indirect, implied, punitive, special, incidental or other consequential damages arising from any use of the Content on this website, which is provided without warranties. The views expressed in the Content by the guests, if any, are their own and do not necessarily represent the views or opinions of Kalkine Media. Some of the images/music that may be used on this website are copyright to their respective owner(s). Kalkine Media does not claim ownership of any of the pictures/music displayed/used on this website unless stated otherwise. The images/music that may be used on this website are taken from various sources on the internet, including paid subscriptions or are believed to be in public domain. We have used reasonable efforts to accredit the source (public domain/CC0 status) to where it was found and indicated it, as necessary.",https://kalkinemedia.com/storage/uploads/original/shutterstock_2765269355_07_02_2026_23_45_45_484072.jpg,N,,2026-10-01 08:12:50.681935
 ID33,Nvidia,2026-10-01 11:36:24+00:00,www.reuters.com,Nvidia's bet that its chips can finance the AI boom gets a Wall Street reality check | Reuters,,,,,,https://www.reuters.com/legal/transactional/nvidias-bet-that-its-chips-can-finance-ai-boom-gets-wall-street-reality-check-2026-10-01/,Nvidia's mammoth financing plan has opened a debate on Wall Street about how much its advanced chips and the infrastructure around them are worth.,Not Available,,Y,,2026-10-01 09:10:26.883649
+ID33,Nvidia,2026-10-01 11:33:38+00:00,Instagram,"Jensen Huang, Founder and CEO of NVIDIA, reflects on the role failure can play on the path ...",Not Available,,,,,https://www.instagram.com/p/Dd8ywInn0FM/,"Good morning Sir.
+Ur quote is better and more accurate than somebody saying “Celebrate failure”.
+Wot U said is to Prioritise success and if Failure comes have a tolerance for it.
+What I am thinking also is Society as a whole doesn’t have much tolerance for Failure and society most of the time punish us even for Silly errors.
+So therefore I think Society must develop such attitude and punish people less for errors so that Innovation is also permitted within the framework of Success & society as whole moves forward.",Good morning Sir. I have analysed this quote. Ur quote is better and more accurate than somebody saying “Celebrate failure”. Wot U said is to Prioritise success and if Failure comes have a tolerance for it. What I am thinking also is Society as a whole doesn’t have much tolerance for Failure and society most of the time punish us even for Silly errors. So therefore I think Society must develop such attitude and punish people less for errors so that Innovation is also permitted within the framework of Success & society as whole moves forward.,https://scontent-iad6-1.cdninstagram.com/v/t39.30808-6/825267021_1112910597911871_5082374311157292129_n.jpg?stp=c216.0.648.648a_dst-jpg_e35_s640x640_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=K7O-51q8EOAQ7kNvwESvjp2&_nc_oc=AdrvwTnlNdL5AMokGB9D-F0BohdkkoPHSguVA3qYywI62i4n7FQHQeWe-BtzawCnskg&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_gid=QrW_hXpFI94aKv6ar-9vrw&_nc_ss=7b689&oh=00_AQNoZ4mKMb9fuABFqxJnFwCvSkf8FwW5NZPzJyNxaE2bkQ&oe=6AC45144,N,,2026-10-01 12:27:04.980109
 ID23,JDE Peet’s,2026-10-01 11:03:38+00:00,www.keurigdrpepper.com,Keurig Dr Pepper Names Russ Torres Chief Executive Officer of Future Global Coffee Co.,Not Available,,,,,https://www.keurigdrpepper.com/keurig-dr-pepper-names-russ-torres-chief-executive-officer-of-future-global-coffee-co/,"He will report to KDP Chief Executive Officer Tim Cofer, who will become Chief Executive Officer of Beverage Co. following separation.
 Torres will also serve as a member of the future Global Coffee Co. Board of Directors upon the Company’s planned separation, targeted for early 2027.
 That is precisely what Global Coffee Co. requires,” said Pamela Patsley, KDP Board Chairman who will serve as Chairman of the Board of the future Global Coffee Co. “Following a rigorous global search against a demanding set of criteria, Russ emerged as the clear choice.
@@ -333,6 +774,95 @@ Few participants recognized the influence. Most credited the statistics when ask
 
 By some estimates, one out of every 25 words we use in ordinary conversation functions as a metaphor. Most pass unnoticed while influencing how we think.","https://img-cdn.inc.com/image/upload/f_webp,q_auto,c_fit/vip/2026/09/satya-nadella-leadership-inc-2272649609.jpg",N,,2026-10-01 07:09:27.148437
 ID6,AXA,2026-10-01 10:23:19+00:00,citywire.com,Exclusive: Four UK fund managers leave BNP Paribas in Axa merger overhaul - Citywire,Not Available,,,,,https://citywire.com/selector/news/exclusive-four-uk-fund-managers-leave-bnp-paribas-in-axa-merger-overhaul/a2499029,Management changes on seven funds come as part of a reorganisation that sees the end of the Axa Investment brand.,Not Available,,N,,2026-10-01 07:09:23.999186
+ID39,Societe Generale,2026-10-01 10:07:45+00:00,The Digital Banker,How Europe's retreat in Africa opens new growth opportunities for African banks,Kevin Luarca,,,,,https://thedigitalbanker.com/how-europes-retreat-in-africa-opens-new-growth/,"African banking markets are also relatively shallow in many countries, with lending often concentrated among large corporates and governments.
+The regional model offers a different growth path The appeal of regional banking is partly based on proximity.
+Cross-border banking becomes more important The regionalisation of African banking is taking place alongside efforts to make cross-border trade and payments easier.
+A new role for European banks In its report, Fitch says that it does not expect European banks to disappear entirely from Africa.
+This model is already visible in the growing number of partnerships between African banks and international financial institutions.","European banks are steadily reducing their presence in Africa, creating space for pan-African and regional banking groups to expand into markets once dominated by international lenders. A report by Fitch Ratings says the change is creating opportunities for African banks to build scale and use their knowledge of local markets, but it also brings new risks around credit quality, foreign-currency funding and access to international banking networks.
+
+The shift is changing how banking services are delivered across the continent, with regional banks increasingly taking on the role of supporting trade, small businesses, retail customers and cross-border payments.
+
+A decade of retrenchment
+
+European banks have been reducing their African operations for several years. Standard Chartered, Société Générale, Barclays and other international banks have sold subsidiaries or withdrawn from selected markets as they have reassessed returns, capital needs and the cost of operating across a large number of countries.
+
+Fitch says European banks have faced a combination of tighter capital rules, higher compliance costs and limited synergies between African subsidiaries and their wider international businesses. African banking markets are also relatively shallow in many countries, with lending often concentrated among large corporates and governments. This can make it harder for international banks to achieve the scale and returns they need from a broad local presence.
+
+In October 2025, Standard Chartered agreed to sell its wealth and retail banking business in Uganda to Absa Bank Uganda, while retaining its corporate and investment banking operations in the country. The transaction formed part of Standard Chartered’s wider effort to focus on affluent customers and cross-border banking rather than mass-market retail activities in selected countries.
+
+Access Bank has followed a similar path. The Nigerian lender has used acquisitions to build a wider African network, including taking over Standard Chartered’s operations in Angola. Access Bank’s 2025 financial statements show that Access Bank Angola acquired 60% of Standard Chartered Bank Angola in October 2024, bringing the former Standard Chartered business into the Access group.
+
+Société Générale’s disposals have created another route for African banking groups to expand. The French bank has sold several African subsidiaries to groups such as Vista and Coris, with the transactions allowing these regional players to gain established customer bases and operating platforms rather than entering markets from scratch.
+
+The change can also affect the credit standing of the businesses being sold. When a subsidiary loses a highly rated international parent, rating agencies can no longer assume that the parent would provide extraordinary support during periods of stress. This can result in weaker shareholder support assessments even where the subsidiary itself continues to have sound governance and risk controls.
+
+The regional model offers a different growth path
+
+The appeal of regional banking is partly based on proximity. A bank that operates across neighbouring African markets can understand local businesses, currencies, regulations and customer behaviour while still achieving a level of scale that a single-country bank may struggle to reach.
+
+Equity Group illustrates this approach. In April 2026, its chief executive told Reuters that the Kenyan banking group was looking at acquisitions in Angola, Zambia and Mozambique. The strategy is based on following customers and trade routes rather than simply adding countries to its footprint. Equity has already built a sizeable position in the Democratic Republic of Congo through acquisitions, where Reuters reported that it held about 24% of the market.
+
+This approach can also reduce the cost and complexity of entering a new market. Equity has said that acquisitions are preferable to building operations from scratch because an established bank already has customers, staff, licences and local knowledge. The same logic is visible across other African banking groups seeking to expand through acquisitions.
+
+Competition is nevertheless becoming more intense. Reuters reported in June 2026 that banks including Egypt’s Commercial International Bank, Nigeria’s Access Bank and South Africa’s Nedbank were expanding in Kenya. They are competing with established players such as Equity Group and KCB, which already have large customer bases, strong local franchises and advanced digital banking platforms.
+
+The result is a banking market in which African institutions are no longer simply filling gaps left by European banks. They are actively competing with each other for regional scale.
+
+Cross-border banking becomes more important
+
+The regionalisation of African banking is taking place alongside efforts to make cross-border trade and payments easier.
+
+Ecobank, one of the continent’s largest pan-African banking groups, has continued to build partnerships around cross-border payments and trade. In October 2025, Ecobank and Thunes announced a collaboration aimed at enabling instant cross-border payments across sub-Saharan Africa. The partnership connects banking and fintech infrastructure to support payments for individuals and businesses operating across borders.
+
+The wider development of African payment infrastructure could make regional banks more valuable as connectors between markets. Reuters reported in June 2025 that the Pan-African Payment and Settlement System, or PAPSS, had expanded to 15 countries and around 150 participating banks. The system allows participating businesses and financial institutions to make cross-border payments in local currencies rather than relying on dollars or other foreign currencies for every transaction.
+
+Local and regional banks therefore need to develop their own international networks, partnerships and payment capabilities if they are to replace the services previously provided by European institutions.
+
+The funding challenge
+
+The main risk is that local ownership does not automatically replace the financial strength and global connections of a large European parent.
+
+European banking groups have historically provided African subsidiaries with access to international funding markets, correspondent banking relationships, trade-finance networks, risk-management systems and foreign-currency liquidity. Fitch warns that successor banks could have more limited access to hard-currency funding and could become more exposed to difficult operating conditions in the markets where they expand.
+
+The IMF’s 2026 assessment of the West African Economic and Monetary Union found that the region’s banking system remained broadly solid, but persistent non-performing loans, high exposure to governments and weaker liquidity remained concerns. The banking system’s capital adequacy ratio was 15.1% in June 2025, above the regional minimum, but the average non-performing loan ratio had reached 9.2%.
+
+The IMF also points to the strong relationship between governments and banks as a financial stability risk. Government claims represented around 37% of bank assets in the WAEMU in 2024, creating a link through which pressure on public finances could affect banks and vice versa.
+
+Similar risks appear elsewhere. The IMF’s 2026 assessment of Angola’s financial system identified high non-performing loans, a strong sovereign-bank relationship and exposure to foreign-exchange risks as areas requiring attention.
+
+For regional banks, therefore, expansion brings both greater revenue potential and greater concentration of risk. A bank operating in several countries may have a broader customer base, but it is also exposed to more currencies, regulators, political conditions and economic cycles.
+
+Local knowledge can support financial inclusion
+
+One potential benefit of the shift is a stronger focus on customers that international banks have traditionally found less attractive.
+
+Pan-African banks can use their regional networks to serve SMEs that operate across borders, local companies involved in trade and consumers who may have been outside the target market of international banks. Their understanding of local markets can also help them design products around the needs of smaller businesses.
+
+The development of cross-border payment systems could reinforce this trend. The African Development Bank reported in 2026 that regional integration remains constrained by fragmented financial, regulatory and infrastructure systems, but that efforts to connect markets are increasing. Its work on regional integration includes support for financial systems, digital connectivity and cross-border trade.
+
+In East Africa, the African Development Fund approved a $9 million grant in June 2026 to support financial integration across nine countries. The project aims to improve capital markets, payment systems and access to long-term finance while strengthening regulatory capacity.
+
+These developments create an environment in which regional banks can potentially use their existing networks to support a more integrated African market.
+
+Scale will not remove the risks
+
+The expansion of African banks should not be viewed as a simple replacement of European banks with stronger local institutions. The new owners inherit many of the same difficult markets and risks that contributed to the original exits.
+
+This makes risk management particularly important. Regional banks need to maintain strong underwriting standards as they grow, avoid excessive concentration in government debt and manage foreign-currency liquidity carefully. They also need to preserve the governance and risk-management standards that have helped some former European subsidiaries remain resilient after ownership changes. Fitch argues that the success of the transition will depend partly on whether successor institutions can maintain these standards while expanding their balance sheets.
+
+The challenge becomes greater as banks expand across several regulatory systems. A regional group must manage different capital rules, currencies, supervisory expectations and economic conditions while still gaining enough scale from its network.
+
+A new role for European banks
+
+In its report, Fitch says that it does not expect European banks to disappear entirely from Africa. Instead, their role is likely to change.
+
+Rather than owning large retail banking networks, European institutions could increasingly work with African banks through partnerships, trade finance, correspondent banking, risk-sharing arrangements and other forms of cooperation. This would allow European banks to maintain connections to African markets without carrying the full capital, compliance and operating costs associated with owning subsidiaries.
+
+This model is already visible in the growing number of partnerships between African banks and international financial institutions. Ecobank, for example, has continued to build international relationships to support trade and cross-border financial services. In December 2025, it signed a memorandum with Bank of China Mauritius to explore greater cooperation in trade finance, payments and China-Africa financial flows.
+
+The model could therefore become less about European banks competing directly for African retail customers and more about international banks providing funding, expertise and global connectivity to regional institutions.
+
+The European retreat is therefore not simply an exit story. It represents a transfer of banking capacity and ownership that could give African institutions a larger role in financing the continent’s economies. The outcome will depend on whether those institutions can turn local knowledge and regional reach into sustainable growth without taking on risks that their new scale makes harder to manage.",https://thedigitalbanker.com/wp-content/uploads/2026/10/pexels-edge-training-521332405-17668871.jpg,N,,2026-10-01 12:27:14.130028
 ID7,Barclays,2026-10-01 09:39:01+00:00,Bloomberg.com,Barclays Expands Use of Anthropic's Claude in Efficiency Push - Bloomberg.com,William Shaw,,,,,https://www.bloomberg.com/news/articles/2026-10-01/barclays-expands-use-of-anthropic-s-claude-in-efficiency-push,"Barclays Plc is widening its use of Anthropic PBC’s artificial intelligence agent Claude in an effort to modernize legacy systems and improve operational efficiency across the bank.
 The British lender expects 50% of its software developers to be using Claude Code by the end of 2026 before broadening that further next year, the two firms said in a joint statement on Thursday.
 Barclays’ markets business is already using Anthropic models to help streamline how client inquiries are processed and managed, and the platform handles approximately 120,000 emails each day.","Barclays Plc is widening its use of Anthropic PBC’s artificial intelligence agent Claude in an effort to modernize legacy systems and improve operational efficiency across the bank.
@@ -9009,407 +9539,3 @@ By Aidan Lane, Alliance News reporter
 Comments and questions to newsroom@alliancenews.com
 
 Copyright 2026 Alliance News Ltd. All Rights Reserved.",https://global.morningstar.com/en-gb/news/alliance-news/1790273358897979800/undefined,N,,2026-09-24 15:16:14.206229
-ID18,Eli Lilly,2026-09-24 18:22:41+00:00,X (formerly Twitter),"Quartz on X: ""Eli Lilly is partnering with China's InnoCare on a drug deal worth up to $3.35 ...",x.com,,,,,https://x.com/qz/status/2103186427785965962,Eli Lilly is partnering with China's InnoCare on a drug deal worth up to $3.35 billion: Lilly will pay $100 million upfront to work with the Beijing-based biotech on as many as five undisclosed drug targets https://t.co/FsdqrtLfZi,Not Available,https://pbs.twimg.com/media/HTAE6FrbgAAm-a1?format=webp&name=large,N,,2026-09-24 15:16:34.954071
-ID22,Instacart,2026-09-24 18:01:31+00:00,Simply Wall St,Dollar General (DG) Brings Same Day Delivery Nationwide In A New Convenience Push,Simply Wall St,,,,,https://simplywall.st/stocks/us/consumer-retailing/nyse-dg/dollar-general/news/dollar-general-dg-brings-same-day-delivery-nationwide-in-a-n/amp,"Dollar General (NYSE:DG) has partnered with Instacart to roll out same-day delivery across its U.S. store network.
-The agreement gives Instacart customers access to Dollar General's assortment of household staples, pantry items, and personal care products for rapid delivery.
-Both companies are using the collaboration to extend reach into value-focused shoppers who prioritize speed and low ticket sizes for everyday essentials.
-The Dollar General and Instacart same-day delivery rollout fits...",Not Available,https://images.simplywall.st/asset/industry/5024000-choice1-card/1788996565706?w=1600&h=900&fit=cover,N,,2026-09-24 18:14:53.499653
-ID22,Instacart,2026-09-24 18:01:30+00:00,Simply Wall St,Dollar General (DG) Brings Same Day Delivery Nationwide In A New Convenience Push,Simply Wall St,,,,,https://simplywall.st/stocks/us/consumer-retailing/nyse-dg/dollar-general/news/dollar-general-dg-brings-same-day-delivery-nationwide-in-a-n,"Advertisement United States / Food and Staples Retail / NYSE:DG Dollar General (DG) Brings Same Day Delivery Nationwide In A New Convenience Push September 24, 2026 SI Reviewed by Bailey Dollar General (NYSE:DG) has partnered with Instacart to roll out same-day delivery across its U.S. store network.
-The Dollar General and Instacart same-day delivery rollout fits alongside broader shifts in how this retailer reaches customers, as recent research shows.
-We have also spotted worth knowing about at Dollar General.
-The Instacart deal strengthens the part of the Dollar General Narrative that leans on digital initiatives rather than just more stores.
-10 9 Sep 18, 2026 About NYSE:DG Dollar General A discount retailer, provides various merchandise products in the southern, southwestern, midwestern, and eastern United States.","Advertisement
-
-United States
-
-/
-
-Food and Staples Retail
-
-/
-
-NYSE:DG
-
-Dollar General (DG) Brings Same Day Delivery Nationwide In A New Convenience Push
-
-September 24, 2026
-
-SI
-
-Reviewed by Bailey
-
-Dollar General (NYSE:DG) has partnered with Instacart to roll out same-day delivery across its U.S. store network.
-
-The agreement gives Instacart customers access to Dollar General's assortment of household staples, pantry items, and personal care products for rapid delivery.
-
-Both companies are using the collaboration to extend reach into value-focused shoppers who prioritize speed and low ticket sizes for everyday essentials.
-
-The Dollar General and Instacart same-day delivery rollout fits alongside broader shifts in how this retailer reaches customers, as recent research shows. We have also spotted worth knowing about at Dollar General.
-
-Anyone tracking the rise of quick delivery for everyday items may want to look beyond Dollar General to a wider group of resilient retailers and service providers via .
-
-Dollar General is a US discount retailer focused on low priced household goods and everyday merchandise across the southern, southwestern, midwestern, and eastern states, so same day delivery taps directly into its core traffic of budget conscious shoppers. With a market cap of $27.1b, the chain brings significant scale to Instacart's reach in value focused consumer retailing.
-
-Advertisement
-
-Same-day delivery plugs directly into Dollar General's omni-channel bet
-
-The investment story for Dollar General hinges on whether a low-price, small-box format can keep expanding while digital tools and partnerships turn that footprint into a broader convenience ecosystem. This Instacart rollout goes straight at that question by using third-party delivery to speed up Dollar General’s push into online convenience.
-
-""Rapid scaling of digital initiatives including same-day delivery partnerships, in-house DG delivery, and the DG Media Network positions Dollar General to capture incremental market share and drive higher-margin omni-channel revenue streams...""
-
-See how the full story points towards .
-
-The Instacart deal strengthens the part of the Dollar General Narrative that leans on digital initiatives rather than just more stores. It gives the retailer a faster route into convenience-first shopping than building everything in-house, which matters when Walmart and Amazon already condition shoppers to expect quick delivery on small baskets.
-
-The open question is unit economics. Same-day delivery on low-ticket baskets can strain margins if fees and assortments are not tightly managed, which analysts have already flagged as a concern for Dollar General given labor and pricing pressures. Your call now is whether this move tilts the story toward smarter omni-channel execution or adds another layer of complexity to an already thin-margin model.
-
-Viewed through the Narrative, news like this stops being just another partnership headline and becomes a real test of whether Dollar General’s long-term thesis still holds together for you.
-
-and get alerts as these catalysts play out.
-
-This article by Simply Wall St is general in nature. We provide commentary based on historical data and analyst forecasts only using an unbiased methodology and our articles are not intended to be financial advice. It does not constitute a recommendation to buy or sell any stock, and does not take account of your objectives, or your financial situation. We aim to bring you long-term focused analysis driven by fundamental data. Note that our analysis may not factor in the latest price-sensitive company announcements or qualitative material. Simply Wall St has no position in any stocks mentioned.
-
-New: Manage All Your Stock Portfolios in One Place
-
-We've created the ultimate portfolio companion for stock investors, and it's free.
-
-• Connect an unlimited number of Portfolios and see your total in one currency
-
-• Be alerted to new Warning Signs or Risks via email or mobile
-
-• Track the Fair Value of your stocks
-
-Try a Demo Portfolio for Free
-
-Have feedback on this article? Concerned about the content? Get in touch with us directly. Alternatively, email editorial-team@simplywallst.com
-
-M
-
-mitchell_lawler
-
-The Foxhole
-
-Yields just hit a 2007 high. Cathie Wood says the market's reading it completely backwards.
-
-8 8
-
-mitchell_lawler
-
-Market Insights
-
-What happens to energy stocks as the fix gets built?
-
-Conflict around the Strait of Hormuz has led investors to oil and tankers. The trouble is, the antidote to the chokepoints is already being built, and it may not reward the same energy stocks.
-
-10 9
-
-Sep 18, 2026
-
-About NYSE:DG
-
-Dollar General
-
-A discount retailer, provides various merchandise products in the southern, southwestern, midwestern, and eastern United States.
-
-Undervalued with excellent balance sheet and pays a dividend.
-
-Advertisement
-
-Weekly Picks
-
-CE
-
-Ceazar on Buffalo Potash · 3 days ago
-
-Under the radar: This $78M stock controls a $1.5B project and it’ll start producing in a few months
-
-Fair Value:CA$1.0612.3 % undervalued
-
-24 followersusers have followed this narrative
-
-·
-
-0 commentsusers have commented on this narrative
-
-·
-
-6 likesusers have liked this narrative
-
-TO
-
-Tokyo on Novo Nordisk · about 2 months ago
-
-EU#2 - From Humble Beginnings to Global Powerhouse
-
-Fair Value:DKK 851.0470.3 % undervalued
-
-80 followersusers have followed this narrative
-
-·
-
-18 commentsusers have commented on this narrative
-
-·
-
-26 likesusers have liked this narrative
-
-HA
-
-HarishPK on Zoetis · 25 days ago
-
-Decision Making Under Ambiguity – A Case Study on Expectations Investing
-
-Fair Value:US$91.321.6 % undervalued
-
-11 followersusers have followed this narrative
-
-·
-
-1 commentusers have commented on this narrative
-
-·
-
-6 likesusers have liked this narrative
-
-RE
-
-RedCandleRx on AppLovin · 8 days ago
-
-Why the Market Still Misprices AppLovin as Just a Gaming Network
-
-Fair Value:US$50737.8 % undervalued
-
-12 followersusers have followed this narrative
-
-·
-
-1 commentusers have commented on this narrative
-
-·
-
-6 likesusers have liked this narrative
-
-Popular Narratives
-
-AN
-
-AnalystConsensusTarget on NVIDIA · about 2 months ago
-
-NVDA: Expanding AI Demand Will Drive Major Data Center Investments Through 2026
-
-Fair Value:US$302.8325.5 % undervalued
-
-1503 followersusers have followed this narrative
-
-·
-
-8 commentsusers have commented on this narrative
-
-·
-
-35 likesusers have liked this narrative
-
-AN
-
-AnalystConsensusTarget on Alphabet · 4 months ago
-
-GOOGL: AI Platform Expansion And Cloud Demand Will Support Durable Performance Amid Competitive Pressures
-
-Fair Value:US$427.8921.0 % undervalued
-
-1658 followersusers have followed this narrative
-
-·
-
-0 commentsusers have commented on this narrative
-
-·
-
-19 likesusers have liked this narrative
-
-AN
-
-AnalystConsensusTarget on Amazon.com · about 1 month ago
-
-AMZN: Acceleration In Cloud And AI Will Drive Margin Expansion Ahead
-
-Fair Value:US$32723.8 % undervalued
-
-1676 followersusers have followed this narrative
-
-·
-
-1 commentusers have commented on this narrative
-
-·
-
-16 likesusers have liked this narrative",https://images.simplywall.st/asset/industry/5024000-choice1-card/1788996565706?w=1600&h=900&fit=cover,N,,2026-09-24 15:16:42.724414
-ID34,OpenAI,2026-09-24 17:43:42+00:00,OpenAI,ChatGPT Ads expands to Southeast Asia and Taiwan - OpenAI,Not Available,,,,,https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/,"Starting today, ChatGPT Ads will begin rolling out across Indonesia, Malaysia, the Philippines, Singapore, Thailand, Vietnam, and Taiwan.
-Advertisers can access ChatGPT Ads through the OpenAI Ads Solutions team, agency partners including dentsu, Havas Media, Omnicom Media, Publicis Groupe and WPP, and technology partners.
-ChatGPT Ads: a new channel for marketing People come to ChatGPT with goals.
-ChatGPT Ads give marketers an opportunity to reach people as they explore and evaluate their options.
-Our progress to date represents only the first chapter in what ChatGPT Ads will become.","Starting today, ChatGPT Ads will begin rolling out across Indonesia, Malaysia, the Philippines, Singapore, Thailand, Vietnam, and Taiwan. This announcement follows Asia Pacific launches in Australia, New Zealand, Japan, South Korea and India, expanding access for businesses of all sizes across the region.
-
-Advertisers can access ChatGPT Ads through the OpenAI Ads Solutions team, agency partners including dentsu, Havas Media, Omnicom Media, Publicis Groupe and WPP, and technology partners. Self-service access through Ads Manager⁠(opens in a new window) is also available for eligible businesses.
-
-Our mission is to ensure that artificial general intelligence benefits all of humanity, and Ads help democratize access to intelligence by supporting free and low-cost access to ChatGPT. As in our existing markets, ads will be shown only to users on the Free and Go plans. Plus, Pro, and Enterprise subscriptions will remain ad-free.
-
-ChatGPT Ads: a new channel for marketing
-
-People come to ChatGPT with goals. They might be planning a trip, choosing software for their business, or furnishing a home. Through conversation, people explain what they want to accomplish, what matters to them, and the constraints they face.
-
-ChatGPT Ads give marketers an opportunity to reach people as they explore and evaluate their options. By introducing relevant products and services, ads can be useful in the moments that spur discovery and shape decisions.
-
-Guided by our ads principles
-
-Protecting the trust people place in ChatGPT is foundational to our approach to advertising.
-
-Guided by OpenAI’s ads principles, we keep conversations private from advertisers and never sell customer data. Ads in ChatGPT are always clearly labeled and separate from ChatGPT’s answers, and advertising does not influence the answers ChatGPT provides. People also have control over ad personalization, with ad-free paid plans available for those who prefer not to see ads.
-
-Our goal is straightforward: ads should be useful to people as they pursue their goals and make decisions, while also being effective for the businesses that advertise with us.
-
-Building a global ads platform
-
-At the end of August, we announced that ChatGPT Ads had reached $1 billion in annualized revenue run rate in less than 200 days after launch. Tens of thousands of advertisers are now running ads in ChatGPT, with many reaching people across multiple countries. This expansion brings that opportunity to more businesses across Southeast Asia and Taiwan. With today’s announcement, ChatGPT Ads are now available in over 60 countries⁠(opens in a new window).
-
-Our progress to date represents only the first chapter in what ChatGPT Ads will become. Over the next few months, we will continue to expand into new markets, build new formats, optimization tools, and measurement solutions. Throughout this work, we remain focused on broadening access to AI, protecting the trust people place in ChatGPT, delivering useful ads to people, and helping businesses achieve their goals.
-
-Businesses interested in getting started can visit ads.openai.com⁠(opens in a new window).",https://images.ctfassets.net/kftzwdyauwt9/7FJ6xwUhzfqnyoSn9ciPcS/2f477db82efadb6e10ace70da6498bb3/chatgpt-ads-expands-to-southeast-asia-and-taiwan-seo.png?w=1600&h=900&fit=fill,N,,2026-09-24 17:15:50.807143
-ID18,Eli Lilly,2026-09-24 17:09:01+00:00,medwatch.com,Eli Lilly signs deal worth up to USD 3.35bn with China's InnoCare - MedWatch,Not Available,,,,,https://medwatch.com/News/Pharma___Biotech/article19675344.ece,"I want to receive customized email newsletters from Watch Medier A/S , including information about our brands and group companies , conferences, courses, networking, competitions and digital services.
-With my consent, I also agree to the processing of my personal data and that information about my interaction with marketing messages (such as opening and reading) is collected using tracking pixels and similar technologies.
-Read more in our privacy policy and cookie policy .
-Consent can always be revoked via the unsubscribe link in newsletters.","I want to receive customized email newsletters from
-
-Watch Medier A/S
-
-, including information about
-
-our brands and group companies
-
-, conferences, courses, networking, competitions and digital services. With my consent, I also agree to the processing of my personal data and that information about my interaction with marketing messages (such as opening and reading) is collected using tracking pixels and similar technologies. Read more in our
-
-privacy policy
-
-and
-
-cookie policy
-
-. Consent can always be revoked via the unsubscribe link in newsletters.",https://imgproxy.watchmedier.dk/EBcz4-1rd7kWs0cCFZtyqK82mmxFvqmdPePnJixlUKk/resize:fill:1200:0:0/quality:75/aHR0cHM6Ly9waG90b3Mud2F0Y2htZWRpZXIuZGsvSW1hZ2VzLzE5Njc1MjgxL3lmcW40dC9BTFRFUk5BVEVTL3NjaGVtYS0xNl85L2hlYWx0aC1vYmVzaXR5bGlsbHktZXVyb3Bl,N,,2026-09-24 15:16:38.991005
-ID43,Walmart,2026-09-24 16:52:15+00:00,Marketplace Pulse,Amazon Opens Seller Central to Rival Marketplaces,"Ben Donovan, spanning brand",,,,,https://www.marketplacepulse.com/articles/amazon-opens-seller-central-to-rival-marketplaces,"Amazon announced during its annual Accelerate seller conference that sellers will be able to manage their eBay, Shopify, TikTok Shop, and Walmart businesses from inside Seller Central.
-A seller edits a product description once, and Amazon reformats and publishes it to the product’s linked listings on eBay, Walmart, and Shopify.
-Shopify and Walmart orders appear alongside Amazon’s and can be fulfilled through Amazon in a few clicks.
-An MCF order from Walmart is Amazon revenue generated by Walmart’s customer, but the multichannel tools are free and work whether or not a seller ships through Amazon.
-Amazon says more than 95% of its sellers sell on multiple channels, but selling on several channels rarely means being diversified.","Amazon announced during its annual Accelerate seller conference that sellers will be able to manage their eBay, Shopify, TikTok Shop, and Walmart businesses from inside Seller Central. Its new multichannel selling tools are rolling out gradually to U.S. sellers at no extra cost, and they pull listings, orders, and profitability from every connected channel into one workspace. The launch is the latest step in a five-year sequence that has taken Amazon from a platform whose policies made selling elsewhere harder to one that powers it.
-
-Five years ago, Amazon was the roadblock of multi-channel commerce. FBA charged more to ship off-Amazon orders, and unbranded packaging was still in beta. Products priced lower elsewhere could be suppressed, as they still can today. The following spring came Buy with Prime, which merged Amazon’s checkout and fulfillment for independent websites. At Accelerate 2024, Amazon said Multi-Channel Fulfillment served more than 200,000 U.S. sellers and its order volume had grown 70%. At last year’s event, it announced MCF integrations with Walmart and Shein.
-
-Each of those steps handled goods or payments. Amazon was the warehouse behind other channels, and it dropped out of the seller’s workflow once an order shipped. The new tools put Amazon in front of those channels instead. A seller edits a product description once, and Amazon reformats and publishes it to the product’s linked listings on eBay, Walmart, and Shopify. Shopify and Walmart orders appear alongside Amazon’s and can be fulfilled through Amazon in a few clicks. A profitability view shows what each product earns on each channel. Amazon has long tracked what its sellers charge elsewhere. Now it can also see how much they sell there, though it says the data won’t inform its retail business.
-
-Unlike the earlier steps, this one earns Amazon nothing directly. An MCF order from Walmart is Amazon revenue generated by Walmart’s customer, but the multichannel tools are free and work whether or not a seller ships through Amazon. Amazon is betting that owning the hub matters more than how a seller’s revenue splits across the spokes, and its sellers’ behavior supports the bet. Amazon says more than 95% of its sellers sell on multiple channels, but selling on several channels rarely means being diversified. According to Marketplace Pulse’s 2026 Seller Index, 71% of Amazon-primary sellers active on at least one other marketplace still earn three-quarters or more of their marketplace revenue from Amazon.",https://cdn.marketplacepulse.com/articles/763/cover_social.jpg,N,,2026-09-24 15:16:57.384680
-ID21,HP Inc,2026-09-24 16:07:04+00:00,Autoweek,2028 Bentley Torcal Breaks with Tradition by Going Electric - Autoweek,Mark Vaughn,,,,,https://www.autoweek.com/news/a73868893/2028-bentley-torcal-reveal/,"Never in the 107-year history of Bentley has there been an EV, until now.
-The front motor sports an open differential for maneuverability and steering feel, while the rear motor has a locking differential with a multi-plate clutch on each output shaft for traction.
-Since Bentley is part of the VW empire, the new Torcal shares much of its structure and drivetrain with the Porsche Cayenne Electric, but that isn’t a bad place to start.
-For those who miss the sound of the internal combustion V8, Bentley engineers have you covered.
-Look for the Torcal in US showrooms sometime early next year as a 2028 model.","What would the Bentley Boys think? They might be amazed.
-
-Never in the 107-year history of Bentley has there been an EV, until now. Bentley took the wraps off the boldly (or perhaps blocky?) Torcal yesterday in London, and the lads who set all those speed records at Brooklands and who dominated Le Mans in the 1920s would likely be thrilled to see it. As might you, too.
-
-Delivering up to 876 hp with the highest torque of any Bentley ever made—996 lb-ft—Torcal can accelerate from 0-60 mph in 2.8 seconds, “yet the driving experience is always accessible, progressive and sophisticated,” Bentley assures us.
-
-That prodigious output comes from a pair of permanent magnet synchronous motors, both dry sump designs filled with oil. The front motor sports an open differential for maneuverability and steering feel, while the rear motor has a locking differential with a multi-plate clutch on each output shaft for traction.
-
-Since Bentley is part of the VW empire, the new Torcal shares much of its structure and drivetrain with the Porsche Cayenne Electric, but that isn’t a bad place to start. That includes Torcal’s 119.0-inch wheelbase, 800-volt electrical architecture, and 108-kWh battery pack.
-
-Torcal rides on a Bentley’s first fully active suspension, with adaptive two-valve dampers designed to deliver what Bentley promises is “a true magic carpet ride, while allowing a choice of chassis tune for each driving mode.” Each damper can be actively and independently raised or lowered instantaneously, reacting to both road and driver inputs for maximum ride comfort and body control, Bentley says.
-
-“The system negates the need for anti-roll bars, using the reactive dampers to provide infinitely adjustable anti-roll torque. Agility is further increased by the fitment of electronic All Wheel Steering as standard, using rear steering angles up to five degrees to reduce the turning circle to 36.4 feet.”
-
-Braking is provided by 420 mm front and 370 mm rear iron discs, but you can upgrade to a Carbon Silicon Carbide (CSiC) ceramic system, with 440 mm front discs (the largest in the world, Bentley points out) paired with 410 mm rears. Both options are available with black, red, or grey calipers, with three additional colors available through Mulliner.
-
-US-spec Torcals get the highly efficient and ever-more-popular NACS charge port for DC fast-charging, and Bentley says a 400-kW connection will allow the SUV to charge from 10 to 80 percent in 16 minutes. No total range was listed, but you might expect about 320 miles.
-
-For those who miss the sound of the internal combustion V8, Bentley engineers have you covered.
-
-“They discovered that the rhythm of a Bentley V8 was central to its appeal, and used real instruments—including drums, viola and bass guitar—to create the Bentley Dynamic Symphony, complete with subtle variations and tiny imperfections,” Bentley said. “From resting pulse to full-throttle acceleration, the Torcal’s human-generated soundtrack provides aural feedback to the driver, underscoring the sense of connection and feedback, rather than simply imitating an engine note.”
-
-Can’t wait to hear that.
-
-Look for the Torcal in US showrooms sometime early next year as a 2028 model. There’s no pricing yet, but it could be less than the Bentayga, which starts at around $230,000.","https://hips.hearstapps.com/hmg-prod/images/02fd6786-4fd6-4c66-8d79-9a9f88d77246.png?crop=1xw:0.804xh;0xw,0.196xh&resize=1200:*",N,,2026-09-24 13:11:47.768167
-ID43,Walmart,2026-09-24 15:53:16+00:00,Allrecipes,Walmart Is Launching a First-Of-Its-Kind Partnership With a Popular Restaurant Chain,"Samantha Dillard, www.facebook.com",,,,,https://www.allrecipes.com/walmart-adds-papa-johns-express-delivery-12132762,"Running between multiple grocery stores to fill the refrigerator and pantry, only to stop at the drive-thru on the way home because you’re too tired to cook.
-Walmart Adds Papa Johns To Express Delivery Shoppers in select markets will soon be able to order their favorite Papa Johns menu items using Walmart Express Delivery.
-This partnership marks the first time Walmart will fulfill orders through a restaurant that is not located inside its stores.
-Once your cart is filled, simply check out as you would for any Walmart Express Delivery order.
-Instead of being limited to the breadsticks and beverages available through Papa Johns, you’ll have Walmart’s selection at your fingertips.","We’ve all been there. Running between multiple grocery stores to fill the refrigerator and pantry, only to stop at the drive-thru on the way home because you’re too tired to cook. In the era of delivery, though, there’s no need to spend your afternoon navigating the crowds. Stores like Walmart are going the extra mile so you can order household essentials and a restaurant meal without leaving the couch.
-
-Recently, Walmart teamed up with Subway, allowing fans to request customized sandwiches right in the store app. Not long after, the retailer announced that Dunkin’s menu would be integrated into the grocery store ordering system, too.
-
-Now, the retailer is teaming up with another popular restaurant to make pizza night easier than ever.
-
-Walmart Adds Papa Johns To Express Delivery
-
-Shoppers in select markets will soon be able to order their favorite Papa Johns menu items using Walmart Express Delivery. This partnership marks the first time Walmart will fulfill orders through a restaurant that is not located inside its stores.
-
-When you get Papa Johns with Walmart delivery, you’ll be able to choose from a selection of pizzas, wings, sandwiches, sides, and desserts, just as you would when ordering through the restaurant. Those who live in eligible areas will see Papa Johns listed on the “Restaurants” tab, which can be viewed on Walmart’s website or app. Once your cart is filled, simply check out as you would for any Walmart Express Delivery order.
-
-“Customers shop at Walmart because they can find what they want and need in one place,” said Greg Cathey, SVP, eCommerce Fulfillment Innovation, Walmart, in a recent press release. “Adding Papa Johns brings even more variety and convenience to that experience, giving customers the option to order a favorite like pizza alongside the everyday items they already count on Walmart for.”
-
-Whether you’re serving a family meal or hosting a party, this partnership could be a game-changer. Instead of being limited to the breadsticks and beverages available through Papa Johns, you’ll have Walmart’s selection at your fingertips. You can add a case of soda, fruit salad, or even a Marketside cake to arrive alongside a stack of hot pizzas. Plus, if you need plates and napkins, you can add them to the same cart and skip making multiple orders.
-
-The new feature will roll out to participating locations this fall, so be sure to check delivery availability in the coming weeks to see if it’s available near you.",https://www.allrecipes.com/thmb/vVgEE2SdL2lB3Z62qil2jv-Ik5g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ar-graphics-test-walmart-batch-branded-03-ar-getty-2x1-89e2a56fcd994fdbb5e8ebd823e546f5.jpg,N,,2026-09-24 13:11:55.072577
-ID18,Eli Lilly,2026-09-24 15:52:19+00:00,www.biopharminternational.com,InnoCare Signs Research Deal With Lilly Worth Up to $3.35 Billion | BioPharm International,Feliza Mirasol,,,,,https://www.biopharminternational.com/view/innocare-research-deal-lilly-3-35-billion,"What are the terms of the deal?
-""³ As modalities grow more complex, no single organization can sustain all required capabilities in-house, Dr Desai noted, driving companies toward specialized partners that combine internal expertise with external technology and large-scale experience across many portfolios.³ What is InnoCare's current pipeline and momentum?
-The candidate is the company’s first bispecific ADC and third ADC candidate to enter clinical development.⁵ What are the limitations?
-The agreement's specific disease targets, therapeutic areas, and development timeline were not been disclosed.
-The milestone payments are contingent on clinical, regulatory, and commercial success and are not necessarily guaranteed.","InnoCare Pharma has entered into a strategic research collaboration and license agreement with Eli Lilly and Company (Lilly) to discover and develop new medicines, the companies announced September 24, 2026.¹ InnoCare will leverage its proprietary drug discovery platform to discover and advance compounds against up to 5 targets addressing critical unmet medical needs, with Lilly responsible for subsequent development and commercialization.¹
-
-Key facts
-
-Companies: InnoCare Pharma; Eli Lilly and Company
-
-Deal scope: Compounds against up to 5 targets
-
-Deal terms: Up to $100 million upfront/near-term; up to $3.25 billion in milestones
-
-Combined potential value: ~$3.35 billion, plus tiered royalties
-
-Disclosed targets: Not disclosed
-
-InnoCare pipeline: 3 approved drugs; 10+ candidates in clinical development
-
-Recent milestone: ICP-B381 (bispecific ADC) cleared for clinical trials in China (September 2026)
-
-Lilly context: Similar deal structure to Lilly's August 2026 Amplitude Therapeutics collaboration
-
-Geography: China-based InnoCare; global Lilly partnership
-
-""We are excited to leverage our R&D platform to collaborate with a global pharmaceutical leader like Lilly,"" said Jasmine Cui, PharmD, co-founder, chairwoman, and CEO of InnoCare, in a company press release.¹ ""We are dedicated to expanding our partnership and innovation footprint.""
-
-What are the terms of the deal?
-
-Under the agreement, InnoCare is eligible to receive up to $100 million in upfront and near-term payments, plus up to approximately $3.25 billion in development and commercial milestone payments, for a combined potential deal value of roughly $3.35 billion, along with single-digit tiered royalties on annual net product sales.¹ Financial terms beyond these figures, including specific initial disease targets, were not disclosed.¹
-
-How does this deal fit into Lilly's broader business development strategy?
-
-The InnoCare agreement follows a similar structure to other recent Lilly research collaborations with smaller biotechs, in which the partner leads early-stage target discovery and optimization while Lilly assumes responsibility for later-stage development, manufacturing, and commercialization.² In August 2026, for example, Lilly entered a comparable strategic research collaboration and licensing agreement with Amplitude Therapeutics to discover and develop trans-amplifying RNA vaccine candidates for infectious diseases, under which Amplitude leads early platform optimization before candidates advance into Lilly-led development.²
-
-Speaking more broadly about why such structured collaborations have become central to biopharma R&D, Manisha P. Desai, PhD, senior vice president of product development at Bristol Myers Squibb, stated in a previous interview with BioPharm International®, an Industry Sciences 1 brand, ""I think early alignment is very critical because development and manufacturing teams ... bring complementary sets of expertise to the table.""³ As modalities grow more complex, no single organization can sustain all required capabilities in-house, Dr Desai noted, driving companies toward specialized partners that combine internal expertise with external technology and large-scale experience across many portfolios.³
-
-What is InnoCare's current pipeline and momentum?
-
-InnoCare has 3 approved drugs, orelabrutinib, tafasitamab, and zurletrectinib, more than 10 innovative drug candidates in clinical development, and multiple preclinical-stage programs, with operations in Beijing, Nanjing, Shanghai, Guangzhou, Hong Kong, and the US.¹ In its 2026 interim results, InnoCare reported revenue growth of 55.5% to RMB 1.1 billion and a return to profitability, with profit of ¥239.7 million (US$35.71 million) in the first half of 2026, a turnaround from a loss in the same period the prior year.⁴ The company also recently received clinical trial approval in China for ICP-B381, a bispecific antibody-drug conjugate (ADC) targeting prostate-specific membrane antigen and six transmembrane epithelial antigen of the prostate 1 for solid tumors, including prostate cancer. The candidate is the company’s first bispecific ADC and third ADC candidate to enter clinical development.⁵
-
-What are the limitations?
-
-The agreement's specific disease targets, therapeutic areas, and development timeline were not been disclosed. The milestone payments are contingent on clinical, regulatory, and commercial success and are not necessarily guaranteed.
-
-References",https://cdn.sanity.io/images/0vv8moc6/biopharn/ac7a953353f68afaae641209430d72e44e984599-1280x720.jpg,N,,2026-09-24 14:09:38.493701
-ID22,Instacart,2026-09-24 15:48:45+00:00,Bloomberg,Watch The Biggest AI Adoption RIsk - Bloomberg,Not Available,,,,,https://www.bloomberg.com/news/videos/2026-09-24/the-biggest-ai-adoption-risk-video,"Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world Former Instacart President and current Beacon CEO Nilam Ganenthiran says the biggest obstacle to AI adoption is trust.
-He explains why AI is “arming both the good guys and bad guys,” how safety fears are holding back the real economy, and why Beacon is building what he calls an “AI-native Berkshire Hathaway.”","Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world
-
-Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world
-
-Former Instacart President and current Beacon CEO Nilam Ganenthiran says the biggest obstacle to AI adoption is trust. He explains why AI is “arming both the good guys and bad guys,” how safety fears are holding back the real economy, and why Beacon is building what he calls an “AI-native Berkshire Hathaway.”",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iBT2cQe83zqs/v3/500x-1.webp,N,,2026-09-24 12:15:20.355884
-ID33,Nvidia,2026-09-24 15:40:28+00:00,Bloomberg,Watch Nvidia Is Shaping the Rules for AI - Bloomberg,Not Available,,,,,https://www.bloomberg.com/news/videos/2026-09-23/opinion-nvidia-is-shaping-the-rules-for-ai-video,"Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world","Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world
-
-Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world",https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iPq7Aus_ByFU/v3/500x-1.webp,N,,2026-09-24 12:15:23.589741
