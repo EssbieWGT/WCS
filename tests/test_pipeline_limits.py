@@ -5,6 +5,7 @@ from pathlib import Path
 import subprocess
 import sys
 import tempfile
+import threading
 import time
 import unittest
 from unittest.mock import patch
@@ -21,6 +22,74 @@ from safe_files import atomic_text_file
 
 
 class PipelineLimitsTests(unittest.TestCase):
+    def test_log_file_updates_before_script_and_batch_finish(self):
+        with tempfile.TemporaryDirectory() as directory:
+            directory = Path(directory)
+            logfile = directory / "live.log"
+            logfile.write_text("launcher started\n", encoding="utf-8")
+            script = directory / "progress.py"
+            script.write_text(
+                "import sys,time\n"
+                "print('stdout marker', flush=True)\n"
+                "print('stderr marker', file=sys.stderr, flush=True)\n"
+                "sys.stdout.write('progress 1/2\\r'); sys.stdout.flush()\n"
+                "time.sleep(3)\n"
+                "print('script complete', flush=True)\n"
+            )
+            result = []
+
+            def run_batch():
+                with run_scripts.live_logging(logfile):
+                    result.append(run_scripts.run_scripts(
+                        [script], script_timeout=8, idle_timeout=5, run_timeout=10,
+                    ))
+
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                runner = threading.Thread(target=run_batch)
+                runner.start()
+                deadline = time.monotonic() + 1.5
+                while time.monotonic() < deadline:
+                    live_content = logfile.read_text(encoding="utf-8")
+                    if "progress 1/2" in live_content:
+                        break
+                    time.sleep(0.02)
+                still_running = runner.is_alive()
+                runner.join(timeout=10)
+            self.assertTrue(still_running)
+            self.assertIn("stdout marker", live_content)
+            self.assertIn("stderr marker", live_content)
+            self.assertIn("progress 1/2", live_content)
+            self.assertNotIn("script complete", live_content)
+            final_content = logfile.read_text(encoding="utf-8")
+            self.assertTrue(final_content.startswith("launcher started\n"))
+            self.assertIn("START", final_content)
+            self.assertIn("END", final_content)
+            self.assertIn("Run finished", final_content)
+            self.assertEqual(result, [0])
+
+    def test_output_is_visible_while_script_is_still_running(self):
+        first_output = threading.Event()
+
+        class LiveOutput(io.StringIO):
+            def write(self, value):
+                if "live output marker" in value:
+                    first_output.set()
+                return super().write(value)
+
+        result = []
+        with contextlib.redirect_stdout(LiveOutput()):
+            runner = threading.Thread(target=lambda: result.append(run_scripts.run_command(
+                [sys.executable, "-u", "-c", "import time; print('live output marker', flush=True); time.sleep(3)"],
+                timeout=8, idle_timeout=5,
+            )))
+            runner.start()
+            visible_during_run = first_output.wait(timeout=1.5)
+            still_running = runner.is_alive()
+            runner.join(timeout=10)
+        self.assertTrue(visible_during_run, "output was buffered until the child exited")
+        self.assertTrue(still_running)
+        self.assertEqual(result, [(0, None)])
+
     def test_timeout_stops_child_processes_too(self):
         with tempfile.TemporaryDirectory() as directory:
             marker = Path(directory) / "orphan_completed"

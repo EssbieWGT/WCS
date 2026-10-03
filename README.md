@@ -16,9 +16,16 @@ final Git publication step. Defaults are 180 seconds without output, at most
 gets a share of the remaining budget so later updates receive time too; unused
 time becomes available to later steps. Git publication is capped at 120 seconds
 and requires preconfigured, noninteractive authentication. Heartbeats and a final
-failure summary appear in the transcript; the batch returns a failure status if
+failure summary appear in the live log; the batch returns a failure status if
 any step fails. Override limits with `-ScriptTimeoutSeconds`,
 `-IdleTimeoutSeconds`, and `-RunTimeoutSeconds` on the PowerShell launcher.
+
+Watch `C:\Scripts\pipenv_scripts_log.txt` for live script output. Python appends
+and flushes every output chunk directly to that file while also displaying it in
+the console. The launcher archives the previous run before starting a new log.
+PowerShell launcher diagnostics are recorded separately in
+`C:\Scripts\pipenv_launcher_log.txt`. When running `run_scripts.py` directly,
+use `--log-file` with the path you want to watch.
 
 CSV archives/exports and timestamp rewrites use temporary files and replacement
 to preserve the previous complete file if an update stops during writing. Each
