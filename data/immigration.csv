@@ -1,4 +1,129 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+,Agencies,2026-10-04 21:25:27+00:00,"Biometric Update | Biometrics News, Companies and Explainers","ICE observer lawsuit shows how Palantir records can feed border screening, analytics",Anthony Kimery,,,,,https://www.biometricupdate.com/202610/ice-observer-lawsuit-shows-how-palantir-records-can-feed-border-screening-analytics,"ICE also requires both transactional case data and “derived analytical data” within the platform to remain wholly owned by the agency.
+WIRED reported that court records in Hilton show an HSI agent created ICM records on people observing immigration arrests in Maine during January’s Operation Catch of the Day.
+ICE is moving ICM data into a new Palantir system The timing is significant because ICE is in the middle of a major ICM overhaul.
+ICM records already reach CBP The Williams border stop also illustrates that information stored in ICM has never necessarily remained inside HSI.
+What is established is that her ICM information reached beyond HSI: the government says J.C.’s entry led to the border stop.","Newly unsealed court records showing how information collected on people observing immigration arrests in Maine later contributed to a border stop offer a real-world example of the kind of subject data ICE is now migrating into a broader Palantir case-management and analytics system.
+
+The records show an HSI agent photographed observers, collected vehicle information and entered subject records into Palantir’s Investigative Case Management system. The government has acknowledged that information entered about plaintiff Carlyn Williams later led to enhanced screening at the Canadian border.
+
+U.S. Immigration and Customs Enforcement (ICE) is requiring existing ICM data to be migrated into a new Palantir architecture designed to combine case management, attached media and investigative analytics in an Enterprise Lakehouse linked to Customs and Border Protection (CBP) and other federal systems.
+
+ICE also requires both transactional case data and “derived analytical data” within the platform to remain wholly owned by the agency. That raises a question not addressed in the public privacy documentation reviewed by Biometric Update: what happens to analytical relationships and other derived information when the underlying subject record is later corrected, archived or deleted?
+
+The question is no longer abstract.
+
+WIRED reported that court records in Hilton show an HSI agent created ICM records on people observing immigration arrests in Maine during January’s Operation Catch of the Day.
+
+The government says the agent, identified as “J.C.”, created records on eight people he believed posed potential threats to law enforcement so law enforcement could access their information if they encountered them again. The plaintiffs say observers were photographed, vehicle information was collected, and facial recognition searches were conducted.
+
+One of those records later had a tangible consequence.
+
+The government has acknowledged in a September 18 filing that J.C.’s entry of Carlyn Williams’ name and vehicle information into ICM led to the March 2026 border stop. The amended complaint says Williams and her spouse, fellow plaintiff Polyxenia Pantos, faced enhanced screening while returning from Canada.
+
+ICE is moving ICM data into a new Palantir system
+
+The timing is significant because ICE is in the middle of a major ICM overhaul.
+
+ICE awarded Palantir a roughly $45.8 million order in June to modernize HSI’s investigative case management and investigative analytics capabilities on the agency’s Case Management and Analytics platform.
+
+The agency’s limited-sources justification describes a system considerably broader than traditional case management. ICE requires a single integrated platform combining investigative case management with investigative analytics.
+
+An Enterprise Lakehouse will combine case records, subject information covering people, businesses, and vehicles, investigative reports, approval workflows, and attached media with outside law enforcement information.
+
+ICE says the lakehouse can become an authoritative data source and is expected to support analytics and information sharing with CBP for lookout and seizure tracking.
+
+The platform must be interoperable with CBP, the Department of Justice, the Federal Bureau of Investigation’s Criminal Justice Information Services, the National Law Enforcement Telecommunications System, and the Department of Homeland Security’s (DHS) Office of Biometric Identity Management.
+
+ICE says existing investigative information must remain accessible and accurate, and it makes the contractor responsible for ensuring all data is migrated and accounted for without exceptions or errors.
+
+The same requirements separately identify both transactional case management information and “derived analytical data” as data that must remain under ICE ownership.
+
+The documents do not establish whether the eight Maine records have already been migrated.
+
+But they place the kinds of records at issue in Hilton within a much larger body of historical ICM information that ICE has directed Palantir to preserve while building a system capable of generating new analytical products from the underlying data.
+
+ICM records already reach CBP
+
+The Williams border stop also illustrates that information stored in ICM has never necessarily remained inside HSI.
+
+A 2016 DHS Privacy Impact Assessment says an ICM Interface Hub allows ICE-created subject records to be continually published and updated in CBP’s TECS Platform.
+
+The records can concern people, vehicles, aircraft, and other subjects of ICE law-enforcement interest. DHS said they “serve as ‘lookout records’” that CBP uses to screen travelers entering and leaving the country.
+
+The same architecture sent daily ICM updates into the HSI Data Warehouse for reporting and analytical use.
+
+That does not mean every ICM subject record automatically becomes a formal TECS lookout requiring a border officer to take action.
+
+CBP’s TECS privacy documentation describes a specific Lookout Record that authorized users can create and place “on Primary,” allowing CBP officers to receive instructions when they encounter a traveler, including referral to secondary inspection.
+
+The public record does not identify which TECS object, flag or referral mechanism caused Williams’ March inspection. What is established is that her ICM information reached beyond HSI: the government says J.C.’s entry led to the border stop.
+
+Among other things, they are seeking to have Williams’ records archived and to prevent DHS from using information collected about the plaintiffs against them.
+
+But an analytical environment can generate information beyond the source record itself – links among people, vehicles, addresses, cases and other entities, as well as visualizations, alerts and other analytical products.
+
+ICE has previously addressed that problem explicitly in another analytics system.
+
+A 2023 privacy assessment for the Data Analysis and Research for Trade Transparency System (DARTTS), as it transitioned to ICE’s Repository for Analytics in a Virtualized Environment (RAVEn), spells out how source-data retention and analytical products are supposed to be handled.
+
+When underlying records are deleted during a source-system refresh, associated analytical products are also supposed to be deleted automatically because they are tagged back to the source records.
+
+An exception applies when an analyst identifies a product as connected to an active investigation or case. It can then be moved into the relevant case-management system and becomes subject to that system’s retention rules.
+
+The new Palantir architecture combines case management and analytics much more directly.
+
+Yet ICE’s publicly available ICM privacy documentation still reflects an older architecture.
+
+The August 2021 ICM privacy assessment predates the Case Management and Analytics platform and Enterprise Lakehouse.
+
+The public documentation reviewed by Biometric Update does not explain the equivalent lineage rules for the new architecture – including whether archiving or correcting an underlying subject record automatically changes analytical relationships, derived information, or copies previously transmitted to another DHS component.
+
+Mobile Query may have created another data trail
+
+The photographs sent for facial recognition in Maine raise a separate biometric retention question.
+
+The court record identifies the CBP application used to search the photographs as Mobile Query.
+
+CBP has long used that name for a broader mobile application.
+
+A CBP contracting document describes Mobile Query as an all-purpose tool that can search agency databases, scan travel documents, review flight manifests, and identify passengers through fingerprints.
+
+But separate federal litigation has produced testimony suggesting the terminology is not always precise.
+
+Biometric Update separately identified federal litigation in Oregon that bears directly on the terminology. In M-J-M-A- v. Wamsley, a CBP official testified that she used what she called a “facial recognition mobile query for CBP.”
+
+U.S. District Judge Mustafa Kasubhai’s subsequent opinion, citing the same encounter and testimony, identifies the application as Mobile Fortify.
+
+Mobile Fortify is a CBP mobile biometric identification app that lets officers use a government-issued phone to capture a person’s face or fingerprints and run them against DHS identity and immigration databases in the field.
+
+Judge Kasubhai’s ruling does not establish that the “Mobile Query” identified in the Maine litigation was necessarily Mobile Fortify, but it shows that the terminology immigration enforcement officers use is not dispositive.
+
+A DHS Privacy Threshold Analysis says every new photograph or fingerprint submitted through Mobile Fortify, whether or not it produces a match, becomes an encounter record stored in CBP’s Automated Targeting System for 15 years. The document says CBP retains all photographs, including nonmatching images of U.S. citizens and lawful permanent residents.
+
+If Mobile Fortify was used in Maine, each photograph submitted through it therefore would have created a CBP encounter record separate from the observers’ ICM subject records. The currently available court documents do not establish that Mobile Fortify was the application used there.
+
+ICE records can encompass people who are not arrest targets
+
+ICE’s formal records policies also show that its information systems can contain information about people beyond those arrested or suspected of crimes.
+
+A July 2025 update to ICE’s Search, Arrest, and Seizure System of Records expanded the categories of individuals covered to include witnesses, people with knowledge of alleged activity and witness bystanders, as well as people whose images or audio are captured incidentally during searches, arrests, or seizures.
+
+For those incidentally recorded individuals, the notice says they fall within the system of records when ICE retrieves the information by a personal identifier in its normal course of business.
+
+The same notice expanded the categories of information maintained in the system to include biometric information, geolocation, commercial data, and information derived from new surveillance and information technologies, in addition to photographs, identifying information, and vehicle-related records.
+
+DHS nevertheless argues in Hilton that the Maine encounters do not demonstrate a wider retaliatory surveillance policy.
+
+The government says department policy prohibits targeting people merely for exercising First Amendment rights and says J.C. created the records because he believed the individuals posed operational or safety concerns.
+
+The plaintiffs dispute that characterization and argue the surveillance and record collection chilled their constitutionally protected observation of immigration enforcement.
+
+Whatever the court ultimately decides, the litigation supplies something the Palantir procurement documents alone could not: a view of what an ICM subject record can look like at the beginning of its lifecycle.
+
+It can begin with a photograph, a vehicle, a name and an agent’s characterization. The Maine case shows how that information can later affect border screening, while ICE is building an analytical environment designed to combine those source records with information derived from them.
+
+Article Topics",https://d1sr9z1pdl3mb7.cloudfront.net/wp-content/uploads/2026/10/04165401/CBP-land-border-inspection-scaled.jpg,N,,2026-10-04 17:58:32.051652
 ,Policy,2026-10-04 20:15:16+00:00,POLITICO,Trump won't be in the White House during the next census. But his directives could outlast ...,,,,,,https://www.politico.com/news/2026/10/04/donald-trump-2030-census-changes-01104876,... administration tried various administrative means to try to break out undocumented immigrants. But the effort ultimately puttered out when the ...,... administration tried various administrative means to try to break out undocumented immigrants. But the effort ultimately puttered out when the ...,https://www.politico.com/dims4/default/resize/1200/quality/90/format/jpg?url=https%3A%2F%2Fstatic.politico.com%2F69%2Fe3%2F1c2701b04eaaba10ec43534e4efc%2Fcensus-2030-94277.jpg,Y,,2026-10-04 16:57:00.137480
 ,Human Rights,2026-10-04 19:57:59+00:00,2 News Nevada,An immigrant deported by the US and held in an African prison for more than a year has ...,GERALD IMRAY - Associated Press,,,,,https://www.2news.com/news/national/an-immigrant-deported-by-the-us-and-held-in-an-african-prison-for-more-than/article_03316e24-459a-59be-a1ad-407a0ac08cf4.html,"CAPE TOWN, South Africa (AP) — A Laotian citizen deported by the United States to Eswatini under the Trump administration's immigration crackdown was released from a maximum-security prison in the African nation on Sunday after being held there for more than a year, his lawyer said.
 Phone Chomsavanh was among five immigrants deported to Eswatini — where he has no ties — in July 2025 in the early days of the Trump administration's secretive and highly contentious third-country deportation program.
@@ -278,6 +403,27 @@ AP Africa news: https://apnews.com/hub/africa
 
 Copyright 2026 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.",https://www.usnews.com/dims4/USNEWS/c587f33/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2Fa7%2Fe5bd7d45d3dd53791e1d87e37f64dd%2F13a0b7d4b00240a085904f1d753cc5c4Eswatini_Deportee_Released_93795.jpg,N,,2026-10-04 15:58:01.737233
 ,Human Rights,2026-10-04 18:51:13+00:00,www.newsday.com,An immigrant deported by the US and held in an African prison for more than a year has ...,,,,,,https://www.newsday.com/news/nation/eswatini-us-immigrant-released-from-prison-laos-p93109,"... rights group Human Rights First, which has been monitoring the deportations. Around a dozen African countries have accepted third-country ...","... rights group Human Rights First, which has been monitoring the deportations. Around a dozen African countries have accepted third-country ...",,Y,,2026-10-04 15:58:05.970952
+,Agencies,2026-10-04 18:37:50+00:00,KXAN Austin,ICE says woman arrested in viral video released because she's the guardian of minors | KXAN Austin,Abigail Jones,,,,,https://www.kxan.com/news/local/austin/ice-says-woman-arrested-in-viral-video-released-because-shes-the-guardian-of-minors/,"AUSTIN (KXAN) — A video circulating on social media has raised concerns over the detention of a woman by U.S. Immigration and Customs Enforcement (ICE) agents in Austin.
+Vela wrote in the caption of the X post, “ICE arrested the mom of a 9-year-old at a school bus stop in Austin, leaving him alone and crying.
+The video has profanity and is heartbreaking to watch, but it shows the fear/pain of what happened.
+A spokesperson shared a statement that said ICE had encountered the woman, whom the agency referred to as an “illegal alien,” on Oct. 1 during a vehicle stop.
+“After learning she was the sole caregiver for minor children who may have been left without supervision, ICE released her approximately 10 minutes later.","AUSTIN (KXAN) — A video circulating on social media has raised concerns over the detention of a woman by U.S. Immigration and Customs Enforcement (ICE) agents in Austin.
+
+Mayor Pro Tem Chito Vela posted the video on X on Thursday. It was initially posted on Facebook by Leonardo Pelaez, where it has nearly 300,000 views as of Sunday.
+
+Vela wrote in the caption of the X post, “ICE arrested the mom of a 9-year-old at a school bus stop in Austin, leaving him alone and crying. The video has profanity and is heartbreaking to watch, but it shows the fear/pain of what happened. This is evil. This is wrong. And it has to stop.”
+
+Vela’s office told KXAN on Friday that it had “heard from community members and neighbors that the child went to school after the incident. While we don’t have more information on the mother’s detainment, we know the child is ok and with family.”
+
+KXAN also reached out to ICE for more information about the arrest.
+
+A spokesperson shared a statement that said ICE had encountered the woman, whom the agency referred to as an “illegal alien,” on Oct. 1 during a vehicle stop.
+
+“After learning she was the sole caregiver for minor children who may have been left without supervision, ICE released her approximately 10 minutes later. No children were present during the stop, and ICE has not confirmed that the child heard crying in a circulating video is related to [the woman].”
+
+The statement from ICE continued, saying the agency “encourages all illegal aliens to take control of their departure with the CBP Home App,” and that the US is offering people $3,000 and a free flight to self-deport.
+
+“We encourage every person here illegally to take advantage of this offer and reserve the chance to come back to the U.S. the right legal way to live the American dream,” the statement continued. “If not, you will be arrested and deported without a chance to return.”",https://www.kxan.com/wp-content/uploads/sites/40/2026/07/AP26159569875818-e1783432535112_7e87ba-e1783478100570.jpg?w=1280,N,,2026-10-04 17:58:36.785743
 ,Agencies,2026-10-04 18:29:36+00:00,Variety,Daily Wire's Pro-ICE Film 'Pawn Shop' Production Temporarily Suspended - Variety,Payton Turkeltaub,,,,,https://variety.com/2026/film/news/daily-wires-pro-ice-film-temporarily-suspended-montana-1236898635/,"Production of Daily Wire’s pro-ICE film “Pawn Shop” has been temporarily halted in Livingston, Mont., following a Special City Commission Meeting held on Saturday.
 The action comes as Livingston locals raised concerns about the film’s impact on local business — and notably the city’s sole food bank — as well as improper notification about hazardous stunts.
 During the meeting, residents voiced worries about the filming, saying it made them feel unsafe.
@@ -875,6 +1021,39 @@ In a statement to AFP, ORR said that in August it provided funding through the e
 Bilal Askaryar, a spokesman for Acacia, explained that USCRI is a small organization with about 50 attorneys, compared to the 800 in Acacia’s network.
 
 “This isn’t about a contract for us. This isn’t about a dispute between an organization and the government. This is about 20,000 children who came to the United States seeking safety,” he said. — AFP",https://www.malaymail.com/malaymail/uploads/images/2026/10/04/366265.jpg,N,,2026-10-04 11:58:15.908364
+,Policy,2026-10-04 12:04:37+00:00,Source ONE News,"McKinney, Duresky Offer Starkly Different Views on ICE During Congressional Debate",Source ONE News staff,,,,,https://www.yoursourceone.com/columbia_basin/mckinney-duresky-offer-starkly-different-views-on-ice-during-congressional-debate/article_aef020e0-9446-477f-8a91-371af2e23064.html,"CENTRAL WASHINGTON — The two candidates seeking Washington’s 4th Congressional District seat presented dramatically different views of the Trump administration's immigration enforcement campaign during a recent candidate forum, including a","CENTRAL WASHINGTON — The two candidates seeking Washington’s 4th Congressional District seat presented dramatically different views of the Trump administration's immigration enforcement campaign during a recent candidate forum, including a direct disagreement over Immigration and Customs Enforcement operations and Washington's restrictions on local cooperation with federal immigration authorities.
+Republican Amanda McKinney defended stronger immigration enforcement and called for greater cooperation between county jails and federal authorities.
+kAms6>@4C2E y@9? sFC6D<J 42==65 E96 4FCC6?E 56A@CE2E:@? 677@CE “:>>@C2= 2?5 566A=J F?\p>6C:42?” 2?5 D2:5 7656C2= 286?ED 2C6 E2C86E:?8 A6@A=6 H9@ 4@?EC:3FE6 E@ r6?EC2= (2D9:?8E@?VD 28C:4F=EFC2= 64@?@>J]k^Am
+kAm%96 :DDF6 92D 364@>6 :?4C62D:?8=J G:D:3=6 :? r6?EC2= (2D9:?8E@? 2>:5 xrt 24E:G:EJ C6A@CE65 :? 4@>>F?:E:6D :?4=F5:?8 ""F:?4J 2?5 (6?2E4966]k^Am
+kAmpD<65 5FC:?8 E96 $6AE] b_ 7@CF> H92E D96 28C665 2?5 5:D28C665 H:E9 23@FE E96 25>:?:DEC2E:@?VD :>>:8C2E:@? DEC2E68J[ |4z:??6J D2:5 D96 DFAA@CED “24EF2==J 6?7@C4:?8 E96 =2H]”k^Am
+kAm$96 =:?<65 :>>:8C2E:@? 6?7@C46>6?E E@ 5CF8 EC277:4<:?8[ 42CE6=D 2?5 9F>2? EC277:4<:?8 2?5 2C8F65 E92E (2D9:?8E@?VD D2?4EF2CJ\C6=2E65 A@=:4:6D :?E6C76C6 H:E9 AF3=:4 D276EJ]k^Am
+kAm|4z:??6J DA64:7:42==J 7@4FD65 @? 4@F?EJ ;2:=D]k^Am
+kAm“~FC D2?4EF2CJ A@=:4:6D 5@ ?@E =6E ;2:=D E2=< E@ 7656C2= =2H 6?7@C46>6?E D@ E92E E9@D6 4C:>:?2=D 42? 36 <6AE :? 2 D64FC6 2C62[” |4z:??6J D2:5]k^Am
+kAm$96 2C8F65 E92E C6=62D:?8 A6@A=6 367@C6 xrt 286?ED 42? E2<6 4FDE@5J C6BF:C6D 7656C2= @77:46CD E@ =@42E6 E96> :? E96 4@>>F?:EJ[ 4C62E:?8 255:E:@?2= 52?86C]k^Am
+kAm“x 2> 2 DEC@?8 25G@42E6 7@C 4@@A6C2E:@?[” |4z:??6J D2:5[ A2CE:4F=2C=J :?G@=G:?8 H92E D96 56D4C:365 2D 92C56?65 4C:>:?2=D 2=C625J 96=5 :? (2D9:?8E@? 4@F?EJ ;2:=D]k^Am
+kAm(2D9:?8E@?VD =2H :D >@C6 DA64:7:4 E92? E92E 492C24E6C:K2E:@? DF886DED]k^Am
+kAm%96 a_`h z66A (2D9:?8E@? (@C<:?8 p4E C6DEC:4ED =@42= =2H 6?7@C46>6?E A2CE:4:A2E:@? :? kDEC@?8m4:G:=k^DEC@?8m 7656C2= :>>:8C2E:@? 6?7@C46>6?E] xE 86?6C2==J AC@9:3:ED =@42= 286?4:6D 7C@> 9@=5:?8 D@>6@?6 D@=6=J @? 2 4:G:= :>>:8C2E:@? H2CC2?E @C 56E2:?6C 2?5 C6DEC:4ED E96 D92C:?8 @7 ?@?AF3=:4 C6=62D6 :?7@C>2E:@? 7@C 4:G:= :>>:8C2E:@? 6?7@C46>6?E] xE 5@6D kDEC@?8m?@Ek^DEC@?8m AC@9:3:E =@42= 286?4:6D 7C@> 6?7@C4:?8 DE2E6 4C:>:?2= =2HD[ 4@>A=J:?8 H:E9 ;F5:4:2= H2CC2?ED @C D92C:?8 46CE2:? :?7@C>2E:@? H96? C6BF:C65 3J DE2E6 @C 7656C2= =2H]k^Am
+kAm%96 :DDF6 92D A2CE:4F=2C C6=6G2?46 :? p52>D r@F?EJ] %96 (2D9:?8E@? pEE@C?6J v6?6C2= DF65 p52>D r@F?EJ 2?5 :ED $96C:77VD ~77:46 :? a_ad[ 2==68:?8 E96 286?4J 925 F?=2H7F==J 2DD:DE65 7656C2= 4:G:= :>>:8C2E:@? 6?7@C46>6?E]k^Am
+kAmsFC6D<J @776C65 2 ?62C=J @AA@D:E6 2DD6DD>6?E @7 E96 7656C2= 6?7@C46>6?E 42>A2:8?]k^Am
+kAm“%96 4FCC6?E 56A@CE2E:@? C68:>6 E92E :D 92AA6?:?8 C:89E ?@H :D 3@E9 :>>@C2= 2?5 566A=J F?\p>6C:42?[” sFC6D<J D2:5]k^Am
+kAmw6 D2:5 :>>:8C2?ED 92G6 A=2J65 2 >2;@C C@=6 :? 3F:=5:?8 r6?EC2= (2D9:?8E@?VD 64@?@>J]k^Am
+kAm“%96JVG6 4@?EC:3FE65 D@ >F49 E@ @FC 28C:4F=EFC2= =6824J[” sFC6D<J D2:5] “%96J 92G6 4@?EC:3FE65 D@ >F49 E@ @FC 4F=EFC6 2?5 @FC 64@?@>J]”k^Am
+kAmsFC6D<J D2:5 96 <?@HD F?5@4F>6?E65 :>>:8C2?ED H9@ 92G6 =:G65 :? E96 C68:@? 7@C J62CD[ H@C<65[ A2:5 E2I6D 2?5 4@?EC:3FE65 E@ E96:C 4@>>F?:E:6D H:E9@FE 4@>>:EE:?8 4C:>6D]k^Am
+kAmw6 DEC6DD65 E92E 96 5@6D ?@E DFAA@CE @A6? 3@C56CD]k^Am
+kAm“(6 92G6 2 C:89E 2D 2 D@G6C6:8? ?2E:@? E@ 4@?EC@= H9@ 4@>6D :?E@ 2?5 @FE @7 @FC 4@F?ECJ[” sFC6D<J D2:5]k^Am
+kAmqFE 96 BF6DE:@?65 9@H xrt C6D@FC46D 2C6 4FCC6?E=J 36:?8 56A=@J65[ D2J:?8 :>>:8C2E:@? 2EE@C?6JD 92G6 E@=5 9:> 286?ED 92G6 366? D9:7E65 2H2J 7C@> 9F>2?\EC277:4<:?8 6?7@C46>6?E E@H2C5 C@FE:?6 :>>:8C2E:@? @A6C2E:@?D]k^Am
+kAmsFC6D<J DA64:7:42==J 4C:E:4:K65 @A6C2E:@?D 96 492C24E6C:K65 2D D62C49:?8 7@C A6@A=6 “8@:?8 :? 2?5 @FE @7 (2=>2CE]”k^Am
+kAm“%92EVD 6?7@C46>6?E E92E H6 5@?VE ?665[” 96 D2:5[ 2C8F:?8 E92E E9@D6 H@C<6CD >2J 36 96=A:?8 “92CG6DE @FC 7CF:E” 2?5 “8C@H @FC 28C:4F=EFC6]”k^Am
+kAmsFC6D<J 2=D@ 4C:E:4:K65 2CC6DED 2E :>>:8C2E:@? 2AA@:?E>6?ED 2?5 42D6D :? H9:49 96 D2:5 A6@A=6VD =682= DE2EFD 42? 492?86 H9:=6 E96J 2C6 2EE6>AE:?8 E@ 4@>A=J H:E9 E96 DJDE6>]k^Am
+kAm%96 6I492?86 D9@H65 @?6 @7 E96 4=62C6DE 5:G:D:@?D @7 E96 ?:89E]k^Am
+kAm|4z:??6J D66D 6IA2?565 4@@A6C2E:@? 2?5 6?7@C46>6?E 2D 2 AF3=:4\D276EJ :DDF6] sFC6D<J D2JD 4FCC6?E 6?7@C46>6?E 92D DH6AE E@@ 3C@25=J 2?5 :D 5:DCFAE:?8 72>:=:6D[ H@C<6CD 2?5 2? 28C:4F=EFC2= 64@?@>J E92E 56A6?5D 962G:=J @? :>>:8C2?E =23@C]k^Am
+kAm%96 H:??6C @7 E96 }@G] b 6=64E:@? H:== 6?E6C r@?8C6DD 2D :>>:8C2E:@? 6?7@C46>6?E C6>2:?D @?6 @7 E96 >@DE 4@?E6?E:@FD 7656C2= :DDF6D 27764E:?8 r6?EC2= (2D9:?8E@?]k^Am
+Newsletters
+Success!
+An email has been sent to
+with a link to confirm list signup.
+Error!
+There was an error processing your request.",https://bloximages.newyork1.vip.townnews.com/yoursourceone.com/content/tncms/assets/v3/editorial/7/70/7709045b-39f5-422c-9ffc-c54e978d2858/6ac196568c643.image.png?crop=1941%2C1019%2C0%2C23&resize=1200%2C630&order=crop%2Cresize,N,,2026-10-04 17:58:28.027902
 ,Human Rights,2026-10-04 11:51:55+00:00,"Race, Racism and the Law",-Black Beyond Borders: An Analysis of the 1996 Immigration Laws and the Invisibility of ...,Annaelle Clara Lafontant,,,,,https://racism.org/articles/citizenship-rights/immigration-race-and-racism/13685-black-beyond-borders,"Abstract Excerpted From: Annaelle Clara Lafontant, Black Beyond Borders: An Analysis of the 1996 Immigration Laws and the Invisibility of Black Immigrants, 17 Georgetown Journal of Law & Modern Critical Race Perspectives 111 (2025) (117 Footnotes) (Full Document Requested) The histories of Black immigrants and African Americans intertwine throughout American history.
 Although this immigration has occurred for over a century, broader conversations about immigration typically exclude Black immigrants, as these conversations usually center non-Black people from Latin America.
 The intersection of their identities as both immigrant and Black, however, places Black immigrants in a precarious condition.
@@ -10721,120 +10900,3 @@ Consequently, the UN working group recommended measures to strengthen rights-bas
 
 Multiple factors drive African individuals to migrate, including poverty, high unemployment rates, climate-related events, armed conflicts, and in search of better living conditions and safety. The UN has previously described Africa as a “continent on the move”, with high numbers of migrants recorded both within the region and in Europe. In July 2026, the President of South Africa called on African countries to strengthen cooperation and tighten immigration enforcement regimes, amid a surge of xenophobic violence against migrants.",https://www.jurist.org/news/wp-content/uploads/sites/4/2026/10/Flickr_-_DFID_-_UK_Department_for_International_Development_-_Displaced_people_crossing_the_border_from_Ivory_Coast_to_Liberia-scaled.jpg,N,,2026-10-01 18:07:30.763041
 ,Agencies,2026-10-01 22:02:19+00:00,YouTube,Top Trump officials and ICE sued by family of Renee Good for horrific killing - YouTube,Not Available,,,,,https://www.youtube.com/watch?v=bL96XhaYkLY,"The family of Renee Good has announced they are suing several Trump officials for wrongful death, conspiracy, and other violations after her shooting death a...",Not Available,https://i.ytimg.com/vi/bL96XhaYkLY/maxresdefault.jpg,N,,2026-10-02 00:12:48.114186
-,Human Rights,2026-10-01 21:54:52+00:00,www.canada.ca,"Second International Conference on Returning Ukrainian Children, Detained Civilians, and ...",Global Affairs Canada,,,,,https://www.canada.ca/en/global-affairs/news/2026/10/backgrounder-pathways-to-peace-second-international-conference-on-returning-ukrainian-children-detained-civilians-and-prisoners-of-war.html,"The Honourable Anita Anand, Minister of Foreign Affairs, together with Denys Uliutin, Minister of Social Policy, Family, and Unity of Ukraine, and Eivind Vad Petersson, State Secretary for the Minister of Foreign Affairs of Norway, co-hosted Pathways to Peace: Second International Conference on Returning Ukrainian Children, Detained Civilians, and Prisoners of War in Toronto, Ontario, on September 28 and 29, 2026.
-The project will strengthen cooperation between state and civil society partners by identifying children at risk, facilitating the safe return of children and providing immediate post-arrival support to children and their families.
-Canada and Ukraine are inviting interested partner countries to also contribute to this collective endeavour.
-Sanctions on individuals involved in human rights violations of Ukrainian children Description: On September 10, 2026, Canada announced new sanctions on eight individuals who have facilitated the Russian government’s violation of rights of Ukrainian children, including their unlawful deportation and forcible transfer, indoctrination and militarization.
-This brings Canada’s total number of sanctions on individuals who have facilitated Russia’s violations of Ukrainian children’s rights to over 120.","The Honourable Anita Anand, Minister of Foreign Affairs, together with Denys Uliutin, Minister of Social Policy, Family, and Unity of Ukraine, and Eivind Vad Petersson, State Secretary for the Minister of Foreign Affairs of Norway, co-hosted Pathways to Peace: Second International Conference on Returning Ukrainian Children, Detained Civilians, and Prisoners of War in Toronto, Ontario, on September 28 and 29, 2026.
-
-At the conference, Minister Anand announced a series of initiatives to strengthen Canada’s support to Ukraine in bringing people home and ensure that those who return can access rehabilitation and reintegration services:
-
-Coordinated response to child militarization in temporarily occupied territories
-
-Partner: Hala Systems
-
-Funding: $3 million
-
-Description: Canada is supporting a pioneering response to the evolving threats facing Ukrainian children, addressing not only deportation, but also indoctrination, militarization and recruitment. The project will strengthen cooperation between state and civil society partners by identifying children at risk, facilitating the safe return of children and providing immediate post-arrival support to children and their families.
-
-Rescue and resilience for Ukrainian civil society
-
-Partner: German Marshall Fund
-
-Funding: $1 million
-
-Description: Canada has previously announced the extension of a project with the German Marshall Fund to support local Ukrainian organizations in identifying and documenting cases, assisting families through complex return procedures, collecting evidence of human rights violations and coordinating with Ukrainian authorities and international partners. By strengthening these locally led efforts, the project assists in the safe return of children, supports families affected by separation and strengthens the capacity of Ukrainian civil society organizations to advocate and respond to the needs of affected children and their families.
-
-Access to justice and healthcare assistance for male survivors of conflict-related sexual violence in Ukraine
-
-Partner: All Survivors Project Foundation
-
-Funding: $500,000
-
-Description: Canada is providing additional funding for an existing project to strengthen services for male survivors of conflict-related sexual violence in Ukraine, including prisoners of war and civilian detainees.
-
-Canada Fund for Local Initiatives
-
-Partner: Embassy of Canada to Ukraine, through the work of multiple local Ukrainian civil society organizations
-
-Funding: $363,112
-
-Description: Through the Canada Fund for Local Initiatives, the Embassy of Canada to Ukraine is supporting Ukrainian civil society organizations providing psychosocial, medical, legal, and reintegration assistance to formerly detained civilians and their families; legal support, advocacy, and trauma-informed services for families of POWs and missing persons; and education, skills development, and career guidance for youth returning from occupation, deportation, or displacement, helping them rebuild their lives and strengthen community resilience.
-
-State reintegration services
-
-Partner: UNICEF
-
-Funding: $2 million
-
-Description: This additional funding, announced by Prime Minister Mark Carney, supports UNICEF’s work with the Government of Ukraine to pilot its State Reintegration Service project in 15 communities. This state service will help establish a nationally defined pathway for returned children, connecting them and their families with the services they need for rehabilitation and reintegration.
-
-Support to Ukrainian veterans and their families through a multi-donor pooled initiative
-
-Funding: up to $40.1 million
-
-Description: Canada and Ukraine are developing a multi-donor pooled initiative to support the implementation of Ukraine’s National Veteran Strategy, thereby providing support to Ukrainian veterans and their families. This initiative will further four broad areas of work: health, rehabilitation, and recovery; access to services and benefits; economic opportunity and livelihoods; and social inclusion and community participation for veterans and their families. Through this initiative, Canada will bring together governments, civil society organizations, and other stakeholders to foster coordination, share expertise and lessons learned as well as strengthen Ukraine’s long-term capacity to respond to the evolving needs of veterans. Canada and Ukraine are inviting interested partner countries to also contribute to this collective endeavour.
-
-Sanctions on individuals involved in human rights violations of Ukrainian children
-
-Description: On September 10, 2026, Canada announced new sanctions on eight individuals who have facilitated the Russian government’s violation of rights of Ukrainian children, including their unlawful deportation and forcible transfer, indoctrination and militarization. This brings Canada’s total number of sanctions on individuals who have facilitated Russia’s violations of Ukrainian children’s rights to over 120.",https://www.canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico,N,,2026-10-01 18:07:33.356701
-,Human Rights,2026-10-01 21:49:46+00:00,NPR,The family of Renee Good files lawsuits over her death during Minneapolis ICE raids - NPR,Meg Anderson,,,,,https://www.npr.org/2026/10/01/nx-s1-5986224/renee-good-ice-lawsuit-minneapolis,"It is seeking damages for Good's family for the suffering she experienced in the final moments of her life.
-Ross shot Renee Good several times in her car.
-At the time, federal officials claimed she had weaponized her vehicle, though video evidence contradicted that.
-In her first public appearance since the killing, Becca Good, Renee Good's partner, also spoke.
-Renee Good had three children, and Becca is still raising their youngest, a 6-year-old.","The family of Renee Good, the 37-year-old killed last January by a federal agent during the Trump administration's immigration enforcement surge in Minnesota, filed two civil lawsuits against the federal government Thursday.
-
-One of the lawsuits, against the United States government itself, is essentially a wrongful death case, arguing that Jonathan Ross, the Immigration and Customs Enforcement officer who killed Good, violated his agency's own policies and the Fourth Amendment by using excessive force.
-
-It is seeking damages for Good's family for the suffering she experienced in the final moments of her life. And also for her partner, Becca Good, who witnessed the killing. The lawsuit says she has suffered intense emotional distress from what she has experienced. Ross shot Renee Good several times in her car. At the time, federal officials claimed she had weaponized her vehicle, though video evidence contradicted that.
-
-The other lawsuit is rarer, alleging that federal officials engaged in a conspiracy to interfere with the civil rights of people in Minnesota.
-
-It argues that Good's death was the ""predictable and intended product"" of the immigration crackdown in the state and that Ross' actions were in furtherance of a ""carefully planned, coordinated effort"" to make Somali and Hispanic people the ""object of aggression and abduction"" and to silence the people ""who observed, documented, and warned of that campaign.""
-
-In making that argument, the lawyers, with the firm Romanucci & Blandin, relied on the Ku Klux Klan Act of 1871, which was used to combat the terrorism wrought by the KKK during the Reconstruction era.
-
-""I would say the second lawsuit is very unusual,"" Rachel Moran, a law professor at the University of St. Thomas, told NPR. ""It was immediately striking to me because the Trump administration has been aggressively using conspiracy charges, including here in Minnesota, against people involved in protesting the administration's immigration tactics.""
-
-Moran said the lawyers in the Good lawsuits seem to be ""turning that tactic on its head"" by arguing that administration officials are involved in an illegal conspiracy themselves.
-
-According to Ben Berkman, one of the lawyers representing Good's family, the first lawsuit is about what federal officers did to Renee Good on a Minneapolis street last winter. The second is about why those officers were on that street in the first place.
-
-""It reaches the agent who fired those shots at Renee and it reaches every official who put him on the street that day,"" Berkman said. ""No mask, no badge and no title in the administration puts anyone above that law.""
-
-Those federal officials include Ross, but also White House adviser Stephen Miller, former Homeland Security Secretary Kristi Noem, White House Border czar Tom Homan, and former Border Patrol Commander Gregory Bovino, among others. NPR reached out to the Department of Homeland Security for comment, but did not hear back.
-
-In a statement, White House spokesperson Lauren Bis said, ""We intend to vigorously defend these baseless civil lawsuits.""
-
-The lawsuit also lists 10 federal agents who were also present at the scene as John Does, noting that the federal government has not released their identities and that they were wearing masks at the time of the killing.
-
-The civil charges also underscore a lack of criminal charges. DHS has provided little public indication that it is investigating Good's death or the death of Alex Pretti at the hands of Border Patrol agents a few weeks later in Minneapolis. According to The Trace, a news site that focuses on gun violence, nine people have been killed by immigration agents since President Trump took office again last year.
-
-At the state level in Minnesota, local officials have also not filed charges or released the findings of any investigation. In a statement, a spokesperson for Hennepin County, where Minneapolis is located, told NPR that state and local officials are reviewing the evidence and that they will ""communicate transparently when a decision is reached.""
-
-At the press conference held Thursday, Good's family seemed frustrated at the inaction on all levels. Civil suits, like the ones filed by the family today, have the potential to hold entire institutions accountable rather than just individual actors.
-
-""The fact that there's been no accountability, no investigation, no expression of condolence, no change in policy is completely mind-blowing,"" Brent Ganger, Good's brother, said. ""We will not wait any longer. The time is absolutely now for accountability, for the deep damage done by ICE and others. We will not be quiet. We will not go away.""
-
-Brent and his mother, Donna Ganger, also testified before Congress last week at a hearing about fatal shootings by federal immigration officers.
-
-In her first public appearance since the killing, Becca Good, Renee Good's partner, also spoke. She focused her words on who Renee was to her, calling her kind and loving, but also on what she has lost. Renee Good had three children, and Becca is still raising their youngest, a 6-year-old.
-
-""This past August, I got ready to put our son in first grade. I bought him new shoes and a backpack and notebooks, pencil case, the whole nine yards. I went to Back To School Night on my own,"" Becca Good said. ""She never missed a single moment. And this Halloween, it's our son's absolute favorite holiday. I'll take him trick or treating, without her hand in mine.""",https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5593x3146+0+291/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F75%2Fe3%2F1d681a5d41479bd46578b4568c38%2Fap26274601303241.jpg,N,,2026-10-01 18:07:50.599668
-,Litigation,2026-10-01 21:49:03+00:00,Gothamist,US judge in NY indefinitely blocks ICE from making arrests at immigration courthouses,"Arya Sundaram, gothamist.com, arya-sundaram",,,,,https://gothamist.com/news/us-judge-in-ny-indefinitely-blocks-ice-from-making-arrests-at-immigration-courthouses,The governor said she does not have faith that the police and the Tompkins County DA effectively investigated the case.,The governor said she does not have faith that the police and the Tompkins County DA effectively investigated the case.,https://api-prod.gothamist.com/images/361755/fill-1200x650|format-webp|webpquality-85/,N,,2026-10-02 00:12:58.077627
-,Litigation,2026-10-01 21:32:25+00:00,wolfsdorf.com,WR Immigration News Digest,Not Available,,,,,https://wolfsdorf.com/wr-immigration-news-digest-20261001/,Impact: The stay allows DHS to resume third-country removals while the Supreme Court considers the broader legal challenge. Individuals with final ...,Not Available,,N,,2026-10-01 19:08:44.426582
-,Human Rights,2026-10-01 21:03:51+00:00,Instagram,"In our recent Dying in Detention report, PHR and @HumanRightsWatch raised many ... - Instagram",Not Available,,,,,https://www.instagram.com/p/Dd90H-6lwVd/,"physiciansforhumanrights Verified 7h In our recent Dying in Detention report, PHR and @HumanRightsWatch raised many questions about the medical care that led to deaths in ICE custody.
-Now, ICE's own Mortality Reviews answer some of them.
-The documents show the care was as bad as feared, and in many ways, worse.
-PHR medical advisor Dr. Katherine Peeler reviewed the Mortality Reviews for @TheIntercept.
-Read at the link in bio.","physiciansforhumanrights
-
-Verified
-
-7h
-
-In our recent Dying in Detention report, PHR and @HumanRightsWatch raised many questions about the medical care that led to deaths in ICE custody.
-
-Now, ICE's own Mortality Reviews answer some of them.
-
-The documents show the care was as bad as feared, and in many ways, worse. PHR medical advisor Dr. Katherine Peeler reviewed the Mortality Reviews for @TheIntercept. Read at the link in bio.",https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/830612275_18349360348271295_2276567203832127815_n.jpg?stp=c216.0.648.648a_dst-jpg_e35_s640x640_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=1CN5Y6SniC8Q7kNvwGVNnjg&_nc_oc=AdqTAWTClPQK2rUWmZnk3QqGXj5tMlGaWxLvP6zG0sI_OYaZCpkB4SeaSWrq0MaQCRE&_nc_zt=23&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_gid=1adJRcGYhG6XT7mmn4w23w&_nc_ss=7b689&oh=00_AQP6r1E7j_hIg20vd4gFKUncJ3V6kIl9eNpgQ7u03TXxmQ&oe=6AC50275,N,,2026-10-02 00:12:18.919248
