@@ -22,10 +22,27 @@ any step fails. Override limits with `-ScriptTimeoutSeconds`,
 
 Watch `C:\Scripts\pipenv_scripts_log.txt` for live script output. Python appends
 and flushes every output chunk directly to that file while also displaying it in
-the console. The launcher archives the previous run before starting a new log.
+the console. The launcher keeps only the current run and
+`C:\Scripts\pipenv_scripts_log.previous.txt`, replacing the previous log each run
+and removing legacy timestamped archives.
 PowerShell launcher diagnostics are recorded separately in
-`C:\Scripts\pipenv_launcher_log.txt`. When running `run_scripts.py` directly,
+`C:\Scripts\pipenv_launcher_log.txt`, also retaining one `.previous.txt` log.
+When running `run_scripts.py` directly,
 use `--log-file` with the path you want to watch.
+
+Article attempts to the same host use a randomly selected 0.5–5 second interval.
+Time already spent processing the previous article counts toward that interval.
+HTTP 403/429, HTTP 503 with `Retry-After`, and recognized challenge pages pause
+that host for 24 hours (longer if `Retry-After` requests it). Cooldowns persist
+across scripts and hourly runs in `development/article_request_state.json`.
+Blocked pages retain available feed content instead of saving challenge text.
+ResearchGate links use feed content only because the site restricts automated
+access. Financial Times (`ft.com` and its subdomains) also uses original feed
+content to avoid extracting login prompts. These safeguards reduce requests;
+they cannot guarantee a site will
+allow automated access or remove an existing block. Pacing applies to article
+navigations, not every browser asset or RSS feed request. Browser startup,
+pacing, and extraction still share the existing 60-second article deadline.
 
 CSV archives/exports and timestamp rewrites use temporary files and replacement
 to preserve the previous complete file if an update stops during writing. Each
