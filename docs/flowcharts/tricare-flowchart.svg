@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2600" height="2060" viewBox="0 0 2600 2060" role="img" aria-labelledby="title description">
+<title id="title">TRICARE news collection and report drafting flowchart</title>
+<desc id="description">Two connected stages show RSS collection, filtering, article extraction, saved archives, separate report classification, decision branches, output files and editorial review.</desc>
+<rect x="0" y="0" width="2600" height="2060" rx="0" fill="#f3f6fa"/>
+<text x="65" y="67" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#53677c" text-anchor="start">WCS / WORKFLOW GUIDE</text>
+<text x="65" y="143" font-family="Segoe UI, Arial, sans-serif" font-size="55" font-weight="700" fill="#172b42" text-anchor="start">TRICARE: from news feeds to report drafts</text>
+<text x="65" y="191" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="400" fill="#53677c" text-anchor="start">Follow the arrows through collection, then a separately invoked report run. Branches show what happens to each story.</text>
+<rect x="60" y="232" width="1090" height="1400" rx="24" fill="#ffffff" stroke="#dbe3ed" stroke-width="2"/>
+<rect x="1245" y="232" width="1295" height="1400" rx="24" fill="#ffffff" stroke="#dbe3ed" stroke-width="2"/>
+<rect x="60" y="232" width="1090" height="8" rx="0" fill="#245c99"/>
+<rect x="1245" y="232" width="1295" height="8" rx="0" fill="#245c99"/>
+<text x="100" y="291" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700" fill="#245c99" text-anchor="start">01  COLLECT &amp; ENRICH</text>
+<text x="1285" y="291" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700" fill="#245c99" text-anchor="start">02  BUILD A REPORT DRAFT</text>
+<text x="100" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">scripts/tricare.py</text>
+<text x="1285" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">scripts/tricareReport.py  /  separate command</text>
+<g data-box="true">
+<rect x="100" y="355" width="600" height="113" rx="16" fill="#edf4fc" stroke="#d5e2ec" stroke-width="2"/>
+<text x="122" y="391" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Read RSS news feeds</text>
+<text x="122" y="419" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="400" fill="#53677c" text-anchor="start">One Google Alerts feed for TRICARE</text>
+<text x="122" y="446" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="400" fill="#53677c" text-anchor="start">Extract headlines, links, dates and excerpts.</text>
+</g>
+<path d="M 400,468 L 400,505" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="400,505 394,493 406,493" fill="#7890a4"/>
+<g data-box="true">
+<rect x="100" y="505" width="600" height="132" rx="16" fill="#edf4fc" stroke="#d5e2ec" stroke-width="2"/>
+<text x="122" y="541" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Clean links &amp; remove known stories</text>
+<text x="122" y="569" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Remove blocked domains and tracking parameters.</text>
+<text x="122" y="596" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Skip URLs already in masterdata/tricare.csv</text>
+<text x="122" y="623" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">or the rejection history: TricareNo.csv.</text>
+</g>
+<path d="M 400,637 L 400,664" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="400,664 394,652 406,652" fill="#7890a4"/>
+<polygon points="400,664 642,724 400,784 158,724" fill="#edf4fc" stroke="#245c99" stroke-width="2.5"/>
+<text x="400" y="732" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" fill="#172b42" text-anchor="middle">Any new stories?</text>
+<path d="M 642,724 L 770,724" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="770,724 758,718 758,730" fill="#7890a4"/>
+<text x="686" y="710" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#7890a4" text-anchor="start">No</text>
+<g data-box="true">
+<rect x="770" y="670" width="340" height="108" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="792" y="706" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Log zero &amp; stop</text>
+<text x="792" y="734" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Append the run timestamp.</text>
+<text x="792" y="761" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Keep existing exports.</text>
+</g>
+<path d="M 400,784 L 400,834" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="400,834 394,822 406,822" fill="#7890a4"/>
+<text x="416" y="815.0" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#7890a4" text-anchor="start">Yes</text>
+<g data-box="true">
+<rect x="100" y="834" width="600" height="164" rx="16" fill="#edf4fc" stroke="#d5e2ec" stroke-width="2"/>
+<text x="122" y="870" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">AI relevance filter</text>
+<text x="122" y="898" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Ollama / qwen3:8b reads the headline + excerpt.</text>
+<text x="122" y="925" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Keep explicit, substantive TRICARE/DHA/MHS</text>
+<text x="122" y="952" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">news: policy, reputation, benefits or operations.</text>
+<text x="122" y="979" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Only an &#x27;interested&#x27; answer advances.</text>
+</g>
+<path d="M 700,892 L 770,892" fill="none" stroke="#aa4b48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="770,892 758,886 758,898" fill="#aa4b48"/>
+<g data-box="true">
+<rect x="770" y="834" width="340" height="164" rx="16" fill="#fff0ed" stroke="#e9c9c4" stroke-width="2"/>
+<text x="792" y="870" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#aa4b48" text-anchor="start">Reject &amp; remember</text>
+<text x="792" y="898" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">&#x27;Not interested&#x27; or an</text>
+<text x="792" y="925" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">unexpected reply is saved</text>
+<text x="792" y="952" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">to TricareNo.csv.</text>
+<text x="792" y="979" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Skip these on future runs.</text>
+</g>
+<g data-box="true">
+<rect x="770" y="1036" width="340" height="106" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="792" y="1072" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Model call fails?</text>
+<text x="792" y="1100" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Skip for this run; leave</text>
+<text x="792" y="1127" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">eligible for a future retry.</text>
+</g>
+<path d="M 700,968 L 744,968 L 744,1085 L 770,1085" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="770,1085 758,1079 758,1091" fill="#7890a4"/>
+<path d="M 400,998 L 400,1050" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="400,1050 394,1038 406,1038" fill="#7890a4"/>
+<text x="416" y="1030.0" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#7890a4" text-anchor="start">Accepted</text>
+<g data-box="true">
+<rect x="100" y="1050" width="600" height="142" rx="16" fill="#edf4fc" stroke="#d5e2ec" stroke-width="2"/>
+<text x="122" y="1086" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Fetch &amp; extract each article</text>
+<text x="122" y="1114" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Browser capture + body/metadata extraction (60s cap).</text>
+<text x="122" y="1141" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Retain saved text on timeout; otherwise use the</text>
+<text x="122" y="1168" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">feed excerpt with error=Y if no body is available.</text>
+</g>
+<path d="M 400,1192 L 400,1238" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="400,1238 394,1226 406,1226" fill="#7890a4"/>
+<g data-box="true">
+<rect x="100" y="1238" width="600" height="110" rx="16" fill="#edf4fc" stroke="#d5e2ec" stroke-width="2"/>
+<text x="122" y="1274" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Add TRICARE sentiment</text>
+<text x="122" y="1302" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="400" fill="#53677c" text-anchor="start">qwen3:8b scores the title + description:</text>
+<text x="122" y="1329" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="400" fill="#53677c" text-anchor="start">-1 negative  /  0 neutral  /  +1 positive.</text>
+</g>
+<path d="M 400,1348 L 400,1400" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="400,1400 394,1388 406,1388" fill="#7890a4"/>
+<g data-box="true">
+<rect x="100" y="1400" width="600" height="166" rx="16" fill="#245c99" stroke="#245c99" stroke-width="2"/>
+<text x="122" y="1436" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" text-anchor="start">Save archive, exports &amp; run logs</text>
+<text x="122" y="1464" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#ffffff" text-anchor="start">Full history: masterdata/tricare.csv</text>
+<text x="122" y="1491" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#ffffff" text-anchor="start">Recent exports: data/tricare.csv + uploads/tricare.csv</text>
+<text x="122" y="1518" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#ffffff" text-anchor="start">Run counts: timestamps/tricareTS.json</text>
+<text x="122" y="1545" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#ffffff" text-anchor="start">Extraction totals: development/scraped_bytes.txt</text>
+</g>
+<g data-box="true">
+<rect x="770" y="1238" width="340" height="135" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="792" y="1274" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Export time window</text>
+<text x="792" y="1302" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Last 3 days, based on</text>
+<text x="792" y="1329" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">publication date.</text>
+<text x="792" y="1356" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Archive keeps full history.</text>
+</g>
+<path d="M 700,1500 L 1197,1500 L 1197,410 L 1285,410" fill="none" stroke="#245c99" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="1285,410 1273,404 1273,416" fill="#245c99"/>
+<text x="825" y="1480" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#245c99" text-anchor="start">Archive input to a separate report run</text>
+<g data-box="true">
+<rect x="1285" y="355" width="625" height="132" rx="16" fill="#edf4fc" stroke="#d5e2ec" stroke-width="2"/>
+<text x="1307" y="391" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Load archive &amp; choose the report window</text>
+<text x="1307" y="419" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Default input: masterdata/tricare.csv</text>
+<text x="1307" y="446" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Default: last 72 hours of firstEyes (first observed).</text>
+<text x="1307" y="473" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Set cutoff, lookback and AM / PM / adhoc edition.</text>
+</g>
+<path d="M 1597,487 L 1597,527" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1597,527 1591,515 1603,515" fill="#7890a4"/>
+<g data-box="true">
+<rect x="1285" y="527" width="625" height="132" rx="16" fill="#edf4fc" stroke="#d5e2ec" stroke-width="2"/>
+<text x="1307" y="563" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Prepare &amp; deduplicate candidates</text>
+<text x="1307" y="591" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Keep records observed inside the selected window.</text>
+<text x="1307" y="618" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Clear existing manual category and ordering fields.</text>
+<text x="1307" y="645" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Check URLs, cutoff dates and explicit --sent-csv files.</text>
+</g>
+<path d="M 1910,591 L 1980,591" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1980,591 1968,585 1968,597" fill="#7890a4"/>
+<g data-box="true">
+<rect x="1980" y="527" width="515" height="132" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="2002" y="563" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Route special cases</text>
+<text x="2002" y="591" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Already sent / duplicate URL: audit only.</text>
+<text x="2002" y="618" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Invalid URL or future publication: review.</text>
+<text x="2002" y="645" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Missing firstEyes / outside window: skip.</text>
+</g>
+<path d="M 1597,659 L 1597,707" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1597,707 1591,695 1603,695" fill="#7890a4"/>
+<g data-box="true">
+<rect x="1285" y="707" width="625" height="113" rx="16" fill="#edf4fc" stroke="#d5e2ec" stroke-width="2"/>
+<text x="1307" y="743" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Score relevance &amp; possible categories</text>
+<text x="1307" y="771" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Cached facebook/bart-large-mnli zero-shot model.</text>
+<text x="1307" y="798" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Uses title + description + a short body excerpt.</text>
+</g>
+<g data-box="true">
+<rect x="1980" y="707" width="515" height="113" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="2002" y="743" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Incomplete article text</text>
+<text x="2002" y="771" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">If error=Y, omit the body from model input.</text>
+<text x="2002" y="798" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">The title and description still inform scoring.</text>
+</g>
+<path d="M 1597,820 L 1597,864" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1597,864 1591,852 1603,852" fill="#7890a4"/>
+<g data-box="true">
+<rect x="1285" y="864" width="625" height="132" rx="16" fill="#edf4fc" stroke="#d5e2ec" stroke-width="2"/>
+<text x="1307" y="900" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Apply topic &amp; client-specific rules</text>
+<text x="1307" y="928" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Propose topics such as Congress, T5 or Pharmacy.</text>
+<text x="1307" y="955" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Social domains override to Social; official DHA/</text>
+<text x="1307" y="982" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">TRICARE domains to Outbound. Market stays blank.</text>
+</g>
+<path d="M 1597,996 L 1597,1048" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1597,1048 1591,1036 1603,1036" fill="#7890a4"/>
+<polygon points="1597,1048 1839,1108 1597,1168 1355,1108" fill="#edf4fc" stroke="#245c99" stroke-width="2.5"/>
+<text x="1597" y="1104" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" fill="#172b42" text-anchor="middle">Apply decision rules</text>
+<text x="1597" y="1134" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#53677c" text-anchor="middle">relevance + category confidence</text>
+<path d="M 1839,1108 L 1980,1108" fill="none" stroke="#ad7012" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1980,1108 1968,1102 1968,1114" fill="#ad7012"/>
+<text x="1860" y="1092" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#ad7012" text-anchor="start">Review</text>
+<g data-box="true">
+<rect x="1980" y="1056" width="515" height="106" rx="16" fill="#fff5e4" stroke="#ebd4aa" stroke-width="2"/>
+<text x="2002" y="1092" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#ad7012" text-anchor="start">Uncertain or flagged</text>
+<text x="2002" y="1120" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Route to review.csv for an editor to assess.</text>
+<text x="2002" y="1147" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Includes weak/conflicting scores or data issues.</text>
+</g>
+<path d="M 1760,1128 L 1945,1188 L 1945,1276 L 1980,1276" fill="none" stroke="#aa4b48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1980,1276 1968,1270 1968,1282" fill="#aa4b48"/>
+<text x="1845" y="1239" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#aa4b48" text-anchor="start">Exclude</text>
+<g data-box="true">
+<rect x="1980" y="1226" width="515" height="106" rx="16" fill="#fff0ed" stroke="#e9c9c4" stroke-width="2"/>
+<text x="2002" y="1262" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#aa4b48" text-anchor="start">Clearly irrelevant</text>
+<text x="2002" y="1290" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Exclude from the draft; keep the decision</text>
+<text x="2002" y="1317" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">and scoring evidence in decisions.csv.</text>
+</g>
+<path d="M 1597,1168 L 1597,1255" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1597,1255 1591,1243 1603,1243" fill="#7890a4"/>
+<text x="1613" y="1217.5" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#7890a4" text-anchor="start">Include</text>
+<g data-box="true">
+<rect x="1285" y="1255" width="625" height="133" rx="16" fill="#edf4fc" stroke="#d5e2ec" stroke-width="2"/>
+<text x="1307" y="1291" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Assemble the proposed report</text>
+<text x="1307" y="1319" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Sort by category, then newest publication first.</text>
+<text x="1307" y="1346" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Suppress exact normalized headline duplicates.</text>
+<text x="1307" y="1373" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Assign categoryorder and articleorder.</text>
+</g>
+<path d="M 1597,1388 L 1597,1443" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1597,1443 1591,1431 1603,1431" fill="#7890a4"/>
+<path d="M 2495,591 L 2517,591 L 2517,1420 L 2240,1420 L 2240,1443" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="2240,1443 2234,1431 2246,1431" fill="#7890a4"/>
+<path d="M 2495,1108 L 2517,1108" fill="none" stroke="#ad7012" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="2517,1108 2505,1102 2505,1114" fill="#ad7012"/>
+<path d="M 2495,1276 L 2517,1276" fill="none" stroke="#aa4b48" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="2517,1276 2505,1270 2505,1282" fill="#aa4b48"/>
+<g data-box="true">
+<rect x="1285" y="1443" width="1210" height="133" rx="16" fill="#245c99" stroke="#245c99" stroke-width="2"/>
+<text x="1307" y="1479" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" text-anchor="start">Write a new, uniquely named report run</text>
+<text x="1307" y="1507" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#ffffff" text-anchor="start">reports/tricare/&lt;cutoff&gt;_&lt;edition&gt;_&lt;unique-id&gt;/</text>
+<text x="1307" y="1534" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#ffffff" text-anchor="start">draft.csv: included stories   |   review.csv: flagged stories   |   decisions.csv: all candidate decisions</text>
+<text x="1307" y="1561" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#ffffff" text-anchor="start">manifest.json: settings, counts and provenance; optional --evaluate adds a harvested-CSV comparison.</text>
+</g>
+<rect x="60" y="1664" width="2480" height="104" rx="16" fill="#172b42"/>
+<text x="91" y="1705" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" fill="#a9cce2" text-anchor="start">EDITORIAL HANDOFF</text>
+<text x="410" y="1705" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="600" fill="#ffffff" text-anchor="start">Review the draft and flagged stories, resolve event-level duplicates, then finalize and send separately.</text>
+<text x="410" y="1743" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="400" fill="#d2dfea" text-anchor="start">These scripts create draft files. Sending and updating finalized/sent history remain separate steps.</text>
+<g data-box="true">
+<rect x="60" y="1810" width="795" height="148" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="82" y="1846" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Two different time windows</text>
+<text x="82" y="1874" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Collection exports use publication date (3 days).</text>
+<text x="82" y="1901" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Report candidates use firstEyes (72 hours by default).</text>
+<text x="82" y="1928" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">A late-discovered older article can enter a report.</text>
+</g>
+<g data-box="true">
+<rect x="875" y="1810" width="850" height="148" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="897" y="1846" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Default decision thresholds</text>
+<text x="897" y="1874" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Include: relevance &gt;= .75; relevance gap &gt;= .10.</text>
+<text x="897" y="1901" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Topic score &gt;= .55 and topic gap &gt;= .10, unless overridden.</text>
+<text x="897" y="1928" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Exclude: relevance &lt;= .30 and irrelevance &gt;= .75.</text>
+</g>
+<g data-box="true">
+<rect x="1745" y="1810" width="795" height="148" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="1767" y="1846" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Reading this chart</text>
+<text x="1767" y="1874" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Solid arrows: processing or a decision branch.</text>
+<text x="1767" y="1901" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Dashed arrows: saved-data input or exception/audit route.</text>
+<text x="1767" y="1928" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Scores are initial rules; other flags can require review.</text>
+</g>
+<text x="65" y="2001" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">Source: scripts/tricare.py, tricareReport.py, getFunc.py, newsFunc.py and aiFunc.py. Based on the local implementation.</text>
+<text x="65" y="2036" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">TRICARE is in run_scripts.py; report drafting is invoked separately. No accepted stories: TRICARE logs zero and exits.</text>
+</svg>

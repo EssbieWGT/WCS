@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2600" height="2060" viewBox="0 0 2600 2060" role="img" aria-labelledby="title description">
+<title id="title">State Summary launcher, classification, summarization and report workflow</title>
+<desc id="description">The launcher starts Python, which reads the state-news archive, filters the last 24 hours, classifies headlines, summarizes accepted stories, writes reports and exports data for the web viewer.</desc>
+<rect x="0" y="0" width="2600" height="2060" rx="0" fill="#f3f6fa"/>
+<text x="65" y="67" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#53677c" text-anchor="start">WCS / WORKFLOW GUIDE</text>
+<text x="65" y="143" font-family="Segoe UI, Arial, sans-serif" font-size="55" font-weight="700" fill="#172b42" text-anchor="start">STATE SUMMARY: from launcher to policy briefings</text>
+<text x="65" y="191" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="400" fill="#53677c" text-anchor="start">Follow stateSummary.ps1 through its Python analysis, generated reports and the State Summary web viewer.</text>
+<rect x="60" y="232" width="1090" height="1400" rx="24" fill="#ffffff" stroke="#dbe3ed" stroke-width="2"/>
+<rect x="1245" y="232" width="1295" height="1400" rx="24" fill="#ffffff" stroke="#dbe3ed" stroke-width="2"/>
+<rect x="60" y="232" width="1090" height="8" rx="0" fill="#66539b"/>
+<rect x="1245" y="232" width="1295" height="8" rx="0" fill="#66539b"/>
+<text x="100" y="291" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700" fill="#66539b" text-anchor="start">01  LAUNCH, PREPARE &amp; CLASSIFY</text>
+<text x="1285" y="291" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700" fill="#66539b" text-anchor="start">02  SUMMARIZE, SAVE &amp; VIEW</text>
+<text x="100" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">scripts/stateSummary.ps1  -&gt;  scripts/stateSummary.py</text>
+<text x="1285" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">scripts/stateSummary.py  -&gt;  files and viewer</text>
+<g data-box="true">
+<rect x="100" y="355" width="600" height="113" rx="16" fill="#f2effa" stroke="#d5e2ec" stroke-width="2"/>
+<text x="122" y="391" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Start the PowerShell launcher</text>
+<text x="122" y="419" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="400" fill="#53677c" text-anchor="start">Append transcript to C:\Scripts\stateSummary.txt.</text>
+<text x="122" y="446" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="400" fill="#53677c" text-anchor="start">Set the working directory to the WCS project.</text>
+</g>
+<path d="M 400,468 L 400,515" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="400,515 394,503 406,503" fill="#7890a4"/>
+<g data-box="true">
+<rect x="100" y="515" width="600" height="113" rx="16" fill="#f2effa" stroke="#d5e2ec" stroke-width="2"/>
+<text x="122" y="551" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Run Python in the Pipenv environment</text>
+<text x="122" y="579" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Loop over the launcher script list (currently one):</text>
+<text x="122" y="606" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">pipenv run python ./scripts/stateSummary.py</text>
+</g>
+<g data-box="true">
+<rect x="770" y="355" width="340" height="191" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="792" y="391" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Upstream input</text>
+<text x="792" y="419" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">stateNews.py runs separately.</text>
+<text x="792" y="446" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">RSS feeds are listed in</text>
+<text x="792" y="473" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">static/media_outlets.csv.</text>
+<text x="792" y="500" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">Their text and metadata</text>
+<text x="792" y="527" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">populate the states archive.</text>
+</g>
+<path d="M 940,546 L 940,751 L 700,751" fill="none" stroke="#66539b" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="700,751 712,745 712,757" fill="#66539b"/>
+<path d="M 400,628 L 400,690" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="400,690 394,678 406,678" fill="#7890a4"/>
+<g data-box="true">
+<rect x="100" y="690" width="600" height="145" rx="16" fill="#f2effa" stroke="#d5e2ec" stroke-width="2"/>
+<text x="122" y="726" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Load, deduplicate &amp; filter the archive</text>
+<text x="122" y="754" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Read masterdata/states.csv.</text>
+<text x="122" y="781" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Deduplicate exact titles first; keep the first row.</text>
+<text x="122" y="808" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Then keep articles published in the last 24 hours.</text>
+</g>
+<path d="M 400,835 L 400,883" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="400,883 394,871 406,871" fill="#7890a4"/>
+<g data-box="true">
+<rect x="100" y="883" width="600" height="113" rx="16" fill="#f2effa" stroke="#d5e2ec" stroke-width="2"/>
+<text x="122" y="919" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Map each outlet to a state</text>
+<text x="122" y="947" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Read the name -&gt; state lookup from</text>
+<text x="122" y="974" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">static/media_outlets.csv and replace the name field.</text>
+</g>
+<path d="M 400,996 L 400,1045" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="400,1045 394,1033 406,1033" fill="#7890a4"/>
+<g data-box="true">
+<rect x="100" y="1045" width="600" height="141" rx="16" fill="#f2effa" stroke="#d5e2ec" stroke-width="2"/>
+<text x="122" y="1081" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Classify headlines into six policy topics</text>
+<text x="122" y="1109" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">facebook/bart-large-mnli on CUDA GPU 0.</text>
+<text x="122" y="1136" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Process headline batches of 16 with multi-label scores.</text>
+<text x="122" y="1163" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Select only the highest-scoring topic per article.</text>
+</g>
+<g data-box="true">
+<rect x="770" y="833" width="340" height="245" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="792" y="869" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Topic thresholds</text>
+<text x="792" y="897" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">State Budget: .70</text>
+<text x="792" y="924" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">K-12 Education: .70</text>
+<text x="792" y="951" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">Public Health: .70</text>
+<text x="792" y="978" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">Public Opinion Polls: .70</text>
+<text x="792" y="1005" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">Protests / civil unrest: .95</text>
+<text x="792" y="1032" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">Immigration / enforcement:</text>
+<text x="792" y="1059" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">.90</text>
+</g>
+<path d="M 400,1186 L 400,1210" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="400,1210 394,1198 406,1198" fill="#7890a4"/>
+<polygon points="400,1210 642,1270 400,1330 158,1270" fill="#f2effa" stroke="#66539b" stroke-width="2.5"/>
+<text x="400" y="1266" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" fill="#172b42" text-anchor="middle">Top topic passes?</text>
+<text x="400" y="1296" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#53677c" text-anchor="middle">score &gt;= that topic&#x27;s threshold</text>
+<path d="M 642,1270 L 770,1270" fill="none" stroke="#aa4b48" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="770,1270 758,1264 758,1276" fill="#aa4b48"/>
+<text x="685" y="1255" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#aa4b48" text-anchor="start">No</text>
+<g data-box="true">
+<rect x="770" y="1210" width="340" height="132" rx="16" fill="#fff0ed" stroke="#e9c9c4" stroke-width="2"/>
+<text x="792" y="1246" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#aa4b48" text-anchor="start">Skip this article</text>
+<text x="792" y="1274" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">classified_issue = None.</text>
+<text x="792" y="1301" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Remove it before sending</text>
+<text x="792" y="1328" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">articles to the summarizer.</text>
+</g>
+<path d="M 400,1330 L 400,1390" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="400,1390 394,1378 406,1378" fill="#7890a4"/>
+<text x="416" y="1366.0" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#7890a4" text-anchor="start">Yes</text>
+<g data-box="true">
+<rect x="100" y="1390" width="600" height="132" rx="16" fill="#66539b" stroke="#66539b" stroke-width="2"/>
+<text x="122" y="1426" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" text-anchor="start">Pass accepted articles to summarization</text>
+<text x="122" y="1454" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#ffffff" text-anchor="start">Carry the assigned state, topic and headline score.</text>
+<text x="122" y="1481" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#ffffff" text-anchor="start">Keep the article text, source title, outlet and URL.</text>
+<text x="122" y="1508" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#ffffff" text-anchor="start">No second topic is assigned if the top topic fails.</text>
+</g>
+<path d="M 700,1484 L 1197,1484 L 1197,410 L 1285,410" fill="none" stroke="#66539b" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1285,410 1273,404 1273,416" fill="#66539b"/>
+<text x="792" y="1466" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#66539b" text-anchor="start">Accepted stories, within the same Python run</text>
+<g data-box="true">
+<rect x="1285" y="355" width="625" height="132" rx="16" fill="#f2effa" stroke="#d5e2ec" stroke-width="2"/>
+<text x="1307" y="391" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Prepare each accepted article&#x27;s text</text>
+<text x="1307" y="419" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Use up to four concurrent worker threads.</text>
+<text x="1307" y="446" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Strip HTML tags and collapse whitespace.</text>
+<text x="1307" y="473" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Build a prompt with the state and assigned issue.</text>
+</g>
+<path d="M 1910,414 L 1980,414" fill="none" stroke="#aa4b48" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="1980,414 1968,408 1968,420" fill="#aa4b48"/>
+<g data-box="true">
+<rect x="1980" y="355" width="515" height="132" rx="16" fill="#fff0ed" stroke="#e9c9c4" stroke-width="2"/>
+<text x="2002" y="391" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#aa4b48" text-anchor="start">Empty cleaned text?</text>
+<text x="2002" y="419" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Return no summary for that article.</text>
+<text x="2002" y="446" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">The active path uses the text field; it has</text>
+<text x="2002" y="473" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">no explicit description fallback.</text>
+</g>
+<path d="M 1597,487 L 1597,535" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1597,535 1591,523 1603,523" fill="#7890a4"/>
+<g data-box="true">
+<rect x="1285" y="535" width="625" height="164" rx="16" fill="#f2effa" stroke="#d5e2ec" stroke-width="2"/>
+<text x="1307" y="571" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Generate an issue-focused summary</text>
+<text x="1307" y="599" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">POST to localhost:11434/api/generate.</text>
+<text x="1307" y="626" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Actual default model: mistral-nemo; stream=False.</text>
+<text x="1307" y="653" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Prompt requests &lt;= 5 sentences about the issue,</text>
+<text x="1307" y="680" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">favoring government, policy and political impacts.</text>
+</g>
+<path d="M 1910,611 L 1980,611" fill="none" stroke="#aa4b48" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="1980,611 1968,605 1968,617" fill="#aa4b48"/>
+<g data-box="true">
+<rect x="1980" y="535" width="515" height="164" rx="16" fill="#fff0ed" stroke="#e9c9c4" stroke-width="2"/>
+<text x="2002" y="571" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#aa4b48" text-anchor="start">No usable model response?</text>
+<text x="2002" y="599" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">An API error returns an empty string.</text>
+<text x="2002" y="626" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Empty responses or a literal SKIP are omitted.</text>
+<text x="2002" y="653" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Each summary request has a 600-second timeout.</text>
+<text x="2002" y="680" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">The script continues with other articles.</text>
+</g>
+<path d="M 1597,699 L 1597,760" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1597,760 1591,748 1603,748" fill="#7890a4"/>
+<g data-box="true">
+<rect x="1285" y="760" width="625" height="142" rx="16" fill="#f2effa" stroke="#d5e2ec" stroke-width="2"/>
+<text x="1307" y="796" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Collect summaries by state and issue</text>
+<text x="1307" y="824" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Gather worker results as they finish.</text>
+<text x="1307" y="851" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Store summary, title, outlet, URL and headline score.</text>
+<text x="1307" y="878" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Article order follows completion, rather than date.</text>
+</g>
+<path d="M 1597,902 L 1597,955" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1597,955 1591,943 1603,943" fill="#7890a4"/>
+<g data-box="true">
+<rect x="1285" y="955" width="625" height="113" rx="16" fill="#f2effa" stroke="#d5e2ec" stroke-width="2"/>
+<text x="1307" y="991" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Clean the summary text</text>
+<text x="1307" y="1019" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Remove bullet characters and asterisks; trim spaces.</text>
+<text x="1307" y="1046" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Keep each summary with its original story metadata.</text>
+</g>
+<path d="M 1597,1068 L 1597,1140" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1597,1140 1591,1128 1603,1128" fill="#7890a4"/>
+<g data-box="true">
+<rect x="1285" y="1140" width="625" height="230" rx="16" fill="#66539b" stroke="#66539b" stroke-width="2"/>
+<text x="1307" y="1176" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" text-anchor="start">Write the reports and data exports</text>
+<text x="1307" y="1204" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#ffffff" text-anchor="start">development/state_issue_summary.json</text>
+<text x="1307" y="1231" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#ffffff" text-anchor="start">development/issue_weekly_report.docx</text>
+<text x="1307" y="1258" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#ffffff" text-anchor="start">development/state_weekly_report.docx</text>
+<text x="1307" y="1285" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#ffffff" text-anchor="start">uploads/state_summary.csv</text>
+<text x="1307" y="1312" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#ffffff" text-anchor="start">CSV: state, topic, outlet, headline, summary, URL.</text>
+<text x="1307" y="1339" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#ffffff" text-anchor="start">Outputs use the same file paths on each run.</text>
+</g>
+<path d="M 1910,1230 L 1980,1230" fill="none" stroke="#66539b" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="1980,1230 1968,1224 1968,1236" fill="#66539b"/>
+<text x="1930" y="1215" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#66539b" text-anchor="start">CSV</text>
+<g data-box="true">
+<rect x="1980" y="1168" width="515" height="185" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="2002" y="1204" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">State Summary web viewer</text>
+<text x="2002" y="1232" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Flask serves templates/state_summary.html.</text>
+<text x="2002" y="1259" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">D3 loads the CSV and displays linked headlines</text>
+<text x="2002" y="1286" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">with summaries, grouped State -&gt; Topic or</text>
+<text x="2002" y="1313" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Topic -&gt; State. Jump links include story counts.</text>
+<text x="2002" y="1340" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Fetch the timestamp for the last-updated label.</text>
+</g>
+<path d="M 1597,1370 L 1597,1440" fill="none" stroke="#7890a4" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1597,1440 1591,1428 1603,1428" fill="#7890a4"/>
+<g data-box="true">
+<rect x="1285" y="1440" width="625" height="132" rx="16" fill="#f2effa" stroke="#d5e2ec" stroke-width="2"/>
+<text x="1307" y="1476" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Log the result &amp; finish the run</text>
+<text x="1307" y="1504" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Append timestamp + row count to static/stateSummary.json.</text>
+<text x="1307" y="1531" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Request Ollama to unload mistral-nemo (keep_alive=0).</text>
+<text x="1307" y="1558" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#53677c" text-anchor="start">Return to PowerShell and stop the transcript.</text>
+</g>
+<path d="M 1910,1500 L 1945,1500 L 1945,1370 L 2240,1370 L 2240,1353" fill="none" stroke="#66539b" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="2240,1353 2234,1365 2246,1365" fill="#66539b"/>
+<text x="1995" y="1404" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#66539b" text-anchor="start">Timestamp input</text>
+<rect x="60" y="1664" width="2480" height="104" rx="16" fill="#172b42"/>
+<text x="91" y="1705" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" fill="#d0c6ef" text-anchor="start">REPORT VIEWS</text>
+<text x="410" y="1705" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="600" fill="#ffffff" text-anchor="start">Issue-first Word report: topic -&gt; states. State-first Word report: state -&gt; topics, with a page break per state.</text>
+<text x="410" y="1743" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="400" fill="#d2dfea" text-anchor="start">Both include linked headlines and summaries. The web viewer offers both grouping modes for the same exported stories.</text>
+<g data-box="true">
+<rect x="60" y="1810" width="795" height="148" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="82" y="1846" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Actual data window</text>
+<text x="82" y="1874" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">The analysis uses the last 24 hours by published date.</text>
+<text x="82" y="1901" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">It does not use firstEyes for eligibility.</text>
+<text x="82" y="1928" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">The &#x27;weekly&#x27; filenames do not change this window.</text>
+</g>
+<g data-box="true">
+<rect x="875" y="1810" width="850" height="148" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="897" y="1846" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">One topic per story</text>
+<text x="897" y="1874" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Six scores are calculated; only the top topic is considered.</text>
+<text x="897" y="1901" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">A below-threshold top score means the story is skipped.</text>
+<text x="897" y="1928" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">There is no review queue or alternate-topic fallback.</text>
+</g>
+<g data-box="true">
+<rect x="1745" y="1810" width="795" height="148" rx="16" fill="#f4f7fb" stroke="#dbe3ed" stroke-width="2"/>
+<text x="1767" y="1846" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#172b42" text-anchor="start">Reading this chart</text>
+<text x="1767" y="1874" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Solid arrows: processing or an acceptance decision.</text>
+<text x="1767" y="1901" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">Dashed arrows: upstream/viewer inputs or skip branches.</text>
+<text x="1767" y="1928" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" fill="#53677c" text-anchor="start">The viewer reads files; it is not launched by PowerShell.</text>
+</g>
+<text x="65" y="2001" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">Source: scripts/stateSummary.ps1, stateSummary.py, stateNews.py, getFunc.py, app.py and templates/state_summary.html.</text>
+<text x="65" y="2036" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#53677c" text-anchor="start">The launcher currently calls only stateSummary.py. State-news collection and web deployment are separate operations.</text>
+</svg>
