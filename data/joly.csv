@@ -1,4 +1,133 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID34,OpenAI,2026-10-11 05:11:39+00:00,michaelparekh.substack.com,"AI: Anthropic vs OpenAI, the Subscription Value Gap. AI-RTZ #1236 - Michael Parekh",Michael Parekh,,,,,https://michaelparekh.substack.com/p/ai-anthropic-vs-openai-the-subscription,"SemiAnalysis tested the limits of every major AI subscription plan, from Anthropic and OpenAI to Meta, SpaceXAI, the leading Chinese labs, and AI coding apps like Cursor and Cognition’s Devin, in ‘Anthropic Subscriptions Offer 5x+ More Value Than OpenAI’.
+So you would expect OpenAI’s subscriptions to be the better deal.
+On SemiAnalysis’s rough numbers for Anthropic, subscriptions are about 10% of revenue, but can take up over 40% of inference compute, lowering blended revenue per megawatt by about $36 million.
+Sources and further reading SemiAnalysis, ‘Anthropic Subscriptions Offer 5x+ More Value Than OpenAI’, October 2026 For longtime readers AI-RTZ #1227: Anthropic’s Hard Cap vs OpenAI’s Soft Touch RTZ #1048: It’s Business and Personal in OpenAI/Anthropic pricing battles RTZ #1064: Anthropic & OpenAI’s ‘Velvet Rope AI’ upgrade Drift AI-RTZ #1114: Anthropic recasts Mythos as Fable 5, with safety & pricing gates AI-RTZ #1142: US frees OpenAI 5.6 vs Anthropic Claude Fable 5 AI-RTZ #1103: Customers asking ‘how much’ for AI tokenmaxxing ARD #114: AI Price Umbrellas Getting Larger ARD #160: ‘Not So Fast’ in AI.
+OpenAI, Anthropic & the AI Economy ARD #173: ‘Shifting into High Gear’ in AI.","The Bigger Picture, Sunday, October 11, 2026
+
+For most of this year, I have tracked the pricing tug of war between Anthropic and OpenAI on two fronts. The ‘a la carte’ front, where companies pay per token for AI Compute through the API. And the subscription front, the $20 to $200 a month plans that most consumers and small businesses use.
+
+The a la carte front gets most of the attention, because that is where the big enterprise money is. But a new deep dive by SemiAnalysis on the subscription front turns some of the conventional wisdom on its head. And it lands right as both companies prepare their mega-AI IPOs. That is the Bigger Picture I would like to discuss this Sunday.
+
+SemiAnalysis tested the limits of every major AI subscription plan, from Anthropic and OpenAI to Meta, SpaceXAI, the leading Chinese labs, and AI coding apps like Cursor and Cognition’s Devin, in ‘Anthropic Subscriptions Offer 5x+ More Value Than OpenAI’.
+
+The headline is the takeaway. It’s all worth unpacking to understand the business model dynamics of the two leading AI frontier labs. And why it merits a closer look ahead of the two biggest IPOs of this AI Tech Wave.
+
+The surprise: the ‘hard cap’ company is the generous one
+
+Regular readers will remember how I have framed the two companies on pricing. Anthropic has been the one closing the ‘all you can eat’ buffet, cutting heavy third-party agent users off its flat-rate plans in April, as I wrote in ‘It’s Business and Personal’. It put its top models behind a ‘velvet rope’. It launched Fable 5 at double the price of Opus, with subscription access for just two weeks before going a la carte, as I discussed in AI-RTZ #1114. And just last week, I covered how it now cuts off enterprise discounts the moment customers hit their cap, while OpenAI gives them a soft landing, in ‘Anthropic’s Hard Cap vs OpenAI’s Soft Touch’.
+
+OpenAI, meanwhile, has been the price cutter. Once the US government cleared its GPT-5.6 family for global release in July, both frontier labs were ‘free at last’ to compete at a la carte prices, as I wrote in AI-RTZ #1142. Its Luna price cut sent usage up ten times this summer, as CFO Sarah Friar told Goldman’s Communacopia, which I discussed on ARD #160. And its newest models came in at ‘half the price per token’.
+
+So you would expect OpenAI’s subscriptions to be the better deal.
+
+On SemiAnalysis’s numbers, they are not. At the top tier, the two are roughly even: a $200 Anthropic plan buys about $2,485 worth of Fable 5.1 at API prices before hitting Fable’s cap, which is half the plan, while a $200 OpenAI plan runs out after about $2,897 of GPT-6 Astra. But at the mid-tier, the models both companies pitch as everyday workhorses, Anthropic’s Opus 5.5 offers about five times the API-equivalent value of OpenAI’s GPT-6.1 Sol across the board. The gap holds even counting raw tokens instead of dollars.
+
+OpenAI’s $200 plan, cut in half
+
+Part of the reason is a change OpenAI made just two weeks ago. Around its Dev Day, which I covered on ARD #173, OpenAI halved the tokens its $200 Pro plan gets for each model tier, and added a new $500 tier with an ‘Ultrafast’ mode. SemiAnalysis’s tracking confirms the cut. Existing $200 subscribers keep their old limits until October 29. New ones start lower right away.
+
+The new $500 plan offers only about 21% more Astra usage than the old $200 plan did. And OpenAI’s price cut on GPT-6.1 Sol actually lowered the dollar value of the Sol usage in its plans, because the token limits did not change. The $200 plan used to be OpenAI’s most subsidized, about twice the per-dollar value of the $100 plan, which was itself about twice the $20 plan on Astra. Now OpenAI’s $100, $200 and $500 plans all offer the same tokens per dollar.
+
+Anthropic, by contrast, already offered the same per-dollar value at every tier. And when it cut Opus prices with Opus 5.5, it raised the Opus token limits in its plans, about 20% for Max and 50% for Pro, though not enough to fully offset the price cut.
+
+OpenAI used to be the developers’ favorite for generous limits. That is no longer the case, per SemiAnalysis. The one point in OpenAI’s favor: its Pro plans have no five-hour limit, so it is easier to use more of the monthly allowance.
+
+Why subscriptions matter more than their revenue share
+
+Here is the part that matters most for the IPOs. Subscriptions are a small share of revenue, but a big share of compute. On SemiAnalysis’s rough numbers for Anthropic, subscriptions are about 10% of revenue, but can take up over 40% of inference compute, lowering blended revenue per megawatt by about $36 million. They matter even more for OpenAI, where subscriptions are a larger share of total revenue.
+
+That is because subscriptions are heavily subsidized. They make sense as customer acquisition and marketing, as SemiAnalysis notes. OpenAI’s generous resets helped fuel the recent surge in Codex adoption, and forced Anthropic to walk back planned limit cuts more than once. But in a world where AI Compute is scarce, every subsidized token is a token not sold at API prices. As I have noted, Anthropic signed up to $517 billion in compute deals in eleven months, and OpenAI is on track for about $750 billion through 2030, in AI-RTZ #1204. Revenue per megawatt is going to be one of the metrics public investors learn to watch.
+
+Two ways to cut the subsidy
+
+Both companies know this. They have picked different ways to fix it.
+
+Anthropic lowers the value per dollar as you move up to its premium models. The drop is small from Sonnet 5.5 to Opus 5.5, and big for Fable 5.1. SemiAnalysis’s margin math, assuming 92% gross margins on the API, makes the point. A subscriber maxing out Opus 5.5 all month would be deeply unprofitable, at minus 369% gross margin, while one maxing out Fable 5.1 would be about breakeven. At a more realistic 20% utilization, those margins rise to 6% for Opus and 80% for Fable. In SemiAnalysis’s reading, Anthropic’s subscriptions would already earn software-like margins if every subscriber used only Fable. And as Opus gets cheaper to serve, the subsidy shrinks on its own.
+
+OpenAI took the faster route, cutting to Fable-like limits across the board. That usually invites a backlash. But OpenAI largely avoided one, likely because its Dev Day news drowned it out and existing plans were grandfathered for a month.
+
+And a detail worth noting for anyone buying these plans: SemiAnalysis caught one provider running a tiny A/B test with about 20% lower limits on some accounts. Labs can, and do, change limits silently, by tweaking how many credits each model and token type uses.
+
+The bigger picture: owning the models
+
+Two more findings round out the picture. Chinese labs, despite being short on compute, still offer subsidized plans, with value per dollar a little below OpenAI’s roughly 12x. And plans from third-party AI coding apps like Cursor and Cognition are much less generous than the labs’ own. Anthropic’s subscription margins are likely higher than both, despite offering more than nine times their limits. SemiAnalysis sums up why:
+
+“This is the power of owning the models yourself.” (SemiAnalysis)
+
+That is the same point I have made about the AI Coding ‘frenemies’ space, in RTZ #806. The wrappers pay retail for the models. The model makers set the terms.
+
+Tokenmaxxing meets token budgeting
+
+All of this sits against the shift I discussed in May in ‘Customers asking how much for AI tokenmaxxing’. Companies that rushed to burn as many AI tokens as possible are now budgeting them, asking what they get for the spend. Subscriptions are the consumer and small business version of that question. A plan’s value now depends on which model you use and how you use it. SemiAnalysis’s point that a plan is never worth a fixed amount in isolation, but only for a given plan, model and workload, is one every buyer of these plans should absorb.
+
+It is also why the industry is shifting from price per token to price per task, as I noted on ARD #160. A cheaper token that takes three times as many tokens to finish the job is not cheaper.
+
+The mega-AI IPO lens
+
+Now put it in IPO terms. Anthropic is aiming to list as soon as mid-November, before Thanksgiving, at a valuation investors peg at $1.8 to $2 trillion, as I discussed on ARD #176. It comes to market with two profitable quarters and gross margins above 80% before revenue shared with partners, per the FT, as I noted in AI-RTZ #1210, after first filing confidentially in June, in AI-RTZ #1105. It has been warming up investors since the summer, as I wrote in AI-RTZ #1176.
+
+OpenAI is staying private this year, and raising more private capital in the meantime. It told investors its adjusted gross margin fell to 33% last year, as the cost of running its models quadrupled. Investors were already skeptical about its long path to profitability back in March, as I wrote in RTZ #1021, through the stormy weather and the rolling internal ‘Code Reds’ this spring.
+
+Seen that way, OpenAI’s subscription cut is not just a pricing change. It is likely margin repair ahead of its own IPO, done in one move. Anthropic’s model-by-model approach does the same job more quietly, and lets it keep the ‘best value’ label with the developers who drive its Claude Code and Cowork growth.
+
+My take
+
+Three things to keep in mind.
+
+First, generous subscriptions are a marketing budget, and both labs are trimming it. Anthropic is doing it model by model, OpenAI all at once. Either way, the subsidy era for the most capable models is ending, just as Fable’s launch signaled in June. The ‘best value’ title will keep changing hands as limits shift, sometimes silently.
+
+Second, subscriptions are a small revenue line with an outsized compute bill. At 10% of revenue and over 40% of inference compute, they will shape revenue per megawatt and gross margins in both prospectuses. Expect public investors to ask about it, and expect the companies to keep tuning the limits as their gigawatts come online.
+
+Third, owning the models is the real moat in pricing. The labs can subsidize where they want, cut where they need to, and still out-earn the apps that resell their models. That is pricing power, and it is a big part of the case both companies will make to Mr. Market.
+
+A word of caution on the numbers. These are SemiAnalysis’s own measurements, at a point in time, on its chosen workload. The labs change limits often, and API-equivalent value is not the same as what a plan costs to serve, or what it is worth to any given user.
+
+But the direction is clear, and it is worth tracking closely into the mega-AI IPOs in this AI Tech Wave. Stay tuned.
+
+Sources and further reading
+
+SemiAnalysis, ‘Anthropic Subscriptions Offer 5x+ More Value Than OpenAI’, October 2026
+
+For longtime readers
+
+AI-RTZ #1227: Anthropic’s Hard Cap vs OpenAI’s Soft Touch
+
+RTZ #1048: It’s Business and Personal in OpenAI/Anthropic pricing battles
+
+RTZ #1064: Anthropic & OpenAI’s ‘Velvet Rope AI’ upgrade Drift
+
+AI-RTZ #1114: Anthropic recasts Mythos as Fable 5, with safety & pricing gates
+
+AI-RTZ #1142: US frees OpenAI 5.6 vs Anthropic Claude Fable 5
+
+AI-RTZ #1103: Customers asking ‘how much’ for AI tokenmaxxing
+
+ARD #114: AI Price Umbrellas Getting Larger
+
+ARD #160: ‘Not So Fast’ in AI. OpenAI, Anthropic & the AI Economy
+
+ARD #173: ‘Shifting into High Gear’ in AI. OpenAI, Anthropic & Apple
+
+ARD #176: ‘Come Hell or High Water’ in AI
+
+AI-RTZ #1204: Anthropic’s $517B vs OpenAI’s $750B Compute Race
+
+AI-RTZ #1210: Anthropic Paces the Frontier, and Floors the IPO
+
+AI-RTZ #1105: Anthropic makes three filed for IPO take-offs
+
+AI-RTZ #1176: Anthropic warms up Investors for 2026 mega-AI IPO
+
+RTZ #1021: OpenAI IPO prospects assessed 6 months early
+
+AI-RTZ #1071: OpenAI’s stormy weather
+
+AI-RTZ #1090: OpenAI’s rolling internal ‘Code Reds’
+
+RTZ #806: The ‘Frenemies’ nature of the AI Coding space
+
+(NOTE: The discussions here are for information purposes only, and not meant as investment advice at any time. Thanks for joining us here.)","https://substackcdn.com/image/fetch/$s_!jo0W!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F74daab96-8be0-4810-8cb2-354313d6e3f4_960x540.gif",N,,2026-10-11 02:10:22.784527
 ID34,OpenAI,2026-10-11 00:07:51+00:00,MarketBeat,Is Synopsys Back from the Dead? EDA Leader Inks Deals With Amazon and OpenAI,Leo Miller,,,,,https://www.marketbeat.com/articles/is-synopsys-back-from-the-dead-eda-leader-inks-deals-with-amazon-and-openai/,"There has also been a fear among some investors that AI tools could supplant current EDA tools, hurting demand longer-term.
 Synopsys Unlocks New IP Demand With Amazon Synopsys has signed an over $1 billion deal with Amazon, primarily based around its IP business.
 The Amazon deal also helps mitigate the weakness at Intel’s Foundry because Amazon is already deploying its custom chips at scale, providing more certainty around royalty revenue.
