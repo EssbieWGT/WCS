@@ -65,6 +65,83 @@ KEY QUOTES:
 Marybeth Wootton, Chairwoman of the Oddball Board of Directors
 
 “What drew me to Oddball is the combination of an incredibly talented team, a strong culture, and a genuine commitment to delivering meaningful outcomes for our customers.”",https://cdn.pulse2.com/cdn/2026/10/Oddball-Logo.jpeg,N,0.0,2026-10-12 16:56:19.817594
+,,2026-10-12 11:51:19+00:00,EmailMeNow IT Consulting,TRICARE Phishing Warning JBSA (Oct 2026) | EmailMeNow,EmailMeNow IT Consulting,,,,,https://emailmenow.com/news/tricare-phishing-jbsa-oct-2026,"What beneficiaries should do Type tricare.mil or tricare.mil/dslogon.
+Independent cybersecurity audits We audited TRICARE, JBSA, Military OneSource, and the East-region contractor on October 11, 2026.
+Audit links: tricare.mil · jbsa.mil · health.mil · militaryonesource.mil · humanamilitary.com · triwest.com TRICARE Identity 95% is the bright spot.
+tricare.mil and jbsa.mil showed no MX in this probe — web posture only.
+DNS lookalike scans (BEC profile, registered signals only): High-interest registered names (investigate; not proof this PSA named them): Type tricare.mil and jbsa.mil.","Joint Base San Antonio republished a Defense Health Agency warning: if a call, text, email, or letter claims to be TRICARE and asks you to pay, “confirm” coverage, or hand over a Social Security number, DoD ID, bank details, or health information, it is a scam. The same copy sits on the TRICARE Newsroom. Fort Sam Houston is the local Texas hook. Military OneSource’s phishing primer is the cited background.
+
+This is an official PSA, not a reported breach of TRICARE, JBSA, Humana Military, or TriWest. Kathy McGuire, chief of the TRICARE Health Plan managed-care support branch at DHA, said scammers “may try to target anyone with TRICARE coverage.”
+
+Official pages: JBSA — Don’t be a target of scams about TRICARE · TRICARE Newsroom
+
+Snapshot
+
+TRICARE and its contractors will not call or text to collect payment or offer discounts. They will not ask for SSN, DoD ID, banking, or health data that way. tricare.mil/fraud repeats the same rule and notes a separate Berkeley Research Group / Express Scripts privacy incident — that vendor notice is not this PSA.
+
+How the lure lands
+
+JBSA and the Newsroom describe the usual military-community mix: a voicemail about a “suspended” ID card, a text about a leftover TRICARE bill, an email with a “secure” portal that is not tricare.mil. Military OneSource groups those as phishing aimed at people who already expect official mail.
+
+The same week, TRICARE is moving logins from legacy DS Logon to myAuth. milConnect and ID Card Office Online have already switched. East (Humana Military), West (TriWest), Overseas (International SOS), TRICARE For Life (WPS), pharmacy (Express Scripts), dental (United Concordia), and MHS GENESIS are still transitioning through FY26, per the May 5, 2026 Newsroom explainer and the myAuth page (updated October 6, 2026). A “your DS Logon expires tonight — click here” message is exactly the kind of mail this PSA is about.
+
+What beneficiaries should do
+
+Type tricare.mil or tricare.mil/dslogon. Do not use a link from unexpected mail or a text.
+
+If someone asks for payment, SSN, DoD ID, or a one-time code, hang up. Call the number you already have for your contractor.
+
+Keep your address and email current in milConnect so real mail does not bounce to a stranger.
+
+Report the contact to your contractor (Humana Military in the East, TriWest in the West) or the DHA Office of Inspector General. You can stay anonymous.
+
+If you already typed a password on a fake page, change it on the real host and tell the contractor.
+
+MFA: YubiKey and Google Authenticator
+
+A hardware key does not stop a voice callback. It does stop a lot of the “reset your myAuth / DS Logon” pages that harvest passwords and SMS codes. Grades match our MFA directory.
+
+Login.gov is the civilian federal comparison: a security key plus apps including Google Authenticator. TRICARE’s public myAuth pages name a CAC, username/password plus “a secure multi-factor authentication method,” and Okta Verify. They do not name a self-serve YubiKey or Google Authenticator. Okta Verify is a vendor-locked app, not open TOTP. A DoD CIO MFA memo still allows SMS OTP on myAuth when SMS is allowed. That keeps the beneficiary story at Fail. A CAC is strong for people who have one. It is not a YubiKey enrollment path we can grade for families and retirees.
+
+Directory: MFA support directory · Category → Healthcare.
+
+We may earn a commission if you buy a YubiKey or sign up for Proton Pass through the links above.
+
+Independent cybersecurity audits
+
+We audited TRICARE, JBSA, Military OneSource, and the East-region contractor on October 11, 2026. 100% is the ideal — none reach it. These scores are public email / transport / website posture. They do not prove a TRICARE breach.
+
+Audit links: tricare.mil · jbsa.mil · health.mil · militaryonesource.mil · humanamilitary.com · triwest.com
+
+TRICARE Identity 95% is the bright spot. Transport 45% (and Humana / TriWest 15%) means a fake “Humana Military / update myAuth” message can still land without MTA-STS enforce. tricare.mil and jbsa.mil showed no MX in this probe — web posture only. jbsa.mil overall 59% is the Fort Sam reprint host, not a clinic-records finding.
+
+Website stack note
+
+Passive website-tech probes on October 11, 2026:
+
+Point-in-time only. A public homepage stack is not a finding on a beneficiary mailbox.
+
+Blacklist and lookalike domains
+
+Email blacklist checks (public DoH, October 11, 2026): tricare.mil, health.mil, militaryonesource.mil, humanamilitary.com, and triwest.com were clear on mail/domain lists we can query. jbsa.mil returned no IPs in this probe. SPFBL notes on TRICARE and Military OneSource web/CDN addresses are informational — not mail-reputation hits.
+
+DNS lookalike scans (BEC profile, registered signals only):
+
+High-interest registered names (investigate; not proof this PSA named them):
+
+Type tricare.mil and jbsa.mil. Continuous monitoring: Cybersquat Domain Monitoring.
+
+Related coverage
+
+HHSC STEPS / PFD phishing
+
+Texas Cyber Command / Cyber Ready
+
+FBI NCII lookalike support phishing
+
+PA AG MyChart phishing
+
+MFA support directory",https://emailmenow.com/_astro/tricare-phishing-jbsa-oct-2026.BObhusqd_2uvavE.jpg,N,0.0,2026-10-12 19:56:19.427260
 ,,2026-10-12 07:27:15+00:00,x.com,"Stars and Stripes on X: ""Dr. Mark Loftis, 39, was convicted of conspiracy to commit health ...",,,,,,https://x.com/starsandstripes/status/2109539568311792045,"The scheme targeted Medicare, Tricare and the Civilian Health and Medical Program of the Department of Veterans Affairs. Read more at:.","The scheme targeted Medicare, Tricare and the Civilian Health and Medical Program of the Department of Veterans Affairs. Read more at:.",,Y,0.0,2026-10-12 04:56:15.655080
 ,,2026-10-12 07:14:13+00:00,www.reddit.com,Tricare West- new enrollee - Reddit,,,,,,https://www.reddit.com/r/tricare/comments/1x3b48f/tricare_west_new_enrollee/,"Question for the audience. We are about to go on Tricare West, and I'm reading alot on here about stories on slow claims proceeding, prior auth…","Question for the audience. We are about to go on Tricare West, and I'm reading alot on here about stories on slow claims proceeding, prior auth…",,Y,-1.0,2026-10-12 05:56:18.398360
 ,,2026-10-12 07:01:52+00:00,www.facebook.com,"Dr. Mark Loftis, 39, was convicted of conspiracy to commit health care fraud and wire ... - Facebook",Not Available,,,,,https://www.facebook.com/stripesmedia/posts/dr-mark-loftis-39-was-convicted-of-conspiracy-to-commit-health-care-fraud-and-wi/1551602380329139/,Facebook Log In,"Facebook
