@@ -1,4 +1,53 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID30,Microsoft,2026-10-21 10:58:25+00:00,CIO,Microsoft expands sovereign cloud offerings as data control concerns grow - CIO,Nidhi Singal,,,,,https://www.cio.com/article/4238389/microsoft-expands-sovereign-cloud-offerings-as-data-control-concerns-grow.html,"“Governments and enterprises want greater control over where their data is stored, who can access it, and whether critical systems can operate during disruptions.
+Additionally, DocumentDB and Blob Storage are entering public preview on Azure Local, while SQL Server on Azure Local is already generally available for connected and disconnected deployments.
+While these additions give enterprises greater flexibility, industry analysts emphasize that localized deployments do not automatically erase vendor dependency.
+The new measures introduced under Microsoft Sovereign Cloud do reduce risks but cannot eliminate them.
+Furthermore, while sovereign cloud capabilities can offer greater control over data, infrastructure, and operations, this often comes with trade-offs in cost, performance, scalability, and access to services.","Microsoft expanded its sovereign cloud offerings on Tuesday, adding new security, governance and AI capabilities as customers, particularly in Europe, demand greater assurance over where data is stored, who can access it and how critical services operate during disruptions.
+
+The announcement builds on Microsoft’s ongoing digital sovereignty efforts, assisting organizations in applying appropriate levels of control to each workload rather than forcing a rigid, one-size-fits-all approach.
+
+“Organizations are considering more than where data resides. They also seek to understand who can access and operate their systems, how sensitive digital assets remain protected, which technology dependencies matter most and whether critical services can continue as regulatory, geopolitical, security or network conditions change,” Douglas Phillips, president and CTO at Microsoft Specialized Clouds, said in a blog post.
+
+The developments come amid growing international scrutiny of how global tech providers handle sensitive data and the extent of control customers retain over their digital infrastructure.
+
+“Three factors are driving this, including stricter data regulations, rising geopolitical tensions, and growing AI adoption,” said Pareekh Jain, CEO at EIIRTrend & Pareekh Consulting. “Governments and enterprises want greater control over where their data is stored, who can access it, and whether critical systems can operate during disruptions. For instance, governments and big enterprises in Europe are worried about keeping their important data on an American company’s computers. Europe has proposed a new law that would limit the use of US cloud companies for sensitive government data in many areas. Microsoft is responding to these concerns while competing with local sovereign cloud providers.”
+
+New controls across cloud and AI workloads
+
+Microsoft is introducing the Sovereign Control Panel, a unified Azure portal experience that will allow organizations to assess their sovereignty posture, identify risks and gaps, apply controls, and evaluate workload portability. The panel is scheduled to enter public preview at Microsoft Ignite.
+
+Expanding on Azure Key Vault Managed Hardware Security Module (HSM), which gives customers dedicated protection over encryption keys, Microsoft is now extending control beyond its own infrastructure. External key management with Azure Managed HSM is now generally available, enabling organizations to keep root encryption keys in hardware they own and operate on-premises or through a trusted third party.
+
+In limited preview, Azure Confidential Clean Rooms will use confidential computing to support collaboration involving sensitive data, where participants will be able to analyse shared information while limiting broader exposure of the underlying data.
+
+Microsoft is also expanding Azure Local to bring more cloud capabilities into customer-operated environments. The ability to transition workloads between connected and disconnected states is entering public preview. Additionally, DocumentDB and Blob Storage are entering public preview on Azure Local, while SQL Server on Azure Local is already generally available for connected and disconnected deployments.
+
+On the AI front, Foundry Local is scheduled to become generally available at Microsoft Ignite for connected and disconnected operations on Azure Local. It will support local inference and agentic retrieval in natural language, backed by an expanded model catalog from Microsoft, partner networks, and the open-source community.
+
+To further protect data during processing, Confidential Virtual Machines on Azure Local is now generally available, leveraging hardware-encrypted memory and isolation alongside workload attestation before sensitive keys or data are released.
+
+While these additions give enterprises greater flexibility, industry analysts emphasize that localized deployments do not automatically erase vendor dependency.
+
+“Depending upon the deployment model, in the public cloud, enterprises get better visibility, stronger access controls, and more control over encryption keys,” said Ashish Banerjee, senior principal analyst at Gartner. “In the Sovereign Private Cloud, they can operate infrastructure locally and even disconnect selected workloads from Azure. But I would not call this complete control. Enterprises still need to check whether Microsoft remains involved in identity, software updates, management, or technical support for the services they use.”
+
+European oversight and partner options
+
+For customers in the EU and the European Free Trade Association (EFTA), Microsoft is rolling out Data Guardian. Under this model, a trusted regional partner will provide independent oversight of remote access requests by Microsoft engineers. Simultaneously, a Production Touch Ledger will create tamper-evident logs of all technical actions performed.
+
+Microsoft is also broadening its Sovereign Partner Ecosystem, highlighting regional operators like Bleu Cloud in France and Delos Cloud in Germany, alongside independent software vendors specializing in security, identity, observability, and backup.
+
+Geopolitical realities and market limits
+
+Despite these additions, analysts note that technical controls cannot eliminate geopolitical dependence entirely. US hyperscalers (Amazon, Google, and Microsoft) continue to account for roughly 70% of the European cloud market, whereas European providers’ market share has contracted over the last decade.
+
+The new measures introduced under Microsoft Sovereign Cloud do reduce risks but cannot eliminate them. “Local infrastructure, independent encryption keys, and disconnected operations make it harder for external parties to access data or disrupt services. However, Microsoft remains subject to applicable US laws, sanctions, and export restrictions. Enterprises gain greater operational independence but not complete legal or technological independence,” added Jain.
+
+Furthermore, while sovereign cloud capabilities can offer greater control over data, infrastructure, and operations, this often comes with trade-offs in cost, performance, scalability, and access to services.
+
+Banerjee noted that sovereignty should be assessed workload by workload, rather than applied as a label to the entire cloud environment. Greater sovereignty generally comes with greater cost and responsibility. Local or disconnected environments may not receive every Azure service at the same time. Enterprises may also need dedicated infrastructure, specialist skills and separate continuity arrangements. On top of that, they may lose some elasticity and economies of scale.
+
+“So, I would not recommend maximum sovereignty for every workload. Reserve it for workloads where the legal, operational or geopolitical risk genuinely justifies the additional complexity,” added Banerjee.",https://www.cio.com/wp-content/uploads/2026/10/4238389-0-23350900-1792580052-Datensouveranitat-als-strategischer-Erfolgsfaktor.jpg?quality=50&strip=all&w=1024,N,,2026-10-21 08:06:52.353039
 ID17,Elevance Health,2026-10-21 10:29:34+00:00,Sheboygan's Country B93,Elevance lifts 2026 profit forecast on better medical cost management | Sheboygan's Country B93,Thomson,,,,,https://b93radio.com/2026/10/21/elevance-lifts-2026-profit-forecast-on-better-medical-cost-management/,"Oct 21 (Reuters) – Elevance Health raised its annual profit forecast on Wednesday, ​as the health ‌insurer banks on its disciplined medical cost management.
 Health insurers have been navigating elevated demand for ‌behavioral ​health services ⁠and specialty drugs ⁠across government-backed plans in recent years, which have driven up costs.
 Elevance forecast full-year ​adjusted profit to be at least $29 per ⁠share, compared ⁠with its previous outlook ​of at least $27 per ​share.
@@ -8800,99 +8849,3 @@ According to Agilent, Proscia’s product offerings will also help to realise �
 The transaction is expected to close in Agilent’s fiscal year 2027, with Proscia set to become part of Agilent’s Life Sciences and Diagnostics Markets business.
 
 Commenting on the buyout, Proscia’s co-founder and CEO, David West, said: “Agilent shares our vision for advancing pathology through open, digital, and AI-enabled solutions. Together, we can accelerate innovation while continuing to provide customers with the flexibility they need across clinical and life-sciences workflows.”",https://www.medicaldevice-network.com/wp-content/uploads/sites/23/2026/10/shutterstock_1664157205.jpg,N,,2026-10-14 12:35:46.897762
-ID43,Walmart,2026-10-14 12:05:34+00:00,hrexecutive.com,"How EY, Walmart are redefining career advancement - HR Executive",Jen Colletta,,,,,https://hrexecutive.com/how-ey-walmart-are-redefining-career-advancement/,"Recent research from Randstad found that the traditional, linear approach to career advancement—modeled after a pyramid—is antiquated.
-In fact, nearly three-quarters of leaders surveyed said vertical advancement up the standard career ladder is an outdated concept, while only about 40% of employees said they would want to follow such a traditional path.
-That has involved a greater emphasis on rotation opportunities and mobility efforts; not easy for an organization that has viewed advancement through the traditional pyramid lens for over a century.
-Efforts include its global Walmart Academy and Live Better U, which provides debt-free educational opportunities.
-Create experiential opportunities, job shadowing, mentorships and sponsorships, she advises, while reimagining manager and leadership training.","Recent research from Randstad found that the traditional, linear approach to career advancement—modeled after a pyramid—is antiquated. In fact, nearly three-quarters of leaders surveyed said vertical advancement up the standard career ladder is an outdated concept, while only about 40% of employees said they would want to follow such a traditional path.
-
-That has involved a greater emphasis on rotation opportunities and mobility efforts; not easy for an organization that has viewed advancement through the traditional pyramid lens for over a century.
-
-""When you've operated for decades the same way and all of a sudden you say, 'We've got to shift to a place where we can allow people to move around the organization more nimbly,' that creates tension within the organization,"" Carlier says. ""But that is what we were starting to see as the demand coming from our workforce.""
-
-Faced with a shortage of skilled tradesworkers like drivers and technicians, the organization doubled-down on
-
-creating new pathways for workers to move across the company.
-
-Walmart Chief People Officer Donna Morris, HR Executive's 2025 HR Executive of the Year, previously detailed how the organization is investing $1 billion in career-focused training by the end of this year. Efforts include its global Walmart Academy and Live Better U, which provides debt-free educational opportunities.
-
-""We've taken the supply of our own internal talent and have focused on, where do we see the future going in terms of skills and capabilities? How do we equip our own associates with those skills and capabilities?"" Morris told HR Executive.
-
-At the Forbes summit, Stomski recalled one associate who went from working behind the deli counter to becoming one of Walmart's fleet drivers, now making six figures.
-
-""We built our own training and started creating pathways and programs,"" Stomski said. ""The worker went from being behind a deli counter to being a driver and she loves it. There are creative strategies you have to think through, beyond the stereotype that promotion is up. It can go many different ways.""
-
-Elise James-DeCruise, chief culture and learning officer at The Ad Council, characterized the moment we're in with a sports analogy: Not everyone is going to lead the team, but everyone has a role to play on the team, if equipped with the right skills. Create experiential opportunities, job shadowing, mentorships and sponsorships, she advises, while reimagining manager and leadership training.",https://assets.touchpointmarkets.com/85/2a/d09c458f48bea426d31be53ae344/ey.png,N,,2026-10-14 14:20:37.098677
-ID33,Nvidia,2026-10-14 11:41:02+00:00,the Guardian,"Nvidia, worth $5.5tn, donates $250m to UK for AI safety research - The Guardian","Dan Milmo, www.theguardian.com",,,,,https://www.theguardian.com/technology/2026/oct/14/nvidia-donates-to-uk-ai-safety-research,"The $5.5tn (£4.1tn) US chipmaker Nvidia is donating $250m worth of computing power to the UK to support AI safety research.
-Nvidia said the donation, which spans five years, would “support agentic safety and security research across the UK”.
-The computing power will be delivered via UK-based datacentres using Nvidia chips.
-On Monday Narayan confirmed that AISI was conducting tests on US-developed AI models before they are released, after reports that the White House had restricted access.
-Anthropic, the developer of the Claude chatbot, warned of a new AI safety threat on Monday after it published a blogpost stating its models could soon become self-replicating.","The $5.5tn (£4.1tn) US chipmaker Nvidia is donating $250m worth of computing power to the UK to support AI safety research.
-
-The donation from the world’s most valuable company comes as the UK government confirmed its AI Security Institute (AISI), which tests advance AI models, will be able to examine cutting-edge technology developed by companies such as OpenAI, Anthropic and Google before they are released.
-
-Nvidia said the donation, which spans five years, would “support agentic safety and security research across the UK”.
-
-Safety concerns about AI agents – highly capable computer programs that are able to design and perform sequences of tasks autonomously – have risen since the summer, when OpenAI confirmed that a “swarm” of agents had attacked Hugging Face, a tech startup.
-
-Nvidia did not reference AISI in its statement but said most of the money would “support the wider UK AI safety and security research community”, with a proportion of the cash going to the British Open-Ended Learning and Discovery Lab, the Science of Fundamental AI Research Lab – run by the Edinburgh, Cambridge, Oxford and University College London universities – and Imperial College London.
-
-The computing power will be delivered via UK-based datacentres using Nvidia chips.
-
-“The UK brings world-class scientific rigour to this essential engineering challenge,” said Jensen Huang, Nvidia’s chief executive. “With this $250m commitment, Nvidia will put accelerated computing in the hands of UK researchers to develop, test and strengthen safeguards for increasingly powerful AI.”
-
-Kanishka Narayan, the UK’s AI minister, said the announcement was a “vote of confidence in our world-leading strength and expertise in AI research”.
-
-On Monday Narayan confirmed that AISI was conducting tests on US-developed AI models before they are released, after reports that the White House had restricted access.
-
-The AI minister also warned that the UK faces agentic attacks similar to the one carried out by OpenAI agents on Australia’s healthcare system this year.
-
-“It seems likely, if not inevitable, that our own cyber defences will be breached,” said Narayan.
-
-Anthropic, the developer of the Claude chatbot, warned of a new AI safety threat on Monday after it published a blogpost stating its models could soon become self-replicating. They find ways to infiltrate internet-connected devices such as smart ovens and lawnmowers, the company said.
-
-Under such a scenario the models could power themselves without datacentres, and instead could use a “botnet” of interconnected devices, Anthropic said, adding that the world should prepare for a future where such botnets were here to stay.
-
-“A replicator like this would be challenging to shut down since there’s no centralised point to shut off,” Anthropic’s researchers wrote.","https://i.guim.co.uk/img/media/63fe41cf76dc85790ffaa07a8437c6647182b789/1000_0_4500_3600/master/4500.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=29a5f46a552f2e27fe9c22326ed87c85",N,,2026-10-14 12:35:41.188520
-ID26,L’Oréal,2026-10-14 11:26:20+00:00,www.cosmeticsbusiness.com,L'Oréal Travel Retail targets 10% in refillable fragrance solutions at travel hubs by 2030,Not Available,,,,,https://www.cosmeticsbusiness.com/loreal-travel-retail-partners-with-avolta,"L’Oréal Travel Retail has partnered with global travel experience retailer Avolta to scale sustainability practices and refillable fragrance formats at its international travel hubs.
-The French beauty giant’s travel retail arm has formalised a joint Sustainability-Linked Business Plan with Avolta, which focuses on expanding refillable beauty formats, lowering supply chain emissions and scaling circular solutions at travel hubs.
-The Sustainability-Linked Business Plan will also see L’Oréal Travel Retail work to lower transport-related impact through low emission transport modes and optimised truckload capacity.
-""Together with Avolta, we are translating shared sustainability commitments into measurable operational steps, expanding refillable beauty and lowering our logistics footprint across key travel hubs,” said Eva Yu, President, L’Oréal Travel Retail.
-L’Oréal Travel Retail signed the Sustainability-Linked Business Plan agreement with Avolta at TFWA World Exhibition & Conference 2026 in Cannes, France, a global summit for the duty-free and travel retail industry.","L’Oréal Travel Retail has partnered with global travel experience retailer Avolta to scale sustainability practices and refillable fragrance formats at its international travel hubs.
-
-The French beauty giant’s travel retail arm has formalised a joint Sustainability-Linked Business Plan with Avolta, which focuses on expanding refillable beauty formats, lowering supply chain emissions and scaling circular solutions at travel hubs.
-
-This operational roadmap is targeting 10% in refill solutions by 2030 across L’Oréal’s core fragrance categories.
-
-This is in response to market data, cited by L’Oréal Travel Retail, which shows that 80% of Gen Z shoppers are looking for sustainable beauty products in Duty Free.
-
-Tickets are now available for the 25th anniversary of the Pure Beauty Awards, taking place on 15 October 2026 at the Grosvenor House Hotel in London, UK. Join the beauty industry for an evening of recognition and celebration as this year’s winners are revealed. Click here to secure your place.
-
-The Sustainability-Linked Business Plan will also see L’Oréal Travel Retail work to lower transport-related impact through low emission transport modes and optimised truckload capacity.
-
-Dedicated Corporate Social Responsibility (CSR) training modules will also be rolled out for frontline beauty advisors at its international travel hubs.
-
-""Together with Avolta, we are translating shared sustainability commitments into measurable operational steps, expanding refillable beauty and lowering our logistics footprint across key travel hubs,” said Eva Yu, President, L’Oréal Travel Retail.
-
-Avolta is a global travel experience retailer which operates across airports, motorways, cruises and rail hubs.
-
-The company combines travel retail and food and beverage (F&B).
-
-L’Oréal Travel Retail signed the Sustainability-Linked Business Plan agreement with Avolta at TFWA World Exhibition & Conference 2026 in Cannes, France, a global summit for the duty-free and travel retail industry.
-
-Image caption: Eva Yu, President of L’Oréal Travel Retail, and Nicolas Girotto, Chief Commercial Officer at Avolta, presenting the joint Sustainability-Linked Business Plan at TFWA World Exhibition & Conference.
-
-Related content:",https://www.cosmeticsbusiness.com/article-image-alias/l-oréal-travel-retail-targets-10-in.jpg,N,,2026-10-14 12:35:08.752901
-ID43,Walmart,2026-10-14 11:15:07+00:00,Hardware Retailing,Wing and Walmart to Expand Drone Delivery in 2027 - Hardware Retailing,Annie Dameworth,,,,,https://hardwareretailing.com/wing-and-walmart-to-expand-drone-delivery-in-2027/,"Wing and Walmart announced they are expanding their drone delivery service to Denver and Seattle metros in 2027, bringing fast, reliable and convenient home delivery of thousands of Walmart items to nearly 20 major U.S. metros.
-To date, the growing partnership has brought drone delivery access to more than three million customers across major U.S. metropolitan areas, including Dallas-Fort Worth, Atlanta, Houston and Orlando.
-“Adding new metros to our expansion speaks to how quickly people across the country are adopting drone delivery,” says Heather Rivera, chief business officer at Wing.
-“Expanding drone delivery to Seattle and Denver is about giving more customers a practical option when they need something quickly,” says Greg Cathey, Walmart’s senior vice president, eCommerce transformation.
-“Walmart’s stores put everyday items close to the communities we serve, and Wing helps bring those items to customers’ homes in minutes.” Once drone delivery is available, customers using the Walmart app or shopping on Walmart.com will automatically see drone delivery as an option if eligible.","Wing and Walmart announced they are expanding their drone delivery service to Denver and Seattle metros in 2027, bringing fast, reliable and convenient home delivery of thousands of Walmart items to nearly 20 major U.S. metros. To date, the growing partnership has brought drone delivery access to more than three million customers across major U.S. metropolitan areas, including Dallas-Fort Worth, Atlanta, Houston and Orlando.
-
-“Adding new metros to our expansion speaks to how quickly people across the country are adopting drone delivery,” says Heather Rivera, chief business officer at Wing. “We’re excited to serve the needs of busy families in nearly 20 major markets spanning diverse communities and climates by delivering the everyday items these families need fast.”
-
-Wing’s aircraft can fly at speeds up to 60 mph, carry up to five pounds and deliver tens of thousands of Walmart items in minutes.
-
-“Expanding drone delivery to Seattle and Denver is about giving more customers a practical option when they need something quickly,” says Greg Cathey, Walmart’s senior vice president, eCommerce transformation. “Walmart’s stores put everyday items close to the communities we serve, and Wing helps bring those items to customers’ homes in minutes.”
-
-Once drone delivery is available, customers using the Walmart app or shopping on Walmart.com will automatically see drone delivery as an option if eligible. Customers will also be able to place an order through the Wing app.",https://hardwareretailing.com/wp-content/uploads/2026/10/Untitled-June-09-2026-at-12.34.23-1-660x330.png,N,,2026-10-14 13:38:51.346703
