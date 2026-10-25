@@ -1,4 +1,35 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID33,Nvidia,2026-10-25 10:13:30+00:00,The Decoder,Nvidia open-sources Flora to make robot video labeling 125x cheaper than GPT-6 Astra,Jonathan Kemper,,,,,https://the-decoder.com/nvidia-open-sources-flora-to-make-robot-video-labeling-125x-cheaper-than-gpt-6-astra/,"Up to 125x cheaper by Nvidia's own estimates In a test with 50 videos, Flora scored slightly better than GPT-6 Astra according to Nvidia, even though OpenAI's model was allowed to use its full reasoning capacity.
+Labeling one hour of video runs about 72 cents with Flora by Nvidia's estimate, compared to roughly $88.50 with GPT-6 Astra.
+On Nvidia's own DenseCaptionBench, Flora leads across all metrics for human recordings, but for robot videos the model comes in second behind Astra.
+In a video with many short hand movements, Flora identifies 34 of 37 individual actions, while Astra catches only four.
+The company has also been working for some time to offset the shortage of robotics training data through simulation and automated data processing.","According to the paper, Flora covers all three. Nvidia says the system is already running during training of its GR00T models, annotating up to 200,000 hours of video per day across 512 GB300 GPUs. The models are available on Hugging Face.
+
+Flora consists of three fine-tuned Qwen3.5 models. A 9B model splits videos into action segments, and a 27B model describes them while factoring in what happened before and after each action. A second 27B model called Flora-Rewarder takes on three roles depending on the prompt. It rates an episode's success on a scale of 1 to 5, classifies each half-second step as normal, suboptimal, or failure, and assigns scores based on self-defined rubrics.
+
+Up to 125x cheaper by Nvidia's own estimates
+
+In a test with 50 videos, Flora scored slightly better than GPT-6 Astra according to Nvidia, even though OpenAI's model was allowed to use its full reasoning capacity. Labeling one hour of video runs about 72 cents with Flora by Nvidia's estimate, compared to roughly $88.50 with GPT-6 Astra. Claude Opus 5 scored much worse in the same test and still cost about $42 per hour.
+
+The Flora cost figures are projections, though, not production measurements. Nvidia calculated them based on an assumed rental price of $10 per GPU per hour.
+
+Flora finds actions better, but Astra often describes them more precisely
+
+On the public WGO-Bench, Flora is best at detecting action boundaries but trails Astra in overall score and falls behind Gemini 3.8 Flash in pure description accuracy. According to the researchers, the gains come mainly from temporal localization.
+
+On Nvidia's own DenseCaptionBench, Flora leads across all metrics for human recordings, but for robot videos the model comes in second behind Astra. There's a methodological catch the researchers acknowledge, too. GPT-6 Astra evaluates the descriptions while also being one of the models under test.
+
+Almost no other model catches mid-episode errors
+
+On RoboRewardBench, Flora's error rate is 27.8 percent lower than Astra's. The paper attributes the gap to partially completed tasks. When a robot only tips a bottle over instead of knocking it off the table, Flora assigns 3 out of 5 points to match the human reference, while Astra gives just one.
+
+Flora-Rewarder catches 53.3 percent of failed steps within an episode, while no competitor gets above 11.7 percent and Astra doesn't catch a single one. The tradeoff is that Flora falsely flags about 11 percent of normal steps as errors. Astra still leads on rubric-based scoring and trajectory ranking.
+
+In a video with many short hand movements, Flora identifies 34 of 37 individual actions, while Astra catches only four. On the flip side, Flora sometimes splits longer actions into too many small steps and occasionally gets descriptions wrong. In one video, a robot hand wipes a plate with a cloth, but Flora describes it as folding a napkin.
+
+Nvidia positions Flora as an open alternative to commercial services like Scale AI's Physical AI Data Engine. Researchers can use it to scale their own robotics datasets and test approaches like transferring human demonstrations to robots. Nvidia is investing billions in open AI models to keep developers in its hardware ecosystem and drive demand for its chips, and Flora serves that same goal.
+
+The company has also been working for some time to offset the shortage of robotics training data through simulation and automated data processing. At GTC earlier this year, Nvidia showed a data pipeline that automatically prepares, multiplies, and scores training material. Flora adds detailed labels and reward signals from video to that pipeline.",https://the-decoder.com/wp-content/uploads/2026/10/nvidia-flora-hero-robot-hands.jpg,N,,2026-10-25 08:11:02.271221
 ID34,OpenAI,2026-10-25 10:02:22+00:00,YouTube,OpenAI's AI Broke Out Of Its Sandbox? Why Advanced Model Training Is Going Internet-Free -,Hindustan Times,,,,,https://www.youtube.com/watch?v=nSIUILwTiac,"INTERNATIONAL NEWS #OpenAI#AI#ArtificialIntelligence#AISafety#AISecurity#AITraining#Cybersecurity#HuggingFace#AgenticAI#RedTeaming#SandboxEscape#FrontierAI#TechNews Download the Hindustan Times App from Playstore/App Store for all the latest news & updates.
 google app store : https://play.google.com/store/apps/de... Apple Store : https://play.google.com/store/apps/de... Add Hindustan Times as your preferred source on Google.
 Click here: https://www.google.com/preferences/so... Hindustan Times Videos brings all the News for the Global Indian under one umbrella.
@@ -7,6 +38,95 @@ Visit our website https://www.hindustantimes.com/ Follow us on Twitter / httweet
 
 ...more Show less",https://i.ytimg.com/vi/nSIUILwTiac/maxresdefault.jpg,N,,2026-10-25 07:03:56.581067
 ID20,H&M,2026-10-25 09:38:22+00:00,www.forbes.com,Why Fast-Fashion Brands Are Launching Their Own Resale Shops And What Founders Can Learn,,,,,,https://www.forbes.com/sites/noemi-kis/2026/10/24/why-fast-fashion-brands-are-launching-their-own-resale-shops-and-what-founders-can-learn/,"Shein, Zara and H&M now help customers resell their old clothes. Here's why fast fashion is moving into resale, and three lessons for founders.","Shein, Zara and H&M now help customers resell their old clothes. Here's why fast fashion is moving into resale, and three lessons for founders.",,Y,,2026-10-25 07:03:45.591758
+ID8,Best Buy,2026-10-25 09:31:47+00:00,Business Insider,'Supercharging bras': The story behind Victoria's Secret's $6 billion turnaround - Business Insider,Jennifer Sor,,,,,https://www.businessinsider.com/victorias-secret-business-turnaround-vsxy-stock-price-bra-sales-2026-10,"There was a stretch of time in recent history when Victoria's Secret was deeply unloved by consumers and investors alike.
+The bra business also remains Victoria's Secret's ""#1 growth driver,"" the company said in its quarterly investor presentation.
+Selman also played a role in revitalizing Victoria's Secret bra department, having learned ""the bra part of the business"" while running his own sportswear line.
+UBS downgraded Victoria's Secret stock following its springtime surge.
+Frazer, the decadeslong Victoria's Secret customer, says the appetite for VS Angel content is still roaring on her channel.","There was a stretch of time in recent history when Victoria's Secret was deeply unloved by consumers and investors alike.
+
+Scarlett Frazer, a 26-year-old fashion influencer who spends thousands at the store annually, is among the diehards who say they never gave up on VS amid its slog in the 2010s. But even she acknowledges the rough patch.
+
+Caught in the cultural shifts of that decade that made the brand seem out of touch and its marketing in bad taste, and beset by competition, the business struggled.
+
+Fast-forward to the present, and the baby pink stripes are back. Victoria's Secret, once known for selling lingerie with unabashed sex appeal, is in the midst of a major comeback, with sales roaring and its stock climbing to records after a yearslong downturn.
+
+The turnaround can be chalked up to a series of strategic decisions that revived the company's status as one of America's supreme intimates retailers — as well as a broader nostalgia for the 90s that has jolted all sorts of brick-and-mortar retailers back to life, from Abercrombie & Fitch to Best Buy.
+
+For Victoria's Secret, the key has been a reinvigorated brand that appeals to a younger crowd, as well as old fans sentimental for Victoria's Secret's 90s-era heyday, analysts told Business Insider.
+
+Victoria's Secret is on track for its best-ever year as a stand-alone publicly traded company. The stock is up 69% year-to-date, marking its best yearly performance since the company was spun off from L Brands, now known as Bath & Body Works, in 2021.
+
+The company's market cap is up $6 billion since October 2023, when its stock plunged to an all-time low of $13 a share.
+
+The gains have been fueled by surging sales. Comparable sales, a measure that excludes distortions stemming from newly opened or closed stores, have risen steadily since 2025.
+
+Prior to that, comparable sales had been falling consistently on a year-over-year basis, Mauricio Serna, an executive director at UBS, said.
+
+Serna said Victoria's Secret's business inflection began as the company embarked on a new strategy laid out by CEO Hillary Super. He pointed to the firm's ""victory lap"" on bras in particular, with brassiere sales seeing mid-teens growth in the second quarter. The bra business also remains Victoria's Secret's ""#1 growth driver,"" the company said in its quarterly investor presentation.
+
+""This is a company that has struggled for several years now,"" Serna told Business Insider. ""The turnaround is materializing.""
+
+The comeback is also partly psychological. Last weekend's Victoria's Secret Fashion Show drew a peak concurrent livestream audience of 3.64 million, up 33% from last year's levels, according to the livestream analytics firm Streams Charts.
+
+""The brand has become sexy and fun and aspirational again, but in a way that feels relevant to today's consumer,"" Hannah Renger, an analyst who covers Victoria's Secret at Citrini Research, said.
+
+Frazer said the retailer is re-entering mainstream popularity. She began to notice the shift herself in 2023, when she began uploading tutorials on how to create the iconic Victoria's Secret Angel look that went ""insanely viral"" on YouTube and TikTok.
+
+""I honestly think Victoria's Secret is in a league of its own,"" she said.
+
+'Supercharging bras'
+
+For investors, the proof is in the stock price. Shares had mostly slid since its 2021 spinoff, but its fortunes began to reverse in late 2024, around the time Hillary Super, the former chief of Savage X Fenty, Rihanna's lingerie line, was brought in as CEO.
+
+The upward trajectory for the stock started in the spring of 2025, when designer Adam Selman, another Savage X Fenty alum, was brought in as the firm's chief creative officer.
+
+Serna said several issues plagued Victoria's Secret in the 2010s:
+
+Limited product offerings. Prior to Super's appointment, Victoria's Secret rarely had new product launches, Serna said.
+
+Heavy discounting. In the last decade, sweeping promotional deals appeared to be Victoria's Secret's main strategy for competing with other retailers, Serna said. The discounts ultimately hurt profit margins and drew lower-quality growth, he added.
+
+Brand perception issues. Victoria's Secret became associated with an ""exclusive"" standard of beauty at a time when culture began to value inclusiveness. The brand was slower than others to adjust, Serna said.
+
+The company also came under scrutiny for its treatment of women and its association with Les Wexner, the former CEO. Wexner, who enlisted Jeffrey Epstein as his personal financial advisor for decades, stepped down from his CEO role in 2020 and later left the board in 2021.
+
+Super, whose role at Savage X Fenty included establishing a major partnership with Nordstrom, has made innovation one of her top priorities since taking the helm in 2024. Since she joined, VS has had a regular pipeline of new product releases, particularly in the bra department, an area management has said they're looking to dominate.
+
+""One of the very first things that Hillary communicated was the opportunity to take what they call 'supercharging bras,' one of their core strategies for the turnaround and enhance the product offering on that front,"" Serna said.
+
+Selman, the chief creative officer at VS&Co, has also played an integral role in the firm's reinvention. The fashion and costume designer, who made Rihanna's famous see-through ""naked dress"" in 2014, appears to have married the brand to a more innovative, fashion-forward aesthetic, Citrini's Renger said.
+
+Selman also played a role in revitalizing Victoria's Secret bra department, having learned ""the bra part of the business"" while running his own sportswear line.
+
+The strategy paid off. 2026 marked the first time the bra business has grown in the last four years, with bra sales accounting for around half of the company's sales growth last quarter, Super said in a call with investors.
+
+""Hillary Super is a fantastic CEO, and one of the most important things that she's done is recognize what actually works for Victoria's Secret,"" Renger said, pointing to the brand's return to ""aspirational sexiness.""
+
+Super has also played a critical role in refining Victoria's Secret's image and landing a more consistent marketing message, Serna said. At times, she's appeared to both lean into the brand's sex appeal — even changing the company's stock ticker from VSCO to VSXY this year — while widening the definition of sexy and shifting the company away from the supermodel aesthetic that dominated in the 90s.
+
+The strategy has walked a fine line between reinvention and a return to the familiar.
+
+Serna pointed to the Victoria's Secret Fashion Show, which was revived from a yearslong hiatus after Super started in 2024. This year's event, however, showcased both legacy Angels, such as Adriana Lima, as well as new influencers, lending to a more diverse lineup.
+
+The annual feather-filled fashion show has drawn newer Gen Z shoppers as well as older people who may have been shopping at Victoria's Secret 30 years ago, Renger said.
+
+End of the runway?
+
+It's unclear how much further Victoria's Secret's turnaround has to run.
+
+The recovery appears to be largely priced in from a valuation standpoint, Serna said. He also outlined potential risks, such as the possibility that the brand reverts to its aggressively promotional stance, or that other players begin competing more aggressively in the US bra market.
+
+Other popular retailers from the 90s and 2000s that have made a comeback have stagnated recently as US shoppers feel the pinch of higher prices. Retail sales slowed in September, rising 0.8% for the month, per the Commerce Department. Gap, which made a high-profile comeback in recent years, is down 11% year-to-date.
+
+""We think maybe there's not that much upside to the stock price at this point,"" Serna said, speculating that the company may see more subdued growth going forward. UBS downgraded Victoria's Secret stock following its springtime surge.
+
+Others are hopeful the hype will endure. In a note, Bank of America said Victoria's Secret was likely experiencing a ""Fashion show halo"" that is expected to boost sales through the holidays.
+
+Frazer, the decadeslong Victoria's Secret customer, says the appetite for VS Angel content is still roaring on her channel.
+
+""It's an entire aesthetic, lifestyle and almost a little club that girls want to be part of. You're not just buying a perfume or a pair of pajamas, you're buying into that whole world,"" she said.
+
+Victoria's Secret executives declined an interview request from Business Insider.",https://i.insider.com/6adba4698e95884e1ca82be6?width=1200&format=jpeg,N,,2026-10-25 08:10:19.518059
 ID7,Barclays,2026-10-25 09:05:50+00:00,businesschief.com,"Barclays Posts £2.3bn Q3 Profit and Plans 5,000 Job Cuts | Business Chief",,,,,,https://businesschief.com/news/barclays-posts-2-3bn-q3-profit-and-plans-5-000-job-cuts,Barclays reports a 12% rise in third-quarter profit to £2.3bn and announces a £500m buyback alongside 5000 global job cuts to fund AI investment.,Barclays reports a 12% rise in third-quarter profit to £2.3bn and announces a £500m buyback alongside 5000 global job cuts to fund AI investment.,,Y,,2026-10-25 07:03:06.670389
 ID33,Nvidia,2026-10-25 08:16:19+00:00,The Chosun Daily,"NVIDIA, Competitors Vie for Robotics Developer Dominance",Kang Da-eun,,,,,https://www.chosun.com/english/industry-en/2026/10/25/S3FGIEYVZFAZNHUMADMRAFH7SU/,"The company that created these robots is not NVIDIA but Falling Robotics, a subsidiary of AI platform company Hugging Face.
 The frontrunner is NVIDIA, which has already integrated its technologies into multiple stages of robot development.
@@ -178,6 +298,109 @@ Meanwhile, external evaluators METR and Redwood found new weaknesses in OpenAI�
 Whether offline training performs as well as training with the open web remains unproven.
 
 RELATED COVERAGE:",https://i0.wp.com/cdn.dtmg.xyz/uploads/2026/10/openai-anthropic-logo-on-screen.jpg?resize=1200%2C630&ssl=1,N,,2026-10-25 06:02:04.701349
+ID33,Nvidia,2026-10-25 04:32:33+00:00,The Times of India,Nvidia CEO Jensen Huang says US regulation pushed China's domestic capabilities but ...,TOI Tech Desk,,,,,https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-says-us-regulation-pushed-chinas-domestic-capabilities-but-americas-technology-is-/articleshow/135183159.cms,"Jensen Huang.
+Nvidia CEO Jensen Huang has said that export curbs and trade restrictions imposed by Washington have served as a ‘catalyst’ for China’s rapid progress in semiconductor development.
+The top executive also dismissed concerns over a memory chip glut, saying that a supply surplus is unlikely to materialise by 2029.
+US export curbs on China Current US trade rules prohibit the export of advanced processors to China, including Nvidia's high-end artificial intelligence (AI) GPUs.
+‘American technology well prepared’ Even with intensified competition and China’s accelerated domestic initiatives, the Nvidia chief expressed strong confidence in the standing of US technology companies.","Jensen Huang.
+
+Nvidia CEO Jensen Huang has said that export curbs and trade restrictions imposed by Washington have served as a ‘catalyst’ for China’s rapid progress in semiconductor development. Speaking to CNBC on the sidelines of Nvidia's GTC Berlin conference, Huang stated that American regulatory measures effectively pushed China to speed up its own domestic chip manufacturing and strive for technological self-reliance. The top executive also dismissed concerns over a memory chip glut, saying that a supply surplus is unlikely to materialise by 2029.
+
+US export curbs on China
+
+Current US trade rules prohibit the export of advanced processors to China, including Nvidia's high-end artificial intelligence (AI) GPUs. Despite these barriers, reports have claimed, several Chinese entities have managed to access that computing power through third-party data centers based in Southeast Asia. Industry experts consider this access crucial to the growing capabilities of Chinese-developed AI models. “We’ve definitely accelerated China’s initiatives, its nationalization of semiconductor manufacturing capabilities, and all of the industrial support that has been put into that sector, and so there’s no question we’ve accelerated that,” Huang said.
+
+‘American technology well prepared’
+
+Even with intensified competition and China’s accelerated domestic initiatives, the Nvidia chief expressed strong confidence in the standing of US technology companies. Huang stated that American tech firms remain “mighty” and are well-prepared to take on competitive pressure “from anybody.”
+
+‘Companies can always use more RAM’
+
+Rejecting concerns that memory chips will be supply surplus, Huang implied that the ongoing hardware supercycle is not nearing any abrupt end. ""One of the things that's really great about memory is that you can always use more of it,"" Huang said, underscoring that High Bandwidth Memory (HBM), which is a specialised form of RAM critical for Al acceleration, will continue to see widespread use for years to come. “We're the first company in the world to put LPDDR memory - what goes into your cell phones - into the world's data centers, and it's enabled us to deliver performance that's twice as energy efficient as anything in the world today, and so we're going to continue to use abundant amounts of them as well,” he said.
+
+Continue Reading
+
+End of Article
+
+Latest Mobiles
+
+View All
+
+Poco C51
+
+₹8,499
+
+Motorola Moto G06 Power
+
+₹12,690
+
+Samsung Galaxy A17 5G
+
+₹18,999
+
+Realme C83 5G
+
+₹19,999
+
+Realme GT
+
+₹21,990
+
+Moto G37 5G
+
+₹14,756
+
+Alcatel V3 Ultra
+
+₹17,200
+
+Samsung Galaxy M16
+
+₹18,499
+
+Moto G45 5G
+
+₹10,997
+
+iQOO Z10 Lite
+
+₹16,999
+
+Samsung Galaxy F17 5G
+
+₹17,998
+
+Lava Bold N1 5G
+
+₹9,999
+
+Poco M8
+
+₹23,209
+
+Moto G86 Power
+
+₹17,835
+
+Realme GT 7T 5G
+
+₹35,999
+
+Realme GT 8 Pro
+
+₹72,999
+
+OnePlus 15
+
+₹84,999
+
+Samsung Galaxy M06
+
+₹14,988
+
+Motorola Moto E32s
+
+₹8,589","https://static.toiimg.com/thumb/msid-135183167,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",N,,2026-10-25 08:11:34.719898
 ID34,OpenAI,2026-10-25 04:11:30+00:00,AI Weekly,Replit Shifts $100M+ AI Spend to OpenAI After 30% Price Cut | AI Weekly,Alexis Dufresne,,,,,https://aiweekly.co/alerts/replit-shifts-100m-ai-spend-to-openai-after-30-price-cut,"OpenAI gave Replit more than 30% off to win a contract worth over $100M a year, The Information reported, after Anthropic refused to extend Replit's prior discount without a higher spending commitment.
 Replit's chief executive and co-founder Amjad Masad told the audience at TechCrunch Disrupt in San Francisco on 16 October that Replit is no longer working with Anthropic.
 'It was a decision based on both cost, partnership, and performance,' he said.
