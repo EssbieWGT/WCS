@@ -3,6 +3,95 @@ ID30,Microsoft,2026-10-31 15:56:00+00:00,www.geekwire.com,"Microsoft's big buyou
 ID21,HP Inc,2026-10-31 15:51:28+00:00,www.axios.com,The PC industry's painful path to an AI future - Axios,,,,,,https://www.axios.com/2026/10/30/pc-intel-ai-nvidia,Intel sent investors scrambling with a stark warning about the sharpening slowdown in the personal computer market. Why it matters: AI is helping ...,Intel sent investors scrambling with a stark warning about the sharpening slowdown in the personal computer market. Why it matters: AI is helping ...,,Y,,2026-10-31 13:24:18.590100
 ID34,OpenAI,2026-10-31 14:16:10+00:00,www.bloomberg.com,OpenAI's Altman Meets Samsung Executives as Chip Crunch Deepens - Bloomberg,,,,,,https://www.bloomberg.com/news/articles/2026-10-31/openai-sam-altman-samsung-executives-memory-crunch-deepens,OpenAI Chief Executive Officer Sam Altman met with Samsung Group's top executives in South Korea on Saturday to deepen cooperation on memory chips ...,OpenAI Chief Executive Officer Sam Altman met with Samsung Group's top executives in South Korea on Saturday to deepen cooperation on memory chips ...,,Y,,2026-10-31 11:02:32.304968
 ID34,OpenAI,2026-10-31 14:15:38+00:00,app.dealroom.co,OpenAI cuts its funding round target by $10B to about $20B as the AI sell-off bites,,,,,,https://app.dealroom.co/news/note/openai-cuts-its-funding-round-target-by-10b-to-about-20b-as-the-ai-sell-off-bites,"OpenAI has cut the target for its latest funding round by $10 billion, the Financial Times reported late on 30 October. The ChatGPT maker is now ...","OpenAI has cut the target for its latest funding round by $10 billion, the Financial Times reported late on 30 October. The ChatGPT maker is now ...",,Y,,2026-10-31 13:29:23.750531
+ID33,Nvidia,2026-10-31 14:07:29+00:00,theregister,Backbone of a beast – charting Nvidia's rise to networking titan - The Register,Tobias Mann,,,,,https://www.theregister.com/networks/2026/10/31/backbone-of-a-beast-charting-nvidias-rise-to-networking-titan/5306499,"In Q2, Nvidia's networking revenues topped $17.5 billion.
+So, for its second cluster, an A100-based machine with around 300 accelerators, Recursion went with Nvidia's Quantum InfiniBand switches and ConnectX NICs.
+Nvidia's networking revenues have grown steadily since the Mellanox acquisition.
+The next frontier Then Blackwell hit the market, enabling much greater scale and creating a surge in Nvidia's networking revenue.
+Nvidia's networking ambitions don't stop there.","Nvidia is more than just a leader in graphics and AI hardware. It has also become a titan of the networking industry with bigger datacenter Ethernet sales than any other vendor.
+
+In Q2, Nvidia's networking revenues topped $17.5 billion. To put that in perspective, Cisco's revenue during that same period, across all products, was $17.3 billion.
+
+GPUzilla's arrival as a networking power feels sudden, yet Jensen Huang started working towards this status in 2019 with the $6.9 billion acquisition of long-time networking partner Mellanox .
+
+At the time, Mellanox wasn't a big name in Ethernet switching. The company was mostly known for its ConnectX NICs and InfiniBand switches. Outside of high-performance computing (HPC) and supercomputing clusters, and a big deployment at Microsoft, InfiniBand wasn't widely deployed in hyperscale datacenters.
+
+Buying Mellanox allowed Nvidia to reposition itself as a system builder, which means something different in the context of distributed compute. Nvidia understood its datacenter customers weren't interested in buying GPUs or even servers; they wanted clusters of systems. For that, Nvidia needed interconnect and Mellanox's InfiniBand fit the bill.
+
+Relentless co-design
+
+Over the years, Huang has talked about co-design – designing components and software to work together for specific set of jobs rather than to be the best GPU, switch, or NIC. Its work with Mellanox is a prime example of that approach.
+
+According to Dell'Oro Group analyst Sameh Boujelbene, Nvidia's decision to integrate compute and networking became key to the company's success.
+
+""Customers choose Nvidia for its tightly integrated compute and networking architecture, optimized for AI workloads,"" she told The Register. That integration makes deployments easier and speeds time to market.
+
+Ben Mabey, CTO of pioneering AI and machine learning company Recursion, told The Reg Nvidia's integration schemes won him over.
+
+Founded in 2013, nearly a decade before ChatGPT made AI the subject of dinner-table discussion, Recursion sought to apply machine learning running atop GPUs to the problem of drug discovery.
+
+This work involved churning through massive datasets which, Mabey tells us, now total more than 50 petabytes in size.
+
+""When you think about our workloads, it makes LLMs workload training seem easy compared to the amount of data that has to be moved around,"" he told The Register.
+
+""In the biological space and sciences in general, it's not well appreciated just how big the data actually is,"" he added. ""The internet's big, but in the grand scheme of things, the text that people are training on is actually pretty small, versus the petabytes of data that we have of these images.""
+
+Recursion's first cluster was a system called BioHive Zero which it cobbled together from GTX 1080 graphics cards originally intended for gaming systems. It used Ethernet to connect GPUs and ran into the limits of conventional networking.
+
+So, for its second cluster, an A100-based machine with around 300 accelerators, Recursion went with Nvidia's Quantum InfiniBand switches and ConnectX NICs.
+
+As Mabey explains it, buying its compute and interconnects from the same vendor vastly simplified optimization and troubleshooting. When Recursion reached out to Nvidia for help tuning the system, they were able to consider it as a single system, rather than discrete compute and networking resources. This level of integration had only previously been offered by boutique supercomputer builders like Cray or Atos (Eviden/Bull/whatever it gets renamed next).
+
+A wider Spectrum
+
+Nvidia hasn't always listed networking revenue as a single line item in its financials. However, based on CFO commentary and a little back of the napkin math we can fill in the blanks.
+
+Nvidia's networking revenues have grown steadily since the Mellanox acquisition. At two moments, its revenue shot up suddenly.
+
+The first came in the 2023 calendar year (FY24) after OpenAI kicked off the AI gold rush with the launch of ChatGPT.
+
+The second spread across 2024 and 2025, when Nvidia started selling Blackwell-generation GPUs and then started to ship them in large quantities.
+
+""I see two major inflection points, both coinciding with the Blackwell platform ramp: the introduction of NVLink switches and the accelerating adoption of Spectrum-X Ethernet switches for AI back-end networks, driven by growing deployments of Nvidia GPU clusters and increased attach rates of Nvidia switches, NICs, optics, and cables,"" Boujelbene said.
+
+It was around this time that users started deploy to Ethernet switches in large volume across Nvidia clusters. Elon Musk's Colossus supercomputer was one of the earliest examples.
+
+As we reported at the time, the first half of the 200,000-chip H100 and H200-based cluster came online in 2024 and, at the time, was among the largest ever clusters deployed using Nvidia's Spectrum-X Ethernet switches.
+
+Meta has also made extensive use of Nvidia's Spectrum switches in its own training clusters, including at its million-GPU Prometheus site in New Albany, Ohio.
+
+There are a couple reasons Nvidia's Spectrum-X offering is doing so well.
+
+First, through a combination of Spectrum Ethernet switches, superNICs, and some clever software optimizations, Nvidia was able to replicate many of the qualities that made InfiniBand so attractive while also benefiting from significantly higher radix and interoperability.
+
+Ethernet switches, including Nvidia's own, have historically offered more ports. The higher the radix, the fewer switches are necessary to support a cluster at a given port speed.
+
+This often gets misconstrued to mean that InfiniBand can't scale beyond clusters of a certain size, which isn't necessarily the case. But for clusters exceeding a certain number of GPUs, Ethernet is often more economical because it requires less equipment while achieving similar utilization.
+
+That said, Nvidia's Spectrum-X isn't exactly unique. Broadcom, Cisco, AMD and others have managed to achieve utilization similar to InfiniBand through various investments in smartNICs and switches.
+
+Nvidia's main differentiator, as Mabey and Boujelbene noted earlier, is the level of integration between the compute and networking.
+
+The next frontier
+
+Then Blackwell hit the market, enabling much greater scale and creating a surge in Nvidia's networking revenue.
+
+Prior to Blackwell, Nvidia's NVLink and NVSwitch interconnect tech had largely been limited to single systems with up to eight GPUs. With the launch of the GB200 NVL72, these NVSwitches were broken out into dedicated appliances. (And yes, we remember GH200 NVL256 and NVL32, but from what we can tell these were never shipped in any meaningful volume, if at all.)
+
+For every NVL72 rack system sold, Nvidia also sold nine NVSwitch trays, which enabled the system's six dozen GPUs to function as a single enormous GPU. This effectively guaranteed steady networking revenue growth: even if customers didn't buy Nvidia's scale-out switches, if they wanted NVL72 racks, they were automatically buying NVSwitch.
+
+""We estimate that NVSwitch now accounts for roughly one-third of Nvidia’s networking revenue, up from virtually zero less than two years ago,"" Boujelbene told El Reg. ""This underscores how quickly NVLink switching has become a major growth engine for Nvidia’s networking business.""
+
+Nvidia is now moving to grow its networking business even further with a new licensing program.
+
+Until recently, Nvidia's NVSwitch tech was limited to its own accelerators. However, with the introduction of NVLink Fusion early last year, Nvidia opened the interconnect tech up to third parties to license.
+
+Many chip designers, including Marvell, Qualcomm, Arm, Fujitsu, MediaTek, and d-Matrix, have announced plans to develop CPUs and XPUs using NVLink Fusion. The adoption of the interconnect opens the door to additional NVSwitch sales, as the chips using NVLink Fusion still rely on them for chip-to-chip communications, and there's no other place to get them, as Nvidia has yet to license out NVSwitch.
+
+""NVLink Fusion allows Nvidia to extend its networking footprint beyond its own GPUs into the rapidly growing custom accelerator market. I see it as a strategic move to capture a larger share of AI networking spending, even in clusters that do not use Nvidia GPUs,"" Boujelbene said.
+
+Nvidia's networking ambitions don't stop there.
+
+""Nvidia continues to pursue opportunities in emerging networking domains as network requirements evolve to keep pace with increasingly demanding AI workloads,"" Boujelbene added. ""The latest example is scale-in networking, designed to address the new requirements of agentic AI, while innovations such as CPO will help overcome growing bandwidth, power, and scalability challenges."" ®",https://image.theregister.com/116063.jpg?imageId=116063&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683,N,,2026-10-31 15:07:46.376076
 ID14,Delta Airlines,2026-10-31 13:59:06+00:00,Simple Flying,"Delta, United & JetBlue Face Federal Probe Over Using Passenger Data To Personalize Fares","Luke Bodell, Luke Diaz",,,,,https://simpleflying.com/delta-united-jetblue-ftc-probe-passenger-data-personalized-fares/,"The US Federal Trade Commission (FTC) has ordered Delta Air Lines, United Airlines and JetBlue to explain how they set their ticket prices as part of an investigation into whether they use customers' personal data to charge personalized fares.
 The airlines have been told to explain any pricing methods that use customers' data and show if and how this affects final fares.
 Delta has received criticism for using a ""dynamic pricing"" tool in partnership with Israeli AI company Fetcherr, although it strenuously denies the tool uses personal data to determine prices.
@@ -173,69 +262,6 @@ The developments have placed her at the centre of a wider debate over the moveme
 For now, the allegations against Alice Huang remain part of an ongoing investigation. Her reported association with Jensen Huang has added another layer of sensitivity to a case involving commercial interests, intelligence concerns and the growing technological rivalry between Washington and Beijing.
 
 - Ends",https://akm-img-a-in.tosshub.com/indiatoday/images/story/202610/alice-huang-nvidia-ceos-aide-and-spy-accused-of-smuggling-microchips-to-china-311422281-16x9_0.jpg?VersionId=Exk01o4g6coFclz1mKIUNokIDT3xgRwd,N,,2026-10-31 12:12:11.505641
-ID22,Instacart,2026-10-31 08:23:02+00:00,TIKR.com,DoorDash Has Disappointed for a Year: Why Bank of America Sees 44% Upside | TIKR.com,Roxanna Maglangit,,,,,https://www.tikr.com/blog/doordash-has-disappointed-for-a-year-why-bank-of-america-sees-44-upside,"Key Takeaways Bank of America cut its DoorDash price target to $257 from $275 on Oct. 30 but kept its Buy rating.
-It also agreed to buy Instacart for about $17 billion, at least 75% of it in cash.
-DoorDash (DASH) just reported record revenue and profit, and agreed to buy Instacart (CART) for about $17 billion.
-Bank of America is still a buyer Post’s $257 target matches the Street’s average to the dollar, and the quarter backs him up.
-So what is DoorDash stock actually worth?","Key Takeaways
-
-Bank of America cut its DoorDash price target to $257 from $275 on Oct. 30 but kept its Buy rating. That target is 44% above a stock that’s down 33% in a year.
-
-In the third quarter, DoorDash reported record revenue and profit. It also agreed to buy Instacart for about $17 billion, at least 75% of it in cash.
-
-DoorDash trades at 25x forward earnings, its lowest in five years, and Bank of America’s target implies 35x, below the stock’s three-year average.
-
-Bank of America’s call looks right on the numbers. The risks are the debt and new shares from the Instacart deal and how long it will take to close.
-
-DoorDash (DASH) just reported record revenue and profit, and agreed to buy Instacart (CART) for about $17 billion. Its stock is still down 33% from a year ago, at $179 as of Thursday’s close.
-
-On Oct. 30, Bank of America analyst Justin Post cut his price target to $257 from $275 and kept his Buy rating. That’s 44% upside.
-
-A year of bigger bills
-
-The trouble started in November 2025, when management said it would spend several hundred million dollars more in 2026 on new projects.
-
-That bill showed up in the second quarter of 2026, when diluted EPS fell to $0.46 from $0.65.
-
-Then, on Oct. 29, came a much bigger bill: Instacart at $65 a share, at least 75% in cash.
-
-Bank of America is still a buyer
-
-Post’s $257 target matches the Street’s average to the dollar, and the quarter backs him up. Third-quarter revenue rose 34% to $4.6 billion, net income jumped 91% to $466 million, and adjusted EBITDA climbed 41% to $1.06 billion, in the top half of management’s guidance.
-
-TIKR tracks 43 analysts on DoorDash. How many say “Buy”?
-
-See the full breakdown of Buy, Hold, and Sell ratings on DoorDash, along with Wall Street’s revenue and earnings estimates, all in one place. More than 500,000 investors use TIKR to research stocks like this one. See DoorDash’s Analyst Ratings
-
-Does $257 add up?
-
-The Street’s average target has fallen from $303 a year ago to $257:
-
-Targets run from $172 to $350, and 43 analysts cover the stock.
-
-Analysts cut their 2026 and 2027 normalized EPS estimates over the past year, but they’ve raised both by 5% to 6% since June 30. They now expect normalized EPS to climb from $5.10 in 2025 to $8.25 in 2027 and $10.16 in 2028:
-
-The quarter’s beat should help the 2026 and 2027 estimates hold up. The 2028 estimate is harder to call, since DoorDash plans to reinvest more than all of the Instacart synergies in the first year after closing.
-
-At [$179], DoorDash trades at 25x forward earnings, its lowest in five years. Post’s $257 works out to 35x expected earnings over the next twelve months. That’s above the stock’s one-year average of 33x and below its three-year average of 39x.
-
-Bank of America has this one right
-
-The risk is Instacart. The deal adds debt and new shares, needs regulatory approval, and may not close until the first half of 2028.
-
-I think Post has DoorDash right: his target asks for less than the stock’s three-year average multiple, on rising estimates, from a business that just set records.
-
-The next test is the fourth-quarter report in February. If DoorDash’s 2027 spending plans come in heavier than analysts expect, $257 gets a lot harder to reach.
-
-So what is DoorDash stock actually worth?
-
-TIKR lets you forecast the future price of any stock in less than a minute. Just enter a few assumptions into TIKR’s valuation model and see what DoorDash could be worth. Start from Wall Street consensus estimates, or adjust the inputs to reflect your own view of the business. It’s free to use.
-
-Value DoorDash for free
-
-Disclaimer:
-
-Please note that the articles on TIKR are not intended to serve as investment or financial advice from TIKR or our content team, nor are they recommendations to buy or sell any stocks. We create our content based on TIKR Terminal’s investment data and analysts’ estimates. Our analysis might not include recent company news or important updates. TIKR has no position in any of the stocks mentioned. Thank you for reading, and happy investing!","https://res.cloudinary.com/tikr/images/w_600,h_400,c_scale/f_webp,q_auto/v1782730604/images/6-24/6-24.png?_i=AA",N,,2026-10-31 14:11:14.683223
 ID38,S&P Global,2026-10-31 08:23:02+00:00,TIKR.com,"Meta Stock Fell 15% in October, Then S&P Forecasts a $71 Billion Cash Flow Deficit. Here's ...",Wiltone Asuncion,,,,,https://www.tikr.com/blog/meta-stock-fell-15-in-october-then-sp-forecasts-a-71-billion-cash-flow-deficit-heres-where-the-stock-could-go-by-2030,"S&P uses its own adjusted measure, so the dollar gap is not exact.
 The timing gap is the sharper disagreement: the Street has cash flow turning positive in 2029, while S&P warns it could stay negative past 2028.
 On the October 21 earnings call, nine days before S&P acted, CEO Mark Zuckerberg described a substitute.
@@ -301,6 +327,69 @@ Analyze Meta on TIKR Free →
 Disclaimer:
 
 Please note that the articles on TIKR are not intended to serve as investment or financial advice from TIKR or our content team, nor are they recommendations to buy or sell any stocks. We create our content based on TIKR Terminal’s investment data and analysts’ estimates. Our analysis might not include recent company news or important updates. TIKR has no position in any stocks mentioned. Thank you for reading, and happy investing!","https://res.cloudinary.com/tikr/images/w_600,h_400,c_scale/f_webp,q_auto/v1793428327/images/2-22_1489947c5a9/2-22_1489947c5a9.png?_i=AA",N,,2026-10-31 13:29:59.145068
+ID22,Instacart,2026-10-31 08:23:02+00:00,TIKR.com,DoorDash Has Disappointed for a Year: Why Bank of America Sees 44% Upside | TIKR.com,Roxanna Maglangit,,,,,https://www.tikr.com/blog/doordash-has-disappointed-for-a-year-why-bank-of-america-sees-44-upside,"Key Takeaways Bank of America cut its DoorDash price target to $257 from $275 on Oct. 30 but kept its Buy rating.
+It also agreed to buy Instacart for about $17 billion, at least 75% of it in cash.
+DoorDash (DASH) just reported record revenue and profit, and agreed to buy Instacart (CART) for about $17 billion.
+Bank of America is still a buyer Post’s $257 target matches the Street’s average to the dollar, and the quarter backs him up.
+So what is DoorDash stock actually worth?","Key Takeaways
+
+Bank of America cut its DoorDash price target to $257 from $275 on Oct. 30 but kept its Buy rating. That target is 44% above a stock that’s down 33% in a year.
+
+In the third quarter, DoorDash reported record revenue and profit. It also agreed to buy Instacart for about $17 billion, at least 75% of it in cash.
+
+DoorDash trades at 25x forward earnings, its lowest in five years, and Bank of America’s target implies 35x, below the stock’s three-year average.
+
+Bank of America’s call looks right on the numbers. The risks are the debt and new shares from the Instacart deal and how long it will take to close.
+
+DoorDash (DASH) just reported record revenue and profit, and agreed to buy Instacart (CART) for about $17 billion. Its stock is still down 33% from a year ago, at $179 as of Thursday’s close.
+
+On Oct. 30, Bank of America analyst Justin Post cut his price target to $257 from $275 and kept his Buy rating. That’s 44% upside.
+
+A year of bigger bills
+
+The trouble started in November 2025, when management said it would spend several hundred million dollars more in 2026 on new projects.
+
+That bill showed up in the second quarter of 2026, when diluted EPS fell to $0.46 from $0.65.
+
+Then, on Oct. 29, came a much bigger bill: Instacart at $65 a share, at least 75% in cash.
+
+Bank of America is still a buyer
+
+Post’s $257 target matches the Street’s average to the dollar, and the quarter backs him up. Third-quarter revenue rose 34% to $4.6 billion, net income jumped 91% to $466 million, and adjusted EBITDA climbed 41% to $1.06 billion, in the top half of management’s guidance.
+
+TIKR tracks 43 analysts on DoorDash. How many say “Buy”?
+
+See the full breakdown of Buy, Hold, and Sell ratings on DoorDash, along with Wall Street’s revenue and earnings estimates, all in one place. More than 500,000 investors use TIKR to research stocks like this one. See DoorDash’s Analyst Ratings
+
+Does $257 add up?
+
+The Street’s average target has fallen from $303 a year ago to $257:
+
+Targets run from $172 to $350, and 43 analysts cover the stock.
+
+Analysts cut their 2026 and 2027 normalized EPS estimates over the past year, but they’ve raised both by 5% to 6% since June 30. They now expect normalized EPS to climb from $5.10 in 2025 to $8.25 in 2027 and $10.16 in 2028:
+
+The quarter’s beat should help the 2026 and 2027 estimates hold up. The 2028 estimate is harder to call, since DoorDash plans to reinvest more than all of the Instacart synergies in the first year after closing.
+
+At [$179], DoorDash trades at 25x forward earnings, its lowest in five years. Post’s $257 works out to 35x expected earnings over the next twelve months. That’s above the stock’s one-year average of 33x and below its three-year average of 39x.
+
+Bank of America has this one right
+
+The risk is Instacart. The deal adds debt and new shares, needs regulatory approval, and may not close until the first half of 2028.
+
+I think Post has DoorDash right: his target asks for less than the stock’s three-year average multiple, on rising estimates, from a business that just set records.
+
+The next test is the fourth-quarter report in February. If DoorDash’s 2027 spending plans come in heavier than analysts expect, $257 gets a lot harder to reach.
+
+So what is DoorDash stock actually worth?
+
+TIKR lets you forecast the future price of any stock in less than a minute. Just enter a few assumptions into TIKR’s valuation model and see what DoorDash could be worth. Start from Wall Street consensus estimates, or adjust the inputs to reflect your own view of the business. It’s free to use.
+
+Value DoorDash for free
+
+Disclaimer:
+
+Please note that the articles on TIKR are not intended to serve as investment or financial advice from TIKR or our content team, nor are they recommendations to buy or sell any stocks. We create our content based on TIKR Terminal’s investment data and analysts’ estimates. Our analysis might not include recent company news or important updates. TIKR has no position in any of the stocks mentioned. Thank you for reading, and happy investing!","https://res.cloudinary.com/tikr/images/w_600,h_400,c_scale/f_webp,q_auto/v1782730604/images/6-24/6-24.png?_i=AA",N,,2026-10-31 14:11:14.683223
 ID22,Instacart,2026-10-31 07:26:30+00:00,Seeking Alpha,"DoorDash And Instacart Earnings: Solid Quarterly Results, Questionable Merger",APAC Research,,,,,https://seekingalpha.com/article/4960289-doordash-and-instacart-earnings-solid-quarterly-results-questionable-merger,"Oct 30, 2026, 12:23 PM ETDoorDash, Inc. (DASH) Stock, CART Stock APAC Research 1.48K Followers Summary DoorDash delivered strong quarterly growth, with revenues up 34% and Marketplace GOV up 36% year-over-year.
 CART earns a hold rating; while numbers are solid, growth is moderating, and long-term sustainability faces significant headwinds.
 Comments About DASH Stock SymbolLast Price% Chg DASH DoorDash, Inc. 178.99-0.01%Post179.180.11% 1D 5D 1M 6M 1Y 5Y 10Y Chart Combination chart with 2 data series.
@@ -8324,11 +8413,6 @@ Joseph Oh (media@careaccess.com)
 To learn more, visit CareAccess.comopens in a new tab",https://corporate.walmart.com/content/dam/corporate/images/newsroom/2026/10/clinical-trial-centers/clinical-trial-center-card.webp,N,,2026-10-27 14:16:22.545858
 ID15,Ecolab,2026-10-27 16:43:48+00:00,www.hotelmanagement.net,Ecolab: Sustainability moves from initiative to business strategy - Hotel Management,,,,,,https://www.hotelmanagement.net/hospitality-show/ecolab-sustainability-moves-initiative-business-strategy,"Innovation is helping hospitality shift sustainability from a cost center to a source of operational and financial value. At Ecolab, we see the ...","Innovation is helping hospitality shift sustainability from a cost center to a source of operational and financial value. At Ecolab, we see the ...",,Y,,2026-10-27 15:16:52.935379
 ID19,FactSet,2026-10-27 16:42:27+00:00,x.com,Street Takeaways - Anthropic's S-1 filing; discloses significant future compute commitments Overview,,,,,,https://x.com/FactSet/status/2115113826215444935,@FactSet · FactSet · @FactSet. Street Takeaways - Anthropic's S-1 filing; discloses significant future compute commitments Overview: • Anthropic ...,@FactSet · FactSet · @FactSet. Street Takeaways - Anthropic's S-1 filing; discloses significant future compute commitments Overview: • Anthropic ...,,Y,,2026-10-27 13:13:42.302334
-ID38,S&P Global,2026-10-27 16:37:36+00:00,www.newsquawk.com,"S&P Global Inc. (SPGI) Q3 2026 (USD): Adj. EPS 4.58 (exp. 4.43), Revenue 3.68bln (exp. 3.64 ...",Newsquawk,,,,,https://www.newsquawk.com/headlines/sp-global-inc-spgi-q3-2026-usd-adj-eps-458-exp-443-revenue-368bln-exp-364bln,"A modest beat on both lines with full-year guidance bracketing consensus is the standard pattern for this name and for the financial data peer set, where the recurring debate is mix rather than headline print: subscription and index-linked revenue versus the more cyclical ratings and issuance exposure.
-In episodes of this kind the post-print move has tended to be driven less by the quarter than by the guidance bridge, and a range that straddles the street number usually reads as in-line absent a margin surprise.
-The larger item is the strategic review of Capital IQ and parts of the data businesses.
-The distinction that matters for the transmission is whether any disposal is dilutive to the ratings-and-index core or releases capital for buybacks, which is how comparable reviews in the sector have tended to resolve.
-What follows is the call, any commentary on process and timeline, and whether peer names in the data complex re-rate in sympathy on read-through to their own portfolio optionality.","A modest beat on both lines with full-year guidance bracketing consensus is the standard pattern for this name and for the financial data peer set, where the recurring debate is mix rather than headline print: subscription and index-linked revenue versus the more cyclical ratings and issuance exposure. In episodes of this kind the post-print move has tended to be driven less by the quarter than by the guidance bridge, and a range that straddles the street number usually reads as in-line absent a margin surprise. The larger item is the strategic review of Capital IQ and parts of the data businesses. Strategic options language of this kind has historically opened a wide band of outcomes, from outright sale to separation to retention after review, and the market's first question is typically sum-of-parts: whether the remaining entity trades at a premium once lower-multiple or slower-growth assets are carved out, a debate that has played out across the exchanges-and-data complex whenever portfolios have been reshaped. The distinction that matters for the transmission is whether any disposal is dilutive to the ratings-and-index core or releases capital for buybacks, which is how comparable reviews in the sector have tended to resolve. What follows is the call, any commentary on process and timeline, and whether peer names in the data complex re-rate in sympathy on read-through to their own portfolio optionality.",https://www.newsquawk.com/assets/placeholder_images_for_news_by_category/Equities/2.png,N,,2026-10-27 16:14:06.131079
 ID34,OpenAI,2026-10-27 16:37:36+00:00,CNBC,"Oracle integrates ChatGPT, Codex into apps, expands cloud chip lineup - CNBC","Seema Mody, www.facebook.com",,,,,https://www.cnbc.com/2026/10/27/oracle-openai-chatgpt-codex-google-tpus.html,"Oracle also said Tuesday that it is making different hardware accessible on its cloud infrastructure, including Google ’s tensor processing unit AI chips and OpenAI’s Jalapeño chip.
 “Now customers can actually have infinite possibilities in terms of how they can drive AI,” Thiagarajan said.
 OpenAI’s Jalapeno chip and Cerebras will also run on Oracle Cloud Infrastructure.
@@ -8386,6 +8470,11 @@ RT Quote | Last NASDAQ LS, VOL From CTA | USD
 131.65+5.59 (+4.43%)
 
 Last | 2:16 PM EDT",https://image.cnbcfm.com/api/v1/image/108469757-1793120004299-Screenshot-2026-10-27-at-125228_PM.jpg?v=1793120065&w=1920&h=1080,N,,2026-10-27 14:16:16.785790
+ID38,S&P Global,2026-10-27 16:37:36+00:00,www.newsquawk.com,"S&P Global Inc. (SPGI) Q3 2026 (USD): Adj. EPS 4.58 (exp. 4.43), Revenue 3.68bln (exp. 3.64 ...",Newsquawk,,,,,https://www.newsquawk.com/headlines/sp-global-inc-spgi-q3-2026-usd-adj-eps-458-exp-443-revenue-368bln-exp-364bln,"A modest beat on both lines with full-year guidance bracketing consensus is the standard pattern for this name and for the financial data peer set, where the recurring debate is mix rather than headline print: subscription and index-linked revenue versus the more cyclical ratings and issuance exposure.
+In episodes of this kind the post-print move has tended to be driven less by the quarter than by the guidance bridge, and a range that straddles the street number usually reads as in-line absent a margin surprise.
+The larger item is the strategic review of Capital IQ and parts of the data businesses.
+The distinction that matters for the transmission is whether any disposal is dilutive to the ratings-and-index core or releases capital for buybacks, which is how comparable reviews in the sector have tended to resolve.
+What follows is the call, any commentary on process and timeline, and whether peer names in the data complex re-rate in sympathy on read-through to their own portfolio optionality.","A modest beat on both lines with full-year guidance bracketing consensus is the standard pattern for this name and for the financial data peer set, where the recurring debate is mix rather than headline print: subscription and index-linked revenue versus the more cyclical ratings and issuance exposure. In episodes of this kind the post-print move has tended to be driven less by the quarter than by the guidance bridge, and a range that straddles the street number usually reads as in-line absent a margin surprise. The larger item is the strategic review of Capital IQ and parts of the data businesses. Strategic options language of this kind has historically opened a wide band of outcomes, from outright sale to separation to retention after review, and the market's first question is typically sum-of-parts: whether the remaining entity trades at a premium once lower-multiple or slower-growth assets are carved out, a debate that has played out across the exchanges-and-data complex whenever portfolios have been reshaped. The distinction that matters for the transmission is whether any disposal is dilutive to the ratings-and-index core or releases capital for buybacks, which is how comparable reviews in the sector have tended to resolve. What follows is the call, any commentary on process and timeline, and whether peer names in the data complex re-rate in sympathy on read-through to their own portfolio optionality.",https://www.newsquawk.com/assets/placeholder_images_for_news_by_category/Equities/2.png,N,,2026-10-27 16:14:06.131079
 ID18,Eli Lilly,2026-10-27 16:35:21+00:00,LinkedIn,Eli Lilly Toughens Legal Game Plan Over Next Weight Loss Drug | Nyah Phengsitthy,Nyah Phengsitthy,,,,,https://www.linkedin.com/posts/nyah-phengsitthy-9304b61a5_eli-lilly-toughens-legal-game-plan-over-next-activity-7520866452581699584-Xj0P,"Feed post Lilly's playbook to protect its next-generation weight-loss drug retatrutide is heating up.
 The Indianapolis-based drugmaker has piled up nearly a dozen lawsuits against online vendors and wellness clinics, accusing them of illegally making copycats of its experimental treatment that has yet to secure approval from any regulator in the world.
 Drawing on similar arguments from its earlier GLP-1 challenges, the latest suits allege businesses are violating multiple state unfair competition laws and jeopardizing the drug’s future by selling versions with unknown composition, purity, and potency.
@@ -12374,4 +12463,3 @@ Connecting data
 Duncan Beach, chief executive of the Insolvency Service, said: “Our recently published strategy makes it very clear that in this rapidly changing world, we need to modernise the work of the Insolvency Service, and a big part of that is moving more quickly, thinking bigger and making better use of intelligence, data and technology.
 
 “So, I’m delighted that we’ve signed this agreement with Quantexa. It means that our skilled investigators will be able to use technology to find the hidden links between cases much more quickly than they could do alone. That means we will be able to combat misconduct much more effectively and bring to justice those who seek to subvert the law.”",https://businesscloud.co.uk/wp-content/uploads/2025/03/Vishal-Marria-CEO-Quantexa.jpg,N,,2026-10-24 18:09:42.443994
-ID25,J&J,2026-10-24 18:35:26+00:00,www.fiercepharma.com,Bayer's Nubeqa scores phase 3 win in high-risk prostate cancer | Fierce Pharma,,,,,,https://www.fiercepharma.com/pharma/bayers-nubeqa-lands-phase-3-win-very-high-risk-prostate-cancer,"... Johnson & Johnson's Erleada. Another androgen receptor inhibitor ... Earlier this year, the two pharmas became embroiled in a heated legal battle after ...","... Johnson & Johnson's Erleada. Another androgen receptor inhibitor ... Earlier this year, the two pharmas became embroiled in a heated legal battle after ...",,Y,,2026-10-24 15:07:49.851676
