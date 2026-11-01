@@ -1,4 +1,5 @@
 ﻿id,name,published,outlet,title,authors,category,market,categoryorder,articleorder,url,description,text,image,error,sentiment,firstEyes
+ID22,Instacart,2026-11-01 10:12:37+00:00,www.investopedia.com,"What to Expect in Markets This Week: Apple, Palantir Report; October Jobs Data Lands",,,,,,https://www.investopedia.com/what-to-expect-in-markets-this-week-apple-palantir-report-october-jobs-data-lands-12199599,"89 Quarterly results from Uber, Lyft, DoorDash and Instacart ... The company last week agreed to merge with rival Instacart (CART), which also reports ...","89 Quarterly results from Uber, Lyft, DoorDash and Instacart ... The company last week agreed to merge with rival Instacart (CART), which also reports ...",,Y,,2026-11-01 06:08:20.914239
 ID30,Microsoft,2026-11-01 05:32:55+00:00,www.forbes.com,Voluntary Buyouts Let Employees Decide Who Leaves Microsoft - Forbes,,,,,,https://www.forbes.com/sites/cindyrodriguezconstable/2026/10/31/voluntary-buyouts-let-employees-decide-who-leaves-microsoft/,Microsoft's voluntary exit offer to 60000 employees hands talent decisions to staff. What leaders give up when employees choose who leaves.,Microsoft's voluntary exit offer to 60000 employees hands talent decisions to staff. What leaders give up when employees choose who leaves.,,Y,,2026-11-01 01:01:32.452611
 ID28,Medtronic,2026-11-01 05:09:18+00:00,The Globe and Mail,Medtronic Just Retired 55 Million Shares Without Spending Cash. Is the Stock a Buy?,Unknown,,,,,https://www.theglobeandmail.com/investing/markets/stocks/ABT/pressreleases/8578428/medtronic-just-retired-55-million-shares-without-spending-cash-is-the-stock-a-buy/,"Medtronic(NYSE: MDT) is entering new waters after spinning off its diabetes segment, now called MiniMed(NASDAQ: MMED).
 As part of the deal, Medtronic received approximately 55 million of its own shares in the final results of its oversubscribed split-off and exchange offer for MiniMed.
@@ -11942,35 +11943,3 @@ Looking for something else? Try the AI Hub.
 Summary, key takeaways, timeline and FAQs — all in one place.
 
 Follow Fortune IndiaNews, insights and conversations that matter, on your favourite platforms.","https://media.fortuneindia.com/fortune-india/2026-10-25/z3oj2fge/GettyImages-2285692569.jpg?w=1200&ar=40:21&auto=format,compress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",N,,2026-10-25 12:19:12.657237
-ID33,Nvidia,2026-10-25 10:13:30+00:00,The Decoder,Nvidia open-sources Flora to make robot video labeling 125x cheaper than GPT-6 Astra,Jonathan Kemper,,,,,https://the-decoder.com/nvidia-open-sources-flora-to-make-robot-video-labeling-125x-cheaper-than-gpt-6-astra/,"Up to 125x cheaper by Nvidia's own estimates In a test with 50 videos, Flora scored slightly better than GPT-6 Astra according to Nvidia, even though OpenAI's model was allowed to use its full reasoning capacity.
-Labeling one hour of video runs about 72 cents with Flora by Nvidia's estimate, compared to roughly $88.50 with GPT-6 Astra.
-On Nvidia's own DenseCaptionBench, Flora leads across all metrics for human recordings, but for robot videos the model comes in second behind Astra.
-In a video with many short hand movements, Flora identifies 34 of 37 individual actions, while Astra catches only four.
-The company has also been working for some time to offset the shortage of robotics training data through simulation and automated data processing.","According to the paper, Flora covers all three. Nvidia says the system is already running during training of its GR00T models, annotating up to 200,000 hours of video per day across 512 GB300 GPUs. The models are available on Hugging Face.
-
-Flora consists of three fine-tuned Qwen3.5 models. A 9B model splits videos into action segments, and a 27B model describes them while factoring in what happened before and after each action. A second 27B model called Flora-Rewarder takes on three roles depending on the prompt. It rates an episode's success on a scale of 1 to 5, classifies each half-second step as normal, suboptimal, or failure, and assigns scores based on self-defined rubrics.
-
-Up to 125x cheaper by Nvidia's own estimates
-
-In a test with 50 videos, Flora scored slightly better than GPT-6 Astra according to Nvidia, even though OpenAI's model was allowed to use its full reasoning capacity. Labeling one hour of video runs about 72 cents with Flora by Nvidia's estimate, compared to roughly $88.50 with GPT-6 Astra. Claude Opus 5 scored much worse in the same test and still cost about $42 per hour.
-
-The Flora cost figures are projections, though, not production measurements. Nvidia calculated them based on an assumed rental price of $10 per GPU per hour.
-
-Flora finds actions better, but Astra often describes them more precisely
-
-On the public WGO-Bench, Flora is best at detecting action boundaries but trails Astra in overall score and falls behind Gemini 3.8 Flash in pure description accuracy. According to the researchers, the gains come mainly from temporal localization.
-
-On Nvidia's own DenseCaptionBench, Flora leads across all metrics for human recordings, but for robot videos the model comes in second behind Astra. There's a methodological catch the researchers acknowledge, too. GPT-6 Astra evaluates the descriptions while also being one of the models under test.
-
-Almost no other model catches mid-episode errors
-
-On RoboRewardBench, Flora's error rate is 27.8 percent lower than Astra's. The paper attributes the gap to partially completed tasks. When a robot only tips a bottle over instead of knocking it off the table, Flora assigns 3 out of 5 points to match the human reference, while Astra gives just one.
-
-Flora-Rewarder catches 53.3 percent of failed steps within an episode, while no competitor gets above 11.7 percent and Astra doesn't catch a single one. The tradeoff is that Flora falsely flags about 11 percent of normal steps as errors. Astra still leads on rubric-based scoring and trajectory ranking.
-
-In a video with many short hand movements, Flora identifies 34 of 37 individual actions, while Astra catches only four. On the flip side, Flora sometimes splits longer actions into too many small steps and occasionally gets descriptions wrong. In one video, a robot hand wipes a plate with a cloth, but Flora describes it as folding a napkin.
-
-Nvidia positions Flora as an open alternative to commercial services like Scale AI's Physical AI Data Engine. Researchers can use it to scale their own robotics datasets and test approaches like transferring human demonstrations to robots. Nvidia is investing billions in open AI models to keep developers in its hardware ecosystem and drive demand for its chips, and Flora serves that same goal.
-
-The company has also been working for some time to offset the shortage of robotics training data through simulation and automated data processing. At GTC earlier this year, Nvidia showed a data pipeline that automatically prepares, multiplies, and scores training material. Flora adds detailed labels and reward signals from video to that pipeline.",https://the-decoder.com/wp-content/uploads/2026/10/nvidia-flora-hero-robot-hands.jpg,N,,2026-10-25 08:11:02.271221
-ID5,Albertsons,2026-10-25 10:10:11+00:00,media.unisba.ac.id,Kroger Looking To Acquire Albertsons In Major Merger Deal Adam Levine (8cpm23YPI1),,,,,,https://media.unisba.ac.id/d3f3a592/7edc51e6eODsLuQfZwM,Kroger is reportedly planning to acquire david muir the grocery store company that rottamazione 歩行者 owns Albertsons and Safeway.,Kroger is reportedly planning to acquire david muir the grocery store company that rottamazione 歩行者 owns Albertsons and Safeway.,,Y,,2026-10-25 18:00:49.924099
