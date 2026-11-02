@@ -14,6 +14,7 @@ SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
 import aiFunc
+import bounded_worker
 import getFunc as gf
 import newsFunc
 import run_scripts
@@ -67,6 +68,51 @@ class ResumableUpdatesTests(unittest.TestCase):
     def run_update(self, **options):
         options = {**self.outputs, "sources": Mock(side_effect=AssertionError("resume fetched new feeds")), **options}
         return updates.run_update("test", **options)
+
+    def test_state_feed_summary_survives_worker_json_and_export(self):
+        xml = f'''<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+            <channel><title>State Outlet</title><item>
+            <title>State headline</title><link>https://example.com/state-story</link>
+            <pubDate>{self.now}</pubDate>
+            <description>&lt;p&gt;Summary &amp;amp; context&lt;/p&gt;</description>
+            <content:encoded><![CDATA[<p>Full article body.</p>]]></content:encoded>
+            </item></channel></rss>'''.encode()
+
+        class Response:
+            url = "https://example.com/feed"
+            headers = {"content-type": "application/rss+xml"}
+            def __enter__(self): return self
+            def __exit__(self, *args): pass
+            def raise_for_status(self): pass
+            def iter_content(self, size): return iter([xml])
+
+        with patch("requests.get", return_value=Response()):
+            entries = json.loads(json.dumps(bounded_worker.fetch_feed(Response.url)))["entries"]
+        self.assertNotIn("description", entries[0])
+        self.assertIn("summary", entries[0])
+        queue = UpdateQueue(self.path, self.outputs)
+        with patch.object(gf, "fetch_feed_entries", return_value=entries):
+            updates._collect(queue, {"url": Response.url, "name": "State", "kind": "state_feed"})
+        self.assertEqual(self.run_update(), 0)
+        for output in ("archive", "data", "uploads"):
+            saved = gf.pd.read_csv(self.outputs[output])
+            self.assertEqual(saved.description.tolist(), ["Summary & context"])
+            self.assertEqual(saved.text.tolist(), ["Full article body."])
+            self.assertEqual(saved.title.tolist(), ["State headline"])
+
+    def test_state_feed_description_fallbacks_and_truncation(self):
+        long_summary = "A" * 361
+        entries = [
+            {"link": "https://example.com/summary", "summary": f"<p>{long_summary}</p>"},
+            {"link": "https://example.com/description", "description": "<p>Legacy description</p>"},
+            {"link": "https://example.com/body", "summary": "", "content": [{"value": "<p>Body excerpt</p>"}]},
+            {"link": "https://example.com/empty"},
+        ]
+        queue = UpdateQueue(self.path, self.outputs)
+        with patch.object(gf, "fetch_feed_entries", return_value=entries):
+            updates._collect(queue, {"url": "https://example.com/feed", "name": "State", "kind": "state_feed"})
+        descriptions = [item["row"]["description"] for item in queue.state["items"]]
+        self.assertEqual(descriptions, ["A" * 360 + "[...]", "Legacy description", "Body excerpt", ""])
 
     def test_classification_progress_survives_failure_and_is_not_repeated(self):
         self.queue()
