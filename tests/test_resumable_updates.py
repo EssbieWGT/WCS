@@ -297,6 +297,25 @@ class ResumableUpdatesTests(unittest.TestCase):
         preview.assert_not_called()
         self.assertEqual(gf.pd.read_csv(self.outputs["data"]).text.tolist(), ["Completed article"] * 3)
 
+    def test_tricare_collection_retries_rejected_reddit_but_keeps_archive_deduplication(self):
+        # A blocked domain mentioned in a Reddit slug must not block Reddit itself.
+        rejected_reddit = dict(self.rows[0], link="https://www.reddit.com/r/TRICARE/comments/retry/www.indeed.com")
+        archived_reddit = dict(self.rows[1], link="https://www.reddit.com/r/TRICARE/comments/saved")
+        rejected_other = self.rows[2]
+        self.outputs["rejects"] = str(self.root / "rejects.csv")
+        gf.pd.DataFrame([rejected_reddit, rejected_other]).to_csv(self.outputs["rejects"], index=False)
+        gf.pd.DataFrame([{"url": archived_reddit["link"]}]).to_csv(self.outputs["archive"], index=False)
+        source = {"url": "https://example.com/feed"}
+        rows = [rejected_reddit, archived_reddit, rejected_other]
+        with patch.object(gf, "get_multi_feed", return_value=rows):
+            # The default policy still skips previously rejected Reddit links.
+            ordinary_queue = UpdateQueue(self.path, self.outputs)
+            updates._collect(ordinary_queue, source)
+            self.assertEqual(ordinary_queue.pending, 0)
+            queue = UpdateQueue(self.path, self.outputs)
+            updates._collect(queue, source, always_accept=aiFunc.tricare_always_accept)
+        self.assertEqual([item["row"]["link"] for item in queue.state["items"]], [rejected_reddit["link"]])
+
     def test_update_entrypoints_use_matching_queues_and_preserve_output_windows(self):
         import runpy
         from update_queue import queue_path
@@ -311,6 +330,8 @@ class ResumableUpdatesTests(unittest.TestCase):
                 self.assertEqual(name, queue_path(SCRIPTS / filename).stem)
                 expected_days = 7 if name == "joly" else 3
                 self.assertEqual(update.call_args.kwargs.get("days", 3), expected_days)
+                if name == "tricare":
+                    self.assertIs(update.call_args.kwargs["always_accept"], aiFunc.tricare_always_accept)
 
     def test_ai_callbacks_distinguish_accept_reject_and_retryable_failure(self):
         client = Mock()
